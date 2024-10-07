@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelSmsMessageSentModuleEventOrBuilder extends
+@java.lang.Deprecated public interface OmnichannelSmsMessageSentModuleEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelSmsMessageSentModuleEvent)
     com.google.protobuf.MessageOrBuilder {
 

@@ -131,16 +131,18 @@ public enum EventType
    * customer sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_CUSTOMER_TEXT_MESSAGE = 309;</code>
+   * <code>OMNICHANNEL_CUSTOMER_TEXT_MESSAGE = 309 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_CUSTOMER_TEXT_MESSAGE(309),
   /**
    * <pre>
    * agent sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_AGENT_TEXT_MESSAGE = 310;</code>
+   * <code>OMNICHANNEL_AGENT_TEXT_MESSAGE = 310 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_AGENT_TEXT_MESSAGE(310),
   /**
    * <pre>
@@ -195,8 +197,9 @@ public enum EventType
    * manager sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_MANAGER_TEXT_MESSAGE = 332;</code>
+   * <code>OMNICHANNEL_MANAGER_TEXT_MESSAGE = 332 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_MANAGER_TEXT_MESSAGE(332),
   /**
    * <pre>
@@ -331,8 +334,9 @@ public enum EventType
    * send sms module event with details
    * </pre>
    *
-   * <code>OMNICHANNEL_MODULE_SMS_MESSAGE_SENT = 347;</code>
+   * <code>OMNICHANNEL_MODULE_SMS_MESSAGE_SENT = 347 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_MODULE_SMS_MESSAGE_SENT(347),
   /**
    * <pre>
@@ -347,16 +351,18 @@ public enum EventType
    * initial reply event for module
    * </pre>
    *
-   * <code>OMNICHANNEL_MODULE_INITIAL_REPLY = 349;</code>
+   * <code>OMNICHANNEL_MODULE_INITIAL_REPLY = 349 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_MODULE_INITIAL_REPLY(349),
   /**
    * <pre>
    * omnichannel task message sent
    * </pre>
    *
-   * <code>OMNICHANNEL_TASK_MESSAGE_SENT = 350;</code>
+   * <code>OMNICHANNEL_TASK_MESSAGE_SENT = 350 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_TASK_MESSAGE_SENT(350),
   /**
    * <pre>
@@ -379,32 +385,36 @@ public enum EventType
    * omnichannel agent message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_AGENT_MESSAGE_UNITS = 353;</code>
+   * <code>OMNICHANNEL_AGENT_MESSAGE_UNITS = 353 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_AGENT_MESSAGE_UNITS(353),
   /**
    * <pre>
    * omnichannel manager message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_MANAGER_MESSAGE_UNITS = 354;</code>
+   * <code>OMNICHANNEL_MANAGER_MESSAGE_UNITS = 354 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_MANAGER_MESSAGE_UNITS(354),
   /**
    * <pre>
    * omnichannel customer message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_CUSTOMER_MESSAGE_UNITS = 355;</code>
+   * <code>OMNICHANNEL_CUSTOMER_MESSAGE_UNITS = 355 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_CUSTOMER_MESSAGE_UNITS(355),
   /**
    * <pre>
    * omnichannel system message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_SYSTEM_MESSAGE_UNITS = 356;</code>
+   * <code>OMNICHANNEL_SYSTEM_MESSAGE_UNITS = 356 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   OMNICHANNEL_SYSTEM_MESSAGE_UNITS(356),
   /**
    * <pre>
@@ -454,6 +464,22 @@ public enum EventType
    * <code>OMNICHANNEL_TRANSCRIPT_SAVED = 362;</code>
    */
   OMNICHANNEL_TRANSCRIPT_SAVED(362),
+  /**
+   * <pre>
+   *omnichannel message
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MESSAGE_SENT = 363;</code>
+   */
+  OMNICHANNEL_MESSAGE_SENT(363),
+  /**
+   * <pre>
+   *omnichannel provider response
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_RESPONSE = 364;</code>
+   */
+  OMNICHANNEL_PROVIDER_RESPONSE(364),
   /**
    * <pre>
    * ASM
@@ -1129,17 +1155,17 @@ public enum EventType
    * customer sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_CUSTOMER_TEXT_MESSAGE = 309;</code>
+   * <code>OMNICHANNEL_CUSTOMER_TEXT_MESSAGE = 309 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_CUSTOMER_TEXT_MESSAGE_VALUE = 309;
+  @java.lang.Deprecated public static final int OMNICHANNEL_CUSTOMER_TEXT_MESSAGE_VALUE = 309;
   /**
    * <pre>
    * agent sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_AGENT_TEXT_MESSAGE = 310;</code>
+   * <code>OMNICHANNEL_AGENT_TEXT_MESSAGE = 310 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_AGENT_TEXT_MESSAGE_VALUE = 310;
+  @java.lang.Deprecated public static final int OMNICHANNEL_AGENT_TEXT_MESSAGE_VALUE = 310;
   /**
    * <pre>
    * finish wrap up event
@@ -1193,9 +1219,9 @@ public enum EventType
    * manager sent a text message event
    * </pre>
    *
-   * <code>OMNICHANNEL_MANAGER_TEXT_MESSAGE = 332;</code>
+   * <code>OMNICHANNEL_MANAGER_TEXT_MESSAGE = 332 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_MANAGER_TEXT_MESSAGE_VALUE = 332;
+  @java.lang.Deprecated public static final int OMNICHANNEL_MANAGER_TEXT_MESSAGE_VALUE = 332;
   /**
    * <pre>
    * update event with campaign details
@@ -1329,9 +1355,9 @@ public enum EventType
    * send sms module event with details
    * </pre>
    *
-   * <code>OMNICHANNEL_MODULE_SMS_MESSAGE_SENT = 347;</code>
+   * <code>OMNICHANNEL_MODULE_SMS_MESSAGE_SENT = 347 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_MODULE_SMS_MESSAGE_SENT_VALUE = 347;
+  @java.lang.Deprecated public static final int OMNICHANNEL_MODULE_SMS_MESSAGE_SENT_VALUE = 347;
   /**
    * <pre>
    * update campaign to archive status event
@@ -1345,17 +1371,17 @@ public enum EventType
    * initial reply event for module
    * </pre>
    *
-   * <code>OMNICHANNEL_MODULE_INITIAL_REPLY = 349;</code>
+   * <code>OMNICHANNEL_MODULE_INITIAL_REPLY = 349 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_MODULE_INITIAL_REPLY_VALUE = 349;
+  @java.lang.Deprecated public static final int OMNICHANNEL_MODULE_INITIAL_REPLY_VALUE = 349;
   /**
    * <pre>
    * omnichannel task message sent
    * </pre>
    *
-   * <code>OMNICHANNEL_TASK_MESSAGE_SENT = 350;</code>
+   * <code>OMNICHANNEL_TASK_MESSAGE_SENT = 350 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_TASK_MESSAGE_SENT_VALUE = 350;
+  @java.lang.Deprecated public static final int OMNICHANNEL_TASK_MESSAGE_SENT_VALUE = 350;
   /**
    * <pre>
    * omnichannel connected inbox poll
@@ -1377,33 +1403,33 @@ public enum EventType
    * omnichannel agent message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_AGENT_MESSAGE_UNITS = 353;</code>
+   * <code>OMNICHANNEL_AGENT_MESSAGE_UNITS = 353 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_AGENT_MESSAGE_UNITS_VALUE = 353;
+  @java.lang.Deprecated public static final int OMNICHANNEL_AGENT_MESSAGE_UNITS_VALUE = 353;
   /**
    * <pre>
    * omnichannel manager message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_MANAGER_MESSAGE_UNITS = 354;</code>
+   * <code>OMNICHANNEL_MANAGER_MESSAGE_UNITS = 354 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_MANAGER_MESSAGE_UNITS_VALUE = 354;
+  @java.lang.Deprecated public static final int OMNICHANNEL_MANAGER_MESSAGE_UNITS_VALUE = 354;
   /**
    * <pre>
    * omnichannel customer message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_CUSTOMER_MESSAGE_UNITS = 355;</code>
+   * <code>OMNICHANNEL_CUSTOMER_MESSAGE_UNITS = 355 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_VALUE = 355;
+  @java.lang.Deprecated public static final int OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_VALUE = 355;
   /**
    * <pre>
    * omnichannel system message units were calculated
    * </pre>
    *
-   * <code>OMNICHANNEL_SYSTEM_MESSAGE_UNITS = 356;</code>
+   * <code>OMNICHANNEL_SYSTEM_MESSAGE_UNITS = 356 [deprecated = true];</code>
    */
-  public static final int OMNICHANNEL_SYSTEM_MESSAGE_UNITS_VALUE = 356;
+  @java.lang.Deprecated public static final int OMNICHANNEL_SYSTEM_MESSAGE_UNITS_VALUE = 356;
   /**
    * <pre>
    * omnichannel payment link was sent
@@ -1452,6 +1478,22 @@ public enum EventType
    * <code>OMNICHANNEL_TRANSCRIPT_SAVED = 362;</code>
    */
   public static final int OMNICHANNEL_TRANSCRIPT_SAVED_VALUE = 362;
+  /**
+   * <pre>
+   *omnichannel message
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MESSAGE_SENT = 363;</code>
+   */
+  public static final int OMNICHANNEL_MESSAGE_SENT_VALUE = 363;
+  /**
+   * <pre>
+   *omnichannel provider response
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_RESPONSE = 364;</code>
+   */
+  public static final int OMNICHANNEL_PROVIDER_RESPONSE_VALUE = 364;
   /**
    * <pre>
    * ASM
@@ -2088,6 +2130,8 @@ public enum EventType
       case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT;
       case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE;
       case 362: return OMNICHANNEL_TRANSCRIPT_SAVED;
+      case 363: return OMNICHANNEL_MESSAGE_SENT;
+      case 364: return OMNICHANNEL_PROVIDER_RESPONSE;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;

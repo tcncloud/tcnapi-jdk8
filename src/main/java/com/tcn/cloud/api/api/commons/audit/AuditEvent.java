@@ -68,15 +68,15 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_AGENT_UNASSIGN_CONVERSATION_EVENT(306),
     OMNICHANNEL_AGENT_REASSIGN_CONVERSATION_EVENT(307),
     OMNICHANNEL_T10_EVENT(308),
-    OMNICHANNEL_CUSTOMER_TEXT_MESSAGE_EVENT(309),
-    OMNICHANNEL_AGENT_TEXT_MESSAGE_EVENT(310),
+    @java.lang.Deprecated OMNICHANNEL_CUSTOMER_TEXT_MESSAGE_EVENT(309),
+    @java.lang.Deprecated OMNICHANNEL_AGENT_TEXT_MESSAGE_EVENT(310),
     OMNICHANNEL_FINISH_WRAP_UP_EVENT(311),
     OMNICHANNEL_BEGIN_WRAP_UP_EVENT(312),
     OMNICHANNEL_T11_EVENT(313),
     OMNICHANNEL_CREATE_CONVERSATION_EVENT(314),
     OMNICHANNEL_AGENT_SUSPEND_EVENT(315),
     OMNICHANNEL_CLOSE_CONVERSATION_EVENT(322),
-    OMNICHANNEL_MANAGER_TEXT_MESSAGE_EVENT(332),
+    @java.lang.Deprecated OMNICHANNEL_MANAGER_TEXT_MESSAGE_EVENT(332),
     OMNICHANNEL_UPDATE_CAMPAIGN_EVENT(330),
     OMNICHANNEL_SET_CONVERSATION_COLLECTED_DATA_EVENT(331),
     OMNICHANNEL_COMPLETE_CAMPAIGN_EVENT(348),
@@ -94,21 +94,23 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_COMPLETE_MODULE_EVENT(344),
     OMNICHANNEL_ARCHIVE_MODULE_EVENT(345),
     OMNICHANNEL_UPDATE_MODULE_EVENT(346),
-    OMNICHANNEL_ADD_SMS_MESSAGE_SENT_MODULE_EVENT(347),
-    OMNICHANNEL_MODULE_INITIAL_REPLY_EVENT(349),
-    OMNICHANNEL_TASK_MESSAGE_SENT_EVENT(350),
+    @java.lang.Deprecated OMNICHANNEL_ADD_SMS_MESSAGE_SENT_MODULE_EVENT(347),
+    @java.lang.Deprecated OMNICHANNEL_MODULE_INITIAL_REPLY_EVENT(349),
+    @java.lang.Deprecated OMNICHANNEL_TASK_MESSAGE_SENT_EVENT(350),
     OMNICHANNEL_CONNECTED_INBOX_POLL_EVENT(351),
     OMNICHANNEL_CONNECTED_INBOX_CREATED_EVENT(352),
-    OMNICHANNEL_AGENT_MESSAGE_UNITS_EVENT(353),
-    OMNICHANNEL_MANAGER_MESSAGE_UNITS_EVENT(354),
-    OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT(355),
-    OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT(356),
+    @java.lang.Deprecated OMNICHANNEL_AGENT_MESSAGE_UNITS_EVENT(353),
+    @java.lang.Deprecated OMNICHANNEL_MANAGER_MESSAGE_UNITS_EVENT(354),
+    @java.lang.Deprecated OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT(355),
+    @java.lang.Deprecated OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT(356),
     OMNICHANNEL_PAYMENT_LINK_SENT_EVENT(357),
     OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT(358),
     OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT(359),
     OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT(360),
     OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT(361),
     OMNICHANNEL_TRANSCRIPT_SAVED_EVENT(362),
+    OMNICHANNEL_MESSAGE_SENT_EVENT(363),
+    OMNICHANNEL_PROVIDER_RESPONSE_EVENT(364),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -244,6 +246,8 @@ private static final long serialVersionUID = 0L;
         case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT;
         case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT;
         case 362: return OMNICHANNEL_TRANSCRIPT_SAVED_EVENT;
+        case 363: return OMNICHANNEL_MESSAGE_SENT_EVENT;
+        case 364: return OMNICHANNEL_PROVIDER_RESPONSE_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -1134,11 +1138,13 @@ private static final long serialVersionUID = 0L;
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=67
    * @return Whether the omnichannelCustomerTextMessageEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelCustomerTextMessageEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelCustomerTextMessageEvent() {
     return eventCase_ == 309;
   }
   /**
@@ -1146,11 +1152,13 @@ private static final long serialVersionUID = 0L;
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=67
    * @return The omnichannelCustomerTextMessageEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent() {
     if (eventCase_ == 309) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent) event_;
     }
@@ -1161,10 +1169,10 @@ private static final long serialVersionUID = 0L;
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder() {
     if (eventCase_ == 309) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent) event_;
     }
@@ -1177,11 +1185,13 @@ private static final long serialVersionUID = 0L;
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=69
    * @return Whether the omnichannelAgentTextMessageEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelAgentTextMessageEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelAgentTextMessageEvent() {
     return eventCase_ == 310;
   }
   /**
@@ -1189,11 +1199,13 @@ private static final long serialVersionUID = 0L;
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=69
    * @return The omnichannelAgentTextMessageEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent() {
     if (eventCase_ == 310) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent) event_;
     }
@@ -1204,10 +1216,10 @@ private static final long serialVersionUID = 0L;
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder() {
     if (eventCase_ == 310) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent) event_;
     }
@@ -1478,11 +1490,13 @@ private static final long serialVersionUID = 0L;
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=83
    * @return Whether the omnichannelManagerTextMessageEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelManagerTextMessageEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelManagerTextMessageEvent() {
     return eventCase_ == 332;
   }
   /**
@@ -1490,11 +1504,13 @@ private static final long serialVersionUID = 0L;
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=83
    * @return The omnichannelManagerTextMessageEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent() {
     if (eventCase_ == 332) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent) event_;
     }
@@ -1505,10 +1521,10 @@ private static final long serialVersionUID = 0L;
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder() {
     if (eventCase_ == 332) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent) event_;
     }
@@ -2252,11 +2268,13 @@ private static final long serialVersionUID = 0L;
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=120
    * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelAddSmsMessageSentModuleEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelAddSmsMessageSentModuleEvent() {
     return eventCase_ == 347;
   }
   /**
@@ -2264,11 +2282,13 @@ private static final long serialVersionUID = 0L;
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=120
    * @return The omnichannelAddSmsMessageSentModuleEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent() {
     if (eventCase_ == 347) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent) event_;
     }
@@ -2279,10 +2299,10 @@ private static final long serialVersionUID = 0L;
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder() {
     if (eventCase_ == 347) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent) event_;
     }
@@ -2295,11 +2315,13 @@ private static final long serialVersionUID = 0L;
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=122
    * @return Whether the omnichannelModuleInitialReplyEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelModuleInitialReplyEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelModuleInitialReplyEvent() {
     return eventCase_ == 349;
   }
   /**
@@ -2307,11 +2329,13 @@ private static final long serialVersionUID = 0L;
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=122
    * @return The omnichannelModuleInitialReplyEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent() {
     if (eventCase_ == 349) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent) event_;
     }
@@ -2322,10 +2346,10 @@ private static final long serialVersionUID = 0L;
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder() {
     if (eventCase_ == 349) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent) event_;
     }
@@ -2338,11 +2362,13 @@ private static final long serialVersionUID = 0L;
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=124
    * @return Whether the omnichannelTaskMessageSentEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelTaskMessageSentEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelTaskMessageSentEvent() {
     return eventCase_ == 350;
   }
   /**
@@ -2350,11 +2376,13 @@ private static final long serialVersionUID = 0L;
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=124
    * @return The omnichannelTaskMessageSentEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent() {
     if (eventCase_ == 350) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent) event_;
     }
@@ -2365,10 +2393,10 @@ private static final long serialVersionUID = 0L;
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder() {
     if (eventCase_ == 350) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent) event_;
     }
@@ -2467,11 +2495,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=130
    * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelAgentMessageUnitsEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelAgentMessageUnitsEvent() {
     return eventCase_ == 353;
   }
   /**
@@ -2479,11 +2509,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=130
    * @return The omnichannelAgentMessageUnitsEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent() {
     if (eventCase_ == 353) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent) event_;
     }
@@ -2494,10 +2526,10 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder() {
     if (eventCase_ == 353) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent) event_;
     }
@@ -2510,11 +2542,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=132
    * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelManagerMessageUnitsEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelManagerMessageUnitsEvent() {
     return eventCase_ == 354;
   }
   /**
@@ -2522,11 +2556,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=132
    * @return The omnichannelManagerMessageUnitsEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent() {
     if (eventCase_ == 354) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent) event_;
     }
@@ -2537,10 +2573,10 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder() {
     if (eventCase_ == 354) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent) event_;
     }
@@ -2553,11 +2589,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=134
    * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelCustomerMessageUnitsEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelCustomerMessageUnitsEvent() {
     return eventCase_ == 355;
   }
   /**
@@ -2565,11 +2603,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=134
    * @return The omnichannelCustomerMessageUnitsEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent() {
     if (eventCase_ == 355) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent) event_;
     }
@@ -2580,10 +2620,10 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder() {
     if (eventCase_ == 355) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent) event_;
     }
@@ -2596,11 +2636,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=136
    * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
    */
   @java.lang.Override
-  public boolean hasOmnichannelSystemMessageUnitsEvent() {
+  @java.lang.Deprecated public boolean hasOmnichannelSystemMessageUnitsEvent() {
     return eventCase_ == 356;
   }
   /**
@@ -2608,11 +2650,13 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=136
    * @return The omnichannelSystemMessageUnitsEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent() {
     if (eventCase_ == 356) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_;
     }
@@ -2623,10 +2667,10 @@ private static final long serialVersionUID = 0L;
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder() {
     if (eventCase_ == 356) {
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_;
     }
@@ -2889,6 +2933,92 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
+  }
+
+  public static final int OMNICHANNEL_MESSAGE_SENT_EVENT_FIELD_NUMBER = 363;
+  /**
+   * <pre>
+   * omni message event that encapsulates all omni messages sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+   * @return Whether the omnichannelMessageSentEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelMessageSentEvent() {
+    return eventCase_ == 363;
+  }
+  /**
+   * <pre>
+   * omni message event that encapsulates all omni messages sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+   * @return The omnichannelMessageSentEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getOmnichannelMessageSentEvent() {
+    if (eventCase_ == 363) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * omni message event that encapsulates all omni messages sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder getOmnichannelMessageSentEventOrBuilder() {
+    if (eventCase_ == 363) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+  }
+
+  public static final int OMNICHANNEL_PROVIDER_RESPONSE_EVENT_FIELD_NUMBER = 364;
+  /**
+   * <pre>
+   * provider response for omni message sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+   * @return Whether the omnichannelProviderResponseEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelProviderResponseEvent() {
+    return eventCase_ == 364;
+  }
+  /**
+   * <pre>
+   * provider response for omni message sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+   * @return The omnichannelProviderResponseEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent getOmnichannelProviderResponseEvent() {
+    if (eventCase_ == 364) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * provider response for omni message sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder getOmnichannelProviderResponseEventOrBuilder() {
+    if (eventCase_ == 364) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
   }
 
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
@@ -4610,7 +4740,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=245
    * @return Whether the billingCommitBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4624,7 +4754,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=245
    * @return The billingCommitBillingPlanEvent.
    */
   @java.lang.Override
@@ -4653,7 +4783,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=246
    * @return Whether the billingCreateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4663,7 +4793,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=246
    * @return The billingCreateBillingPlanEvent.
    */
   @java.lang.Override
@@ -4688,7 +4818,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=242
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4698,7 +4828,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=242
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
@@ -4723,7 +4853,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingCreateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4733,7 +4863,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingCreateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4758,7 +4888,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingDeleteBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4768,7 +4898,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingDeleteBillingPlanEvent.
    */
   @java.lang.Override
@@ -4793,7 +4923,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=250
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4803,7 +4933,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=250
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
@@ -4828,7 +4958,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=251
    * @return Whether the billingDeleteRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4838,7 +4968,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=251
    * @return The billingDeleteRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4863,7 +4993,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=252
    * @return Whether the billingExportInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4873,7 +5003,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=252
    * @return The billingExportInvoiceEvent.
    */
   @java.lang.Override
@@ -4898,7 +5028,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=253
    * @return Whether the billingUpdateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4908,7 +5038,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=253
    * @return The billingUpdateBillingPlanEvent.
    */
   @java.lang.Override
@@ -4933,7 +5063,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=254
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4943,7 +5073,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=254
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
@@ -4968,7 +5098,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=255
    * @return Whether the billingUpdateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4978,7 +5108,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=255
    * @return The billingUpdateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -5182,7 +5312,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=260
+   *     See api/commons/audit/audit.proto;l=265
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Override
@@ -5192,7 +5322,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=260
+   *     See api/commons/audit/audit.proto;l=265
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Override
@@ -5217,7 +5347,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=261
+   *     See api/commons/audit/audit.proto;l=266
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Override
@@ -5227,7 +5357,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=261
+   *     See api/commons/audit/audit.proto;l=266
    * @return The contactManagerKycEvent.
    */
   @java.lang.Override
@@ -5571,6 +5701,12 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 362) {
       output.writeMessage(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
+    if (eventCase_ == 363) {
+      output.writeMessage(363, (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_);
+    }
+    if (eventCase_ == 364) {
+      output.writeMessage(364, (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_);
     }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
@@ -6010,6 +6146,14 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 362) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
+    if (eventCase_ == 363) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(363, (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_);
+    }
+    if (eventCase_ == 364) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(364, (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_);
     }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
@@ -6514,6 +6658,14 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelTranscriptSavedEvent()
             .equals(other.getOmnichannelTranscriptSavedEvent())) return false;
         break;
+      case 363:
+        if (!getOmnichannelMessageSentEvent()
+            .equals(other.getOmnichannelMessageSentEvent())) return false;
+        break;
+      case 364:
+        if (!getOmnichannelProviderResponseEvent()
+            .equals(other.getOmnichannelProviderResponseEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -7014,6 +7166,14 @@ private static final long serialVersionUID = 0L;
       case 362:
         hash = (37 * hash) + OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelTranscriptSavedEvent().hashCode();
+        break;
+      case 363:
+        hash = (37 * hash) + OMNICHANNEL_MESSAGE_SENT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelMessageSentEvent().hashCode();
+        break;
+      case 364:
+        hash = (37 * hash) + OMNICHANNEL_PROVIDER_RESPONSE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelProviderResponseEvent().hashCode();
         break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
@@ -7582,6 +7742,12 @@ private static final long serialVersionUID = 0L;
       if (omnichannelTranscriptSavedEventBuilder_ != null) {
         omnichannelTranscriptSavedEventBuilder_.clear();
       }
+      if (omnichannelMessageSentEventBuilder_ != null) {
+        omnichannelMessageSentEventBuilder_.clear();
+      }
+      if (omnichannelProviderResponseEventBuilder_ != null) {
+        omnichannelProviderResponseEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -8067,6 +8233,14 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 362 &&
           omnichannelTranscriptSavedEventBuilder_ != null) {
         result.event_ = omnichannelTranscriptSavedEventBuilder_.build();
+      }
+      if (eventCase_ == 363 &&
+          omnichannelMessageSentEventBuilder_ != null) {
+        result.event_ = omnichannelMessageSentEventBuilder_.build();
+      }
+      if (eventCase_ == 364 &&
+          omnichannelProviderResponseEventBuilder_ != null) {
+        result.event_ = omnichannelProviderResponseEventBuilder_.build();
       }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
@@ -8611,6 +8785,14 @@ private static final long serialVersionUID = 0L;
         }
         case OMNICHANNEL_TRANSCRIPT_SAVED_EVENT: {
           mergeOmnichannelTranscriptSavedEvent(other.getOmnichannelTranscriptSavedEvent());
+          break;
+        }
+        case OMNICHANNEL_MESSAGE_SENT_EVENT: {
+          mergeOmnichannelMessageSentEvent(other.getOmnichannelMessageSentEvent());
+          break;
+        }
+        case OMNICHANNEL_PROVIDER_RESPONSE_EVENT: {
+          mergeOmnichannelProviderResponseEvent(other.getOmnichannelProviderResponseEvent());
           break;
         }
         case ASM_AGENT_LOGIN_EVENT: {
@@ -9315,6 +9497,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 362;
               break;
             } // case 2898
+            case 2906: {
+              input.readMessage(
+                  getOmnichannelMessageSentEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 363;
+              break;
+            } // case 2906
+            case 2914: {
+              input.readMessage(
+                  getOmnichannelProviderResponseEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 364;
+              break;
+            } // case 2914
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -12784,11 +12980,13 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=67
      * @return Whether the omnichannelCustomerTextMessageEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelCustomerTextMessageEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelCustomerTextMessageEvent() {
       return eventCase_ == 309;
     }
     /**
@@ -12796,11 +12994,13 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=67
      * @return The omnichannelCustomerTextMessageEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent() {
       if (omnichannelCustomerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 309) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent) event_;
@@ -12818,9 +13018,9 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelCustomerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelCustomerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent value) {
       if (omnichannelCustomerTextMessageEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -12838,9 +13038,9 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelCustomerTextMessageEvent(
+    @java.lang.Deprecated public Builder setOmnichannelCustomerTextMessageEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.Builder builderForValue) {
       if (omnichannelCustomerTextMessageEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -12856,9 +13056,9 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelCustomerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelCustomerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent value) {
       if (omnichannelCustomerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 309 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.getDefaultInstance()) {
@@ -12883,9 +13083,9 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelCustomerTextMessageEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelCustomerTextMessageEvent() {
       if (omnichannelCustomerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 309) {
           eventCase_ = 0;
@@ -12906,9 +13106,9 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.Builder getOmnichannelCustomerTextMessageEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.Builder getOmnichannelCustomerTextMessageEventBuilder() {
       return getOmnichannelCustomerTextMessageEventFieldBuilder().getBuilder();
     }
     /**
@@ -12916,10 +13116,10 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder() {
       if ((eventCase_ == 309) && (omnichannelCustomerTextMessageEventBuilder_ != null)) {
         return omnichannelCustomerTextMessageEventBuilder_.getMessageOrBuilder();
       } else {
@@ -12934,7 +13134,7 @@ private static final long serialVersionUID = 0L;
      * customer sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder> 
@@ -12962,11 +13162,13 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=69
      * @return Whether the omnichannelAgentTextMessageEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelAgentTextMessageEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelAgentTextMessageEvent() {
       return eventCase_ == 310;
     }
     /**
@@ -12974,11 +13176,13 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=69
      * @return The omnichannelAgentTextMessageEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent() {
       if (omnichannelAgentTextMessageEventBuilder_ == null) {
         if (eventCase_ == 310) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent) event_;
@@ -12996,9 +13200,9 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAgentTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelAgentTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent value) {
       if (omnichannelAgentTextMessageEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -13016,9 +13220,9 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAgentTextMessageEvent(
+    @java.lang.Deprecated public Builder setOmnichannelAgentTextMessageEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.Builder builderForValue) {
       if (omnichannelAgentTextMessageEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -13034,9 +13238,9 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelAgentTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelAgentTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent value) {
       if (omnichannelAgentTextMessageEventBuilder_ == null) {
         if (eventCase_ == 310 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.getDefaultInstance()) {
@@ -13061,9 +13265,9 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelAgentTextMessageEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelAgentTextMessageEvent() {
       if (omnichannelAgentTextMessageEventBuilder_ == null) {
         if (eventCase_ == 310) {
           eventCase_ = 0;
@@ -13084,9 +13288,9 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.Builder getOmnichannelAgentTextMessageEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.Builder getOmnichannelAgentTextMessageEventBuilder() {
       return getOmnichannelAgentTextMessageEventFieldBuilder().getBuilder();
     }
     /**
@@ -13094,10 +13298,10 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder() {
       if ((eventCase_ == 310) && (omnichannelAgentTextMessageEventBuilder_ != null)) {
         return omnichannelAgentTextMessageEventBuilder_.getMessageOrBuilder();
       } else {
@@ -13112,7 +13316,7 @@ private static final long serialVersionUID = 0L;
      * agent sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder> 
@@ -14208,11 +14412,13 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=83
      * @return Whether the omnichannelManagerTextMessageEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelManagerTextMessageEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelManagerTextMessageEvent() {
       return eventCase_ == 332;
     }
     /**
@@ -14220,11 +14426,13 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=83
      * @return The omnichannelManagerTextMessageEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent() {
       if (omnichannelManagerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 332) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent) event_;
@@ -14242,9 +14450,9 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelManagerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelManagerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent value) {
       if (omnichannelManagerTextMessageEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -14262,9 +14470,9 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelManagerTextMessageEvent(
+    @java.lang.Deprecated public Builder setOmnichannelManagerTextMessageEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.Builder builderForValue) {
       if (omnichannelManagerTextMessageEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -14280,9 +14488,9 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelManagerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelManagerTextMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent value) {
       if (omnichannelManagerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 332 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.getDefaultInstance()) {
@@ -14307,9 +14515,9 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelManagerTextMessageEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelManagerTextMessageEvent() {
       if (omnichannelManagerTextMessageEventBuilder_ == null) {
         if (eventCase_ == 332) {
           eventCase_ = 0;
@@ -14330,9 +14538,9 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.Builder getOmnichannelManagerTextMessageEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.Builder getOmnichannelManagerTextMessageEventBuilder() {
       return getOmnichannelManagerTextMessageEventFieldBuilder().getBuilder();
     }
     /**
@@ -14340,10 +14548,10 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder() {
       if ((eventCase_ == 332) && (omnichannelManagerTextMessageEventBuilder_ != null)) {
         return omnichannelManagerTextMessageEventBuilder_.getMessageOrBuilder();
       } else {
@@ -14358,7 +14566,7 @@ private static final long serialVersionUID = 0L;
      * manager sent a text message event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder> 
@@ -17412,11 +17620,13 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=120
      * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelAddSmsMessageSentModuleEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelAddSmsMessageSentModuleEvent() {
       return eventCase_ == 347;
     }
     /**
@@ -17424,11 +17634,13 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=120
      * @return The omnichannelAddSmsMessageSentModuleEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent() {
       if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
         if (eventCase_ == 347) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent) event_;
@@ -17446,9 +17658,9 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAddSmsMessageSentModuleEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelAddSmsMessageSentModuleEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent value) {
       if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -17466,9 +17678,9 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAddSmsMessageSentModuleEvent(
+    @java.lang.Deprecated public Builder setOmnichannelAddSmsMessageSentModuleEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.Builder builderForValue) {
       if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -17484,9 +17696,9 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelAddSmsMessageSentModuleEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelAddSmsMessageSentModuleEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent value) {
       if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
         if (eventCase_ == 347 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.getDefaultInstance()) {
@@ -17511,9 +17723,9 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelAddSmsMessageSentModuleEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelAddSmsMessageSentModuleEvent() {
       if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
         if (eventCase_ == 347) {
           eventCase_ = 0;
@@ -17534,9 +17746,9 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.Builder getOmnichannelAddSmsMessageSentModuleEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.Builder getOmnichannelAddSmsMessageSentModuleEventBuilder() {
       return getOmnichannelAddSmsMessageSentModuleEventFieldBuilder().getBuilder();
     }
     /**
@@ -17544,10 +17756,10 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder() {
       if ((eventCase_ == 347) && (omnichannelAddSmsMessageSentModuleEventBuilder_ != null)) {
         return omnichannelAddSmsMessageSentModuleEventBuilder_.getMessageOrBuilder();
       } else {
@@ -17562,7 +17774,7 @@ private static final long serialVersionUID = 0L;
      *  SmsMessageSent module event
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder> 
@@ -17590,11 +17802,13 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=122
      * @return Whether the omnichannelModuleInitialReplyEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelModuleInitialReplyEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelModuleInitialReplyEvent() {
       return eventCase_ == 349;
     }
     /**
@@ -17602,11 +17816,13 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=122
      * @return The omnichannelModuleInitialReplyEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent() {
       if (omnichannelModuleInitialReplyEventBuilder_ == null) {
         if (eventCase_ == 349) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent) event_;
@@ -17624,9 +17840,9 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelModuleInitialReplyEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelModuleInitialReplyEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent value) {
       if (omnichannelModuleInitialReplyEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -17644,9 +17860,9 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelModuleInitialReplyEvent(
+    @java.lang.Deprecated public Builder setOmnichannelModuleInitialReplyEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.Builder builderForValue) {
       if (omnichannelModuleInitialReplyEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -17662,9 +17878,9 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelModuleInitialReplyEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelModuleInitialReplyEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent value) {
       if (omnichannelModuleInitialReplyEventBuilder_ == null) {
         if (eventCase_ == 349 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.getDefaultInstance()) {
@@ -17689,9 +17905,9 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelModuleInitialReplyEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelModuleInitialReplyEvent() {
       if (omnichannelModuleInitialReplyEventBuilder_ == null) {
         if (eventCase_ == 349) {
           eventCase_ = 0;
@@ -17712,9 +17928,9 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.Builder getOmnichannelModuleInitialReplyEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.Builder getOmnichannelModuleInitialReplyEventBuilder() {
       return getOmnichannelModuleInitialReplyEventFieldBuilder().getBuilder();
     }
     /**
@@ -17722,10 +17938,10 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder() {
       if ((eventCase_ == 349) && (omnichannelModuleInitialReplyEventBuilder_ != null)) {
         return omnichannelModuleInitialReplyEventBuilder_.getMessageOrBuilder();
       } else {
@@ -17740,7 +17956,7 @@ private static final long serialVersionUID = 0L;
      * ModuleInitialReply
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder> 
@@ -17768,11 +17984,13 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=124
      * @return Whether the omnichannelTaskMessageSentEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelTaskMessageSentEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelTaskMessageSentEvent() {
       return eventCase_ == 350;
     }
     /**
@@ -17780,11 +17998,13 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=124
      * @return The omnichannelTaskMessageSentEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent() {
       if (omnichannelTaskMessageSentEventBuilder_ == null) {
         if (eventCase_ == 350) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent) event_;
@@ -17802,9 +18022,9 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelTaskMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelTaskMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent value) {
       if (omnichannelTaskMessageSentEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -17822,9 +18042,9 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelTaskMessageSentEvent(
+    @java.lang.Deprecated public Builder setOmnichannelTaskMessageSentEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder builderForValue) {
       if (omnichannelTaskMessageSentEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -17840,9 +18060,9 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelTaskMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelTaskMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent value) {
       if (omnichannelTaskMessageSentEventBuilder_ == null) {
         if (eventCase_ == 350 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.getDefaultInstance()) {
@@ -17867,9 +18087,9 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelTaskMessageSentEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelTaskMessageSentEvent() {
       if (omnichannelTaskMessageSentEventBuilder_ == null) {
         if (eventCase_ == 350) {
           eventCase_ = 0;
@@ -17890,9 +18110,9 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder getOmnichannelTaskMessageSentEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder getOmnichannelTaskMessageSentEventBuilder() {
       return getOmnichannelTaskMessageSentEventFieldBuilder().getBuilder();
     }
     /**
@@ -17900,10 +18120,10 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder() {
       if ((eventCase_ == 350) && (omnichannelTaskMessageSentEventBuilder_ != null)) {
         return omnichannelTaskMessageSentEventBuilder_.getMessageOrBuilder();
       } else {
@@ -17918,7 +18138,7 @@ private static final long serialVersionUID = 0L;
      * a task message was sent for a campaign
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder> 
@@ -18302,11 +18522,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=130
      * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelAgentMessageUnitsEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelAgentMessageUnitsEvent() {
       return eventCase_ == 353;
     }
     /**
@@ -18314,11 +18536,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=130
      * @return The omnichannelAgentMessageUnitsEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent() {
       if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 353) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent) event_;
@@ -18336,9 +18560,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAgentMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelAgentMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent value) {
       if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -18356,9 +18580,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelAgentMessageUnitsEvent(
+    @java.lang.Deprecated public Builder setOmnichannelAgentMessageUnitsEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.Builder builderForValue) {
       if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -18374,9 +18598,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelAgentMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelAgentMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent value) {
       if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 353 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.getDefaultInstance()) {
@@ -18401,9 +18625,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelAgentMessageUnitsEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelAgentMessageUnitsEvent() {
       if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 353) {
           eventCase_ = 0;
@@ -18424,9 +18648,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.Builder getOmnichannelAgentMessageUnitsEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.Builder getOmnichannelAgentMessageUnitsEventBuilder() {
       return getOmnichannelAgentMessageUnitsEventFieldBuilder().getBuilder();
     }
     /**
@@ -18434,10 +18658,10 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder() {
       if ((eventCase_ == 353) && (omnichannelAgentMessageUnitsEventBuilder_ != null)) {
         return omnichannelAgentMessageUnitsEventBuilder_.getMessageOrBuilder();
       } else {
@@ -18452,7 +18676,7 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for an agent omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder> 
@@ -18480,11 +18704,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=132
      * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelManagerMessageUnitsEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelManagerMessageUnitsEvent() {
       return eventCase_ == 354;
     }
     /**
@@ -18492,11 +18718,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=132
      * @return The omnichannelManagerMessageUnitsEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent() {
       if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 354) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent) event_;
@@ -18514,9 +18742,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelManagerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelManagerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent value) {
       if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -18534,9 +18762,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelManagerMessageUnitsEvent(
+    @java.lang.Deprecated public Builder setOmnichannelManagerMessageUnitsEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.Builder builderForValue) {
       if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -18552,9 +18780,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelManagerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelManagerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent value) {
       if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 354 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.getDefaultInstance()) {
@@ -18579,9 +18807,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelManagerMessageUnitsEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelManagerMessageUnitsEvent() {
       if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 354) {
           eventCase_ = 0;
@@ -18602,9 +18830,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.Builder getOmnichannelManagerMessageUnitsEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.Builder getOmnichannelManagerMessageUnitsEventBuilder() {
       return getOmnichannelManagerMessageUnitsEventFieldBuilder().getBuilder();
     }
     /**
@@ -18612,10 +18840,10 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder() {
       if ((eventCase_ == 354) && (omnichannelManagerMessageUnitsEventBuilder_ != null)) {
         return omnichannelManagerMessageUnitsEventBuilder_.getMessageOrBuilder();
       } else {
@@ -18630,7 +18858,7 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a manager omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder> 
@@ -18658,11 +18886,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=134
      * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelCustomerMessageUnitsEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelCustomerMessageUnitsEvent() {
       return eventCase_ == 355;
     }
     /**
@@ -18670,11 +18900,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=134
      * @return The omnichannelCustomerMessageUnitsEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent() {
       if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 355) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent) event_;
@@ -18692,9 +18924,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelCustomerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelCustomerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent value) {
       if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -18712,9 +18944,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelCustomerMessageUnitsEvent(
+    @java.lang.Deprecated public Builder setOmnichannelCustomerMessageUnitsEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.Builder builderForValue) {
       if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -18730,9 +18962,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelCustomerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelCustomerMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent value) {
       if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 355 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.getDefaultInstance()) {
@@ -18757,9 +18989,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelCustomerMessageUnitsEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelCustomerMessageUnitsEvent() {
       if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 355) {
           eventCase_ = 0;
@@ -18780,9 +19012,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.Builder getOmnichannelCustomerMessageUnitsEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.Builder getOmnichannelCustomerMessageUnitsEventBuilder() {
       return getOmnichannelCustomerMessageUnitsEventFieldBuilder().getBuilder();
     }
     /**
@@ -18790,10 +19022,10 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder() {
       if ((eventCase_ == 355) && (omnichannelCustomerMessageUnitsEventBuilder_ != null)) {
         return omnichannelCustomerMessageUnitsEventBuilder_.getMessageOrBuilder();
       } else {
@@ -18808,7 +19040,7 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a customer omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder> 
@@ -18836,11 +19068,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=136
      * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
      */
     @java.lang.Override
-    public boolean hasOmnichannelSystemMessageUnitsEvent() {
+    @java.lang.Deprecated public boolean hasOmnichannelSystemMessageUnitsEvent() {
       return eventCase_ == 356;
     }
     /**
@@ -18848,11 +19082,13 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=136
      * @return The omnichannelSystemMessageUnitsEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent() {
       if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 356) {
           return (com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_;
@@ -18870,9 +19106,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelSystemMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder setOmnichannelSystemMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent value) {
       if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -18890,9 +19126,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder setOmnichannelSystemMessageUnitsEvent(
+    @java.lang.Deprecated public Builder setOmnichannelSystemMessageUnitsEvent(
         com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.Builder builderForValue) {
       if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -18908,9 +19144,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder mergeOmnichannelSystemMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent value) {
+    @java.lang.Deprecated public Builder mergeOmnichannelSystemMessageUnitsEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent value) {
       if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 356 &&
             event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.getDefaultInstance()) {
@@ -18935,9 +19171,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
-    public Builder clearOmnichannelSystemMessageUnitsEvent() {
+    @java.lang.Deprecated public Builder clearOmnichannelSystemMessageUnitsEvent() {
       if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
         if (eventCase_ == 356) {
           eventCase_ = 0;
@@ -18958,9 +19194,9 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.Builder getOmnichannelSystemMessageUnitsEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.Builder getOmnichannelSystemMessageUnitsEventBuilder() {
       return getOmnichannelSystemMessageUnitsEventFieldBuilder().getBuilder();
     }
     /**
@@ -18968,10 +19204,10 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder() {
       if ((eventCase_ == 356) && (omnichannelSystemMessageUnitsEventBuilder_ != null)) {
         return omnichannelSystemMessageUnitsEventBuilder_.getMessageOrBuilder();
       } else {
@@ -18986,7 +19222,7 @@ private static final long serialVersionUID = 0L;
      * an event for when the message units for a system omni message were calculated
      * </pre>
      *
-     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+     * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder> 
@@ -20073,6 +20309,362 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 362;
       onChanged();
       return omnichannelTranscriptSavedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder> omnichannelMessageSentEventBuilder_;
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     * @return Whether the omnichannelMessageSentEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelMessageSentEvent() {
+      return eventCase_ == 363;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     * @return The omnichannelMessageSentEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getOmnichannelMessageSentEvent() {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        if (eventCase_ == 363) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 363) {
+          return omnichannelMessageSentEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    public Builder setOmnichannelMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent value) {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelMessageSentEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    public Builder setOmnichannelMessageSentEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder builderForValue) {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelMessageSentEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    public Builder mergeOmnichannelMessageSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent value) {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        if (eventCase_ == 363 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 363) {
+          omnichannelMessageSentEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelMessageSentEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    public Builder clearOmnichannelMessageSentEvent() {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        if (eventCase_ == 363) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 363) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelMessageSentEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder getOmnichannelMessageSentEventBuilder() {
+      return getOmnichannelMessageSentEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder getOmnichannelMessageSentEventOrBuilder() {
+      if ((eventCase_ == 363) && (omnichannelMessageSentEventBuilder_ != null)) {
+        return omnichannelMessageSentEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 363) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all omni messages sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder> 
+        getOmnichannelMessageSentEventFieldBuilder() {
+      if (omnichannelMessageSentEventBuilder_ == null) {
+        if (!(eventCase_ == 363)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+        }
+        omnichannelMessageSentEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 363;
+      onChanged();
+      return omnichannelMessageSentEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder> omnichannelProviderResponseEventBuilder_;
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     * @return Whether the omnichannelProviderResponseEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelProviderResponseEvent() {
+      return eventCase_ == 364;
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     * @return The omnichannelProviderResponseEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent getOmnichannelProviderResponseEvent() {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        if (eventCase_ == 364) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 364) {
+          return omnichannelProviderResponseEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    public Builder setOmnichannelProviderResponseEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent value) {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelProviderResponseEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 364;
+      return this;
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    public Builder setOmnichannelProviderResponseEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder builderForValue) {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelProviderResponseEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 364;
+      return this;
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    public Builder mergeOmnichannelProviderResponseEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent value) {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        if (eventCase_ == 364 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 364) {
+          omnichannelProviderResponseEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelProviderResponseEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 364;
+      return this;
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    public Builder clearOmnichannelProviderResponseEvent() {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        if (eventCase_ == 364) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 364) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelProviderResponseEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder getOmnichannelProviderResponseEventBuilder() {
+      return getOmnichannelProviderResponseEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder getOmnichannelProviderResponseEventOrBuilder() {
+      if ((eventCase_ == 364) && (omnichannelProviderResponseEventBuilder_ != null)) {
+        return omnichannelProviderResponseEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 364) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * provider response for omni message sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelProviderResponseEvent omnichannel_provider_response_event = 364 [json_name = "omnichannelProviderResponseEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder> 
+        getOmnichannelProviderResponseEventFieldBuilder() {
+      if (omnichannelProviderResponseEventBuilder_ == null) {
+        if (!(eventCase_ == 364)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
+        }
+        omnichannelProviderResponseEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 364;
+      onChanged();
+      return omnichannelProviderResponseEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -27177,7 +27769,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=240
+     *     See api/commons/audit/audit.proto;l=245
      * @return Whether the billingCommitBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27191,7 +27783,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=240
+     *     See api/commons/audit/audit.proto;l=245
      * @return The billingCommitBillingPlanEvent.
      */
     @java.lang.Override
@@ -27355,7 +27947,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=246
      * @return Whether the billingCreateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27365,7 +27957,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=246
      * @return The billingCreateBillingPlanEvent.
      */
     @java.lang.Override
@@ -27501,7 +28093,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=242
+     *     See api/commons/audit/audit.proto;l=247
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27511,7 +28103,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=242
+     *     See api/commons/audit/audit.proto;l=247
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
@@ -27647,7 +28239,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=243
+     *     See api/commons/audit/audit.proto;l=248
      * @return Whether the billingCreateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -27657,7 +28249,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=243
+     *     See api/commons/audit/audit.proto;l=248
      * @return The billingCreateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -27793,7 +28385,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=249
      * @return Whether the billingDeleteBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27803,7 +28395,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=249
      * @return The billingDeleteBillingPlanEvent.
      */
     @java.lang.Override
@@ -27939,7 +28531,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=245
+     *     See api/commons/audit/audit.proto;l=250
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27949,7 +28541,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=245
+     *     See api/commons/audit/audit.proto;l=250
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
@@ -28085,7 +28677,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=251
      * @return Whether the billingDeleteRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28095,7 +28687,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=251
      * @return The billingDeleteRateDefinitionEvent.
      */
     @java.lang.Override
@@ -28231,7 +28823,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=252
      * @return Whether the billingExportInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28241,7 +28833,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=252
      * @return The billingExportInvoiceEvent.
      */
     @java.lang.Override
@@ -28377,7 +28969,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=253
      * @return Whether the billingUpdateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -28387,7 +28979,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=253
      * @return The billingUpdateBillingPlanEvent.
      */
     @java.lang.Override
@@ -28523,7 +29115,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=254
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28533,7 +29125,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=254
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override
@@ -28669,7 +29261,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=255
      * @return Whether the billingUpdateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28679,7 +29271,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=255
      * @return The billingUpdateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -29597,7 +30189,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=260
+     *     See api/commons/audit/audit.proto;l=265
      * @return Whether the contactManagerDeleteEvent field is set.
      */
     @java.lang.Override
@@ -29607,7 +30199,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=260
+     *     See api/commons/audit/audit.proto;l=265
      * @return The contactManagerDeleteEvent.
      */
     @java.lang.Override
@@ -29743,7 +30335,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=261
+     *     See api/commons/audit/audit.proto;l=266
      * @return Whether the contactManagerKycEvent field is set.
      */
     @java.lang.Override
@@ -29753,7 +30345,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=261
+     *     See api/commons/audit/audit.proto;l=266
      * @return The contactManagerKycEvent.
      */
     @java.lang.Override

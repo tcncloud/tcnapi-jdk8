@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelManagerTextMessageEventOrBuilder extends
+@java.lang.Deprecated public interface OmnichannelManagerTextMessageEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelManagerTextMessageEvent)
     com.google.protobuf.MessageOrBuilder {
 

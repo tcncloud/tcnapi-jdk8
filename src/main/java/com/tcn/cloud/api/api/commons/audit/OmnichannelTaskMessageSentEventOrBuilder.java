@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelTaskMessageSentEventOrBuilder extends
+@java.lang.Deprecated public interface OmnichannelTaskMessageSentEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelTaskMessageSentEvent)
     com.google.protobuf.MessageOrBuilder {
 
