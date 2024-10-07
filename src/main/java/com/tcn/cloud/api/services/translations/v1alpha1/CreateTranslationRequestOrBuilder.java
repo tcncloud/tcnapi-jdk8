@@ -9,10 +9,30 @@ public interface CreateTranslationRequestOrBuilder extends
 
   /**
    * <pre>
+   * The context of the translation.
+   * </pre>
+   *
+   * <code>string context = 1 [json_name = "context"];</code>
+   * @return The context.
+   */
+  java.lang.String getContext();
+  /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
+   * <code>string context = 1 [json_name = "context"];</code>
+   * @return The bytes for context.
+   */
+  com.google.protobuf.ByteString
+      getContextBytes();
+
+  /**
+   * <pre>
    * The original template.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
+   * <code>string template = 2 [json_name = "template"];</code>
    * @return The template.
    */
   java.lang.String getTemplate();
@@ -21,7 +41,7 @@ public interface CreateTranslationRequestOrBuilder extends
    * The original template.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
+   * <code>string template = 2 [json_name = "template"];</code>
    * @return The bytes for template.
    */
   com.google.protobuf.ByteString
@@ -32,7 +52,7 @@ public interface CreateTranslationRequestOrBuilder extends
    * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+   * <code>string language_tag = 3 [json_name = "languageTag"];</code>
    * @return The languageTag.
    */
   java.lang.String getLanguageTag();
@@ -41,7 +61,7 @@ public interface CreateTranslationRequestOrBuilder extends
    * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+   * <code>string language_tag = 3 [json_name = "languageTag"];</code>
    * @return The bytes for languageTag.
    */
   com.google.protobuf.ByteString
@@ -52,7 +72,7 @@ public interface CreateTranslationRequestOrBuilder extends
    * The new translation.
    * </pre>
    *
-   * <code>string translation = 3 [json_name = "translation"];</code>
+   * <code>string translation = 4 [json_name = "translation"];</code>
    * @return The translation.
    */
   java.lang.String getTranslation();
@@ -61,7 +81,7 @@ public interface CreateTranslationRequestOrBuilder extends
    * The new translation.
    * </pre>
    *
-   * <code>string translation = 3 [json_name = "translation"];</code>
+   * <code>string translation = 4 [json_name = "translation"];</code>
    * @return The bytes for translation.
    */
   com.google.protobuf.ByteString

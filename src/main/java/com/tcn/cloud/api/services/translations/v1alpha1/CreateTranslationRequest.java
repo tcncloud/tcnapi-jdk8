@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateTranslationRequest() {
+    context_ = "";
     template_ = "";
     languageTag_ = "";
     translation_ = "";
@@ -46,7 +47,54 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest.class, com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest.Builder.class);
   }
 
-  public static final int TEMPLATE_FIELD_NUMBER = 1;
+  public static final int CONTEXT_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object context_ = "";
+  /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
+   * <code>string context = 1 [json_name = "context"];</code>
+   * @return The context.
+   */
+  @java.lang.Override
+  public java.lang.String getContext() {
+    java.lang.Object ref = context_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      context_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
+   * <code>string context = 1 [json_name = "context"];</code>
+   * @return The bytes for context.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getContextBytes() {
+    java.lang.Object ref = context_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      context_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPLATE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object template_ = "";
   /**
@@ -54,7 +102,7 @@ private static final long serialVersionUID = 0L;
    * The original template.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
+   * <code>string template = 2 [json_name = "template"];</code>
    * @return The template.
    */
   @java.lang.Override
@@ -75,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * The original template.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
+   * <code>string template = 2 [json_name = "template"];</code>
    * @return The bytes for template.
    */
   @java.lang.Override
@@ -93,7 +141,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LANGUAGE_TAG_FIELD_NUMBER = 2;
+  public static final int LANGUAGE_TAG_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object languageTag_ = "";
   /**
@@ -101,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+   * <code>string language_tag = 3 [json_name = "languageTag"];</code>
    * @return The languageTag.
    */
   @java.lang.Override
@@ -122,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+   * <code>string language_tag = 3 [json_name = "languageTag"];</code>
    * @return The bytes for languageTag.
    */
   @java.lang.Override
@@ -140,7 +188,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TRANSLATION_FIELD_NUMBER = 3;
+  public static final int TRANSLATION_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object translation_ = "";
   /**
@@ -148,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * The new translation.
    * </pre>
    *
-   * <code>string translation = 3 [json_name = "translation"];</code>
+   * <code>string translation = 4 [json_name = "translation"];</code>
    * @return The translation.
    */
   @java.lang.Override
@@ -169,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * The new translation.
    * </pre>
    *
-   * <code>string translation = 3 [json_name = "translation"];</code>
+   * <code>string translation = 4 [json_name = "translation"];</code>
    * @return The bytes for translation.
    */
   @java.lang.Override
@@ -201,14 +249,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, context_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, template_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, template_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageTag_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, languageTag_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, languageTag_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translation_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, translation_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, translation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -219,14 +270,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, context_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, template_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, template_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageTag_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, languageTag_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, languageTag_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translation_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, translation_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, translation_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -243,6 +297,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest other = (com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest) obj;
 
+    if (!getContext()
+        .equals(other.getContext())) return false;
     if (!getTemplate()
         .equals(other.getTemplate())) return false;
     if (!getLanguageTag()
@@ -260,6 +316,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getContext().hashCode();
     hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
     hash = (53 * hash) + getTemplate().hashCode();
     hash = (37 * hash) + LANGUAGE_TAG_FIELD_NUMBER;
@@ -402,6 +460,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      context_ = "";
       template_ = "";
       languageTag_ = "";
       translation_ = "";
@@ -439,12 +498,15 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.template_ = template_;
+        result.context_ = context_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.languageTag_ = languageTag_;
+        result.template_ = template_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.languageTag_ = languageTag_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.translation_ = translation_;
       }
     }
@@ -493,19 +555,24 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest other) {
       if (other == com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest.getDefaultInstance()) return this;
+      if (!other.getContext().isEmpty()) {
+        context_ = other.context_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getTemplate().isEmpty()) {
         template_ = other.template_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getLanguageTag().isEmpty()) {
         languageTag_ = other.languageTag_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getTranslation().isEmpty()) {
         translation_ = other.translation_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -535,20 +602,25 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              template_ = input.readStringRequireUtf8();
+              context_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              languageTag_ = input.readStringRequireUtf8();
+              template_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              translation_ = input.readStringRequireUtf8();
+              languageTag_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              translation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -566,13 +638,105 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object context_ = "";
+    /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
+     * <code>string context = 1 [json_name = "context"];</code>
+     * @return The context.
+     */
+    public java.lang.String getContext() {
+      java.lang.Object ref = context_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        context_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
+     * <code>string context = 1 [json_name = "context"];</code>
+     * @return The bytes for context.
+     */
+    public com.google.protobuf.ByteString
+        getContextBytes() {
+      java.lang.Object ref = context_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        context_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
+     * <code>string context = 1 [json_name = "context"];</code>
+     * @param value The context to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContext(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      context_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
+     * <code>string context = 1 [json_name = "context"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContext() {
+      context_ = getDefaultInstance().getContext();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
+     * <code>string context = 1 [json_name = "context"];</code>
+     * @param value The bytes for context to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      context_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object template_ = "";
     /**
      * <pre>
      * The original template.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @return The template.
      */
     public java.lang.String getTemplate() {
@@ -592,7 +756,7 @@ private static final long serialVersionUID = 0L;
      * The original template.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @return The bytes for template.
      */
     public com.google.protobuf.ByteString
@@ -613,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * The original template.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @param value The template to set.
      * @return This builder for chaining.
      */
@@ -621,7 +785,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       template_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -630,12 +794,12 @@ private static final long serialVersionUID = 0L;
      * The original template.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTemplate() {
       template_ = getDefaultInstance().getTemplate();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -644,7 +808,7 @@ private static final long serialVersionUID = 0L;
      * The original template.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @param value The bytes for template to set.
      * @return This builder for chaining.
      */
@@ -653,7 +817,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       template_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -664,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+     * <code>string language_tag = 3 [json_name = "languageTag"];</code>
      * @return The languageTag.
      */
     public java.lang.String getLanguageTag() {
@@ -684,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+     * <code>string language_tag = 3 [json_name = "languageTag"];</code>
      * @return The bytes for languageTag.
      */
     public com.google.protobuf.ByteString
@@ -705,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+     * <code>string language_tag = 3 [json_name = "languageTag"];</code>
      * @param value The languageTag to set.
      * @return This builder for chaining.
      */
@@ -713,7 +877,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       languageTag_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -722,12 +886,12 @@ private static final long serialVersionUID = 0L;
      * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+     * <code>string language_tag = 3 [json_name = "languageTag"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageTag() {
       languageTag_ = getDefaultInstance().getLanguageTag();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -736,7 +900,7 @@ private static final long serialVersionUID = 0L;
      * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>string language_tag = 2 [json_name = "languageTag"];</code>
+     * <code>string language_tag = 3 [json_name = "languageTag"];</code>
      * @param value The bytes for languageTag to set.
      * @return This builder for chaining.
      */
@@ -745,7 +909,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       languageTag_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -756,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * The new translation.
      * </pre>
      *
-     * <code>string translation = 3 [json_name = "translation"];</code>
+     * <code>string translation = 4 [json_name = "translation"];</code>
      * @return The translation.
      */
     public java.lang.String getTranslation() {
@@ -776,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * The new translation.
      * </pre>
      *
-     * <code>string translation = 3 [json_name = "translation"];</code>
+     * <code>string translation = 4 [json_name = "translation"];</code>
      * @return The bytes for translation.
      */
     public com.google.protobuf.ByteString
@@ -797,7 +961,7 @@ private static final long serialVersionUID = 0L;
      * The new translation.
      * </pre>
      *
-     * <code>string translation = 3 [json_name = "translation"];</code>
+     * <code>string translation = 4 [json_name = "translation"];</code>
      * @param value The translation to set.
      * @return This builder for chaining.
      */
@@ -805,7 +969,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       translation_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -814,12 +978,12 @@ private static final long serialVersionUID = 0L;
      * The new translation.
      * </pre>
      *
-     * <code>string translation = 3 [json_name = "translation"];</code>
+     * <code>string translation = 4 [json_name = "translation"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTranslation() {
       translation_ = getDefaultInstance().getTranslation();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -828,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * The new translation.
      * </pre>
      *
-     * <code>string translation = 3 [json_name = "translation"];</code>
+     * <code>string translation = 4 [json_name = "translation"];</code>
      * @param value The bytes for translation to set.
      * @return This builder for chaining.
      */
@@ -837,7 +1001,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       translation_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

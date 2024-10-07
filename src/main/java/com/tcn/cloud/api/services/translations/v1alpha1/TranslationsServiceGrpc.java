@@ -558,6 +558,7 @@ public final class TranslationsServiceGrpc {
      *   - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.AlreadyExists: The template already exists for the given context and language (use override method).
      * </pre>
      */
     default void createTranslation(com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest request,
@@ -778,6 +779,7 @@ public final class TranslationsServiceGrpc {
      *   - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.AlreadyExists: The template already exists for the given context and language (use override method).
      * </pre>
      */
     public void createTranslation(com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest request,
@@ -993,6 +995,7 @@ public final class TranslationsServiceGrpc {
      *   - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.AlreadyExists: The template already exists for the given context and language (use override method).
      * </pre>
      */
     public com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationResponse createTranslation(com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationRequest request) {
@@ -1202,6 +1205,7 @@ public final class TranslationsServiceGrpc {
      *   - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.AlreadyExists: The template already exists for the given context and language (use override method).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.CreateTranslationResponse> createTranslation(

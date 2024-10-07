@@ -203,55 +203,56 @@ public final class EntitiesProto {
       "R\013languageTag\"k\n\030ListTranslationsRespons" +
       "e\022O\n\014translations\030\001 \003(\0132+.services.trans" +
       "lations.v1alpha1.TranslationR\014translatio" +
-      "ns\"{\n\030CreateTranslationRequest\022\032\n\010templa" +
-      "te\030\001 \001(\tR\010template\022!\n\014language_tag\030\002 \001(\t" +
-      "R\013languageTag\022 \n\013translation\030\003 \001(\tR\013tran" +
-      "slation\"j\n\031CreateTranslationResponse\022M\n\013" +
-      "translation\030\001 \001(\0132+.services.translation" +
-      "s.v1alpha1.TranslationR\013translation\"c\n\030U" +
-      "pdateTranslationRequest\022%\n\016translation_i" +
-      "d\030\001 \001(\tR\rtranslationId\022 \n\013translation\030\002 " +
-      "\001(\tR\013translation\"j\n\031UpdateTranslationRes" +
-      "ponse\022M\n\013translation\030\001 \001(\0132+.services.tr" +
-      "anslations.v1alpha1.TranslationR\013transla" +
-      "tion\"E\n\034TriggerLLMTranslationRequest\022%\n\016" +
-      "translation_id\030\001 \001(\tR\rtranslationId\"n\n\035T" +
-      "riggerLLMTranslationResponse\022M\n\013translat" +
-      "ion\030\001 \001(\0132+.services.translations.v1alph" +
-      "a1.TranslationR\013translation\"Z\n\027SetSystem" +
-      "MessageRequest\022\030\n\007context\030\001 \001(\tR\007context" +
-      "\022%\n\016system_message\030\002 \001(\tR\rsystemMessage\"" +
-      "\032\n\030SetSystemMessageResponse\"3\n\027GetSystem" +
-      "MessageRequest\022\030\n\007context\030\001 \001(\tR\007context" +
-      "\"A\n\030GetSystemMessageResponse\022%\n\016system_m" +
-      "essage\030\001 \001(\tR\rsystemMessage\"\200\001\n\030TestSyst" +
-      "emMessageRequest\022%\n\016system_message\030\001 \001(\t" +
-      "R\rsystemMessage\022\032\n\010template\030\002 \001(\tR\010templ" +
-      "ate\022!\n\014language_tag\030\003 \001(\tR\013languageTag\"=" +
-      "\n\031TestSystemMessageResponse\022 \n\013translati" +
-      "on\030\001 \001(\tR\013translation\"9\n\035TriggerLLMTrans" +
-      "lationsRequest\022\030\n\007context\030\001 \001(\tR\007context" +
-      "\" \n\036TriggerLLMTranslationsResponse\"\026\n\024Li" +
-      "stLanguagesRequest\"k\n\025ListLanguagesRespo" +
-      "nse\022R\n\tlanguages\030\001 \003(\01324.services.transl" +
-      "ations.v1alpha1.LocalizationLanguageR\tla" +
-      "nguages\"\025\n\023ListContextsRequest\"\234\001\n\024ListC" +
-      "ontextsResponse\022\032\n\010contexts\030\001 \003(\tR\010conte" +
-      "xts\022h\n\025localization_contexts\030\002 \003(\01323.ser" +
-      "vices.translations.v1alpha1.Localization" +
-      "ContextR\024localizationContexts\"0\n\024EnableC" +
-      "ontextRequest\022\030\n\007context\030\001 \001(\tR\007context\"" +
-      "\027\n\025EnableContextResponse\"1\n\025DisableConte" +
-      "xtRequest\022\030\n\007context\030\001 \001(\tR\007context\"\030\n\026D" +
-      "isableContextResponse\"H\n\035BulkDeleteTrans" +
-      "lationsRequest\022\'\n\017translation_ids\030\001 \003(\tR" +
-      "\016translationIds\" \n\036BulkDeleteTranslation" +
-      "sResponseB\333\001\n0com.tcn.cloud.api.services" +
-      ".translations.v1alpha1B\rEntitiesProtoP\001\242" +
-      "\002\003STX\252\002\036Services.Translations.V1alpha1\312\002" +
-      "\036Services\\Translations\\V1alpha1\342\002*Servic" +
-      "es\\Translations\\V1alpha1\\GPBMetadata\352\002 S" +
-      "ervices::Translations::V1alpha1b\006proto3"
+      "ns\"\225\001\n\030CreateTranslationRequest\022\030\n\007conte" +
+      "xt\030\001 \001(\tR\007context\022\032\n\010template\030\002 \001(\tR\010tem" +
+      "plate\022!\n\014language_tag\030\003 \001(\tR\013languageTag" +
+      "\022 \n\013translation\030\004 \001(\tR\013translation\"j\n\031Cr" +
+      "eateTranslationResponse\022M\n\013translation\030\001" +
+      " \001(\0132+.services.translations.v1alpha1.Tr" +
+      "anslationR\013translation\"c\n\030UpdateTranslat" +
+      "ionRequest\022%\n\016translation_id\030\001 \001(\tR\rtran" +
+      "slationId\022 \n\013translation\030\002 \001(\tR\013translat" +
+      "ion\"j\n\031UpdateTranslationResponse\022M\n\013tran" +
+      "slation\030\001 \001(\0132+.services.translations.v1" +
+      "alpha1.TranslationR\013translation\"E\n\034Trigg" +
+      "erLLMTranslationRequest\022%\n\016translation_i" +
+      "d\030\001 \001(\tR\rtranslationId\"n\n\035TriggerLLMTran" +
+      "slationResponse\022M\n\013translation\030\001 \001(\0132+.s" +
+      "ervices.translations.v1alpha1.Translatio" +
+      "nR\013translation\"Z\n\027SetSystemMessageReques" +
+      "t\022\030\n\007context\030\001 \001(\tR\007context\022%\n\016system_me" +
+      "ssage\030\002 \001(\tR\rsystemMessage\"\032\n\030SetSystemM" +
+      "essageResponse\"3\n\027GetSystemMessageReques" +
+      "t\022\030\n\007context\030\001 \001(\tR\007context\"A\n\030GetSystem" +
+      "MessageResponse\022%\n\016system_message\030\001 \001(\tR" +
+      "\rsystemMessage\"\200\001\n\030TestSystemMessageRequ" +
+      "est\022%\n\016system_message\030\001 \001(\tR\rsystemMessa" +
+      "ge\022\032\n\010template\030\002 \001(\tR\010template\022!\n\014langua" +
+      "ge_tag\030\003 \001(\tR\013languageTag\"=\n\031TestSystemM" +
+      "essageResponse\022 \n\013translation\030\001 \001(\tR\013tra" +
+      "nslation\"9\n\035TriggerLLMTranslationsReques" +
+      "t\022\030\n\007context\030\001 \001(\tR\007context\" \n\036TriggerLL" +
+      "MTranslationsResponse\"\026\n\024ListLanguagesRe" +
+      "quest\"k\n\025ListLanguagesResponse\022R\n\tlangua" +
+      "ges\030\001 \003(\01324.services.translations.v1alph" +
+      "a1.LocalizationLanguageR\tlanguages\"\025\n\023Li" +
+      "stContextsRequest\"\234\001\n\024ListContextsRespon" +
+      "se\022\032\n\010contexts\030\001 \003(\tR\010contexts\022h\n\025locali" +
+      "zation_contexts\030\002 \003(\01323.services.transla" +
+      "tions.v1alpha1.LocalizationContextR\024loca" +
+      "lizationContexts\"0\n\024EnableContextRequest" +
+      "\022\030\n\007context\030\001 \001(\tR\007context\"\027\n\025EnableCont" +
+      "extResponse\"1\n\025DisableContextRequest\022\030\n\007" +
+      "context\030\001 \001(\tR\007context\"\030\n\026DisableContext" +
+      "Response\"H\n\035BulkDeleteTranslationsReques" +
+      "t\022\'\n\017translation_ids\030\001 \003(\tR\016translationI" +
+      "ds\" \n\036BulkDeleteTranslationsResponseB\333\001\n" +
+      "0com.tcn.cloud.api.services.translations" +
+      ".v1alpha1B\rEntitiesProtoP\001\242\002\003STX\252\002\036Servi" +
+      "ces.Translations.V1alpha1\312\002\036Services\\Tra" +
+      "nslations\\V1alpha1\342\002*Services\\Translatio" +
+      "ns\\V1alpha1\\GPBMetadata\352\002 Services::Tran" +
+      "slations::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -305,7 +306,7 @@ public final class EntitiesProto {
     internal_static_services_translations_v1alpha1_CreateTranslationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_CreateTranslationRequest_descriptor,
-        new java.lang.String[] { "Template", "LanguageTag", "Translation", });
+        new java.lang.String[] { "Context", "Template", "LanguageTag", "Translation", });
     internal_static_services_translations_v1alpha1_CreateTranslationResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_services_translations_v1alpha1_CreateTranslationResponse_fieldAccessorTable = new
