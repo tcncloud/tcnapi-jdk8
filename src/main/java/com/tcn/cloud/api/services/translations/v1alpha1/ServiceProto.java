@@ -27,7 +27,7 @@ public final class ServiceProto {
       ".proto\022\036services.translations.v1alpha1\032\027" +
       "annotations/authz.proto\032\034google/api/anno" +
       "tations.proto\032-services/translations/v1a" +
-      "lpha1/entities.proto2\262\025\n\023TranslationsSer" +
+      "lpha1/entities.proto2\205\027\n\023TranslationsSer" +
       "vice\022\315\001\n\021TranslateTemplate\0228.services.tr" +
       "anslations.v1alpha1.TranslateTemplateReq" +
       "uest\0329.services.translations.v1alpha1.Tr" +
@@ -48,60 +48,66 @@ public final class ServiceProto {
       "t\0324.services.translations.v1alpha1.ListC" +
       "ontextsResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/serv" +
       "ices/translations/v1alpha1/listcontexts:" +
-      "\001*\022\320\001\n\021UpdateTranslation\0228.services.tran" +
-      "slations.v1alpha1.UpdateTranslationReque" +
-      "st\0329.services.translations.v1alpha1.Upda" +
+      "\001*\022\320\001\n\021CreateTranslation\0228.services.tran" +
+      "slations.v1alpha1.CreateTranslationReque" +
+      "st\0329.services.translations.v1alpha1.Crea" +
       "teTranslationResponse\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"" +
-      "1/services/translations/v1alpha1/updatet" +
-      "ranslation:\001*\022\340\001\n\025TriggerLLMTranslation\022" +
-      "<.services.translations.v1alpha1.Trigger" +
-      "LLMTranslationRequest\032=.services.transla" +
-      "tions.v1alpha1.TriggerLLMTranslationResp" +
-      "onse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/services/transl" +
-      "ations/v1alpha1/triggerllmtranslation:\001*" +
-      "\022\344\001\n\026TriggerLLMTranslations\022=.services.t" +
-      "ranslations.v1alpha1.TriggerLLMTranslati" +
-      "onsRequest\032>.services.translations.v1alp" +
-      "ha1.TriggerLLMTranslationsResponse\"K\272\270\221\002" +
-      "\005\n\003\010\310\001\202\323\344\223\002;\"6/services/translations/v1a" +
-      "lpha1/triggerllmtranslations:\001*\022\314\001\n\020SetS" +
-      "ystemMessage\0227.services.translations.v1a" +
-      "lpha1.SetSystemMessageRequest\0328.services" +
-      ".translations.v1alpha1.SetSystemMessageR" +
-      "esponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/services/tra" +
-      "nslations/v1alpha1/setsystemmessage:\001*\022\314" +
-      "\001\n\020GetSystemMessage\0227.services.translati" +
-      "ons.v1alpha1.GetSystemMessageRequest\0328.s" +
-      "ervices.translations.v1alpha1.GetSystemM" +
-      "essageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/servi" +
-      "ces/translations/v1alpha1/getsystemmessa" +
-      "ge:\001*\022\320\001\n\021TestSystemMessage\0228.services.t" +
-      "ranslations.v1alpha1.TestSystemMessageRe" +
-      "quest\0329.services.translations.v1alpha1.T" +
-      "estSystemMessageResponse\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
-      "\0026\"1/services/translations/v1alpha1/test" +
-      "systemmessage:\001*\022\300\001\n\rEnableContext\0224.ser" +
-      "vices.translations.v1alpha1.EnableContex" +
-      "tRequest\0325.services.translations.v1alpha" +
-      "1.EnableContextResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
-      "2\"-/services/translations/v1alpha1/enabl" +
-      "econtext:\001*\022\304\001\n\016DisableContext\0225.service" +
-      "s.translations.v1alpha1.DisableContextRe" +
-      "quest\0326.services.translations.v1alpha1.D" +
-      "isableContextResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"" +
-      "./services/translations/v1alpha1/disable" +
-      "context:\001*\022\344\001\n\026BulkDeleteTranslations\022=." +
-      "services.translations.v1alpha1.BulkDelet" +
-      "eTranslationsRequest\032>.services.translat" +
-      "ions.v1alpha1.BulkDeleteTranslationsResp" +
-      "onse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services/transl" +
-      "ations/v1alpha1/bulkdeletetranslations:\001" +
-      "*B\332\001\n0com.tcn.cloud.api.services.transla" +
-      "tions.v1alpha1B\014ServiceProtoP\001\242\002\003STX\252\002\036S" +
-      "ervices.Translations.V1alpha1\312\002\036Services" +
-      "\\Translations\\V1alpha1\342\002*Services\\Transl" +
-      "ations\\V1alpha1\\GPBMetadata\352\002 Services::" +
-      "Translations::V1alpha1b\006proto3"
+      "1/services/translations/v1alpha1/createt" +
+      "ranslation:\001*\022\320\001\n\021UpdateTranslation\0228.se" +
+      "rvices.translations.v1alpha1.UpdateTrans" +
+      "lationRequest\0329.services.translations.v1" +
+      "alpha1.UpdateTranslationResponse\"F\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\0026\"1/services/translations/v1alp" +
+      "ha1/updatetranslation:\001*\022\340\001\n\025TriggerLLMT" +
+      "ranslation\022<.services.translations.v1alp" +
+      "ha1.TriggerLLMTranslationRequest\032=.servi" +
+      "ces.translations.v1alpha1.TriggerLLMTran" +
+      "slationResponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/serv" +
+      "ices/translations/v1alpha1/triggerllmtra" +
+      "nslation:\001*\022\344\001\n\026TriggerLLMTranslations\022=" +
+      ".services.translations.v1alpha1.TriggerL" +
+      "LMTranslationsRequest\032>.services.transla" +
+      "tions.v1alpha1.TriggerLLMTranslationsRes" +
+      "ponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services/trans" +
+      "lations/v1alpha1/triggerllmtranslations:" +
+      "\001*\022\314\001\n\020SetSystemMessage\0227.services.trans" +
+      "lations.v1alpha1.SetSystemMessageRequest" +
+      "\0328.services.translations.v1alpha1.SetSys" +
+      "temMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/s" +
+      "ervices/translations/v1alpha1/setsystemm" +
+      "essage:\001*\022\314\001\n\020GetSystemMessage\0227.service" +
+      "s.translations.v1alpha1.GetSystemMessage" +
+      "Request\0328.services.translations.v1alpha1" +
+      ".GetSystemMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344" +
+      "\223\0025\"0/services/translations/v1alpha1/get" +
+      "systemmessage:\001*\022\320\001\n\021TestSystemMessage\0228" +
+      ".services.translations.v1alpha1.TestSyst" +
+      "emMessageRequest\0329.services.translations" +
+      ".v1alpha1.TestSystemMessageResponse\"F\272\270\221" +
+      "\002\005\n\003\010\310\001\202\323\344\223\0026\"1/services/translations/v1" +
+      "alpha1/testsystemmessage:\001*\022\300\001\n\rEnableCo" +
+      "ntext\0224.services.translations.v1alpha1.E" +
+      "nableContextRequest\0325.services.translati" +
+      "ons.v1alpha1.EnableContextResponse\"B\272\270\221\002" +
+      "\005\n\003\010\310\001\202\323\344\223\0022\"-/services/translations/v1a" +
+      "lpha1/enablecontext:\001*\022\304\001\n\016DisableContex" +
+      "t\0225.services.translations.v1alpha1.Disab" +
+      "leContextRequest\0326.services.translations" +
+      ".v1alpha1.DisableContextResponse\"C\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\0023\"./services/translations/v1alp" +
+      "ha1/disablecontext:\001*\022\344\001\n\026BulkDeleteTran" +
+      "slations\022=.services.translations.v1alpha" +
+      "1.BulkDeleteTranslationsRequest\032>.servic" +
+      "es.translations.v1alpha1.BulkDeleteTrans" +
+      "lationsResponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/serv" +
+      "ices/translations/v1alpha1/bulkdeletetra" +
+      "nslations:\001*B\332\001\n0com.tcn.cloud.api.servi" +
+      "ces.translations.v1alpha1B\014ServiceProtoP" +
+      "\001\242\002\003STX\252\002\036Services.Translations.V1alpha1" +
+      "\312\002\036Services\\Translations\\V1alpha1\342\002*Serv" +
+      "ices\\Translations\\V1alpha1\\GPBMetadata\352\002" +
+      " Services::Translations::V1alpha1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
