@@ -113,7 +113,7 @@ public interface SmsOrBuilder extends
    * The omni campain this sms belongs to.
    * </pre>
    *
-   * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
+   * <code>int64 campaign_sid = 5 [json_name = "campaignSid", jstype = JS_STRING];</code>
    * @return The campaignSid.
    */
   long getCampaignSid();
