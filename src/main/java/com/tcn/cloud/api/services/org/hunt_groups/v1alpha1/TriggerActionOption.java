@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * The status to advance to when the trigger is activated
    * Used for action: Advance Status
    * Following are the valid status transitions:
-   * Waiting -&gt; Paused
+   * Waiting -&gt; Paused, Manual Dial Call
    * Paused -&gt; Waiting
    * On Call -&gt; Wrap Up
    * Preview Call -&gt; On Call, Waiting
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * The status to advance to when the trigger is activated
    * Used for action: Advance Status
    * Following are the valid status transitions:
-   * Waiting -&gt; Paused
+   * Waiting -&gt; Paused, Manual Dial Call
    * Paused -&gt; Waiting
    * On Call -&gt; Wrap Up
    * Preview Call -&gt; On Call, Waiting
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * The status to advance to when the trigger is activated
      * Used for action: Advance Status
      * Following are the valid status transitions:
-     * Waiting -&gt; Paused
+     * Waiting -&gt; Paused, Manual Dial Call
      * Paused -&gt; Waiting
      * On Call -&gt; Wrap Up
      * Preview Call -&gt; On Call, Waiting
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * The status to advance to when the trigger is activated
      * Used for action: Advance Status
      * Following are the valid status transitions:
-     * Waiting -&gt; Paused
+     * Waiting -&gt; Paused, Manual Dial Call
      * Paused -&gt; Waiting
      * On Call -&gt; Wrap Up
      * Preview Call -&gt; On Call, Waiting
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * The status to advance to when the trigger is activated
      * Used for action: Advance Status
      * Following are the valid status transitions:
-     * Waiting -&gt; Paused
+     * Waiting -&gt; Paused, Manual Dial Call
      * Paused -&gt; Waiting
      * On Call -&gt; Wrap Up
      * Preview Call -&gt; On Call, Waiting
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * The status to advance to when the trigger is activated
      * Used for action: Advance Status
      * Following are the valid status transitions:
-     * Waiting -&gt; Paused
+     * Waiting -&gt; Paused, Manual Dial Call
      * Paused -&gt; Waiting
      * On Call -&gt; Wrap Up
      * Preview Call -&gt; On Call, Waiting
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * The status to advance to when the trigger is activated
      * Used for action: Advance Status
      * Following are the valid status transitions:
-     * Waiting -&gt; Paused
+     * Waiting -&gt; Paused, Manual Dial Call
      * Paused -&gt; Waiting
      * On Call -&gt; Wrap Up
      * Preview Call -&gt; On Call, Waiting
