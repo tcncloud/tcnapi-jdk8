@@ -217,6 +217,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   INTEGRATION_TYPE_DEBUG(5000),
+  /**
+   * <code>INTEGRATION_TYPE_ACQUIRED = 5100;</code>
+   */
+  INTEGRATION_TYPE_ACQUIRED(5100),
   UNRECOGNIZED(-1),
   ;
 
@@ -424,6 +428,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
+  /**
+   * <code>INTEGRATION_TYPE_ACQUIRED = 5100;</code>
+   */
+  public static final int INTEGRATION_TYPE_ACQUIRED_VALUE = 5100;
 
 
   public final int getNumber() {
@@ -501,6 +509,7 @@ public enum IntegrationType
       case 4800: return INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT;
       case 4900: return INTEGRATION_TYPE_PDCFLOW;
       case 5000: return INTEGRATION_TYPE_DEBUG;
+      case 5100: return INTEGRATION_TYPE_ACQUIRED;
       default: return null;
     }
   }
