@@ -742,4 +742,31 @@ public interface GetUserResponseOrBuilder extends
    * <code>.api.commons.LocalePreferences locale_preferences_override = 31 [json_name = "localePreferencesOverride"];</code>
    */
   com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
+
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   * @return Whether the passwordResetDate field is set.
+   */
+  boolean hasPasswordResetDate();
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   * @return The passwordResetDate.
+   */
+  com.google.protobuf.Timestamp getPasswordResetDate();
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder();
 }

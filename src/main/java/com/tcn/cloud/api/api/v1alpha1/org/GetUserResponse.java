@@ -2747,6 +2747,44 @@ private static final long serialVersionUID = 0L;
     return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
   }
 
+  public static final int PASSWORD_RESET_DATE_FIELD_NUMBER = 32;
+  private com.google.protobuf.Timestamp passwordResetDate_;
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   * @return Whether the passwordResetDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasPasswordResetDate() {
+    return passwordResetDate_ != null;
+  }
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   * @return The passwordResetDate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getPasswordResetDate() {
+    return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+  }
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+    return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2853,6 +2891,9 @@ private static final long serialVersionUID = 0L;
     }
     if (localePreferencesOverride_ != null) {
       output.writeMessage(31, getLocalePreferencesOverride());
+    }
+    if (passwordResetDate_ != null) {
+      output.writeMessage(32, getPasswordResetDate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2985,6 +3026,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getLocalePreferencesOverride());
     }
+    if (passwordResetDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, getPasswordResetDate());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3081,6 +3126,11 @@ private static final long serialVersionUID = 0L;
     if (hasLocalePreferencesOverride()) {
       if (!getLocalePreferencesOverride()
           .equals(other.getLocalePreferencesOverride())) return false;
+    }
+    if (hasPasswordResetDate() != other.hasPasswordResetDate()) return false;
+    if (hasPasswordResetDate()) {
+      if (!getPasswordResetDate()
+          .equals(other.getPasswordResetDate())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -3187,6 +3237,10 @@ private static final long serialVersionUID = 0L;
     if (hasLocalePreferencesOverride()) {
       hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
+    }
+    if (hasPasswordResetDate()) {
+      hash = (37 * hash) + PASSWORD_RESET_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getPasswordResetDate().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3408,6 +3462,11 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverrideBuilder_.dispose();
         localePreferencesOverrideBuilder_ = null;
       }
+      passwordResetDate_ = null;
+      if (passwordResetDateBuilder_ != null) {
+        passwordResetDateBuilder_.dispose();
+        passwordResetDateBuilder_ = null;
+      }
       return this;
     }
 
@@ -3577,6 +3636,11 @@ private static final long serialVersionUID = 0L;
         result.localePreferencesOverride_ = localePreferencesOverrideBuilder_ == null
             ? localePreferencesOverride_
             : localePreferencesOverrideBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.passwordResetDate_ = passwordResetDateBuilder_ == null
+            ? passwordResetDate_
+            : passwordResetDateBuilder_.build();
       }
     }
 
@@ -3843,6 +3907,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasLocalePreferencesOverride()) {
         mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
       }
+      if (other.hasPasswordResetDate()) {
+        mergePasswordResetDate(other.getPasswordResetDate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4072,6 +4139,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x40000000;
               break;
             } // case 250
+            case 258: {
+              input.readMessage(
+                  getPasswordResetDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 258
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8015,6 +8089,161 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverride_ = null;
       }
       return localePreferencesOverrideBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp passwordResetDate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> passwordResetDateBuilder_;
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     * @return Whether the passwordResetDate field is set.
+     */
+    public boolean hasPasswordResetDate() {
+      return ((bitField0_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     * @return The passwordResetDate.
+     */
+    public com.google.protobuf.Timestamp getPasswordResetDate() {
+      if (passwordResetDateBuilder_ == null) {
+        return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+      } else {
+        return passwordResetDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder setPasswordResetDate(com.google.protobuf.Timestamp value) {
+      if (passwordResetDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        passwordResetDate_ = value;
+      } else {
+        passwordResetDateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder setPasswordResetDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (passwordResetDateBuilder_ == null) {
+        passwordResetDate_ = builderForValue.build();
+      } else {
+        passwordResetDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder mergePasswordResetDate(com.google.protobuf.Timestamp value) {
+      if (passwordResetDateBuilder_ == null) {
+        if (((bitField0_ & 0x80000000) != 0) &&
+          passwordResetDate_ != null &&
+          passwordResetDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getPasswordResetDateBuilder().mergeFrom(value);
+        } else {
+          passwordResetDate_ = value;
+        }
+      } else {
+        passwordResetDateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder clearPasswordResetDate() {
+      bitField0_ = (bitField0_ & ~0x80000000);
+      passwordResetDate_ = null;
+      if (passwordResetDateBuilder_ != null) {
+        passwordResetDateBuilder_.dispose();
+        passwordResetDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getPasswordResetDateBuilder() {
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return getPasswordResetDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+      if (passwordResetDateBuilder_ != null) {
+        return passwordResetDateBuilder_.getMessageOrBuilder();
+      } else {
+        return passwordResetDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+      }
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getPasswordResetDateFieldBuilder() {
+      if (passwordResetDateBuilder_ == null) {
+        passwordResetDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getPasswordResetDate(),
+                getParentForChildren(),
+                isClean());
+        passwordResetDate_ = null;
+      }
+      return passwordResetDateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
