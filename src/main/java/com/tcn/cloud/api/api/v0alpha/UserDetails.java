@@ -1139,6 +1139,44 @@ private static final long serialVersionUID = 0L;
     return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
   }
 
+  public static final int PASSWORD_RESET_DATE_FIELD_NUMBER = 38;
+  private com.google.protobuf.Timestamp passwordResetDate_;
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+   * @return Whether the passwordResetDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasPasswordResetDate() {
+    return passwordResetDate_ != null;
+  }
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+   * @return The passwordResetDate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getPasswordResetDate() {
+    return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+  }
+  /**
+   * <pre>
+   * Password reset date is the timestamp of when a user must reset their password by.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+    return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+  }
+
   public static final int TRUSTS_FIELD_NUMBER = 200;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_;
@@ -1310,6 +1348,9 @@ private static final long serialVersionUID = 0L;
     if (localePreferencesOverride_ != null) {
       output.writeMessage(37, getLocalePreferencesOverride());
     }
+    if (passwordResetDate_ != null) {
+      output.writeMessage(38, getPasswordResetDate());
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       output.writeMessage(200, trusts_.get(i));
     }
@@ -1448,6 +1489,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, getLocalePreferencesOverride());
     }
+    if (passwordResetDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, getPasswordResetDate());
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(200, trusts_.get(i));
@@ -1541,6 +1586,11 @@ private static final long serialVersionUID = 0L;
     if (hasLocalePreferencesOverride()) {
       if (!getLocalePreferencesOverride()
           .equals(other.getLocalePreferencesOverride())) return false;
+    }
+    if (hasPasswordResetDate() != other.hasPasswordResetDate()) return false;
+    if (hasPasswordResetDate()) {
+      if (!getPasswordResetDate()
+          .equals(other.getPasswordResetDate())) return false;
     }
     if (!getTrustsList()
         .equals(other.getTrustsList())) return false;
@@ -1645,6 +1695,10 @@ private static final long serialVersionUID = 0L;
     if (hasLocalePreferencesOverride()) {
       hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
+    }
+    if (hasPasswordResetDate()) {
+      hash = (37 * hash) + PASSWORD_RESET_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getPasswordResetDate().hashCode();
     }
     if (getTrustsCount() > 0) {
       hash = (37 * hash) + TRUSTS_FIELD_NUMBER;
@@ -1851,13 +1905,18 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverrideBuilder_.dispose();
         localePreferencesOverrideBuilder_ = null;
       }
+      passwordResetDate_ = null;
+      if (passwordResetDateBuilder_ != null) {
+        passwordResetDateBuilder_.dispose();
+        passwordResetDateBuilder_ = null;
+      }
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
       } else {
         trusts_ = null;
         trustsBuilder_.clear();
       }
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField1_ = (bitField1_ & ~0x00000002);
       return this;
     }
 
@@ -1920,9 +1979,9 @@ private static final long serialVersionUID = 0L;
         result.labelEntities_ = labelEntitiesBuilder_.build();
       }
       if (trustsBuilder_ == null) {
-        if (((bitField1_ & 0x00000001) != 0)) {
+        if (((bitField1_ & 0x00000002) != 0)) {
           trusts_ = java.util.Collections.unmodifiableList(trusts_);
-          bitField1_ = (bitField1_ & ~0x00000001);
+          bitField1_ = (bitField1_ & ~0x00000002);
         }
         result.trusts_ = trusts_;
       } else {
@@ -2034,6 +2093,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(com.tcn.cloud.api.api.v0alpha.UserDetails result) {
       int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.passwordResetDate_ = passwordResetDateBuilder_ == null
+            ? passwordResetDate_
+            : passwordResetDateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2294,11 +2358,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasLocalePreferencesOverride()) {
         mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
       }
+      if (other.hasPasswordResetDate()) {
+        mergePasswordResetDate(other.getPasswordResetDate());
+      }
       if (trustsBuilder_ == null) {
         if (!other.trusts_.isEmpty()) {
           if (trusts_.isEmpty()) {
             trusts_ = other.trusts_;
-            bitField1_ = (bitField1_ & ~0x00000001);
+            bitField1_ = (bitField1_ & ~0x00000002);
           } else {
             ensureTrustsIsMutable();
             trusts_.addAll(other.trusts_);
@@ -2311,7 +2378,7 @@ private static final long serialVersionUID = 0L;
             trustsBuilder_.dispose();
             trustsBuilder_ = null;
             trusts_ = other.trusts_;
-            bitField1_ = (bitField1_ & ~0x00000001);
+            bitField1_ = (bitField1_ & ~0x00000002);
             trustsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTrustsFieldBuilder() : null;
@@ -2541,6 +2608,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x80000000;
               break;
             } // case 298
+            case 306: {
+              input.readMessage(
+                  getPasswordResetDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 306
             case 1602: {
               com.tcn.cloud.api.api.commons.org.Trust m =
                   input.readMessage(
@@ -5689,12 +5763,167 @@ private static final long serialVersionUID = 0L;
       return localePreferencesOverrideBuilder_;
     }
 
+    private com.google.protobuf.Timestamp passwordResetDate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> passwordResetDateBuilder_;
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     * @return Whether the passwordResetDate field is set.
+     */
+    public boolean hasPasswordResetDate() {
+      return ((bitField1_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     * @return The passwordResetDate.
+     */
+    public com.google.protobuf.Timestamp getPasswordResetDate() {
+      if (passwordResetDateBuilder_ == null) {
+        return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+      } else {
+        return passwordResetDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder setPasswordResetDate(com.google.protobuf.Timestamp value) {
+      if (passwordResetDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        passwordResetDate_ = value;
+      } else {
+        passwordResetDateBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder setPasswordResetDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (passwordResetDateBuilder_ == null) {
+        passwordResetDate_ = builderForValue.build();
+      } else {
+        passwordResetDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder mergePasswordResetDate(com.google.protobuf.Timestamp value) {
+      if (passwordResetDateBuilder_ == null) {
+        if (((bitField1_ & 0x00000001) != 0) &&
+          passwordResetDate_ != null &&
+          passwordResetDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getPasswordResetDateBuilder().mergeFrom(value);
+        } else {
+          passwordResetDate_ = value;
+        }
+      } else {
+        passwordResetDateBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public Builder clearPasswordResetDate() {
+      bitField1_ = (bitField1_ & ~0x00000001);
+      passwordResetDate_ = null;
+      if (passwordResetDateBuilder_ != null) {
+        passwordResetDateBuilder_.dispose();
+        passwordResetDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getPasswordResetDateBuilder() {
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return getPasswordResetDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder() {
+      if (passwordResetDateBuilder_ != null) {
+        return passwordResetDateBuilder_.getMessageOrBuilder();
+      } else {
+        return passwordResetDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
+      }
+    }
+    /**
+     * <pre>
+     * Password reset date is the timestamp of when a user must reset their password by.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp password_reset_date = 38 [json_name = "passwordResetDate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getPasswordResetDateFieldBuilder() {
+      if (passwordResetDateBuilder_ == null) {
+        passwordResetDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getPasswordResetDate(),
+                getParentForChildren(),
+                isClean());
+        passwordResetDate_ = null;
+      }
+      return passwordResetDateBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_ =
       java.util.Collections.emptyList();
     private void ensureTrustsIsMutable() {
-      if (!((bitField1_ & 0x00000001) != 0)) {
+      if (!((bitField1_ & 0x00000002) != 0)) {
         trusts_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Trust>(trusts_);
-        bitField1_ |= 0x00000001;
+        bitField1_ |= 0x00000002;
        }
     }
 
@@ -5888,7 +6117,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTrusts() {
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00000001);
+        bitField1_ = (bitField1_ & ~0x00000002);
         onChanged();
       } else {
         trustsBuilder_.clear();
@@ -5993,7 +6222,7 @@ private static final long serialVersionUID = 0L;
         trustsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.Trust, com.tcn.cloud.api.api.commons.org.Trust.Builder, com.tcn.cloud.api.api.commons.org.TrustOrBuilder>(
                 trusts_,
-                ((bitField1_ & 0x00000001) != 0),
+                ((bitField1_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         trusts_ = null;
