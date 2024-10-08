@@ -4089,7 +4089,7 @@ private static final long serialVersionUID = 0L;
    * The omni campain this sms belongs to.
    * </pre>
    *
-   * <code>int64 campaign_sid = 5 [json_name = "campaignSid", jstype = JS_STRING];</code>
+   * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
    * @return The campaignSid.
    */
   @java.lang.Override
@@ -5192,7 +5192,7 @@ private static final long serialVersionUID = 0L;
      * The omni campain this sms belongs to.
      * </pre>
      *
-     * <code>int64 campaign_sid = 5 [json_name = "campaignSid", jstype = JS_STRING];</code>
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
      * @return The campaignSid.
      */
     @java.lang.Override
@@ -5204,7 +5204,7 @@ private static final long serialVersionUID = 0L;
      * The omni campain this sms belongs to.
      * </pre>
      *
-     * <code>int64 campaign_sid = 5 [json_name = "campaignSid", jstype = JS_STRING];</code>
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
      * @param value The campaignSid to set.
      * @return This builder for chaining.
      */
@@ -5220,7 +5220,7 @@ private static final long serialVersionUID = 0L;
      * The omni campain this sms belongs to.
      * </pre>
      *
-     * <code>int64 campaign_sid = 5 [json_name = "campaignSid", jstype = JS_STRING];</code>
+     * <code>int64 campaign_sid = 5 [json_name = "campaignSid"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignSid() {
