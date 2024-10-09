@@ -82,19 +82,4 @@ public interface OmnichannelMessageSentEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
-   * @return Whether the payload field is set.
-   */
-  boolean hasPayload();
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
-   * @return The payload.
-   */
-  com.tcn.cloud.api.api.commons.OmniMessagePayload getPayload();
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getPayloadOrBuilder();
 }
