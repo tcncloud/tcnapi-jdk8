@@ -233,6 +233,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PAYLOAD_FIELD_NUMBER = 9;
+  private com.tcn.cloud.api.api.commons.OmniMessagePayload payload_;
+  /**
+   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+   * @return Whether the payload field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayload() {
+    return payload_ != null;
+  }
+  /**
+   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+   * @return The payload.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessagePayload getPayload() {
+    return payload_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : payload_;
+  }
+  /**
+   * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getPayloadOrBuilder() {
+    return payload_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : payload_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -270,6 +296,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userId_);
+    }
+    if (payload_ != null) {
+      output.writeMessage(9, getPayload());
     }
     getUnknownFields().writeTo(output);
   }
@@ -309,6 +338,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userId_);
     }
+    if (payload_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getPayload());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -338,6 +371,11 @@ private static final long serialVersionUID = 0L;
     if (senderType_ != other.senderType_) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
+    if (hasPayload() != other.hasPayload()) return false;
+    if (hasPayload()) {
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -368,6 +406,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + senderType_;
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    if (hasPayload()) {
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -511,6 +553,11 @@ private static final long serialVersionUID = 0L;
       attachmentSize_ = 0L;
       senderType_ = 0;
       userId_ = "";
+      payload_ = null;
+      if (payloadBuilder_ != null) {
+        payloadBuilder_.dispose();
+        payloadBuilder_ = null;
+      }
       return this;
     }
 
@@ -567,6 +614,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.payload_ = payloadBuilder_ == null
+            ? payload_
+            : payloadBuilder_.build();
       }
     }
 
@@ -644,6 +696,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (other.hasPayload()) {
+        mergePayload(other.getPayload());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -710,6 +765,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getPayloadFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1143,6 +1205,125 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniMessagePayload payload_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder> payloadBuilder_;
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     * @return Whether the payload field is set.
+     */
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayload getPayload() {
+      if (payloadBuilder_ == null) {
+        return payload_ == null ? com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : payload_;
+      } else {
+        return payloadBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public Builder setPayload(com.tcn.cloud.api.api.commons.OmniMessagePayload value) {
+      if (payloadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+      } else {
+        payloadBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public Builder setPayload(
+        com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder builderForValue) {
+      if (payloadBuilder_ == null) {
+        payload_ = builderForValue.build();
+      } else {
+        payloadBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public Builder mergePayload(com.tcn.cloud.api.api.commons.OmniMessagePayload value) {
+      if (payloadBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          payload_ != null &&
+          payload_ != com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance()) {
+          getPayloadBuilder().mergeFrom(value);
+        } else {
+          payload_ = value;
+        }
+      } else {
+        payloadBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public Builder clearPayload() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      payload_ = null;
+      if (payloadBuilder_ != null) {
+        payloadBuilder_.dispose();
+        payloadBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder getPayloadBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getPayloadFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getPayloadOrBuilder() {
+      if (payloadBuilder_ != null) {
+        return payloadBuilder_.getMessageOrBuilder();
+      } else {
+        return payload_ == null ?
+            com.tcn.cloud.api.api.commons.OmniMessagePayload.getDefaultInstance() : payload_;
+      }
+    }
+    /**
+     * <code>.api.commons.OmniMessagePayload payload = 9 [json_name = "payload"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder> 
+        getPayloadFieldBuilder() {
+      if (payloadBuilder_ == null) {
+        payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniMessagePayload, com.tcn.cloud.api.api.commons.OmniMessagePayload.Builder, com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder>(
+                getPayload(),
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      return payloadBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
