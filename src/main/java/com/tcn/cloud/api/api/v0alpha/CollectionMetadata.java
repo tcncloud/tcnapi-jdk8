@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     collectionName_ = "";
     fields_ = java.util.Collections.emptyList();
     createdBy_ = "";
+    primaryKey_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -376,6 +378,43 @@ private static final long serialVersionUID = 0L;
     return lastSearched_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSearched_;
   }
 
+  public static final int PRIMARY_KEY_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList primaryKey_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @return A list containing the primaryKey.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getPrimaryKeyList() {
+    return primaryKey_;
+  }
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @return The count of primaryKey.
+   */
+  public int getPrimaryKeyCount() {
+    return primaryKey_.size();
+  }
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @param index The index of the element to return.
+   * @return The primaryKey at the given index.
+   */
+  public java.lang.String getPrimaryKey(int index) {
+    return primaryKey_.get(index);
+  }
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the primaryKey at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getPrimaryKeyBytes(int index) {
+    return primaryKey_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -425,6 +464,9 @@ private static final long serialVersionUID = 0L;
     }
     if (lastSearched_ != null) {
       output.writeMessage(14, getLastSearched());
+    }
+    for (int i = 0; i < primaryKey_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, primaryKey_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -480,6 +522,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getLastSearched());
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < primaryKey_.size(); i++) {
+        dataSize += computeStringSizeNoTag(primaryKey_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getPrimaryKeyList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -531,6 +581,8 @@ private static final long serialVersionUID = 0L;
       if (!getLastSearched()
           .equals(other.getLastSearched())) return false;
     }
+    if (!getPrimaryKeyList()
+        .equals(other.getPrimaryKeyList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -579,6 +631,10 @@ private static final long serialVersionUID = 0L;
     if (hasLastSearched()) {
       hash = (37 * hash) + LAST_SEARCHED_FIELD_NUMBER;
       hash = (53 * hash) + getLastSearched().hashCode();
+    }
+    if (getPrimaryKeyCount() > 0) {
+      hash = (37 * hash) + PRIMARY_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPrimaryKeyList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -745,6 +801,8 @@ private static final long serialVersionUID = 0L;
         lastSearchedBuilder_.dispose();
         lastSearchedBuilder_ = null;
       }
+      primaryKey_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -831,6 +889,10 @@ private static final long serialVersionUID = 0L;
         result.lastSearched_ = lastSearchedBuilder_ == null
             ? lastSearched_
             : lastSearchedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        primaryKey_.makeImmutable();
+        result.primaryKey_ = primaryKey_;
       }
     }
 
@@ -943,6 +1005,16 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastSearched()) {
         mergeLastSearched(other.getLastSearched());
       }
+      if (!other.primaryKey_.isEmpty()) {
+        if (primaryKey_.isEmpty()) {
+          primaryKey_ = other.primaryKey_;
+          bitField0_ |= 0x00001000;
+        } else {
+          ensurePrimaryKeyIsMutable();
+          primaryKey_.addAll(other.primaryKey_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1045,6 +1117,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 114
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePrimaryKeyIsMutable();
+              primaryKey_.add(s);
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2212,6 +2290,117 @@ private static final long serialVersionUID = 0L;
         lastSearched_ = null;
       }
       return lastSearchedBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList primaryKey_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensurePrimaryKeyIsMutable() {
+      if (!primaryKey_.isModifiable()) {
+        primaryKey_ = new com.google.protobuf.LazyStringArrayList(primaryKey_);
+      }
+      bitField0_ |= 0x00001000;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @return A list containing the primaryKey.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrimaryKeyList() {
+      primaryKey_.makeImmutable();
+      return primaryKey_;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @return The count of primaryKey.
+     */
+    public int getPrimaryKeyCount() {
+      return primaryKey_.size();
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param index The index of the element to return.
+     * @return The primaryKey at the given index.
+     */
+    public java.lang.String getPrimaryKey(int index) {
+      return primaryKey_.get(index);
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the primaryKey at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrimaryKeyBytes(int index) {
+      return primaryKey_.getByteString(index);
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param index The index to set the value at.
+     * @param value The primaryKey to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryKey(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePrimaryKeyIsMutable();
+      primaryKey_.set(index, value);
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param value The primaryKey to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryKey(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePrimaryKeyIsMutable();
+      primaryKey_.add(value);
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param values The primaryKey to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPrimaryKey(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePrimaryKeyIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, primaryKey_);
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrimaryKey() {
+      primaryKey_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00001000);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+     * @param value The bytes of the primaryKey to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryKeyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensurePrimaryKeyIsMutable();
+      primaryKey_.add(value);
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
