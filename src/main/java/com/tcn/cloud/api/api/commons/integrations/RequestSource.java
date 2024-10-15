@@ -32,10 +32,6 @@ public enum RequestSource
    * <code>REQUEST_SOURCE_LMS = 5;</code>
    */
   REQUEST_SOURCE_LMS(5),
-  /**
-   * <code>REQUEST_SOURCE_AGENT = 6;</code>
-   */
-  REQUEST_SOURCE_AGENT(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -63,10 +59,6 @@ public enum RequestSource
    * <code>REQUEST_SOURCE_LMS = 5;</code>
    */
   public static final int REQUEST_SOURCE_LMS_VALUE = 5;
-  /**
-   * <code>REQUEST_SOURCE_AGENT = 6;</code>
-   */
-  public static final int REQUEST_SOURCE_AGENT_VALUE = 6;
 
 
   public final int getNumber() {
@@ -99,7 +91,6 @@ public enum RequestSource
       case 3: return REQUEST_SOURCE_SMS;
       case 4: return REQUEST_SOURCE_CHAT;
       case 5: return REQUEST_SOURCE_LMS;
-      case 6: return REQUEST_SOURCE_AGENT;
       default: return null;
     }
   }
