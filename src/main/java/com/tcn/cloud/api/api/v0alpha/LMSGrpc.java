@@ -1162,37 +1162,6 @@ public final class LMSGrpc {
     return getUpdateCollectionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq,
-      com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> getRetypeCollectionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RetypeCollection",
-      requestType = com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq,
-      com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> getRetypeCollectionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq, com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> getRetypeCollectionMethod;
-    if ((getRetypeCollectionMethod = LMSGrpc.getRetypeCollectionMethod) == null) {
-      synchronized (LMSGrpc.class) {
-        if ((getRetypeCollectionMethod = LMSGrpc.getRetypeCollectionMethod) == null) {
-          LMSGrpc.getRetypeCollectionMethod = getRetypeCollectionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq, com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RetypeCollection"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("RetypeCollection"))
-              .build();
-        }
-      }
-    }
-    return getRetypeCollectionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq,
       com.google.protobuf.Empty> getDeleteCollectionMethod;
 
@@ -2199,13 +2168,6 @@ public final class LMSGrpc {
 
     /**
      */
-    default void retypeCollection(com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRetypeCollectionMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCollectionMethod(), responseObserver);
@@ -2747,14 +2709,6 @@ public final class LMSGrpc {
 
     /**
      */
-    public void retypeCollection(com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRetypeCollectionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -3267,13 +3221,6 @@ public final class LMSGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes retypeCollection(com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRetypeCollectionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
     public com.google.protobuf.Empty deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCollectionMethod(), getCallOptions(), request);
@@ -3759,14 +3706,6 @@ public final class LMSGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes> retypeCollection(
-        com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRetypeCollectionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCollection(
         com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -4014,30 +3953,29 @@ public final class LMSGrpc {
   private static final int METHODID_CREATE_COLLECTION = 33;
   private static final int METHODID_GET_COLLECTION = 34;
   private static final int METHODID_UPDATE_COLLECTION = 35;
-  private static final int METHODID_RETYPE_COLLECTION = 36;
-  private static final int METHODID_DELETE_COLLECTION = 37;
-  private static final int METHODID_LIST_COLLECTIONS = 38;
-  private static final int METHODID_RESET_COLLECTION = 39;
-  private static final int METHODID_ADD_COLLECTION_ENTRY = 40;
-  private static final int METHODID_DELETE_COLLECTION_ENTRY = 41;
-  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 42;
-  private static final int METHODID_STREAM_COLLECTION = 43;
-  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 44;
-  private static final int METHODID_GET_COLLECTION_ENTRIES = 45;
-  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 46;
-  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 47;
-  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 48;
-  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 49;
-  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 50;
-  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 51;
-  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 52;
-  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 53;
-  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 54;
-  private static final int METHODID_SAMPLE_ENDPOINT = 55;
-  private static final int METHODID_GET_AVAILABLE_EHRFIELDS = 56;
-  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 57;
-  private static final int METHODID_LIST_POOLS = 58;
-  private static final int METHODID_STREAM_LIST = 59;
+  private static final int METHODID_DELETE_COLLECTION = 36;
+  private static final int METHODID_LIST_COLLECTIONS = 37;
+  private static final int METHODID_RESET_COLLECTION = 38;
+  private static final int METHODID_ADD_COLLECTION_ENTRY = 39;
+  private static final int METHODID_DELETE_COLLECTION_ENTRY = 40;
+  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 41;
+  private static final int METHODID_STREAM_COLLECTION = 42;
+  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 43;
+  private static final int METHODID_GET_COLLECTION_ENTRIES = 44;
+  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 45;
+  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 46;
+  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 47;
+  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 48;
+  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 49;
+  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 50;
+  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 51;
+  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 52;
+  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 53;
+  private static final int METHODID_SAMPLE_ENDPOINT = 54;
+  private static final int METHODID_GET_AVAILABLE_EHRFIELDS = 55;
+  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 56;
+  private static final int METHODID_LIST_POOLS = 57;
+  private static final int METHODID_STREAM_LIST = 58;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4199,10 +4137,6 @@ public final class LMSGrpc {
         case METHODID_UPDATE_COLLECTION:
           serviceImpl.updateCollection((com.tcn.cloud.api.api.v0alpha.CollectionMetadata) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_RETYPE_COLLECTION:
-          serviceImpl.retypeCollection((com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes>) responseObserver);
           break;
         case METHODID_DELETE_COLLECTION:
           serviceImpl.deleteCollection((com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq) request,
@@ -4573,13 +4507,6 @@ public final class LMSGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_COLLECTION)))
         .addMethod(
-          getRetypeCollectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RetypeCollectionReq,
-              com.tcn.cloud.api.api.v0alpha.RetypeCollectionRes>(
-                service, METHODID_RETYPE_COLLECTION)))
-        .addMethod(
           getDeleteCollectionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4818,7 +4745,6 @@ public final class LMSGrpc {
               .addMethod(getCreateCollectionMethod())
               .addMethod(getGetCollectionMethod())
               .addMethod(getUpdateCollectionMethod())
-              .addMethod(getRetypeCollectionMethod())
               .addMethod(getDeleteCollectionMethod())
               .addMethod(getListCollectionsMethod())
               .addMethod(getResetCollectionMethod())

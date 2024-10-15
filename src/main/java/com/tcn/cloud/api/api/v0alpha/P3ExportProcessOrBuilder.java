@@ -53,7 +53,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>string username = 3 [json_name = "username", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
-   *     See api/v0alpha/lms.proto;l=1667
+   *     See api/v0alpha/lms.proto;l=1662
    * @return The username.
    */
   @java.lang.Deprecated java.lang.String getUsername();
@@ -64,7 +64,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>string username = 3 [json_name = "username", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.username is deprecated.
-   *     See api/v0alpha/lms.proto;l=1667
+   *     See api/v0alpha/lms.proto;l=1662
    * @return The bytes for username.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -77,7 +77,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>string password = 4 [json_name = "password", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1664
    * @return The password.
    */
   @java.lang.Deprecated java.lang.String getPassword();
@@ -88,7 +88,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>string password = 4 [json_name = "password", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.password is deprecated.
-   *     See api/v0alpha/lms.proto;l=1669
+   *     See api/v0alpha/lms.proto;l=1664
    * @return The bytes for password.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -266,7 +266,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1702
+   *     See api/v0alpha/lms.proto;l=1697
    * @return Whether the filePattern field is set.
    */
   @java.lang.Deprecated boolean hasFilePattern();
@@ -281,7 +281,7 @@ public interface P3ExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1702
+   *     See api/v0alpha/lms.proto;l=1697
    * @return The filePattern.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.FilePattern getFilePattern();
