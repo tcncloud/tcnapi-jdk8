@@ -39,7 +39,7 @@ public interface GeneralSettingsOrBuilder extends
 
   /**
    * <pre>
-   * Requires secondary confirmation to end call. `DisconnectConvirmation`
+   * Requires secondary confirmation to end call. `DisconnectConfirmation`
    * </pre>
    *
    * <code>bool require_end_call_confirmation = 3 [json_name = "requireEndCallConfirmation"];</code>
@@ -183,6 +183,46 @@ public interface GeneralSettingsOrBuilder extends
    * @return The enablePauseOptionReset.
    */
   boolean getEnablePauseOptionReset();
+
+  /**
+   * <pre>
+   * Use this pause code instead of the trigger generated one.
+   * </pre>
+   *
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * @return The triggeredPauseStatusPauseCodeWaiting.
+   */
+  java.lang.String getTriggeredPauseStatusPauseCodeWaiting();
+  /**
+   * <pre>
+   * Use this pause code instead of the trigger generated one.
+   * </pre>
+   *
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * @return The bytes for triggeredPauseStatusPauseCodeWaiting.
+   */
+  com.google.protobuf.ByteString
+      getTriggeredPauseStatusPauseCodeWaitingBytes();
+
+  /**
+   * <pre>
+   * Use this pause code instead of the trigger generated one.
+   * </pre>
+   *
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * @return The triggeredPauseStatusPauseCodeWrapup.
+   */
+  java.lang.String getTriggeredPauseStatusPauseCodeWrapup();
+  /**
+   * <pre>
+   * Use this pause code instead of the trigger generated one.
+   * </pre>
+   *
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * @return The bytes for triggeredPauseStatusPauseCodeWrapup.
+   */
+  com.google.protobuf.ByteString
+      getTriggeredPauseStatusPauseCodeWrapupBytes();
 
   /**
    * <pre>
