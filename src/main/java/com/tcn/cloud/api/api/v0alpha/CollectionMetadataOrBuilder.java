@@ -178,4 +178,29 @@ public interface CollectionMetadataOrBuilder extends
    * <code>.google.protobuf.Timestamp last_searched = 14 [json_name = "lastSearched"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastSearchedOrBuilder();
+
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @return A list containing the primaryKey.
+   */
+  java.util.List<java.lang.String>
+      getPrimaryKeyList();
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @return The count of primaryKey.
+   */
+  int getPrimaryKeyCount();
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @param index The index of the element to return.
+   * @return The primaryKey at the given index.
+   */
+  java.lang.String getPrimaryKey(int index);
+  /**
+   * <code>repeated string primary_key = 15 [json_name = "primaryKey"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the primaryKey at the given index.
+   */
+  com.google.protobuf.ByteString
+      getPrimaryKeyBytes(int index);
 }
