@@ -1164,6 +1164,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT = 5101;</code>
    */
   REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT(5101),
+  /**
+   * <code>REQUEST_METHOD_GENERIC_REQUEST = 5201;</code>
+   */
+  REQUEST_METHOD_GENERIC_REQUEST(5201),
   UNRECOGNIZED(-1),
   ;
 
@@ -2309,6 +2313,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT = 5101;</code>
    */
   public static final int REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT_VALUE = 5101;
+  /**
+   * <code>REQUEST_METHOD_GENERIC_REQUEST = 5201;</code>
+   */
+  public static final int REQUEST_METHOD_GENERIC_REQUEST_VALUE = 5201;
 
 
   public final int getNumber() {
@@ -2618,6 +2626,7 @@ public enum RequestMethod
       case 5001: return REQUEST_METHOD_DEBUG_ECHO;
       case 5002: return REQUESET_METHOD_DEBUG_VALIDATE;
       case 5101: return REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT;
+      case 5201: return REQUEST_METHOD_GENERIC_REQUEST;
       default: return null;
     }
   }
