@@ -27,7 +27,7 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\372\022\n\016ContactManager\022\312\001\n" +
+      "annotations.proto2\353\022\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
@@ -77,23 +77,23 @@ public final class ServiceProto {
       "nager.GetContactFieldTypeResponse\"Y\272\270\221\002\n" +
       "\n\003\010\354\'\n\003\010\355\'\202\323\344\223\002D\"?/api/v1alpha1/contactm" +
       "anager/contactmanager/getcontactfieldtyp" +
-      "e:\001*\022\330\001\n\024AgentAddContactEntry\0223.api.v1al" +
-      "pha1.contactmanager.AddContactEntryReque" +
-      "st\0324.api.v1alpha1.contactmanager.AddCont" +
-      "actEntryResponse\"U\272\270\221\002\005\n\003\010\355\'\202\323\344\223\002E\"@/api" +
-      "/v1alpha1/contactmanager/contactmanager/" +
-      "agentaddcontactentry:\001*\022\334\001\n\025AgentEditCon" +
-      "tactEntry\0224.api.v1alpha1.contactmanager." +
-      "EditContactEntryRequest\0325.api.v1alpha1.c" +
-      "ontactmanager.EditContactEntryResponse\"V" +
-      "\272\270\221\002\005\n\003\010\355\'\202\323\344\223\002F\"A/api/v1alpha1/contactm" +
-      "anager/contactmanager/agenteditcontacten" +
-      "try:\001*B\313\001\n-com.tcn.cloud.api.api.v1alpha" +
-      "1.contactmanagerB\014ServiceProtoP\001\242\002\003AVC\252\002" +
-      "\033Api.V1alpha1.Contactmanager\312\002\033Api\\V1alp" +
-      "ha1\\Contactmanager\342\002\'Api\\V1alpha1\\Contac" +
-      "tmanager\\GPBMetadata\352\002\035Api::V1alpha1::Co" +
-      "ntactmanagerb\006proto3"
+      "e:\001*\022\323\001\n\017AgentAddContact\0223.api.v1alpha1." +
+      "contactmanager.AddContactEntryRequest\0324." +
+      "api.v1alpha1.contactmanager.AddContactEn" +
+      "tryResponse\"U\272\270\221\002\005\n\003\010\355\'\202\323\344\223\002E\"@/api/v1al" +
+      "pha1/contactmanager/contactmanager/agent" +
+      "addcontactentry:\001*\022\322\001\n\020AgentEditContact\022" +
+      "4.api.v1alpha1.contactmanager.EditContac" +
+      "tEntryRequest\0325.api.v1alpha1.contactmana" +
+      "ger.EditContactEntryResponse\"Q\272\270\221\002\005\n\003\010\355\'" +
+      "\202\323\344\223\002A\"</api/v1alpha1/contactmanager/con" +
+      "tactmanager/agenteditcontact:\001*B\313\001\n-com." +
+      "tcn.cloud.api.api.v1alpha1.contactmanage" +
+      "rB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.C" +
+      "ontactmanager\312\002\033Api\\V1alpha1\\Contactmana" +
+      "ger\342\002\'Api\\V1alpha1\\Contactmanager\\GPBMet" +
+      "adata\352\002\035Api::V1alpha1::Contactmanagerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
