@@ -51,7 +51,12 @@ public interface ListContactEntryListRequestOrBuilder extends
       getProjectIdBytes();
 
   /**
-   * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return Whether the projectSid field is set.
+   */
+  boolean hasProjectSid();
+  /**
+   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
    * @return The projectSid.
    */
   long getProjectSid();

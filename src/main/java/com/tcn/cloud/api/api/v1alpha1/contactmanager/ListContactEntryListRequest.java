@@ -149,7 +149,15 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECT_SID_FIELD_NUMBER = 4;
   private long projectSid_ = 0L;
   /**
-   * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return Whether the projectSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasProjectSid() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
    * @return The projectSid.
    */
   @java.lang.Override
@@ -180,7 +188,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
     }
-    if (projectSid_ != 0L) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt64(4, projectSid_);
     }
     getUnknownFields().writeTo(output);
@@ -202,7 +210,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
     }
-    if (projectSid_ != 0L) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, projectSid_);
     }
@@ -230,8 +238,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getProjectId()
         .equals(other.getProjectId())) return false;
-    if (getProjectSid()
-        != other.getProjectSid()) return false;
+    if (hasProjectSid() != other.hasProjectSid()) return false;
+    if (hasProjectSid()) {
+      if (getProjectSid()
+          != other.getProjectSid()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -252,9 +263,11 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getProjectId().hashCode();
-    hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getProjectSid());
+    if (hasProjectSid()) {
+      hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProjectSid());
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -436,6 +449,7 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.projectSid_ = projectSid_;
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -497,7 +511,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.getProjectSid() != 0L) {
+      if (other.hasProjectSid()) {
         setProjectSid(other.getProjectSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -769,7 +783,15 @@ private static final long serialVersionUID = 0L;
 
     private long projectSid_ ;
     /**
-     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * @return Whether the projectSid field is set.
+     */
+    @java.lang.Override
+    public boolean hasProjectSid() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @return The projectSid.
      */
     @java.lang.Override
@@ -777,7 +799,7 @@ private static final long serialVersionUID = 0L;
       return projectSid_;
     }
     /**
-     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @param value The projectSid to set.
      * @return This builder for chaining.
      */
@@ -789,7 +811,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearProjectSid() {
