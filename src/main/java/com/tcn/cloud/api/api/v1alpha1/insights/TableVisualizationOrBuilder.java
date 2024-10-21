@@ -50,43 +50,4 @@ public interface TableVisualizationOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * Delimiter for csv exports
-   * </pre>
-   *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
-   * @return The delimiter.
-   */
-  java.lang.String getDelimiter();
-  /**
-   * <pre>
-   * Delimiter for csv exports
-   * </pre>
-   *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
-   * @return The bytes for delimiter.
-   */
-  com.google.protobuf.ByteString
-      getDelimiterBytes();
-
-  /**
-   * <pre>
-   * Quote character for csv exports
-   * </pre>
-   *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
-   * @return The enum numeric value on the wire for quoteCharacter.
-   */
-  int getQuoteCharacterValue();
-  /**
-   * <pre>
-   * Quote character for csv exports
-   * </pre>
-   *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
-   * @return The quoteCharacter.
-   */
-  com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter();
 }
