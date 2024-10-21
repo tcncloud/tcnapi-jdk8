@@ -27,7 +27,7 @@ public final class ServiceProto {
       ".proto\022\036services.translations.v1alpha1\032\027" +
       "annotations/authz.proto\032\034google/api/anno" +
       "tations.proto\032-services/translations/v1a" +
-      "lpha1/entities.proto2\370\030\n\023TranslationsSer" +
+      "lpha1/entities.proto2\205\027\n\023TranslationsSer" +
       "vice\022\315\001\n\021TranslateTemplate\0228.services.tr" +
       "anslations.v1alpha1.TranslateTemplateReq" +
       "uest\0329.services.translations.v1alpha1.Tr" +
@@ -95,25 +95,19 @@ public final class ServiceProto {
       "leContextRequest\0326.services.translations" +
       ".v1alpha1.DisableContextResponse\"C\272\270\221\002\005\n" +
       "\003\010\310\001\202\323\344\223\0023\"./services/translations/v1alp" +
-      "ha1/disablecontext:\001*\022\360\001\n\034DeleteTranslat" +
-      "ionsByTemplate\022=.services.translations.v" +
-      "1alpha1.BulkDeleteTranslationsRequest\032>." +
-      "services.translations.v1alpha1.BulkDelet" +
-      "eTranslationsResponse\"Q\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002A\"" +
-      "</services/translations/v1alpha1/deletet" +
-      "ranslationsbytemplate:\001*\022\344\001\n\026BulkDeleteT" +
-      "ranslations\022=.services.translations.v1al" +
-      "pha1.BulkDeleteTranslationsRequest\032>.ser" +
-      "vices.translations.v1alpha1.BulkDeleteTr" +
-      "anslationsResponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/s" +
-      "ervices/translations/v1alpha1/bulkdelete" +
-      "translations:\001*B\332\001\n0com.tcn.cloud.api.se" +
-      "rvices.translations.v1alpha1B\014ServicePro" +
-      "toP\001\242\002\003STX\252\002\036Services.Translations.V1alp" +
-      "ha1\312\002\036Services\\Translations\\V1alpha1\342\002*S" +
-      "ervices\\Translations\\V1alpha1\\GPBMetadat" +
-      "a\352\002 Services::Translations::V1alpha1b\006pr" +
-      "oto3"
+      "ha1/disablecontext:\001*\022\344\001\n\026BulkDeleteTran" +
+      "slations\022=.services.translations.v1alpha" +
+      "1.BulkDeleteTranslationsRequest\032>.servic" +
+      "es.translations.v1alpha1.BulkDeleteTrans" +
+      "lationsResponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/serv" +
+      "ices/translations/v1alpha1/bulkdeletetra" +
+      "nslations:\001*B\332\001\n0com.tcn.cloud.api.servi" +
+      "ces.translations.v1alpha1B\014ServiceProtoP" +
+      "\001\242\002\003STX\252\002\036Services.Translations.V1alpha1" +
+      "\312\002\036Services\\Translations\\V1alpha1\342\002*Serv" +
+      "ices\\Translations\\V1alpha1\\GPBMetadata\352\002" +
+      " Services::Translations::V1alpha1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
