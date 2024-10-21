@@ -8,11 +8,19 @@ public interface DeleteTranslationsByTemplateRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The original template for the translations.
+   * </pre>
+   *
    * <code>string template = 1 [json_name = "template"];</code>
    * @return The template.
    */
   java.lang.String getTemplate();
   /**
+   * <pre>
+   * The original template for the translations.
+   * </pre>
+   *
    * <code>string template = 1 [json_name = "template"];</code>
    * @return The bytes for template.
    */
@@ -20,11 +28,19 @@ public interface DeleteTranslationsByTemplateRequestOrBuilder extends
       getTemplateBytes();
 
   /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
    * <code>string context = 2 [json_name = "context"];</code>
    * @return The context.
    */
   java.lang.String getContext();
   /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
    * <code>string context = 2 [json_name = "context"];</code>
    * @return The bytes for context.
    */

@@ -48,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object template_ = "";
   /**
+   * <pre>
+   * The original template for the translations.
+   * </pre>
+   *
    * <code>string template = 1 [json_name = "template"];</code>
    * @return The template.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The original template for the translations.
+   * </pre>
+   *
    * <code>string template = 1 [json_name = "template"];</code>
    * @return The bytes for template.
    */
@@ -87,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object context_ = "";
   /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
    * <code>string context = 2 [json_name = "context"];</code>
    * @return The context.
    */
@@ -104,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The context of the translation.
+   * </pre>
+   *
    * <code>string context = 2 [json_name = "context"];</code>
    * @return The bytes for context.
    */
@@ -478,6 +494,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object template_ = "";
     /**
+     * <pre>
+     * The original template for the translations.
+     * </pre>
+     *
      * <code>string template = 1 [json_name = "template"];</code>
      * @return The template.
      */
@@ -494,6 +514,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The original template for the translations.
+     * </pre>
+     *
      * <code>string template = 1 [json_name = "template"];</code>
      * @return The bytes for template.
      */
@@ -511,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The original template for the translations.
+     * </pre>
+     *
      * <code>string template = 1 [json_name = "template"];</code>
      * @param value The template to set.
      * @return This builder for chaining.
@@ -524,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The original template for the translations.
+     * </pre>
+     *
      * <code>string template = 1 [json_name = "template"];</code>
      * @return This builder for chaining.
      */
@@ -534,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The original template for the translations.
+     * </pre>
+     *
      * <code>string template = 1 [json_name = "template"];</code>
      * @param value The bytes for template to set.
      * @return This builder for chaining.
@@ -550,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object context_ = "";
     /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
      * <code>string context = 2 [json_name = "context"];</code>
      * @return The context.
      */
@@ -566,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
      * <code>string context = 2 [json_name = "context"];</code>
      * @return The bytes for context.
      */
@@ -583,6 +627,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
      * <code>string context = 2 [json_name = "context"];</code>
      * @param value The context to set.
      * @return This builder for chaining.
@@ -596,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
      * <code>string context = 2 [json_name = "context"];</code>
      * @return This builder for chaining.
      */
@@ -606,6 +658,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The context of the translation.
+     * </pre>
+     *
      * <code>string context = 2 [json_name = "context"];</code>
      * @param value The bytes for context to set.
      * @return This builder for chaining.
