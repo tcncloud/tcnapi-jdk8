@@ -1043,6 +1043,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT = 1207;</code>
    */
   EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT(1207),
+  /**
+   * <pre>
+   *Contact Manager entry expunge event at TTL
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT = 1208;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT(1208),
   UNRECOGNIZED(-1),
   ;
 
@@ -2044,6 +2052,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT = 1207;</code>
    */
   public static final int EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT_VALUE = 1207;
+  /**
+   * <pre>
+   *Contact Manager entry expunge event at TTL
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT = 1208;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT_VALUE = 1208;
 
 
   public final int getNumber() {
@@ -2209,6 +2225,7 @@ public enum EventType
       case 1205: return EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT;
       case 1206: return EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT;
       case 1207: return EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT;
+      case 1208: return EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT;
       default: return null;
     }
   }

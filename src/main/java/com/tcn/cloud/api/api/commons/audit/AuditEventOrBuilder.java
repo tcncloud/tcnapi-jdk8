@@ -3138,5 +3138,20 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryDeleteEventOrBuilder();
 
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   * @return Whether the contactManagerEntryExpungeEvent field is set.
+   */
+  boolean hasContactManagerEntryExpungeEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   * @return The contactManagerEntryExpungeEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryExpungeEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryExpungeEventOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

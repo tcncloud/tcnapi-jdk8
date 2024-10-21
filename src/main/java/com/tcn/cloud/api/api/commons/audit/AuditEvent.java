@@ -173,6 +173,7 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_LIST_UPLOAD_EVENT(1205),
     CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
     CONTACT_MANAGER_ENTRY_DELETE_EVENT(1207),
+    CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT(1208),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -310,6 +311,7 @@ private static final long serialVersionUID = 0L;
         case 1205: return CONTACT_MANAGER_LIST_UPLOAD_EVENT;
         case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
         case 1207: return CONTACT_MANAGER_ENTRY_DELETE_EVENT;
+        case 1208: return CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -5502,6 +5504,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
   }
 
+  public static final int CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT_FIELD_NUMBER = 1208;
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   * @return Whether the contactManagerEntryExpungeEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerEntryExpungeEvent() {
+    return eventCase_ == 1208;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   * @return The contactManagerEntryExpungeEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryExpungeEvent() {
+    if (eventCase_ == 1208) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryExpungeEventOrBuilder() {
+    if (eventCase_ == 1208) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5893,6 +5926,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1207) {
       output.writeMessage(1207, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
+    }
+    if (eventCase_ == 1208) {
+      output.writeMessage(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6402,6 +6438,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1207) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1207, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
+    }
+    if (eventCase_ == 1208) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6914,6 +6954,10 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerEntryDeleteEvent()
             .equals(other.getContactManagerEntryDeleteEvent())) return false;
         break;
+      case 1208:
+        if (!getContactManagerEntryExpungeEvent()
+            .equals(other.getContactManagerEntryExpungeEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -7422,6 +7466,10 @@ private static final long serialVersionUID = 0L;
       case 1207:
         hash = (37 * hash) + CONTACT_MANAGER_ENTRY_DELETE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerEntryDeleteEvent().hashCode();
+        break;
+      case 1208:
+        hash = (37 * hash) + CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerEntryExpungeEvent().hashCode();
         break;
       case 0:
       default:
@@ -7933,6 +7981,9 @@ private static final long serialVersionUID = 0L;
       }
       if (contactManagerEntryDeleteEventBuilder_ != null) {
         contactManagerEntryDeleteEventBuilder_.clear();
+      }
+      if (contactManagerEntryExpungeEventBuilder_ != null) {
+        contactManagerEntryExpungeEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -8490,6 +8541,10 @@ private static final long serialVersionUID = 0L;
           contactManagerEntryDeleteEventBuilder_ != null) {
         result.event_ = contactManagerEntryDeleteEventBuilder_.build();
       }
+      if (eventCase_ == 1208 &&
+          contactManagerEntryExpungeEventBuilder_ != null) {
+        result.event_ = contactManagerEntryExpungeEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -9041,6 +9096,10 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_ENTRY_DELETE_EVENT: {
           mergeContactManagerEntryDeleteEvent(other.getContactManagerEntryDeleteEvent());
+          break;
+        }
+        case CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT: {
+          mergeContactManagerEntryExpungeEvent(other.getContactManagerEntryExpungeEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -9945,6 +10004,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1207;
               break;
             } // case 9658
+            case 9666: {
+              input.readMessage(
+                  getContactManagerEntryExpungeEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1208;
+              break;
+            } // case 9666
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -31042,6 +31108,148 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1207;
       onChanged();
       return contactManagerEntryDeleteEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> contactManagerEntryExpungeEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     * @return Whether the contactManagerEntryExpungeEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerEntryExpungeEvent() {
+      return eventCase_ == 1208;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     * @return The contactManagerEntryExpungeEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryExpungeEvent() {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        if (eventCase_ == 1208) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1208) {
+          return contactManagerEntryExpungeEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    public Builder setContactManagerEntryExpungeEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerEntryExpungeEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    public Builder setContactManagerEntryExpungeEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder builderForValue) {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerEntryExpungeEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    public Builder mergeContactManagerEntryExpungeEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        if (eventCase_ == 1208 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1208) {
+          contactManagerEntryExpungeEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerEntryExpungeEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    public Builder clearContactManagerEntryExpungeEvent() {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        if (eventCase_ == 1208) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1208) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerEntryExpungeEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder getContactManagerEntryExpungeEventBuilder() {
+      return getContactManagerEntryExpungeEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryExpungeEventOrBuilder() {
+      if ((eventCase_ == 1208) && (contactManagerEntryExpungeEventBuilder_ != null)) {
+        return contactManagerEntryExpungeEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1208) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> 
+        getContactManagerEntryExpungeEventFieldBuilder() {
+      if (contactManagerEntryExpungeEventBuilder_ == null) {
+        if (!(eventCase_ == 1208)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+        }
+        contactManagerEntryExpungeEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1208;
+      onChanged();
+      return contactManagerEntryExpungeEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
