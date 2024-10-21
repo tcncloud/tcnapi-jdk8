@@ -60,4 +60,34 @@ public interface ListContactEntryListRequestOrBuilder extends
    * @return The projectSid.
    */
   long getProjectSid();
+
+  /**
+   * <pre>
+   * pagination fields - returned page
+   * </pre>
+   *
+   * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  int getPageSize();
+
+  /**
+   * <pre>
+   * pagination fields - page token
+   * </pre>
+   *
+   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  java.lang.String getPageToken();
+  /**
+   * <pre>
+   * pagination fields - page token
+   * </pre>
+   *
+   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 }
