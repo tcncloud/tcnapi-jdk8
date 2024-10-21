@@ -419,6 +419,37 @@ public final class TranslationsServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> getDeleteTranslationsByTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTranslationsByTemplate",
+      requestType = com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest.class,
+      responseType = com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> getDeleteTranslationsByTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest, com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> getDeleteTranslationsByTemplateMethod;
+    if ((getDeleteTranslationsByTemplateMethod = TranslationsServiceGrpc.getDeleteTranslationsByTemplateMethod) == null) {
+      synchronized (TranslationsServiceGrpc.class) {
+        if ((getDeleteTranslationsByTemplateMethod = TranslationsServiceGrpc.getDeleteTranslationsByTemplateMethod) == null) {
+          TranslationsServiceGrpc.getDeleteTranslationsByTemplateMethod = getDeleteTranslationsByTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest, com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTranslationsByTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("DeleteTranslationsByTemplate"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTranslationsByTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest,
       com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> getBulkDeleteTranslationsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
@@ -674,6 +705,21 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Delete translations by template and context
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.NotFound: No translations found for the given template and context.
+     * </pre>
+     */
+    default void deleteTranslationsByTemplate(com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTranslationsByTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Bulk delete translations
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -904,6 +950,22 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Delete translations by template and context
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.NotFound: No translations found for the given template and context.
+     * </pre>
+     */
+    public void deleteTranslationsByTemplate(com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTranslationsByTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Bulk delete translations
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -1107,6 +1169,21 @@ public final class TranslationsServiceGrpc {
     public com.tcn.cloud.api.services.translations.v1alpha1.DisableContextResponse disableContext(com.tcn.cloud.api.services.translations.v1alpha1.DisableContextRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableContextMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete translations by template and context
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.NotFound: No translations found for the given template and context.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse deleteTranslationsByTemplate(com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTranslationsByTemplateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1330,6 +1407,22 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Delete translations by template and context
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     *   - grpc.NotFound: No translations found for the given template and context.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse> deleteTranslationsByTemplate(
+        com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTranslationsByTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Bulk delete translations
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -1357,7 +1450,8 @@ public final class TranslationsServiceGrpc {
   private static final int METHODID_TEST_SYSTEM_MESSAGE = 10;
   private static final int METHODID_ENABLE_CONTEXT = 11;
   private static final int METHODID_DISABLE_CONTEXT = 12;
-  private static final int METHODID_BULK_DELETE_TRANSLATIONS = 13;
+  private static final int METHODID_DELETE_TRANSLATIONS_BY_TEMPLATE = 13;
+  private static final int METHODID_BULK_DELETE_TRANSLATIONS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1427,6 +1521,10 @@ public final class TranslationsServiceGrpc {
         case METHODID_DISABLE_CONTEXT:
           serviceImpl.disableContext((com.tcn.cloud.api.services.translations.v1alpha1.DisableContextRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.DisableContextResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_TRANSLATIONS_BY_TEMPLATE:
+          serviceImpl.deleteTranslationsByTemplate((com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse>) responseObserver);
           break;
         case METHODID_BULK_DELETE_TRANSLATIONS:
           serviceImpl.bulkDeleteTranslations((com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest) request,
@@ -1542,6 +1640,13 @@ public final class TranslationsServiceGrpc {
               com.tcn.cloud.api.services.translations.v1alpha1.DisableContextResponse>(
                 service, METHODID_DISABLE_CONTEXT)))
         .addMethod(
+          getDeleteTranslationsByTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsRequest,
+              com.tcn.cloud.api.services.translations.v1alpha1.BulkDeleteTranslationsResponse>(
+                service, METHODID_DELETE_TRANSLATIONS_BY_TEMPLATE)))
+        .addMethod(
           getBulkDeleteTranslationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1609,6 +1714,7 @@ public final class TranslationsServiceGrpc {
               .addMethod(getTestSystemMessageMethod())
               .addMethod(getEnableContextMethod())
               .addMethod(getDisableContextMethod())
+              .addMethod(getDeleteTranslationsByTemplateMethod())
               .addMethod(getBulkDeleteTranslationsMethod())
               .build();
         }
