@@ -39,10 +39,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerListId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -111,6 +120,25 @@ private static final long serialVersionUID = 0L;
     return entry_.get(index);
   }
 
+  public static final int PROJECT_SID_FIELD_NUMBER = 3;
+  private long projectSid_ = 0L;
+  /**
+   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return Whether the projectSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasProjectSid() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return The projectSid.
+   */
+  @java.lang.Override
+  public long getProjectSid() {
+    return projectSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -125,11 +153,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(1, contactManagerListId_);
     }
     for (int i = 0; i < entry_.size(); i++) {
       output.writeMessage(2, entry_.get(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeInt64(3, projectSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -140,13 +171,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactManagerListId_);
     }
     for (int i = 0; i < entry_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, entry_.get(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, projectSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -163,10 +198,18 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest) obj;
 
-    if (getContactManagerListId()
-        != other.getContactManagerListId()) return false;
+    if (hasContactManagerListId() != other.hasContactManagerListId()) return false;
+    if (hasContactManagerListId()) {
+      if (getContactManagerListId()
+          != other.getContactManagerListId()) return false;
+    }
     if (!getEntryList()
         .equals(other.getEntryList())) return false;
+    if (hasProjectSid() != other.hasProjectSid()) return false;
+    if (hasProjectSid()) {
+      if (getProjectSid()
+          != other.getProjectSid()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -178,12 +221,19 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerListId());
+    if (hasContactManagerListId()) {
+      hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContactManagerListId());
+    }
     if (getEntryCount() > 0) {
       hash = (37 * hash) + ENTRY_FIELD_NUMBER;
       hash = (53 * hash) + getEntryList().hashCode();
+    }
+    if (hasProjectSid()) {
+      hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProjectSid());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -324,6 +374,7 @@ private static final long serialVersionUID = 0L;
         entryBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      projectSid_ = 0L;
       return this;
     }
 
@@ -370,9 +421,16 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
+        to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.projectSid_ = projectSid_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -419,7 +477,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.getDefaultInstance()) return this;
-      if (other.getContactManagerListId() != 0L) {
+      if (other.hasContactManagerListId()) {
         setContactManagerListId(other.getContactManagerListId());
       }
       if (entryBuilder_ == null) {
@@ -447,6 +505,9 @@ private static final long serialVersionUID = 0L;
             entryBuilder_.addAllMessages(other.entry_);
           }
         }
+      }
+      if (other.hasProjectSid()) {
+        setProjectSid(other.getProjectSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -492,6 +553,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 24: {
+              projectSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -511,7 +577,15 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * @return Whether the contactManagerListId field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerListId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -519,7 +593,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -531,7 +605,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {
@@ -851,6 +925,46 @@ private static final long serialVersionUID = 0L;
         entry_ = null;
       }
       return entryBuilder_;
+    }
+
+    private long projectSid_ ;
+    /**
+     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * @return Whether the projectSid field is set.
+     */
+    @java.lang.Override
+    public boolean hasProjectSid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * @return The projectSid.
+     */
+    @java.lang.Override
+    public long getProjectSid() {
+      return projectSid_;
+    }
+    /**
+     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * @param value The projectSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectSid(long value) {
+
+      projectSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      projectSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

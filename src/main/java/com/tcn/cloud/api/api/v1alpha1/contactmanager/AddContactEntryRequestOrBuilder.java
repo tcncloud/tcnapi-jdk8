@@ -8,7 +8,12 @@ public interface AddContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  boolean hasContactManagerListId();
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
@@ -56,4 +61,15 @@ public interface AddContactEntryRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
       int index);
+
+  /**
+   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return Whether the projectSid field is set.
+   */
+  boolean hasProjectSid();
+  /**
+   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return The projectSid.
+   */
+  long getProjectSid();
 }

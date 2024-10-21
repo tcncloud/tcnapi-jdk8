@@ -8,32 +8,51 @@ public interface ListContactEntryListRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  boolean hasContactManagerListId();
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
 
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The projectId.
    */
-  java.lang.String getProjectId();
+  @java.lang.Deprecated java.lang.String getProjectId();
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The bytes for projectId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getProjectIdBytes();
+
+  /**
+   * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+   * @return The projectSid.
+   */
+  long getProjectSid();
 }

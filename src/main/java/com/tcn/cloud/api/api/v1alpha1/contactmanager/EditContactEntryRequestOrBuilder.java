@@ -8,7 +8,12 @@ public interface EditContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  boolean hasContactManagerListId();
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();

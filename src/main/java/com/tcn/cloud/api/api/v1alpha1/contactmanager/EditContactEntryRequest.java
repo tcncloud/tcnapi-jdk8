@@ -39,10 +39,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerListId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -116,7 +125,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(1, contactManagerListId_);
     }
     if (contactManagerEntryId_ != 0L) {
@@ -134,7 +143,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactManagerListId_);
     }
@@ -161,8 +170,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest) obj;
 
-    if (getContactManagerListId()
-        != other.getContactManagerListId()) return false;
+    if (hasContactManagerListId() != other.hasContactManagerListId()) return false;
+    if (hasContactManagerListId()) {
+      if (getContactManagerListId()
+          != other.getContactManagerListId()) return false;
+    }
     if (getContactManagerEntryId()
         != other.getContactManagerEntryId()) return false;
     if (!getEditedEntryList()
@@ -178,9 +190,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerListId());
+    if (hasContactManagerListId()) {
+      hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContactManagerListId());
+    }
     hash = (37 * hash) + CONTACT_MANAGER_ENTRY_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getContactManagerEntryId());
@@ -374,12 +388,15 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactManagerEntryId_ = contactManagerEntryId_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -426,7 +443,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest.getDefaultInstance()) return this;
-      if (other.getContactManagerListId() != 0L) {
+      if (other.hasContactManagerListId()) {
         setContactManagerListId(other.getContactManagerListId());
       }
       if (other.getContactManagerEntryId() != 0L) {
@@ -526,7 +543,15 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * @return Whether the contactManagerListId field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerListId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -534,7 +559,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -546,7 +571,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {

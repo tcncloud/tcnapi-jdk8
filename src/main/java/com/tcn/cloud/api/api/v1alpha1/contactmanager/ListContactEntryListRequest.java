@@ -40,10 +40,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerListId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -55,11 +64,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -72,11 +83,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -94,11 +107,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object projectId_ = "";
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The projectId.
    */
   @java.lang.Override
-  public java.lang.String getProjectId() {
+  @java.lang.Deprecated public java.lang.String getProjectId() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -111,11 +126,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string project_id = 3 [json_name = "projectId"];</code>
+   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The bytes for projectId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getProjectIdBytes() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
@@ -127,6 +144,17 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int PROJECT_SID_FIELD_NUMBER = 4;
+  private long projectSid_ = 0L;
+  /**
+   * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+   * @return The projectSid.
+   */
+  @java.lang.Override
+  public long getProjectSid() {
+    return projectSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -143,7 +171,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(1, contactManagerListId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
@@ -151,6 +179,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
+    }
+    if (projectSid_ != 0L) {
+      output.writeInt64(4, projectSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -161,7 +192,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactManagerListId_);
     }
@@ -170,6 +201,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
+    }
+    if (projectSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, projectSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -186,12 +221,17 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest) obj;
 
-    if (getContactManagerListId()
-        != other.getContactManagerListId()) return false;
+    if (hasContactManagerListId() != other.hasContactManagerListId()) return false;
+    if (hasContactManagerListId()) {
+      if (getContactManagerListId()
+          != other.getContactManagerListId()) return false;
+    }
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (!getProjectId()
         .equals(other.getProjectId())) return false;
+    if (getProjectSid()
+        != other.getProjectSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -203,13 +243,18 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerListId());
+    if (hasContactManagerListId()) {
+      hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContactManagerListId());
+    }
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getProjectId().hashCode();
+    hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProjectSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +389,7 @@ private static final long serialVersionUID = 0L;
       contactManagerListId_ = 0L;
       orgId_ = "";
       projectId_ = "";
+      projectSid_ = 0L;
       return this;
     }
 
@@ -377,8 +423,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orgId_ = orgId_;
@@ -386,6 +434,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectId_ = projectId_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.projectSid_ = projectSid_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -432,7 +484,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.getDefaultInstance()) return this;
-      if (other.getContactManagerListId() != 0L) {
+      if (other.hasContactManagerListId()) {
         setContactManagerListId(other.getContactManagerListId());
       }
       if (!other.getOrgId().isEmpty()) {
@@ -444,6 +496,9 @@ private static final long serialVersionUID = 0L;
         projectId_ = other.projectId_;
         bitField0_ |= 0x00000004;
         onChanged();
+      }
+      if (other.getProjectSid() != 0L) {
+        setProjectSid(other.getProjectSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -486,6 +541,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              projectSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -505,7 +565,15 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * @return Whether the contactManagerListId field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerListId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -513,7 +581,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -525,7 +593,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {
@@ -537,10 +605,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -553,10 +623,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -570,11 +642,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -583,21 +657,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -609,10 +687,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object projectId_ = "";
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
      * @return The projectId.
      */
-    public java.lang.String getProjectId() {
+    @java.lang.Deprecated public java.lang.String getProjectId() {
       java.lang.Object ref = projectId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -625,10 +705,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
      * @return The bytes for projectId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getProjectIdBytes() {
       java.lang.Object ref = projectId_;
       if (ref instanceof String) {
@@ -642,11 +724,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectId(
+    @java.lang.Deprecated public Builder setProjectId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       projectId_ = value;
@@ -655,26 +739,62 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
      * @return This builder for chaining.
      */
-    public Builder clearProjectId() {
+    @java.lang.Deprecated public Builder clearProjectId() {
       projectId_ = getDefaultInstance().getProjectId();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId"];</code>
+     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
      * @param value The bytes for projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectIdBytes(
+    @java.lang.Deprecated public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       projectId_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private long projectSid_ ;
+    /**
+     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * @return The projectSid.
+     */
+    @java.lang.Override
+    public long getProjectSid() {
+      return projectSid_;
+    }
+    /**
+     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * @param value The projectSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectSid(long value) {
+
+      projectSid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 project_sid = 4 [json_name = "projectSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectSid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      projectSid_ = 0L;
       onChanged();
       return this;
     }

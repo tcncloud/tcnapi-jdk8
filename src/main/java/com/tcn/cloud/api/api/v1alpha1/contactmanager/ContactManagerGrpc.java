@@ -294,6 +294,68 @@ public final class ContactManagerGrpc {
     return getGetContactFieldTypeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> getAgentAddContactEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AgentAddContactEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> getAgentAddContactEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> getAgentAddContactEntryMethod;
+    if ((getAgentAddContactEntryMethod = ContactManagerGrpc.getAgentAddContactEntryMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getAgentAddContactEntryMethod = ContactManagerGrpc.getAgentAddContactEntryMethod) == null) {
+          ContactManagerGrpc.getAgentAddContactEntryMethod = getAgentAddContactEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentAddContactEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("AgentAddContactEntry"))
+              .build();
+        }
+      }
+    }
+    return getAgentAddContactEntryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> getAgentEditContactEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AgentEditContactEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> getAgentEditContactEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> getAgentEditContactEntryMethod;
+    if ((getAgentEditContactEntryMethod = ContactManagerGrpc.getAgentEditContactEntryMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getAgentEditContactEntryMethod = ContactManagerGrpc.getAgentEditContactEntryMethod) == null) {
+          ContactManagerGrpc.getAgentEditContactEntryMethod = getAgentEditContactEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentEditContactEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("AgentEditContactEntry"))
+              .build();
+        }
+      }
+    }
+    return getAgentEditContactEntryMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -420,6 +482,28 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactFieldTypeMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *Adds a new contact entry based on the provided request, used on the agent side
+     * </pre>
+     */
+    default void agentAddContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentAddContactEntryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     **
+     *Edits the fields of an existing contact entry, used on the agent side
+     * </pre>
+     */
+    default void agentEditContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentEditContactEntryMethod(), responseObserver);
+    }
   }
 
   /**
@@ -536,6 +620,30 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *Adds a new contact entry based on the provided request, used on the agent side
+     * </pre>
+     */
+    public void agentAddContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAgentAddContactEntryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     **
+     *Edits the fields of an existing contact entry, used on the agent side
+     * </pre>
+     */
+    public void agentEditContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAgentEditContactEntryMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -631,6 +739,28 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse getContactFieldType(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetContactFieldTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *Adds a new contact entry based on the provided request, used on the agent side
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse agentAddContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAgentAddContactEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *Edits the fields of an existing contact entry, used on the agent side
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse agentEditContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAgentEditContactEntryMethod(), getCallOptions(), request);
     }
   }
 
@@ -737,6 +867,30 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     **
+     *Adds a new contact entry based on the provided request, used on the agent side
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse> agentAddContactEntry(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAgentAddContactEntryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *Edits the fields of an existing contact entry, used on the agent side
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> agentEditContactEntry(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAgentEditContactEntryMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
@@ -748,6 +902,8 @@ public final class ContactManagerGrpc {
   private static final int METHODID_EDIT_CONTACT_ENTRY = 6;
   private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 7;
   private static final int METHODID_GET_CONTACT_FIELD_TYPE = 8;
+  private static final int METHODID_AGENT_ADD_CONTACT_ENTRY = 9;
+  private static final int METHODID_AGENT_EDIT_CONTACT_ENTRY = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -801,6 +957,14 @@ public final class ContactManagerGrpc {
         case METHODID_GET_CONTACT_FIELD_TYPE:
           serviceImpl.getContactFieldType((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>) responseObserver);
+          break;
+        case METHODID_AGENT_ADD_CONTACT_ENTRY:
+          serviceImpl.agentAddContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse>) responseObserver);
+          break;
+        case METHODID_AGENT_EDIT_CONTACT_ENTRY:
+          serviceImpl.agentEditContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -883,6 +1047,20 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>(
                 service, METHODID_GET_CONTACT_FIELD_TYPE)))
+        .addMethod(
+          getAgentAddContactEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.AddContactEntryResponse>(
+                service, METHODID_AGENT_ADD_CONTACT_ENTRY)))
+        .addMethod(
+          getAgentEditContactEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse>(
+                service, METHODID_AGENT_EDIT_CONTACT_ENTRY)))
         .build();
   }
 
@@ -940,6 +1118,8 @@ public final class ContactManagerGrpc {
               .addMethod(getEditContactEntryMethod())
               .addMethod(getListContactsByEntityMethod())
               .addMethod(getGetContactFieldTypeMethod())
+              .addMethod(getAgentAddContactEntryMethod())
+              .addMethod(getAgentEditContactEntryMethod())
               .build();
         }
       }
