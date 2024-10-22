@@ -152,7 +152,7 @@ public enum Visibility
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor().getEnumTypes().get(7);
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor().getEnumTypes().get(6);
   }
 
   private static final Visibility[] VALUES = values();

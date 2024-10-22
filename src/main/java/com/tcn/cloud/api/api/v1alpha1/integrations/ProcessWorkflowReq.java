@@ -19,7 +19,6 @@ private static final long serialVersionUID = 0L;
     portalLinkId_ = "";
     portalId_ = "";
     callType_ = 0;
-    requestOrigin_ = 0;
   }
 
   @java.lang.Override
@@ -300,24 +299,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
-  public static final int REQUEST_ORIGIN_FIELD_NUMBER = 8;
-  private int requestOrigin_ = 0;
-  /**
-   * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-   * @return The enum numeric value on the wire for requestOrigin.
-   */
-  @java.lang.Override public int getRequestOriginValue() {
-    return requestOrigin_;
-  }
-  /**
-   * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-   * @return The requestOrigin.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin() {
-    com.tcn.cloud.api.api.commons.integrations.RequestOrigin result = com.tcn.cloud.api.api.commons.integrations.RequestOrigin.forNumber(requestOrigin_);
-    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestOrigin.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -355,9 +336,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
     if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
       output.writeEnum(7, callType_);
-    }
-    if (requestOrigin_ != com.tcn.cloud.api.api.commons.integrations.RequestOrigin.REQUEST_ORIGIN_UNKNOWN.getNumber()) {
-      output.writeEnum(8, requestOrigin_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -400,10 +378,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, callType_);
     }
-    if (requestOrigin_ != com.tcn.cloud.api.api.commons.integrations.RequestOrigin.REQUEST_ORIGIN_UNKNOWN.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(8, requestOrigin_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -432,7 +406,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (getCallSid()
         != other.getCallSid()) return false;
     if (callType_ != other.callType_) return false;
-    if (requestOrigin_ != other.requestOrigin_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -461,8 +434,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         getCallSid());
     hash = (37 * hash) + CALL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + callType_;
-    hash = (37 * hash) + REQUEST_ORIGIN_FIELD_NUMBER;
-    hash = (53 * hash) + requestOrigin_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -623,7 +594,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableParams().clear();
       callSid_ = 0L;
       callType_ = 0;
-      requestOrigin_ = 0;
       return this;
     }
 
@@ -678,9 +648,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.callType_ = callType_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.requestOrigin_ = requestOrigin_;
       }
     }
 
@@ -753,9 +720,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (other.callType_ != 0) {
         setCallTypeValue(other.getCallTypeValue());
       }
-      if (other.requestOrigin_ != 0) {
-        setRequestOriginValue(other.getRequestOriginValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -821,11 +785,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
               bitField0_ |= 0x00000040;
               break;
             } // case 56
-            case 64: {
-              requestOrigin_ = input.readEnum();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1343,59 +1302,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     public Builder clearCallType() {
       bitField0_ = (bitField0_ & ~0x00000040);
       callType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int requestOrigin_ = 0;
-    /**
-     * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-     * @return The enum numeric value on the wire for requestOrigin.
-     */
-    @java.lang.Override public int getRequestOriginValue() {
-      return requestOrigin_;
-    }
-    /**
-     * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-     * @param value The enum numeric value on the wire for requestOrigin to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRequestOriginValue(int value) {
-      requestOrigin_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-     * @return The requestOrigin.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin() {
-      com.tcn.cloud.api.api.commons.integrations.RequestOrigin result = com.tcn.cloud.api.api.commons.integrations.RequestOrigin.forNumber(requestOrigin_);
-      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestOrigin.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-     * @param value The requestOrigin to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRequestOrigin(com.tcn.cloud.api.api.commons.integrations.RequestOrigin value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000080;
-      requestOrigin_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.RequestOrigin request_origin = 8 [json_name = "requestOrigin"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRequestOrigin() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      requestOrigin_ = 0;
       onChanged();
       return this;
     }

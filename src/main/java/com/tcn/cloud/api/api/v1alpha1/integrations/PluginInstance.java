@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1292
+   *     See api/v1alpha1/integrations/service.proto;l=1290
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Override @java.lang.Deprecated public int getMethodIdValue() {
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1292
+   *     See api/v1alpha1/integrations/service.proto;l=1290
    * @return The methodId.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
@@ -1626,7 +1626,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1292
+     *     See api/v1alpha1/integrations/service.proto;l=1290
      * @return The enum numeric value on the wire for methodId.
      */
     @java.lang.Override @java.lang.Deprecated public int getMethodIdValue() {
@@ -1635,7 +1635,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1292
+     *     See api/v1alpha1/integrations/service.proto;l=1290
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
@@ -1648,7 +1648,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1292
+     *     See api/v1alpha1/integrations/service.proto;l=1290
      * @return The methodId.
      */
     @java.lang.Override
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1292
+     *     See api/v1alpha1/integrations/service.proto;l=1290
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
@@ -1675,7 +1675,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1292
+     *     See api/v1alpha1/integrations/service.proto;l=1290
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMethodId() {

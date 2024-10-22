@@ -221,15 +221,4 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    * @return The callType.
    */
   com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
-
-  /**
-   * <code>.api.commons.integrations.RequestOrigin request_origin = 12 [json_name = "requestOrigin"];</code>
-   * @return The enum numeric value on the wire for requestOrigin.
-   */
-  int getRequestOriginValue();
-  /**
-   * <code>.api.commons.integrations.RequestOrigin request_origin = 12 [json_name = "requestOrigin"];</code>
-   * @return The requestOrigin.
-   */
-  com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin();
 }
