@@ -179,19 +179,19 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.UNRECOGNIZED : result;
   }
 
-  public static final int INCLUDE_HEADER_FIELD_NUMBER = 4;
-  private boolean includeHeader_ = false;
+  public static final int NO_HEADER_FIELD_NUMBER = 4;
+  private boolean noHeader_ = false;
   /**
    * <pre>
    * Flag to include header in csv exports
    * </pre>
    *
-   * <code>bool include_header = 4 [json_name = "includeHeader"];</code>
-   * @return The includeHeader.
+   * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+   * @return The noHeader.
    */
   @java.lang.Override
-  public boolean getIncludeHeader() {
-    return includeHeader_;
+  public boolean getNoHeader() {
+    return noHeader_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -217,8 +217,8 @@ private static final long serialVersionUID = 0L;
     if (quoteCharacter_ != com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.QUOTE_CHARACTER_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, quoteCharacter_);
     }
-    if (includeHeader_ != false) {
-      output.writeBool(4, includeHeader_);
+    if (noHeader_ != false) {
+      output.writeBool(4, noHeader_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -240,9 +240,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, quoteCharacter_);
     }
-    if (includeHeader_ != false) {
+    if (noHeader_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, includeHeader_);
+        .computeBoolSize(4, noHeader_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -264,8 +264,8 @@ private static final long serialVersionUID = 0L;
     if (!getDelimiter()
         .equals(other.getDelimiter())) return false;
     if (quoteCharacter_ != other.quoteCharacter_) return false;
-    if (getIncludeHeader()
-        != other.getIncludeHeader()) return false;
+    if (getNoHeader()
+        != other.getNoHeader()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -285,9 +285,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDelimiter().hashCode();
     hash = (37 * hash) + QUOTE_CHARACTER_FIELD_NUMBER;
     hash = (53 * hash) + quoteCharacter_;
-    hash = (37 * hash) + INCLUDE_HEADER_FIELD_NUMBER;
+    hash = (37 * hash) + NO_HEADER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIncludeHeader());
+        getNoHeader());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       delimiter_ = "";
       quoteCharacter_ = 0;
-      includeHeader_ = false;
+      noHeader_ = false;
       return this;
     }
 
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
         result.quoteCharacter_ = quoteCharacter_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.includeHeader_ = includeHeader_;
+        result.noHeader_ = noHeader_;
       }
     }
 
@@ -568,8 +568,8 @@ private static final long serialVersionUID = 0L;
       if (other.quoteCharacter_ != 0) {
         setQuoteCharacterValue(other.getQuoteCharacterValue());
       }
-      if (other.getIncludeHeader() != false) {
-        setIncludeHeader(other.getIncludeHeader());
+      if (other.getNoHeader() != false) {
+        setNoHeader(other.getNoHeader());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 24
             case 32: {
-              includeHeader_ = input.readBool();
+              noHeader_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -1119,31 +1119,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean includeHeader_ ;
+    private boolean noHeader_ ;
     /**
      * <pre>
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool include_header = 4 [json_name = "includeHeader"];</code>
-     * @return The includeHeader.
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * @return The noHeader.
      */
     @java.lang.Override
-    public boolean getIncludeHeader() {
-      return includeHeader_;
+    public boolean getNoHeader() {
+      return noHeader_;
     }
     /**
      * <pre>
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool include_header = 4 [json_name = "includeHeader"];</code>
-     * @param value The includeHeader to set.
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * @param value The noHeader to set.
      * @return This builder for chaining.
      */
-    public Builder setIncludeHeader(boolean value) {
+    public Builder setNoHeader(boolean value) {
 
-      includeHeader_ = value;
+      noHeader_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
@@ -1153,12 +1153,12 @@ private static final long serialVersionUID = 0L;
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool include_header = 4 [json_name = "includeHeader"];</code>
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearIncludeHeader() {
+    public Builder clearNoHeader() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      includeHeader_ = false;
+      noHeader_ = false;
       onChanged();
       return this;
     }

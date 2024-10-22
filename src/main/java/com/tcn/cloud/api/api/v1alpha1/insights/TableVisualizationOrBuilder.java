@@ -95,8 +95,8 @@ public interface TableVisualizationOrBuilder extends
    * Flag to include header in csv exports
    * </pre>
    *
-   * <code>bool include_header = 4 [json_name = "includeHeader"];</code>
-   * @return The includeHeader.
+   * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+   * @return The noHeader.
    */
-  boolean getIncludeHeader();
+  boolean getNoHeader();
 }
