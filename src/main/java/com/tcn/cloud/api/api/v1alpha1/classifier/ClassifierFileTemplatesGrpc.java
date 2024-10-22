@@ -46,99 +46,6 @@ public final class ClassifierFileTemplatesGrpc {
     return getParseFileMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> getListEventsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListEvents",
-      requestType = com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> getListEventsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> getListEventsMethod;
-    if ((getListEventsMethod = ClassifierFileTemplatesGrpc.getListEventsMethod) == null) {
-      synchronized (ClassifierFileTemplatesGrpc.class) {
-        if ((getListEventsMethod = ClassifierFileTemplatesGrpc.getListEventsMethod) == null) {
-          ClassifierFileTemplatesGrpc.getListEventsMethod = getListEventsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListEvents"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClassifierFileTemplatesMethodDescriptorSupplier("ListEvents"))
-              .build();
-        }
-      }
-    }
-    return getListEventsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> getPeekListMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "PeekList",
-      requestType = com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> getPeekListMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest, com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> getPeekListMethod;
-    if ((getPeekListMethod = ClassifierFileTemplatesGrpc.getPeekListMethod) == null) {
-      synchronized (ClassifierFileTemplatesGrpc.class) {
-        if ((getPeekListMethod = ClassifierFileTemplatesGrpc.getPeekListMethod) == null) {
-          ClassifierFileTemplatesGrpc.getPeekListMethod = getPeekListMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest, com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PeekList"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClassifierFileTemplatesMethodDescriptorSupplier("PeekList"))
-              .build();
-        }
-      }
-    }
-    return getPeekListMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ParseFTSFile",
-      requestType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod;
-    if ((getParseFTSFileMethod = ClassifierFileTemplatesGrpc.getParseFTSFileMethod) == null) {
-      synchronized (ClassifierFileTemplatesGrpc.class) {
-        if ((getParseFTSFileMethod = ClassifierFileTemplatesGrpc.getParseFTSFileMethod) == null) {
-          ClassifierFileTemplatesGrpc.getParseFTSFileMethod = getParseFTSFileMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ParseFTSFile"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClassifierFileTemplatesMethodDescriptorSupplier("ParseFTSFile"))
-              .build();
-        }
-      }
-    }
-    return getParseFTSFileMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest,
       com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateResponse> getUpdateFileTemplateMethod;
 
@@ -320,27 +227,6 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    default void listEvents(com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEventsMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void peekList(com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPeekListMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParseFTSFileMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void updateFileTemplate(com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFileTemplateMethod(), responseObserver);
@@ -405,30 +291,6 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    public void listEvents(com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListEventsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void peekList(com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getPeekListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getParseFTSFileMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void updateFileTemplate(com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -481,27 +343,6 @@ public final class ClassifierFileTemplatesGrpc {
     public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileResponse parseFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getParseFileMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse listEvents(com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListEventsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse peekList(com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getPeekListMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getParseFTSFileMethod(), getCallOptions(), request);
     }
 
     /**
@@ -559,30 +400,6 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse> listEvents(
-        com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListEventsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse> peekList(
-        com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getPeekListMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> parseFTSFile(
-        com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getParseFTSFileMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateResponse> updateFileTemplate(
         com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -615,13 +432,10 @@ public final class ClassifierFileTemplatesGrpc {
   }
 
   private static final int METHODID_PARSE_FILE = 0;
-  private static final int METHODID_LIST_EVENTS = 1;
-  private static final int METHODID_PEEK_LIST = 2;
-  private static final int METHODID_PARSE_FTSFILE = 3;
-  private static final int METHODID_UPDATE_FILE_TEMPLATE = 4;
-  private static final int METHODID_DELETE_FILE_TEMPLATE = 5;
-  private static final int METHODID_LIST_FILE_TEMPLATES = 6;
-  private static final int METHODID_GET_FILE_TEMPLATE = 7;
+  private static final int METHODID_UPDATE_FILE_TEMPLATE = 1;
+  private static final int METHODID_DELETE_FILE_TEMPLATE = 2;
+  private static final int METHODID_LIST_FILE_TEMPLATES = 3;
+  private static final int METHODID_GET_FILE_TEMPLATE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -643,18 +457,6 @@ public final class ClassifierFileTemplatesGrpc {
         case METHODID_PARSE_FILE:
           serviceImpl.parseFile((com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileResponse>) responseObserver);
-          break;
-        case METHODID_LIST_EVENTS:
-          serviceImpl.listEvents((com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse>) responseObserver);
-          break;
-        case METHODID_PEEK_LIST:
-          serviceImpl.peekList((com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse>) responseObserver);
-          break;
-        case METHODID_PARSE_FTSFILE:
-          serviceImpl.parseFTSFile((com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>) responseObserver);
           break;
         case METHODID_UPDATE_FILE_TEMPLATE:
           serviceImpl.updateFileTemplate((com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest) request,
@@ -697,27 +499,6 @@ public final class ClassifierFileTemplatesGrpc {
               com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileRequest,
               com.tcn.cloud.api.api.v1alpha1.classifier.ParseFileResponse>(
                 service, METHODID_PARSE_FILE)))
-        .addMethod(
-          getListEventsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsRequest,
-              com.tcn.cloud.api.api.v1alpha1.classifier.ListEventsResponse>(
-                service, METHODID_LIST_EVENTS)))
-        .addMethod(
-          getPeekListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest,
-              com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse>(
-                service, METHODID_PEEK_LIST)))
-        .addMethod(
-          getParseFTSFileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>(
-                service, METHODID_PARSE_FTSFILE)))
         .addMethod(
           getUpdateFileTemplateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -795,9 +576,6 @@ public final class ClassifierFileTemplatesGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ClassifierFileTemplatesFileDescriptorSupplier())
               .addMethod(getParseFileMethod())
-              .addMethod(getListEventsMethod())
-              .addMethod(getPeekListMethod())
-              .addMethod(getParseFTSFileMethod())
               .addMethod(getUpdateFileTemplateMethod())
               .addMethod(getDeleteFileTemplateMethod())
               .addMethod(getListFileTemplatesMethod())
