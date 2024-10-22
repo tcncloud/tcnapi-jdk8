@@ -215,4 +215,15 @@ public interface IntegrationTransactionOrBuilder extends
    * <code>.api.v1alpha1.integrations.Conditions conds = 15 [json_name = "conds"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.ConditionsOrBuilder getCondsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.RequestOrigin request_origin = 16 [json_name = "requestOrigin"];</code>
+   * @return The enum numeric value on the wire for requestOrigin.
+   */
+  int getRequestOriginValue();
+  /**
+   * <code>.api.commons.integrations.RequestOrigin request_origin = 16 [json_name = "requestOrigin"];</code>
+   * @return The requestOrigin.
+   */
+  com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin();
 }
