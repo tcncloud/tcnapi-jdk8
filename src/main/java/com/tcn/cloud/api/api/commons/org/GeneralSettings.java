@@ -8610,11 +8610,13 @@ private static final long serialVersionUID = 0L;
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=55
    * @return The triggeredPauseStatusPauseCodeWaiting.
    */
   @java.lang.Override
-  public java.lang.String getTriggeredPauseStatusPauseCodeWaiting() {
+  @java.lang.Deprecated public java.lang.String getTriggeredPauseStatusPauseCodeWaiting() {
     java.lang.Object ref = triggeredPauseStatusPauseCodeWaiting_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -8631,11 +8633,13 @@ private static final long serialVersionUID = 0L;
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=55
    * @return The bytes for triggeredPauseStatusPauseCodeWaiting.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTriggeredPauseStatusPauseCodeWaitingBytes() {
     java.lang.Object ref = triggeredPauseStatusPauseCodeWaiting_;
     if (ref instanceof java.lang.String) {
@@ -8657,11 +8661,13 @@ private static final long serialVersionUID = 0L;
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=57
    * @return The triggeredPauseStatusPauseCodeWrapup.
    */
   @java.lang.Override
-  public java.lang.String getTriggeredPauseStatusPauseCodeWrapup() {
+  @java.lang.Deprecated public java.lang.String getTriggeredPauseStatusPauseCodeWrapup() {
     java.lang.Object ref = triggeredPauseStatusPauseCodeWrapup_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -8678,11 +8684,13 @@ private static final long serialVersionUID = 0L;
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=57
    * @return The bytes for triggeredPauseStatusPauseCodeWrapup.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTriggeredPauseStatusPauseCodeWrapupBytes() {
     java.lang.Object ref = triggeredPauseStatusPauseCodeWrapup_;
     if (ref instanceof java.lang.String) {
@@ -11883,10 +11891,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=55
      * @return The triggeredPauseStatusPauseCodeWaiting.
      */
-    public java.lang.String getTriggeredPauseStatusPauseCodeWaiting() {
+    @java.lang.Deprecated public java.lang.String getTriggeredPauseStatusPauseCodeWaiting() {
       java.lang.Object ref = triggeredPauseStatusPauseCodeWaiting_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -11903,10 +11913,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=55
      * @return The bytes for triggeredPauseStatusPauseCodeWaiting.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTriggeredPauseStatusPauseCodeWaitingBytes() {
       java.lang.Object ref = triggeredPauseStatusPauseCodeWaiting_;
       if (ref instanceof String) {
@@ -11924,11 +11936,13 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=55
      * @param value The triggeredPauseStatusPauseCodeWaiting to set.
      * @return This builder for chaining.
      */
-    public Builder setTriggeredPauseStatusPauseCodeWaiting(
+    @java.lang.Deprecated public Builder setTriggeredPauseStatusPauseCodeWaiting(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       triggeredPauseStatusPauseCodeWaiting_ = value;
@@ -11941,10 +11955,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=55
      * @return This builder for chaining.
      */
-    public Builder clearTriggeredPauseStatusPauseCodeWaiting() {
+    @java.lang.Deprecated public Builder clearTriggeredPauseStatusPauseCodeWaiting() {
       triggeredPauseStatusPauseCodeWaiting_ = getDefaultInstance().getTriggeredPauseStatusPauseCodeWaiting();
       bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
@@ -11955,11 +11971,13 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+     * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=55
      * @param value The bytes for triggeredPauseStatusPauseCodeWaiting to set.
      * @return This builder for chaining.
      */
-    public Builder setTriggeredPauseStatusPauseCodeWaitingBytes(
+    @java.lang.Deprecated public Builder setTriggeredPauseStatusPauseCodeWaitingBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -11975,10 +11993,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=57
      * @return The triggeredPauseStatusPauseCodeWrapup.
      */
-    public java.lang.String getTriggeredPauseStatusPauseCodeWrapup() {
+    @java.lang.Deprecated public java.lang.String getTriggeredPauseStatusPauseCodeWrapup() {
       java.lang.Object ref = triggeredPauseStatusPauseCodeWrapup_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -11995,10 +12015,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=57
      * @return The bytes for triggeredPauseStatusPauseCodeWrapup.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTriggeredPauseStatusPauseCodeWrapupBytes() {
       java.lang.Object ref = triggeredPauseStatusPauseCodeWrapup_;
       if (ref instanceof String) {
@@ -12016,11 +12038,13 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=57
      * @param value The triggeredPauseStatusPauseCodeWrapup to set.
      * @return This builder for chaining.
      */
-    public Builder setTriggeredPauseStatusPauseCodeWrapup(
+    @java.lang.Deprecated public Builder setTriggeredPauseStatusPauseCodeWrapup(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       triggeredPauseStatusPauseCodeWrapup_ = value;
@@ -12033,10 +12057,12 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=57
      * @return This builder for chaining.
      */
-    public Builder clearTriggeredPauseStatusPauseCodeWrapup() {
+    @java.lang.Deprecated public Builder clearTriggeredPauseStatusPauseCodeWrapup() {
       triggeredPauseStatusPauseCodeWrapup_ = getDefaultInstance().getTriggeredPauseStatusPauseCodeWrapup();
       bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
@@ -12047,11 +12073,13 @@ private static final long serialVersionUID = 0L;
      * Use this pause code instead of the trigger generated one.
      * </pre>
      *
-     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+     * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+     * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=57
      * @param value The bytes for triggeredPauseStatusPauseCodeWrapup to set.
      * @return This builder for chaining.
      */
-    public Builder setTriggeredPauseStatusPauseCodeWrapupBytes(
+    @java.lang.Deprecated public Builder setTriggeredPauseStatusPauseCodeWrapupBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
