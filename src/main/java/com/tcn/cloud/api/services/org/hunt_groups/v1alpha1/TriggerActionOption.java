@@ -206,6 +206,50 @@ private static final long serialVersionUID = 0L;
     return exileLinkSid_;
   }
 
+  public static final int PAUSE_CODE_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode pauseCode_;
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   * @return Whether the pauseCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasPauseCode() {
+    return pauseCode_ != null;
+  }
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   * @return The pauseCode.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode getPauseCode() {
+    return pauseCode_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.getDefaultInstance() : pauseCode_;
+  }
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder getPauseCodeOrBuilder() {
+    return pauseCode_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.getDefaultInstance() : pauseCode_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -237,6 +281,9 @@ private static final long serialVersionUID = 0L;
     }
     if (exileLinkSid_ != 0L) {
       output.writeInt64(6, exileLinkSid_);
+    }
+    if (pauseCode_ != null) {
+      output.writeMessage(7, getPauseCode());
     }
     getUnknownFields().writeTo(output);
   }
@@ -270,6 +317,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(6, exileLinkSid_);
     }
+    if (pauseCode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getPauseCode());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -295,6 +346,11 @@ private static final long serialVersionUID = 0L;
         != other.getIntegrationLinkSid()) return false;
     if (getExileLinkSid()
         != other.getExileLinkSid()) return false;
+    if (hasPauseCode() != other.hasPauseCode()) return false;
+    if (hasPauseCode()) {
+      if (!getPauseCode()
+          .equals(other.getPauseCode())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -321,6 +377,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EXILE_LINK_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getExileLinkSid());
+    if (hasPauseCode()) {
+      hash = (37 * hash) + PAUSE_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getPauseCode().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -458,6 +518,11 @@ private static final long serialVersionUID = 0L;
       webLinkSid_ = 0L;
       integrationLinkSid_ = 0L;
       exileLinkSid_ = 0L;
+      pauseCode_ = null;
+      if (pauseCodeBuilder_ != null) {
+        pauseCodeBuilder_.dispose();
+        pauseCodeBuilder_ = null;
+      }
       return this;
     }
 
@@ -508,6 +573,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.exileLinkSid_ = exileLinkSid_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.pauseCode_ = pauseCodeBuilder_ == null
+            ? pauseCode_
+            : pauseCodeBuilder_.build();
       }
     }
 
@@ -575,6 +645,9 @@ private static final long serialVersionUID = 0L;
       if (other.getExileLinkSid() != 0L) {
         setExileLinkSid(other.getExileLinkSid());
       }
+      if (other.hasPauseCode()) {
+        mergePauseCode(other.getPauseCode());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -631,6 +704,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              input.readMessage(
+                  getPauseCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1070,6 +1150,179 @@ private static final long serialVersionUID = 0L;
       exileLinkSid_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode pauseCode_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder> pauseCodeBuilder_;
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     * @return Whether the pauseCode field is set.
+     */
+    public boolean hasPauseCode() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     * @return The pauseCode.
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode getPauseCode() {
+      if (pauseCodeBuilder_ == null) {
+        return pauseCode_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.getDefaultInstance() : pauseCode_;
+      } else {
+        return pauseCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public Builder setPauseCode(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode value) {
+      if (pauseCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pauseCode_ = value;
+      } else {
+        pauseCodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public Builder setPauseCode(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.Builder builderForValue) {
+      if (pauseCodeBuilder_ == null) {
+        pauseCode_ = builderForValue.build();
+      } else {
+        pauseCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public Builder mergePauseCode(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode value) {
+      if (pauseCodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          pauseCode_ != null &&
+          pauseCode_ != com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.getDefaultInstance()) {
+          getPauseCodeBuilder().mergeFrom(value);
+        } else {
+          pauseCode_ = value;
+        }
+      } else {
+        pauseCodeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public Builder clearPauseCode() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      pauseCode_ = null;
+      if (pauseCodeBuilder_ != null) {
+        pauseCodeBuilder_.dispose();
+        pauseCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.Builder getPauseCodeBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getPauseCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder getPauseCodeOrBuilder() {
+      if (pauseCodeBuilder_ != null) {
+        return pauseCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return pauseCode_ == null ?
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.getDefaultInstance() : pauseCode_;
+      }
+    }
+    /**
+     * <pre>
+     * The pause code to apply for the trigger
+     * Use pause code only if either system_pause_code or custom_pause_code is set
+     * Applied when agent is in status: Paused
+     * </pre>
+     *
+     * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder> 
+        getPauseCodeFieldBuilder() {
+      if (pauseCodeBuilder_ == null) {
+        pauseCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder>(
+                getPauseCode(),
+                getParentForChildren(),
+                isClean());
+        pauseCode_ = null;
+      }
+      return pauseCodeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -189,19 +189,23 @@ public interface GeneralSettingsOrBuilder extends
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=55
    * @return The triggeredPauseStatusPauseCodeWaiting.
    */
-  java.lang.String getTriggeredPauseStatusPauseCodeWaiting();
+  @java.lang.Deprecated java.lang.String getTriggeredPauseStatusPauseCodeWaiting();
   /**
    * <pre>
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting"];</code>
+   * <code>string triggered_pause_status_pause_code_waiting = 105 [json_name = "triggeredPauseStatusPauseCodeWaiting", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_waiting is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=55
    * @return The bytes for triggeredPauseStatusPauseCodeWaiting.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTriggeredPauseStatusPauseCodeWaitingBytes();
 
   /**
@@ -209,19 +213,23 @@ public interface GeneralSettingsOrBuilder extends
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=57
    * @return The triggeredPauseStatusPauseCodeWrapup.
    */
-  java.lang.String getTriggeredPauseStatusPauseCodeWrapup();
+  @java.lang.Deprecated java.lang.String getTriggeredPauseStatusPauseCodeWrapup();
   /**
    * <pre>
    * Use this pause code instead of the trigger generated one.
    * </pre>
    *
-   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup"];</code>
+   * <code>string triggered_pause_status_pause_code_wrapup = 106 [json_name = "triggeredPauseStatusPauseCodeWrapup", deprecated = true];</code>
+   * @deprecated api.commons.org.GeneralSettings.triggered_pause_status_pause_code_wrapup is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=57
    * @return The bytes for triggeredPauseStatusPauseCodeWrapup.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTriggeredPauseStatusPauseCodeWrapupBytes();
 
   /**

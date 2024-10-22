@@ -115,4 +115,37 @@ public interface TriggerActionOptionOrBuilder extends
    * @return The exileLinkSid.
    */
   long getExileLinkSid();
+
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   * @return Whether the pauseCode field is set.
+   */
+  boolean hasPauseCode();
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   * @return The pauseCode.
+   */
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCode getPauseCode();
+  /**
+   * <pre>
+   * The pause code to apply for the trigger
+   * Use pause code only if either system_pause_code or custom_pause_code is set
+   * Applied when agent is in status: Paused
+   * </pre>
+   *
+   * <code>.services.org.hunt_groups.v1alpha1.TriggerPauseCode pause_code = 7 [json_name = "pauseCode"];</code>
+   */
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.TriggerPauseCodeOrBuilder getPauseCodeOrBuilder();
 }
