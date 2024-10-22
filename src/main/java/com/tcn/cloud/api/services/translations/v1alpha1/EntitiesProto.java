@@ -160,6 +160,16 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_translations_v1alpha1_DisableContextResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_translations_v1alpha1_BulkDeleteTranslationsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -244,15 +254,18 @@ public final class EntitiesProto {
       "\022\030\n\007context\030\001 \001(\tR\007context\"\027\n\025EnableCont" +
       "extResponse\"1\n\025DisableContextRequest\022\030\n\007" +
       "context\030\001 \001(\tR\007context\"\030\n\026DisableContext" +
-      "Response\"H\n\035BulkDeleteTranslationsReques" +
-      "t\022\'\n\017translation_ids\030\001 \003(\tR\016translationI" +
-      "ds\" \n\036BulkDeleteTranslationsResponseB\333\001\n" +
-      "0com.tcn.cloud.api.services.translations" +
-      ".v1alpha1B\rEntitiesProtoP\001\242\002\003STX\252\002\036Servi" +
-      "ces.Translations.V1alpha1\312\002\036Services\\Tra" +
-      "nslations\\V1alpha1\342\002*Services\\Translatio" +
-      "ns\\V1alpha1\\GPBMetadata\352\002 Services::Tran" +
-      "slations::V1alpha1b\006proto3"
+      "Response\"[\n#DeleteTranslationsByTemplate" +
+      "Request\022\032\n\010template\030\001 \001(\tR\010template\022\030\n\007c" +
+      "ontext\030\002 \001(\tR\007context\"&\n$DeleteTranslati" +
+      "onsByTemplateResponse\"H\n\035BulkDeleteTrans" +
+      "lationsRequest\022\'\n\017translation_ids\030\001 \003(\tR" +
+      "\016translationIds\" \n\036BulkDeleteTranslation" +
+      "sResponseB\333\001\n0com.tcn.cloud.api.services" +
+      ".translations.v1alpha1B\rEntitiesProtoP\001\242" +
+      "\002\003STX\252\002\036Services.Translations.V1alpha1\312\002" +
+      "\036Services\\Translations\\V1alpha1\342\002*Servic" +
+      "es\\Translations\\V1alpha1\\GPBMetadata\352\002 S" +
+      "ervices::Translations::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -433,14 +446,26 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_DisableContextResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_services_translations_v1alpha1_BulkDeleteTranslationsRequest_descriptor =
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(29);
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateRequest_descriptor,
+        new java.lang.String[] { "Template", "Context", });
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_DeleteTranslationsByTemplateResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_translations_v1alpha1_BulkDeleteTranslationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(31);
     internal_static_services_translations_v1alpha1_BulkDeleteTranslationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_BulkDeleteTranslationsRequest_descriptor,
         new java.lang.String[] { "TranslationIds", });
     internal_static_services_translations_v1alpha1_BulkDeleteTranslationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_services_translations_v1alpha1_BulkDeleteTranslationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_BulkDeleteTranslationsResponse_descriptor,
