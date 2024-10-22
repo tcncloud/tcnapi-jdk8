@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private ListOutputConfigurationsRequest() {
     insightResourceId_ = "";
-    filter_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -91,84 +90,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FILTER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> filter_;
-  private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType> filter_converter_ =
-          new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType>() {
-            public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType result = com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType.forNumber(from);
-              return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType.UNRECOGNIZED : result;
-            }
-          };
-  /**
-   * <pre>
-   * Filter for the output configuration type
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-   * @return A list containing the filter.
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType> getFilterList() {
-    return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType>(filter_, filter_converter_);
-  }
-  /**
-   * <pre>
-   * Filter for the output configuration type
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-   * @return The count of filter.
-   */
-  @java.lang.Override
-  public int getFilterCount() {
-    return filter_.size();
-  }
-  /**
-   * <pre>
-   * Filter for the output configuration type
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-   * @param index The index of the element to return.
-   * @return The filter at the given index.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType getFilter(int index) {
-    return filter_converter_.convert(filter_.get(index));
-  }
-  /**
-   * <pre>
-   * Filter for the output configuration type
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-   * @return A list containing the enum numeric values on the wire for filter.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Integer>
-  getFilterValueList() {
-    return filter_;
-  }
-  /**
-   * <pre>
-   * Filter for the output configuration type
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of filter at the given index.
-   */
-  @java.lang.Override
-  public int getFilterValue(int index) {
-    return filter_.get(index);
-  }
-  private int filterMemoizedSerializedSize;
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -183,16 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightResourceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, insightResourceId_);
-    }
-    if (getFilterList().size() > 0) {
-      output.writeUInt32NoTag(18);
-      output.writeUInt32NoTag(filterMemoizedSerializedSize);
-    }
-    for (int i = 0; i < filter_.size(); i++) {
-      output.writeEnumNoTag(filter_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -205,18 +118,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightResourceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, insightResourceId_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < filter_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(filter_.get(i));
-      }
-      size += dataSize;
-      if (!getFilterList().isEmpty()) {  size += 1;
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32SizeNoTag(dataSize);
-      }filterMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -235,7 +136,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getInsightResourceId()
         .equals(other.getInsightResourceId())) return false;
-    if (!filter_.equals(other.filter_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -249,10 +149,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + INSIGHT_RESOURCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getInsightResourceId().hashCode();
-    if (getFilterCount() > 0) {
-      hash = (37 * hash) + FILTER_FIELD_NUMBER;
-      hash = (53 * hash) + filter_.hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -389,8 +285,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       insightResourceId_ = "";
-      filter_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -417,18 +311,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest result = new com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        filter_ = java.util.Collections.unmodifiableList(filter_);
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.filter_ = filter_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest result) {
@@ -487,16 +372,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.filter_.isEmpty()) {
-        if (filter_.isEmpty()) {
-          filter_ = other.filter_;
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          ensureFilterIsMutable();
-          filter_.addAll(other.filter_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -528,23 +403,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              int tmpRaw = input.readEnum();
-              ensureFilterIsMutable();
-              filter_.add(tmpRaw);
-              break;
-            } // case 16
-            case 18: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureFilterIsMutable();
-                filter_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -650,194 +508,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       insightResourceId_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<java.lang.Integer> filter_ =
-      java.util.Collections.emptyList();
-    private void ensureFilterIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        filter_ = new java.util.ArrayList<java.lang.Integer>(filter_);
-        bitField0_ |= 0x00000002;
-      }
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @return A list containing the filter.
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType> getFilterList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType>(filter_, filter_converter_);
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @return The count of filter.
-     */
-    public int getFilterCount() {
-      return filter_.size();
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param index The index of the element to return.
-     * @return The filter at the given index.
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType getFilter(int index) {
-      return filter_converter_.convert(filter_.get(index));
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param index The index to set the value at.
-     * @param value The filter to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFilter(
-        int index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureFilterIsMutable();
-      filter_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param value The filter to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFilter(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureFilterIsMutable();
-      filter_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param values The filter to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllFilter(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType> values) {
-      ensureFilterIsMutable();
-      for (com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType value : values) {
-        filter_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFilter() {
-      filter_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @return A list containing the enum numeric values on the wire for filter.
-     */
-    public java.util.List<java.lang.Integer>
-    getFilterValueList() {
-      return java.util.Collections.unmodifiableList(filter_);
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of filter at the given index.
-     */
-    public int getFilterValue(int index) {
-      return filter_.get(index);
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for filter to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFilterValue(
-        int index, int value) {
-      ensureFilterIsMutable();
-      filter_.set(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param value The enum numeric value on the wire for filter to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFilterValue(int value) {
-      ensureFilterIsMutable();
-      filter_.add(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Filter for the output configuration type
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
-     * @param values The enum numeric values on the wire for filter to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllFilterValue(
-        java.lang.Iterable<java.lang.Integer> values) {
-      ensureFilterIsMutable();
-      for (int value : values) {
-        filter_.add(value);
-      }
       onChanged();
       return this;
     }
