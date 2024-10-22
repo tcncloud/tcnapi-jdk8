@@ -6404,130 +6404,6 @@ public final class WFMGrpc {
     return getDeleteAdherenceAgentRuleClauseMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> getAgentGetScheduleMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AgentGetSchedule",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> getAgentGetScheduleMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> getAgentGetScheduleMethod;
-    if ((getAgentGetScheduleMethod = WFMGrpc.getAgentGetScheduleMethod) == null) {
-      synchronized (WFMGrpc.class) {
-        if ((getAgentGetScheduleMethod = WFMGrpc.getAgentGetScheduleMethod) == null) {
-          WFMGrpc.getAgentGetScheduleMethod = getAgentGetScheduleMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentGetSchedule"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("AgentGetSchedule"))
-              .build();
-        }
-      }
-    }
-    return getAgentGetScheduleMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> getAgentListLeavePetitionsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AgentListLeavePetitions",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> getAgentListLeavePetitionsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> getAgentListLeavePetitionsMethod;
-    if ((getAgentListLeavePetitionsMethod = WFMGrpc.getAgentListLeavePetitionsMethod) == null) {
-      synchronized (WFMGrpc.class) {
-        if ((getAgentListLeavePetitionsMethod = WFMGrpc.getAgentListLeavePetitionsMethod) == null) {
-          WFMGrpc.getAgentListLeavePetitionsMethod = getAgentListLeavePetitionsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentListLeavePetitions"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("AgentListLeavePetitions"))
-              .build();
-        }
-      }
-    }
-    return getAgentListLeavePetitionsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> getAgentCreateLeavePetitionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AgentCreateLeavePetition",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> getAgentCreateLeavePetitionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> getAgentCreateLeavePetitionMethod;
-    if ((getAgentCreateLeavePetitionMethod = WFMGrpc.getAgentCreateLeavePetitionMethod) == null) {
-      synchronized (WFMGrpc.class) {
-        if ((getAgentCreateLeavePetitionMethod = WFMGrpc.getAgentCreateLeavePetitionMethod) == null) {
-          WFMGrpc.getAgentCreateLeavePetitionMethod = getAgentCreateLeavePetitionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentCreateLeavePetition"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("AgentCreateLeavePetition"))
-              .build();
-        }
-      }
-    }
-    return getAgentCreateLeavePetitionMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> getAgentCancelLeavePetitionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AgentCancelLeavePetition",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> getAgentCancelLeavePetitionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> getAgentCancelLeavePetitionMethod;
-    if ((getAgentCancelLeavePetitionMethod = WFMGrpc.getAgentCancelLeavePetitionMethod) == null) {
-      synchronized (WFMGrpc.class) {
-        if ((getAgentCancelLeavePetitionMethod = WFMGrpc.getAgentCancelLeavePetitionMethod) == null) {
-          WFMGrpc.getAgentCancelLeavePetitionMethod = getAgentCancelLeavePetitionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentCancelLeavePetition"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("AgentCancelLeavePetition"))
-              .build();
-        }
-      }
-    }
-    return getAgentCancelLeavePetitionMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -9769,70 +9645,6 @@ public final class WFMGrpc {
     default void deleteAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAdherenceAgentRuleClauseMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Gets the published schedule for the corresponding &#64;datetime_range for the agent and org sending the request.
-     * Errors:
-     *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
-     *   - grpc.Internal: error occurs when getting the published schedule.
-     * </pre>
-     */
-    default void agentGetSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetScheduleMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Lists agent leave petitions over the &#64;datetime_range for the agent and org sending the request.
-     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
-     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
-     * If no agent leave petitions are found for the given parameters, an empty list will be returned.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the agent leave petitions.
-     * </pre>
-     */
-    default void agentListLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentListLeavePetitionsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Creates an agent leave petition to request time off over the &#64;requested_datetime_ranges for the agent and org sending the request.
-     * The &#64;petition_comment must be set with a value.
-     * The &#64;requested_datetime_ranges may not overlap each other.
-     * The number of working hours requested off should be set in &#64;requested_hours_off.
-     * The &#64;requested_hours_off does not need to relate directly to the datetime range being requested off,
-     *   for example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
-     * The usage of &#64;requested_hours_off hours will depend on org policy, but is not yet implemented.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when creating the time off request.
-     * </pre>
-     */
-    default void agentCreateLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentCreateLeavePetitionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Cancels the given &#64;agent_leave_petition_id for the agent and organization sending the request.
-     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
-     *   but any desired shifts must be added by the user after that leave is canceled.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
-     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
-     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
-     * </pre>
-     */
-    default void agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentCancelLeavePetitionMethod(), responseObserver);
     }
   }
 
@@ -13266,74 +13078,6 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * Gets the published schedule for the corresponding &#64;datetime_range for the agent and org sending the request.
-     * Errors:
-     *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
-     *   - grpc.Internal: error occurs when getting the published schedule.
-     * </pre>
-     */
-    public void agentGetSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAgentGetScheduleMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Lists agent leave petitions over the &#64;datetime_range for the agent and org sending the request.
-     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
-     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
-     * If no agent leave petitions are found for the given parameters, an empty list will be returned.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the agent leave petitions.
-     * </pre>
-     */
-    public void agentListLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAgentListLeavePetitionsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Creates an agent leave petition to request time off over the &#64;requested_datetime_ranges for the agent and org sending the request.
-     * The &#64;petition_comment must be set with a value.
-     * The &#64;requested_datetime_ranges may not overlap each other.
-     * The number of working hours requested off should be set in &#64;requested_hours_off.
-     * The &#64;requested_hours_off does not need to relate directly to the datetime range being requested off,
-     *   for example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
-     * The usage of &#64;requested_hours_off hours will depend on org policy, but is not yet implemented.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when creating the time off request.
-     * </pre>
-     */
-    public void agentCreateLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAgentCreateLeavePetitionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Cancels the given &#64;agent_leave_petition_id for the agent and organization sending the request.
-     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
-     *   but any desired shifts must be added by the user after that leave is canceled.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
-     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
-     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
-     * </pre>
-     */
-    public void agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -16551,70 +16295,6 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse deleteAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Gets the published schedule for the corresponding &#64;datetime_range for the agent and org sending the request.
-     * Errors:
-     *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
-     *   - grpc.Internal: error occurs when getting the published schedule.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse agentGetSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAgentGetScheduleMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Lists agent leave petitions over the &#64;datetime_range for the agent and org sending the request.
-     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
-     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
-     * If no agent leave petitions are found for the given parameters, an empty list will be returned.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the agent leave petitions.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse agentListLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAgentListLeavePetitionsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Creates an agent leave petition to request time off over the &#64;requested_datetime_ranges for the agent and org sending the request.
-     * The &#64;petition_comment must be set with a value.
-     * The &#64;requested_datetime_ranges may not overlap each other.
-     * The number of working hours requested off should be set in &#64;requested_hours_off.
-     * The &#64;requested_hours_off does not need to relate directly to the datetime range being requested off,
-     *   for example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
-     * The usage of &#64;requested_hours_off hours will depend on org policy, but is not yet implemented.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when creating the time off request.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse agentCreateLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAgentCreateLeavePetitionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Cancels the given &#64;agent_leave_petition_id for the agent and organization sending the request.
-     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
-     *   but any desired shifts must be added by the user after that leave is canceled.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
-     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
-     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAgentCancelLeavePetitionMethod(), getCallOptions(), request);
     }
   }
 
@@ -19932,74 +19612,6 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * Gets the published schedule for the corresponding &#64;datetime_range for the agent and org sending the request.
-     * Errors:
-     *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
-     *   - grpc.Internal: error occurs when getting the published schedule.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse> agentGetSchedule(
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAgentGetScheduleMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Lists agent leave petitions over the &#64;datetime_range for the agent and org sending the request.
-     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
-     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
-     * If no agent leave petitions are found for the given parameters, an empty list will be returned.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the agent leave petitions.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse> agentListLeavePetitions(
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAgentListLeavePetitionsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Creates an agent leave petition to request time off over the &#64;requested_datetime_ranges for the agent and org sending the request.
-     * The &#64;petition_comment must be set with a value.
-     * The &#64;requested_datetime_ranges may not overlap each other.
-     * The number of working hours requested off should be set in &#64;requested_hours_off.
-     * The &#64;requested_hours_off does not need to relate directly to the datetime range being requested off,
-     *   for example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
-     * The usage of &#64;requested_hours_off hours will depend on org policy, but is not yet implemented.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when creating the time off request.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse> agentCreateLeavePetition(
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAgentCreateLeavePetitionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Cancels the given &#64;agent_leave_petition_id for the agent and organization sending the request.
-     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
-     *   but any desired shifts must be added by the user after that leave is canceled.
-     * Errors:
-     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
-     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
-     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> agentCancelLeavePetition(
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -20208,10 +19820,6 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 203;
   private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 204;
   private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 205;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 206;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 207;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 208;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 209;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -21053,22 +20661,6 @@ public final class WFMGrpc {
         case METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE:
           serviceImpl.deleteAdherenceAgentRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse>) responseObserver);
-          break;
-        case METHODID_AGENT_GET_SCHEDULE:
-          serviceImpl.agentGetSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse>) responseObserver);
-          break;
-        case METHODID_AGENT_LIST_LEAVE_PETITIONS:
-          serviceImpl.agentListLeavePetitions((com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse>) responseObserver);
-          break;
-        case METHODID_AGENT_CREATE_LEAVE_PETITION:
-          serviceImpl.agentCreateLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse>) responseObserver);
-          break;
-        case METHODID_AGENT_CANCEL_LEAVE_PETITION:
-          serviceImpl.agentCancelLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -22530,34 +22122,6 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse>(
                 service, METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE)))
-        .addMethod(
-          getAgentGetScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentGetScheduleResponse>(
-                service, METHODID_AGENT_GET_SCHEDULE)))
-        .addMethod(
-          getAgentListLeavePetitionsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentListLeavePetitionsResponse>(
-                service, METHODID_AGENT_LIST_LEAVE_PETITIONS)))
-        .addMethod(
-          getAgentCreateLeavePetitionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentCreateLeavePetitionResponse>(
-                service, METHODID_AGENT_CREATE_LEAVE_PETITION)))
-        .addMethod(
-          getAgentCancelLeavePetitionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>(
-                service, METHODID_AGENT_CANCEL_LEAVE_PETITION)))
         .build();
   }
 
@@ -22812,10 +22376,6 @@ public final class WFMGrpc {
               .addMethod(getUpdateAdherenceAgentRuleClauseMethod())
               .addMethod(getListAdherenceAgentRulesMethod())
               .addMethod(getDeleteAdherenceAgentRuleClauseMethod())
-              .addMethod(getAgentGetScheduleMethod())
-              .addMethod(getAgentListLeavePetitionsMethod())
-              .addMethod(getAgentCreateLeavePetitionMethod())
-              .addMethod(getAgentCancelLeavePetitionMethod())
               .build();
         }
       }

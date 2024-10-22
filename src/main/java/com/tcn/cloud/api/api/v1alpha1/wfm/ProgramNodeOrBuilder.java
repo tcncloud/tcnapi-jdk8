@@ -101,7 +101,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5247
+   *     See api/v1alpha1/wfm/wfm.proto;l=5159
    * @return The shrinkageIsPercentage.
    */
   @java.lang.Deprecated boolean getShrinkageIsPercentage();
@@ -113,7 +113,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5249
+   *     See api/v1alpha1/wfm/wfm.proto;l=5161
    * @return The shrinkageValue.
    */
   @java.lang.Deprecated int getShrinkageValue();
@@ -444,7 +444,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5268
+   *     See api/v1alpha1/wfm/wfm.proto;l=5180
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -456,7 +456,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5268
+   *     See api/v1alpha1/wfm/wfm.proto;l=5180
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();
