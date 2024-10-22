@@ -204,47 +204,52 @@ public final class ContactmanagerProto {
       "is_deleted\030\t \001(\010R\tisDeleted\0226\n\006status\030\n " +
       "\001(\0162\036.api.commons.ContactListStatusR\006sta" +
       "tus\"B\n\026ContactManagerEntryVal\022\022\n\004type\030\001 " +
-      "\001(\tR\004type\022\024\n\005value\030\002 \001(\tR\005value\"\327\001\n\026AddC" +
+      "\001(\tR\004type\022\024\n\005value\030\002 \001(\tR\005value\"\230\002\n\026AddC" +
       "ontactEntryRequest\022>\n\027contact_manager_li" +
       "st_id\030\001 \001(\003B\0020\001H\000R\024contactManagerListId\210" +
       "\001\001\022<\n\005entry\030\002 \003(\0132\".api.v1alpha1.contact" +
       "manager.EntryB\002\030\001R\005entry\022#\n\013project_sid\030" +
-      "\003 \001(\003B\0020\001R\nprojectSidB\032\n\030_contact_manage" +
-      "r_list_id\"I\n\005Entry\022\022\n\004name\030\001 \001(\tR\004name\022\024" +
-      "\n\005value\030\002 \001(\tR\005value\022\022\n\004type\030\003 \001(\tR\004type" +
-      ":\002\030\001\"<\n\027AddContactEntryResponse\022!\n\nconta" +
-      "ct_id\030\001 \001(\003B\0020\001R\tcontactId\"\367\001\n\027EditConta" +
-      "ctEntryRequest\022:\n\027contact_manager_list_i" +
-      "d\030\001 \001(\003H\000R\024contactManagerListId\210\001\001\0227\n\030co" +
-      "ntact_manager_entry_id\030\002 \001(\003R\025contactMan" +
-      "agerEntryId\022K\n\014edited_entry\030\003 \003(\0132(.api." +
-      "v1alpha1.contactmanager.EditedEntryR\013edi" +
-      "tedEntryB\032\n\030_contact_manager_list_id\"\221\001\n" +
-      "\013EditedEntry\022@\n\035contact_manager_entry_li" +
-      "st_id\030\001 \001(\003R\031contactManagerEntryListId\022\022" +
-      "\n\004name\030\002 \001(\tR\004name\022\024\n\005value\030\003 \001(\tR\005value" +
-      "\022\022\n\004type\030\004 \001(\tR\004type:\002\030\001\"L\n\014ContactField" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005val" +
-      "ue\022\022\n\004type\030\003 \001(\tR\004type\"\032\n\030EditContactEnt" +
-      "ryResponse\"]\n\033ListContactsByEntityReques" +
-      "t\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tprojectId\022\033\n\t" +
-      "entity_id\030\002 \001(\tR\010entityId\"\204\001\n\034ListContac" +
-      "tsByEntityResponse\022d\n\025contact_manager_en" +
-      "try\030\001 \003(\01320.api.v1alpha1.contactmanager." +
-      "ContactManagerEntryR\023contactManagerEntry" +
-      "\"\262\001\n\032GetContactFieldTypeRequest\022\035\n\nfield" +
-      "_name\030\001 \001(\tR\tfieldName\022\037\n\013field_value\030\002 " +
-      "\001(\tR\nfieldValue\022E\n\nfield_type\030\003 \001(\0162!.ap" +
-      "i.commons.ClassifierEntityTypeH\000R\tfieldT" +
-      "ype\210\001\001B\r\n\013_field_type\"_\n\033GetContactField" +
-      "TypeResponse\022@\n\nfield_type\030\001 \001(\0162!.api.c" +
-      "ommons.ClassifierEntityTypeR\tfieldTypeB\322" +
-      "\001\n-com.tcn.cloud.api.api.v1alpha1.contac" +
-      "tmanagerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033" +
-      "Api.V1alpha1.Contactmanager\312\002\033Api\\V1alph" +
-      "a1\\Contactmanager\342\002\'Api\\V1alpha1\\Contact" +
-      "manager\\GPBMetadata\352\002\035Api::V1alpha1::Con" +
-      "tactmanagerb\006proto3"
+      "\003 \001(\003B\0020\001R\nprojectSid\022?\n\005field\030\004 \003(\0132).a" +
+      "pi.v1alpha1.contactmanager.ContactFieldR" +
+      "\005fieldB\032\n\030_contact_manager_list_id\"I\n\005En" +
+      "try\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005" +
+      "value\022\022\n\004type\030\003 \001(\tR\004type:\002\030\001\"<\n\027AddCont" +
+      "actEntryResponse\022!\n\ncontact_id\030\001 \001(\003B\0020\001" +
+      "R\tcontactId\"\274\002\n\027EditContactEntryRequest\022" +
+      ":\n\027contact_manager_list_id\030\001 \001(\003H\000R\024cont" +
+      "actManagerListId\210\001\001\0227\n\030contact_manager_e" +
+      "ntry_id\030\002 \001(\003R\025contactManagerEntryId\022O\n\014" +
+      "edited_entry\030\003 \003(\0132(.api.v1alpha1.contac" +
+      "tmanager.EditedEntryB\002\030\001R\013editedEntry\022?\n" +
+      "\005field\030\004 \003(\0132).api.v1alpha1.contactmanag" +
+      "er.ContactFieldR\005fieldB\032\n\030_contact_manag" +
+      "er_list_id\"\221\001\n\013EditedEntry\022@\n\035contact_ma" +
+      "nager_entry_list_id\030\001 \001(\003R\031contactManage" +
+      "rEntryListId\022\022\n\004name\030\002 \001(\tR\004name\022\024\n\005valu" +
+      "e\030\003 \001(\tR\005value\022\022\n\004type\030\004 \001(\tR\004type:\002\030\001\"L" +
+      "\n\014ContactField\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value\022\022\n\004type\030\003 \001(\tR\004type\"[\n\030" +
+      "EditContactEntryResponse\022?\n\005field\030\001 \003(\0132" +
+      ").api.v1alpha1.contactmanager.ContactFie" +
+      "ldR\005field\"]\n\033ListContactsByEntityRequest" +
+      "\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tprojectId\022\033\n\te" +
+      "ntity_id\030\002 \001(\tR\010entityId\"\204\001\n\034ListContact" +
+      "sByEntityResponse\022d\n\025contact_manager_ent" +
+      "ry\030\001 \003(\01320.api.v1alpha1.contactmanager.C" +
+      "ontactManagerEntryR\023contactManagerEntry\"" +
+      "\262\001\n\032GetContactFieldTypeRequest\022\035\n\nfield_" +
+      "name\030\001 \001(\tR\tfieldName\022\037\n\013field_value\030\002 \001" +
+      "(\tR\nfieldValue\022E\n\nfield_type\030\003 \001(\0162!.api" +
+      ".commons.ClassifierEntityTypeH\000R\tfieldTy" +
+      "pe\210\001\001B\r\n\013_field_type\"_\n\033GetContactFieldT" +
+      "ypeResponse\022@\n\nfield_type\030\001 \001(\0162!.api.co" +
+      "mmons.ClassifierEntityTypeR\tfieldTypeB\322\001" +
+      "\n-com.tcn.cloud.api.api.v1alpha1.contact" +
+      "managerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033A" +
+      "pi.V1alpha1.Contactmanager\312\002\033Api\\V1alpha" +
+      "1\\Contactmanager\342\002\'Api\\V1alpha1\\Contactm" +
+      "anager\\GPBMetadata\352\002\035Api::V1alpha1::Cont" +
+      "actmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -337,7 +342,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_AddContactEntryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_AddContactEntryRequest_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "Entry", "ProjectSid", "ContactManagerListId", });
+        new java.lang.String[] { "ContactManagerListId", "Entry", "ProjectSid", "Field", "ContactManagerListId", });
     internal_static_api_v1alpha1_contactmanager_Entry_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_contactmanager_Entry_fieldAccessorTable = new
@@ -355,7 +360,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_EditContactEntryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_EditContactEntryRequest_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "ContactManagerEntryId", "EditedEntry", "ContactManagerListId", });
+        new java.lang.String[] { "ContactManagerListId", "ContactManagerEntryId", "EditedEntry", "Field", "ContactManagerListId", });
     internal_static_api_v1alpha1_contactmanager_EditedEntry_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_contactmanager_EditedEntry_fieldAccessorTable = new
@@ -373,7 +378,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_EditContactEntryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_EditContactEntryResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Field", });
     internal_static_api_v1alpha1_contactmanager_ListContactsByEntityRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_contactmanager_ListContactsByEntityRequest_fieldAccessorTable = new
