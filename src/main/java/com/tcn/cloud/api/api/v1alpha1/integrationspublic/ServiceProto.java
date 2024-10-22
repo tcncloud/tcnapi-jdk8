@@ -309,12 +309,14 @@ public final class ServiceProto {
       "ionspublic.ValueR\005value:\0028\001\032c\n\rResponseE" +
       "ntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&." +
       "api.v1alpha1.integrationspublic.ValueR\005v" +
-      "alue:\0028\001\"\305\002\n\022ProcessWorkflowReq\022$\n\016porta" +
+      "alue:\0028\001\"\225\003\n\022ProcessWorkflowReq\022$\n\016porta" +
       "l_link_id\030\001 \001(\tR\014portalLinkId\022\033\n\tportal_" +
       "id\030\002 \001(\tR\010portalId\022\030\n\007segment\030\003 \001(\005R\007seg" +
       "ment\022\026\n\006choice\030\004 \001(\005R\006choice\022W\n\006params\030\005" +
       " \003(\0132?.api.v1alpha1.integrationspublic.P" +
-      "rocessWorkflowReq.ParamsEntryR\006params\032a\n" +
+      "rocessWorkflowReq.ParamsEntryR\006params\022N\n" +
+      "\016request_origin\030\006 \001(\0162\'.api.commons.inte" +
+      "grations.RequestOriginR\rrequestOrigin\032a\n" +
       "\013ParamsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030" +
       "\002 \001(\0132&.api.v1alpha1.integrationspublic." +
       "ValueR\005value:\0028\001\"\342\001\n\022ProcessWorkflowRes\022" +
@@ -544,7 +546,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_descriptor,
-        new java.lang.String[] { "PortalLinkId", "PortalId", "Segment", "Choice", "Params", });
+        new java.lang.String[] { "PortalLinkId", "PortalId", "Segment", "Choice", "Params", "RequestOrigin", });
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_ParamsEntry_descriptor =
       internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_ParamsEntry_fieldAccessorTable = new

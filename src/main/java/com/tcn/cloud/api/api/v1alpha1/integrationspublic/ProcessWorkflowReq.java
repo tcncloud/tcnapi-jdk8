@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private ProcessWorkflowReq() {
     portalLinkId_ = "";
     portalId_ = "";
+    requestOrigin_ = 0;
   }
 
   @java.lang.Override
@@ -269,6 +270,24 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     return map.get(key);
   }
 
+  public static final int REQUEST_ORIGIN_FIELD_NUMBER = 6;
+  private int requestOrigin_ = 0;
+  /**
+   * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+   * @return The enum numeric value on the wire for requestOrigin.
+   */
+  @java.lang.Override public int getRequestOriginValue() {
+    return requestOrigin_;
+  }
+  /**
+   * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+   * @return The requestOrigin.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin() {
+    com.tcn.cloud.api.api.commons.integrations.RequestOrigin result = com.tcn.cloud.api.api.commons.integrations.RequestOrigin.forNumber(requestOrigin_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestOrigin.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -301,6 +320,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         internalGetParams(),
         ParamsDefaultEntryHolder.defaultEntry,
         5);
+    if (requestOrigin_ != com.tcn.cloud.api.api.commons.integrations.RequestOrigin.REQUEST_ORIGIN_UNKNOWN.getNumber()) {
+      output.writeEnum(6, requestOrigin_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -334,6 +356,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, params__);
     }
+    if (requestOrigin_ != com.tcn.cloud.api.api.commons.integrations.RequestOrigin.REQUEST_ORIGIN_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, requestOrigin_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -359,6 +385,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         != other.getChoice()) return false;
     if (!internalGetParams().equals(
         other.internalGetParams())) return false;
+    if (requestOrigin_ != other.requestOrigin_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -382,6 +409,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       hash = (37 * hash) + PARAMS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetParams().hashCode();
     }
+    hash = (37 * hash) + REQUEST_ORIGIN_FIELD_NUMBER;
+    hash = (53 * hash) + requestOrigin_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -540,6 +569,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       segment_ = 0;
       choice_ = 0;
       internalGetMutableParams().clear();
+      requestOrigin_ = 0;
       return this;
     }
 
@@ -588,6 +618,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.params_ = internalGetParams();
         result.params_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.requestOrigin_ = requestOrigin_;
       }
     }
 
@@ -654,6 +687,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       internalGetMutableParams().mergeFrom(
           other.internalGetParams());
       bitField0_ |= 0x00000010;
+      if (other.requestOrigin_ != 0) {
+        setRequestOriginValue(other.getRequestOriginValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -709,6 +745,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              requestOrigin_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1142,6 +1183,59 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       internalGetMutableParams().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000010;
+      return this;
+    }
+
+    private int requestOrigin_ = 0;
+    /**
+     * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+     * @return The enum numeric value on the wire for requestOrigin.
+     */
+    @java.lang.Override public int getRequestOriginValue() {
+      return requestOrigin_;
+    }
+    /**
+     * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+     * @param value The enum numeric value on the wire for requestOrigin to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestOriginValue(int value) {
+      requestOrigin_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+     * @return The requestOrigin.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin() {
+      com.tcn.cloud.api.api.commons.integrations.RequestOrigin result = com.tcn.cloud.api.api.commons.integrations.RequestOrigin.forNumber(requestOrigin_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestOrigin.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+     * @param value The requestOrigin to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestOrigin(com.tcn.cloud.api.api.commons.integrations.RequestOrigin value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      requestOrigin_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.RequestOrigin request_origin = 6 [json_name = "requestOrigin"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequestOrigin() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      requestOrigin_ = 0;
+      onChanged();
       return this;
     }
     @java.lang.Override
