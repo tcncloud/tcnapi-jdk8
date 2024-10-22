@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private AgentGetScheduleResponse() {
     shiftInstances_ = java.util.Collections.emptyList();
-    nonSkillActivities_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -105,67 +104,6 @@ private static final long serialVersionUID = 0L;
     return shiftInstances_.get(index);
   }
 
-  public static final int NON_SKILL_ACTIVITIES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> nonSkillActivities_;
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> getNonSkillActivitiesList() {
-    return nonSkillActivities_;
-  }
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder> 
-      getNonSkillActivitiesOrBuilderList() {
-    return nonSkillActivities_;
-  }
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  @java.lang.Override
-  public int getNonSkillActivitiesCount() {
-    return nonSkillActivities_.size();
-  }
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity getNonSkillActivities(int index) {
-    return nonSkillActivities_.get(index);
-  }
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder getNonSkillActivitiesOrBuilder(
-      int index) {
-    return nonSkillActivities_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -183,9 +121,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < shiftInstances_.size(); i++) {
       output.writeMessage(1, shiftInstances_.get(i));
     }
-    for (int i = 0; i < nonSkillActivities_.size(); i++) {
-      output.writeMessage(2, nonSkillActivities_.get(i));
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -198,10 +133,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < shiftInstances_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, shiftInstances_.get(i));
-    }
-    for (int i = 0; i < nonSkillActivities_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, nonSkillActivities_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -220,8 +151,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getShiftInstancesList()
         .equals(other.getShiftInstancesList())) return false;
-    if (!getNonSkillActivitiesList()
-        .equals(other.getNonSkillActivitiesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -236,10 +165,6 @@ private static final long serialVersionUID = 0L;
     if (getShiftInstancesCount() > 0) {
       hash = (37 * hash) + SHIFT_INSTANCES_FIELD_NUMBER;
       hash = (53 * hash) + getShiftInstancesList().hashCode();
-    }
-    if (getNonSkillActivitiesCount() > 0) {
-      hash = (37 * hash) + NON_SKILL_ACTIVITIES_FIELD_NUMBER;
-      hash = (53 * hash) + getNonSkillActivitiesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -383,13 +308,6 @@ private static final long serialVersionUID = 0L;
         shiftInstancesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (nonSkillActivitiesBuilder_ == null) {
-        nonSkillActivities_ = java.util.Collections.emptyList();
-      } else {
-        nonSkillActivities_ = null;
-        nonSkillActivitiesBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -431,15 +349,6 @@ private static final long serialVersionUID = 0L;
         result.shiftInstances_ = shiftInstances_;
       } else {
         result.shiftInstances_ = shiftInstancesBuilder_.build();
-      }
-      if (nonSkillActivitiesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          nonSkillActivities_ = java.util.Collections.unmodifiableList(nonSkillActivities_);
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.nonSkillActivities_ = nonSkillActivities_;
-      } else {
-        result.nonSkillActivities_ = nonSkillActivitiesBuilder_.build();
       }
     }
 
@@ -517,32 +426,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (nonSkillActivitiesBuilder_ == null) {
-        if (!other.nonSkillActivities_.isEmpty()) {
-          if (nonSkillActivities_.isEmpty()) {
-            nonSkillActivities_ = other.nonSkillActivities_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureNonSkillActivitiesIsMutable();
-            nonSkillActivities_.addAll(other.nonSkillActivities_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.nonSkillActivities_.isEmpty()) {
-          if (nonSkillActivitiesBuilder_.isEmpty()) {
-            nonSkillActivitiesBuilder_.dispose();
-            nonSkillActivitiesBuilder_ = null;
-            nonSkillActivities_ = other.nonSkillActivities_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-            nonSkillActivitiesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getNonSkillActivitiesFieldBuilder() : null;
-          } else {
-            nonSkillActivitiesBuilder_.addAllMessages(other.nonSkillActivities_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -582,19 +465,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.parser(),
-                      extensionRegistry);
-              if (nonSkillActivitiesBuilder_ == null) {
-                ensureNonSkillActivitiesIsMutable();
-                nonSkillActivities_.add(m);
-              } else {
-                nonSkillActivitiesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -922,318 +792,6 @@ private static final long serialVersionUID = 0L;
         shiftInstances_ = null;
       }
       return shiftInstancesBuilder_;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> nonSkillActivities_ =
-      java.util.Collections.emptyList();
-    private void ensureNonSkillActivitiesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        nonSkillActivities_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity>(nonSkillActivities_);
-        bitField0_ |= 0x00000002;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder> nonSkillActivitiesBuilder_;
-
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> getNonSkillActivitiesList() {
-      if (nonSkillActivitiesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(nonSkillActivities_);
-      } else {
-        return nonSkillActivitiesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public int getNonSkillActivitiesCount() {
-      if (nonSkillActivitiesBuilder_ == null) {
-        return nonSkillActivities_.size();
-      } else {
-        return nonSkillActivitiesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity getNonSkillActivities(int index) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        return nonSkillActivities_.get(index);
-      } else {
-        return nonSkillActivitiesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder setNonSkillActivities(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity value) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.set(index, value);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder setNonSkillActivities(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder builderForValue) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder addNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity value) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.add(value);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder addNonSkillActivities(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity value) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.add(index, value);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder addNonSkillActivities(
-        com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder builderForValue) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.add(builderForValue.build());
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder addNonSkillActivities(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder builderForValue) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder addAllNonSkillActivities(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> values) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        ensureNonSkillActivitiesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, nonSkillActivities_);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder clearNonSkillActivities() {
-      if (nonSkillActivitiesBuilder_ == null) {
-        nonSkillActivities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public Builder removeNonSkillActivities(int index) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        ensureNonSkillActivitiesIsMutable();
-        nonSkillActivities_.remove(index);
-        onChanged();
-      } else {
-        nonSkillActivitiesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder getNonSkillActivitiesBuilder(
-        int index) {
-      return getNonSkillActivitiesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder getNonSkillActivitiesOrBuilder(
-        int index) {
-      if (nonSkillActivitiesBuilder_ == null) {
-        return nonSkillActivities_.get(index);  } else {
-        return nonSkillActivitiesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder> 
-         getNonSkillActivitiesOrBuilderList() {
-      if (nonSkillActivitiesBuilder_ != null) {
-        return nonSkillActivitiesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(nonSkillActivities_);
-      }
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder addNonSkillActivitiesBuilder() {
-      return getNonSkillActivitiesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder addNonSkillActivitiesBuilder(
-        int index) {
-      return getNonSkillActivitiesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder> 
-         getNonSkillActivitiesBuilderList() {
-      return getNonSkillActivitiesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder> 
-        getNonSkillActivitiesFieldBuilder() {
-      if (nonSkillActivitiesBuilder_ == null) {
-        nonSkillActivitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder>(
-                nonSkillActivities_,
-                ((bitField0_ & 0x00000002) != 0),
-                getParentForChildren(),
-                isClean());
-        nonSkillActivities_ = null;
-      }
-      return nonSkillActivitiesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

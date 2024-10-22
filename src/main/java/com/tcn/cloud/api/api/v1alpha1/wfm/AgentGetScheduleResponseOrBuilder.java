@@ -50,48 +50,4 @@ public interface AgentGetScheduleResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstancesOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity> 
-      getNonSkillActivitiesList();
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity getNonSkillActivities(int index);
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  int getNonSkillActivitiesCount();
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder> 
-      getNonSkillActivitiesOrBuilderList();
-  /**
-   * <pre>
-   * TODO: Remove this and add PERMISSION_AGENT_PORTAL permission to the endpoint to get those.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.NonSkillActivity non_skill_activities = 2 [json_name = "nonSkillActivities"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder getNonSkillActivitiesOrBuilder(
-      int index);
 }
