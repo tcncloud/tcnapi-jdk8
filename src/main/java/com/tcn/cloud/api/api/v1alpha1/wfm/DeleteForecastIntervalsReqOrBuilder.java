@@ -15,7 +15,7 @@ public interface DeleteForecastIntervalsReqOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4886
+   *     See api/v1alpha1/wfm/wfm.proto;l=4974
    * @return Whether the skillProfileSid field is set.
    */
   @java.lang.Deprecated boolean hasSkillProfileSid();
@@ -27,7 +27,7 @@ public interface DeleteForecastIntervalsReqOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4886
+   *     See api/v1alpha1/wfm/wfm.proto;l=4974
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();

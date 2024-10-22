@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private TableVisualization() {
     tableColumnDetails_ = java.util.Collections.emptyList();
+    delimiter_ = "";
+    quoteCharacter_ = 0;
   }
 
   @java.lang.Override
@@ -104,6 +106,94 @@ private static final long serialVersionUID = 0L;
     return tableColumnDetails_.get(index);
   }
 
+  public static final int DELIMITER_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object delimiter_ = "";
+  /**
+   * <pre>
+   * Delimiter for csv exports
+   * </pre>
+   *
+   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * @return The delimiter.
+   */
+  @java.lang.Override
+  public java.lang.String getDelimiter() {
+    java.lang.Object ref = delimiter_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      delimiter_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Delimiter for csv exports
+   * </pre>
+   *
+   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * @return The bytes for delimiter.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDelimiterBytes() {
+    java.lang.Object ref = delimiter_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      delimiter_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int QUOTE_CHARACTER_FIELD_NUMBER = 3;
+  private int quoteCharacter_ = 0;
+  /**
+   * <pre>
+   * Quote character for csv exports
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * @return The enum numeric value on the wire for quoteCharacter.
+   */
+  @java.lang.Override public int getQuoteCharacterValue() {
+    return quoteCharacter_;
+  }
+  /**
+   * <pre>
+   * Quote character for csv exports
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * @return The quoteCharacter.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
+    com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter result = com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.forNumber(quoteCharacter_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.UNRECOGNIZED : result;
+  }
+
+  public static final int NO_HEADER_FIELD_NUMBER = 4;
+  private boolean noHeader_ = false;
+  /**
+   * <pre>
+   * Flag to include header in csv exports
+   * </pre>
+   *
+   * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+   * @return The noHeader.
+   */
+  @java.lang.Override
+  public boolean getNoHeader() {
+    return noHeader_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +211,15 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < tableColumnDetails_.size(); i++) {
       output.writeMessage(1, tableColumnDetails_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delimiter_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, delimiter_);
+    }
+    if (quoteCharacter_ != com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.QUOTE_CHARACTER_UNSPECIFIED.getNumber()) {
+      output.writeEnum(3, quoteCharacter_);
+    }
+    if (noHeader_ != false) {
+      output.writeBool(4, noHeader_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +232,17 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < tableColumnDetails_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, tableColumnDetails_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delimiter_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, delimiter_);
+    }
+    if (quoteCharacter_ != com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.QUOTE_CHARACTER_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, quoteCharacter_);
+    }
+    if (noHeader_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, noHeader_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,6 +261,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getTableColumnDetailsList()
         .equals(other.getTableColumnDetailsList())) return false;
+    if (!getDelimiter()
+        .equals(other.getDelimiter())) return false;
+    if (quoteCharacter_ != other.quoteCharacter_) return false;
+    if (getNoHeader()
+        != other.getNoHeader()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -166,6 +281,13 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TABLE_COLUMN_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getTableColumnDetailsList().hashCode();
     }
+    hash = (37 * hash) + DELIMITER_FIELD_NUMBER;
+    hash = (53 * hash) + getDelimiter().hashCode();
+    hash = (37 * hash) + QUOTE_CHARACTER_FIELD_NUMBER;
+    hash = (53 * hash) + quoteCharacter_;
+    hash = (37 * hash) + NO_HEADER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNoHeader());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,6 +430,9 @@ private static final long serialVersionUID = 0L;
         tableColumnDetailsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      delimiter_ = "";
+      quoteCharacter_ = 0;
+      noHeader_ = false;
       return this;
     }
 
@@ -354,6 +479,15 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.delimiter_ = delimiter_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.quoteCharacter_ = quoteCharacter_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.noHeader_ = noHeader_;
+      }
     }
 
     @java.lang.Override
@@ -426,6 +560,17 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getDelimiter().isEmpty()) {
+        delimiter_ = other.delimiter_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.quoteCharacter_ != 0) {
+        setQuoteCharacterValue(other.getQuoteCharacterValue());
+      }
+      if (other.getNoHeader() != false) {
+        setNoHeader(other.getNoHeader());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +610,21 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              delimiter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              quoteCharacter_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              noHeader_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -792,6 +952,215 @@ private static final long serialVersionUID = 0L;
         tableColumnDetails_ = null;
       }
       return tableColumnDetailsBuilder_;
+    }
+
+    private java.lang.Object delimiter_ = "";
+    /**
+     * <pre>
+     * Delimiter for csv exports
+     * </pre>
+     *
+     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * @return The delimiter.
+     */
+    public java.lang.String getDelimiter() {
+      java.lang.Object ref = delimiter_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delimiter_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Delimiter for csv exports
+     * </pre>
+     *
+     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * @return The bytes for delimiter.
+     */
+    public com.google.protobuf.ByteString
+        getDelimiterBytes() {
+      java.lang.Object ref = delimiter_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delimiter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Delimiter for csv exports
+     * </pre>
+     *
+     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * @param value The delimiter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDelimiter(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      delimiter_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Delimiter for csv exports
+     * </pre>
+     *
+     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDelimiter() {
+      delimiter_ = getDefaultInstance().getDelimiter();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Delimiter for csv exports
+     * </pre>
+     *
+     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * @param value The bytes for delimiter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDelimiterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      delimiter_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int quoteCharacter_ = 0;
+    /**
+     * <pre>
+     * Quote character for csv exports
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * @return The enum numeric value on the wire for quoteCharacter.
+     */
+    @java.lang.Override public int getQuoteCharacterValue() {
+      return quoteCharacter_;
+    }
+    /**
+     * <pre>
+     * Quote character for csv exports
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * @param value The enum numeric value on the wire for quoteCharacter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuoteCharacterValue(int value) {
+      quoteCharacter_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Quote character for csv exports
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * @return The quoteCharacter.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
+      com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter result = com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.forNumber(quoteCharacter_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Quote character for csv exports
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * @param value The quoteCharacter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuoteCharacter(com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      quoteCharacter_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Quote character for csv exports
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuoteCharacter() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      quoteCharacter_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean noHeader_ ;
+    /**
+     * <pre>
+     * Flag to include header in csv exports
+     * </pre>
+     *
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * @return The noHeader.
+     */
+    @java.lang.Override
+    public boolean getNoHeader() {
+      return noHeader_;
+    }
+    /**
+     * <pre>
+     * Flag to include header in csv exports
+     * </pre>
+     *
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * @param value The noHeader to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNoHeader(boolean value) {
+
+      noHeader_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flag to include header in csv exports
+     * </pre>
+     *
+     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNoHeader() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      noHeader_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
