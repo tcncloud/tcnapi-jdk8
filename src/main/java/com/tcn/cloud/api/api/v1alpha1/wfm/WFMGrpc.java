@@ -3645,6 +3645,68 @@ public final class WFMGrpc {
     return getBuildDraftScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> getPollBuildInProgressMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PollBuildInProgress",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> getPollBuildInProgressMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest, com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> getPollBuildInProgressMethod;
+    if ((getPollBuildInProgressMethod = WFMGrpc.getPollBuildInProgressMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getPollBuildInProgressMethod = WFMGrpc.getPollBuildInProgressMethod) == null) {
+          WFMGrpc.getPollBuildInProgressMethod = getPollBuildInProgressMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest, com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PollBuildInProgress"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("PollBuildInProgress"))
+              .build();
+        }
+      }
+    }
+    return getPollBuildInProgressMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> getCancelBuildInProgressMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CancelBuildInProgress",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> getCancelBuildInProgressMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> getCancelBuildInProgressMethod;
+    if ((getCancelBuildInProgressMethod = WFMGrpc.getCancelBuildInProgressMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCancelBuildInProgressMethod = WFMGrpc.getCancelBuildInProgressMethod) == null) {
+          WFMGrpc.getCancelBuildInProgressMethod = getCancelBuildInProgressMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelBuildInProgress"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CancelBuildInProgress"))
+              .build();
+        }
+      }
+    }
+    return getCancelBuildInProgressMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes> getPublishDraftScheduleMethod;
 
@@ -8420,6 +8482,35 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
+     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error chceking for the build in progress.
+     * </pre>
+     */
+    default void pollBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPollBuildInProgressMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
+     * </pre>
+     */
+    default void cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelBuildInProgressMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Publishes the shift instances of the given &#64;draft_schedule_sid to the published schedule of the org sending the request.
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
@@ -11827,6 +11918,37 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
+     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error chceking for the build in progress.
+     * </pre>
+     */
+    public void pollBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPollBuildInProgressMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
+     * </pre>
+     */
+    public void cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCancelBuildInProgressMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Publishes the shift instances of the given &#64;draft_schedule_sid to the published schedule of the org sending the request.
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
@@ -15202,6 +15324,35 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
+     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error chceking for the build in progress.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse pollBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPollBuildInProgressMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCancelBuildInProgressMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Publishes the shift instances of the given &#64;draft_schedule_sid to the published schedule of the org sending the request.
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
@@ -18493,6 +18644,37 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
+     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error chceking for the build in progress.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse> pollBuildInProgress(
+        com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPollBuildInProgressMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> cancelBuildInProgress(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCancelBuildInProgressMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Publishes the shift instances of the given &#64;draft_schedule_sid to the published schedule of the org sending the request.
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
@@ -20119,99 +20301,101 @@ public final class WFMGrpc {
   private static final int METHODID_CREATE_DRAFT_SCHEDULE = 114;
   private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 115;
   private static final int METHODID_BUILD_DRAFT_SCHEDULE = 116;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 117;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 118;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 119;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 120;
-  private static final int METHODID_CLEAR_SCHEDULE = 121;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 122;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 123;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 124;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 125;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 126;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 127;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 128;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 129;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 130;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 131;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 132;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 133;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 134;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 135;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 136;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 137;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 138;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 139;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 140;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 141;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 142;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 143;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 144;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 145;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 146;
-  private static final int METHODID_GET_TOUR_PATTERN = 147;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 148;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 149;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 150;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 151;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 152;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 153;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 154;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 155;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 156;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 157;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 158;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 159;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 160;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 161;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 162;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 163;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 164;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 165;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 166;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 167;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 168;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 169;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 170;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 171;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 172;
-  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 173;
-  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 174;
-  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 175;
-  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 176;
-  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 177;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 178;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 179;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 180;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 181;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 182;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 183;
-  private static final int METHODID_CREATE_RGBA_COLOR = 184;
-  private static final int METHODID_LIST_RGBA_COLORS = 185;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 186;
-  private static final int METHODID_DELETE_RGBA_COLOR = 187;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 188;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 189;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 190;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 191;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 192;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 193;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 194;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 195;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 196;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 197;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 198;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 199;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 200;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 201;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 202;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 203;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 204;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 205;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 206;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 207;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 208;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 209;
+  private static final int METHODID_POLL_BUILD_IN_PROGRESS = 117;
+  private static final int METHODID_CANCEL_BUILD_IN_PROGRESS = 118;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 119;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 120;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 121;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 122;
+  private static final int METHODID_CLEAR_SCHEDULE = 123;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 124;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 125;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 126;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 127;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 128;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 129;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 130;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 131;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 132;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 133;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 134;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 135;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 136;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 137;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 138;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 139;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 140;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 141;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 142;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 143;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 144;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 145;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 146;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 147;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 148;
+  private static final int METHODID_GET_TOUR_PATTERN = 149;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 150;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 151;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 152;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 153;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 154;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 155;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 156;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 157;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 158;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 159;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 160;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 161;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 162;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 163;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 164;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 165;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 166;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 167;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 168;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 169;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 170;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 171;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 172;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 173;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 174;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 175;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 176;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 177;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 178;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 179;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 180;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 181;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 182;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 183;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 184;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 185;
+  private static final int METHODID_CREATE_RGBA_COLOR = 186;
+  private static final int METHODID_LIST_RGBA_COLORS = 187;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 188;
+  private static final int METHODID_DELETE_RGBA_COLOR = 189;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 190;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 191;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 192;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 193;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 194;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 195;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 196;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 197;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 198;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 199;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 200;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 201;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 202;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 203;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 204;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 205;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 206;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 207;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 208;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 209;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 210;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 211;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -20697,6 +20881,14 @@ public final class WFMGrpc {
         case METHODID_BUILD_DRAFT_SCHEDULE:
           serviceImpl.buildDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>) responseObserver);
+          break;
+        case METHODID_POLL_BUILD_IN_PROGRESS:
+          serviceImpl.pollBuildInProgress((com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse>) responseObserver);
+          break;
+        case METHODID_CANCEL_BUILD_IN_PROGRESS:
+          serviceImpl.cancelBuildInProgress((com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse>) responseObserver);
           break;
         case METHODID_PUBLISH_DRAFT_SCHEDULE:
           serviceImpl.publishDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq) request,
@@ -21908,6 +22100,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>(
                 service, METHODID_BUILD_DRAFT_SCHEDULE)))
         .addMethod(
+          getPollBuildInProgressMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse>(
+                service, METHODID_POLL_BUILD_IN_PROGRESS)))
+        .addMethod(
+          getCancelBuildInProgressMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse>(
+                service, METHODID_CANCEL_BUILD_IN_PROGRESS)))
+        .addMethod(
           getPublishDraftScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -22723,6 +22929,8 @@ public final class WFMGrpc {
               .addMethod(getCreateDraftScheduleMethod())
               .addMethod(getUpdateDraftScheduleMethod())
               .addMethod(getBuildDraftScheduleMethod())
+              .addMethod(getPollBuildInProgressMethod())
+              .addMethod(getCancelBuildInProgressMethod())
               .addMethod(getPublishDraftScheduleMethod())
               .addMethod(getResetDraftScheduleMethod())
               .addMethod(getGetDraftScheduleMethod())
