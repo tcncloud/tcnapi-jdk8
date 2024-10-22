@@ -26,4 +26,53 @@ public interface ListOutputConfigurationsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInsightResourceIdBytes();
+
+  /**
+   * <pre>
+   * Filter for the output configuration type
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
+   * @return A list containing the filter.
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType> getFilterList();
+  /**
+   * <pre>
+   * Filter for the output configuration type
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
+   * @return The count of filter.
+   */
+  int getFilterCount();
+  /**
+   * <pre>
+   * Filter for the output configuration type
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
+   * @param index The index of the element to return.
+   * @return The filter at the given index.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationType getFilter(int index);
+  /**
+   * <pre>
+   * Filter for the output configuration type
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
+   * @return A list containing the enum numeric values on the wire for filter.
+   */
+  java.util.List<java.lang.Integer>
+  getFilterValueList();
+  /**
+   * <pre>
+   * Filter for the output configuration type
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.insights.OutputConfigurationType filter = 2 [json_name = "filter"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of filter at the given index.
+   */
+  int getFilterValue(int index);
 }
