@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6663
+   *     See api/v1alpha1/wfm/wfm.proto;l=6667
    * @return The requiredFteOccupancy.
    */
   @java.lang.Override
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6664
+   *     See api/v1alpha1/wfm/wfm.proto;l=6668
    * @return The achievedFteOccupancy.
    */
   @java.lang.Override
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6663
+     *     See api/v1alpha1/wfm/wfm.proto;l=6667
      * @return The requiredFteOccupancy.
      */
     @java.lang.Override
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6663
+     *     See api/v1alpha1/wfm/wfm.proto;l=6667
      * @param value The requiredFteOccupancy to set.
      * @return This builder for chaining.
      */
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6663
+     *     See api/v1alpha1/wfm/wfm.proto;l=6667
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRequiredFteOccupancy() {
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6664
+     *     See api/v1alpha1/wfm/wfm.proto;l=6668
      * @return The achievedFteOccupancy.
      */
     @java.lang.Override
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6664
+     *     See api/v1alpha1/wfm/wfm.proto;l=6668
      * @param value The achievedFteOccupancy to set.
      * @return This builder for chaining.
      */
@@ -863,7 +863,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6664
+     *     See api/v1alpha1/wfm/wfm.proto;l=6668
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearAchievedFteOccupancy() {

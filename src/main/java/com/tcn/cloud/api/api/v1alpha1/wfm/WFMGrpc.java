@@ -8374,6 +8374,10 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
     default void cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request,
@@ -11743,6 +11747,10 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
     public void cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request,
@@ -15076,6 +15084,10 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse cancelBuildInProgress(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressRequest request) {
@@ -18329,6 +18341,10 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * Errors:
+     *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
+     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
+     *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse> cancelBuildInProgress(
