@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 
 /**
- * Protobuf type {@code api.v1alpha1.contactmanager.EditedEntry}
+ * Protobuf type {@code api.v1alpha1.contactmanager.ContactField}
  */
-@java.lang.Deprecated public final class EditedEntry extends
+public final class ContactField extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.contactmanager.EditedEntry)
-    EditedEntryOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.contactmanager.ContactField)
+    ContactFieldOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use EditedEntry.newBuilder() to construct.
-  private EditedEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ContactField.newBuilder() to construct.
+  private ContactField(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private EditedEntry() {
+  private ContactField() {
     name_ = "";
     value_ = "";
     type_ = "";
@@ -25,38 +25,27 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new EditedEntry();
+    return new ContactField();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_EditedEntry_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_ContactField_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_EditedEntry_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_ContactField_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder.class);
   }
 
-  public static final int CONTACT_MANAGER_ENTRY_LIST_ID_FIELD_NUMBER = 1;
-  private long contactManagerEntryListId_ = 0L;
-  /**
-   * <code>int64 contact_manager_entry_list_id = 1 [json_name = "contactManagerEntryListId"];</code>
-   * @return The contactManagerEntryListId.
-   */
-  @java.lang.Override
-  public long getContactManagerEntryListId() {
-    return contactManagerEntryListId_;
-  }
-
-  public static final int NAME_FIELD_NUMBER = 2;
+  public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -73,7 +62,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -91,15 +80,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VALUE_FIELD_NUMBER = 3;
+  public static final int VALUE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
-   * <pre>
-   * The new value to be updated
-   * </pre>
-   *
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 2 [json_name = "value"];</code>
    * @return The value.
    */
   @java.lang.Override
@@ -116,11 +101,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * The new value to be updated
-   * </pre>
-   *
-   * <code>string value = 3 [json_name = "value"];</code>
+   * <code>string value = 2 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -138,11 +119,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TYPE_FIELD_NUMBER = 4;
+  public static final int TYPE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object type_ = "";
   /**
-   * <code>string type = 4 [json_name = "type"];</code>
+   * <code>string type = 3 [json_name = "type"];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -159,7 +140,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string type = 4 [json_name = "type"];</code>
+   * <code>string type = 3 [json_name = "type"];</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -191,17 +172,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerEntryListId_ != 0L) {
-      output.writeInt64(1, contactManagerEntryListId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, type_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -212,18 +190,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerEntryListId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, contactManagerEntryListId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, type_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -235,13 +209,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry) obj;
+    com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField) obj;
 
-    if (getContactManagerEntryListId()
-        != other.getContactManagerEntryListId()) return false;
     if (!getName()
         .equals(other.getName())) return false;
     if (!getValue()
@@ -259,9 +231,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_ENTRY_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerEntryListId());
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + VALUE_FIELD_NUMBER;
@@ -273,44 +242,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -318,26 +287,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -350,7 +319,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -366,26 +335,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.contactmanager.EditedEntry}
+   * Protobuf type {@code api.v1alpha1.contactmanager.ContactField}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.contactmanager.EditedEntry)
-      com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntryOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.contactmanager.ContactField)
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_EditedEntry_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_ContactField_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_EditedEntry_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_ContactField_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.newBuilder()
     private Builder() {
 
     }
@@ -399,7 +368,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      contactManagerEntryListId_ = 0L;
       name_ = "";
       value_ = "";
       type_ = "";
@@ -409,17 +377,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_EditedEntry_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactmanagerProto.internal_static_api_v1alpha1_contactmanager_ContactField_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry build() {
-      com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField build() {
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -427,25 +395,22 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry result = new com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry(this);
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField result = new com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.contactManagerEntryListId_ = contactManagerEntryListId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.value_ = value_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.type_ = type_;
       }
     }
@@ -484,32 +449,29 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry.getDefaultInstance()) return this;
-      if (other.getContactManagerEntryListId() != 0L) {
-        setContactManagerEntryListId(other.getContactManagerEntryListId());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getValue().isEmpty()) {
         value_ = other.value_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getType().isEmpty()) {
         type_ = other.type_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -538,26 +500,21 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              contactManagerEntryListId_ = input.readInt64();
+            case 10: {
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
+            } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
+              value_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              value_ = input.readStringRequireUtf8();
+              type_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              type_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,41 +532,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long contactManagerEntryListId_ ;
-    /**
-     * <code>int64 contact_manager_entry_list_id = 1 [json_name = "contactManagerEntryListId"];</code>
-     * @return The contactManagerEntryListId.
-     */
-    @java.lang.Override
-    public long getContactManagerEntryListId() {
-      return contactManagerEntryListId_;
-    }
-    /**
-     * <code>int64 contact_manager_entry_list_id = 1 [json_name = "contactManagerEntryListId"];</code>
-     * @param value The contactManagerEntryListId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactManagerEntryListId(long value) {
-
-      contactManagerEntryListId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 contact_manager_entry_list_id = 1 [json_name = "contactManagerEntryListId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearContactManagerEntryListId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      contactManagerEntryListId_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -625,7 +550,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +567,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -650,22 +575,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -674,18 +599,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
     private java.lang.Object value_ = "";
     /**
-     * <pre>
-     * The new value to be updated
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -701,11 +622,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The new value to be updated
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -722,11 +639,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The new value to be updated
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -734,30 +647,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       value_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new value to be updated
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
       value_ = getDefaultInstance().getValue();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The new value to be updated
-     * </pre>
-     *
-     * <code>string value = 3 [json_name = "value"];</code>
+     * <code>string value = 2 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -766,14 +671,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       value_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
     private java.lang.Object type_ = "";
     /**
-     * <code>string type = 4 [json_name = "type"];</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -789,7 +694,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 4 [json_name = "type"];</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -806,7 +711,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 4 [json_name = "type"];</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -814,22 +719,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       type_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string type = 4 [json_name = "type"];</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
       type_ = getDefaultInstance().getType();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string type = 4 [json_name = "type"];</code>
+     * <code>string type = 3 [json_name = "type"];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
@@ -838,7 +743,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       type_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -855,23 +760,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.contactmanager.EditedEntry)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.contactmanager.ContactField)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.contactmanager.EditedEntry)
-  private static final com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.contactmanager.ContactField)
+  private static final com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<EditedEntry>
-      PARSER = new com.google.protobuf.AbstractParser<EditedEntry>() {
+  private static final com.google.protobuf.Parser<ContactField>
+      PARSER = new com.google.protobuf.AbstractParser<ContactField>() {
     @java.lang.Override
-    public EditedEntry parsePartialFrom(
+    public ContactField parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -890,17 +795,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<EditedEntry> parser() {
+  public static com.google.protobuf.Parser<ContactField> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<EditedEntry> getParserForType() {
+  public com.google.protobuf.Parser<ContactField> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -32,19 +32,11 @@ public interface ListContactEntryListResponseOrBuilder extends
       int index);
 
   /**
-   * <pre>
-   * the next page token
-   * </pre>
-   *
    * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
    * @return The nextPageToken.
    */
   java.lang.String getNextPageToken();
   /**
-   * <pre>
-   * the next page token
-   * </pre>
-   *
    * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
    * @return The bytes for nextPageToken.
    */

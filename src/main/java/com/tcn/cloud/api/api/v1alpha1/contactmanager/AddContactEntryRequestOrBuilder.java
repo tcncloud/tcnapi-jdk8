@@ -23,52 +23,47 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> 
       getEntryList();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index);
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  int getEntryCount();
+  @java.lang.Deprecated int getEntryCount();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
       getEntryOrBuilderList();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
       int index);
 
   /**
-   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return Whether the projectSid field is set.
-   */
-  boolean hasProjectSid();
-  /**
-   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
    * @return The projectSid.
    */
   long getProjectSid();

@@ -27,7 +27,7 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\353\022\n\016ContactManager\022\312\001\n" +
+      "annotations.proto2\312\017\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
@@ -36,7 +36,7 @@ public final class ServiceProto {
       "*\022\347\001\n\024ListContactEntryList\0228.api.v1alpha" +
       "1.contactmanager.ListContactEntryListReq" +
       "uest\0329.api.v1alpha1.contactmanager.ListC" +
-      "ontactEntryListResponse\"Z\272\270\221\002\n\n\003\010\354\'\n\003\010\355\'" +
+      "ontactEntryListResponse\"Z\272\270\221\002\n\n\003\010\354\'\n\003\010\254\002" +
       "\202\323\344\223\002E\"@/api/v1alpha1/contactmanager/con" +
       "tactmanager/listcontactentrylist:\001*\022\332\001\n\022" +
       "GetEncContactEntry\0226.api.v1alpha1.contac" +
@@ -54,46 +54,35 @@ public final class ServiceProto {
       "contactmanager.GetKYCKeysRequest\032/.api.v" +
       "1alpha1.contactmanager.GetKYCKeysRespons" +
       "e\"K\272\270\221\002\005\n\003\010\355\'\202\323\344\223\002;\"6/api/v1alpha1/conta" +
-      "ctmanager/contactmanager/getkyckeys:\001*\022\316" +
+      "ctmanager/contactmanager/getkyckeys:\001*\022\323" +
       "\001\n\017AddContactEntry\0223.api.v1alpha1.contac" +
       "tmanager.AddContactEntryRequest\0324.api.v1" +
       "alpha1.contactmanager.AddContactEntryRes" +
-      "ponse\"P\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002@\";/api/v1alpha1/c" +
-      "ontactmanager/contactmanager/addcontacte" +
-      "ntry:\001*\022\322\001\n\020EditContactEntry\0224.api.v1alp" +
-      "ha1.contactmanager.EditContactEntryReque" +
-      "st\0325.api.v1alpha1.contactmanager.EditCon" +
-      "tactEntryResponse\"Q\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002A\"</ap" +
+      "ponse\"U\272\270\221\002\n\n\003\010\354\'\n\003\010\254\002\202\323\344\223\002@\";/api/v1alp" +
+      "ha1/contactmanager/contactmanager/addcon" +
+      "tactentry:\001*\022\327\001\n\020EditContactEntry\0224.api." +
+      "v1alpha1.contactmanager.EditContactEntry" +
+      "Request\0325.api.v1alpha1.contactmanager.Ed" +
+      "itContactEntryResponse\"V\272\270\221\002\n\n\003\010\354\'\n\003\010\254\002\202" +
+      "\323\344\223\002A\"</api/v1alpha1/contactmanager/cont" +
+      "actmanager/editcontactentry:\001*\022\347\001\n\024ListC" +
+      "ontactsByEntity\0228.api.v1alpha1.contactma" +
+      "nager.ListContactsByEntityRequest\0329.api." +
+      "v1alpha1.contactmanager.ListContactsByEn" +
+      "tityResponse\"Z\272\270\221\002\n\n\003\010\354\'\n\003\010\355\'\202\323\344\223\002E\"@/ap" +
       "i/v1alpha1/contactmanager/contactmanager" +
-      "/editcontactentry:\001*\022\347\001\n\024ListContactsByE" +
-      "ntity\0228.api.v1alpha1.contactmanager.List" +
-      "ContactsByEntityRequest\0329.api.v1alpha1.c" +
-      "ontactmanager.ListContactsByEntityRespon" +
-      "se\"Z\272\270\221\002\n\n\003\010\354\'\n\003\010\355\'\202\323\344\223\002E\"@/api/v1alpha1" +
-      "/contactmanager/contactmanager/listconta" +
-      "ctsbyentity:\001*\022\343\001\n\023GetContactFieldType\0227" +
-      ".api.v1alpha1.contactmanager.GetContactF" +
-      "ieldTypeRequest\0328.api.v1alpha1.contactma" +
-      "nager.GetContactFieldTypeResponse\"Y\272\270\221\002\n" +
-      "\n\003\010\354\'\n\003\010\355\'\202\323\344\223\002D\"?/api/v1alpha1/contactm" +
-      "anager/contactmanager/getcontactfieldtyp" +
-      "e:\001*\022\323\001\n\017AgentAddContact\0223.api.v1alpha1." +
-      "contactmanager.AddContactEntryRequest\0324." +
-      "api.v1alpha1.contactmanager.AddContactEn" +
-      "tryResponse\"U\272\270\221\002\005\n\003\010\355\'\202\323\344\223\002E\"@/api/v1al" +
-      "pha1/contactmanager/contactmanager/agent" +
-      "addcontactentry:\001*\022\322\001\n\020AgentEditContact\022" +
-      "4.api.v1alpha1.contactmanager.EditContac" +
-      "tEntryRequest\0325.api.v1alpha1.contactmana" +
-      "ger.EditContactEntryResponse\"Q\272\270\221\002\005\n\003\010\355\'" +
-      "\202\323\344\223\002A\"</api/v1alpha1/contactmanager/con" +
-      "tactmanager/agenteditcontact:\001*B\313\001\n-com." +
-      "tcn.cloud.api.api.v1alpha1.contactmanage" +
-      "rB\014ServiceProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1.C" +
-      "ontactmanager\312\002\033Api\\V1alpha1\\Contactmana" +
-      "ger\342\002\'Api\\V1alpha1\\Contactmanager\\GPBMet" +
-      "adata\352\002\035Api::V1alpha1::Contactmanagerb\006p" +
-      "roto3"
+      "/listcontactsbyentity:\001*\022\343\001\n\023GetContactF" +
+      "ieldType\0227.api.v1alpha1.contactmanager.G" +
+      "etContactFieldTypeRequest\0328.api.v1alpha1" +
+      ".contactmanager.GetContactFieldTypeRespo" +
+      "nse\"Y\272\270\221\002\n\n\003\010\354\'\n\003\010\355\'\202\323\344\223\002D\"?/api/v1alpha" +
+      "1/contactmanager/contactmanager/getconta" +
+      "ctfieldtype:\001*B\313\001\n-com.tcn.cloud.api.api" +
+      ".v1alpha1.contactmanagerB\014ServiceProtoP\001" +
+      "\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager\312\002\033A" +
+      "pi\\V1alpha1\\Contactmanager\342\002\'Api\\V1alpha" +
+      "1\\Contactmanager\\GPBMetadata\352\002\035Api::V1al" +
+      "pha1::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

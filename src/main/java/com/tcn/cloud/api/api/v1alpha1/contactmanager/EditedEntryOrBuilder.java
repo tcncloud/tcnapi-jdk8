@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 
-public interface EditedEntryOrBuilder extends
+@java.lang.Deprecated public interface EditedEntryOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.contactmanager.EditedEntry)
     com.google.protobuf.MessageOrBuilder {
 

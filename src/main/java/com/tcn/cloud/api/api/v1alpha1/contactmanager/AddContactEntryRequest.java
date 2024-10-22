@@ -67,10 +67,10 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
     return entry_;
   }
   /**
@@ -78,10 +78,10 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
       getEntryOrBuilderList() {
     return entry_;
   }
@@ -90,10 +90,10 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getEntryCount() {
+  @java.lang.Deprecated public int getEntryCount() {
     return entry_.size();
   }
   /**
@@ -101,10 +101,10 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
     return entry_.get(index);
   }
   /**
@@ -112,10 +112,10 @@ private static final long serialVersionUID = 0L;
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
       int index) {
     return entry_.get(index);
   }
@@ -123,15 +123,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECT_SID_FIELD_NUMBER = 3;
   private long projectSid_ = 0L;
   /**
-   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return Whether the projectSid field is set.
-   */
-  @java.lang.Override
-  public boolean hasProjectSid() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
    * @return The projectSid.
    */
   @java.lang.Override
@@ -159,7 +151,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < entry_.size(); i++) {
       output.writeMessage(2, entry_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (projectSid_ != 0L) {
       output.writeInt64(3, projectSid_);
     }
     getUnknownFields().writeTo(output);
@@ -179,7 +171,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, entry_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (projectSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, projectSid_);
     }
@@ -205,11 +197,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getEntryList()
         .equals(other.getEntryList())) return false;
-    if (hasProjectSid() != other.hasProjectSid()) return false;
-    if (hasProjectSid()) {
-      if (getProjectSid()
-          != other.getProjectSid()) return false;
-    }
+    if (getProjectSid()
+        != other.getProjectSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -230,11 +219,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENTRY_FIELD_NUMBER;
       hash = (53 * hash) + getEntryList().hashCode();
     }
-    if (hasProjectSid()) {
-      hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getProjectSid());
-    }
+    hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProjectSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -428,7 +415,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectSid_ = projectSid_;
-        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -506,7 +492,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.hasProjectSid()) {
+      if (other.getProjectSid() != 0L) {
         setProjectSid(other.getProjectSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -632,9 +618,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> getEntryList() {
       if (entryBuilder_ == null) {
         return java.util.Collections.unmodifiableList(entry_);
       } else {
@@ -646,9 +632,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public int getEntryCount() {
+    @java.lang.Deprecated public int getEntryCount() {
       if (entryBuilder_ == null) {
         return entry_.size();
       } else {
@@ -660,9 +646,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index) {
       if (entryBuilder_ == null) {
         return entry_.get(index);
       } else {
@@ -674,9 +660,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder setEntry(
+    @java.lang.Deprecated public Builder setEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
       if (entryBuilder_ == null) {
         if (value == null) {
@@ -695,9 +681,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder setEntry(
+    @java.lang.Deprecated public Builder setEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
       if (entryBuilder_ == null) {
         ensureEntryIsMutable();
@@ -713,9 +699,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder addEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
+    @java.lang.Deprecated public Builder addEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
       if (entryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -733,9 +719,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder addEntry(
+    @java.lang.Deprecated public Builder addEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry value) {
       if (entryBuilder_ == null) {
         if (value == null) {
@@ -754,9 +740,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder addEntry(
+    @java.lang.Deprecated public Builder addEntry(
         com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
       if (entryBuilder_ == null) {
         ensureEntryIsMutable();
@@ -772,9 +758,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder addEntry(
+    @java.lang.Deprecated public Builder addEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder builderForValue) {
       if (entryBuilder_ == null) {
         ensureEntryIsMutable();
@@ -790,9 +776,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder addAllEntry(
+    @java.lang.Deprecated public Builder addAllEntry(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> values) {
       if (entryBuilder_ == null) {
         ensureEntryIsMutable();
@@ -809,9 +795,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder clearEntry() {
+    @java.lang.Deprecated public Builder clearEntry() {
       if (entryBuilder_ == null) {
         entry_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -826,9 +812,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public Builder removeEntry(int index) {
+    @java.lang.Deprecated public Builder removeEntry(int index) {
       if (entryBuilder_ == null) {
         ensureEntryIsMutable();
         entry_.remove(index);
@@ -843,9 +829,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder getEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder getEntryBuilder(
         int index) {
       return getEntryFieldBuilder().getBuilder(index);
     }
@@ -854,9 +840,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
         int index) {
       if (entryBuilder_ == null) {
         return entry_.get(index);  } else {
@@ -868,9 +854,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
          getEntryOrBuilderList() {
       if (entryBuilder_ != null) {
         return entryBuilder_.getMessageOrBuilderList();
@@ -883,9 +869,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder() {
       return getEntryFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.getDefaultInstance());
     }
@@ -894,9 +880,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder addEntryBuilder(
         int index) {
       return getEntryFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.getDefaultInstance());
@@ -906,9 +892,9 @@ private static final long serialVersionUID = 0L;
      * List of entries of a given contact
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+     * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry.Builder> 
          getEntryBuilderList() {
       return getEntryFieldBuilder().getBuilderList();
     }
@@ -929,15 +915,7 @@ private static final long serialVersionUID = 0L;
 
     private long projectSid_ ;
     /**
-     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return Whether the projectSid field is set.
-     */
-    @java.lang.Override
-    public boolean hasProjectSid() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @return The projectSid.
      */
     @java.lang.Override
@@ -945,7 +923,7 @@ private static final long serialVersionUID = 0L;
       return projectSid_;
     }
     /**
-     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @param value The projectSid to set.
      * @return This builder for chaining.
      */
@@ -957,7 +935,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearProjectSid() {

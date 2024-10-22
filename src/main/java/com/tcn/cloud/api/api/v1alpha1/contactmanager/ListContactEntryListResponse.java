@@ -90,10 +90,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object nextPageToken_ = "";
   /**
-   * <pre>
-   * the next page token
-   * </pre>
-   *
    * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
    * @return The nextPageToken.
    */
@@ -111,10 +107,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the next page token
-   * </pre>
-   *
    * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
    * @return The bytes for nextPageToken.
    */
@@ -778,10 +770,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nextPageToken_ = "";
     /**
-     * <pre>
-     * the next page token
-     * </pre>
-     *
      * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
      * @return The nextPageToken.
      */
@@ -798,10 +786,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the next page token
-     * </pre>
-     *
      * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
      * @return The bytes for nextPageToken.
      */
@@ -819,10 +803,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the next page token
-     * </pre>
-     *
      * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
      * @param value The nextPageToken to set.
      * @return This builder for chaining.
@@ -836,10 +816,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the next page token
-     * </pre>
-     *
      * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
      * @return This builder for chaining.
      */
@@ -850,10 +826,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the next page token
-     * </pre>
-     *
      * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
      * @param value The bytes for nextPageToken to set.
      * @return This builder for chaining.

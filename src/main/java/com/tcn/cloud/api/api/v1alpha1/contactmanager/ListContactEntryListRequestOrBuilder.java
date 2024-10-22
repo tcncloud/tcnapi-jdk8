@@ -35,38 +35,23 @@ public interface ListContactEntryListRequestOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+   * <code>string project_id = 3 [json_name = "projectId"];</code>
    * @return The projectId.
    */
-  @java.lang.Deprecated java.lang.String getProjectId();
+  java.lang.String getProjectId();
   /**
-   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+   * <code>string project_id = 3 [json_name = "projectId"];</code>
    * @return The bytes for projectId.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getProjectIdBytes();
-
-  /**
-   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return Whether the projectSid field is set.
-   */
-  boolean hasProjectSid();
-  /**
-   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
-   */
-  long getProjectSid();
 
   /**
    * <pre>
    * pagination fields - returned page
    * </pre>
    *
-   * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+   * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
   int getPageSize();
@@ -76,7 +61,7 @@ public interface ListContactEntryListRequestOrBuilder extends
    * pagination fields - page token
    * </pre>
    *
-   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   java.lang.String getPageToken();
@@ -85,7 +70,7 @@ public interface ListContactEntryListRequestOrBuilder extends
    * pagination fields - page token
    * </pre>
    *
-   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString

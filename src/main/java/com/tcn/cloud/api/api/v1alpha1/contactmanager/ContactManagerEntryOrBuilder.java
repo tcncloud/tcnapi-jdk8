@@ -14,10 +14,12 @@ public interface ContactManagerEntryOrBuilder extends
   long getContactManagerEntryId();
 
   /**
-   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
+   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
    * @return The contactManagerEntryListId.
    */
-  long getContactManagerEntryListId();
+  @java.lang.Deprecated long getContactManagerEntryListId();
 
   /**
    * <code>string key = 3 [json_name = "key"];</code>

@@ -108,13 +108,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object projectId_ = "";
   /**
-   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+   * <code>string project_id = 3 [json_name = "projectId"];</code>
    * @return The projectId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getProjectId() {
+  public java.lang.String getProjectId() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -127,13 +125,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+   * <code>string project_id = 3 [json_name = "projectId"];</code>
    * @return The bytes for projectId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getProjectIdBytes() {
     java.lang.Object ref = projectId_;
     if (ref instanceof java.lang.String) {
@@ -147,33 +143,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PROJECT_SID_FIELD_NUMBER = 4;
-  private long projectSid_ = 0L;
-  /**
-   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return Whether the projectSid field is set.
-   */
-  @java.lang.Override
-  public boolean hasProjectSid() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
-   */
-  @java.lang.Override
-  public long getProjectSid() {
-    return projectSid_;
-  }
-
-  public static final int PAGE_SIZE_FIELD_NUMBER = 5;
+  public static final int PAGE_SIZE_FIELD_NUMBER = 4;
   private int pageSize_ = 0;
   /**
    * <pre>
    * pagination fields - returned page
    * </pre>
    *
-   * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+   * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
   @java.lang.Override
@@ -181,7 +158,7 @@ private static final long serialVersionUID = 0L;
     return pageSize_;
   }
 
-  public static final int PAGE_TOKEN_FIELD_NUMBER = 6;
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object pageToken_ = "";
   /**
@@ -189,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * pagination fields - page token
    * </pre>
    *
-   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   @java.lang.Override
@@ -210,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * pagination fields - page token
    * </pre>
    *
-   * <code>string page_token = 6 [json_name = "pageToken"];</code>
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
   @java.lang.Override
@@ -251,14 +228,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeInt64(4, projectSid_);
-    }
     if (pageSize_ != 0) {
-      output.writeInt32(5, pageSize_);
+      output.writeInt32(4, pageSize_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pageToken_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pageToken_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -279,16 +253,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, projectSid_);
-    }
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, pageSize_);
+        .computeInt32Size(4, pageSize_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pageToken_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pageToken_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -314,11 +284,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getProjectId()
         .equals(other.getProjectId())) return false;
-    if (hasProjectSid() != other.hasProjectSid()) return false;
-    if (hasProjectSid()) {
-      if (getProjectSid()
-          != other.getProjectSid()) return false;
-    }
     if (getPageSize()
         != other.getPageSize()) return false;
     if (!getPageToken()
@@ -343,11 +308,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getProjectId().hashCode();
-    if (hasProjectSid()) {
-      hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getProjectSid());
-    }
     hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
@@ -486,7 +446,6 @@ private static final long serialVersionUID = 0L;
       contactManagerListId_ = 0L;
       orgId_ = "";
       projectId_ = "";
-      projectSid_ = 0L;
       pageSize_ = 0;
       pageToken_ = "";
       return this;
@@ -534,13 +493,9 @@ private static final long serialVersionUID = 0L;
         result.projectId_ = projectId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.projectSid_ = projectSid_;
-        to_bitField0_ |= 0x00000002;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageSize_ = pageSize_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageToken_ = pageToken_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -603,15 +558,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.hasProjectSid()) {
-        setProjectSid(other.getProjectSid());
-      }
       if (other.getPageSize() != 0) {
         setPageSize(other.getPageSize());
       }
       if (!other.getPageToken().isEmpty()) {
         pageToken_ = other.pageToken_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -656,20 +608,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              projectSid_ = input.readInt64();
+              pageSize_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
-            case 40: {
-              pageSize_ = input.readInt32();
+            case 42: {
+              pageToken_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
-            } // case 40
-            case 50: {
-              pageToken_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -811,12 +758,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object projectId_ = "";
     /**
-     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+     * <code>string project_id = 3 [json_name = "projectId"];</code>
      * @return The projectId.
      */
-    @java.lang.Deprecated public java.lang.String getProjectId() {
+    public java.lang.String getProjectId() {
       java.lang.Object ref = projectId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -829,12 +774,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+     * <code>string project_id = 3 [json_name = "projectId"];</code>
      * @return The bytes for projectId.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getProjectIdBytes() {
       java.lang.Object ref = projectId_;
       if (ref instanceof String) {
@@ -848,13 +791,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+     * <code>string project_id = 3 [json_name = "projectId"];</code>
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setProjectId(
+    public Builder setProjectId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       projectId_ = value;
@@ -863,70 +804,26 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+     * <code>string project_id = 3 [json_name = "projectId"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearProjectId() {
+    public Builder clearProjectId() {
       projectId_ = getDefaultInstance().getProjectId();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string project_id = 3 [json_name = "projectId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.project_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
+     * <code>string project_id = 3 [json_name = "projectId"];</code>
      * @param value The bytes for projectId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setProjectIdBytes(
+    public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       projectId_ = value;
       bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private long projectSid_ ;
-    /**
-     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return Whether the projectSid field is set.
-     */
-    @java.lang.Override
-    public boolean hasProjectSid() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return The projectSid.
-     */
-    @java.lang.Override
-    public long getProjectSid() {
-      return projectSid_;
-    }
-    /**
-     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @param value The projectSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectSid(long value) {
-
-      projectSid_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional int64 project_sid = 4 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectSid() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      projectSid_ = 0L;
       onChanged();
       return this;
     }
@@ -937,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * pagination fields - returned page
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -949,14 +846,14 @@ private static final long serialVersionUID = 0L;
      * pagination fields - returned page
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
      * @param value The pageSize to set.
      * @return This builder for chaining.
      */
     public Builder setPageSize(int value) {
 
       pageSize_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -965,11 +862,11 @@ private static final long serialVersionUID = 0L;
      * pagination fields - returned page
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       pageSize_ = 0;
       onChanged();
       return this;
@@ -981,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * pagination fields - page token
      * </pre>
      *
-     * <code>string page_token = 6 [json_name = "pageToken"];</code>
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
      * @return The pageToken.
      */
     public java.lang.String getPageToken() {
@@ -1001,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * pagination fields - page token
      * </pre>
      *
-     * <code>string page_token = 6 [json_name = "pageToken"];</code>
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
      * @return The bytes for pageToken.
      */
     public com.google.protobuf.ByteString
@@ -1022,7 +919,7 @@ private static final long serialVersionUID = 0L;
      * pagination fields - page token
      * </pre>
      *
-     * <code>string page_token = 6 [json_name = "pageToken"];</code>
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
      * @param value The pageToken to set.
      * @return This builder for chaining.
      */
@@ -1030,7 +927,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       pageToken_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1039,12 +936,12 @@ private static final long serialVersionUID = 0L;
      * pagination fields - page token
      * </pre>
      *
-     * <code>string page_token = 6 [json_name = "pageToken"];</code>
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
       pageToken_ = getDefaultInstance().getPageToken();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1053,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * pagination fields - page token
      * </pre>
      *
-     * <code>string page_token = 6 [json_name = "pageToken"];</code>
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
      * @param value The bytes for pageToken to set.
      * @return This builder for chaining.
      */
@@ -1062,7 +959,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       pageToken_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
