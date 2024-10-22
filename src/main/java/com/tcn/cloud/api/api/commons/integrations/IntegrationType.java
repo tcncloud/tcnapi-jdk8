@@ -221,6 +221,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_ACQUIRED = 5100;</code>
    */
   INTEGRATION_TYPE_ACQUIRED(5100),
+  /**
+   * <code>INTEGRATION_TYPE_GENERIC = 5200;</code>
+   */
+  INTEGRATION_TYPE_GENERIC(5200),
   UNRECOGNIZED(-1),
   ;
 
@@ -432,6 +436,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_ACQUIRED = 5100;</code>
    */
   public static final int INTEGRATION_TYPE_ACQUIRED_VALUE = 5100;
+  /**
+   * <code>INTEGRATION_TYPE_GENERIC = 5200;</code>
+   */
+  public static final int INTEGRATION_TYPE_GENERIC_VALUE = 5200;
 
 
   public final int getNumber() {
@@ -510,6 +518,7 @@ public enum IntegrationType
       case 4900: return INTEGRATION_TYPE_PDCFLOW;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       case 5100: return INTEGRATION_TYPE_ACQUIRED;
+      case 5200: return INTEGRATION_TYPE_GENERIC;
       default: return null;
     }
   }
