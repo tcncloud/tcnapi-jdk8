@@ -30,4 +30,16 @@ public interface ListContactEntryListResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
       int index);
+
+  /**
+   * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+   * @return The nextPageToken.
+   */
+  java.lang.String getNextPageToken();
+  /**
+   * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+   * @return The bytes for nextPageToken.
+   */
+  com.google.protobuf.ByteString
+      getNextPageTokenBytes();
 }

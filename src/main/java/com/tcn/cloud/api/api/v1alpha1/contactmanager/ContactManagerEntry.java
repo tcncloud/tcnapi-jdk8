@@ -60,11 +60,13 @@ private static final long serialVersionUID = 0L;
   public static final int CONTACT_MANAGER_ENTRY_LIST_ID_FIELD_NUMBER = 2;
   private long contactManagerEntryListId_ = 0L;
   /**
-   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
+   * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
    * @return The contactManagerEntryListId.
    */
   @java.lang.Override
-  public long getContactManagerEntryListId() {
+  @java.lang.Deprecated public long getContactManagerEntryListId() {
     return contactManagerEntryListId_;
   }
 
@@ -747,19 +749,23 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerEntryListId_ ;
     /**
-     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
      * @return The contactManagerEntryListId.
      */
     @java.lang.Override
-    public long getContactManagerEntryListId() {
+    @java.lang.Deprecated public long getContactManagerEntryListId() {
       return contactManagerEntryListId_;
     }
     /**
-     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
      * @param value The contactManagerEntryListId to set.
      * @return This builder for chaining.
      */
-    public Builder setContactManagerEntryListId(long value) {
+    @java.lang.Deprecated public Builder setContactManagerEntryListId(long value) {
 
       contactManagerEntryListId_ = value;
       bitField0_ |= 0x00000002;
@@ -767,10 +773,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", jstype = JS_STRING];</code>
+     * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
      * @return This builder for chaining.
      */
-    public Builder clearContactManagerEntryListId() {
+    @java.lang.Deprecated public Builder clearContactManagerEntryListId() {
       bitField0_ = (bitField0_ & ~0x00000002);
       contactManagerEntryListId_ = 0L;
       onChanged();

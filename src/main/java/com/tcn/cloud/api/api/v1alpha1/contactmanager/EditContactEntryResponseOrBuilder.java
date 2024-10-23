@@ -6,4 +6,48 @@ package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 public interface EditContactEntryResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.contactmanager.EditContactEntryResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *list of edited/inserted fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 1 [json_name = "field"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> 
+      getFieldList();
+  /**
+   * <pre>
+   *list of edited/inserted fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 1 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index);
+  /**
+   * <pre>
+   *list of edited/inserted fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 1 [json_name = "field"];</code>
+   */
+  int getFieldCount();
+  /**
+   * <pre>
+   *list of edited/inserted fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 1 [json_name = "field"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+      getFieldOrBuilderList();
+  /**
+   * <pre>
+   *list of edited/inserted fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 1 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
+      int index);
 }

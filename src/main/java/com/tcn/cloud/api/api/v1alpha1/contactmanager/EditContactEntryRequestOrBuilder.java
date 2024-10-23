@@ -8,7 +8,12 @@ public interface EditContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  boolean hasContactManagerListId();
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId"];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
@@ -20,26 +25,50 @@ public interface EditContactEntryRequestOrBuilder extends
   long getContactManagerEntryId();
 
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry> 
       getEditedEntryList();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry getEditedEntry(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntry getEditedEntry(int index);
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry", deprecated = true];</code>
    */
-  int getEditedEntryCount();
+  @java.lang.Deprecated int getEditedEntryCount();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntryOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntryOrBuilder> 
       getEditedEntryOrBuilderList();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.EditedEntry edited_entry = 3 [json_name = "editedEntry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntryOrBuilder getEditedEntryOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.EditedEntryOrBuilder getEditedEntryOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> 
+      getFieldList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index);
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  int getFieldCount();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+      getFieldOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
       int index);
 }

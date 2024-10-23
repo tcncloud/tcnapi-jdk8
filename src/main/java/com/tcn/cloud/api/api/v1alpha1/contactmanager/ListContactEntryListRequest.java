@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private ListContactEntryListRequest() {
     orgId_ = "";
     projectId_ = "";
+    pageToken_ = "";
   }
 
   @java.lang.Override
@@ -40,10 +41,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACT_MANAGER_LIST_ID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerListId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   @java.lang.Override
@@ -55,11 +65,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -72,11 +84,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -129,6 +143,68 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PAGE_SIZE_FIELD_NUMBER = 4;
+  private int pageSize_ = 0;
+  /**
+   * <pre>
+   * pagination fields - returned page
+   * </pre>
+   *
+   * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  @java.lang.Override
+  public int getPageSize() {
+    return pageSize_;
+  }
+
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
+  /**
+   * <pre>
+   * pagination fields - page token
+   * </pre>
+   *
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  @java.lang.Override
+  public java.lang.String getPageToken() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pageToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * pagination fields - page token
+   * </pre>
+   *
+   * <code>string page_token = 5 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPageTokenBytes() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pageToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -143,7 +219,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(1, contactManagerListId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
@@ -151,6 +227,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
+    }
+    if (pageSize_ != 0) {
+      output.writeInt32(4, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pageToken_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -161,7 +243,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contactManagerListId_ != 0L) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactManagerListId_);
     }
@@ -170,6 +252,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
+    }
+    if (pageSize_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pageToken_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -186,12 +275,19 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest) obj;
 
-    if (getContactManagerListId()
-        != other.getContactManagerListId()) return false;
+    if (hasContactManagerListId() != other.hasContactManagerListId()) return false;
+    if (hasContactManagerListId()) {
+      if (getContactManagerListId()
+          != other.getContactManagerListId()) return false;
+    }
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (!getProjectId()
         .equals(other.getProjectId())) return false;
+    if (getPageSize()
+        != other.getPageSize()) return false;
+    if (!getPageToken()
+        .equals(other.getPageToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -203,13 +299,19 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getContactManagerListId());
+    if (hasContactManagerListId()) {
+      hash = (37 * hash) + CONTACT_MANAGER_LIST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContactManagerListId());
+    }
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getProjectId().hashCode();
+    hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getPageSize();
+    hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getPageToken().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +446,8 @@ private static final long serialVersionUID = 0L;
       contactManagerListId_ = 0L;
       orgId_ = "";
       projectId_ = "";
+      pageSize_ = 0;
+      pageToken_ = "";
       return this;
     }
 
@@ -377,8 +481,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orgId_ = orgId_;
@@ -386,6 +492,13 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectId_ = projectId_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pageSize_ = pageSize_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.pageToken_ = pageToken_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -432,7 +545,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest.getDefaultInstance()) return this;
-      if (other.getContactManagerListId() != 0L) {
+      if (other.hasContactManagerListId()) {
         setContactManagerListId(other.getContactManagerListId());
       }
       if (!other.getOrgId().isEmpty()) {
@@ -443,6 +556,14 @@ private static final long serialVersionUID = 0L;
       if (!other.getProjectId().isEmpty()) {
         projectId_ = other.projectId_;
         bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.getPageSize() != 0) {
+        setPageSize(other.getPageSize());
+      }
+      if (!other.getPageToken().isEmpty()) {
+        pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -486,6 +607,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              pageSize_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              pageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -505,7 +636,15 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerListId_ ;
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * @return Whether the contactManagerListId field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerListId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return The contactManagerListId.
      */
     @java.lang.Override
@@ -513,7 +652,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerListId_;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
@@ -525,7 +664,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+     * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListId() {
@@ -537,10 +676,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -553,10 +694,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -570,11 +713,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -583,21 +728,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -675,6 +824,142 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       projectId_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int pageSize_ ;
+    /**
+     * <pre>
+     * pagination fields - returned page
+     * </pre>
+     *
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <pre>
+     * pagination fields - returned page
+     * </pre>
+     *
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageSize(int value) {
+
+      pageSize_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * pagination fields - returned page
+     * </pre>
+     *
+     * <code>int32 page_size = 4 [json_name = "pageSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageSize() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      pageSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pageToken_ = "";
+    /**
+     * <pre>
+     * pagination fields - page token
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * pagination fields - page token
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * pagination fields - page token
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pageToken_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * pagination fields - page token
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageToken() {
+      pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * pagination fields - page token
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pageToken_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

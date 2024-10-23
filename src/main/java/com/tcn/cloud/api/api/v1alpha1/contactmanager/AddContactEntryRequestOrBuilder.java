@@ -8,7 +8,12 @@ public interface AddContactEntryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
+   * @return Whether the contactManagerListId field is set.
+   */
+  boolean hasContactManagerListId();
+  /**
+   * <code>optional int64 contact_manager_list_id = 1 [json_name = "contactManagerListId", jstype = JS_STRING];</code>
    * @return The contactManagerListId.
    */
   long getContactManagerListId();
@@ -18,42 +23,72 @@ public interface AddContactEntryRequestOrBuilder extends
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry> 
       getEntryList();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.Entry getEntry(int index);
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  int getEntryCount();
+  @java.lang.Deprecated int getEntryCount();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder> 
       getEntryOrBuilderList();
   /**
    * <pre>
    * List of entries of a given contact
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry"];</code>
+   * <code>repeated .api.v1alpha1.contactmanager.Entry entry = 2 [json_name = "entry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.EntryOrBuilder getEntryOrBuilder(
+      int index);
+
+  /**
+   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+   * @return The projectSid.
+   */
+  long getProjectSid();
+
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> 
+      getFieldList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index);
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  int getFieldCount();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+      getFieldOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 4 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
       int index);
 }

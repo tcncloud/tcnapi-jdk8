@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 
-@java.lang.Deprecated public interface EntryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.contactmanager.Entry)
+public interface ContactFieldOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.contactmanager.ContactField)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 /**
  * Protobuf type {@code api.v1alpha1.contactmanager.Entry}
  */
-public final class Entry extends
+@java.lang.Deprecated public final class Entry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.contactmanager.Entry)
     EntryOrBuilder {
