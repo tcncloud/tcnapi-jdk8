@@ -225,6 +225,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_GENERIC = 5200;</code>
    */
   INTEGRATION_TYPE_GENERIC(5200),
+  /**
+   * <code>INTEGRATION_TYPE_HEALTHPAY24 = 5300;</code>
+   */
+  INTEGRATION_TYPE_HEALTHPAY24(5300),
   UNRECOGNIZED(-1),
   ;
 
@@ -440,6 +444,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_GENERIC = 5200;</code>
    */
   public static final int INTEGRATION_TYPE_GENERIC_VALUE = 5200;
+  /**
+   * <code>INTEGRATION_TYPE_HEALTHPAY24 = 5300;</code>
+   */
+  public static final int INTEGRATION_TYPE_HEALTHPAY24_VALUE = 5300;
 
 
   public final int getNumber() {
@@ -519,6 +527,7 @@ public enum IntegrationType
       case 5000: return INTEGRATION_TYPE_DEBUG;
       case 5100: return INTEGRATION_TYPE_ACQUIRED;
       case 5200: return INTEGRATION_TYPE_GENERIC;
+      case 5300: return INTEGRATION_TYPE_HEALTHPAY24;
       default: return null;
     }
   }
