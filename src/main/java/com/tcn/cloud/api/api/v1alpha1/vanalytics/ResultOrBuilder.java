@@ -102,4 +102,19 @@ public interface ResultOrBuilder extends
    * @return The huntGroupSid.
    */
   long getHuntGroupSid();
+
+  /**
+   * <code>.api.v1alpha1.vanalytics.Sentiment sentiment = 12 [json_name = "sentiment"];</code>
+   * @return Whether the sentiment field is set.
+   */
+  boolean hasSentiment();
+  /**
+   * <code>.api.v1alpha1.vanalytics.Sentiment sentiment = 12 [json_name = "sentiment"];</code>
+   * @return The sentiment.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.Sentiment getSentiment();
+  /**
+   * <code>.api.v1alpha1.vanalytics.Sentiment sentiment = 12 [json_name = "sentiment"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SentimentOrBuilder getSentimentOrBuilder();
 }
