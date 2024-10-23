@@ -75,15 +75,15 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_classifier_GetFileTemplateResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_classifier_ParseFTSFileRequest_descriptor;
+    internal_static_api_v1alpha1_classifier_ParseLargeFileRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_classifier_ParseFTSFileRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_classifier_ParseLargeFileRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor;
+    internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_classifier_ListEventsRequest_descriptor;
   static final 
@@ -170,98 +170,99 @@ public final class ServiceProto {
       "B\0020\001R\016fileTemplateId\"e\n\027GetFileTemplateR" +
       "esponse\022J\n\rfile_template\030\001 \001(\0132%.api.v1a" +
       "lpha1.classifier.FileTemplateR\014fileTempl" +
-      "ate\"@\n\023ParseFTSFileRequest\022\025\n\006fts_id\030\001 \001" +
-      "(\tR\005ftsId\022\022\n\004name\030\002 \001(\tR\004name\"b\n\024ParseFT" +
-      "SFileResponse\022J\n\rfile_template\030\001 \001(\0132%.a" +
-      "pi.v1alpha1.classifier.FileTemplateR\014fil" +
-      "eTemplate\"\261\001\n\021ListEventsRequest\022\035\n\neleme" +
-      "nt_id\030\001 \001(\tR\telementId\0220\n\005begin\030\002 \001(\0132\032." +
-      "google.protobuf.TimestampR\005begin\022,\n\003end\030" +
-      "\003 \001(\0132\032.google.protobuf.TimestampR\003end\022\035" +
-      "\n\ntime_range\030\004 \001(\tR\ttimeRange\"\341\007\n\022ListEv" +
-      "entsResponse\022C\n\004rows\030\001 \003(\0132/.api.v1alpha" +
-      "1.classifier.ListEventsResponse.RowR\004row" +
-      "s\032\205\007\n\003Row\022,\n\022input_record_count\030\001 \001(\003R\020i" +
-      "nputRecordCount\022.\n\023output_record_count\030\002" +
-      " \001(\003R\021outputRecordCount\0224\n\026discarded_rec" +
-      "ord_count\030\003 \001(\003R\024discardedRecordCount\0220\n" +
-      "\005begin\030\004 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\005begin\022,\n\003end\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampR\003end\022\035\n\nelement_id\030\006 \001(\tR\teleme" +
-      "ntId\022 \n\013entrypoints\030\007 \003(\tR\013entrypoints\022\035" +
-      "\n\nparent_ids\030\010 \003(\tR\tparentIds\022\030\n\007columns" +
-      "\030\t \003(\tR\007columns\022j\n\017field_pii_types\030\n \003(\013" +
-      "2B.api.v1alpha1.classifier.ListEventsRes" +
-      "ponse.Row.FieldPiiTypesEntryR\rfieldPiiTy" +
-      "pes\022s\n\022field_syntax_types\030\013 \003(\0132E.api.v1" +
-      "alpha1.classifier.ListEventsResponse.Row" +
-      ".FieldSyntaxTypesEntryR\020fieldSyntaxTypes" +
-      "\0227\n\030total_queue_wait_seconds\030\014 \001(\003R\025tota" +
-      "lQueueWaitSeconds\0228\n\030total_processing_se" +
-      "conds\030\r \001(\003R\026totalProcessingSeconds\022\022\n\004m" +
-      "sgs\030\016 \003(\tR\004msgs\032c\n\022FieldPiiTypesEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\0227\n\005value\030\002 \001(\0162!.api.com" +
-      "mons.ClassifierEntityTypeR\005value:\0028\001\032C\n\025" +
-      "FieldSyntaxTypesEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
-      "\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\331\002\n\017PeekListRe" +
-      "quest\0220\n\005begin\030\001 \001(\0132\032.google.protobuf.T" +
-      "imestampR\005begin\022,\n\003end\030\002 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\003end\022\027\n\007prev_id\030\003 \001(\003R\006" +
-      "prevId\022\020\n\003asc\030\004 \001(\010R\003asc\022\033\n\tpage_size\030\005 " +
-      "\001(\005R\010pageSize\022\035\n\nelement_id\030\006 \001(\tR\teleme" +
-      "ntId\022\030\n\007columns\030\007 \003(\tR\007columns\022#\n\rentryp" +
-      "oint_id\030\010 \001(\tR\014entrypointId\022\033\n\tparent_id" +
-      "\030\t \001(\tR\010parentId\022#\n\rview_discards\030\n \001(\010R" +
-      "\014viewDiscards\"\274\002\n\020PeekListResponse\022J\n\007co" +
-      "lumns\030\005 \003(\01320.api.v1alpha1.classifier.Pe" +
-      "ekListResponse.ColumnR\007columns\022!\n\014record" +
-      "_count\030\006 \001(\003R\013recordCount\022\035\n\npage_token\030" +
-      "\007 \001(\tR\tpageToken\032\231\001\n\006Column\022\022\n\004name\030\001 \001(" +
-      "\tR\004name\022B\n\013entity_type\030\002 \001(\0162!.api.commo" +
-      "ns.ClassifierEntityTypeR\nentityType\022\037\n\013s" +
-      "yntax_type\030\003 \001(\tR\nsyntaxType\022\026\n\006values\030\004" +
-      " \003(\tR\006values2\275\013\n\027ClassifierFileTemplates" +
-      "\022\246\001\n\tParseFile\022).api.v1alpha1.classifier" +
-      ".ParseFileRequest\032*.api.v1alpha1.classif" +
-      "ier.ParseFileResponse\"B\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0022\"" +
-      "-/api/v1alpha1/classifier/file_templates" +
-      "/parse:\001*\022\240\001\n\nListEvents\022*.api.v1alpha1." +
-      "classifier.ListEventsRequest\032+.api.v1alp" +
-      "ha1.classifier.ListEventsResponse\"9\272\270\221\002\005" +
-      "\n\003\010\351\007\202\323\344\223\002)\"$/api/v1alpha1/classifier/ev" +
-      "ents/list:\001*\022\235\001\n\010PeekList\022(.api.v1alpha1" +
-      ".classifier.PeekListRequest\032).api.v1alph" +
-      "a1.classifier.PeekListResponse\"<\272\270\221\002\005\n\003\010" +
-      "\351\007\202\323\344\223\002,\"\'/api/v1alpha1/classifier/event" +
-      "s/preview:\001*\022\262\001\n\014ParseFTSFile\022,.api.v1al" +
-      "pha1.classifier.ParseFTSFileRequest\032-.ap" +
-      "i.v1alpha1.classifier.ParseFTSFileRespon" +
-      "se\"E\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0025\"0/api/v1alpha1/clas" +
-      "sifier/file_templates/parsefts:\001*\022\302\001\n\022Up" +
-      "dateFileTemplate\0222.api.v1alpha1.classifi" +
-      "er.UpdateFileTemplateRequest\0323.api.v1alp" +
-      "ha1.classifier.UpdateFileTemplateRespons" +
-      "e\"C\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023\"./api/v1alpha1/class" +
-      "ifier/file_templates/update:\001*\022\302\001\n\022Delet" +
-      "eFileTemplate\0222.api.v1alpha1.classifier." +
-      "DeleteFileTemplateRequest\0323.api.v1alpha1" +
-      ".classifier.DeleteFileTemplateResponse\"C" +
-      "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023*./api/v1alpha1/classifi" +
-      "er/file_templates/delete:\001*\022\275\001\n\021ListFile" +
-      "Templates\0221.api.v1alpha1.classifier.List" +
-      "FileTemplatesRequest\0322.api.v1alpha1.clas" +
-      "sifier.ListFileTemplatesResponse\"A\272\270\221\002\005\n" +
-      "\003\010\351\007\202\323\344\223\0021\",/api/v1alpha1/classifier/fil" +
-      "e_templates/list:\001*\022\266\001\n\017GetFileTemplate\022" +
-      "/.api.v1alpha1.classifier.GetFileTemplat" +
-      "eRequest\0320.api.v1alpha1.classifier.GetFi" +
-      "leTemplateResponse\"@\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0020\"+/a" +
-      "pi/v1alpha1/classifier/file_templates/ge" +
-      "t:\001*B\267\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "classifierB\014ServiceProtoP\001\242\002\003AVC\252\002\027Api.V" +
-      "1alpha1.Classifier\312\002\027Api\\V1alpha1\\Classi" +
-      "fier\342\002#Api\\V1alpha1\\Classifier\\GPBMetada" +
-      "ta\352\002\031Api::V1alpha1::Classifierb\006proto3"
+      "ate\"T\n\025ParseLargeFileRequest\022\027\n\006fts_id\030\001" +
+      " \001(\tH\000R\005ftsId\022\022\n\004name\030\002 \001(\tR\004nameB\016\n\014fil" +
+      "e_pointer\"d\n\026ParseLargeFileResponse\022J\n\rf" +
+      "ile_template\030\001 \001(\0132%.api.v1alpha1.classi" +
+      "fier.FileTemplateR\014fileTemplate\"\261\001\n\021List" +
+      "EventsRequest\022\035\n\nelement_id\030\001 \001(\tR\teleme" +
+      "ntId\0220\n\005begin\030\002 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\005begin\022,\n\003end\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\003end\022\035\n\ntime_range\030\004 \001(\t" +
+      "R\ttimeRange\"\341\007\n\022ListEventsResponse\022C\n\004ro" +
+      "ws\030\001 \003(\0132/.api.v1alpha1.classifier.ListE" +
+      "ventsResponse.RowR\004rows\032\205\007\n\003Row\022,\n\022input" +
+      "_record_count\030\001 \001(\003R\020inputRecordCount\022.\n" +
+      "\023output_record_count\030\002 \001(\003R\021outputRecord" +
+      "Count\0224\n\026discarded_record_count\030\003 \001(\003R\024d" +
+      "iscardedRecordCount\0220\n\005begin\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\005begin\022,\n\003end\030\005 \001" +
+      "(\0132\032.google.protobuf.TimestampR\003end\022\035\n\ne" +
+      "lement_id\030\006 \001(\tR\telementId\022 \n\013entrypoint" +
+      "s\030\007 \003(\tR\013entrypoints\022\035\n\nparent_ids\030\010 \003(\t" +
+      "R\tparentIds\022\030\n\007columns\030\t \003(\tR\007columns\022j\n" +
+      "\017field_pii_types\030\n \003(\0132B.api.v1alpha1.cl" +
+      "assifier.ListEventsResponse.Row.FieldPii" +
+      "TypesEntryR\rfieldPiiTypes\022s\n\022field_synta" +
+      "x_types\030\013 \003(\0132E.api.v1alpha1.classifier." +
+      "ListEventsResponse.Row.FieldSyntaxTypesE" +
+      "ntryR\020fieldSyntaxTypes\0227\n\030total_queue_wa" +
+      "it_seconds\030\014 \001(\003R\025totalQueueWaitSeconds\022" +
+      "8\n\030total_processing_seconds\030\r \001(\003R\026total" +
+      "ProcessingSeconds\022\022\n\004msgs\030\016 \003(\tR\004msgs\032c\n" +
+      "\022FieldPiiTypesEntry\022\020\n\003key\030\001 \001(\tR\003key\0227\n" +
+      "\005value\030\002 \001(\0162!.api.commons.ClassifierEnt" +
+      "ityTypeR\005value:\0028\001\032C\n\025FieldSyntaxTypesEn" +
+      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
+      "lue:\0028\001\"\331\002\n\017PeekListRequest\0220\n\005begin\030\001 \001" +
+      "(\0132\032.google.protobuf.TimestampR\005begin\022,\n" +
+      "\003end\030\002 \001(\0132\032.google.protobuf.TimestampR\003" +
+      "end\022\027\n\007prev_id\030\003 \001(\003R\006prevId\022\020\n\003asc\030\004 \001(" +
+      "\010R\003asc\022\033\n\tpage_size\030\005 \001(\005R\010pageSize\022\035\n\ne" +
+      "lement_id\030\006 \001(\tR\telementId\022\030\n\007columns\030\007 " +
+      "\003(\tR\007columns\022#\n\rentrypoint_id\030\010 \001(\tR\014ent" +
+      "rypointId\022\033\n\tparent_id\030\t \001(\tR\010parentId\022#" +
+      "\n\rview_discards\030\n \001(\010R\014viewDiscards\"\274\002\n\020" +
+      "PeekListResponse\022J\n\007columns\030\005 \003(\01320.api." +
+      "v1alpha1.classifier.PeekListResponse.Col" +
+      "umnR\007columns\022!\n\014record_count\030\006 \001(\003R\013reco" +
+      "rdCount\022\035\n\npage_token\030\007 \001(\tR\tpageToken\032\231" +
+      "\001\n\006Column\022\022\n\004name\030\001 \001(\tR\004name\022B\n\013entity_" +
+      "type\030\002 \001(\0162!.api.commons.ClassifierEntit" +
+      "yTypeR\nentityType\022\037\n\013syntax_type\030\003 \001(\tR\n" +
+      "syntaxType\022\026\n\006values\030\004 \003(\tR\006values2\306\013\n\027C" +
+      "lassifierFileTemplates\022\246\001\n\tParseFile\022).a" +
+      "pi.v1alpha1.classifier.ParseFileRequest\032" +
+      "*.api.v1alpha1.classifier.ParseFileRespo" +
+      "nse\"B\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0022\"-/api/v1alpha1/cla" +
+      "ssifier/file_templates/parse:\001*\022\240\001\n\nList" +
+      "Events\022*.api.v1alpha1.classifier.ListEve" +
+      "ntsRequest\032+.api.v1alpha1.classifier.Lis" +
+      "tEventsResponse\"9\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002)\"$/api/" +
+      "v1alpha1/classifier/events/list:\001*\022\235\001\n\010P" +
+      "eekList\022(.api.v1alpha1.classifier.PeekLi" +
+      "stRequest\032).api.v1alpha1.classifier.Peek" +
+      "ListResponse\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v1a" +
+      "lpha1/classifier/events/preview:\001*\022\273\001\n\016P" +
+      "arseLargeFile\022..api.v1alpha1.classifier." +
+      "ParseLargeFileRequest\032/.api.v1alpha1.cla" +
+      "ssifier.ParseLargeFileResponse\"H\272\270\221\002\005\n\003\010" +
+      "\351\007\202\323\344\223\0028\"3/api/v1alpha1/classifier/file_" +
+      "templates/large_parse:\001*\022\302\001\n\022UpdateFileT" +
+      "emplate\0222.api.v1alpha1.classifier.Update" +
+      "FileTemplateRequest\0323.api.v1alpha1.class" +
+      "ifier.UpdateFileTemplateResponse\"C\272\270\221\002\005\n" +
+      "\003\010\351\007\202\323\344\223\0023\"./api/v1alpha1/classifier/fil" +
+      "e_templates/update:\001*\022\302\001\n\022DeleteFileTemp" +
+      "late\0222.api.v1alpha1.classifier.DeleteFil" +
+      "eTemplateRequest\0323.api.v1alpha1.classifi" +
+      "er.DeleteFileTemplateResponse\"C\272\270\221\002\005\n\003\010\351" +
+      "\007\202\323\344\223\0023*./api/v1alpha1/classifier/file_t" +
+      "emplates/delete:\001*\022\275\001\n\021ListFileTemplates" +
+      "\0221.api.v1alpha1.classifier.ListFileTempl" +
+      "atesRequest\0322.api.v1alpha1.classifier.Li" +
+      "stFileTemplatesResponse\"A\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002" +
+      "1\",/api/v1alpha1/classifier/file_templat" +
+      "es/list:\001*\022\266\001\n\017GetFileTemplate\022/.api.v1a" +
+      "lpha1.classifier.GetFileTemplateRequest\032" +
+      "0.api.v1alpha1.classifier.GetFileTemplat" +
+      "eResponse\"@\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0020\"+/api/v1alph" +
+      "a1/classifier/file_templates/get:\001*B\267\001\n)" +
+      "com.tcn.cloud.api.api.v1alpha1.classifie" +
+      "rB\014ServiceProtoP\001\242\002\003AVC\252\002\027Api.V1alpha1.C" +
+      "lassifier\312\002\027Api\\V1alpha1\\Classifier\342\002#Ap" +
+      "i\\V1alpha1\\Classifier\\GPBMetadata\352\002\031Api:" +
+      ":V1alpha1::Classifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -344,17 +345,17 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_GetFileTemplateResponse_descriptor,
         new java.lang.String[] { "FileTemplate", });
-    internal_static_api_v1alpha1_classifier_ParseFTSFileRequest_descriptor =
+    internal_static_api_v1alpha1_classifier_ParseLargeFileRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_api_v1alpha1_classifier_ParseFTSFileRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_classifier_ParseLargeFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_classifier_ParseFTSFileRequest_descriptor,
-        new java.lang.String[] { "FtsId", "Name", });
-    internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor =
+        internal_static_api_v1alpha1_classifier_ParseLargeFileRequest_descriptor,
+        new java.lang.String[] { "FtsId", "Name", "FilePointer", });
+    internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor,
+        internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor,
         new java.lang.String[] { "FileTemplate", });
     internal_static_api_v1alpha1_classifier_ListEventsRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);

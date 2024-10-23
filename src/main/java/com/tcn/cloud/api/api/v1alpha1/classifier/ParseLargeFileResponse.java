@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.v1alpha1.classifier;
 
 /**
- * Protobuf type {@code api.v1alpha1.classifier.ParseFTSFileResponse}
+ * Protobuf type {@code api.v1alpha1.classifier.ParseLargeFileResponse}
  */
-public final class ParseFTSFileResponse extends
+public final class ParseLargeFileResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.classifier.ParseFTSFileResponse)
-    ParseFTSFileResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.classifier.ParseLargeFileResponse)
+    ParseLargeFileResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ParseFTSFileResponse.newBuilder() to construct.
-  private ParseFTSFileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ParseLargeFileResponse.newBuilder() to construct.
+  private ParseLargeFileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ParseFTSFileResponse() {
+  private ParseLargeFileResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ParseFTSFileResponse();
+    return new ParseLargeFileResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.class, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.class, com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.Builder.class);
   }
 
   public static final int FILE_TEMPLATE_FIELD_NUMBER = 1;
@@ -104,10 +104,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse other = (com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse other = (com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse) obj;
 
     if (hasFileTemplate() != other.hasFileTemplate()) return false;
     if (hasFileTemplate()) {
@@ -134,44 +134,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -179,26 +179,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -227,26 +227,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.classifier.ParseFTSFileResponse}
+   * Protobuf type {@code api.v1alpha1.classifier.ParseLargeFileResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.classifier.ParseFTSFileResponse)
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.classifier.ParseLargeFileResponse)
+      com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.class, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.class, com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.newBuilder()
     private Builder() {
 
     }
@@ -271,17 +271,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseFTSFileResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ParseLargeFileResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -289,14 +289,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse result = new com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse result = new com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.fileTemplate_ = fileTemplateBuilder_ == null
@@ -339,16 +339,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.getDefaultInstance()) return this;
       if (other.hasFileTemplate()) {
         mergeFileTemplate(other.getFileTemplate());
       }
@@ -533,23 +533,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.classifier.ParseFTSFileResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.classifier.ParseLargeFileResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.classifier.ParseFTSFileResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.classifier.ParseLargeFileResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ParseFTSFileResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ParseFTSFileResponse>() {
+  private static final com.google.protobuf.Parser<ParseLargeFileResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ParseLargeFileResponse>() {
     @java.lang.Override
-    public ParseFTSFileResponse parsePartialFrom(
+    public ParseLargeFileResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -568,17 +568,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ParseFTSFileResponse> parser() {
+  public static com.google.protobuf.Parser<ParseLargeFileResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ParseFTSFileResponse> getParserForType() {
+  public com.google.protobuf.Parser<ParseLargeFileResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

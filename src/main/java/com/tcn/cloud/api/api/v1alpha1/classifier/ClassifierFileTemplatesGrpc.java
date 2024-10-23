@@ -108,35 +108,35 @@ public final class ClassifierFileTemplatesGrpc {
     return getPeekListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest,
+      com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> getParseLargeFileMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ParseFTSFile",
-      requestType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ParseLargeFile",
+      requestType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-      com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> getParseFTSFileMethod;
-    if ((getParseFTSFileMethod = ClassifierFileTemplatesGrpc.getParseFTSFileMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest,
+      com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> getParseLargeFileMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> getParseLargeFileMethod;
+    if ((getParseLargeFileMethod = ClassifierFileTemplatesGrpc.getParseLargeFileMethod) == null) {
       synchronized (ClassifierFileTemplatesGrpc.class) {
-        if ((getParseFTSFileMethod = ClassifierFileTemplatesGrpc.getParseFTSFileMethod) == null) {
-          ClassifierFileTemplatesGrpc.getParseFTSFileMethod = getParseFTSFileMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>newBuilder()
+        if ((getParseLargeFileMethod = ClassifierFileTemplatesGrpc.getParseLargeFileMethod) == null) {
+          ClassifierFileTemplatesGrpc.getParseLargeFileMethod = getParseLargeFileMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest, com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ParseFTSFile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ParseLargeFile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClassifierFileTemplatesMethodDescriptorSupplier("ParseFTSFile"))
+                  com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ClassifierFileTemplatesMethodDescriptorSupplier("ParseLargeFile"))
               .build();
         }
       }
     }
-    return getParseFTSFileMethod;
+    return getParseLargeFileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest,
@@ -334,9 +334,9 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    default void parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParseFTSFileMethod(), responseObserver);
+    default void parseLargeFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParseLargeFileMethod(), responseObserver);
     }
 
     /**
@@ -421,10 +421,10 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    public void parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> responseObserver) {
+    public void parseLargeFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getParseFTSFileMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getParseLargeFileMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -499,9 +499,9 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse parseFTSFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse parseLargeFile(com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getParseFTSFileMethod(), getCallOptions(), request);
+          getChannel(), getParseLargeFileMethod(), getCallOptions(), request);
     }
 
     /**
@@ -575,10 +575,10 @@ public final class ClassifierFileTemplatesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse> parseFTSFile(
-        com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse> parseLargeFile(
+        com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getParseFTSFileMethod(), getCallOptions()), request);
+          getChannel().newCall(getParseLargeFileMethod(), getCallOptions()), request);
     }
 
     /**
@@ -617,7 +617,7 @@ public final class ClassifierFileTemplatesGrpc {
   private static final int METHODID_PARSE_FILE = 0;
   private static final int METHODID_LIST_EVENTS = 1;
   private static final int METHODID_PEEK_LIST = 2;
-  private static final int METHODID_PARSE_FTSFILE = 3;
+  private static final int METHODID_PARSE_LARGE_FILE = 3;
   private static final int METHODID_UPDATE_FILE_TEMPLATE = 4;
   private static final int METHODID_DELETE_FILE_TEMPLATE = 5;
   private static final int METHODID_LIST_FILE_TEMPLATES = 6;
@@ -652,9 +652,9 @@ public final class ClassifierFileTemplatesGrpc {
           serviceImpl.peekList((com.tcn.cloud.api.api.v1alpha1.classifier.PeekListRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse>) responseObserver);
           break;
-        case METHODID_PARSE_FTSFILE:
-          serviceImpl.parseFTSFile((com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>) responseObserver);
+        case METHODID_PARSE_LARGE_FILE:
+          serviceImpl.parseLargeFile((com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse>) responseObserver);
           break;
         case METHODID_UPDATE_FILE_TEMPLATE:
           serviceImpl.updateFileTemplate((com.tcn.cloud.api.api.v1alpha1.classifier.UpdateFileTemplateRequest) request,
@@ -712,12 +712,12 @@ public final class ClassifierFileTemplatesGrpc {
               com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse>(
                 service, METHODID_PEEK_LIST)))
         .addMethod(
-          getParseFTSFileMethod(),
+          getParseLargeFileMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileRequest,
-              com.tcn.cloud.api.api.v1alpha1.classifier.ParseFTSFileResponse>(
-                service, METHODID_PARSE_FTSFILE)))
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest,
+              com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileResponse>(
+                service, METHODID_PARSE_LARGE_FILE)))
         .addMethod(
           getUpdateFileTemplateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -797,7 +797,7 @@ public final class ClassifierFileTemplatesGrpc {
               .addMethod(getParseFileMethod())
               .addMethod(getListEventsMethod())
               .addMethod(getPeekListMethod())
-              .addMethod(getParseFTSFileMethod())
+              .addMethod(getParseLargeFileMethod())
               .addMethod(getUpdateFileTemplateMethod())
               .addMethod(getDeleteFileTemplateMethod())
               .addMethod(getListFileTemplatesMethod())

@@ -3,16 +3,33 @@
 
 package com.tcn.cloud.api.api.v1alpha1.classifier;
 
-public interface ParseFTSFileRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.classifier.ParseFTSFileRequest)
+public interface ParseLargeFileRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.classifier.ParseLargeFileRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * fts_id for file to classify
+   * </pre>
+   *
+   * <code>string fts_id = 1 [json_name = "ftsId"];</code>
+   * @return Whether the ftsId field is set.
+   */
+  boolean hasFtsId();
+  /**
+   * <pre>
+   * fts_id for file to classify
+   * </pre>
+   *
    * <code>string fts_id = 1 [json_name = "ftsId"];</code>
    * @return The ftsId.
    */
   java.lang.String getFtsId();
   /**
+   * <pre>
+   * fts_id for file to classify
+   * </pre>
+   *
    * <code>string fts_id = 1 [json_name = "ftsId"];</code>
    * @return The bytes for ftsId.
    */
@@ -20,14 +37,24 @@ public interface ParseFTSFileRequestOrBuilder extends
       getFtsIdBytes();
 
   /**
+   * <pre>
+   * name of file
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * name of file
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  com.tcn.cloud.api.api.v1alpha1.classifier.ParseLargeFileRequest.FilePointerCase getFilePointerCase();
 }

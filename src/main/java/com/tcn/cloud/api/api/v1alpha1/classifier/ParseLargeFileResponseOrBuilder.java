@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.classifier;
 
-public interface ParseFTSFileResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.classifier.ParseFTSFileResponse)
+public interface ParseLargeFileResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.classifier.ParseLargeFileResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
