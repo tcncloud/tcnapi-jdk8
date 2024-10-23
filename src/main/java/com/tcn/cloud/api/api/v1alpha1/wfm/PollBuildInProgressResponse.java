@@ -96,6 +96,24 @@ private static final long serialVersionUID = 0L;
     return buildInProgress_;
   }
 
+  public static final int PREVIOUS_BUILD_STATE_FIELD_NUMBER = 3;
+  private boolean previousBuildState_ = false;
+  /**
+   * <pre>
+   * If build_in_progress is False, indicates whether the previous build was successful.
+   * If true, the last build succeeded.
+   * If false, the last build failed.
+   * If build_in_progress is True, this value is always false.
+   * </pre>
+   *
+   * <code>bool previous_build_state = 3 [json_name = "previousBuildState"];</code>
+   * @return The previousBuildState.
+   */
+  @java.lang.Override
+  public boolean getPreviousBuildState() {
+    return previousBuildState_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -116,6 +134,9 @@ private static final long serialVersionUID = 0L;
     if (buildInProgress_ != false) {
       output.writeBool(2, buildInProgress_);
     }
+    if (previousBuildState_ != false) {
+      output.writeBool(3, previousBuildState_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -132,6 +153,10 @@ private static final long serialVersionUID = 0L;
     if (buildInProgress_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, buildInProgress_);
+    }
+    if (previousBuildState_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, previousBuildState_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -155,6 +180,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getBuildInProgress()
         != other.getBuildInProgress()) return false;
+    if (getPreviousBuildState()
+        != other.getPreviousBuildState()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -173,6 +200,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BUILD_IN_PROGRESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getBuildInProgress());
+    hash = (37 * hash) + PREVIOUS_BUILD_STATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPreviousBuildState());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -314,6 +344,7 @@ private static final long serialVersionUID = 0L;
         buildStartDatetimeBuilder_ = null;
       }
       buildInProgress_ = false;
+      previousBuildState_ = false;
       return this;
     }
 
@@ -354,6 +385,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.buildInProgress_ = buildInProgress_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.previousBuildState_ = previousBuildState_;
       }
     }
 
@@ -407,6 +441,9 @@ private static final long serialVersionUID = 0L;
       if (other.getBuildInProgress() != false) {
         setBuildInProgress(other.getBuildInProgress());
       }
+      if (other.getPreviousBuildState() != false) {
+        setPreviousBuildState(other.getPreviousBuildState());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -445,6 +482,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              previousBuildState_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -660,6 +702,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearBuildInProgress() {
       bitField0_ = (bitField0_ & ~0x00000002);
       buildInProgress_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean previousBuildState_ ;
+    /**
+     * <pre>
+     * If build_in_progress is False, indicates whether the previous build was successful.
+     * If true, the last build succeeded.
+     * If false, the last build failed.
+     * If build_in_progress is True, this value is always false.
+     * </pre>
+     *
+     * <code>bool previous_build_state = 3 [json_name = "previousBuildState"];</code>
+     * @return The previousBuildState.
+     */
+    @java.lang.Override
+    public boolean getPreviousBuildState() {
+      return previousBuildState_;
+    }
+    /**
+     * <pre>
+     * If build_in_progress is False, indicates whether the previous build was successful.
+     * If true, the last build succeeded.
+     * If false, the last build failed.
+     * If build_in_progress is True, this value is always false.
+     * </pre>
+     *
+     * <code>bool previous_build_state = 3 [json_name = "previousBuildState"];</code>
+     * @param value The previousBuildState to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviousBuildState(boolean value) {
+
+      previousBuildState_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If build_in_progress is False, indicates whether the previous build was successful.
+     * If true, the last build succeeded.
+     * If false, the last build failed.
+     * If build_in_progress is True, this value is always false.
+     * </pre>
+     *
+     * <code>bool previous_build_state = 3 [json_name = "previousBuildState"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPreviousBuildState() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      previousBuildState_ = false;
       onChanged();
       return this;
     }

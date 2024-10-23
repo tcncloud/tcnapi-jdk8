@@ -44,4 +44,17 @@ public interface PollBuildInProgressResponseOrBuilder extends
    * @return The buildInProgress.
    */
   boolean getBuildInProgress();
+
+  /**
+   * <pre>
+   * If build_in_progress is False, indicates whether the previous build was successful.
+   * If true, the last build succeeded.
+   * If false, the last build failed.
+   * If build_in_progress is True, this value is always false.
+   * </pre>
+   *
+   * <code>bool previous_build_state = 3 [json_name = "previousBuildState"];</code>
+   * @return The previousBuildState.
+   */
+  boolean getPreviousBuildState();
 }
