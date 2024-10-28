@@ -435,13 +435,14 @@ public final class InsightProto {
       "eId\"\206\001\n%GetDefaultOutputConfigurationRes" +
       "ponse\022]\n\024output_configuration\030\001 \001(\0132*.ap" +
       "i.v1alpha1.insights.OutputConfigurationR" +
-      "\023outputConfiguration*\351\001\n\027OutputConfigura" +
+      "\023outputConfiguration*\221\002\n\027OutputConfigura" +
       "tionType\022)\n%OUTPUT_CONFIGURATION_TYPE_UN" +
       "SPECIFIED\020\000\022#\n\037OUTPUT_CONFIGURATION_TYPE" +
       "_TABLE\020\001\022*\n&OUTPUT_CONFIGURATION_TYPE_MU" +
       "LTI_SERIES\020\002\022\'\n#OUTPUT_CONFIGURATION_TYP" +
       "E_PIE_CHART\020\003\022)\n%OUTPUT_CONFIGURATION_TY" +
-      "PE_FIXED_WIDTH\020\004*\340\002\n\rOperationType\022\036\n\032OP" +
+      "PE_FIXED_WIDTH\020\004\022&\n\"OUTPUT_CONFIGURATION" +
+      "_TYPE_TIMELINE\020\005*\340\002\n\rOperationType\022\036\n\032OP" +
       "ERATION_TYPE_UNSPECIFIED\020\000\022\027\n\023OPERATION_" +
       "TYPE_DATE\020\001\022\031\n\025OPERATION_TYPE_PREFIX\020\002\022\031" +
       "\n\025OPERATION_TYPE_SUFFIX\020\003\022\033\n\027OPERATION_T" +
