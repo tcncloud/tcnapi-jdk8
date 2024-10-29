@@ -127,31 +127,47 @@ public interface PortalWorkflowOrBuilder extends
    * text presented to the user for this flow
    * </pre>
    *
-   * <code>string header_text = 6 [json_name = "headerText"];</code>
+   * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1409
    * @return The headerText.
    */
-  java.lang.String getHeaderText();
+  @java.lang.Deprecated java.lang.String getHeaderText();
   /**
    * <pre>
    * text presented to the user for this flow
    * </pre>
    *
-   * <code>string header_text = 6 [json_name = "headerText"];</code>
+   * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1409
    * @return The bytes for headerText.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getHeaderTextBytes();
 
   /**
-   * <code>string footer_text = 7 [json_name = "footerText"];</code>
+   * <pre>
+   *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+   * </pre>
+   *
+   * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1410
    * @return The footerText.
    */
-  java.lang.String getFooterText();
+  @java.lang.Deprecated java.lang.String getFooterText();
   /**
-   * <code>string footer_text = 7 [json_name = "footerText"];</code>
+   * <pre>
+   *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+   * </pre>
+   *
+   * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1410
    * @return The bytes for footerText.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFooterTextBytes();
 
   /**

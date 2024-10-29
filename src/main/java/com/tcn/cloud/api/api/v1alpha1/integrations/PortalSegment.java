@@ -32,6 +32,8 @@ private static final long serialVersionUID = 0L;
   }
   private PortalSegment() {
     workflowChoices_ = java.util.Collections.emptyList();
+    headerText_ = "";
+    footerText_ = "";
   }
 
   @java.lang.Override
@@ -95,6 +97,84 @@ private static final long serialVersionUID = 0L;
     return workflowChoices_.get(index);
   }
 
+  public static final int HEADER_TEXT_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headerText_ = "";
+  /**
+   * <code>string header_text = 2 [json_name = "headerText"];</code>
+   * @return The headerText.
+   */
+  @java.lang.Override
+  public java.lang.String getHeaderText() {
+    java.lang.Object ref = headerText_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      headerText_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string header_text = 2 [json_name = "headerText"];</code>
+   * @return The bytes for headerText.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHeaderTextBytes() {
+    java.lang.Object ref = headerText_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      headerText_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FOOTER_TEXT_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object footerText_ = "";
+  /**
+   * <code>string footer_text = 3 [json_name = "footerText"];</code>
+   * @return The footerText.
+   */
+  @java.lang.Override
+  public java.lang.String getFooterText() {
+    java.lang.Object ref = footerText_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      footerText_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string footer_text = 3 [json_name = "footerText"];</code>
+   * @return The bytes for footerText.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFooterTextBytes() {
+    java.lang.Object ref = footerText_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      footerText_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -112,6 +192,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < workflowChoices_.size(); i++) {
       output.writeMessage(1, workflowChoices_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, headerText_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, footerText_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -124,6 +210,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < workflowChoices_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, workflowChoices_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, headerText_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, footerText_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -142,6 +234,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getWorkflowChoicesList()
         .equals(other.getWorkflowChoicesList())) return false;
+    if (!getHeaderText()
+        .equals(other.getHeaderText())) return false;
+    if (!getFooterText()
+        .equals(other.getFooterText())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -157,6 +253,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WORKFLOW_CHOICES_FIELD_NUMBER;
       hash = (53 * hash) + getWorkflowChoicesList().hashCode();
     }
+    hash = (37 * hash) + HEADER_TEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getHeaderText().hashCode();
+    hash = (37 * hash) + FOOTER_TEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getFooterText().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +410,8 @@ private static final long serialVersionUID = 0L;
         workflowChoicesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      headerText_ = "";
+      footerText_ = "";
       return this;
     }
 
@@ -356,6 +458,12 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalSegment result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.headerText_ = headerText_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.footerText_ = footerText_;
+      }
     }
 
     @java.lang.Override
@@ -428,6 +536,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getHeaderText().isEmpty()) {
+        headerText_ = other.headerText_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getFooterText().isEmpty()) {
+        footerText_ = other.footerText_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -467,6 +585,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              headerText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              footerText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -722,6 +850,150 @@ private static final long serialVersionUID = 0L;
         workflowChoices_ = null;
       }
       return workflowChoicesBuilder_;
+    }
+
+    private java.lang.Object headerText_ = "";
+    /**
+     * <code>string header_text = 2 [json_name = "headerText"];</code>
+     * @return The headerText.
+     */
+    public java.lang.String getHeaderText() {
+      java.lang.Object ref = headerText_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerText_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string header_text = 2 [json_name = "headerText"];</code>
+     * @return The bytes for headerText.
+     */
+    public com.google.protobuf.ByteString
+        getHeaderTextBytes() {
+      java.lang.Object ref = headerText_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string header_text = 2 [json_name = "headerText"];</code>
+     * @param value The headerText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderText(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      headerText_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string header_text = 2 [json_name = "headerText"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeaderText() {
+      headerText_ = getDefaultInstance().getHeaderText();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string header_text = 2 [json_name = "headerText"];</code>
+     * @param value The bytes for headerText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderTextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      headerText_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object footerText_ = "";
+    /**
+     * <code>string footer_text = 3 [json_name = "footerText"];</code>
+     * @return The footerText.
+     */
+    public java.lang.String getFooterText() {
+      java.lang.Object ref = footerText_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        footerText_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string footer_text = 3 [json_name = "footerText"];</code>
+     * @return The bytes for footerText.
+     */
+    public com.google.protobuf.ByteString
+        getFooterTextBytes() {
+      java.lang.Object ref = footerText_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        footerText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string footer_text = 3 [json_name = "footerText"];</code>
+     * @param value The footerText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFooterText(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      footerText_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string footer_text = 3 [json_name = "footerText"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFooterText() {
+      footerText_ = getDefaultInstance().getFooterText();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string footer_text = 3 [json_name = "footerText"];</code>
+     * @param value The bytes for footerText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFooterTextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      footerText_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
