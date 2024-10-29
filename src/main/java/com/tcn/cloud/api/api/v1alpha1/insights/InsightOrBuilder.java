@@ -173,24 +173,4 @@ public interface InsightOrBuilder extends
    * @return The datasourceType.
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType();
-
-  /**
-   * <pre>
-   * primary datasource for filtering
-   * </pre>
-   *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-   * @return The datasourceName.
-   */
-  java.lang.String getDatasourceName();
-  /**
-   * <pre>
-   * primary datasource for filtering
-   * </pre>
-   *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-   * @return The bytes for datasourceName.
-   */
-  com.google.protobuf.ByteString
-      getDatasourceNameBytes();
 }

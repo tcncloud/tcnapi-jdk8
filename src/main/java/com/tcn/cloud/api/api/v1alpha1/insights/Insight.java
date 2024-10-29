@@ -29,7 +29,6 @@ private static final long serialVersionUID = 0L;
     insightPermissionType_ = 0;
     resourceId_ = "";
     datasourceType_ = 0;
-    datasourceName_ = "";
   }
 
   @java.lang.Override
@@ -363,53 +362,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.UNRECOGNIZED : result;
   }
 
-  public static final int DATASOURCE_NAME_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object datasourceName_ = "";
-  /**
-   * <pre>
-   * primary datasource for filtering
-   * </pre>
-   *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-   * @return The datasourceName.
-   */
-  @java.lang.Override
-  public java.lang.String getDatasourceName() {
-    java.lang.Object ref = datasourceName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      datasourceName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * primary datasource for filtering
-   * </pre>
-   *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-   * @return The bytes for datasourceName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDatasourceNameBytes() {
-    java.lang.Object ref = datasourceName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      datasourceName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -453,9 +405,6 @@ private static final long serialVersionUID = 0L;
     }
     if (datasourceType_ != com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.DATASOURCE_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(11, datasourceType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasourceName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, datasourceName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -502,9 +451,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(11, datasourceType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasourceName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, datasourceName_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -537,8 +483,6 @@ private static final long serialVersionUID = 0L;
     if (getStandardInsight()
         != other.getStandardInsight()) return false;
     if (datasourceType_ != other.datasourceType_) return false;
-    if (!getDatasourceName()
-        .equals(other.getDatasourceName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -572,8 +516,6 @@ private static final long serialVersionUID = 0L;
         getStandardInsight());
     hash = (37 * hash) + DATASOURCE_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + datasourceType_;
-    hash = (37 * hash) + DATASOURCE_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getDatasourceName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -721,7 +663,6 @@ private static final long serialVersionUID = 0L;
       resourceId_ = "";
       standardInsight_ = false;
       datasourceType_ = 0;
-      datasourceName_ = "";
       return this;
     }
 
@@ -784,9 +725,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.datasourceType_ = datasourceType_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.datasourceName_ = datasourceName_;
       }
     }
 
@@ -872,11 +810,6 @@ private static final long serialVersionUID = 0L;
       if (other.datasourceType_ != 0) {
         setDatasourceTypeValue(other.getDatasourceTypeValue());
       }
-      if (!other.getDatasourceName().isEmpty()) {
-        datasourceName_ = other.datasourceName_;
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -953,11 +886,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 88
-            case 98: {
-              datasourceName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1690,98 +1618,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearDatasourceType() {
       bitField0_ = (bitField0_ & ~0x00000200);
       datasourceType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object datasourceName_ = "";
-    /**
-     * <pre>
-     * primary datasource for filtering
-     * </pre>
-     *
-     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-     * @return The datasourceName.
-     */
-    public java.lang.String getDatasourceName() {
-      java.lang.Object ref = datasourceName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        datasourceName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * primary datasource for filtering
-     * </pre>
-     *
-     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-     * @return The bytes for datasourceName.
-     */
-    public com.google.protobuf.ByteString
-        getDatasourceNameBytes() {
-      java.lang.Object ref = datasourceName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        datasourceName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * primary datasource for filtering
-     * </pre>
-     *
-     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-     * @param value The datasourceName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatasourceName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      datasourceName_ = value;
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * primary datasource for filtering
-     * </pre>
-     *
-     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDatasourceName() {
-      datasourceName_ = getDefaultInstance().getDatasourceName();
-      bitField0_ = (bitField0_ & ~0x00000400);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * primary datasource for filtering
-     * </pre>
-     *
-     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
-     * @param value The bytes for datasourceName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatasourceNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      datasourceName_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
