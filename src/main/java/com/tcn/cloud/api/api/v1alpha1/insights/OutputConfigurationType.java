@@ -52,6 +52,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH = 4;</code>
    */
   OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH(4),
+  /**
+   * <pre>
+   * Output configuration for the timeline chart format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_TIMELINE = 5;</code>
+   */
+  OUTPUT_CONFIGURATION_TYPE_TIMELINE(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -95,6 +103,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH = 4;</code>
    */
   public static final int OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH_VALUE = 4;
+  /**
+   * <pre>
+   * Output configuration for the timeline chart format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_TIMELINE = 5;</code>
+   */
+  public static final int OUTPUT_CONFIGURATION_TYPE_TIMELINE_VALUE = 5;
 
 
   public final int getNumber() {
@@ -126,6 +142,7 @@ public enum OutputConfigurationType
       case 2: return OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES;
       case 3: return OUTPUT_CONFIGURATION_TYPE_PIE_CHART;
       case 4: return OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH;
+      case 5: return OUTPUT_CONFIGURATION_TYPE_TIMELINE;
       default: return null;
     }
   }
