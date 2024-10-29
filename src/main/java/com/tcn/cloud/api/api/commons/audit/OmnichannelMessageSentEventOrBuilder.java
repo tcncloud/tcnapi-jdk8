@@ -82,4 +82,15 @@ public interface OmnichannelMessageSentEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 9 [json_name = "messageType"];</code>
+   * @return The enum numeric value on the wire for messageType.
+   */
+  int getMessageTypeValue();
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 9 [json_name = "messageType"];</code>
+   * @return The messageType.
+   */
+  com.tcn.cloud.api.api.commons.OmniMessageType getMessageType();
 }

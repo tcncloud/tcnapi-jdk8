@@ -551,7 +551,7 @@ public final class OmnichannelEventsProto {
       "equeueEvent\022)\n\004task\030\001 \001(\0132\025.api.commons." +
       "OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006userId\022" +
       "&\n\017asm_session_sid\030\003 \001(\003R\rasmSessionSid\"" +
-      "\324\002\n\033OmnichannelMessageSentEvent\022\037\n\013messa" +
+      "\225\003\n\033OmnichannelMessageSentEvent\022\037\n\013messa" +
       "ge_sid\030\001 \001(\003R\nmessageSid\022;\n\014channel_type" +
       "\030\002 \001(\0162\030.api.commons.ChannelTypeR\013channe" +
       "lType\022\033\n\tsent_from\030\003 \001(\tR\010sentFrom\022\027\n\007se" +
@@ -559,22 +559,25 @@ public final class OmnichannelEventsProto {
       "\003R\013messageSize\022\'\n\017attachment_size\030\006 \001(\003R" +
       "\016attachmentSize\022<\n\013sender_type\030\007 \001(\0162\033.a" +
       "pi.commons.OmniSenderTypeR\nsenderType\022\027\n" +
-      "\007user_id\030\010 \001(\tR\006userId\"\230\003\n OmnichannelPr" +
-      "oviderResponseEvent\022(\n\020omni_message_sid\030" +
-      "\001 \001(\003R\016omniMessageSid\022;\n\014channel_type\030\002 " +
-      "\001(\0162\030.api.commons.ChannelTypeR\013channelTy" +
-      "pe\022\033\n\tsent_from\030\003 \001(\tR\010sentFrom\022\027\n\007sent_" +
-      "to\030\004 \001(\tR\006sentTo\022!\n\014message_size\030\005 \001(\003R\013" +
-      "messageSize\022\'\n\017attachment_size\030\006 \001(\003R\016at" +
-      "tachmentSize\022<\n\013sender_type\030\007 \001(\0162\033.api." +
-      "commons.OmniSenderTypeR\nsenderType\022\027\n\007us" +
-      "er_id\030\010 \001(\tR\006userId\0224\n\026provider_message_" +
-      "count\030\t \001(\003R\024providerMessageCountB\243\001\n#co" +
-      "m.tcn.cloud.api.api.commons.auditB\026Omnic" +
-      "hannelEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons." +
-      "Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\" +
-      "Audit\\GPBMetadata\352\002\023Api::Commons::Auditb" +
-      "\006proto3"
+      "\007user_id\030\010 \001(\tR\006userId\022?\n\014message_type\030\t" +
+      " \001(\0162\034.api.commons.OmniMessageTypeR\013mess" +
+      "ageType\"\331\003\n OmnichannelProviderResponseE" +
+      "vent\022(\n\020omni_message_sid\030\001 \001(\003R\016omniMess" +
+      "ageSid\022;\n\014channel_type\030\002 \001(\0162\030.api.commo" +
+      "ns.ChannelTypeR\013channelType\022\033\n\tsent_from" +
+      "\030\003 \001(\tR\010sentFrom\022\027\n\007sent_to\030\004 \001(\tR\006sentT" +
+      "o\022!\n\014message_size\030\005 \001(\003R\013messageSize\022\'\n\017" +
+      "attachment_size\030\006 \001(\003R\016attachmentSize\022<\n" +
+      "\013sender_type\030\007 \001(\0162\033.api.commons.OmniSen" +
+      "derTypeR\nsenderType\022\027\n\007user_id\030\010 \001(\tR\006us" +
+      "erId\0224\n\026provider_message_count\030\t \001(\003R\024pr" +
+      "oviderMessageCount\022?\n\014message_type\030\n \001(\016" +
+      "2\034.api.commons.OmniMessageTypeR\013messageT" +
+      "ypeB\243\001\n#com.tcn.cloud.api.api.commons.au" +
+      "ditB\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021Ap" +
+      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
+      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
+      "ns::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -881,13 +884,13 @@ public final class OmnichannelEventsProto {
     internal_static_api_commons_audit_OmnichannelMessageSentEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor,
-        new java.lang.String[] { "MessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", });
+        new java.lang.String[] { "MessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", "MessageType", });
     internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor =
       getDescriptor().getMessageTypes().get(50);
     internal_static_api_commons_audit_OmnichannelProviderResponseEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor,
-        new java.lang.String[] { "OmniMessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", "ProviderMessageCount", });
+        new java.lang.String[] { "OmniMessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", "ProviderMessageCount", "MessageType", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

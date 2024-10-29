@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     sentTo_ = "";
     senderType_ = 0;
     userId_ = "";
+    messageType_ = 0;
   }
 
   @java.lang.Override
@@ -244,6 +245,24 @@ private static final long serialVersionUID = 0L;
     return providerMessageCount_;
   }
 
+  public static final int MESSAGE_TYPE_FIELD_NUMBER = 10;
+  private int messageType_ = 0;
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+   * @return The enum numeric value on the wire for messageType.
+   */
+  @java.lang.Override public int getMessageTypeValue() {
+    return messageType_;
+  }
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+   * @return The messageType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.OmniMessageType getMessageType() {
+    com.tcn.cloud.api.api.commons.OmniMessageType result = com.tcn.cloud.api.api.commons.OmniMessageType.forNumber(messageType_);
+    return result == null ? com.tcn.cloud.api.api.commons.OmniMessageType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -284,6 +303,9 @@ private static final long serialVersionUID = 0L;
     }
     if (providerMessageCount_ != 0L) {
       output.writeInt64(9, providerMessageCount_);
+    }
+    if (messageType_ != com.tcn.cloud.api.api.commons.OmniMessageType.OMNI_MESSAGE_TYPE_TEXT_MESSAGE.getNumber()) {
+      output.writeEnum(10, messageType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -327,6 +349,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, providerMessageCount_);
     }
+    if (messageType_ != com.tcn.cloud.api.api.commons.OmniMessageType.OMNI_MESSAGE_TYPE_TEXT_MESSAGE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, messageType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -358,6 +384,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUserId())) return false;
     if (getProviderMessageCount()
         != other.getProviderMessageCount()) return false;
+    if (messageType_ != other.messageType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -391,6 +418,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROVIDER_MESSAGE_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProviderMessageCount());
+    hash = (37 * hash) + MESSAGE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + messageType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -535,6 +564,7 @@ private static final long serialVersionUID = 0L;
       senderType_ = 0;
       userId_ = "";
       providerMessageCount_ = 0L;
+      messageType_ = 0;
       return this;
     }
 
@@ -594,6 +624,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.providerMessageCount_ = providerMessageCount_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.messageType_ = messageType_;
       }
     }
 
@@ -674,6 +707,9 @@ private static final long serialVersionUID = 0L;
       if (other.getProviderMessageCount() != 0L) {
         setProviderMessageCount(other.getProviderMessageCount());
       }
+      if (other.messageType_ != 0) {
+        setMessageTypeValue(other.getMessageTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -745,6 +781,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              messageType_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1208,6 +1249,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearProviderMessageCount() {
       bitField0_ = (bitField0_ & ~0x00000100);
       providerMessageCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int messageType_ = 0;
+    /**
+     * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+     * @return The enum numeric value on the wire for messageType.
+     */
+    @java.lang.Override public int getMessageTypeValue() {
+      return messageType_;
+    }
+    /**
+     * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+     * @param value The enum numeric value on the wire for messageType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessageTypeValue(int value) {
+      messageType_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+     * @return The messageType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniMessageType getMessageType() {
+      com.tcn.cloud.api.api.commons.OmniMessageType result = com.tcn.cloud.api.api.commons.OmniMessageType.forNumber(messageType_);
+      return result == null ? com.tcn.cloud.api.api.commons.OmniMessageType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+     * @param value The messageType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessageType(com.tcn.cloud.api.api.commons.OmniMessageType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      messageType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMessageType() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      messageType_ = 0;
       onChanged();
       return this;
     }
