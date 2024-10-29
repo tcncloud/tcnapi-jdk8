@@ -88,4 +88,15 @@ public interface OmnichannelProviderResponseEventOrBuilder extends
    * @return The providerMessageCount.
    */
   long getProviderMessageCount();
+
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+   * @return The enum numeric value on the wire for messageType.
+   */
+  int getMessageTypeValue();
+  /**
+   * <code>.api.commons.OmniMessageType message_type = 10 [json_name = "messageType"];</code>
+   * @return The messageType.
+   */
+  com.tcn.cloud.api.api.commons.OmniMessageType getMessageType();
 }
