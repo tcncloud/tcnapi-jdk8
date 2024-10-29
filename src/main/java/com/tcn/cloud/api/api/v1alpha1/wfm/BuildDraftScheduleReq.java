@@ -246,6 +246,44 @@ private static final long serialVersionUID = 0L;
     return autoGenerateAgents_;
   }
 
+  public static final int SCHEDULING_TARGET_FIELD_NUMBER = 11;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget schedulingTarget_;
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * @return Whether the schedulingTarget field is set.
+   */
+  @java.lang.Override
+  public boolean hasSchedulingTarget() {
+    return schedulingTarget_ != null;
+  }
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * @return The schedulingTarget.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
+    return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
+  }
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
+    return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -289,6 +327,9 @@ private static final long serialVersionUID = 0L;
     }
     if (autoGenerateAgents_ != false) {
       output.writeBool(10, autoGenerateAgents_);
+    }
+    if (schedulingTarget_ != null) {
+      output.writeMessage(11, getSchedulingTarget());
     }
     getUnknownFields().writeTo(output);
   }
@@ -339,6 +380,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, autoGenerateAgents_);
     }
+    if (schedulingTarget_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getSchedulingTarget());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -380,6 +425,11 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeActivity()) return false;
     if (getAutoGenerateAgents()
         != other.getAutoGenerateAgents()) return false;
+    if (hasSchedulingTarget() != other.hasSchedulingTarget()) return false;
+    if (hasSchedulingTarget()) {
+      if (!getSchedulingTarget()
+          .equals(other.getSchedulingTarget())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -423,6 +473,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AUTO_GENERATE_AGENTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAutoGenerateAgents());
+    if (hasSchedulingTarget()) {
+      hash = (37 * hash) + SCHEDULING_TARGET_FIELD_NUMBER;
+      hash = (53 * hash) + getSchedulingTarget().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -576,6 +630,11 @@ private static final long serialVersionUID = 0L;
       includeSchedulingActivity_ = false;
       includeActivity_ = false;
       autoGenerateAgents_ = false;
+      schedulingTarget_ = null;
+      if (schedulingTargetBuilder_ != null) {
+        schedulingTargetBuilder_.dispose();
+        schedulingTargetBuilder_ = null;
+      }
       return this;
     }
 
@@ -642,6 +701,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.autoGenerateAgents_ = autoGenerateAgents_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.schedulingTarget_ = schedulingTargetBuilder_ == null
+            ? schedulingTarget_
+            : schedulingTargetBuilder_.build();
       }
     }
 
@@ -718,6 +782,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAutoGenerateAgents() != false) {
         setAutoGenerateAgents(other.getAutoGenerateAgents());
+      }
+      if (other.hasSchedulingTarget()) {
+        mergeSchedulingTarget(other.getSchedulingTarget());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -799,6 +866,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 90: {
+              input.readMessage(
+                  getSchedulingTargetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1500,6 +1574,161 @@ private static final long serialVersionUID = 0L;
       autoGenerateAgents_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget schedulingTarget_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder> schedulingTargetBuilder_;
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * @return Whether the schedulingTarget field is set.
+     */
+    public boolean hasSchedulingTarget() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * @return The schedulingTarget.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
+      if (schedulingTargetBuilder_ == null) {
+        return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
+      } else {
+        return schedulingTargetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public Builder setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
+      if (schedulingTargetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        schedulingTarget_ = value;
+      } else {
+        schedulingTargetBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public Builder setSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder builderForValue) {
+      if (schedulingTargetBuilder_ == null) {
+        schedulingTarget_ = builderForValue.build();
+      } else {
+        schedulingTargetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public Builder mergeSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
+      if (schedulingTargetBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          schedulingTarget_ != null &&
+          schedulingTarget_ != com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance()) {
+          getSchedulingTargetBuilder().mergeFrom(value);
+        } else {
+          schedulingTarget_ = value;
+        }
+      } else {
+        schedulingTargetBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public Builder clearSchedulingTarget() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      schedulingTarget_ = null;
+      if (schedulingTargetBuilder_ != null) {
+        schedulingTargetBuilder_.dispose();
+        schedulingTargetBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder getSchedulingTargetBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getSchedulingTargetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
+      if (schedulingTargetBuilder_ != null) {
+        return schedulingTargetBuilder_.getMessageOrBuilder();
+      } else {
+        return schedulingTarget_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
+      }
+    }
+    /**
+     * <pre>
+     * The scheduling target.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder> 
+        getSchedulingTargetFieldBuilder() {
+      if (schedulingTargetBuilder_ == null) {
+        schedulingTargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder>(
+                getSchedulingTarget(),
+                getParentForChildren(),
+                isClean());
+        schedulingTarget_ = null;
+      }
+      return schedulingTargetBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

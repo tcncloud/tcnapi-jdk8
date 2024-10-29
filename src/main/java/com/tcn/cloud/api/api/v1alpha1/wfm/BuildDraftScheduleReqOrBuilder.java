@@ -148,4 +148,31 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * @return The autoGenerateAgents.
    */
   boolean getAutoGenerateAgents();
+
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * @return Whether the schedulingTarget field is set.
+   */
+  boolean hasSchedulingTarget();
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * @return The schedulingTarget.
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();
+  /**
+   * <pre>
+   * The scheduling target.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder();
 }
