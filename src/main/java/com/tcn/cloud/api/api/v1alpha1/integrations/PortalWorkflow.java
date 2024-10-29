@@ -233,11 +233,13 @@ private static final long serialVersionUID = 0L;
    * text presented to the user for this flow
    * </pre>
    *
-   * <code>string header_text = 6 [json_name = "headerText"];</code>
+   * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1409
    * @return The headerText.
    */
   @java.lang.Override
-  public java.lang.String getHeaderText() {
+  @java.lang.Deprecated public java.lang.String getHeaderText() {
     java.lang.Object ref = headerText_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -254,11 +256,13 @@ private static final long serialVersionUID = 0L;
    * text presented to the user for this flow
    * </pre>
    *
-   * <code>string header_text = 6 [json_name = "headerText"];</code>
+   * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1409
    * @return The bytes for headerText.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getHeaderTextBytes() {
     java.lang.Object ref = headerText_;
     if (ref instanceof java.lang.String) {
@@ -276,11 +280,17 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object footerText_ = "";
   /**
-   * <code>string footer_text = 7 [json_name = "footerText"];</code>
+   * <pre>
+   *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+   * </pre>
+   *
+   * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1410
    * @return The footerText.
    */
   @java.lang.Override
-  public java.lang.String getFooterText() {
+  @java.lang.Deprecated public java.lang.String getFooterText() {
     java.lang.Object ref = footerText_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -293,11 +303,17 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string footer_text = 7 [json_name = "footerText"];</code>
+   * <pre>
+   *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+   * </pre>
+   *
+   * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1410
    * @return The bytes for footerText.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFooterTextBytes() {
     java.lang.Object ref = footerText_;
     if (ref instanceof java.lang.String) {
@@ -2091,10 +2107,12 @@ java.lang.String defaultValue) {
      * text presented to the user for this flow
      * </pre>
      *
-     * <code>string header_text = 6 [json_name = "headerText"];</code>
+     * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1409
      * @return The headerText.
      */
-    public java.lang.String getHeaderText() {
+    @java.lang.Deprecated public java.lang.String getHeaderText() {
       java.lang.Object ref = headerText_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2111,10 +2129,12 @@ java.lang.String defaultValue) {
      * text presented to the user for this flow
      * </pre>
      *
-     * <code>string header_text = 6 [json_name = "headerText"];</code>
+     * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1409
      * @return The bytes for headerText.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getHeaderTextBytes() {
       java.lang.Object ref = headerText_;
       if (ref instanceof String) {
@@ -2132,11 +2152,13 @@ java.lang.String defaultValue) {
      * text presented to the user for this flow
      * </pre>
      *
-     * <code>string header_text = 6 [json_name = "headerText"];</code>
+     * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1409
      * @param value The headerText to set.
      * @return This builder for chaining.
      */
-    public Builder setHeaderText(
+    @java.lang.Deprecated public Builder setHeaderText(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       headerText_ = value;
@@ -2149,10 +2171,12 @@ java.lang.String defaultValue) {
      * text presented to the user for this flow
      * </pre>
      *
-     * <code>string header_text = 6 [json_name = "headerText"];</code>
+     * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1409
      * @return This builder for chaining.
      */
-    public Builder clearHeaderText() {
+    @java.lang.Deprecated public Builder clearHeaderText() {
       headerText_ = getDefaultInstance().getHeaderText();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -2163,11 +2187,13 @@ java.lang.String defaultValue) {
      * text presented to the user for this flow
      * </pre>
      *
-     * <code>string header_text = 6 [json_name = "headerText"];</code>
+     * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1409
      * @param value The bytes for headerText to set.
      * @return This builder for chaining.
      */
-    public Builder setHeaderTextBytes(
+    @java.lang.Deprecated public Builder setHeaderTextBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -2179,10 +2205,16 @@ java.lang.String defaultValue) {
 
     private java.lang.Object footerText_ = "";
     /**
-     * <code>string footer_text = 7 [json_name = "footerText"];</code>
+     * <pre>
+     *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+     * </pre>
+     *
+     * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1410
      * @return The footerText.
      */
-    public java.lang.String getFooterText() {
+    @java.lang.Deprecated public java.lang.String getFooterText() {
       java.lang.Object ref = footerText_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2195,10 +2227,16 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string footer_text = 7 [json_name = "footerText"];</code>
+     * <pre>
+     *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+     * </pre>
+     *
+     * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1410
      * @return The bytes for footerText.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFooterTextBytes() {
       java.lang.Object ref = footerText_;
       if (ref instanceof String) {
@@ -2212,11 +2250,17 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string footer_text = 7 [json_name = "footerText"];</code>
+     * <pre>
+     *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+     * </pre>
+     *
+     * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1410
      * @param value The footerText to set.
      * @return This builder for chaining.
      */
-    public Builder setFooterText(
+    @java.lang.Deprecated public Builder setFooterText(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       footerText_ = value;
@@ -2225,21 +2269,33 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>string footer_text = 7 [json_name = "footerText"];</code>
+     * <pre>
+     *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+     * </pre>
+     *
+     * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1410
      * @return This builder for chaining.
      */
-    public Builder clearFooterText() {
+    @java.lang.Deprecated public Builder clearFooterText() {
       footerText_ = getDefaultInstance().getFooterText();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
-     * <code>string footer_text = 7 [json_name = "footerText"];</code>
+     * <pre>
+     *moving to the Portal Segment, workflow specific instruction will be on the fields helper text
+     * </pre>
+     *
+     * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1410
      * @param value The bytes for footerText to set.
      * @return This builder for chaining.
      */
-    public Builder setFooterTextBytes(
+    @java.lang.Deprecated public Builder setFooterTextBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

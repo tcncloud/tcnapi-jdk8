@@ -30,4 +30,28 @@ public interface PortalSegmentOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflowOrBuilder getWorkflowChoicesOrBuilder(
       int index);
+
+  /**
+   * <code>string header_text = 2 [json_name = "headerText"];</code>
+   * @return The headerText.
+   */
+  java.lang.String getHeaderText();
+  /**
+   * <code>string header_text = 2 [json_name = "headerText"];</code>
+   * @return The bytes for headerText.
+   */
+  com.google.protobuf.ByteString
+      getHeaderTextBytes();
+
+  /**
+   * <code>string footer_text = 3 [json_name = "footerText"];</code>
+   * @return The footerText.
+   */
+  java.lang.String getFooterText();
+  /**
+   * <code>string footer_text = 3 [json_name = "footerText"];</code>
+   * @return The bytes for footerText.
+   */
+  com.google.protobuf.ByteString
+      getFooterTextBytes();
 }
