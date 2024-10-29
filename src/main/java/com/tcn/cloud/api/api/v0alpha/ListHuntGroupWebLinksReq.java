@@ -200,6 +200,21 @@ private static final long serialVersionUID = 0L;
     return isInitialPreview_;
   }
 
+  public static final int TASK_SID_FIELD_NUMBER = 11;
+  private long taskSid_ = 0L;
+  /**
+   * <pre>
+   * use this field when the ui is in a "preview call" state and no call sid is available
+   * </pre>
+   *
+   * <code>int64 task_sid = 11 [json_name = "taskSid"];</code>
+   * @return The taskSid.
+   */
+  @java.lang.Override
+  public long getTaskSid() {
+    return taskSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -234,6 +249,9 @@ private static final long serialVersionUID = 0L;
     }
     if (isInitialPreview_ != false) {
       output.writeBool(10, isInitialPreview_);
+    }
+    if (taskSid_ != 0L) {
+      output.writeInt64(11, taskSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -270,6 +288,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, isInitialPreview_);
     }
+    if (taskSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(11, taskSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -298,6 +320,8 @@ private static final long serialVersionUID = 0L;
         != other.getSessionSid()) return false;
     if (getIsInitialPreview()
         != other.getIsInitialPreview()) return false;
+    if (getTaskSid()
+        != other.getTaskSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -327,6 +351,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ISINITIALPREVIEW_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsInitialPreview());
+    hash = (37 * hash) + TASK_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTaskSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -465,6 +492,7 @@ private static final long serialVersionUID = 0L;
       scheduledCallbackId_ = "";
       sessionSid_ = 0L;
       isInitialPreview_ = false;
+      taskSid_ = 0L;
       return this;
     }
 
@@ -518,6 +546,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.isInitialPreview_ = isInitialPreview_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.taskSid_ = taskSid_;
       }
     }
 
@@ -590,6 +621,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsInitialPreview() != false) {
         setIsInitialPreview(other.getIsInitialPreview());
       }
+      if (other.getTaskSid() != 0L) {
+        setTaskSid(other.getTaskSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -651,6 +685,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 80
+            case 88: {
+              taskSid_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1041,6 +1080,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsInitialPreview() {
       bitField0_ = (bitField0_ & ~0x00000040);
       isInitialPreview_ = false;
+      onChanged();
+      return this;
+    }
+
+    private long taskSid_ ;
+    /**
+     * <pre>
+     * use this field when the ui is in a "preview call" state and no call sid is available
+     * </pre>
+     *
+     * <code>int64 task_sid = 11 [json_name = "taskSid"];</code>
+     * @return The taskSid.
+     */
+    @java.lang.Override
+    public long getTaskSid() {
+      return taskSid_;
+    }
+    /**
+     * <pre>
+     * use this field when the ui is in a "preview call" state and no call sid is available
+     * </pre>
+     *
+     * <code>int64 task_sid = 11 [json_name = "taskSid"];</code>
+     * @param value The taskSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTaskSid(long value) {
+
+      taskSid_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * use this field when the ui is in a "preview call" state and no call sid is available
+     * </pre>
+     *
+     * <code>int64 task_sid = 11 [json_name = "taskSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTaskSid() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      taskSid_ = 0L;
       onChanged();
       return this;
     }
