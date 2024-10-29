@@ -84,4 +84,14 @@ public interface ListHuntGroupWebLinksReqOrBuilder extends
    * @return The isInitialPreview.
    */
   boolean getIsInitialPreview();
+
+  /**
+   * <pre>
+   * use this field when the ui is in a "preview call" state and no call sid is available
+   * </pre>
+   *
+   * <code>int64 task_sid = 11 [json_name = "taskSid"];</code>
+   * @return The taskSid.
+   */
+  long getTaskSid();
 }
