@@ -333,6 +333,7 @@ private static final long serialVersionUID = 0L;
     DEBUG_VALIDATE(5002),
     ACQUIRED_PROCESS_PAYMENT(5101),
     GENERIC_REQUEST(5201),
+    HEALTHPAY24_ACCOUNTS_RECEIVABLE(5301),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -631,6 +632,7 @@ private static final long serialVersionUID = 0L;
         case 5002: return DEBUG_VALIDATE;
         case 5101: return ACQUIRED_PROCESS_PAYMENT;
         case 5201: return GENERIC_REQUEST;
+        case 5301: return HEALTHPAY24_ACCOUNTS_RECEIVABLE;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -8718,7 +8720,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1112
+   *     See api/commons/integrations/integrations.proto;l=1115
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8728,7 +8730,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1112
+   *     See api/commons/integrations/integrations.proto;l=1115
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8753,7 +8755,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1113
+   *     See api/commons/integrations/integrations.proto;l=1116
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8763,7 +8765,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1113
+   *     See api/commons/integrations/integrations.proto;l=1116
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8788,7 +8790,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1114
+   *     See api/commons/integrations/integrations.proto;l=1117
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8798,7 +8800,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1114
+   *     See api/commons/integrations/integrations.proto;l=1117
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8823,7 +8825,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1115
+   *     See api/commons/integrations/integrations.proto;l=1118
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8833,7 +8835,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1115
+   *     See api/commons/integrations/integrations.proto;l=1118
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8858,7 +8860,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1116
+   *     See api/commons/integrations/integrations.proto;l=1119
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8868,7 +8870,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1116
+   *     See api/commons/integrations/integrations.proto;l=1119
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -8893,7 +8895,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1117
+   *     See api/commons/integrations/integrations.proto;l=1120
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -8903,7 +8905,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1117
+   *     See api/commons/integrations/integrations.proto;l=1120
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -8928,7 +8930,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1118
+   *     See api/commons/integrations/integrations.proto;l=1121
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -8938,7 +8940,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1118
+   *     See api/commons/integrations/integrations.proto;l=1121
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9422,6 +9424,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteGenericRequest) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteGenericRequest.getDefaultInstance();
+  }
+
+  public static final int HEALTHPAY24_ACCOUNTS_RECEIVABLE_FIELD_NUMBER = 5301;
+  /**
+   * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+   * @return Whether the healthpay24AccountsReceivable field is set.
+   */
+  @java.lang.Override
+  public boolean hasHealthpay24AccountsReceivable() {
+    return valueCase_ == 5301;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+   * @return The healthpay24AccountsReceivable.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable getHealthpay24AccountsReceivable() {
+    if (valueCase_ == 5301) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivableOrBuilder getHealthpay24AccountsReceivableOrBuilder() {
+    if (valueCase_ == 5301) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -10283,6 +10316,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5201) {
       output.writeMessage(5201, (com.tcn.cloud.api.api.commons.integrations.ExecuteGenericRequest) value_);
+    }
+    if (valueCase_ == 5301) {
+      output.writeMessage(5301, (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -11419,6 +11455,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5201) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5201, (com.tcn.cloud.api.api.commons.integrations.ExecuteGenericRequest) value_);
+    }
+    if (valueCase_ == 5301) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5301, (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -12563,6 +12603,10 @@ private static final long serialVersionUID = 0L;
         if (!getGenericRequest()
             .equals(other.getGenericRequest())) return false;
         break;
+      case 5301:
+        if (!getHealthpay24AccountsReceivable()
+            .equals(other.getHealthpay24AccountsReceivable())) return false;
+        break;
       case 0:
       default:
     }
@@ -13704,6 +13748,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + GENERIC_REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getGenericRequest().hashCode();
         break;
+      case 5301:
+        hash = (37 * hash) + HEALTHPAY24_ACCOUNTS_RECEIVABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getHealthpay24AccountsReceivable().hashCode();
+        break;
       case 0:
       default:
     }
@@ -14696,6 +14744,9 @@ private static final long serialVersionUID = 0L;
       }
       if (genericRequestBuilder_ != null) {
         genericRequestBuilder_.clear();
+      }
+      if (healthpay24AccountsReceivableBuilder_ != null) {
+        healthpay24AccountsReceivableBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -15905,6 +15956,10 @@ private static final long serialVersionUID = 0L;
           genericRequestBuilder_ != null) {
         result.value_ = genericRequestBuilder_.build();
       }
+      if (valueCase_ == 5301 &&
+          healthpay24AccountsReceivableBuilder_ != null) {
+        result.value_ = healthpay24AccountsReceivableBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -17079,6 +17134,10 @@ private static final long serialVersionUID = 0L;
         }
         case GENERIC_REQUEST: {
           mergeGenericRequest(other.getGenericRequest());
+          break;
+        }
+        case HEALTHPAY24_ACCOUNTS_RECEIVABLE: {
+          mergeHealthpay24AccountsReceivable(other.getHealthpay24AccountsReceivable());
           break;
         }
         case VALUE_NOT_SET: {
@@ -19083,6 +19142,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5201;
               break;
             } // case 41610
+            case 42410: {
+              input.readMessage(
+                  getHealthpay24AccountsReceivableFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5301;
+              break;
+            } // case 42410
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -55978,7 +56044,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1112
+     *     See api/commons/integrations/integrations.proto;l=1115
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -55988,7 +56054,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1112
+     *     See api/commons/integrations/integrations.proto;l=1115
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -56124,7 +56190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1113
+     *     See api/commons/integrations/integrations.proto;l=1116
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -56134,7 +56200,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1113
+     *     See api/commons/integrations/integrations.proto;l=1116
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -56270,7 +56336,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1114
+     *     See api/commons/integrations/integrations.proto;l=1117
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -56280,7 +56346,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1114
+     *     See api/commons/integrations/integrations.proto;l=1117
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -56416,7 +56482,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1115
+     *     See api/commons/integrations/integrations.proto;l=1118
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -56426,7 +56492,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1115
+     *     See api/commons/integrations/integrations.proto;l=1118
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -56562,7 +56628,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1116
+     *     See api/commons/integrations/integrations.proto;l=1119
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -56572,7 +56638,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1116
+     *     See api/commons/integrations/integrations.proto;l=1119
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -56708,7 +56774,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1117
+     *     See api/commons/integrations/integrations.proto;l=1120
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -56718,7 +56784,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1117
+     *     See api/commons/integrations/integrations.proto;l=1120
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -56854,7 +56920,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1118
+     *     See api/commons/integrations/integrations.proto;l=1121
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -56864,7 +56930,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1118
+     *     See api/commons/integrations/integrations.proto;l=1121
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -59123,6 +59189,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5201;
       onChanged();
       return genericRequestBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivableOrBuilder> healthpay24AccountsReceivableBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     * @return Whether the healthpay24AccountsReceivable field is set.
+     */
+    @java.lang.Override
+    public boolean hasHealthpay24AccountsReceivable() {
+      return valueCase_ == 5301;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     * @return The healthpay24AccountsReceivable.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable getHealthpay24AccountsReceivable() {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        if (valueCase_ == 5301) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5301) {
+          return healthpay24AccountsReceivableBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    public Builder setHealthpay24AccountsReceivable(com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable value) {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        healthpay24AccountsReceivableBuilder_.setMessage(value);
+      }
+      valueCase_ = 5301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    public Builder setHealthpay24AccountsReceivable(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.Builder builderForValue) {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        healthpay24AccountsReceivableBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    public Builder mergeHealthpay24AccountsReceivable(com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable value) {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        if (valueCase_ == 5301 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5301) {
+          healthpay24AccountsReceivableBuilder_.mergeFrom(value);
+        } else {
+          healthpay24AccountsReceivableBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    public Builder clearHealthpay24AccountsReceivable() {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        if (valueCase_ == 5301) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5301) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        healthpay24AccountsReceivableBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.Builder getHealthpay24AccountsReceivableBuilder() {
+      return getHealthpay24AccountsReceivableFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivableOrBuilder getHealthpay24AccountsReceivableOrBuilder() {
+      if ((valueCase_ == 5301) && (healthpay24AccountsReceivableBuilder_ != null)) {
+        return healthpay24AccountsReceivableBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5301) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteHealthpay24AccountsReceivable healthpay24_accounts_receivable = 5301 [json_name = "healthpay24AccountsReceivable"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivableOrBuilder> 
+        getHealthpay24AccountsReceivableFieldBuilder() {
+      if (healthpay24AccountsReceivableBuilder_ == null) {
+        if (!(valueCase_ == 5301)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.getDefaultInstance();
+        }
+        healthpay24AccountsReceivableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivableOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteHealthpay24AccountsReceivable) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5301;
+      onChanged();
+      return healthpay24AccountsReceivableBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

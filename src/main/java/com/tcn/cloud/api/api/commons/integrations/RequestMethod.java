@@ -1168,6 +1168,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_GENERIC_REQUEST = 5201;</code>
    */
   REQUEST_METHOD_GENERIC_REQUEST(5201),
+  /**
+   * <code>REQUEST_METHOD_HEALTHPAY24_ACCOUNTS_RECEIVABLE = 5301;</code>
+   */
+  REQUEST_METHOD_HEALTHPAY24_ACCOUNTS_RECEIVABLE(5301),
   UNRECOGNIZED(-1),
   ;
 
@@ -2317,6 +2321,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_GENERIC_REQUEST = 5201;</code>
    */
   public static final int REQUEST_METHOD_GENERIC_REQUEST_VALUE = 5201;
+  /**
+   * <code>REQUEST_METHOD_HEALTHPAY24_ACCOUNTS_RECEIVABLE = 5301;</code>
+   */
+  public static final int REQUEST_METHOD_HEALTHPAY24_ACCOUNTS_RECEIVABLE_VALUE = 5301;
 
 
   public final int getNumber() {
@@ -2627,6 +2635,7 @@ public enum RequestMethod
       case 5002: return REQUESET_METHOD_DEBUG_VALIDATE;
       case 5101: return REQUEST_METHOD_ACQUIRED_PROCESS_PAYMENT;
       case 5201: return REQUEST_METHOD_GENERIC_REQUEST;
+      case 5301: return REQUEST_METHOD_HEALTHPAY24_ACCOUNTS_RECEIVABLE;
       default: return null;
     }
   }
