@@ -77,6 +77,37 @@ public final class InsightsGrpc {
     return getListInsightsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListInsightsStreamed",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod;
+    if ((getListInsightsStreamedMethod = InsightsGrpc.getListInsightsStreamedMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getListInsightsStreamedMethod = InsightsGrpc.getListInsightsStreamedMethod) == null) {
+          InsightsGrpc.getListInsightsStreamedMethod = getListInsightsStreamedMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInsightsStreamed"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListInsightsStreamed"))
+              .build();
+        }
+      }
+    }
+    return getListInsightsStreamedMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest,
       com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsResponse> getListOrgInsightsMethod;
 
@@ -705,6 +736,16 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListInsightsStreamed lists insights with streaming
+     * </pre>
+     */
+    default void listInsightsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInsightsStreamedMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListOrgInsights lists insights for an org. Used for support app.
      * </pre>
      */
@@ -931,6 +972,17 @@ public final class InsightsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInsightsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListInsightsStreamed lists insights with streaming
+     * </pre>
+     */
+    public void listInsightsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListInsightsStreamedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1166,6 +1218,17 @@ public final class InsightsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse listInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInsightsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListInsightsStreamed lists insights with streaming
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> listInsightsStreamed(
+        com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListInsightsStreamedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1588,24 +1651,25 @@ public final class InsightsGrpc {
 
   private static final int METHODID_CREATE_INSIGHT = 0;
   private static final int METHODID_LIST_INSIGHTS = 1;
-  private static final int METHODID_LIST_ORG_INSIGHTS = 2;
-  private static final int METHODID_UPDATE_INSIGHT = 3;
-  private static final int METHODID_DELETE_INSIGHT = 4;
-  private static final int METHODID_GET_INSIGHT = 5;
-  private static final int METHODID_CREATE_COMMONS_INSIGHT = 6;
-  private static final int METHODID_UPDATE_COMMONS_INSIGHT = 7;
-  private static final int METHODID_DELETE_COMMONS_INSIGHT = 8;
-  private static final int METHODID_GET_VFS_SCHEMA = 9;
-  private static final int METHODID_LIST_VFSES = 10;
-  private static final int METHODID_LIST_VFS_SCHEMAS = 11;
-  private static final int METHODID_PUBLISH_INSIGHT = 12;
-  private static final int METHODID_CREATE_OUTPUT_CONFIGURATION = 13;
-  private static final int METHODID_LIST_OUTPUT_CONFIGURATIONS = 14;
-  private static final int METHODID_UPDATE_OUTPUT_CONFIGURATION = 15;
-  private static final int METHODID_DELETE_OUTPUT_CONFIGURATION = 16;
-  private static final int METHODID_GET_OUTPUT_CONFIGURATION = 17;
-  private static final int METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION = 18;
-  private static final int METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION = 19;
+  private static final int METHODID_LIST_INSIGHTS_STREAMED = 2;
+  private static final int METHODID_LIST_ORG_INSIGHTS = 3;
+  private static final int METHODID_UPDATE_INSIGHT = 4;
+  private static final int METHODID_DELETE_INSIGHT = 5;
+  private static final int METHODID_GET_INSIGHT = 6;
+  private static final int METHODID_CREATE_COMMONS_INSIGHT = 7;
+  private static final int METHODID_UPDATE_COMMONS_INSIGHT = 8;
+  private static final int METHODID_DELETE_COMMONS_INSIGHT = 9;
+  private static final int METHODID_GET_VFS_SCHEMA = 10;
+  private static final int METHODID_LIST_VFSES = 11;
+  private static final int METHODID_LIST_VFS_SCHEMAS = 12;
+  private static final int METHODID_PUBLISH_INSIGHT = 13;
+  private static final int METHODID_CREATE_OUTPUT_CONFIGURATION = 14;
+  private static final int METHODID_LIST_OUTPUT_CONFIGURATIONS = 15;
+  private static final int METHODID_UPDATE_OUTPUT_CONFIGURATION = 16;
+  private static final int METHODID_DELETE_OUTPUT_CONFIGURATION = 17;
+  private static final int METHODID_GET_OUTPUT_CONFIGURATION = 18;
+  private static final int METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION = 19;
+  private static final int METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1630,6 +1694,10 @@ public final class InsightsGrpc {
           break;
         case METHODID_LIST_INSIGHTS:
           serviceImpl.listInsights((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_INSIGHTS_STREAMED:
+          serviceImpl.listInsightsStreamed((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>) responseObserver);
           break;
         case METHODID_LIST_ORG_INSIGHTS:
@@ -1736,6 +1804,13 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
                 service, METHODID_LIST_INSIGHTS)))
+        .addMethod(
+          getListInsightsStreamedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
+                service, METHODID_LIST_INSIGHTS_STREAMED)))
         .addMethod(
           getListOrgInsightsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1912,6 +1987,7 @@ public final class InsightsGrpc {
               .setSchemaDescriptor(new InsightsFileDescriptorSupplier())
               .addMethod(getCreateInsightMethod())
               .addMethod(getListInsightsMethod())
+              .addMethod(getListInsightsStreamedMethod())
               .addMethod(getListOrgInsightsMethod())
               .addMethod(getUpdateInsightMethod())
               .addMethod(getDeleteInsightMethod())
