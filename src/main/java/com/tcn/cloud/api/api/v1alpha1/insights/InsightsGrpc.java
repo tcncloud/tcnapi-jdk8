@@ -78,34 +78,34 @@ public final class InsightsGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
-      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod;
+      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListInsightsStreamed",
+      fullMethodName = SERVICE_NAME + '/' + "ListInsightsStream",
       requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest.class,
       responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
-      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamedMethod;
-    if ((getListInsightsStreamedMethod = InsightsGrpc.getListInsightsStreamedMethod) == null) {
+      com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> getListInsightsStreamMethod;
+    if ((getListInsightsStreamMethod = InsightsGrpc.getListInsightsStreamMethod) == null) {
       synchronized (InsightsGrpc.class) {
-        if ((getListInsightsStreamedMethod = InsightsGrpc.getListInsightsStreamedMethod) == null) {
-          InsightsGrpc.getListInsightsStreamedMethod = getListInsightsStreamedMethod =
+        if ((getListInsightsStreamMethod = InsightsGrpc.getListInsightsStreamMethod) == null) {
+          InsightsGrpc.getListInsightsStreamMethod = getListInsightsStreamMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInsightsStreamed"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInsightsStream"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListInsightsStreamed"))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListInsightsStream"))
               .build();
         }
       }
     }
-    return getListInsightsStreamedMethod;
+    return getListInsightsStreamMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOrgInsightsRequest,
@@ -736,12 +736,12 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListInsightsStreamed lists insights with streaming
+     * ListInsightsStream lists insights with streaming
      * </pre>
      */
-    default void listInsightsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
+    default void listInsightsStream(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInsightsStreamedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInsightsStreamMethod(), responseObserver);
     }
 
     /**
@@ -976,13 +976,13 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListInsightsStreamed lists insights with streaming
+     * ListInsightsStream lists insights with streaming
      * </pre>
      */
-    public void listInsightsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
+    public void listInsightsStream(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getListInsightsStreamedMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListInsightsStreamMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1222,13 +1222,13 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListInsightsStreamed lists insights with streaming
+     * ListInsightsStream lists insights with streaming
      * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> listInsightsStreamed(
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> listInsightsStream(
         com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getListInsightsStreamedMethod(), getCallOptions(), request);
+          getChannel(), getListInsightsStreamMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1651,7 +1651,7 @@ public final class InsightsGrpc {
 
   private static final int METHODID_CREATE_INSIGHT = 0;
   private static final int METHODID_LIST_INSIGHTS = 1;
-  private static final int METHODID_LIST_INSIGHTS_STREAMED = 2;
+  private static final int METHODID_LIST_INSIGHTS_STREAM = 2;
   private static final int METHODID_LIST_ORG_INSIGHTS = 3;
   private static final int METHODID_UPDATE_INSIGHT = 4;
   private static final int METHODID_DELETE_INSIGHT = 5;
@@ -1696,8 +1696,8 @@ public final class InsightsGrpc {
           serviceImpl.listInsights((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>) responseObserver);
           break;
-        case METHODID_LIST_INSIGHTS_STREAMED:
-          serviceImpl.listInsightsStreamed((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
+        case METHODID_LIST_INSIGHTS_STREAM:
+          serviceImpl.listInsightsStream((com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>) responseObserver);
           break;
         case METHODID_LIST_ORG_INSIGHTS:
@@ -1805,12 +1805,12 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
                 service, METHODID_LIST_INSIGHTS)))
         .addMethod(
-          getListInsightsStreamedMethod(),
+          getListInsightsStreamMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
               com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
-                service, METHODID_LIST_INSIGHTS_STREAMED)))
+                service, METHODID_LIST_INSIGHTS_STREAM)))
         .addMethod(
           getListOrgInsightsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1987,7 +1987,7 @@ public final class InsightsGrpc {
               .setSchemaDescriptor(new InsightsFileDescriptorSupplier())
               .addMethod(getCreateInsightMethod())
               .addMethod(getListInsightsMethod())
-              .addMethod(getListInsightsStreamedMethod())
+              .addMethod(getListInsightsStreamMethod())
               .addMethod(getListOrgInsightsMethod())
               .addMethod(getUpdateInsightMethod())
               .addMethod(getDeleteInsightMethod())
