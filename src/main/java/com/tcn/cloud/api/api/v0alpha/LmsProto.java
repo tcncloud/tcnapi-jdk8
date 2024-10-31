@@ -1529,11 +1529,12 @@ public final class LmsProto {
       "rConfigName\"z\n\024RndEnrichmentProcess\022\025\n\006o" +
       "rg_id\030\001 \001(\tR\005orgId\022\024\n\005field\030\002 \001(\tR\005field" +
       "\0225\n\027date_last_contact_field\030\003 \001(\tR\024dateL" +
-      "astContactField\"\236\001\n\020CjsImportProcess\022*\n\021" +
+      "astContactField\"\306\001\n\020CjsImportProcess\022*\n\021" +
       "cjs_collection_id\030\003 \001(\tR\017cjsCollectionId" +
       "\022\030\n\007enabled\030\005 \001(\010R\007enabled\022\022\n\004cron\030\006 \001(\t" +
       "R\004cron\022\032\n\010timezone\030\007 \001(\tR\010timezone\022\024\n\005de",
-      "dup\030\010 \001(\010R\005dedup\"\262\002\n\020CjsExportProcess\022*\n" +
+      "dup\030\010 \001(\010R\005dedup\022&\n\017use_zero_values\030\t \001(" +
+      "\010R\ruseZeroValues\"\262\002\n\020CjsExportProcess\022*\n" +
       "\021cjs_collection_id\030\003 \001(\tR\017cjsCollectionI" +
       "d\0221\n\006header\030\004 \001(\0132\031.api.v0alpha.ExportHe" +
       "aderR\006header\022/\n\010run_type\030\005 \001(\0162\024.api.com" +
@@ -1541,7 +1542,7 @@ public final class LmsProto {
       "name\030\006 \001(\tR\021cjsCollectionName\022\034\n\toverwri" +
       "te\030\010 \001(\010R\toverwrite\022\026\n\006update\030\t \001(\010R\006upd" +
       "ate\022(\n\020update_key_field\030\n \001(\tR\016updateKey" +
-      "Field\"\377\002\n\024CjsEnrichmentProcess\022*\n\021cjs_co" +
+      "Field\"\247\003\n\024CjsEnrichmentProcess\022*\n\021cjs_co" +
       "llection_id\030\003 \001(\tR\017cjsCollectionId\022\033\n\tke" +
       "y_field\030\004 \001(\tR\010keyField\022<\n\013enrich_type\030\005" +
       " \001(\0162\033.api.commons.EnrichmentTypeR\nenric" +
@@ -1550,7 +1551,8 @@ public final class LmsProto {
       "key_field_name\030\007 \001(\tR\017cjsKeyFieldName\022)\n" +
       "\020column_overwrite\030\010 \001(\010R\017columnOverwrite" +
       "\022E\n\020dedup_key_policy\030\t \001(\0162\033.api.commons" +
-      ".DedupKeyPolicyR\016dedupKeyPolicy\"&\n\rAppen" +
+      ".DedupKeyPolicyR\016dedupKeyPolicy\022&\n\017use_z" +
+      "ero_values\030\n \001(\010R\ruseZeroValues\"&\n\rAppen" +
       "dProcess\022\025\n\006fts_id\030\005 \001(\tR\005ftsId\"\375\003\n\rLook" +
       "upProcess\022\037\n\013field_names\030\006 \003(\tR\nfieldNam" +
       "es\022?\n\005compl\030\007 \001(\0132\'.api.v0alpha.LookupPr" +
@@ -1930,9 +1932,9 @@ public final class LmsProto {
       "ex\022(\n\020min_record_index\030\013 \001(\005R\016minRecordI" +
       "ndex\022\024\n\005files\030\014 \003(\tR\005files\022\026\n\006groups\030\r \003" +
       "(\tR\006groups\022%\n\016missing_fields\030\017 \003(\tR\rmiss" +
-      "ingFields\022(\n\020seconds_to_start\030\020 \001(\001R\016sec" +
+      "ingFields\022(\n\020seconds_to_start\030\020 \001(\001R\016sec",
       "ondsToStart\022,\n\022seconds_to_process\030\021 \001(\001R" +
-      "\020secondsToProcess\"h\n\010ParseReq\022\035\n\nelement",
+      "\020secondsToProcess\"h\n\010ParseReq\022\035\n\nelement" +
       "_id\030\003 \001(\tR\telementId\022\035\n\nsession_id\030\004 \001(\t" +
       "R\tsessionId\022\036\n\nexpression\030\005 \001(\tR\nexpress" +
       "ion\"\314\001\n\010ParseRes\022\035\n\nsession_id\030\001 \001(\tR\tse" +
@@ -2330,9 +2332,9 @@ public final class LmsProto {
       "tCollectionEntriesReq\032$.api.v0alpha.GetC" +
       "ollectionEntriesRes\"F\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0026\"1/" +
       "api/v0alpha/lms/collections/getcollectio" +
-      "nentries:\001*\022\246\001\n\031CreateCjsSearchDefinitio" +
+      "nentries:\001*\022\246\001\n\031CreateCjsSearchDefinitio",
       "n\022 .api.v0alpha.CjsSearchDefinition\032 .ap" +
-      "i.v0alpha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323",
+      "i.v0alpha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323" +
       "\344\223\0028\"3/api/v0alpha/lms/collections/creat" +
       "esearchdefinition:\001*\022\246\001\n\026GetCjsSearchDef" +
       "inition\022&.api.v0alpha.GetCjsSearchDefini" +
@@ -2900,7 +2902,7 @@ public final class LmsProto {
     internal_static_api_v0alpha_CjsImportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsImportProcess_descriptor,
-        new java.lang.String[] { "CjsCollectionId", "Enabled", "Cron", "Timezone", "Dedup", });
+        new java.lang.String[] { "CjsCollectionId", "Enabled", "Cron", "Timezone", "Dedup", "UseZeroValues", });
     internal_static_api_v0alpha_CjsExportProcess_descriptor =
       getDescriptor().getMessageTypes().get(73);
     internal_static_api_v0alpha_CjsExportProcess_fieldAccessorTable = new
@@ -2912,7 +2914,7 @@ public final class LmsProto {
     internal_static_api_v0alpha_CjsEnrichmentProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsEnrichmentProcess_descriptor,
-        new java.lang.String[] { "CjsCollectionId", "KeyField", "EnrichType", "PrimarySource", "CjsKeyFieldName", "ColumnOverwrite", "DedupKeyPolicy", });
+        new java.lang.String[] { "CjsCollectionId", "KeyField", "EnrichType", "PrimarySource", "CjsKeyFieldName", "ColumnOverwrite", "DedupKeyPolicy", "UseZeroValues", });
     internal_static_api_v0alpha_AppendProcess_descriptor =
       getDescriptor().getMessageTypes().get(75);
     internal_static_api_v0alpha_AppendProcess_fieldAccessorTable = new
