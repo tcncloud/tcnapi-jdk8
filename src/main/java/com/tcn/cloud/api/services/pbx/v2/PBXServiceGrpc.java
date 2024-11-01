@@ -170,37 +170,6 @@ public final class PBXServiceGrpc {
     return getGetSIPAccountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest,
-      com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> getGetSIPAccountByUserIdMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetSIPAccountByUserId",
-      requestType = com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest.class,
-      responseType = com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest,
-      com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> getGetSIPAccountByUserIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest, com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> getGetSIPAccountByUserIdMethod;
-    if ((getGetSIPAccountByUserIdMethod = PBXServiceGrpc.getGetSIPAccountByUserIdMethod) == null) {
-      synchronized (PBXServiceGrpc.class) {
-        if ((getGetSIPAccountByUserIdMethod = PBXServiceGrpc.getGetSIPAccountByUserIdMethod) == null) {
-          PBXServiceGrpc.getGetSIPAccountByUserIdMethod = getGetSIPAccountByUserIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest, com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSIPAccountByUserId"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PBXServiceMethodDescriptorSupplier("GetSIPAccountByUserId"))
-              .build();
-        }
-      }
-    }
-    return getGetSIPAccountByUserIdMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsRequest,
       com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse> getListSIPAccountsMethod;
 
@@ -523,24 +492,6 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * Returns details of the SIP Account associated with the org_user_id
-     * Required permissions:
-     *   PBX-MANAGER
-     * Errors:
-     *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
-     *   - grpc.Internal: An internal error occurred.
-     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
-     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
-     * </pre>
-     */
-    default void getSIPAccountByUserId(com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSIPAccountByUserIdMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -770,25 +721,6 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * Returns details of the SIP Account associated with the org_user_id
-     * Required permissions:
-     *   PBX-MANAGER
-     * Errors:
-     *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
-     *   - grpc.Internal: An internal error occurred.
-     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
-     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
-     * </pre>
-     */
-    public void getSIPAccountByUserId(com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetSIPAccountByUserIdMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1004,24 +936,6 @@ public final class PBXServiceGrpc {
     public com.tcn.cloud.api.services.pbx.v2.GetSIPAccountResponse getSIPAccount(com.tcn.cloud.api.services.pbx.v2.GetSIPAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSIPAccountMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Returns details of the SIP Account associated with the org_user_id
-     * Required permissions:
-     *   PBX-MANAGER
-     * Errors:
-     *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
-     *   - grpc.Internal: An internal error occurred.
-     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
-     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
-     * </pre>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse getSIPAccountByUserId(com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetSIPAccountByUserIdMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1244,25 +1158,6 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * Returns details of the SIP Account associated with the org_user_id
-     * Required permissions:
-     *   PBX-MANAGER
-     * Errors:
-     *   - grpc.InvalidArgument: The request is invalid.
-     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
-     *   - grpc.Internal: An internal error occurred.
-     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
-     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse> getSIPAccountByUserId(
-        com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetSIPAccountByUserIdMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1383,13 +1278,12 @@ public final class PBXServiceGrpc {
   private static final int METHODID_LIST_RING_GROUPS = 2;
   private static final int METHODID_GET_RING_GROUP = 3;
   private static final int METHODID_GET_SIPACCOUNT = 4;
-  private static final int METHODID_GET_SIPACCOUNT_BY_USER_ID = 5;
-  private static final int METHODID_LIST_SIPACCOUNTS = 6;
-  private static final int METHODID_UPDATE_SIPACCOUNT = 7;
-  private static final int METHODID_UPDATE_RING_GROUP = 8;
-  private static final int METHODID_CREATE_RING_GROUP = 9;
-  private static final int METHODID_DELETE_RING_GROUP = 10;
-  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 11;
+  private static final int METHODID_LIST_SIPACCOUNTS = 5;
+  private static final int METHODID_UPDATE_SIPACCOUNT = 6;
+  private static final int METHODID_UPDATE_RING_GROUP = 7;
+  private static final int METHODID_CREATE_RING_GROUP = 8;
+  private static final int METHODID_DELETE_RING_GROUP = 9;
+  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1427,10 +1321,6 @@ public final class PBXServiceGrpc {
         case METHODID_GET_SIPACCOUNT:
           serviceImpl.getSIPAccount((com.tcn.cloud.api.services.pbx.v2.GetSIPAccountRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountResponse>) responseObserver);
-          break;
-        case METHODID_GET_SIPACCOUNT_BY_USER_ID:
-          serviceImpl.getSIPAccountByUserId((com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse>) responseObserver);
           break;
         case METHODID_LIST_SIPACCOUNTS:
           serviceImpl.listSIPAccounts((com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsRequest) request,
@@ -1509,13 +1399,6 @@ public final class PBXServiceGrpc {
               com.tcn.cloud.api.services.pbx.v2.GetSIPAccountRequest,
               com.tcn.cloud.api.services.pbx.v2.GetSIPAccountResponse>(
                 service, METHODID_GET_SIPACCOUNT)))
-        .addMethod(
-          getGetSIPAccountByUserIdMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest,
-              com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse>(
-                service, METHODID_GET_SIPACCOUNT_BY_USER_ID)))
         .addMethod(
           getListSIPAccountsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1611,7 +1494,6 @@ public final class PBXServiceGrpc {
               .addMethod(getListRingGroupsMethod())
               .addMethod(getGetRingGroupMethod())
               .addMethod(getGetSIPAccountMethod())
-              .addMethod(getGetSIPAccountByUserIdMethod())
               .addMethod(getListSIPAccountsMethod())
               .addMethod(getUpdateSIPAccountMethod())
               .addMethod(getUpdateRingGroupMethod())
