@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
    * @deprecated api.v0alpha.Search.fuzziness is deprecated.
-   *     See api/v0alpha/lms.proto;l=2623
+   *     See api/v0alpha/lms.proto;l=2624
    * @return The fuzziness.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
    * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
-   *     See api/v0alpha/lms.proto;l=2634
+   *     See api/v0alpha/lms.proto;l=2635
    * @return The caseSensitive.
    */
   @java.lang.Override
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.fuzziness is deprecated.
-     *     See api/v0alpha/lms.proto;l=2623
+     *     See api/v0alpha/lms.proto;l=2624
      * @return The fuzziness.
      */
     @java.lang.Override
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.fuzziness is deprecated.
-     *     See api/v0alpha/lms.proto;l=2623
+     *     See api/v0alpha/lms.proto;l=2624
      * @param value The fuzziness to set.
      * @return This builder for chaining.
      */
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.fuzziness is deprecated.
-     *     See api/v0alpha/lms.proto;l=2623
+     *     See api/v0alpha/lms.proto;l=2624
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFuzziness() {
@@ -918,7 +918,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
-     *     See api/v0alpha/lms.proto;l=2634
+     *     See api/v0alpha/lms.proto;l=2635
      * @return The caseSensitive.
      */
     @java.lang.Override
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
-     *     See api/v0alpha/lms.proto;l=2634
+     *     See api/v0alpha/lms.proto;l=2635
      * @param value The caseSensitive to set.
      * @return This builder for chaining.
      */
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
      * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
-     *     See api/v0alpha/lms.proto;l=2634
+     *     See api/v0alpha/lms.proto;l=2635
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCaseSensitive() {

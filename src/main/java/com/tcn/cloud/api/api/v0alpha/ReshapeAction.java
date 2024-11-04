@@ -17129,27 +17129,57 @@ private static final long serialVersionUID = 0L;
   public static final int PREDICATE_FIELD_NUMBER = 50;
   private com.tcn.cloud.api.api.v0alpha.FilterCheck predicate_;
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+   * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+   *     See api/v0alpha/lms.proto;l=2330
    * @return Whether the predicate field is set.
    */
   @java.lang.Override
-  public boolean hasPredicate() {
+  @java.lang.Deprecated public boolean hasPredicate() {
     return predicate_ != null;
   }
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+   * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+   *     See api/v0alpha/lms.proto;l=2330
    * @return The predicate.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate() {
     return predicate_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : predicate_;
   }
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder() {
     return predicate_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : predicate_;
+  }
+
+  public static final int OPERATIONS_FIELD_NUMBER = 55;
+  private com.tcn.cloud.api.api.v0alpha.FilterOperation operations_;
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   * @return Whether the operations field is set.
+   */
+  @java.lang.Override
+  public boolean hasOperations() {
+    return operations_ != null;
+  }
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   * @return The operations.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FilterOperation getOperations() {
+    return operations_ == null ? com.tcn.cloud.api.api.v0alpha.FilterOperation.getDefaultInstance() : operations_;
+  }
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder getOperationsOrBuilder() {
+    return operations_ == null ? com.tcn.cloud.api.api.v0alpha.FilterOperation.getDefaultInstance() : operations_;
   }
 
   public static final int RENAME_FIELD_NUMBER = 22;
@@ -17855,6 +17885,9 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 54) {
       output.writeMessage(54, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Extract) action_);
     }
+    if (operations_ != null) {
+      output.writeMessage(55, getOperations());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -17955,6 +17988,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(54, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Extract) action_);
     }
+    if (operations_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(55, getOperations());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -17977,6 +18014,11 @@ private static final long serialVersionUID = 0L;
     if (hasPredicate()) {
       if (!getPredicate()
           .equals(other.getPredicate())) return false;
+    }
+    if (hasOperations() != other.hasOperations()) return false;
+    if (hasOperations()) {
+      if (!getOperations()
+          .equals(other.getOperations())) return false;
     }
     if (!getActionCase().equals(other.getActionCase())) return false;
     switch (actionCase_) {
@@ -18081,6 +18123,10 @@ private static final long serialVersionUID = 0L;
     if (hasPredicate()) {
       hash = (37 * hash) + PREDICATE_FIELD_NUMBER;
       hash = (53 * hash) + getPredicate().hashCode();
+    }
+    if (hasOperations()) {
+      hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperations().hashCode();
     }
     switch (actionCase_) {
       case 22:
@@ -18304,6 +18350,11 @@ private static final long serialVersionUID = 0L;
         predicateBuilder_.dispose();
         predicateBuilder_ = null;
       }
+      operations_ = null;
+      if (operationsBuilder_ != null) {
+        operationsBuilder_.dispose();
+        operationsBuilder_ = null;
+      }
       if (renameBuilder_ != null) {
         renameBuilder_.clear();
       }
@@ -18410,6 +18461,11 @@ private static final long serialVersionUID = 0L;
         result.predicate_ = predicateBuilder_ == null
             ? predicate_
             : predicateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.operations_ = operationsBuilder_ == null
+            ? operations_
+            : operationsBuilder_.build();
       }
     }
 
@@ -18552,6 +18608,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPredicate()) {
         mergePredicate(other.getPredicate());
+      }
+      if (other.hasOperations()) {
+        mergeOperations(other.getOperations());
       }
       switch (other.getActionCase()) {
         case RENAME: {
@@ -18821,6 +18880,13 @@ private static final long serialVersionUID = 0L;
               actionCase_ = 54;
               break;
             } // case 434
+            case 442: {
+              input.readMessage(
+                  getOperationsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 442
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -19032,17 +19098,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.FilterCheck, com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder, com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder> predicateBuilder_;
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+     *     See api/v0alpha/lms.proto;l=2330
      * @return Whether the predicate field is set.
      */
-    public boolean hasPredicate() {
+    @java.lang.Deprecated public boolean hasPredicate() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+     *     See api/v0alpha/lms.proto;l=2330
      * @return The predicate.
      */
-    public com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate() {
       if (predicateBuilder_ == null) {
         return predicate_ == null ? com.tcn.cloud.api.api.v0alpha.FilterCheck.getDefaultInstance() : predicate_;
       } else {
@@ -19050,9 +19120,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public Builder setPredicate(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
+    @java.lang.Deprecated public Builder setPredicate(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
       if (predicateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -19066,9 +19136,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public Builder setPredicate(
+    @java.lang.Deprecated public Builder setPredicate(
         com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder builderForValue) {
       if (predicateBuilder_ == null) {
         predicate_ = builderForValue.build();
@@ -19080,9 +19150,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public Builder mergePredicate(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
+    @java.lang.Deprecated public Builder mergePredicate(com.tcn.cloud.api.api.v0alpha.FilterCheck value) {
       if (predicateBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           predicate_ != null &&
@@ -19099,9 +19169,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public Builder clearPredicate() {
+    @java.lang.Deprecated public Builder clearPredicate() {
       bitField0_ = (bitField0_ & ~0x00000004);
       predicate_ = null;
       if (predicateBuilder_ != null) {
@@ -19112,17 +19182,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder getPredicateBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder getPredicateBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getPredicateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder() {
       if (predicateBuilder_ != null) {
         return predicateBuilder_.getMessageOrBuilder();
       } else {
@@ -19131,7 +19201,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+     * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.FilterCheck, com.tcn.cloud.api.api.v0alpha.FilterCheck.Builder, com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder> 
@@ -19145,6 +19215,125 @@ private static final long serialVersionUID = 0L;
         predicate_ = null;
       }
       return predicateBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v0alpha.FilterOperation operations_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FilterOperation, com.tcn.cloud.api.api.v0alpha.FilterOperation.Builder, com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder> operationsBuilder_;
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     * @return Whether the operations field is set.
+     */
+    public boolean hasOperations() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     * @return The operations.
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterOperation getOperations() {
+      if (operationsBuilder_ == null) {
+        return operations_ == null ? com.tcn.cloud.api.api.v0alpha.FilterOperation.getDefaultInstance() : operations_;
+      } else {
+        return operationsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public Builder setOperations(com.tcn.cloud.api.api.v0alpha.FilterOperation value) {
+      if (operationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operations_ = value;
+      } else {
+        operationsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public Builder setOperations(
+        com.tcn.cloud.api.api.v0alpha.FilterOperation.Builder builderForValue) {
+      if (operationsBuilder_ == null) {
+        operations_ = builderForValue.build();
+      } else {
+        operationsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public Builder mergeOperations(com.tcn.cloud.api.api.v0alpha.FilterOperation value) {
+      if (operationsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          operations_ != null &&
+          operations_ != com.tcn.cloud.api.api.v0alpha.FilterOperation.getDefaultInstance()) {
+          getOperationsBuilder().mergeFrom(value);
+        } else {
+          operations_ = value;
+        }
+      } else {
+        operationsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public Builder clearOperations() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      operations_ = null;
+      if (operationsBuilder_ != null) {
+        operationsBuilder_.dispose();
+        operationsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterOperation.Builder getOperationsBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getOperationsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder getOperationsOrBuilder() {
+      if (operationsBuilder_ != null) {
+        return operationsBuilder_.getMessageOrBuilder();
+      } else {
+        return operations_ == null ?
+            com.tcn.cloud.api.api.v0alpha.FilterOperation.getDefaultInstance() : operations_;
+      }
+    }
+    /**
+     * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FilterOperation, com.tcn.cloud.api.api.v0alpha.FilterOperation.Builder, com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder> 
+        getOperationsFieldBuilder() {
+      if (operationsBuilder_ == null) {
+        operationsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.FilterOperation, com.tcn.cloud.api.api.v0alpha.FilterOperation.Builder, com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder>(
+                getOperations(),
+                getParentForChildren(),
+                isClean());
+        operations_ = null;
+      }
+      return operationsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
