@@ -689,6 +689,14 @@ public enum DiagnosticCode
    * <code>TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR = 70;</code>
    */
   TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR(70),
+  /**
+   * <pre>
+   * DiagnosticNoPredictedCallsInShedulingRange integer value
+   * </pre>
+   *
+   * <code>NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE = 71;</code>
+   */
+  NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE(71),
   UNRECOGNIZED(-1),
   ;
 
@@ -1369,6 +1377,14 @@ public enum DiagnosticCode
    * <code>TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR = 70;</code>
    */
   public static final int TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR_VALUE = 70;
+  /**
+   * <pre>
+   * DiagnosticNoPredictedCallsInShedulingRange integer value
+   * </pre>
+   *
+   * <code>NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE = 71;</code>
+   */
+  public static final int NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE_VALUE = 71;
 
 
   public final int getNumber() {
@@ -1466,6 +1482,7 @@ public enum DiagnosticCode
       case 68: return SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM;
       case 69: return NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM;
       case 70: return TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR;
+      case 71: return NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE;
       default: return null;
     }
   }
