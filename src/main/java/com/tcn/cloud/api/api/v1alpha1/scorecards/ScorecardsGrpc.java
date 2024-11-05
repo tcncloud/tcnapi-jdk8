@@ -1162,6 +1162,37 @@ public final class ScorecardsGrpc {
     return getSampleCallsByCategoryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> getSampleAgentConversationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SampleAgentConversations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> getSampleAgentConversationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> getSampleAgentConversationsMethod;
+    if ((getSampleAgentConversationsMethod = ScorecardsGrpc.getSampleAgentConversationsMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getSampleAgentConversationsMethod = ScorecardsGrpc.getSampleAgentConversationsMethod) == null) {
+          ScorecardsGrpc.getSampleAgentConversationsMethod = getSampleAgentConversationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SampleAgentConversations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("SampleAgentConversations"))
+              .build();
+        }
+      }
+    }
+    return getSampleAgentConversationsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse> getCreateAutoQuestionMethod;
 
@@ -2079,6 +2110,16 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * SampleAgentConversations
+     * </pre>
+     */
+    default void sampleAgentConversations(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSampleAgentConversationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateAutoQuestion creates an auto question
      * </pre>
      */
@@ -2675,6 +2716,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * SampleAgentConversations
+     * </pre>
+     */
+    public void sampleAgentConversations(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSampleAgentConversationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateAutoQuestion creates an auto question
      * </pre>
      */
@@ -3235,6 +3287,16 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSampleCallsByCategoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SampleAgentConversations
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse sampleAgentConversations(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSampleAgentConversationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3825,6 +3887,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * SampleAgentConversations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse> sampleAgentConversations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSampleAgentConversationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateAutoQuestion creates an auto question
      * </pre>
      */
@@ -4026,22 +4099,23 @@ public final class ScorecardsGrpc {
   private static final int METHODID_UPDATE_EVALUATION_QUESTION = 34;
   private static final int METHODID_DELETE_EVALUATION_QUESTION = 35;
   private static final int METHODID_SAMPLE_CALLS_BY_CATEGORY = 36;
-  private static final int METHODID_CREATE_AUTO_QUESTION = 37;
-  private static final int METHODID_UPDATE_AUTO_QUESTION = 38;
-  private static final int METHODID_DELETE_AUTO_QUESTION = 39;
-  private static final int METHODID_GET_AUTO_QUESTION = 40;
-  private static final int METHODID_GET_AUTO_EVALUATION = 41;
-  private static final int METHODID_LIST_AUTO_EVALUATIONS = 42;
-  private static final int METHODID_STREAM_AUTO_EVALUATIONS = 43;
-  private static final int METHODID_DELETE_AUTO_EVALUATION = 44;
-  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 45;
-  private static final int METHODID_RESTORE_EVALUATION = 46;
-  private static final int METHODID_CREATE_SMART_QUESTION = 47;
-  private static final int METHODID_UPDATE_SMART_QUESTION = 48;
-  private static final int METHODID_DELETE_SMART_QUESTION = 49;
-  private static final int METHODID_LIST_SMART_EVALUATIONS = 50;
-  private static final int METHODID_DELETE_SMART_EVALUATION = 51;
-  private static final int METHODID_GET_SMART_EVALUATION = 52;
+  private static final int METHODID_SAMPLE_AGENT_CONVERSATIONS = 37;
+  private static final int METHODID_CREATE_AUTO_QUESTION = 38;
+  private static final int METHODID_UPDATE_AUTO_QUESTION = 39;
+  private static final int METHODID_DELETE_AUTO_QUESTION = 40;
+  private static final int METHODID_GET_AUTO_QUESTION = 41;
+  private static final int METHODID_GET_AUTO_EVALUATION = 42;
+  private static final int METHODID_LIST_AUTO_EVALUATIONS = 43;
+  private static final int METHODID_STREAM_AUTO_EVALUATIONS = 44;
+  private static final int METHODID_DELETE_AUTO_EVALUATION = 45;
+  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 46;
+  private static final int METHODID_RESTORE_EVALUATION = 47;
+  private static final int METHODID_CREATE_SMART_QUESTION = 48;
+  private static final int METHODID_UPDATE_SMART_QUESTION = 49;
+  private static final int METHODID_DELETE_SMART_QUESTION = 50;
+  private static final int METHODID_LIST_SMART_EVALUATIONS = 51;
+  private static final int METHODID_DELETE_SMART_EVALUATION = 52;
+  private static final int METHODID_GET_SMART_EVALUATION = 53;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4207,6 +4281,10 @@ public final class ScorecardsGrpc {
         case METHODID_SAMPLE_CALLS_BY_CATEGORY:
           serviceImpl.sampleCallsByCategory((com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>) responseObserver);
+          break;
+        case METHODID_SAMPLE_AGENT_CONVERSATIONS:
+          serviceImpl.sampleAgentConversations((com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse>) responseObserver);
           break;
         case METHODID_CREATE_AUTO_QUESTION:
           serviceImpl.createAutoQuestion((com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest) request,
@@ -4550,6 +4628,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>(
                 service, METHODID_SAMPLE_CALLS_BY_CATEGORY)))
         .addMethod(
+          getSampleAgentConversationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentConversationsResponse>(
+                service, METHODID_SAMPLE_AGENT_CONVERSATIONS)))
+        .addMethod(
           getCreateAutoQuestionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4746,6 +4831,7 @@ public final class ScorecardsGrpc {
               .addMethod(getUpdateEvaluationQuestionMethod())
               .addMethod(getDeleteEvaluationQuestionMethod())
               .addMethod(getSampleCallsByCategoryMethod())
+              .addMethod(getSampleAgentConversationsMethod())
               .addMethod(getCreateAutoQuestionMethod())
               .addMethod(getUpdateAutoQuestionMethod())
               .addMethod(getDeleteAutoQuestionMethod())
