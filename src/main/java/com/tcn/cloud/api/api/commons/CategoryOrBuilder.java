@@ -123,7 +123,7 @@ public interface CategoryOrBuilder extends
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=111
+   *     See api/commons/scorecards.proto;l=112
    * @return A list containing the callTypes.
    */
   @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList();
@@ -134,7 +134,7 @@ public interface CategoryOrBuilder extends
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=111
+   *     See api/commons/scorecards.proto;l=112
    * @return The count of callTypes.
    */
   @java.lang.Deprecated int getCallTypesCount();
@@ -145,7 +145,7 @@ public interface CategoryOrBuilder extends
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=111
+   *     See api/commons/scorecards.proto;l=112
    * @param index The index of the element to return.
    * @return The callTypes at the given index.
    */
@@ -157,7 +157,7 @@ public interface CategoryOrBuilder extends
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=111
+   *     See api/commons/scorecards.proto;l=112
    * @return A list containing the enum numeric values on the wire for callTypes.
    */
   @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -169,7 +169,7 @@ public interface CategoryOrBuilder extends
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=111
+   *     See api/commons/scorecards.proto;l=112
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of callTypes at the given index.
    */
