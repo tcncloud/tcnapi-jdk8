@@ -34,7 +34,7 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2325
+   *     See api/v0alpha/lms.proto;l=2329
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Deprecated int getMatchingTypeValue();
@@ -45,25 +45,44 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2325
+   *     See api/v0alpha/lms.proto;l=2329
    * @return The matchingType.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getMatchingType();
 
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+   * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+   *     See api/v0alpha/lms.proto;l=2330
    * @return Whether the predicate field is set.
    */
-  boolean hasPredicate();
+  @java.lang.Deprecated boolean hasPredicate();
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
+   * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
+   *     See api/v0alpha/lms.proto;l=2330
    * @return The predicate.
    */
-  com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate();
   /**
-   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
+   * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.FilterCheckOrBuilder getPredicateOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   * @return Whether the operations field is set.
+   */
+  boolean hasOperations();
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   * @return The operations.
+   */
+  com.tcn.cloud.api.api.v0alpha.FilterOperation getOperations();
+  /**
+   * <code>.api.v0alpha.FilterOperation operations = 55 [json_name = "operations"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.FilterOperationOrBuilder getOperationsOrBuilder();
 
   /**
    * <code>.api.v0alpha.ReshapeAction.Rename rename = 22 [json_name = "rename"];</code>

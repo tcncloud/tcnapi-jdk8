@@ -312,6 +312,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.DedupKeyPolicy.UNRECOGNIZED : result;
   }
 
+  public static final int USE_ZERO_VALUES_FIELD_NUMBER = 10;
+  private boolean useZeroValues_ = false;
+  /**
+   * <pre>
+   * If journey value is nil, set the field to zero
+   * </pre>
+   *
+   * <code>bool use_zero_values = 10 [json_name = "useZeroValues"];</code>
+   * @return The useZeroValues.
+   */
+  @java.lang.Override
+  public boolean getUseZeroValues() {
+    return useZeroValues_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -347,6 +362,9 @@ private static final long serialVersionUID = 0L;
     if (dedupKeyPolicy_ != com.tcn.cloud.api.api.commons.DedupKeyPolicy.KEEP_FIRST.getNumber()) {
       output.writeEnum(9, dedupKeyPolicy_);
     }
+    if (useZeroValues_ != false) {
+      output.writeBool(10, useZeroValues_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -381,6 +399,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, dedupKeyPolicy_);
     }
+    if (useZeroValues_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, useZeroValues_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -407,6 +429,8 @@ private static final long serialVersionUID = 0L;
     if (getColumnOverwrite()
         != other.getColumnOverwrite()) return false;
     if (dedupKeyPolicy_ != other.dedupKeyPolicy_) return false;
+    if (getUseZeroValues()
+        != other.getUseZeroValues()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -433,6 +457,9 @@ private static final long serialVersionUID = 0L;
         getColumnOverwrite());
     hash = (37 * hash) + DEDUP_KEY_POLICY_FIELD_NUMBER;
     hash = (53 * hash) + dedupKeyPolicy_;
+    hash = (37 * hash) + USE_ZERO_VALUES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getUseZeroValues());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -571,6 +598,7 @@ private static final long serialVersionUID = 0L;
       cjsKeyFieldName_ = "";
       columnOverwrite_ = false;
       dedupKeyPolicy_ = 0;
+      useZeroValues_ = false;
       return this;
     }
 
@@ -624,6 +652,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.dedupKeyPolicy_ = dedupKeyPolicy_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.useZeroValues_ = useZeroValues_;
       }
     }
 
@@ -698,6 +729,9 @@ private static final long serialVersionUID = 0L;
       if (other.dedupKeyPolicy_ != 0) {
         setDedupKeyPolicyValue(other.getDedupKeyPolicyValue());
       }
+      if (other.getUseZeroValues() != false) {
+        setUseZeroValues(other.getUseZeroValues());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -759,6 +793,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 72
+            case 80: {
+              useZeroValues_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1397,6 +1436,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearDedupKeyPolicy() {
       bitField0_ = (bitField0_ & ~0x00000040);
       dedupKeyPolicy_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean useZeroValues_ ;
+    /**
+     * <pre>
+     * If journey value is nil, set the field to zero
+     * </pre>
+     *
+     * <code>bool use_zero_values = 10 [json_name = "useZeroValues"];</code>
+     * @return The useZeroValues.
+     */
+    @java.lang.Override
+    public boolean getUseZeroValues() {
+      return useZeroValues_;
+    }
+    /**
+     * <pre>
+     * If journey value is nil, set the field to zero
+     * </pre>
+     *
+     * <code>bool use_zero_values = 10 [json_name = "useZeroValues"];</code>
+     * @param value The useZeroValues to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUseZeroValues(boolean value) {
+
+      useZeroValues_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If journey value is nil, set the field to zero
+     * </pre>
+     *
+     * <code>bool use_zero_values = 10 [json_name = "useZeroValues"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUseZeroValues() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      useZeroValues_ = false;
       onChanged();
       return this;
     }

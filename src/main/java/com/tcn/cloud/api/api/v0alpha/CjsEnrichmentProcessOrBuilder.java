@@ -167,4 +167,14 @@ public interface CjsEnrichmentProcessOrBuilder extends
    * @return The dedupKeyPolicy.
    */
   com.tcn.cloud.api.api.commons.DedupKeyPolicy getDedupKeyPolicy();
+
+  /**
+   * <pre>
+   * If journey value is nil, set the field to zero
+   * </pre>
+   *
+   * <code>bool use_zero_values = 10 [json_name = "useZeroValues"];</code>
+   * @return The useZeroValues.
+   */
+  boolean getUseZeroValues();
 }

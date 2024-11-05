@@ -98,4 +98,14 @@ public interface CjsImportProcessOrBuilder extends
    * @return The dedup.
    */
   boolean getDedup();
+
+  /**
+   * <pre>
+   * If journey value is nil, set the field to zero
+   * </pre>
+   *
+   * <code>bool use_zero_values = 9 [json_name = "useZeroValues"];</code>
+   * @return The useZeroValues.
+   */
+  boolean getUseZeroValues();
 }
