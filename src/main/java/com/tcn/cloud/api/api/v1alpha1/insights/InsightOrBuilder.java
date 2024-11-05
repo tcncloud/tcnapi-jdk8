@@ -179,18 +179,76 @@ public interface InsightOrBuilder extends
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
+   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=23
    * @return The datasourceName.
    */
-  java.lang.String getDatasourceName();
+  @java.lang.Deprecated java.lang.String getDatasourceName();
   /**
    * <pre>
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
+   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=23
    * @return The bytes for datasourceName.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getDatasourceNameBytes();
+
+  /**
+   * <pre>
+   * create time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <pre>
+   * create time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <pre>
+   * create time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * update time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   * @return Whether the updateTime field is set.
+   */
+  boolean hasUpdateTime();
+  /**
+   * <pre>
+   * update time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   * @return The updateTime.
+   */
+  com.google.protobuf.Timestamp getUpdateTime();
+  /**
+   * <pre>
+   * update time of insight
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }
