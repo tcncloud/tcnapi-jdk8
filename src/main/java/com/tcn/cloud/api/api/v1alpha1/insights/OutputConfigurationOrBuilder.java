@@ -152,5 +152,59 @@ public interface OutputConfigurationOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder getTableVisualizationOrBuilder();
 
+  /**
+   * <pre>
+   * create time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <pre>
+   * create time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <pre>
+   * create time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * update time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
+   * @return Whether the updateTime field is set.
+   */
+  boolean hasUpdateTime();
+  /**
+   * <pre>
+   * update time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
+   * @return The updateTime.
+   */
+  com.google.protobuf.Timestamp getUpdateTime();
+  /**
+   * <pre>
+   * update time of output configuration
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.BodyCase getBodyCase();
 }
