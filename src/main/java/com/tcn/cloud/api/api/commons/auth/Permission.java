@@ -303,9 +303,21 @@ public enum Permission
    */
   PERMISSION_AGENT(300),
   /**
+   * <pre>
+   * Permission for accepting calls on hold
+   * </pre>
+   *
    * <code>PERMISSION_ACCEPT_QUEUED_CALLS = 310 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_ACCEPT_QUEUED_CALLS(310),
+  /**
+   * <pre>
+   * Enables ability to view the hold queue/counts.
+   * </pre>
+   *
+   * <code>PERMISSION_VIEW_HOLD_QUEUE = 311 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_VIEW_HOLD_QUEUE(311),
   /**
    * <pre>
    * Enables ability to view the campaign completion box.
@@ -1164,9 +1176,21 @@ public enum Permission
    */
   public static final int PERMISSION_AGENT_VALUE = 300;
   /**
+   * <pre>
+   * Permission for accepting calls on hold
+   * </pre>
+   *
    * <code>PERMISSION_ACCEPT_QUEUED_CALLS = 310 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_ACCEPT_QUEUED_CALLS_VALUE = 310;
+  /**
+   * <pre>
+   * Enables ability to view the hold queue/counts.
+   * </pre>
+   *
+   * <code>PERMISSION_VIEW_HOLD_QUEUE = 311 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_VIEW_HOLD_QUEUE_VALUE = 311;
   /**
    * <pre>
    * Enables ability to view the campaign completion box.
@@ -1789,6 +1813,7 @@ public enum Permission
       case 251: return PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
+      case 311: return PERMISSION_VIEW_HOLD_QUEUE;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
       case 321: return PERMISSION_VIEW_VOICE_MAIL;
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
