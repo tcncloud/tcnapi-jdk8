@@ -20,10 +20,6 @@ public enum CategoryType
    * <code>MANUAL_DIAL = 2;</code>
    */
   MANUAL_DIAL(2),
-  /**
-   * <code>SKILL_GROUPS = 3;</code>
-   */
-  SKILL_GROUPS(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -39,10 +35,6 @@ public enum CategoryType
    * <code>MANUAL_DIAL = 2;</code>
    */
   public static final int MANUAL_DIAL_VALUE = 2;
-  /**
-   * <code>SKILL_GROUPS = 3;</code>
-   */
-  public static final int SKILL_GROUPS_VALUE = 3;
 
 
   public final int getNumber() {
@@ -72,7 +64,6 @@ public enum CategoryType
       case 0: return INVALID;
       case 1: return SKILL_CALLS;
       case 2: return MANUAL_DIAL;
-      case 3: return SKILL_GROUPS;
       default: return null;
     }
   }
