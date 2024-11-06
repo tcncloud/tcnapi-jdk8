@@ -9,132 +9,45 @@ public interface ListAgentScriptsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The scripts belonging to an org
+   * The list of agent scripts.
    * </pre>
    *
-   * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script scripts = 1 [json_name = "scripts"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.org.HuntGroupScript> 
+  java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script> 
       getScriptsList();
   /**
    * <pre>
-   * The scripts belonging to an org
+   * The list of agent scripts.
    * </pre>
    *
-   * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script scripts = 1 [json_name = "scripts"];</code>
    */
-  com.tcn.cloud.api.api.commons.org.HuntGroupScript getScripts(int index);
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script getScripts(int index);
   /**
    * <pre>
-   * The scripts belonging to an org
+   * The list of agent scripts.
    * </pre>
    *
-   * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script scripts = 1 [json_name = "scripts"];</code>
    */
   int getScriptsCount();
   /**
    * <pre>
-   * The scripts belonging to an org
+   * The list of agent scripts.
    * </pre>
    *
-   * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script scripts = 1 [json_name = "scripts"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.ScriptOrBuilder> 
       getScriptsOrBuilderList();
   /**
    * <pre>
-   * The scripts belonging to an org
+   * The list of agent scripts.
    * </pre>
    *
-   * <code>repeated .api.commons.org.HuntGroupScript scripts = 1 [json_name = "scripts"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script scripts = 1 [json_name = "scripts"];</code>
    */
-  com.tcn.cloud.api.api.commons.org.HuntGroupScriptOrBuilder getScriptsOrBuilder(
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.ScriptOrBuilder getScriptsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * The hunt groups that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
-   * @return A list containing the huntGroupSids.
-   */
-  java.util.List<java.lang.Long> getHuntGroupSidsList();
-  /**
-   * <pre>
-   * The hunt groups that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
-   * @return The count of huntGroupSids.
-   */
-  int getHuntGroupSidsCount();
-  /**
-   * <pre>
-   * The hunt groups that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
-   * @param index The index of the element to return.
-   * @return The huntGroupSids at the given index.
-   */
-  long getHuntGroupSids(int index);
-
-  /**
-   * <pre>
-   * The outbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
-   * @return A list containing the outboundBroadcastTemplateSids.
-   */
-  java.util.List<java.lang.Long> getOutboundBroadcastTemplateSidsList();
-  /**
-   * <pre>
-   * The outbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
-   * @return The count of outboundBroadcastTemplateSids.
-   */
-  int getOutboundBroadcastTemplateSidsCount();
-  /**
-   * <pre>
-   * The outbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
-   * @param index The index of the element to return.
-   * @return The outboundBroadcastTemplateSids at the given index.
-   */
-  long getOutboundBroadcastTemplateSids(int index);
-
-  /**
-   * <pre>
-   * The inbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
-   * @return A list containing the inboundBroadcastTemplateSids.
-   */
-  java.util.List<java.lang.Long> getInboundBroadcastTemplateSidsList();
-  /**
-   * <pre>
-   * The inbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
-   * @return The count of inboundBroadcastTemplateSids.
-   */
-  int getInboundBroadcastTemplateSidsCount();
-  /**
-   * <pre>
-   * The inbound broadcast templates that have been assigned this script
-   * </pre>
-   *
-   * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
-   * @param index The index of the element to return.
-   * @return The inboundBroadcastTemplateSids at the given index.
-   */
-  long getInboundBroadcastTemplateSids(int index);
 }
