@@ -304,7 +304,7 @@ public final class HuntGroupsServiceGrpc {
       fullMethodName = SERVICE_NAME + '/' + "ListAgentScripts",
       requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest.class,
       responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest,
       com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse> getListAgentScriptsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse> getListAgentScriptsMethod;
@@ -313,7 +313,7 @@ public final class HuntGroupsServiceGrpc {
         if ((getListAgentScriptsMethod = HuntGroupsServiceGrpc.getListAgentScriptsMethod) == null) {
           HuntGroupsServiceGrpc.getListAgentScriptsMethod = getListAgentScriptsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentScripts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -639,7 +639,7 @@ public final class HuntGroupsServiceGrpc {
      */
     public void listAgentScripts(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListAgentScriptsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -768,8 +768,9 @@ public final class HuntGroupsServiceGrpc {
      * ListAgentScripts returns a list of agent scripts for the given organization.
      * </pre>
      */
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse listAgentScripts(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public java.util.Iterator<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse> listAgentScripts(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListAgentScriptsMethod(), getCallOptions(), request);
     }
   }
@@ -900,17 +901,6 @@ public final class HuntGroupsServiceGrpc {
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAdminListHuntGroupsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * ListAgentScripts returns a list of agent scripts for the given organization.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse> listAgentScripts(
-        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAgentScriptsMethod(), getCallOptions()), request);
     }
   }
 
@@ -1065,7 +1055,7 @@ public final class HuntGroupsServiceGrpc {
                 service, METHODID_ADMIN_LIST_HUNT_GROUPS)))
         .addMethod(
           getListAgentScriptsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsRequest,
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse>(
