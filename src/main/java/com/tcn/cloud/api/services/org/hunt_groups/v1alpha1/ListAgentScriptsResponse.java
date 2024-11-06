@@ -5,7 +5,7 @@ package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
 /**
  * <pre>
- * The response message for ListAgentScript
+ * The response message for ListAgentScripts
  * </pre>
  *
  * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse}
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The response message for ListAgentScript
+   * The response message for ListAgentScripts
    * </pre>
    *
    * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse}
