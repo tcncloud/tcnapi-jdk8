@@ -102,4 +102,45 @@ public interface SchedulingActivityOrBuilder extends
    * @return The activityClassification.
    */
   com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification();
+
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @return A list containing the pauseCodes.
+   */
+  java.util.List<java.lang.String>
+      getPauseCodesList();
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @return The count of pauseCodes.
+   */
+  int getPauseCodesCount();
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @param index The index of the element to return.
+   * @return The pauseCodes at the given index.
+   */
+  java.lang.String getPauseCodes(int index);
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the pauseCodes at the given index.
+   */
+  com.google.protobuf.ByteString
+      getPauseCodesBytes(int index);
 }
