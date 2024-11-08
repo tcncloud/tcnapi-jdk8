@@ -60,6 +60,22 @@ public enum ExileConfigurationType
    * <code>EXILE_CONFIGURATION_TYPE_VELOSIDY = 5;</code>
    */
   EXILE_CONFIGURATION_TYPE_VELOSIDY(5),
+  /**
+   * <pre>
+   * Type Latitude Classic specifies the configuration for Latitude Classic (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_LATITUDE_CLASSIC = 6;</code>
+   */
+  EXILE_CONFIGURATION_TYPE_LATITUDE_CLASSIC(6),
+  /**
+   * <pre>
+   * Type Latitude NextGen specifies the configuration for Latitude Liquid (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_LATITUDE_LIQUID = 7;</code>
+   */
+  EXILE_CONFIGURATION_TYPE_LATITUDE_LIQUID(7),
   UNRECOGNIZED(-1),
   ;
 
@@ -111,6 +127,22 @@ public enum ExileConfigurationType
    * <code>EXILE_CONFIGURATION_TYPE_VELOSIDY = 5;</code>
    */
   public static final int EXILE_CONFIGURATION_TYPE_VELOSIDY_VALUE = 5;
+  /**
+   * <pre>
+   * Type Latitude Classic specifies the configuration for Latitude Classic (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_LATITUDE_CLASSIC = 6;</code>
+   */
+  public static final int EXILE_CONFIGURATION_TYPE_LATITUDE_CLASSIC_VALUE = 6;
+  /**
+   * <pre>
+   * Type Latitude NextGen specifies the configuration for Latitude Liquid (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_LATITUDE_LIQUID = 7;</code>
+   */
+  public static final int EXILE_CONFIGURATION_TYPE_LATITUDE_LIQUID_VALUE = 7;
 
 
   public final int getNumber() {
@@ -143,6 +175,8 @@ public enum ExileConfigurationType
       case 3: return EXILE_CONFIGURATION_TYPE_ARTIVA_RM;
       case 4: return EXILE_CONFIGURATION_TYPE_FACS;
       case 5: return EXILE_CONFIGURATION_TYPE_VELOSIDY;
+      case 6: return EXILE_CONFIGURATION_TYPE_LATITUDE_CLASSIC;
+      case 7: return EXILE_CONFIGURATION_TYPE_LATITUDE_LIQUID;
       default: return null;
     }
   }
