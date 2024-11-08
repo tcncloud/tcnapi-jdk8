@@ -214,6 +214,10 @@ private static final long serialVersionUID = 0L;
     GLOBALPAYMENTS_REVERSE_SALE_OR_REFUND(3005),
     PAYSCOUT_CREDIT_SALE(3101),
     PAYSCOUT_ECHECK_SALE(3102),
+    PAYSCOUT_CREDIT_SALE_RECURRING(3103),
+    PAYSCOUT_CREDIT_SALE_POST(3104),
+    PAYSCOUT_ECHECK_SALE_RECURRING(3105),
+    PAYSCOUT_ECHECK_SALE_POST(3106),
     I2C_ECHO(3201),
     I2C_BALANCE_INQUIRY(3202),
     I2C_VERIFY_USER(3203),
@@ -513,6 +517,10 @@ private static final long serialVersionUID = 0L;
         case 3005: return GLOBALPAYMENTS_REVERSE_SALE_OR_REFUND;
         case 3101: return PAYSCOUT_CREDIT_SALE;
         case 3102: return PAYSCOUT_ECHECK_SALE;
+        case 3103: return PAYSCOUT_CREDIT_SALE_RECURRING;
+        case 3104: return PAYSCOUT_CREDIT_SALE_POST;
+        case 3105: return PAYSCOUT_ECHECK_SALE_RECURRING;
+        case 3106: return PAYSCOUT_ECHECK_SALE_POST;
         case 3201: return I2C_ECHO;
         case 3202: return I2C_BALANCE_INQUIRY;
         case 3203: return I2C_VERIFY_USER;
@@ -5709,6 +5717,130 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSale.getDefaultInstance();
   }
 
+  public static final int PAYSCOUT_CREDIT_SALE_RECURRING_FIELD_NUMBER = 3103;
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+   * @return Whether the payscoutCreditSaleRecurring field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayscoutCreditSaleRecurring() {
+    return valueCase_ == 3103;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+   * @return The payscoutCreditSaleRecurring.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring getPayscoutCreditSaleRecurring() {
+    if (valueCase_ == 3103) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurringOrBuilder getPayscoutCreditSaleRecurringOrBuilder() {
+    if (valueCase_ == 3103) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+  }
+
+  public static final int PAYSCOUT_CREDIT_SALE_POST_FIELD_NUMBER = 3104;
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+   * @return Whether the payscoutCreditSalePost field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayscoutCreditSalePost() {
+    return valueCase_ == 3104;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+   * @return The payscoutCreditSalePost.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost getPayscoutCreditSalePost() {
+    if (valueCase_ == 3104) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePostOrBuilder getPayscoutCreditSalePostOrBuilder() {
+    if (valueCase_ == 3104) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+  }
+
+  public static final int PAYSCOUT_ECHECK_SALE_RECURRING_FIELD_NUMBER = 3105;
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+   * @return Whether the payscoutEcheckSaleRecurring field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayscoutEcheckSaleRecurring() {
+    return valueCase_ == 3105;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+   * @return The payscoutEcheckSaleRecurring.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring getPayscoutEcheckSaleRecurring() {
+    if (valueCase_ == 3105) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurringOrBuilder getPayscoutEcheckSaleRecurringOrBuilder() {
+    if (valueCase_ == 3105) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+  }
+
+  public static final int PAYSCOUT_ECHECK_SALE_POST_FIELD_NUMBER = 3106;
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+   * @return Whether the payscoutEcheckSalePost field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayscoutEcheckSalePost() {
+    return valueCase_ == 3106;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+   * @return The payscoutEcheckSalePost.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost getPayscoutEcheckSalePost() {
+    if (valueCase_ == 3106) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePostOrBuilder getPayscoutEcheckSalePostOrBuilder() {
+    if (valueCase_ == 3106) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+  }
+
   public static final int I2C_ECHO_FIELD_NUMBER = 3201;
   /**
    * <code>.api.commons.integrations.ExecuteI2cEcho i2c_echo = 3201 [json_name = "i2cEcho"];</code>
@@ -8720,7 +8852,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1115
+   *     See api/commons/integrations/integrations.proto;l=1119
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8730,7 +8862,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1115
+   *     See api/commons/integrations/integrations.proto;l=1119
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8755,7 +8887,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1116
+   *     See api/commons/integrations/integrations.proto;l=1120
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8765,7 +8897,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1116
+   *     See api/commons/integrations/integrations.proto;l=1120
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8790,7 +8922,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1117
+   *     See api/commons/integrations/integrations.proto;l=1121
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8800,7 +8932,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1117
+   *     See api/commons/integrations/integrations.proto;l=1121
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8825,7 +8957,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1118
+   *     See api/commons/integrations/integrations.proto;l=1122
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8835,7 +8967,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1118
+   *     See api/commons/integrations/integrations.proto;l=1122
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8860,7 +8992,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1119
+   *     See api/commons/integrations/integrations.proto;l=1123
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8870,7 +9002,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1119
+   *     See api/commons/integrations/integrations.proto;l=1123
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -8895,7 +9027,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1120
+   *     See api/commons/integrations/integrations.proto;l=1124
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -8905,7 +9037,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1120
+   *     See api/commons/integrations/integrations.proto;l=1124
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -8930,7 +9062,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1121
+   *     See api/commons/integrations/integrations.proto;l=1125
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -8940,7 +9072,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1121
+   *     See api/commons/integrations/integrations.proto;l=1125
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9959,6 +10091,18 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3102) {
       output.writeMessage(3102, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSale) value_);
+    }
+    if (valueCase_ == 3103) {
+      output.writeMessage(3103, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_);
+    }
+    if (valueCase_ == 3104) {
+      output.writeMessage(3104, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_);
+    }
+    if (valueCase_ == 3105) {
+      output.writeMessage(3105, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_);
+    }
+    if (valueCase_ == 3106) {
+      output.writeMessage(3106, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_);
     }
     if (valueCase_ == 3201) {
       output.writeMessage(3201, (com.tcn.cloud.api.api.commons.integrations.ExecuteI2cEcho) value_);
@@ -10979,6 +11123,22 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3102) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3102, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSale) value_);
+    }
+    if (valueCase_ == 3103) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3103, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_);
+    }
+    if (valueCase_ == 3104) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3104, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_);
+    }
+    if (valueCase_ == 3105) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3105, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_);
+    }
+    if (valueCase_ == 3106) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3106, (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_);
     }
     if (valueCase_ == 3201) {
       size += com.google.protobuf.CodedOutputStream
@@ -12127,6 +12287,22 @@ private static final long serialVersionUID = 0L;
         if (!getPayscoutEcheckSale()
             .equals(other.getPayscoutEcheckSale())) return false;
         break;
+      case 3103:
+        if (!getPayscoutCreditSaleRecurring()
+            .equals(other.getPayscoutCreditSaleRecurring())) return false;
+        break;
+      case 3104:
+        if (!getPayscoutCreditSalePost()
+            .equals(other.getPayscoutCreditSalePost())) return false;
+        break;
+      case 3105:
+        if (!getPayscoutEcheckSaleRecurring()
+            .equals(other.getPayscoutEcheckSaleRecurring())) return false;
+        break;
+      case 3106:
+        if (!getPayscoutEcheckSalePost()
+            .equals(other.getPayscoutEcheckSalePost())) return false;
+        break;
       case 3201:
         if (!getI2CEcho()
             .equals(other.getI2CEcho())) return false;
@@ -13272,6 +13448,22 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PAYSCOUT_ECHECK_SALE_FIELD_NUMBER;
         hash = (53 * hash) + getPayscoutEcheckSale().hashCode();
         break;
+      case 3103:
+        hash = (37 * hash) + PAYSCOUT_CREDIT_SALE_RECURRING_FIELD_NUMBER;
+        hash = (53 * hash) + getPayscoutCreditSaleRecurring().hashCode();
+        break;
+      case 3104:
+        hash = (37 * hash) + PAYSCOUT_CREDIT_SALE_POST_FIELD_NUMBER;
+        hash = (53 * hash) + getPayscoutCreditSalePost().hashCode();
+        break;
+      case 3105:
+        hash = (37 * hash) + PAYSCOUT_ECHECK_SALE_RECURRING_FIELD_NUMBER;
+        hash = (53 * hash) + getPayscoutEcheckSaleRecurring().hashCode();
+        break;
+      case 3106:
+        hash = (37 * hash) + PAYSCOUT_ECHECK_SALE_POST_FIELD_NUMBER;
+        hash = (53 * hash) + getPayscoutEcheckSalePost().hashCode();
+        break;
       case 3201:
         hash = (37 * hash) + I2C_ECHO_FIELD_NUMBER;
         hash = (53 * hash) + getI2CEcho().hashCode();
@@ -14388,6 +14580,18 @@ private static final long serialVersionUID = 0L;
       if (payscoutEcheckSaleBuilder_ != null) {
         payscoutEcheckSaleBuilder_.clear();
       }
+      if (payscoutCreditSaleRecurringBuilder_ != null) {
+        payscoutCreditSaleRecurringBuilder_.clear();
+      }
+      if (payscoutCreditSalePostBuilder_ != null) {
+        payscoutCreditSalePostBuilder_.clear();
+      }
+      if (payscoutEcheckSaleRecurringBuilder_ != null) {
+        payscoutEcheckSaleRecurringBuilder_.clear();
+      }
+      if (payscoutEcheckSalePostBuilder_ != null) {
+        payscoutEcheckSalePostBuilder_.clear();
+      }
       if (i2CEchoBuilder_ != null) {
         i2CEchoBuilder_.clear();
       }
@@ -15479,6 +15683,22 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3102 &&
           payscoutEcheckSaleBuilder_ != null) {
         result.value_ = payscoutEcheckSaleBuilder_.build();
+      }
+      if (valueCase_ == 3103 &&
+          payscoutCreditSaleRecurringBuilder_ != null) {
+        result.value_ = payscoutCreditSaleRecurringBuilder_.build();
+      }
+      if (valueCase_ == 3104 &&
+          payscoutCreditSalePostBuilder_ != null) {
+        result.value_ = payscoutCreditSalePostBuilder_.build();
+      }
+      if (valueCase_ == 3105 &&
+          payscoutEcheckSaleRecurringBuilder_ != null) {
+        result.value_ = payscoutEcheckSaleRecurringBuilder_.build();
+      }
+      if (valueCase_ == 3106 &&
+          payscoutEcheckSalePostBuilder_ != null) {
+        result.value_ = payscoutEcheckSalePostBuilder_.build();
       }
       if (valueCase_ == 3201 &&
           i2CEchoBuilder_ != null) {
@@ -16658,6 +16878,22 @@ private static final long serialVersionUID = 0L;
         }
         case PAYSCOUT_ECHECK_SALE: {
           mergePayscoutEcheckSale(other.getPayscoutEcheckSale());
+          break;
+        }
+        case PAYSCOUT_CREDIT_SALE_RECURRING: {
+          mergePayscoutCreditSaleRecurring(other.getPayscoutCreditSaleRecurring());
+          break;
+        }
+        case PAYSCOUT_CREDIT_SALE_POST: {
+          mergePayscoutCreditSalePost(other.getPayscoutCreditSalePost());
+          break;
+        }
+        case PAYSCOUT_ECHECK_SALE_RECURRING: {
+          mergePayscoutEcheckSaleRecurring(other.getPayscoutEcheckSaleRecurring());
+          break;
+        }
+        case PAYSCOUT_ECHECK_SALE_POST: {
+          mergePayscoutEcheckSalePost(other.getPayscoutEcheckSalePost());
           break;
         }
         case I2C_ECHO: {
@@ -18309,6 +18545,34 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3102;
               break;
             } // case 24818
+            case 24826: {
+              input.readMessage(
+                  getPayscoutCreditSaleRecurringFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3103;
+              break;
+            } // case 24826
+            case 24834: {
+              input.readMessage(
+                  getPayscoutCreditSalePostFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3104;
+              break;
+            } // case 24834
+            case 24842: {
+              input.readMessage(
+                  getPayscoutEcheckSaleRecurringFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3105;
+              break;
+            } // case 24842
+            case 24850: {
+              input.readMessage(
+                  getPayscoutEcheckSalePostFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3106;
+              break;
+            } // case 24850
             case 25610: {
               input.readMessage(
                   getI2CEchoFieldBuilder().getBuilder(),
@@ -42266,6 +42530,574 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurringOrBuilder> payscoutCreditSaleRecurringBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     * @return Whether the payscoutCreditSaleRecurring field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayscoutCreditSaleRecurring() {
+      return valueCase_ == 3103;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     * @return The payscoutCreditSaleRecurring.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring getPayscoutCreditSaleRecurring() {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3103) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3103) {
+          return payscoutCreditSaleRecurringBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    public Builder setPayscoutCreditSaleRecurring(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring value) {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        payscoutCreditSaleRecurringBuilder_.setMessage(value);
+      }
+      valueCase_ = 3103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    public Builder setPayscoutCreditSaleRecurring(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.Builder builderForValue) {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        payscoutCreditSaleRecurringBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    public Builder mergePayscoutCreditSaleRecurring(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring value) {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3103 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3103) {
+          payscoutCreditSaleRecurringBuilder_.mergeFrom(value);
+        } else {
+          payscoutCreditSaleRecurringBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    public Builder clearPayscoutCreditSaleRecurring() {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3103) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3103) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        payscoutCreditSaleRecurringBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.Builder getPayscoutCreditSaleRecurringBuilder() {
+      return getPayscoutCreditSaleRecurringFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurringOrBuilder getPayscoutCreditSaleRecurringOrBuilder() {
+      if ((valueCase_ == 3103) && (payscoutCreditSaleRecurringBuilder_ != null)) {
+        return payscoutCreditSaleRecurringBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3103) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring payscout_credit_sale_recurring = 3103 [json_name = "payscoutCreditSaleRecurring"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurringOrBuilder> 
+        getPayscoutCreditSaleRecurringFieldBuilder() {
+      if (payscoutCreditSaleRecurringBuilder_ == null) {
+        if (!(valueCase_ == 3103)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.getDefaultInstance();
+        }
+        payscoutCreditSaleRecurringBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurringOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSaleRecurring) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3103;
+      onChanged();
+      return payscoutCreditSaleRecurringBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePostOrBuilder> payscoutCreditSalePostBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     * @return Whether the payscoutCreditSalePost field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayscoutCreditSalePost() {
+      return valueCase_ == 3104;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     * @return The payscoutCreditSalePost.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost getPayscoutCreditSalePost() {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        if (valueCase_ == 3104) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3104) {
+          return payscoutCreditSalePostBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    public Builder setPayscoutCreditSalePost(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost value) {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        payscoutCreditSalePostBuilder_.setMessage(value);
+      }
+      valueCase_ = 3104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    public Builder setPayscoutCreditSalePost(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.Builder builderForValue) {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        payscoutCreditSalePostBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    public Builder mergePayscoutCreditSalePost(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost value) {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        if (valueCase_ == 3104 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3104) {
+          payscoutCreditSalePostBuilder_.mergeFrom(value);
+        } else {
+          payscoutCreditSalePostBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    public Builder clearPayscoutCreditSalePost() {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        if (valueCase_ == 3104) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3104) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        payscoutCreditSalePostBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.Builder getPayscoutCreditSalePostBuilder() {
+      return getPayscoutCreditSalePostFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePostOrBuilder getPayscoutCreditSalePostOrBuilder() {
+      if ((valueCase_ == 3104) && (payscoutCreditSalePostBuilder_ != null)) {
+        return payscoutCreditSalePostBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3104) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutCreditCardSalePost payscout_credit_sale_post = 3104 [json_name = "payscoutCreditSalePost"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePostOrBuilder> 
+        getPayscoutCreditSalePostFieldBuilder() {
+      if (payscoutCreditSalePostBuilder_ == null) {
+        if (!(valueCase_ == 3104)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.getDefaultInstance();
+        }
+        payscoutCreditSalePostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePostOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutCreditCardSalePost) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3104;
+      onChanged();
+      return payscoutCreditSalePostBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurringOrBuilder> payscoutEcheckSaleRecurringBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     * @return Whether the payscoutEcheckSaleRecurring field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayscoutEcheckSaleRecurring() {
+      return valueCase_ == 3105;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     * @return The payscoutEcheckSaleRecurring.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring getPayscoutEcheckSaleRecurring() {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3105) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3105) {
+          return payscoutEcheckSaleRecurringBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    public Builder setPayscoutEcheckSaleRecurring(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring value) {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        payscoutEcheckSaleRecurringBuilder_.setMessage(value);
+      }
+      valueCase_ = 3105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    public Builder setPayscoutEcheckSaleRecurring(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.Builder builderForValue) {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        payscoutEcheckSaleRecurringBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    public Builder mergePayscoutEcheckSaleRecurring(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring value) {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3105 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3105) {
+          payscoutEcheckSaleRecurringBuilder_.mergeFrom(value);
+        } else {
+          payscoutEcheckSaleRecurringBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    public Builder clearPayscoutEcheckSaleRecurring() {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        if (valueCase_ == 3105) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3105) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        payscoutEcheckSaleRecurringBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.Builder getPayscoutEcheckSaleRecurringBuilder() {
+      return getPayscoutEcheckSaleRecurringFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurringOrBuilder getPayscoutEcheckSaleRecurringOrBuilder() {
+      if ((valueCase_ == 3105) && (payscoutEcheckSaleRecurringBuilder_ != null)) {
+        return payscoutEcheckSaleRecurringBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3105) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring payscout_echeck_sale_recurring = 3105 [json_name = "payscoutEcheckSaleRecurring"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurringOrBuilder> 
+        getPayscoutEcheckSaleRecurringFieldBuilder() {
+      if (payscoutEcheckSaleRecurringBuilder_ == null) {
+        if (!(valueCase_ == 3105)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.getDefaultInstance();
+        }
+        payscoutEcheckSaleRecurringBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurringOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSaleRecurring) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3105;
+      onChanged();
+      return payscoutEcheckSaleRecurringBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePostOrBuilder> payscoutEcheckSalePostBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     * @return Whether the payscoutEcheckSalePost field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayscoutEcheckSalePost() {
+      return valueCase_ == 3106;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     * @return The payscoutEcheckSalePost.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost getPayscoutEcheckSalePost() {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        if (valueCase_ == 3106) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3106) {
+          return payscoutEcheckSalePostBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    public Builder setPayscoutEcheckSalePost(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost value) {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        payscoutEcheckSalePostBuilder_.setMessage(value);
+      }
+      valueCase_ = 3106;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    public Builder setPayscoutEcheckSalePost(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.Builder builderForValue) {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        payscoutEcheckSalePostBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3106;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    public Builder mergePayscoutEcheckSalePost(com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost value) {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        if (valueCase_ == 3106 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3106) {
+          payscoutEcheckSalePostBuilder_.mergeFrom(value);
+        } else {
+          payscoutEcheckSalePostBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3106;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    public Builder clearPayscoutEcheckSalePost() {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        if (valueCase_ == 3106) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3106) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        payscoutEcheckSalePostBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.Builder getPayscoutEcheckSalePostBuilder() {
+      return getPayscoutEcheckSalePostFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePostOrBuilder getPayscoutEcheckSalePostOrBuilder() {
+      if ((valueCase_ == 3106) && (payscoutEcheckSalePostBuilder_ != null)) {
+        return payscoutEcheckSalePostBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3106) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePayScoutEcheckSalePost payscout_echeck_sale_post = 3106 [json_name = "payscoutEcheckSalePost"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePostOrBuilder> 
+        getPayscoutEcheckSalePostFieldBuilder() {
+      if (payscoutEcheckSalePostBuilder_ == null) {
+        if (!(valueCase_ == 3106)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.getDefaultInstance();
+        }
+        payscoutEcheckSalePostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePostOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePayScoutEcheckSalePost) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3106;
+      onChanged();
+      return payscoutEcheckSalePostBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteI2cEcho, com.tcn.cloud.api.api.commons.integrations.ExecuteI2cEcho.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteI2cEchoOrBuilder> i2CEchoBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteI2cEcho i2c_echo = 3201 [json_name = "i2cEcho"];</code>
@@ -56044,7 +56876,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1115
+     *     See api/commons/integrations/integrations.proto;l=1119
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -56054,7 +56886,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1115
+     *     See api/commons/integrations/integrations.proto;l=1119
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -56190,7 +57022,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1116
+     *     See api/commons/integrations/integrations.proto;l=1120
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -56200,7 +57032,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1116
+     *     See api/commons/integrations/integrations.proto;l=1120
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -56336,7 +57168,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1117
+     *     See api/commons/integrations/integrations.proto;l=1121
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -56346,7 +57178,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1117
+     *     See api/commons/integrations/integrations.proto;l=1121
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -56482,7 +57314,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1118
+     *     See api/commons/integrations/integrations.proto;l=1122
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -56492,7 +57324,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1118
+     *     See api/commons/integrations/integrations.proto;l=1122
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -56628,7 +57460,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1119
+     *     See api/commons/integrations/integrations.proto;l=1123
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -56638,7 +57470,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1119
+     *     See api/commons/integrations/integrations.proto;l=1123
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -56774,7 +57606,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1120
+     *     See api/commons/integrations/integrations.proto;l=1124
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -56784,7 +57616,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1120
+     *     See api/commons/integrations/integrations.proto;l=1124
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -56920,7 +57752,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1121
+     *     See api/commons/integrations/integrations.proto;l=1125
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -56930,7 +57762,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1121
+     *     See api/commons/integrations/integrations.proto;l=1125
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
