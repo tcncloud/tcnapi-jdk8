@@ -37,7 +37,7 @@ public interface PerformanceMetricV2OrBuilder extends
   /**
    * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6699
+   *     See api/v1alpha1/wfm/wfm.proto;l=6704
    * @return The totalFteIntervalsRequired.
    */
   @java.lang.Deprecated float getTotalFteIntervalsRequired();
@@ -45,7 +45,7 @@ public interface PerformanceMetricV2OrBuilder extends
   /**
    * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6700
+   *     See api/v1alpha1/wfm/wfm.proto;l=6705
    * @return The totalFteIntervalsAchieved.
    */
   @java.lang.Deprecated float getTotalFteIntervalsAchieved();

@@ -139,7 +139,7 @@ public enum AdherenceRuleCondition
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(26);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(27);
   }
 
   private static final AdherenceRuleCondition[] VALUES = values();

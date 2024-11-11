@@ -156,7 +156,7 @@ public enum AdherenceRuleRange
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(24);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(25);
   }
 
   private static final AdherenceRuleRange[] VALUES = values();

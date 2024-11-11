@@ -8483,7 +8483,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
-     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * If there is a build in progress &#64;build_in_progress will be true.
+     * As long as there has been a build started for the given &#64;draft_schedule_sid, &#64;build_start_datetime will be set with the time that the build process started.
+     * If a build has been completed for the draft, &#64;build_end_datetime will be set with the time that the build ended, otherwise it will be None.
+     * The &#64;build_status gives the status of the most recent build for the draft.
+     * The &#64;diagnostics will be set with any diagnostics encountered during the most recent build.
+     * Any errors encountered during the build process will be returned as INTERNAL_ERROR diagnostics.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
      *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
@@ -11919,7 +11924,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
-     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * If there is a build in progress &#64;build_in_progress will be true.
+     * As long as there has been a build started for the given &#64;draft_schedule_sid, &#64;build_start_datetime will be set with the time that the build process started.
+     * If a build has been completed for the draft, &#64;build_end_datetime will be set with the time that the build ended, otherwise it will be None.
+     * The &#64;build_status gives the status of the most recent build for the draft.
+     * The &#64;diagnostics will be set with any diagnostics encountered during the most recent build.
+     * Any errors encountered during the build process will be returned as INTERNAL_ERROR diagnostics.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
      *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
@@ -15325,7 +15335,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
-     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * If there is a build in progress &#64;build_in_progress will be true.
+     * As long as there has been a build started for the given &#64;draft_schedule_sid, &#64;build_start_datetime will be set with the time that the build process started.
+     * If a build has been completed for the draft, &#64;build_end_datetime will be set with the time that the build ended, otherwise it will be None.
+     * The &#64;build_status gives the status of the most recent build for the draft.
+     * The &#64;diagnostics will be set with any diagnostics encountered during the most recent build.
+     * Any errors encountered during the build process will be returned as INTERNAL_ERROR diagnostics.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
      *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.
@@ -18645,7 +18660,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Polls the scheduler to check if there is currently a build in progress for the given &#64;draft_schedule_sid.
-     * If there is a build in progress &#64;build_in_progress will be true and the &#64;build_start_datetime will be set with the time that the build process started.
+     * If there is a build in progress &#64;build_in_progress will be true.
+     * As long as there has been a build started for the given &#64;draft_schedule_sid, &#64;build_start_datetime will be set with the time that the build process started.
+     * If a build has been completed for the draft, &#64;build_end_datetime will be set with the time that the build ended, otherwise it will be None.
+     * The &#64;build_status gives the status of the most recent build for the draft.
+     * The &#64;diagnostics will be set with any diagnostics encountered during the most recent build.
+     * Any errors encountered during the build process will be returned as INTERNAL_ERROR diagnostics.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
      *   - grpc.NotFound: the &#64;draft_schedule_sid does not exist for the org sending the request.

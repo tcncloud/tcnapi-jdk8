@@ -5,80 +5,96 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Enum representing the state of a client's initial setup to use WFM.
+ * enum representing the state of a draft build.
  * </pre>
  *
- * Protobuf enum {@code api.commons.InitialSetupState}
+ * Protobuf enum {@code api.commons.BuildDraftStatus}
  */
-public enum InitialSetupState
+public enum BuildDraftStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * Not setup and no set up attempts have been made.
+   * No build has ever been started for this draft.
    * </pre>
    *
-   * <code>NOT_SETUP = 0;</code>
+   * <code>NO_BUILD = 0;</code>
    */
-  NOT_SETUP(0),
+  NO_BUILD(0),
   /**
    * <pre>
-   * Currently doing setup tasks.
+   * The build is currently in progress.
    * </pre>
    *
-   * <code>SETTING_UP = 1;</code>
+   * <code>IN_PROGRESS = 1;</code>
    */
-  SETTING_UP(1),
+  IN_PROGRESS(1),
   /**
    * <pre>
-   * Set up for client is complete.
+   * The build succeeded.
    * </pre>
    *
-   * <code>SETUP_COMPLETE = 2;</code>
+   * <code>SUCCEEDED = 2;</code>
    */
-  SETUP_COMPLETE(2),
+  SUCCEEDED(2),
   /**
    * <pre>
-   * Setup was attempted but failed and no new setup attempts have been made.
+   * The build failed.
    * </pre>
    *
-   * <code>FAILURE = 3;</code>
+   * <code>FAILED = 3;</code>
    */
-  FAILURE(3),
+  FAILED(3),
+  /**
+   * <pre>
+   * The build was canceled
+   * </pre>
+   *
+   * <code>CANCELED = 4;</code>
+   */
+  CANCELED(4),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * Not setup and no set up attempts have been made.
+   * No build has ever been started for this draft.
    * </pre>
    *
-   * <code>NOT_SETUP = 0;</code>
+   * <code>NO_BUILD = 0;</code>
    */
-  public static final int NOT_SETUP_VALUE = 0;
+  public static final int NO_BUILD_VALUE = 0;
   /**
    * <pre>
-   * Currently doing setup tasks.
+   * The build is currently in progress.
    * </pre>
    *
-   * <code>SETTING_UP = 1;</code>
+   * <code>IN_PROGRESS = 1;</code>
    */
-  public static final int SETTING_UP_VALUE = 1;
+  public static final int IN_PROGRESS_VALUE = 1;
   /**
    * <pre>
-   * Set up for client is complete.
+   * The build succeeded.
    * </pre>
    *
-   * <code>SETUP_COMPLETE = 2;</code>
+   * <code>SUCCEEDED = 2;</code>
    */
-  public static final int SETUP_COMPLETE_VALUE = 2;
+  public static final int SUCCEEDED_VALUE = 2;
   /**
    * <pre>
-   * Setup was attempted but failed and no new setup attempts have been made.
+   * The build failed.
    * </pre>
    *
-   * <code>FAILURE = 3;</code>
+   * <code>FAILED = 3;</code>
    */
-  public static final int FAILURE_VALUE = 3;
+  public static final int FAILED_VALUE = 3;
+  /**
+   * <pre>
+   * The build was canceled
+   * </pre>
+   *
+   * <code>CANCELED = 4;</code>
+   */
+  public static final int CANCELED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -95,7 +111,7 @@ public enum InitialSetupState
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static InitialSetupState valueOf(int value) {
+  public static BuildDraftStatus valueOf(int value) {
     return forNumber(value);
   }
 
@@ -103,25 +119,26 @@ public enum InitialSetupState
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static InitialSetupState forNumber(int value) {
+  public static BuildDraftStatus forNumber(int value) {
     switch (value) {
-      case 0: return NOT_SETUP;
-      case 1: return SETTING_UP;
-      case 2: return SETUP_COMPLETE;
-      case 3: return FAILURE;
+      case 0: return NO_BUILD;
+      case 1: return IN_PROGRESS;
+      case 2: return SUCCEEDED;
+      case 3: return FAILED;
+      case 4: return CANCELED;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<InitialSetupState>
+  public static com.google.protobuf.Internal.EnumLiteMap<BuildDraftStatus>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      InitialSetupState> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<InitialSetupState>() {
-          public InitialSetupState findValueByNumber(int number) {
-            return InitialSetupState.forNumber(number);
+      BuildDraftStatus> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<BuildDraftStatus>() {
+          public BuildDraftStatus findValueByNumber(int number) {
+            return BuildDraftStatus.forNumber(number);
           }
         };
 
@@ -139,12 +156,12 @@ public enum InitialSetupState
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(19);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(16);
   }
 
-  private static final InitialSetupState[] VALUES = values();
+  private static final BuildDraftStatus[] VALUES = values();
 
-  public static InitialSetupState valueOf(
+  public static BuildDraftStatus valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -158,10 +175,10 @@ public enum InitialSetupState
 
   private final int value;
 
-  private InitialSetupState(int value) {
+  private BuildDraftStatus(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.InitialSetupState)
+  // @@protoc_insertion_point(enum_scope:api.commons.BuildDraftStatus)
 }
 
