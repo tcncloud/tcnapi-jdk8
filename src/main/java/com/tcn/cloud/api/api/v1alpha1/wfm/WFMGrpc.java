@@ -8503,9 +8503,9 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * If there was a build to cancel, &#64;canceled_build will be returned as true, otherwise it will be false.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
-     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
      *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
@@ -11945,9 +11945,9 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * If there was a build to cancel, &#64;canceled_build will be returned as true, otherwise it will be false.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
-     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
      *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
@@ -15355,9 +15355,9 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * If there was a build to cancel, &#64;canceled_build will be returned as true, otherwise it will be false.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
-     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
      *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
@@ -18681,9 +18681,9 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Cancels the build in progress for the given &#64;draft_schedule_sid.
+     * If there was a build to cancel, &#64;canceled_build will be returned as true, otherwise it will be false.
      * Errors:
      *   - grpc.Invalid: the &#64;draft_schedule_sid is invalid.
-     *   - grpc.NotFound: there is no build in progress to be cancelled for the org sending the request.
      *   - grpc.Internal: error when cancelling the build or updating the build in progress table.
      * </pre>
      */
