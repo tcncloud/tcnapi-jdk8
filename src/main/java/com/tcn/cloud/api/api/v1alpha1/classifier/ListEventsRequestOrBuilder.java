@@ -137,7 +137,7 @@ public interface ListEventsRequestOrBuilder extends
    * the parent_id
    * </pre>
    *
-   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * <code>string parent_id = 6 [json_name = "parentId"];</code>
    * @return The parentId.
    */
   java.lang.String getParentId();
@@ -147,7 +147,7 @@ public interface ListEventsRequestOrBuilder extends
    * the parent_id
    * </pre>
    *
-   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * <code>string parent_id = 6 [json_name = "parentId"];</code>
    * @return The bytes for parentId.
    */
   com.google.protobuf.ByteString

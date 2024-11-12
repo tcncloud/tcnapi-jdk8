@@ -53,7 +53,7 @@ public interface PeekListResponseOrBuilder extends
    * the result_id.oid.record_index of where we left off, so we can paginate this call. See task notes for structure.
    * </pre>
    *
-   * <code>string page_token = 7 [json_name = "pageToken"];</code>
+   * <code>string page_token = 2 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   java.lang.String getPageToken();
@@ -62,7 +62,7 @@ public interface PeekListResponseOrBuilder extends
    * the result_id.oid.record_index of where we left off, so we can paginate this call. See task notes for structure.
    * </pre>
    *
-   * <code>string page_token = 7 [json_name = "pageToken"];</code>
+   * <code>string page_token = 2 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString

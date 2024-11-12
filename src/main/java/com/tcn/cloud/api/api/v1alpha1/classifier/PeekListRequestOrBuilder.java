@@ -59,7 +59,7 @@ public interface PeekListRequestOrBuilder extends
    * If provided here, we only show results with this matching tag.
    * </pre>
    *
-   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * <code>string external_tag = 3 [json_name = "externalTag"];</code>
    * @return The externalTag.
    */
   java.lang.String getExternalTag();
@@ -70,7 +70,7 @@ public interface PeekListRequestOrBuilder extends
    * If provided here, we only show results with this matching tag.
    * </pre>
    *
-   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * <code>string external_tag = 3 [json_name = "externalTag"];</code>
    * @return The bytes for externalTag.
    */
   com.google.protobuf.ByteString
@@ -81,7 +81,7 @@ public interface PeekListRequestOrBuilder extends
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   java.lang.String getPageToken();
@@ -90,7 +90,7 @@ public interface PeekListRequestOrBuilder extends
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
@@ -101,7 +101,7 @@ public interface PeekListRequestOrBuilder extends
    * sort ascending instead of descending
    * </pre>
    *
-   * <code>bool asc = 4 [json_name = "asc"];</code>
+   * <code>bool asc = 5 [json_name = "asc"];</code>
    * @return The asc.
    */
   boolean getAsc();
@@ -111,7 +111,7 @@ public interface PeekListRequestOrBuilder extends
    * how many records to get
    * </pre>
    *
-   * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+   * <code>int32 page_size = 6 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
   int getPageSize();
@@ -121,7 +121,7 @@ public interface PeekListRequestOrBuilder extends
    * which element we are looking at events for in the dag
    * </pre>
    *
-   * <code>string element_id = 6 [json_name = "elementId"];</code>
+   * <code>string element_id = 7 [json_name = "elementId"];</code>
    * @return The elementId.
    */
   java.lang.String getElementId();
@@ -130,7 +130,7 @@ public interface PeekListRequestOrBuilder extends
    * which element we are looking at events for in the dag
    * </pre>
    *
-   * <code>string element_id = 6 [json_name = "elementId"];</code>
+   * <code>string element_id = 7 [json_name = "elementId"];</code>
    * @return The bytes for elementId.
    */
   com.google.protobuf.ByteString
@@ -141,7 +141,7 @@ public interface PeekListRequestOrBuilder extends
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
   java.util.List<java.lang.String>
@@ -151,7 +151,7 @@ public interface PeekListRequestOrBuilder extends
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @return The count of columns.
    */
   int getColumnsCount();
@@ -160,7 +160,7 @@ public interface PeekListRequestOrBuilder extends
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
    */
@@ -170,7 +170,7 @@ public interface PeekListRequestOrBuilder extends
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
    */
@@ -184,7 +184,7 @@ public interface PeekListRequestOrBuilder extends
    * the node
    * </pre>
    *
-   * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+   * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
    * @return The entrypointId.
    */
   java.lang.String getEntrypointId();
@@ -195,7 +195,7 @@ public interface PeekListRequestOrBuilder extends
    * the node
    * </pre>
    *
-   * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+   * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
    * @return The bytes for entrypointId.
    */
   com.google.protobuf.ByteString
@@ -207,7 +207,7 @@ public interface PeekListRequestOrBuilder extends
    * parent path. Otherwise we look at all data that went through the node.
    * </pre>
    *
-   * <code>string parent_id = 9 [json_name = "parentId"];</code>
+   * <code>string parent_id = 10 [json_name = "parentId"];</code>
    * @return The parentId.
    */
   java.lang.String getParentId();
@@ -217,7 +217,7 @@ public interface PeekListRequestOrBuilder extends
    * parent path. Otherwise we look at all data that went through the node.
    * </pre>
    *
-   * <code>string parent_id = 9 [json_name = "parentId"];</code>
+   * <code>string parent_id = 10 [json_name = "parentId"];</code>
    * @return The bytes for parentId.
    */
   com.google.protobuf.ByteString
@@ -229,7 +229,7 @@ public interface PeekListRequestOrBuilder extends
    * defaults to false, where we look at the kept records.
    * </pre>
    *
-   * <code>bool view_discards = 10 [json_name = "viewDiscards"];</code>
+   * <code>bool view_discards = 11 [json_name = "viewDiscards"];</code>
    * @return The viewDiscards.
    */
   boolean getViewDiscards();

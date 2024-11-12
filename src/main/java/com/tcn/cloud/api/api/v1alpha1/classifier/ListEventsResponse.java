@@ -276,7 +276,7 @@ private static final long serialVersionUID = 0L;
      * processing has to happen in order.
      * </pre>
      *
-     * <code>int64 total_queue_wait_seconds = 12 [json_name = "totalQueueWaitSeconds"];</code>
+     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
      * @return The totalQueueWaitSeconds.
      */
     long getTotalQueueWaitSeconds();
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
      * on the input records.
      * </pre>
      *
-     * <code>int64 total_processing_seconds = 13 [json_name = "totalProcessingSeconds"];</code>
+     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
      * @return The totalProcessingSeconds.
      */
     long getTotalProcessingSeconds();
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @return A list containing the msgs.
      */
     java.util.List<java.lang.String>
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @return The count of msgs.
      */
     int getMsgsCount();
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @param index The index of the element to return.
      * @return The msgs at the given index.
      */
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the msgs at the given index.
      */
@@ -703,7 +703,7 @@ private static final long serialVersionUID = 0L;
       return columns_.getByteString(index);
     }
 
-    public static final int TOTAL_QUEUE_WAIT_SECONDS_FIELD_NUMBER = 12;
+    public static final int TOTAL_QUEUE_WAIT_SECONDS_FIELD_NUMBER = 10;
     private long totalQueueWaitSeconds_ = 0L;
     /**
      * <pre>
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
      * processing has to happen in order.
      * </pre>
      *
-     * <code>int64 total_queue_wait_seconds = 12 [json_name = "totalQueueWaitSeconds"];</code>
+     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
      * @return The totalQueueWaitSeconds.
      */
     @java.lang.Override
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
       return totalQueueWaitSeconds_;
     }
 
-    public static final int TOTAL_PROCESSING_SECONDS_FIELD_NUMBER = 13;
+    public static final int TOTAL_PROCESSING_SECONDS_FIELD_NUMBER = 11;
     private long totalProcessingSeconds_ = 0L;
     /**
      * <pre>
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * on the input records.
      * </pre>
      *
-     * <code>int64 total_processing_seconds = 13 [json_name = "totalProcessingSeconds"];</code>
+     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
      * @return The totalProcessingSeconds.
      */
     @java.lang.Override
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
       return totalProcessingSeconds_;
     }
 
-    public static final int MSGS_FIELD_NUMBER = 14;
+    public static final int MSGS_FIELD_NUMBER = 12;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList msgs_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @return A list containing the msgs.
      */
     public com.google.protobuf.ProtocolStringList
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @return The count of msgs.
      */
     public int getMsgsCount() {
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @param index The index of the element to return.
      * @return The msgs at the given index.
      */
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
      * the latest 5 server messages that were for this element for this time range.
      * </pre>
      *
-     * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+     * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the msgs at the given index.
      */
@@ -833,13 +833,13 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, columns_.getRaw(i));
       }
       if (totalQueueWaitSeconds_ != 0L) {
-        output.writeInt64(12, totalQueueWaitSeconds_);
+        output.writeInt64(10, totalQueueWaitSeconds_);
       }
       if (totalProcessingSeconds_ != 0L) {
-        output.writeInt64(13, totalProcessingSeconds_);
+        output.writeInt64(11, totalProcessingSeconds_);
       }
       for (int i = 0; i < msgs_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, msgs_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, msgs_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -899,11 +899,11 @@ private static final long serialVersionUID = 0L;
       }
       if (totalQueueWaitSeconds_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(12, totalQueueWaitSeconds_);
+          .computeInt64Size(10, totalQueueWaitSeconds_);
       }
       if (totalProcessingSeconds_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(13, totalProcessingSeconds_);
+          .computeInt64Size(11, totalProcessingSeconds_);
       }
       {
         int dataSize = 0;
@@ -1432,22 +1432,22 @@ private static final long serialVersionUID = 0L;
                 columns_.add(s);
                 break;
               } // case 74
-              case 96: {
+              case 80: {
                 totalQueueWaitSeconds_ = input.readInt64();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 96
-              case 104: {
+              } // case 80
+              case 88: {
                 totalProcessingSeconds_ = input.readInt64();
                 bitField0_ |= 0x00000400;
                 break;
-              } // case 104
-              case 114: {
+              } // case 88
+              case 98: {
                 java.lang.String s = input.readStringRequireUtf8();
                 ensureMsgsIsMutable();
                 msgs_.add(s);
                 break;
-              } // case 114
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2440,7 +2440,7 @@ private static final long serialVersionUID = 0L;
        * processing has to happen in order.
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 12 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
        * @return The totalQueueWaitSeconds.
        */
       @java.lang.Override
@@ -2455,7 +2455,7 @@ private static final long serialVersionUID = 0L;
        * processing has to happen in order.
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 12 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
        * @param value The totalQueueWaitSeconds to set.
        * @return This builder for chaining.
        */
@@ -2474,7 +2474,7 @@ private static final long serialVersionUID = 0L;
        * processing has to happen in order.
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 12 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalQueueWaitSeconds() {
@@ -2492,7 +2492,7 @@ private static final long serialVersionUID = 0L;
        * on the input records.
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 13 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
        * @return The totalProcessingSeconds.
        */
       @java.lang.Override
@@ -2506,7 +2506,7 @@ private static final long serialVersionUID = 0L;
        * on the input records.
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 13 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
        * @param value The totalProcessingSeconds to set.
        * @return This builder for chaining.
        */
@@ -2524,7 +2524,7 @@ private static final long serialVersionUID = 0L;
        * on the input records.
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 13 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalProcessingSeconds() {
@@ -2547,7 +2547,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @return A list containing the msgs.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2560,7 +2560,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @return The count of msgs.
        */
       public int getMsgsCount() {
@@ -2571,7 +2571,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param index The index of the element to return.
        * @return The msgs at the given index.
        */
@@ -2583,7 +2583,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the msgs at the given index.
        */
@@ -2596,7 +2596,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param index The index to set the value at.
        * @param value The msgs to set.
        * @return This builder for chaining.
@@ -2615,7 +2615,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param value The msgs to add.
        * @return This builder for chaining.
        */
@@ -2633,7 +2633,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param values The msgs to add.
        * @return This builder for chaining.
        */
@@ -2651,7 +2651,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMsgs() {
@@ -2666,7 +2666,7 @@ private static final long serialVersionUID = 0L;
        * the latest 5 server messages that were for this element for this time range.
        * </pre>
        *
-       * <code>repeated string msgs = 14 [json_name = "msgs"];</code>
+       * <code>repeated string msgs = 12 [json_name = "msgs"];</code>
        * @param value The bytes of the msgs to add.
        * @return This builder for chaining.
        */

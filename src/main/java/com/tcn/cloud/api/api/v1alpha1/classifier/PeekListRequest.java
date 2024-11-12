@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
   }
 
-  public static final int EXTERNAL_TAG_FIELD_NUMBER = 11;
+  public static final int EXTERNAL_TAG_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object externalTag_ = "";
   /**
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * If provided here, we only show results with this matching tag.
    * </pre>
    *
-   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * <code>string external_tag = 3 [json_name = "externalTag"];</code>
    * @return The externalTag.
    */
   @java.lang.Override
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * If provided here, we only show results with this matching tag.
    * </pre>
    *
-   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * <code>string external_tag = 3 [json_name = "externalTag"];</code>
    * @return The bytes for externalTag.
    */
   @java.lang.Override
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object pageToken_ = "";
   /**
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
    * @return The pageToken.
    */
   @java.lang.Override
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
    * @return The bytes for pageToken.
    */
   @java.lang.Override
@@ -210,14 +210,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ASC_FIELD_NUMBER = 4;
+  public static final int ASC_FIELD_NUMBER = 5;
   private boolean asc_ = false;
   /**
    * <pre>
    * sort ascending instead of descending
    * </pre>
    *
-   * <code>bool asc = 4 [json_name = "asc"];</code>
+   * <code>bool asc = 5 [json_name = "asc"];</code>
    * @return The asc.
    */
   @java.lang.Override
@@ -225,14 +225,14 @@ private static final long serialVersionUID = 0L;
     return asc_;
   }
 
-  public static final int PAGE_SIZE_FIELD_NUMBER = 5;
+  public static final int PAGE_SIZE_FIELD_NUMBER = 6;
   private int pageSize_ = 0;
   /**
    * <pre>
    * how many records to get
    * </pre>
    *
-   * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+   * <code>int32 page_size = 6 [json_name = "pageSize"];</code>
    * @return The pageSize.
    */
   @java.lang.Override
@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
     return pageSize_;
   }
 
-  public static final int ELEMENT_ID_FIELD_NUMBER = 6;
+  public static final int ELEMENT_ID_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object elementId_ = "";
   /**
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * which element we are looking at events for in the dag
    * </pre>
    *
-   * <code>string element_id = 6 [json_name = "elementId"];</code>
+   * <code>string element_id = 7 [json_name = "elementId"];</code>
    * @return The elementId.
    */
   @java.lang.Override
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
    * which element we are looking at events for in the dag
    * </pre>
    *
-   * <code>string element_id = 6 [json_name = "elementId"];</code>
+   * <code>string element_id = 7 [json_name = "elementId"];</code>
    * @return The bytes for elementId.
    */
   @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COLUMNS_FIELD_NUMBER = 7;
+  public static final int COLUMNS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList columns_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
@@ -296,7 +296,7 @@ private static final long serialVersionUID = 0L;
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
   public com.google.protobuf.ProtocolStringList
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @return The count of columns.
    */
   public int getColumnsCount() {
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
    */
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
    * the columns and ordering we want the results to be in
    * </pre>
    *
-   * <code>repeated string columns = 7 [json_name = "columns"];</code>
+   * <code>repeated string columns = 8 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
    */
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
     return columns_.getByteString(index);
   }
 
-  public static final int ENTRYPOINT_ID_FIELD_NUMBER = 8;
+  public static final int ENTRYPOINT_ID_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object entrypointId_ = "";
   /**
@@ -350,7 +350,7 @@ private static final long serialVersionUID = 0L;
    * the node
    * </pre>
    *
-   * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+   * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
    * @return The entrypointId.
    */
   @java.lang.Override
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
    * the node
    * </pre>
    *
-   * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+   * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
    * @return The bytes for entrypointId.
    */
   @java.lang.Override
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PARENT_ID_FIELD_NUMBER = 9;
+  public static final int PARENT_ID_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
   private volatile java.lang.Object parentId_ = "";
   /**
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
    * parent path. Otherwise we look at all data that went through the node.
    * </pre>
    *
-   * <code>string parent_id = 9 [json_name = "parentId"];</code>
+   * <code>string parent_id = 10 [json_name = "parentId"];</code>
    * @return The parentId.
    */
   @java.lang.Override
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
    * parent path. Otherwise we look at all data that went through the node.
    * </pre>
    *
-   * <code>string parent_id = 9 [json_name = "parentId"];</code>
+   * <code>string parent_id = 10 [json_name = "parentId"];</code>
    * @return The bytes for parentId.
    */
   @java.lang.Override
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VIEW_DISCARDS_FIELD_NUMBER = 10;
+  public static final int VIEW_DISCARDS_FIELD_NUMBER = 11;
   private boolean viewDiscards_ = false;
   /**
    * <pre>
@@ -448,7 +448,7 @@ private static final long serialVersionUID = 0L;
    * defaults to false, where we look at the kept records.
    * </pre>
    *
-   * <code>bool view_discards = 10 [json_name = "viewDiscards"];</code>
+   * <code>bool view_discards = 11 [json_name = "viewDiscards"];</code>
    * @return The viewDiscards.
    */
   @java.lang.Override
@@ -476,32 +476,32 @@ private static final long serialVersionUID = 0L;
     if (end_ != null) {
       output.writeMessage(2, getEnd());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalTag_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
     }
     if (asc_ != false) {
-      output.writeBool(4, asc_);
+      output.writeBool(5, asc_);
     }
     if (pageSize_ != 0) {
-      output.writeInt32(5, pageSize_);
+      output.writeInt32(6, pageSize_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, elementId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, elementId_);
     }
     for (int i = 0; i < columns_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, columns_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, columns_.getRaw(i));
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypointId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, entrypointId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, entrypointId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, parentId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, parentId_);
     }
     if (viewDiscards_ != false) {
-      output.writeBool(10, viewDiscards_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, externalTag_);
+      output.writeBool(11, viewDiscards_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -520,19 +520,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEnd());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalTag_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
     }
     if (asc_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, asc_);
+        .computeBoolSize(5, asc_);
     }
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, pageSize_);
+        .computeInt32Size(6, pageSize_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, elementId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, elementId_);
     }
     {
       int dataSize = 0;
@@ -543,17 +546,14 @@ private static final long serialVersionUID = 0L;
       size += 1 * getColumnsList().size();
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypointId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, entrypointId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, entrypointId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, parentId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, parentId_);
     }
     if (viewDiscards_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(10, viewDiscards_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, externalTag_);
+        .computeBoolSize(11, viewDiscards_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -998,51 +998,51 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 26: {
+              externalTag_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
               pageToken_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 26
-            case 32: {
+            } // case 34
+            case 40: {
               asc_ = input.readBool();
               bitField0_ |= 0x00000010;
               break;
-            } // case 32
-            case 40: {
+            } // case 40
+            case 48: {
               pageSize_ = input.readInt32();
               bitField0_ |= 0x00000020;
               break;
-            } // case 40
-            case 50: {
+            } // case 48
+            case 58: {
               elementId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 50
-            case 58: {
+            } // case 58
+            case 66: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureColumnsIsMutable();
               columns_.add(s);
               break;
-            } // case 58
-            case 66: {
+            } // case 66
+            case 74: {
               entrypointId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000100;
               break;
-            } // case 66
-            case 74: {
+            } // case 74
+            case 82: {
               parentId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000200;
               break;
-            } // case 74
-            case 80: {
+            } // case 82
+            case 88: {
               viewDiscards_ = input.readBool();
               bitField0_ |= 0x00000400;
               break;
-            } // case 80
-            case 90: {
-              externalTag_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 90
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * If provided here, we only show results with this matching tag.
      * </pre>
      *
-     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * <code>string external_tag = 3 [json_name = "externalTag"];</code>
      * @return The externalTag.
      */
     public java.lang.String getExternalTag() {
@@ -1373,7 +1373,7 @@ private static final long serialVersionUID = 0L;
      * If provided here, we only show results with this matching tag.
      * </pre>
      *
-     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * <code>string external_tag = 3 [json_name = "externalTag"];</code>
      * @return The bytes for externalTag.
      */
     public com.google.protobuf.ByteString
@@ -1396,7 +1396,7 @@ private static final long serialVersionUID = 0L;
      * If provided here, we only show results with this matching tag.
      * </pre>
      *
-     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * <code>string external_tag = 3 [json_name = "externalTag"];</code>
      * @param value The externalTag to set.
      * @return This builder for chaining.
      */
@@ -1415,7 +1415,7 @@ private static final long serialVersionUID = 0L;
      * If provided here, we only show results with this matching tag.
      * </pre>
      *
-     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * <code>string external_tag = 3 [json_name = "externalTag"];</code>
      * @return This builder for chaining.
      */
     public Builder clearExternalTag() {
@@ -1431,7 +1431,7 @@ private static final long serialVersionUID = 0L;
      * If provided here, we only show results with this matching tag.
      * </pre>
      *
-     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * <code>string external_tag = 3 [json_name = "externalTag"];</code>
      * @param value The bytes for externalTag to set.
      * @return This builder for chaining.
      */
@@ -1451,7 +1451,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
      * @return The pageToken.
      */
     public java.lang.String getPageToken() {
@@ -1471,7 +1471,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
      * @return The bytes for pageToken.
      */
     public com.google.protobuf.ByteString
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
      * @param value The pageToken to set.
      * @return This builder for chaining.
      */
@@ -1509,7 +1509,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
@@ -1523,7 +1523,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
      * @param value The bytes for pageToken to set.
      * @return This builder for chaining.
      */
@@ -1543,7 +1543,7 @@ private static final long serialVersionUID = 0L;
      * sort ascending instead of descending
      * </pre>
      *
-     * <code>bool asc = 4 [json_name = "asc"];</code>
+     * <code>bool asc = 5 [json_name = "asc"];</code>
      * @return The asc.
      */
     @java.lang.Override
@@ -1555,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * sort ascending instead of descending
      * </pre>
      *
-     * <code>bool asc = 4 [json_name = "asc"];</code>
+     * <code>bool asc = 5 [json_name = "asc"];</code>
      * @param value The asc to set.
      * @return This builder for chaining.
      */
@@ -1571,7 +1571,7 @@ private static final long serialVersionUID = 0L;
      * sort ascending instead of descending
      * </pre>
      *
-     * <code>bool asc = 4 [json_name = "asc"];</code>
+     * <code>bool asc = 5 [json_name = "asc"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAsc() {
@@ -1587,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * how many records to get
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 6 [json_name = "pageSize"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1599,7 +1599,7 @@ private static final long serialVersionUID = 0L;
      * how many records to get
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 6 [json_name = "pageSize"];</code>
      * @param value The pageSize to set.
      * @return This builder for chaining.
      */
@@ -1615,7 +1615,7 @@ private static final long serialVersionUID = 0L;
      * how many records to get
      * </pre>
      *
-     * <code>int32 page_size = 5 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 6 [json_name = "pageSize"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
      * which element we are looking at events for in the dag
      * </pre>
      *
-     * <code>string element_id = 6 [json_name = "elementId"];</code>
+     * <code>string element_id = 7 [json_name = "elementId"];</code>
      * @return The elementId.
      */
     public java.lang.String getElementId() {
@@ -1651,7 +1651,7 @@ private static final long serialVersionUID = 0L;
      * which element we are looking at events for in the dag
      * </pre>
      *
-     * <code>string element_id = 6 [json_name = "elementId"];</code>
+     * <code>string element_id = 7 [json_name = "elementId"];</code>
      * @return The bytes for elementId.
      */
     public com.google.protobuf.ByteString
@@ -1672,7 +1672,7 @@ private static final long serialVersionUID = 0L;
      * which element we are looking at events for in the dag
      * </pre>
      *
-     * <code>string element_id = 6 [json_name = "elementId"];</code>
+     * <code>string element_id = 7 [json_name = "elementId"];</code>
      * @param value The elementId to set.
      * @return This builder for chaining.
      */
@@ -1689,7 +1689,7 @@ private static final long serialVersionUID = 0L;
      * which element we are looking at events for in the dag
      * </pre>
      *
-     * <code>string element_id = 6 [json_name = "elementId"];</code>
+     * <code>string element_id = 7 [json_name = "elementId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearElementId() {
@@ -1703,7 +1703,7 @@ private static final long serialVersionUID = 0L;
      * which element we are looking at events for in the dag
      * </pre>
      *
-     * <code>string element_id = 6 [json_name = "elementId"];</code>
+     * <code>string element_id = 7 [json_name = "elementId"];</code>
      * @param value The bytes for elementId to set.
      * @return This builder for chaining.
      */
@@ -1730,7 +1730,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @return A list containing the columns.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1743,7 +1743,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @return The count of columns.
      */
     public int getColumnsCount() {
@@ -1754,7 +1754,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param index The index of the element to return.
      * @return The columns at the given index.
      */
@@ -1766,7 +1766,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the columns at the given index.
      */
@@ -1779,7 +1779,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param index The index to set the value at.
      * @param value The columns to set.
      * @return This builder for chaining.
@@ -1798,7 +1798,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param value The columns to add.
      * @return This builder for chaining.
      */
@@ -1816,7 +1816,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param values The columns to add.
      * @return This builder for chaining.
      */
@@ -1834,7 +1834,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @return This builder for chaining.
      */
     public Builder clearColumns() {
@@ -1849,7 +1849,7 @@ private static final long serialVersionUID = 0L;
      * the columns and ordering we want the results to be in
      * </pre>
      *
-     * <code>repeated string columns = 7 [json_name = "columns"];</code>
+     * <code>repeated string columns = 8 [json_name = "columns"];</code>
      * @param value The bytes of the columns to add.
      * @return This builder for chaining.
      */
@@ -1872,7 +1872,7 @@ private static final long serialVersionUID = 0L;
      * the node
      * </pre>
      *
-     * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+     * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
      * @return The entrypointId.
      */
     public java.lang.String getEntrypointId() {
@@ -1894,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      * the node
      * </pre>
      *
-     * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+     * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
      * @return The bytes for entrypointId.
      */
     public com.google.protobuf.ByteString
@@ -1917,7 +1917,7 @@ private static final long serialVersionUID = 0L;
      * the node
      * </pre>
      *
-     * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+     * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
      * @param value The entrypointId to set.
      * @return This builder for chaining.
      */
@@ -1936,7 +1936,7 @@ private static final long serialVersionUID = 0L;
      * the node
      * </pre>
      *
-     * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+     * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEntrypointId() {
@@ -1952,7 +1952,7 @@ private static final long serialVersionUID = 0L;
      * the node
      * </pre>
      *
-     * <code>string entrypoint_id = 8 [json_name = "entrypointId"];</code>
+     * <code>string entrypoint_id = 9 [json_name = "entrypointId"];</code>
      * @param value The bytes for entrypointId to set.
      * @return This builder for chaining.
      */
@@ -1973,7 +1973,7 @@ private static final long serialVersionUID = 0L;
      * parent path. Otherwise we look at all data that went through the node.
      * </pre>
      *
-     * <code>string parent_id = 9 [json_name = "parentId"];</code>
+     * <code>string parent_id = 10 [json_name = "parentId"];</code>
      * @return The parentId.
      */
     public java.lang.String getParentId() {
@@ -1994,7 +1994,7 @@ private static final long serialVersionUID = 0L;
      * parent path. Otherwise we look at all data that went through the node.
      * </pre>
      *
-     * <code>string parent_id = 9 [json_name = "parentId"];</code>
+     * <code>string parent_id = 10 [json_name = "parentId"];</code>
      * @return The bytes for parentId.
      */
     public com.google.protobuf.ByteString
@@ -2016,7 +2016,7 @@ private static final long serialVersionUID = 0L;
      * parent path. Otherwise we look at all data that went through the node.
      * </pre>
      *
-     * <code>string parent_id = 9 [json_name = "parentId"];</code>
+     * <code>string parent_id = 10 [json_name = "parentId"];</code>
      * @param value The parentId to set.
      * @return This builder for chaining.
      */
@@ -2034,7 +2034,7 @@ private static final long serialVersionUID = 0L;
      * parent path. Otherwise we look at all data that went through the node.
      * </pre>
      *
-     * <code>string parent_id = 9 [json_name = "parentId"];</code>
+     * <code>string parent_id = 10 [json_name = "parentId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearParentId() {
@@ -2049,7 +2049,7 @@ private static final long serialVersionUID = 0L;
      * parent path. Otherwise we look at all data that went through the node.
      * </pre>
      *
-     * <code>string parent_id = 9 [json_name = "parentId"];</code>
+     * <code>string parent_id = 10 [json_name = "parentId"];</code>
      * @param value The bytes for parentId to set.
      * @return This builder for chaining.
      */
@@ -2070,7 +2070,7 @@ private static final long serialVersionUID = 0L;
      * defaults to false, where we look at the kept records.
      * </pre>
      *
-     * <code>bool view_discards = 10 [json_name = "viewDiscards"];</code>
+     * <code>bool view_discards = 11 [json_name = "viewDiscards"];</code>
      * @return The viewDiscards.
      */
     @java.lang.Override
@@ -2083,7 +2083,7 @@ private static final long serialVersionUID = 0L;
      * defaults to false, where we look at the kept records.
      * </pre>
      *
-     * <code>bool view_discards = 10 [json_name = "viewDiscards"];</code>
+     * <code>bool view_discards = 11 [json_name = "viewDiscards"];</code>
      * @param value The viewDiscards to set.
      * @return This builder for chaining.
      */
@@ -2100,7 +2100,7 @@ private static final long serialVersionUID = 0L;
      * defaults to false, where we look at the kept records.
      * </pre>
      *
-     * <code>bool view_discards = 10 [json_name = "viewDiscards"];</code>
+     * <code>bool view_discards = 11 [json_name = "viewDiscards"];</code>
      * @return This builder for chaining.
      */
     public Builder clearViewDiscards() {
