@@ -122,7 +122,7 @@ public enum AdherenceRuleRequirementType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(23);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(24);
   }
 
   private static final AdherenceRuleRequirementType[] VALUES = values();

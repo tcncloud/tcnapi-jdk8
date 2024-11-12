@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PollBuildInProgressResponse() {
+    buildStatus_ = 0;
+    diagnostics_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -96,6 +98,144 @@ private static final long serialVersionUID = 0L;
     return buildInProgress_;
   }
 
+  public static final int BUILD_END_DATETIME_FIELD_NUMBER = 3;
+  private com.google.protobuf.Timestamp buildEndDatetime_;
+  /**
+   * <pre>
+   * The end time of the most recent build session.
+   * Will be set to None if the most recent build attempt is still in progress.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+   * @return Whether the buildEndDatetime field is set.
+   */
+  @java.lang.Override
+  public boolean hasBuildEndDatetime() {
+    return buildEndDatetime_ != null;
+  }
+  /**
+   * <pre>
+   * The end time of the most recent build session.
+   * Will be set to None if the most recent build attempt is still in progress.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+   * @return The buildEndDatetime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getBuildEndDatetime() {
+    return buildEndDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : buildEndDatetime_;
+  }
+  /**
+   * <pre>
+   * The end time of the most recent build session.
+   * Will be set to None if the most recent build attempt is still in progress.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getBuildEndDatetimeOrBuilder() {
+    return buildEndDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : buildEndDatetime_;
+  }
+
+  public static final int BUILD_STATUS_FIELD_NUMBER = 4;
+  private int buildStatus_ = 0;
+  /**
+   * <pre>
+   * Status of the most recent build.
+   * </pre>
+   *
+   * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+   * @return The enum numeric value on the wire for buildStatus.
+   */
+  @java.lang.Override public int getBuildStatusValue() {
+    return buildStatus_;
+  }
+  /**
+   * <pre>
+   * Status of the most recent build.
+   * </pre>
+   *
+   * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+   * @return The buildStatus.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.BuildDraftStatus getBuildStatus() {
+    com.tcn.cloud.api.api.commons.BuildDraftStatus result = com.tcn.cloud.api.api.commons.BuildDraftStatus.forNumber(buildStatus_);
+    return result == null ? com.tcn.cloud.api.api.commons.BuildDraftStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int DIAGNOSTICS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_;
+  /**
+   * <pre>
+   * Any diagnostics encountered.
+   * Errors encountered will be returned in the form of
+   * INTERNAL_ERROR level diagnostics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered.
+   * Errors encountered will be returned in the form of
+   * INTERNAL_ERROR level diagnostics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered.
+   * Errors encountered will be returned in the form of
+   * INTERNAL_ERROR level diagnostics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public int getDiagnosticsCount() {
+    return diagnostics_.size();
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered.
+   * Errors encountered will be returned in the form of
+   * INTERNAL_ERROR level diagnostics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+    return diagnostics_.get(index);
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered.
+   * Errors encountered will be returned in the form of
+   * INTERNAL_ERROR level diagnostics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index) {
+    return diagnostics_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -116,6 +256,15 @@ private static final long serialVersionUID = 0L;
     if (buildInProgress_ != false) {
       output.writeBool(2, buildInProgress_);
     }
+    if (buildEndDatetime_ != null) {
+      output.writeMessage(3, getBuildEndDatetime());
+    }
+    if (buildStatus_ != com.tcn.cloud.api.api.commons.BuildDraftStatus.NO_BUILD.getNumber()) {
+      output.writeEnum(4, buildStatus_);
+    }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      output.writeMessage(5, diagnostics_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -132,6 +281,18 @@ private static final long serialVersionUID = 0L;
     if (buildInProgress_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, buildInProgress_);
+    }
+    if (buildEndDatetime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getBuildEndDatetime());
+    }
+    if (buildStatus_ != com.tcn.cloud.api.api.commons.BuildDraftStatus.NO_BUILD.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, buildStatus_);
+    }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, diagnostics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -155,6 +316,14 @@ private static final long serialVersionUID = 0L;
     }
     if (getBuildInProgress()
         != other.getBuildInProgress()) return false;
+    if (hasBuildEndDatetime() != other.hasBuildEndDatetime()) return false;
+    if (hasBuildEndDatetime()) {
+      if (!getBuildEndDatetime()
+          .equals(other.getBuildEndDatetime())) return false;
+    }
+    if (buildStatus_ != other.buildStatus_) return false;
+    if (!getDiagnosticsList()
+        .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -173,6 +342,16 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BUILD_IN_PROGRESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getBuildInProgress());
+    if (hasBuildEndDatetime()) {
+      hash = (37 * hash) + BUILD_END_DATETIME_FIELD_NUMBER;
+      hash = (53 * hash) + getBuildEndDatetime().hashCode();
+    }
+    hash = (37 * hash) + BUILD_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + buildStatus_;
+    if (getDiagnosticsCount() > 0) {
+      hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+      hash = (53 * hash) + getDiagnosticsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -314,6 +493,19 @@ private static final long serialVersionUID = 0L;
         buildStartDatetimeBuilder_ = null;
       }
       buildInProgress_ = false;
+      buildEndDatetime_ = null;
+      if (buildEndDatetimeBuilder_ != null) {
+        buildEndDatetimeBuilder_.dispose();
+        buildEndDatetimeBuilder_ = null;
+      }
+      buildStatus_ = 0;
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+      } else {
+        diagnostics_ = null;
+        diagnosticsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -340,9 +532,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse result) {
+      if (diagnosticsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.diagnostics_ = diagnostics_;
+      } else {
+        result.diagnostics_ = diagnosticsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PollBuildInProgressResponse result) {
@@ -354,6 +559,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.buildInProgress_ = buildInProgress_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.buildEndDatetime_ = buildEndDatetimeBuilder_ == null
+            ? buildEndDatetime_
+            : buildEndDatetimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.buildStatus_ = buildStatus_;
       }
     }
 
@@ -407,6 +620,38 @@ private static final long serialVersionUID = 0L;
       if (other.getBuildInProgress() != false) {
         setBuildInProgress(other.getBuildInProgress());
       }
+      if (other.hasBuildEndDatetime()) {
+        mergeBuildEndDatetime(other.getBuildEndDatetime());
+      }
+      if (other.buildStatus_ != 0) {
+        setBuildStatusValue(other.getBuildStatusValue());
+      }
+      if (diagnosticsBuilder_ == null) {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnosticsBuilder_.isEmpty()) {
+            diagnosticsBuilder_.dispose();
+            diagnosticsBuilder_ = null;
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            diagnosticsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDiagnosticsFieldBuilder() : null;
+          } else {
+            diagnosticsBuilder_.addAllMessages(other.diagnostics_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -445,6 +690,31 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              input.readMessage(
+                  getBuildEndDatetimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              buildStatus_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.parser(),
+                      extensionRegistry);
+              if (diagnosticsBuilder_ == null) {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(m);
+              } else {
+                diagnosticsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -662,6 +932,591 @@ private static final long serialVersionUID = 0L;
       buildInProgress_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp buildEndDatetime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> buildEndDatetimeBuilder_;
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     * @return Whether the buildEndDatetime field is set.
+     */
+    public boolean hasBuildEndDatetime() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     * @return The buildEndDatetime.
+     */
+    public com.google.protobuf.Timestamp getBuildEndDatetime() {
+      if (buildEndDatetimeBuilder_ == null) {
+        return buildEndDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : buildEndDatetime_;
+      } else {
+        return buildEndDatetimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public Builder setBuildEndDatetime(com.google.protobuf.Timestamp value) {
+      if (buildEndDatetimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        buildEndDatetime_ = value;
+      } else {
+        buildEndDatetimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public Builder setBuildEndDatetime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (buildEndDatetimeBuilder_ == null) {
+        buildEndDatetime_ = builderForValue.build();
+      } else {
+        buildEndDatetimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public Builder mergeBuildEndDatetime(com.google.protobuf.Timestamp value) {
+      if (buildEndDatetimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          buildEndDatetime_ != null &&
+          buildEndDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getBuildEndDatetimeBuilder().mergeFrom(value);
+        } else {
+          buildEndDatetime_ = value;
+        }
+      } else {
+        buildEndDatetimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public Builder clearBuildEndDatetime() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      buildEndDatetime_ = null;
+      if (buildEndDatetimeBuilder_ != null) {
+        buildEndDatetimeBuilder_.dispose();
+        buildEndDatetimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getBuildEndDatetimeBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getBuildEndDatetimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getBuildEndDatetimeOrBuilder() {
+      if (buildEndDatetimeBuilder_ != null) {
+        return buildEndDatetimeBuilder_.getMessageOrBuilder();
+      } else {
+        return buildEndDatetime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : buildEndDatetime_;
+      }
+    }
+    /**
+     * <pre>
+     * The end time of the most recent build session.
+     * Will be set to None if the most recent build attempt is still in progress.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp build_end_datetime = 3 [json_name = "buildEndDatetime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getBuildEndDatetimeFieldBuilder() {
+      if (buildEndDatetimeBuilder_ == null) {
+        buildEndDatetimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getBuildEndDatetime(),
+                getParentForChildren(),
+                isClean());
+        buildEndDatetime_ = null;
+      }
+      return buildEndDatetimeBuilder_;
+    }
+
+    private int buildStatus_ = 0;
+    /**
+     * <pre>
+     * Status of the most recent build.
+     * </pre>
+     *
+     * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+     * @return The enum numeric value on the wire for buildStatus.
+     */
+    @java.lang.Override public int getBuildStatusValue() {
+      return buildStatus_;
+    }
+    /**
+     * <pre>
+     * Status of the most recent build.
+     * </pre>
+     *
+     * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+     * @param value The enum numeric value on the wire for buildStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildStatusValue(int value) {
+      buildStatus_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Status of the most recent build.
+     * </pre>
+     *
+     * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+     * @return The buildStatus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.BuildDraftStatus getBuildStatus() {
+      com.tcn.cloud.api.api.commons.BuildDraftStatus result = com.tcn.cloud.api.api.commons.BuildDraftStatus.forNumber(buildStatus_);
+      return result == null ? com.tcn.cloud.api.api.commons.BuildDraftStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Status of the most recent build.
+     * </pre>
+     *
+     * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+     * @param value The buildStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildStatus(com.tcn.cloud.api.api.commons.BuildDraftStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      buildStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Status of the most recent build.
+     * </pre>
+     *
+     * <code>.api.commons.BuildDraftStatus build_status = 4 [json_name = "buildStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBuildStatus() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      buildStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
+      java.util.Collections.emptyList();
+    private void ensureDiagnosticsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        diagnostics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic>(diagnostics_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> diagnosticsBuilder_;
+
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+      if (diagnosticsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      } else {
+        return diagnosticsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public int getDiagnosticsCount() {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.size();
+      } else {
+        return diagnosticsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);
+      } else {
+        return diagnosticsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder addAllDiagnostics(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> values) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diagnostics_);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder clearDiagnostics() {
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public Builder removeDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.remove(index);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder getDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+        int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);  } else {
+        return diagnosticsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+         getDiagnosticsOrBuilderList() {
+      if (diagnosticsBuilder_ != null) {
+        return diagnosticsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder() {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered.
+     * Errors encountered will be returned in the form of
+     * INTERNAL_ERROR level diagnostics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder> 
+         getDiagnosticsBuilderList() {
+      return getDiagnosticsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+        getDiagnosticsFieldBuilder() {
+      if (diagnosticsBuilder_ == null) {
+        diagnosticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder>(
+                diagnostics_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        diagnostics_ = null;
+      }
+      return diagnosticsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

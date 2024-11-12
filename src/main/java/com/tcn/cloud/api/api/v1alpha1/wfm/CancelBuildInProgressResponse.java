@@ -42,6 +42,22 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse.Builder.class);
   }
 
+  public static final int CANCELED_BUILD_FIELD_NUMBER = 1;
+  private boolean canceledBuild_ = false;
+  /**
+   * <pre>
+   * True if a build was cancelled.
+   * False if there was not a build to cancel.
+   * </pre>
+   *
+   * <code>bool canceled_build = 1 [json_name = "canceledBuild"];</code>
+   * @return The canceledBuild.
+   */
+  @java.lang.Override
+  public boolean getCanceledBuild() {
+    return canceledBuild_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +72,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (canceledBuild_ != false) {
+      output.writeBool(1, canceledBuild_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +84,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (canceledBuild_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, canceledBuild_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +103,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse) obj;
 
+    if (getCanceledBuild()
+        != other.getCanceledBuild()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +116,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + CANCELED_BUILD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getCanceledBuild());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +253,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      canceledBuild_ = false;
       return this;
     }
 
@@ -251,8 +281,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.canceledBuild_ = canceledBuild_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +337,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CancelBuildInProgressResponse.getDefaultInstance()) return this;
+      if (other.getCanceledBuild() != false) {
+        setCanceledBuild(other.getCanceledBuild());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +366,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              canceledBuild_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +384,54 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private boolean canceledBuild_ ;
+    /**
+     * <pre>
+     * True if a build was cancelled.
+     * False if there was not a build to cancel.
+     * </pre>
+     *
+     * <code>bool canceled_build = 1 [json_name = "canceledBuild"];</code>
+     * @return The canceledBuild.
+     */
+    @java.lang.Override
+    public boolean getCanceledBuild() {
+      return canceledBuild_;
+    }
+    /**
+     * <pre>
+     * True if a build was cancelled.
+     * False if there was not a build to cancel.
+     * </pre>
+     *
+     * <code>bool canceled_build = 1 [json_name = "canceledBuild"];</code>
+     * @param value The canceledBuild to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCanceledBuild(boolean value) {
+
+      canceledBuild_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if a build was cancelled.
+     * False if there was not a build to cancel.
+     * </pre>
+     *
+     * <code>bool canceled_build = 1 [json_name = "canceledBuild"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCanceledBuild() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      canceledBuild_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override

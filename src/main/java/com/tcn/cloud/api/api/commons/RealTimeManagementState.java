@@ -241,7 +241,7 @@ public enum RealTimeManagementState
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(19);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(20);
   }
 
   private static final RealTimeManagementState[] VALUES = values();
