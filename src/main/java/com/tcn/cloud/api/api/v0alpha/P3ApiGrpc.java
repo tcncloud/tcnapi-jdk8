@@ -3084,6 +3084,37 @@ public final class P3ApiGrpc {
     return getGetMailMergeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest,
+      com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> getListDistinctPauseCodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListDistinctPauseCodes",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest,
+      com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> getListDistinctPauseCodesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest, com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> getListDistinctPauseCodesMethod;
+    if ((getListDistinctPauseCodesMethod = P3ApiGrpc.getListDistinctPauseCodesMethod) == null) {
+      synchronized (P3ApiGrpc.class) {
+        if ((getListDistinctPauseCodesMethod = P3ApiGrpc.getListDistinctPauseCodesMethod) == null) {
+          P3ApiGrpc.getListDistinctPauseCodesMethod = getListDistinctPauseCodesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest, com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDistinctPauseCodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListDistinctPauseCodes"))
+              .build();
+        }
+      }
+    }
+    return getListDistinctPauseCodesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -4179,6 +4210,20 @@ public final class P3ApiGrpc {
     default void getMailMerge(com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMailMergeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the pause codes from all the sets of the org sending the request.
+     * Duplicates codes between sets will be removed and only one copy kept.
+     * Resulting pause codes will be sorted alphabetically in ascending order.
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the pause codes.
+     * </pre>
+     */
+    default void listDistinctPauseCodes(com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDistinctPauseCodesMethod(), responseObserver);
     }
   }
 
@@ -5356,6 +5401,21 @@ public final class P3ApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMailMergeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Retrieves the pause codes from all the sets of the org sending the request.
+     * Duplicates codes between sets will be removed and only one copy kept.
+     * Resulting pause codes will be sorted alphabetically in ascending order.
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the pause codes.
+     * </pre>
+     */
+    public void listDistinctPauseCodes(com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListDistinctPauseCodesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -6423,6 +6483,20 @@ public final class P3ApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.GetMailMergeRes getMailMerge(com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMailMergeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the pause codes from all the sets of the org sending the request.
+     * Duplicates codes between sets will be removed and only one copy kept.
+     * Resulting pause codes will be sorted alphabetically in ascending order.
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the pause codes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse listDistinctPauseCodes(com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListDistinctPauseCodesMethod(), getCallOptions(), request);
     }
   }
 
@@ -7568,6 +7642,21 @@ public final class P3ApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMailMergeMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieves the pause codes from all the sets of the org sending the request.
+     * Duplicates codes between sets will be removed and only one copy kept.
+     * Resulting pause codes will be sorted alphabetically in ascending order.
+     * Errors:
+     *   - grpc.Internal: error occurs when getting the pause codes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse> listDistinctPauseCodes(
+        com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListDistinctPauseCodesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_AGENT_HUNT_GROUP = 0;
@@ -7669,6 +7758,7 @@ public final class P3ApiGrpc {
   private static final int METHODID_LIST_CUSTOM_REPORT_FILTERS = 96;
   private static final int METHODID_LIST_SMS_NUMBERS = 97;
   private static final int METHODID_GET_MAIL_MERGE = 98;
+  private static final int METHODID_LIST_DISTINCT_PAUSE_CODES = 99;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -8082,6 +8172,10 @@ public final class P3ApiGrpc {
         case METHODID_GET_MAIL_MERGE:
           serviceImpl.getMailMerge((com.tcn.cloud.api.api.v0alpha.GetMailMergeReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes>) responseObserver);
+          break;
+        case METHODID_LIST_DISTINCT_PAUSE_CODES:
+          serviceImpl.listDistinctPauseCodes((com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -8794,6 +8888,13 @@ public final class P3ApiGrpc {
               com.tcn.cloud.api.api.v0alpha.GetMailMergeReq,
               com.tcn.cloud.api.api.v0alpha.GetMailMergeRes>(
                 service, METHODID_GET_MAIL_MERGE)))
+        .addMethod(
+          getListDistinctPauseCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesRequest,
+              com.tcn.cloud.api.api.v0alpha.ListDistinctPauseCodesResponse>(
+                service, METHODID_LIST_DISTINCT_PAUSE_CODES)))
         .build();
   }
 
@@ -8941,6 +9042,7 @@ public final class P3ApiGrpc {
               .addMethod(getListCustomReportFiltersMethod())
               .addMethod(getListSmsNumbersMethod())
               .addMethod(getGetMailMergeMethod())
+              .addMethod(getListDistinctPauseCodesMethod())
               .build();
         }
       }
