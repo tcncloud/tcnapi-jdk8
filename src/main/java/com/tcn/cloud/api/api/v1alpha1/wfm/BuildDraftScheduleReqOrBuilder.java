@@ -151,28 +151,32 @@ public interface BuildDraftScheduleReqOrBuilder extends
 
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return Whether the schedulingTarget field is set.
    */
-  boolean hasSchedulingTarget();
+  @java.lang.Deprecated boolean hasSchedulingTarget();
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return The schedulingTarget.
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder();
 }

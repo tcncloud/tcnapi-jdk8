@@ -250,37 +250,41 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget schedulingTarget_;
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return Whether the schedulingTarget field is set.
    */
   @java.lang.Override
-  public boolean hasSchedulingTarget() {
+  @java.lang.Deprecated public boolean hasSchedulingTarget() {
     return schedulingTarget_ != null;
   }
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return The schedulingTarget.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
     return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
   }
   /**
    * <pre>
-   * The scheduling target.
+   * The scheduling target. Not used. If given, it is still ignored.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
     return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
   }
 
@@ -1581,24 +1585,28 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder> schedulingTargetBuilder_;
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=7015
      * @return Whether the schedulingTarget field is set.
      */
-    public boolean hasSchedulingTarget() {
+    @java.lang.Deprecated public boolean hasSchedulingTarget() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=7015
      * @return The schedulingTarget.
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget() {
       if (schedulingTargetBuilder_ == null) {
         return schedulingTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance() : schedulingTarget_;
       } else {
@@ -1607,12 +1615,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public Builder setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
+    @java.lang.Deprecated public Builder setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
       if (schedulingTargetBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1627,12 +1635,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public Builder setSchedulingTarget(
+    @java.lang.Deprecated public Builder setSchedulingTarget(
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder builderForValue) {
       if (schedulingTargetBuilder_ == null) {
         schedulingTarget_ = builderForValue.build();
@@ -1645,12 +1653,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public Builder mergeSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
+    @java.lang.Deprecated public Builder mergeSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
       if (schedulingTargetBuilder_ == null) {
         if (((bitField0_ & 0x00000400) != 0) &&
           schedulingTarget_ != null &&
@@ -1668,12 +1676,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public Builder clearSchedulingTarget() {
+    @java.lang.Deprecated public Builder clearSchedulingTarget() {
       bitField0_ = (bitField0_ & ~0x00000400);
       schedulingTarget_ = null;
       if (schedulingTargetBuilder_ != null) {
@@ -1685,24 +1693,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder getSchedulingTargetBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder getSchedulingTargetBuilder() {
       bitField0_ |= 0x00000400;
       onChanged();
       return getSchedulingTargetFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder() {
       if (schedulingTargetBuilder_ != null) {
         return schedulingTargetBuilder_.getMessageOrBuilder();
       } else {
@@ -1712,10 +1720,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling target.
+     * The scheduling target. Not used. If given, it is still ignored.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder> 
