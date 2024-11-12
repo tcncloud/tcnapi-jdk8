@@ -54,13 +54,47 @@ public interface PeekListRequestOrBuilder extends
 
   /**
    * <pre>
+   * tag is optionally given when queueing a file or sending data. It has significance to the client
+   * only. But we store it on all results for the operation so it can be searched.
+   * If provided here, we only show results with this matching tag.
+   * </pre>
+   *
+   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * @return The externalTag.
+   */
+  java.lang.String getExternalTag();
+  /**
+   * <pre>
+   * tag is optionally given when queueing a file or sending data. It has significance to the client
+   * only. But we store it on all results for the operation so it can be searched.
+   * If provided here, we only show results with this matching tag.
+   * </pre>
+   *
+   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * @return The bytes for externalTag.
+   */
+  com.google.protobuf.ByteString
+      getExternalTagBytes();
+
+  /**
+   * <pre>
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>int64 prev_id = 3 [json_name = "prevId"];</code>
-   * @return The prevId.
+   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * @return The pageToken.
    */
-  long getPrevId();
+  java.lang.String getPageToken();
+  /**
+   * <pre>
+   * if empty we will start at begining/end of list
+   * </pre>
+   *
+   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 
   /**
    * <pre>

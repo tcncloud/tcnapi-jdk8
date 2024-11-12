@@ -9,61 +9,48 @@ public interface PeekListResponseOrBuilder extends
 
   /**
    * <pre>
-   * the column.values[i] will line up with every other column value at that index.
+   * each item is a json record.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.classifier.PeekListResponse.Column columns = 5 [json_name = "columns"];</code>
+   * <code>repeated string json_records = 1 [json_name = "jsonRecords"];</code>
+   * @return A list containing the jsonRecords.
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.Column> 
-      getColumnsList();
+  java.util.List<java.lang.String>
+      getJsonRecordsList();
   /**
    * <pre>
-   * the column.values[i] will line up with every other column value at that index.
+   * each item is a json record.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.classifier.PeekListResponse.Column columns = 5 [json_name = "columns"];</code>
+   * <code>repeated string json_records = 1 [json_name = "jsonRecords"];</code>
+   * @return The count of jsonRecords.
    */
-  com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.Column getColumns(int index);
+  int getJsonRecordsCount();
   /**
    * <pre>
-   * the column.values[i] will line up with every other column value at that index.
+   * each item is a json record.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.classifier.PeekListResponse.Column columns = 5 [json_name = "columns"];</code>
+   * <code>repeated string json_records = 1 [json_name = "jsonRecords"];</code>
+   * @param index The index of the element to return.
+   * @return The jsonRecords at the given index.
    */
-  int getColumnsCount();
+  java.lang.String getJsonRecords(int index);
   /**
    * <pre>
-   * the column.values[i] will line up with every other column value at that index.
+   * each item is a json record.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.classifier.PeekListResponse.Column columns = 5 [json_name = "columns"];</code>
+   * <code>repeated string json_records = 1 [json_name = "jsonRecords"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the jsonRecords at the given index.
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.ColumnOrBuilder> 
-      getColumnsOrBuilderList();
-  /**
-   * <pre>
-   * the column.values[i] will line up with every other column value at that index.
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.classifier.PeekListResponse.Column columns = 5 [json_name = "columns"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.classifier.PeekListResponse.ColumnOrBuilder getColumnsOrBuilder(
-      int index);
+  com.google.protobuf.ByteString
+      getJsonRecordsBytes(int index);
 
   /**
    * <pre>
-   * how many records are in the result
-   * </pre>
-   *
-   * <code>int64 record_count = 6 [json_name = "recordCount"];</code>
-   * @return The recordCount.
-   */
-  long getRecordCount();
-
-  /**
-   * <pre>
-   * the result_id.oid.record_index of where we left off, so we can paginate this call
+   * the result_id.oid.record_index of where we left off, so we can paginate this call. See task notes for structure.
    * </pre>
    *
    * <code>string page_token = 7 [json_name = "pageToken"];</code>
@@ -72,7 +59,7 @@ public interface PeekListResponseOrBuilder extends
   java.lang.String getPageToken();
   /**
    * <pre>
-   * the result_id.oid.record_index of where we left off, so we can paginate this call
+   * the result_id.oid.record_index of where we left off, so we can paginate this call. See task notes for structure.
    * </pre>
    *
    * <code>string page_token = 7 [json_name = "pageToken"];</code>

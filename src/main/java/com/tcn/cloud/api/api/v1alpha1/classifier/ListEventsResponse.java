@@ -270,161 +270,6 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    int getFieldPiiTypesCount();
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    boolean containsFieldPiiTypes(
-        java.lang.String key);
-    /**
-     * Use {@link #getFieldPiiTypesMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-    getFieldPiiTypes();
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-    getFieldPiiTypesMap();
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType         defaultValue);
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrThrow(
-        java.lang.String key);
-    /**
-     * Use {@link #getFieldPiiTypesValueMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.Integer>
-    getFieldPiiTypesValue();
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    java.util.Map<java.lang.String, java.lang.Integer>
-    getFieldPiiTypesValueMap();
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    int getFieldPiiTypesValueOrDefault(
-        java.lang.String key,
-        int defaultValue);
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    int getFieldPiiTypesValueOrThrow(
-        java.lang.String key);
-
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    int getFieldSyntaxTypesCount();
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    boolean containsFieldSyntaxTypes(
-        java.lang.String key);
-    /**
-     * Use {@link #getFieldSyntaxTypesMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getFieldSyntaxTypes();
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getFieldSyntaxTypesMap();
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    /* nullable */
-java.lang.String getFieldSyntaxTypesOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    java.lang.String getFieldSyntaxTypesOrThrow(
-        java.lang.String key);
-
-    /**
-     * <pre>
      * how long the element sat in the queue waiting to start processing, in seconds.
      * a large number here, means upstream of this element took a really long time.
      * the longer the DAG, the more time will be spent waiting to process, because
@@ -525,20 +370,6 @@ java.lang.String defaultValue);
       return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 10:
-          return internalGetFieldPiiTypes();
-        case 11:
-          return internalGetFieldSyntaxTypes();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -872,279 +703,6 @@ java.lang.String defaultValue);
       return columns_.getByteString(index);
     }
 
-    public static final int FIELD_PII_TYPES_FIELD_NUMBER = 10;
-    private static final class FieldPiiTypesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.Integer> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.Integer>newDefaultInstance(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_FieldPiiTypesEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.ENUM,
-                  com.tcn.cloud.api.api.commons.ClassifierEntityType.CET_UNKNOWN.getNumber());
-    }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.Integer> fieldPiiTypes_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-    internalGetFieldPiiTypes() {
-      if (fieldPiiTypes_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            FieldPiiTypesDefaultEntryHolder.defaultEntry);
-      }
-      return fieldPiiTypes_;
-    }
-    private static final
-    com.google.protobuf.Internal.MapAdapter.Converter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.ClassifierEntityType> fieldPiiTypesValueConverter =
-            com.google.protobuf.Internal.MapAdapter.newEnumConverter(
-                com.tcn.cloud.api.api.commons.ClassifierEntityType.internalGetValueMap(),
-                com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED);
-    private static final java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-    internalGetAdaptedFieldPiiTypesMap(
-        java.util.Map<java.lang.String, java.lang.Integer> map) {
-      return new com.google.protobuf.Internal.MapAdapter<
-          java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType, java.lang.Integer>(
-              map, fieldPiiTypesValueConverter);
-    }
-    public int getFieldPiiTypesCount() {
-      return internalGetFieldPiiTypes().getMap().size();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public boolean containsFieldPiiTypes(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetFieldPiiTypes().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getFieldPiiTypesMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-    getFieldPiiTypes() {
-      return getFieldPiiTypesMap();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-    getFieldPiiTypesMap() {
-      return internalGetAdaptedFieldPiiTypesMap(
-          internalGetFieldPiiTypes().getMap());}
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Integer> map =
-          internalGetFieldPiiTypes().getMap();
-      return map.containsKey(key)
-             ? fieldPiiTypesValueConverter.doForward(map.get(key))
-             : defaultValue;
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Integer> map =
-          internalGetFieldPiiTypes().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return fieldPiiTypesValueConverter.doForward(map.get(key));
-    }
-    /**
-     * Use {@link #getFieldPiiTypesValueMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Integer>
-    getFieldPiiTypesValue() {
-      return getFieldPiiTypesValueMap();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.Integer>
-    getFieldPiiTypesValueMap() {
-      return internalGetFieldPiiTypes().getMap();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public int getFieldPiiTypesValueOrDefault(
-        java.lang.String key,
-        int defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Integer> map =
-          internalGetFieldPiiTypes().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; classifier entity type (email, person, phone)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-     */
-    @java.lang.Override
-    public int getFieldPiiTypesValueOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Integer> map =
-          internalGetFieldPiiTypes().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int FIELD_SYNTAX_TYPES_FIELD_NUMBER = 11;
-    private static final class FieldSyntaxTypesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_FieldSyntaxTypesEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> fieldSyntaxTypes_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetFieldSyntaxTypes() {
-      if (fieldSyntaxTypes_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            FieldSyntaxTypesDefaultEntryHolder.defaultEntry);
-      }
-      return fieldSyntaxTypes_;
-    }
-    public int getFieldSyntaxTypesCount() {
-      return internalGetFieldSyntaxTypes().getMap().size();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    @java.lang.Override
-    public boolean containsFieldSyntaxTypes(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetFieldSyntaxTypes().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getFieldSyntaxTypesMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getFieldSyntaxTypes() {
-      return getFieldSyntaxTypesMap();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getFieldSyntaxTypesMap() {
-      return internalGetFieldSyntaxTypes().getMap();
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getFieldSyntaxTypesOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetFieldSyntaxTypes().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * the field_name =&gt; syntax type name (string, int, bool)
-     * for the data for this event
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getFieldSyntaxTypesOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetFieldSyntaxTypes().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
     public static final int TOTAL_QUEUE_WAIT_SECONDS_FIELD_NUMBER = 12;
     private long totalQueueWaitSeconds_ = 0L;
     /**
@@ -1274,18 +832,6 @@ java.lang.String defaultValue) {
       for (int i = 0; i < columns_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, columns_.getRaw(i));
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetFieldPiiTypes(),
-          FieldPiiTypesDefaultEntryHolder.defaultEntry,
-          10);
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetFieldSyntaxTypes(),
-          FieldSyntaxTypesDefaultEntryHolder.defaultEntry,
-          11);
       if (totalQueueWaitSeconds_ != 0L) {
         output.writeInt64(12, totalQueueWaitSeconds_);
       }
@@ -1351,26 +897,6 @@ java.lang.String defaultValue) {
         size += dataSize;
         size += 1 * getColumnsList().size();
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
-           : internalGetFieldPiiTypes().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
-        fieldPiiTypes__ = FieldPiiTypesDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, fieldPiiTypes__);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetFieldSyntaxTypes().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        fieldSyntaxTypes__ = FieldSyntaxTypesDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(11, fieldSyntaxTypes__);
-      }
       if (totalQueueWaitSeconds_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(12, totalQueueWaitSeconds_);
@@ -1426,10 +952,6 @@ java.lang.String defaultValue) {
           .equals(other.getParentIdsList())) return false;
       if (!getColumnsList()
           .equals(other.getColumnsList())) return false;
-      if (!internalGetFieldPiiTypes().equals(
-          other.internalGetFieldPiiTypes())) return false;
-      if (!internalGetFieldSyntaxTypes().equals(
-          other.internalGetFieldSyntaxTypes())) return false;
       if (getTotalQueueWaitSeconds()
           != other.getTotalQueueWaitSeconds()) return false;
       if (getTotalProcessingSeconds()
@@ -1477,14 +999,6 @@ java.lang.String defaultValue) {
       if (getColumnsCount() > 0) {
         hash = (37 * hash) + COLUMNS_FIELD_NUMBER;
         hash = (53 * hash) + getColumnsList().hashCode();
-      }
-      if (!internalGetFieldPiiTypes().getMap().isEmpty()) {
-        hash = (37 * hash) + FIELD_PII_TYPES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetFieldPiiTypes().hashCode();
-      }
-      if (!internalGetFieldSyntaxTypes().getMap().isEmpty()) {
-        hash = (37 * hash) + FIELD_SYNTAX_TYPES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetFieldSyntaxTypes().hashCode();
       }
       hash = (37 * hash) + TOTAL_QUEUE_WAIT_SECONDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -1605,32 +1119,6 @@ java.lang.String defaultValue) {
         return com.tcn.cloud.api.api.v1alpha1.classifier.ServiceProto.internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 10:
-            return internalGetFieldPiiTypes();
-          case 11:
-            return internalGetFieldSyntaxTypes();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 10:
-            return internalGetMutableFieldPiiTypes();
-          case 11:
-            return internalGetMutableFieldSyntaxTypes();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1673,8 +1161,6 @@ java.lang.String defaultValue) {
             com.google.protobuf.LazyStringArrayList.emptyList();
         columns_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
-        internalGetMutableFieldPiiTypes().clear();
-        internalGetMutableFieldSyntaxTypes().clear();
         totalQueueWaitSeconds_ = 0L;
         totalProcessingSeconds_ = 0L;
         msgs_ =
@@ -1747,20 +1233,12 @@ java.lang.String defaultValue) {
           result.columns_ = columns_;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.fieldPiiTypes_ = internalGetFieldPiiTypes();
-          result.fieldPiiTypes_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.fieldSyntaxTypes_ = internalGetFieldSyntaxTypes();
-          result.fieldSyntaxTypes_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.totalQueueWaitSeconds_ = totalQueueWaitSeconds_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.totalProcessingSeconds_ = totalProcessingSeconds_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           msgs_.makeImmutable();
           result.msgs_ = msgs_;
         }
@@ -1860,12 +1338,6 @@ java.lang.String defaultValue) {
           }
           onChanged();
         }
-        internalGetMutableFieldPiiTypes().mergeFrom(
-            other.internalGetFieldPiiTypes());
-        bitField0_ |= 0x00000200;
-        internalGetMutableFieldSyntaxTypes().mergeFrom(
-            other.internalGetFieldSyntaxTypes());
-        bitField0_ |= 0x00000400;
         if (other.getTotalQueueWaitSeconds() != 0L) {
           setTotalQueueWaitSeconds(other.getTotalQueueWaitSeconds());
         }
@@ -1875,7 +1347,7 @@ java.lang.String defaultValue) {
         if (!other.msgs_.isEmpty()) {
           if (msgs_.isEmpty()) {
             msgs_ = other.msgs_;
-            bitField0_ |= 0x00002000;
+            bitField0_ |= 0x00000800;
           } else {
             ensureMsgsIsMutable();
             msgs_.addAll(other.msgs_);
@@ -1960,32 +1432,14 @@ java.lang.String defaultValue) {
                 columns_.add(s);
                 break;
               } // case 74
-              case 82: {
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
-                fieldPiiTypes__ = input.readMessage(
-                    FieldPiiTypesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFieldPiiTypes().getMutableMap().put(
-                    fieldPiiTypes__.getKey(), fieldPiiTypes__.getValue());
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 82
-              case 90: {
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                fieldSyntaxTypes__ = input.readMessage(
-                    FieldSyntaxTypesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFieldSyntaxTypes().getMutableMap().put(
-                    fieldSyntaxTypes__.getKey(), fieldSyntaxTypes__.getValue());
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 90
               case 96: {
                 totalQueueWaitSeconds_ = input.readInt64();
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 96
               case 104: {
                 totalProcessingSeconds_ = input.readInt64();
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 104
               case 114: {
@@ -2977,436 +2431,6 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.Integer> fieldPiiTypes_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-          internalGetFieldPiiTypes() {
-        if (fieldPiiTypes_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              FieldPiiTypesDefaultEntryHolder.defaultEntry);
-        }
-        return fieldPiiTypes_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-          internalGetMutableFieldPiiTypes() {
-        if (fieldPiiTypes_ == null) {
-          fieldPiiTypes_ = com.google.protobuf.MapField.newMapField(
-              FieldPiiTypesDefaultEntryHolder.defaultEntry);
-        }
-        if (!fieldPiiTypes_.isMutable()) {
-          fieldPiiTypes_ = fieldPiiTypes_.copy();
-        }
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return fieldPiiTypes_;
-      }
-      public int getFieldPiiTypesCount() {
-        return internalGetFieldPiiTypes().getMap().size();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public boolean containsFieldPiiTypes(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetFieldPiiTypes().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getFieldPiiTypesMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-      getFieldPiiTypes() {
-        return getFieldPiiTypesMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-      getFieldPiiTypesMap() {
-        return internalGetAdaptedFieldPiiTypesMap(
-            internalGetFieldPiiTypes().getMap());}
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.tcn.cloud.api.api.commons.ClassifierEntityType defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Integer> map =
-            internalGetFieldPiiTypes().getMap();
-        return map.containsKey(key)
-               ? fieldPiiTypesValueConverter.doForward(map.get(key))
-               : defaultValue;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldPiiTypesOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Integer> map =
-            internalGetFieldPiiTypes().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return fieldPiiTypesValueConverter.doForward(map.get(key));
-      }
-      /**
-       * Use {@link #getFieldPiiTypesValueMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Integer>
-      getFieldPiiTypesValue() {
-        return getFieldPiiTypesValueMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.Integer>
-      getFieldPiiTypesValueMap() {
-        return internalGetFieldPiiTypes().getMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public int getFieldPiiTypesValueOrDefault(
-          java.lang.String key,
-          int defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Integer> map =
-            internalGetFieldPiiTypes().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      @java.lang.Override
-      public int getFieldPiiTypesValueOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Integer> map =
-            internalGetFieldPiiTypes().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-      public Builder clearFieldPiiTypes() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        internalGetMutableFieldPiiTypes().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      public Builder removeFieldPiiTypes(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableFieldPiiTypes().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType>
-          getMutableFieldPiiTypes() {
-        bitField0_ |= 0x00000200;
-        return internalGetAdaptedFieldPiiTypesMap(
-             internalGetMutableFieldPiiTypes().getMutableMap());
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      public Builder putFieldPiiTypes(
-          java.lang.String key,
-          com.tcn.cloud.api.api.commons.ClassifierEntityType value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-
-        internalGetMutableFieldPiiTypes().getMutableMap()
-            .put(key, fieldPiiTypesValueConverter.doBackward(value));
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      public Builder putAllFieldPiiTypes(
-          java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.ClassifierEntityType> values) {
-        internalGetAdaptedFieldPiiTypesMap(
-            internalGetMutableFieldPiiTypes().getMutableMap())
-                .putAll(values);
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableFieldPiiTypesValue() {
-        bitField0_ |= 0x00000200;
-        return internalGetMutableFieldPiiTypes().getMutableMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      public Builder putFieldPiiTypesValue(
-          java.lang.String key,
-          int value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-
-        internalGetMutableFieldPiiTypes().getMutableMap()
-            .put(key, value);
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; classifier entity type (email, person, phone)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, .api.commons.ClassifierEntityType&gt; field_pii_types = 10 [json_name = "fieldPiiTypes"];</code>
-       */
-      public Builder putAllFieldPiiTypesValue(
-          java.util.Map<java.lang.String, java.lang.Integer> values) {
-        internalGetMutableFieldPiiTypes().getMutableMap()
-            .putAll(values);
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> fieldSyntaxTypes_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetFieldSyntaxTypes() {
-        if (fieldSyntaxTypes_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              FieldSyntaxTypesDefaultEntryHolder.defaultEntry);
-        }
-        return fieldSyntaxTypes_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableFieldSyntaxTypes() {
-        if (fieldSyntaxTypes_ == null) {
-          fieldSyntaxTypes_ = com.google.protobuf.MapField.newMapField(
-              FieldSyntaxTypesDefaultEntryHolder.defaultEntry);
-        }
-        if (!fieldSyntaxTypes_.isMutable()) {
-          fieldSyntaxTypes_ = fieldSyntaxTypes_.copy();
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return fieldSyntaxTypes_;
-      }
-      public int getFieldSyntaxTypesCount() {
-        return internalGetFieldSyntaxTypes().getMap().size();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      @java.lang.Override
-      public boolean containsFieldSyntaxTypes(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetFieldSyntaxTypes().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getFieldSyntaxTypesMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getFieldSyntaxTypes() {
-        return getFieldSyntaxTypesMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getFieldSyntaxTypesMap() {
-        return internalGetFieldSyntaxTypes().getMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      @java.lang.Override
-      public /* nullable */
-java.lang.String getFieldSyntaxTypesOrDefault(
-          java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetFieldSyntaxTypes().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      @java.lang.Override
-      public java.lang.String getFieldSyntaxTypesOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetFieldSyntaxTypes().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-      public Builder clearFieldSyntaxTypes() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        internalGetMutableFieldSyntaxTypes().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      public Builder removeFieldSyntaxTypes(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableFieldSyntaxTypes().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-          getMutableFieldSyntaxTypes() {
-        bitField0_ |= 0x00000400;
-        return internalGetMutableFieldSyntaxTypes().getMutableMap();
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      public Builder putFieldSyntaxTypes(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableFieldSyntaxTypes().getMutableMap()
-            .put(key, value);
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <pre>
-       * the field_name =&gt; syntax type name (string, int, bool)
-       * for the data for this event
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; field_syntax_types = 11 [json_name = "fieldSyntaxTypes"];</code>
-       */
-      public Builder putAllFieldSyntaxTypes(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableFieldSyntaxTypes().getMutableMap()
-            .putAll(values);
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-
       private long totalQueueWaitSeconds_ ;
       /**
        * <pre>
@@ -3438,7 +2462,7 @@ java.lang.String defaultValue) {
       public Builder setTotalQueueWaitSeconds(long value) {
 
         totalQueueWaitSeconds_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -3454,7 +2478,7 @@ java.lang.String defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearTotalQueueWaitSeconds() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000200);
         totalQueueWaitSeconds_ = 0L;
         onChanged();
         return this;
@@ -3489,7 +2513,7 @@ java.lang.String defaultValue) {
       public Builder setTotalProcessingSeconds(long value) {
 
         totalProcessingSeconds_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3504,7 +2528,7 @@ java.lang.String defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearTotalProcessingSeconds() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000400);
         totalProcessingSeconds_ = 0L;
         onChanged();
         return this;
@@ -3516,7 +2540,7 @@ java.lang.String defaultValue) {
         if (!msgs_.isModifiable()) {
           msgs_ = new com.google.protobuf.LazyStringArrayList(msgs_);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000800;
       }
       /**
        * <pre>
@@ -3582,7 +2606,7 @@ java.lang.String defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureMsgsIsMutable();
         msgs_.set(index, value);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -3600,7 +2624,7 @@ java.lang.String defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureMsgsIsMutable();
         msgs_.add(value);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -3618,7 +2642,7 @@ java.lang.String defaultValue) {
         ensureMsgsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, msgs_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -3633,7 +2657,7 @@ java.lang.String defaultValue) {
       public Builder clearMsgs() {
         msgs_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);;
+        bitField0_ = (bitField0_ & ~0x00000800);;
         onChanged();
         return this;
       }
@@ -3652,7 +2676,7 @@ java.lang.String defaultValue) {
         checkByteStringIsUtf8(value);
         ensureMsgsIsMutable();
         msgs_.add(value);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }

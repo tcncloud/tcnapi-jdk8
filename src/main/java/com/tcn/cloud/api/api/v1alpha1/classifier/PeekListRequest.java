@@ -16,6 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PeekListRequest() {
+    externalTag_ = "";
+    pageToken_ = "";
     elementId_ = "";
     columns_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
@@ -110,19 +112,102 @@ private static final long serialVersionUID = 0L;
     return end_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : end_;
   }
 
-  public static final int PREV_ID_FIELD_NUMBER = 3;
-  private long prevId_ = 0L;
+  public static final int EXTERNAL_TAG_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object externalTag_ = "";
+  /**
+   * <pre>
+   * tag is optionally given when queueing a file or sending data. It has significance to the client
+   * only. But we store it on all results for the operation so it can be searched.
+   * If provided here, we only show results with this matching tag.
+   * </pre>
+   *
+   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * @return The externalTag.
+   */
+  @java.lang.Override
+  public java.lang.String getExternalTag() {
+    java.lang.Object ref = externalTag_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      externalTag_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * tag is optionally given when queueing a file or sending data. It has significance to the client
+   * only. But we store it on all results for the operation so it can be searched.
+   * If provided here, we only show results with this matching tag.
+   * </pre>
+   *
+   * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+   * @return The bytes for externalTag.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getExternalTagBytes() {
+    java.lang.Object ref = externalTag_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      externalTag_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
   /**
    * <pre>
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>int64 prev_id = 3 [json_name = "prevId"];</code>
-   * @return The prevId.
+   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * @return The pageToken.
    */
   @java.lang.Override
-  public long getPrevId() {
-    return prevId_;
+  public java.lang.String getPageToken() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pageToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * if empty we will start at begining/end of list
+   * </pre>
+   *
+   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPageTokenBytes() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pageToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int ASC_FIELD_NUMBER = 4;
@@ -391,8 +476,8 @@ private static final long serialVersionUID = 0L;
     if (end_ != null) {
       output.writeMessage(2, getEnd());
     }
-    if (prevId_ != 0L) {
-      output.writeInt64(3, prevId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
     }
     if (asc_ != false) {
       output.writeBool(4, asc_);
@@ -415,6 +500,9 @@ private static final long serialVersionUID = 0L;
     if (viewDiscards_ != false) {
       output.writeBool(10, viewDiscards_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, externalTag_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -432,9 +520,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEnd());
     }
-    if (prevId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, prevId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
     }
     if (asc_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -465,6 +552,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, viewDiscards_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalTag_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, externalTag_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -490,8 +580,10 @@ private static final long serialVersionUID = 0L;
       if (!getEnd()
           .equals(other.getEnd())) return false;
     }
-    if (getPrevId()
-        != other.getPrevId()) return false;
+    if (!getExternalTag()
+        .equals(other.getExternalTag())) return false;
+    if (!getPageToken()
+        .equals(other.getPageToken())) return false;
     if (getAsc()
         != other.getAsc()) return false;
     if (getPageSize()
@@ -525,9 +617,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + END_FIELD_NUMBER;
       hash = (53 * hash) + getEnd().hashCode();
     }
-    hash = (37 * hash) + PREV_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getPrevId());
+    hash = (37 * hash) + EXTERNAL_TAG_FIELD_NUMBER;
+    hash = (53 * hash) + getExternalTag().hashCode();
+    hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getPageToken().hashCode();
     hash = (37 * hash) + ASC_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAsc());
@@ -687,7 +780,8 @@ private static final long serialVersionUID = 0L;
         endBuilder_.dispose();
         endBuilder_ = null;
       }
-      prevId_ = 0L;
+      externalTag_ = "";
+      pageToken_ = "";
       asc_ = false;
       pageSize_ = 0;
       elementId_ = "";
@@ -740,28 +834,31 @@ private static final long serialVersionUID = 0L;
             : endBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.prevId_ = prevId_;
+        result.externalTag_ = externalTag_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.asc_ = asc_;
+        result.pageToken_ = pageToken_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.pageSize_ = pageSize_;
+        result.asc_ = asc_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.elementId_ = elementId_;
+        result.pageSize_ = pageSize_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.elementId_ = elementId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         columns_.makeImmutable();
         result.columns_ = columns_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.entrypointId_ = entrypointId_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.parentId_ = parentId_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.viewDiscards_ = viewDiscards_;
       }
     }
@@ -816,8 +913,15 @@ private static final long serialVersionUID = 0L;
       if (other.hasEnd()) {
         mergeEnd(other.getEnd());
       }
-      if (other.getPrevId() != 0L) {
-        setPrevId(other.getPrevId());
+      if (!other.getExternalTag().isEmpty()) {
+        externalTag_ = other.externalTag_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getPageToken().isEmpty()) {
+        pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000008;
+        onChanged();
       }
       if (other.getAsc() != false) {
         setAsc(other.getAsc());
@@ -827,13 +931,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getElementId().isEmpty()) {
         elementId_ = other.elementId_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.columns_.isEmpty()) {
         if (columns_.isEmpty()) {
           columns_ = other.columns_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
         } else {
           ensureColumnsIsMutable();
           columns_.addAll(other.columns_);
@@ -842,12 +946,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEntrypointId().isEmpty()) {
         entrypointId_ = other.entrypointId_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getParentId().isEmpty()) {
         parentId_ = other.parentId_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.getViewDiscards() != false) {
@@ -893,24 +997,24 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              prevId_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+            case 26: {
+              pageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
               break;
-            } // case 24
+            } // case 26
             case 32: {
               asc_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 32
             case 40: {
               pageSize_ = input.readInt32();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 40
             case 50: {
               elementId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
             case 58: {
@@ -921,19 +1025,24 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 66: {
               entrypointId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 66
             case 74: {
               parentId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 74
             case 80: {
               viewDiscards_ = input.readBool();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 80
+            case 90: {
+              externalTag_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1234,32 +1343,164 @@ private static final long serialVersionUID = 0L;
       return endBuilder_;
     }
 
-    private long prevId_ ;
+    private java.lang.Object externalTag_ = "";
+    /**
+     * <pre>
+     * tag is optionally given when queueing a file or sending data. It has significance to the client
+     * only. But we store it on all results for the operation so it can be searched.
+     * If provided here, we only show results with this matching tag.
+     * </pre>
+     *
+     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * @return The externalTag.
+     */
+    public java.lang.String getExternalTag() {
+      java.lang.Object ref = externalTag_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalTag_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * tag is optionally given when queueing a file or sending data. It has significance to the client
+     * only. But we store it on all results for the operation so it can be searched.
+     * If provided here, we only show results with this matching tag.
+     * </pre>
+     *
+     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * @return The bytes for externalTag.
+     */
+    public com.google.protobuf.ByteString
+        getExternalTagBytes() {
+      java.lang.Object ref = externalTag_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * tag is optionally given when queueing a file or sending data. It has significance to the client
+     * only. But we store it on all results for the operation so it can be searched.
+     * If provided here, we only show results with this matching tag.
+     * </pre>
+     *
+     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * @param value The externalTag to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExternalTag(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      externalTag_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * tag is optionally given when queueing a file or sending data. It has significance to the client
+     * only. But we store it on all results for the operation so it can be searched.
+     * If provided here, we only show results with this matching tag.
+     * </pre>
+     *
+     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExternalTag() {
+      externalTag_ = getDefaultInstance().getExternalTag();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * tag is optionally given when queueing a file or sending data. It has significance to the client
+     * only. But we store it on all results for the operation so it can be searched.
+     * If provided here, we only show results with this matching tag.
+     * </pre>
+     *
+     * <code>string external_tag = 11 [json_name = "externalTag"];</code>
+     * @param value The bytes for externalTag to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExternalTagBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      externalTag_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pageToken_ = "";
     /**
      * <pre>
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 3 [json_name = "prevId"];</code>
-     * @return The prevId.
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The pageToken.
      */
-    @java.lang.Override
-    public long getPrevId() {
-      return prevId_;
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 3 [json_name = "prevId"];</code>
-     * @param value The prevId to set.
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * if empty we will start at begining/end of list
+     * </pre>
+     *
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
      * @return This builder for chaining.
      */
-    public Builder setPrevId(long value) {
-
-      prevId_ = value;
-      bitField0_ |= 0x00000004;
+    public Builder setPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pageToken_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1268,12 +1509,30 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 3 [json_name = "prevId"];</code>
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPrevId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      prevId_ = 0L;
+    public Builder clearPageToken() {
+      pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if empty we will start at begining/end of list
+     * </pre>
+     *
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pageToken_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1303,7 +1562,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAsc(boolean value) {
 
       asc_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1316,7 +1575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsc() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       asc_ = false;
       onChanged();
       return this;
@@ -1347,7 +1606,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPageSize(int value) {
 
       pageSize_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1360,7 +1619,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       pageSize_ = 0;
       onChanged();
       return this;
@@ -1421,7 +1680,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       elementId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1435,7 +1694,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearElementId() {
       elementId_ = getDefaultInstance().getElementId();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1453,7 +1712,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       elementId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1464,7 +1723,7 @@ private static final long serialVersionUID = 0L;
       if (!columns_.isModifiable()) {
         columns_ = new com.google.protobuf.LazyStringArrayList(columns_);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
@@ -1530,7 +1789,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureColumnsIsMutable();
       columns_.set(index, value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1548,7 +1807,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureColumnsIsMutable();
       columns_.add(value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1566,7 +1825,7 @@ private static final long serialVersionUID = 0L;
       ensureColumnsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, columns_);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1581,7 +1840,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearColumns() {
       columns_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -1600,7 +1859,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureColumnsIsMutable();
       columns_.add(value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1666,7 +1925,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       entrypointId_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1682,7 +1941,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEntrypointId() {
       entrypointId_ = getDefaultInstance().getEntrypointId();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1702,7 +1961,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       entrypointId_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1765,7 +2024,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       parentId_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1780,7 +2039,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearParentId() {
       parentId_ = getDefaultInstance().getParentId();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1799,7 +2058,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       parentId_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1831,7 +2090,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewDiscards(boolean value) {
 
       viewDiscards_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1845,7 +2104,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewDiscards() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       viewDiscards_ = false;
       onChanged();
       return this;

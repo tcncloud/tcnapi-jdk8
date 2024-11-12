@@ -89,7 +89,6 @@ public interface ListEventsRequestOrBuilder extends
    * - 1h = 1 hour increments (default)
    * - 10m = 10 minute increments
    * - 3d = 3 day increments
-   * - none = no increment. Interpret each row in the response as exactly 1 event.
    * </pre>
    *
    * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -104,7 +103,6 @@ public interface ListEventsRequestOrBuilder extends
    * - 1h = 1 hour increments (default)
    * - 10m = 10 minute increments
    * - 3d = 3 day increments
-   * - none = no increment. Interpret each row in the response as exactly 1 event.
    * </pre>
    *
    * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -112,4 +110,46 @@ public interface ListEventsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTimeRangeBytes();
+
+  /**
+   * <pre>
+   * optional, if provided, we only show data that came from this entrypoint id
+   * </pre>
+   *
+   * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+   * @return The entrypointId.
+   */
+  java.lang.String getEntrypointId();
+  /**
+   * <pre>
+   * optional, if provided, we only show data that came from this entrypoint id
+   * </pre>
+   *
+   * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+   * @return The bytes for entrypointId.
+   */
+  com.google.protobuf.ByteString
+      getEntrypointIdBytes();
+
+  /**
+   * <pre>
+   * optional, if provided we only show data that fed through to this element from
+   * the parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * @return The parentId.
+   */
+  java.lang.String getParentId();
+  /**
+   * <pre>
+   * optional, if provided we only show data that fed through to this element from
+   * the parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * @return The bytes for parentId.
+   */
+  com.google.protobuf.ByteString
+      getParentIdBytes();
 }

@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private ListEventsRequest() {
     elementId_ = "";
     timeRange_ = "";
+    entrypointId_ = "";
+    parentId_ = "";
   }
 
   @java.lang.Override
@@ -174,7 +176,6 @@ private static final long serialVersionUID = 0L;
    * - 1h = 1 hour increments (default)
    * - 10m = 10 minute increments
    * - 3d = 3 day increments
-   * - none = no increment. Interpret each row in the response as exactly 1 event.
    * </pre>
    *
    * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -201,7 +202,6 @@ private static final long serialVersionUID = 0L;
    * - 1h = 1 hour increments (default)
    * - 10m = 10 minute increments
    * - 3d = 3 day increments
-   * - none = no increment. Interpret each row in the response as exactly 1 event.
    * </pre>
    *
    * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -216,6 +216,102 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       timeRange_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ENTRYPOINT_ID_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object entrypointId_ = "";
+  /**
+   * <pre>
+   * optional, if provided, we only show data that came from this entrypoint id
+   * </pre>
+   *
+   * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+   * @return The entrypointId.
+   */
+  @java.lang.Override
+  public java.lang.String getEntrypointId() {
+    java.lang.Object ref = entrypointId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      entrypointId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * optional, if provided, we only show data that came from this entrypoint id
+   * </pre>
+   *
+   * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+   * @return The bytes for entrypointId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEntrypointIdBytes() {
+    java.lang.Object ref = entrypointId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      entrypointId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PARENT_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object parentId_ = "";
+  /**
+   * <pre>
+   * optional, if provided we only show data that fed through to this element from
+   * the parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * @return The parentId.
+   */
+  @java.lang.Override
+  public java.lang.String getParentId() {
+    java.lang.Object ref = parentId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      parentId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * optional, if provided we only show data that fed through to this element from
+   * the parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 8 [json_name = "parentId"];</code>
+   * @return The bytes for parentId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getParentIdBytes() {
+    java.lang.Object ref = parentId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      parentId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -248,6 +344,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeRange_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timeRange_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypointId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, entrypointId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, parentId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -270,6 +372,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeRange_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timeRange_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entrypointId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, entrypointId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, parentId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -300,6 +408,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTimeRange()
         .equals(other.getTimeRange())) return false;
+    if (!getEntrypointId()
+        .equals(other.getEntrypointId())) return false;
+    if (!getParentId()
+        .equals(other.getParentId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -323,6 +435,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TIME_RANGE_FIELD_NUMBER;
     hash = (53 * hash) + getTimeRange().hashCode();
+    hash = (37 * hash) + ENTRYPOINT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getEntrypointId().hashCode();
+    hash = (37 * hash) + PARENT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getParentId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -466,6 +582,8 @@ private static final long serialVersionUID = 0L;
         endBuilder_ = null;
       }
       timeRange_ = "";
+      entrypointId_ = "";
+      parentId_ = "";
       return this;
     }
 
@@ -514,6 +632,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.timeRange_ = timeRange_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.entrypointId_ = entrypointId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.parentId_ = parentId_;
       }
     }
 
@@ -577,6 +701,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getEntrypointId().isEmpty()) {
+        entrypointId_ = other.entrypointId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getParentId().isEmpty()) {
+        parentId_ = other.parentId_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -627,6 +761,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              entrypointId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 66: {
+              parentId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1055,7 +1199,6 @@ private static final long serialVersionUID = 0L;
      * - 1h = 1 hour increments (default)
      * - 10m = 10 minute increments
      * - 3d = 3 day increments
-     * - none = no increment. Interpret each row in the response as exactly 1 event.
      * </pre>
      *
      * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -1081,7 +1224,6 @@ private static final long serialVersionUID = 0L;
      * - 1h = 1 hour increments (default)
      * - 10m = 10 minute increments
      * - 3d = 3 day increments
-     * - none = no increment. Interpret each row in the response as exactly 1 event.
      * </pre>
      *
      * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -1108,7 +1250,6 @@ private static final long serialVersionUID = 0L;
      * - 1h = 1 hour increments (default)
      * - 10m = 10 minute increments
      * - 3d = 3 day increments
-     * - none = no increment. Interpret each row in the response as exactly 1 event.
      * </pre>
      *
      * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -1131,7 +1272,6 @@ private static final long serialVersionUID = 0L;
      * - 1h = 1 hour increments (default)
      * - 10m = 10 minute increments
      * - 3d = 3 day increments
-     * - none = no increment. Interpret each row in the response as exactly 1 event.
      * </pre>
      *
      * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -1151,7 +1291,6 @@ private static final long serialVersionUID = 0L;
      * - 1h = 1 hour increments (default)
      * - 10m = 10 minute increments
      * - 3d = 3 day increments
-     * - none = no increment. Interpret each row in the response as exactly 1 event.
      * </pre>
      *
      * <code>string time_range = 4 [json_name = "timeRange"];</code>
@@ -1164,6 +1303,195 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       timeRange_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object entrypointId_ = "";
+    /**
+     * <pre>
+     * optional, if provided, we only show data that came from this entrypoint id
+     * </pre>
+     *
+     * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+     * @return The entrypointId.
+     */
+    public java.lang.String getEntrypointId() {
+      java.lang.Object ref = entrypointId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entrypointId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * optional, if provided, we only show data that came from this entrypoint id
+     * </pre>
+     *
+     * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+     * @return The bytes for entrypointId.
+     */
+    public com.google.protobuf.ByteString
+        getEntrypointIdBytes() {
+      java.lang.Object ref = entrypointId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entrypointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * optional, if provided, we only show data that came from this entrypoint id
+     * </pre>
+     *
+     * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+     * @param value The entrypointId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntrypointId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      entrypointId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * optional, if provided, we only show data that came from this entrypoint id
+     * </pre>
+     *
+     * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEntrypointId() {
+      entrypointId_ = getDefaultInstance().getEntrypointId();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * optional, if provided, we only show data that came from this entrypoint id
+     * </pre>
+     *
+     * <code>string entrypoint_id = 5 [json_name = "entrypointId"];</code>
+     * @param value The bytes for entrypointId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntrypointIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      entrypointId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object parentId_ = "";
+    /**
+     * <pre>
+     * optional, if provided we only show data that fed through to this element from
+     * the parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 8 [json_name = "parentId"];</code>
+     * @return The parentId.
+     */
+    public java.lang.String getParentId() {
+      java.lang.Object ref = parentId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * optional, if provided we only show data that fed through to this element from
+     * the parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 8 [json_name = "parentId"];</code>
+     * @return The bytes for parentId.
+     */
+    public com.google.protobuf.ByteString
+        getParentIdBytes() {
+      java.lang.Object ref = parentId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * optional, if provided we only show data that fed through to this element from
+     * the parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 8 [json_name = "parentId"];</code>
+     * @param value The parentId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setParentId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      parentId_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * optional, if provided we only show data that fed through to this element from
+     * the parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 8 [json_name = "parentId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearParentId() {
+      parentId_ = getDefaultInstance().getParentId();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * optional, if provided we only show data that fed through to this element from
+     * the parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 8 [json_name = "parentId"];</code>
+     * @param value The bytes for parentId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setParentIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      parentId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
