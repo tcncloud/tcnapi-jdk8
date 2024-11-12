@@ -33,6 +33,10 @@ public enum OmniConversationMetadataName
    */
   OMNI_CONVERSATION_METADATA_NAME_FLOW_DATA(4),
   /**
+   * <code>OMNI_CONVERSATION_METADATA_NAME_VOICE_DATA = 5;</code>
+   */
+  OMNI_CONVERSATION_METADATA_NAME_VOICE_DATA(5),
+  /**
    * <code>OMNI_CONVERSATION_METADATA_NAME_TIMER_WAIT = 10;</code>
    */
   OMNI_CONVERSATION_METADATA_NAME_TIMER_WAIT(10),
@@ -87,6 +91,10 @@ public enum OmniConversationMetadataName
    * <code>OMNI_CONVERSATION_METADATA_NAME_FLOW_DATA = 4;</code>
    */
   public static final int OMNI_CONVERSATION_METADATA_NAME_FLOW_DATA_VALUE = 4;
+  /**
+   * <code>OMNI_CONVERSATION_METADATA_NAME_VOICE_DATA = 5;</code>
+   */
+  public static final int OMNI_CONVERSATION_METADATA_NAME_VOICE_DATA_VALUE = 5;
   /**
    * <code>OMNI_CONVERSATION_METADATA_NAME_TIMER_WAIT = 10;</code>
    */
@@ -150,6 +158,7 @@ public enum OmniConversationMetadataName
       case 2: return HANDLE_TIME;
       case 3: return TRANSCRIPT_PATH;
       case 4: return OMNI_CONVERSATION_METADATA_NAME_FLOW_DATA;
+      case 5: return OMNI_CONVERSATION_METADATA_NAME_VOICE_DATA;
       case 10: return OMNI_CONVERSATION_METADATA_NAME_TIMER_WAIT;
       case 100: return OMNI_CONVERSATION_METADATA_NAME_TIMER_TALK;
       case 101: return OMNI_CONVERSATION_METADATA_NAME_TIMER_TALK_INITIAL_AGENT_RESPONSE;
