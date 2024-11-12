@@ -27,7 +27,7 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\356\021\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\307\023\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
@@ -84,13 +84,19 @@ public final class ServiceProto {
       "tHuntGroupsRequest\032>.services.org.hunt_g" +
       "roups.v1alpha1.AdminListHuntGroupsRespon" +
       "se\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/services/org/hunt" +
-      "groups/v1alpha1/adminlisthuntgroups:\001*B\346" +
-      "\001\n3com.tcn.cloud.api.services.org.hunt_g" +
-      "roups.v1alpha1B\014ServiceProtoP\001\242\002\003SOH\252\002 S" +
-      "ervices.Org.HuntGroups.V1alpha1\312\002 Servic" +
-      "es\\Org\\HuntGroups\\V1alpha1\342\002,Services\\Or" +
-      "g\\HuntGroups\\V1alpha1\\GPBMetadata\352\002#Serv" +
-      "ices::Org::HuntGroups::V1alpha1b\006proto3"
+      "groups/v1alpha1/adminlisthuntgroups:\001*\022\326" +
+      "\001\n\020ListAgentScripts\022:.services.org.hunt_" +
+      "groups.v1alpha1.ListAgentScriptsRequest\032" +
+      ";.services.org.hunt_groups.v1alpha1.List" +
+      "AgentScriptsResponse\"G\272\270\221\002\005\n\003\010\236\017\202\323\344\223\0027\"2" +
+      "/services/org/huntgroups/v1alpha1/listag" +
+      "entscripts:\001*0\001B\346\001\n3com.tcn.cloud.api.se" +
+      "rvices.org.hunt_groups.v1alpha1B\014Service" +
+      "ProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups." +
+      "V1alpha1\312\002 Services\\Org\\HuntGroups\\V1alp" +
+      "ha1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\G" +
+      "PBMetadata\352\002#Services::Org::HuntGroups::" +
+      "V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
