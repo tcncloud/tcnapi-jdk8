@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private SchedulingActivity() {
     activityClassification_ = 0;
+    pauseCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -178,6 +180,59 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.SchedulingActivityClassification.UNRECOGNIZED : result;
   }
 
+  public static final int PAUSE_CODES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList pauseCodes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @return A list containing the pauseCodes.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getPauseCodesList() {
+    return pauseCodes_;
+  }
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @return The count of pauseCodes.
+   */
+  public int getPauseCodesCount() {
+    return pauseCodes_.size();
+  }
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @param index The index of the element to return.
+   * @return The pauseCodes at the given index.
+   */
+  public java.lang.String getPauseCodes(int index) {
+    return pauseCodes_.get(index);
+  }
+  /**
+   * <pre>
+   * List of all the pause codes that this activity allows.
+   * </pre>
+   *
+   * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the pauseCodes at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getPauseCodesBytes(int index) {
+    return pauseCodes_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -207,6 +262,9 @@ private static final long serialVersionUID = 0L;
     if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
       output.writeEnum(5, activityClassification_);
     }
+    for (int i = 0; i < pauseCodes_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pauseCodes_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -235,6 +293,14 @@ private static final long serialVersionUID = 0L;
     if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, activityClassification_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < pauseCodes_.size(); i++) {
+        dataSize += computeStringSizeNoTag(pauseCodes_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getPauseCodesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -266,6 +332,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getMemberNonSkillActivity())) return false;
     }
     if (activityClassification_ != other.activityClassification_) return false;
+    if (!getPauseCodesList()
+        .equals(other.getPauseCodesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -293,6 +361,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ACTIVITY_CLASSIFICATION_FIELD_NUMBER;
     hash = (53 * hash) + activityClassification_;
+    if (getPauseCodesCount() > 0) {
+      hash = (37 * hash) + PAUSE_CODES_FIELD_NUMBER;
+      hash = (53 * hash) + getPauseCodesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -441,6 +513,8 @@ private static final long serialVersionUID = 0L;
         memberNonSkillActivityBuilder_ = null;
       }
       activityClassification_ = 0;
+      pauseCodes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -492,6 +566,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.activityClassification_ = activityClassification_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        pauseCodes_.makeImmutable();
+        result.pauseCodes_ = pauseCodes_;
       }
     }
 
@@ -554,6 +632,16 @@ private static final long serialVersionUID = 0L;
       if (other.activityClassification_ != 0) {
         setActivityClassificationValue(other.getActivityClassificationValue());
       }
+      if (!other.pauseCodes_.isEmpty()) {
+        if (pauseCodes_.isEmpty()) {
+          pauseCodes_ = other.pauseCodes_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensurePauseCodesIsMutable();
+          pauseCodes_.addAll(other.pauseCodes_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -609,6 +697,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePauseCodesIsMutable();
+              pauseCodes_.add(s);
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1102,6 +1196,153 @@ private static final long serialVersionUID = 0L;
     public Builder clearActivityClassification() {
       bitField0_ = (bitField0_ & ~0x00000010);
       activityClassification_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList pauseCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensurePauseCodesIsMutable() {
+      if (!pauseCodes_.isModifiable()) {
+        pauseCodes_ = new com.google.protobuf.LazyStringArrayList(pauseCodes_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @return A list containing the pauseCodes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPauseCodesList() {
+      pauseCodes_.makeImmutable();
+      return pauseCodes_;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @return The count of pauseCodes.
+     */
+    public int getPauseCodesCount() {
+      return pauseCodes_.size();
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param index The index of the element to return.
+     * @return The pauseCodes at the given index.
+     */
+    public java.lang.String getPauseCodes(int index) {
+      return pauseCodes_.get(index);
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pauseCodes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPauseCodesBytes(int index) {
+      return pauseCodes_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param index The index to set the value at.
+     * @param value The pauseCodes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPauseCodes(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePauseCodesIsMutable();
+      pauseCodes_.set(index, value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param value The pauseCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPauseCodes(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePauseCodesIsMutable();
+      pauseCodes_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param values The pauseCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPauseCodes(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePauseCodesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, pauseCodes_);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPauseCodes() {
+      pauseCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of all the pause codes that this activity allows.
+     * </pre>
+     *
+     * <code>repeated string pause_codes = 6 [json_name = "pauseCodes"];</code>
+     * @param value The bytes of the pauseCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPauseCodesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensurePauseCodesIsMutable();
+      pauseCodes_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
