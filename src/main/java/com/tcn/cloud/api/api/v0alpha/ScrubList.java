@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private ScrubList() {
     listId_ = "";
     entries_ = java.util.Collections.emptyList();
-    decompositions_ = "";
   }
 
   @java.lang.Override
@@ -121,56 +120,6 @@ private static final long serialVersionUID = 0L;
     return entries_.get(index);
   }
 
-  public static final int LIST_TYPE_FIELD_NUMBER = 4;
-  private long listType_ = 0L;
-  /**
-   * <code>int64 list_type = 4 [json_name = "listType"];</code>
-   * @return The listType.
-   */
-  @java.lang.Override
-  public long getListType() {
-    return listType_;
-  }
-
-  public static final int DECOMPOSITIONS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object decompositions_ = "";
-  /**
-   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-   * @return The decompositions.
-   */
-  @java.lang.Override
-  public java.lang.String getDecompositions() {
-    java.lang.Object ref = decompositions_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      decompositions_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-   * @return The bytes for decompositions.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDecompositionsBytes() {
-    java.lang.Object ref = decompositions_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      decompositions_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -191,12 +140,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < entries_.size(); i++) {
       output.writeMessage(3, entries_.get(i));
     }
-    if (listType_ != 0L) {
-      output.writeInt64(4, listType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decompositions_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, decompositions_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -212,13 +155,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < entries_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, entries_.get(i));
-    }
-    if (listType_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, listType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decompositions_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, decompositions_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -239,10 +175,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getListId())) return false;
     if (!getEntriesList()
         .equals(other.getEntriesList())) return false;
-    if (getListType()
-        != other.getListType()) return false;
-    if (!getDecompositions()
-        .equals(other.getDecompositions())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -260,11 +192,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
       hash = (53 * hash) + getEntriesList().hashCode();
     }
-    hash = (37 * hash) + LIST_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getListType());
-    hash = (37 * hash) + DECOMPOSITIONS_FIELD_NUMBER;
-    hash = (53 * hash) + getDecompositions().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -404,8 +331,6 @@ private static final long serialVersionUID = 0L;
         entriesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      listType_ = 0L;
-      decompositions_ = "";
       return this;
     }
 
@@ -454,12 +379,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.listId_ = listId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.listType_ = listType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.decompositions_ = decompositions_;
       }
     }
 
@@ -538,14 +457,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.getListType() != 0L) {
-        setListType(other.getListType());
-      }
-      if (!other.getDecompositions().isEmpty()) {
-        decompositions_ = other.decompositions_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -590,16 +501,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
-            case 32: {
-              listType_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 32
-            case 42: {
-              decompositions_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -927,110 +828,6 @@ private static final long serialVersionUID = 0L;
         entries_ = null;
       }
       return entriesBuilder_;
-    }
-
-    private long listType_ ;
-    /**
-     * <code>int64 list_type = 4 [json_name = "listType"];</code>
-     * @return The listType.
-     */
-    @java.lang.Override
-    public long getListType() {
-      return listType_;
-    }
-    /**
-     * <code>int64 list_type = 4 [json_name = "listType"];</code>
-     * @param value The listType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setListType(long value) {
-
-      listType_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 list_type = 4 [json_name = "listType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearListType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      listType_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object decompositions_ = "";
-    /**
-     * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-     * @return The decompositions.
-     */
-    public java.lang.String getDecompositions() {
-      java.lang.Object ref = decompositions_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        decompositions_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-     * @return The bytes for decompositions.
-     */
-    public com.google.protobuf.ByteString
-        getDecompositionsBytes() {
-      java.lang.Object ref = decompositions_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        decompositions_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-     * @param value The decompositions to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDecompositions(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      decompositions_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDecompositions() {
-      decompositions_ = getDefaultInstance().getDecompositions();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-     * @param value The bytes for decompositions to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDecompositionsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      decompositions_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

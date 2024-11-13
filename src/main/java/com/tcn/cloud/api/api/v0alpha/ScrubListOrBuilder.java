@@ -42,22 +42,4 @@ public interface ScrubListOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ScrubEntryOrBuilder getEntriesOrBuilder(
       int index);
-
-  /**
-   * <code>int64 list_type = 4 [json_name = "listType"];</code>
-   * @return The listType.
-   */
-  long getListType();
-
-  /**
-   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-   * @return The decompositions.
-   */
-  java.lang.String getDecompositions();
-  /**
-   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
-   * @return The bytes for decompositions.
-   */
-  com.google.protobuf.ByteString
-      getDecompositionsBytes();
 }
