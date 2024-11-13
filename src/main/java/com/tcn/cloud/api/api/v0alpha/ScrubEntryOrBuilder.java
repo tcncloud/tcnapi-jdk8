@@ -8,21 +8,27 @@ public interface ScrubEntryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 country_sid = 2 [json_name = "countrySid"];</code>
+   * <code>int64 country_sid = 2 [json_name = "countrySid", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.country_sid is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1096
    * @return The countrySid.
    */
-  long getCountrySid();
+  @java.lang.Deprecated long getCountrySid();
 
   /**
-   * <code>string list_id = 6 [json_name = "listId"];</code>
+   * <code>string list_id = 6 [json_name = "listId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.list_id is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1097
    * @return The listId.
    */
-  java.lang.String getListId();
+  @java.lang.Deprecated java.lang.String getListId();
   /**
-   * <code>string list_id = 6 [json_name = "listId"];</code>
+   * <code>string list_id = 6 [json_name = "listId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.list_id is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1097
    * @return The bytes for listId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getListIdBytes();
 
   /**
@@ -101,19 +107,23 @@ public interface ScrubEntryOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder();
 
   /**
-   * <code>.google.protobuf.StringValue result = 13 [json_name = "result"];</code>
+   * <code>.google.protobuf.StringValue result = 13 [json_name = "result", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.result is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1105
    * @return Whether the result field is set.
    */
-  boolean hasResult();
+  @java.lang.Deprecated boolean hasResult();
   /**
-   * <code>.google.protobuf.StringValue result = 13 [json_name = "result"];</code>
+   * <code>.google.protobuf.StringValue result = 13 [json_name = "result", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.result is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1105
    * @return The result.
    */
-  com.google.protobuf.StringValue getResult();
+  @java.lang.Deprecated com.google.protobuf.StringValue getResult();
   /**
-   * <code>.google.protobuf.StringValue result = 13 [json_name = "result"];</code>
+   * <code>.google.protobuf.StringValue result = 13 [json_name = "result", deprecated = true];</code>
    */
-  com.google.protobuf.StringValueOrBuilder getResultOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.StringValueOrBuilder getResultOrBuilder();
 
   /**
    * <code>.api.commons.ContentType type = 14 [json_name = "type"];</code>
@@ -142,44 +152,100 @@ public interface ScrubEntryOrBuilder extends
   com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder();
 
   /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn"];</code>
-   * @return Whether the createdOn field is set.
+   * <code>int64 scrub_list_id = 16 [json_name = "scrubListId"];</code>
+   * @return The scrubListId.
    */
-  boolean hasCreatedOn();
-  /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn"];</code>
-   * @return The createdOn.
-   */
-  com.google.protobuf.Timestamp getCreatedOn();
-  /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder();
+  long getScrubListId();
 
   /**
-   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
+   * <code>int64 scrub_list_entry_id = 17 [json_name = "scrubListEntryId"];</code>
+   * @return The scrubListEntryId.
+   */
+  long getScrubListEntryId();
+
+  /**
+   * <code>bool is_wild_card = 18 [json_name = "isWildCard"];</code>
+   * @return The isWildCard.
+   */
+  boolean getIsWildCard();
+
+  /**
+   * <pre>
+   * audit
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.created_on is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1113
+   * @return Whether the createdOn field is set.
+   */
+  @java.lang.Deprecated boolean hasCreatedOn();
+  /**
+   * <pre>
+   * audit
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.created_on is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1113
+   * @return The createdOn.
+   */
+  @java.lang.Deprecated com.google.protobuf.Timestamp getCreatedOn();
+  /**
+   * <pre>
+   * audit
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.created_by is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1114
    * @return Whether the createdBy field is set.
    */
-  boolean hasCreatedBy();
+  @java.lang.Deprecated boolean hasCreatedBy();
   /**
-   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
+   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubEntry.created_by is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1114
    * @return The createdBy.
    */
-  com.google.protobuf.StringValue getCreatedBy();
+  @java.lang.Deprecated com.google.protobuf.StringValue getCreatedBy();
   /**
-   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
+   * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy", deprecated = true];</code>
    */
-  com.google.protobuf.StringValueOrBuilder getCreatedByOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.StringValueOrBuilder getCreatedByOrBuilder();
+
+  /**
+   * <code>.google.protobuf.Timestamp create_time = 202 [json_name = "createTime"];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <code>.google.protobuf.Timestamp create_time = 202 [json_name = "createTime"];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <code>.google.protobuf.Timestamp create_time = 202 [json_name = "createTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 203 [json_name = "updateTime"];</code>
+   * @return Whether the updateTime field is set.
+   */
+  boolean hasUpdateTime();
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 203 [json_name = "updateTime"];</code>
+   * @return The updateTime.
+   */
+  com.google.protobuf.Timestamp getUpdateTime();
+  /**
+   * <code>.google.protobuf.Timestamp update_time = 203 [json_name = "updateTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }

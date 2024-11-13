@@ -45,7 +45,7 @@ public interface ScrubListResOrBuilder extends
   /**
    * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
    * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1072
+   *     See api/v0alpha/compliance.proto;l=1081
    * @return A list containing the invalidEntries.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -53,14 +53,14 @@ public interface ScrubListResOrBuilder extends
   /**
    * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
    * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1072
+   *     See api/v0alpha/compliance.proto;l=1081
    * @return The count of invalidEntries.
    */
   @java.lang.Deprecated int getInvalidEntriesCount();
   /**
    * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
    * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1072
+   *     See api/v0alpha/compliance.proto;l=1081
    * @param index The index of the element to return.
    * @return The invalidEntries at the given index.
    */
@@ -68,7 +68,7 @@ public interface ScrubListResOrBuilder extends
   /**
    * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
    * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1072
+   *     See api/v0alpha/compliance.proto;l=1081
    * @param index The index of the value to return.
    * @return The bytes of the invalidEntries at the given index.
    */
