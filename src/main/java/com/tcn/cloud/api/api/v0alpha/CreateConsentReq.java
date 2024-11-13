@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1377
+   *     See api/v0alpha/compliance.proto;l=1367
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1377
+   *     See api/v0alpha/compliance.proto;l=1367
    * @return The channel.
    */
   @java.lang.Override
@@ -2192,7 +2192,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
      * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-     *     See api/v0alpha/compliance.proto;l=1377
+     *     See api/v0alpha/compliance.proto;l=1367
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
      * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-     *     See api/v0alpha/compliance.proto;l=1377
+     *     See api/v0alpha/compliance.proto;l=1367
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CommType getChannel() {

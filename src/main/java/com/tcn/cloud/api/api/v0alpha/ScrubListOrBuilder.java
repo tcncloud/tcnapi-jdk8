@@ -8,19 +8,15 @@ public interface ScrubListOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string list_id = 2 [json_name = "listId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ScrubList.list_id is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1001
+   * <code>string list_id = 2 [json_name = "listId"];</code>
    * @return The listId.
    */
-  @java.lang.Deprecated java.lang.String getListId();
+  java.lang.String getListId();
   /**
-   * <code>string list_id = 2 [json_name = "listId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ScrubList.list_id is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1001
+   * <code>string list_id = 2 [json_name = "listId"];</code>
    * @return The bytes for listId.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getListIdBytes();
 
   /**
@@ -48,86 +44,20 @@ public interface ScrubListOrBuilder extends
       int index);
 
   /**
-   * <code>int64 scrub_list_id = 5 [json_name = "scrubListId"];</code>
-   * @return The scrubListId.
-   */
-  long getScrubListId();
-
-  /**
-   * <code>string list_name = 6 [json_name = "listName"];</code>
-   * @return The listName.
-   */
-  java.lang.String getListName();
-  /**
-   * <code>string list_name = 6 [json_name = "listName"];</code>
-   * @return The bytes for listName.
-   */
-  com.google.protobuf.ByteString
-      getListNameBytes();
-
-  /**
-   * <code>int64 list_type = 7 [json_name = "listType"];</code>
+   * <code>int64 list_type = 4 [json_name = "listType"];</code>
    * @return The listType.
    */
   long getListType();
 
   /**
-   * <code>string decompositions = 8 [json_name = "decompositions"];</code>
+   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
    * @return The decompositions.
    */
   java.lang.String getDecompositions();
   /**
-   * <code>string decompositions = 8 [json_name = "decompositions"];</code>
+   * <code>string decompositions = 5 [json_name = "decompositions"];</code>
    * @return The bytes for decompositions.
    */
   com.google.protobuf.ByteString
       getDecompositionsBytes();
-
-  /**
-   * <code>bool deleted = 9 [json_name = "deleted"];</code>
-   * @return The deleted.
-   */
-  boolean getDeleted();
-
-  /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 30 [json_name = "createTime"];</code>
-   * @return Whether the createTime field is set.
-   */
-  boolean hasCreateTime();
-  /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 30 [json_name = "createTime"];</code>
-   * @return The createTime.
-   */
-  com.google.protobuf.Timestamp getCreateTime();
-  /**
-   * <pre>
-   * audit
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 30 [json_name = "createTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
-
-  /**
-   * <code>.google.protobuf.Timestamp update_time = 31 [json_name = "updateTime"];</code>
-   * @return Whether the updateTime field is set.
-   */
-  boolean hasUpdateTime();
-  /**
-   * <code>.google.protobuf.Timestamp update_time = 31 [json_name = "updateTime"];</code>
-   * @return The updateTime.
-   */
-  com.google.protobuf.Timestamp getUpdateTime();
-  /**
-   * <code>.google.protobuf.Timestamp update_time = 31 [json_name = "updateTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }

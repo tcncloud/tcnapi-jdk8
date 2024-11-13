@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     contentType_ = 0;
     countryCode_ = "";
     scrubEntryDetails_ = java.util.Collections.emptyList();
+    decompositions_ = "";
   }
 
   @java.lang.Override
@@ -245,6 +246,45 @@ private static final long serialVersionUID = 0L;
     return durable_;
   }
 
+  public static final int DECOMPOSITIONS_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object decompositions_ = "";
+  /**
+   * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  @java.lang.Override
+  public java.lang.String getDecompositions() {
+    java.lang.Object ref = decompositions_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      decompositions_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+   * @return The bytes for decompositions.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDecompositionsBytes() {
+    java.lang.Object ref = decompositions_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      decompositions_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -276,6 +316,9 @@ private static final long serialVersionUID = 0L;
     }
     if (durable_ != false) {
       output.writeBool(14, durable_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decompositions_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, decompositions_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -312,6 +355,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, durable_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decompositions_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, decompositions_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -338,6 +384,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getScrubEntryDetailsList())) return false;
     if (getDurable()
         != other.getDurable()) return false;
+    if (!getDecompositions()
+        .equals(other.getDecompositions())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -366,6 +414,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DURABLE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDurable());
+    hash = (37 * hash) + DECOMPOSITIONS_FIELD_NUMBER;
+    hash = (53 * hash) + getDecompositions().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -510,6 +560,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       durable_ = false;
+      decompositions_ = "";
       return this;
     }
 
@@ -571,6 +622,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.durable_ = durable_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.decompositions_ = decompositions_;
       }
     }
 
@@ -670,6 +724,11 @@ private static final long serialVersionUID = 0L;
       if (other.getDurable() != false) {
         setDurable(other.getDurable());
       }
+      if (!other.getDecompositions().isEmpty()) {
+        decompositions_ = other.decompositions_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -735,6 +794,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 112
+            case 122: {
+              decompositions_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1364,6 +1428,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearDurable() {
       bitField0_ = (bitField0_ & ~0x00000020);
       durable_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object decompositions_ = "";
+    /**
+     * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+     * @return The decompositions.
+     */
+    public java.lang.String getDecompositions() {
+      java.lang.Object ref = decompositions_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        decompositions_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+     * @return The bytes for decompositions.
+     */
+    public com.google.protobuf.ByteString
+        getDecompositionsBytes() {
+      java.lang.Object ref = decompositions_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        decompositions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+     * @param value The decompositions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDecompositions(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      decompositions_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDecompositions() {
+      decompositions_ = getDefaultInstance().getDecompositions();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+     * @param value The bytes for decompositions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDecompositionsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      decompositions_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

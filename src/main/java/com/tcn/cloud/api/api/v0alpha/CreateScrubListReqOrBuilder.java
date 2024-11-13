@@ -112,4 +112,16 @@ public interface CreateScrubListReqOrBuilder extends
    * @return The durable.
    */
   boolean getDurable();
+
+  /**
+   * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  java.lang.String getDecompositions();
+  /**
+   * <code>string decompositions = 15 [json_name = "decompositions"];</code>
+   * @return The bytes for decompositions.
+   */
+  com.google.protobuf.ByteString
+      getDecompositionsBytes();
 }
