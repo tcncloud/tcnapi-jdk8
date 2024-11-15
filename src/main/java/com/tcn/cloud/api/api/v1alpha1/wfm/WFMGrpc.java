@@ -8432,11 +8432,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Returns the published schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -8499,7 +8495,7 @@ public final class WFMGrpc {
      * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
      * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
      * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
-     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Returns the updated schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
      *   - grpc.Internal: error occurs when updating the schedule or its instances.
@@ -8514,7 +8510,7 @@ public final class WFMGrpc {
      * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
+     * Returns the draft schedule without any shift instances.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
@@ -8564,7 +8560,7 @@ public final class WFMGrpc {
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
-     * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
+     * does not return any shift instances on the published schedule.
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -8598,12 +8594,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Does not return any shift instances on the draft schedule.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -11881,11 +11872,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Returns the published schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -11952,7 +11939,7 @@ public final class WFMGrpc {
      * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
      * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
      * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
-     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Returns the updated schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
      *   - grpc.Internal: error occurs when updating the schedule or its instances.
@@ -11968,7 +11955,7 @@ public final class WFMGrpc {
      * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
+     * Returns the draft schedule without any shift instances.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
@@ -12021,7 +12008,7 @@ public final class WFMGrpc {
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
-     * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
+     * does not return any shift instances on the published schedule.
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -12057,12 +12044,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Does not return any shift instances on the draft schedule.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -15311,11 +15293,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Returns the published schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -15378,7 +15356,7 @@ public final class WFMGrpc {
      * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
      * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
      * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
-     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Returns the updated schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
      *   - grpc.Internal: error occurs when updating the schedule or its instances.
@@ -15393,7 +15371,7 @@ public final class WFMGrpc {
      * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
+     * Returns the draft schedule without any shift instances.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
@@ -15443,7 +15421,7 @@ public final class WFMGrpc {
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
-     * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
+     * does not return any shift instances on the published schedule.
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -15477,12 +15455,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Does not return any shift instances on the draft schedule.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.
@@ -18644,11 +18617,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the published schedule for the corresponding &#64;datetime_range for the org sending the request.
      * Will create a published schedule if it does not exist already for the org sending the request.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the published schedule will be returned in the published schedules shift_instances field.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Returns the published schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range, &#64;metric_types are invalid.
      *   - grpc.NotFound: the &#64;node_selector doesn't exist.
@@ -18715,7 +18684,7 @@ public final class WFMGrpc {
      * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
      * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
      * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
-     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Returns the updated schedule without any shift instances.
      * Errors:
      *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
      *   - grpc.Internal: error occurs when updating the schedule or its instances.
@@ -18731,7 +18700,7 @@ public final class WFMGrpc {
      * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
+     * Returns the draft schedule without any shift instances.
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * If &#64;auto_generate_agents is set to true, unassigned agents will automatically be generated to meet the requirements of the shift templates min and max agents.
      * </pre>
@@ -18784,7 +18753,7 @@ public final class WFMGrpc {
      * Overlapping shift instances that aren't locked will be replaced with the instances from the draft schedule.
      * If &#64;ignore_diagnostics_errors is set to true, it will publish the schedule regardless of any diagnostics errors,
      * otherwise it will return those diagnostic errors and not publish the schedule.
-     * &#64;include parameters are used when retrieving the resulting published schedule, and work in the same way as for GetDraftSchedule.
+     * does not return any shift instances on the published schedule.
      * Errors:
      *   - grpc.Invalid: the parameters in the &#64;req are invalid..
      *   - grpc.NotFound: &#64;draft_schedule_sid doesn't exist.
@@ -18820,12 +18789,7 @@ public final class WFMGrpc {
      * <pre>
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
-     * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
-     * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
-     * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
-     * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
-     * if &#64;include_activity is true, any returned scheduling activities will have their member_non_skill_activity field set, otherwise the field will be left nil.
+     * Does not return any shift instances on the draft schedule.
      * Errors:
      *   - grpc.Invalid: the &#64;datetime_range or &#64;draft_schedule_sid are invalid.
      *   - grpc.NotFound: the &#64;node_selector or &#64;draft_schedule_sid doesn't exist.

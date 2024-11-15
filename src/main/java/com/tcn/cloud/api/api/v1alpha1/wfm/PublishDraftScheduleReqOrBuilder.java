@@ -77,10 +77,12 @@ public interface PublishDraftScheduleReqOrBuilder extends
    * Set to true to include shift instances.
    * </pre>
    *
-   * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances"];</code>
+   * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7066
    * @return The includeShiftInstances.
    */
-  boolean getIncludeShiftInstances();
+  @java.lang.Deprecated boolean getIncludeShiftInstances();
 
   /**
    * <pre>
@@ -88,10 +90,12 @@ public interface PublishDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate"];</code>
+   * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7069
    * @return The includeShiftTemplate.
    */
-  boolean getIncludeShiftTemplate();
+  @java.lang.Deprecated boolean getIncludeShiftTemplate();
 
   /**
    * <pre>
@@ -99,10 +103,12 @@ public interface PublishDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments"];</code>
+   * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7072
    * @return The includeShiftSegments.
    */
-  boolean getIncludeShiftSegments();
+  @java.lang.Deprecated boolean getIncludeShiftSegments();
 
   /**
    * <pre>
@@ -110,10 +116,12 @@ public interface PublishDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances and include_shift_segments are also set to true.
    * </pre>
    *
-   * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity"];</code>
+   * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7075
    * @return The includeSchedulingActivity.
    */
-  boolean getIncludeSchedulingActivity();
+  @java.lang.Deprecated boolean getIncludeSchedulingActivity();
 
   /**
    * <pre>
@@ -121,10 +129,12 @@ public interface PublishDraftScheduleReqOrBuilder extends
    * Only effective when include_scheduling_activity, include_shift_segments and include_shift_instances are also set to true.
    * </pre>
    *
-   * <code>bool include_activity = 8 [json_name = "includeActivity"];</code>
+   * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7078
    * @return The includeActivity.
    */
-  boolean getIncludeActivity();
+  @java.lang.Deprecated boolean getIncludeActivity();
 
   /**
    * <pre>

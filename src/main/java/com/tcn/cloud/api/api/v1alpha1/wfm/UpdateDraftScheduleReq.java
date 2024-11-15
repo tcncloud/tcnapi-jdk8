@@ -229,11 +229,13 @@ private static final long serialVersionUID = 0L;
    * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
    * </pre>
    *
-   * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts"];</code>
+   * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6968
    * @return The getUpdatedShifts.
    */
   @java.lang.Override
-  public boolean getGetUpdatedShifts() {
+  @java.lang.Deprecated public boolean getGetUpdatedShifts() {
     return getUpdatedShifts_;
   }
 
@@ -1203,11 +1205,13 @@ private static final long serialVersionUID = 0L;
      * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
      * </pre>
      *
-     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts"];</code>
+     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=6968
      * @return The getUpdatedShifts.
      */
     @java.lang.Override
-    public boolean getGetUpdatedShifts() {
+    @java.lang.Deprecated public boolean getGetUpdatedShifts() {
       return getUpdatedShifts_;
     }
     /**
@@ -1215,11 +1219,13 @@ private static final long serialVersionUID = 0L;
      * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
      * </pre>
      *
-     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts"];</code>
+     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=6968
      * @param value The getUpdatedShifts to set.
      * @return This builder for chaining.
      */
-    public Builder setGetUpdatedShifts(boolean value) {
+    @java.lang.Deprecated public Builder setGetUpdatedShifts(boolean value) {
 
       getUpdatedShifts_ = value;
       bitField0_ |= 0x00000040;
@@ -1231,10 +1237,12 @@ private static final long serialVersionUID = 0L;
      * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
      * </pre>
      *
-     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts"];</code>
+     * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=6968
      * @return This builder for chaining.
      */
-    public Builder clearGetUpdatedShifts() {
+    @java.lang.Deprecated public Builder clearGetUpdatedShifts() {
       bitField0_ = (bitField0_ & ~0x00000040);
       getUpdatedShifts_ = false;
       onChanged();
