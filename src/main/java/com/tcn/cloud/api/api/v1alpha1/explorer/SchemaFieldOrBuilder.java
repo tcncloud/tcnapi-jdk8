@@ -53,4 +53,16 @@ public interface SchemaFieldOrBuilder extends
    */
   com.google.protobuf.ByteString
       getColumnDescriptionBytes();
+
+  /**
+   * <code>bool is_time_filter_column = 6 [json_name = "isTimeFilterColumn"];</code>
+   * @return The isTimeFilterColumn.
+   */
+  boolean getIsTimeFilterColumn();
+
+  /**
+   * <code>bool is_default_time_filter_column = 7 [json_name = "isDefaultTimeFilterColumn"];</code>
+   * @return The isDefaultTimeFilterColumn.
+   */
+  boolean getIsDefaultTimeFilterColumn();
 }
