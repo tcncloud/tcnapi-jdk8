@@ -66,16 +66,4 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getDataOrThrow(
       java.lang.String key);
-
-  /**
-   * <code>string session_id = 3 [json_name = "sessionId"];</code>
-   * @return The sessionId.
-   */
-  java.lang.String getSessionId();
-  /**
-   * <code>string session_id = 3 [json_name = "sessionId"];</code>
-   * @return The bytes for sessionId.
-   */
-  com.google.protobuf.ByteString
-      getSessionIdBytes();
 }

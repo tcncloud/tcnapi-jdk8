@@ -130,24 +130,4 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * @return The requestOrigin.
    */
   com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin();
-
-  /**
-   * <pre>
-   * session_id is an optional field, only specific Portals will check the session before processing.
-   * </pre>
-   *
-   * <code>string session_id = 7 [json_name = "sessionId"];</code>
-   * @return The sessionId.
-   */
-  java.lang.String getSessionId();
-  /**
-   * <pre>
-   * session_id is an optional field, only specific Portals will check the session before processing.
-   * </pre>
-   *
-   * <code>string session_id = 7 [json_name = "sessionId"];</code>
-   * @return The bytes for sessionId.
-   */
-  com.google.protobuf.ByteString
-      getSessionIdBytes();
 }
