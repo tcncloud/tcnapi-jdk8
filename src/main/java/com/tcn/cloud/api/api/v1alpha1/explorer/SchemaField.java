@@ -163,28 +163,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IS_TIME_FILTER_COLUMN_FIELD_NUMBER = 6;
-  private boolean isTimeFilterColumn_ = false;
-  /**
-   * <code>bool is_time_filter_column = 6 [json_name = "isTimeFilterColumn"];</code>
-   * @return The isTimeFilterColumn.
-   */
-  @java.lang.Override
-  public boolean getIsTimeFilterColumn() {
-    return isTimeFilterColumn_;
-  }
-
-  public static final int IS_DEFAULT_TIME_FILTER_COLUMN_FIELD_NUMBER = 7;
-  private boolean isDefaultTimeFilterColumn_ = false;
-  /**
-   * <code>bool is_default_time_filter_column = 7 [json_name = "isDefaultTimeFilterColumn"];</code>
-   * @return The isDefaultTimeFilterColumn.
-   */
-  @java.lang.Override
-  public boolean getIsDefaultTimeFilterColumn() {
-    return isDefaultTimeFilterColumn_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -214,12 +192,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, columnDescription_);
     }
-    if (isTimeFilterColumn_ != false) {
-      output.writeBool(6, isTimeFilterColumn_);
-    }
-    if (isDefaultTimeFilterColumn_ != false) {
-      output.writeBool(7, isDefaultTimeFilterColumn_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -247,14 +219,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, columnDescription_);
     }
-    if (isTimeFilterColumn_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, isTimeFilterColumn_);
-    }
-    if (isDefaultTimeFilterColumn_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(7, isDefaultTimeFilterColumn_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -279,10 +243,6 @@ private static final long serialVersionUID = 0L;
         != other.getIsLowCardinality()) return false;
     if (!getColumnDescription()
         .equals(other.getColumnDescription())) return false;
-    if (getIsTimeFilterColumn()
-        != other.getIsTimeFilterColumn()) return false;
-    if (getIsDefaultTimeFilterColumn()
-        != other.getIsDefaultTimeFilterColumn()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -306,12 +266,6 @@ private static final long serialVersionUID = 0L;
         getIsLowCardinality());
     hash = (37 * hash) + COLUMN_DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getColumnDescription().hashCode();
-    hash = (37 * hash) + IS_TIME_FILTER_COLUMN_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsTimeFilterColumn());
-    hash = (37 * hash) + IS_DEFAULT_TIME_FILTER_COLUMN_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsDefaultTimeFilterColumn());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -452,8 +406,6 @@ private static final long serialVersionUID = 0L;
       isPrimaryKey_ = false;
       isLowCardinality_ = false;
       columnDescription_ = "";
-      isTimeFilterColumn_ = false;
-      isDefaultTimeFilterColumn_ = false;
       return this;
     }
 
@@ -501,12 +453,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.columnDescription_ = columnDescription_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.isTimeFilterColumn_ = isTimeFilterColumn_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.isDefaultTimeFilterColumn_ = isDefaultTimeFilterColumn_;
       }
     }
 
@@ -573,12 +519,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (other.getIsTimeFilterColumn() != false) {
-        setIsTimeFilterColumn(other.getIsTimeFilterColumn());
-      }
-      if (other.getIsDefaultTimeFilterColumn() != false) {
-        setIsDefaultTimeFilterColumn(other.getIsDefaultTimeFilterColumn());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -630,16 +570,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 48: {
-              isTimeFilterColumn_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 56: {
-              isDefaultTimeFilterColumn_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -914,70 +844,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       columnDescription_ = value;
       bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private boolean isTimeFilterColumn_ ;
-    /**
-     * <code>bool is_time_filter_column = 6 [json_name = "isTimeFilterColumn"];</code>
-     * @return The isTimeFilterColumn.
-     */
-    @java.lang.Override
-    public boolean getIsTimeFilterColumn() {
-      return isTimeFilterColumn_;
-    }
-    /**
-     * <code>bool is_time_filter_column = 6 [json_name = "isTimeFilterColumn"];</code>
-     * @param value The isTimeFilterColumn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIsTimeFilterColumn(boolean value) {
-
-      isTimeFilterColumn_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool is_time_filter_column = 6 [json_name = "isTimeFilterColumn"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIsTimeFilterColumn() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      isTimeFilterColumn_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean isDefaultTimeFilterColumn_ ;
-    /**
-     * <code>bool is_default_time_filter_column = 7 [json_name = "isDefaultTimeFilterColumn"];</code>
-     * @return The isDefaultTimeFilterColumn.
-     */
-    @java.lang.Override
-    public boolean getIsDefaultTimeFilterColumn() {
-      return isDefaultTimeFilterColumn_;
-    }
-    /**
-     * <code>bool is_default_time_filter_column = 7 [json_name = "isDefaultTimeFilterColumn"];</code>
-     * @param value The isDefaultTimeFilterColumn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIsDefaultTimeFilterColumn(boolean value) {
-
-      isDefaultTimeFilterColumn_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool is_default_time_filter_column = 7 [json_name = "isDefaultTimeFilterColumn"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIsDefaultTimeFilterColumn() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      isDefaultTimeFilterColumn_ = false;
       onChanged();
       return this;
     }
