@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     portalLinkId_ = "";
     portalId_ = "";
     requestOrigin_ = 0;
+    sessionId_ = "";
   }
 
   @java.lang.Override
@@ -288,6 +289,53 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestOrigin.UNRECOGNIZED : result;
   }
 
+  public static final int SESSION_ID_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sessionId_ = "";
+  /**
+   * <pre>
+   * session_id is an optional field, only specific Portals will check the session before processing.
+   * </pre>
+   *
+   * <code>string session_id = 7 [json_name = "sessionId"];</code>
+   * @return The sessionId.
+   */
+  @java.lang.Override
+  public java.lang.String getSessionId() {
+    java.lang.Object ref = sessionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sessionId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * session_id is an optional field, only specific Portals will check the session before processing.
+   * </pre>
+   *
+   * <code>string session_id = 7 [json_name = "sessionId"];</code>
+   * @return The bytes for sessionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSessionIdBytes() {
+    java.lang.Object ref = sessionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sessionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -322,6 +370,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         5);
     if (requestOrigin_ != com.tcn.cloud.api.api.commons.integrations.RequestOrigin.REQUEST_ORIGIN_UNKNOWN.getNumber()) {
       output.writeEnum(6, requestOrigin_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sessionId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -360,6 +411,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, requestOrigin_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sessionId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -386,6 +440,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (!internalGetParams().equals(
         other.internalGetParams())) return false;
     if (requestOrigin_ != other.requestOrigin_) return false;
+    if (!getSessionId()
+        .equals(other.getSessionId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -411,6 +467,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     }
     hash = (37 * hash) + REQUEST_ORIGIN_FIELD_NUMBER;
     hash = (53 * hash) + requestOrigin_;
+    hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSessionId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -570,6 +628,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       choice_ = 0;
       internalGetMutableParams().clear();
       requestOrigin_ = 0;
+      sessionId_ = "";
       return this;
     }
 
@@ -621,6 +680,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.requestOrigin_ = requestOrigin_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.sessionId_ = sessionId_;
       }
     }
 
@@ -690,6 +752,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (other.requestOrigin_ != 0) {
         setRequestOriginValue(other.getRequestOriginValue());
       }
+      if (!other.getSessionId().isEmpty()) {
+        sessionId_ = other.sessionId_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -750,6 +817,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              sessionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1235,6 +1307,98 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     public Builder clearRequestOrigin() {
       bitField0_ = (bitField0_ & ~0x00000020);
       requestOrigin_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sessionId_ = "";
+    /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
+     * <code>string session_id = 7 [json_name = "sessionId"];</code>
+     * @return The sessionId.
+     */
+    public java.lang.String getSessionId() {
+      java.lang.Object ref = sessionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
+     * <code>string session_id = 7 [json_name = "sessionId"];</code>
+     * @return The bytes for sessionId.
+     */
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      java.lang.Object ref = sessionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
+     * <code>string session_id = 7 [json_name = "sessionId"];</code>
+     * @param value The sessionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      sessionId_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
+     * <code>string session_id = 7 [json_name = "sessionId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSessionId() {
+      sessionId_ = getDefaultInstance().getSessionId();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
+     * <code>string session_id = 7 [json_name = "sessionId"];</code>
+     * @param value The bytes for sessionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sessionId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
