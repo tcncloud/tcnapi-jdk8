@@ -159,7 +159,7 @@ public final class EventTypesProto {
       "_MANAGER_DELETE_EVENT\020\267\t\022-\n(EVENT_TYPE_C" +
       "ONTACT_MANAGER_EXPUNGE_EVENT\020\270\t\022\034\n\027EVENT" +
       "_TYPE_ORGANIZATION\020\224\n\022=\n8EVENT_TYPE_ORGA" +
-      "NIZATION_USER_ACCESS_TOKEN_REMINDER_EVEN" +
+      "NIZATION_USER_ACCESS_TOKEN_EXPIRING_EVEN" +
       "T\020\225\nB\234\001\n#com.tcn.cloud.api.api.commons.a" +
       "uditB\017EventTypesProtoP\001\242\002\003ACA\252\002\021Api.Comm" +
       "ons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Comm" +
