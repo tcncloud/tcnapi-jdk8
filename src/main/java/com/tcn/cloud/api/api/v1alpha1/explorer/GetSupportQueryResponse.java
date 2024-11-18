@@ -4,18 +4,19 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
- * Protobuf type {@code api.v1alpha1.explorer.GetInsightSupportQueryResponse}
+ * Protobuf type {@code api.v1alpha1.explorer.GetSupportQueryResponse}
  */
-public final class GetInsightSupportQueryResponse extends
+public final class GetSupportQueryResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.explorer.GetInsightSupportQueryResponse)
-    GetInsightSupportQueryResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.explorer.GetSupportQueryResponse)
+    GetSupportQueryResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetInsightSupportQueryResponse.newBuilder() to construct.
-  private GetInsightSupportQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetSupportQueryResponse.newBuilder() to construct.
+  private GetSupportQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetInsightSupportQueryResponse() {
+  private GetSupportQueryResponse() {
+    resultUrl_ = "";
     prql_ = "";
     sql_ = "";
     explain_ = "";
@@ -25,23 +26,85 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetInsightSupportQueryResponse();
+    return new GetSupportQueryResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.Builder.class);
   }
 
-  public static final int PRQL_FIELD_NUMBER = 1;
+  public static final int RESULT_URL_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resultUrl_ = "";
+  /**
+   * <pre>
+   * result_url is the URL to the result of the query.
+   * </pre>
+   *
+   * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+   * @return The resultUrl.
+   */
+  @java.lang.Override
+  public java.lang.String getResultUrl() {
+    java.lang.Object ref = resultUrl_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resultUrl_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * result_url is the URL to the result of the query.
+   * </pre>
+   *
+   * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+   * @return The bytes for resultUrl.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResultUrlBytes() {
+    java.lang.Object ref = resultUrl_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resultUrl_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RESULT_SIZE_BYTES_FIELD_NUMBER = 2;
+  private long resultSizeBytes_ = 0L;
+  /**
+   * <pre>
+   * result_size_bytes is the size of the result in bytes.
+   * </pre>
+   *
+   * <code>int64 result_size_bytes = 2 [json_name = "resultSizeBytes"];</code>
+   * @return The resultSizeBytes.
+   */
+  @java.lang.Override
+  public long getResultSizeBytes() {
+    return resultSizeBytes_;
+  }
+
+  public static final int PRQL_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object prql_ = "";
   /**
@@ -49,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * the prql query string
    * </pre>
    *
-   * <code>string prql = 1 [json_name = "prql"];</code>
+   * <code>string prql = 3 [json_name = "prql"];</code>
    * @return The prql.
    */
   @java.lang.Override
@@ -70,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * the prql query string
    * </pre>
    *
-   * <code>string prql = 1 [json_name = "prql"];</code>
+   * <code>string prql = 3 [json_name = "prql"];</code>
    * @return The bytes for prql.
    */
   @java.lang.Override
@@ -88,7 +151,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SQL_FIELD_NUMBER = 2;
+  public static final int SQL_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object sql_ = "";
   /**
@@ -96,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * the sql query string
    * </pre>
    *
-   * <code>string sql = 2 [json_name = "sql"];</code>
+   * <code>string sql = 4 [json_name = "sql"];</code>
    * @return The sql.
    */
   @java.lang.Override
@@ -117,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * the sql query string
    * </pre>
    *
-   * <code>string sql = 2 [json_name = "sql"];</code>
+   * <code>string sql = 4 [json_name = "sql"];</code>
    * @return The bytes for sql.
    */
   @java.lang.Override
@@ -135,7 +198,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EXPLAIN_FIELD_NUMBER = 3;
+  public static final int EXPLAIN_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object explain_ = "";
   /**
@@ -143,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * the sql explain string
    * </pre>
    *
-   * <code>string explain = 3 [json_name = "explain"];</code>
+   * <code>string explain = 5 [json_name = "explain"];</code>
    * @return The explain.
    */
   @java.lang.Override
@@ -164,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * the sql explain string
    * </pre>
    *
-   * <code>string explain = 3 [json_name = "explain"];</code>
+   * <code>string explain = 5 [json_name = "explain"];</code>
    * @return The bytes for explain.
    */
   @java.lang.Override
@@ -196,14 +259,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultUrl_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resultUrl_);
+    }
+    if (resultSizeBytes_ != 0L) {
+      output.writeInt64(2, resultSizeBytes_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prql_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prql_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, prql_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sql_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sql_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sql_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, explain_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, explain_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -214,14 +283,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultUrl_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resultUrl_);
+    }
+    if (resultSizeBytes_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, resultSizeBytes_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prql_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prql_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, prql_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sql_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sql_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sql_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, explain_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, explain_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -233,11 +309,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse other = (com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse other = (com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse) obj;
 
+    if (!getResultUrl()
+        .equals(other.getResultUrl())) return false;
+    if (getResultSizeBytes()
+        != other.getResultSizeBytes()) return false;
     if (!getPrql()
         .equals(other.getPrql())) return false;
     if (!getSql()
@@ -255,6 +335,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + RESULT_URL_FIELD_NUMBER;
+    hash = (53 * hash) + getResultUrl().hashCode();
+    hash = (37 * hash) + RESULT_SIZE_BYTES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getResultSizeBytes());
     hash = (37 * hash) + PRQL_FIELD_NUMBER;
     hash = (53 * hash) + getPrql().hashCode();
     hash = (37 * hash) + SQL_FIELD_NUMBER;
@@ -266,44 +351,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -311,26 +396,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -343,7 +428,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -359,26 +444,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.explorer.GetInsightSupportQueryResponse}
+   * Protobuf type {@code api.v1alpha1.explorer.GetSupportQueryResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.explorer.GetInsightSupportQueryResponse)
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.explorer.GetSupportQueryResponse)
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.newBuilder()
     private Builder() {
 
     }
@@ -392,6 +477,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      resultUrl_ = "";
+      resultSizeBytes_ = 0L;
       prql_ = "";
       sql_ = "";
       explain_ = "";
@@ -401,17 +488,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -419,22 +506,28 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.prql_ = prql_;
+        result.resultUrl_ = resultUrl_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.sql_ = sql_;
+        result.resultSizeBytes_ = resultSizeBytes_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.prql_ = prql_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.sql_ = sql_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.explain_ = explain_;
       }
     }
@@ -473,29 +566,37 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.getDefaultInstance()) return this;
+      if (!other.getResultUrl().isEmpty()) {
+        resultUrl_ = other.resultUrl_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.getResultSizeBytes() != 0L) {
+        setResultSizeBytes(other.getResultSizeBytes());
+      }
       if (!other.getPrql().isEmpty()) {
         prql_ = other.prql_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getSql().isEmpty()) {
         sql_ = other.sql_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getExplain().isEmpty()) {
         explain_ = other.explain_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -525,20 +626,30 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              prql_ = input.readStringRequireUtf8();
+              resultUrl_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              sql_ = input.readStringRequireUtf8();
+            case 16: {
+              resultSizeBytes_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
-              explain_ = input.readStringRequireUtf8();
+              prql_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              sql_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              explain_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -556,13 +667,149 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object resultUrl_ = "";
+    /**
+     * <pre>
+     * result_url is the URL to the result of the query.
+     * </pre>
+     *
+     * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+     * @return The resultUrl.
+     */
+    public java.lang.String getResultUrl() {
+      java.lang.Object ref = resultUrl_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resultUrl_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * result_url is the URL to the result of the query.
+     * </pre>
+     *
+     * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+     * @return The bytes for resultUrl.
+     */
+    public com.google.protobuf.ByteString
+        getResultUrlBytes() {
+      java.lang.Object ref = resultUrl_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resultUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * result_url is the URL to the result of the query.
+     * </pre>
+     *
+     * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+     * @param value The resultUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResultUrl(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resultUrl_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result_url is the URL to the result of the query.
+     * </pre>
+     *
+     * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResultUrl() {
+      resultUrl_ = getDefaultInstance().getResultUrl();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result_url is the URL to the result of the query.
+     * </pre>
+     *
+     * <code>string result_url = 1 [json_name = "resultUrl"];</code>
+     * @param value The bytes for resultUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResultUrlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resultUrl_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long resultSizeBytes_ ;
+    /**
+     * <pre>
+     * result_size_bytes is the size of the result in bytes.
+     * </pre>
+     *
+     * <code>int64 result_size_bytes = 2 [json_name = "resultSizeBytes"];</code>
+     * @return The resultSizeBytes.
+     */
+    @java.lang.Override
+    public long getResultSizeBytes() {
+      return resultSizeBytes_;
+    }
+    /**
+     * <pre>
+     * result_size_bytes is the size of the result in bytes.
+     * </pre>
+     *
+     * <code>int64 result_size_bytes = 2 [json_name = "resultSizeBytes"];</code>
+     * @param value The resultSizeBytes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResultSizeBytes(long value) {
+
+      resultSizeBytes_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result_size_bytes is the size of the result in bytes.
+     * </pre>
+     *
+     * <code>int64 result_size_bytes = 2 [json_name = "resultSizeBytes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResultSizeBytes() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      resultSizeBytes_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object prql_ = "";
     /**
      * <pre>
      * the prql query string
      * </pre>
      *
-     * <code>string prql = 1 [json_name = "prql"];</code>
+     * <code>string prql = 3 [json_name = "prql"];</code>
      * @return The prql.
      */
     public java.lang.String getPrql() {
@@ -582,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * the prql query string
      * </pre>
      *
-     * <code>string prql = 1 [json_name = "prql"];</code>
+     * <code>string prql = 3 [json_name = "prql"];</code>
      * @return The bytes for prql.
      */
     public com.google.protobuf.ByteString
@@ -603,7 +850,7 @@ private static final long serialVersionUID = 0L;
      * the prql query string
      * </pre>
      *
-     * <code>string prql = 1 [json_name = "prql"];</code>
+     * <code>string prql = 3 [json_name = "prql"];</code>
      * @param value The prql to set.
      * @return This builder for chaining.
      */
@@ -611,7 +858,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       prql_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -620,12 +867,12 @@ private static final long serialVersionUID = 0L;
      * the prql query string
      * </pre>
      *
-     * <code>string prql = 1 [json_name = "prql"];</code>
+     * <code>string prql = 3 [json_name = "prql"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrql() {
       prql_ = getDefaultInstance().getPrql();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -634,7 +881,7 @@ private static final long serialVersionUID = 0L;
      * the prql query string
      * </pre>
      *
-     * <code>string prql = 1 [json_name = "prql"];</code>
+     * <code>string prql = 3 [json_name = "prql"];</code>
      * @param value The bytes for prql to set.
      * @return This builder for chaining.
      */
@@ -643,7 +890,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       prql_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -654,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * the sql query string
      * </pre>
      *
-     * <code>string sql = 2 [json_name = "sql"];</code>
+     * <code>string sql = 4 [json_name = "sql"];</code>
      * @return The sql.
      */
     public java.lang.String getSql() {
@@ -674,7 +921,7 @@ private static final long serialVersionUID = 0L;
      * the sql query string
      * </pre>
      *
-     * <code>string sql = 2 [json_name = "sql"];</code>
+     * <code>string sql = 4 [json_name = "sql"];</code>
      * @return The bytes for sql.
      */
     public com.google.protobuf.ByteString
@@ -695,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * the sql query string
      * </pre>
      *
-     * <code>string sql = 2 [json_name = "sql"];</code>
+     * <code>string sql = 4 [json_name = "sql"];</code>
      * @param value The sql to set.
      * @return This builder for chaining.
      */
@@ -703,7 +950,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       sql_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -712,12 +959,12 @@ private static final long serialVersionUID = 0L;
      * the sql query string
      * </pre>
      *
-     * <code>string sql = 2 [json_name = "sql"];</code>
+     * <code>string sql = 4 [json_name = "sql"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSql() {
       sql_ = getDefaultInstance().getSql();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -726,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * the sql query string
      * </pre>
      *
-     * <code>string sql = 2 [json_name = "sql"];</code>
+     * <code>string sql = 4 [json_name = "sql"];</code>
      * @param value The bytes for sql to set.
      * @return This builder for chaining.
      */
@@ -735,7 +982,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       sql_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -746,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * the sql explain string
      * </pre>
      *
-     * <code>string explain = 3 [json_name = "explain"];</code>
+     * <code>string explain = 5 [json_name = "explain"];</code>
      * @return The explain.
      */
     public java.lang.String getExplain() {
@@ -766,7 +1013,7 @@ private static final long serialVersionUID = 0L;
      * the sql explain string
      * </pre>
      *
-     * <code>string explain = 3 [json_name = "explain"];</code>
+     * <code>string explain = 5 [json_name = "explain"];</code>
      * @return The bytes for explain.
      */
     public com.google.protobuf.ByteString
@@ -787,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * the sql explain string
      * </pre>
      *
-     * <code>string explain = 3 [json_name = "explain"];</code>
+     * <code>string explain = 5 [json_name = "explain"];</code>
      * @param value The explain to set.
      * @return This builder for chaining.
      */
@@ -795,7 +1042,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       explain_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -804,12 +1051,12 @@ private static final long serialVersionUID = 0L;
      * the sql explain string
      * </pre>
      *
-     * <code>string explain = 3 [json_name = "explain"];</code>
+     * <code>string explain = 5 [json_name = "explain"];</code>
      * @return This builder for chaining.
      */
     public Builder clearExplain() {
       explain_ = getDefaultInstance().getExplain();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -818,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * the sql explain string
      * </pre>
      *
-     * <code>string explain = 3 [json_name = "explain"];</code>
+     * <code>string explain = 5 [json_name = "explain"];</code>
      * @param value The bytes for explain to set.
      * @return This builder for chaining.
      */
@@ -827,7 +1074,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       explain_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -844,23 +1091,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.explorer.GetInsightSupportQueryResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.explorer.GetSupportQueryResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.explorer.GetInsightSupportQueryResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.explorer.GetSupportQueryResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetInsightSupportQueryResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetInsightSupportQueryResponse>() {
+  private static final com.google.protobuf.Parser<GetSupportQueryResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetSupportQueryResponse>() {
     @java.lang.Override
-    public GetInsightSupportQueryResponse parsePartialFrom(
+    public GetSupportQueryResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -879,17 +1126,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetInsightSupportQueryResponse> parser() {
+  public static com.google.protobuf.Parser<GetSupportQueryResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetInsightSupportQueryResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetSupportQueryResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

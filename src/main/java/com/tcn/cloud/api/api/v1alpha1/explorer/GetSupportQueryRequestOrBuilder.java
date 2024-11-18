@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
-public interface GetInsightSupportQueryRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.GetInsightSupportQueryRequest)
+public interface GetSupportQueryRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.GetSupportQueryRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -288,5 +288,5 @@ public interface GetInsightSupportQueryRequestOrBuilder extends
   com.google.protobuf.ByteString
       getCommentBytes();
 
-  com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest.QueryCase getQueryCase();
+  com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryRequest.QueryCase getQueryCase();
 }
