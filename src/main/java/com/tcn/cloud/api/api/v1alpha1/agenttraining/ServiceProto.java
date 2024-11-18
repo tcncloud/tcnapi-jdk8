@@ -27,69 +27,69 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\345\021\n\024AgentTrainingSe" +
-      "rvice\022\376\001\n\031CreateLearningOpportunity\022<.ap" +
+      "pi/annotations.proto2\321\021\n\024AgentTrainingSe" +
+      "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
       "aining.CreateLearningOpportunityResponse" +
-      "\"d\272\270\221\002\n\n\003\010\304\014\n\003\010\364\003\202\323\344\223\002O\"J/api/v1alpha1/a" +
-      "genttraining/agenttrainingservice/create" +
-      "learningopportunity:\001*\022\376\001\n\031ListLearningO" +
-      "pportunities\022<.api.v1alpha1.agenttrainin" +
-      "g.ListLearningOpportunitiesRequest\032=.api" +
-      ".v1alpha1.agenttraining.ListLearningOppo" +
-      "rtunitiesResponse\"d\272\270\221\002\n\n\003\010\304\014\n\003\010\364\003\202\323\344\223\002O" +
-      "\"J/api/v1alpha1/agenttraining/agenttrain" +
-      "ingservice/listlearningopportunities:\001*\022" +
-      "\215\002\n\036ListAgentLearningOpportunities\022A.api" +
-      ".v1alpha1.agenttraining.ListAgentLearnin" +
-      "gOpportunitiesRequest\032B.api.v1alpha1.age" +
-      "nttraining.ListAgentLearningOpportunitie" +
-      "sResponse\"d\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002T\"O/api/v1alph" +
-      "a1/agenttraining/agenttrainingservice/li" +
-      "stagentlearningopportunities:\001*\022\225\002\n Comp" +
-      "leteAgentLearningOpportunity\022C.api.v1alp" +
-      "ha1.agenttraining.CompleteAgentLearningO" +
-      "pportunityRequest\032D.api.v1alpha1.agenttr" +
-      "aining.CompleteAgentLearningOpportunityR" +
-      "esponse\"f\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002V\"Q/api/v1alpha1" +
-      "/agenttraining/agenttrainingservice/comp" +
-      "leteagentlearningopportunity:\001*\022\315\001\n\016List" +
-      "Dashboards\0221.api.v1alpha1.agenttraining." +
-      "ListDashboardsRequest\0322.api.v1alpha1.age" +
-      "nttraining.ListDashboardsResponse\"T\272\270\221\002\005" +
-      "\n\003\010\324\002\202\323\344\223\002D\"?/api/v1alpha1/agenttraining" +
-      "/agenttrainingservice/listdashboards:\001*\022" +
-      "\340\001\n\025ListManagerDashboards\0221.api.v1alpha1" +
-      ".agenttraining.ListDashboardsRequest\0322.a" +
-      "pi.v1alpha1.agenttraining.ListDashboards" +
-      "Response\"`\272\270\221\002\n\n\003\010\300\014\n\003\010\301\014\202\323\344\223\002K\"F/api/v1" +
-      "alpha1/agenttraining/agenttrainingservic" +
-      "e/listmanagerdashboards:\001*\022\376\001\n\031UpdateLea" +
-      "rningOpportunity\022<.api.v1alpha1.agenttra" +
-      "ining.UpdateLearningOpportunityRequest\032=" +
-      ".api.v1alpha1.agenttraining.UpdateLearni" +
-      "ngOpportunityResponse\"d\272\270\221\002\n\n\003\010\304\014\n\003\010\364\003\202\323" +
-      "\344\223\002O\"J/api/v1alpha1/agenttraining/agentt" +
-      "rainingservice/updatelearningopportunity" +
-      ":\001*\022\376\001\n\031DeleteLearningOpportunity\022<.api." +
-      "v1alpha1.agenttraining.DeleteLearningOpp" +
-      "ortunityRequest\032=.api.v1alpha1.agenttrai" +
-      "ning.DeleteLearningOpportunityResponse\"d" +
-      "\272\270\221\002\n\n\003\010\304\014\n\003\010\364\003\202\323\344\223\002O\"J/api/v1alpha1/age" +
-      "nttraining/agenttrainingservice/deletele" +
-      "arningopportunity:\001*\022\355\001\n\026GetLearningOppo" +
-      "rtunity\0229.api.v1alpha1.agenttraining.Get" +
-      "LearningOpportunityRequest\032:.api.v1alpha" +
-      "1.agenttraining.GetLearningOpportunityRe" +
-      "sponse\"\\\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002L\"G/api/v1alpha1/" +
-      "agenttraining/agenttrainingservice/getle" +
-      "arningopportunity:\001*B\306\001\n,com.tcn.cloud.a" +
-      "pi.api.v1alpha1.agenttrainingB\014ServicePr" +
-      "otoP\001\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraining" +
-      "\312\002\032Api\\V1alpha1\\Agenttraining\342\002&Api\\V1al" +
-      "pha1\\Agenttraining\\GPBMetadata\352\002\034Api::V1" +
-      "alpha1::Agenttrainingb\006proto3"
+      "\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1alpha1/agentt" +
+      "raining/agenttrainingservice/createlearn" +
+      "ingopportunity:\001*\022\371\001\n\031ListLearningOpport" +
+      "unities\022<.api.v1alpha1.agenttraining.Lis" +
+      "tLearningOpportunitiesRequest\032=.api.v1al" +
+      "pha1.agenttraining.ListLearningOpportuni" +
+      "tiesResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1a" +
+      "lpha1/agenttraining/agenttrainingservice" +
+      "/listlearningopportunities:\001*\022\215\002\n\036ListAg" +
+      "entLearningOpportunities\022A.api.v1alpha1." +
+      "agenttraining.ListAgentLearningOpportuni" +
+      "tiesRequest\032B.api.v1alpha1.agenttraining" +
+      ".ListAgentLearningOpportunitiesResponse\"" +
+      "d\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002T\"O/api/v1alpha1/agenttr" +
+      "aining/agenttrainingservice/listagentlea" +
+      "rningopportunities:\001*\022\225\002\n CompleteAgentL" +
+      "earningOpportunity\022C.api.v1alpha1.agentt" +
+      "raining.CompleteAgentLearningOpportunity" +
+      "Request\032D.api.v1alpha1.agenttraining.Com" +
+      "pleteAgentLearningOpportunityResponse\"f\272" +
+      "\270\221\002\005\n\003\010\324\002\202\323\344\223\002V\"Q/api/v1alpha1/agenttrai" +
+      "ning/agenttrainingservice/completeagentl" +
+      "earningopportunity:\001*\022\315\001\n\016ListDashboards" +
+      "\0221.api.v1alpha1.agenttraining.ListDashbo" +
+      "ardsRequest\0322.api.v1alpha1.agenttraining" +
+      ".ListDashboardsResponse\"T\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002" +
+      "D\"?/api/v1alpha1/agenttraining/agenttrai" +
+      "ningservice/listdashboards:\001*\022\340\001\n\025ListMa" +
+      "nagerDashboards\0221.api.v1alpha1.agenttrai" +
+      "ning.ListDashboardsRequest\0322.api.v1alpha" +
+      "1.agenttraining.ListDashboardsResponse\"`" +
+      "\272\270\221\002\n\n\003\010\300\014\n\003\010\301\014\202\323\344\223\002K\"F/api/v1alpha1/age" +
+      "nttraining/agenttrainingservice/listmana" +
+      "gerdashboards:\001*\022\371\001\n\031UpdateLearningOppor" +
+      "tunity\022<.api.v1alpha1.agenttraining.Upda" +
+      "teLearningOpportunityRequest\032=.api.v1alp" +
+      "ha1.agenttraining.UpdateLearningOpportun" +
+      "ityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1al" +
+      "pha1/agenttraining/agenttrainingservice/" +
+      "updatelearningopportunity:\001*\022\371\001\n\031DeleteL" +
+      "earningOpportunity\022<.api.v1alpha1.agentt" +
+      "raining.DeleteLearningOpportunityRequest" +
+      "\032=.api.v1alpha1.agenttraining.DeleteLear" +
+      "ningOpportunityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002" +
+      "O\"J/api/v1alpha1/agenttraining/agenttrai" +
+      "ningservice/deletelearningopportunity:\001*" +
+      "\022\355\001\n\026GetLearningOpportunity\0229.api.v1alph" +
+      "a1.agenttraining.GetLearningOpportunityR" +
+      "equest\032:.api.v1alpha1.agenttraining.GetL" +
+      "earningOpportunityResponse\"\\\272\270\221\002\005\n\003\010\304\014\202\323" +
+      "\344\223\002L\"G/api/v1alpha1/agenttraining/agentt" +
+      "rainingservice/getlearningopportunity:\001*" +
+      "B\306\001\n,com.tcn.cloud.api.api.v1alpha1.agen" +
+      "ttrainingB\014ServiceProtoP\001\242\002\003AVA\252\002\032Api.V1" +
+      "alpha1.Agenttraining\312\002\032Api\\V1alpha1\\Agen" +
+      "ttraining\342\002&Api\\V1alpha1\\Agenttraining\\G" +
+      "PBMetadata\352\002\034Api::V1alpha1::Agenttrainin" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
