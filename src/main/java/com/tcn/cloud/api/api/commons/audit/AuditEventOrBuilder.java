@@ -3155,7 +3155,7 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *
@@ -3165,7 +3165,7 @@ public interface AuditEventOrBuilder extends
   boolean hasUserAccessTokenExpiringEvent();
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *
@@ -3175,7 +3175,7 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent getUserAccessTokenExpiringEvent();
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *

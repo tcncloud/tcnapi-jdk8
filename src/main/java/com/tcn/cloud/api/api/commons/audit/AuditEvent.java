@@ -5540,7 +5540,7 @@ private static final long serialVersionUID = 0L;
   public static final int USER_ACCESS_TOKEN_EXPIRING_EVENT_FIELD_NUMBER = 1300;
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *
@@ -5553,7 +5553,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *
@@ -5569,7 +5569,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Organization event
+   * Organization Events
    * user_access_token_expiring_event is sent when the user access token is about to expire
    * </pre>
    *
@@ -31337,7 +31337,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder> userAccessTokenExpiringEventBuilder_;
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31350,7 +31350,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31373,7 +31373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31394,7 +31394,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31413,7 +31413,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31441,7 +31441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31465,7 +31465,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31476,7 +31476,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
@@ -31495,7 +31495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Organization event
+     * Organization Events
      * user_access_token_expiring_event is sent when the user access token is about to expire
      * </pre>
      *
