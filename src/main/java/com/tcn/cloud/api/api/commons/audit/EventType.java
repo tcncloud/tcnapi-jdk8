@@ -1051,6 +1051,22 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT = 1208;</code>
    */
   EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT(1208),
+  /**
+   * <pre>
+   * Organization Events
+   * </pre>
+   *
+   * <code>EVENT_TYPE_ORGANIZATION = 1300;</code>
+   */
+  EVENT_TYPE_ORGANIZATION(1300),
+  /**
+   * <pre>
+   * Event when user access token is about to expire
+   * </pre>
+   *
+   * <code>EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_REMINDER_EVENT = 1301;</code>
+   */
+  EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_REMINDER_EVENT(1301),
   UNRECOGNIZED(-1),
   ;
 
@@ -2060,6 +2076,22 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT = 1208;</code>
    */
   public static final int EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT_VALUE = 1208;
+  /**
+   * <pre>
+   * Organization Events
+   * </pre>
+   *
+   * <code>EVENT_TYPE_ORGANIZATION = 1300;</code>
+   */
+  public static final int EVENT_TYPE_ORGANIZATION_VALUE = 1300;
+  /**
+   * <pre>
+   * Event when user access token is about to expire
+   * </pre>
+   *
+   * <code>EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_REMINDER_EVENT = 1301;</code>
+   */
+  public static final int EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_REMINDER_EVENT_VALUE = 1301;
 
 
   public final int getNumber() {
@@ -2226,6 +2258,8 @@ public enum EventType
       case 1206: return EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT;
       case 1207: return EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT;
       case 1208: return EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT;
+      case 1300: return EVENT_TYPE_ORGANIZATION;
+      case 1301: return EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_REMINDER_EVENT;
       default: return null;
     }
   }
