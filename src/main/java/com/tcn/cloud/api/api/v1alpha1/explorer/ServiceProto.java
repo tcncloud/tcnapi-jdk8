@@ -34,6 +34,16 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_QueryResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_GetInsightSupportQueryRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70,21 +80,42 @@ public final class ServiceProto {
       "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
       "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
       "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes2\355\002\n\017ExplorerService\022\313\001\n\025Li" +
-      "stDatasourceSchemas\0223.api.v1alpha1.explo" +
-      "rer.ListDatasourceSchemasRequest\0324.api.v" +
-      "1alpha1.explorer.ListDatasourceSchemasRe" +
-      "sponse\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v1alpha1/exp" +
-      "lorer/explorer/listdatasourceschemas:\001*\022" +
-      "\213\001\n\005Query\022#.api.v1alpha1.explorer.QueryR" +
-      "equest\032$.api.v1alpha1.explorer.QueryResp" +
-      "onse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v1alpha1/explo" +
-      "rer/explorer/query:\001*B\255\001\n\'com.tcn.cloud." +
-      "api.api.v1alpha1.explorerB\014ServiceProtoP" +
-      "\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1" +
-      "alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\" +
-      "GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006p" +
-      "roto3"
+      "sultSizeBytes\"\212\004\n\035GetInsightSupportQuery" +
+      "Request\022\'\n\017datasource_name\030\001 \001(\tR\016dataso" +
+      "urceName\022N\n\017datasource_type\030\002 \001(\0162%.api." +
+      "v1alpha1.explorer.DatasourceTypeR\016dataso" +
+      "urceType\022\034\n\010pipeline\030\003 \001(\tH\000R\010pipeline\022\024" +
+      "\n\004prql\030\004 \001(\tH\000R\004prql\022\027\n\007org_ids\030\005 \003(\tR\006o" +
+      "rgIds\0229\n\nstart_time\030\006 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tstartTime\0225\n\010end_time\030\007 \001" +
+      "(\0132\032.google.protobuf.TimestampR\007endTime\022" +
+      "\032\n\010timezone\030\010 \001(\tR\010timezone\022R\n\023pipeline_" +
+      "parameters\030\t \001(\0132!.api.v1alpha1.explorer" +
+      ".ParametersR\022pipelineParameters\022\036\n\013ui_tr" +
+      "ace_id\030\n \001(\tR\tuiTraceId\022\030\n\007comment\030\013 \001(\t" +
+      "R\007commentB\007\n\005query\"`\n\036GetInsightSupportQ" +
+      "ueryResponse\022\022\n\004prql\030\001 \001(\tR\004prql\022\020\n\003sql\030" +
+      "\002 \001(\tR\003sql\022\030\n\007explain\030\003 \001(\tR\007explain2\302\004\n" +
+      "\017ExplorerService\022\313\001\n\025ListDatasourceSchem" +
+      "as\0223.api.v1alpha1.explorer.ListDatasourc" +
+      "eSchemasRequest\0324.api.v1alpha1.explorer." +
+      "ListDatasourceSchemasResponse\"G\272\270\221\002\002\030\001\202\323" +
+      "\344\223\002:\"5/api/v1alpha1/explorer/explorer/li" +
+      "stdatasourceschemas:\001*\022\213\001\n\005Query\022#.api.v" +
+      "1alpha1.explorer.QueryRequest\032$.api.v1al" +
+      "pha1.explorer.QueryResponse\"7\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002*\"%/api/v1alpha1/explorer/explorer/quer" +
+      "y:\001*\022\322\001\n\026GetInsightSupportQuery\0224.api.v1" +
+      "alpha1.explorer.GetInsightSupportQueryRe" +
+      "quest\0325.api.v1alpha1.explorer.GetInsight" +
+      "SupportQueryResponse\"K\272\270\221\002\005\n\003\010\342\004\202\323\344\223\002;\"6" +
+      "/api/v1alpha1/explorer/explorer/getinsig" +
+      "htsupportquery:\001*B\255\001\n\'com.tcn.cloud.api." +
+      "api.v1alpha1.explorerB\014ServiceProtoP\001\242\002\003" +
+      "AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1alph" +
+      "a1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\GPBM" +
+      "etadata\352\002\027Api::V1alpha1::Explorerb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -118,6 +149,18 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryResponse_descriptor,
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", });
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_GetInsightSupportQueryRequest_descriptor,
+        new java.lang.String[] { "DatasourceName", "DatasourceType", "Pipeline", "Prql", "OrgIds", "StartTime", "EndTime", "Timezone", "PipelineParameters", "UiTraceId", "Comment", "Query", });
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_GetInsightSupportQueryResponse_descriptor,
+        new java.lang.String[] { "Prql", "Sql", "Explain", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);

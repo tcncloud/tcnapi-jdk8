@@ -80,6 +80,37 @@ public final class ExplorerServiceGrpc {
     return getQueryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> getGetInsightSupportQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetInsightSupportQuery",
+      requestType = com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> getGetInsightSupportQueryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest, com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> getGetInsightSupportQueryMethod;
+    if ((getGetInsightSupportQueryMethod = ExplorerServiceGrpc.getGetInsightSupportQueryMethod) == null) {
+      synchronized (ExplorerServiceGrpc.class) {
+        if ((getGetInsightSupportQueryMethod = ExplorerServiceGrpc.getGetInsightSupportQueryMethod) == null) {
+          ExplorerServiceGrpc.getGetInsightSupportQueryMethod = getGetInsightSupportQueryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest, com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInsightSupportQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExplorerServiceMethodDescriptorSupplier("GetInsightSupportQuery"))
+              .build();
+        }
+      }
+    }
+    return getGetInsightSupportQueryMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -150,6 +181,13 @@ public final class ExplorerServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getInsightSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInsightSupportQueryMethod(), responseObserver);
+    }
   }
 
   /**
@@ -206,6 +244,14 @@ public final class ExplorerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getQueryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getInsightSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetInsightSupportQueryMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -245,6 +291,13 @@ public final class ExplorerServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse query(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse getInsightSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetInsightSupportQueryMethod(), getCallOptions(), request);
     }
   }
 
@@ -288,10 +341,19 @@ public final class ExplorerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getQueryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse> getInsightSupportQuery(
+        com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetInsightSupportQueryMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_DATASOURCE_SCHEMAS = 0;
   private static final int METHODID_QUERY = 1;
+  private static final int METHODID_GET_INSIGHT_SUPPORT_QUERY = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -317,6 +379,10 @@ public final class ExplorerServiceGrpc {
         case METHODID_QUERY:
           serviceImpl.query((com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse>) responseObserver);
+          break;
+        case METHODID_GET_INSIGHT_SUPPORT_QUERY:
+          serviceImpl.getInsightSupportQuery((com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -350,6 +416,13 @@ public final class ExplorerServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest,
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse>(
                 service, METHODID_QUERY)))
+        .addMethod(
+          getGetInsightSupportQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryRequest,
+              com.tcn.cloud.api.api.v1alpha1.explorer.GetInsightSupportQueryResponse>(
+                service, METHODID_GET_INSIGHT_SUPPORT_QUERY)))
         .build();
   }
 
@@ -400,6 +473,7 @@ public final class ExplorerServiceGrpc {
               .setSchemaDescriptor(new ExplorerServiceFileDescriptorSupplier())
               .addMethod(getListDatasourceSchemasMethod())
               .addMethod(getQueryMethod())
+              .addMethod(getGetInsightSupportQueryMethod())
               .build();
         }
       }

@@ -574,6 +574,10 @@ public enum Permission
    */
   PERMISSION_REPORT_GENERATOR_EDIT(609),
   /**
+   * <code>PERMISSION_QUERY_SUPPORT = 610;</code>
+   */
+  PERMISSION_QUERY_SUPPORT(610),
+  /**
    * <pre>
    * Enables access to room 303 chat at a base level
    * Lowest tier permissions for unconfigured rooms and direct messaging
@@ -1442,6 +1446,10 @@ public enum Permission
    */
   public static final int PERMISSION_REPORT_GENERATOR_EDIT_VALUE = 609;
   /**
+   * <code>PERMISSION_QUERY_SUPPORT = 610;</code>
+   */
+  public static final int PERMISSION_QUERY_SUPPORT_VALUE = 610;
+  /**
    * <pre>
    * Enables access to room 303 chat at a base level
    * Lowest tier permissions for unconfigured rooms and direct messaging
@@ -1845,6 +1853,7 @@ public enum Permission
       case 607: return PERMISSION_INSIGHTS_DASHBOARD_VIEW;
       case 608: return PERMISSION_INSIGHTS_DASHBOARD_EDIT;
       case 609: return PERMISSION_REPORT_GENERATOR_EDIT;
+      case 610: return PERMISSION_QUERY_SUPPORT;
       case 700: return PERMISSION_ROOM303;
       case 701: return PERMISSION_ROOM303_MEMBER;
       case 702: return PERMISSION_ROOM303_SUPERVISOR;
