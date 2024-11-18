@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.callmonitor.v1alpha1;
 
-public interface GetStatsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.callmonitor.v1alpha1.GetStatsResponse)
+public interface GetHoldQueueStatsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,24 +12,24 @@ public interface GetStatsResponseOrBuilder extends
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.CallStats> 
+  java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats> 
       getStatsList();
   /**
    * <pre>
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
-  com.tcn.cloud.api.api.commons.CallStats getStats(int index);
+  com.tcn.cloud.api.api.commons.HoldQueueCallStats getStats(int index);
   /**
    * <pre>
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   int getStatsCount();
   /**
@@ -37,18 +37,18 @@ public interface GetStatsResponseOrBuilder extends
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.CallStatsOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder> 
       getStatsOrBuilderList();
   /**
    * <pre>
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
-  com.tcn.cloud.api.api.commons.CallStatsOrBuilder getStatsOrBuilder(
+  com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder getStatsOrBuilder(
       int index);
 
   /**

@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.services.callmonitor.v1alpha1;
 
 /**
- * Protobuf type {@code services.callmonitor.v1alpha1.GetStatsResponse}
+ * Protobuf type {@code services.callmonitor.v1alpha1.GetHoldQueueStatsResponse}
  */
-public final class GetStatsResponse extends
+public final class GetHoldQueueStatsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.callmonitor.v1alpha1.GetStatsResponse)
-    GetStatsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)
+    GetHoldQueueStatsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetStatsResponse.newBuilder() to construct.
-  private GetStatsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetHoldQueueStatsResponse.newBuilder() to construct.
+  private GetHoldQueueStatsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetStatsResponse() {
+  private GetHoldQueueStatsResponse() {
     stats_ = java.util.Collections.emptyList();
   }
 
@@ -23,34 +23,34 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetStatsResponse();
+    return new GetHoldQueueStatsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor;
+    return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetStatsResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.class, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.Builder.class);
+            com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.class, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.Builder.class);
   }
 
   public static final int STATS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.CallStats> stats_;
+  private java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats> stats_;
   /**
    * <pre>
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.CallStats> getStatsList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats> getStatsList() {
     return stats_;
   }
   /**
@@ -58,10 +58,10 @@ private static final long serialVersionUID = 0L;
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.CallStatsOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder> 
       getStatsOrBuilderList() {
     return stats_;
   }
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   @java.lang.Override
   public int getStatsCount() {
@@ -81,10 +81,10 @@ private static final long serialVersionUID = 0L;
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallStats getStats(int index) {
+  public com.tcn.cloud.api.api.commons.HoldQueueCallStats getStats(int index) {
     return stats_.get(index);
   }
   /**
@@ -92,10 +92,10 @@ private static final long serialVersionUID = 0L;
    * Stats for individual calls in the hold queue.
    * </pre>
    *
-   * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+   * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallStatsOrBuilder getStatsOrBuilder(
+  public com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder getStatsOrBuilder(
       int index) {
     return stats_.get(index);
   }
@@ -250,10 +250,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse other = (com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse) obj;
+    com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse other = (com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse) obj;
 
     if (!getStatsList()
         .equals(other.getStatsList())) return false;
@@ -298,44 +298,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -343,26 +343,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse parseFrom(
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -375,7 +375,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -391,26 +391,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.callmonitor.v1alpha1.GetStatsResponse}
+   * Protobuf type {@code services.callmonitor.v1alpha1.GetHoldQueueStatsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.callmonitor.v1alpha1.GetStatsResponse)
-      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)
+      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor;
+      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetStatsResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.class, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.Builder.class);
+              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.class, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.newBuilder()
     private Builder() {
 
     }
@@ -442,17 +442,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor;
+      return com.tcn.cloud.api.services.callmonitor.v1alpha1.ServiceProto.internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse build() {
-      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse result = buildPartial();
+    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse build() {
+      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -460,15 +460,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse buildPartial() {
-      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse result = new com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse(this);
+    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse buildPartial() {
+      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse result = new com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse result) {
       if (statsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           stats_ = java.util.Collections.unmodifiableList(stats_);
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.totalNumCalls_ = totalNumCalls_;
@@ -533,16 +533,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse other) {
-      if (other == com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse other) {
+      if (other == com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.getDefaultInstance()) return this;
       if (statsBuilder_ == null) {
         if (!other.stats_.isEmpty()) {
           if (stats_.isEmpty()) {
@@ -611,9 +611,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.CallStats m =
+              com.tcn.cloud.api.api.commons.HoldQueueCallStats m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.CallStats.parser(),
+                      com.tcn.cloud.api.api.commons.HoldQueueCallStats.parser(),
                       extensionRegistry);
               if (statsBuilder_ == null) {
                 ensureStatsIsMutable();
@@ -665,26 +665,26 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.CallStats> stats_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats> stats_ =
       java.util.Collections.emptyList();
     private void ensureStatsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        stats_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CallStats>(stats_);
+        stats_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoldQueueCallStats>(stats_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CallStats, com.tcn.cloud.api.api.commons.CallStats.Builder, com.tcn.cloud.api.api.commons.CallStatsOrBuilder> statsBuilder_;
+        com.tcn.cloud.api.api.commons.HoldQueueCallStats, com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder, com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder> statsBuilder_;
 
     /**
      * <pre>
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.CallStats> getStatsList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats> getStatsList() {
       if (statsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(stats_);
       } else {
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public int getStatsCount() {
       if (statsBuilder_ == null) {
@@ -710,9 +710,9 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallStats getStats(int index) {
+    public com.tcn.cloud.api.api.commons.HoldQueueCallStats getStats(int index) {
       if (statsBuilder_ == null) {
         return stats_.get(index);
       } else {
@@ -724,10 +724,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder setStats(
-        int index, com.tcn.cloud.api.api.commons.CallStats value) {
+        int index, com.tcn.cloud.api.api.commons.HoldQueueCallStats value) {
       if (statsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -745,10 +745,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder setStats(
-        int index, com.tcn.cloud.api.api.commons.CallStats.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder builderForValue) {
       if (statsBuilder_ == null) {
         ensureStatsIsMutable();
         stats_.set(index, builderForValue.build());
@@ -763,9 +763,9 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public Builder addStats(com.tcn.cloud.api.api.commons.CallStats value) {
+    public Builder addStats(com.tcn.cloud.api.api.commons.HoldQueueCallStats value) {
       if (statsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -783,10 +783,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder addStats(
-        int index, com.tcn.cloud.api.api.commons.CallStats value) {
+        int index, com.tcn.cloud.api.api.commons.HoldQueueCallStats value) {
       if (statsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -804,10 +804,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder addStats(
-        com.tcn.cloud.api.api.commons.CallStats.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder builderForValue) {
       if (statsBuilder_ == null) {
         ensureStatsIsMutable();
         stats_.add(builderForValue.build());
@@ -822,10 +822,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder addStats(
-        int index, com.tcn.cloud.api.api.commons.CallStats.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder builderForValue) {
       if (statsBuilder_ == null) {
         ensureStatsIsMutable();
         stats_.add(index, builderForValue.build());
@@ -840,10 +840,10 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder addAllStats(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallStats> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.HoldQueueCallStats> values) {
       if (statsBuilder_ == null) {
         ensureStatsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder clearStats() {
       if (statsBuilder_ == null) {
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
     public Builder removeStats(int index) {
       if (statsBuilder_ == null) {
@@ -893,9 +893,9 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallStats.Builder getStatsBuilder(
+    public com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder getStatsBuilder(
         int index) {
       return getStatsFieldBuilder().getBuilder(index);
     }
@@ -904,9 +904,9 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallStatsOrBuilder getStatsOrBuilder(
+    public com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder getStatsOrBuilder(
         int index) {
       if (statsBuilder_ == null) {
         return stats_.get(index);  } else {
@@ -918,9 +918,9 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.CallStatsOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder> 
          getStatsOrBuilderList() {
       if (statsBuilder_ != null) {
         return statsBuilder_.getMessageOrBuilderList();
@@ -933,41 +933,41 @@ private static final long serialVersionUID = 0L;
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallStats.Builder addStatsBuilder() {
+    public com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder addStatsBuilder() {
       return getStatsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.CallStats.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.HoldQueueCallStats.getDefaultInstance());
     }
     /**
      * <pre>
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallStats.Builder addStatsBuilder(
+    public com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder addStatsBuilder(
         int index) {
       return getStatsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.CallStats.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.HoldQueueCallStats.getDefaultInstance());
     }
     /**
      * <pre>
      * Stats for individual calls in the hold queue.
      * </pre>
      *
-     * <code>repeated .api.commons.CallStats stats = 1 [json_name = "stats"];</code>
+     * <code>repeated .api.commons.HoldQueueCallStats stats = 1 [json_name = "stats"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.CallStats.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder> 
          getStatsBuilderList() {
       return getStatsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CallStats, com.tcn.cloud.api.api.commons.CallStats.Builder, com.tcn.cloud.api.api.commons.CallStatsOrBuilder> 
+        com.tcn.cloud.api.api.commons.HoldQueueCallStats, com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder, com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder> 
         getStatsFieldBuilder() {
       if (statsBuilder_ == null) {
         statsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.CallStats, com.tcn.cloud.api.api.commons.CallStats.Builder, com.tcn.cloud.api.api.commons.CallStatsOrBuilder>(
+            com.tcn.cloud.api.api.commons.HoldQueueCallStats, com.tcn.cloud.api.api.commons.HoldQueueCallStats.Builder, com.tcn.cloud.api.api.commons.HoldQueueCallStatsOrBuilder>(
                 stats_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -1209,23 +1209,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.callmonitor.v1alpha1.GetStatsResponse)
+    // @@protoc_insertion_point(builder_scope:services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.callmonitor.v1alpha1.GetStatsResponse)
-  private static final com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.callmonitor.v1alpha1.GetHoldQueueStatsResponse)
+  private static final com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse();
   }
 
-  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetStatsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetStatsResponse>() {
+  private static final com.google.protobuf.Parser<GetHoldQueueStatsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetHoldQueueStatsResponse>() {
     @java.lang.Override
-    public GetStatsResponse parsePartialFrom(
+    public GetHoldQueueStatsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1244,17 +1244,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetStatsResponse> parser() {
+  public static com.google.protobuf.Parser<GetHoldQueueStatsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetStatsResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetHoldQueueStatsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -15,20 +15,20 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_descriptor;
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_callmonitor_v1alpha1_GetStatsRequest_fieldAccessorTable;
+      internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_Filter_descriptor;
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_Filter_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_callmonitor_v1alpha1_GetStatsRequest_Filter_fieldAccessorTable;
+      internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_Filter_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor;
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_callmonitor_v1alpha1_GetStatsResponse_fieldAccessorTable;
+      internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42,34 +42,36 @@ public final class ServiceProto {
       "proto\022\035services.callmonitor.v1alpha1\032\027an" +
       "notations/authz.proto\032\035api/commons/callm" +
       "onitor.proto\032\034google/api/annotations.pro" +
-      "to\032\037google/protobuf/timestamp.proto\"\310\002\n\017" +
-      "GetStatsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\0229" +
-      "\n\nstart_time\030\002 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\tstartTime\0225\n\010end_time\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\007endTime\022M\n\006filt" +
-      "er\030\004 \001(\01325.services.callmonitor.v1alpha1" +
-      ".GetStatsRequest.FilterR\006filter\032]\n\006Filte" +
-      "r\0222\n\006status\030\001 \001(\0162\032.api.commons.MonitorS" +
-      "tatusR\006status\022\037\n\013campaign_id\030\003 \001(\tR\ncamp" +
-      "aignId\"\255\002\n\020GetStatsResponse\022,\n\005stats\030\001 \003" +
-      "(\0132\026.api.commons.CallStatsR\005stats\022&\n\017tot" +
-      "al_num_calls\030\002 \001(\005R\rtotalNumCalls\0220\n\024tot" +
-      "al_num_successful\030\003 \001(\005R\022totalNumSuccess" +
-      "ful\022(\n\020total_num_failed\030\004 \001(\005R\016totalNumF" +
-      "ailed\0225\n\027avg_monitor_duration_ms\030\005 \001(\003R\024" +
-      "avgMonitorDurationMs\0220\n\024total_num_monito" +
-      "ring\030\006 \001(\005R\022totalNumMonitoring2\300\001\n\022CallM" +
-      "onitorService\022\251\001\n\010GetStats\022..services.ca" +
-      "llmonitor.v1alpha1.GetStatsRequest\032/.ser" +
-      "vices.callmonitor.v1alpha1.GetStatsRespo" +
-      "nse\"<\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002,\"\'/services/callmon" +
-      "itor/v1alpha1/getstats:\001*B\325\001\n/com.tcn.cl" +
-      "oud.api.services.callmonitor.v1alpha1B\014S" +
-      "erviceProtoP\001\242\002\003SCX\252\002\035Services.Callmonit" +
-      "or.V1alpha1\312\002\035Services\\Callmonitor\\V1alp" +
-      "ha1\342\002)Services\\Callmonitor\\V1alpha1\\GPBM" +
-      "etadata\352\002\037Services::Callmonitor::V1alpha" +
-      "1b\006proto3"
+      "to\032\037google/protobuf/timestamp.proto\"\343\002\n\030" +
+      "GetHoldQueueStatsRequest\022\025\n\006org_id\030\001 \001(\t" +
+      "R\005orgId\0229\n\nstart_time\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tstartTime\0225\n\010end_time\030\003" +
+      " \001(\0132\032.google.protobuf.TimestampR\007endTim" +
+      "e\022V\n\006filter\030\004 \001(\0132>.services.callmonitor" +
+      ".v1alpha1.GetHoldQueueStatsRequest.Filte" +
+      "rR\006filter\032f\n\006Filter\022;\n\006status\030\001 \001(\0162#.ap" +
+      "i.commons.HoldQueueMonitorStatusR\006status" +
+      "\022\037\n\013campaign_id\030\003 \001(\tR\ncampaignId\"\277\002\n\031Ge" +
+      "tHoldQueueStatsResponse\0225\n\005stats\030\001 \003(\0132\037" +
+      ".api.commons.HoldQueueCallStatsR\005stats\022&" +
+      "\n\017total_num_calls\030\002 \001(\005R\rtotalNumCalls\0220" +
+      "\n\024total_num_successful\030\003 \001(\005R\022totalNumSu" +
+      "ccessful\022(\n\020total_num_failed\030\004 \001(\005R\016tota" +
+      "lNumFailed\0225\n\027avg_monitor_duration_ms\030\005 " +
+      "\001(\003R\024avgMonitorDurationMs\0220\n\024total_num_m" +
+      "onitoring\030\006 \001(\005R\022totalNumMonitoring2\344\001\n\022" +
+      "CallMonitorService\022\315\001\n\021GetHoldQueueStats" +
+      "\0227.services.callmonitor.v1alpha1.GetHold" +
+      "QueueStatsRequest\0328.services.callmonitor" +
+      ".v1alpha1.GetHoldQueueStatsResponse\"E\272\270\221" +
+      "\002\005\n\003\010\260\t\202\323\344\223\0025\"0/services/callmonitor/v1a" +
+      "lpha1/getholdqueuestats:\001*B\325\001\n/com.tcn.c" +
+      "loud.api.services.callmonitor.v1alpha1B\014" +
+      "ServiceProtoP\001\242\002\003SCX\252\002\035Services.Callmoni" +
+      "tor.V1alpha1\312\002\035Services\\Callmonitor\\V1al" +
+      "pha1\342\002)Services\\Callmonitor\\V1alpha1\\GPB" +
+      "Metadata\352\002\037Services::Callmonitor::V1alph" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,23 +81,23 @@ public final class ServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_descriptor =
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_fieldAccessorTable = new
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_callmonitor_v1alpha1_GetStatsRequest_descriptor,
+        internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_descriptor,
         new java.lang.String[] { "OrgId", "StartTime", "EndTime", "Filter", });
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_Filter_descriptor =
-      internal_static_services_callmonitor_v1alpha1_GetStatsRequest_descriptor.getNestedTypes().get(0);
-    internal_static_services_callmonitor_v1alpha1_GetStatsRequest_Filter_fieldAccessorTable = new
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_Filter_descriptor =
+      internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_descriptor.getNestedTypes().get(0);
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_Filter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_callmonitor_v1alpha1_GetStatsRequest_Filter_descriptor,
+        internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsRequest_Filter_descriptor,
         new java.lang.String[] { "Status", "CampaignId", });
-    internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor =
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_services_callmonitor_v1alpha1_GetStatsResponse_fieldAccessorTable = new
+    internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_callmonitor_v1alpha1_GetStatsResponse_descriptor,
+        internal_static_services_callmonitor_v1alpha1_GetHoldQueueStatsResponse_descriptor,
         new java.lang.String[] { "Stats", "TotalNumCalls", "TotalNumSuccessful", "TotalNumFailed", "AvgMonitorDurationMs", "TotalNumMonitoring", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

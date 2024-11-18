@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.callmonitor.v1alpha1;
 
-public interface GetStatsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.callmonitor.v1alpha1.GetStatsRequest)
+public interface GetHoldQueueStatsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.callmonitor.v1alpha1.GetHoldQueueStatsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -88,17 +88,17 @@ public interface GetStatsRequestOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
   /**
-   * <code>.services.callmonitor.v1alpha1.GetStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
+   * <code>.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
    * @return Whether the filter field is set.
    */
   boolean hasFilter();
   /**
-   * <code>.services.callmonitor.v1alpha1.GetStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
+   * <code>.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
    * @return The filter.
    */
-  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest.Filter getFilter();
+  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.Filter getFilter();
   /**
-   * <code>.services.callmonitor.v1alpha1.GetStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
+   * <code>.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.Filter filter = 4 [json_name = "filter"];</code>
    */
-  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest.FilterOrBuilder getFilterOrBuilder();
+  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.FilterOrBuilder getFilterOrBuilder();
 }

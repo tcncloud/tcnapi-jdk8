@@ -4,45 +4,45 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * Protobuf enum {@code api.commons.MonitorStatus}
+ * Protobuf enum {@code api.commons.HoldQueueMonitorStatus}
  */
-public enum MonitorStatus
+public enum HoldQueueMonitorStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>MONITOR_STATUS_UNSPECIFIED = 0;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_UNSPECIFIED = 0;</code>
    */
-  MONITOR_STATUS_UNSPECIFIED(0),
+  HOLD_QUEUE_MONITOR_STATUS_UNSPECIFIED(0),
   /**
-   * <code>MONITOR_STATUS_MONITORING = 1;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_MONITORING = 1;</code>
    */
-  MONITOR_STATUS_MONITORING(1),
+  HOLD_QUEUE_MONITOR_STATUS_MONITORING(1),
   /**
-   * <code>MONITOR_STATUS_SUCCESS = 2;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_SUCCESS = 2;</code>
    */
-  MONITOR_STATUS_SUCCESS(2),
+  HOLD_QUEUE_MONITOR_STATUS_SUCCESS(2),
   /**
-   * <code>MONITOR_STATUS_FAILED = 3;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_FAILED = 3;</code>
    */
-  MONITOR_STATUS_FAILED(3),
+  HOLD_QUEUE_MONITOR_STATUS_FAILED(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>MONITOR_STATUS_UNSPECIFIED = 0;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_UNSPECIFIED = 0;</code>
    */
-  public static final int MONITOR_STATUS_UNSPECIFIED_VALUE = 0;
+  public static final int HOLD_QUEUE_MONITOR_STATUS_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>MONITOR_STATUS_MONITORING = 1;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_MONITORING = 1;</code>
    */
-  public static final int MONITOR_STATUS_MONITORING_VALUE = 1;
+  public static final int HOLD_QUEUE_MONITOR_STATUS_MONITORING_VALUE = 1;
   /**
-   * <code>MONITOR_STATUS_SUCCESS = 2;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_SUCCESS = 2;</code>
    */
-  public static final int MONITOR_STATUS_SUCCESS_VALUE = 2;
+  public static final int HOLD_QUEUE_MONITOR_STATUS_SUCCESS_VALUE = 2;
   /**
-   * <code>MONITOR_STATUS_FAILED = 3;</code>
+   * <code>HOLD_QUEUE_MONITOR_STATUS_FAILED = 3;</code>
    */
-  public static final int MONITOR_STATUS_FAILED_VALUE = 3;
+  public static final int HOLD_QUEUE_MONITOR_STATUS_FAILED_VALUE = 3;
 
 
   public final int getNumber() {
@@ -59,7 +59,7 @@ public enum MonitorStatus
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static MonitorStatus valueOf(int value) {
+  public static HoldQueueMonitorStatus valueOf(int value) {
     return forNumber(value);
   }
 
@@ -67,25 +67,25 @@ public enum MonitorStatus
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static MonitorStatus forNumber(int value) {
+  public static HoldQueueMonitorStatus forNumber(int value) {
     switch (value) {
-      case 0: return MONITOR_STATUS_UNSPECIFIED;
-      case 1: return MONITOR_STATUS_MONITORING;
-      case 2: return MONITOR_STATUS_SUCCESS;
-      case 3: return MONITOR_STATUS_FAILED;
+      case 0: return HOLD_QUEUE_MONITOR_STATUS_UNSPECIFIED;
+      case 1: return HOLD_QUEUE_MONITOR_STATUS_MONITORING;
+      case 2: return HOLD_QUEUE_MONITOR_STATUS_SUCCESS;
+      case 3: return HOLD_QUEUE_MONITOR_STATUS_FAILED;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<MonitorStatus>
+  public static com.google.protobuf.Internal.EnumLiteMap<HoldQueueMonitorStatus>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      MonitorStatus> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<MonitorStatus>() {
-          public MonitorStatus findValueByNumber(int number) {
-            return MonitorStatus.forNumber(number);
+      HoldQueueMonitorStatus> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<HoldQueueMonitorStatus>() {
+          public HoldQueueMonitorStatus findValueByNumber(int number) {
+            return HoldQueueMonitorStatus.forNumber(number);
           }
         };
 
@@ -106,9 +106,9 @@ public enum MonitorStatus
     return com.tcn.cloud.api.api.commons.CallmonitorProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final MonitorStatus[] VALUES = values();
+  private static final HoldQueueMonitorStatus[] VALUES = values();
 
-  public static MonitorStatus valueOf(
+  public static HoldQueueMonitorStatus valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -122,10 +122,10 @@ public enum MonitorStatus
 
   private final int value;
 
-  private MonitorStatus(int value) {
+  private HoldQueueMonitorStatus(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.MonitorStatus)
+  // @@protoc_insertion_point(enum_scope:api.commons.HoldQueueMonitorStatus)
 }
 

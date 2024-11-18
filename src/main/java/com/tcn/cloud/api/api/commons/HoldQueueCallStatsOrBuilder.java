@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface CallStatsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.CallStats)
+public interface HoldQueueCallStatsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.HoldQueueCallStats)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -92,7 +92,7 @@ public interface CallStatsOrBuilder extends
    * The current status of the call.
    * </pre>
    *
-   * <code>.api.commons.MonitorStatus status = 5 [json_name = "status"];</code>
+   * <code>.api.commons.HoldQueueMonitorStatus status = 5 [json_name = "status"];</code>
    * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
@@ -101,10 +101,10 @@ public interface CallStatsOrBuilder extends
    * The current status of the call.
    * </pre>
    *
-   * <code>.api.commons.MonitorStatus status = 5 [json_name = "status"];</code>
+   * <code>.api.commons.HoldQueueMonitorStatus status = 5 [json_name = "status"];</code>
    * @return The status.
    */
-  com.tcn.cloud.api.api.commons.MonitorStatus getStatus();
+  com.tcn.cloud.api.api.commons.HoldQueueMonitorStatus getStatus();
 
   /**
    * <pre>

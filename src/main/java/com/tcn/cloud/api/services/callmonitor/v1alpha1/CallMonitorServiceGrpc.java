@@ -15,35 +15,35 @@ public final class CallMonitorServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "services.callmonitor.v1alpha1.CallMonitorService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest,
-      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> getGetStatsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest,
+      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> getGetHoldQueueStatsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetStats",
-      requestType = com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest.class,
-      responseType = com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetHoldQueueStats",
+      requestType = com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.class,
+      responseType = com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest,
-      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> getGetStatsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> getGetStatsMethod;
-    if ((getGetStatsMethod = CallMonitorServiceGrpc.getGetStatsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest,
+      com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> getGetHoldQueueStatsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> getGetHoldQueueStatsMethod;
+    if ((getGetHoldQueueStatsMethod = CallMonitorServiceGrpc.getGetHoldQueueStatsMethod) == null) {
       synchronized (CallMonitorServiceGrpc.class) {
-        if ((getGetStatsMethod = CallMonitorServiceGrpc.getGetStatsMethod) == null) {
-          CallMonitorServiceGrpc.getGetStatsMethod = getGetStatsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse>newBuilder()
+        if ((getGetHoldQueueStatsMethod = CallMonitorServiceGrpc.getGetHoldQueueStatsMethod) == null) {
+          CallMonitorServiceGrpc.getGetHoldQueueStatsMethod = getGetHoldQueueStatsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest, com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStats"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHoldQueueStats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CallMonitorServiceMethodDescriptorSupplier("GetStats"))
+                  com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CallMonitorServiceMethodDescriptorSupplier("GetHoldQueueStats"))
               .build();
         }
       }
     }
-    return getGetStatsMethod;
+    return getGetHoldQueueStatsMethod;
   }
 
   /**
@@ -96,9 +96,9 @@ public final class CallMonitorServiceGrpc {
 
     /**
      */
-    default void getStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatsMethod(), responseObserver);
+    default void getHoldQueueStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHoldQueueStatsMethod(), responseObserver);
     }
   }
 
@@ -131,10 +131,10 @@ public final class CallMonitorServiceGrpc {
 
     /**
      */
-    public void getStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> responseObserver) {
+    public void getHoldQueueStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetStatsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetHoldQueueStatsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -156,9 +156,9 @@ public final class CallMonitorServiceGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse getStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest request) {
+    public com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse getHoldQueueStats(com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetStatsMethod(), getCallOptions(), request);
+          getChannel(), getGetHoldQueueStatsMethod(), getCallOptions(), request);
     }
   }
 
@@ -180,14 +180,14 @@ public final class CallMonitorServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse> getStats(
-        com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse> getHoldQueueStats(
+        com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetStatsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetHoldQueueStatsMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_STATS = 0;
+  private static final int METHODID_GET_HOLD_QUEUE_STATS = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -206,9 +206,9 @@ public final class CallMonitorServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_STATS:
-          serviceImpl.getStats((com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse>) responseObserver);
+        case METHODID_GET_HOLD_QUEUE_STATS:
+          serviceImpl.getHoldQueueStats((com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -229,12 +229,12 @@ public final class CallMonitorServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetStatsMethod(),
+          getGetHoldQueueStatsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsRequest,
-              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetStatsResponse>(
-                service, METHODID_GET_STATS)))
+              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsRequest,
+              com.tcn.cloud.api.services.callmonitor.v1alpha1.GetHoldQueueStatsResponse>(
+                service, METHODID_GET_HOLD_QUEUE_STATS)))
         .build();
   }
 
@@ -283,7 +283,7 @@ public final class CallMonitorServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CallMonitorServiceFileDescriptorSupplier())
-              .addMethod(getGetStatsMethod())
+              .addMethod(getGetHoldQueueStatsMethod())
               .build();
         }
       }

@@ -15,10 +15,10 @@ public final class CallmonitorProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_CallStats_descriptor;
+    internal_static_api_commons_HoldQueueCallStats_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_CallStats_fieldAccessorTable;
+      internal_static_api_commons_HoldQueueCallStats_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,35 +29,37 @@ public final class CallmonitorProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035api/commons/callmonitor.proto\022\013api.com" +
-      "mons\032\037google/protobuf/timestamp.proto\"\373\002" +
-      "\n\tCallStats\022\027\n\007call_id\030\001 \001(\tR\006callId\022\025\n\006" +
-      "org_id\030\002 \001(\tR\005orgId\022\037\n\013campaign_id\030\003 \001(\t" +
-      "R\ncampaignId\022!\n\014phone_number\030\004 \001(\tR\013phon" +
-      "eNumber\0222\n\006status\030\005 \001(\0162\032.api.commons.Mo" +
-      "nitorStatusR\006status\0226\n\027monitor_duration_" +
-      "millis\030\007 \001(\003R\025monitorDurationMillis\022H\n\022m" +
-      "onitor_start_time\030\010 \001(\0132\032.google.protobu" +
-      "f.TimestampR\020monitorStartTime\022D\n\020monitor" +
-      "_end_time\030\t \001(\0132\032.google.protobuf.Timest" +
-      "ampR\016monitorEndTime*\205\001\n\rMonitorStatus\022\036\n" +
-      "\032MONITOR_STATUS_UNSPECIFIED\020\000\022\035\n\031MONITOR" +
-      "_STATUS_MONITORING\020\001\022\032\n\026MONITOR_STATUS_S" +
-      "UCCESS\020\002\022\031\n\025MONITOR_STATUS_FAILED\020\003B~\n\035c" +
-      "om.tcn.cloud.api.api.commonsB\020Callmonito" +
-      "rProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "mons\032\037google/protobuf/timestamp.proto\"\215\003" +
+      "\n\022HoldQueueCallStats\022\027\n\007call_id\030\001 \001(\tR\006c" +
+      "allId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\037\n\013campaign" +
+      "_id\030\003 \001(\tR\ncampaignId\022!\n\014phone_number\030\004 " +
+      "\001(\tR\013phoneNumber\022;\n\006status\030\005 \001(\0162#.api.c" +
+      "ommons.HoldQueueMonitorStatusR\006status\0226\n" +
+      "\027monitor_duration_millis\030\007 \001(\003R\025monitorD" +
+      "urationMillis\022H\n\022monitor_start_time\030\010 \001(" +
+      "\0132\032.google.protobuf.TimestampR\020monitorSt" +
+      "artTime\022D\n\020monitor_end_time\030\t \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\016monitorEndTime*\272\001" +
+      "\n\026HoldQueueMonitorStatus\022)\n%HOLD_QUEUE_M" +
+      "ONITOR_STATUS_UNSPECIFIED\020\000\022(\n$HOLD_QUEU" +
+      "E_MONITOR_STATUS_MONITORING\020\001\022%\n!HOLD_QU" +
+      "EUE_MONITOR_STATUS_SUCCESS\020\002\022$\n HOLD_QUE" +
+      "UE_MONITOR_STATUS_FAILED\020\003B~\n\035com.tcn.cl" +
+      "oud.api.api.commonsB\020CallmonitorProtoP\001\242" +
+      "\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\" +
+      "Commons\\GPBMetadata\352\002\014Api::Commonsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_api_commons_CallStats_descriptor =
+    internal_static_api_commons_HoldQueueCallStats_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_api_commons_CallStats_fieldAccessorTable = new
+    internal_static_api_commons_HoldQueueCallStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_CallStats_descriptor,
+        internal_static_api_commons_HoldQueueCallStats_descriptor,
         new java.lang.String[] { "CallId", "OrgId", "CampaignId", "PhoneNumber", "Status", "MonitorDurationMillis", "MonitorStartTime", "MonitorEndTime", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
