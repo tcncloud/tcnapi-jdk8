@@ -293,6 +293,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   @SuppressWarnings("serial")
   private volatile java.lang.Object sessionId_ = "";
   /**
+   * <pre>
+   * session_id is an optional field, only specific Portals will check the session before processing.
+   * </pre>
+   *
    * <code>string session_id = 7 [json_name = "sessionId"];</code>
    * @return The sessionId.
    */
@@ -310,6 +314,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     }
   }
   /**
+   * <pre>
+   * session_id is an optional field, only specific Portals will check the session before processing.
+   * </pre>
+   *
    * <code>string session_id = 7 [json_name = "sessionId"];</code>
    * @return The bytes for sessionId.
    */
@@ -1305,6 +1313,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     private java.lang.Object sessionId_ = "";
     /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
      * <code>string session_id = 7 [json_name = "sessionId"];</code>
      * @return The sessionId.
      */
@@ -1321,6 +1333,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
     }
     /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
      * <code>string session_id = 7 [json_name = "sessionId"];</code>
      * @return The bytes for sessionId.
      */
@@ -1338,6 +1354,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
     }
     /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
      * <code>string session_id = 7 [json_name = "sessionId"];</code>
      * @param value The sessionId to set.
      * @return This builder for chaining.
@@ -1351,6 +1371,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
      * <code>string session_id = 7 [json_name = "sessionId"];</code>
      * @return This builder for chaining.
      */
@@ -1361,6 +1385,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * session_id is an optional field, only specific Portals will check the session before processing.
+     * </pre>
+     *
      * <code>string session_id = 7 [json_name = "sessionId"];</code>
      * @param value The bytes for sessionId to set.
      * @return This builder for chaining.
