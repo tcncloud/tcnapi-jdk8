@@ -80,6 +80,68 @@ public final class ExplorerServiceGrpc {
     return getQueryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> getGetSupportQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSupportQuery",
+      requestType = com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> getGetSupportQueryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest, com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> getGetSupportQueryMethod;
+    if ((getGetSupportQueryMethod = ExplorerServiceGrpc.getGetSupportQueryMethod) == null) {
+      synchronized (ExplorerServiceGrpc.class) {
+        if ((getGetSupportQueryMethod = ExplorerServiceGrpc.getGetSupportQueryMethod) == null) {
+          ExplorerServiceGrpc.getGetSupportQueryMethod = getGetSupportQueryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest, com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSupportQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExplorerServiceMethodDescriptorSupplier("GetSupportQuery"))
+              .build();
+        }
+      }
+    }
+    return getGetSupportQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> getGetQueryExplainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetQueryExplain",
+      requestType = com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> getGetQueryExplainMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest, com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> getGetQueryExplainMethod;
+    if ((getGetQueryExplainMethod = ExplorerServiceGrpc.getGetQueryExplainMethod) == null) {
+      synchronized (ExplorerServiceGrpc.class) {
+        if ((getGetQueryExplainMethod = ExplorerServiceGrpc.getGetQueryExplainMethod) == null) {
+          ExplorerServiceGrpc.getGetQueryExplainMethod = getGetQueryExplainMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest, com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQueryExplain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExplorerServiceMethodDescriptorSupplier("GetQueryExplain"))
+              .build();
+        }
+      }
+    }
+    return getGetQueryExplainMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -150,6 +212,20 @@ public final class ExplorerServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSupportQueryMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getQueryExplain(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueryExplainMethod(), responseObserver);
+    }
   }
 
   /**
@@ -206,6 +282,22 @@ public final class ExplorerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getQueryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSupportQueryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getQueryExplain(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetQueryExplainMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -245,6 +337,20 @@ public final class ExplorerServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse query(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse getSupportQuery(com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSupportQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse getQueryExplain(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetQueryExplainMethod(), getCallOptions(), request);
     }
   }
 
@@ -288,10 +394,28 @@ public final class ExplorerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getQueryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse> getSupportQuery(
+        com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSupportQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> getQueryExplain(
+        com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetQueryExplainMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_DATASOURCE_SCHEMAS = 0;
   private static final int METHODID_QUERY = 1;
+  private static final int METHODID_GET_SUPPORT_QUERY = 2;
+  private static final int METHODID_GET_QUERY_EXPLAIN = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -317,6 +441,14 @@ public final class ExplorerServiceGrpc {
         case METHODID_QUERY:
           serviceImpl.query((com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse>) responseObserver);
+          break;
+        case METHODID_GET_SUPPORT_QUERY:
+          serviceImpl.getSupportQuery((com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse>) responseObserver);
+          break;
+        case METHODID_GET_QUERY_EXPLAIN:
+          serviceImpl.getQueryExplain((com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -350,6 +482,20 @@ public final class ExplorerServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest,
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse>(
                 service, METHODID_QUERY)))
+        .addMethod(
+          getGetSupportQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryRequest,
+              com.tcn.cloud.api.api.v1alpha1.explorer.SupportQueryResponse>(
+                service, METHODID_GET_SUPPORT_QUERY)))
+        .addMethod(
+          getGetQueryExplainMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest,
+              com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse>(
+                service, METHODID_GET_QUERY_EXPLAIN)))
         .build();
   }
 
@@ -400,6 +546,8 @@ public final class ExplorerServiceGrpc {
               .setSchemaDescriptor(new ExplorerServiceFileDescriptorSupplier())
               .addMethod(getListDatasourceSchemasMethod())
               .addMethod(getQueryMethod())
+              .addMethod(getGetSupportQueryMethod())
+              .addMethod(getGetQueryExplainMethod())
               .build();
         }
       }
