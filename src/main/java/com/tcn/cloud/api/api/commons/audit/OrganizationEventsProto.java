@@ -29,12 +29,13 @@ public final class OrganizationEventsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n+api/commons/audit/organization_events." +
-      "proto\022\021api.commons.audit\"\036\n\034UserAccessTo" +
-      "kenExpiringEventB\244\001\n#com.tcn.cloud.api.a" +
-      "pi.commons.auditB\027OrganizationEventsProt" +
-      "oP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Comm" +
-      "ons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadat" +
-      "a\352\002\023Api::Commons::Auditb\006proto3"
+      "proto\022\021api.commons.audit\"8\n\034UserAccessTo" +
+      "kenExpiringEvent\022\030\n\007message\030\001 \001(\tR\007messa" +
+      "geB\244\001\n#com.tcn.cloud.api.api.commons.aud" +
+      "itB\027OrganizationEventsProtoP\001\242\002\003ACA\252\002\021Ap" +
+      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
+      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
+      "ns::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45,7 +46,7 @@ public final class OrganizationEventsProto {
     internal_static_api_commons_audit_UserAccessTokenExpiringEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_UserAccessTokenExpiringEvent_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

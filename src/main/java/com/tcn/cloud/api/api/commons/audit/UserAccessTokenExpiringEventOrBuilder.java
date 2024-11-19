@@ -6,4 +6,24 @@ package com.tcn.cloud.api.api.commons.audit;
 public interface UserAccessTokenExpiringEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.UserAccessTokenExpiringEvent)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The notification message.
+   * </pre>
+   *
+   * <code>string message = 1 [json_name = "message"];</code>
+   * @return The message.
+   */
+  java.lang.String getMessage();
+  /**
+   * <pre>
+   * The notification message.
+   * </pre>
+   *
+   * <code>string message = 1 [json_name = "message"];</code>
+   * @return The bytes for message.
+   */
+  com.google.protobuf.ByteString
+      getMessageBytes();
 }

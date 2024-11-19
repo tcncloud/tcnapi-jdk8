@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UserAccessTokenExpiringEvent() {
+    message_ = "";
   }
 
   @java.lang.Override
@@ -42,6 +43,53 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.class, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder.class);
   }
 
+  public static final int MESSAGE_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object message_ = "";
+  /**
+   * <pre>
+   * The notification message.
+   * </pre>
+   *
+   * <code>string message = 1 [json_name = "message"];</code>
+   * @return The message.
+   */
+  @java.lang.Override
+  public java.lang.String getMessage() {
+    java.lang.Object ref = message_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      message_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The notification message.
+   * </pre>
+   *
+   * <code>string message = 1 [json_name = "message"];</code>
+   * @return The bytes for message.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMessageBytes() {
+    java.lang.Object ref = message_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      message_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +104,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +116,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +134,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent other = (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) obj;
 
+    if (!getMessage()
+        .equals(other.getMessage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +147,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getMessage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +283,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      message_ = "";
       return this;
     }
 
@@ -251,8 +311,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent result = new com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.message_ = message_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +367,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance()) return this;
+      if (!other.getMessage().isEmpty()) {
+        message_ = other.message_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +398,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              message_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +416,99 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object message_ = "";
+    /**
+     * <pre>
+     * The notification message.
+     * </pre>
+     *
+     * <code>string message = 1 [json_name = "message"];</code>
+     * @return The message.
+     */
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The notification message.
+     * </pre>
+     *
+     * <code>string message = 1 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The notification message.
+     * </pre>
+     *
+     * <code>string message = 1 [json_name = "message"];</code>
+     * @param value The message to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      message_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The notification message.
+     * </pre>
+     *
+     * <code>string message = 1 [json_name = "message"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMessage() {
+      message_ = getDefaultInstance().getMessage();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The notification message.
+     * </pre>
+     *
+     * <code>string message = 1 [json_name = "message"];</code>
+     * @param value The bytes for message to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      message_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     @java.lang.Override

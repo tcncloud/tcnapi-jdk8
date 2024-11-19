@@ -1054,7 +1054,7 @@ public enum EventType
   /**
    * <pre>
    * Organization Events
-   * Event when user access token is about to expire
+   * Organization event when a user access token is about to expire
    * </pre>
    *
    * <code>EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_EXPIRING_EVENT = 1300;</code>
@@ -2072,7 +2072,7 @@ public enum EventType
   /**
    * <pre>
    * Organization Events
-   * Event when user access token is about to expire
+   * Organization event when a user access token is about to expire
    * </pre>
    *
    * <code>EVENT_TYPE_ORGANIZATION_USER_ACCESS_TOKEN_EXPIRING_EVENT = 1300;</code>
