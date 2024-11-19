@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface UsersAccessTokensExpiringEventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.audit.UsersAccessTokensExpiringEvent)
+public interface AccessTokensExpiringEventOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.audit.AccessTokensExpiringEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**

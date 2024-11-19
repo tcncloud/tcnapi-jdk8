@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- * UsersAccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
+ * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
  * </pre>
  *
- * Protobuf type {@code api.commons.audit.UsersAccessTokensExpiringEvent}
+ * Protobuf type {@code api.commons.audit.AccessTokensExpiringEvent}
  */
-public final class UsersAccessTokensExpiringEvent extends
+public final class AccessTokensExpiringEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.audit.UsersAccessTokensExpiringEvent)
-    UsersAccessTokensExpiringEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.audit.AccessTokensExpiringEvent)
+    AccessTokensExpiringEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UsersAccessTokensExpiringEvent.newBuilder() to construct.
-  private UsersAccessTokensExpiringEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AccessTokensExpiringEvent.newBuilder() to construct.
+  private AccessTokensExpiringEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UsersAccessTokensExpiringEvent() {
+  private AccessTokensExpiringEvent() {
     orgId_ = "";
     report_ = "";
   }
@@ -28,20 +28,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UsersAccessTokensExpiringEvent();
+    return new AccessTokensExpiringEvent();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_UsersAccessTokensExpiringEvent_descriptor;
+    return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_AccessTokensExpiringEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_UsersAccessTokensExpiringEvent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_AccessTokensExpiringEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.class, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder.class);
+            com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.class, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder.class);
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -183,10 +183,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent other = (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) obj;
+    com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent other = (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) obj;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
@@ -212,44 +212,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +257,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +306,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * UsersAccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
    * </pre>
    *
-   * Protobuf type {@code api.commons.audit.UsersAccessTokensExpiringEvent}
+   * Protobuf type {@code api.commons.audit.AccessTokensExpiringEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.audit.UsersAccessTokensExpiringEvent)
-      com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.audit.AccessTokensExpiringEvent)
+      com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_UsersAccessTokensExpiringEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_AccessTokensExpiringEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_UsersAccessTokensExpiringEvent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_AccessTokensExpiringEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.class, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder.class);
+              com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.class, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_UsersAccessTokensExpiringEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.OrganizationEventsProto.internal_static_api_commons_audit_AccessTokensExpiringEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent build() {
-      com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent build() {
+      com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent buildPartial() {
-      com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent result = new com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent(this);
+    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent buildPartial() {
+      com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent result = new com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
@@ -419,16 +419,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent other) {
-      if (other == com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent other) {
+      if (other == com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
         bitField0_ |= 0x00000001;
@@ -688,23 +688,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.audit.UsersAccessTokensExpiringEvent)
+    // @@protoc_insertion_point(builder_scope:api.commons.audit.AccessTokensExpiringEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.audit.UsersAccessTokensExpiringEvent)
-  private static final com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.audit.AccessTokensExpiringEvent)
+  private static final com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent();
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UsersAccessTokensExpiringEvent>
-      PARSER = new com.google.protobuf.AbstractParser<UsersAccessTokensExpiringEvent>() {
+  private static final com.google.protobuf.Parser<AccessTokensExpiringEvent>
+      PARSER = new com.google.protobuf.AbstractParser<AccessTokensExpiringEvent>() {
     @java.lang.Override
-    public UsersAccessTokensExpiringEvent parsePartialFrom(
+    public AccessTokensExpiringEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +723,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UsersAccessTokensExpiringEvent> parser() {
+  public static com.google.protobuf.Parser<AccessTokensExpiringEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UsersAccessTokensExpiringEvent> getParserForType() {
+  public com.google.protobuf.Parser<AccessTokensExpiringEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

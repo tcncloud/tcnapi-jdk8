@@ -3156,32 +3156,32 @@ public interface AuditEventOrBuilder extends
   /**
    * <pre>
    * Organization Events
-   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
    * </pre>
    *
-   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
-   * @return Whether the usersAccessTokensExpiringEvent field is set.
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
+   * @return Whether the accessTokensExpiringEvent field is set.
    */
-  boolean hasUsersAccessTokensExpiringEvent();
+  boolean hasAccessTokensExpiringEvent();
   /**
    * <pre>
    * Organization Events
-   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
    * </pre>
    *
-   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
-   * @return The usersAccessTokensExpiringEvent.
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
+   * @return The accessTokensExpiringEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getUsersAccessTokensExpiringEvent();
+  com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getAccessTokensExpiringEvent();
   /**
    * <pre>
    * Organization Events
-   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
    * </pre>
    *
-   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder getUsersAccessTokensExpiringEventOrBuilder();
+  com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder getAccessTokensExpiringEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }
