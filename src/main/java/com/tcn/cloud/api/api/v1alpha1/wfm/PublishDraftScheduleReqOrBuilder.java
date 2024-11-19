@@ -79,7 +79,7 @@ public interface PublishDraftScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7091
+   *     See api/v1alpha1/wfm/wfm.proto;l=7066
    * @return The includeShiftInstances.
    */
   @java.lang.Deprecated boolean getIncludeShiftInstances();
@@ -92,7 +92,7 @@ public interface PublishDraftScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7094
+   *     See api/v1alpha1/wfm/wfm.proto;l=7069
    * @return The includeShiftTemplate.
    */
   @java.lang.Deprecated boolean getIncludeShiftTemplate();
@@ -105,7 +105,7 @@ public interface PublishDraftScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7097
+   *     See api/v1alpha1/wfm/wfm.proto;l=7072
    * @return The includeShiftSegments.
    */
   @java.lang.Deprecated boolean getIncludeShiftSegments();
@@ -118,7 +118,7 @@ public interface PublishDraftScheduleReqOrBuilder extends
    *
    * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7100
+   *     See api/v1alpha1/wfm/wfm.proto;l=7075
    * @return The includeSchedulingActivity.
    */
   @java.lang.Deprecated boolean getIncludeSchedulingActivity();
@@ -131,7 +131,7 @@ public interface PublishDraftScheduleReqOrBuilder extends
    *
    * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7103
+   *     See api/v1alpha1/wfm/wfm.proto;l=7078
    * @return The includeActivity.
    */
   @java.lang.Deprecated boolean getIncludeActivity();
