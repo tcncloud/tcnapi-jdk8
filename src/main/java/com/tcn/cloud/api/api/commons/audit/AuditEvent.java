@@ -174,7 +174,6 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
     CONTACT_MANAGER_ENTRY_DELETE_EVENT(1207),
     CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT(1208),
-    ACCESS_TOKENS_EXPIRING_EVENT(1300),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -313,7 +312,6 @@ private static final long serialVersionUID = 0L;
         case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
         case 1207: return CONTACT_MANAGER_ENTRY_DELETE_EVENT;
         case 1208: return CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT;
-        case 1300: return ACCESS_TOKENS_EXPIRING_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -1144,7 +1142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=68
+   *     See api/commons/audit/audit.proto;l=67
    * @return Whether the omnichannelCustomerTextMessageEvent field is set.
    */
   @java.lang.Override
@@ -1158,7 +1156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=68
+   *     See api/commons/audit/audit.proto;l=67
    * @return The omnichannelCustomerTextMessageEvent.
    */
   @java.lang.Override
@@ -1191,7 +1189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=70
+   *     See api/commons/audit/audit.proto;l=69
    * @return Whether the omnichannelAgentTextMessageEvent field is set.
    */
   @java.lang.Override
@@ -1205,7 +1203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=70
+   *     See api/commons/audit/audit.proto;l=69
    * @return The omnichannelAgentTextMessageEvent.
    */
   @java.lang.Override
@@ -1496,7 +1494,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=84
+   *     See api/commons/audit/audit.proto;l=83
    * @return Whether the omnichannelManagerTextMessageEvent field is set.
    */
   @java.lang.Override
@@ -1510,7 +1508,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=84
+   *     See api/commons/audit/audit.proto;l=83
    * @return The omnichannelManagerTextMessageEvent.
    */
   @java.lang.Override
@@ -2274,7 +2272,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=121
+   *     See api/commons/audit/audit.proto;l=120
    * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
    */
   @java.lang.Override
@@ -2288,7 +2286,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=121
+   *     See api/commons/audit/audit.proto;l=120
    * @return The omnichannelAddSmsMessageSentModuleEvent.
    */
   @java.lang.Override
@@ -2321,7 +2319,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=123
+   *     See api/commons/audit/audit.proto;l=122
    * @return Whether the omnichannelModuleInitialReplyEvent field is set.
    */
   @java.lang.Override
@@ -2335,7 +2333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=123
+   *     See api/commons/audit/audit.proto;l=122
    * @return The omnichannelModuleInitialReplyEvent.
    */
   @java.lang.Override
@@ -2368,7 +2366,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=125
+   *     See api/commons/audit/audit.proto;l=124
    * @return Whether the omnichannelTaskMessageSentEvent field is set.
    */
   @java.lang.Override
@@ -2382,7 +2380,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=125
+   *     See api/commons/audit/audit.proto;l=124
    * @return The omnichannelTaskMessageSentEvent.
    */
   @java.lang.Override
@@ -2501,7 +2499,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=131
+   *     See api/commons/audit/audit.proto;l=130
    * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
    */
   @java.lang.Override
@@ -2515,7 +2513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=131
+   *     See api/commons/audit/audit.proto;l=130
    * @return The omnichannelAgentMessageUnitsEvent.
    */
   @java.lang.Override
@@ -2548,7 +2546,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=133
+   *     See api/commons/audit/audit.proto;l=132
    * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
    */
   @java.lang.Override
@@ -2562,7 +2560,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=133
+   *     See api/commons/audit/audit.proto;l=132
    * @return The omnichannelManagerMessageUnitsEvent.
    */
   @java.lang.Override
@@ -2595,7 +2593,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=135
+   *     See api/commons/audit/audit.proto;l=134
    * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
    */
   @java.lang.Override
@@ -2609,7 +2607,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=135
+   *     See api/commons/audit/audit.proto;l=134
    * @return The omnichannelCustomerMessageUnitsEvent.
    */
   @java.lang.Override
@@ -2642,7 +2640,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=137
+   *     See api/commons/audit/audit.proto;l=136
    * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
    */
   @java.lang.Override
@@ -2656,7 +2654,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=137
+   *     See api/commons/audit/audit.proto;l=136
    * @return The omnichannelSystemMessageUnitsEvent.
    */
   @java.lang.Override
@@ -4744,7 +4742,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=245
    * @return Whether the billingCommitBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4758,7 +4756,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=245
    * @return The billingCommitBillingPlanEvent.
    */
   @java.lang.Override
@@ -4787,7 +4785,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=246
    * @return Whether the billingCreateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4797,7 +4795,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=246
    * @return The billingCreateBillingPlanEvent.
    */
   @java.lang.Override
@@ -4822,7 +4820,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4832,7 +4830,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
@@ -4857,7 +4855,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingCreateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4867,7 +4865,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingCreateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4892,7 +4890,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingDeleteBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4902,7 +4900,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingDeleteBillingPlanEvent.
    */
   @java.lang.Override
@@ -4927,7 +4925,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=251
+   *     See api/commons/audit/audit.proto;l=250
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4937,7 +4935,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=251
+   *     See api/commons/audit/audit.proto;l=250
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
@@ -4962,7 +4960,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=252
+   *     See api/commons/audit/audit.proto;l=251
    * @return Whether the billingDeleteRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4972,7 +4970,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=252
+   *     See api/commons/audit/audit.proto;l=251
    * @return The billingDeleteRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4997,7 +4995,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=253
+   *     See api/commons/audit/audit.proto;l=252
    * @return Whether the billingExportInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -5007,7 +5005,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=253
+   *     See api/commons/audit/audit.proto;l=252
    * @return The billingExportInvoiceEvent.
    */
   @java.lang.Override
@@ -5032,7 +5030,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=254
+   *     See api/commons/audit/audit.proto;l=253
    * @return Whether the billingUpdateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -5042,7 +5040,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=254
+   *     See api/commons/audit/audit.proto;l=253
    * @return The billingUpdateBillingPlanEvent.
    */
   @java.lang.Override
@@ -5067,7 +5065,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=255
+   *     See api/commons/audit/audit.proto;l=254
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -5077,7 +5075,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=255
+   *     See api/commons/audit/audit.proto;l=254
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
@@ -5102,7 +5100,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=256
+   *     See api/commons/audit/audit.proto;l=255
    * @return Whether the billingUpdateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -5112,7 +5110,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=256
+   *     See api/commons/audit/audit.proto;l=255
    * @return The billingUpdateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -5316,7 +5314,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=266
+   *     See api/commons/audit/audit.proto;l=265
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Override
@@ -5326,7 +5324,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=266
+   *     See api/commons/audit/audit.proto;l=265
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Override
@@ -5351,7 +5349,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=267
+   *     See api/commons/audit/audit.proto;l=266
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Override
@@ -5361,7 +5359,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=267
+   *     See api/commons/audit/audit.proto;l=266
    * @return The contactManagerKycEvent.
    */
   @java.lang.Override
@@ -5535,52 +5533,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
-  }
-
-  public static final int ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER = 1300;
-  /**
-   * <pre>
-   * Organization Events
-   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-   * </pre>
-   *
-   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-   * @return Whether the accessTokensExpiringEvent field is set.
-   */
-  @java.lang.Override
-  public boolean hasAccessTokensExpiringEvent() {
-    return eventCase_ == 1300;
-  }
-  /**
-   * <pre>
-   * Organization Events
-   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-   * </pre>
-   *
-   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-   * @return The accessTokensExpiringEvent.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getAccessTokensExpiringEvent() {
-    if (eventCase_ == 1300) {
-       return (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * Organization Events
-   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-   * </pre>
-   *
-   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder getAccessTokensExpiringEventOrBuilder() {
-    if (eventCase_ == 1300) {
-       return (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -5977,9 +5929,6 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1208) {
       output.writeMessage(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
-    }
-    if (eventCase_ == 1300) {
-      output.writeMessage(1300, (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6493,10 +6442,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1208) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
-    }
-    if (eventCase_ == 1300) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1300, (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7013,10 +6958,6 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerEntryExpungeEvent()
             .equals(other.getContactManagerEntryExpungeEvent())) return false;
         break;
-      case 1300:
-        if (!getAccessTokensExpiringEvent()
-            .equals(other.getAccessTokensExpiringEvent())) return false;
-        break;
       case 0:
       default:
     }
@@ -7529,10 +7470,6 @@ private static final long serialVersionUID = 0L;
       case 1208:
         hash = (37 * hash) + CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerEntryExpungeEvent().hashCode();
-        break;
-      case 1300:
-        hash = (37 * hash) + ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAccessTokensExpiringEvent().hashCode();
         break;
       case 0:
       default:
@@ -8047,9 +7984,6 @@ private static final long serialVersionUID = 0L;
       }
       if (contactManagerEntryExpungeEventBuilder_ != null) {
         contactManagerEntryExpungeEventBuilder_.clear();
-      }
-      if (accessTokensExpiringEventBuilder_ != null) {
-        accessTokensExpiringEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -8611,10 +8545,6 @@ private static final long serialVersionUID = 0L;
           contactManagerEntryExpungeEventBuilder_ != null) {
         result.event_ = contactManagerEntryExpungeEventBuilder_.build();
       }
-      if (eventCase_ == 1300 &&
-          accessTokensExpiringEventBuilder_ != null) {
-        result.event_ = accessTokensExpiringEventBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -9170,10 +9100,6 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT: {
           mergeContactManagerEntryExpungeEvent(other.getContactManagerEntryExpungeEvent());
-          break;
-        }
-        case ACCESS_TOKENS_EXPIRING_EVENT: {
-          mergeAccessTokensExpiringEvent(other.getAccessTokensExpiringEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -10085,13 +10011,6 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1208;
               break;
             } // case 9666
-            case 10402: {
-              input.readMessage(
-                  getAccessTokensExpiringEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 1300;
-              break;
-            } // case 10402
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -13129,7 +13048,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=68
+     *     See api/commons/audit/audit.proto;l=67
      * @return Whether the omnichannelCustomerTextMessageEvent field is set.
      */
     @java.lang.Override
@@ -13143,7 +13062,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=68
+     *     See api/commons/audit/audit.proto;l=67
      * @return The omnichannelCustomerTextMessageEvent.
      */
     @java.lang.Override
@@ -13311,7 +13230,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=70
+     *     See api/commons/audit/audit.proto;l=69
      * @return Whether the omnichannelAgentTextMessageEvent field is set.
      */
     @java.lang.Override
@@ -13325,7 +13244,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=70
+     *     See api/commons/audit/audit.proto;l=69
      * @return The omnichannelAgentTextMessageEvent.
      */
     @java.lang.Override
@@ -14561,7 +14480,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=84
+     *     See api/commons/audit/audit.proto;l=83
      * @return Whether the omnichannelManagerTextMessageEvent field is set.
      */
     @java.lang.Override
@@ -14575,7 +14494,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=84
+     *     See api/commons/audit/audit.proto;l=83
      * @return The omnichannelManagerTextMessageEvent.
      */
     @java.lang.Override
@@ -17769,7 +17688,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=121
+     *     See api/commons/audit/audit.proto;l=120
      * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
      */
     @java.lang.Override
@@ -17783,7 +17702,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=121
+     *     See api/commons/audit/audit.proto;l=120
      * @return The omnichannelAddSmsMessageSentModuleEvent.
      */
     @java.lang.Override
@@ -17951,7 +17870,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=123
+     *     See api/commons/audit/audit.proto;l=122
      * @return Whether the omnichannelModuleInitialReplyEvent field is set.
      */
     @java.lang.Override
@@ -17965,7 +17884,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=123
+     *     See api/commons/audit/audit.proto;l=122
      * @return The omnichannelModuleInitialReplyEvent.
      */
     @java.lang.Override
@@ -18133,7 +18052,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=125
+     *     See api/commons/audit/audit.proto;l=124
      * @return Whether the omnichannelTaskMessageSentEvent field is set.
      */
     @java.lang.Override
@@ -18147,7 +18066,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=125
+     *     See api/commons/audit/audit.proto;l=124
      * @return The omnichannelTaskMessageSentEvent.
      */
     @java.lang.Override
@@ -18671,7 +18590,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=131
+     *     See api/commons/audit/audit.proto;l=130
      * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
      */
     @java.lang.Override
@@ -18685,7 +18604,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=131
+     *     See api/commons/audit/audit.proto;l=130
      * @return The omnichannelAgentMessageUnitsEvent.
      */
     @java.lang.Override
@@ -18853,7 +18772,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=133
+     *     See api/commons/audit/audit.proto;l=132
      * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
      */
     @java.lang.Override
@@ -18867,7 +18786,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=133
+     *     See api/commons/audit/audit.proto;l=132
      * @return The omnichannelManagerMessageUnitsEvent.
      */
     @java.lang.Override
@@ -19035,7 +18954,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=135
+     *     See api/commons/audit/audit.proto;l=134
      * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
      */
     @java.lang.Override
@@ -19049,7 +18968,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=135
+     *     See api/commons/audit/audit.proto;l=134
      * @return The omnichannelCustomerMessageUnitsEvent.
      */
     @java.lang.Override
@@ -19217,7 +19136,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=137
+     *     See api/commons/audit/audit.proto;l=136
      * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
      */
     @java.lang.Override
@@ -19231,7 +19150,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=137
+     *     See api/commons/audit/audit.proto;l=136
      * @return The omnichannelSystemMessageUnitsEvent.
      */
     @java.lang.Override
@@ -27916,7 +27835,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=245
      * @return Whether the billingCommitBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27930,7 +27849,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=245
      * @return The billingCommitBillingPlanEvent.
      */
     @java.lang.Override
@@ -28094,7 +28013,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=246
      * @return Whether the billingCreateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -28104,7 +28023,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=246
      * @return The billingCreateBillingPlanEvent.
      */
     @java.lang.Override
@@ -28240,7 +28159,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=247
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28250,7 +28169,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=247
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
@@ -28386,7 +28305,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=248
      * @return Whether the billingCreateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28396,7 +28315,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=248
      * @return The billingCreateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -28532,7 +28451,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=249
      * @return Whether the billingDeleteBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -28542,7 +28461,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=249
      * @return The billingDeleteBillingPlanEvent.
      */
     @java.lang.Override
@@ -28678,7 +28597,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=251
+     *     See api/commons/audit/audit.proto;l=250
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28688,7 +28607,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=251
+     *     See api/commons/audit/audit.proto;l=250
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
@@ -28824,7 +28743,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=252
+     *     See api/commons/audit/audit.proto;l=251
      * @return Whether the billingDeleteRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28834,7 +28753,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=252
+     *     See api/commons/audit/audit.proto;l=251
      * @return The billingDeleteRateDefinitionEvent.
      */
     @java.lang.Override
@@ -28970,7 +28889,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=253
+     *     See api/commons/audit/audit.proto;l=252
      * @return Whether the billingExportInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28980,7 +28899,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=253
+     *     See api/commons/audit/audit.proto;l=252
      * @return The billingExportInvoiceEvent.
      */
     @java.lang.Override
@@ -29116,7 +29035,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=254
+     *     See api/commons/audit/audit.proto;l=253
      * @return Whether the billingUpdateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -29126,7 +29045,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=254
+     *     See api/commons/audit/audit.proto;l=253
      * @return The billingUpdateBillingPlanEvent.
      */
     @java.lang.Override
@@ -29262,7 +29181,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=255
+     *     See api/commons/audit/audit.proto;l=254
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -29272,7 +29191,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=255
+     *     See api/commons/audit/audit.proto;l=254
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override
@@ -29408,7 +29327,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=256
+     *     See api/commons/audit/audit.proto;l=255
      * @return Whether the billingUpdateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -29418,7 +29337,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=256
+     *     See api/commons/audit/audit.proto;l=255
      * @return The billingUpdateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -30336,7 +30255,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=266
+     *     See api/commons/audit/audit.proto;l=265
      * @return Whether the contactManagerDeleteEvent field is set.
      */
     @java.lang.Override
@@ -30346,7 +30265,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=266
+     *     See api/commons/audit/audit.proto;l=265
      * @return The contactManagerDeleteEvent.
      */
     @java.lang.Override
@@ -30482,7 +30401,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=267
+     *     See api/commons/audit/audit.proto;l=266
      * @return Whether the contactManagerKycEvent field is set.
      */
     @java.lang.Override
@@ -30492,7 +30411,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=267
+     *     See api/commons/audit/audit.proto;l=266
      * @return The contactManagerKycEvent.
      */
     @java.lang.Override
@@ -31331,193 +31250,6 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1208;
       onChanged();
       return contactManagerEntryExpungeEventBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder> accessTokensExpiringEventBuilder_;
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     * @return Whether the accessTokensExpiringEvent field is set.
-     */
-    @java.lang.Override
-    public boolean hasAccessTokensExpiringEvent() {
-      return eventCase_ == 1300;
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     * @return The accessTokensExpiringEvent.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getAccessTokensExpiringEvent() {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        if (eventCase_ == 1300) {
-          return (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
-      } else {
-        if (eventCase_ == 1300) {
-          return accessTokensExpiringEventBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    public Builder setAccessTokensExpiringEvent(com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent value) {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        event_ = value;
-        onChanged();
-      } else {
-        accessTokensExpiringEventBuilder_.setMessage(value);
-      }
-      eventCase_ = 1300;
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    public Builder setAccessTokensExpiringEvent(
-        com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder builderForValue) {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        event_ = builderForValue.build();
-        onChanged();
-      } else {
-        accessTokensExpiringEventBuilder_.setMessage(builderForValue.build());
-      }
-      eventCase_ = 1300;
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    public Builder mergeAccessTokensExpiringEvent(com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent value) {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        if (eventCase_ == 1300 &&
-            event_ != com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance()) {
-          event_ = com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          event_ = value;
-        }
-        onChanged();
-      } else {
-        if (eventCase_ == 1300) {
-          accessTokensExpiringEventBuilder_.mergeFrom(value);
-        } else {
-          accessTokensExpiringEventBuilder_.setMessage(value);
-        }
-      }
-      eventCase_ = 1300;
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    public Builder clearAccessTokensExpiringEvent() {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        if (eventCase_ == 1300) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-      } else {
-        if (eventCase_ == 1300) {
-          eventCase_ = 0;
-          event_ = null;
-        }
-        accessTokensExpiringEventBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder getAccessTokensExpiringEventBuilder() {
-      return getAccessTokensExpiringEventFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder getAccessTokensExpiringEventOrBuilder() {
-      if ((eventCase_ == 1300) && (accessTokensExpiringEventBuilder_ != null)) {
-        return accessTokensExpiringEventBuilder_.getMessageOrBuilder();
-      } else {
-        if (eventCase_ == 1300) {
-          return (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Organization Events
-     * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
-     * </pre>
-     *
-     * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder> 
-        getAccessTokensExpiringEventFieldBuilder() {
-      if (accessTokensExpiringEventBuilder_ == null) {
-        if (!(eventCase_ == 1300)) {
-          event_ = com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.getDefaultInstance();
-        }
-        accessTokensExpiringEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder>(
-                (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_,
-                getParentForChildren(),
-                isClean());
-        event_ = null;
-      }
-      eventCase_ = 1300;
-      onChanged();
-      return accessTokensExpiringEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
