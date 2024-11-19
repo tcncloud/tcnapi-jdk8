@@ -89,10 +89,12 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * Set to true to include shift instances.
    * </pre>
    *
-   * <code>bool include_shift_instances = 5 [json_name = "includeShiftInstances"];</code>
+   * <code>bool include_shift_instances = 5 [json_name = "includeShiftInstances", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.include_shift_instances is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6989
    * @return The includeShiftInstances.
    */
-  boolean getIncludeShiftInstances();
+  @java.lang.Deprecated boolean getIncludeShiftInstances();
 
   /**
    * <pre>
@@ -100,10 +102,12 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_template = 6 [json_name = "includeShiftTemplate"];</code>
+   * <code>bool include_shift_template = 6 [json_name = "includeShiftTemplate", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.include_shift_template is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6992
    * @return The includeShiftTemplate.
    */
-  boolean getIncludeShiftTemplate();
+  @java.lang.Deprecated boolean getIncludeShiftTemplate();
 
   /**
    * <pre>
@@ -111,10 +115,12 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_segments = 7 [json_name = "includeShiftSegments"];</code>
+   * <code>bool include_shift_segments = 7 [json_name = "includeShiftSegments", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.include_shift_segments is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6995
    * @return The includeShiftSegments.
    */
-  boolean getIncludeShiftSegments();
+  @java.lang.Deprecated boolean getIncludeShiftSegments();
 
   /**
    * <pre>
@@ -122,10 +128,12 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * Only effective when include_shift_instances and include_shift_segments are also set to true.
    * </pre>
    *
-   * <code>bool include_scheduling_activity = 8 [json_name = "includeSchedulingActivity"];</code>
+   * <code>bool include_scheduling_activity = 8 [json_name = "includeSchedulingActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.include_scheduling_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6998
    * @return The includeSchedulingActivity.
    */
-  boolean getIncludeSchedulingActivity();
+  @java.lang.Deprecated boolean getIncludeSchedulingActivity();
 
   /**
    * <pre>
@@ -133,10 +141,12 @@ public interface BuildDraftScheduleReqOrBuilder extends
    * Only effective when include_scheduling_activity, include_shift_segments and include_shift_instances are also set to true.
    * </pre>
    *
-   * <code>bool include_activity = 9 [json_name = "includeActivity"];</code>
+   * <code>bool include_activity = 9 [json_name = "includeActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.include_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=7001
    * @return The includeActivity.
    */
-  boolean getIncludeActivity();
+  @java.lang.Deprecated boolean getIncludeActivity();
 
   /**
    * <pre>
@@ -156,7 +166,7 @@ public interface BuildDraftScheduleReqOrBuilder extends
    *
    * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7015
+   *     See api/v1alpha1/wfm/wfm.proto;l=7006
    * @return Whether the schedulingTarget field is set.
    */
   @java.lang.Deprecated boolean hasSchedulingTarget();
@@ -167,7 +177,7 @@ public interface BuildDraftScheduleReqOrBuilder extends
    *
    * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7015
+   *     See api/v1alpha1/wfm/wfm.proto;l=7006
    * @return The schedulingTarget.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();

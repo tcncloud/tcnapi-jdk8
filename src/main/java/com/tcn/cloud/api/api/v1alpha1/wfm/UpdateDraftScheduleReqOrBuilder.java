@@ -110,8 +110,10 @@ public interface UpdateDraftScheduleReqOrBuilder extends
    * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
    * </pre>
    *
-   * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts"];</code>
+   * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6968
    * @return The getUpdatedShifts.
    */
-  boolean getGetUpdatedShifts();
+  @java.lang.Deprecated boolean getGetUpdatedShifts();
 }

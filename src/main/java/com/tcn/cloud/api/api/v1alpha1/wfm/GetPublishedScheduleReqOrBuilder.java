@@ -39,10 +39,12 @@ public interface GetPublishedScheduleReqOrBuilder extends
    * Set to true to include shift instances.
    * </pre>
    *
-   * <code>bool include_shift_instances = 2 [json_name = "includeShiftInstances"];</code>
+   * <code>bool include_shift_instances = 2 [json_name = "includeShiftInstances", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_instances is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6877
    * @return The includeShiftInstances.
    */
-  boolean getIncludeShiftInstances();
+  @java.lang.Deprecated boolean getIncludeShiftInstances();
 
   /**
    * <pre>
@@ -50,10 +52,12 @@ public interface GetPublishedScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+   * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_template is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6880
    * @return The includeShiftTemplate.
    */
-  boolean getIncludeShiftTemplate();
+  @java.lang.Deprecated boolean getIncludeShiftTemplate();
 
   /**
    * <pre>
@@ -61,10 +65,12 @@ public interface GetPublishedScheduleReqOrBuilder extends
    * Only effective when include_shift_instances is also set to true.
    * </pre>
    *
-   * <code>bool include_shift_segments = 4 [json_name = "includeShiftSegments"];</code>
+   * <code>bool include_shift_segments = 4 [json_name = "includeShiftSegments", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_segments is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6883
    * @return The includeShiftSegments.
    */
-  boolean getIncludeShiftSegments();
+  @java.lang.Deprecated boolean getIncludeShiftSegments();
 
   /**
    * <pre>
@@ -72,10 +78,12 @@ public interface GetPublishedScheduleReqOrBuilder extends
    * Only effective when include_shift_instances and include_shift_segments are also set to true.
    * </pre>
    *
-   * <code>bool include_scheduling_activity = 5 [json_name = "includeSchedulingActivity"];</code>
+   * <code>bool include_scheduling_activity = 5 [json_name = "includeSchedulingActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_scheduling_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6886
    * @return The includeSchedulingActivity.
    */
-  boolean getIncludeSchedulingActivity();
+  @java.lang.Deprecated boolean getIncludeSchedulingActivity();
 
   /**
    * <pre>
@@ -83,10 +91,12 @@ public interface GetPublishedScheduleReqOrBuilder extends
    * Only effective when include_scheduling_activity, include_shift_segments and include_shift_instances are also set to true.
    * </pre>
    *
-   * <code>bool include_activity = 6 [json_name = "includeActivity"];</code>
+   * <code>bool include_activity = 6 [json_name = "includeActivity", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_activity is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=6889
    * @return The includeActivity.
    */
-  boolean getIncludeActivity();
+  @java.lang.Deprecated boolean getIncludeActivity();
 
   /**
    * <pre>
