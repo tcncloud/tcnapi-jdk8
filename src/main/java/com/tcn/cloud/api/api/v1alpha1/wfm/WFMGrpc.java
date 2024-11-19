@@ -5722,37 +5722,6 @@ public final class WFMGrpc {
     return getListRealTimeManagementStatesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> getListAdherenceAgentStatesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceAgentStates",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> getListAdherenceAgentStatesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> getListAdherenceAgentStatesMethod;
-    if ((getListAdherenceAgentStatesMethod = WFMGrpc.getListAdherenceAgentStatesMethod) == null) {
-      synchronized (WFMGrpc.class) {
-        if ((getListAdherenceAgentStatesMethod = WFMGrpc.getListAdherenceAgentStatesMethod) == null) {
-          WFMGrpc.getListAdherenceAgentStatesMethod = getListAdherenceAgentStatesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceAgentStates"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceAgentStates"))
-              .build();
-        }
-      }
-    }
-    return getListAdherenceAgentStatesMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> getUpsertRealTimeManagementStateColorMethod;
 
@@ -9595,21 +9564,6 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the current time (start time not inclusive, end time inclusive).
-     * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
-     * Errors:
-     *   - grpc.Invalid: arguments in the request are invalid.
-     *   - grpc.Internal: error occurs when getting the states.
-     * </pre>
-     */
-    default void listAdherenceAgentStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceAgentStatesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
      *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
@@ -13131,22 +13085,6 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the current time (start time not inclusive, end time inclusive).
-     * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
-     * Errors:
-     *   - grpc.Invalid: arguments in the request are invalid.
-     *   - grpc.Internal: error occurs when getting the states.
-     * </pre>
-     */
-    public void listAdherenceAgentStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAdherenceAgentStatesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
      *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
@@ -16501,21 +16439,6 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse listRealTimeManagementStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRealTimeManagementStatesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the current time (start time not inclusive, end time inclusive).
-     * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
-     * Errors:
-     *   - grpc.Invalid: arguments in the request are invalid.
-     *   - grpc.Internal: error occurs when getting the states.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse listAdherenceAgentStates(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAdherenceAgentStatesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -19925,22 +19848,6 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the current time (start time not inclusive, end time inclusive).
-     * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
-     * Errors:
-     *   - grpc.Invalid: arguments in the request are invalid.
-     *   - grpc.Internal: error occurs when getting the states.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse> listAdherenceAgentStates(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAdherenceAgentStatesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
      *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
@@ -20566,36 +20473,35 @@ public final class WFMGrpc {
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 181;
   private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 182;
   private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 183;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 184;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 185;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 186;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 187;
-  private static final int METHODID_CREATE_RGBA_COLOR = 188;
-  private static final int METHODID_LIST_RGBA_COLORS = 189;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 190;
-  private static final int METHODID_DELETE_RGBA_COLOR = 191;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 192;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 193;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 194;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 195;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 196;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 197;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 198;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 199;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 200;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 201;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 202;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 203;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 204;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 205;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 206;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 207;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 208;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 209;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 210;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 211;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 212;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 213;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 184;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 185;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 186;
+  private static final int METHODID_CREATE_RGBA_COLOR = 187;
+  private static final int METHODID_LIST_RGBA_COLORS = 188;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 189;
+  private static final int METHODID_DELETE_RGBA_COLOR = 190;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 191;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 192;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 193;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 194;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 195;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 196;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 197;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 198;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 199;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 200;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 201;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 202;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 203;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 204;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 205;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 206;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 207;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 208;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 209;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 210;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 211;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 212;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -21349,10 +21255,6 @@ public final class WFMGrpc {
         case METHODID_LIST_REAL_TIME_MANAGEMENT_STATES:
           serviceImpl.listRealTimeManagementStates((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>) responseObserver);
-          break;
-        case METHODID_LIST_ADHERENCE_AGENT_STATES:
-          serviceImpl.listAdherenceAgentStates((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse>) responseObserver);
           break;
         case METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR:
           serviceImpl.upsertRealTimeManagementStateColor((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest) request,
@@ -22777,13 +22679,6 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>(
                 service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATES)))
         .addMethod(
-          getListAdherenceAgentStatesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStatesResponse>(
-                service, METHODID_LIST_ADHERENCE_AGENT_STATES)))
-        .addMethod(
           getUpsertRealTimeManagementStateColorMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -23218,7 +23113,6 @@ public final class WFMGrpc {
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
-              .addMethod(getListAdherenceAgentStatesMethod())
               .addMethod(getUpsertRealTimeManagementStateColorMethod())
               .addMethod(getListRealTimeManagementStateColorsMethod())
               .addMethod(getDeleteRealTimeManagementStateColorMethod())
