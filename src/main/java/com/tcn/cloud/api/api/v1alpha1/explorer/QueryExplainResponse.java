@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
+ * <pre>
+ * QueryExplainResponse contains the result of a query explain.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.explorer.QueryExplainResponse}
  */
 public final class QueryExplainResponse extends
@@ -444,6 +448,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * QueryExplainResponse contains the result of a query explain.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.explorer.QueryExplainResponse}
    */
   public static final class Builder extends

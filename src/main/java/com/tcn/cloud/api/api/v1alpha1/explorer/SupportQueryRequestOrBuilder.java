@@ -8,16 +8,28 @@ public interface SupportQueryRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    * @return Whether the queryRequest field is set.
    */
   boolean hasQueryRequest();
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    * @return The queryRequest.
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest getQueryRequest();
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequestOrBuilder getQueryRequestOrBuilder();

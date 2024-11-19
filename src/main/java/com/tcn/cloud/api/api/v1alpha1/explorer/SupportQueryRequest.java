@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
+ * <pre>
+ * SupportQueryRequest is the request to query a datasource with support permissions.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.explorer.SupportQueryRequest}
  */
 public final class SupportQueryRequest extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int QUERY_REQUEST_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest queryRequest_;
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    * @return Whether the queryRequest field is set.
    */
@@ -49,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return queryRequest_ != null;
   }
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    * @return The queryRequest.
    */
@@ -57,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return queryRequest_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.getDefaultInstance() : queryRequest_;
   }
   /**
+   * <pre>
+   * query_request is the query to execute.
+   * </pre>
+   *
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    */
   @java.lang.Override
@@ -227,6 +243,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SupportQueryRequest is the request to query a datasource with support permissions.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.explorer.SupportQueryRequest}
    */
   public static final class Builder extends
@@ -406,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest, com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequestOrBuilder> queryRequestBuilder_;
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      * @return Whether the queryRequest field is set.
      */
@@ -413,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      * @return The queryRequest.
      */
@@ -424,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public Builder setQueryRequest(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest value) {
@@ -440,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public Builder setQueryRequest(
@@ -454,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public Builder mergeQueryRequest(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest value) {
@@ -473,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public Builder clearQueryRequest() {
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.Builder getQueryRequestBuilder() {
@@ -494,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getQueryRequestFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequestOrBuilder getQueryRequestOrBuilder() {
@@ -505,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * query_request is the query to execute.
+     * </pre>
+     *
      * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

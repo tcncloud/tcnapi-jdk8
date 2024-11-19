@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
+ * <pre>
+ * QueryExplainRequest is the request to retrieve debug data for a query.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.explorer.QueryExplainRequest}
  */
 public final class QueryExplainRequest extends
@@ -227,6 +231,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * QueryExplainRequest is the request to retrieve debug data for a query.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.explorer.QueryExplainRequest}
    */
   public static final class Builder extends

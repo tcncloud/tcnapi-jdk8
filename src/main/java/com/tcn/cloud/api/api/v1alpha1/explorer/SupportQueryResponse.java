@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
+ * <pre>
+ * SupportQueryResponse contains the result of a datasource query with support permissions.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.explorer.SupportQueryResponse}
  */
 public final class SupportQueryResponse extends
@@ -270,6 +274,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SupportQueryResponse contains the result of a datasource query with support permissions.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.explorer.SupportQueryResponse}
    */
   public static final class Builder extends
