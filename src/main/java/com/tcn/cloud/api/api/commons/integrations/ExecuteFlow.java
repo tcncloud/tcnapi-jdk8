@@ -337,6 +337,10 @@ private static final long serialVersionUID = 0L;
     GENERIC_REQUEST(5201),
     HEALTHPAY24_ACCOUNTS_RECEIVABLE(5301),
     FINVI_FACS_PROCESS_PAYMENT(5401),
+    FINVI_VELOSIDY_ACCOUNT_SEARCH(5501),
+    FINVI_VELOSIDY_ONE_TIME_SALE(5502),
+    FINVI_VELOSIDY_PLAN_OFFER(5503),
+    FINVI_VELOSIDY_PLAN_RECURRING_CREATE(5504),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -639,6 +643,10 @@ private static final long serialVersionUID = 0L;
         case 5201: return GENERIC_REQUEST;
         case 5301: return HEALTHPAY24_ACCOUNTS_RECEIVABLE;
         case 5401: return FINVI_FACS_PROCESS_PAYMENT;
+        case 5501: return FINVI_VELOSIDY_ACCOUNT_SEARCH;
+        case 5502: return FINVI_VELOSIDY_ONE_TIME_SALE;
+        case 5503: return FINVI_VELOSIDY_PLAN_OFFER;
+        case 5504: return FINVI_VELOSIDY_PLAN_RECURRING_CREATE;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -8788,7 +8796,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1120
+   *     See api/commons/integrations/integrations.proto;l=1126
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8798,7 +8806,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1120
+   *     See api/commons/integrations/integrations.proto;l=1126
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8823,7 +8831,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1121
+   *     See api/commons/integrations/integrations.proto;l=1127
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8833,7 +8841,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1121
+   *     See api/commons/integrations/integrations.proto;l=1127
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8858,7 +8866,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1122
+   *     See api/commons/integrations/integrations.proto;l=1128
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8868,7 +8876,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1122
+   *     See api/commons/integrations/integrations.proto;l=1128
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8893,7 +8901,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1123
+   *     See api/commons/integrations/integrations.proto;l=1129
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8903,7 +8911,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1123
+   *     See api/commons/integrations/integrations.proto;l=1129
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8928,7 +8936,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1124
+   *     See api/commons/integrations/integrations.proto;l=1130
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8938,7 +8946,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1124
+   *     See api/commons/integrations/integrations.proto;l=1130
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -8963,7 +8971,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1125
+   *     See api/commons/integrations/integrations.proto;l=1131
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -8973,7 +8981,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1125
+   *     See api/commons/integrations/integrations.proto;l=1131
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -8998,7 +9006,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1126
+   *     See api/commons/integrations/integrations.proto;l=1132
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9008,7 +9016,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1126
+   *     See api/commons/integrations/integrations.proto;l=1132
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9554,6 +9562,130 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviFacsProcessPayment) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviFacsProcessPayment.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_ACCOUNT_SEARCH_FIELD_NUMBER = 5501;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+   * @return Whether the finviVelosidyAccountSearch field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyAccountSearch() {
+    return valueCase_ == 5501;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+   * @return The finviVelosidyAccountSearch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch getFinviVelosidyAccountSearch() {
+    if (valueCase_ == 5501) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearchOrBuilder getFinviVelosidyAccountSearchOrBuilder() {
+    if (valueCase_ == 5501) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_ONE_TIME_SALE_FIELD_NUMBER = 5502;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+   * @return Whether the finviVelosidyOneTimeSale field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyOneTimeSale() {
+    return valueCase_ == 5502;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+   * @return The finviVelosidyOneTimeSale.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale getFinviVelosidyOneTimeSale() {
+    if (valueCase_ == 5502) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSaleOrBuilder getFinviVelosidyOneTimeSaleOrBuilder() {
+    if (valueCase_ == 5502) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_PLAN_OFFER_FIELD_NUMBER = 5503;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+   * @return Whether the finviVelosidyPlanOffer field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyPlanOffer() {
+    return valueCase_ == 5503;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+   * @return The finviVelosidyPlanOffer.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer getFinviVelosidyPlanOffer() {
+    if (valueCase_ == 5503) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOfferOrBuilder getFinviVelosidyPlanOfferOrBuilder() {
+    if (valueCase_ == 5503) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_PLAN_RECURRING_CREATE_FIELD_NUMBER = 5504;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+   * @return Whether the finviVelosidyPlanRecurringCreate field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyPlanRecurringCreate() {
+    return valueCase_ == 5504;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+   * @return The finviVelosidyPlanRecurringCreate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate getFinviVelosidyPlanRecurringCreate() {
+    if (valueCase_ == 5504) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder getFinviVelosidyPlanRecurringCreateOrBuilder() {
+    if (valueCase_ == 5504) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -10427,6 +10559,18 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5401) {
       output.writeMessage(5401, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviFacsProcessPayment) value_);
+    }
+    if (valueCase_ == 5501) {
+      output.writeMessage(5501, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_);
+    }
+    if (valueCase_ == 5502) {
+      output.writeMessage(5502, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_);
+    }
+    if (valueCase_ == 5503) {
+      output.writeMessage(5503, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_);
+    }
+    if (valueCase_ == 5504) {
+      output.writeMessage(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -11579,6 +11723,22 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5401) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5401, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviFacsProcessPayment) value_);
+    }
+    if (valueCase_ == 5501) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5501, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_);
+    }
+    if (valueCase_ == 5502) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5502, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_);
+    }
+    if (valueCase_ == 5503) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5503, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_);
+    }
+    if (valueCase_ == 5504) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -12739,6 +12899,22 @@ private static final long serialVersionUID = 0L;
         if (!getFinviFacsProcessPayment()
             .equals(other.getFinviFacsProcessPayment())) return false;
         break;
+      case 5501:
+        if (!getFinviVelosidyAccountSearch()
+            .equals(other.getFinviVelosidyAccountSearch())) return false;
+        break;
+      case 5502:
+        if (!getFinviVelosidyOneTimeSale()
+            .equals(other.getFinviVelosidyOneTimeSale())) return false;
+        break;
+      case 5503:
+        if (!getFinviVelosidyPlanOffer()
+            .equals(other.getFinviVelosidyPlanOffer())) return false;
+        break;
+      case 5504:
+        if (!getFinviVelosidyPlanRecurringCreate()
+            .equals(other.getFinviVelosidyPlanRecurringCreate())) return false;
+        break;
       case 0:
       default:
     }
@@ -13896,6 +14072,22 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FINVI_FACS_PROCESS_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getFinviFacsProcessPayment().hashCode();
         break;
+      case 5501:
+        hash = (37 * hash) + FINVI_VELOSIDY_ACCOUNT_SEARCH_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyAccountSearch().hashCode();
+        break;
+      case 5502:
+        hash = (37 * hash) + FINVI_VELOSIDY_ONE_TIME_SALE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyOneTimeSale().hashCode();
+        break;
+      case 5503:
+        hash = (37 * hash) + FINVI_VELOSIDY_PLAN_OFFER_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyPlanOffer().hashCode();
+        break;
+      case 5504:
+        hash = (37 * hash) + FINVI_VELOSIDY_PLAN_RECURRING_CREATE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyPlanRecurringCreate().hashCode();
+        break;
       case 0:
       default:
     }
@@ -14045,6 +14237,7 @@ private static final long serialVersionUID = 0L;
       bitField6_ = 0;
       bitField7_ = 0;
       bitField8_ = 0;
+      bitField9_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -14901,6 +15094,18 @@ private static final long serialVersionUID = 0L;
       if (finviFacsProcessPaymentBuilder_ != null) {
         finviFacsProcessPaymentBuilder_.clear();
       }
+      if (finviVelosidyAccountSearchBuilder_ != null) {
+        finviVelosidyAccountSearchBuilder_.clear();
+      }
+      if (finviVelosidyOneTimeSaleBuilder_ != null) {
+        finviVelosidyOneTimeSaleBuilder_.clear();
+      }
+      if (finviVelosidyPlanOfferBuilder_ != null) {
+        finviVelosidyPlanOfferBuilder_.clear();
+      }
+      if (finviVelosidyPlanRecurringCreateBuilder_ != null) {
+        finviVelosidyPlanRecurringCreateBuilder_.clear();
+      }
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -14938,6 +15143,7 @@ private static final long serialVersionUID = 0L;
       if (bitField6_ != 0) { buildPartial6(result); }
       if (bitField7_ != 0) { buildPartial7(result); }
       if (bitField8_ != 0) { buildPartial8(result); }
+      if (bitField9_ != 0) { buildPartial9(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -14980,6 +15186,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial8(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField8_ = bitField8_;
+    }
+
+    private void buildPartial9(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField9_ = bitField9_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -16124,6 +16334,22 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 5401 &&
           finviFacsProcessPaymentBuilder_ != null) {
         result.value_ = finviFacsProcessPaymentBuilder_.build();
+      }
+      if (valueCase_ == 5501 &&
+          finviVelosidyAccountSearchBuilder_ != null) {
+        result.value_ = finviVelosidyAccountSearchBuilder_.build();
+      }
+      if (valueCase_ == 5502 &&
+          finviVelosidyOneTimeSaleBuilder_ != null) {
+        result.value_ = finviVelosidyOneTimeSaleBuilder_.build();
+      }
+      if (valueCase_ == 5503 &&
+          finviVelosidyPlanOfferBuilder_ != null) {
+        result.value_ = finviVelosidyPlanOfferBuilder_.build();
+      }
+      if (valueCase_ == 5504 &&
+          finviVelosidyPlanRecurringCreateBuilder_ != null) {
+        result.value_ = finviVelosidyPlanRecurringCreateBuilder_.build();
       }
     }
 
@@ -17315,6 +17541,22 @@ private static final long serialVersionUID = 0L;
         }
         case FINVI_FACS_PROCESS_PAYMENT: {
           mergeFinviFacsProcessPayment(other.getFinviFacsProcessPayment());
+          break;
+        }
+        case FINVI_VELOSIDY_ACCOUNT_SEARCH: {
+          mergeFinviVelosidyAccountSearch(other.getFinviVelosidyAccountSearch());
+          break;
+        }
+        case FINVI_VELOSIDY_ONE_TIME_SALE: {
+          mergeFinviVelosidyOneTimeSale(other.getFinviVelosidyOneTimeSale());
+          break;
+        }
+        case FINVI_VELOSIDY_PLAN_OFFER: {
+          mergeFinviVelosidyPlanOffer(other.getFinviVelosidyPlanOffer());
+          break;
+        }
+        case FINVI_VELOSIDY_PLAN_RECURRING_CREATE: {
+          mergeFinviVelosidyPlanRecurringCreate(other.getFinviVelosidyPlanRecurringCreate());
           break;
         }
         case VALUE_NOT_SET: {
@@ -19347,6 +19589,34 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5401;
               break;
             } // case 43210
+            case 44010: {
+              input.readMessage(
+                  getFinviVelosidyAccountSearchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5501;
+              break;
+            } // case 44010
+            case 44018: {
+              input.readMessage(
+                  getFinviVelosidyOneTimeSaleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5502;
+              break;
+            } // case 44018
+            case 44026: {
+              input.readMessage(
+                  getFinviVelosidyPlanOfferFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5503;
+              break;
+            } // case 44026
+            case 44034: {
+              input.readMessage(
+                  getFinviVelosidyPlanRecurringCreateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5504;
+              break;
+            } // case 44034
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -19386,6 +19656,7 @@ private static final long serialVersionUID = 0L;
     private int bitField6_;
     private int bitField7_;
     private int bitField8_;
+    private int bitField9_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -56526,7 +56797,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1120
+     *     See api/commons/integrations/integrations.proto;l=1126
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -56536,7 +56807,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1120
+     *     See api/commons/integrations/integrations.proto;l=1126
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -56672,7 +56943,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1121
+     *     See api/commons/integrations/integrations.proto;l=1127
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -56682,7 +56953,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1121
+     *     See api/commons/integrations/integrations.proto;l=1127
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -56818,7 +57089,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1122
+     *     See api/commons/integrations/integrations.proto;l=1128
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -56828,7 +57099,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1122
+     *     See api/commons/integrations/integrations.proto;l=1128
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -56964,7 +57235,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1123
+     *     See api/commons/integrations/integrations.proto;l=1129
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -56974,7 +57245,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1123
+     *     See api/commons/integrations/integrations.proto;l=1129
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -57110,7 +57381,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1124
+     *     See api/commons/integrations/integrations.proto;l=1130
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -57120,7 +57391,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1124
+     *     See api/commons/integrations/integrations.proto;l=1130
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -57256,7 +57527,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1125
+     *     See api/commons/integrations/integrations.proto;l=1131
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -57266,7 +57537,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1125
+     *     See api/commons/integrations/integrations.proto;l=1131
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -57402,7 +57673,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1126
+     *     See api/commons/integrations/integrations.proto;l=1132
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -57412,7 +57683,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1126
+     *     See api/commons/integrations/integrations.proto;l=1132
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -59955,6 +60226,574 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5401;
       onChanged();
       return finviFacsProcessPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearchOrBuilder> finviVelosidyAccountSearchBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     * @return Whether the finviVelosidyAccountSearch field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyAccountSearch() {
+      return valueCase_ == 5501;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     * @return The finviVelosidyAccountSearch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch getFinviVelosidyAccountSearch() {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        if (valueCase_ == 5501) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5501) {
+          return finviVelosidyAccountSearchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    public Builder setFinviVelosidyAccountSearch(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch value) {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyAccountSearchBuilder_.setMessage(value);
+      }
+      valueCase_ = 5501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    public Builder setFinviVelosidyAccountSearch(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.Builder builderForValue) {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyAccountSearchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    public Builder mergeFinviVelosidyAccountSearch(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch value) {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        if (valueCase_ == 5501 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5501) {
+          finviVelosidyAccountSearchBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyAccountSearchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    public Builder clearFinviVelosidyAccountSearch() {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        if (valueCase_ == 5501) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5501) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyAccountSearchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.Builder getFinviVelosidyAccountSearchBuilder() {
+      return getFinviVelosidyAccountSearchFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearchOrBuilder getFinviVelosidyAccountSearchOrBuilder() {
+      if ((valueCase_ == 5501) && (finviVelosidyAccountSearchBuilder_ != null)) {
+        return finviVelosidyAccountSearchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5501) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyAccountSearch finvi_velosidy_account_search = 5501 [json_name = "finviVelosidyAccountSearch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearchOrBuilder> 
+        getFinviVelosidyAccountSearchFieldBuilder() {
+      if (finviVelosidyAccountSearchBuilder_ == null) {
+        if (!(valueCase_ == 5501)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.getDefaultInstance();
+        }
+        finviVelosidyAccountSearchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearchOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyAccountSearch) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5501;
+      onChanged();
+      return finviVelosidyAccountSearchBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSaleOrBuilder> finviVelosidyOneTimeSaleBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     * @return Whether the finviVelosidyOneTimeSale field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyOneTimeSale() {
+      return valueCase_ == 5502;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     * @return The finviVelosidyOneTimeSale.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale getFinviVelosidyOneTimeSale() {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        if (valueCase_ == 5502) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5502) {
+          return finviVelosidyOneTimeSaleBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    public Builder setFinviVelosidyOneTimeSale(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale value) {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyOneTimeSaleBuilder_.setMessage(value);
+      }
+      valueCase_ = 5502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    public Builder setFinviVelosidyOneTimeSale(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.Builder builderForValue) {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyOneTimeSaleBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    public Builder mergeFinviVelosidyOneTimeSale(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale value) {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        if (valueCase_ == 5502 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5502) {
+          finviVelosidyOneTimeSaleBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyOneTimeSaleBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    public Builder clearFinviVelosidyOneTimeSale() {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        if (valueCase_ == 5502) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5502) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyOneTimeSaleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.Builder getFinviVelosidyOneTimeSaleBuilder() {
+      return getFinviVelosidyOneTimeSaleFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSaleOrBuilder getFinviVelosidyOneTimeSaleOrBuilder() {
+      if ((valueCase_ == 5502) && (finviVelosidyOneTimeSaleBuilder_ != null)) {
+        return finviVelosidyOneTimeSaleBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5502) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale finvi_velosidy_one_time_sale = 5502 [json_name = "finviVelosidyOneTimeSale"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSaleOrBuilder> 
+        getFinviVelosidyOneTimeSaleFieldBuilder() {
+      if (finviVelosidyOneTimeSaleBuilder_ == null) {
+        if (!(valueCase_ == 5502)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.getDefaultInstance();
+        }
+        finviVelosidyOneTimeSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSaleOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyOneTimeSale) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5502;
+      onChanged();
+      return finviVelosidyOneTimeSaleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOfferOrBuilder> finviVelosidyPlanOfferBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     * @return Whether the finviVelosidyPlanOffer field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyPlanOffer() {
+      return valueCase_ == 5503;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     * @return The finviVelosidyPlanOffer.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer getFinviVelosidyPlanOffer() {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        if (valueCase_ == 5503) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5503) {
+          return finviVelosidyPlanOfferBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    public Builder setFinviVelosidyPlanOffer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer value) {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyPlanOfferBuilder_.setMessage(value);
+      }
+      valueCase_ = 5503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    public Builder setFinviVelosidyPlanOffer(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.Builder builderForValue) {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyPlanOfferBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    public Builder mergeFinviVelosidyPlanOffer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer value) {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        if (valueCase_ == 5503 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5503) {
+          finviVelosidyPlanOfferBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyPlanOfferBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    public Builder clearFinviVelosidyPlanOffer() {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        if (valueCase_ == 5503) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5503) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyPlanOfferBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.Builder getFinviVelosidyPlanOfferBuilder() {
+      return getFinviVelosidyPlanOfferFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOfferOrBuilder getFinviVelosidyPlanOfferOrBuilder() {
+      if ((valueCase_ == 5503) && (finviVelosidyPlanOfferBuilder_ != null)) {
+        return finviVelosidyPlanOfferBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5503) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOffer finvi_velosidy_plan_offer = 5503 [json_name = "finviVelosidyPlanOffer"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOfferOrBuilder> 
+        getFinviVelosidyPlanOfferFieldBuilder() {
+      if (finviVelosidyPlanOfferBuilder_ == null) {
+        if (!(valueCase_ == 5503)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.getDefaultInstance();
+        }
+        finviVelosidyPlanOfferBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOfferOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOffer) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5503;
+      onChanged();
+      return finviVelosidyPlanOfferBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder> finviVelosidyPlanRecurringCreateBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     * @return Whether the finviVelosidyPlanRecurringCreate field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyPlanRecurringCreate() {
+      return valueCase_ == 5504;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     * @return The finviVelosidyPlanRecurringCreate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate getFinviVelosidyPlanRecurringCreate() {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        if (valueCase_ == 5504) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5504) {
+          return finviVelosidyPlanRecurringCreateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    public Builder setFinviVelosidyPlanRecurringCreate(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate value) {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyPlanRecurringCreateBuilder_.setMessage(value);
+      }
+      valueCase_ = 5504;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    public Builder setFinviVelosidyPlanRecurringCreate(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.Builder builderForValue) {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyPlanRecurringCreateBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5504;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    public Builder mergeFinviVelosidyPlanRecurringCreate(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate value) {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        if (valueCase_ == 5504 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5504) {
+          finviVelosidyPlanRecurringCreateBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyPlanRecurringCreateBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5504;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    public Builder clearFinviVelosidyPlanRecurringCreate() {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        if (valueCase_ == 5504) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5504) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyPlanRecurringCreateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.Builder getFinviVelosidyPlanRecurringCreateBuilder() {
+      return getFinviVelosidyPlanRecurringCreateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder getFinviVelosidyPlanRecurringCreateOrBuilder() {
+      if ((valueCase_ == 5504) && (finviVelosidyPlanRecurringCreateBuilder_ != null)) {
+        return finviVelosidyPlanRecurringCreateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5504) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder> 
+        getFinviVelosidyPlanRecurringCreateFieldBuilder() {
+      if (finviVelosidyPlanRecurringCreateBuilder_ == null) {
+        if (!(valueCase_ == 5504)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+        }
+        finviVelosidyPlanRecurringCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5504;
+      onChanged();
+      return finviVelosidyPlanRecurringCreateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

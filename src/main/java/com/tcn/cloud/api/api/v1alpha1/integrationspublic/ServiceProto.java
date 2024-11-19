@@ -309,61 +309,62 @@ public final class ServiceProto {
       "ionspublic.ValueR\005value:\0028\001\032c\n\rResponseE" +
       "ntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&." +
       "api.v1alpha1.integrationspublic.ValueR\005v" +
-      "alue:\0028\001\"\225\003\n\022ProcessWorkflowReq\022$\n\016porta" +
+      "alue:\0028\001\"\264\003\n\022ProcessWorkflowReq\022$\n\016porta" +
       "l_link_id\030\001 \001(\tR\014portalLinkId\022\033\n\tportal_" +
       "id\030\002 \001(\tR\010portalId\022\030\n\007segment\030\003 \001(\005R\007seg" +
       "ment\022\026\n\006choice\030\004 \001(\005R\006choice\022W\n\006params\030\005" +
       " \003(\0132?.api.v1alpha1.integrationspublic.P" +
       "rocessWorkflowReq.ParamsEntryR\006params\022N\n" +
       "\016request_origin\030\006 \001(\0162\'.api.commons.inte" +
-      "grations.RequestOriginR\rrequestOrigin\032a\n" +
-      "\013ParamsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030" +
-      "\002 \001(\0132&.api.v1alpha1.integrationspublic." +
-      "ValueR\005value:\0028\001\"\342\001\n\022ProcessWorkflowRes\022" +
-      "\030\n\007success\030\001 \001(\010R\007success\022Q\n\004data\030\002 \003(\0132" +
-      "=.api.v1alpha1.integrationspublic.Proces" +
-      "sWorkflowRes.DataEntryR\004data\032_\n\tDataEntr" +
-      "y\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api" +
-      ".v1alpha1.integrationspublic.ValueR\005valu" +
-      "e:\0028\0012\201\n\n\022IntegrationsPublic\022\250\001\n\013GetLink" +
-      "Data\022/.api.v1alpha1.integrationspublic.G" +
-      "etLinkDataReq\032/.api.v1alpha1.integration" +
-      "spublic.GetLinkDataRes\"7\202\323\344\223\0021\",/api/v1a" +
-      "lpha1/integrationspublic/getlinkdata:\001*\022" +
-      "\304\001\n\022SubmitVerification\0226.api.v1alpha1.in" +
-      "tegrationspublic.SubmitVerificationReq\0326" +
-      ".api.v1alpha1.integrationspublic.SubmitV" +
-      "erificationRes\">\202\323\344\223\0028\"3/api/v1alpha1/in" +
-      "tegrationspublic/submitverification:\001*\022\274" +
-      "\001\n\020SessionKeepAlive\0224.api.v1alpha1.integ" +
-      "rationspublic.SessionKeepAliveReq\0324.api." +
-      "v1alpha1.integrationspublic.SessionKeepA" +
-      "liveRes\"<\202\323\344\223\0026\"1/api/v1alpha1/integrati" +
-      "onspublic/sessionkeepalive:\001*\022\244\001\n\nGetInv" +
-      "oice\022..api.v1alpha1.integrationspublic.G" +
-      "etInvoiceReq\032..api.v1alpha1.integrations" +
-      "public.GetInvoiceRes\"6\202\323\344\223\0020\"+/api/v1alp" +
-      "ha1/integrationspublic/getinvoice:\001*\022\260\001\n" +
-      "\rSubmitPayment\0221.api.v1alpha1.integratio" +
-      "nspublic.SubmitPaymentReq\0321.api.v1alpha1" +
-      ".integrationspublic.SubmitPaymentRes\"9\202\323" +
-      "\344\223\0023\"./api/v1alpha1/integrationspublic/s" +
-      "ubmitpayment:\001*\022\244\001\n\nGetReceipt\022..api.v1a" +
-      "lpha1.integrationspublic.GetReceiptReq\032." +
-      ".api.v1alpha1.integrationspublic.GetRece" +
-      "iptRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integratio" +
-      "nspublic/getreceipt:\001*\022\270\001\n\017ProcessWorkfl" +
-      "ow\0223.api.v1alpha1.integrationspublic.Pro" +
-      "cessWorkflowReq\0323.api.v1alpha1.integrati" +
-      "onspublic.ProcessWorkflowRes\";\202\323\344\223\0025\"0/a" +
-      "pi/v1alpha1/integrationspublic/processwo" +
-      "rkflow:\001*B\337\001\n1com.tcn.cloud.api.api.v1al" +
-      "pha1.integrationspublicB\014ServiceProtoP\001\242" +
-      "\002\003AVI\252\002\037Api.V1alpha1.Integrationspublic\312" +
-      "\002\037Api\\V1alpha1\\Integrationspublic\342\002+Api\\" +
-      "V1alpha1\\Integrationspublic\\GPBMetadata\352" +
-      "\002!Api::V1alpha1::Integrationspublicb\006pro" +
-      "to3"
+      "grations.RequestOriginR\rrequestOrigin\022\035\n" +
+      "\nsession_id\030\007 \001(\tR\tsessionId\032a\n\013ParamsEn" +
+      "try\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.a" +
+      "pi.v1alpha1.integrationspublic.ValueR\005va" +
+      "lue:\0028\001\"\201\002\n\022ProcessWorkflowRes\022\030\n\007succes" +
+      "s\030\001 \001(\010R\007success\022Q\n\004data\030\002 \003(\0132=.api.v1a" +
+      "lpha1.integrationspublic.ProcessWorkflow" +
+      "Res.DataEntryR\004data\022\035\n\nsession_id\030\003 \001(\tR" +
+      "\tsessionId\032_\n\tDataEntry\022\020\n\003key\030\001 \001(\tR\003ke" +
+      "y\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.integrat" +
+      "ionspublic.ValueR\005value:\0028\0012\201\n\n\022Integrat" +
+      "ionsPublic\022\250\001\n\013GetLinkData\022/.api.v1alpha" +
+      "1.integrationspublic.GetLinkDataReq\032/.ap" +
+      "i.v1alpha1.integrationspublic.GetLinkDat" +
+      "aRes\"7\202\323\344\223\0021\",/api/v1alpha1/integrations" +
+      "public/getlinkdata:\001*\022\304\001\n\022SubmitVerifica" +
+      "tion\0226.api.v1alpha1.integrationspublic.S" +
+      "ubmitVerificationReq\0326.api.v1alpha1.inte" +
+      "grationspublic.SubmitVerificationRes\">\202\323" +
+      "\344\223\0028\"3/api/v1alpha1/integrationspublic/s" +
+      "ubmitverification:\001*\022\274\001\n\020SessionKeepAliv" +
+      "e\0224.api.v1alpha1.integrationspublic.Sess" +
+      "ionKeepAliveReq\0324.api.v1alpha1.integrati" +
+      "onspublic.SessionKeepAliveRes\"<\202\323\344\223\0026\"1/" +
+      "api/v1alpha1/integrationspublic/sessionk" +
+      "eepalive:\001*\022\244\001\n\nGetInvoice\022..api.v1alpha" +
+      "1.integrationspublic.GetInvoiceReq\032..api" +
+      ".v1alpha1.integrationspublic.GetInvoiceR" +
+      "es\"6\202\323\344\223\0020\"+/api/v1alpha1/integrationspu" +
+      "blic/getinvoice:\001*\022\260\001\n\rSubmitPayment\0221.a" +
+      "pi.v1alpha1.integrationspublic.SubmitPay" +
+      "mentReq\0321.api.v1alpha1.integrationspubli" +
+      "c.SubmitPaymentRes\"9\202\323\344\223\0023\"./api/v1alpha" +
+      "1/integrationspublic/submitpayment:\001*\022\244\001" +
+      "\n\nGetReceipt\022..api.v1alpha1.integrations" +
+      "public.GetReceiptReq\032..api.v1alpha1.inte" +
+      "grationspublic.GetReceiptRes\"6\202\323\344\223\0020\"+/a" +
+      "pi/v1alpha1/integrationspublic/getreceip" +
+      "t:\001*\022\270\001\n\017ProcessWorkflow\0223.api.v1alpha1." +
+      "integrationspublic.ProcessWorkflowReq\0323." +
+      "api.v1alpha1.integrationspublic.ProcessW" +
+      "orkflowRes\";\202\323\344\223\0025\"0/api/v1alpha1/integr" +
+      "ationspublic/processworkflow:\001*B\337\001\n1com." +
+      "tcn.cloud.api.api.v1alpha1.integrationsp" +
+      "ublicB\014ServiceProtoP\001\242\002\003AVI\252\002\037Api.V1alph" +
+      "a1.Integrationspublic\312\002\037Api\\V1alpha1\\Int" +
+      "egrationspublic\342\002+Api\\V1alpha1\\Integrati" +
+      "onspublic\\GPBMetadata\352\002!Api::V1alpha1::I" +
+      "ntegrationspublicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -546,7 +547,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_descriptor,
-        new java.lang.String[] { "PortalLinkId", "PortalId", "Segment", "Choice", "Params", "RequestOrigin", });
+        new java.lang.String[] { "PortalLinkId", "PortalId", "Segment", "Choice", "Params", "RequestOrigin", "SessionId", });
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_ParamsEntry_descriptor =
       internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowReq_ParamsEntry_fieldAccessorTable = new
@@ -558,7 +559,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowRes_descriptor,
-        new java.lang.String[] { "Success", "Data", });
+        new java.lang.String[] { "Success", "Data", "SessionId", });
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowRes_DataEntry_descriptor =
       internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowRes_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_integrationspublic_ProcessWorkflowRes_DataEntry_fieldAccessorTable = new
