@@ -65,4 +65,28 @@ public interface SchemaOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTableDescriptionBytes();
+
+  /**
+   * <code>string category = 5 [json_name = "category"];</code>
+   * @return The category.
+   */
+  java.lang.String getCategory();
+  /**
+   * <code>string category = 5 [json_name = "category"];</code>
+   * @return The bytes for category.
+   */
+  com.google.protobuf.ByteString
+      getCategoryBytes();
+
+  /**
+   * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+   * @return The subCategory.
+   */
+  java.lang.String getSubCategory();
+  /**
+   * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+   * @return The bytes for subCategory.
+   */
+  com.google.protobuf.ByteString
+      getSubCategoryBytes();
 }
