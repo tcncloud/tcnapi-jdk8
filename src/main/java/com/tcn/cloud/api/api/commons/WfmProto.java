@@ -115,16 +115,6 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AgentStateSequence_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_AdherenceAgentState_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_AdherenceAgentState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_AdherenceAgentStates_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_AgentLeavePetition_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -307,15 +297,7 @@ public final class WfmProto {
       "time\030\002 \001(\0132\032.google.protobuf.TimestampR\r" +
       "startDatetime\022E\n\016state_segments\030\003 \003(\0132\036." +
       "api.commons.AgentStateSegmentR\rstateSegm" +
-      "ents\"\340\001\n\023AdherenceAgentState\022\"\n\rwfm_agen" +
-      "t_sid\030\001 \001(\003R\013wfmAgentSid\022A\n\016start_dateti" +
-      "me\030\002 \001(\0132\032.google.protobuf.TimestampR\rst" +
-      "artDatetime\022C\n\nadm_states\030\003 \003(\0162$.api.co" +
-      "mmons.RealTimeManagementStateR\tadmStates" +
-      "\022\035\n\npause_code\030\004 \001(\tR\tpauseCode\"[\n\024Adher" +
-      "enceAgentStates\022C\n\014agent_states\030\001 \003(\0132 ." +
-      "api.commons.AdherenceAgentStateR\013agentSt" +
-      "ates\"\221\005\n\022AgentLeavePetition\0229\n\027agent_lea" +
+      "ents\"\221\005\n\022AgentLeavePetition\0229\n\027agent_lea" +
       "ve_petition_id\030\001 \001(\003B\0020\001R\024agentLeavePeti" +
       "tionId\022\"\n\rwfm_agent_sid\030\002 \001(\003R\013wfmAgentS" +
       "id\022N\n\017petition_status\030\003 \001(\0162%.api.common" +
@@ -582,7 +564,7 @@ public final class WfmProto {
       ",\n(ADHERENCE_AGENT_RULE_ACTION_TYPE_WRAP" +
       "_UP\020\000\022,\n(ADHERENCE_AGENT_RULE_ACTION_TYP" +
       "E_WAITING\020\001\0220\n,ADHERENCE_AGENT_RULE_ACTI" +
-      "ON_TYPE_MANUAL_DIAL\020\002\0221\n-ADHERENCE_AGENT",
+      "ON_TYPE_MANUAL_DIAL\020\002\0221\n-ADHERENCE_AGENT" +
       "_RULE_ACTION_TYPE_PREVIEW_DIAL\020\003\0221\n-ADHE" +
       "RENCE_AGENT_RULE_ACTION_TYPE_ANSWER_CALL" +
       "S\020\004\022,\n(ADHERENCE_AGENT_RULE_ACTION_TYPE_" +
@@ -590,7 +572,7 @@ public final class WfmProto {
       "_TYPE_ON_HOLD\020\006\0220\n,ADHERENCE_AGENT_RULE_" +
       "ACTION_TYPE_SHIFT_START\020\007\0225\n1ADHERENCE_A" +
       "GENT_RULE_ACTION_TYPE_SHIFT_START_LATE\020\010" +
-      "\0224\n0ADHERENCE_AGENT_RULE_ACTION_TYPE_SHI" +
+      "\0224\n0ADHERENCE_AGENT_RULE_ACTION_TYPE_SHI",
       "FT_END_EARLY\020\tBv\n\035com.tcn.cloud.api.api." +
       "commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
       "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
@@ -722,74 +704,62 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentStateSequence_descriptor,
         new java.lang.String[] { "WfmAgentSid", "StartDatetime", "StateSegments", });
-    internal_static_api_commons_AdherenceAgentState_descriptor =
-      getDescriptor().getMessageTypes().get(20);
-    internal_static_api_commons_AdherenceAgentState_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_AdherenceAgentState_descriptor,
-        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "AdmStates", "PauseCode", });
-    internal_static_api_commons_AdherenceAgentStates_descriptor =
-      getDescriptor().getMessageTypes().get(21);
-    internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_AdherenceAgentStates_descriptor,
-        new java.lang.String[] { "AgentStates", });
     internal_static_api_commons_AgentLeavePetition_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_commons_AgentLeavePetition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentLeavePetition_descriptor,
         new java.lang.String[] { "AgentLeavePetitionId", "WfmAgentSid", "PetitionStatus", "PetitionComment", "ResponseComment", "RequestedDatetimeRanges", "CreatedTime", "ArchivedTime", "ResolvedTime", "ResolvedByUserId", "RequestedHoursOff", });
     internal_static_api_commons_ConfigEntity_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_commons_ConfigEntity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ConfigEntity_descriptor,
         new java.lang.String[] { "EntitySid", "EntityType", });
     internal_static_api_commons_AdherenceRuleNotificationConfig_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_commons_AdherenceRuleNotificationConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceRuleNotificationConfig_descriptor,
         new java.lang.String[] { "AdherenceRuleNotificationConfigId", "Name", "Entries", });
     internal_static_api_commons_AdherenceRuleNotificationConfigEntry_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_commons_AdherenceRuleNotificationConfigEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceRuleNotificationConfigEntry_descriptor,
         new java.lang.String[] { "AdherenceRuleNotificationConfigEntryId", "AdherenceRuleNotificationConfigId", "RecipientUserId", "NotificationMedium", "SecondsToWaitForNoResponse", });
     internal_static_api_commons_AdherenceDepartmentalRuleAction_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_commons_AdherenceDepartmentalRuleAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRuleAction_descriptor,
         new java.lang.String[] { "ActionType", });
     internal_static_api_commons_AdherenceDepartmentalRule_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_commons_AdherenceDepartmentalRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRule_descriptor,
         new java.lang.String[] { "AdherenceDepartmentalRuleId", "Name", "SelectedEntity", "RuleRequirementType", "AdherenceRuleNotificationConfigId", "RuleRange", "CustomRange", "RuleClauses", });
     internal_static_api_commons_AdherenceDepartmentalRuleClause_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_commons_AdherenceDepartmentalRuleClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRuleClause_descriptor,
         new java.lang.String[] { "AdherenceDepartmentalRuleClauseId", "AdherenceDepartmentalRuleId", "Action", "Condition", "Amount", "Unit", "PerAmount", "PerUnit", });
     internal_static_api_commons_AdherenceAgentRule_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_commons_AdherenceAgentRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRule_descriptor,
         new java.lang.String[] { "AdherenceAgentRuleId", "Name", "SelectedEntity", "RuleRequirementType", "AdherenceRuleNotificationConfigId", "RuleClauses", });
     internal_static_api_commons_AdherenceAgentRuleAction_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_commons_AdherenceAgentRuleAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRuleAction_descriptor,
         new java.lang.String[] { "ActionType", });
     internal_static_api_commons_AdherenceAgentRuleClause_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_commons_AdherenceAgentRuleClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRuleClause_descriptor,

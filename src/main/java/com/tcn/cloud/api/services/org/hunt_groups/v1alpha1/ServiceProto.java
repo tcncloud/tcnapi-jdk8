@@ -27,7 +27,7 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\372\036\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\307\023\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
@@ -90,49 +90,13 @@ public final class ServiceProto {
       ";.services.org.hunt_groups.v1alpha1.List" +
       "AgentScriptsResponse\"G\272\270\221\002\005\n\003\010\236\017\202\323\344\223\0027\"2" +
       "/services/org/huntgroups/v1alpha1/listag" +
-      "entscripts:\001*0\001\022\244\002\n$CreateAgentClientInf" +
-      "oDisplayTemplate\022N.services.org.hunt_gro" +
-      "ups.v1alpha1.CreateAgentClientInfoDispla" +
-      "yTemplateRequest\032O.services.org.hunt_gro" +
-      "ups.v1alpha1.CreateAgentClientInfoDispla" +
-      "yTemplateResponse\"[\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002K\"F/se" +
-      "rvices/org/huntgroups/v1alpha1/createage" +
-      "ntclientinfodisplaytemplate:\001*\022\244\002\n$Updat" +
-      "eAgentClientInfoDisplayTemplate\022N.servic" +
-      "es.org.hunt_groups.v1alpha1.UpdateAgentC" +
-      "lientInfoDisplayTemplateRequest\032O.servic" +
-      "es.org.hunt_groups.v1alpha1.UpdateAgentC" +
-      "lientInfoDisplayTemplateResponse\"[\272\270\221\002\005\n" +
-      "\003\010\355\016\202\323\344\223\002K\"F/services/org/huntgroups/v1a" +
-      "lpha1/updateagentclientinfodisplaytempla" +
-      "te:\001*\022\230\002\n!GetAgentClientInfoDisplayTempl" +
-      "ate\022K.services.org.hunt_groups.v1alpha1." +
-      "GetAgentClientInfoDisplayTemplateRequest" +
-      "\032L.services.org.hunt_groups.v1alpha1.Get" +
-      "AgentClientInfoDisplayTemplateResponse\"X" +
-      "\272\270\221\002\005\n\003\010\354\016\202\323\344\223\002H\"C/services/org/huntgrou" +
-      "ps/v1alpha1/getagentclientinfodisplaytem" +
-      "plate:\001*\022\240\002\n#ListAgentClientInfoDisplayT" +
-      "emplates\022M.services.org.hunt_groups.v1al" +
-      "pha1.ListAgentClientInfoDisplayTemplates" +
-      "Request\032N.services.org.hunt_groups.v1alp" +
-      "ha1.ListAgentClientInfoDisplayTemplatesR" +
-      "esponse\"Z\272\270\221\002\005\n\003\010\354\016\202\323\344\223\002J\"E/services/org" +
-      "/huntgroups/v1alpha1/listagentclientinfo" +
-      "displaytemplates:\001*\022\244\002\n$DeleteAgentClien" +
-      "tInfoDisplayTemplate\022N.services.org.hunt" +
-      "_groups.v1alpha1.DeleteAgentClientInfoDi" +
-      "splayTemplateRequest\032O.services.org.hunt" +
-      "_groups.v1alpha1.DeleteAgentClientInfoDi" +
-      "splayTemplateResponse\"[\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002K\"" +
-      "F/services/org/huntgroups/v1alpha1/delet" +
-      "eagentclientinfodisplaytemplate:\001*B\346\001\n3c" +
-      "om.tcn.cloud.api.services.org.hunt_group" +
-      "s.v1alpha1B\014ServiceProtoP\001\242\002\003SOH\252\002 Servi" +
-      "ces.Org.HuntGroups.V1alpha1\312\002 Services\\O" +
-      "rg\\HuntGroups\\V1alpha1\342\002,Services\\Org\\Hu" +
-      "ntGroups\\V1alpha1\\GPBMetadata\352\002#Services" +
-      "::Org::HuntGroups::V1alpha1b\006proto3"
+      "entscripts:\001*0\001B\346\001\n3com.tcn.cloud.api.se" +
+      "rvices.org.hunt_groups.v1alpha1B\014Service" +
+      "ProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups." +
+      "V1alpha1\312\002 Services\\Org\\HuntGroups\\V1alp" +
+      "ha1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\G" +
+      "PBMetadata\352\002#Services::Org::HuntGroups::" +
+      "V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

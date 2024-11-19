@@ -72,14 +72,4 @@ public interface SearchTranscriptsResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNextPageTokenBytes();
-
-  /**
-   * <pre>
-   * Total number of hits in query. This number is capped at 10,000.
-   * </pre>
-   *
-   * <code>uint64 total = 3 [json_name = "total"];</code>
-   * @return The total.
-   */
-  long getTotal();
 }

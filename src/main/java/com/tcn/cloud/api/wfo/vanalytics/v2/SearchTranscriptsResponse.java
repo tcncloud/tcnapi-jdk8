@@ -822,21 +822,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOTAL_FIELD_NUMBER = 3;
-  private long total_ = 0L;
-  /**
-   * <pre>
-   * Total number of hits in query. This number is capped at 10,000.
-   * </pre>
-   *
-   * <code>uint64 total = 3 [json_name = "total"];</code>
-   * @return The total.
-   */
-  @java.lang.Override
-  public long getTotal() {
-    return total_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -857,9 +842,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
     }
-    if (total_ != 0L) {
-      output.writeUInt64(3, total_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -875,10 +857,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
-    }
-    if (total_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(3, total_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -899,8 +877,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getHitsList())) return false;
     if (!getNextPageToken()
         .equals(other.getNextPageToken())) return false;
-    if (getTotal()
-        != other.getTotal()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -918,9 +894,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getNextPageToken().hashCode();
-    hash = (37 * hash) + TOTAL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTotal());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1064,7 +1037,6 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
-      total_ = 0L;
       return this;
     }
 
@@ -1113,9 +1085,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.nextPageToken_ = nextPageToken_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.total_ = total_;
       }
     }
 
@@ -1194,9 +1163,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.getTotal() != 0L) {
-        setTotal(other.getTotal());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1241,11 +1207,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              total_ = input.readUInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1668,50 +1629,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       nextPageToken_ = value;
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private long total_ ;
-    /**
-     * <pre>
-     * Total number of hits in query. This number is capped at 10,000.
-     * </pre>
-     *
-     * <code>uint64 total = 3 [json_name = "total"];</code>
-     * @return The total.
-     */
-    @java.lang.Override
-    public long getTotal() {
-      return total_;
-    }
-    /**
-     * <pre>
-     * Total number of hits in query. This number is capped at 10,000.
-     * </pre>
-     *
-     * <code>uint64 total = 3 [json_name = "total"];</code>
-     * @param value The total to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTotal(long value) {
-
-      total_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Total number of hits in query. This number is capped at 10,000.
-     * </pre>
-     *
-     * <code>uint64 total = 3 [json_name = "total"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTotal() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      total_ = 0L;
       onChanged();
       return this;
     }
