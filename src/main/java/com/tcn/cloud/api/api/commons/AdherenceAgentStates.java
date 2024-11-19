@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Bundle of agent states.
+ * Bundle of agent states, used when returned as a bundle in a map.
  * </pre>
  *
  * Protobuf type {@code api.commons.AdherenceAgentStates}
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Bundle of agent states.
+   * Bundle of agent states, used when returned as a bundle in a map.
    * </pre>
    *
    * Protobuf type {@code api.commons.AdherenceAgentStates}

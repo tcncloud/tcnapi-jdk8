@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Represents a single agents state at a given point in time.
+ * Represents a single agent's state at a given point in time.
  * </pre>
  *
  * Protobuf type {@code api.commons.AdherenceAgentState}
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a single agents state at a given point in time.
+   * Represents a single agent's state at a given point in time.
    * </pre>
    *
    * Protobuf type {@code api.commons.AdherenceAgentState}
