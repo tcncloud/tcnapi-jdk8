@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=732
+   *     See api/v1alpha1/delivery/service.proto;l=738
    * @return Whether the systemMessage field is set.
    */
   @java.lang.Override
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=732
+   *     See api/v1alpha1/delivery/service.proto;l=738
    * @return The systemMessage.
    */
   @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=732
+     *     See api/v1alpha1/delivery/service.proto;l=738
      * @return Whether the systemMessage field is set.
      */
     @java.lang.Override
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=732
+     *     See api/v1alpha1/delivery/service.proto;l=738
      * @return The systemMessage.
      */
     @java.lang.Override

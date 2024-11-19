@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=720
+   *     See api/v1alpha1/delivery/service.proto;l=726
    * @return The fromAddress.
    */
   @java.lang.Override
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=720
+   *     See api/v1alpha1/delivery/service.proto;l=726
    * @return The bytes for fromAddress.
    */
   @java.lang.Override
@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=722
+   *     See api/v1alpha1/delivery/service.proto;l=728
    * @return The toAddress.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=722
+   *     See api/v1alpha1/delivery/service.proto;l=728
    * @return The bytes for toAddress.
    */
   @java.lang.Override
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=720
+     *     See api/v1alpha1/delivery/service.proto;l=726
      * @return The fromAddress.
      */
     @java.lang.Deprecated public java.lang.String getFromAddress() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=720
+     *     See api/v1alpha1/delivery/service.proto;l=726
      * @return The bytes for fromAddress.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=720
+     *     See api/v1alpha1/delivery/service.proto;l=726
      * @param value The fromAddress to set.
      * @return This builder for chaining.
      */
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=720
+     *     See api/v1alpha1/delivery/service.proto;l=726
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFromAddress() {
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=720
+     *     See api/v1alpha1/delivery/service.proto;l=726
      * @param value The bytes for fromAddress to set.
      * @return This builder for chaining.
      */
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=722
+     *     See api/v1alpha1/delivery/service.proto;l=728
      * @return The toAddress.
      */
     @java.lang.Deprecated public java.lang.String getToAddress() {
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=722
+     *     See api/v1alpha1/delivery/service.proto;l=728
      * @return The bytes for toAddress.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=722
+     *     See api/v1alpha1/delivery/service.proto;l=728
      * @param value The toAddress to set.
      * @return This builder for chaining.
      */
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=722
+     *     See api/v1alpha1/delivery/service.proto;l=728
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearToAddress() {
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=722
+     *     See api/v1alpha1/delivery/service.proto;l=728
      * @param value The bytes for toAddress to set.
      * @return This builder for chaining.
      */
