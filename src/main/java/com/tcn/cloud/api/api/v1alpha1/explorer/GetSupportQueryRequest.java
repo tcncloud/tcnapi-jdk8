@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     timezone_ = "";
     uiTraceId_ = "";
     comment_ = "";
+    format_ = 0;
   }
 
   @java.lang.Override
@@ -598,6 +599,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FORMAT_FIELD_NUMBER = 12;
+  private int format_ = 0;
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+   * @return The enum numeric value on the wire for format.
+   */
+  @java.lang.Override public int getFormatValue() {
+    return format_;
+  }
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+   * @return The format.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getFormat() {
+    com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(format_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -644,6 +671,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, comment_);
+    }
+    if (format_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(12, format_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -696,6 +726,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, comment_);
     }
+    if (format_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(12, format_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -737,6 +771,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUiTraceId())) return false;
     if (!getComment()
         .equals(other.getComment())) return false;
+    if (format_ != other.format_) return false;
     if (!getQueryCase().equals(other.getQueryCase())) return false;
     switch (queryCase_) {
       case 3:
@@ -787,6 +822,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUiTraceId().hashCode();
     hash = (37 * hash) + COMMENT_FIELD_NUMBER;
     hash = (53 * hash) + getComment().hashCode();
+    hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + format_;
     switch (queryCase_) {
       case 3:
         hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
@@ -952,6 +989,7 @@ private static final long serialVersionUID = 0L;
       }
       uiTraceId_ = "";
       comment_ = "";
+      format_ = 0;
       queryCase_ = 0;
       query_ = null;
       return this;
@@ -1021,6 +1059,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.comment_ = comment_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.format_ = format_;
       }
     }
 
@@ -1114,6 +1155,9 @@ private static final long serialVersionUID = 0L;
         comment_ = other.comment_;
         bitField0_ |= 0x00000400;
         onChanged();
+      }
+      if (other.format_ != 0) {
+        setFormatValue(other.getFormatValue());
       }
       switch (other.getQueryCase()) {
         case PIPELINE: {
@@ -1222,6 +1266,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 90
+            case 96: {
+              format_ = input.readEnum();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2542,6 +2591,79 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       comment_ = value;
       bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private int format_ = 0;
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+     * @return The enum numeric value on the wire for format.
+     */
+    @java.lang.Override public int getFormatValue() {
+      return format_;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+     * @param value The enum numeric value on the wire for format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormatValue(int value) {
+      format_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+     * @return The format.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getFormat() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(format_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+     * @param value The format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormat(com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000800;
+      format_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFormat() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      format_ = 0;
       onChanged();
       return this;
     }
