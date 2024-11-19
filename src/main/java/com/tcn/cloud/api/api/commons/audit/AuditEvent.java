@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
     CONTACT_MANAGER_ENTRY_DELETE_EVENT(1207),
     CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT(1208),
-    USER_ACCESS_TOKEN_EXPIRING_EVENT(1300),
+    USERS_ACCESS_TOKENS_EXPIRING_EVENT(1300),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
         case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
         case 1207: return CONTACT_MANAGER_ENTRY_DELETE_EVENT;
         case 1208: return CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT;
-        case 1300: return USER_ACCESS_TOKEN_EXPIRING_EVENT;
+        case 1300: return USERS_ACCESS_TOKENS_EXPIRING_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -5537,50 +5537,50 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
   }
 
-  public static final int USER_ACCESS_TOKEN_EXPIRING_EVENT_FIELD_NUMBER = 1300;
+  public static final int USERS_ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER = 1300;
   /**
    * <pre>
    * Organization Events
-   * user_access_token_expiring_event is sent when the user access token is about to expire
+   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
    * </pre>
    *
-   * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
-   * @return Whether the userAccessTokenExpiringEvent field is set.
+   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
+   * @return Whether the usersAccessTokensExpiringEvent field is set.
    */
   @java.lang.Override
-  public boolean hasUserAccessTokenExpiringEvent() {
+  public boolean hasUsersAccessTokensExpiringEvent() {
     return eventCase_ == 1300;
   }
   /**
    * <pre>
    * Organization Events
-   * user_access_token_expiring_event is sent when the user access token is about to expire
+   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
    * </pre>
    *
-   * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
-   * @return The userAccessTokenExpiringEvent.
+   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
+   * @return The usersAccessTokensExpiringEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent getUserAccessTokenExpiringEvent() {
+  public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getUsersAccessTokensExpiringEvent() {
     if (eventCase_ == 1300) {
-       return (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_;
+       return (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_;
     }
-    return com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
   }
   /**
    * <pre>
    * Organization Events
-   * user_access_token_expiring_event is sent when the user access token is about to expire
+   * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
    * </pre>
    *
-   * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+   * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder getUserAccessTokenExpiringEventOrBuilder() {
+  public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder getUsersAccessTokensExpiringEventOrBuilder() {
     if (eventCase_ == 1300) {
-       return (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_;
+       return (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_;
     }
-    return com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -5979,7 +5979,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
     }
     if (eventCase_ == 1300) {
-      output.writeMessage(1300, (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_);
+      output.writeMessage(1300, (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6496,7 +6496,7 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1300) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1300, (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_);
+        .computeMessageSize(1300, (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7014,8 +7014,8 @@ private static final long serialVersionUID = 0L;
             .equals(other.getContactManagerEntryExpungeEvent())) return false;
         break;
       case 1300:
-        if (!getUserAccessTokenExpiringEvent()
-            .equals(other.getUserAccessTokenExpiringEvent())) return false;
+        if (!getUsersAccessTokensExpiringEvent()
+            .equals(other.getUsersAccessTokensExpiringEvent())) return false;
         break;
       case 0:
       default:
@@ -7531,8 +7531,8 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getContactManagerEntryExpungeEvent().hashCode();
         break;
       case 1300:
-        hash = (37 * hash) + USER_ACCESS_TOKEN_EXPIRING_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getUserAccessTokenExpiringEvent().hashCode();
+        hash = (37 * hash) + USERS_ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getUsersAccessTokensExpiringEvent().hashCode();
         break;
       case 0:
       default:
@@ -8048,8 +8048,8 @@ private static final long serialVersionUID = 0L;
       if (contactManagerEntryExpungeEventBuilder_ != null) {
         contactManagerEntryExpungeEventBuilder_.clear();
       }
-      if (userAccessTokenExpiringEventBuilder_ != null) {
-        userAccessTokenExpiringEventBuilder_.clear();
+      if (usersAccessTokensExpiringEventBuilder_ != null) {
+        usersAccessTokensExpiringEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -8612,8 +8612,8 @@ private static final long serialVersionUID = 0L;
         result.event_ = contactManagerEntryExpungeEventBuilder_.build();
       }
       if (eventCase_ == 1300 &&
-          userAccessTokenExpiringEventBuilder_ != null) {
-        result.event_ = userAccessTokenExpiringEventBuilder_.build();
+          usersAccessTokensExpiringEventBuilder_ != null) {
+        result.event_ = usersAccessTokensExpiringEventBuilder_.build();
       }
     }
 
@@ -9172,8 +9172,8 @@ private static final long serialVersionUID = 0L;
           mergeContactManagerEntryExpungeEvent(other.getContactManagerEntryExpungeEvent());
           break;
         }
-        case USER_ACCESS_TOKEN_EXPIRING_EVENT: {
-          mergeUserAccessTokenExpiringEvent(other.getUserAccessTokenExpiringEvent());
+        case USERS_ACCESS_TOKENS_EXPIRING_EVENT: {
+          mergeUsersAccessTokensExpiringEvent(other.getUsersAccessTokensExpiringEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -10087,7 +10087,7 @@ private static final long serialVersionUID = 0L;
             } // case 9666
             case 10402: {
               input.readMessage(
-                  getUserAccessTokenExpiringEventFieldBuilder().getBuilder(),
+                  getUsersAccessTokensExpiringEventFieldBuilder().getBuilder(),
                   extensionRegistry);
               eventCase_ = 1300;
               break;
@@ -31334,60 +31334,60 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder> userAccessTokenExpiringEventBuilder_;
+        com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder> usersAccessTokensExpiringEventBuilder_;
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
-     * @return Whether the userAccessTokenExpiringEvent field is set.
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
+     * @return Whether the usersAccessTokensExpiringEvent field is set.
      */
     @java.lang.Override
-    public boolean hasUserAccessTokenExpiringEvent() {
+    public boolean hasUsersAccessTokensExpiringEvent() {
       return eventCase_ == 1300;
     }
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
-     * @return The userAccessTokenExpiringEvent.
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
+     * @return The usersAccessTokensExpiringEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent getUserAccessTokenExpiringEvent() {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent getUsersAccessTokensExpiringEvent() {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         if (eventCase_ == 1300) {
-          return (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_;
+          return (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_;
         }
-        return com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
       } else {
         if (eventCase_ == 1300) {
-          return userAccessTokenExpiringEventBuilder_.getMessage();
+          return usersAccessTokensExpiringEventBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
       }
     }
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
-    public Builder setUserAccessTokenExpiringEvent(com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent value) {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+    public Builder setUsersAccessTokensExpiringEvent(com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent value) {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         event_ = value;
         onChanged();
       } else {
-        userAccessTokenExpiringEventBuilder_.setMessage(value);
+        usersAccessTokensExpiringEventBuilder_.setMessage(value);
       }
       eventCase_ = 1300;
       return this;
@@ -31395,18 +31395,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
-    public Builder setUserAccessTokenExpiringEvent(
-        com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder builderForValue) {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+    public Builder setUsersAccessTokensExpiringEvent(
+        com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder builderForValue) {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         event_ = builderForValue.build();
         onChanged();
       } else {
-        userAccessTokenExpiringEventBuilder_.setMessage(builderForValue.build());
+        usersAccessTokensExpiringEventBuilder_.setMessage(builderForValue.build());
       }
       eventCase_ = 1300;
       return this;
@@ -31414,16 +31414,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
-    public Builder mergeUserAccessTokenExpiringEvent(com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent value) {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+    public Builder mergeUsersAccessTokensExpiringEvent(com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent value) {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         if (eventCase_ == 1300 &&
-            event_ != com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance()) {
-          event_ = com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_)
+            event_ != com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_)
               .mergeFrom(value).buildPartial();
         } else {
           event_ = value;
@@ -31431,9 +31431,9 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (eventCase_ == 1300) {
-          userAccessTokenExpiringEventBuilder_.mergeFrom(value);
+          usersAccessTokensExpiringEventBuilder_.mergeFrom(value);
         } else {
-          userAccessTokenExpiringEventBuilder_.setMessage(value);
+          usersAccessTokensExpiringEventBuilder_.setMessage(value);
         }
       }
       eventCase_ = 1300;
@@ -31442,13 +31442,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
-    public Builder clearUserAccessTokenExpiringEvent() {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+    public Builder clearUsersAccessTokensExpiringEvent() {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         if (eventCase_ == 1300) {
           eventCase_ = 0;
           event_ = null;
@@ -31459,65 +31459,65 @@ private static final long serialVersionUID = 0L;
           eventCase_ = 0;
           event_ = null;
         }
-        userAccessTokenExpiringEventBuilder_.clear();
+        usersAccessTokensExpiringEventBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder getUserAccessTokenExpiringEventBuilder() {
-      return getUserAccessTokenExpiringEventFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder getUsersAccessTokensExpiringEventBuilder() {
+      return getUsersAccessTokensExpiringEventFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder getUserAccessTokenExpiringEventOrBuilder() {
-      if ((eventCase_ == 1300) && (userAccessTokenExpiringEventBuilder_ != null)) {
-        return userAccessTokenExpiringEventBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder getUsersAccessTokensExpiringEventOrBuilder() {
+      if ((eventCase_ == 1300) && (usersAccessTokensExpiringEventBuilder_ != null)) {
+        return usersAccessTokensExpiringEventBuilder_.getMessageOrBuilder();
       } else {
         if (eventCase_ == 1300) {
-          return (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_;
+          return (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_;
         }
-        return com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
       }
     }
     /**
      * <pre>
      * Organization Events
-     * user_access_token_expiring_event is sent when the user access token is about to expire
+     * UserAccessTokenExpiringEvent is the event that is triggered when any users access token is about to expire.
      * </pre>
      *
-     * <code>.api.commons.audit.UserAccessTokenExpiringEvent user_access_token_expiring_event = 1300 [json_name = "userAccessTokenExpiringEvent"];</code>
+     * <code>.api.commons.audit.UsersAccessTokensExpiringEvent users_access_tokens_expiring_event = 1300 [json_name = "usersAccessTokensExpiringEvent"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder> 
-        getUserAccessTokenExpiringEventFieldBuilder() {
-      if (userAccessTokenExpiringEventBuilder_ == null) {
+        com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder> 
+        getUsersAccessTokensExpiringEventFieldBuilder() {
+      if (usersAccessTokensExpiringEventBuilder_ == null) {
         if (!(eventCase_ == 1300)) {
-          event_ = com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.getDefaultInstance();
+          event_ = com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.getDefaultInstance();
         }
-        userAccessTokenExpiringEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEventOrBuilder>(
-                (com.tcn.cloud.api.api.commons.audit.UserAccessTokenExpiringEvent) event_,
+        usersAccessTokensExpiringEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent.Builder, com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.UsersAccessTokensExpiringEvent) event_,
                 getParentForChildren(),
                 isClean());
         event_ = null;
       }
       eventCase_ = 1300;
       onChanged();
-      return userAccessTokenExpiringEventBuilder_;
+      return usersAccessTokensExpiringEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
