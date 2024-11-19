@@ -24,6 +24,8 @@ private static final long serialVersionUID = 0L;
     datasourceType_ = 0;
     fields_ = java.util.Collections.emptyList();
     tableDescription_ = "";
+    category_ = "";
+    subCategory_ = "";
   }
 
   @java.lang.Override
@@ -183,6 +185,84 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CATEGORY_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object category_ = "";
+  /**
+   * <code>string category = 5 [json_name = "category"];</code>
+   * @return The category.
+   */
+  @java.lang.Override
+  public java.lang.String getCategory() {
+    java.lang.Object ref = category_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      category_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string category = 5 [json_name = "category"];</code>
+   * @return The bytes for category.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCategoryBytes() {
+    java.lang.Object ref = category_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      category_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SUB_CATEGORY_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subCategory_ = "";
+  /**
+   * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+   * @return The subCategory.
+   */
+  @java.lang.Override
+  public java.lang.String getSubCategory() {
+    java.lang.Object ref = subCategory_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      subCategory_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+   * @return The bytes for subCategory.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSubCategoryBytes() {
+    java.lang.Object ref = subCategory_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      subCategory_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -209,6 +289,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tableDescription_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, category_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subCategory_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subCategory_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -232,6 +318,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tableDescription_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, category_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subCategory_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subCategory_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -254,6 +346,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFieldsList())) return false;
     if (!getTableDescription()
         .equals(other.getTableDescription())) return false;
+    if (!getCategory()
+        .equals(other.getCategory())) return false;
+    if (!getSubCategory()
+        .equals(other.getSubCategory())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -275,6 +371,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TABLE_DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getTableDescription().hashCode();
+    hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + getCategory().hashCode();
+    hash = (37 * hash) + SUB_CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + getSubCategory().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -420,6 +520,8 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       tableDescription_ = "";
+      category_ = "";
+      subCategory_ = "";
       return this;
     }
 
@@ -474,6 +576,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.tableDescription_ = tableDescription_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.subCategory_ = subCategory_;
       }
     }
 
@@ -560,6 +668,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getCategory().isEmpty()) {
+        category_ = other.category_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getSubCategory().isEmpty()) {
+        subCategory_ = other.subCategory_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -614,6 +732,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              category_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              subCategory_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1064,6 +1192,150 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       tableDescription_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object category_ = "";
+    /**
+     * <code>string category = 5 [json_name = "category"];</code>
+     * @return The category.
+     */
+    public java.lang.String getCategory() {
+      java.lang.Object ref = category_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        category_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string category = 5 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    public com.google.protobuf.ByteString
+        getCategoryBytes() {
+      java.lang.Object ref = category_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        category_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string category = 5 [json_name = "category"];</code>
+     * @param value The category to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategory(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      category_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string category = 5 [json_name = "category"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategory() {
+      category_ = getDefaultInstance().getCategory();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string category = 5 [json_name = "category"];</code>
+     * @param value The bytes for category to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      category_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object subCategory_ = "";
+    /**
+     * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+     * @return The subCategory.
+     */
+    public java.lang.String getSubCategory() {
+      java.lang.Object ref = subCategory_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subCategory_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+     * @return The bytes for subCategory.
+     */
+    public com.google.protobuf.ByteString
+        getSubCategoryBytes() {
+      java.lang.Object ref = subCategory_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subCategory_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+     * @param value The subCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubCategory(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      subCategory_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubCategory() {
+      subCategory_ = getDefaultInstance().getSubCategory();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string sub_category = 6 [json_name = "subCategory"];</code>
+     * @param value The bytes for subCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubCategoryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      subCategory_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
