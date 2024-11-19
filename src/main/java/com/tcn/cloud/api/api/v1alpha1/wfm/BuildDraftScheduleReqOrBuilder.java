@@ -156,7 +156,7 @@ public interface BuildDraftScheduleReqOrBuilder extends
    *
    * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6997
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return Whether the schedulingTarget field is set.
    */
   @java.lang.Deprecated boolean hasSchedulingTarget();
@@ -167,7 +167,7 @@ public interface BuildDraftScheduleReqOrBuilder extends
    *
    * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 11 [json_name = "schedulingTarget", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildDraftScheduleReq.scheduling_target is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6997
+   *     See api/v1alpha1/wfm/wfm.proto;l=7015
    * @return The schedulingTarget.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();
