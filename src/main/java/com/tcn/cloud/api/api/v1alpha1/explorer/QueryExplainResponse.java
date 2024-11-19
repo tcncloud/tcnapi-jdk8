@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
- * Protobuf type {@code api.v1alpha1.explorer.GetSupportQueryResponse}
+ * Protobuf type {@code api.v1alpha1.explorer.QueryExplainResponse}
  */
-public final class GetSupportQueryResponse extends
+public final class QueryExplainResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.explorer.GetSupportQueryResponse)
-    GetSupportQueryResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.explorer.QueryExplainResponse)
+    QueryExplainResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetSupportQueryResponse.newBuilder() to construct.
-  private GetSupportQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use QueryExplainResponse.newBuilder() to construct.
+  private QueryExplainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetSupportQueryResponse() {
+  private QueryExplainResponse() {
     resultUrl_ = "";
     prql_ = "";
     sql_ = "";
@@ -26,20 +26,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetSupportQueryResponse();
+    return new QueryExplainResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.Builder.class);
   }
 
   public static final int RESULT_URL_FIELD_NUMBER = 1;
@@ -309,10 +309,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse other = (com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse other = (com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse) obj;
 
     if (!getResultUrl()
         .equals(other.getResultUrl())) return false;
@@ -351,44 +351,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -396,26 +396,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -428,7 +428,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -444,26 +444,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.explorer.GetSupportQueryResponse}
+   * Protobuf type {@code api.v1alpha1.explorer.QueryExplainResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.explorer.GetSupportQueryResponse)
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.explorer.QueryExplainResponse)
+      com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.class, com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.newBuilder()
     private Builder() {
 
     }
@@ -488,17 +488,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -506,14 +506,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.resultUrl_ = resultUrl_;
@@ -566,16 +566,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse.getDefaultInstance()) return this;
       if (!other.getResultUrl().isEmpty()) {
         resultUrl_ = other.resultUrl_;
         bitField0_ |= 0x00000001;
@@ -1091,23 +1091,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.explorer.GetSupportQueryResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.explorer.QueryExplainResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.explorer.GetSupportQueryResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.explorer.QueryExplainResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetSupportQueryResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetSupportQueryResponse>() {
+  private static final com.google.protobuf.Parser<QueryExplainResponse>
+      PARSER = new com.google.protobuf.AbstractParser<QueryExplainResponse>() {
     @java.lang.Override
-    public GetSupportQueryResponse parsePartialFrom(
+    public QueryExplainResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1126,17 +1126,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetSupportQueryResponse> parser() {
+  public static com.google.protobuf.Parser<QueryExplainResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetSupportQueryResponse> getParserForType() {
+  public com.google.protobuf.Parser<QueryExplainResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.GetSupportQueryResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -35,15 +35,25 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_QueryResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_explorer_GetSupportQueryRequest_descriptor;
+    internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_explorer_GetSupportQueryRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_explorer_SupportQueryRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor;
+    internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_explorer_SupportQueryResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_QueryExplainRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_QueryExplainRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_QueryExplainResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -80,44 +90,41 @@ public final class ServiceProto {
       "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
       "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
       "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes\"\300\004\n\026GetSupportQueryRequest" +
-      "\022\'\n\017datasource_name\030\001 \001(\tR\016datasourceNam" +
-      "e\022N\n\017datasource_type\030\002 \001(\0162%.api.v1alpha" +
-      "1.explorer.DatasourceTypeR\016datasourceTyp" +
-      "e\022\034\n\010pipeline\030\003 \001(\tH\000R\010pipeline\022\024\n\004prql\030" +
-      "\004 \001(\tH\000R\004prql\022\027\n\007org_ids\030\005 \003(\tR\006orgIds\0229" +
-      "\n\nstart_time\030\006 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\tstartTime\0225\n\010end_time\030\007 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\007endTime\022\032\n\010time" +
-      "zone\030\010 \001(\tR\010timezone\022R\n\023pipeline_paramet" +
-      "ers\030\t \001(\0132!.api.v1alpha1.explorer.Parame" +
-      "tersR\022pipelineParameters\022\036\n\013ui_trace_id\030" +
-      "\n \001(\tR\tuiTraceId\022\030\n\007comment\030\013 \001(\tR\007comme" +
-      "nt\022;\n\006format\030\014 \001(\0162#.api.v1alpha1.explor" +
-      "er.ExportFormatR\006formatB\007\n\005query\"\244\001\n\027Get" +
-      "SupportQueryResponse\022\035\n\nresult_url\030\001 \001(\t" +
-      "R\tresultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017" +
-      "resultSizeBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003s" +
-      "ql\030\004 \001(\tR\003sql\022\030\n\007explain\030\005 \001(\tR\007explain2" +
-      "\246\004\n\017ExplorerService\022\313\001\n\025ListDatasourceSc" +
-      "hemas\0223.api.v1alpha1.explorer.ListDataso" +
-      "urceSchemasRequest\0324.api.v1alpha1.explor" +
-      "er.ListDatasourceSchemasResponse\"G\272\270\221\002\002\030" +
-      "\001\202\323\344\223\002:\"5/api/v1alpha1/explorer/explorer" +
-      "/listdatasourceschemas:\001*\022\213\001\n\005Query\022#.ap" +
-      "i.v1alpha1.explorer.QueryRequest\032$.api.v" +
-      "1alpha1.explorer.QueryResponse\"7\272\270\221\002\002\030\001\202" +
-      "\323\344\223\002*\"%/api/v1alpha1/explorer/explorer/q" +
-      "uery:\001*\022\266\001\n\017GetSupportQuery\022-.api.v1alph" +
-      "a1.explorer.GetSupportQueryRequest\032..api" +
-      ".v1alpha1.explorer.GetSupportQueryRespon" +
-      "se\"D\272\270\221\002\005\n\003\010\372\001\202\323\344\223\0024\"//api/v1alpha1/expl" +
-      "orer/explorer/getsupportquery:\001*B\255\001\n\'com" +
-      ".tcn.cloud.api.api.v1alpha1.explorerB\014Se" +
-      "rviceProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explor" +
-      "er\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1alpha" +
-      "1\\Explorer\\GPBMetadata\352\002\027Api::V1alpha1::" +
-      "Explorerb\006proto3"
+      "sultSizeBytes\"_\n\023SupportQueryRequest\022H\n\r" +
+      "query_request\030\001 \001(\0132#.api.v1alpha1.explo" +
+      "rer.QueryRequestR\014queryRequest\"a\n\024Suppor" +
+      "tQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\tresu" +
+      "ltUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017result" +
+      "SizeBytes\"_\n\023QueryExplainRequest\022H\n\rquer" +
+      "y_request\030\001 \001(\0132#.api.v1alpha1.explorer." +
+      "QueryRequestR\014queryRequest\"\241\001\n\024QueryExpl" +
+      "ainResponse\022\035\n\nresult_url\030\001 \001(\tR\tresultU" +
+      "rl\022*\n\021result_size_bytes\030\002 \001(\003R\017resultSiz" +
+      "eBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003sql\030\004 \001(\tR" +
+      "\003sql\022\030\n\007explain\030\005 \001(\tR\007explain2\323\005\n\017Explo" +
+      "rerService\022\313\001\n\025ListDatasourceSchemas\0223.a" +
+      "pi.v1alpha1.explorer.ListDatasourceSchem" +
+      "asRequest\0324.api.v1alpha1.explorer.ListDa" +
+      "tasourceSchemasResponse\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5" +
+      "/api/v1alpha1/explorer/explorer/listdata" +
+      "sourceschemas:\001*\022\213\001\n\005Query\022#.api.v1alpha" +
+      "1.explorer.QueryRequest\032$.api.v1alpha1.e" +
+      "xplorer.QueryResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/a" +
+      "pi/v1alpha1/explorer/explorer/query:\001*\022\260" +
+      "\001\n\017GetSupportQuery\022*.api.v1alpha1.explor" +
+      "er.SupportQueryRequest\032+.api.v1alpha1.ex" +
+      "plorer.SupportQueryResponse\"D\272\270\221\002\005\n\003\010\372\001\202" +
+      "\323\344\223\0024\"//api/v1alpha1/explorer/explorer/g" +
+      "etsupportquery:\001*\022\260\001\n\017GetQueryExplain\022*." +
+      "api.v1alpha1.explorer.QueryExplainReques" +
+      "t\032+.api.v1alpha1.explorer.QueryExplainRe" +
+      "sponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v1alpha1/" +
+      "explorer/explorer/getqueryexplain:\001*B\255\001\n" +
+      "\'com.tcn.cloud.api.api.v1alpha1.explorer" +
+      "B\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Ex" +
+      "plorer\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1a" +
+      "lpha1\\Explorer\\GPBMetadata\352\002\027Api::V1alph" +
+      "a1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -151,17 +158,29 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryResponse_descriptor,
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", });
-    internal_static_api_v1alpha1_explorer_GetSupportQueryRequest_descriptor =
+    internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_api_v1alpha1_explorer_GetSupportQueryRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_explorer_SupportQueryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_explorer_GetSupportQueryRequest_descriptor,
-        new java.lang.String[] { "DatasourceName", "DatasourceType", "Pipeline", "Prql", "OrgIds", "StartTime", "EndTime", "Timezone", "PipelineParameters", "UiTraceId", "Comment", "Format", "Query", });
-    internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor =
+        internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor,
+        new java.lang.String[] { "QueryRequest", });
+    internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_explorer_SupportQueryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_explorer_GetSupportQueryResponse_descriptor,
+        internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor,
+        new java.lang.String[] { "ResultUrl", "ResultSizeBytes", });
+    internal_static_api_v1alpha1_explorer_QueryExplainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_explorer_QueryExplainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_QueryExplainRequest_descriptor,
+        new java.lang.String[] { "QueryRequest", });
+    internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_explorer_QueryExplainResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor,
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", "Prql", "Sql", "Explain", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

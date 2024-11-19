@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
-public interface GetSupportQueryResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.GetSupportQueryResponse)
+public interface QueryExplainResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.QueryExplainResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
