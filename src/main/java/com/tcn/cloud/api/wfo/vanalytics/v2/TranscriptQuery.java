@@ -67578,7 +67578,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=466
+   *     See wfo/vanalytics/v2/transcript.proto;l=469
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -67592,7 +67592,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=466
+   *     See wfo/vanalytics/v2/transcript.proto;l=469
    * @return The channel.
    */
   @java.lang.Override
@@ -68746,7 +68746,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=466
+     *     See wfo/vanalytics/v2/transcript.proto;l=469
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -68759,7 +68759,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=466
+     *     See wfo/vanalytics/v2/transcript.proto;l=469
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
