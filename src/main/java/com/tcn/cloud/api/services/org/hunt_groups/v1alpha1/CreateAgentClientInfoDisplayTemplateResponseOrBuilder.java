@@ -12,8 +12,8 @@ public interface CreateAgentClientInfoDisplayTemplateResponseOrBuilder extends
    * the ID of the created display template.
    * </pre>
    *
-   * <code>int64 template_id = 1 [json_name = "templateId"];</code>
-   * @return The templateId.
+   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
+   * @return The templateSid.
    */
-  long getTemplateId();
+  long getTemplateSid();
 }

@@ -8,8 +8,17 @@ public interface GetAgentClientInfoDisplayTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-   * @return The templateSid.
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   * @return Whether the template field is set.
    */
-  long getTemplateSid();
+  boolean hasTemplate();
+  /**
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   * @return The template.
+   */
+  com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate();
+  /**
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder();
 }

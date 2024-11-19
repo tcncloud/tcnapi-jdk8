@@ -42,15 +42,30 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse.Builder.class);
   }
 
-  public static final int TEMPLATE_SID_FIELD_NUMBER = 1;
-  private long templateSid_ = 0L;
+  public static final int TEMPLATE_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate template_;
   /**
-   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-   * @return The templateSid.
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   * @return Whether the template field is set.
    */
   @java.lang.Override
-  public long getTemplateSid() {
-    return templateSid_;
+  public boolean hasTemplate() {
+    return template_ != null;
+  }
+  /**
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   * @return The template.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate() {
+    return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+  }
+  /**
+   * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder() {
+    return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -67,8 +82,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (templateSid_ != 0L) {
-      output.writeInt64(1, templateSid_);
+    if (template_ != null) {
+      output.writeMessage(1, getTemplate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -79,9 +94,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (templateSid_ != 0L) {
+    if (template_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, templateSid_);
+        .computeMessageSize(1, getTemplate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -98,8 +113,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse) obj;
 
-    if (getTemplateSid()
-        != other.getTemplateSid()) return false;
+    if (hasTemplate() != other.hasTemplate()) return false;
+    if (hasTemplate()) {
+      if (!getTemplate()
+          .equals(other.getTemplate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -111,9 +129,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEMPLATE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTemplateSid());
+    if (hasTemplate()) {
+      hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplate().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -249,7 +268,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      templateSid_ = 0L;
+      template_ = null;
+      if (templateBuilder_ != null) {
+        templateBuilder_.dispose();
+        templateBuilder_ = null;
+      }
       return this;
     }
 
@@ -284,7 +307,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.templateSid_ = templateSid_;
+        result.template_ = templateBuilder_ == null
+            ? template_
+            : templateBuilder_.build();
       }
     }
 
@@ -332,8 +357,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse other) {
       if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.GetAgentClientInfoDisplayTemplateResponse.getDefaultInstance()) return this;
-      if (other.getTemplateSid() != 0L) {
-        setTemplateSid(other.getTemplateSid());
+      if (other.hasTemplate()) {
+        mergeTemplate(other.getTemplate());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -361,11 +386,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              templateSid_ = input.readInt64();
+            case 10: {
+              input.readMessage(
+                  getTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -383,36 +410,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long templateSid_ ;
+    private com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate template_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> templateBuilder_;
     /**
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @return The templateSid.
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return Whether the template field is set.
      */
-    @java.lang.Override
-    public long getTemplateSid() {
-      return templateSid_;
+    public boolean hasTemplate() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @param value The templateSid to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return The template.
      */
-    public Builder setTemplateSid(long value) {
-
-      templateSid_ = value;
+    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate() {
+      if (templateBuilder_ == null) {
+        return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+      } else {
+        return templateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    public Builder setTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
+      if (templateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        template_ = value;
+      } else {
+        templateBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
      */
-    public Builder clearTemplateSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      templateSid_ = 0L;
+    public Builder setTemplate(
+        com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder builderForValue) {
+      if (templateBuilder_ == null) {
+        template_ = builderForValue.build();
+      } else {
+        templateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    public Builder mergeTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
+      if (templateBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          template_ != null &&
+          template_ != com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance()) {
+          getTemplateBuilder().mergeFrom(value);
+        } else {
+          template_ = value;
+        }
+      } else {
+        templateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    public Builder clearTemplate() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      template_ = null;
+      if (templateBuilder_ != null) {
+        templateBuilder_.dispose();
+        templateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder getTemplateBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getTemplateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder() {
+      if (templateBuilder_ != null) {
+        return templateBuilder_.getMessageOrBuilder();
+      } else {
+        return template_ == null ?
+            com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+      }
+    }
+    /**
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
+        getTemplateFieldBuilder() {
+      if (templateBuilder_ == null) {
+        templateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder>(
+                getTemplate(),
+                getParentForChildren(),
+                isClean());
+        template_ = null;
+      }
+      return templateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

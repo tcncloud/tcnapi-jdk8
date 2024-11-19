@@ -341,52 +341,53 @@ public final class EntitiesProto {
       "\003(\003R\034inboundBroadcastTemplateSids\"u\n+Cre" +
       "ateAgentClientInfoDisplayTemplateRequest" +
       "\022F\n\010template\030\001 \001(\0132*.api.commons.org.Cli" +
-      "entInfoDisplayTemplateR\010template\"O\n,Crea" +
+      "entInfoDisplayTemplateR\010template\"Q\n,Crea" +
       "teAgentClientInfoDisplayTemplateResponse" +
-      "\022\037\n\013template_id\030\001 \001(\003R\ntemplateId\"u\n+Upd" +
-      "ateAgentClientInfoDisplayTemplateRequest" +
-      "\022F\n\010template\030\001 \001(\0132*.api.commons.org.Cli" +
-      "entInfoDisplayTemplateR\010template\".\n,Upda" +
-      "teAgentClientInfoDisplayTemplateResponse" +
-      "\"K\n(GetAgentClientInfoDisplayTemplateReq" +
-      "uest\022\037\n\013template_id\030\001 \001(\003R\ntemplateId\"N\n" +
-      ")GetAgentClientInfoDisplayTemplateRespon" +
-      "se\022!\n\014template_sid\030\001 \001(\003R\013templateSid\",\n" +
-      "*ListAgentClientInfoDisplayTemplatesRequ" +
-      "est\"w\n+ListAgentClientInfoDisplayTemplat" +
-      "esResponse\022H\n\ttemplates\030\001 \003(\0132*.api.comm" +
-      "ons.org.ClientInfoDisplayTemplateR\ttempl" +
-      "ates\"N\n+DeleteAgentClientInfoDisplayTemp" +
-      "lateRequest\022\037\n\013template_id\030\001 \001(\003R\ntempla" +
-      "teId\".\n,DeleteAgentClientInfoDisplayTemp" +
-      "lateResponse*\327\002\n\013AgentStatus\022\034\n\030AGENT_ST" +
-      "ATUS_UNSPECIFIED\020\000\022\032\n\026AGENT_STATUS_LOGGE" +
-      "D_IN\020\001\022\030\n\024AGENT_STATUS_WAITING\020\002\022\027\n\023AGEN" +
-      "T_STATUS_PAUSED\020\003\022\030\n\024AGENT_STATUS_ON_CAL" +
-      "L\020\004\022\036\n\032AGENT_STATUS_TRANSFER_CALL\020\005\022\036\n\032A" +
-      "GENT_STATUS_TRANSFER_LOST\020\006\022%\n!AGENT_STA" +
-      "TUS_TRANSFER_TARGET_LOST\020\007\022\035\n\031AGENT_STAT" +
-      "US_PREVIEW_CALL\020\010\022!\n\035AGENT_STATUS_MANUAL" +
-      "_DIAL_CALL\020\t\022\030\n\024AGENT_STATUS_WRAP_UP\020\n*\350" +
-      "\001\n\017SystemPauseCode\022!\n\035SYSTEM_PAUSE_CODE_" +
-      "UNSPECIFIED\020\000\0225\n1SYSTEM_PAUSE_CODE_AGENT" +
-      "_TRIGGER_ADVANCE_TO_PAUSED\020\001\022%\n!SYSTEM_P" +
-      "AUSE_CODE_CHANGE_PASSWORD\020\002\022&\n\"SYSTEM_PA" +
-      "USE_CODE_CHECK_VOICE_MAIL\020\003\022,\n(SYSTEM_PA" +
-      "USE_CODE_MANUALLY_APPROVE_CALLS\020\004*\222\002\n\rTr" +
-      "iggerAction\022\036\n\032TRIGGER_ACTION_UNSPECIFIE" +
-      "D\020\000\022$\n TRIGGER_ACTION_ADVANCE_TO_STATUS\020" +
-      "\001\022\"\n\036TRIGGER_ACTION_DISPLAY_MESSAGE\020\002\022\036\n" +
-      "\032TRIGGER_ACTION_EJECT_AGENT\020\003\022#\n\037TRIGGER" +
-      "_ACTION_EXECUTE_WEB_LINK\020\004\022+\n\'TRIGGER_AC" +
-      "TION_EXECUTE_INTEGRATION_LINK\020\005\022%\n!TRIGG" +
-      "ER_ACTION_EXECUTE_EXILE_LINK\020\006B\347\001\n3com.t" +
-      "cn.cloud.api.services.org.hunt_groups.v1" +
-      "alpha1B\rEntitiesProtoP\001\242\002\003SOH\252\002 Services" +
-      ".Org.HuntGroups.V1alpha1\312\002 Services\\Org\\" +
-      "HuntGroups\\V1alpha1\342\002,Services\\Org\\HuntG" +
-      "roups\\V1alpha1\\GPBMetadata\352\002#Services::O" +
-      "rg::HuntGroups::V1alpha1b\006proto3"
+      "\022!\n\014template_sid\030\001 \001(\003R\013templateSid\"u\n+U" +
+      "pdateAgentClientInfoDisplayTemplateReque" +
+      "st\022F\n\010template\030\001 \001(\0132*.api.commons.org.C" +
+      "lientInfoDisplayTemplateR\010template\".\n,Up" +
+      "dateAgentClientInfoDisplayTemplateRespon" +
+      "se\"M\n(GetAgentClientInfoDisplayTemplateR" +
+      "equest\022!\n\014template_sid\030\001 \001(\003R\013templateSi" +
+      "d\"s\n)GetAgentClientInfoDisplayTemplateRe" +
+      "sponse\022F\n\010template\030\001 \001(\0132*.api.commons.o" +
+      "rg.ClientInfoDisplayTemplateR\010template\"," +
+      "\n*ListAgentClientInfoDisplayTemplatesReq" +
+      "uest\"w\n+ListAgentClientInfoDisplayTempla" +
+      "tesResponse\022H\n\ttemplates\030\001 \003(\0132*.api.com" +
+      "mons.org.ClientInfoDisplayTemplateR\ttemp" +
+      "lates\"P\n+DeleteAgentClientInfoDisplayTem" +
+      "plateRequest\022!\n\014template_sid\030\001 \001(\003R\013temp" +
+      "lateSid\".\n,DeleteAgentClientInfoDisplayT" +
+      "emplateResponse*\327\002\n\013AgentStatus\022\034\n\030AGENT" +
+      "_STATUS_UNSPECIFIED\020\000\022\032\n\026AGENT_STATUS_LO" +
+      "GGED_IN\020\001\022\030\n\024AGENT_STATUS_WAITING\020\002\022\027\n\023A" +
+      "GENT_STATUS_PAUSED\020\003\022\030\n\024AGENT_STATUS_ON_" +
+      "CALL\020\004\022\036\n\032AGENT_STATUS_TRANSFER_CALL\020\005\022\036" +
+      "\n\032AGENT_STATUS_TRANSFER_LOST\020\006\022%\n!AGENT_" +
+      "STATUS_TRANSFER_TARGET_LOST\020\007\022\035\n\031AGENT_S" +
+      "TATUS_PREVIEW_CALL\020\010\022!\n\035AGENT_STATUS_MAN" +
+      "UAL_DIAL_CALL\020\t\022\030\n\024AGENT_STATUS_WRAP_UP\020" +
+      "\n*\350\001\n\017SystemPauseCode\022!\n\035SYSTEM_PAUSE_CO" +
+      "DE_UNSPECIFIED\020\000\0225\n1SYSTEM_PAUSE_CODE_AG" +
+      "ENT_TRIGGER_ADVANCE_TO_PAUSED\020\001\022%\n!SYSTE" +
+      "M_PAUSE_CODE_CHANGE_PASSWORD\020\002\022&\n\"SYSTEM" +
+      "_PAUSE_CODE_CHECK_VOICE_MAIL\020\003\022,\n(SYSTEM" +
+      "_PAUSE_CODE_MANUALLY_APPROVE_CALLS\020\004*\222\002\n" +
+      "\rTriggerAction\022\036\n\032TRIGGER_ACTION_UNSPECI" +
+      "FIED\020\000\022$\n TRIGGER_ACTION_ADVANCE_TO_STAT" +
+      "US\020\001\022\"\n\036TRIGGER_ACTION_DISPLAY_MESSAGE\020\002" +
+      "\022\036\n\032TRIGGER_ACTION_EJECT_AGENT\020\003\022#\n\037TRIG" +
+      "GER_ACTION_EXECUTE_WEB_LINK\020\004\022+\n\'TRIGGER" +
+      "_ACTION_EXECUTE_INTEGRATION_LINK\020\005\022%\n!TR" +
+      "IGGER_ACTION_EXECUTE_EXILE_LINK\020\006B\347\001\n3co" +
+      "m.tcn.cloud.api.services.org.hunt_groups" +
+      ".v1alpha1B\rEntitiesProtoP\001\242\002\003SOH\252\002 Servi" +
+      "ces.Org.HuntGroups.V1alpha1\312\002 Services\\O" +
+      "rg\\HuntGroups\\V1alpha1\342\002,Services\\Org\\Hu" +
+      "ntGroups\\V1alpha1\\GPBMetadata\352\002#Services" +
+      "::Org::HuntGroups::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -584,7 +585,7 @@ public final class EntitiesProto {
     internal_static_services_org_hunt_groups_v1alpha1_CreateAgentClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_CreateAgentClientInfoDisplayTemplateResponse_descriptor,
-        new java.lang.String[] { "TemplateId", });
+        new java.lang.String[] { "TemplateSid", });
     internal_static_services_org_hunt_groups_v1alpha1_UpdateAgentClientInfoDisplayTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_services_org_hunt_groups_v1alpha1_UpdateAgentClientInfoDisplayTemplateRequest_fieldAccessorTable = new
@@ -602,13 +603,13 @@ public final class EntitiesProto {
     internal_static_services_org_hunt_groups_v1alpha1_GetAgentClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_GetAgentClientInfoDisplayTemplateRequest_descriptor,
-        new java.lang.String[] { "TemplateId", });
+        new java.lang.String[] { "TemplateSid", });
     internal_static_services_org_hunt_groups_v1alpha1_GetAgentClientInfoDisplayTemplateResponse_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_services_org_hunt_groups_v1alpha1_GetAgentClientInfoDisplayTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_GetAgentClientInfoDisplayTemplateResponse_descriptor,
-        new java.lang.String[] { "TemplateSid", });
+        new java.lang.String[] { "Template", });
     internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesRequest_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesRequest_fieldAccessorTable = new
@@ -626,7 +627,7 @@ public final class EntitiesProto {
     internal_static_services_org_hunt_groups_v1alpha1_DeleteAgentClientInfoDisplayTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_DeleteAgentClientInfoDisplayTemplateRequest_descriptor,
-        new java.lang.String[] { "TemplateId", });
+        new java.lang.String[] { "TemplateSid", });
     internal_static_services_org_hunt_groups_v1alpha1_DeleteAgentClientInfoDisplayTemplateResponse_descriptor =
       getDescriptor().getMessageTypes().get(37);
     internal_static_services_org_hunt_groups_v1alpha1_DeleteAgentClientInfoDisplayTemplateResponse_fieldAccessorTable = new

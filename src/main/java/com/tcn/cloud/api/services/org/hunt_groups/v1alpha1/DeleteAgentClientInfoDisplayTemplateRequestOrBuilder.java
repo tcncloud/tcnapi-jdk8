@@ -12,8 +12,8 @@ public interface DeleteAgentClientInfoDisplayTemplateRequestOrBuilder extends
    * the ID of the template to delete
    * </pre>
    *
-   * <code>int64 template_id = 1 [json_name = "templateId"];</code>
-   * @return The templateId.
+   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
+   * @return The templateSid.
    */
-  long getTemplateId();
+  long getTemplateSid();
 }

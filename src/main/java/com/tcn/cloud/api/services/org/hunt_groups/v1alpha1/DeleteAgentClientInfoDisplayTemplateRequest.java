@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest.Builder.class);
   }
 
-  public static final int TEMPLATE_ID_FIELD_NUMBER = 1;
-  private long templateId_ = 0L;
+  public static final int TEMPLATE_SID_FIELD_NUMBER = 1;
+  private long templateSid_ = 0L;
   /**
    * <pre>
    * the ID of the template to delete
    * </pre>
    *
-   * <code>int64 template_id = 1 [json_name = "templateId"];</code>
-   * @return The templateId.
+   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
+   * @return The templateSid.
    */
   @java.lang.Override
-  public long getTemplateId() {
-    return templateId_;
+  public long getTemplateSid() {
+    return templateSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,8 +71,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (templateId_ != 0L) {
-      output.writeInt64(1, templateId_);
+    if (templateSid_ != 0L) {
+      output.writeInt64(1, templateSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -83,9 +83,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (templateId_ != 0L) {
+    if (templateSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, templateId_);
+        .computeInt64Size(1, templateSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -102,8 +102,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest) obj;
 
-    if (getTemplateId()
-        != other.getTemplateId()) return false;
+    if (getTemplateSid()
+        != other.getTemplateSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -115,9 +115,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+    hash = (37 * hash) + TEMPLATE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTemplateId());
+        getTemplateSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      templateId_ = 0L;
+      templateSid_ = 0L;
       return this;
     }
 
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.templateId_ = templateId_;
+        result.templateSid_ = templateSid_;
       }
     }
 
@@ -336,8 +336,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest other) {
       if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest.getDefaultInstance()) return this;
-      if (other.getTemplateId() != 0L) {
-        setTemplateId(other.getTemplateId());
+      if (other.getTemplateSid() != 0L) {
+        setTemplateSid(other.getTemplateSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -366,7 +366,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              templateId_ = input.readInt64();
+              templateSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -387,31 +387,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long templateId_ ;
+    private long templateSid_ ;
     /**
      * <pre>
      * the ID of the template to delete
      * </pre>
      *
-     * <code>int64 template_id = 1 [json_name = "templateId"];</code>
-     * @return The templateId.
+     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
+     * @return The templateSid.
      */
     @java.lang.Override
-    public long getTemplateId() {
-      return templateId_;
+    public long getTemplateSid() {
+      return templateSid_;
     }
     /**
      * <pre>
      * the ID of the template to delete
      * </pre>
      *
-     * <code>int64 template_id = 1 [json_name = "templateId"];</code>
-     * @param value The templateId to set.
+     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
+     * @param value The templateSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTemplateId(long value) {
+    public Builder setTemplateSid(long value) {
 
-      templateId_ = value;
+      templateSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -421,12 +421,12 @@ private static final long serialVersionUID = 0L;
      * the ID of the template to delete
      * </pre>
      *
-     * <code>int64 template_id = 1 [json_name = "templateId"];</code>
+     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTemplateId() {
+    public Builder clearTemplateSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      templateId_ = 0L;
+      templateSid_ = 0L;
       onChanged();
       return this;
     }
