@@ -112,19 +112,4 @@ public interface CreateScrubListReqOrBuilder extends
    * @return The durable.
    */
   boolean getDurable();
-
-  /**
-   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
-   * @return Whether the decompositions field is set.
-   */
-  boolean hasDecompositions();
-  /**
-   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
-   * @return The decompositions.
-   */
-  com.tcn.cloud.api.api.commons.Decompositions getDecompositions();
-  /**
-   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
-   */
-  com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder();
 }

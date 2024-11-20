@@ -142,12 +142,6 @@ public interface ScrubEntryOrBuilder extends
   com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder();
 
   /**
-   * <code>bool is_wild_card = 16 [json_name = "isWildCard"];</code>
-   * @return The isWildCard.
-   */
-  boolean getIsWildCard();
-
-  /**
    * <pre>
    * audit
    * </pre>
