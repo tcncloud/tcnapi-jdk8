@@ -49553,7 +49553,7 @@ private static final long serialVersionUID = 0L;
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      * @return Whether the campaignDirection field is set.
      */
     boolean hasCampaignDirection();
@@ -49562,18 +49562,18 @@ private static final long serialVersionUID = 0L;
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      * @return The campaignDirection.
      */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection();
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getCampaignDirection();
     /**
      * <pre>
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder();
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder getCampaignDirectionOrBuilder();
   }
   /**
    * <pre>
@@ -50944,8 +50944,8 @@ private static final long serialVersionUID = 0L;
 
     }
 
-    public interface OmniCampaignDirectionOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+    public interface CampaignDirectionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -51003,18 +51003,18 @@ private static final long serialVersionUID = 0L;
       int getAnyValue(int index);
     }
     /**
-     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection}
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection}
      */
-    public static final class OmniCampaignDirection extends
+    public static final class CampaignDirection extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
-        OmniCampaignDirectionOrBuilder {
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)
+        CampaignDirectionOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use OmniCampaignDirection.newBuilder() to construct.
-      private OmniCampaignDirection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use CampaignDirection.newBuilder() to construct.
+      private CampaignDirection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private OmniCampaignDirection() {
+      private CampaignDirection() {
         any_ = java.util.Collections.emptyList();
       }
 
@@ -51022,20 +51022,20 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new OmniCampaignDirection();
+        return new CampaignDirection();
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignDirection_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_fieldAccessorTable
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignDirection_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder.class);
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder.class);
       }
 
       public static final int ANY_FIELD_NUMBER = 1;
@@ -51174,10 +51174,10 @@ private static final long serialVersionUID = 0L;
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)) {
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)) {
           return super.equals(obj);
         }
-        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection) obj;
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection) obj;
 
         if (!any_.equals(other.any_)) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -51200,44 +51200,44 @@ private static final long serialVersionUID = 0L;
         return hash;
       }
 
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(byte[] data)
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(java.io.InputStream input)
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -51245,26 +51245,26 @@ private static final long serialVersionUID = 0L;
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseDelimitedFrom(java.io.InputStream input)
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseDelimitedFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -51277,7 +51277,7 @@ private static final long serialVersionUID = 0L;
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection prototype) {
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -51293,26 +51293,26 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
-       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection}
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder {
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignDirection_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_fieldAccessorTable
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignDirection_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder.class);
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder.class);
         }
 
-        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.newBuilder()
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.newBuilder()
         private Builder() {
 
         }
@@ -51334,17 +51334,17 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignDirection_descriptor;
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstanceForType() {
-          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance();
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection build() {
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result = buildPartial();
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -51352,15 +51352,15 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection buildPartial() {
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection(this);
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection(this);
           buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result) {
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection result) {
           if (((bitField0_ & 0x00000001) != 0)) {
             any_ = java.util.Collections.unmodifiableList(any_);
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -51368,7 +51368,7 @@ private static final long serialVersionUID = 0L;
           result.any_ = any_;
         }
 
-        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result) {
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection result) {
           int from_bitField0_ = bitField0_;
         }
 
@@ -51406,16 +51406,16 @@ private static final long serialVersionUID = 0L;
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection) {
-            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)other);
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection other) {
-          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance()) return this;
           if (!other.any_.isEmpty()) {
             if (any_.isEmpty()) {
               any_ = other.any_;
@@ -51698,23 +51698,23 @@ private static final long serialVersionUID = 0L;
         }
 
 
-        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)
       }
 
-      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
-      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection();
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection();
       }
 
-      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstance() {
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<OmniCampaignDirection>
-          PARSER = new com.google.protobuf.AbstractParser<OmniCampaignDirection>() {
+      private static final com.google.protobuf.Parser<CampaignDirection>
+          PARSER = new com.google.protobuf.AbstractParser<CampaignDirection>() {
         @java.lang.Override
-        public OmniCampaignDirection parsePartialFrom(
+        public CampaignDirection parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -51733,17 +51733,17 @@ private static final long serialVersionUID = 0L;
         }
       };
 
-      public static com.google.protobuf.Parser<OmniCampaignDirection> parser() {
+      public static com.google.protobuf.Parser<CampaignDirection> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<OmniCampaignDirection> getParserForType() {
+      public com.google.protobuf.Parser<CampaignDirection> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstanceForType() {
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -51826,13 +51826,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CAMPAIGN_DIRECTION_FIELD_NUMBER = 3;
-    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaignDirection_;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaignDirection_;
     /**
      * <pre>
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      * @return Whether the campaignDirection field is set.
      */
     @java.lang.Override
@@ -51844,23 +51844,23 @@ private static final long serialVersionUID = 0L;
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      * @return The campaignDirection.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection() {
-      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getCampaignDirection() {
+      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance() : campaignDirection_;
     }
     /**
      * <pre>
      * Query constraints on campaign direction.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
-      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
+      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance() : campaignDirection_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -52587,15 +52587,15 @@ private static final long serialVersionUID = 0L;
         return campaignSidBuilder_;
       }
 
-      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaignDirection_;
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaignDirection_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder> campaignDirectionBuilder_;
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder> campaignDirectionBuilder_;
       /**
        * <pre>
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        * @return Whether the campaignDirection field is set.
        */
       public boolean hasCampaignDirection() {
@@ -52606,12 +52606,12 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        * @return The campaignDirection.
        */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection() {
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection getCampaignDirection() {
         if (campaignDirectionBuilder_ == null) {
-          return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+          return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance() : campaignDirection_;
         } else {
           return campaignDirectionBuilder_.getMessage();
         }
@@ -52621,9 +52621,9 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
-      public Builder setCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection value) {
+      public Builder setCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection value) {
         if (campaignDirectionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -52641,10 +52641,10 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
       public Builder setCampaignDirection(
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder builderForValue) {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder builderForValue) {
         if (campaignDirectionBuilder_ == null) {
           campaignDirection_ = builderForValue.build();
         } else {
@@ -52659,13 +52659,13 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
-      public Builder mergeCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection value) {
+      public Builder mergeCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection value) {
         if (campaignDirectionBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0) &&
             campaignDirection_ != null &&
-            campaignDirection_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance()) {
+            campaignDirection_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance()) {
             getCampaignDirectionBuilder().mergeFrom(value);
           } else {
             campaignDirection_ = value;
@@ -52682,7 +52682,7 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
       public Builder clearCampaignDirection() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -52699,9 +52699,9 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder getCampaignDirectionBuilder() {
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder getCampaignDirectionBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getCampaignDirectionFieldBuilder().getBuilder();
@@ -52711,14 +52711,14 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
         if (campaignDirectionBuilder_ != null) {
           return campaignDirectionBuilder_.getMessageOrBuilder();
         } else {
           return campaignDirection_ == null ?
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.getDefaultInstance() : campaignDirection_;
         }
       }
       /**
@@ -52726,14 +52726,14 @@ private static final long serialVersionUID = 0L;
        * Query constraints on campaign direction.
        * </pre>
        *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder> 
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder> 
           getCampaignDirectionFieldBuilder() {
         if (campaignDirectionBuilder_ == null) {
           campaignDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder>(
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignDirectionOrBuilder>(
                   getCampaignDirection(),
                   getParentForChildren(),
                   isClean());
