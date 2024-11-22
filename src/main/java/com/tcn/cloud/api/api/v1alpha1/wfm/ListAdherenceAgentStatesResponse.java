@@ -153,6 +153,50 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
     return map.get(key);
   }
 
+  public static final int DATETIME_OF_LASTEST_STATE_FIELD_NUMBER = 2;
+  private com.google.protobuf.Timestamp datetimeOfLastestState_;
+  /**
+   * <pre>
+   * Lastest datetime found among all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+   * @return Whether the datetimeOfLastestState field is set.
+   */
+  @java.lang.Override
+  public boolean hasDatetimeOfLastestState() {
+    return datetimeOfLastestState_ != null;
+  }
+  /**
+   * <pre>
+   * Lastest datetime found among all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+   * @return The datetimeOfLastestState.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDatetimeOfLastestState() {
+    return datetimeOfLastestState_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeOfLastestState_;
+  }
+  /**
+   * <pre>
+   * Lastest datetime found among all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDatetimeOfLastestStateOrBuilder() {
+    return datetimeOfLastestState_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeOfLastestState_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -173,6 +217,9 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
         internalGetAgentStates(),
         AgentStatesDefaultEntryHolder.defaultEntry,
         1);
+    if (datetimeOfLastestState_ != null) {
+      output.writeMessage(2, getDatetimeOfLastestState());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -192,6 +239,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, agentStates__);
     }
+    if (datetimeOfLastestState_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getDatetimeOfLastestState());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -209,6 +260,11 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
 
     if (!internalGetAgentStates().equals(
         other.internalGetAgentStates())) return false;
+    if (hasDatetimeOfLastestState() != other.hasDatetimeOfLastestState()) return false;
+    if (hasDatetimeOfLastestState()) {
+      if (!getDatetimeOfLastestState()
+          .equals(other.getDatetimeOfLastestState())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -223,6 +279,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
     if (!internalGetAgentStates().getMap().isEmpty()) {
       hash = (37 * hash) + AGENT_STATES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetAgentStates().hashCode();
+    }
+    if (hasDatetimeOfLastestState()) {
+      hash = (37 * hash) + DATETIME_OF_LASTEST_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatetimeOfLastestState().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -382,6 +442,11 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       super.clear();
       bitField0_ = 0;
       internalGetMutableAgentStates().clear();
+      datetimeOfLastestState_ = null;
+      if (datetimeOfLastestStateBuilder_ != null) {
+        datetimeOfLastestStateBuilder_.dispose();
+        datetimeOfLastestStateBuilder_ = null;
+      }
       return this;
     }
 
@@ -418,6 +483,11 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentStates_ = internalGetAgentStates();
         result.agentStates_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.datetimeOfLastestState_ = datetimeOfLastestStateBuilder_ == null
+            ? datetimeOfLastestState_
+            : datetimeOfLastestStateBuilder_.build();
       }
     }
 
@@ -468,6 +538,9 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       internalGetMutableAgentStates().mergeFrom(
           other.internalGetAgentStates());
       bitField0_ |= 0x00000001;
+      if (other.hasDatetimeOfLastestState()) {
+        mergeDatetimeOfLastestState(other.getDatetimeOfLastestState());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -503,6 +576,13 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getDatetimeOfLastestStateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -680,6 +760,179 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
           .putAll(values);
       bitField0_ |= 0x00000001;
       return this;
+    }
+
+    private com.google.protobuf.Timestamp datetimeOfLastestState_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> datetimeOfLastestStateBuilder_;
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     * @return Whether the datetimeOfLastestState field is set.
+     */
+    public boolean hasDatetimeOfLastestState() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     * @return The datetimeOfLastestState.
+     */
+    public com.google.protobuf.Timestamp getDatetimeOfLastestState() {
+      if (datetimeOfLastestStateBuilder_ == null) {
+        return datetimeOfLastestState_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeOfLastestState_;
+      } else {
+        return datetimeOfLastestStateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public Builder setDatetimeOfLastestState(com.google.protobuf.Timestamp value) {
+      if (datetimeOfLastestStateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        datetimeOfLastestState_ = value;
+      } else {
+        datetimeOfLastestStateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public Builder setDatetimeOfLastestState(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (datetimeOfLastestStateBuilder_ == null) {
+        datetimeOfLastestState_ = builderForValue.build();
+      } else {
+        datetimeOfLastestStateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public Builder mergeDatetimeOfLastestState(com.google.protobuf.Timestamp value) {
+      if (datetimeOfLastestStateBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          datetimeOfLastestState_ != null &&
+          datetimeOfLastestState_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDatetimeOfLastestStateBuilder().mergeFrom(value);
+        } else {
+          datetimeOfLastestState_ = value;
+        }
+      } else {
+        datetimeOfLastestStateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public Builder clearDatetimeOfLastestState() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      datetimeOfLastestState_ = null;
+      if (datetimeOfLastestStateBuilder_ != null) {
+        datetimeOfLastestStateBuilder_.dispose();
+        datetimeOfLastestStateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDatetimeOfLastestStateBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getDatetimeOfLastestStateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDatetimeOfLastestStateOrBuilder() {
+      if (datetimeOfLastestStateBuilder_ != null) {
+        return datetimeOfLastestStateBuilder_.getMessageOrBuilder();
+      } else {
+        return datetimeOfLastestState_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : datetimeOfLastestState_;
+      }
+    }
+    /**
+     * <pre>
+     * Lastest datetime found among all the returned states.
+     * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+     * This value should be used as input to this function whenever the next set of agent states is desired.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDatetimeOfLastestStateFieldBuilder() {
+      if (datetimeOfLastestStateBuilder_ == null) {
+        datetimeOfLastestStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDatetimeOfLastestState(),
+                getParentForChildren(),
+                isClean());
+        datetimeOfLastestState_ = null;
+      }
+      return datetimeOfLastestStateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
