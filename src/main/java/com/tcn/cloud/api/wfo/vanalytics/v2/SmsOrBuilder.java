@@ -120,20 +120,20 @@ public interface SmsOrBuilder extends
 
   /**
    * <pre>
-   * The omni campaign direction for this sms.
+   * The omni conversation direction for this sms.
    * </pre>
    *
-   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-   * @return The enum numeric value on the wire for campaignDirection.
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The enum numeric value on the wire for conversationType.
    */
-  int getCampaignDirectionValue();
+  int getConversationTypeValue();
   /**
    * <pre>
-   * The omni campaign direction for this sms.
+   * The omni conversation direction for this sms.
    * </pre>
    *
-   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-   * @return The campaignDirection.
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The conversationType.
    */
-  com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection();
+  com.tcn.cloud.api.api.commons.ConversationType getConversationType();
 }

@@ -22,7 +22,7 @@ private static final long serialVersionUID = 0L;
   private Sms() {
     threads_ = java.util.Collections.emptyList();
     callerId_ = "";
-    campaignDirection_ = 0;
+    conversationType_ = 0;
   }
 
   @java.lang.Override
@@ -4098,30 +4098,30 @@ private static final long serialVersionUID = 0L;
     return campaignSid_;
   }
 
-  public static final int CAMPAIGN_DIRECTION_FIELD_NUMBER = 6;
-  private int campaignDirection_ = 0;
+  public static final int CONVERSATION_TYPE_FIELD_NUMBER = 6;
+  private int conversationType_ = 0;
   /**
    * <pre>
-   * The omni campaign direction for this sms.
+   * The omni conversation direction for this sms.
    * </pre>
    *
-   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-   * @return The enum numeric value on the wire for campaignDirection.
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The enum numeric value on the wire for conversationType.
    */
-  @java.lang.Override public int getCampaignDirectionValue() {
-    return campaignDirection_;
+  @java.lang.Override public int getConversationTypeValue() {
+    return conversationType_;
   }
   /**
    * <pre>
-   * The omni campaign direction for this sms.
+   * The omni conversation direction for this sms.
    * </pre>
    *
-   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-   * @return The campaignDirection.
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The conversationType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection() {
-    com.tcn.cloud.api.api.commons.OmniCampaignDirection result = com.tcn.cloud.api.api.commons.OmniCampaignDirection.forNumber(campaignDirection_);
-    return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignDirection.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConversationType getConversationType() {
+    com.tcn.cloud.api.api.commons.ConversationType result = com.tcn.cloud.api.api.commons.ConversationType.forNumber(conversationType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConversationType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -4153,8 +4153,8 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       output.writeInt64(5, campaignSid_);
     }
-    if (campaignDirection_ != com.tcn.cloud.api.api.commons.OmniCampaignDirection.INBOUND.getNumber()) {
-      output.writeEnum(6, campaignDirection_);
+    if (conversationType_ != com.tcn.cloud.api.api.commons.ConversationType.CONVERSATION_TYPE_INBOUND.getNumber()) {
+      output.writeEnum(6, conversationType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -4184,9 +4184,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, campaignSid_);
     }
-    if (campaignDirection_ != com.tcn.cloud.api.api.commons.OmniCampaignDirection.INBOUND.getNumber()) {
+    if (conversationType_ != com.tcn.cloud.api.api.commons.ConversationType.CONVERSATION_TYPE_INBOUND.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(6, campaignDirection_);
+        .computeEnumSize(6, conversationType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4216,7 +4216,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallerId())) return false;
     if (getCampaignSid()
         != other.getCampaignSid()) return false;
-    if (campaignDirection_ != other.campaignDirection_) return false;
+    if (conversationType_ != other.conversationType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4244,8 +4244,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCampaignSid());
-    hash = (37 * hash) + CAMPAIGN_DIRECTION_FIELD_NUMBER;
-    hash = (53 * hash) + campaignDirection_;
+    hash = (37 * hash) + CONVERSATION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + conversationType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4396,7 +4396,7 @@ private static final long serialVersionUID = 0L;
       }
       callerId_ = "";
       campaignSid_ = 0L;
-      campaignDirection_ = 0;
+      conversationType_ = 0;
       return this;
     }
 
@@ -4458,7 +4458,7 @@ private static final long serialVersionUID = 0L;
         result.campaignSid_ = campaignSid_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.campaignDirection_ = campaignDirection_;
+        result.conversationType_ = conversationType_;
       }
     }
 
@@ -4546,8 +4546,8 @@ private static final long serialVersionUID = 0L;
       if (other.getCampaignSid() != 0L) {
         setCampaignSid(other.getCampaignSid());
       }
-      if (other.campaignDirection_ != 0) {
-        setCampaignDirectionValue(other.getCampaignDirectionValue());
+      if (other.conversationType_ != 0) {
+        setConversationTypeValue(other.getConversationTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4611,7 +4611,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 40
             case 48: {
-              campaignDirection_ = input.readEnum();
+              conversationType_ = input.readEnum();
               bitField0_ |= 0x00000020;
               break;
             } // case 48
@@ -5279,75 +5279,75 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int campaignDirection_ = 0;
+    private int conversationType_ = 0;
     /**
      * <pre>
-     * The omni campaign direction for this sms.
+     * The omni conversation direction for this sms.
      * </pre>
      *
-     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-     * @return The enum numeric value on the wire for campaignDirection.
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @return The enum numeric value on the wire for conversationType.
      */
-    @java.lang.Override public int getCampaignDirectionValue() {
-      return campaignDirection_;
+    @java.lang.Override public int getConversationTypeValue() {
+      return conversationType_;
     }
     /**
      * <pre>
-     * The omni campaign direction for this sms.
+     * The omni conversation direction for this sms.
      * </pre>
      *
-     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-     * @param value The enum numeric value on the wire for campaignDirection to set.
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @param value The enum numeric value on the wire for conversationType to set.
      * @return This builder for chaining.
      */
-    public Builder setCampaignDirectionValue(int value) {
-      campaignDirection_ = value;
+    public Builder setConversationTypeValue(int value) {
+      conversationType_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The omni campaign direction for this sms.
+     * The omni conversation direction for this sms.
      * </pre>
      *
-     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-     * @return The campaignDirection.
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @return The conversationType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection() {
-      com.tcn.cloud.api.api.commons.OmniCampaignDirection result = com.tcn.cloud.api.api.commons.OmniCampaignDirection.forNumber(campaignDirection_);
-      return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignDirection.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ConversationType getConversationType() {
+      com.tcn.cloud.api.api.commons.ConversationType result = com.tcn.cloud.api.api.commons.ConversationType.forNumber(conversationType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConversationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * The omni campaign direction for this sms.
+     * The omni conversation direction for this sms.
      * </pre>
      *
-     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
-     * @param value The campaignDirection to set.
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @param value The conversationType to set.
      * @return This builder for chaining.
      */
-    public Builder setCampaignDirection(com.tcn.cloud.api.api.commons.OmniCampaignDirection value) {
+    public Builder setConversationType(com.tcn.cloud.api.api.commons.ConversationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000020;
-      campaignDirection_ = value.getNumber();
+      conversationType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The omni campaign direction for this sms.
+     * The omni conversation direction for this sms.
      * </pre>
      *
-     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearCampaignDirection() {
+    public Builder clearConversationType() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      campaignDirection_ = 0;
+      conversationType_ = 0;
       onChanged();
       return this;
     }
