@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private Sms() {
     threads_ = java.util.Collections.emptyList();
     callerId_ = "";
+    campaignDirection_ = 0;
   }
 
   @java.lang.Override
@@ -4097,6 +4098,32 @@ private static final long serialVersionUID = 0L;
     return campaignSid_;
   }
 
+  public static final int CAMPAIGN_DIRECTION_FIELD_NUMBER = 6;
+  private int campaignDirection_ = 0;
+  /**
+   * <pre>
+   * The omni campaign direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+   * @return The enum numeric value on the wire for campaignDirection.
+   */
+  @java.lang.Override public int getCampaignDirectionValue() {
+    return campaignDirection_;
+  }
+  /**
+   * <pre>
+   * The omni campaign direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+   * @return The campaignDirection.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection() {
+    com.tcn.cloud.api.api.commons.OmniCampaignDirection result = com.tcn.cloud.api.api.commons.OmniCampaignDirection.forNumber(campaignDirection_);
+    return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignDirection.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4126,6 +4153,9 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       output.writeInt64(5, campaignSid_);
     }
+    if (campaignDirection_ != com.tcn.cloud.api.api.commons.OmniCampaignDirection.INBOUND.getNumber()) {
+      output.writeEnum(6, campaignDirection_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -4153,6 +4183,10 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, campaignSid_);
+    }
+    if (campaignDirection_ != com.tcn.cloud.api.api.commons.OmniCampaignDirection.INBOUND.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, campaignDirection_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4182,6 +4216,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallerId())) return false;
     if (getCampaignSid()
         != other.getCampaignSid()) return false;
+    if (campaignDirection_ != other.campaignDirection_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4209,6 +4244,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCampaignSid());
+    hash = (37 * hash) + CAMPAIGN_DIRECTION_FIELD_NUMBER;
+    hash = (53 * hash) + campaignDirection_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4359,6 +4396,7 @@ private static final long serialVersionUID = 0L;
       }
       callerId_ = "";
       campaignSid_ = 0L;
+      campaignDirection_ = 0;
       return this;
     }
 
@@ -4418,6 +4456,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.campaignDirection_ = campaignDirection_;
       }
     }
 
@@ -4505,6 +4546,9 @@ private static final long serialVersionUID = 0L;
       if (other.getCampaignSid() != 0L) {
         setCampaignSid(other.getCampaignSid());
       }
+      if (other.campaignDirection_ != 0) {
+        setCampaignDirectionValue(other.getCampaignDirectionValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4566,6 +4610,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              campaignDirection_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5226,6 +5275,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearCampaignSid() {
       bitField0_ = (bitField0_ & ~0x00000010);
       campaignSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int campaignDirection_ = 0;
+    /**
+     * <pre>
+     * The omni campaign direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * @return The enum numeric value on the wire for campaignDirection.
+     */
+    @java.lang.Override public int getCampaignDirectionValue() {
+      return campaignDirection_;
+    }
+    /**
+     * <pre>
+     * The omni campaign direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * @param value The enum numeric value on the wire for campaignDirection to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignDirectionValue(int value) {
+      campaignDirection_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The omni campaign direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * @return The campaignDirection.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection() {
+      com.tcn.cloud.api.api.commons.OmniCampaignDirection result = com.tcn.cloud.api.api.commons.OmniCampaignDirection.forNumber(campaignDirection_);
+      return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignDirection.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The omni campaign direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * @param value The campaignDirection to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignDirection(com.tcn.cloud.api.api.commons.OmniCampaignDirection value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      campaignDirection_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The omni campaign direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignDirection() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      campaignDirection_ = 0;
       onChanged();
       return this;
     }

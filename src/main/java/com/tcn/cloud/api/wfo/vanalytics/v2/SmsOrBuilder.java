@@ -117,4 +117,23 @@ public interface SmsOrBuilder extends
    * @return The campaignSid.
    */
   long getCampaignSid();
+
+  /**
+   * <pre>
+   * The omni campaign direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+   * @return The enum numeric value on the wire for campaignDirection.
+   */
+  int getCampaignDirectionValue();
+  /**
+   * <pre>
+   * The omni campaign direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.OmniCampaignDirection campaign_direction = 6 [json_name = "campaignDirection"];</code>
+   * @return The campaignDirection.
+   */
+  com.tcn.cloud.api.api.commons.OmniCampaignDirection getCampaignDirection();
 }

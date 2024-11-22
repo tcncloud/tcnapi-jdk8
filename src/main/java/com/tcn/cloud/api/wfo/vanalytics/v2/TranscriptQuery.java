@@ -49547,6 +49547,33 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder getCampaignSidOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * @return Whether the campaignDirection field is set.
+     */
+    boolean hasCampaignDirection();
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * @return The campaignDirection.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection();
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder();
   }
   /**
    * <pre>
@@ -50917,6 +50944,811 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface OmniCampaignDirectionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignDirection> getAnyList();
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      com.tcn.cloud.api.api.commons.OmniCampaignDirection getAny(int index);
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      java.util.List<java.lang.Integer>
+      getAnyValueList();
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      int getAnyValue(int index);
+    }
+    /**
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection}
+     */
+    public static final class OmniCampaignDirection extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+        OmniCampaignDirectionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use OmniCampaignDirection.newBuilder() to construct.
+      private OmniCampaignDirection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private OmniCampaignDirection() {
+        any_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OmniCampaignDirection();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<java.lang.Integer> any_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignDirection> any_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignDirection>() {
+                public com.tcn.cloud.api.api.commons.OmniCampaignDirection convert(java.lang.Integer from) {
+                  com.tcn.cloud.api.api.commons.OmniCampaignDirection result = com.tcn.cloud.api.api.commons.OmniCampaignDirection.forNumber(from);
+                  return result == null ? com.tcn.cloud.api.api.commons.OmniCampaignDirection.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignDirection> getAnyList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignDirection>(any_, any_converter_);
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      @java.lang.Override
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.OmniCampaignDirection getAny(int index) {
+        return any_converter_.convert(any_.get(index));
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Integer>
+      getAnyValueList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign direction
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      @java.lang.Override
+      public int getAnyValue(int index) {
+        return any_.get(index);
+      }
+      private int anyMemoizedSerializedSize;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeEnumNoTag(any_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(any_.get(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection) obj;
+
+        if (!any_.equals(other.any_)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + any_.hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_OmniCampaignDirection_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_ = java.util.Collections.unmodifiableList(any_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  ensureAnyIsMutable();
+                  any_.add(tmpRaw);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int oldLimit = input.pushLimit(length);
+                  while(input.getBytesUntilLimit() > 0) {
+                    int tmpRaw = input.readEnum();
+                    ensureAnyIsMutable();
+                    any_.add(tmpRaw);
+                  }
+                  input.popLimit(oldLimit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<java.lang.Integer> any_ =
+          java.util.Collections.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = new java.util.ArrayList<java.lang.Integer>(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<com.tcn.cloud.api.api.commons.OmniCampaignDirection> getAnyList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.OmniCampaignDirection>(any_, any_converter_);
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public com.tcn.cloud.api.api.commons.OmniCampaignDirection getAny(int index) {
+          return any_converter_.convert(any_.get(index));
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, com.tcn.cloud.api.api.commons.OmniCampaignDirection value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(com.tcn.cloud.api.api.commons.OmniCampaignDirection value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.OmniCampaignDirection> values) {
+          ensureAnyIsMutable();
+          for (com.tcn.cloud.api.api.commons.OmniCampaignDirection value : values) {
+            any_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @return A list containing the enum numeric values on the wire for any.
+         */
+        public java.util.List<java.lang.Integer>
+        getAnyValueList() {
+          return java.util.Collections.unmodifiableList(any_);
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of any at the given index.
+         */
+        public int getAnyValue(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The enum numeric value on the wire for any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAnyValue(
+            int index, int value) {
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param value The enum numeric value on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyValue(int value) {
+          ensureAnyIsMutable();
+          any_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign direction
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.OmniCampaignDirection any = 1 [json_name = "any"];</code>
+         * @param values The enum numeric values on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAnyValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureAnyIsMutable();
+          for (int value : values) {
+            any_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<OmniCampaignDirection>
+          PARSER = new com.google.protobuf.AbstractParser<OmniCampaignDirection>() {
+        @java.lang.Override
+        public OmniCampaignDirection parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<OmniCampaignDirection> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<OmniCampaignDirection> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversationSid_;
     /**
@@ -50993,6 +51825,44 @@ private static final long serialVersionUID = 0L;
       return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
     }
 
+    public static final int CAMPAIGN_DIRECTION_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaignDirection_;
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * @return Whether the campaignDirection field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignDirection() {
+      return campaignDirection_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     * @return The campaignDirection.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection() {
+      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign direction.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
+      return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -51013,6 +51883,9 @@ private static final long serialVersionUID = 0L;
       if (campaignSid_ != null) {
         output.writeMessage(2, getCampaignSid());
       }
+      if (campaignDirection_ != null) {
+        output.writeMessage(3, getCampaignDirection());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -51029,6 +51902,10 @@ private static final long serialVersionUID = 0L;
       if (campaignSid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCampaignSid());
+      }
+      if (campaignDirection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCampaignDirection());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -51055,6 +51932,11 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignSid()
             .equals(other.getCampaignSid())) return false;
       }
+      if (hasCampaignDirection() != other.hasCampaignDirection()) return false;
+      if (hasCampaignDirection()) {
+        if (!getCampaignDirection()
+            .equals(other.getCampaignDirection())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -51073,6 +51955,10 @@ private static final long serialVersionUID = 0L;
       if (hasCampaignSid()) {
         hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignSid().hashCode();
+      }
+      if (hasCampaignDirection()) {
+        hash = (37 * hash) + CAMPAIGN_DIRECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignDirection().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -51219,6 +52105,11 @@ private static final long serialVersionUID = 0L;
           campaignSidBuilder_.dispose();
           campaignSidBuilder_ = null;
         }
+        campaignDirection_ = null;
+        if (campaignDirectionBuilder_ != null) {
+          campaignDirectionBuilder_.dispose();
+          campaignDirectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -51261,6 +52152,11 @@ private static final long serialVersionUID = 0L;
           result.campaignSid_ = campaignSidBuilder_ == null
               ? campaignSid_
               : campaignSidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.campaignDirection_ = campaignDirectionBuilder_ == null
+              ? campaignDirection_
+              : campaignDirectionBuilder_.build();
         }
       }
 
@@ -51314,6 +52210,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasCampaignSid()) {
           mergeCampaignSid(other.getCampaignSid());
         }
+        if (other.hasCampaignDirection()) {
+          mergeCampaignDirection(other.getCampaignDirection());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -51354,6 +52253,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getCampaignDirectionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -51679,6 +52585,161 @@ private static final long serialVersionUID = 0L;
           campaignSid_ = null;
         }
         return campaignSidBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaignDirection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder> campaignDirectionBuilder_;
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * @return Whether the campaignDirection field is set.
+       */
+      public boolean hasCampaignDirection() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       * @return The campaignDirection.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection getCampaignDirection() {
+        if (campaignDirectionBuilder_ == null) {
+          return campaignDirection_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+        } else {
+          return campaignDirectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public Builder setCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection value) {
+        if (campaignDirectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignDirection_ = value;
+        } else {
+          campaignDirectionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public Builder setCampaignDirection(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder builderForValue) {
+        if (campaignDirectionBuilder_ == null) {
+          campaignDirection_ = builderForValue.build();
+        } else {
+          campaignDirectionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public Builder mergeCampaignDirection(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection value) {
+        if (campaignDirectionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            campaignDirection_ != null &&
+            campaignDirection_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance()) {
+            getCampaignDirectionBuilder().mergeFrom(value);
+          } else {
+            campaignDirection_ = value;
+          }
+        } else {
+          campaignDirectionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public Builder clearCampaignDirection() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        campaignDirection_ = null;
+        if (campaignDirectionBuilder_ != null) {
+          campaignDirectionBuilder_.dispose();
+          campaignDirectionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder getCampaignDirectionBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCampaignDirectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder getCampaignDirectionOrBuilder() {
+        if (campaignDirectionBuilder_ != null) {
+          return campaignDirectionBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignDirection_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.getDefaultInstance() : campaignDirection_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign direction.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection campaign_direction = 3 [json_name = "campaignDirection"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder> 
+          getCampaignDirectionFieldBuilder() {
+        if (campaignDirectionBuilder_ == null) {
+          campaignDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirection.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.OmniCampaignDirectionOrBuilder>(
+                  getCampaignDirection(),
+                  getParentForChildren(),
+                  isClean());
+          campaignDirection_ = null;
+        }
+        return campaignDirectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -67578,7 +68639,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=469
+   *     See wfo/vanalytics/v2/transcript.proto;l=472
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -67592,7 +68653,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=469
+   *     See wfo/vanalytics/v2/transcript.proto;l=472
    * @return The channel.
    */
   @java.lang.Override
@@ -68746,7 +69807,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=469
+     *     See wfo/vanalytics/v2/transcript.proto;l=472
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -68759,7 +69820,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=469
+     *     See wfo/vanalytics/v2/transcript.proto;l=472
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
