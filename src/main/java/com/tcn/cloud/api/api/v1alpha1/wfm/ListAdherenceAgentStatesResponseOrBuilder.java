@@ -73,10 +73,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
-   * @return Whether the datetimeOfLastestState field is set.
+   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
+   * @return Whether the datetimeOfLatestState field is set.
    */
-  boolean hasDatetimeOfLastestState();
+  boolean hasDatetimeOfLatestState();
   /**
    * <pre>
    * Lastest datetime found among all the returned states.
@@ -84,10 +84,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
-   * @return The datetimeOfLastestState.
+   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
+   * @return The datetimeOfLatestState.
    */
-  com.google.protobuf.Timestamp getDatetimeOfLastestState();
+  com.google.protobuf.Timestamp getDatetimeOfLatestState();
   /**
    * <pre>
    * Lastest datetime found among all the returned states.
@@ -95,7 +95,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_lastest_state = 2 [json_name = "datetimeOfLastestState"];</code>
+   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDatetimeOfLastestStateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getDatetimeOfLatestStateOrBuilder();
 }
