@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7052
+   *     See api/v1alpha1/wfm/wfm.proto;l=7053
    * @return The getUpdatedShifts.
    */
   @java.lang.Override
@@ -1207,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7052
+     *     See api/v1alpha1/wfm/wfm.proto;l=7053
      * @return The getUpdatedShifts.
      */
     @java.lang.Override
@@ -1221,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7052
+     *     See api/v1alpha1/wfm/wfm.proto;l=7053
      * @param value The getUpdatedShifts to set.
      * @return This builder for chaining.
      */
@@ -1239,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7052
+     *     See api/v1alpha1/wfm/wfm.proto;l=7053
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearGetUpdatedShifts() {

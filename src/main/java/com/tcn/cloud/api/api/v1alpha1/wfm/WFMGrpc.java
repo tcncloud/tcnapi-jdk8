@@ -9685,6 +9685,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -13248,6 +13249,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -16647,6 +16649,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -20094,6 +20097,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
