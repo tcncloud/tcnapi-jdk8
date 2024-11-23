@@ -68,7 +68,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
 
   /**
    * <pre>
-   * Lastest datetime found among all the returned states.
+   * Lastest datetime found amongst all the returned states.
    * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
@@ -79,7 +79,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
   boolean hasDatetimeOfLatestState();
   /**
    * <pre>
-   * Lastest datetime found among all the returned states.
+   * Lastest datetime found amongst all the returned states.
    * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
@@ -90,7 +90,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
   com.google.protobuf.Timestamp getDatetimeOfLatestState();
   /**
    * <pre>
-   * Lastest datetime found among all the returned states.
+   * Lastest datetime found amongst all the returned states.
    * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
