@@ -80,19 +80,19 @@ private static final long serialVersionUID = 0L;
     return queryRequest_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.getDefaultInstance() : queryRequest_;
   }
 
-  public static final int INCLUDE_EXPLAIN_FIELD_NUMBER = 2;
-  private boolean includeExplain_ = false;
+  public static final int DEBUG_FIELD_NUMBER = 2;
+  private boolean debug_ = false;
   /**
    * <pre>
    * include debug information in the response
    * </pre>
    *
-   * <code>bool include_explain = 2 [json_name = "includeExplain"];</code>
-   * @return The includeExplain.
+   * <code>bool debug = 2 [json_name = "debug"];</code>
+   * @return The debug.
    */
   @java.lang.Override
-  public boolean getIncludeExplain() {
-    return includeExplain_;
+  public boolean getDebug() {
+    return debug_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -112,8 +112,8 @@ private static final long serialVersionUID = 0L;
     if (queryRequest_ != null) {
       output.writeMessage(1, getQueryRequest());
     }
-    if (includeExplain_ != false) {
-      output.writeBool(2, includeExplain_);
+    if (debug_ != false) {
+      output.writeBool(2, debug_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -128,9 +128,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getQueryRequest());
     }
-    if (includeExplain_ != false) {
+    if (debug_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, includeExplain_);
+        .computeBoolSize(2, debug_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,8 +152,8 @@ private static final long serialVersionUID = 0L;
       if (!getQueryRequest()
           .equals(other.getQueryRequest())) return false;
     }
-    if (getIncludeExplain()
-        != other.getIncludeExplain()) return false;
+    if (getDebug()
+        != other.getDebug()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -169,9 +169,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + QUERY_REQUEST_FIELD_NUMBER;
       hash = (53 * hash) + getQueryRequest().hashCode();
     }
-    hash = (37 * hash) + INCLUDE_EXPLAIN_FIELD_NUMBER;
+    hash = (37 * hash) + DEBUG_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIncludeExplain());
+        getDebug());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
         queryRequestBuilder_.dispose();
         queryRequestBuilder_ = null;
       }
-      includeExplain_ = false;
+      debug_ = false;
       return this;
     }
 
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
             : queryRequestBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.includeExplain_ = includeExplain_;
+        result.debug_ = debug_;
       }
     }
 
@@ -403,8 +403,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasQueryRequest()) {
         mergeQueryRequest(other.getQueryRequest());
       }
-      if (other.getIncludeExplain() != false) {
-        setIncludeExplain(other.getIncludeExplain());
+      if (other.getDebug() != false) {
+        setDebug(other.getDebug());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 16: {
-              includeExplain_ = input.readBool();
+              debug_ = input.readBool();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -616,31 +616,31 @@ private static final long serialVersionUID = 0L;
       return queryRequestBuilder_;
     }
 
-    private boolean includeExplain_ ;
+    private boolean debug_ ;
     /**
      * <pre>
      * include debug information in the response
      * </pre>
      *
-     * <code>bool include_explain = 2 [json_name = "includeExplain"];</code>
-     * @return The includeExplain.
+     * <code>bool debug = 2 [json_name = "debug"];</code>
+     * @return The debug.
      */
     @java.lang.Override
-    public boolean getIncludeExplain() {
-      return includeExplain_;
+    public boolean getDebug() {
+      return debug_;
     }
     /**
      * <pre>
      * include debug information in the response
      * </pre>
      *
-     * <code>bool include_explain = 2 [json_name = "includeExplain"];</code>
-     * @param value The includeExplain to set.
+     * <code>bool debug = 2 [json_name = "debug"];</code>
+     * @param value The debug to set.
      * @return This builder for chaining.
      */
-    public Builder setIncludeExplain(boolean value) {
+    public Builder setDebug(boolean value) {
 
-      includeExplain_ = value;
+      debug_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -650,12 +650,12 @@ private static final long serialVersionUID = 0L;
      * include debug information in the response
      * </pre>
      *
-     * <code>bool include_explain = 2 [json_name = "includeExplain"];</code>
+     * <code>bool debug = 2 [json_name = "debug"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearIncludeExplain() {
+    public Builder clearDebug() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      includeExplain_ = false;
+      debug_ = false;
       onChanged();
       return this;
     }

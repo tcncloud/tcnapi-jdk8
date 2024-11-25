@@ -39,8 +39,8 @@ public interface SupportQueryRequestOrBuilder extends
    * include debug information in the response
    * </pre>
    *
-   * <code>bool include_explain = 2 [json_name = "includeExplain"];</code>
-   * @return The includeExplain.
+   * <code>bool debug = 2 [json_name = "debug"];</code>
+   * @return The debug.
    */
-  boolean getIncludeExplain();
+  boolean getDebug();
 }

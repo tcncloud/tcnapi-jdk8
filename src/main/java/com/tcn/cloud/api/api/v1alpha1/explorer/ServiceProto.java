@@ -90,44 +90,43 @@ public final class ServiceProto {
       "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
       "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
       "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes\"\210\001\n\023SupportQueryRequest\022H\n" +
-      "\rquery_request\030\001 \001(\0132#.api.v1alpha1.expl" +
-      "orer.QueryRequestR\014queryRequest\022\'\n\017inclu" +
-      "de_explain\030\002 \001(\010R\016includeExplain\"\241\001\n\024Sup" +
-      "portQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\tr" +
-      "esultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017res" +
-      "ultSizeBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003sql\030" +
-      "\004 \001(\tR\003sql\022\030\n\007explain\030\005 \001(\tR\007explain\"_\n\023" +
-      "QueryExplainRequest\022H\n\rquery_request\030\001 \001" +
-      "(\0132#.api.v1alpha1.explorer.QueryRequestR" +
-      "\014queryRequest\"\241\001\n\024QueryExplainResponse\022\035" +
-      "\n\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021result_" +
-      "size_bytes\030\002 \001(\003R\017resultSizeBytes\022\022\n\004prq" +
-      "l\030\003 \001(\tR\004prql\022\020\n\003sql\030\004 \001(\tR\003sql\022\030\n\007expla" +
-      "in\030\005 \001(\tR\007explain2\323\005\n\017ExplorerService\022\313\001" +
-      "\n\025ListDatasourceSchemas\0223.api.v1alpha1.e" +
-      "xplorer.ListDatasourceSchemasRequest\0324.a" +
-      "pi.v1alpha1.explorer.ListDatasourceSchem" +
-      "asResponse\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v1alpha1" +
-      "/explorer/explorer/listdatasourceschemas" +
-      ":\001*\022\213\001\n\005Query\022#.api.v1alpha1.explorer.Qu" +
-      "eryRequest\032$.api.v1alpha1.explorer.Query" +
-      "Response\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v1alpha1/e" +
-      "xplorer/explorer/query:\001*\022\260\001\n\017GetSupport" +
-      "Query\022*.api.v1alpha1.explorer.SupportQue" +
-      "ryRequest\032+.api.v1alpha1.explorer.Suppor" +
-      "tQueryResponse\"D\272\270\221\002\005\n\003\010\372\001\202\323\344\223\0024\"//api/v" +
-      "1alpha1/explorer/explorer/getsupportquer" +
-      "y:\001*\022\260\001\n\017GetQueryExplain\022*.api.v1alpha1." +
-      "explorer.QueryExplainRequest\032+.api.v1alp" +
-      "ha1.explorer.QueryExplainResponse\"D\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0024\"//api/v1alpha1/explorer/expl" +
-      "orer/getqueryexplain:\001*B\255\001\n\'com.tcn.clou" +
-      "d.api.api.v1alpha1.explorerB\014ServiceProt" +
-      "oP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\" +
-      "V1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explore" +
-      "r\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb" +
-      "\006proto3"
+      "sultSizeBytes\"u\n\023SupportQueryRequest\022H\n\r" +
+      "query_request\030\001 \001(\0132#.api.v1alpha1.explo" +
+      "rer.QueryRequestR\014queryRequest\022\024\n\005debug\030" +
+      "\002 \001(\010R\005debug\"\241\001\n\024SupportQueryResponse\022\035\n" +
+      "\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021result_s" +
+      "ize_bytes\030\002 \001(\003R\017resultSizeBytes\022\022\n\004prql" +
+      "\030\003 \001(\tR\004prql\022\020\n\003sql\030\004 \001(\tR\003sql\022\030\n\007explai" +
+      "n\030\005 \001(\tR\007explain\"_\n\023QueryExplainRequest\022" +
+      "H\n\rquery_request\030\001 \001(\0132#.api.v1alpha1.ex" +
+      "plorer.QueryRequestR\014queryRequest\"\241\001\n\024Qu" +
+      "eryExplainResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
+      "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
+      "sultSizeBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003sql" +
+      "\030\004 \001(\tR\003sql\022\030\n\007explain\030\005 \001(\tR\007explain2\323\005" +
+      "\n\017ExplorerService\022\313\001\n\025ListDatasourceSche" +
+      "mas\0223.api.v1alpha1.explorer.ListDatasour" +
+      "ceSchemasRequest\0324.api.v1alpha1.explorer" +
+      ".ListDatasourceSchemasResponse\"G\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002:\"5/api/v1alpha1/explorer/explorer/l" +
+      "istdatasourceschemas:\001*\022\213\001\n\005Query\022#.api." +
+      "v1alpha1.explorer.QueryRequest\032$.api.v1a" +
+      "lpha1.explorer.QueryResponse\"7\272\270\221\002\002\030\001\202\323\344" +
+      "\223\002*\"%/api/v1alpha1/explorer/explorer/que" +
+      "ry:\001*\022\260\001\n\017GetSupportQuery\022*.api.v1alpha1" +
+      ".explorer.SupportQueryRequest\032+.api.v1al" +
+      "pha1.explorer.SupportQueryResponse\"D\272\270\221\002" +
+      "\005\n\003\010\372\001\202\323\344\223\0024\"//api/v1alpha1/explorer/exp" +
+      "lorer/getsupportquery:\001*\022\260\001\n\017GetQueryExp" +
+      "lain\022*.api.v1alpha1.explorer.QueryExplai" +
+      "nRequest\032+.api.v1alpha1.explorer.QueryEx" +
+      "plainResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v1" +
+      "alpha1/explorer/explorer/getqueryexplain" +
+      ":\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.e" +
+      "xplorerB\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1al" +
+      "pha1.Explorer\312\002\025Api\\V1alpha1\\Explorer\342\002!" +
+      "Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027Api:" +
+      ":V1alpha1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -166,7 +165,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_explorer_SupportQueryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor,
-        new java.lang.String[] { "QueryRequest", "IncludeExplain", });
+        new java.lang.String[] { "QueryRequest", "Debug", });
     internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_explorer_SupportQueryResponse_fieldAccessorTable = new
