@@ -38,7 +38,7 @@ public final class ServiceProto {
       "roto\032.api/v1alpha1/scorecards/smart_eval" +
       "uation.proto\032,api/v1alpha1/scorecards/sm" +
       "art_question.proto\032\034google/api/annotatio" +
-      "ns.proto2\253U\n\nScorecards\022\276\001\n\017CreateScorec" +
+      "ns.proto2\256U\n\nScorecards\022\276\001\n\017CreateScorec" +
       "ard\022/.api.v1alpha1.scorecards.CreateScor" +
       "ecardRequest\0320.api.v1alpha1.scorecards.C" +
       "reateScorecardResponse\"H\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0028" +
@@ -258,65 +258,65 @@ public final class ServiceProto {
       "equest\0324.api.v1alpha1.scorecards.ListAut" +
       "oEvaluationsResponse\"L\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002<\"7" +
       "/api/v1alpha1/scorecards/scorecards/list" +
-      "autoevaluations:\001*\022\330\001\n\025StreamAutoEvaluat" +
+      "autoevaluations:\001*\022\333\001\n\025StreamAutoEvaluat" +
       "ions\0225.api.v1alpha1.scorecards.StreamAut" +
       "oEvaluationsRequest\0326.api.v1alpha1.score" +
-      "cards.StreamAutoEvaluationsResponse\"N\272\270\221" +
-      "\002\005\n\003\010\302\014\202\323\344\223\002>\"9/api/v1alpha1/scorecards/" +
-      "scorecards/streamautoevaluations:\001*0\001\022\322\001" +
-      "\n\024DeleteAutoEvaluation\0224.api.v1alpha1.sc" +
-      "orecards.DeleteAutoEvaluationRequest\0325.a" +
-      "pi.v1alpha1.scorecards.DeleteAutoEvaluat" +
-      "ionResponse\"M\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002=\"8/api/v1al" +
-      "pha1/scorecards/scorecards/deleteautoeva" +
-      "luation:\001*\022\332\001\n\026PreviewEvaluationScore\0226." +
-      "api.v1alpha1.scorecards.PreviewEvaluatio" +
-      "nScoreRequest\0327.api.v1alpha1.scorecards." +
-      "PreviewEvaluationScoreResponse\"O\272\270\221\002\005\n\003\010" +
-      "\302\014\202\323\344\223\002?\":/api/v1alpha1/scorecards/score" +
-      "cards/previewevaluationscore:\001*\022\306\001\n\021Rest" +
-      "oreEvaluation\0221.api.v1alpha1.scorecards." +
-      "RestoreEvaluationRequest\0322.api.v1alpha1." +
-      "scorecards.RestoreEvaluationResponse\"J\272\270" +
-      "\221\002\005\n\003\010\302\014\202\323\344\223\002:\"5/api/v1alpha1/scorecards" +
-      "/scorecards/restoreevaluation:\001*\022\316\001\n\023Cre" +
-      "ateSmartQuestion\0223.api.v1alpha1.scorecar" +
-      "ds.CreateSmartQuestionRequest\0324.api.v1al" +
-      "pha1.scorecards.CreateSmartQuestionRespo" +
-      "nse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/v1alpha1/sco" +
-      "recards/scorecards/createsmartquestion:\001" +
-      "*\022\316\001\n\023UpdateSmartQuestion\0223.api.v1alpha1" +
-      ".scorecards.UpdateSmartQuestionRequest\0324" +
-      ".api.v1alpha1.scorecards.UpdateSmartQues" +
-      "tionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/v1a" +
-      "lpha1/scorecards/scorecards/updatesmartq" +
-      "uestion:\001*\022\316\001\n\023DeleteSmartQuestion\0223.api" +
-      ".v1alpha1.scorecards.DeleteSmartQuestion" +
-      "Request\0324.api.v1alpha1.scorecards.Delete" +
-      "SmartQuestionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"" +
-      "7/api/v1alpha1/scorecards/scorecards/del" +
-      "etesmartquestion:\001*\022\322\001\n\024ListSmartEvaluat" +
-      "ions\0224.api.v1alpha1.scorecards.ListSmart" +
-      "EvaluationsRequest\0325.api.v1alpha1.scorec" +
-      "ards.ListSmartEvaluationsResponse\"M\272\270\221\002\005" +
-      "\n\003\010\302\014\202\323\344\223\002=\"8/api/v1alpha1/scorecards/sc" +
-      "orecards/listsmartevaluations:\001*\022\326\001\n\025Del" +
-      "eteSmartEvaluation\0225.api.v1alpha1.scorec" +
-      "ards.DeleteSmartEvaluationRequest\0326.api." +
-      "v1alpha1.scorecards.DeleteSmartEvaluatio" +
-      "nResponse\"N\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002>\"9/api/v1alph" +
-      "a1/scorecards/scorecards/deletesmarteval" +
-      "uation:\001*\022\312\001\n\022GetSmartEvaluation\0222.api.v" +
-      "1alpha1.scorecards.GetSmartEvaluationReq" +
-      "uest\0323.api.v1alpha1.scorecards.GetSmartE" +
-      "valuationResponse\"K\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002;\"6/ap" +
-      "i/v1alpha1/scorecards/scorecards/getsmar" +
-      "tevaluation:\001*B\267\001\n)com.tcn.cloud.api.api" +
-      ".v1alpha1.scorecardsB\014ServiceProtoP\001\242\002\003A" +
-      "VS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alp" +
-      "ha1\\Scorecards\342\002#Api\\V1alpha1\\Scorecards" +
-      "\\GPBMetadata\352\002\031Api::V1alpha1::Scorecards" +
-      "b\006proto3"
+      "cards.StreamAutoEvaluationsResponse\"Q\210\002\001" +
+      "\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002>\"9/api/v1alpha1/scorecar" +
+      "ds/scorecards/streamautoevaluations:\001*0\001" +
+      "\022\322\001\n\024DeleteAutoEvaluation\0224.api.v1alpha1" +
+      ".scorecards.DeleteAutoEvaluationRequest\032" +
+      "5.api.v1alpha1.scorecards.DeleteAutoEval" +
+      "uationResponse\"M\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002=\"8/api/v" +
+      "1alpha1/scorecards/scorecards/deleteauto" +
+      "evaluation:\001*\022\332\001\n\026PreviewEvaluationScore" +
+      "\0226.api.v1alpha1.scorecards.PreviewEvalua" +
+      "tionScoreRequest\0327.api.v1alpha1.scorecar" +
+      "ds.PreviewEvaluationScoreResponse\"O\272\270\221\002\005" +
+      "\n\003\010\302\014\202\323\344\223\002?\":/api/v1alpha1/scorecards/sc" +
+      "orecards/previewevaluationscore:\001*\022\306\001\n\021R" +
+      "estoreEvaluation\0221.api.v1alpha1.scorecar" +
+      "ds.RestoreEvaluationRequest\0322.api.v1alph" +
+      "a1.scorecards.RestoreEvaluationResponse\"" +
+      "J\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002:\"5/api/v1alpha1/scoreca" +
+      "rds/scorecards/restoreevaluation:\001*\022\316\001\n\023" +
+      "CreateSmartQuestion\0223.api.v1alpha1.score" +
+      "cards.CreateSmartQuestionRequest\0324.api.v" +
+      "1alpha1.scorecards.CreateSmartQuestionRe" +
+      "sponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/v1alpha1/" +
+      "scorecards/scorecards/createsmartquestio" +
+      "n:\001*\022\316\001\n\023UpdateSmartQuestion\0223.api.v1alp" +
+      "ha1.scorecards.UpdateSmartQuestionReques" +
+      "t\0324.api.v1alpha1.scorecards.UpdateSmartQ" +
+      "uestionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/" +
+      "v1alpha1/scorecards/scorecards/updatesma" +
+      "rtquestion:\001*\022\316\001\n\023DeleteSmartQuestion\0223." +
+      "api.v1alpha1.scorecards.DeleteSmartQuest" +
+      "ionRequest\0324.api.v1alpha1.scorecards.Del" +
+      "eteSmartQuestionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223" +
+      "\002<\"7/api/v1alpha1/scorecards/scorecards/" +
+      "deletesmartquestion:\001*\022\322\001\n\024ListSmartEval" +
+      "uations\0224.api.v1alpha1.scorecards.ListSm" +
+      "artEvaluationsRequest\0325.api.v1alpha1.sco" +
+      "recards.ListSmartEvaluationsResponse\"M\272\270" +
+      "\221\002\005\n\003\010\302\014\202\323\344\223\002=\"8/api/v1alpha1/scorecards" +
+      "/scorecards/listsmartevaluations:\001*\022\326\001\n\025" +
+      "DeleteSmartEvaluation\0225.api.v1alpha1.sco" +
+      "recards.DeleteSmartEvaluationRequest\0326.a" +
+      "pi.v1alpha1.scorecards.DeleteSmartEvalua" +
+      "tionResponse\"N\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002>\"9/api/v1a" +
+      "lpha1/scorecards/scorecards/deletesmarte" +
+      "valuation:\001*\022\312\001\n\022GetSmartEvaluation\0222.ap" +
+      "i.v1alpha1.scorecards.GetSmartEvaluation" +
+      "Request\0323.api.v1alpha1.scorecards.GetSma" +
+      "rtEvaluationResponse\"K\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002;\"6" +
+      "/api/v1alpha1/scorecards/scorecards/gets" +
+      "martevaluation:\001*B\267\001\n)com.tcn.cloud.api." +
+      "api.v1alpha1.scorecardsB\014ServiceProtoP\001\242" +
+      "\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1" +
+      "alpha1\\Scorecards\342\002#Api\\V1alpha1\\Scoreca" +
+      "rds\\GPBMetadata\352\002\031Api::V1alpha1::Scoreca" +
+      "rdsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

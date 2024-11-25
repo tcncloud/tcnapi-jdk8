@@ -2180,9 +2180,10 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
-     * StreamAutoEvaluations streams a list of auto evaluations
+     * DEPRECATED. Use ListAutoEvaluations.
      * </pre>
      */
+    @java.lang.Deprecated
     default void streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamAutoEvaluationsMethod(), responseObserver);
@@ -2793,9 +2794,10 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
-     * StreamAutoEvaluations streams a list of auto evaluations
+     * DEPRECATED. Use ListAutoEvaluations.
      * </pre>
      */
+    @java.lang.Deprecated
     public void streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -3361,9 +3363,10 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
-     * StreamAutoEvaluations streams a list of auto evaluations
+     * DEPRECATED. Use ListAutoEvaluations.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> streamAutoEvaluations(
         com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
