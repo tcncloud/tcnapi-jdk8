@@ -179,23 +179,19 @@ public interface InsightOrBuilder extends
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=23
+   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
    * @return The datasourceName.
    */
-  @java.lang.Deprecated java.lang.String getDatasourceName();
+  java.lang.String getDatasourceName();
   /**
    * <pre>
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=23
+   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
    * @return The bytes for datasourceName.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getDatasourceNameBytes();
 
   /**
