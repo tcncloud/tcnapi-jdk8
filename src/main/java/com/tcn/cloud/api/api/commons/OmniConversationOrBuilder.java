@@ -537,15 +537,4 @@ public interface OmniConversationOrBuilder extends
    * <code>.google.protobuf.Timestamp last_state_changed_time = 23 [json_name = "lastStateChangedTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastStateChangedTimeOrBuilder();
-
-  /**
-   * <code>.api.commons.ConversationType conversation_type = 24 [json_name = "conversationType"];</code>
-   * @return The enum numeric value on the wire for conversationType.
-   */
-  int getConversationTypeValue();
-  /**
-   * <code>.api.commons.ConversationType conversation_type = 24 [json_name = "conversationType"];</code>
-   * @return The conversationType.
-   */
-  com.tcn.cloud.api.api.commons.ConversationType getConversationType();
 }
