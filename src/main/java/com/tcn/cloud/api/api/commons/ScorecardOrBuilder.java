@@ -252,7 +252,7 @@ public interface ScorecardOrBuilder extends
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=319
+   *     See api/commons/scorecards.proto;l=320
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();
@@ -422,4 +422,41 @@ public interface ScorecardOrBuilder extends
    * @return The enum numeric value on the wire of channels at the given index.
    */
   int getChannelsValue(int index);
+
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   * @return Whether the minimumCallLength field is set.
+   */
+  boolean hasMinimumCallLength();
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   * @return The minimumCallLength.
+   */
+  com.google.protobuf.Duration getMinimumCallLength();
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   */
+  com.google.protobuf.DurationOrBuilder getMinimumCallLengthOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Required number of messages for sms conversations.
+   * </pre>
+   *
+   * <code>int32 minimum_sms_message_count = 24 [json_name = "minimumSmsMessageCount"];</code>
+   * @return The minimumSmsMessageCount.
+   */
+  int getMinimumSmsMessageCount();
 }

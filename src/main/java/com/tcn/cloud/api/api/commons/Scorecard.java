@@ -456,7 +456,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=319
+   *     See api/commons/scorecards.proto;l=320
    * @return The isAdHoc.
    */
   @java.lang.Override
@@ -711,6 +711,59 @@ private static final long serialVersionUID = 0L;
   }
   private int channelsMemoizedSerializedSize;
 
+  public static final int MINIMUM_CALL_LENGTH_FIELD_NUMBER = 23;
+  private com.google.protobuf.Duration minimumCallLength_;
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   * @return Whether the minimumCallLength field is set.
+   */
+  @java.lang.Override
+  public boolean hasMinimumCallLength() {
+    return minimumCallLength_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   * @return The minimumCallLength.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Duration getMinimumCallLength() {
+    return minimumCallLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minimumCallLength_;
+  }
+  /**
+   * <pre>
+   * Optional. Required length for voice conversations.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.DurationOrBuilder getMinimumCallLengthOrBuilder() {
+    return minimumCallLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minimumCallLength_;
+  }
+
+  public static final int MINIMUM_SMS_MESSAGE_COUNT_FIELD_NUMBER = 24;
+  private int minimumSmsMessageCount_ = 0;
+  /**
+   * <pre>
+   * Optional. Required number of messages for sms conversations.
+   * </pre>
+   *
+   * <code>int32 minimum_sms_message_count = 24 [json_name = "minimumSmsMessageCount"];</code>
+   * @return The minimumSmsMessageCount.
+   */
+  @java.lang.Override
+  public int getMinimumSmsMessageCount() {
+    return minimumSmsMessageCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -787,6 +840,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < channels_.size(); i++) {
       output.writeEnumNoTag(channels_.get(i));
+    }
+    if (minimumCallLength_ != null) {
+      output.writeMessage(23, getMinimumCallLength());
+    }
+    if (minimumSmsMessageCount_ != 0) {
+      output.writeInt32(24, minimumSmsMessageCount_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -886,6 +945,14 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }channelsMemoizedSerializedSize = dataSize;
     }
+    if (minimumCallLength_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, getMinimumCallLength());
+    }
+    if (minimumSmsMessageCount_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(24, minimumSmsMessageCount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -939,6 +1006,13 @@ private static final long serialVersionUID = 0L;
           .equals(other.getUpdatedAt())) return false;
     }
     if (!channels_.equals(other.channels_)) return false;
+    if (hasMinimumCallLength() != other.hasMinimumCallLength()) return false;
+    if (hasMinimumCallLength()) {
+      if (!getMinimumCallLength()
+          .equals(other.getMinimumCallLength())) return false;
+    }
+    if (getMinimumSmsMessageCount()
+        != other.getMinimumSmsMessageCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1003,6 +1077,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
       hash = (53 * hash) + channels_.hashCode();
     }
+    if (hasMinimumCallLength()) {
+      hash = (37 * hash) + MINIMUM_CALL_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getMinimumCallLength().hashCode();
+    }
+    hash = (37 * hash) + MINIMUM_SMS_MESSAGE_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getMinimumSmsMessageCount();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1174,6 +1254,12 @@ private static final long serialVersionUID = 0L;
       }
       channels_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00020000);
+      minimumCallLength_ = null;
+      if (minimumCallLengthBuilder_ != null) {
+        minimumCallLengthBuilder_.dispose();
+        minimumCallLengthBuilder_ = null;
+      }
+      minimumSmsMessageCount_ = 0;
       return this;
     }
 
@@ -1279,6 +1365,14 @@ private static final long serialVersionUID = 0L;
         result.updatedAt_ = updatedAtBuilder_ == null
             ? updatedAt_
             : updatedAtBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.minimumCallLength_ = minimumCallLengthBuilder_ == null
+            ? minimumCallLength_
+            : minimumCallLengthBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.minimumSmsMessageCount_ = minimumSmsMessageCount_;
       }
     }
 
@@ -1429,6 +1523,12 @@ private static final long serialVersionUID = 0L;
           channels_.addAll(other.channels_);
         }
         onChanged();
+      }
+      if (other.hasMinimumCallLength()) {
+        mergeMinimumCallLength(other.getMinimumCallLength());
+      }
+      if (other.getMinimumSmsMessageCount() != 0) {
+        setMinimumSmsMessageCount(other.getMinimumSmsMessageCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1583,6 +1683,18 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 178
+            case 186: {
+              input.readMessage(
+                  getMinimumCallLengthFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 186
+            case 192: {
+              minimumSmsMessageCount_ = input.readInt32();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 192
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2790,7 +2902,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=319
+     *     See api/commons/scorecards.proto;l=320
      * @return The isAdHoc.
      */
     @java.lang.Override
@@ -2804,7 +2916,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=319
+     *     See api/commons/scorecards.proto;l=320
      * @param value The isAdHoc to set.
      * @return This builder for chaining.
      */
@@ -2822,7 +2934,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=319
+     *     See api/commons/scorecards.proto;l=320
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAdHoc() {
@@ -3506,6 +3618,205 @@ private static final long serialVersionUID = 0L;
       for (int value : values) {
         channels_.add(value);
       }
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Duration minimumCallLength_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> minimumCallLengthBuilder_;
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     * @return Whether the minimumCallLength field is set.
+     */
+    public boolean hasMinimumCallLength() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     * @return The minimumCallLength.
+     */
+    public com.google.protobuf.Duration getMinimumCallLength() {
+      if (minimumCallLengthBuilder_ == null) {
+        return minimumCallLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minimumCallLength_;
+      } else {
+        return minimumCallLengthBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public Builder setMinimumCallLength(com.google.protobuf.Duration value) {
+      if (minimumCallLengthBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minimumCallLength_ = value;
+      } else {
+        minimumCallLengthBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public Builder setMinimumCallLength(
+        com.google.protobuf.Duration.Builder builderForValue) {
+      if (minimumCallLengthBuilder_ == null) {
+        minimumCallLength_ = builderForValue.build();
+      } else {
+        minimumCallLengthBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public Builder mergeMinimumCallLength(com.google.protobuf.Duration value) {
+      if (minimumCallLengthBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0) &&
+          minimumCallLength_ != null &&
+          minimumCallLength_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getMinimumCallLengthBuilder().mergeFrom(value);
+        } else {
+          minimumCallLength_ = value;
+        }
+      } else {
+        minimumCallLengthBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public Builder clearMinimumCallLength() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      minimumCallLength_ = null;
+      if (minimumCallLengthBuilder_ != null) {
+        minimumCallLengthBuilder_.dispose();
+        minimumCallLengthBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public com.google.protobuf.Duration.Builder getMinimumCallLengthBuilder() {
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return getMinimumCallLengthFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getMinimumCallLengthOrBuilder() {
+      if (minimumCallLengthBuilder_ != null) {
+        return minimumCallLengthBuilder_.getMessageOrBuilder();
+      } else {
+        return minimumCallLength_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : minimumCallLength_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Required length for voice conversations.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration minimum_call_length = 23 [json_name = "minimumCallLength"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+        getMinimumCallLengthFieldBuilder() {
+      if (minimumCallLengthBuilder_ == null) {
+        minimumCallLengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getMinimumCallLength(),
+                getParentForChildren(),
+                isClean());
+        minimumCallLength_ = null;
+      }
+      return minimumCallLengthBuilder_;
+    }
+
+    private int minimumSmsMessageCount_ ;
+    /**
+     * <pre>
+     * Optional. Required number of messages for sms conversations.
+     * </pre>
+     *
+     * <code>int32 minimum_sms_message_count = 24 [json_name = "minimumSmsMessageCount"];</code>
+     * @return The minimumSmsMessageCount.
+     */
+    @java.lang.Override
+    public int getMinimumSmsMessageCount() {
+      return minimumSmsMessageCount_;
+    }
+    /**
+     * <pre>
+     * Optional. Required number of messages for sms conversations.
+     * </pre>
+     *
+     * <code>int32 minimum_sms_message_count = 24 [json_name = "minimumSmsMessageCount"];</code>
+     * @param value The minimumSmsMessageCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMinimumSmsMessageCount(int value) {
+
+      minimumSmsMessageCount_ = value;
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Required number of messages for sms conversations.
+     * </pre>
+     *
+     * <code>int32 minimum_sms_message_count = 24 [json_name = "minimumSmsMessageCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMinimumSmsMessageCount() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      minimumSmsMessageCount_ = 0;
       onChanged();
       return this;
     }
