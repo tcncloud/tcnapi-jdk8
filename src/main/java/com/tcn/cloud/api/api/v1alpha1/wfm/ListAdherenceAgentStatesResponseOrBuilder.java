@@ -73,10 +73,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
-   * @return Whether the datetimeOfLatestState field is set.
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
+   * @return Whether the latestAgentStateDatetime field is set.
    */
-  boolean hasDatetimeOfLatestState();
+  boolean hasLatestAgentStateDatetime();
   /**
    * <pre>
    * Lastest datetime found amongst all the returned states.
@@ -84,10 +84,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
-   * @return The datetimeOfLatestState.
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
+   * @return The latestAgentStateDatetime.
    */
-  com.google.protobuf.Timestamp getDatetimeOfLatestState();
+  com.google.protobuf.Timestamp getLatestAgentStateDatetime();
   /**
    * <pre>
    * Lastest datetime found amongst all the returned states.
@@ -95,7 +95,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    * This value should be used as input to this function whenever the next set of agent states is desired.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp datetime_of_latest_state = 2 [json_name = "datetimeOfLatestState"];</code>
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDatetimeOfLatestStateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getLatestAgentStateDatetimeOrBuilder();
 }
