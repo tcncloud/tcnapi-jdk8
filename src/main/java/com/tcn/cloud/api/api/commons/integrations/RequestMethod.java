@@ -1204,6 +1204,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION = 5601;</code>
    */
   REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION(5601),
+  /**
+   * <code>REQUEST_METHOD_NUVEI_PAYMENT = 5701;</code>
+   */
+  REQUEST_METHOD_NUVEI_PAYMENT(5701),
   UNRECOGNIZED(-1),
   ;
 
@@ -2389,6 +2393,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION = 5601;</code>
    */
   public static final int REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION_VALUE = 5601;
+  /**
+   * <code>REQUEST_METHOD_NUVEI_PAYMENT = 5701;</code>
+   */
+  public static final int REQUEST_METHOD_NUVEI_PAYMENT_VALUE = 5701;
 
 
   public final int getNumber() {
@@ -2708,6 +2716,7 @@ public enum RequestMethod
       case 5503: return REQUEST_METHOD_FINVI_VELOSIDY_PLAN_OFFER;
       case 5504: return REQUEST_METHOD_FINVI_VELOSIDY_PLAN_RECURRING_CREATE;
       case 5601: return REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
+      case 5701: return REQUEST_METHOD_NUVEI_PAYMENT;
       default: return null;
     }
   }
