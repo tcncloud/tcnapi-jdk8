@@ -54,6 +54,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     BRAINTREE_CREDIT_SALE(101),
     BRAINTREE_BANK_SALE(102),
+    BRAINTREE_AUTHORIZE_PAYMENT_METHOD(103),
+    BRAINTREE_AUTHORIZE_CREDIT_CARD(104),
     RELATIENT_GET_PATIENT_BALANCE(201),
     RELATIENT_GET_PATIENT_CC_TOKENS(202),
     RELATIENT_POST_PATIENT_TOKEN(203),
@@ -363,6 +365,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 101: return BRAINTREE_CREDIT_SALE;
         case 102: return BRAINTREE_BANK_SALE;
+        case 103: return BRAINTREE_AUTHORIZE_PAYMENT_METHOD;
+        case 104: return BRAINTREE_AUTHORIZE_CREDIT_CARD;
         case 201: return RELATIENT_GET_PATIENT_BALANCE;
         case 202: return RELATIENT_GET_PATIENT_CC_TOKENS;
         case 203: return RELATIENT_POST_PATIENT_TOKEN;
@@ -767,6 +771,68 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankSale) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankSale.getDefaultInstance();
+  }
+
+  public static final int BRAINTREE_AUTHORIZE_PAYMENT_METHOD_FIELD_NUMBER = 103;
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+   * @return Whether the braintreeAuthorizePaymentMethod field is set.
+   */
+  @java.lang.Override
+  public boolean hasBraintreeAuthorizePaymentMethod() {
+    return valueCase_ == 103;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+   * @return The braintreeAuthorizePaymentMethod.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getBraintreeAuthorizePaymentMethod() {
+    if (valueCase_ == 103) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder getBraintreeAuthorizePaymentMethodOrBuilder() {
+    if (valueCase_ == 103) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+  }
+
+  public static final int BRAINTREE_AUTHORIZE_CREDIT_CARD_FIELD_NUMBER = 104;
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+   * @return Whether the braintreeAuthorizeCreditCard field is set.
+   */
+  @java.lang.Override
+  public boolean hasBraintreeAuthorizeCreditCard() {
+    return valueCase_ == 104;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+   * @return The braintreeAuthorizeCreditCard.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getBraintreeAuthorizeCreditCard() {
+    if (valueCase_ == 104) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder getBraintreeAuthorizeCreditCardOrBuilder() {
+    if (valueCase_ == 104) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
   }
 
   public static final int RELATIENT_GET_PATIENT_BALANCE_FIELD_NUMBER = 201;
@@ -8833,7 +8899,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1136
+   *     See api/commons/integrations/integrations.proto;l=1140
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8843,7 +8909,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1136
+   *     See api/commons/integrations/integrations.proto;l=1140
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8868,7 +8934,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1137
+   *     See api/commons/integrations/integrations.proto;l=1141
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8878,7 +8944,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1137
+   *     See api/commons/integrations/integrations.proto;l=1141
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8903,7 +8969,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1138
+   *     See api/commons/integrations/integrations.proto;l=1142
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8913,7 +8979,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1138
+   *     See api/commons/integrations/integrations.proto;l=1142
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8938,7 +9004,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1139
+   *     See api/commons/integrations/integrations.proto;l=1143
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8948,7 +9014,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1139
+   *     See api/commons/integrations/integrations.proto;l=1143
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8973,7 +9039,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1140
+   *     See api/commons/integrations/integrations.proto;l=1144
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8983,7 +9049,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1140
+   *     See api/commons/integrations/integrations.proto;l=1144
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9008,7 +9074,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1141
+   *     See api/commons/integrations/integrations.proto;l=1145
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9018,7 +9084,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1141
+   *     See api/commons/integrations/integrations.proto;l=1145
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9043,7 +9109,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1142
+   *     See api/commons/integrations/integrations.proto;l=1146
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9053,7 +9119,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1142
+   *     See api/commons/integrations/integrations.proto;l=1146
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9809,6 +9875,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 102) {
       output.writeMessage(102, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankSale) value_);
+    }
+    if (valueCase_ == 103) {
+      output.writeMessage(103, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_);
+    }
+    if (valueCase_ == 104) {
+      output.writeMessage(104, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_);
     }
     if (valueCase_ == 201) {
       output.writeMessage(201, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalance) value_);
@@ -10699,6 +10771,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 102) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(102, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankSale) value_);
+    }
+    if (valueCase_ == 103) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(103, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_);
+    }
+    if (valueCase_ == 104) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(104, (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_);
     }
     if (valueCase_ == 201) {
       size += com.google.protobuf.CodedOutputStream
@@ -11887,6 +11967,14 @@ private static final long serialVersionUID = 0L;
         if (!getBraintreeBankSale()
             .equals(other.getBraintreeBankSale())) return false;
         break;
+      case 103:
+        if (!getBraintreeAuthorizePaymentMethod()
+            .equals(other.getBraintreeAuthorizePaymentMethod())) return false;
+        break;
+      case 104:
+        if (!getBraintreeAuthorizeCreditCard()
+            .equals(other.getBraintreeAuthorizeCreditCard())) return false;
+        break;
       case 201:
         if (!getRelatientGetPatientBalance()
             .equals(other.getRelatientGetPatientBalance())) return false;
@@ -13071,6 +13159,14 @@ private static final long serialVersionUID = 0L;
       case 102:
         hash = (37 * hash) + BRAINTREE_BANK_SALE_FIELD_NUMBER;
         hash = (53 * hash) + getBraintreeBankSale().hashCode();
+        break;
+      case 103:
+        hash = (37 * hash) + BRAINTREE_AUTHORIZE_PAYMENT_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + getBraintreeAuthorizePaymentMethod().hashCode();
+        break;
+      case 104:
+        hash = (37 * hash) + BRAINTREE_AUTHORIZE_CREDIT_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getBraintreeAuthorizeCreditCard().hashCode();
         break;
       case 201:
         hash = (37 * hash) + RELATIENT_GET_PATIENT_BALANCE_FIELD_NUMBER;
@@ -14389,6 +14485,12 @@ private static final long serialVersionUID = 0L;
       if (braintreeBankSaleBuilder_ != null) {
         braintreeBankSaleBuilder_.clear();
       }
+      if (braintreeAuthorizePaymentMethodBuilder_ != null) {
+        braintreeAuthorizePaymentMethodBuilder_.clear();
+      }
+      if (braintreeAuthorizeCreditCardBuilder_ != null) {
+        braintreeAuthorizeCreditCardBuilder_.clear();
+      }
       if (relatientGetPatientBalanceBuilder_ != null) {
         relatientGetPatientBalanceBuilder_.clear();
       }
@@ -15355,6 +15457,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 102 &&
           braintreeBankSaleBuilder_ != null) {
         result.value_ = braintreeBankSaleBuilder_.build();
+      }
+      if (valueCase_ == 103 &&
+          braintreeAuthorizePaymentMethodBuilder_ != null) {
+        result.value_ = braintreeAuthorizePaymentMethodBuilder_.build();
+      }
+      if (valueCase_ == 104 &&
+          braintreeAuthorizeCreditCardBuilder_ != null) {
+        result.value_ = braintreeAuthorizeCreditCardBuilder_.build();
       }
       if (valueCase_ == 201 &&
           relatientGetPatientBalanceBuilder_ != null) {
@@ -16576,6 +16686,14 @@ private static final long serialVersionUID = 0L;
           mergeBraintreeBankSale(other.getBraintreeBankSale());
           break;
         }
+        case BRAINTREE_AUTHORIZE_PAYMENT_METHOD: {
+          mergeBraintreeAuthorizePaymentMethod(other.getBraintreeAuthorizePaymentMethod());
+          break;
+        }
+        case BRAINTREE_AUTHORIZE_CREDIT_CARD: {
+          mergeBraintreeAuthorizeCreditCard(other.getBraintreeAuthorizeCreditCard());
+          break;
+        }
         case RELATIENT_GET_PATIENT_BALANCE: {
           mergeRelatientGetPatientBalance(other.getRelatientGetPatientBalance());
           break;
@@ -17785,6 +17903,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 102;
               break;
             } // case 818
+            case 826: {
+              input.readMessage(
+                  getBraintreeAuthorizePaymentMethodFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 103;
+              break;
+            } // case 826
+            case 834: {
+              input.readMessage(
+                  getBraintreeAuthorizeCreditCardFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 104;
+              break;
+            } // case 834
             case 1610: {
               input.readMessage(
                   getRelatientGetPatientBalanceFieldBuilder().getBuilder(),
@@ -20210,6 +20342,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 102;
       onChanged();
       return braintreeBankSaleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder> braintreeAuthorizePaymentMethodBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     * @return Whether the braintreeAuthorizePaymentMethod field is set.
+     */
+    @java.lang.Override
+    public boolean hasBraintreeAuthorizePaymentMethod() {
+      return valueCase_ == 103;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     * @return The braintreeAuthorizePaymentMethod.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getBraintreeAuthorizePaymentMethod() {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        if (valueCase_ == 103) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+      } else {
+        if (valueCase_ == 103) {
+          return braintreeAuthorizePaymentMethodBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    public Builder setBraintreeAuthorizePaymentMethod(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod value) {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        braintreeAuthorizePaymentMethodBuilder_.setMessage(value);
+      }
+      valueCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    public Builder setBraintreeAuthorizePaymentMethod(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder builderForValue) {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        braintreeAuthorizePaymentMethodBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    public Builder mergeBraintreeAuthorizePaymentMethod(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod value) {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        if (valueCase_ == 103 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 103) {
+          braintreeAuthorizePaymentMethodBuilder_.mergeFrom(value);
+        } else {
+          braintreeAuthorizePaymentMethodBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    public Builder clearBraintreeAuthorizePaymentMethod() {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        if (valueCase_ == 103) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 103) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        braintreeAuthorizePaymentMethodBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder getBraintreeAuthorizePaymentMethodBuilder() {
+      return getBraintreeAuthorizePaymentMethodFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder getBraintreeAuthorizePaymentMethodOrBuilder() {
+      if ((valueCase_ == 103) && (braintreeAuthorizePaymentMethodBuilder_ != null)) {
+        return braintreeAuthorizePaymentMethodBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 103) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder> 
+        getBraintreeAuthorizePaymentMethodFieldBuilder() {
+      if (braintreeAuthorizePaymentMethodBuilder_ == null) {
+        if (!(valueCase_ == 103)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+        }
+        braintreeAuthorizePaymentMethodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 103;
+      onChanged();
+      return braintreeAuthorizePaymentMethodBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder> braintreeAuthorizeCreditCardBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     * @return Whether the braintreeAuthorizeCreditCard field is set.
+     */
+    @java.lang.Override
+    public boolean hasBraintreeAuthorizeCreditCard() {
+      return valueCase_ == 104;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     * @return The braintreeAuthorizeCreditCard.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getBraintreeAuthorizeCreditCard() {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 104) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+      } else {
+        if (valueCase_ == 104) {
+          return braintreeAuthorizeCreditCardBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    public Builder setBraintreeAuthorizeCreditCard(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard value) {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        braintreeAuthorizeCreditCardBuilder_.setMessage(value);
+      }
+      valueCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    public Builder setBraintreeAuthorizeCreditCard(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder builderForValue) {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        braintreeAuthorizeCreditCardBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    public Builder mergeBraintreeAuthorizeCreditCard(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard value) {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 104 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 104) {
+          braintreeAuthorizeCreditCardBuilder_.mergeFrom(value);
+        } else {
+          braintreeAuthorizeCreditCardBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    public Builder clearBraintreeAuthorizeCreditCard() {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 104) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 104) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        braintreeAuthorizeCreditCardBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder getBraintreeAuthorizeCreditCardBuilder() {
+      return getBraintreeAuthorizeCreditCardFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder getBraintreeAuthorizeCreditCardOrBuilder() {
+      if ((valueCase_ == 104) && (braintreeAuthorizeCreditCardBuilder_ != null)) {
+        return braintreeAuthorizeCreditCardBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 104) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder> 
+        getBraintreeAuthorizeCreditCardFieldBuilder() {
+      if (braintreeAuthorizeCreditCardBuilder_ == null) {
+        if (!(valueCase_ == 104)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+        }
+        braintreeAuthorizeCreditCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 104;
+      onChanged();
+      return braintreeAuthorizeCreditCardBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -57137,7 +57553,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1136
+     *     See api/commons/integrations/integrations.proto;l=1140
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -57147,7 +57563,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1136
+     *     See api/commons/integrations/integrations.proto;l=1140
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -57283,7 +57699,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1137
+     *     See api/commons/integrations/integrations.proto;l=1141
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -57293,7 +57709,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1137
+     *     See api/commons/integrations/integrations.proto;l=1141
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -57429,7 +57845,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1138
+     *     See api/commons/integrations/integrations.proto;l=1142
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -57439,7 +57855,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1138
+     *     See api/commons/integrations/integrations.proto;l=1142
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -57575,7 +57991,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1139
+     *     See api/commons/integrations/integrations.proto;l=1143
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -57585,7 +58001,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1139
+     *     See api/commons/integrations/integrations.proto;l=1143
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -57721,7 +58137,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1140
+     *     See api/commons/integrations/integrations.proto;l=1144
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -57731,7 +58147,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1140
+     *     See api/commons/integrations/integrations.proto;l=1144
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -57867,7 +58283,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1141
+     *     See api/commons/integrations/integrations.proto;l=1145
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -57877,7 +58293,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1141
+     *     See api/commons/integrations/integrations.proto;l=1145
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -58013,7 +58429,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1142
+     *     See api/commons/integrations/integrations.proto;l=1146
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -58023,7 +58439,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1142
+     *     See api/commons/integrations/integrations.proto;l=1146
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
