@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteBraintreeAuthorizePaymentMethodOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)
+public interface ExecuteBraintreeBankAuthorizePaymentOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)
     com.google.protobuf.MessageOrBuilder {
 }

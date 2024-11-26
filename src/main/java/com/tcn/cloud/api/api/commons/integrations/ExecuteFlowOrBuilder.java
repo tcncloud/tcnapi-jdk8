@@ -50,34 +50,34 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankSaleOrBuilder getBraintreeBankSaleOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
-   * @return Whether the braintreeAuthorizePaymentMethod field is set.
+   * <code>.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment braintree_credit_authorize_payment = 103 [json_name = "braintreeCreditAuthorizePayment"];</code>
+   * @return Whether the braintreeCreditAuthorizePayment field is set.
    */
-  boolean hasBraintreeAuthorizePaymentMethod();
+  boolean hasBraintreeCreditAuthorizePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
-   * @return The braintreeAuthorizePaymentMethod.
+   * <code>.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment braintree_credit_authorize_payment = 103 [json_name = "braintreeCreditAuthorizePayment"];</code>
+   * @return The braintreeCreditAuthorizePayment.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getBraintreeAuthorizePaymentMethod();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment getBraintreeCreditAuthorizePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod braintree_authorize_payment_method = 103 [json_name = "braintreeAuthorizePaymentMethod"];</code>
+   * <code>.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment braintree_credit_authorize_payment = 103 [json_name = "braintreeCreditAuthorizePayment"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder getBraintreeAuthorizePaymentMethodOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePaymentOrBuilder getBraintreeCreditAuthorizePaymentOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
-   * @return Whether the braintreeAuthorizeCreditCard field is set.
+   * <code>.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment braintree_bank_authorize_payment = 104 [json_name = "braintreeBankAuthorizePayment"];</code>
+   * @return Whether the braintreeBankAuthorizePayment field is set.
    */
-  boolean hasBraintreeAuthorizeCreditCard();
+  boolean hasBraintreeBankAuthorizePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
-   * @return The braintreeAuthorizeCreditCard.
+   * <code>.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment braintree_bank_authorize_payment = 104 [json_name = "braintreeBankAuthorizePayment"];</code>
+   * @return The braintreeBankAuthorizePayment.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getBraintreeAuthorizeCreditCard();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment getBraintreeBankAuthorizePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard braintree_authorize_credit_card = 104 [json_name = "braintreeAuthorizeCreditCard"];</code>
+   * <code>.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment braintree_bank_authorize_payment = 104 [json_name = "braintreeBankAuthorizePayment"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder getBraintreeAuthorizeCreditCardOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePaymentOrBuilder getBraintreeBankAuthorizePaymentOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalance relatient_get_patient_balance = 201 [json_name = "relatientGetPatientBalance"];</code>

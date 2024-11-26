@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.commons.integrations;
 
 /**
- * Protobuf type {@code api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard}
+ * Protobuf type {@code api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment}
  */
-public final class ExecuteBraintreeAuthorizeCreditCard extends
+public final class ExecuteBraintreeCreditAuthorizePayment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)
-    ExecuteBraintreeAuthorizeCreditCardOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)
+    ExecuteBraintreeCreditAuthorizePaymentOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ExecuteBraintreeAuthorizeCreditCard.newBuilder() to construct.
-  private ExecuteBraintreeAuthorizeCreditCard(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ExecuteBraintreeCreditAuthorizePayment.newBuilder() to construct.
+  private ExecuteBraintreeCreditAuthorizePayment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ExecuteBraintreeAuthorizeCreditCard() {
+  private ExecuteBraintreeCreditAuthorizePayment() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ExecuteBraintreeAuthorizeCreditCard();
+    return new ExecuteBraintreeCreditAuthorizePayment();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizeCreditCard_descriptor;
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeCreditAuthorizePayment_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizeCreditCard_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeCreditAuthorizePayment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder.class);
+            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) obj;
+    com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard}
+   * Protobuf type {@code api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCardOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePaymentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizeCreditCard_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeCreditAuthorizePayment_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizeCreditCard_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeCreditAuthorizePayment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.Builder.class);
+              com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizeCreditCard_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeCreditAuthorizePayment_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard build() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard result = buildPartial();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment build() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard buildPartial() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard(this);
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment buildPartial() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard other) {
-      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment other) {
+      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)
+    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard)
-  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment)
+  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment();
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExecuteBraintreeAuthorizeCreditCard>
-      PARSER = new com.google.protobuf.AbstractParser<ExecuteBraintreeAuthorizeCreditCard>() {
+  private static final com.google.protobuf.Parser<ExecuteBraintreeCreditAuthorizePayment>
+      PARSER = new com.google.protobuf.AbstractParser<ExecuteBraintreeCreditAuthorizePayment>() {
     @java.lang.Override
-    public ExecuteBraintreeAuthorizeCreditCard parsePartialFrom(
+    public ExecuteBraintreeCreditAuthorizePayment parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ExecuteBraintreeAuthorizeCreditCard> parser() {
+  public static com.google.protobuf.Parser<ExecuteBraintreeCreditAuthorizePayment> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ExecuteBraintreeAuthorizeCreditCard> getParserForType() {
+  public com.google.protobuf.Parser<ExecuteBraintreeCreditAuthorizePayment> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizeCreditCard getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeCreditAuthorizePayment getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

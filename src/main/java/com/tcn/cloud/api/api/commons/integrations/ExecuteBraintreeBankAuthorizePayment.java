@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.commons.integrations;
 
 /**
- * Protobuf type {@code api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod}
+ * Protobuf type {@code api.commons.integrations.ExecuteBraintreeBankAuthorizePayment}
  */
-public final class ExecuteBraintreeAuthorizePaymentMethod extends
+public final class ExecuteBraintreeBankAuthorizePayment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)
-    ExecuteBraintreeAuthorizePaymentMethodOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)
+    ExecuteBraintreeBankAuthorizePaymentOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ExecuteBraintreeAuthorizePaymentMethod.newBuilder() to construct.
-  private ExecuteBraintreeAuthorizePaymentMethod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ExecuteBraintreeBankAuthorizePayment.newBuilder() to construct.
+  private ExecuteBraintreeBankAuthorizePayment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ExecuteBraintreeAuthorizePaymentMethod() {
+  private ExecuteBraintreeBankAuthorizePayment() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ExecuteBraintreeAuthorizePaymentMethod();
+    return new ExecuteBraintreeBankAuthorizePayment();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizePaymentMethod_descriptor;
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeBankAuthorizePayment_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizePaymentMethod_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeBankAuthorizePayment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder.class);
+            com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) obj;
+    com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod}
+   * Protobuf type {@code api.commons.integrations.ExecuteBraintreeBankAuthorizePayment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethodOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePaymentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizePaymentMethod_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeBankAuthorizePayment_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizePaymentMethod_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeBankAuthorizePayment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.Builder.class);
+              com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeAuthorizePaymentMethod_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBraintreeBankAuthorizePayment_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod build() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod result = buildPartial();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment build() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod buildPartial() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod(this);
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment buildPartial() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod other) {
-      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment other) {
+      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)
+    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod)
-  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBraintreeBankAuthorizePayment)
+  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment();
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExecuteBraintreeAuthorizePaymentMethod>
-      PARSER = new com.google.protobuf.AbstractParser<ExecuteBraintreeAuthorizePaymentMethod>() {
+  private static final com.google.protobuf.Parser<ExecuteBraintreeBankAuthorizePayment>
+      PARSER = new com.google.protobuf.AbstractParser<ExecuteBraintreeBankAuthorizePayment>() {
     @java.lang.Override
-    public ExecuteBraintreeAuthorizePaymentMethod parsePartialFrom(
+    public ExecuteBraintreeBankAuthorizePayment parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ExecuteBraintreeAuthorizePaymentMethod> parser() {
+  public static com.google.protobuf.Parser<ExecuteBraintreeBankAuthorizePayment> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ExecuteBraintreeAuthorizePaymentMethod> getParserForType() {
+  public com.google.protobuf.Parser<ExecuteBraintreeBankAuthorizePayment> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeAuthorizePaymentMethod getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBraintreeBankAuthorizePayment getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
