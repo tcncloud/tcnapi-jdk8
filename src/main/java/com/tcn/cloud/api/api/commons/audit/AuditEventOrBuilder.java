@@ -455,7 +455,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=67
+   *     See api/commons/audit/audit.proto;l=68
    * @return Whether the omnichannelCustomerTextMessageEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelCustomerTextMessageEvent();
@@ -466,7 +466,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=67
+   *     See api/commons/audit/audit.proto;l=68
    * @return The omnichannelCustomerTextMessageEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent();
@@ -486,7 +486,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=69
+   *     See api/commons/audit/audit.proto;l=70
    * @return Whether the omnichannelAgentTextMessageEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelAgentTextMessageEvent();
@@ -497,7 +497,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=69
+   *     See api/commons/audit/audit.proto;l=70
    * @return The omnichannelAgentTextMessageEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent();
@@ -679,7 +679,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=83
+   *     See api/commons/audit/audit.proto;l=84
    * @return Whether the omnichannelManagerTextMessageEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelManagerTextMessageEvent();
@@ -690,7 +690,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=83
+   *     See api/commons/audit/audit.proto;l=84
    * @return The omnichannelManagerTextMessageEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent();
@@ -1169,7 +1169,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=120
+   *     See api/commons/audit/audit.proto;l=121
    * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelAddSmsMessageSentModuleEvent();
@@ -1180,7 +1180,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=120
+   *     See api/commons/audit/audit.proto;l=121
    * @return The omnichannelAddSmsMessageSentModuleEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent();
@@ -1200,7 +1200,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=122
+   *     See api/commons/audit/audit.proto;l=123
    * @return Whether the omnichannelModuleInitialReplyEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelModuleInitialReplyEvent();
@@ -1211,7 +1211,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=122
+   *     See api/commons/audit/audit.proto;l=123
    * @return The omnichannelModuleInitialReplyEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent();
@@ -1231,7 +1231,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=124
+   *     See api/commons/audit/audit.proto;l=125
    * @return Whether the omnichannelTaskMessageSentEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelTaskMessageSentEvent();
@@ -1242,7 +1242,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=124
+   *     See api/commons/audit/audit.proto;l=125
    * @return The omnichannelTaskMessageSentEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent();
@@ -1316,7 +1316,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=130
+   *     See api/commons/audit/audit.proto;l=131
    * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelAgentMessageUnitsEvent();
@@ -1327,7 +1327,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=130
+   *     See api/commons/audit/audit.proto;l=131
    * @return The omnichannelAgentMessageUnitsEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent();
@@ -1347,7 +1347,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=132
+   *     See api/commons/audit/audit.proto;l=133
    * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelManagerMessageUnitsEvent();
@@ -1358,7 +1358,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=132
+   *     See api/commons/audit/audit.proto;l=133
    * @return The omnichannelManagerMessageUnitsEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent();
@@ -1378,7 +1378,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=134
+   *     See api/commons/audit/audit.proto;l=135
    * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelCustomerMessageUnitsEvent();
@@ -1389,7 +1389,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=134
+   *     See api/commons/audit/audit.proto;l=135
    * @return The omnichannelCustomerMessageUnitsEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent();
@@ -1409,7 +1409,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=136
+   *     See api/commons/audit/audit.proto;l=137
    * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
    */
   @java.lang.Deprecated boolean hasOmnichannelSystemMessageUnitsEvent();
@@ -1420,7 +1420,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=136
+   *     See api/commons/audit/audit.proto;l=137
    * @return The omnichannelSystemMessageUnitsEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent();
@@ -2727,7 +2727,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=246
    * @return Whether the billingCommitBillingPlanEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCommitBillingPlanEvent();
@@ -2738,7 +2738,7 @@ public interface AuditEventOrBuilder extends
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=246
    * @return The billingCommitBillingPlanEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent getBillingCommitBillingPlanEvent();
@@ -2754,14 +2754,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingCreateBillingPlanEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCreateBillingPlanEvent();
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingCreateBillingPlanEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent getBillingCreateBillingPlanEvent();
@@ -2773,14 +2773,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCreateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
@@ -2792,14 +2792,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingCreateRateDefinitionEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCreateRateDefinitionEvent();
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingCreateRateDefinitionEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent getBillingCreateRateDefinitionEvent();
@@ -2811,14 +2811,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=250
    * @return Whether the billingDeleteBillingPlanEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingDeleteBillingPlanEvent();
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=250
    * @return The billingDeleteBillingPlanEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent getBillingDeleteBillingPlanEvent();
@@ -2830,14 +2830,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=251
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingDeleteInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=251
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
@@ -2849,14 +2849,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=251
+   *     See api/commons/audit/audit.proto;l=252
    * @return Whether the billingDeleteRateDefinitionEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingDeleteRateDefinitionEvent();
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=251
+   *     See api/commons/audit/audit.proto;l=252
    * @return The billingDeleteRateDefinitionEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent getBillingDeleteRateDefinitionEvent();
@@ -2868,14 +2868,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=252
+   *     See api/commons/audit/audit.proto;l=253
    * @return Whether the billingExportInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingExportInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=252
+   *     See api/commons/audit/audit.proto;l=253
    * @return The billingExportInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent getBillingExportInvoiceEvent();
@@ -2887,14 +2887,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=253
+   *     See api/commons/audit/audit.proto;l=254
    * @return Whether the billingUpdateBillingPlanEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingUpdateBillingPlanEvent();
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=253
+   *     See api/commons/audit/audit.proto;l=254
    * @return The billingUpdateBillingPlanEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent getBillingUpdateBillingPlanEvent();
@@ -2906,14 +2906,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=254
+   *     See api/commons/audit/audit.proto;l=255
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingUpdateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=254
+   *     See api/commons/audit/audit.proto;l=255
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();
@@ -2925,14 +2925,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=255
+   *     See api/commons/audit/audit.proto;l=256
    * @return Whether the billingUpdateRateDefinitionEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingUpdateRateDefinitionEvent();
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=255
+   *     See api/commons/audit/audit.proto;l=256
    * @return The billingUpdateRateDefinitionEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent getBillingUpdateRateDefinitionEvent();
@@ -3043,14 +3043,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=265
+   *     See api/commons/audit/audit.proto;l=266
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Deprecated boolean hasContactManagerDeleteEvent();
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=265
+   *     See api/commons/audit/audit.proto;l=266
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent();
@@ -3062,14 +3062,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=266
+   *     See api/commons/audit/audit.proto;l=267
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Deprecated boolean hasContactManagerKycEvent();
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=266
+   *     See api/commons/audit/audit.proto;l=267
    * @return The contactManagerKycEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent();
@@ -3152,6 +3152,36 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_expunge_event = 1208 [json_name = "contactManagerEntryExpungeEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryExpungeEventOrBuilder();
+
+  /**
+   * <pre>
+   * Organization Events
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
+   * </pre>
+   *
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
+   * @return Whether the accessTokensExpiringEvent field is set.
+   */
+  boolean hasAccessTokensExpiringEvent();
+  /**
+   * <pre>
+   * Organization Events
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
+   * </pre>
+   *
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
+   * @return The accessTokensExpiringEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent getAccessTokensExpiringEvent();
+  /**
+   * <pre>
+   * Organization Events
+   * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.
+   * </pre>
+   *
+   * <code>.api.commons.audit.AccessTokensExpiringEvent access_tokens_expiring_event = 1300 [json_name = "accessTokensExpiringEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEventOrBuilder getAccessTokensExpiringEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

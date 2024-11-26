@@ -6,12 +6,11 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Request message for the ListForecastIntervals RPC
- * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsReq}
  */
-@java.lang.Deprecated public final class ListForecastIntervalsReq extends
+public final class ListForecastIntervalsReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListForecastIntervalsReq)
     ListForecastIntervalsReqOrBuilder {
@@ -246,7 +245,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for the ListForecastIntervals RPC
-   * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsReq}

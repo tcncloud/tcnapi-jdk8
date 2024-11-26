@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-@java.lang.Deprecated public interface ListForecastIntervalsReqOrBuilder extends
+public interface ListForecastIntervalsReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListForecastIntervalsReq)
     com.google.protobuf.MessageOrBuilder {
 
