@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7117
+   *     See api/v1alpha1/wfm/wfm.proto;l=7091
    * @return The includeShiftInstances.
    */
   @java.lang.Override
@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7120
+   *     See api/v1alpha1/wfm/wfm.proto;l=7094
    * @return The includeShiftTemplate.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7123
+   *     See api/v1alpha1/wfm/wfm.proto;l=7097
    * @return The includeShiftSegments.
    */
   @java.lang.Override
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7126
+   *     See api/v1alpha1/wfm/wfm.proto;l=7100
    * @return The includeSchedulingActivity.
    */
   @java.lang.Override
@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7129
+   *     See api/v1alpha1/wfm/wfm.proto;l=7103
    * @return The includeActivity.
    */
   @java.lang.Override
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7117
+     *     See api/v1alpha1/wfm/wfm.proto;l=7091
      * @return The includeShiftInstances.
      */
     @java.lang.Override
@@ -1163,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7117
+     *     See api/v1alpha1/wfm/wfm.proto;l=7091
      * @param value The includeShiftInstances to set.
      * @return This builder for chaining.
      */
@@ -1182,7 +1182,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_instances = 4 [json_name = "includeShiftInstances", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_instances is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7117
+     *     See api/v1alpha1/wfm/wfm.proto;l=7091
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIncludeShiftInstances() {
@@ -1201,7 +1201,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7120
+     *     See api/v1alpha1/wfm/wfm.proto;l=7094
      * @return The includeShiftTemplate.
      */
     @java.lang.Override
@@ -1216,7 +1216,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7120
+     *     See api/v1alpha1/wfm/wfm.proto;l=7094
      * @param value The includeShiftTemplate to set.
      * @return This builder for chaining.
      */
@@ -1235,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_template = 5 [json_name = "includeShiftTemplate", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_template is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7120
+     *     See api/v1alpha1/wfm/wfm.proto;l=7094
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIncludeShiftTemplate() {
@@ -1254,7 +1254,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7123
+     *     See api/v1alpha1/wfm/wfm.proto;l=7097
      * @return The includeShiftSegments.
      */
     @java.lang.Override
@@ -1269,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7123
+     *     See api/v1alpha1/wfm/wfm.proto;l=7097
      * @param value The includeShiftSegments to set.
      * @return This builder for chaining.
      */
@@ -1288,7 +1288,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_shift_segments = 6 [json_name = "includeShiftSegments", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_shift_segments is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7123
+     *     See api/v1alpha1/wfm/wfm.proto;l=7097
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIncludeShiftSegments() {
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7126
+     *     See api/v1alpha1/wfm/wfm.proto;l=7100
      * @return The includeSchedulingActivity.
      */
     @java.lang.Override
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7126
+     *     See api/v1alpha1/wfm/wfm.proto;l=7100
      * @param value The includeSchedulingActivity to set.
      * @return This builder for chaining.
      */
@@ -1341,7 +1341,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_scheduling_activity = 7 [json_name = "includeSchedulingActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_scheduling_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7126
+     *     See api/v1alpha1/wfm/wfm.proto;l=7100
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIncludeSchedulingActivity() {
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7129
+     *     See api/v1alpha1/wfm/wfm.proto;l=7103
      * @return The includeActivity.
      */
     @java.lang.Override
@@ -1375,7 +1375,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7129
+     *     See api/v1alpha1/wfm/wfm.proto;l=7103
      * @param value The includeActivity to set.
      * @return This builder for chaining.
      */
@@ -1394,7 +1394,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool include_activity = 8 [json_name = "includeActivity", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PublishDraftScheduleReq.include_activity is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7129
+     *     See api/v1alpha1/wfm/wfm.proto;l=7103
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIncludeActivity() {
