@@ -17773,16 +17773,28 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder getAudioBytesOrBuilder();
 
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      * @return Whether the recordingType field is set.
      */
     boolean hasRecordingType();
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      * @return The recordingType.
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getRecordingType();
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder getRecordingTypeOrBuilder();
@@ -47660,6 +47672,10 @@ private static final long serialVersionUID = 0L;
     public static final int RECORDING_TYPE_FIELD_NUMBER = 14;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recordingType_;
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      * @return Whether the recordingType field is set.
      */
@@ -47668,6 +47684,10 @@ private static final long serialVersionUID = 0L;
       return recordingType_ != null;
     }
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      * @return The recordingType.
      */
@@ -47676,6 +47696,10 @@ private static final long serialVersionUID = 0L;
       return recordingType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance() : recordingType_;
     }
     /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
      */
     @java.lang.Override
@@ -50321,6 +50345,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder> recordingTypeBuilder_;
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        * @return Whether the recordingType field is set.
        */
@@ -50328,6 +50356,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00001000) != 0);
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        * @return The recordingType.
        */
@@ -50339,6 +50371,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public Builder setRecordingType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType value) {
@@ -50355,6 +50391,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public Builder setRecordingType(
@@ -50369,6 +50409,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public Builder mergeRecordingType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType value) {
@@ -50388,6 +50432,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public Builder clearRecordingType() {
@@ -50401,6 +50449,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder getRecordingTypeBuilder() {
@@ -50409,6 +50461,10 @@ private static final long serialVersionUID = 0L;
         return getRecordingTypeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder getRecordingTypeOrBuilder() {
@@ -50420,6 +50476,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
        * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -68587,7 +68647,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=469
+   *     See wfo/vanalytics/v2/transcript.proto;l=472
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -68601,7 +68661,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=469
+   *     See wfo/vanalytics/v2/transcript.proto;l=472
    * @return The channel.
    */
   @java.lang.Override
@@ -69755,7 +69815,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=469
+     *     See wfo/vanalytics/v2/transcript.proto;l=472
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -69768,7 +69828,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=469
+     *     See wfo/vanalytics/v2/transcript.proto;l=472
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
