@@ -383,47 +383,17 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue);
    * The recording type for this call.
    * </pre>
    *
-   * <code>repeated .api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
-   * @return A list containing the recordingType.
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The enum numeric value on the wire for recordingType.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.RecordingType> getRecordingTypeList();
+  int getRecordingTypeValue();
   /**
    * <pre>
    * The recording type for this call.
    * </pre>
    *
-   * <code>repeated .api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
-   * @return The count of recordingType.
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The recordingType.
    */
-  int getRecordingTypeCount();
-  /**
-   * <pre>
-   * The recording type for this call.
-   * </pre>
-   *
-   * <code>repeated .api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
-   * @param index The index of the element to return.
-   * @return The recordingType at the given index.
-   */
-  com.tcn.cloud.api.api.commons.RecordingType getRecordingType(int index);
-  /**
-   * <pre>
-   * The recording type for this call.
-   * </pre>
-   *
-   * <code>repeated .api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
-   * @return A list containing the enum numeric values on the wire for recordingType.
-   */
-  java.util.List<java.lang.Integer>
-  getRecordingTypeValueList();
-  /**
-   * <pre>
-   * The recording type for this call.
-   * </pre>
-   *
-   * <code>repeated .api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of recordingType at the given index.
-   */
-  int getRecordingTypeValue(int index);
+  com.tcn.cloud.api.api.commons.RecordingType getRecordingType();
 }

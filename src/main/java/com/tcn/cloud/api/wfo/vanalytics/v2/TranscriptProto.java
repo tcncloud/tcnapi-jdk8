@@ -649,7 +649,7 @@ public final class TranscriptProto {
       "analytics.v2.AgentCallLogR\014agentCallLog\022" +
       "3\n\005phone\030\016 \001(\0132\035.wfo.vanalytics.v2.Call." +
       "PhoneR\005phone\022\037\n\013audio_bytes\030\020 \001(\003R\naudio" +
-      "Bytes\022A\n\016recording_type\030\021 \003(\0162\032.api.comm" +
+      "Bytes\022A\n\016recording_type\030\021 \001(\0162\032.api.comm" +
       "ons.RecordingTypeR\rrecordingType\032g\n\022Agen" +
       "tResponseEntry\022\020\n\003key\030\001 \001(\tR\003key\022;\n\005valu" +
       "e\030\002 \001(\0132%.wfo.vanalytics.v2.Call.AgentRe" +
