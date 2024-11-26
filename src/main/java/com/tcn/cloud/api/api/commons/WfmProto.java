@@ -115,6 +115,16 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AgentStateSequence_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_AdherenceAgentState_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_AdherenceAgentState_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_AdherenceAgentStates_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_AgentLeavePetition_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -297,7 +307,15 @@ public final class WfmProto {
       "time\030\002 \001(\0132\032.google.protobuf.TimestampR\r" +
       "startDatetime\022E\n\016state_segments\030\003 \003(\0132\036." +
       "api.commons.AgentStateSegmentR\rstateSegm" +
-      "ents\"\221\005\n\022AgentLeavePetition\0229\n\027agent_lea" +
+      "ents\"\340\001\n\023AdherenceAgentState\022\"\n\rwfm_agen" +
+      "t_sid\030\001 \001(\003R\013wfmAgentSid\022A\n\016start_dateti" +
+      "me\030\002 \001(\0132\032.google.protobuf.TimestampR\rst" +
+      "artDatetime\022C\n\nadm_states\030\003 \003(\0162$.api.co" +
+      "mmons.RealTimeManagementStateR\tadmStates" +
+      "\022\035\n\npause_code\030\004 \001(\tR\tpauseCode\"[\n\024Adher" +
+      "enceAgentStates\022C\n\014agent_states\030\001 \003(\0132 ." +
+      "api.commons.AdherenceAgentStateR\013agentSt" +
+      "ates\"\221\005\n\022AgentLeavePetition\0229\n\027agent_lea" +
       "ve_petition_id\030\001 \001(\003B\0020\001R\024agentLeavePeti" +
       "tionId\022\"\n\rwfm_agent_sid\030\002 \001(\003R\013wfmAgentS" +
       "id\022N\n\017petition_status\030\003 \001(\0162%.api.common" +
@@ -423,7 +441,7 @@ public final class WfmProto {
       "SSOCIATED_WITH\020\001\022\020\n\014IS_MEMBER_OF\020\002*i\n\017Di" +
       "agnosticLevel\022\017\n\013INFORMATION\020\000\022\016\n\nSUGGES" +
       "TION\020\001\022\013\n\007WARNING\020\002\022\024\n\020DIAGNOSTIC_ERROR\020" +
-      "\003\022\022\n\016INTERNAL_ERROR\020\004*\223\031\n\016DiagnosticCode" +
+      "\003\022\022\n\016INTERNAL_ERROR\020\004*\276\031\n\016DiagnosticCode" +
       "\022\013\n\007GENERAL\020\000\022\006\n\002OK\020\001\022\033\n\027NO_SKILLS_IN_DI" +
       "CTIONARY\020\002\022$\n AGENT_HAS_NO_SKILL_PROFICI" +
       "ENCIES\020\003\022\027\n\023AGENT_HAS_NO_SKILLS\020\004\0221\n-NO_" +
@@ -504,79 +522,80 @@ public final class WfmProto {
       "T_OR_INHERITED_BY_PROGRAM\020E\0222\n.TOUR_AGEN" +
       "T_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR\020F\022" +
       "*\n&NO_PREDICTED_CALLS_IN_SCHEDULING_RANG" +
-      "E\020G*\312\001\n\025PerformanceMetricType\022#\n\037FTE_REQ" +
-      "UIRED_VS_ACHIEVED_SIMPLE\020\000\022%\n!FTE_REQUIR" +
-      "ED_VS_ACHIEVED_EXTENDED\020\001\022\032\n\026SERVICE_LEV" +
-      "EL_ANALYSIS\020\002\022\030\n\024SERVICE_LEVEL_MATRIX\020\003\022" +
-      "\034\n\030CONTACT_HANDLING_METRICS\020\004\022\021\n\rLOAD_FO" +
-      "RECAST\020\005*|\n\025ScheduleShouldInclude\022\030\n\024ONL" +
-      "Y_SHIFT_INSTANCES\020\000\022\034\n\030ONLY_PERFORMANCE_" +
-      "METRICS\020\001\022+\n\'SHIFT_INSTANCES_AND_PERFORM" +
-      "ANCE_METRICS\020\002*(\n\014ScheduleType\022\t\n\005DRAFT\020" +
-      "\000\022\r\n\tPUBLISHED\020\001*7\n\024SchedulingTargetType" +
-      "\022\014\n\010COVERAGE\020\000\022\021\n\rSERVICE_LEVEL\020\001*Z\n\020Bui" +
-      "ldDraftStatus\022\014\n\010NO_BUILD\020\000\022\017\n\013IN_PROGRE" +
-      "SS\020\001\022\r\n\tSUCCEEDED\020\002\022\n\n\006FAILED\020\003\022\014\n\010CANCE" +
-      "LED\020\004*F\n\nBitmapType\022\014\n\010COMPLETE\020\000\022\021\n\rONL" +
-      "Y_WEEKMAPS\020\001\022\027\n\023ONLY_CALENDAR_ITEMS\020\002*Z\n" +
-      "\021HistoryCacheState\022\016\n\nNOT_LOADED\020\000\022\013\n\007LO" +
-      "ADING\020\001\022\024\n\020LOADING_COMPLETE\020\002\022\022\n\016LOADING" +
-      "_FAILED\020\003*S\n\021InitialSetupState\022\r\n\tNOT_SE" +
-      "TUP\020\000\022\016\n\nSETTING_UP\020\001\022\022\n\016SETUP_COMPLETE\020" +
-      "\002\022\013\n\007FAILURE\020\003*\263\001\n\027RealTimeManagementSta" +
-      "te\022\017\n\013UNSPECIFIED\020\000\022\r\n\tLOGGED_IN\020\001\022\020\n\014CA" +
-      "LL_ON_HOLD\020\004\022\021\n\rOUTBOUND_CALL\020\005\022\014\n\010TRANS" +
-      "FER\020\007\022\016\n\nCONFERENCE\020\010\022\t\n\005READY\020\t\022\r\n\tNOT_" +
-      "READY\020\n\022\013\n\007WRAP_UP\020\013\022\016\n\nLOGGED_OUT\020\r*\225\001\n" +
-      "\030AgentLeavePetitionStatus\022\037\n\033UNSPECIFIED" +
-      "_PETITION_STATUS\020\000\022\024\n\020PENDING_PETITION\020\001" +
-      "\022\025\n\021APPROVED_PETITION\020\002\022\023\n\017DENIED_PETITI" +
-      "ON\020\003\022\026\n\022CANCELLED_PETITION\020\004*\207\001\n Schedul" +
-      "ingActivityClassification\022 \n\034STANDARD_SC" +
-      "HEDULING_ACTIVITY\020\000\022\024\n\020ON_CALL_ACTIVITY\020" +
-      "\001\022\025\n\021TIME_OFF_ACTIVITY\020\002\022\024\n\020MEETING_ACTI" +
-      "VITY\020\003*\202\001\n\037AdherenceRuleNotificationMedi" +
-      "um\0221\n-ADHERENCE_RULE_NOTIFICATION_MEDIUM" +
-      "_IN_PRODUCT\020\000\022,\n(ADHERENCE_RULE_NOTIFICA" +
-      "TION_MEDIUM_EMAIL\020\001*\251\001\n\034AdherenceRuleReq" +
-      "uirementType\022,\n(ADHERENCE_RULE_REQUIREME" +
-      "NT_TYPE_NOT_USED\020\000\022,\n(ADHERENCE_RULE_REQ" +
-      "UIREMENT_TYPE_OPTIONAL\020\001\022-\n)ADHERENCE_RU" +
-      "LE_REQUIREMENT_TYPE_MANDATORY\020\002*\336\001\n\022Adhe" +
-      "renceRuleRange\022%\n!ADHERENCE_RULE_RANGE_S" +
-      "TART_OF_DAY\020\000\022&\n\"ADHERENCE_RULE_RANGE_ST" +
-      "ART_OF_WEEK\020\001\022\'\n#ADHERENCE_RULE_RANGE_ST" +
-      "ART_OF_MONTH\020\002\022$\n ADHERENCE_RULE_RANGE_R" +
-      "EST_OF_DAY\020\003\022*\n&ADHERENCE_RULE_RANGE_CUS" +
-      "TOM_DATE_RANGE\020\004*a\n#AdherenceDepartmenta" +
-      "lRuleActionType\022:\n6ADHERENCE_DEPARTMENTA" +
-      "L_RULE_ACTION_TYPE_CALLS_ANSWERED\020\000*\312\001\n\026" +
-      "AdherenceRuleCondition\022)\n%ADHERENCE_RULE" +
-      "_CONDITION_GREATER_THAN\020\000\022/\n+ADHERENCE_R" +
-      "ULE_CONDITION_GREATER_THAN_EQUAL\020\001\022&\n\"AD" +
-      "HERENCE_RULE_CONDITION_LESS_THAN\020\002\022,\n(AD" +
-      "HERENCE_RULE_CONDITION_LESS_THAN_EQUAL\020\003" +
-      "*\230\001\n\021AdherenceRuleUnit\022\037\n\033ADHERENCE_RULE" +
-      "_UNIT_SECONDS\020\000\022\037\n\033ADHERENCE_RULE_UNIT_M" +
-      "INUTES\020\001\022\035\n\031ADHERENCE_RULE_UNIT_CALLS\020\002\022" +
-      "\"\n\036ADHERENCE_RULE_UNIT_PERCENTAGE\020\003*\215\004\n\034" +
-      "AdherenceAgentRuleActionType\022,\n(ADHERENC" +
-      "E_AGENT_RULE_ACTION_TYPE_WRAP_UP\020\000\022,\n(AD" +
-      "HERENCE_AGENT_RULE_ACTION_TYPE_WAITING\020\001" +
-      "\0220\n,ADHERENCE_AGENT_RULE_ACTION_TYPE_MAN" +
-      "UAL_DIAL\020\002\0221\n-ADHERENCE_AGENT_RULE_ACTIO" +
-      "N_TYPE_PREVIEW_DIAL\020\003\0221\n-ADHERENCE_AGENT" +
-      "_RULE_ACTION_TYPE_ANSWER_CALLS\020\004\022,\n(ADHE" +
-      "RENCE_AGENT_RULE_ACTION_TYPE_ON_CALL\020\005\022," +
-      "\n(ADHERENCE_AGENT_RULE_ACTION_TYPE_ON_HO" +
-      "LD\020\006\0220\n,ADHERENCE_AGENT_RULE_ACTION_TYPE" +
-      "_SHIFT_START\020\007\0225\n1ADHERENCE_AGENT_RULE_A" +
-      "CTION_TYPE_SHIFT_START_LATE\020\010\0224\n0ADHEREN" +
-      "CE_AGENT_RULE_ACTION_TYPE_SHIFT_END_EARL",
-      "Y\020\tBv\n\035com.tcn.cloud.api.api.commonsB\010Wf" +
-      "mProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "E\020G\022)\n%SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISM" +
+      "ATCH\020H*\312\001\n\025PerformanceMetricType\022#\n\037FTE_" +
+      "REQUIRED_VS_ACHIEVED_SIMPLE\020\000\022%\n!FTE_REQ" +
+      "UIRED_VS_ACHIEVED_EXTENDED\020\001\022\032\n\026SERVICE_" +
+      "LEVEL_ANALYSIS\020\002\022\030\n\024SERVICE_LEVEL_MATRIX" +
+      "\020\003\022\034\n\030CONTACT_HANDLING_METRICS\020\004\022\021\n\rLOAD" +
+      "_FORECAST\020\005*|\n\025ScheduleShouldInclude\022\030\n\024" +
+      "ONLY_SHIFT_INSTANCES\020\000\022\034\n\030ONLY_PERFORMAN" +
+      "CE_METRICS\020\001\022+\n\'SHIFT_INSTANCES_AND_PERF" +
+      "ORMANCE_METRICS\020\002*(\n\014ScheduleType\022\t\n\005DRA" +
+      "FT\020\000\022\r\n\tPUBLISHED\020\001*7\n\024SchedulingTargetT" +
+      "ype\022\014\n\010COVERAGE\020\000\022\021\n\rSERVICE_LEVEL\020\001*Z\n\020" +
+      "BuildDraftStatus\022\014\n\010NO_BUILD\020\000\022\017\n\013IN_PRO" +
+      "GRESS\020\001\022\r\n\tSUCCEEDED\020\002\022\n\n\006FAILED\020\003\022\014\n\010CA" +
+      "NCELED\020\004*F\n\nBitmapType\022\014\n\010COMPLETE\020\000\022\021\n\r" +
+      "ONLY_WEEKMAPS\020\001\022\027\n\023ONLY_CALENDAR_ITEMS\020\002" +
+      "*Z\n\021HistoryCacheState\022\016\n\nNOT_LOADED\020\000\022\013\n" +
+      "\007LOADING\020\001\022\024\n\020LOADING_COMPLETE\020\002\022\022\n\016LOAD" +
+      "ING_FAILED\020\003*S\n\021InitialSetupState\022\r\n\tNOT" +
+      "_SETUP\020\000\022\016\n\nSETTING_UP\020\001\022\022\n\016SETUP_COMPLE" +
+      "TE\020\002\022\013\n\007FAILURE\020\003*\276\001\n\027RealTimeManagement" +
+      "State\022\017\n\013UNSPECIFIED\020\000\022\r\n\tLOGGED_IN\020\001\022\020\n" +
+      "\014CALL_ON_HOLD\020\004\022\021\n\rOUTBOUND_CALL\020\005\022\014\n\010TR" +
+      "ANSFER\020\007\022\016\n\nCONFERENCE\020\010\022\t\n\005READY\020\t\022\r\n\tN" +
+      "OT_READY\020\n\022\013\n\007WRAP_UP\020\013\022\016\n\nLOGGED_OUT\020\r\022" +
+      "\t\n\005PAUSE\020\016*\225\001\n\030AgentLeavePetitionStatus\022" +
+      "\037\n\033UNSPECIFIED_PETITION_STATUS\020\000\022\024\n\020PEND" +
+      "ING_PETITION\020\001\022\025\n\021APPROVED_PETITION\020\002\022\023\n" +
+      "\017DENIED_PETITION\020\003\022\026\n\022CANCELLED_PETITION" +
+      "\020\004*\207\001\n SchedulingActivityClassification\022" +
+      " \n\034STANDARD_SCHEDULING_ACTIVITY\020\000\022\024\n\020ON_" +
+      "CALL_ACTIVITY\020\001\022\025\n\021TIME_OFF_ACTIVITY\020\002\022\024" +
+      "\n\020MEETING_ACTIVITY\020\003*\202\001\n\037AdherenceRuleNo" +
+      "tificationMedium\0221\n-ADHERENCE_RULE_NOTIF" +
+      "ICATION_MEDIUM_IN_PRODUCT\020\000\022,\n(ADHERENCE" +
+      "_RULE_NOTIFICATION_MEDIUM_EMAIL\020\001*\251\001\n\034Ad" +
+      "herenceRuleRequirementType\022,\n(ADHERENCE_" +
+      "RULE_REQUIREMENT_TYPE_NOT_USED\020\000\022,\n(ADHE" +
+      "RENCE_RULE_REQUIREMENT_TYPE_OPTIONAL\020\001\022-" +
+      "\n)ADHERENCE_RULE_REQUIREMENT_TYPE_MANDAT" +
+      "ORY\020\002*\336\001\n\022AdherenceRuleRange\022%\n!ADHERENC" +
+      "E_RULE_RANGE_START_OF_DAY\020\000\022&\n\"ADHERENCE" +
+      "_RULE_RANGE_START_OF_WEEK\020\001\022\'\n#ADHERENCE" +
+      "_RULE_RANGE_START_OF_MONTH\020\002\022$\n ADHERENC" +
+      "E_RULE_RANGE_REST_OF_DAY\020\003\022*\n&ADHERENCE_" +
+      "RULE_RANGE_CUSTOM_DATE_RANGE\020\004*a\n#Adhere" +
+      "nceDepartmentalRuleActionType\022:\n6ADHEREN" +
+      "CE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_A" +
+      "NSWERED\020\000*\312\001\n\026AdherenceRuleCondition\022)\n%" +
+      "ADHERENCE_RULE_CONDITION_GREATER_THAN\020\000\022" +
+      "/\n+ADHERENCE_RULE_CONDITION_GREATER_THAN" +
+      "_EQUAL\020\001\022&\n\"ADHERENCE_RULE_CONDITION_LES" +
+      "S_THAN\020\002\022,\n(ADHERENCE_RULE_CONDITION_LES" +
+      "S_THAN_EQUAL\020\003*\230\001\n\021AdherenceRuleUnit\022\037\n\033" +
+      "ADHERENCE_RULE_UNIT_SECONDS\020\000\022\037\n\033ADHEREN" +
+      "CE_RULE_UNIT_MINUTES\020\001\022\035\n\031ADHERENCE_RULE" +
+      "_UNIT_CALLS\020\002\022\"\n\036ADHERENCE_RULE_UNIT_PER" +
+      "CENTAGE\020\003*\215\004\n\034AdherenceAgentRuleActionTy" +
+      "pe\022,\n(ADHERENCE_AGENT_RULE_ACTION_TYPE_W" +
+      "RAP_UP\020\000\022,\n(ADHERENCE_AGENT_RULE_ACTION_" +
+      "TYPE_WAITING\020\001\0220\n,ADHERENCE_AGENT_RULE_A",
+      "CTION_TYPE_MANUAL_DIAL\020\002\0221\n-ADHERENCE_AG" +
+      "ENT_RULE_ACTION_TYPE_PREVIEW_DIAL\020\003\0221\n-A" +
+      "DHERENCE_AGENT_RULE_ACTION_TYPE_ANSWER_C" +
+      "ALLS\020\004\022,\n(ADHERENCE_AGENT_RULE_ACTION_TY" +
+      "PE_ON_CALL\020\005\022,\n(ADHERENCE_AGENT_RULE_ACT" +
+      "ION_TYPE_ON_HOLD\020\006\0220\n,ADHERENCE_AGENT_RU" +
+      "LE_ACTION_TYPE_SHIFT_START\020\007\0225\n1ADHERENC" +
+      "E_AGENT_RULE_ACTION_TYPE_SHIFT_START_LAT" +
+      "E\020\010\0224\n0ADHERENCE_AGENT_RULE_ACTION_TYPE_" +
+      "SHIFT_END_EARLY\020\tBv\n\035com.tcn.cloud.api.a" +
+      "pi.commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api.Commo" +
+      "ns\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetada" +
+      "ta\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -704,62 +723,74 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentStateSequence_descriptor,
         new java.lang.String[] { "WfmAgentSid", "StartDatetime", "StateSegments", });
-    internal_static_api_commons_AgentLeavePetition_descriptor =
+    internal_static_api_commons_AdherenceAgentState_descriptor =
       getDescriptor().getMessageTypes().get(20);
+    internal_static_api_commons_AdherenceAgentState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_AdherenceAgentState_descriptor,
+        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "AdmStates", "PauseCode", });
+    internal_static_api_commons_AdherenceAgentStates_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_AdherenceAgentStates_descriptor,
+        new java.lang.String[] { "AgentStates", });
+    internal_static_api_commons_AgentLeavePetition_descriptor =
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_commons_AgentLeavePetition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentLeavePetition_descriptor,
         new java.lang.String[] { "AgentLeavePetitionId", "WfmAgentSid", "PetitionStatus", "PetitionComment", "ResponseComment", "RequestedDatetimeRanges", "CreatedTime", "ArchivedTime", "ResolvedTime", "ResolvedByUserId", "RequestedHoursOff", });
     internal_static_api_commons_ConfigEntity_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_commons_ConfigEntity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ConfigEntity_descriptor,
         new java.lang.String[] { "EntitySid", "EntityType", });
     internal_static_api_commons_AdherenceRuleNotificationConfig_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_commons_AdherenceRuleNotificationConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceRuleNotificationConfig_descriptor,
         new java.lang.String[] { "AdherenceRuleNotificationConfigId", "Name", "Entries", });
     internal_static_api_commons_AdherenceRuleNotificationConfigEntry_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_commons_AdherenceRuleNotificationConfigEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceRuleNotificationConfigEntry_descriptor,
         new java.lang.String[] { "AdherenceRuleNotificationConfigEntryId", "AdherenceRuleNotificationConfigId", "RecipientUserId", "NotificationMedium", "SecondsToWaitForNoResponse", });
     internal_static_api_commons_AdherenceDepartmentalRuleAction_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_commons_AdherenceDepartmentalRuleAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRuleAction_descriptor,
         new java.lang.String[] { "ActionType", });
     internal_static_api_commons_AdherenceDepartmentalRule_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_commons_AdherenceDepartmentalRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRule_descriptor,
         new java.lang.String[] { "AdherenceDepartmentalRuleId", "Name", "SelectedEntity", "RuleRequirementType", "AdherenceRuleNotificationConfigId", "RuleRange", "CustomRange", "RuleClauses", });
     internal_static_api_commons_AdherenceDepartmentalRuleClause_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_commons_AdherenceDepartmentalRuleClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceDepartmentalRuleClause_descriptor,
         new java.lang.String[] { "AdherenceDepartmentalRuleClauseId", "AdherenceDepartmentalRuleId", "Action", "Condition", "Amount", "Unit", "PerAmount", "PerUnit", });
     internal_static_api_commons_AdherenceAgentRule_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_commons_AdherenceAgentRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRule_descriptor,
         new java.lang.String[] { "AdherenceAgentRuleId", "Name", "SelectedEntity", "RuleRequirementType", "AdherenceRuleNotificationConfigId", "RuleClauses", });
     internal_static_api_commons_AdherenceAgentRuleAction_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_commons_AdherenceAgentRuleAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRuleAction_descriptor,
         new java.lang.String[] { "ActionType", });
     internal_static_api_commons_AdherenceAgentRuleClause_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_commons_AdherenceAgentRuleClause_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentRuleClause_descriptor,

@@ -697,6 +697,15 @@ public enum DiagnosticCode
    * <code>NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE = 71;</code>
    */
   NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE(71),
+  /**
+   * <pre>
+   * DiagnosticMinShiftWidthDowMismatch integer value
+   * The diagnostic is reporting that the Shift Template has a DOW Pattern that is smaller than the template MIN_WDITH.
+   * </pre>
+   *
+   * <code>SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISMATCH = 72;</code>
+   */
+  SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISMATCH(72),
   UNRECOGNIZED(-1),
   ;
 
@@ -1385,6 +1394,15 @@ public enum DiagnosticCode
    * <code>NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE = 71;</code>
    */
   public static final int NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE_VALUE = 71;
+  /**
+   * <pre>
+   * DiagnosticMinShiftWidthDowMismatch integer value
+   * The diagnostic is reporting that the Shift Template has a DOW Pattern that is smaller than the template MIN_WDITH.
+   * </pre>
+   *
+   * <code>SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISMATCH = 72;</code>
+   */
+  public static final int SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISMATCH_VALUE = 72;
 
 
   public final int getNumber() {
@@ -1483,6 +1501,7 @@ public enum DiagnosticCode
       case 69: return NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM;
       case 70: return TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR;
       case 71: return NO_PREDICTED_CALLS_IN_SCHEDULING_RANGE;
+      case 72: return SHIFT_TEMPLATE_MIN_WIDTH_DOW_MISMATCH;
       default: return null;
     }
   }
