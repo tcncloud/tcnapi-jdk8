@@ -245,6 +245,32 @@ private static final long serialVersionUID = 0L;
     return durable_;
   }
 
+  public static final int DECOMPOSITIONS_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.Decompositions decompositions_;
+  /**
+   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+   * @return Whether the decompositions field is set.
+   */
+  @java.lang.Override
+  public boolean hasDecompositions() {
+    return decompositions_ != null;
+  }
+  /**
+   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Decompositions getDecompositions() {
+    return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+  }
+  /**
+   * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder() {
+    return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -276,6 +302,9 @@ private static final long serialVersionUID = 0L;
     }
     if (durable_ != false) {
       output.writeBool(14, durable_);
+    }
+    if (decompositions_ != null) {
+      output.writeMessage(15, getDecompositions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -312,6 +341,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, durable_);
     }
+    if (decompositions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getDecompositions());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -338,6 +371,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getScrubEntryDetailsList())) return false;
     if (getDurable()
         != other.getDurable()) return false;
+    if (hasDecompositions() != other.hasDecompositions()) return false;
+    if (hasDecompositions()) {
+      if (!getDecompositions()
+          .equals(other.getDecompositions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -366,6 +404,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DURABLE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDurable());
+    if (hasDecompositions()) {
+      hash = (37 * hash) + DECOMPOSITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getDecompositions().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -510,6 +552,11 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       durable_ = false;
+      decompositions_ = null;
+      if (decompositionsBuilder_ != null) {
+        decompositionsBuilder_.dispose();
+        decompositionsBuilder_ = null;
+      }
       return this;
     }
 
@@ -571,6 +618,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.durable_ = durable_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.decompositions_ = decompositionsBuilder_ == null
+            ? decompositions_
+            : decompositionsBuilder_.build();
       }
     }
 
@@ -670,6 +722,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDurable() != false) {
         setDurable(other.getDurable());
       }
+      if (other.hasDecompositions()) {
+        mergeDecompositions(other.getDecompositions());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -735,6 +790,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 112
+            case 122: {
+              input.readMessage(
+                  getDecompositionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1366,6 +1428,125 @@ private static final long serialVersionUID = 0L;
       durable_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Decompositions decompositions_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder> decompositionsBuilder_;
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     * @return Whether the decompositions field is set.
+     */
+    public boolean hasDecompositions() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     * @return The decompositions.
+     */
+    public com.tcn.cloud.api.api.commons.Decompositions getDecompositions() {
+      if (decompositionsBuilder_ == null) {
+        return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+      } else {
+        return decompositionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public Builder setDecompositions(com.tcn.cloud.api.api.commons.Decompositions value) {
+      if (decompositionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        decompositions_ = value;
+      } else {
+        decompositionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public Builder setDecompositions(
+        com.tcn.cloud.api.api.commons.Decompositions.Builder builderForValue) {
+      if (decompositionsBuilder_ == null) {
+        decompositions_ = builderForValue.build();
+      } else {
+        decompositionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public Builder mergeDecompositions(com.tcn.cloud.api.api.commons.Decompositions value) {
+      if (decompositionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          decompositions_ != null &&
+          decompositions_ != com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance()) {
+          getDecompositionsBuilder().mergeFrom(value);
+        } else {
+          decompositions_ = value;
+        }
+      } else {
+        decompositionsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public Builder clearDecompositions() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      decompositions_ = null;
+      if (decompositionsBuilder_ != null) {
+        decompositionsBuilder_.dispose();
+        decompositionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Decompositions.Builder getDecompositionsBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getDecompositionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder() {
+      if (decompositionsBuilder_ != null) {
+        return decompositionsBuilder_.getMessageOrBuilder();
+      } else {
+        return decompositions_ == null ?
+            com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+      }
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 15 [json_name = "decompositions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder> 
+        getDecompositionsFieldBuilder() {
+      if (decompositionsBuilder_ == null) {
+        decompositionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder>(
+                getDecompositions(),
+                getParentForChildren(),
+                isClean());
+        decompositions_ = null;
+      }
+      return decompositionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

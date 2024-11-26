@@ -356,6 +356,37 @@ public final class ComplianceGrpc {
     return getCreateScrubListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> getUpdateScrubListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateScrubList",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> getUpdateScrubListMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest, com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> getUpdateScrubListMethod;
+    if ((getUpdateScrubListMethod = ComplianceGrpc.getUpdateScrubListMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getUpdateScrubListMethod = ComplianceGrpc.getUpdateScrubListMethod) == null) {
+          ComplianceGrpc.getUpdateScrubListMethod = getUpdateScrubListMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest, com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScrubList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateScrubList"))
+              .build();
+        }
+      }
+    }
+    return getUpdateScrubListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
       com.tcn.cloud.api.api.v0alpha.ScrubListRes> getAddScrubListEntriesMethod;
 
@@ -2188,6 +2219,19 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Updates a scrub list metadata
+     * The method will return an UpdateScrubListResponse.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
+     */
+    default void updateScrubList(com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScrubListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Add entries to an existing scrub list defined by AddScrubListEntriesReq message.
      * The method will return a ScrubListRes message that will
      * contain the results.
@@ -2938,6 +2982,20 @@ public final class ComplianceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScrubListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a scrub list metadata
+     * The method will return an UpdateScrubListResponse.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
+     */
+    public void updateScrubList(com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3730,6 +3788,19 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Updates a scrub list metadata
+     * The method will return an UpdateScrubListResponse.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse updateScrubList(com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateScrubListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Add entries to an existing scrub list defined by AddScrubListEntriesReq message.
      * The method will return a ScrubListRes message that will
      * contain the results.
@@ -4465,6 +4536,20 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Updates a scrub list metadata
+     * The method will return an UpdateScrubListResponse.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse> updateScrubList(
+        com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateScrubListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Add entries to an existing scrub list defined by AddScrubListEntriesReq message.
      * The method will return a ScrubListRes message that will
      * contain the results.
@@ -5168,61 +5253,62 @@ public final class ComplianceGrpc {
   private static final int METHODID_ENABLE_RULE_SET = 8;
   private static final int METHODID_DISABLE_RULE_SET = 9;
   private static final int METHODID_CREATE_SCRUB_LIST = 10;
-  private static final int METHODID_ADD_SCRUB_LIST_ENTRIES = 11;
-  private static final int METHODID_UPDATE_SCRUB_ENTRY = 12;
-  private static final int METHODID_DELETE_SCRUB_LIST_ENTRIES = 13;
-  private static final int METHODID_GET_SCRUB_LIST = 14;
-  private static final int METHODID_DELETE_SCRUB_LIST = 15;
-  private static final int METHODID_GET_DEFAULT_RULES = 16;
-  private static final int METHODID_GET_SCRUB_LISTS = 17;
-  private static final int METHODID_SEARCH_SCRUB_LIST = 18;
-  private static final int METHODID_GET_SCRUB_LIST_UPLOAD_URL = 19;
-  private static final int METHODID_PROCESS_SCRUB_LIST_UPLOAD = 20;
-  private static final int METHODID_SCRUB_LIST_DOWNLOAD = 21;
-  private static final int METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD = 22;
-  private static final int METHODID_EXPORT_SCRUB_LIST = 23;
-  private static final int METHODID_PURGE_SCRUB_LIST = 24;
-  private static final int METHODID_CREATE_SCENARIO = 25;
-  private static final int METHODID_GET_SCENARIO = 26;
-  private static final int METHODID_UPDATE_SCENARIO = 27;
-  private static final int METHODID_DELETE_SCENARIO = 28;
-  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 29;
-  private static final int METHODID_LIST_ALL_SCENARIOS = 30;
-  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 31;
-  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 32;
-  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 33;
-  private static final int METHODID_ASSIGN_SCENARIO = 34;
-  private static final int METHODID_UNASSIGN_SCENARIO = 35;
-  private static final int METHODID_ENABLE_SCENARIO = 36;
-  private static final int METHODID_DISABLE_SCENARIO = 37;
-  private static final int METHODID_GET_FIELD_NAMES = 38;
-  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 39;
-  private static final int METHODID_CREATE_CONSENT_PROFILE = 40;
-  private static final int METHODID_CREATE_CONSENT = 41;
-  private static final int METHODID_GET_CONSENT_PROFILE = 42;
-  private static final int METHODID_GET_CONSENT = 43;
-  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 44;
-  private static final int METHODID_GET_CONSENT_BY_CONTENT = 45;
-  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 46;
-  private static final int METHODID_UPDATE_CONSENT = 47;
-  private static final int METHODID_EXPIRE_CONSENT = 48;
-  private static final int METHODID_REVOKE_CONSENT = 49;
-  private static final int METHODID_DELETE_CONSENT = 50;
-  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 51;
-  private static final int METHODID_CONSENT_LIST_DOWNLOAD = 52;
-  private static final int METHODID_ENABLE_CONSENT_PROFILE = 53;
-  private static final int METHODID_DISABLE_CONSENT_PROFILE = 54;
-  private static final int METHODID_LIST_CONSENT_PROFILES = 55;
-  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 56;
-  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 57;
-  private static final int METHODID_EXPORT_CONSENT_LIST = 58;
-  private static final int METHODID_LIST_CONSENT_TOPICS = 59;
-  private static final int METHODID_GET_CONSENT_TOPIC = 60;
-  private static final int METHODID_CREATE_CONSENT_TOPIC = 61;
-  private static final int METHODID_DELETE_CONSENT_TOPIC = 62;
-  private static final int METHODID_UPDATE_CONSENT_TOPIC = 63;
-  private static final int METHODID_PROCESS_OUTBOUND_CALL = 64;
-  private static final int METHODID_QUERY_HOLIDAYS = 65;
+  private static final int METHODID_UPDATE_SCRUB_LIST = 11;
+  private static final int METHODID_ADD_SCRUB_LIST_ENTRIES = 12;
+  private static final int METHODID_UPDATE_SCRUB_ENTRY = 13;
+  private static final int METHODID_DELETE_SCRUB_LIST_ENTRIES = 14;
+  private static final int METHODID_GET_SCRUB_LIST = 15;
+  private static final int METHODID_DELETE_SCRUB_LIST = 16;
+  private static final int METHODID_GET_DEFAULT_RULES = 17;
+  private static final int METHODID_GET_SCRUB_LISTS = 18;
+  private static final int METHODID_SEARCH_SCRUB_LIST = 19;
+  private static final int METHODID_GET_SCRUB_LIST_UPLOAD_URL = 20;
+  private static final int METHODID_PROCESS_SCRUB_LIST_UPLOAD = 21;
+  private static final int METHODID_SCRUB_LIST_DOWNLOAD = 22;
+  private static final int METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD = 23;
+  private static final int METHODID_EXPORT_SCRUB_LIST = 24;
+  private static final int METHODID_PURGE_SCRUB_LIST = 25;
+  private static final int METHODID_CREATE_SCENARIO = 26;
+  private static final int METHODID_GET_SCENARIO = 27;
+  private static final int METHODID_UPDATE_SCENARIO = 28;
+  private static final int METHODID_DELETE_SCENARIO = 29;
+  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 30;
+  private static final int METHODID_LIST_ALL_SCENARIOS = 31;
+  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 32;
+  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 33;
+  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 34;
+  private static final int METHODID_ASSIGN_SCENARIO = 35;
+  private static final int METHODID_UNASSIGN_SCENARIO = 36;
+  private static final int METHODID_ENABLE_SCENARIO = 37;
+  private static final int METHODID_DISABLE_SCENARIO = 38;
+  private static final int METHODID_GET_FIELD_NAMES = 39;
+  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 40;
+  private static final int METHODID_CREATE_CONSENT_PROFILE = 41;
+  private static final int METHODID_CREATE_CONSENT = 42;
+  private static final int METHODID_GET_CONSENT_PROFILE = 43;
+  private static final int METHODID_GET_CONSENT = 44;
+  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 45;
+  private static final int METHODID_GET_CONSENT_BY_CONTENT = 46;
+  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 47;
+  private static final int METHODID_UPDATE_CONSENT = 48;
+  private static final int METHODID_EXPIRE_CONSENT = 49;
+  private static final int METHODID_REVOKE_CONSENT = 50;
+  private static final int METHODID_DELETE_CONSENT = 51;
+  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 52;
+  private static final int METHODID_CONSENT_LIST_DOWNLOAD = 53;
+  private static final int METHODID_ENABLE_CONSENT_PROFILE = 54;
+  private static final int METHODID_DISABLE_CONSENT_PROFILE = 55;
+  private static final int METHODID_LIST_CONSENT_PROFILES = 56;
+  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 57;
+  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 58;
+  private static final int METHODID_EXPORT_CONSENT_LIST = 59;
+  private static final int METHODID_LIST_CONSENT_TOPICS = 60;
+  private static final int METHODID_GET_CONSENT_TOPIC = 61;
+  private static final int METHODID_CREATE_CONSENT_TOPIC = 62;
+  private static final int METHODID_DELETE_CONSENT_TOPIC = 63;
+  private static final int METHODID_UPDATE_CONSENT_TOPIC = 64;
+  private static final int METHODID_PROCESS_OUTBOUND_CALL = 65;
+  private static final int METHODID_QUERY_HOLIDAYS = 66;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5284,6 +5370,10 @@ public final class ComplianceGrpc {
         case METHODID_CREATE_SCRUB_LIST:
           serviceImpl.createScrubList((com.tcn.cloud.api.api.v0alpha.CreateScrubListReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SCRUB_LIST:
+          serviceImpl.updateScrubList((com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse>) responseObserver);
           break;
         case METHODID_ADD_SCRUB_LIST_ENTRIES:
           serviceImpl.addScrubListEntries((com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq) request,
@@ -5600,6 +5690,13 @@ public final class ComplianceGrpc {
               com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
               com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
                 service, METHODID_CREATE_SCRUB_LIST)))
+        .addMethod(
+          getUpdateScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateScrubListRequest,
+              com.tcn.cloud.api.api.v0alpha.UpdateScrubListResponse>(
+                service, METHODID_UPDATE_SCRUB_LIST)))
         .addMethod(
           getAddScrubListEntriesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6044,6 +6141,7 @@ public final class ComplianceGrpc {
               .addMethod(getEnableRuleSetMethod())
               .addMethod(getDisableRuleSetMethod())
               .addMethod(getCreateScrubListMethod())
+              .addMethod(getUpdateScrubListMethod())
               .addMethod(getAddScrubListEntriesMethod())
               .addMethod(getUpdateScrubEntryMethod())
               .addMethod(getDeleteScrubListEntriesMethod())

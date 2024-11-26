@@ -301,6 +301,17 @@ private static final long serialVersionUID = 0L;
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
 
+  public static final int IS_WILD_CARD_FIELD_NUMBER = 16;
+  private boolean isWildCard_ = false;
+  /**
+   * <code>bool is_wild_card = 16 [json_name = "isWildCard"];</code>
+   * @return The isWildCard.
+   */
+  @java.lang.Override
+  public boolean getIsWildCard() {
+    return isWildCard_;
+  }
+
   public static final int CREATED_ON_FIELD_NUMBER = 200;
   private com.google.protobuf.Timestamp createdOn_;
   /**
@@ -409,6 +420,9 @@ private static final long serialVersionUID = 0L;
     if (countryCode_ != null) {
       output.writeMessage(15, getCountryCode());
     }
+    if (isWildCard_ != false) {
+      output.writeBool(16, isWildCard_);
+    }
     if (createdOn_ != null) {
       output.writeMessage(200, getCreatedOn());
     }
@@ -461,6 +475,10 @@ private static final long serialVersionUID = 0L;
     if (countryCode_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getCountryCode());
+    }
+    if (isWildCard_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(16, isWildCard_);
     }
     if (createdOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -519,6 +537,8 @@ private static final long serialVersionUID = 0L;
       if (!getCountryCode()
           .equals(other.getCountryCode())) return false;
     }
+    if (getIsWildCard()
+        != other.getIsWildCard()) return false;
     if (hasCreatedOn() != other.hasCreatedOn()) return false;
     if (hasCreatedOn()) {
       if (!getCreatedOn()
@@ -572,6 +592,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCountryCode().hashCode();
     }
+    hash = (37 * hash) + IS_WILD_CARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsWildCard());
     if (hasCreatedOn()) {
       hash = (37 * hash) + CREATED_ON_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedOn().hashCode();
@@ -741,6 +764,7 @@ private static final long serialVersionUID = 0L;
         countryCodeBuilder_.dispose();
         countryCodeBuilder_ = null;
       }
+      isWildCard_ = false;
       createdOn_ = null;
       if (createdOnBuilder_ != null) {
         createdOnBuilder_.dispose();
@@ -825,11 +849,14 @@ private static final long serialVersionUID = 0L;
             : countryCodeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.isWildCard_ = isWildCard_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.createdBy_ = createdByBuilder_ == null
             ? createdBy_
             : createdByBuilder_.build();
@@ -913,6 +940,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCountryCode()) {
         mergeCountryCode(other.getCountryCode());
+      }
+      if (other.getIsWildCard() != false) {
+        setIsWildCard(other.getIsWildCard());
       }
       if (other.hasCreatedOn()) {
         mergeCreatedOn(other.getCreatedOn());
@@ -1006,18 +1036,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 122
+            case 128: {
+              isWildCard_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 128
             case 1602: {
               input.readMessage(
                   getCreatedOnFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             } // case 1602
             case 1610: {
               input.readMessage(
                   getCreatedByFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               break;
             } // case 1610
             default: {
@@ -1929,6 +1964,38 @@ private static final long serialVersionUID = 0L;
       return countryCodeBuilder_;
     }
 
+    private boolean isWildCard_ ;
+    /**
+     * <code>bool is_wild_card = 16 [json_name = "isWildCard"];</code>
+     * @return The isWildCard.
+     */
+    @java.lang.Override
+    public boolean getIsWildCard() {
+      return isWildCard_;
+    }
+    /**
+     * <code>bool is_wild_card = 16 [json_name = "isWildCard"];</code>
+     * @param value The isWildCard to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsWildCard(boolean value) {
+
+      isWildCard_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_wild_card = 16 [json_name = "isWildCard"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsWildCard() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      isWildCard_ = false;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.Timestamp createdOn_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdOnBuilder_;
@@ -1941,7 +2008,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdOn field is set.
      */
     public boolean hasCreatedOn() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -1974,7 +2041,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -1992,7 +2059,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2005,7 +2072,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
       if (createdOnBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0) &&
+        if (((bitField0_ & 0x00000800) != 0) &&
           createdOn_ != null &&
           createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedOnBuilder().mergeFrom(value);
@@ -2015,7 +2082,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2027,7 +2094,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn"];</code>
      */
     public Builder clearCreatedOn() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       createdOn_ = null;
       if (createdOnBuilder_ != null) {
         createdOnBuilder_.dispose();
@@ -2044,7 +2111,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 200 [json_name = "createdOn"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return getCreatedOnFieldBuilder().getBuilder();
     }
@@ -2092,7 +2159,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdBy field is set.
      */
     public boolean hasCreatedBy() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
@@ -2117,7 +2184,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdByBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2131,7 +2198,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdByBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2140,7 +2207,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedBy(com.google.protobuf.StringValue value) {
       if (createdByBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
+        if (((bitField0_ & 0x00001000) != 0) &&
           createdBy_ != null &&
           createdBy_ != com.google.protobuf.StringValue.getDefaultInstance()) {
           getCreatedByBuilder().mergeFrom(value);
@@ -2150,7 +2217,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdByBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2158,7 +2225,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
      */
     public Builder clearCreatedBy() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       createdBy_ = null;
       if (createdByBuilder_ != null) {
         createdByBuilder_.dispose();
@@ -2171,7 +2238,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue created_by = 201 [json_name = "createdBy"];</code>
      */
     public com.google.protobuf.StringValue.Builder getCreatedByBuilder() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return getCreatedByFieldBuilder().getBuilder();
     }
