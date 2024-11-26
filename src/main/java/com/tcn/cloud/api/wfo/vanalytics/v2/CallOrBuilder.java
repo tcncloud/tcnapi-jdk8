@@ -377,4 +377,23 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue);
    * @return The audioBytes.
    */
   long getAudioBytes();
+
+  /**
+   * <pre>
+   * The recording type for this call.
+   * </pre>
+   *
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The enum numeric value on the wire for recordingType.
+   */
+  int getRecordingTypeValue();
+  /**
+   * <pre>
+   * The recording type for this call.
+   * </pre>
+   *
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The recordingType.
+   */
+  com.tcn.cloud.api.api.commons.RecordingType getRecordingType();
 }

@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     groupName_ = "";
     huntGroupSids_ = emptyLongList();
     numberFormat_ = "";
+    recordingType_ = 0;
   }
 
   @java.lang.Override
@@ -9505,6 +9506,32 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     return audioBytes_;
   }
 
+  public static final int RECORDING_TYPE_FIELD_NUMBER = 17;
+  private int recordingType_ = 0;
+  /**
+   * <pre>
+   * The recording type for this call.
+   * </pre>
+   *
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The enum numeric value on the wire for recordingType.
+   */
+  @java.lang.Override public int getRecordingTypeValue() {
+    return recordingType_;
+  }
+  /**
+   * <pre>
+   * The recording type for this call.
+   * </pre>
+   *
+   * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+   * @return The recordingType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.RecordingType getRecordingType() {
+    com.tcn.cloud.api.api.commons.RecordingType result = com.tcn.cloud.api.api.commons.RecordingType.forNumber(recordingType_);
+    return result == null ? com.tcn.cloud.api.api.commons.RecordingType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -9571,6 +9598,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     }
     if (audioBytes_ != 0L) {
       output.writeInt64(16, audioBytes_);
+    }
+    if (recordingType_ != com.tcn.cloud.api.api.commons.RecordingType.RECORDING_TYPE_TCN.getNumber()) {
+      output.writeEnum(17, recordingType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -9654,6 +9684,10 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(16, audioBytes_);
     }
+    if (recordingType_ != com.tcn.cloud.api.api.commons.RecordingType.RECORDING_TYPE_TCN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(17, recordingType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -9713,6 +9747,7 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     }
     if (getAudioBytes()
         != other.getAudioBytes()) return false;
+    if (recordingType_ != other.recordingType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -9772,6 +9807,8 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     hash = (37 * hash) + AUDIO_BYTES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAudioBytes());
+    hash = (37 * hash) + RECORDING_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + recordingType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -9970,6 +10007,7 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
         phoneBuilder_ = null;
       }
       audioBytes_ = 0L;
+      recordingType_ = 0;
       return this;
     }
 
@@ -10070,6 +10108,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.audioBytes_ = audioBytes_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.recordingType_ = recordingType_;
       }
     }
 
@@ -10197,6 +10238,9 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
       }
       if (other.getAudioBytes() != 0L) {
         setAudioBytes(other.getAudioBytes());
+      }
+      if (other.recordingType_ != 0) {
+        setRecordingTypeValue(other.getRecordingTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -10332,6 +10376,11 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
               bitField0_ |= 0x00004000;
               break;
             } // case 128
+            case 136: {
+              recordingType_ = input.readEnum();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 136
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -12177,6 +12226,79 @@ com.tcn.cloud.api.wfo.vanalytics.v2.Call.AgentResponse defaultValue) {
     public Builder clearAudioBytes() {
       bitField0_ = (bitField0_ & ~0x00004000);
       audioBytes_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int recordingType_ = 0;
+    /**
+     * <pre>
+     * The recording type for this call.
+     * </pre>
+     *
+     * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+     * @return The enum numeric value on the wire for recordingType.
+     */
+    @java.lang.Override public int getRecordingTypeValue() {
+      return recordingType_;
+    }
+    /**
+     * <pre>
+     * The recording type for this call.
+     * </pre>
+     *
+     * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+     * @param value The enum numeric value on the wire for recordingType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRecordingTypeValue(int value) {
+      recordingType_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The recording type for this call.
+     * </pre>
+     *
+     * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+     * @return The recordingType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.RecordingType getRecordingType() {
+      com.tcn.cloud.api.api.commons.RecordingType result = com.tcn.cloud.api.api.commons.RecordingType.forNumber(recordingType_);
+      return result == null ? com.tcn.cloud.api.api.commons.RecordingType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The recording type for this call.
+     * </pre>
+     *
+     * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+     * @param value The recordingType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRecordingType(com.tcn.cloud.api.api.commons.RecordingType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00008000;
+      recordingType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The recording type for this call.
+     * </pre>
+     *
+     * <code>.api.commons.RecordingType recording_type = 17 [json_name = "recordingType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRecordingType() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      recordingType_ = 0;
       onChanged();
       return this;
     }
