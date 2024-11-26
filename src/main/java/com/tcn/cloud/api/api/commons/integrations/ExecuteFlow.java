@@ -166,6 +166,7 @@ private static final long serialVersionUID = 0L;
     JOURNEY_LATEST(2401),
     JOURNEY_LIST(2402),
     JOURNEY_UPDATE(2403),
+    JOURNEY_SEARCH(2404),
     ATHENAHEALTH_GET_PATIENTS(2501),
     ATHENAHEALTH_GET_PATIENTS_WITH_ID(2502),
     ATHENAHEALTH_CC_PAYMENT(2503),
@@ -473,6 +474,7 @@ private static final long serialVersionUID = 0L;
         case 2401: return JOURNEY_LATEST;
         case 2402: return JOURNEY_LIST;
         case 2403: return JOURNEY_UPDATE;
+        case 2404: return JOURNEY_SEARCH;
         case 2501: return ATHENAHEALTH_GET_PATIENTS;
         case 2502: return ATHENAHEALTH_GET_PATIENTS_WITH_ID;
         case 2503: return ATHENAHEALTH_CC_PAYMENT;
@@ -4235,6 +4237,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+  }
+
+  public static final int JOURNEY_SEARCH_FIELD_NUMBER = 2404;
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+   * @return Whether the journeySearch field is set.
+   */
+  @java.lang.Override
+  public boolean hasJourneySearch() {
+    return valueCase_ == 2404;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+   * @return The journeySearch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch getJourneySearch() {
+    if (valueCase_ == 2404) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearchOrBuilder getJourneySearchOrBuilder() {
+    if (valueCase_ == 2404) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
   }
 
   public static final int ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER = 2501;
@@ -8798,7 +8831,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1131
+   *     See api/commons/integrations/integrations.proto;l=1133
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8808,7 +8841,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1131
+   *     See api/commons/integrations/integrations.proto;l=1133
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8833,7 +8866,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1132
+   *     See api/commons/integrations/integrations.proto;l=1134
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8843,7 +8876,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1132
+   *     See api/commons/integrations/integrations.proto;l=1134
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8868,7 +8901,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1133
+   *     See api/commons/integrations/integrations.proto;l=1135
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8878,7 +8911,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1133
+   *     See api/commons/integrations/integrations.proto;l=1135
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8903,7 +8936,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1134
+   *     See api/commons/integrations/integrations.proto;l=1136
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8913,7 +8946,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1134
+   *     See api/commons/integrations/integrations.proto;l=1136
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8938,7 +8971,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1135
+   *     See api/commons/integrations/integrations.proto;l=1137
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8948,7 +8981,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1135
+   *     See api/commons/integrations/integrations.proto;l=1137
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -8973,7 +9006,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1136
+   *     See api/commons/integrations/integrations.proto;l=1138
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -8983,7 +9016,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1136
+   *     See api/commons/integrations/integrations.proto;l=1138
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9008,7 +9041,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1137
+   *     See api/commons/integrations/integrations.proto;l=1139
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9018,7 +9051,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1137
+   *     See api/commons/integrations/integrations.proto;l=1139
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10080,6 +10113,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2403) {
       output.writeMessage(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
     }
+    if (valueCase_ == 2404) {
+      output.writeMessage(2404, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_);
+    }
     if (valueCase_ == 2501) {
       output.writeMessage(2501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients) value_);
     }
@@ -11075,6 +11111,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2403) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
+    }
+    if (valueCase_ == 2404) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2404, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_);
     }
     if (valueCase_ == 2501) {
       size += com.google.protobuf.CodedOutputStream
@@ -12255,6 +12295,10 @@ private static final long serialVersionUID = 0L;
         if (!getJourneyUpdate()
             .equals(other.getJourneyUpdate())) return false;
         break;
+      case 2404:
+        if (!getJourneySearch()
+            .equals(other.getJourneySearch())) return false;
+        break;
       case 2501:
         if (!getAthenahealthGetPatients()
             .equals(other.getAthenahealthGetPatients())) return false;
@@ -13431,6 +13475,10 @@ private static final long serialVersionUID = 0L;
       case 2403:
         hash = (37 * hash) + JOURNEY_UPDATE_FIELD_NUMBER;
         hash = (53 * hash) + getJourneyUpdate().hashCode();
+        break;
+      case 2404:
+        hash = (37 * hash) + JOURNEY_SEARCH_FIELD_NUMBER;
+        hash = (53 * hash) + getJourneySearch().hashCode();
         break;
       case 2501:
         hash = (37 * hash) + ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER;
@@ -14629,6 +14677,9 @@ private static final long serialVersionUID = 0L;
       if (journeyUpdateBuilder_ != null) {
         journeyUpdateBuilder_.clear();
       }
+      if (journeySearchBuilder_ != null) {
+        journeySearchBuilder_.clear();
+      }
       if (athenahealthGetPatientsBuilder_ != null) {
         athenahealthGetPatientsBuilder_.clear();
       }
@@ -15701,6 +15752,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2403 &&
           journeyUpdateBuilder_ != null) {
         result.value_ = journeyUpdateBuilder_.build();
+      }
+      if (valueCase_ == 2404 &&
+          journeySearchBuilder_ != null) {
+        result.value_ = journeySearchBuilder_.build();
       }
       if (valueCase_ == 2501 &&
           athenahealthGetPatientsBuilder_ != null) {
@@ -16912,6 +16967,10 @@ private static final long serialVersionUID = 0L;
         }
         case JOURNEY_UPDATE: {
           mergeJourneyUpdate(other.getJourneyUpdate());
+          break;
+        }
+        case JOURNEY_SEARCH: {
+          mergeJourneySearch(other.getJourneySearch());
           break;
         }
         case ATHENAHEALTH_GET_PATIENTS: {
@@ -18451,6 +18510,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2403;
               break;
             } // case 19226
+            case 19234: {
+              input.readMessage(
+                  getJourneySearchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2404;
+              break;
+            } // case 19234
             case 20010: {
               input.readMessage(
                   getAthenahealthGetPatientsFieldBuilder().getBuilder(),
@@ -35982,6 +36048,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 2403;
       onChanged();
       return journeyUpdateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearchOrBuilder> journeySearchBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     * @return Whether the journeySearch field is set.
+     */
+    @java.lang.Override
+    public boolean hasJourneySearch() {
+      return valueCase_ == 2404;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     * @return The journeySearch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch getJourneySearch() {
+      if (journeySearchBuilder_ == null) {
+        if (valueCase_ == 2404) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2404) {
+          return journeySearchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    public Builder setJourneySearch(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch value) {
+      if (journeySearchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        journeySearchBuilder_.setMessage(value);
+      }
+      valueCase_ = 2404;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    public Builder setJourneySearch(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.Builder builderForValue) {
+      if (journeySearchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        journeySearchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2404;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    public Builder mergeJourneySearch(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch value) {
+      if (journeySearchBuilder_ == null) {
+        if (valueCase_ == 2404 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2404) {
+          journeySearchBuilder_.mergeFrom(value);
+        } else {
+          journeySearchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2404;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    public Builder clearJourneySearch() {
+      if (journeySearchBuilder_ == null) {
+        if (valueCase_ == 2404) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2404) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        journeySearchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.Builder getJourneySearchBuilder() {
+      return getJourneySearchFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearchOrBuilder getJourneySearchOrBuilder() {
+      if ((valueCase_ == 2404) && (journeySearchBuilder_ != null)) {
+        return journeySearchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2404) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneySearch journey_search = 2404 [json_name = "journeySearch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearchOrBuilder> 
+        getJourneySearchFieldBuilder() {
+      if (journeySearchBuilder_ == null) {
+        if (!(valueCase_ == 2404)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.getDefaultInstance();
+        }
+        journeySearchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearchOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneySearch) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2404;
+      onChanged();
+      return journeySearchBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -56863,7 +57071,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1131
+     *     See api/commons/integrations/integrations.proto;l=1133
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -56873,7 +57081,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1131
+     *     See api/commons/integrations/integrations.proto;l=1133
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -57009,7 +57217,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1132
+     *     See api/commons/integrations/integrations.proto;l=1134
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -57019,7 +57227,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1132
+     *     See api/commons/integrations/integrations.proto;l=1134
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -57155,7 +57363,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1133
+     *     See api/commons/integrations/integrations.proto;l=1135
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -57165,7 +57373,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1133
+     *     See api/commons/integrations/integrations.proto;l=1135
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -57301,7 +57509,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1134
+     *     See api/commons/integrations/integrations.proto;l=1136
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -57311,7 +57519,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1134
+     *     See api/commons/integrations/integrations.proto;l=1136
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -57447,7 +57655,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1135
+     *     See api/commons/integrations/integrations.proto;l=1137
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -57457,7 +57665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1135
+     *     See api/commons/integrations/integrations.proto;l=1137
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -57593,7 +57801,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1136
+     *     See api/commons/integrations/integrations.proto;l=1138
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -57603,7 +57811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1136
+     *     See api/commons/integrations/integrations.proto;l=1138
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -57739,7 +57947,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1137
+     *     See api/commons/integrations/integrations.proto;l=1139
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -57749,7 +57957,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1137
+     *     See api/commons/integrations/integrations.proto;l=1139
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
