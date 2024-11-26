@@ -93,43 +93,43 @@ public interface GetPerformanceMetricsReqOrBuilder extends
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> 
       getMetricParamsList();
   /**
    * <pre>
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index);
   /**
    * <pre>
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
-  int getMetricParamsCount();
+  @java.lang.Deprecated int getMetricParamsCount();
   /**
    * <pre>
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
       getMetricParamsOrBuilderList();
   /**
    * <pre>
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
       int index);
 
   /**
@@ -154,4 +154,24 @@ public interface GetPerformanceMetricsReqOrBuilder extends
    * @return The resyncCallStats.
    */
   boolean getResyncCallStats();
+
+  /**
+   * <pre>
+   * Target service level percentage to perform calculations around [0 to 100].
+   * </pre>
+   *
+   * <code>int32 service_level_target_percentage = 7 [json_name = "serviceLevelTargetPercentage"];</code>
+   * @return The serviceLevelTargetPercentage.
+   */
+  int getServiceLevelTargetPercentage();
+
+  /**
+   * <pre>
+   * Target service level duration to perform calculations around.
+   * </pre>
+   *
+   * <code>int32 service_level_target_duration_seconds = 8 [json_name = "serviceLevelTargetDurationSeconds"];</code>
+   * @return The serviceLevelTargetDurationSeconds.
+   */
+  int getServiceLevelTargetDurationSeconds();
 }

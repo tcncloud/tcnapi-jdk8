@@ -54,6 +54,7 @@ public interface GetPerformanceMetricsResOrBuilder extends
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -63,6 +64,7 @@ public interface GetPerformanceMetricsResOrBuilder extends
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -71,6 +73,7 @@ public interface GetPerformanceMetricsResOrBuilder extends
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -79,6 +82,7 @@ public interface GetPerformanceMetricsResOrBuilder extends
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -88,10 +92,82 @@ public interface GetPerformanceMetricsResOrBuilder extends
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   * @return Whether the performanceMetricsV3 field is set.
+   */
+  boolean hasPerformanceMetricsV3();
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   * @return The performanceMetricsV3.
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 getPerformanceMetricsV3();
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder getPerformanceMetricsV3OrBuilder();
+
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  int getDiagnosticsCount();
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
       int index);
 }

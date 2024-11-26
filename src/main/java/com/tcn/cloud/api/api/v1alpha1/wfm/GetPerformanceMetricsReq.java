@@ -165,10 +165,10 @@ private static final long serialVersionUID = 0L;
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> getMetricParamsList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> getMetricParamsList() {
     return metricParams_;
   }
   /**
@@ -176,10 +176,10 @@ private static final long serialVersionUID = 0L;
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
       getMetricParamsOrBuilderList() {
     return metricParams_;
   }
@@ -188,10 +188,10 @@ private static final long serialVersionUID = 0L;
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getMetricParamsCount() {
+  @java.lang.Deprecated public int getMetricParamsCount() {
     return metricParams_.size();
   }
   /**
@@ -199,10 +199,10 @@ private static final long serialVersionUID = 0L;
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index) {
     return metricParams_.get(index);
   }
   /**
@@ -210,10 +210,10 @@ private static final long serialVersionUID = 0L;
    * Parameters to get metrics for.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
       int index) {
     return metricParams_.get(index);
   }
@@ -251,6 +251,36 @@ private static final long serialVersionUID = 0L;
     return resyncCallStats_;
   }
 
+  public static final int SERVICE_LEVEL_TARGET_PERCENTAGE_FIELD_NUMBER = 7;
+  private int serviceLevelTargetPercentage_ = 0;
+  /**
+   * <pre>
+   * Target service level percentage to perform calculations around [0 to 100].
+   * </pre>
+   *
+   * <code>int32 service_level_target_percentage = 7 [json_name = "serviceLevelTargetPercentage"];</code>
+   * @return The serviceLevelTargetPercentage.
+   */
+  @java.lang.Override
+  public int getServiceLevelTargetPercentage() {
+    return serviceLevelTargetPercentage_;
+  }
+
+  public static final int SERVICE_LEVEL_TARGET_DURATION_SECONDS_FIELD_NUMBER = 8;
+  private int serviceLevelTargetDurationSeconds_ = 0;
+  /**
+   * <pre>
+   * Target service level duration to perform calculations around.
+   * </pre>
+   *
+   * <code>int32 service_level_target_duration_seconds = 8 [json_name = "serviceLevelTargetDurationSeconds"];</code>
+   * @return The serviceLevelTargetDurationSeconds.
+   */
+  @java.lang.Override
+  public int getServiceLevelTargetDurationSeconds() {
+    return serviceLevelTargetDurationSeconds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -282,6 +312,12 @@ private static final long serialVersionUID = 0L;
     }
     if (resyncCallStats_ != false) {
       output.writeBool(6, resyncCallStats_);
+    }
+    if (serviceLevelTargetPercentage_ != 0) {
+      output.writeInt32(7, serviceLevelTargetPercentage_);
+    }
+    if (serviceLevelTargetDurationSeconds_ != 0) {
+      output.writeInt32(8, serviceLevelTargetDurationSeconds_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -315,6 +351,14 @@ private static final long serialVersionUID = 0L;
     if (resyncCallStats_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, resyncCallStats_);
+    }
+    if (serviceLevelTargetPercentage_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, serviceLevelTargetPercentage_);
+    }
+    if (serviceLevelTargetDurationSeconds_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(8, serviceLevelTargetDurationSeconds_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -352,6 +396,10 @@ private static final long serialVersionUID = 0L;
         != other.getIntervalWidthInMinutes()) return false;
     if (getResyncCallStats()
         != other.getResyncCallStats()) return false;
+    if (getServiceLevelTargetPercentage()
+        != other.getServiceLevelTargetPercentage()) return false;
+    if (getServiceLevelTargetDurationSeconds()
+        != other.getServiceLevelTargetDurationSeconds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -384,6 +432,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RESYNC_CALL_STATS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getResyncCallStats());
+    hash = (37 * hash) + SERVICE_LEVEL_TARGET_PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceLevelTargetPercentage();
+    hash = (37 * hash) + SERVICE_LEVEL_TARGET_DURATION_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceLevelTargetDurationSeconds();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -543,6 +595,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       intervalWidthInMinutes_ = 0;
       resyncCallStats_ = false;
+      serviceLevelTargetPercentage_ = 0;
+      serviceLevelTargetDurationSeconds_ = 0;
       return this;
     }
 
@@ -609,6 +663,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.resyncCallStats_ = resyncCallStats_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.serviceLevelTargetPercentage_ = serviceLevelTargetPercentage_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSeconds_;
       }
     }
 
@@ -697,6 +757,12 @@ private static final long serialVersionUID = 0L;
       if (other.getResyncCallStats() != false) {
         setResyncCallStats(other.getResyncCallStats());
       }
+      if (other.getServiceLevelTargetPercentage() != 0) {
+        setServiceLevelTargetPercentage(other.getServiceLevelTargetPercentage());
+      }
+      if (other.getServiceLevelTargetDurationSeconds() != 0) {
+        setServiceLevelTargetDurationSeconds(other.getServiceLevelTargetDurationSeconds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -767,6 +833,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 56: {
+              serviceLevelTargetPercentage_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              serviceLevelTargetDurationSeconds_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1266,9 +1342,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> getMetricParamsList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> getMetricParamsList() {
       if (metricParamsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(metricParams_);
       } else {
@@ -1280,9 +1356,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public int getMetricParamsCount() {
+    @java.lang.Deprecated public int getMetricParamsCount() {
       if (metricParamsBuilder_ == null) {
         return metricParams_.size();
       } else {
@@ -1294,9 +1370,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter getMetricParams(int index) {
       if (metricParamsBuilder_ == null) {
         return metricParams_.get(index);
       } else {
@@ -1308,9 +1384,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder setMetricParams(
+    @java.lang.Deprecated public Builder setMetricParams(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter value) {
       if (metricParamsBuilder_ == null) {
         if (value == null) {
@@ -1329,9 +1405,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder setMetricParams(
+    @java.lang.Deprecated public Builder setMetricParams(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder builderForValue) {
       if (metricParamsBuilder_ == null) {
         ensureMetricParamsIsMutable();
@@ -1347,9 +1423,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder addMetricParams(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter value) {
+    @java.lang.Deprecated public Builder addMetricParams(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter value) {
       if (metricParamsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1367,9 +1443,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder addMetricParams(
+    @java.lang.Deprecated public Builder addMetricParams(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter value) {
       if (metricParamsBuilder_ == null) {
         if (value == null) {
@@ -1388,9 +1464,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder addMetricParams(
+    @java.lang.Deprecated public Builder addMetricParams(
         com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder builderForValue) {
       if (metricParamsBuilder_ == null) {
         ensureMetricParamsIsMutable();
@@ -1406,9 +1482,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder addMetricParams(
+    @java.lang.Deprecated public Builder addMetricParams(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder builderForValue) {
       if (metricParamsBuilder_ == null) {
         ensureMetricParamsIsMutable();
@@ -1424,9 +1500,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder addAllMetricParams(
+    @java.lang.Deprecated public Builder addAllMetricParams(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> values) {
       if (metricParamsBuilder_ == null) {
         ensureMetricParamsIsMutable();
@@ -1443,9 +1519,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder clearMetricParams() {
+    @java.lang.Deprecated public Builder clearMetricParams() {
       if (metricParamsBuilder_ == null) {
         metricParams_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -1460,9 +1536,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public Builder removeMetricParams(int index) {
+    @java.lang.Deprecated public Builder removeMetricParams(int index) {
       if (metricParamsBuilder_ == null) {
         ensureMetricParamsIsMutable();
         metricParams_.remove(index);
@@ -1477,9 +1553,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder getMetricParamsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder getMetricParamsBuilder(
         int index) {
       return getMetricParamsFieldBuilder().getBuilder(index);
     }
@@ -1488,9 +1564,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder getMetricParamsOrBuilder(
         int index) {
       if (metricParamsBuilder_ == null) {
         return metricParams_.get(index);  } else {
@@ -1502,9 +1578,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder> 
          getMetricParamsOrBuilderList() {
       if (metricParamsBuilder_ != null) {
         return metricParamsBuilder_.getMessageOrBuilderList();
@@ -1517,9 +1593,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder addMetricParamsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder addMetricParamsBuilder() {
       return getMetricParamsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.getDefaultInstance());
     }
@@ -1528,9 +1604,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder addMetricParamsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder addMetricParamsBuilder(
         int index) {
       return getMetricParamsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.getDefaultInstance());
@@ -1540,9 +1616,9 @@ private static final long serialVersionUID = 0L;
      * Parameters to get metrics for.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricParameter metric_params = 4 [json_name = "metricParams", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder> 
          getMetricParamsBuilderList() {
       return getMetricParamsFieldBuilder().getBuilderList();
     }
@@ -1654,6 +1730,94 @@ private static final long serialVersionUID = 0L;
     public Builder clearResyncCallStats() {
       bitField0_ = (bitField0_ & ~0x00000020);
       resyncCallStats_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int serviceLevelTargetPercentage_ ;
+    /**
+     * <pre>
+     * Target service level percentage to perform calculations around [0 to 100].
+     * </pre>
+     *
+     * <code>int32 service_level_target_percentage = 7 [json_name = "serviceLevelTargetPercentage"];</code>
+     * @return The serviceLevelTargetPercentage.
+     */
+    @java.lang.Override
+    public int getServiceLevelTargetPercentage() {
+      return serviceLevelTargetPercentage_;
+    }
+    /**
+     * <pre>
+     * Target service level percentage to perform calculations around [0 to 100].
+     * </pre>
+     *
+     * <code>int32 service_level_target_percentage = 7 [json_name = "serviceLevelTargetPercentage"];</code>
+     * @param value The serviceLevelTargetPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceLevelTargetPercentage(int value) {
+
+      serviceLevelTargetPercentage_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Target service level percentage to perform calculations around [0 to 100].
+     * </pre>
+     *
+     * <code>int32 service_level_target_percentage = 7 [json_name = "serviceLevelTargetPercentage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceLevelTargetPercentage() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      serviceLevelTargetPercentage_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int serviceLevelTargetDurationSeconds_ ;
+    /**
+     * <pre>
+     * Target service level duration to perform calculations around.
+     * </pre>
+     *
+     * <code>int32 service_level_target_duration_seconds = 8 [json_name = "serviceLevelTargetDurationSeconds"];</code>
+     * @return The serviceLevelTargetDurationSeconds.
+     */
+    @java.lang.Override
+    public int getServiceLevelTargetDurationSeconds() {
+      return serviceLevelTargetDurationSeconds_;
+    }
+    /**
+     * <pre>
+     * Target service level duration to perform calculations around.
+     * </pre>
+     *
+     * <code>int32 service_level_target_duration_seconds = 8 [json_name = "serviceLevelTargetDurationSeconds"];</code>
+     * @param value The serviceLevelTargetDurationSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceLevelTargetDurationSeconds(int value) {
+
+      serviceLevelTargetDurationSeconds_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Target service level duration to perform calculations around.
+     * </pre>
+     *
+     * <code>int32 service_level_target_duration_seconds = 8 [json_name = "serviceLevelTargetDurationSeconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceLevelTargetDurationSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      serviceLevelTargetDurationSeconds_ = 0;
       onChanged();
       return this;
     }
