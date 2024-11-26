@@ -65,4 +65,37 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue);
    */
   com.tcn.cloud.api.api.commons.AdherenceAgentStates getAgentStatesOrThrow(
       long key);
+
+  /**
+   * <pre>
+   * Lastest datetime found amongst all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
+   * @return Whether the latestAgentStateDatetime field is set.
+   */
+  boolean hasLatestAgentStateDatetime();
+  /**
+   * <pre>
+   * Lastest datetime found amongst all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
+   * @return The latestAgentStateDatetime.
+   */
+  com.google.protobuf.Timestamp getLatestAgentStateDatetime();
+  /**
+   * <pre>
+   * Lastest datetime found amongst all the returned states.
+   * If no agent states are returned, this date will be set to the &#64;start_datetime from the request.
+   * This value should be used as input to this function whenever the next set of agent states is desired.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp latest_agent_state_datetime = 2 [json_name = "latestAgentStateDatetime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLatestAgentStateDatetimeOrBuilder();
 }

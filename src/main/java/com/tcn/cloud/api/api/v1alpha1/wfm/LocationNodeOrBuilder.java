@@ -120,7 +120,7 @@ public interface LocationNodeOrBuilder extends
    *
    * <code>bool shrinkage_is_percentage = 7 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.LocationNode.shrinkage_is_percentage is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5260
+   *     See api/v1alpha1/wfm/wfm.proto;l=5300
    * @return The shrinkageIsPercentage.
    */
   @java.lang.Deprecated boolean getShrinkageIsPercentage();
@@ -132,7 +132,7 @@ public interface LocationNodeOrBuilder extends
    *
    * <code>int32 shrinkage_value = 8 [json_name = "shrinkageValue", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.LocationNode.shrinkage_value is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5262
+   *     See api/v1alpha1/wfm/wfm.proto;l=5302
    * @return The shrinkageValue.
    */
   @java.lang.Deprecated int getShrinkageValue();
@@ -419,7 +419,7 @@ public interface LocationNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5279
+   *     See api/v1alpha1/wfm/wfm.proto;l=5319
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -431,7 +431,7 @@ public interface LocationNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.LocationNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5279
+   *     See api/v1alpha1/wfm/wfm.proto;l=5319
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();

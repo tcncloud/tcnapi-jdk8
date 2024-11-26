@@ -2064,6 +2064,68 @@ public final class WFMGrpc {
     return getGetOnCallSchedulingActivityMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> getCreateSchedulingActivityPauseCodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSchedulingActivityPauseCodes",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> getCreateSchedulingActivityPauseCodesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> getCreateSchedulingActivityPauseCodesMethod;
+    if ((getCreateSchedulingActivityPauseCodesMethod = WFMGrpc.getCreateSchedulingActivityPauseCodesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateSchedulingActivityPauseCodesMethod = WFMGrpc.getCreateSchedulingActivityPauseCodesMethod) == null) {
+          WFMGrpc.getCreateSchedulingActivityPauseCodesMethod = getCreateSchedulingActivityPauseCodesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSchedulingActivityPauseCodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateSchedulingActivityPauseCodes"))
+              .build();
+        }
+      }
+    }
+    return getCreateSchedulingActivityPauseCodesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> getDeleteSchedulingActivityPauseCodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSchedulingActivityPauseCodes",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> getDeleteSchedulingActivityPauseCodesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> getDeleteSchedulingActivityPauseCodesMethod;
+    if ((getDeleteSchedulingActivityPauseCodesMethod = WFMGrpc.getDeleteSchedulingActivityPauseCodesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteSchedulingActivityPauseCodesMethod = WFMGrpc.getDeleteSchedulingActivityPauseCodesMethod) == null) {
+          WFMGrpc.getDeleteSchedulingActivityPauseCodesMethod = getDeleteSchedulingActivityPauseCodesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSchedulingActivityPauseCodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteSchedulingActivityPauseCodes"))
+              .build();
+        }
+      }
+    }
+    return getDeleteSchedulingActivityPauseCodesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListPatternsForSchedulingActivityClassificationsRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListPatternsForSchedulingActivityClassificationsResponse> getListPatternsForSchedulingActivityClassificationsMethod;
 
@@ -7717,6 +7779,39 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates the given &#64;pause_codes for the given &#64;scheduling_activity_sid.
+     * If a pause code already exists for that scheduling activity a new one won't be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when creating the pause codes.
+     * </pre>
+     */
+    default void createSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSchedulingActivityPauseCodesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the given &#64;pause_codes from the given &#64;scheduling_activity_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when deleting the pause codes.
+     * </pre>
+     */
+    default void deleteSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingActivityPauseCodesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity and &#64;scheduling_activity_classifications for the org sending the request.
      * Required permissions:
      *   NONE
@@ -9590,6 +9685,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -11123,6 +11219,41 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOnCallSchedulingActivityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;pause_codes for the given &#64;scheduling_activity_sid.
+     * If a pause code already exists for that scheduling activity a new one won't be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when creating the pause codes.
+     * </pre>
+     */
+    public void createSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSchedulingActivityPauseCodesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the given &#64;pause_codes from the given &#64;scheduling_activity_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when deleting the pause codes.
+     * </pre>
+     */
+    public void deleteSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSchedulingActivityPauseCodesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13118,6 +13249,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -14607,6 +14739,39 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityRes getOnCallSchedulingActivity(com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOnCallSchedulingActivityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;pause_codes for the given &#64;scheduling_activity_sid.
+     * If a pause code already exists for that scheduling activity a new one won't be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when creating the pause codes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse createSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSchedulingActivityPauseCodesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the given &#64;pause_codes from the given &#64;scheduling_activity_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when deleting the pause codes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse deleteSchedulingActivityPauseCodes(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSchedulingActivityPauseCodesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16484,6 +16649,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -17901,6 +18067,41 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOnCallSchedulingActivityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;pause_codes for the given &#64;scheduling_activity_sid.
+     * If a pause code already exists for that scheduling activity a new one won't be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when creating the pause codes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse> createSchedulingActivityPauseCodes(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSchedulingActivityPauseCodesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the given &#64;pause_codes from the given &#64;scheduling_activity_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the paremeters in the request are invalid.
+     *   - grpc.NotFound: the scheduling activity for the org is not found.
+     *   - grpc.Internal: error occurs when deleting the pause codes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse> deleteSchedulingActivityPauseCodes(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSchedulingActivityPauseCodesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -19896,6 +20097,7 @@ public final class WFMGrpc {
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
      * If zero states are found for a given agent, it will not be included in the resulting map.
+     * It also returns the latest datetime amongst all the states returned.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -20416,154 +20618,156 @@ public final class WFMGrpc {
   private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 63;
   private static final int METHODID_LIST_SCHEDULING_ACTIVITIES = 64;
   private static final int METHODID_GET_ON_CALL_SCHEDULING_ACTIVITY = 65;
-  private static final int METHODID_LIST_PATTERNS_FOR_SCHEDULING_ACTIVITY_CLASSIFICATIONS = 66;
-  private static final int METHODID_GET_TIME_OFF_SCHEDULING_ACTIVITY = 67;
-  private static final int METHODID_CREATE_AGENT_GROUP = 68;
-  private static final int METHODID_LIST_AGENT_SCHEDULE_GROUPS = 69;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 70;
-  private static final int METHODID_CREATE_UNASSIGNED_WFMAGENT = 71;
-  private static final int METHODID_UPDATE_WFMAGENT = 72;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 73;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 74;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 75;
-  private static final int METHODID_LIST_WFMAGENT_SIDS = 76;
-  private static final int METHODID_LIST_UNASSIGNED_WFMAGENTS = 77;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 78;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 79;
-  private static final int METHODID_COPY_WFMAGENT_MEMBERSHIPS = 80;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 81;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 82;
-  private static final int METHODID_REMOVE_AGENT_FROM_FUTURE_SHIFTS = 83;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 84;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 85;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 86;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 87;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 88;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 89;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 90;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 91;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 92;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 93;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 94;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 95;
-  private static final int METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS = 96;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 97;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 98;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 99;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 100;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 101;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 102;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 103;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 104;
-  private static final int METHODID_COPY_SCENARIO = 105;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 106;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 107;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 108;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 109;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 110;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 111;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 112;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 113;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 114;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 115;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 116;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 117;
-  private static final int METHODID_POLL_BUILD_IN_PROGRESS = 118;
-  private static final int METHODID_CANCEL_BUILD_IN_PROGRESS = 119;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 120;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 121;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 122;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 123;
-  private static final int METHODID_CLEAR_SCHEDULE = 124;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 125;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 126;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 127;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 128;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 129;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 130;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 131;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 132;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 133;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 134;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 135;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 136;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 137;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 138;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 139;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 140;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 141;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 142;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 143;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 144;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 145;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 146;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 147;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 148;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 149;
-  private static final int METHODID_GET_TOUR_PATTERN = 150;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 151;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 152;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 153;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 154;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 155;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 156;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 157;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 158;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 159;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 160;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 161;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 162;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 163;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 164;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 165;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 166;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 167;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 168;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 169;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 170;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 171;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 172;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 173;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 174;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 175;
-  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 176;
-  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 177;
-  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 178;
-  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 179;
-  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 180;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 181;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 182;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 183;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 184;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 185;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 186;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 187;
-  private static final int METHODID_CREATE_RGBA_COLOR = 188;
-  private static final int METHODID_LIST_RGBA_COLORS = 189;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 190;
-  private static final int METHODID_DELETE_RGBA_COLOR = 191;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 192;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 193;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 194;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 195;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 196;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 197;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 198;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 199;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 200;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 201;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 202;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 203;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 204;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 205;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 206;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 207;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 208;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 209;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 210;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 211;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 212;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 213;
+  private static final int METHODID_CREATE_SCHEDULING_ACTIVITY_PAUSE_CODES = 66;
+  private static final int METHODID_DELETE_SCHEDULING_ACTIVITY_PAUSE_CODES = 67;
+  private static final int METHODID_LIST_PATTERNS_FOR_SCHEDULING_ACTIVITY_CLASSIFICATIONS = 68;
+  private static final int METHODID_GET_TIME_OFF_SCHEDULING_ACTIVITY = 69;
+  private static final int METHODID_CREATE_AGENT_GROUP = 70;
+  private static final int METHODID_LIST_AGENT_SCHEDULE_GROUPS = 71;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 72;
+  private static final int METHODID_CREATE_UNASSIGNED_WFMAGENT = 73;
+  private static final int METHODID_UPDATE_WFMAGENT = 74;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 75;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 76;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 77;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 78;
+  private static final int METHODID_LIST_UNASSIGNED_WFMAGENTS = 79;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 80;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 81;
+  private static final int METHODID_COPY_WFMAGENT_MEMBERSHIPS = 82;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 83;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 84;
+  private static final int METHODID_REMOVE_AGENT_FROM_FUTURE_SHIFTS = 85;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 86;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 87;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 88;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 89;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 90;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 91;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 92;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 93;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 94;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 95;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 96;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 97;
+  private static final int METHODID_LIST_OPEN_DATE_RANGES_FOR_NODE_OPEN_TIMES_BITMAPS = 98;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 99;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 100;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 101;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 102;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 103;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 104;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 105;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 106;
+  private static final int METHODID_COPY_SCENARIO = 107;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 108;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 109;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 110;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 111;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 112;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 113;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 114;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 115;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 116;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 117;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 118;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 119;
+  private static final int METHODID_POLL_BUILD_IN_PROGRESS = 120;
+  private static final int METHODID_CANCEL_BUILD_IN_PROGRESS = 121;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 122;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 123;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 124;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 125;
+  private static final int METHODID_CLEAR_SCHEDULE = 126;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 127;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 128;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 129;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 130;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 131;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 132;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 133;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 134;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 135;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 136;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 137;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 138;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 139;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 140;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 141;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 142;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 143;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 144;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 145;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 146;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 147;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 148;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 149;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 150;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 151;
+  private static final int METHODID_GET_TOUR_PATTERN = 152;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 153;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 154;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 155;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 156;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 157;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 158;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 159;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 160;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 161;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 162;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 163;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 164;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 165;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 166;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 167;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 168;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 169;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 170;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 171;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 172;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 173;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 174;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 175;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 176;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 177;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 178;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 179;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 180;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 181;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 182;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 183;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 184;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 185;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 186;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 187;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 188;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 189;
+  private static final int METHODID_CREATE_RGBA_COLOR = 190;
+  private static final int METHODID_LIST_RGBA_COLORS = 191;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 192;
+  private static final int METHODID_DELETE_RGBA_COLOR = 193;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 194;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 195;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 196;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 197;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 198;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 199;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 200;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 201;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 202;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 203;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 204;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 205;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 206;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 207;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 208;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 209;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 210;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 211;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 212;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 213;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 214;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 215;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -20845,6 +21049,14 @@ public final class WFMGrpc {
         case METHODID_GET_ON_CALL_SCHEDULING_ACTIVITY:
           serviceImpl.getOnCallSchedulingActivity((com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityRes>) responseObserver);
+          break;
+        case METHODID_CREATE_SCHEDULING_ACTIVITY_PAUSE_CODES:
+          serviceImpl.createSchedulingActivityPauseCodes((com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_SCHEDULING_ACTIVITY_PAUSE_CODES:
+          serviceImpl.deleteSchedulingActivityPauseCodes((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse>) responseObserver);
           break;
         case METHODID_LIST_PATTERNS_FOR_SCHEDULING_ACTIVITY_CLASSIFICATIONS:
           serviceImpl.listPatternsForSchedulingActivityClassifications((com.tcn.cloud.api.api.v1alpha1.wfm.ListPatternsForSchedulingActivityClassificationsRequest) request,
@@ -21918,6 +22130,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.GetOnCallSchedulingActivityRes>(
                 service, METHODID_GET_ON_CALL_SCHEDULING_ACTIVITY)))
+        .addMethod(
+          getCreateSchedulingActivityPauseCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSchedulingActivityPauseCodesResponse>(
+                service, METHODID_CREATE_SCHEDULING_ACTIVITY_PAUSE_CODES)))
+        .addMethod(
+          getDeleteSchedulingActivityPauseCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingActivityPauseCodesResponse>(
+                service, METHODID_DELETE_SCHEDULING_ACTIVITY_PAUSE_CODES)))
         .addMethod(
           getListPatternsForSchedulingActivityClassificationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -23068,6 +23294,8 @@ public final class WFMGrpc {
               .addMethod(getListCandidateSchedulingActivitiesMethod())
               .addMethod(getListSchedulingActivitiesMethod())
               .addMethod(getGetOnCallSchedulingActivityMethod())
+              .addMethod(getCreateSchedulingActivityPauseCodesMethod())
+              .addMethod(getDeleteSchedulingActivityPauseCodesMethod())
               .addMethod(getListPatternsForSchedulingActivityClassificationsMethod())
               .addMethod(getGetTimeOffSchedulingActivityMethod())
               .addMethod(getCreateAgentGroupMethod())
