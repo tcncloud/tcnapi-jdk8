@@ -92,6 +92,14 @@ public enum RealTimeManagementState
    * <code>LOGGED_OUT = 13;</code>
    */
   LOGGED_OUT(13),
+  /**
+   * <pre>
+   * The agent is in pause.
+   * </pre>
+   *
+   * <code>PAUSE = 14;</code>
+   */
+  PAUSE(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -175,6 +183,14 @@ public enum RealTimeManagementState
    * <code>LOGGED_OUT = 13;</code>
    */
   public static final int LOGGED_OUT_VALUE = 13;
+  /**
+   * <pre>
+   * The agent is in pause.
+   * </pre>
+   *
+   * <code>PAUSE = 14;</code>
+   */
+  public static final int PAUSE_VALUE = 14;
 
 
   public final int getNumber() {
@@ -211,6 +227,7 @@ public enum RealTimeManagementState
       case 10: return NOT_READY;
       case 11: return WRAP_UP;
       case 13: return LOGGED_OUT;
+      case 14: return PAUSE;
       default: return null;
     }
   }
