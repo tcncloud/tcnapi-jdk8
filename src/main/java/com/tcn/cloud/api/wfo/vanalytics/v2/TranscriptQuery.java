@@ -17771,6 +17771,21 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder getAudioBytesOrBuilder();
+
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     * @return Whether the recordingType field is set.
+     */
+    boolean hasRecordingType();
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     * @return The recordingType.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getRecordingType();
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder getRecordingTypeOrBuilder();
   }
   /**
    * <pre>
@@ -17809,6 +17824,819 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.Builder.class);
+    }
+
+    public interface RecordingTypeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<com.tcn.cloud.api.api.commons.RecordingType> getAnyList();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      com.tcn.cloud.api.api.commons.RecordingType getAny(int index);
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      java.util.List<java.lang.Integer>
+      getAnyValueList();
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      int getAnyValue(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on recording type.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType}
+     */
+    public static final class RecordingType extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)
+        RecordingTypeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RecordingType.newBuilder() to construct.
+      private RecordingType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RecordingType() {
+        any_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RecordingType();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_RecordingType_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_RecordingType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<java.lang.Integer> any_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.RecordingType> any_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, com.tcn.cloud.api.api.commons.RecordingType>() {
+                public com.tcn.cloud.api.api.commons.RecordingType convert(java.lang.Integer from) {
+                  com.tcn.cloud.api.api.commons.RecordingType result = com.tcn.cloud.api.api.commons.RecordingType.forNumber(from);
+                  return result == null ? com.tcn.cloud.api.api.commons.RecordingType.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<com.tcn.cloud.api.api.commons.RecordingType> getAnyList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.commons.RecordingType>(any_, any_converter_);
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      @java.lang.Override
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.RecordingType getAny(int index) {
+        return any_converter_.convert(any_.get(index));
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Integer>
+      getAnyValueList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all call specific transcript hits to have a recording type
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      @java.lang.Override
+      public int getAnyValue(int index) {
+        return any_.get(index);
+      }
+      private int anyMemoizedSerializedSize;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeEnumNoTag(any_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(any_.get(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType) obj;
+
+        if (!any_.equals(other.any_)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + any_.hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on recording type.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_RecordingType_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_RecordingType_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_RecordingType_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_ = java.util.Collections.unmodifiableList(any_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  ensureAnyIsMutable();
+                  any_.add(tmpRaw);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int oldLimit = input.pushLimit(length);
+                  while(input.getBytesUntilLimit() > 0) {
+                    int tmpRaw = input.readEnum();
+                    ensureAnyIsMutable();
+                    any_.add(tmpRaw);
+                  }
+                  input.popLimit(oldLimit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<java.lang.Integer> any_ =
+          java.util.Collections.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = new java.util.ArrayList<java.lang.Integer>(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<com.tcn.cloud.api.api.commons.RecordingType> getAnyList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.RecordingType>(any_, any_converter_);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public com.tcn.cloud.api.api.commons.RecordingType getAny(int index) {
+          return any_converter_.convert(any_.get(index));
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, com.tcn.cloud.api.api.commons.RecordingType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(com.tcn.cloud.api.api.commons.RecordingType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyIsMutable();
+          any_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RecordingType> values) {
+          ensureAnyIsMutable();
+          for (com.tcn.cloud.api.api.commons.RecordingType value : values) {
+            any_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @return A list containing the enum numeric values on the wire for any.
+         */
+        public java.util.List<java.lang.Integer>
+        getAnyValueList() {
+          return java.util.Collections.unmodifiableList(any_);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of any at the given index.
+         */
+        public int getAnyValue(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The enum numeric value on the wire for any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAnyValue(
+            int index, int value) {
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param value The enum numeric value on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyValue(int value) {
+          ensureAnyIsMutable();
+          any_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all call specific transcript hits to have a recording type
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated .api.commons.RecordingType any = 1 [json_name = "any"];</code>
+         * @param values The enum numeric values on the wire for any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAnyValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureAnyIsMutable();
+          for (int value : values) {
+            any_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RecordingType>
+          PARSER = new com.google.protobuf.AbstractParser<RecordingType>() {
+        @java.lang.Override
+        public RecordingType parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<RecordingType> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RecordingType> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public interface AudioBytesOrBuilder extends
@@ -46829,6 +47657,32 @@ private static final long serialVersionUID = 0L;
       return audioBytes_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance() : audioBytes_;
     }
 
+    public static final int RECORDING_TYPE_FIELD_NUMBER = 14;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recordingType_;
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     * @return Whether the recordingType field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecordingType() {
+      return recordingType_ != null;
+    }
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     * @return The recordingType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getRecordingType() {
+      return recordingType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance() : recordingType_;
+    }
+    /**
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder getRecordingTypeOrBuilder() {
+      return recordingType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance() : recordingType_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46878,6 +47732,9 @@ private static final long serialVersionUID = 0L;
       }
       if (audioBytes_ != null) {
         output.writeMessage(13, getAudioBytes());
+      }
+      if (recordingType_ != null) {
+        output.writeMessage(14, getRecordingType());
       }
       getUnknownFields().writeTo(output);
     }
@@ -46935,6 +47792,10 @@ private static final long serialVersionUID = 0L;
       if (audioBytes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getAudioBytes());
+      }
+      if (recordingType_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getRecordingType());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -47011,6 +47872,11 @@ private static final long serialVersionUID = 0L;
         if (!getAudioBytes()
             .equals(other.getAudioBytes())) return false;
       }
+      if (hasRecordingType() != other.hasRecordingType()) return false;
+      if (hasRecordingType()) {
+        if (!getRecordingType()
+            .equals(other.getRecordingType())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -47069,6 +47935,10 @@ private static final long serialVersionUID = 0L;
       if (hasAudioBytes()) {
         hash = (37 * hash) + AUDIO_BYTES_FIELD_NUMBER;
         hash = (53 * hash) + getAudioBytes().hashCode();
+      }
+      if (hasRecordingType()) {
+        hash = (37 * hash) + RECORDING_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordingType().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -47265,6 +48135,11 @@ private static final long serialVersionUID = 0L;
           audioBytesBuilder_.dispose();
           audioBytesBuilder_ = null;
         }
+        recordingType_ = null;
+        if (recordingTypeBuilder_ != null) {
+          recordingTypeBuilder_.dispose();
+          recordingTypeBuilder_ = null;
+        }
         return this;
       }
 
@@ -47358,6 +48233,11 @@ private static final long serialVersionUID = 0L;
               ? audioBytes_
               : audioBytesBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.recordingType_ = recordingTypeBuilder_ == null
+              ? recordingType_
+              : recordingTypeBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -47439,6 +48319,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasAudioBytes()) {
           mergeAudioBytes(other.getAudioBytes());
+        }
+        if (other.hasRecordingType()) {
+          mergeRecordingType(other.getRecordingType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -47550,6 +48433,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000800;
                 break;
               } // case 106
+              case 114: {
+                input.readMessage(
+                    getRecordingTypeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -49425,6 +50315,125 @@ private static final long serialVersionUID = 0L;
           audioBytes_ = null;
         }
         return audioBytesBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recordingType_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder> recordingTypeBuilder_;
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       * @return Whether the recordingType field is set.
+       */
+      public boolean hasRecordingType() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       * @return The recordingType.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType getRecordingType() {
+        if (recordingTypeBuilder_ == null) {
+          return recordingType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance() : recordingType_;
+        } else {
+          return recordingTypeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public Builder setRecordingType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType value) {
+        if (recordingTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recordingType_ = value;
+        } else {
+          recordingTypeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public Builder setRecordingType(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder builderForValue) {
+        if (recordingTypeBuilder_ == null) {
+          recordingType_ = builderForValue.build();
+        } else {
+          recordingTypeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public Builder mergeRecordingType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType value) {
+        if (recordingTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            recordingType_ != null &&
+            recordingType_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance()) {
+            getRecordingTypeBuilder().mergeFrom(value);
+          } else {
+            recordingType_ = value;
+          }
+        } else {
+          recordingTypeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public Builder clearRecordingType() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        recordingType_ = null;
+        if (recordingTypeBuilder_ != null) {
+          recordingTypeBuilder_.dispose();
+          recordingTypeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder getRecordingTypeBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getRecordingTypeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder getRecordingTypeOrBuilder() {
+        if (recordingTypeBuilder_ != null) {
+          return recordingTypeBuilder_.getMessageOrBuilder();
+        } else {
+          return recordingType_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.getDefaultInstance() : recordingType_;
+        }
+      }
+      /**
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType recording_type = 14 [json_name = "recordingType"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder> 
+          getRecordingTypeFieldBuilder() {
+        if (recordingTypeBuilder_ == null) {
+          recordingTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingType.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.RecordingTypeOrBuilder>(
+                  getRecordingType(),
+                  getParentForChildren(),
+                  isClean());
+          recordingType_ = null;
+        }
+        return recordingTypeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
