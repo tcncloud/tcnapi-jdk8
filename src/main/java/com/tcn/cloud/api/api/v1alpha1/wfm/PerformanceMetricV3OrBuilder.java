@@ -39,7 +39,24 @@ public interface PerformanceMetricV3OrBuilder extends
    * Performance Metrics sorted by skill collection over the measured datetime range.
    * </pre>
    *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> 
+      getMetricsBySkillCollectionList();
+  /**
+   * <pre>
+   * Performance Metrics sorted by skill collection over the measured datetime range.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getMetricsBySkillCollection(int index);
+  /**
+   * <pre>
+   * Performance Metrics sorted by skill collection over the measured datetime range.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
    */
   int getMetricsBySkillCollectionCount();
   /**
@@ -47,44 +64,17 @@ public interface PerformanceMetricV3OrBuilder extends
    * Performance Metrics sorted by skill collection over the measured datetime range.
    * </pre>
    *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
    */
-  boolean containsMetricsBySkillCollection(
-      long key);
-  /**
-   * Use {@link #getMetricsBySkillCollectionMap()} instead.
-   */
-  @java.lang.Deprecated
-  java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-  getMetricsBySkillCollection();
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder> 
+      getMetricsBySkillCollectionOrBuilderList();
   /**
    * <pre>
    * Performance Metrics sorted by skill collection over the measured datetime range.
    * </pre>
    *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
    */
-  java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-  getMetricsBySkillCollectionMap();
-  /**
-   * <pre>
-   * Performance Metrics sorted by skill collection over the measured datetime range.
-   * </pre>
-   *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-   */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrDefault(
-      long key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue);
-  /**
-   * <pre>
-   * Performance Metrics sorted by skill collection over the measured datetime range.
-   * </pre>
-   *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrThrow(
-      long key);
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
+      int index);
 }

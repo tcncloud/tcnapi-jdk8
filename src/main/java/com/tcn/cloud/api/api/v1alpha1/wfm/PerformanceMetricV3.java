@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PerformanceMetricV3() {
+    metricsBySkillCollection_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -30,24 +31,936 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapField internalGetMapField(
-      int number) {
-    switch (number) {
-      case 2:
-        return internalGetMetricsBySkillCollection();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder.class);
+  }
+
+  public interface MetricByCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     * @return Whether the skillCollection field is set.
+     */
+    boolean hasSkillCollection();
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     * @return The skillCollection.
+     */
+    com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection();
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     */
+    com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
+
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     * @return Whether the metric field is set.
+     */
+    boolean hasMetric();
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     * @return The metric.
+     */
+    com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetric();
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder getMetricOrBuilder();
+  }
+  /**
+   * <pre>
+   * Pairs the skill collection to a v3 performance metric.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection}
+   */
+  public static final class MetricByCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)
+      MetricByCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MetricByCollection.newBuilder() to construct.
+    private MetricByCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetricByCollection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MetricByCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricByCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricByCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder.class);
+    }
+
+    public static final int SKILL_COLLECTION_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     * @return Whether the skillCollection field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkillCollection() {
+      return skillCollection_ != null;
+    }
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     * @return The skillCollection.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+      return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+    }
+    /**
+     * <pre>
+     * Skill collections that metrics were calculated for.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+      return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+    }
+
+    public static final int METRIC_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric_;
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     * @return Whether the metric field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetric() {
+      return metric_ != null;
+    }
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     * @return The metric.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetric() {
+      return metric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance() : metric_;
+    }
+    /**
+     * <pre>
+     * The metric for the &#64;skill_collection.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder getMetricOrBuilder() {
+      return metric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance() : metric_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (skillCollection_ != null) {
+        output.writeMessage(1, getSkillCollection());
+      }
+      if (metric_ != null) {
+        output.writeMessage(2, getMetric());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (skillCollection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSkillCollection());
+      }
+      if (metric_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMetric());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection other = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection) obj;
+
+      if (hasSkillCollection() != other.hasSkillCollection()) return false;
+      if (hasSkillCollection()) {
+        if (!getSkillCollection()
+            .equals(other.getSkillCollection())) return false;
+      }
+      if (hasMetric() != other.hasMetric()) return false;
+      if (hasMetric()) {
+        if (!getMetric()
+            .equals(other.getMetric())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSkillCollection()) {
+        hash = (37 * hash) + SKILL_COLLECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getSkillCollection().hashCode();
+      }
+      if (hasMetric()) {
+        hash = (37 * hash) + METRIC_FIELD_NUMBER;
+        hash = (53 * hash) + getMetric().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Pairs the skill collection to a v3 performance metric.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricByCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricByCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        skillCollection_ = null;
+        if (skillCollectionBuilder_ != null) {
+          skillCollectionBuilder_.dispose();
+          skillCollectionBuilder_ = null;
+        }
+        metric_ = null;
+        if (metricBuilder_ != null) {
+          metricBuilder_.dispose();
+          metricBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricByCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection build() {
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.skillCollection_ = skillCollectionBuilder_ == null
+              ? skillCollection_
+              : skillCollectionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.metric_ = metricBuilder_ == null
+              ? metric_
+              : metricBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.getDefaultInstance()) return this;
+        if (other.hasSkillCollection()) {
+          mergeSkillCollection(other.getSkillCollection());
+        }
+        if (other.hasMetric()) {
+          mergeMetric(other.getMetric());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSkillCollectionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMetricFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.api.commons.SkillProfileCategory skillCollection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillCollectionBuilder_;
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       * @return Whether the skillCollection field is set.
+       */
+      public boolean hasSkillCollection() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       * @return The skillCollection.
+       */
+      public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillCollection() {
+        if (skillCollectionBuilder_ == null) {
+          return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+        } else {
+          return skillCollectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public Builder setSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+        if (skillCollectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          skillCollection_ = value;
+        } else {
+          skillCollectionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public Builder setSkillCollection(
+          com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+        if (skillCollectionBuilder_ == null) {
+          skillCollection_ = builderForValue.build();
+        } else {
+          skillCollectionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public Builder mergeSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+        if (skillCollectionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            skillCollection_ != null &&
+            skillCollection_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+            getSkillCollectionBuilder().mergeFrom(value);
+          } else {
+            skillCollection_ = value;
+          }
+        } else {
+          skillCollectionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public Builder clearSkillCollection() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        skillCollection_ = null;
+        if (skillCollectionBuilder_ != null) {
+          skillCollectionBuilder_.dispose();
+          skillCollectionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillCollectionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSkillCollectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder() {
+        if (skillCollectionBuilder_ != null) {
+          return skillCollectionBuilder_.getMessageOrBuilder();
+        } else {
+          return skillCollection_ == null ?
+              com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
+        }
+      }
+      /**
+       * <pre>
+       * Skill collections that metrics were calculated for.
+       * </pre>
+       *
+       * <code>.api.commons.SkillProfileCategory skill_collection = 1 [json_name = "skillCollection"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+          getSkillCollectionFieldBuilder() {
+        if (skillCollectionBuilder_ == null) {
+          skillCollectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                  getSkillCollection(),
+                  getParentForChildren(),
+                  isClean());
+          skillCollection_ = null;
+        }
+        return skillCollectionBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder> metricBuilder_;
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       * @return Whether the metric field is set.
+       */
+      public boolean hasMetric() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       * @return The metric.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetric() {
+        if (metricBuilder_ == null) {
+          return metric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance() : metric_;
+        } else {
+          return metricBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public Builder setMetric(com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 value) {
+        if (metricBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metric_ = value;
+        } else {
+          metricBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public Builder setMetric(
+          com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.Builder builderForValue) {
+        if (metricBuilder_ == null) {
+          metric_ = builderForValue.build();
+        } else {
+          metricBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public Builder mergeMetric(com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 value) {
+        if (metricBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            metric_ != null &&
+            metric_ != com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance()) {
+            getMetricBuilder().mergeFrom(value);
+          } else {
+            metric_ = value;
+          }
+        } else {
+          metricBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public Builder clearMetric() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        metric_ = null;
+        if (metricBuilder_ != null) {
+          metricBuilder_.dispose();
+          metricBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.Builder getMetricBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMetricFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder getMetricOrBuilder() {
+        if (metricBuilder_ != null) {
+          return metricBuilder_.getMessageOrBuilder();
+        } else {
+          return metric_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance() : metric_;
+        }
+      }
+      /**
+       * <pre>
+       * The metric for the &#64;skill_collection.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.wfm.Basic_PerformanceMetricV3 metric = 2 [json_name = "metric"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder> 
+          getMetricFieldBuilder() {
+        if (metricBuilder_ == null) {
+          metricBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3OrBuilder>(
+                  getMetric(),
+                  getParentForChildren(),
+                  isClean());
+          metric_ = null;
+        }
+        return metricBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection)
+    private static final com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MetricByCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MetricByCollection>() {
+      @java.lang.Override
+      public MetricByCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetricByCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetricByCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public static final int METRICS_ALL_SKILLS_FIELD_NUMBER = 1;
@@ -89,98 +1002,64 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER = 2;
-  private static final class MetricsBySkillCollectionDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_MetricsBySkillCollectionEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.INT64,
-                0L,
-                com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3.getDefaultInstance());
-  }
   @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> metricsBySkillCollection_;
-  private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-  internalGetMetricsBySkillCollection() {
-    if (metricsBySkillCollection_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          MetricsBySkillCollectionDefaultEntryHolder.defaultEntry);
-    }
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> metricsBySkillCollection_;
+  /**
+   * <pre>
+   * Performance Metrics sorted by skill collection over the measured datetime range.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> getMetricsBySkillCollectionList() {
     return metricsBySkillCollection_;
   }
+  /**
+   * <pre>
+   * Performance Metrics sorted by skill collection over the measured datetime range.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder> 
+      getMetricsBySkillCollectionOrBuilderList() {
+    return metricsBySkillCollection_;
+  }
+  /**
+   * <pre>
+   * Performance Metrics sorted by skill collection over the measured datetime range.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   */
+  @java.lang.Override
   public int getMetricsBySkillCollectionCount() {
-    return internalGetMetricsBySkillCollection().getMap().size();
+    return metricsBySkillCollection_.size();
   }
   /**
    * <pre>
    * Performance Metrics sorted by skill collection over the measured datetime range.
    * </pre>
    *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public boolean containsMetricsBySkillCollection(
-      long key) {
-
-    return internalGetMetricsBySkillCollection().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getMetricsBySkillCollectionMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> getMetricsBySkillCollection() {
-    return getMetricsBySkillCollectionMap();
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getMetricsBySkillCollection(int index) {
+    return metricsBySkillCollection_.get(index);
   }
   /**
    * <pre>
    * Performance Metrics sorted by skill collection over the measured datetime range.
    * </pre>
    *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
    */
   @java.lang.Override
-  public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> getMetricsBySkillCollectionMap() {
-    return internalGetMetricsBySkillCollection().getMap();
-  }
-  /**
-   * <pre>
-   * Performance Metrics sorted by skill collection over the measured datetime range.
-   * </pre>
-   *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrDefault(
-      long key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
-
-    java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> map =
-        internalGetMetricsBySkillCollection().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * Performance Metrics sorted by skill collection over the measured datetime range.
-   * </pre>
-   *
-   * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrThrow(
-      long key) {
-
-    java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> map =
-        internalGetMetricsBySkillCollection().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
+      int index) {
+    return metricsBySkillCollection_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -200,12 +1079,9 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
     if (metricsAllSkills_ != null) {
       output.writeMessage(1, getMetricsAllSkills());
     }
-    com.google.protobuf.GeneratedMessageV3
-      .serializeLongMapTo(
-        output,
-        internalGetMetricsBySkillCollection(),
-        MetricsBySkillCollectionDefaultEntryHolder.defaultEntry,
-        2);
+    for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
+      output.writeMessage(2, metricsBySkillCollection_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -219,15 +1095,9 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getMetricsAllSkills());
     }
-    for (java.util.Map.Entry<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> entry
-         : internalGetMetricsBySkillCollection().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-      metricsBySkillCollection__ = MetricsBySkillCollectionDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
+    for (int i = 0; i < metricsBySkillCollection_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, metricsBySkillCollection__);
+        .computeMessageSize(2, metricsBySkillCollection_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,8 +1119,8 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       if (!getMetricsAllSkills()
           .equals(other.getMetricsAllSkills())) return false;
     }
-    if (!internalGetMetricsBySkillCollection().equals(
-        other.internalGetMetricsBySkillCollection())) return false;
+    if (!getMetricsBySkillCollectionList()
+        .equals(other.getMetricsBySkillCollectionList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -266,9 +1136,9 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       hash = (37 * hash) + METRICS_ALL_SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getMetricsAllSkills().hashCode();
     }
-    if (!internalGetMetricsBySkillCollection().getMap().isEmpty()) {
+    if (getMetricsBySkillCollectionCount() > 0) {
       hash = (37 * hash) + METRICS_BY_SKILL_COLLECTION_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetMetricsBySkillCollection().hashCode();
+      hash = (53 * hash) + getMetricsBySkillCollectionList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -379,28 +1249,6 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricV3_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 2:
-          return internalGetMetricsBySkillCollection();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMutableMapField(
-        int number) {
-      switch (number) {
-        case 2:
-          return internalGetMutableMetricsBySkillCollection();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -428,7 +1276,13 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
         metricsAllSkillsBuilder_.dispose();
         metricsAllSkillsBuilder_ = null;
       }
-      internalGetMutableMetricsBySkillCollection().clear();
+      if (metricsBySkillCollectionBuilder_ == null) {
+        metricsBySkillCollection_ = java.util.Collections.emptyList();
+      } else {
+        metricsBySkillCollection_ = null;
+        metricsBySkillCollectionBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -455,9 +1309,22 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 result) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          metricsBySkillCollection_ = java.util.Collections.unmodifiableList(metricsBySkillCollection_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.metricsBySkillCollection_ = metricsBySkillCollection_;
+      } else {
+        result.metricsBySkillCollection_ = metricsBySkillCollectionBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 result) {
@@ -466,10 +1333,6 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
         result.metricsAllSkills_ = metricsAllSkillsBuilder_ == null
             ? metricsAllSkills_
             : metricsAllSkillsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.metricsBySkillCollection_ = internalGetMetricsBySkillCollection();
-        result.metricsBySkillCollection_.makeImmutable();
       }
     }
 
@@ -520,9 +1383,32 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       if (other.hasMetricsAllSkills()) {
         mergeMetricsAllSkills(other.getMetricsAllSkills());
       }
-      internalGetMutableMetricsBySkillCollection().mergeFrom(
-          other.internalGetMetricsBySkillCollection());
-      bitField0_ |= 0x00000002;
+      if (metricsBySkillCollectionBuilder_ == null) {
+        if (!other.metricsBySkillCollection_.isEmpty()) {
+          if (metricsBySkillCollection_.isEmpty()) {
+            metricsBySkillCollection_ = other.metricsBySkillCollection_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMetricsBySkillCollectionIsMutable();
+            metricsBySkillCollection_.addAll(other.metricsBySkillCollection_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.metricsBySkillCollection_.isEmpty()) {
+          if (metricsBySkillCollectionBuilder_.isEmpty()) {
+            metricsBySkillCollectionBuilder_.dispose();
+            metricsBySkillCollectionBuilder_ = null;
+            metricsBySkillCollection_ = other.metricsBySkillCollection_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            metricsBySkillCollectionBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getMetricsBySkillCollectionFieldBuilder() : null;
+          } else {
+            metricsBySkillCollectionBuilder_.addAllMessages(other.metricsBySkillCollection_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -557,12 +1443,16 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
               break;
             } // case 10
             case 18: {
-              com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-              metricsBySkillCollection__ = input.readMessage(
-                  MetricsBySkillCollectionDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableMetricsBySkillCollection().getMutableMap().put(
-                  metricsBySkillCollection__.getKey(), metricsBySkillCollection__.getValue());
-              bitField0_ |= 0x00000002;
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.parser(),
+                      extensionRegistry);
+              if (metricsBySkillCollectionBuilder_ == null) {
+                ensureMetricsBySkillCollectionIsMutable();
+                metricsBySkillCollection_.add(m);
+              } else {
+                metricsBySkillCollectionBuilder_.addMessage(m);
+              }
               break;
             } // case 18
             default: {
@@ -737,104 +1627,210 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
       return metricsAllSkillsBuilder_;
     }
 
-    private com.google.protobuf.MapField<
-        java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> metricsBySkillCollection_;
-    private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-        internalGetMetricsBySkillCollection() {
-      if (metricsBySkillCollection_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MetricsBySkillCollectionDefaultEntryHolder.defaultEntry);
-      }
-      return metricsBySkillCollection_;
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> metricsBySkillCollection_ =
+      java.util.Collections.emptyList();
+    private void ensureMetricsBySkillCollectionIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        metricsBySkillCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection>(metricsBySkillCollection_);
+        bitField0_ |= 0x00000002;
+       }
     }
-    private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-        internalGetMutableMetricsBySkillCollection() {
-      if (metricsBySkillCollection_ == null) {
-        metricsBySkillCollection_ = com.google.protobuf.MapField.newMapField(
-            MetricsBySkillCollectionDefaultEntryHolder.defaultEntry);
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder> metricsBySkillCollectionBuilder_;
+
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> getMetricsBySkillCollectionList() {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(metricsBySkillCollection_);
+      } else {
+        return metricsBySkillCollectionBuilder_.getMessageList();
       }
-      if (!metricsBySkillCollection_.isMutable()) {
-        metricsBySkillCollection_ = metricsBySkillCollection_.copy();
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return metricsBySkillCollection_;
     }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
     public int getMetricsBySkillCollectionCount() {
-      return internalGetMetricsBySkillCollection().getMap().size();
-    }
-    /**
-     * <pre>
-     * Performance Metrics sorted by skill collection over the measured datetime range.
-     * </pre>
-     *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-     */
-    @java.lang.Override
-    public boolean containsMetricsBySkillCollection(
-        long key) {
-
-      return internalGetMetricsBySkillCollection().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getMetricsBySkillCollectionMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> getMetricsBySkillCollection() {
-      return getMetricsBySkillCollectionMap();
-    }
-    /**
-     * <pre>
-     * Performance Metrics sorted by skill collection over the measured datetime range.
-     * </pre>
-     *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> getMetricsBySkillCollectionMap() {
-      return internalGetMetricsBySkillCollection().getMap();
-    }
-    /**
-     * <pre>
-     * Performance Metrics sorted by skill collection over the measured datetime range.
-     * </pre>
-     *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrDefault(
-        long key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
-
-      java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> map =
-          internalGetMetricsBySkillCollection().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * Performance Metrics sorted by skill collection over the measured datetime range.
-     * </pre>
-     *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 getMetricsBySkillCollectionOrThrow(
-        long key) {
-
-      java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> map =
-          internalGetMetricsBySkillCollection().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+      if (metricsBySkillCollectionBuilder_ == null) {
+        return metricsBySkillCollection_.size();
+      } else {
+        return metricsBySkillCollectionBuilder_.getCount();
       }
-      return map.get(key);
     }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection getMetricsBySkillCollection(int index) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        return metricsBySkillCollection_.get(index);
+      } else {
+        return metricsBySkillCollectionBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder setMetricsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection value) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.set(index, value);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder setMetricsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder builderForValue) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder addMetricsBySkillCollection(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection value) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.add(value);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder addMetricsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection value) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.add(index, value);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder addMetricsBySkillCollection(
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder builderForValue) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.add(builderForValue.build());
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder addMetricsBySkillCollection(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder builderForValue) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public Builder addAllMetricsBySkillCollection(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection> values) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        ensureMetricsBySkillCollectionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, metricsBySkillCollection_);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
     public Builder clearMetricsBySkillCollection() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      internalGetMutableMetricsBySkillCollection().getMutableMap()
-          .clear();
+      if (metricsBySkillCollectionBuilder_ == null) {
+        metricsBySkillCollection_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.clear();
+      }
       return this;
     }
     /**
@@ -842,39 +1838,16 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
      * Performance Metrics sorted by skill collection over the measured datetime range.
      * </pre>
      *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
      */
-    public Builder removeMetricsBySkillCollection(
-        long key) {
-
-      internalGetMutableMetricsBySkillCollection().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3>
-        getMutableMetricsBySkillCollection() {
-      bitField0_ |= 0x00000002;
-      return internalGetMutableMetricsBySkillCollection().getMutableMap();
-    }
-    /**
-     * <pre>
-     * Performance Metrics sorted by skill collection over the measured datetime range.
-     * </pre>
-     *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
-     */
-    public Builder putMetricsBySkillCollection(
-        long key,
-        com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 value) {
-
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableMetricsBySkillCollection().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000002;
+    public Builder removeMetricsBySkillCollection(int index) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        ensureMetricsBySkillCollectionIsMutable();
+        metricsBySkillCollection_.remove(index);
+        onChanged();
+      } else {
+        metricsBySkillCollectionBuilder_.remove(index);
+      }
       return this;
     }
     /**
@@ -882,14 +1855,88 @@ com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3 defaultValue) {
      * Performance Metrics sorted by skill collection over the measured datetime range.
      * </pre>
      *
-     * <code>map&lt;int64, .api.v1alpha1.wfm.Basic_PerformanceMetricV3&gt; metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
      */
-    public Builder putAllMetricsBySkillCollection(
-        java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v1alpha1.wfm.Basic_PerformanceMetricV3> values) {
-      internalGetMutableMetricsBySkillCollection().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000002;
-      return this;
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder getMetricsBySkillCollectionBuilder(
+        int index) {
+      return getMetricsBySkillCollectionFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder getMetricsBySkillCollectionOrBuilder(
+        int index) {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        return metricsBySkillCollection_.get(index);  } else {
+        return metricsBySkillCollectionBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder> 
+         getMetricsBySkillCollectionOrBuilderList() {
+      if (metricsBySkillCollectionBuilder_ != null) {
+        return metricsBySkillCollectionBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(metricsBySkillCollection_);
+      }
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder addMetricsBySkillCollectionBuilder() {
+      return getMetricsBySkillCollectionFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder addMetricsBySkillCollectionBuilder(
+        int index) {
+      return getMetricsBySkillCollectionFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Performance Metrics sorted by skill collection over the measured datetime range.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection metrics_by_skill_collection = 2 [json_name = "metricsBySkillCollection"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder> 
+         getMetricsBySkillCollectionBuilderList() {
+      return getMetricsBySkillCollectionFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder> 
+        getMetricsBySkillCollectionFieldBuilder() {
+      if (metricsBySkillCollectionBuilder_ == null) {
+        metricsBySkillCollectionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.MetricByCollectionOrBuilder>(
+                metricsBySkillCollection_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        metricsBySkillCollection_ = null;
+      }
+      return metricsBySkillCollectionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
