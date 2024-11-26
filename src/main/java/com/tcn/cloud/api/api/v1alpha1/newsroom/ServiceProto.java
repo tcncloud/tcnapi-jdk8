@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\211\022\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\311\023\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -84,12 +84,17 @@ public final class ServiceProto {
       "oadNewsArticleImageRequest\0325.api.v1alpha" +
       "1.newsroom.UploadNewsArticleImageRespons" +
       "e\"B\272\270\221\002\005\n\003\010\350 \202\323\344\223\0022\"-/api/v1alpha1/newsr" +
-      "oom/uploadnewsarticleimage:\001*B\255\001\n\'com.tc" +
-      "n.cloud.api.api.v1alpha1.newsroomB\014Servi" +
-      "ceProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312" +
-      "\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\N" +
-      "ewsroom\\GPBMetadata\352\002\027Api::V1alpha1::New" +
-      "sroomb\006proto3"
+      "oom/uploadnewsarticleimage:\001*\022\275\001\n\023Create" +
+      "ClientArticle\0221.api.v1alpha1.newsroom.Cr" +
+      "eateClientArticleRequest\0322.api.v1alpha1." +
+      "newsroom.CreateClientArticleResponse\"?\272\270" +
+      "\221\002\005\n\003\010\352 \202\323\344\223\002/\"*/api/v1alpha1/newsroom/c" +
+      "reateclientarticle:\001*B\255\001\n\'com.tcn.cloud." +
+      "api.api.v1alpha1.newsroomB\014ServiceProtoP" +
+      "\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1" +
+      "alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\" +
+      "GPBMetadata\352\002\027Api::V1alpha1::Newsroomb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
