@@ -5,69 +5,51 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for the ListHistoricalData RPC
+ * Request message for the ListForecastIntervalsV2 RPC
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.ListHistoricalDataReq}
+ * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsV2Request}
  */
-public final class ListHistoricalDataReq extends
+public final class ListForecastIntervalsV2Request extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListHistoricalDataReq)
-    ListHistoricalDataReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListForecastIntervalsV2Request)
+    ListForecastIntervalsV2RequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListHistoricalDataReq.newBuilder() to construct.
-  private ListHistoricalDataReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListForecastIntervalsV2Request.newBuilder() to construct.
+  private ListForecastIntervalsV2Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListHistoricalDataReq() {
+  private ListForecastIntervalsV2Request() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListHistoricalDataReq();
+    return new ListForecastIntervalsV2Request();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListHistoricalDataReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListForecastIntervalsV2Request_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListHistoricalDataReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListForecastIntervalsV2Request_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.Builder.class);
   }
 
-  public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
-  private long skillProfileSid_ = 0L;
-  /**
-   * <pre>
-   * ID of the skill profile used to examine matching calls in the client's historical data.
-   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
-   * </pre>
-   *
-   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
-   * @deprecated api.v1alpha1.wfm.ListHistoricalDataReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4558
-   * @return The skillProfileSid.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public long getSkillProfileSid() {
-    return skillProfileSid_;
-  }
-
-  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 2;
+  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.SkillProfileCategory skillProfileCategory_;
   /**
    * <pre>
-   * Skill profile category that the desired calls will belong to.
+   * Category to get the forecast data intervals for.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
    * @return Whether the skillProfileCategory field is set.
    */
   @java.lang.Override
@@ -76,10 +58,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Skill profile category that the desired calls will belong to.
+   * Category to get the forecast data intervals for.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
    * @return The skillProfileCategory.
    */
   @java.lang.Override
@@ -88,10 +70,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Skill profile category that the desired calls will belong to.
+   * Category to get the forecast data intervals for.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
@@ -112,11 +94,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (skillProfileSid_ != 0L) {
-      output.writeInt64(1, skillProfileSid_);
-    }
     if (skillProfileCategory_ != null) {
-      output.writeMessage(2, getSkillProfileCategory());
+      output.writeMessage(1, getSkillProfileCategory());
     }
     getUnknownFields().writeTo(output);
   }
@@ -127,13 +106,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (skillProfileSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, skillProfileSid_);
-    }
     if (skillProfileCategory_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getSkillProfileCategory());
+        .computeMessageSize(1, getSkillProfileCategory());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -145,13 +120,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request) obj;
 
-    if (getSkillProfileSid()
-        != other.getSkillProfileSid()) return false;
     if (hasSkillProfileCategory() != other.hasSkillProfileCategory()) return false;
     if (hasSkillProfileCategory()) {
       if (!getSkillProfileCategory()
@@ -168,9 +141,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SKILL_PROFILE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getSkillProfileSid());
     if (hasSkillProfileCategory()) {
       hash = (37 * hash) + SKILL_PROFILE_CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfileCategory().hashCode();
@@ -180,44 +150,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -225,26 +195,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,7 +227,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -274,29 +244,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the ListHistoricalData RPC
+   * Request message for the ListForecastIntervalsV2 RPC
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.ListHistoricalDataReq}
+   * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsV2Request}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListHistoricalDataReq)
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListForecastIntervalsV2Request)
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2RequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListHistoricalDataReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListForecastIntervalsV2Request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListHistoricalDataReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListForecastIntervalsV2Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.newBuilder()
     private Builder() {
 
     }
@@ -310,7 +280,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      skillProfileSid_ = 0L;
       skillProfileCategory_ = null;
       if (skillProfileCategoryBuilder_ != null) {
         skillProfileCategoryBuilder_.dispose();
@@ -322,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListHistoricalDataReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListForecastIntervalsV2Request_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -340,19 +309,16 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.skillProfileSid_ = skillProfileSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.skillProfileCategory_ = skillProfileCategoryBuilder_ == null
             ? skillProfileCategory_
             : skillProfileCategoryBuilder_.build();
@@ -393,19 +359,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.getDefaultInstance()) return this;
-      if (other.getSkillProfileSid() != 0L) {
-        setSkillProfileSid(other.getSkillProfileSid());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request.getDefaultInstance()) return this;
       if (other.hasSkillProfileCategory()) {
         mergeSkillProfileCategory(other.getSkillProfileCategory());
       }
@@ -435,18 +398,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              skillProfileSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
+            case 10: {
               input.readMessage(
                   getSkillProfileCategoryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -464,79 +422,26 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long skillProfileSid_ ;
-    /**
-     * <pre>
-     * ID of the skill profile used to examine matching calls in the client's historical data.
-     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
-     * </pre>
-     *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.wfm.ListHistoricalDataReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4558
-     * @return The skillProfileSid.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public long getSkillProfileSid() {
-      return skillProfileSid_;
-    }
-    /**
-     * <pre>
-     * ID of the skill profile used to examine matching calls in the client's historical data.
-     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
-     * </pre>
-     *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.wfm.ListHistoricalDataReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4558
-     * @param value The skillProfileSid to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setSkillProfileSid(long value) {
-
-      skillProfileSid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the skill profile used to examine matching calls in the client's historical data.
-     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
-     * </pre>
-     *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
-     * @deprecated api.v1alpha1.wfm.ListHistoricalDataReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4558
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearSkillProfileSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      skillProfileSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private com.tcn.cloud.api.api.commons.SkillProfileCategory skillProfileCategory_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillProfileCategoryBuilder_;
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      * @return Whether the skillProfileCategory field is set.
      */
     public boolean hasSkillProfileCategory() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      * @return The skillProfileCategory.
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
@@ -548,10 +453,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public Builder setSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
       if (skillProfileCategoryBuilder_ == null) {
@@ -562,16 +467,16 @@ private static final long serialVersionUID = 0L;
       } else {
         skillProfileCategoryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public Builder setSkillProfileCategory(
         com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
@@ -580,20 +485,20 @@ private static final long serialVersionUID = 0L;
       } else {
         skillProfileCategoryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public Builder mergeSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
       if (skillProfileCategoryBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000001) != 0) &&
           skillProfileCategory_ != null &&
           skillProfileCategory_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
           getSkillProfileCategoryBuilder().mergeFrom(value);
@@ -603,19 +508,19 @@ private static final long serialVersionUID = 0L;
       } else {
         skillProfileCategoryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public Builder clearSkillProfileCategory() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       skillProfileCategory_ = null;
       if (skillProfileCategoryBuilder_ != null) {
         skillProfileCategoryBuilder_.dispose();
@@ -626,22 +531,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillProfileCategoryBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSkillProfileCategoryFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
       if (skillProfileCategoryBuilder_ != null) {
@@ -653,10 +558,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Skill profile category that the desired calls will belong to.
+     * Category to get the forecast data intervals for.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 2 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 1 [json_name = "skillProfileCategory"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
@@ -684,23 +589,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListHistoricalDataReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListForecastIntervalsV2Request)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListHistoricalDataReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListForecastIntervalsV2Request)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListHistoricalDataReq>
-      PARSER = new com.google.protobuf.AbstractParser<ListHistoricalDataReq>() {
+  private static final com.google.protobuf.Parser<ListForecastIntervalsV2Request>
+      PARSER = new com.google.protobuf.AbstractParser<ListForecastIntervalsV2Request>() {
     @java.lang.Override
-    public ListHistoricalDataReq parsePartialFrom(
+    public ListForecastIntervalsV2Request parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -719,17 +624,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListHistoricalDataReq> parser() {
+  public static com.google.protobuf.Parser<ListForecastIntervalsV2Request> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListHistoricalDataReq> getParserForType() {
+  public com.google.protobuf.Parser<ListForecastIntervalsV2Request> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsV2Request getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

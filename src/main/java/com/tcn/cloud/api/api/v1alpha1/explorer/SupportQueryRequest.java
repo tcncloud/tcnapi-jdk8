@@ -80,6 +80,21 @@ private static final long serialVersionUID = 0L;
     return queryRequest_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.getDefaultInstance() : queryRequest_;
   }
 
+  public static final int DEBUG_FIELD_NUMBER = 2;
+  private boolean debug_ = false;
+  /**
+   * <pre>
+   * include debug information in the response
+   * </pre>
+   *
+   * <code>bool debug = 2 [json_name = "debug"];</code>
+   * @return The debug.
+   */
+  @java.lang.Override
+  public boolean getDebug() {
+    return debug_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +112,9 @@ private static final long serialVersionUID = 0L;
     if (queryRequest_ != null) {
       output.writeMessage(1, getQueryRequest());
     }
+    if (debug_ != false) {
+      output.writeBool(2, debug_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +127,10 @@ private static final long serialVersionUID = 0L;
     if (queryRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getQueryRequest());
+    }
+    if (debug_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, debug_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,6 +152,8 @@ private static final long serialVersionUID = 0L;
       if (!getQueryRequest()
           .equals(other.getQueryRequest())) return false;
     }
+    if (getDebug()
+        != other.getDebug()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +169,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + QUERY_REQUEST_FIELD_NUMBER;
       hash = (53 * hash) + getQueryRequest().hashCode();
     }
+    hash = (37 * hash) + DEBUG_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDebug());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -285,6 +312,7 @@ private static final long serialVersionUID = 0L;
         queryRequestBuilder_.dispose();
         queryRequestBuilder_ = null;
       }
+      debug_ = false;
       return this;
     }
 
@@ -322,6 +350,9 @@ private static final long serialVersionUID = 0L;
         result.queryRequest_ = queryRequestBuilder_ == null
             ? queryRequest_
             : queryRequestBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.debug_ = debug_;
       }
     }
 
@@ -372,6 +403,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasQueryRequest()) {
         mergeQueryRequest(other.getQueryRequest());
       }
+      if (other.getDebug() != false) {
+        setDebug(other.getDebug());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -405,6 +439,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              debug_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +614,50 @@ private static final long serialVersionUID = 0L;
         queryRequest_ = null;
       }
       return queryRequestBuilder_;
+    }
+
+    private boolean debug_ ;
+    /**
+     * <pre>
+     * include debug information in the response
+     * </pre>
+     *
+     * <code>bool debug = 2 [json_name = "debug"];</code>
+     * @return The debug.
+     */
+    @java.lang.Override
+    public boolean getDebug() {
+      return debug_;
+    }
+    /**
+     * <pre>
+     * include debug information in the response
+     * </pre>
+     *
+     * <code>bool debug = 2 [json_name = "debug"];</code>
+     * @param value The debug to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDebug(boolean value) {
+
+      debug_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * include debug information in the response
+     * </pre>
+     *
+     * <code>bool debug = 2 [json_name = "debug"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDebug() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      debug_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -33,4 +33,14 @@ public interface SupportQueryRequestOrBuilder extends
    * <code>.api.v1alpha1.explorer.QueryRequest query_request = 1 [json_name = "queryRequest"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequestOrBuilder getQueryRequestOrBuilder();
+
+  /**
+   * <pre>
+   * include debug information in the response
+   * </pre>
+   *
+   * <code>bool debug = 2 [json_name = "debug"];</code>
+   * @return The debug.
+   */
+  boolean getDebug();
 }

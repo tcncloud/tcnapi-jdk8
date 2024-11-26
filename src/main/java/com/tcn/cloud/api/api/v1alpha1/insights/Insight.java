@@ -371,13 +371,11 @@ private static final long serialVersionUID = 0L;
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=23
+   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
    * @return The datasourceName.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getDatasourceName() {
+  public java.lang.String getDatasourceName() {
     java.lang.Object ref = datasourceName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -394,13 +392,11 @@ private static final long serialVersionUID = 0L;
    * primary datasource for filtering
    * </pre>
    *
-   * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=23
+   * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
    * @return The bytes for datasourceName.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getDatasourceNameBytes() {
     java.lang.Object ref = datasourceName_;
     if (ref instanceof java.lang.String) {
@@ -1852,12 +1848,10 @@ private static final long serialVersionUID = 0L;
      * primary datasource for filtering
      * </pre>
      *
-     * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=23
+     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
      * @return The datasourceName.
      */
-    @java.lang.Deprecated public java.lang.String getDatasourceName() {
+    public java.lang.String getDatasourceName() {
       java.lang.Object ref = datasourceName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1874,12 +1868,10 @@ private static final long serialVersionUID = 0L;
      * primary datasource for filtering
      * </pre>
      *
-     * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=23
+     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
      * @return The bytes for datasourceName.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getDatasourceNameBytes() {
       java.lang.Object ref = datasourceName_;
       if (ref instanceof String) {
@@ -1897,13 +1889,11 @@ private static final long serialVersionUID = 0L;
      * primary datasource for filtering
      * </pre>
      *
-     * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=23
+     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
      * @param value The datasourceName to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDatasourceName(
+    public Builder setDatasourceName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       datasourceName_ = value;
@@ -1916,12 +1906,10 @@ private static final long serialVersionUID = 0L;
      * primary datasource for filtering
      * </pre>
      *
-     * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=23
+     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearDatasourceName() {
+    public Builder clearDatasourceName() {
       datasourceName_ = getDefaultInstance().getDatasourceName();
       bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
@@ -1932,13 +1920,11 @@ private static final long serialVersionUID = 0L;
      * primary datasource for filtering
      * </pre>
      *
-     * <code>string datasource_name = 12 [json_name = "datasourceName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.Insight.datasource_name is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=23
+     * <code>string datasource_name = 12 [json_name = "datasourceName"];</code>
      * @param value The bytes for datasourceName to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDatasourceNameBytes(
+    public Builder setDatasourceNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

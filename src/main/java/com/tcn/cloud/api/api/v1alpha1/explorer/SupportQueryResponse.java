@@ -21,6 +21,9 @@ private static final long serialVersionUID = 0L;
   }
   private SupportQueryResponse() {
     resultUrl_ = "";
+    prql_ = "";
+    sql_ = "";
+    explain_ = "";
   }
 
   @java.lang.Override
@@ -105,6 +108,147 @@ private static final long serialVersionUID = 0L;
     return resultSizeBytes_;
   }
 
+  public static final int PRQL_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object prql_ = "";
+  /**
+   * <pre>
+   * the prql query string
+   * </pre>
+   *
+   * <code>string prql = 3 [json_name = "prql"];</code>
+   * @return The prql.
+   */
+  @java.lang.Override
+  public java.lang.String getPrql() {
+    java.lang.Object ref = prql_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      prql_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the prql query string
+   * </pre>
+   *
+   * <code>string prql = 3 [json_name = "prql"];</code>
+   * @return The bytes for prql.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPrqlBytes() {
+    java.lang.Object ref = prql_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      prql_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SQL_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sql_ = "";
+  /**
+   * <pre>
+   * the sql query string
+   * </pre>
+   *
+   * <code>string sql = 4 [json_name = "sql"];</code>
+   * @return The sql.
+   */
+  @java.lang.Override
+  public java.lang.String getSql() {
+    java.lang.Object ref = sql_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sql_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the sql query string
+   * </pre>
+   *
+   * <code>string sql = 4 [json_name = "sql"];</code>
+   * @return The bytes for sql.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSqlBytes() {
+    java.lang.Object ref = sql_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sql_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EXPLAIN_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object explain_ = "";
+  /**
+   * <pre>
+   * the sql explain string
+   * </pre>
+   *
+   * <code>string explain = 5 [json_name = "explain"];</code>
+   * @return The explain.
+   */
+  @java.lang.Override
+  public java.lang.String getExplain() {
+    java.lang.Object ref = explain_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      explain_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the sql explain string
+   * </pre>
+   *
+   * <code>string explain = 5 [json_name = "explain"];</code>
+   * @return The bytes for explain.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getExplainBytes() {
+    java.lang.Object ref = explain_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      explain_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -125,6 +269,15 @@ private static final long serialVersionUID = 0L;
     if (resultSizeBytes_ != 0L) {
       output.writeInt64(2, resultSizeBytes_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prql_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, prql_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sql_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sql_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, explain_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -140,6 +293,15 @@ private static final long serialVersionUID = 0L;
     if (resultSizeBytes_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, resultSizeBytes_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prql_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, prql_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sql_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sql_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, explain_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -160,6 +322,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResultUrl())) return false;
     if (getResultSizeBytes()
         != other.getResultSizeBytes()) return false;
+    if (!getPrql()
+        .equals(other.getPrql())) return false;
+    if (!getSql()
+        .equals(other.getSql())) return false;
+    if (!getExplain()
+        .equals(other.getExplain())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -176,6 +344,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RESULT_SIZE_BYTES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getResultSizeBytes());
+    hash = (37 * hash) + PRQL_FIELD_NUMBER;
+    hash = (53 * hash) + getPrql().hashCode();
+    hash = (37 * hash) + SQL_FIELD_NUMBER;
+    hash = (53 * hash) + getSql().hashCode();
+    hash = (37 * hash) + EXPLAIN_FIELD_NUMBER;
+    hash = (53 * hash) + getExplain().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,6 +487,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       resultUrl_ = "";
       resultSizeBytes_ = 0L;
+      prql_ = "";
+      sql_ = "";
+      explain_ = "";
       return this;
     }
 
@@ -351,6 +528,15 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.resultSizeBytes_ = resultSizeBytes_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.prql_ = prql_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.sql_ = sql_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.explain_ = explain_;
       }
     }
 
@@ -406,6 +592,21 @@ private static final long serialVersionUID = 0L;
       if (other.getResultSizeBytes() != 0L) {
         setResultSizeBytes(other.getResultSizeBytes());
       }
+      if (!other.getPrql().isEmpty()) {
+        prql_ = other.prql_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getSql().isEmpty()) {
+        sql_ = other.sql_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getExplain().isEmpty()) {
+        explain_ = other.explain_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -442,6 +643,21 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              prql_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              sql_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              explain_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -591,6 +807,282 @@ private static final long serialVersionUID = 0L;
     public Builder clearResultSizeBytes() {
       bitField0_ = (bitField0_ & ~0x00000002);
       resultSizeBytes_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object prql_ = "";
+    /**
+     * <pre>
+     * the prql query string
+     * </pre>
+     *
+     * <code>string prql = 3 [json_name = "prql"];</code>
+     * @return The prql.
+     */
+    public java.lang.String getPrql() {
+      java.lang.Object ref = prql_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prql_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the prql query string
+     * </pre>
+     *
+     * <code>string prql = 3 [json_name = "prql"];</code>
+     * @return The bytes for prql.
+     */
+    public com.google.protobuf.ByteString
+        getPrqlBytes() {
+      java.lang.Object ref = prql_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prql_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the prql query string
+     * </pre>
+     *
+     * <code>string prql = 3 [json_name = "prql"];</code>
+     * @param value The prql to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrql(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      prql_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the prql query string
+     * </pre>
+     *
+     * <code>string prql = 3 [json_name = "prql"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrql() {
+      prql_ = getDefaultInstance().getPrql();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the prql query string
+     * </pre>
+     *
+     * <code>string prql = 3 [json_name = "prql"];</code>
+     * @param value The bytes for prql to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrqlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      prql_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sql_ = "";
+    /**
+     * <pre>
+     * the sql query string
+     * </pre>
+     *
+     * <code>string sql = 4 [json_name = "sql"];</code>
+     * @return The sql.
+     */
+    public java.lang.String getSql() {
+      java.lang.Object ref = sql_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sql_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the sql query string
+     * </pre>
+     *
+     * <code>string sql = 4 [json_name = "sql"];</code>
+     * @return The bytes for sql.
+     */
+    public com.google.protobuf.ByteString
+        getSqlBytes() {
+      java.lang.Object ref = sql_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sql_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the sql query string
+     * </pre>
+     *
+     * <code>string sql = 4 [json_name = "sql"];</code>
+     * @param value The sql to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSql(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      sql_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the sql query string
+     * </pre>
+     *
+     * <code>string sql = 4 [json_name = "sql"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSql() {
+      sql_ = getDefaultInstance().getSql();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the sql query string
+     * </pre>
+     *
+     * <code>string sql = 4 [json_name = "sql"];</code>
+     * @param value The bytes for sql to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSqlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sql_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object explain_ = "";
+    /**
+     * <pre>
+     * the sql explain string
+     * </pre>
+     *
+     * <code>string explain = 5 [json_name = "explain"];</code>
+     * @return The explain.
+     */
+    public java.lang.String getExplain() {
+      java.lang.Object ref = explain_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        explain_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the sql explain string
+     * </pre>
+     *
+     * <code>string explain = 5 [json_name = "explain"];</code>
+     * @return The bytes for explain.
+     */
+    public com.google.protobuf.ByteString
+        getExplainBytes() {
+      java.lang.Object ref = explain_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        explain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the sql explain string
+     * </pre>
+     *
+     * <code>string explain = 5 [json_name = "explain"];</code>
+     * @param value The explain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExplain(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      explain_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the sql explain string
+     * </pre>
+     *
+     * <code>string explain = 5 [json_name = "explain"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExplain() {
+      explain_ = getDefaultInstance().getExplain();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the sql explain string
+     * </pre>
+     *
+     * <code>string explain = 5 [json_name = "explain"];</code>
+     * @param value The bytes for explain to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExplainBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      explain_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

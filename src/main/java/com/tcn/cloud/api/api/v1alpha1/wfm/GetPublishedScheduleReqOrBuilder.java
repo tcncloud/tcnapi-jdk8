@@ -41,7 +41,7 @@ public interface GetPublishedScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_instances = 2 [json_name = "includeShiftInstances", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_instances is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7045
+   *     See api/v1alpha1/wfm/wfm.proto;l=7071
    * @return The includeShiftInstances.
    */
   @java.lang.Deprecated boolean getIncludeShiftInstances();
@@ -54,7 +54,7 @@ public interface GetPublishedScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_template is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7048
+   *     See api/v1alpha1/wfm/wfm.proto;l=7074
    * @return The includeShiftTemplate.
    */
   @java.lang.Deprecated boolean getIncludeShiftTemplate();
@@ -67,7 +67,7 @@ public interface GetPublishedScheduleReqOrBuilder extends
    *
    * <code>bool include_shift_segments = 4 [json_name = "includeShiftSegments", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_shift_segments is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7051
+   *     See api/v1alpha1/wfm/wfm.proto;l=7077
    * @return The includeShiftSegments.
    */
   @java.lang.Deprecated boolean getIncludeShiftSegments();
@@ -80,7 +80,7 @@ public interface GetPublishedScheduleReqOrBuilder extends
    *
    * <code>bool include_scheduling_activity = 5 [json_name = "includeSchedulingActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_scheduling_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7054
+   *     See api/v1alpha1/wfm/wfm.proto;l=7080
    * @return The includeSchedulingActivity.
    */
   @java.lang.Deprecated boolean getIncludeSchedulingActivity();
@@ -93,7 +93,7 @@ public interface GetPublishedScheduleReqOrBuilder extends
    *
    * <code>bool include_activity = 6 [json_name = "includeActivity", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.GetPublishedScheduleReq.include_activity is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7057
+   *     See api/v1alpha1/wfm/wfm.proto;l=7083
    * @return The includeActivity.
    */
   @java.lang.Deprecated boolean getIncludeActivity();

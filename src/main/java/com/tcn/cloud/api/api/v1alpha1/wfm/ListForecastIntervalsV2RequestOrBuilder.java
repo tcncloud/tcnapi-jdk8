@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface ListForecastIntervalsReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListForecastIntervalsReq)
+public interface ListForecastIntervalsV2RequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListForecastIntervalsV2Request)
     com.google.protobuf.MessageOrBuilder {
 
   /**

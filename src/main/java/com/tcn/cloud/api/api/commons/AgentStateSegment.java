@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
    * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
-   *     See api/commons/wfm.proto;l=816
+   *     See api/commons/wfm.proto;l=819
    * @return The widthInMinutes.
    */
   @java.lang.Override
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
      * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
-     *     See api/commons/wfm.proto;l=816
+     *     See api/commons/wfm.proto;l=819
      * @return The widthInMinutes.
      */
     @java.lang.Override
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
      * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
-     *     See api/commons/wfm.proto;l=816
+     *     See api/commons/wfm.proto;l=819
      * @param value The widthInMinutes to set.
      * @return This builder for chaining.
      */
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
      * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
-     *     See api/commons/wfm.proto;l=816
+     *     See api/commons/wfm.proto;l=819
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearWidthInMinutes() {
