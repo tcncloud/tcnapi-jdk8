@@ -179,6 +179,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -304,12 +314,18 @@ public final class EntitiesProto {
       "oogle.protobuf.FieldMaskR\tfieldMask\"q\n\033U" +
       "pdateClientArticleResponse\022R\n\017article_de" +
       "tails\030\001 \001(\0132).api.v1alpha1.newsroom.News" +
-      "ArticleDetailsR\016articleDetailsB\256\001\n\'com.t" +
-      "cn.cloud.api.api.v1alpha1.newsroomB\rEnti" +
-      "tiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroo" +
-      "m\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1" +
-      "\\Newsroom\\GPBMetadata\352\002\027Api::V1alpha1::N" +
-      "ewsroomb\006proto3"
+      "ArticleDetailsR\016articleDetails\"\216\001\n\031ListC" +
+      "lientArticlesRequest\0226\n\010statuses\030\001 \003(\0162\032" +
+      ".api.commons.ArticleStatusR\010statuses\0229\n\n" +
+      "field_mask\030d \001(\0132\032.google.protobuf.Field" +
+      "MaskR\tfieldMask\"p\n\032ListClientArticlesRes" +
+      "ponse\022R\n\017article_details\030\001 \003(\0132).api.v1a" +
+      "lpha1.newsroom.NewsArticleDetailsR\016artic" +
+      "leDetailsB\256\001\n\'com.tcn.cloud.api.api.v1al" +
+      "pha1.newsroomB\rEntitiesProtoP\001\242\002\003AVN\252\002\025A" +
+      "pi.V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\News" +
+      "room\342\002!Api\\V1alpha1\\Newsroom\\GPBMetadata" +
+      "\352\002\027Api::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -516,6 +532,18 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_descriptor,
+        new java.lang.String[] { "ArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor,
+        new java.lang.String[] { "Statuses", "FieldMask", });
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor,
         new java.lang.String[] { "ArticleDetails", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
