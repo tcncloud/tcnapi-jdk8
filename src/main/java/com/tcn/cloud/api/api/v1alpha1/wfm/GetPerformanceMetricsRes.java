@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private GetPerformanceMetricsRes() {
     performanceMetrics_ = java.util.Collections.emptyList();
     performanceMetricsV2_ = java.util.Collections.emptyList();
+    diagnostics_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -111,6 +112,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -122,6 +124,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -134,6 +137,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -145,6 +149,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -156,6 +161,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Requested set of performance metrics.
+   * These metrics will be deprecated once V3 metrics are fully integrated.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -164,6 +170,105 @@ private static final long serialVersionUID = 0L;
   public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
       int index) {
     return performanceMetricsV2_.get(index);
+  }
+
+  public static final int PERFORMANCE_METRICS_V3_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 performanceMetricsV3_;
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   * @return Whether the performanceMetricsV3 field is set.
+   */
+  @java.lang.Override
+  public boolean hasPerformanceMetricsV3() {
+    return performanceMetricsV3_ != null;
+  }
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   * @return The performanceMetricsV3.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 getPerformanceMetricsV3() {
+    return performanceMetricsV3_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.getDefaultInstance() : performanceMetricsV3_;
+  }
+  /**
+   * <pre>
+   * Requested performance metrics.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder getPerformanceMetricsV3OrBuilder() {
+    return performanceMetricsV3_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.getDefaultInstance() : performanceMetricsV3_;
+  }
+
+  public static final int DIAGNOSTICS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_;
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public int getDiagnosticsCount() {
+    return diagnostics_.size();
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+    return diagnostics_.get(index);
+  }
+  /**
+   * <pre>
+   * Any diagnostics encountered while generating the metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index) {
+    return diagnostics_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -186,6 +291,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < performanceMetricsV2_.size(); i++) {
       output.writeMessage(2, performanceMetricsV2_.get(i));
     }
+    if (performanceMetricsV3_ != null) {
+      output.writeMessage(3, getPerformanceMetricsV3());
+    }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      output.writeMessage(4, diagnostics_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -202,6 +313,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < performanceMetricsV2_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, performanceMetricsV2_.get(i));
+    }
+    if (performanceMetricsV3_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getPerformanceMetricsV3());
+    }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, diagnostics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -222,6 +341,13 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPerformanceMetricsList())) return false;
     if (!getPerformanceMetricsV2List()
         .equals(other.getPerformanceMetricsV2List())) return false;
+    if (hasPerformanceMetricsV3() != other.hasPerformanceMetricsV3()) return false;
+    if (hasPerformanceMetricsV3()) {
+      if (!getPerformanceMetricsV3()
+          .equals(other.getPerformanceMetricsV3())) return false;
+    }
+    if (!getDiagnosticsList()
+        .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -240,6 +366,14 @@ private static final long serialVersionUID = 0L;
     if (getPerformanceMetricsV2Count() > 0) {
       hash = (37 * hash) + PERFORMANCE_METRICS_V2_FIELD_NUMBER;
       hash = (53 * hash) + getPerformanceMetricsV2List().hashCode();
+    }
+    if (hasPerformanceMetricsV3()) {
+      hash = (37 * hash) + PERFORMANCE_METRICS_V3_FIELD_NUMBER;
+      hash = (53 * hash) + getPerformanceMetricsV3().hashCode();
+    }
+    if (getDiagnosticsCount() > 0) {
+      hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+      hash = (53 * hash) + getDiagnosticsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -390,6 +524,18 @@ private static final long serialVersionUID = 0L;
         performanceMetricsV2Builder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      performanceMetricsV3_ = null;
+      if (performanceMetricsV3Builder_ != null) {
+        performanceMetricsV3Builder_.dispose();
+        performanceMetricsV3Builder_ = null;
+      }
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+      } else {
+        diagnostics_ = null;
+        diagnosticsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -441,10 +587,24 @@ private static final long serialVersionUID = 0L;
       } else {
         result.performanceMetricsV2_ = performanceMetricsV2Builder_.build();
       }
+      if (diagnosticsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.diagnostics_ = diagnostics_;
+      } else {
+        result.diagnostics_ = diagnosticsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.performanceMetricsV3_ = performanceMetricsV3Builder_ == null
+            ? performanceMetricsV3_
+            : performanceMetricsV3Builder_.build();
+      }
     }
 
     @java.lang.Override
@@ -543,6 +703,35 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasPerformanceMetricsV3()) {
+        mergePerformanceMetricsV3(other.getPerformanceMetricsV3());
+      }
+      if (diagnosticsBuilder_ == null) {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnosticsBuilder_.isEmpty()) {
+            diagnosticsBuilder_.dispose();
+            diagnosticsBuilder_ = null;
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            diagnosticsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDiagnosticsFieldBuilder() : null;
+          } else {
+            diagnosticsBuilder_.addAllMessages(other.diagnostics_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -595,6 +784,26 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getPerformanceMetricsV3FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.parser(),
+                      extensionRegistry);
+              if (diagnosticsBuilder_ == null) {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(m);
+              } else {
+                diagnosticsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -939,6 +1148,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -953,6 +1163,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -967,6 +1178,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -981,6 +1193,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1002,6 +1215,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1020,6 +1234,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1040,6 +1255,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1061,6 +1277,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1079,6 +1296,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1097,6 +1315,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1116,6 +1335,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1133,6 +1353,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1150,6 +1371,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1161,6 +1383,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1175,6 +1398,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1190,6 +1414,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1201,6 +1426,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1213,6 +1439,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Requested set of performance metrics.
+     * These metrics will be deprecated once V3 metrics are fully integrated.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
@@ -1234,6 +1461,473 @@ private static final long serialVersionUID = 0L;
         performanceMetricsV2_ = null;
       }
       return performanceMetricsV2Builder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 performanceMetricsV3_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder> performanceMetricsV3Builder_;
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     * @return Whether the performanceMetricsV3 field is set.
+     */
+    public boolean hasPerformanceMetricsV3() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     * @return The performanceMetricsV3.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 getPerformanceMetricsV3() {
+      if (performanceMetricsV3Builder_ == null) {
+        return performanceMetricsV3_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.getDefaultInstance() : performanceMetricsV3_;
+      } else {
+        return performanceMetricsV3Builder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public Builder setPerformanceMetricsV3(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 value) {
+      if (performanceMetricsV3Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        performanceMetricsV3_ = value;
+      } else {
+        performanceMetricsV3Builder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public Builder setPerformanceMetricsV3(
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder builderForValue) {
+      if (performanceMetricsV3Builder_ == null) {
+        performanceMetricsV3_ = builderForValue.build();
+      } else {
+        performanceMetricsV3Builder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public Builder mergePerformanceMetricsV3(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3 value) {
+      if (performanceMetricsV3Builder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          performanceMetricsV3_ != null &&
+          performanceMetricsV3_ != com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.getDefaultInstance()) {
+          getPerformanceMetricsV3Builder().mergeFrom(value);
+        } else {
+          performanceMetricsV3_ = value;
+        }
+      } else {
+        performanceMetricsV3Builder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public Builder clearPerformanceMetricsV3() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      performanceMetricsV3_ = null;
+      if (performanceMetricsV3Builder_ != null) {
+        performanceMetricsV3Builder_.dispose();
+        performanceMetricsV3Builder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder getPerformanceMetricsV3Builder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getPerformanceMetricsV3FieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder getPerformanceMetricsV3OrBuilder() {
+      if (performanceMetricsV3Builder_ != null) {
+        return performanceMetricsV3Builder_.getMessageOrBuilder();
+      } else {
+        return performanceMetricsV3_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.getDefaultInstance() : performanceMetricsV3_;
+      }
+    }
+    /**
+     * <pre>
+     * Requested performance metrics.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.PerformanceMetricV3 performance_metrics_v3 = 3 [json_name = "performanceMetricsV3"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder> 
+        getPerformanceMetricsV3FieldBuilder() {
+      if (performanceMetricsV3Builder_ == null) {
+        performanceMetricsV3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV3OrBuilder>(
+                getPerformanceMetricsV3(),
+                getParentForChildren(),
+                isClean());
+        performanceMetricsV3_ = null;
+      }
+      return performanceMetricsV3Builder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
+      java.util.Collections.emptyList();
+    private void ensureDiagnosticsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        diagnostics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic>(diagnostics_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> diagnosticsBuilder_;
+
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+      if (diagnosticsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      } else {
+        return diagnosticsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public int getDiagnosticsCount() {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.size();
+      } else {
+        return diagnosticsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);
+      } else {
+        return diagnosticsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder addAllDiagnostics(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> values) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diagnostics_);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder clearDiagnostics() {
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public Builder removeDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.remove(index);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder getDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+        int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);  } else {
+        return diagnosticsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+         getDiagnosticsOrBuilderList() {
+      if (diagnosticsBuilder_ != null) {
+        return diagnosticsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      }
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder() {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any diagnostics encountered while generating the metrics.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 4 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder> 
+         getDiagnosticsBuilderList() {
+      return getDiagnosticsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+        getDiagnosticsFieldBuilder() {
+      if (diagnosticsBuilder_ == null) {
+        diagnosticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder>(
+                diagnostics_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        diagnostics_ = null;
+      }
+      return diagnosticsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

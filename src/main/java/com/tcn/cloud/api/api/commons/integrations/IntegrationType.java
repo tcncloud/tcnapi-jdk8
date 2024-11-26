@@ -233,6 +233,14 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_FINVI_FACS = 5400;</code>
    */
   INTEGRATION_TYPE_FINVI_FACS(5400),
+  /**
+   * <code>INTEGRATION_TYPE_FINVI_VELOSIDY = 5500;</code>
+   */
+  INTEGRATION_TYPE_FINVI_VELOSIDY(5500),
+  /**
+   * <code>INTEGRATION_TYPE_CLOVER = 5600;</code>
+   */
+  INTEGRATION_TYPE_CLOVER(5600),
   UNRECOGNIZED(-1),
   ;
 
@@ -456,6 +464,14 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_FINVI_FACS = 5400;</code>
    */
   public static final int INTEGRATION_TYPE_FINVI_FACS_VALUE = 5400;
+  /**
+   * <code>INTEGRATION_TYPE_FINVI_VELOSIDY = 5500;</code>
+   */
+  public static final int INTEGRATION_TYPE_FINVI_VELOSIDY_VALUE = 5500;
+  /**
+   * <code>INTEGRATION_TYPE_CLOVER = 5600;</code>
+   */
+  public static final int INTEGRATION_TYPE_CLOVER_VALUE = 5600;
 
 
   public final int getNumber() {
@@ -537,6 +553,8 @@ public enum IntegrationType
       case 5200: return INTEGRATION_TYPE_GENERIC;
       case 5300: return INTEGRATION_TYPE_HEALTHPAY24;
       case 5400: return INTEGRATION_TYPE_FINVI_FACS;
+      case 5500: return INTEGRATION_TYPE_FINVI_VELOSIDY;
+      case 5600: return INTEGRATION_TYPE_CLOVER;
       default: return null;
     }
   }
