@@ -232,6 +232,37 @@ public final class PBXServiceGrpc {
     return getGetSIPAccountByUserIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest,
+      com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> getGetSIPSessionPasswordMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSIPSessionPassword",
+      requestType = com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest.class,
+      responseType = com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest,
+      com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> getGetSIPSessionPasswordMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest, com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> getGetSIPSessionPasswordMethod;
+    if ((getGetSIPSessionPasswordMethod = PBXServiceGrpc.getGetSIPSessionPasswordMethod) == null) {
+      synchronized (PBXServiceGrpc.class) {
+        if ((getGetSIPSessionPasswordMethod = PBXServiceGrpc.getGetSIPSessionPasswordMethod) == null) {
+          PBXServiceGrpc.getGetSIPSessionPasswordMethod = getGetSIPSessionPasswordMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest, com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSIPSessionPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PBXServiceMethodDescriptorSupplier("GetSIPSessionPassword"))
+              .build();
+        }
+      }
+    }
+    return getGetSIPSessionPasswordMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsRequest,
       com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsResponse> getListSIPAccountsMethod;
 
@@ -621,6 +652,23 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns session password for SIP Account associated with the org_user_id
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void getSIPSessionPassword(com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSIPSessionPasswordMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -906,6 +954,24 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns session password for SIP Account associated with the org_user_id
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void getSIPSessionPassword(com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSIPSessionPasswordMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1176,6 +1242,23 @@ public final class PBXServiceGrpc {
     public com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse getSIPAccountByUserId(com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSIPAccountByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns session password for SIP Account associated with the org_user_id
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse getSIPSessionPassword(com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSIPSessionPasswordMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1454,6 +1537,24 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns session password for SIP Account associated with the org_user_id
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The group does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse> getSIPSessionPassword(
+        com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSIPSessionPasswordMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns details of all SIP Accounts associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1595,13 +1696,14 @@ public final class PBXServiceGrpc {
   private static final int METHODID_GET_RING_GROUP = 4;
   private static final int METHODID_GET_SIPACCOUNT = 5;
   private static final int METHODID_GET_SIPACCOUNT_BY_USER_ID = 6;
-  private static final int METHODID_LIST_SIPACCOUNTS = 7;
-  private static final int METHODID_LIST_SIPACCOUNTS_BY_RING_GROUP_ID = 8;
-  private static final int METHODID_UPDATE_SIPACCOUNT = 9;
-  private static final int METHODID_UPDATE_RING_GROUP = 10;
-  private static final int METHODID_CREATE_RING_GROUP = 11;
-  private static final int METHODID_DELETE_RING_GROUP = 12;
-  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 13;
+  private static final int METHODID_GET_SIPSESSION_PASSWORD = 7;
+  private static final int METHODID_LIST_SIPACCOUNTS = 8;
+  private static final int METHODID_LIST_SIPACCOUNTS_BY_RING_GROUP_ID = 9;
+  private static final int METHODID_UPDATE_SIPACCOUNT = 10;
+  private static final int METHODID_UPDATE_RING_GROUP = 11;
+  private static final int METHODID_CREATE_RING_GROUP = 12;
+  private static final int METHODID_DELETE_RING_GROUP = 13;
+  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1647,6 +1749,10 @@ public final class PBXServiceGrpc {
         case METHODID_GET_SIPACCOUNT_BY_USER_ID:
           serviceImpl.getSIPAccountByUserId((com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_GET_SIPSESSION_PASSWORD:
+          serviceImpl.getSIPSessionPassword((com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse>) responseObserver);
           break;
         case METHODID_LIST_SIPACCOUNTS:
           serviceImpl.listSIPAccounts((com.tcn.cloud.api.services.pbx.v2.ListSIPAccountsRequest) request,
@@ -1743,6 +1849,13 @@ public final class PBXServiceGrpc {
               com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdRequest,
               com.tcn.cloud.api.services.pbx.v2.GetSIPAccountByUserIdResponse>(
                 service, METHODID_GET_SIPACCOUNT_BY_USER_ID)))
+        .addMethod(
+          getGetSIPSessionPasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordRequest,
+              com.tcn.cloud.api.services.pbx.v2.GetSIPSessionPasswordResponse>(
+                service, METHODID_GET_SIPSESSION_PASSWORD)))
         .addMethod(
           getListSIPAccountsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1847,6 +1960,7 @@ public final class PBXServiceGrpc {
               .addMethod(getGetRingGroupMethod())
               .addMethod(getGetSIPAccountMethod())
               .addMethod(getGetSIPAccountByUserIdMethod())
+              .addMethod(getGetSIPSessionPasswordMethod())
               .addMethod(getListSIPAccountsMethod())
               .addMethod(getListSIPAccountsByRingGroupIdMethod())
               .addMethod(getUpdateSIPAccountMethod())
