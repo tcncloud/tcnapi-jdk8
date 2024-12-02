@@ -8,11 +8,19 @@ public interface GetSIPSessionPasswordResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * generated user session password for registering SIPAccount
+   * </pre>
+   *
    * <code>string password = 1 [json_name = "password"];</code>
    * @return The password.
    */
   java.lang.String getPassword();
   /**
+   * <pre>
+   * generated user session password for registering SIPAccount
+   * </pre>
+   *
    * <code>string password = 1 [json_name = "password"];</code>
    * @return The bytes for password.
    */

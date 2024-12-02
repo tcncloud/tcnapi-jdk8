@@ -43,6 +43,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object password_ = "";
   /**
+   * <pre>
+   * generated user session password for registering SIPAccount
+   * </pre>
+   *
    * <code>string password = 1 [json_name = "password"];</code>
    * @return The password.
    */
@@ -60,6 +64,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * generated user session password for registering SIPAccount
+   * </pre>
+   *
    * <code>string password = 1 [json_name = "password"];</code>
    * @return The bytes for password.
    */
@@ -406,6 +414,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object password_ = "";
     /**
+     * <pre>
+     * generated user session password for registering SIPAccount
+     * </pre>
+     *
      * <code>string password = 1 [json_name = "password"];</code>
      * @return The password.
      */
@@ -422,6 +434,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * generated user session password for registering SIPAccount
+     * </pre>
+     *
      * <code>string password = 1 [json_name = "password"];</code>
      * @return The bytes for password.
      */
@@ -439,6 +455,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * generated user session password for registering SIPAccount
+     * </pre>
+     *
      * <code>string password = 1 [json_name = "password"];</code>
      * @param value The password to set.
      * @return This builder for chaining.
@@ -452,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * generated user session password for registering SIPAccount
+     * </pre>
+     *
      * <code>string password = 1 [json_name = "password"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * generated user session password for registering SIPAccount
+     * </pre>
+     *
      * <code>string password = 1 [json_name = "password"];</code>
      * @param value The bytes for password to set.
      * @return This builder for chaining.
