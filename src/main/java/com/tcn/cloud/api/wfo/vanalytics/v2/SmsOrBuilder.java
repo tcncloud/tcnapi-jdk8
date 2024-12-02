@@ -117,23 +117,4 @@ public interface SmsOrBuilder extends
    * @return The campaignSid.
    */
   long getCampaignSid();
-
-  /**
-   * <pre>
-   * The omni conversation direction for this sms.
-   * </pre>
-   *
-   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
-   * @return The enum numeric value on the wire for conversationType.
-   */
-  int getConversationTypeValue();
-  /**
-   * <pre>
-   * The omni conversation direction for this sms.
-   * </pre>
-   *
-   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
-   * @return The conversationType.
-   */
-  com.tcn.cloud.api.api.commons.ConversationType getConversationType();
 }
