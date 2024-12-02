@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private Sms() {
     threads_ = java.util.Collections.emptyList();
     callerId_ = "";
+    conversationType_ = 0;
   }
 
   @java.lang.Override
@@ -4097,6 +4098,32 @@ private static final long serialVersionUID = 0L;
     return campaignSid_;
   }
 
+  public static final int CONVERSATION_TYPE_FIELD_NUMBER = 6;
+  private int conversationType_ = 0;
+  /**
+   * <pre>
+   * The omni conversation direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The enum numeric value on the wire for conversationType.
+   */
+  @java.lang.Override public int getConversationTypeValue() {
+    return conversationType_;
+  }
+  /**
+   * <pre>
+   * The omni conversation direction for this sms.
+   * </pre>
+   *
+   * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+   * @return The conversationType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConversationType getConversationType() {
+    com.tcn.cloud.api.api.commons.ConversationType result = com.tcn.cloud.api.api.commons.ConversationType.forNumber(conversationType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConversationType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4126,6 +4153,9 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       output.writeInt64(5, campaignSid_);
     }
+    if (conversationType_ != com.tcn.cloud.api.api.commons.ConversationType.CONVERSATION_TYPE_INBOUND.getNumber()) {
+      output.writeEnum(6, conversationType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -4153,6 +4183,10 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, campaignSid_);
+    }
+    if (conversationType_ != com.tcn.cloud.api.api.commons.ConversationType.CONVERSATION_TYPE_INBOUND.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, conversationType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4182,6 +4216,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallerId())) return false;
     if (getCampaignSid()
         != other.getCampaignSid()) return false;
+    if (conversationType_ != other.conversationType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4209,6 +4244,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCampaignSid());
+    hash = (37 * hash) + CONVERSATION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + conversationType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4359,6 +4396,7 @@ private static final long serialVersionUID = 0L;
       }
       callerId_ = "";
       campaignSid_ = 0L;
+      conversationType_ = 0;
       return this;
     }
 
@@ -4418,6 +4456,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.conversationType_ = conversationType_;
       }
     }
 
@@ -4505,6 +4546,9 @@ private static final long serialVersionUID = 0L;
       if (other.getCampaignSid() != 0L) {
         setCampaignSid(other.getCampaignSid());
       }
+      if (other.conversationType_ != 0) {
+        setConversationTypeValue(other.getConversationTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4566,6 +4610,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              conversationType_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5226,6 +5275,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearCampaignSid() {
       bitField0_ = (bitField0_ & ~0x00000010);
       campaignSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int conversationType_ = 0;
+    /**
+     * <pre>
+     * The omni conversation direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @return The enum numeric value on the wire for conversationType.
+     */
+    @java.lang.Override public int getConversationTypeValue() {
+      return conversationType_;
+    }
+    /**
+     * <pre>
+     * The omni conversation direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @param value The enum numeric value on the wire for conversationType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversationTypeValue(int value) {
+      conversationType_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The omni conversation direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @return The conversationType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConversationType getConversationType() {
+      com.tcn.cloud.api.api.commons.ConversationType result = com.tcn.cloud.api.api.commons.ConversationType.forNumber(conversationType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConversationType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The omni conversation direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @param value The conversationType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversationType(com.tcn.cloud.api.api.commons.ConversationType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      conversationType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The omni conversation direction for this sms.
+     * </pre>
+     *
+     * <code>.api.commons.ConversationType conversation_type = 6 [json_name = "conversationType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversationType() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      conversationType_ = 0;
       onChanged();
       return this;
     }
