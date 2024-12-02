@@ -4,33 +4,37 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * <pre>
- * OmniConversationResult -
- * </pre>
- *
- * Protobuf enum {@code api.commons.OmniConversationResult}
+ * Protobuf enum {@code api.commons.ConversationType}
  */
-public enum OmniConversationResult
+public enum ConversationType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>NONE = 0;</code>
+   * <code>CONVERSATION_TYPE_INBOUND = 0;</code>
    */
-  NONE(0),
+  CONVERSATION_TYPE_INBOUND(0),
   /**
-   * <code>ABANDONED = 1;</code>
+   * <code>CONVERSATION_TYPE_OUTBOUND = 1;</code>
    */
-  ABANDONED(1),
+  CONVERSATION_TYPE_OUTBOUND(1),
+  /**
+   * <code>CONVERSATION_TYPE_MANUAL = 2;</code>
+   */
+  CONVERSATION_TYPE_MANUAL(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>NONE = 0;</code>
+   * <code>CONVERSATION_TYPE_INBOUND = 0;</code>
    */
-  public static final int NONE_VALUE = 0;
+  public static final int CONVERSATION_TYPE_INBOUND_VALUE = 0;
   /**
-   * <code>ABANDONED = 1;</code>
+   * <code>CONVERSATION_TYPE_OUTBOUND = 1;</code>
    */
-  public static final int ABANDONED_VALUE = 1;
+  public static final int CONVERSATION_TYPE_OUTBOUND_VALUE = 1;
+  /**
+   * <code>CONVERSATION_TYPE_MANUAL = 2;</code>
+   */
+  public static final int CONVERSATION_TYPE_MANUAL_VALUE = 2;
 
 
   public final int getNumber() {
@@ -47,7 +51,7 @@ public enum OmniConversationResult
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static OmniConversationResult valueOf(int value) {
+  public static ConversationType valueOf(int value) {
     return forNumber(value);
   }
 
@@ -55,23 +59,24 @@ public enum OmniConversationResult
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static OmniConversationResult forNumber(int value) {
+  public static ConversationType forNumber(int value) {
     switch (value) {
-      case 0: return NONE;
-      case 1: return ABANDONED;
+      case 0: return CONVERSATION_TYPE_INBOUND;
+      case 1: return CONVERSATION_TYPE_OUTBOUND;
+      case 2: return CONVERSATION_TYPE_MANUAL;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<OmniConversationResult>
+  public static com.google.protobuf.Internal.EnumLiteMap<ConversationType>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      OmniConversationResult> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<OmniConversationResult>() {
-          public OmniConversationResult findValueByNumber(int number) {
-            return OmniConversationResult.forNumber(number);
+      ConversationType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<ConversationType>() {
+          public ConversationType findValueByNumber(int number) {
+            return ConversationType.forNumber(number);
           }
         };
 
@@ -89,12 +94,12 @@ public enum OmniConversationResult
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(14);
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(13);
   }
 
-  private static final OmniConversationResult[] VALUES = values();
+  private static final ConversationType[] VALUES = values();
 
-  public static OmniConversationResult valueOf(
+  public static ConversationType valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -108,10 +113,10 @@ public enum OmniConversationResult
 
   private final int value;
 
-  private OmniConversationResult(int value) {
+  private ConversationType(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.OmniConversationResult)
+  // @@protoc_insertion_point(enum_scope:api.commons.ConversationType)
 }
 
