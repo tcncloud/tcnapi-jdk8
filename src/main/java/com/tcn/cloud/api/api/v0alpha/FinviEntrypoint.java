@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     poolId_ = "";
     cronInterval_ = "";
     timezone_ = "";
+    filenamePattern_ = "";
   }
 
   @java.lang.Override
@@ -197,6 +198,87 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FILENAME_PATTERN_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object filenamePattern_ = "";
+  /**
+   * <pre>
+   * template string to use as the generated filename.
+   * any text inside double brackets "{{text}}"
+   * will be replaced with the value that field represents.
+   * choose from:
+   * - "element_id" id of LMS element
+   * - "element_name" name of LMS element
+   * - "pool_id" id of the pool on external system
+   * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+   * - "YYYY-MM-DDTHH_mm_ss"
+   * - "YYYY-MM-DD"
+   * - "MM-DD-YYYYTHH_mm_ss"
+   * - "MM-DD-YYYY"
+   * - "HH"
+   * - "HH_mm_ss"
+   * - "UNIX"
+   * if left blank, the default template is used.
+   * expect more fields to be supported in future.
+   * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+   * </pre>
+   *
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The filenamePattern.
+   */
+  @java.lang.Override
+  public java.lang.String getFilenamePattern() {
+    java.lang.Object ref = filenamePattern_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      filenamePattern_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * template string to use as the generated filename.
+   * any text inside double brackets "{{text}}"
+   * will be replaced with the value that field represents.
+   * choose from:
+   * - "element_id" id of LMS element
+   * - "element_name" name of LMS element
+   * - "pool_id" id of the pool on external system
+   * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+   * - "YYYY-MM-DDTHH_mm_ss"
+   * - "YYYY-MM-DD"
+   * - "MM-DD-YYYYTHH_mm_ss"
+   * - "MM-DD-YYYY"
+   * - "HH"
+   * - "HH_mm_ss"
+   * - "UNIX"
+   * if left blank, the default template is used.
+   * expect more fields to be supported in future.
+   * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+   * </pre>
+   *
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The bytes for filenamePattern.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFilenamePatternBytes() {
+    java.lang.Object ref = filenamePattern_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      filenamePattern_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -223,6 +305,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timezone_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filenamePattern_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filenamePattern_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -244,6 +329,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timezone_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filenamePattern_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filenamePattern_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,6 +356,8 @@ private static final long serialVersionUID = 0L;
         != other.getDisabled()) return false;
     if (!getTimezone()
         .equals(other.getTimezone())) return false;
+    if (!getFilenamePattern()
+        .equals(other.getFilenamePattern())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -288,6 +378,8 @@ private static final long serialVersionUID = 0L;
         getDisabled());
     hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
     hash = (53 * hash) + getTimezone().hashCode();
+    hash = (37 * hash) + FILENAME_PATTERN_FIELD_NUMBER;
+    hash = (53 * hash) + getFilenamePattern().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -423,6 +515,7 @@ private static final long serialVersionUID = 0L;
       cronInterval_ = "";
       disabled_ = false;
       timezone_ = "";
+      filenamePattern_ = "";
       return this;
     }
 
@@ -467,6 +560,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.filenamePattern_ = filenamePattern_;
       }
     }
 
@@ -532,6 +628,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getFilenamePattern().isEmpty()) {
+        filenamePattern_ = other.filenamePattern_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -578,6 +679,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              filenamePattern_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -911,6 +1017,183 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       timezone_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object filenamePattern_ = "";
+    /**
+     * <pre>
+     * template string to use as the generated filename.
+     * any text inside double brackets "{{text}}"
+     * will be replaced with the value that field represents.
+     * choose from:
+     * - "element_id" id of LMS element
+     * - "element_name" name of LMS element
+     * - "pool_id" id of the pool on external system
+     * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+     * - "YYYY-MM-DDTHH_mm_ss"
+     * - "YYYY-MM-DD"
+     * - "MM-DD-YYYYTHH_mm_ss"
+     * - "MM-DD-YYYY"
+     * - "HH"
+     * - "HH_mm_ss"
+     * - "UNIX"
+     * if left blank, the default template is used.
+     * expect more fields to be supported in future.
+     * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+     * </pre>
+     *
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @return The filenamePattern.
+     */
+    public java.lang.String getFilenamePattern() {
+      java.lang.Object ref = filenamePattern_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filenamePattern_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * template string to use as the generated filename.
+     * any text inside double brackets "{{text}}"
+     * will be replaced with the value that field represents.
+     * choose from:
+     * - "element_id" id of LMS element
+     * - "element_name" name of LMS element
+     * - "pool_id" id of the pool on external system
+     * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+     * - "YYYY-MM-DDTHH_mm_ss"
+     * - "YYYY-MM-DD"
+     * - "MM-DD-YYYYTHH_mm_ss"
+     * - "MM-DD-YYYY"
+     * - "HH"
+     * - "HH_mm_ss"
+     * - "UNIX"
+     * if left blank, the default template is used.
+     * expect more fields to be supported in future.
+     * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+     * </pre>
+     *
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @return The bytes for filenamePattern.
+     */
+    public com.google.protobuf.ByteString
+        getFilenamePatternBytes() {
+      java.lang.Object ref = filenamePattern_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filenamePattern_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * template string to use as the generated filename.
+     * any text inside double brackets "{{text}}"
+     * will be replaced with the value that field represents.
+     * choose from:
+     * - "element_id" id of LMS element
+     * - "element_name" name of LMS element
+     * - "pool_id" id of the pool on external system
+     * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+     * - "YYYY-MM-DDTHH_mm_ss"
+     * - "YYYY-MM-DD"
+     * - "MM-DD-YYYYTHH_mm_ss"
+     * - "MM-DD-YYYY"
+     * - "HH"
+     * - "HH_mm_ss"
+     * - "UNIX"
+     * if left blank, the default template is used.
+     * expect more fields to be supported in future.
+     * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+     * </pre>
+     *
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @param value The filenamePattern to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilenamePattern(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      filenamePattern_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * template string to use as the generated filename.
+     * any text inside double brackets "{{text}}"
+     * will be replaced with the value that field represents.
+     * choose from:
+     * - "element_id" id of LMS element
+     * - "element_name" name of LMS element
+     * - "pool_id" id of the pool on external system
+     * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+     * - "YYYY-MM-DDTHH_mm_ss"
+     * - "YYYY-MM-DD"
+     * - "MM-DD-YYYYTHH_mm_ss"
+     * - "MM-DD-YYYY"
+     * - "HH"
+     * - "HH_mm_ss"
+     * - "UNIX"
+     * if left blank, the default template is used.
+     * expect more fields to be supported in future.
+     * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+     * </pre>
+     *
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFilenamePattern() {
+      filenamePattern_ = getDefaultInstance().getFilenamePattern();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * template string to use as the generated filename.
+     * any text inside double brackets "{{text}}"
+     * will be replaced with the value that field represents.
+     * choose from:
+     * - "element_id" id of LMS element
+     * - "element_name" name of LMS element
+     * - "pool_id" id of the pool on external system
+     * - "pool_name" the name of the pool/tableID on external system when calling pool.GetStatus
+     * - "YYYY-MM-DDTHH_mm_ss"
+     * - "YYYY-MM-DD"
+     * - "MM-DD-YYYYTHH_mm_ss"
+     * - "MM-DD-YYYY"
+     * - "HH"
+     * - "HH_mm_ss"
+     * - "UNIX"
+     * if left blank, the default template is used.
+     * expect more fields to be supported in future.
+     * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
+     * </pre>
+     *
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @param value The bytes for filenamePattern to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilenamePatternBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      filenamePattern_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
