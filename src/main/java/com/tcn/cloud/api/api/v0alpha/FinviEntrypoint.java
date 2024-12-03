@@ -19,7 +19,7 @@ private static final long serialVersionUID = 0L;
     poolId_ = "";
     cronInterval_ = "";
     timezone_ = "";
-    filename_ = "";
+    filenamePattern_ = "";
   }
 
   @java.lang.Override
@@ -198,9 +198,9 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FILENAME_FIELD_NUMBER = 5;
+  public static final int FILENAME_PATTERN_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object filename_ = "";
+  private volatile java.lang.Object filenamePattern_ = "";
   /**
    * <pre>
    * template string to use as the generated filename.
@@ -223,19 +223,19 @@ private static final long serialVersionUID = 0L;
    * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
    * </pre>
    *
-   * <code>string filename = 5 [json_name = "filename"];</code>
-   * @return The filename.
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The filenamePattern.
    */
   @java.lang.Override
-  public java.lang.String getFilename() {
-    java.lang.Object ref = filename_;
+  public java.lang.String getFilenamePattern() {
+    java.lang.Object ref = filenamePattern_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      filename_ = s;
+      filenamePattern_ = s;
       return s;
     }
   }
@@ -261,18 +261,18 @@ private static final long serialVersionUID = 0L;
    * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
    * </pre>
    *
-   * <code>string filename = 5 [json_name = "filename"];</code>
-   * @return The bytes for filename.
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The bytes for filenamePattern.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFilenameBytes() {
-    java.lang.Object ref = filename_;
+      getFilenamePatternBytes() {
+    java.lang.Object ref = filenamePattern_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      filename_ = b;
+      filenamePattern_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -305,8 +305,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timezone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filename_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filenamePattern_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filenamePattern_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -330,8 +330,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timezone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filename_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filenamePattern_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filenamePattern_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -356,8 +356,8 @@ private static final long serialVersionUID = 0L;
         != other.getDisabled()) return false;
     if (!getTimezone()
         .equals(other.getTimezone())) return false;
-    if (!getFilename()
-        .equals(other.getFilename())) return false;
+    if (!getFilenamePattern()
+        .equals(other.getFilenamePattern())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -378,8 +378,8 @@ private static final long serialVersionUID = 0L;
         getDisabled());
     hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
     hash = (53 * hash) + getTimezone().hashCode();
-    hash = (37 * hash) + FILENAME_FIELD_NUMBER;
-    hash = (53 * hash) + getFilename().hashCode();
+    hash = (37 * hash) + FILENAME_PATTERN_FIELD_NUMBER;
+    hash = (53 * hash) + getFilenamePattern().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
       cronInterval_ = "";
       disabled_ = false;
       timezone_ = "";
-      filename_ = "";
+      filenamePattern_ = "";
       return this;
     }
 
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
         result.timezone_ = timezone_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.filename_ = filename_;
+        result.filenamePattern_ = filenamePattern_;
       }
     }
 
@@ -628,8 +628,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getFilename().isEmpty()) {
-        filename_ = other.filename_;
+      if (!other.getFilenamePattern().isEmpty()) {
+        filenamePattern_ = other.filenamePattern_;
         bitField0_ |= 0x00000010;
         onChanged();
       }
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 42: {
-              filename_ = input.readStringRequireUtf8();
+              filenamePattern_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 42
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object filename_ = "";
+    private java.lang.Object filenamePattern_ = "";
     /**
      * <pre>
      * template string to use as the generated filename.
@@ -1044,16 +1044,16 @@ private static final long serialVersionUID = 0L;
      * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
      * </pre>
      *
-     * <code>string filename = 5 [json_name = "filename"];</code>
-     * @return The filename.
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @return The filenamePattern.
      */
-    public java.lang.String getFilename() {
-      java.lang.Object ref = filename_;
+    public java.lang.String getFilenamePattern() {
+      java.lang.Object ref = filenamePattern_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        filename_ = s;
+        filenamePattern_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1081,17 +1081,17 @@ private static final long serialVersionUID = 0L;
      * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
      * </pre>
      *
-     * <code>string filename = 5 [json_name = "filename"];</code>
-     * @return The bytes for filename.
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @return The bytes for filenamePattern.
      */
     public com.google.protobuf.ByteString
-        getFilenameBytes() {
-      java.lang.Object ref = filename_;
+        getFilenamePatternBytes() {
+      java.lang.Object ref = filenamePattern_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        filename_ = b;
+        filenamePattern_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1119,14 +1119,14 @@ private static final long serialVersionUID = 0L;
      * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
      * </pre>
      *
-     * <code>string filename = 5 [json_name = "filename"];</code>
-     * @param value The filename to set.
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @param value The filenamePattern to set.
      * @return This builder for chaining.
      */
-    public Builder setFilename(
+    public Builder setFilenamePattern(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      filename_ = value;
+      filenamePattern_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
@@ -1153,11 +1153,11 @@ private static final long serialVersionUID = 0L;
      * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
      * </pre>
      *
-     * <code>string filename = 5 [json_name = "filename"];</code>
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFilename() {
-      filename_ = getDefaultInstance().getFilename();
+    public Builder clearFilenamePattern() {
+      filenamePattern_ = getDefaultInstance().getFilenamePattern();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
@@ -1184,15 +1184,15 @@ private static final long serialVersionUID = 0L;
      * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
      * </pre>
      *
-     * <code>string filename = 5 [json_name = "filename"];</code>
-     * @param value The bytes for filename to set.
+     * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+     * @param value The bytes for filenamePattern to set.
      * @return This builder for chaining.
      */
-    public Builder setFilenameBytes(
+    public Builder setFilenamePatternBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      filename_ = value;
+      filenamePattern_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;

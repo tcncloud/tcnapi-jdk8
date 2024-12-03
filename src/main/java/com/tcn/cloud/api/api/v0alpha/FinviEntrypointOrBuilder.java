@@ -99,10 +99,10 @@ public interface FinviEntrypointOrBuilder extends
    * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
    * </pre>
    *
-   * <code>string filename = 5 [json_name = "filename"];</code>
-   * @return The filename.
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The filenamePattern.
    */
-  java.lang.String getFilename();
+  java.lang.String getFilenamePattern();
   /**
    * <pre>
    * template string to use as the generated filename.
@@ -125,9 +125,9 @@ public interface FinviEntrypointOrBuilder extends
    * default template looks like: "{{pool_id}}_{{element_id}}_{{UNIX}}"
    * </pre>
    *
-   * <code>string filename = 5 [json_name = "filename"];</code>
-   * @return The bytes for filename.
+   * <code>string filename_pattern = 5 [json_name = "filenamePattern"];</code>
+   * @return The bytes for filenamePattern.
    */
   com.google.protobuf.ByteString
-      getFilenameBytes();
+      getFilenamePatternBytes();
 }
