@@ -27,7 +27,7 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\372\036\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\220$\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
@@ -126,13 +126,30 @@ public final class ServiceProto {
       "_groups.v1alpha1.DeleteAgentClientInfoDi" +
       "splayTemplateResponse\"[\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002K\"" +
       "F/services/org/huntgroups/v1alpha1/delet" +
-      "eagentclientinfodisplaytemplate:\001*B\346\001\n3c" +
-      "om.tcn.cloud.api.services.org.hunt_group" +
-      "s.v1alpha1B\014ServiceProtoP\001\242\002\003SOH\252\002 Servi" +
-      "ces.Org.HuntGroups.V1alpha1\312\002 Services\\O" +
-      "rg\\HuntGroups\\V1alpha1\342\002,Services\\Org\\Hu" +
-      "ntGroups\\V1alpha1\\GPBMetadata\352\002#Services" +
-      "::Org::HuntGroups::V1alpha1b\006proto3"
+      "eagentclientinfodisplaytemplate:\001*\022\300\002\n+A" +
+      "ssignClientInfoDisplayTemplateToHuntGrou" +
+      "ps\022U.services.org.hunt_groups.v1alpha1.A" +
+      "ssignClientInfoDisplayTemplateToHuntGrou" +
+      "psRequest\032V.services.org.hunt_groups.v1a" +
+      "lpha1.AssignClientInfoDisplayTemplateToH" +
+      "untGroupsResponse\"b\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002R\"M/se" +
+      "rvices/org/huntgroups/v1alpha1/assigncli" +
+      "entinfodisplaytemplatetohuntgroups:\001*\022\320\002" +
+      "\n/UnassignClientInfoDisplayTemplateFromH" +
+      "untGroups\022Y.services.org.hunt_groups.v1a" +
+      "lpha1.UnassignClientInfoDisplayTemplateF" +
+      "romHuntGroupsRequest\032Z.services.org.hunt" +
+      "_groups.v1alpha1.UnassignClientInfoDispl" +
+      "ayTemplateFromHuntGroupsResponse\"f\272\270\221\002\005\n" +
+      "\003\010\355\016\202\323\344\223\002V\"Q/services/org/huntgroups/v1a" +
+      "lpha1/unassignclientinfodisplaytemplatef" +
+      "romhuntgroups:\001*B\346\001\n3com.tcn.cloud.api.s" +
+      "ervices.org.hunt_groups.v1alpha1B\014Servic" +
+      "eProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups" +
+      ".V1alpha1\312\002 Services\\Org\\HuntGroups\\V1al" +
+      "pha1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\" +
+      "GPBMetadata\352\002#Services::Org::HuntGroups:" +
+      ":V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
