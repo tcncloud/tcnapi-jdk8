@@ -5,21 +5,21 @@ package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
 /**
  * <pre>
- * Request to assign agent campaign client info display template.
+ * Request for removing templates from hunt groups.
  * </pre>
  *
- * Protobuf type {@code services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest}
+ * Protobuf type {@code services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest}
  */
-public final class AssignClientInfoDisplayTemplateToHuntGroupsRequest extends
+public final class UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)
-    AssignClientInfoDisplayTemplateToHuntGroupsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)
+    UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AssignClientInfoDisplayTemplateToHuntGroupsRequest.newBuilder() to construct.
-  private AssignClientInfoDisplayTemplateToHuntGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.newBuilder() to construct.
+  private UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AssignClientInfoDisplayTemplateToHuntGroupsRequest() {
+  private UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest() {
     huntGroupSids_ = emptyLongList();
   }
 
@@ -27,46 +27,31 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AssignClientInfoDisplayTemplateToHuntGroupsRequest();
+    return new UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AssignClientInfoDisplayTemplateToHuntGroupsRequest_descriptor;
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AssignClientInfoDisplayTemplateToHuntGroupsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.Builder.class);
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.Builder.class);
   }
 
-  public static final int TEMPLATE_SID_FIELD_NUMBER = 1;
-  private long templateSid_ = 0L;
-  /**
-   * <pre>
-   * The template to be assigned
-   * </pre>
-   *
-   * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-   * @return The templateSid.
-   */
-  @java.lang.Override
-  public long getTemplateSid() {
-    return templateSid_;
-  }
-
-  public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 2;
+  public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList huntGroupSids_;
   /**
    * <pre>
-   * The target hunt groups to assign the specified template.
+   * The hunt groups from which to remove the template.
    * </pre>
    *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
    * @return A list containing the huntGroupSids.
    */
   @java.lang.Override
@@ -76,10 +61,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The target hunt groups to assign the specified template.
+   * The hunt groups from which to remove the template.
    * </pre>
    *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
    * @return The count of huntGroupSids.
    */
   public int getHuntGroupSidsCount() {
@@ -87,10 +72,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The target hunt groups to assign the specified template.
+   * The hunt groups from which to remove the template.
    * </pre>
    *
-   * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+   * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
    * @param index The index of the element to return.
    * @return The huntGroupSids at the given index.
    */
@@ -114,11 +99,8 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (templateSid_ != 0L) {
-      output.writeInt64(1, templateSid_);
-    }
     if (getHuntGroupSidsList().size() > 0) {
-      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(10);
       output.writeUInt32NoTag(huntGroupSidsMemoizedSerializedSize);
     }
     for (int i = 0; i < huntGroupSids_.size(); i++) {
@@ -133,10 +115,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (templateSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, templateSid_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < huntGroupSids_.size(); i++) {
@@ -161,13 +139,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest) obj;
+    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest) obj;
 
-    if (getTemplateSid()
-        != other.getTemplateSid()) return false;
     if (!getHuntGroupSidsList()
         .equals(other.getHuntGroupSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -181,9 +157,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEMPLATE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTemplateSid());
     if (getHuntGroupSidsCount() > 0) {
       hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getHuntGroupSidsList().hashCode();
@@ -193,44 +166,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -238,26 +211,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -270,7 +243,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -287,29 +260,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request to assign agent campaign client info display template.
+   * Request for removing templates from hunt groups.
    * </pre>
    *
-   * Protobuf type {@code services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest}
+   * Protobuf type {@code services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AssignClientInfoDisplayTemplateToHuntGroupsRequest_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AssignClientInfoDisplayTemplateToHuntGroupsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.Builder.class);
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.newBuilder()
     private Builder() {
 
     }
@@ -323,7 +296,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      templateSid_ = 0L;
       huntGroupSids_ = emptyLongList();
       return this;
     }
@@ -331,17 +303,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AssignClientInfoDisplayTemplateToHuntGroupsRequest_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest build() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest result = buildPartial();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest build() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -349,27 +321,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest buildPartial() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest(this);
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest buildPartial() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         huntGroupSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.huntGroupSids_ = huntGroupSids_;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.templateSid_ = templateSid_;
-      }
     }
 
     @java.lang.Override
@@ -406,23 +375,20 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest other) {
-      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest.getDefaultInstance()) return this;
-      if (other.getTemplateSid() != 0L) {
-        setTemplateSid(other.getTemplateSid());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest other) {
+      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.getDefaultInstance()) return this;
       if (!other.huntGroupSids_.isEmpty()) {
         if (huntGroupSids_.isEmpty()) {
           huntGroupSids_ = other.huntGroupSids_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureHuntGroupSidsIsMutable();
           huntGroupSids_.addAll(other.huntGroupSids_);
@@ -456,17 +422,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              templateSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
               long v = input.readInt64();
               ensureHuntGroupSidsIsMutable();
               huntGroupSids_.addLong(v);
               break;
-            } // case 16
-            case 18: {
+            } // case 8
+            case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureHuntGroupSidsIsMutable();
@@ -475,7 +436,7 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -493,76 +454,32 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long templateSid_ ;
-    /**
-     * <pre>
-     * The template to be assigned
-     * </pre>
-     *
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @return The templateSid.
-     */
-    @java.lang.Override
-    public long getTemplateSid() {
-      return templateSid_;
-    }
-    /**
-     * <pre>
-     * The template to be assigned
-     * </pre>
-     *
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @param value The templateSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTemplateSid(long value) {
-
-      templateSid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The template to be assigned
-     * </pre>
-     *
-     * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTemplateSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      templateSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
     private void ensureHuntGroupSidsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         huntGroupSids_ = mutableCopy(huntGroupSids_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @return A list containing the huntGroupSids.
      */
     public java.util.List<java.lang.Long>
         getHuntGroupSidsList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @return The count of huntGroupSids.
      */
     public int getHuntGroupSidsCount() {
@@ -570,10 +487,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @param index The index of the element to return.
      * @return The huntGroupSids at the given index.
      */
@@ -582,10 +499,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @param index The index to set the value at.
      * @param value The huntGroupSids to set.
      * @return This builder for chaining.
@@ -600,10 +517,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @param value The huntGroupSids to add.
      * @return This builder for chaining.
      */
@@ -616,10 +533,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @param values The huntGroupSids to add.
      * @return This builder for chaining.
      */
@@ -633,15 +550,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target hunt groups to assign the specified template.
+     * The hunt groups from which to remove the template.
      * </pre>
      *
-     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * <code>repeated int64 hunt_group_sids = 1 [json_name = "huntGroupSids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSids() {
       huntGroupSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -658,23 +575,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)
+    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest)
-  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)
+  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest();
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AssignClientInfoDisplayTemplateToHuntGroupsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<AssignClientInfoDisplayTemplateToHuntGroupsRequest>() {
+  private static final com.google.protobuf.Parser<UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest>() {
     @java.lang.Override
-    public AssignClientInfoDisplayTemplateToHuntGroupsRequest parsePartialFrom(
+    public UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -693,17 +610,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AssignClientInfoDisplayTemplateToHuntGroupsRequest> parser() {
+  public static com.google.protobuf.Parser<UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AssignClientInfoDisplayTemplateToHuntGroupsRequest> getParserForType() {
+  public com.google.protobuf.Parser<UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignClientInfoDisplayTemplateToHuntGroupsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

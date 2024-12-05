@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
-public interface UnassignClientInfoDisplayTemplateFromHuntGroupsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.UnassignClientInfoDisplayTemplateFromHuntGroupsRequest)
+public interface UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
