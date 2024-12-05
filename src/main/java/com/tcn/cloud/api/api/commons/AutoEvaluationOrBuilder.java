@@ -256,4 +256,23 @@ public interface AutoEvaluationOrBuilder extends
    * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
    */
   com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder getCategoryInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Channel type of the evaluated transcript.
+   * </pre>
+   *
+   * <code>.api.commons.ChannelType channel_type = 19 [json_name = "channelType"];</code>
+   * @return The enum numeric value on the wire for channelType.
+   */
+  int getChannelTypeValue();
+  /**
+   * <pre>
+   * Channel type of the evaluated transcript.
+   * </pre>
+   *
+   * <code>.api.commons.ChannelType channel_type = 19 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  com.tcn.cloud.api.api.commons.ChannelType getChannelType();
 }

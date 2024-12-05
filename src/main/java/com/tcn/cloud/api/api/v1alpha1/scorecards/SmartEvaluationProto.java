@@ -74,46 +74,48 @@ public final class SmartEvaluationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n.api/v1alpha1/scorecards/smart_evaluati" +
-      "on.proto\022\027api.v1alpha1.scorecards\032\034api/c" +
-      "ommons/scorecards.proto\032 google/protobuf" +
-      "/field_mask.proto\"g\n\034CreateSmartEvaluati" +
-      "onRequest\022G\n\020smart_evaluation\030\001 \001(\0132\034.ap" +
-      "i.commons.SmartEvaluationR\017smartEvaluati" +
-      "on\"h\n\035CreateSmartEvaluationResponse\022G\n\020s" +
-      "mart_evaluation\030\001 \001(\0132\034.api.commons.Smar" +
-      "tEvaluationR\017smartEvaluation\"\315\001\n\033ListSma" +
-      "rtEvaluationsRequest\022\031\n\010order_by\030\002 \001(\tR\007" +
-      "orderBy\022\033\n\tpage_size\030\003 \001(\005R\010pageSize\022\035\n\n" +
-      "page_token\030\004 \001(\tR\tpageToken\022?\n\rreturn_fi" +
-      "elds\030\005 \001(\0132\032.google.protobuf.FieldMaskR\014" +
-      "returnFields\022\026\n\006filter\030\006 \001(\tR\006filter\"\221\001\n" +
-      "\034ListSmartEvaluationsResponse\022I\n\021smart_e" +
-      "valuations\030\001 \003(\0132\034.api.commons.SmartEval" +
-      "uationR\020smartEvaluations\022&\n\017next_page_to" +
-      "ken\030\002 \001(\tR\rnextPageToken\"\244\001\n\034UpdateSmart" +
-      "EvaluationRequest\022G\n\020smart_evaluation\030\001 " +
-      "\001(\0132\034.api.commons.SmartEvaluationR\017smart" +
-      "Evaluation\022;\n\013update_mask\030\002 \001(\0132\032.google" +
-      ".protobuf.FieldMaskR\nupdateMask\"h\n\035Updat" +
-      "eSmartEvaluationResponse\022G\n\020smart_evalua" +
-      "tion\030\001 \001(\0132\034.api.commons.SmartEvaluation" +
-      "R\017smartEvaluation\"N\n\034DeleteSmartEvaluati" +
-      "onRequest\022.\n\023smart_evaluation_id\030\002 \001(\003R\021" +
-      "smartEvaluationId\"\037\n\035DeleteSmartEvaluati" +
-      "onResponse\"K\n\031GetSmartEvaluationRequest\022" +
-      ".\n\023smart_evaluation_id\030\002 \001(\003R\021smartEvalu" +
-      "ationId\"e\n\032GetSmartEvaluationResponse\022G\n" +
-      "\020smart_evaluation\030\001 \001(\0132\034.api.commons.Sm" +
-      "artEvaluationR\017smartEvaluationB\277\001\n)com.t" +
-      "cn.cloud.api.api.v1alpha1.scorecardsB\024Sm" +
-      "artEvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alpha" +
-      "1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards\342\002" +
-      "#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002\031A" +
-      "pi::V1alpha1::Scorecardsb\006proto3"
+      "on.proto\022\027api.v1alpha1.scorecards\032\035api/c" +
+      "ommons/omnichannel.proto\032\034api/commons/sc" +
+      "orecards.proto\032 google/protobuf/field_ma" +
+      "sk.proto\"g\n\034CreateSmartEvaluationRequest" +
+      "\022G\n\020smart_evaluation\030\001 \001(\0132\034.api.commons" +
+      ".SmartEvaluationR\017smartEvaluation\"h\n\035Cre" +
+      "ateSmartEvaluationResponse\022G\n\020smart_eval" +
+      "uation\030\001 \001(\0132\034.api.commons.SmartEvaluati" +
+      "onR\017smartEvaluation\"\315\001\n\033ListSmartEvaluat" +
+      "ionsRequest\022\031\n\010order_by\030\002 \001(\tR\007orderBy\022\033" +
+      "\n\tpage_size\030\003 \001(\005R\010pageSize\022\035\n\npage_toke" +
+      "n\030\004 \001(\tR\tpageToken\022?\n\rreturn_fields\030\005 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\014returnFie" +
+      "lds\022\026\n\006filter\030\006 \001(\tR\006filter\"\221\001\n\034ListSmar" +
+      "tEvaluationsResponse\022I\n\021smart_evaluation" +
+      "s\030\001 \003(\0132\034.api.commons.SmartEvaluationR\020s" +
+      "martEvaluations\022&\n\017next_page_token\030\002 \001(\t" +
+      "R\rnextPageToken\"\244\001\n\034UpdateSmartEvaluatio" +
+      "nRequest\022G\n\020smart_evaluation\030\001 \001(\0132\034.api" +
+      ".commons.SmartEvaluationR\017smartEvaluatio" +
+      "n\022;\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\nupdateMask\"h\n\035UpdateSmartEva" +
+      "luationResponse\022G\n\020smart_evaluation\030\001 \001(" +
+      "\0132\034.api.commons.SmartEvaluationR\017smartEv" +
+      "aluation\"N\n\034DeleteSmartEvaluationRequest" +
+      "\022.\n\023smart_evaluation_id\030\002 \001(\003R\021smartEval" +
+      "uationId\"\037\n\035DeleteSmartEvaluationRespons" +
+      "e\"K\n\031GetSmartEvaluationRequest\022.\n\023smart_" +
+      "evaluation_id\030\002 \001(\003R\021smartEvaluationId\"e" +
+      "\n\032GetSmartEvaluationResponse\022G\n\020smart_ev" +
+      "aluation\030\001 \001(\0132\034.api.commons.SmartEvalua" +
+      "tionR\017smartEvaluationB\277\001\n)com.tcn.cloud." +
+      "api.api.v1alpha1.scorecardsB\024SmartEvalua" +
+      "tionProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scoreca" +
+      "rds\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1al" +
+      "pha1\\Scorecards\\GPBMetadata\352\002\031Api::V1alp" +
+      "ha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
@@ -177,6 +179,7 @@ public final class SmartEvaluationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_GetSmartEvaluationResponse_descriptor,
         new java.lang.String[] { "SmartEvaluation", });
+    com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

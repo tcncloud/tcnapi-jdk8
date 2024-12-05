@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
      * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-     *     See api/commons/scorecards.proto;l=273
+     *     See api/commons/scorecards.proto;l=275
      * @return Whether the points field is set.
      */
     @java.lang.Deprecated boolean hasPoints();
@@ -87,7 +87,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
      * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-     *     See api/commons/scorecards.proto;l=273
+     *     See api/commons/scorecards.proto;l=275
      * @return The points.
      */
     @java.lang.Deprecated int getPoints();
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
      * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-     *     See api/commons/scorecards.proto;l=273
+     *     See api/commons/scorecards.proto;l=275
      * @return Whether the points field is set.
      */
     @java.lang.Override
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
      * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-     *     See api/commons/scorecards.proto;l=273
+     *     See api/commons/scorecards.proto;l=275
      * @return The points.
      */
     @java.lang.Override
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
        * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-       *     See api/commons/scorecards.proto;l=273
+       *     See api/commons/scorecards.proto;l=275
        * @return Whether the points field is set.
        */
       @java.lang.Deprecated public boolean hasPoints() {
@@ -933,7 +933,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
        * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-       *     See api/commons/scorecards.proto;l=273
+       *     See api/commons/scorecards.proto;l=275
        * @return The points.
        */
       @java.lang.Deprecated public int getPoints() {
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
        * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-       *     See api/commons/scorecards.proto;l=273
+       *     See api/commons/scorecards.proto;l=275
        * @param value The points to set.
        * @return This builder for chaining.
        */
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
        * @deprecated api.commons.ScorecardQuestion.Answer.points is deprecated.
-       *     See api/commons/scorecards.proto;l=273
+       *     See api/commons/scorecards.proto;l=275
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPoints() {
