@@ -1053,6 +1053,14 @@ public enum EventType
   EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT(1208),
   /**
    * <pre>
+   *Contact Entity association event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT = 1209;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT(1209),
+  /**
+   * <pre>
    * Organization Events
    * Organization event when any users access tokens are expiring.
    * </pre>
@@ -2071,6 +2079,14 @@ public enum EventType
   public static final int EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT_VALUE = 1208;
   /**
    * <pre>
+   *Contact Entity association event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT = 1209;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT_VALUE = 1209;
+  /**
+   * <pre>
    * Organization Events
    * Organization event when any users access tokens are expiring.
    * </pre>
@@ -2244,6 +2260,7 @@ public enum EventType
       case 1206: return EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT;
       case 1207: return EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT;
       case 1208: return EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT;
+      case 1209: return EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT;
       case 1300: return EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT;
       default: return null;
     }

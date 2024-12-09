@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=88
    * @return The contactManagerEntryListId.
    */
   @java.lang.Override
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=88
      * @return The contactManagerEntryListId.
      */
     @java.lang.Override
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=88
      * @param value The contactManagerEntryListId to set.
      * @return This builder for chaining.
      */
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=88
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContactManagerEntryListId() {

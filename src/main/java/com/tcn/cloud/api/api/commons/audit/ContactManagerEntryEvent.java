@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ContactManagerEntryEvent() {
     contactManagerEntryListIds_ = emptyLongList();
+    fieldsChanges_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACTMANAGERLISTID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
@@ -50,11 +52,13 @@ private static final long serialVersionUID = 0L;
    *contact manager list id
    * </pre>
    *
-   * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+   * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerListId is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=26
    * @return The contactManagerListId.
    */
   @java.lang.Override
-  public long getContactManagerListId() {
+  @java.lang.Deprecated public long getContactManagerListId() {
     return contactManagerListId_;
   }
 
@@ -81,11 +85,13 @@ private static final long serialVersionUID = 0L;
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @return A list containing the contactManagerEntryListIds.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
+  @java.lang.Deprecated public java.util.List<java.lang.Long>
       getContactManagerEntryListIdsList() {
     return contactManagerEntryListIds_;
   }
@@ -94,10 +100,12 @@ private static final long serialVersionUID = 0L;
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @return The count of contactManagerEntryListIds.
    */
-  public int getContactManagerEntryListIdsCount() {
+  @java.lang.Deprecated public int getContactManagerEntryListIdsCount() {
     return contactManagerEntryListIds_.size();
   }
   /**
@@ -105,14 +113,96 @@ private static final long serialVersionUID = 0L;
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @param index The index of the element to return.
    * @return The contactManagerEntryListIds at the given index.
    */
-  public long getContactManagerEntryListIds(int index) {
+  @java.lang.Deprecated public long getContactManagerEntryListIds(int index) {
     return contactManagerEntryListIds_.getLong(index);
   }
   private int contactManagerEntryListIdsMemoizedSerializedSize = -1;
+
+  public static final int FIELDS_CHANGES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldsChanges_;
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldsChangesList() {
+    return fieldsChanges_;
+  }
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
+      getFieldsChangesOrBuilderList() {
+    return fieldsChanges_;
+  }
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  @java.lang.Override
+  public int getFieldsChangesCount() {
+    return fieldsChanges_.size();
+  }
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index) {
+    return fieldsChanges_.get(index);
+  }
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+      int index) {
+    return fieldsChanges_.get(index);
+  }
+
+  public static final int CONTACT_UPDATE_TASK_ID_FIELD_NUMBER = 5;
+  private long contactUpdateTaskId_ = 0L;
+  /**
+   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * @return Whether the contactUpdateTaskId field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactUpdateTaskId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * @return The contactUpdateTaskId.
+   */
+  @java.lang.Override
+  public long getContactUpdateTaskId() {
+    return contactUpdateTaskId_;
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -141,6 +231,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < contactManagerEntryListIds_.size(); i++) {
       output.writeInt64NoTag(contactManagerEntryListIds_.getLong(i));
+    }
+    for (int i = 0; i < fieldsChanges_.size(); i++) {
+      output.writeMessage(4, fieldsChanges_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeInt64(5, contactUpdateTaskId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -173,6 +269,14 @@ private static final long serialVersionUID = 0L;
       }
       contactManagerEntryListIdsMemoizedSerializedSize = dataSize;
     }
+    for (int i = 0; i < fieldsChanges_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, fieldsChanges_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, contactUpdateTaskId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -194,6 +298,13 @@ private static final long serialVersionUID = 0L;
         != other.getContactManagerEntryId()) return false;
     if (!getContactManagerEntryListIdsList()
         .equals(other.getContactManagerEntryListIdsList())) return false;
+    if (!getFieldsChangesList()
+        .equals(other.getFieldsChangesList())) return false;
+    if (hasContactUpdateTaskId() != other.hasContactUpdateTaskId()) return false;
+    if (hasContactUpdateTaskId()) {
+      if (getContactUpdateTaskId()
+          != other.getContactUpdateTaskId()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -214,6 +325,15 @@ private static final long serialVersionUID = 0L;
     if (getContactManagerEntryListIdsCount() > 0) {
       hash = (37 * hash) + CONTACTMANAGERENTRYLISTIDS_FIELD_NUMBER;
       hash = (53 * hash) + getContactManagerEntryListIdsList().hashCode();
+    }
+    if (getFieldsChangesCount() > 0) {
+      hash = (37 * hash) + FIELDS_CHANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldsChangesList().hashCode();
+    }
+    if (hasContactUpdateTaskId()) {
+      hash = (37 * hash) + CONTACT_UPDATE_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getContactUpdateTaskId());
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -353,6 +473,14 @@ private static final long serialVersionUID = 0L;
       contactManagerListId_ = 0L;
       contactManagerEntryId_ = 0L;
       contactManagerEntryListIds_ = emptyLongList();
+      if (fieldsChangesBuilder_ == null) {
+        fieldsChanges_ = java.util.Collections.emptyList();
+      } else {
+        fieldsChanges_ = null;
+        fieldsChangesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
+      contactUpdateTaskId_ = 0L;
       return this;
     }
 
@@ -391,6 +519,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.contactManagerEntryListIds_ = contactManagerEntryListIds_;
+      if (fieldsChangesBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          fieldsChanges_ = java.util.Collections.unmodifiableList(fieldsChanges_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.fieldsChanges_ = fieldsChanges_;
+      } else {
+        result.fieldsChanges_ = fieldsChangesBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent result) {
@@ -401,6 +538,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactManagerEntryId_ = contactManagerEntryId_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.contactUpdateTaskId_ = contactUpdateTaskId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -463,6 +606,35 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (fieldsChangesBuilder_ == null) {
+        if (!other.fieldsChanges_.isEmpty()) {
+          if (fieldsChanges_.isEmpty()) {
+            fieldsChanges_ = other.fieldsChanges_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureFieldsChangesIsMutable();
+            fieldsChanges_.addAll(other.fieldsChanges_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fieldsChanges_.isEmpty()) {
+          if (fieldsChangesBuilder_.isEmpty()) {
+            fieldsChangesBuilder_.dispose();
+            fieldsChangesBuilder_ = null;
+            fieldsChanges_ = other.fieldsChanges_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            fieldsChangesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFieldsChangesFieldBuilder() : null;
+          } else {
+            fieldsChangesBuilder_.addAllMessages(other.fieldsChanges_);
+          }
+        }
+      }
+      if (other.hasContactUpdateTaskId()) {
+        setContactUpdateTaskId(other.getContactUpdateTaskId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -515,6 +687,24 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.commons.audit.ContactFieldChanges m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.parser(),
+                      extensionRegistry);
+              if (fieldsChangesBuilder_ == null) {
+                ensureFieldsChangesIsMutable();
+                fieldsChanges_.add(m);
+              } else {
+                fieldsChangesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 40: {
+              contactUpdateTaskId_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -538,11 +728,13 @@ private static final long serialVersionUID = 0L;
      *contact manager list id
      * </pre>
      *
-     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerListId is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=26
      * @return The contactManagerListId.
      */
     @java.lang.Override
-    public long getContactManagerListId() {
+    @java.lang.Deprecated public long getContactManagerListId() {
       return contactManagerListId_;
     }
     /**
@@ -550,11 +742,13 @@ private static final long serialVersionUID = 0L;
      *contact manager list id
      * </pre>
      *
-     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerListId is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=26
      * @param value The contactManagerListId to set.
      * @return This builder for chaining.
      */
-    public Builder setContactManagerListId(long value) {
+    @java.lang.Deprecated public Builder setContactManagerListId(long value) {
 
       contactManagerListId_ = value;
       bitField0_ |= 0x00000001;
@@ -566,10 +760,12 @@ private static final long serialVersionUID = 0L;
      *contact manager list id
      * </pre>
      *
-     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+     * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerListId is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=26
      * @return This builder for chaining.
      */
-    public Builder clearContactManagerListId() {
+    @java.lang.Deprecated public Builder clearContactManagerListId() {
       bitField0_ = (bitField0_ & ~0x00000001);
       contactManagerListId_ = 0L;
       onChanged();
@@ -632,10 +828,12 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @return A list containing the contactManagerEntryListIds.
      */
-    public java.util.List<java.lang.Long>
+    @java.lang.Deprecated public java.util.List<java.lang.Long>
         getContactManagerEntryListIdsList() {
       return ((bitField0_ & 0x00000004) != 0) ?
                java.util.Collections.unmodifiableList(contactManagerEntryListIds_) : contactManagerEntryListIds_;
@@ -645,10 +843,12 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @return The count of contactManagerEntryListIds.
      */
-    public int getContactManagerEntryListIdsCount() {
+    @java.lang.Deprecated public int getContactManagerEntryListIdsCount() {
       return contactManagerEntryListIds_.size();
     }
     /**
@@ -656,11 +856,13 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @param index The index of the element to return.
      * @return The contactManagerEntryListIds at the given index.
      */
-    public long getContactManagerEntryListIds(int index) {
+    @java.lang.Deprecated public long getContactManagerEntryListIds(int index) {
       return contactManagerEntryListIds_.getLong(index);
     }
     /**
@@ -668,12 +870,14 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @param index The index to set the value at.
      * @param value The contactManagerEntryListIds to set.
      * @return This builder for chaining.
      */
-    public Builder setContactManagerEntryListIds(
+    @java.lang.Deprecated public Builder setContactManagerEntryListIds(
         int index, long value) {
 
       ensureContactManagerEntryListIdsIsMutable();
@@ -686,11 +890,13 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @param value The contactManagerEntryListIds to add.
      * @return This builder for chaining.
      */
-    public Builder addContactManagerEntryListIds(long value) {
+    @java.lang.Deprecated public Builder addContactManagerEntryListIds(long value) {
 
       ensureContactManagerEntryListIdsIsMutable();
       contactManagerEntryListIds_.addLong(value);
@@ -702,11 +908,13 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @param values The contactManagerEntryListIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllContactManagerEntryListIds(
+    @java.lang.Deprecated public Builder addAllContactManagerEntryListIds(
         java.lang.Iterable<? extends java.lang.Long> values) {
       ensureContactManagerEntryListIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -719,12 +927,366 @@ private static final long serialVersionUID = 0L;
      *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+     *     See api/commons/audit/contactmanager_events.proto;l=28
      * @return This builder for chaining.
      */
-    public Builder clearContactManagerEntryListIds() {
+    @java.lang.Deprecated public Builder clearContactManagerEntryListIds() {
       contactManagerEntryListIds_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldsChanges_ =
+      java.util.Collections.emptyList();
+    private void ensureFieldsChangesIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        fieldsChanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges>(fieldsChanges_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> fieldsChangesBuilder_;
+
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldsChangesList() {
+      if (fieldsChangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fieldsChanges_);
+      } else {
+        return fieldsChangesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public int getFieldsChangesCount() {
+      if (fieldsChangesBuilder_ == null) {
+        return fieldsChanges_.size();
+      } else {
+        return fieldsChangesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index) {
+      if (fieldsChangesBuilder_ == null) {
+        return fieldsChanges_.get(index);
+      } else {
+        return fieldsChangesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder setFieldsChanges(
+        int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
+      if (fieldsChangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.set(index, value);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder setFieldsChanges(
+        int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
+      if (fieldsChangesBuilder_ == null) {
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder addFieldsChanges(com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
+      if (fieldsChangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.add(value);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder addFieldsChanges(
+        int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
+      if (fieldsChangesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.add(index, value);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder addFieldsChanges(
+        com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
+      if (fieldsChangesBuilder_ == null) {
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder addFieldsChanges(
+        int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
+      if (fieldsChangesBuilder_ == null) {
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder addAllFieldsChanges(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> values) {
+      if (fieldsChangesBuilder_ == null) {
+        ensureFieldsChangesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fieldsChanges_);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder clearFieldsChanges() {
+      if (fieldsChangesBuilder_ == null) {
+        fieldsChanges_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public Builder removeFieldsChanges(int index) {
+      if (fieldsChangesBuilder_ == null) {
+        ensureFieldsChangesIsMutable();
+        fieldsChanges_.remove(index);
+        onChanged();
+      } else {
+        fieldsChangesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder getFieldsChangesBuilder(
+        int index) {
+      return getFieldsChangesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+        int index) {
+      if (fieldsChangesBuilder_ == null) {
+        return fieldsChanges_.get(index);  } else {
+        return fieldsChangesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
+         getFieldsChangesOrBuilderList() {
+      if (fieldsChangesBuilder_ != null) {
+        return fieldsChangesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fieldsChanges_);
+      }
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldsChangesBuilder() {
+      return getFieldsChangesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldsChangesBuilder(
+        int index) {
+      return getFieldsChangesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *TODO: better name
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder> 
+         getFieldsChangesBuilderList() {
+      return getFieldsChangesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
+        getFieldsChangesFieldBuilder() {
+      if (fieldsChangesBuilder_ == null) {
+        fieldsChangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder>(
+                fieldsChanges_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        fieldsChanges_ = null;
+      }
+      return fieldsChangesBuilder_;
+    }
+
+    private long contactUpdateTaskId_ ;
+    /**
+     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * @return Whether the contactUpdateTaskId field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactUpdateTaskId() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * @return The contactUpdateTaskId.
+     */
+    @java.lang.Override
+    public long getContactUpdateTaskId() {
+      return contactUpdateTaskId_;
+    }
+    /**
+     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * @param value The contactUpdateTaskId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContactUpdateTaskId(long value) {
+
+      contactUpdateTaskId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContactUpdateTaskId() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      contactUpdateTaskId_ = 0L;
       onChanged();
       return this;
     }
