@@ -15,15 +15,35 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotRequest_descriptor;
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotRequest_fieldAccessorTable;
+      internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor;
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_fieldAccessorTable;
+      internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,17 +55,41 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n3services/omnichannel/instant/v1alpha1/" +
       "service.proto\022%services.omnichannel.inst" +
-      "ant.v1alpha1\032\027annotations/authz.proto\032\034g" +
-      "oogle/api/annotations.proto\"$\n\"StreamCon" +
-      "tactCenterSnapshotRequest\"%\n#StreamConta" +
-      "ctCenterSnapshotResponse2\235\002\n\014OauthServic" +
-      "e\022\214\002\n\033StreamContactCenterSnapshot\022I.serv" +
-      "ices.omnichannel.instant.v1alpha1.Stream" +
-      "ContactCenterSnapshotRequest\032J.services." +
-      "omnichannel.instant.v1alpha1.StreamConta" +
-      "ctCenterSnapshotResponse\"T\272\270\221\002\005\n\003\010\260\t\202\323\344\223" +
-      "\002D\"?/services/omnichannel/instant/v1alph" +
-      "a1/getContactCenterSnapshot:\001*0\001B\376\001\n7com" +
+      "ant.v1alpha1\032\027annotations/authz.proto\032\025a" +
+      "pi/commons/acd.proto\032\034google/api/annotat" +
+      "ions.proto\032\037google/protobuf/timestamp.pr" +
+      "oto\"1\n\030StreamAgentEventsRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\"d\n\031StreamAgentEventsRespo" +
+      "nse\022G\n\005event\030\001 \003(\01321.services.omnichanne" +
+      "l.instant.v1alpha1.AgentEventR\005event\"2\n\031" +
+      "StreamCallerEventsRequest\022\025\n\006org_id\030\001 \001(" +
+      "\tR\005orgId\"f\n\032StreamCallerEventsResponse\022H" +
+      "\n\005event\030\001 \003(\01322.services.omnichannel.ins" +
+      "tant.v1alpha1.CallerEventR\005event\"\322\001\n\nAge" +
+      "ntEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nclient" +
+      "_sid\030\002 \001(\003R\tclientSid\022\033\n\tagent_sid\030\003 \001(\003" +
+      "R\010agentSid\022\027\n\007user_id\030\004 \001(\tR\006userId\0229\n\ne" +
+      "vent_time\030\005 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\teventTime\022\035\n\nevent_data\030\006 \001(\tR\teven" +
+      "tData\"\371\001\n\013CallerEvent\022\025\n\006org_id\030\001 \001(\tR\005o" +
+      "rgId\022\035\n\nclient_sid\030\002 \001(\003R\tclientSid\022\035\n\nc" +
+      "aller_sid\030\003 \001(\003R\tcallerSid\022;\n\013caller_typ" +
+      "e\030\004 \001(\0162\032.api.commons.CallType.EnumR\ncal" +
+      "lerType\0229\n\nevent_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\teventTime\022\035\n\nevent_data" +
+      "\030\006 \001(\tR\teventData2\354\003\n\022InstantDataService" +
+      "\022\347\001\n\021StreamAgentEvents\022?.services.omnich" +
+      "annel.instant.v1alpha1.StreamAgentEvents" +
+      "Request\032@.services.omnichannel.instant.v" +
+      "1alpha1.StreamAgentEventsResponse\"M\272\270\221\002\005" +
+      "\n\003\010\260\t\202\323\344\223\002=\"8/services/omnichannel/insta" +
+      "nt/v1alpha1/streamAgentEvents:\001*0\001\022\353\001\n\022S" +
+      "treamCallerEvents\022@.services.omnichannel" +
+      ".instant.v1alpha1.StreamCallerEventsRequ" +
+      "est\032A.services.omnichannel.instant.v1alp" +
+      "ha1.StreamCallerEventsResponse\"N\272\270\221\002\005\n\003\010" +
+      "\260\t\202\323\344\223\002>\"9/services/omnichannel/instant/" +
+      "v1alpha1/streamCallerEvents:\001*0\001B\376\001\n7com" +
       ".tcn.cloud.api.services.omnichannel.inst" +
       "ant.v1alpha1B\014ServiceProtoP\001\242\002\003SOI\252\002%Ser" +
       "vices.Omnichannel.Instant.V1alpha1\312\002%Ser" +
@@ -58,20 +102,46 @@ public final class ServiceProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotRequest_descriptor =
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotRequest_fieldAccessorTable = new
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor =
+        internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsRequest_descriptor,
+        new java.lang.String[] { "OrgId", });
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_fieldAccessorTable = new
+    internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor,
-        new java.lang.String[] { });
+        internal_static_services_omnichannel_instant_v1alpha1_StreamAgentEventsResponse_descriptor,
+        new java.lang.String[] { "Event", });
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsRequest_descriptor,
+        new java.lang.String[] { "OrgId", });
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_instant_v1alpha1_StreamCallerEventsResponse_descriptor,
+        new java.lang.String[] { "Event", });
+    internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_descriptor,
+        new java.lang.String[] { "OrgId", "ClientSid", "AgentSid", "UserId", "EventTime", "EventData", });
+    internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_descriptor,
+        new java.lang.String[] { "OrgId", "ClientSid", "CallerSid", "CallerType", "EventTime", "EventData", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
@@ -79,7 +149,9 @@ public final class ServiceProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
