@@ -12,10 +12,12 @@ public interface ContactManagerEntryEventOrBuilder extends
    *contact manager list id
    * </pre>
    *
-   * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+   * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerListId is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=26
    * @return The contactManagerListId.
    */
-  long getContactManagerListId();
+  @java.lang.Deprecated long getContactManagerListId();
 
   /**
    * <pre>
@@ -32,27 +34,88 @@ public interface ContactManagerEntryEventOrBuilder extends
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @return A list containing the contactManagerEntryListIds.
    */
-  java.util.List<java.lang.Long> getContactManagerEntryListIdsList();
+  @java.lang.Deprecated java.util.List<java.lang.Long> getContactManagerEntryListIdsList();
   /**
    * <pre>
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @return The count of contactManagerEntryListIds.
    */
-  int getContactManagerEntryListIdsCount();
+  @java.lang.Deprecated int getContactManagerEntryListIdsCount();
   /**
    * <pre>
    *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.ContactManagerEntryEvent.ContactManagerEntryListIds is deprecated.
+   *     See api/commons/audit/contactmanager_events.proto;l=28
    * @param index The index of the element to return.
    * @return The contactManagerEntryListIds at the given index.
    */
-  long getContactManagerEntryListIds(int index);
+  @java.lang.Deprecated long getContactManagerEntryListIds(int index);
+
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> 
+      getFieldsChangesList();
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index);
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  int getFieldsChangesCount();
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
+      getFieldsChangesOrBuilderList();
+  /**
+   * <pre>
+   *TODO: better name
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+      int index);
+
+  /**
+   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * @return Whether the contactUpdateTaskId field is set.
+   */
+  boolean hasContactUpdateTaskId();
+  /**
+   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * @return The contactUpdateTaskId.
+   */
+  long getContactUpdateTaskId();
 }

@@ -109,11 +109,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fileName_ = "";
   /**
-   * <code>string file_name = 4 [json_name = "fileName"];</code>
+   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
    * @return The fileName.
    */
   @java.lang.Override
-  public java.lang.String getFileName() {
+  @java.lang.Deprecated public java.lang.String getFileName() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -126,11 +128,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string file_name = 4 [json_name = "fileName"];</code>
+   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
    * @return The bytes for fileName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFileNameBytes() {
     java.lang.Object ref = fileName_;
     if (ref instanceof java.lang.String) {
@@ -192,10 +196,12 @@ private static final long serialVersionUID = 0L;
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
    * @return A list containing the listDetails.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getListDetailsList() {
     return listDetails_;
   }
@@ -204,10 +210,12 @@ private static final long serialVersionUID = 0L;
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
    * @return The count of listDetails.
    */
-  public int getListDetailsCount() {
+  @java.lang.Deprecated public int getListDetailsCount() {
     return listDetails_.size();
   }
   /**
@@ -215,11 +223,13 @@ private static final long serialVersionUID = 0L;
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
    * @param index The index of the element to return.
    * @return The listDetails at the given index.
    */
-  public java.lang.String getListDetails(int index) {
+  @java.lang.Deprecated public java.lang.String getListDetails(int index) {
     return listDetails_.get(index);
   }
   /**
@@ -227,11 +237,13 @@ private static final long serialVersionUID = 0L;
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
    * @param index The index of the value to return.
    * @return The bytes of the listDetails at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getListDetailsBytes(int index) {
     return listDetails_.getByteString(index);
   }
@@ -239,11 +251,13 @@ private static final long serialVersionUID = 0L;
   public static final int TTL_FIELD_NUMBER = 7;
   private long ttl_ = 0L;
   /**
-   * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
+   * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=108
    * @return The ttl.
    */
   @java.lang.Override
-  public long getTtl() {
+  @java.lang.Deprecated public long getTtl() {
     return ttl_;
   }
 
@@ -1007,10 +1021,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object fileName_ = "";
     /**
-     * <code>string file_name = 4 [json_name = "fileName"];</code>
+     * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
      * @return The fileName.
      */
-    public java.lang.String getFileName() {
+    @java.lang.Deprecated public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1023,10 +1039,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string file_name = 4 [json_name = "fileName"];</code>
+     * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
      * @return The bytes for fileName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFileNameBytes() {
       java.lang.Object ref = fileName_;
       if (ref instanceof String) {
@@ -1040,11 +1058,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string file_name = 4 [json_name = "fileName"];</code>
+     * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
      * @param value The fileName to set.
      * @return This builder for chaining.
      */
-    public Builder setFileName(
+    @java.lang.Deprecated public Builder setFileName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       fileName_ = value;
@@ -1053,21 +1073,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string file_name = 4 [json_name = "fileName"];</code>
+     * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
      * @return This builder for chaining.
      */
-    public Builder clearFileName() {
+    @java.lang.Deprecated public Builder clearFileName() {
       fileName_ = getDefaultInstance().getFileName();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string file_name = 4 [json_name = "fileName"];</code>
+     * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
      * @param value The bytes for fileName to set.
      * @return This builder for chaining.
      */
-    public Builder setFileNameBytes(
+    @java.lang.Deprecated public Builder setFileNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1162,10 +1186,12 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @return A list containing the listDetails.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getListDetailsList() {
       listDetails_.makeImmutable();
       return listDetails_;
@@ -1175,10 +1201,12 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @return The count of listDetails.
      */
-    public int getListDetailsCount() {
+    @java.lang.Deprecated public int getListDetailsCount() {
       return listDetails_.size();
     }
     /**
@@ -1186,11 +1214,13 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param index The index of the element to return.
      * @return The listDetails at the given index.
      */
-    public java.lang.String getListDetails(int index) {
+    @java.lang.Deprecated public java.lang.String getListDetails(int index) {
       return listDetails_.get(index);
     }
     /**
@@ -1198,11 +1228,13 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param index The index of the value to return.
      * @return The bytes of the listDetails at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getListDetailsBytes(int index) {
       return listDetails_.getByteString(index);
     }
@@ -1211,12 +1243,14 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param index The index to set the value at.
      * @param value The listDetails to set.
      * @return This builder for chaining.
      */
-    public Builder setListDetails(
+    @java.lang.Deprecated public Builder setListDetails(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureListDetailsIsMutable();
@@ -1230,11 +1264,13 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param value The listDetails to add.
      * @return This builder for chaining.
      */
-    public Builder addListDetails(
+    @java.lang.Deprecated public Builder addListDetails(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureListDetailsIsMutable();
@@ -1248,11 +1284,13 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param values The listDetails to add.
      * @return This builder for chaining.
      */
-    public Builder addAllListDetails(
+    @java.lang.Deprecated public Builder addAllListDetails(
         java.lang.Iterable<java.lang.String> values) {
       ensureListDetailsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1266,10 +1304,12 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @return This builder for chaining.
      */
-    public Builder clearListDetails() {
+    @java.lang.Deprecated public Builder clearListDetails() {
       listDetails_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000020);;
@@ -1281,11 +1321,13 @@ private static final long serialVersionUID = 0L;
      * List of Columns In The Contact List. UI to render table based on this list
      * </pre>
      *
-     * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+     * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
      * @param value The bytes of the listDetails to add.
      * @return This builder for chaining.
      */
-    public Builder addListDetailsBytes(
+    @java.lang.Deprecated public Builder addListDetailsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1298,19 +1340,23 @@ private static final long serialVersionUID = 0L;
 
     private long ttl_ ;
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=108
      * @return The ttl.
      */
     @java.lang.Override
-    public long getTtl() {
+    @java.lang.Deprecated public long getTtl() {
       return ttl_;
     }
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=108
      * @param value The ttl to set.
      * @return This builder for chaining.
      */
-    public Builder setTtl(long value) {
+    @java.lang.Deprecated public Builder setTtl(long value) {
 
       ttl_ = value;
       bitField0_ |= 0x00000040;
@@ -1318,10 +1364,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
+     * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=108
      * @return This builder for chaining.
      */
-    public Builder clearTtl() {
+    @java.lang.Deprecated public Builder clearTtl() {
       bitField0_ = (bitField0_ & ~0x00000040);
       ttl_ = 0L;
       onChanged();
