@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.api.commons.audit;
 
 /**
- * <pre>
- * TODO: Find a better name
- * </pre>
- *
  * Protobuf type {@code api.commons.audit.ContactFieldChanges}
  */
 public final class ContactFieldChanges extends
@@ -273,10 +269,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * TODO: Find a better name
-   * </pre>
-   *
    * Protobuf type {@code api.commons.audit.ContactFieldChanges}
    */
   public static final class Builder extends

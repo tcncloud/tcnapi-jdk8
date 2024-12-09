@@ -46,37 +46,6 @@ public final class ContactManagerGrpc {
     return getGetContactListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest,
-      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> getListContactUpdateTaskMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListContactUpdateTask",
-      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest,
-      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> getListContactUpdateTaskMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> getListContactUpdateTaskMethod;
-    if ((getListContactUpdateTaskMethod = ContactManagerGrpc.getListContactUpdateTaskMethod) == null) {
-      synchronized (ContactManagerGrpc.class) {
-        if ((getListContactUpdateTaskMethod = ContactManagerGrpc.getListContactUpdateTaskMethod) == null) {
-          ContactManagerGrpc.getListContactUpdateTaskMethod = getListContactUpdateTaskMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactUpdateTask"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("ListContactUpdateTask"))
-              .build();
-        }
-      }
-    }
-    return getListContactUpdateTaskMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest,
       com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListResponse> getListContactEntryListMethod;
 
@@ -413,13 +382,6 @@ public final class ContactManagerGrpc {
 
     /**
      */
-    default void listContactUpdateTask(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactUpdateTaskMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void listContactEntryList(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactEntryListMethod(), responseObserver);
@@ -535,14 +497,6 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactListResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void listContactUpdateTask(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListContactUpdateTaskMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -663,13 +617,6 @@ public final class ContactManagerGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse listContactUpdateTask(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListContactUpdateTaskMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListResponse listContactEntryList(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactEntryListMethod(), getCallOptions(), request);
@@ -778,14 +725,6 @@ public final class ContactManagerGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse> listContactUpdateTask(
-        com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListContactUpdateTaskMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListResponse> listContactEntryList(
         com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -878,16 +817,15 @@ public final class ContactManagerGrpc {
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
-  private static final int METHODID_LIST_CONTACT_UPDATE_TASK = 1;
-  private static final int METHODID_LIST_CONTACT_ENTRY_LIST = 2;
-  private static final int METHODID_GET_ENC_CONTACT_ENTRY = 3;
-  private static final int METHODID_GET_KYCENC_CONTACT_ENTRY = 4;
-  private static final int METHODID_GET_KYCKEYS = 5;
-  private static final int METHODID_ADD_CONTACT_ENTRY = 6;
-  private static final int METHODID_EDIT_CONTACT_ENTRY = 7;
-  private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 8;
-  private static final int METHODID_GET_CONTACT_FIELD_TYPE = 9;
-  private static final int METHODID_LIST_CONTACT_ACTIVITY_LOG = 10;
+  private static final int METHODID_LIST_CONTACT_ENTRY_LIST = 1;
+  private static final int METHODID_GET_ENC_CONTACT_ENTRY = 2;
+  private static final int METHODID_GET_KYCENC_CONTACT_ENTRY = 3;
+  private static final int METHODID_GET_KYCKEYS = 4;
+  private static final int METHODID_ADD_CONTACT_ENTRY = 5;
+  private static final int METHODID_EDIT_CONTACT_ENTRY = 6;
+  private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 7;
+  private static final int METHODID_GET_CONTACT_FIELD_TYPE = 8;
+  private static final int METHODID_LIST_CONTACT_ACTIVITY_LOG = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -909,10 +847,6 @@ public final class ContactManagerGrpc {
         case METHODID_GET_CONTACT_LIST:
           serviceImpl.getContactList((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactListRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactListResponse>) responseObserver);
-          break;
-        case METHODID_LIST_CONTACT_UPDATE_TASK:
-          serviceImpl.listContactUpdateTask((com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse>) responseObserver);
           break;
         case METHODID_LIST_CONTACT_ENTRY_LIST:
           serviceImpl.listContactEntryList((com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactEntryListRequest) request,
@@ -975,13 +909,6 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactListRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactListResponse>(
                 service, METHODID_GET_CONTACT_LIST)))
-        .addMethod(
-          getListContactUpdateTaskMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskRequest,
-              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactUpdateTaskResponse>(
-                service, METHODID_LIST_CONTACT_UPDATE_TASK)))
         .addMethod(
           getListContactEntryListMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1094,7 +1021,6 @@ public final class ContactManagerGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ContactManagerFileDescriptorSupplier())
               .addMethod(getGetContactListMethod())
-              .addMethod(getListContactUpdateTaskMethod())
               .addMethod(getListContactEntryListMethod())
               .addMethod(getGetEncContactEntryMethod())
               .addMethod(getGetKYCEncContactEntryMethod())

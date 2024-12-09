@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.audit;
 
 /**
+ * <pre>
+ *payload for associating contact with external events
+ * </pre>
+ *
  * Protobuf type {@code api.commons.audit.ContactManagerEntityAssociationEvent}
  */
 public final class ContactManagerEntityAssociationEvent extends
@@ -18,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ContactManagerEntityAssociationEvent() {
     fromEntity_ = "";
     toEntity_ = "";
+    entityType_ = "";
   }
 
   @java.lang.Override
@@ -40,10 +45,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder.class);
   }
 
-  public static final int CONTACTMANAGERENTRYID_FIELD_NUMBER = 2;
+  public static final int CONTACTMANAGERENTRYID_FIELD_NUMBER = 1;
   private long contactManagerEntryId_ = 0L;
   /**
-   * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
+   * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
    * @return The contactManagerEntryId.
    */
   @java.lang.Override
@@ -51,11 +56,11 @@ private static final long serialVersionUID = 0L;
     return contactManagerEntryId_;
   }
 
-  public static final int FROM_ENTITY_FIELD_NUMBER = 3;
+  public static final int FROM_ENTITY_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fromEntity_ = "";
   /**
-   * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
    * @return The fromEntity.
    */
   @java.lang.Override
@@ -72,7 +77,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
    * @return The bytes for fromEntity.
    */
   @java.lang.Override
@@ -90,11 +95,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TO_ENTITY_FIELD_NUMBER = 4;
+  public static final int TO_ENTITY_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object toEntity_ = "";
   /**
-   * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
    * @return The toEntity.
    */
   @java.lang.Override
@@ -111,7 +116,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
    * @return The bytes for toEntity.
    */
   @java.lang.Override
@@ -123,6 +128,45 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       toEntity_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ENTITY_TYPE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object entityType_ = "";
+  /**
+   * <code>string entity_type = 4 [json_name = "entityType"];</code>
+   * @return The entityType.
+   */
+  @java.lang.Override
+  public java.lang.String getEntityType() {
+    java.lang.Object ref = entityType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      entityType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string entity_type = 4 [json_name = "entityType"];</code>
+   * @return The bytes for entityType.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEntityTypeBytes() {
+    java.lang.Object ref = entityType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      entityType_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -144,13 +188,16 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (contactManagerEntryId_ != 0L) {
-      output.writeInt64(2, contactManagerEntryId_);
+      output.writeInt64(1, contactManagerEntryId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEntity_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromEntity_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromEntity_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toEntity_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, toEntity_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, toEntity_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, entityType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -163,13 +210,16 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (contactManagerEntryId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, contactManagerEntryId_);
+        .computeInt64Size(1, contactManagerEntryId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEntity_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromEntity_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromEntity_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toEntity_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, toEntity_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, toEntity_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, entityType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +242,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFromEntity())) return false;
     if (!getToEntity()
         .equals(other.getToEntity())) return false;
+    if (!getEntityType()
+        .equals(other.getEntityType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -210,6 +262,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFromEntity().hashCode();
     hash = (37 * hash) + TO_ENTITY_FIELD_NUMBER;
     hash = (53 * hash) + getToEntity().hashCode();
+    hash = (37 * hash) + ENTITY_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getEntityType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,6 +362,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *payload for associating contact with external events
+   * </pre>
+   *
    * Protobuf type {@code api.commons.audit.ContactManagerEntityAssociationEvent}
    */
   public static final class Builder extends
@@ -344,6 +402,7 @@ private static final long serialVersionUID = 0L;
       contactManagerEntryId_ = 0L;
       fromEntity_ = "";
       toEntity_ = "";
+      entityType_ = "";
       return this;
     }
 
@@ -385,6 +444,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.toEntity_ = toEntity_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.entityType_ = entityType_;
       }
     }
 
@@ -445,6 +507,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (!other.getEntityType().isEmpty()) {
+        entityType_ = other.entityType_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -471,19 +538,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 16: {
+            case 8: {
               contactManagerEntryId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
-            } // case 16
-            case 26: {
+            } // case 8
+            case 18: {
               fromEntity_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 26
-            case 34: {
+            } // case 18
+            case 26: {
               toEntity_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              entityType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             default: {
@@ -505,7 +577,7 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerEntryId_ ;
     /**
-     * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
      * @return The contactManagerEntryId.
      */
     @java.lang.Override
@@ -513,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerEntryId_;
     }
     /**
-     * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
      * @param value The contactManagerEntryId to set.
      * @return This builder for chaining.
      */
@@ -525,7 +597,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerEntryId() {
@@ -537,7 +609,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object fromEntity_ = "";
     /**
-     * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
      * @return The fromEntity.
      */
     public java.lang.String getFromEntity() {
@@ -553,7 +625,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
      * @return The bytes for fromEntity.
      */
     public com.google.protobuf.ByteString
@@ -570,7 +642,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
      * @param value The fromEntity to set.
      * @return This builder for chaining.
      */
@@ -583,7 +655,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFromEntity() {
@@ -593,7 +665,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string from_entity = 3 [json_name = "fromEntity"];</code>
+     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
      * @param value The bytes for fromEntity to set.
      * @return This builder for chaining.
      */
@@ -609,7 +681,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object toEntity_ = "";
     /**
-     * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
      * @return The toEntity.
      */
     public java.lang.String getToEntity() {
@@ -625,7 +697,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
      * @return The bytes for toEntity.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +714,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
      * @param value The toEntity to set.
      * @return This builder for chaining.
      */
@@ -655,7 +727,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
      * @return This builder for chaining.
      */
     public Builder clearToEntity() {
@@ -665,7 +737,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string to_entity = 4 [json_name = "toEntity"];</code>
+     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
      * @param value The bytes for toEntity to set.
      * @return This builder for chaining.
      */
@@ -675,6 +747,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       toEntity_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object entityType_ = "";
+    /**
+     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * @return The entityType.
+     */
+    public java.lang.String getEntityType() {
+      java.lang.Object ref = entityType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * @return The bytes for entityType.
+     */
+    public com.google.protobuf.ByteString
+        getEntityTypeBytes() {
+      java.lang.Object ref = entityType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * @param value The entityType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntityType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      entityType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEntityType() {
+      entityType_ = getDefaultInstance().getEntityType();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * @param value The bytes for entityType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntityTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      entityType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

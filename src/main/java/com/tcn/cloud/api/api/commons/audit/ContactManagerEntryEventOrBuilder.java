@@ -21,7 +21,7 @@ public interface ContactManagerEntryEventOrBuilder extends
 
   /**
    * <pre>
-   *contact manager entry
+   *contact manager entry id
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -66,46 +66,46 @@ public interface ContactManagerEntryEventOrBuilder extends
 
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> 
-      getFieldsChangesList();
+      getFieldChangesList();
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index);
+  com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index);
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
-  int getFieldsChangesCount();
+  int getFieldChangesCount();
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
-      getFieldsChangesOrBuilderList();
+      getFieldChangesOrBuilderList();
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+  com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
       int index);
 
   /**

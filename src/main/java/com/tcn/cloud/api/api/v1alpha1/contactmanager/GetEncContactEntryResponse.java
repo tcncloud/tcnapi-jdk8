@@ -17,10 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetEncContactEntryResponse() {
     contactManagerEntry_ = java.util.Collections.emptyList();
-    fileName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    listName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -84,80 +80,6 @@ private static final long serialVersionUID = 0L;
     return contactManagerEntry_.get(index);
   }
 
-  public static final int FILE_NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList fileName_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-   * @return A list containing the fileName.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getFileNameList() {
-    return fileName_;
-  }
-  /**
-   * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-   * @return The count of fileName.
-   */
-  public int getFileNameCount() {
-    return fileName_.size();
-  }
-  /**
-   * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-   * @param index The index of the element to return.
-   * @return The fileName at the given index.
-   */
-  public java.lang.String getFileName(int index) {
-    return fileName_.get(index);
-  }
-  /**
-   * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the fileName at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getFileNameBytes(int index) {
-    return fileName_.getByteString(index);
-  }
-
-  public static final int LIST_NAME_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList listName_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-   * @return A list containing the listName.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getListNameList() {
-    return listName_;
-  }
-  /**
-   * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-   * @return The count of listName.
-   */
-  public int getListNameCount() {
-    return listName_.size();
-  }
-  /**
-   * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-   * @param index The index of the element to return.
-   * @return The listName at the given index.
-   */
-  public java.lang.String getListName(int index) {
-    return listName_.get(index);
-  }
-  /**
-   * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the listName at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getListNameBytes(int index) {
-    return listName_.getByteString(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -175,12 +97,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactManagerEntry_.size(); i++) {
       output.writeMessage(2, contactManagerEntry_.get(i));
     }
-    for (int i = 0; i < fileName_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileName_.getRaw(i));
-    }
-    for (int i = 0; i < listName_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, listName_.getRaw(i));
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -193,22 +109,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactManagerEntry_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, contactManagerEntry_.get(i));
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < fileName_.size(); i++) {
-        dataSize += computeStringSizeNoTag(fileName_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getFileNameList().size();
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < listName_.size(); i++) {
-        dataSize += computeStringSizeNoTag(listName_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getListNameList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -227,10 +127,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getContactManagerEntryList()
         .equals(other.getContactManagerEntryList())) return false;
-    if (!getFileNameList()
-        .equals(other.getFileNameList())) return false;
-    if (!getListNameList()
-        .equals(other.getListNameList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -245,14 +141,6 @@ private static final long serialVersionUID = 0L;
     if (getContactManagerEntryCount() > 0) {
       hash = (37 * hash) + CONTACT_MANAGER_ENTRY_FIELD_NUMBER;
       hash = (53 * hash) + getContactManagerEntryList().hashCode();
-    }
-    if (getFileNameCount() > 0) {
-      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFileNameList().hashCode();
-    }
-    if (getListNameCount() > 0) {
-      hash = (37 * hash) + LIST_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getListNameList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -392,10 +280,6 @@ private static final long serialVersionUID = 0L;
         contactManagerEntryBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      fileName_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      listName_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -442,14 +326,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetEncContactEntryResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        fileName_.makeImmutable();
-        result.fileName_ = fileName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        listName_.makeImmutable();
-        result.listName_ = listName_;
-      }
     }
 
     @java.lang.Override
@@ -522,26 +398,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.fileName_.isEmpty()) {
-        if (fileName_.isEmpty()) {
-          fileName_ = other.fileName_;
-          bitField0_ |= 0x00000002;
-        } else {
-          ensureFileNameIsMutable();
-          fileName_.addAll(other.fileName_);
-        }
-        onChanged();
-      }
-      if (!other.listName_.isEmpty()) {
-        if (listName_.isEmpty()) {
-          listName_ = other.listName_;
-          bitField0_ |= 0x00000004;
-        } else {
-          ensureListNameIsMutable();
-          listName_.addAll(other.listName_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -581,18 +437,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureFileNameIsMutable();
-              fileName_.add(s);
-              break;
-            } // case 26
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureListNameIsMutable();
-              listName_.add(s);
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -848,228 +692,6 @@ private static final long serialVersionUID = 0L;
         contactManagerEntry_ = null;
       }
       return contactManagerEntryBuilder_;
-    }
-
-    private com.google.protobuf.LazyStringArrayList fileName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureFileNameIsMutable() {
-      if (!fileName_.isModifiable()) {
-        fileName_ = new com.google.protobuf.LazyStringArrayList(fileName_);
-      }
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @return A list containing the fileName.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getFileNameList() {
-      fileName_.makeImmutable();
-      return fileName_;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @return The count of fileName.
-     */
-    public int getFileNameCount() {
-      return fileName_.size();
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param index The index of the element to return.
-     * @return The fileName at the given index.
-     */
-    public java.lang.String getFileName(int index) {
-      return fileName_.get(index);
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fileName at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getFileNameBytes(int index) {
-      return fileName_.getByteString(index);
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param index The index to set the value at.
-     * @param value The fileName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileName(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFileNameIsMutable();
-      fileName_.set(index, value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param value The fileName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFileName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFileNameIsMutable();
-      fileName_.add(value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param values The fileName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllFileName(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureFileNameIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, fileName_);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFileName() {
-      fileName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_name = 3 [json_name = "fileName"];</code>
-     * @param value The bytes of the fileName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFileNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureFileNameIsMutable();
-      fileName_.add(value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.LazyStringArrayList listName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureListNameIsMutable() {
-      if (!listName_.isModifiable()) {
-        listName_ = new com.google.protobuf.LazyStringArrayList(listName_);
-      }
-      bitField0_ |= 0x00000004;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @return A list containing the listName.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getListNameList() {
-      listName_.makeImmutable();
-      return listName_;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @return The count of listName.
-     */
-    public int getListNameCount() {
-      return listName_.size();
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param index The index of the element to return.
-     * @return The listName at the given index.
-     */
-    public java.lang.String getListName(int index) {
-      return listName_.get(index);
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the listName at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getListNameBytes(int index) {
-      return listName_.getByteString(index);
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param index The index to set the value at.
-     * @param value The listName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setListName(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureListNameIsMutable();
-      listName_.set(index, value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param value The listName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addListName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureListNameIsMutable();
-      listName_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param values The listName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllListName(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureListNameIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, listName_);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearListName() {
-      listName_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string list_name = 4 [json_name = "listName"];</code>
-     * @param value The bytes of the listName to add.
-     * @return This builder for chaining.
-     */
-    public Builder addListNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureListNameIsMutable();
-      listName_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ContactManagerEntryEvent() {
     contactManagerEntryListIds_ = emptyLongList();
-    fieldsChanges_ = java.util.Collections.emptyList();
+    fieldChanges_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
   private long contactManagerEntryId_ = 0L;
   /**
    * <pre>
-   *contact manager entry
+   *contact manager entry id
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -124,65 +124,65 @@ private static final long serialVersionUID = 0L;
   }
   private int contactManagerEntryListIdsMemoizedSerializedSize = -1;
 
-  public static final int FIELDS_CHANGES_FIELD_NUMBER = 4;
+  public static final int FIELD_CHANGES_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldsChanges_;
+  private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldChanges_;
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldsChangesList() {
-    return fieldsChanges_;
+  public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldChangesList() {
+    return fieldChanges_;
   }
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
-      getFieldsChangesOrBuilderList() {
-    return fieldsChanges_;
+      getFieldChangesOrBuilderList() {
+    return fieldChanges_;
   }
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   @java.lang.Override
-  public int getFieldsChangesCount() {
-    return fieldsChanges_.size();
+  public int getFieldChangesCount() {
+    return fieldChanges_.size();
   }
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index) {
-    return fieldsChanges_.get(index);
+  public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index) {
+    return fieldChanges_.get(index);
   }
   /**
    * <pre>
-   *TODO: better name
+   *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+  public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
       int index) {
-    return fieldsChanges_.get(index);
+    return fieldChanges_.get(index);
   }
 
   public static final int CONTACT_UPDATE_TASK_ID_FIELD_NUMBER = 5;
@@ -232,8 +232,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactManagerEntryListIds_.size(); i++) {
       output.writeInt64NoTag(contactManagerEntryListIds_.getLong(i));
     }
-    for (int i = 0; i < fieldsChanges_.size(); i++) {
-      output.writeMessage(4, fieldsChanges_.get(i));
+    for (int i = 0; i < fieldChanges_.size(); i++) {
+      output.writeMessage(4, fieldChanges_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(5, contactUpdateTaskId_);
@@ -269,9 +269,9 @@ private static final long serialVersionUID = 0L;
       }
       contactManagerEntryListIdsMemoizedSerializedSize = dataSize;
     }
-    for (int i = 0; i < fieldsChanges_.size(); i++) {
+    for (int i = 0; i < fieldChanges_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, fieldsChanges_.get(i));
+        .computeMessageSize(4, fieldChanges_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -298,8 +298,8 @@ private static final long serialVersionUID = 0L;
         != other.getContactManagerEntryId()) return false;
     if (!getContactManagerEntryListIdsList()
         .equals(other.getContactManagerEntryListIdsList())) return false;
-    if (!getFieldsChangesList()
-        .equals(other.getFieldsChangesList())) return false;
+    if (!getFieldChangesList()
+        .equals(other.getFieldChangesList())) return false;
     if (hasContactUpdateTaskId() != other.hasContactUpdateTaskId()) return false;
     if (hasContactUpdateTaskId()) {
       if (getContactUpdateTaskId()
@@ -326,9 +326,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTACTMANAGERENTRYLISTIDS_FIELD_NUMBER;
       hash = (53 * hash) + getContactManagerEntryListIdsList().hashCode();
     }
-    if (getFieldsChangesCount() > 0) {
-      hash = (37 * hash) + FIELDS_CHANGES_FIELD_NUMBER;
-      hash = (53 * hash) + getFieldsChangesList().hashCode();
+    if (getFieldChangesCount() > 0) {
+      hash = (37 * hash) + FIELD_CHANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldChangesList().hashCode();
     }
     if (hasContactUpdateTaskId()) {
       hash = (37 * hash) + CONTACT_UPDATE_TASK_ID_FIELD_NUMBER;
@@ -473,11 +473,11 @@ private static final long serialVersionUID = 0L;
       contactManagerListId_ = 0L;
       contactManagerEntryId_ = 0L;
       contactManagerEntryListIds_ = emptyLongList();
-      if (fieldsChangesBuilder_ == null) {
-        fieldsChanges_ = java.util.Collections.emptyList();
+      if (fieldChangesBuilder_ == null) {
+        fieldChanges_ = java.util.Collections.emptyList();
       } else {
-        fieldsChanges_ = null;
-        fieldsChangesBuilder_.clear();
+        fieldChanges_ = null;
+        fieldChangesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
       contactUpdateTaskId_ = 0L;
@@ -519,14 +519,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.contactManagerEntryListIds_ = contactManagerEntryListIds_;
-      if (fieldsChangesBuilder_ == null) {
+      if (fieldChangesBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          fieldsChanges_ = java.util.Collections.unmodifiableList(fieldsChanges_);
+          fieldChanges_ = java.util.Collections.unmodifiableList(fieldChanges_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.fieldsChanges_ = fieldsChanges_;
+        result.fieldChanges_ = fieldChanges_;
       } else {
-        result.fieldsChanges_ = fieldsChangesBuilder_.build();
+        result.fieldChanges_ = fieldChangesBuilder_.build();
       }
     }
 
@@ -606,29 +606,29 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (fieldsChangesBuilder_ == null) {
-        if (!other.fieldsChanges_.isEmpty()) {
-          if (fieldsChanges_.isEmpty()) {
-            fieldsChanges_ = other.fieldsChanges_;
+      if (fieldChangesBuilder_ == null) {
+        if (!other.fieldChanges_.isEmpty()) {
+          if (fieldChanges_.isEmpty()) {
+            fieldChanges_ = other.fieldChanges_;
             bitField0_ = (bitField0_ & ~0x00000008);
           } else {
-            ensureFieldsChangesIsMutable();
-            fieldsChanges_.addAll(other.fieldsChanges_);
+            ensureFieldChangesIsMutable();
+            fieldChanges_.addAll(other.fieldChanges_);
           }
           onChanged();
         }
       } else {
-        if (!other.fieldsChanges_.isEmpty()) {
-          if (fieldsChangesBuilder_.isEmpty()) {
-            fieldsChangesBuilder_.dispose();
-            fieldsChangesBuilder_ = null;
-            fieldsChanges_ = other.fieldsChanges_;
+        if (!other.fieldChanges_.isEmpty()) {
+          if (fieldChangesBuilder_.isEmpty()) {
+            fieldChangesBuilder_.dispose();
+            fieldChangesBuilder_ = null;
+            fieldChanges_ = other.fieldChanges_;
             bitField0_ = (bitField0_ & ~0x00000008);
-            fieldsChangesBuilder_ = 
+            fieldChangesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getFieldsChangesFieldBuilder() : null;
+                 getFieldChangesFieldBuilder() : null;
           } else {
-            fieldsChangesBuilder_.addAllMessages(other.fieldsChanges_);
+            fieldChangesBuilder_.addAllMessages(other.fieldChanges_);
           }
         }
       }
@@ -692,11 +692,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.parser(),
                       extensionRegistry);
-              if (fieldsChangesBuilder_ == null) {
-                ensureFieldsChangesIsMutable();
-                fieldsChanges_.add(m);
+              if (fieldChangesBuilder_ == null) {
+                ensureFieldChangesIsMutable();
+                fieldChanges_.add(m);
               } else {
-                fieldsChangesBuilder_.addMessage(m);
+                fieldChangesBuilder_.addMessage(m);
               }
               break;
             } // case 34
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
     private long contactManagerEntryId_ ;
     /**
      * <pre>
-     *contact manager entry
+     *contact manager entry id
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry
+     *contact manager entry id
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry
+     *contact manager entry id
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -939,316 +939,316 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldsChanges_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldChanges_ =
       java.util.Collections.emptyList();
-    private void ensureFieldsChangesIsMutable() {
+    private void ensureFieldChangesIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        fieldsChanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges>(fieldsChanges_);
+        fieldChanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges>(fieldChanges_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> fieldsChangesBuilder_;
+        com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> fieldChangesBuilder_;
 
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldsChangesList() {
-      if (fieldsChangesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(fieldsChanges_);
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldChangesList() {
+      if (fieldChangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fieldChanges_);
       } else {
-        return fieldsChangesBuilder_.getMessageList();
+        return fieldChangesBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public int getFieldsChangesCount() {
-      if (fieldsChangesBuilder_ == null) {
-        return fieldsChanges_.size();
+    public int getFieldChangesCount() {
+      if (fieldChangesBuilder_ == null) {
+        return fieldChanges_.size();
       } else {
-        return fieldsChangesBuilder_.getCount();
+        return fieldChangesBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldsChanges(int index) {
-      if (fieldsChangesBuilder_ == null) {
-        return fieldsChanges_.get(index);
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index) {
+      if (fieldChangesBuilder_ == null) {
+        return fieldChanges_.get(index);
       } else {
-        return fieldsChangesBuilder_.getMessage(index);
+        return fieldChangesBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder setFieldsChanges(
+    public Builder setFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
-      if (fieldsChangesBuilder_ == null) {
+      if (fieldChangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.set(index, value);
+        ensureFieldChangesIsMutable();
+        fieldChanges_.set(index, value);
         onChanged();
       } else {
-        fieldsChangesBuilder_.setMessage(index, value);
+        fieldChangesBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder setFieldsChanges(
+    public Builder setFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
-      if (fieldsChangesBuilder_ == null) {
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.set(index, builderForValue.build());
+      if (fieldChangesBuilder_ == null) {
+        ensureFieldChangesIsMutable();
+        fieldChanges_.set(index, builderForValue.build());
         onChanged();
       } else {
-        fieldsChangesBuilder_.setMessage(index, builderForValue.build());
+        fieldChangesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder addFieldsChanges(com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
-      if (fieldsChangesBuilder_ == null) {
+    public Builder addFieldChanges(com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
+      if (fieldChangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.add(value);
+        ensureFieldChangesIsMutable();
+        fieldChanges_.add(value);
         onChanged();
       } else {
-        fieldsChangesBuilder_.addMessage(value);
+        fieldChangesBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder addFieldsChanges(
+    public Builder addFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
-      if (fieldsChangesBuilder_ == null) {
+      if (fieldChangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.add(index, value);
+        ensureFieldChangesIsMutable();
+        fieldChanges_.add(index, value);
         onChanged();
       } else {
-        fieldsChangesBuilder_.addMessage(index, value);
+        fieldChangesBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder addFieldsChanges(
+    public Builder addFieldChanges(
         com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
-      if (fieldsChangesBuilder_ == null) {
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.add(builderForValue.build());
+      if (fieldChangesBuilder_ == null) {
+        ensureFieldChangesIsMutable();
+        fieldChanges_.add(builderForValue.build());
         onChanged();
       } else {
-        fieldsChangesBuilder_.addMessage(builderForValue.build());
+        fieldChangesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder addFieldsChanges(
+    public Builder addFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
-      if (fieldsChangesBuilder_ == null) {
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.add(index, builderForValue.build());
+      if (fieldChangesBuilder_ == null) {
+        ensureFieldChangesIsMutable();
+        fieldChanges_.add(index, builderForValue.build());
         onChanged();
       } else {
-        fieldsChangesBuilder_.addMessage(index, builderForValue.build());
+        fieldChangesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder addAllFieldsChanges(
+    public Builder addAllFieldChanges(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> values) {
-      if (fieldsChangesBuilder_ == null) {
-        ensureFieldsChangesIsMutable();
+      if (fieldChangesBuilder_ == null) {
+        ensureFieldChangesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, fieldsChanges_);
+            values, fieldChanges_);
         onChanged();
       } else {
-        fieldsChangesBuilder_.addAllMessages(values);
+        fieldChangesBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder clearFieldsChanges() {
-      if (fieldsChangesBuilder_ == null) {
-        fieldsChanges_ = java.util.Collections.emptyList();
+    public Builder clearFieldChanges() {
+      if (fieldChangesBuilder_ == null) {
+        fieldChanges_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
-        fieldsChangesBuilder_.clear();
+        fieldChangesBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public Builder removeFieldsChanges(int index) {
-      if (fieldsChangesBuilder_ == null) {
-        ensureFieldsChangesIsMutable();
-        fieldsChanges_.remove(index);
+    public Builder removeFieldChanges(int index) {
+      if (fieldChangesBuilder_ == null) {
+        ensureFieldChangesIsMutable();
+        fieldChanges_.remove(index);
         onChanged();
       } else {
-        fieldsChangesBuilder_.remove(index);
+        fieldChangesBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder getFieldsChangesBuilder(
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder getFieldChangesBuilder(
         int index) {
-      return getFieldsChangesFieldBuilder().getBuilder(index);
+      return getFieldChangesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldsChangesOrBuilder(
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
         int index) {
-      if (fieldsChangesBuilder_ == null) {
-        return fieldsChanges_.get(index);  } else {
-        return fieldsChangesBuilder_.getMessageOrBuilder(index);
+      if (fieldChangesBuilder_ == null) {
+        return fieldChanges_.get(index);  } else {
+        return fieldChangesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
-         getFieldsChangesOrBuilderList() {
-      if (fieldsChangesBuilder_ != null) {
-        return fieldsChangesBuilder_.getMessageOrBuilderList();
+         getFieldChangesOrBuilderList() {
+      if (fieldChangesBuilder_ != null) {
+        return fieldChangesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(fieldsChanges_);
+        return java.util.Collections.unmodifiableList(fieldChanges_);
       }
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldsChangesBuilder() {
-      return getFieldsChangesFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldChangesBuilder() {
+      return getFieldChangesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.getDefaultInstance());
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldsChangesBuilder(
+    public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldChangesBuilder(
         int index) {
-      return getFieldsChangesFieldBuilder().addBuilder(
+      return getFieldChangesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.getDefaultInstance());
     }
     /**
      * <pre>
-     *TODO: better name
+     *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges fields_changes = 4 [json_name = "fieldsChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder> 
-         getFieldsChangesBuilderList() {
-      return getFieldsChangesFieldBuilder().getBuilderList();
+         getFieldChangesBuilderList() {
+      return getFieldChangesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
-        getFieldsChangesFieldBuilder() {
-      if (fieldsChangesBuilder_ == null) {
-        fieldsChangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getFieldChangesFieldBuilder() {
+      if (fieldChangesBuilder_ == null) {
+        fieldChangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.audit.ContactFieldChanges, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder, com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder>(
-                fieldsChanges_,
+                fieldChanges_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
-        fieldsChanges_ = null;
+        fieldChanges_ = null;
       }
-      return fieldsChangesBuilder_;
+      return fieldChangesBuilder_;
     }
 
     private long contactUpdateTaskId_ ;

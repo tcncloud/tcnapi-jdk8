@@ -16,7 +16,7 @@ public interface ContactManagerEntryOrBuilder extends
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=88
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
    * @return The contactManagerEntryListId.
    */
   @java.lang.Deprecated long getContactManagerEntryListId();
