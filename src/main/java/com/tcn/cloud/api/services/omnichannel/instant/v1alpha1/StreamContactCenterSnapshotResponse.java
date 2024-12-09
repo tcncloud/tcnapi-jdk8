@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.instant.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse}
+ * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse}
  */
-public final class StreamContantCenterSnapshotResponse extends
+public final class StreamContactCenterSnapshotResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)
-    StreamContantCenterSnapshotResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)
+    StreamContactCenterSnapshotResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use StreamContantCenterSnapshotResponse.newBuilder() to construct.
-  private StreamContantCenterSnapshotResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StreamContactCenterSnapshotResponse.newBuilder() to construct.
+  private StreamContactCenterSnapshotResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private StreamContantCenterSnapshotResponse() {
+  private StreamContactCenterSnapshotResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new StreamContantCenterSnapshotResponse();
+    return new StreamContactCenterSnapshotResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse other = (com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse) obj;
+    com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse other = (com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse}
+   * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContactCenterSnapshotResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse build() {
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse build() {
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse result = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse(this);
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse result = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse)
-  private static final com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)
+  private static final com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<StreamContantCenterSnapshotResponse>
-      PARSER = new com.google.protobuf.AbstractParser<StreamContantCenterSnapshotResponse>() {
+  private static final com.google.protobuf.Parser<StreamContactCenterSnapshotResponse>
+      PARSER = new com.google.protobuf.AbstractParser<StreamContactCenterSnapshotResponse>() {
     @java.lang.Override
-    public StreamContantCenterSnapshotResponse parsePartialFrom(
+    public StreamContactCenterSnapshotResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<StreamContantCenterSnapshotResponse> parser() {
+  public static com.google.protobuf.Parser<StreamContactCenterSnapshotResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<StreamContantCenterSnapshotResponse> getParserForType() {
+  public com.google.protobuf.Parser<StreamContactCenterSnapshotResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.instant.v1alpha1;
 
-public interface StreamContantCenterSnapshotRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)
+public interface StreamContactCenterSnapshotResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.instant.v1alpha1.StreamContactCenterSnapshotResponse)
     com.google.protobuf.MessageOrBuilder {
 }
