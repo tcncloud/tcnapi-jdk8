@@ -62,6 +62,14 @@ public enum OmniTaskStatus
   OMNI_TASK_SENDING_INCOMPLETE(111),
   /**
    * <pre>
+   * invalid destination number that is not a cell number
+   * </pre>
+   *
+   * <code>OMNI_TASK_SENDING_INVALID = 112;</code>
+   */
+  OMNI_TASK_SENDING_INVALID(112),
+  /**
+   * <pre>
    * the task successfully sent
    * </pre>
    *
@@ -137,6 +145,14 @@ public enum OmniTaskStatus
   public static final int OMNI_TASK_SENDING_INCOMPLETE_VALUE = 111;
   /**
    * <pre>
+   * invalid destination number that is not a cell number
+   * </pre>
+   *
+   * <code>OMNI_TASK_SENDING_INVALID = 112;</code>
+   */
+  public static final int OMNI_TASK_SENDING_INVALID_VALUE = 112;
+  /**
+   * <pre>
    * the task successfully sent
    * </pre>
    *
@@ -191,6 +207,7 @@ public enum OmniTaskStatus
       case 100: return OMNI_TASK_SENDING;
       case 110: return OMNI_TASK_SENDING_FAILED;
       case 111: return OMNI_TASK_SENDING_INCOMPLETE;
+      case 112: return OMNI_TASK_SENDING_INVALID;
       case 120: return OMNI_TASK_SENT;
       case 130: return OMNI_TASK_RECEIVED;
       case 140: return OMNI_TASK_CANCELLED;
