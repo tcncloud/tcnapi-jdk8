@@ -15,15 +15,15 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor;
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_fieldAccessorTable;
+      internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotResponse_descriptor;
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotResponse_fieldAccessorTable;
+      internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -36,22 +36,23 @@ public final class ServiceProto {
       "\n3services/omnichannel/instant/v1alpha1/" +
       "service.proto\022%services.omnichannel.inst" +
       "ant.v1alpha1\032\027annotations/authz.proto\032\034g" +
-      "oogle/api/annotations.proto\"!\n\037GetContan" +
-      "tCenterSnapshotRequest\"\"\n GetContantCent" +
-      "erSnapshotResponse2\222\002\n\014OauthService\022\201\002\n\030" +
-      "GetContantCenterSnapshot\022F.services.omni" +
-      "channel.instant.v1alpha1.GetContantCente" +
-      "rSnapshotRequest\032G.services.omnichannel." +
-      "instant.v1alpha1.GetContantCenterSnapsho" +
-      "tResponse\"T\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002D\"?/services/o" +
-      "mnichannel/instant/v1alpha1/getContactCe" +
-      "nterSnapshot:\001*B\376\001\n7com.tcn.cloud.api.se" +
-      "rvices.omnichannel.instant.v1alpha1B\014Ser" +
-      "viceProtoP\001\242\002\003SOI\252\002%Services.Omnichannel" +
-      ".Instant.V1alpha1\312\002%Services\\Omnichannel" +
-      "\\Instant\\V1alpha1\342\0021Services\\Omnichannel" +
-      "\\Instant\\V1alpha1\\GPBMetadata\352\002(Services" +
-      "::Omnichannel::Instant::V1alpha1b\006proto3"
+      "oogle/api/annotations.proto\"$\n\"StreamCon" +
+      "tantCenterSnapshotRequest\"%\n#StreamConta" +
+      "ntCenterSnapshotResponse2\235\002\n\014OauthServic" +
+      "e\022\214\002\n\033StreamContantCenterSnapshot\022I.serv" +
+      "ices.omnichannel.instant.v1alpha1.Stream" +
+      "ContantCenterSnapshotRequest\032J.services." +
+      "omnichannel.instant.v1alpha1.StreamConta" +
+      "ntCenterSnapshotResponse\"T\272\270\221\002\005\n\003\010\260\t\202\323\344\223" +
+      "\002D\"?/services/omnichannel/instant/v1alph" +
+      "a1/getContactCenterSnapshot:\001*0\001B\376\001\n7com" +
+      ".tcn.cloud.api.services.omnichannel.inst" +
+      "ant.v1alpha1B\014ServiceProtoP\001\242\002\003SOI\252\002%Ser" +
+      "vices.Omnichannel.Instant.V1alpha1\312\002%Ser" +
+      "vices\\Omnichannel\\Instant\\V1alpha1\342\0021Ser" +
+      "vices\\Omnichannel\\Instant\\V1alpha1\\GPBMe" +
+      "tadata\352\002(Services::Omnichannel::Instant:" +
+      ":V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59,17 +60,17 @@ public final class ServiceProto {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor =
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_fieldAccessorTable = new
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor,
+        internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotResponse_descriptor =
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotResponse_fieldAccessorTable = new
+    internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotResponse_descriptor,
+        internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

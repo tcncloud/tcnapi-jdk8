@@ -15,35 +15,35 @@ public final class OauthServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "services.omnichannel.instant.v1alpha1.OauthService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest,
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> getGetContantCenterSnapshotMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest,
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> getStreamContantCenterSnapshotMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetContantCenterSnapshot",
-      requestType = com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.class,
-      responseType = com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest,
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> getGetContantCenterSnapshotMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> getGetContantCenterSnapshotMethod;
-    if ((getGetContantCenterSnapshotMethod = OauthServiceGrpc.getGetContantCenterSnapshotMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "StreamContantCenterSnapshot",
+      requestType = com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.class,
+      responseType = com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest,
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> getStreamContantCenterSnapshotMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> getStreamContantCenterSnapshotMethod;
+    if ((getStreamContantCenterSnapshotMethod = OauthServiceGrpc.getStreamContantCenterSnapshotMethod) == null) {
       synchronized (OauthServiceGrpc.class) {
-        if ((getGetContantCenterSnapshotMethod = OauthServiceGrpc.getGetContantCenterSnapshotMethod) == null) {
-          OauthServiceGrpc.getGetContantCenterSnapshotMethod = getGetContantCenterSnapshotMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContantCenterSnapshot"))
+        if ((getStreamContantCenterSnapshotMethod = OauthServiceGrpc.getStreamContantCenterSnapshotMethod) == null) {
+          OauthServiceGrpc.getStreamContantCenterSnapshotMethod = getStreamContantCenterSnapshotMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamContantCenterSnapshot"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OauthServiceMethodDescriptorSupplier("GetContantCenterSnapshot"))
+                  com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OauthServiceMethodDescriptorSupplier("StreamContantCenterSnapshot"))
               .build();
         }
       }
     }
-    return getGetContantCenterSnapshotMethod;
+    return getStreamContantCenterSnapshotMethod;
   }
 
   /**
@@ -96,9 +96,9 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    default void getContantCenterSnapshot(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContantCenterSnapshotMethod(), responseObserver);
+    default void streamContantCenterSnapshot(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamContantCenterSnapshotMethod(), responseObserver);
     }
   }
 
@@ -131,10 +131,10 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    public void getContantCenterSnapshot(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetContantCenterSnapshotMethod(), getCallOptions()), request, responseObserver);
+    public void streamContantCenterSnapshot(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getStreamContantCenterSnapshotMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -156,9 +156,10 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse getContantCenterSnapshot(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetContantCenterSnapshotMethod(), getCallOptions(), request);
+    public java.util.Iterator<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse> streamContantCenterSnapshot(
+        com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getStreamContantCenterSnapshotMethod(), getCallOptions(), request);
     }
   }
 
@@ -177,17 +178,9 @@ public final class OauthServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OauthServiceFutureStub(channel, callOptions);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse> getContantCenterSnapshot(
-        com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetContantCenterSnapshotMethod(), getCallOptions()), request);
-    }
   }
 
-  private static final int METHODID_GET_CONTANT_CENTER_SNAPSHOT = 0;
+  private static final int METHODID_STREAM_CONTANT_CENTER_SNAPSHOT = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -206,9 +199,9 @@ public final class OauthServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_CONTANT_CENTER_SNAPSHOT:
-          serviceImpl.getContantCenterSnapshot((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse>) responseObserver);
+        case METHODID_STREAM_CONTANT_CENTER_SNAPSHOT:
+          serviceImpl.streamContantCenterSnapshot((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -229,12 +222,12 @@ public final class OauthServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetContantCenterSnapshotMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
+          getStreamContantCenterSnapshotMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest,
-              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotResponse>(
-                service, METHODID_GET_CONTANT_CENTER_SNAPSHOT)))
+              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest,
+              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotResponse>(
+                service, METHODID_STREAM_CONTANT_CENTER_SNAPSHOT)))
         .build();
   }
 
@@ -283,7 +276,7 @@ public final class OauthServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new OauthServiceFileDescriptorSupplier())
-              .addMethod(getGetContantCenterSnapshotMethod())
+              .addMethod(getStreamContantCenterSnapshotMethod())
               .build();
         }
       }

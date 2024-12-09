@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.instant.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest}
+ * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest}
  */
-public final class GetContantCenterSnapshotRequest extends
+public final class StreamContantCenterSnapshotRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)
-    GetContantCenterSnapshotRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)
+    StreamContantCenterSnapshotRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetContantCenterSnapshotRequest.newBuilder() to construct.
-  private GetContantCenterSnapshotRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StreamContantCenterSnapshotRequest.newBuilder() to construct.
+  private StreamContantCenterSnapshotRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetContantCenterSnapshotRequest() {
+  private StreamContantCenterSnapshotRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetContantCenterSnapshotRequest();
+    return new StreamContantCenterSnapshotRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest other = (com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest) obj;
+    com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest other = (com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest}
+   * Protobuf type {@code services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.class, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_GetContantCenterSnapshotRequest_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.ServiceProto.internal_static_services_omnichannel_instant_v1alpha1_StreamContantCenterSnapshotRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest build() {
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest build() {
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest result = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest(this);
+    public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest result = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest)
-  private static final com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest)
+  private static final com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetContantCenterSnapshotRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetContantCenterSnapshotRequest>() {
+  private static final com.google.protobuf.Parser<StreamContantCenterSnapshotRequest>
+      PARSER = new com.google.protobuf.AbstractParser<StreamContantCenterSnapshotRequest>() {
     @java.lang.Override
-    public GetContantCenterSnapshotRequest parsePartialFrom(
+    public StreamContantCenterSnapshotRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetContantCenterSnapshotRequest> parser() {
+  public static com.google.protobuf.Parser<StreamContantCenterSnapshotRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetContantCenterSnapshotRequest> getParserForType() {
+  public com.google.protobuf.Parser<StreamContantCenterSnapshotRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.GetContantCenterSnapshotRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.StreamContantCenterSnapshotRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
