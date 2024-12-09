@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- *payload for contact list upload or manual entry
+ *payload for contact list upload
  * </pre>
  *
  * Protobuf type {@code api.commons.audit.ContactManagerListUploadEvent}
@@ -22,8 +22,6 @@ private static final long serialVersionUID = 0L;
   private ContactManagerListUploadEvent() {
     deDupFieldType_ = 0;
     deDupMergeStrategy_ = 0;
-    contactManagerListName_ = "";
-    fileName_ = "";
   }
 
   @java.lang.Override
@@ -46,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONTACTMANAGERLISTID_FIELD_NUMBER = 1;
   private long contactManagerListId_ = 0L;
   /**
@@ -173,114 +170,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.UNRECOGNIZED : result;
   }
 
-  public static final int CONTACT_MANAGER_LIST_NAME_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object contactManagerListName_ = "";
-  /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-   * @return The contactManagerListName.
-   */
-  @java.lang.Override
-  public java.lang.String getContactManagerListName() {
-    java.lang.Object ref = contactManagerListName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      contactManagerListName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-   * @return The bytes for contactManagerListName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getContactManagerListNameBytes() {
-    java.lang.Object ref = contactManagerListName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      contactManagerListName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int FILE_NAME_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fileName_ = "";
-  /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-   * @return Whether the fileName field is set.
-   */
-  @java.lang.Override
-  public boolean hasFileName() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-   * @return The fileName.
-   */
-  @java.lang.Override
-  public java.lang.String getFileName() {
-    java.lang.Object ref = fileName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      fileName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-   * @return The bytes for fileName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getFileNameBytes() {
-    java.lang.Object ref = fileName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      fileName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int UPLOAD_TASK_ID_FIELD_NUMBER = 11;
-  private long uploadTaskId_ = 0L;
-  /**
-   * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-   * @return The uploadTaskId.
-   */
-  @java.lang.Override
-  public long getUploadTaskId() {
-    return uploadTaskId_;
-  }
-
-  public static final int TTL_FIELD_NUMBER = 12;
-  private long ttl_ = 0L;
-  /**
-   * <code>int64 ttl = 12 [json_name = "ttl"];</code>
-   * @return The ttl.
-   */
-  @java.lang.Override
-  public long getTtl() {
-    return ttl_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -318,18 +207,6 @@ private static final long serialVersionUID = 0L;
     }
     if (deDupMergeStrategy_ != com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.KEEP_EXISTING_LIST.getNumber()) {
       output.writeEnum(8, deDupMergeStrategy_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactManagerListName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, contactManagerListName_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, fileName_);
-    }
-    if (uploadTaskId_ != 0L) {
-      output.writeInt64(11, uploadTaskId_);
-    }
-    if (ttl_ != 0L) {
-      output.writeInt64(12, ttl_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -372,20 +249,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, deDupMergeStrategy_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactManagerListName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, contactManagerListName_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, fileName_);
-    }
-    if (uploadTaskId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(11, uploadTaskId_);
-    }
-    if (ttl_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(12, ttl_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -415,17 +278,6 @@ private static final long serialVersionUID = 0L;
         != other.getNumberOfDuplicateContacts()) return false;
     if (deDupFieldType_ != other.deDupFieldType_) return false;
     if (deDupMergeStrategy_ != other.deDupMergeStrategy_) return false;
-    if (!getContactManagerListName()
-        .equals(other.getContactManagerListName())) return false;
-    if (hasFileName() != other.hasFileName()) return false;
-    if (hasFileName()) {
-      if (!getFileName()
-          .equals(other.getFileName())) return false;
-    }
-    if (getUploadTaskId()
-        != other.getUploadTaskId()) return false;
-    if (getTtl()
-        != other.getTtl()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -459,18 +311,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + deDupFieldType_;
     hash = (37 * hash) + DEDUPMERGESTRATEGY_FIELD_NUMBER;
     hash = (53 * hash) + deDupMergeStrategy_;
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getContactManagerListName().hashCode();
-    if (hasFileName()) {
-      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFileName().hashCode();
-    }
-    hash = (37 * hash) + UPLOAD_TASK_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getUploadTaskId());
-    hash = (37 * hash) + TTL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTtl());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -570,7 +410,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *payload for contact list upload or manual entry
+   *payload for contact list upload
    * </pre>
    *
    * Protobuf type {@code api.commons.audit.ContactManagerListUploadEvent}
@@ -614,10 +454,6 @@ private static final long serialVersionUID = 0L;
       numberOfDuplicateContacts_ = 0L;
       deDupFieldType_ = 0;
       deDupMergeStrategy_ = 0;
-      contactManagerListName_ = "";
-      fileName_ = "";
-      uploadTaskId_ = 0L;
-      ttl_ = 0L;
       return this;
     }
 
@@ -675,21 +511,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.deDupMergeStrategy_ = deDupMergeStrategy_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.contactManagerListName_ = contactManagerListName_;
-      }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.fileName_ = fileName_;
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.uploadTaskId_ = uploadTaskId_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.ttl_ = ttl_;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -760,22 +581,6 @@ private static final long serialVersionUID = 0L;
       if (other.deDupMergeStrategy_ != 0) {
         setDeDupMergeStrategyValue(other.getDeDupMergeStrategyValue());
       }
-      if (!other.getContactManagerListName().isEmpty()) {
-        contactManagerListName_ = other.contactManagerListName_;
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
-      if (other.hasFileName()) {
-        fileName_ = other.fileName_;
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
-      if (other.getUploadTaskId() != 0L) {
-        setUploadTaskId(other.getUploadTaskId());
-      }
-      if (other.getTtl() != 0L) {
-        setTtl(other.getTtl());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -842,26 +647,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
-            case 74: {
-              contactManagerListName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 74
-            case 82: {
-              fileName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 82
-            case 88: {
-              uploadTaskId_ = input.readInt64();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 88
-            case 96: {
-              ttl_ = input.readInt64();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1245,221 +1030,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearDeDupMergeStrategy() {
       bitField0_ = (bitField0_ & ~0x00000080);
       deDupMergeStrategy_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object contactManagerListName_ = "";
-    /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-     * @return The contactManagerListName.
-     */
-    public java.lang.String getContactManagerListName() {
-      java.lang.Object ref = contactManagerListName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        contactManagerListName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-     * @return The bytes for contactManagerListName.
-     */
-    public com.google.protobuf.ByteString
-        getContactManagerListNameBytes() {
-      java.lang.Object ref = contactManagerListName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contactManagerListName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-     * @param value The contactManagerListName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactManagerListName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      contactManagerListName_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearContactManagerListName() {
-      contactManagerListName_ = getDefaultInstance().getContactManagerListName();
-      bitField0_ = (bitField0_ & ~0x00000100);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
-     * @param value The bytes for contactManagerListName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactManagerListNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      contactManagerListName_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object fileName_ = "";
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @return Whether the fileName field is set.
-     */
-    public boolean hasFileName() {
-      return ((bitField0_ & 0x00000200) != 0);
-    }
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @return The fileName.
-     */
-    public java.lang.String getFileName() {
-      java.lang.Object ref = fileName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fileName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @return The bytes for fileName.
-     */
-    public com.google.protobuf.ByteString
-        getFileNameBytes() {
-      java.lang.Object ref = fileName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fileName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @param value The fileName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      fileName_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFileName() {
-      fileName_ = getDefaultInstance().getFileName();
-      bitField0_ = (bitField0_ & ~0x00000200);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
-     * @param value The bytes for fileName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      fileName_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-
-    private long uploadTaskId_ ;
-    /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-     * @return The uploadTaskId.
-     */
-    @java.lang.Override
-    public long getUploadTaskId() {
-      return uploadTaskId_;
-    }
-    /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-     * @param value The uploadTaskId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUploadTaskId(long value) {
-
-      uploadTaskId_ = value;
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUploadTaskId() {
-      bitField0_ = (bitField0_ & ~0x00000400);
-      uploadTaskId_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long ttl_ ;
-    /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
-     * @return The ttl.
-     */
-    @java.lang.Override
-    public long getTtl() {
-      return ttl_;
-    }
-    /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
-     * @param value The ttl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTtl(long value) {
-
-      ttl_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTtl() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      ttl_ = 0L;
       onChanged();
       return this;
     }

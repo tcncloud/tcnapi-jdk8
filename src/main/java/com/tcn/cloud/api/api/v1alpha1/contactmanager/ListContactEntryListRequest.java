@@ -19,7 +19,6 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     projectId_ = "";
     pageToken_ = "";
-    contactUpdateTaskId_ = "";
   }
 
   @java.lang.Override
@@ -206,45 +205,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONTACT_UPDATE_TASK_ID_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object contactUpdateTaskId_ = "";
-  /**
-   * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-   * @return The contactUpdateTaskId.
-   */
-  @java.lang.Override
-  public java.lang.String getContactUpdateTaskId() {
-    java.lang.Object ref = contactUpdateTaskId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      contactUpdateTaskId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-   * @return The bytes for contactUpdateTaskId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getContactUpdateTaskIdBytes() {
-    java.lang.Object ref = contactUpdateTaskId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      contactUpdateTaskId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -274,9 +234,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pageToken_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactUpdateTaskId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, contactUpdateTaskId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -302,9 +259,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pageToken_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactUpdateTaskId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, contactUpdateTaskId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -334,8 +288,6 @@ private static final long serialVersionUID = 0L;
         != other.getPageSize()) return false;
     if (!getPageToken()
         .equals(other.getPageToken())) return false;
-    if (!getContactUpdateTaskId()
-        .equals(other.getContactUpdateTaskId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -360,8 +312,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
-    hash = (37 * hash) + CONTACT_UPDATE_TASK_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getContactUpdateTaskId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -498,7 +448,6 @@ private static final long serialVersionUID = 0L;
       projectId_ = "";
       pageSize_ = 0;
       pageToken_ = "";
-      contactUpdateTaskId_ = "";
       return this;
     }
 
@@ -548,9 +497,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageToken_ = pageToken_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.contactUpdateTaskId_ = contactUpdateTaskId_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -620,11 +566,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (!other.getContactUpdateTaskId().isEmpty()) {
-        contactUpdateTaskId_ = other.contactUpdateTaskId_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -676,11 +617,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              contactUpdateTaskId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1024,78 +960,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pageToken_ = value;
       bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object contactUpdateTaskId_ = "";
-    /**
-     * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-     * @return The contactUpdateTaskId.
-     */
-    public java.lang.String getContactUpdateTaskId() {
-      java.lang.Object ref = contactUpdateTaskId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        contactUpdateTaskId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-     * @return The bytes for contactUpdateTaskId.
-     */
-    public com.google.protobuf.ByteString
-        getContactUpdateTaskIdBytes() {
-      java.lang.Object ref = contactUpdateTaskId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contactUpdateTaskId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-     * @param value The contactUpdateTaskId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactUpdateTaskId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      contactUpdateTaskId_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearContactUpdateTaskId() {
-      contactUpdateTaskId_ = getDefaultInstance().getContactUpdateTaskId();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-     * @param value The bytes for contactUpdateTaskId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setContactUpdateTaskIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      contactUpdateTaskId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

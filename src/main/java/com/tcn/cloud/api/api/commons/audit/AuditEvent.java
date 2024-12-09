@@ -174,7 +174,6 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
     CONTACT_MANAGER_ENTRY_DELETE_EVENT(1207),
     CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT(1208),
-    CONTACT_MANAGER_ENTITY_ASSOCIATION_EVENT(1209),
     ACCESS_TOKENS_EXPIRING_EVENT(1300),
     EVENT_NOT_SET(0);
     private final int value;
@@ -314,7 +313,6 @@ private static final long serialVersionUID = 0L;
         case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
         case 1207: return CONTACT_MANAGER_ENTRY_DELETE_EVENT;
         case 1208: return CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT;
-        case 1209: return CONTACT_MANAGER_ENTITY_ASSOCIATION_EVENT;
         case 1300: return ACCESS_TOKENS_EXPIRING_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
@@ -5539,37 +5537,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
   }
 
-  public static final int CONTACT_MANAGER_ENTITY_ASSOCIATION_EVENT_FIELD_NUMBER = 1209;
-  /**
-   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-   * @return Whether the contactManagerEntityAssociationEvent field is set.
-   */
-  @java.lang.Override
-  public boolean hasContactManagerEntityAssociationEvent() {
-    return eventCase_ == 1209;
-  }
-  /**
-   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-   * @return The contactManagerEntityAssociationEvent.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent getContactManagerEntityAssociationEvent() {
-    if (eventCase_ == 1209) {
-       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder getContactManagerEntityAssociationEventOrBuilder() {
-    if (eventCase_ == 1209) {
-       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-  }
-
   public static final int ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER = 1300;
   /**
    * <pre>
@@ -6010,9 +5977,6 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1208) {
       output.writeMessage(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
-    }
-    if (eventCase_ == 1209) {
-      output.writeMessage(1209, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_);
     }
     if (eventCase_ == 1300) {
       output.writeMessage(1300, (com.tcn.cloud.api.api.commons.audit.AccessTokensExpiringEvent) event_);
@@ -6529,10 +6493,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1208) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1208, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
-    }
-    if (eventCase_ == 1209) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1209, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_);
     }
     if (eventCase_ == 1300) {
       size += com.google.protobuf.CodedOutputStream
@@ -7053,10 +7013,6 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerEntryExpungeEvent()
             .equals(other.getContactManagerEntryExpungeEvent())) return false;
         break;
-      case 1209:
-        if (!getContactManagerEntityAssociationEvent()
-            .equals(other.getContactManagerEntityAssociationEvent())) return false;
-        break;
       case 1300:
         if (!getAccessTokensExpiringEvent()
             .equals(other.getAccessTokensExpiringEvent())) return false;
@@ -7574,10 +7530,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerEntryExpungeEvent().hashCode();
         break;
-      case 1209:
-        hash = (37 * hash) + CONTACT_MANAGER_ENTITY_ASSOCIATION_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getContactManagerEntityAssociationEvent().hashCode();
-        break;
       case 1300:
         hash = (37 * hash) + ACCESS_TOKENS_EXPIRING_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAccessTokensExpiringEvent().hashCode();
@@ -7723,7 +7675,6 @@ private static final long serialVersionUID = 0L;
       bitField1_ = 0;
       bitField2_ = 0;
       bitField3_ = 0;
-      bitField4_ = 0;
       orgId_ = "";
       regionId_ = "";
       clusterId_ = "";
@@ -8097,9 +8048,6 @@ private static final long serialVersionUID = 0L;
       if (contactManagerEntryExpungeEventBuilder_ != null) {
         contactManagerEntryExpungeEventBuilder_.clear();
       }
-      if (contactManagerEntityAssociationEventBuilder_ != null) {
-        contactManagerEntityAssociationEventBuilder_.clear();
-      }
       if (accessTokensExpiringEventBuilder_ != null) {
         accessTokensExpiringEventBuilder_.clear();
       }
@@ -8135,7 +8083,6 @@ private static final long serialVersionUID = 0L;
       if (bitField1_ != 0) { buildPartial1(result); }
       if (bitField2_ != 0) { buildPartial2(result); }
       if (bitField3_ != 0) { buildPartial3(result); }
-      if (bitField4_ != 0) { buildPartial4(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -8175,10 +8122,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial3(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
       int from_bitField3_ = bitField3_;
-    }
-
-    private void buildPartial4(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
-      int from_bitField4_ = bitField4_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
@@ -8667,10 +8610,6 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 1208 &&
           contactManagerEntryExpungeEventBuilder_ != null) {
         result.event_ = contactManagerEntryExpungeEventBuilder_.build();
-      }
-      if (eventCase_ == 1209 &&
-          contactManagerEntityAssociationEventBuilder_ != null) {
-        result.event_ = contactManagerEntityAssociationEventBuilder_.build();
       }
       if (eventCase_ == 1300 &&
           accessTokensExpiringEventBuilder_ != null) {
@@ -9231,10 +9170,6 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_ENTRY_EXPUNGE_EVENT: {
           mergeContactManagerEntryExpungeEvent(other.getContactManagerEntryExpungeEvent());
-          break;
-        }
-        case CONTACT_MANAGER_ENTITY_ASSOCIATION_EVENT: {
-          mergeContactManagerEntityAssociationEvent(other.getContactManagerEntityAssociationEvent());
           break;
         }
         case ACCESS_TOKENS_EXPIRING_EVENT: {
@@ -10150,13 +10085,6 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1208;
               break;
             } // case 9666
-            case 9674: {
-              input.readMessage(
-                  getContactManagerEntityAssociationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 1209;
-              break;
-            } // case 9674
             case 10402: {
               input.readMessage(
                   getAccessTokensExpiringEventFieldBuilder().getBuilder(),
@@ -10198,7 +10126,6 @@ private static final long serialVersionUID = 0L;
     private int bitField1_;
     private int bitField2_;
     private int bitField3_;
-    private int bitField4_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -31404,148 +31331,6 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1208;
       onChanged();
       return contactManagerEntryExpungeEventBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder> contactManagerEntityAssociationEventBuilder_;
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     * @return Whether the contactManagerEntityAssociationEvent field is set.
-     */
-    @java.lang.Override
-    public boolean hasContactManagerEntityAssociationEvent() {
-      return eventCase_ == 1209;
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     * @return The contactManagerEntityAssociationEvent.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent getContactManagerEntityAssociationEvent() {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        if (eventCase_ == 1209) {
-          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-      } else {
-        if (eventCase_ == 1209) {
-          return contactManagerEntityAssociationEventBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    public Builder setContactManagerEntityAssociationEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent value) {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        event_ = value;
-        onChanged();
-      } else {
-        contactManagerEntityAssociationEventBuilder_.setMessage(value);
-      }
-      eventCase_ = 1209;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    public Builder setContactManagerEntityAssociationEvent(
-        com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder builderForValue) {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        event_ = builderForValue.build();
-        onChanged();
-      } else {
-        contactManagerEntityAssociationEventBuilder_.setMessage(builderForValue.build());
-      }
-      eventCase_ = 1209;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    public Builder mergeContactManagerEntityAssociationEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent value) {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        if (eventCase_ == 1209 &&
-            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance()) {
-          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          event_ = value;
-        }
-        onChanged();
-      } else {
-        if (eventCase_ == 1209) {
-          contactManagerEntityAssociationEventBuilder_.mergeFrom(value);
-        } else {
-          contactManagerEntityAssociationEventBuilder_.setMessage(value);
-        }
-      }
-      eventCase_ = 1209;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    public Builder clearContactManagerEntityAssociationEvent() {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        if (eventCase_ == 1209) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-      } else {
-        if (eventCase_ == 1209) {
-          eventCase_ = 0;
-          event_ = null;
-        }
-        contactManagerEntityAssociationEventBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder getContactManagerEntityAssociationEventBuilder() {
-      return getContactManagerEntityAssociationEventFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder getContactManagerEntityAssociationEventOrBuilder() {
-      if ((eventCase_ == 1209) && (contactManagerEntityAssociationEventBuilder_ != null)) {
-        return contactManagerEntityAssociationEventBuilder_.getMessageOrBuilder();
-      } else {
-        if (eventCase_ == 1209) {
-          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder> 
-        getContactManagerEntityAssociationEventFieldBuilder() {
-      if (contactManagerEntityAssociationEventBuilder_ == null) {
-        if (!(eventCase_ == 1209)) {
-          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.getDefaultInstance();
-        }
-        contactManagerEntityAssociationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder>(
-                (com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent) event_,
-                getParentForChildren(),
-                isClean());
-        event_ = null;
-      }
-      eventCase_ = 1209;
-      onChanged();
-      return contactManagerEntityAssociationEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -32,19 +32,15 @@ public interface ContactManagerListOrBuilder extends
   long getProjectId();
 
   /**
-   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
+   * <code>string file_name = 4 [json_name = "fileName"];</code>
    * @return The fileName.
    */
-  @java.lang.Deprecated java.lang.String getFileName();
+  java.lang.String getFileName();
   /**
-   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=104
+   * <code>string file_name = 4 [json_name = "fileName"];</code>
    * @return The bytes for fileName.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getFileNameBytes();
 
   /**
@@ -64,57 +60,47 @@ public interface ContactManagerListOrBuilder extends
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
+   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
    * @return A list containing the listDetails.
    */
-  @java.lang.Deprecated java.util.List<java.lang.String>
+  java.util.List<java.lang.String>
       getListDetailsList();
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
+   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
    * @return The count of listDetails.
    */
-  @java.lang.Deprecated int getListDetailsCount();
+  int getListDetailsCount();
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
+   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
    * @param index The index of the element to return.
    * @return The listDetails at the given index.
    */
-  @java.lang.Deprecated java.lang.String getListDetails(int index);
+  java.lang.String getListDetails(int index);
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=107
+   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the listDetails at the given index.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getListDetailsBytes(int index);
 
   /**
-   * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
-   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=108
+   * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
    * @return The ttl.
    */
-  @java.lang.Deprecated long getTtl();
+  long getTtl();
 
   /**
    * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated"];</code>

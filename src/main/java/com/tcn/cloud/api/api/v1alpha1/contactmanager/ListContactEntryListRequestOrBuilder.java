@@ -75,16 +75,4 @@ public interface ListContactEntryListRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
-
-  /**
-   * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-   * @return The contactUpdateTaskId.
-   */
-  java.lang.String getContactUpdateTaskId();
-  /**
-   * <code>string contact_update_task_id = 6 [json_name = "contactUpdateTaskId"];</code>
-   * @return The bytes for contactUpdateTaskId.
-   */
-  com.google.protobuf.ByteString
-      getContactUpdateTaskIdBytes();
 }
