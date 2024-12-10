@@ -8,7 +8,7 @@ public interface ContactManagerEntityAssociationEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
+   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
    * @return The contactManagerEntryId.
    */
   long getContactManagerEntryId();

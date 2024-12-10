@@ -45,10 +45,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent.Builder.class);
   }
 
-  public static final int CONTACTMANAGERENTRYID_FIELD_NUMBER = 1;
+  public static final int CONTACT_MANAGER_ENTRY_ID_FIELD_NUMBER = 1;
   private long contactManagerEntryId_ = 0L;
   /**
-   * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
+   * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
    * @return The contactManagerEntryId.
    */
   @java.lang.Override
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTACTMANAGERENTRYID_FIELD_NUMBER;
+    hash = (37 * hash) + CONTACT_MANAGER_ENTRY_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getContactManagerEntryId());
     hash = (37 * hash) + FROM_ENTITY_FIELD_NUMBER;
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
 
     private long contactManagerEntryId_ ;
     /**
-     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
      * @return The contactManagerEntryId.
      */
     @java.lang.Override
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return contactManagerEntryId_;
     }
     /**
-     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
      * @param value The contactManagerEntryId to set.
      * @return This builder for chaining.
      */
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ContactManagerEntryId = 1 [json_name = "ContactManagerEntryId"];</code>
+     * <code>int64 contact_manager_entry_id = 1 [json_name = "contactManagerEntryId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerEntryId() {

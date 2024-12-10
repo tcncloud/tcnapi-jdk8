@@ -127,16 +127,16 @@ public final class ContactmanagerEventsProto {
       "ContactManagerEntryId\030\002 \001(\003R\025ContactMana" +
       "gerEntryId\022\024\n\005types\030\003 \003(\tR\005types\022>\n\032Cont" +
       "actManagerEntryListIds\030\004 \003(\003R\032ContactMan" +
-      "agerEntryListIds\"\273\001\n$ContactManagerEntit" +
-      "yAssociationEvent\0224\n\025ContactManagerEntry" +
-      "Id\030\001 \001(\003R\025ContactManagerEntryId\022\037\n\013from_" +
-      "entity\030\002 \001(\tR\nfromEntity\022\033\n\tto_entity\030\003 " +
-      "\001(\tR\010toEntity\022\037\n\013entity_type\030\004 \001(\tR\nenti" +
-      "tyTypeB\246\001\n#com.tcn.cloud.api.api.commons" +
-      ".auditB\031ContactmanagerEventsProtoP\001\242\002\003AC" +
-      "A\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audi" +
-      "t\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api:" +
-      ":Commons::Auditb\006proto3"
+      "agerEntryListIds\"\276\001\n$ContactManagerEntit" +
+      "yAssociationEvent\0227\n\030contact_manager_ent" +
+      "ry_id\030\001 \001(\003R\025contactManagerEntryId\022\037\n\013fr" +
+      "om_entity\030\002 \001(\tR\nfromEntity\022\033\n\tto_entity" +
+      "\030\003 \001(\tR\010toEntity\022\037\n\013entity_type\030\004 \001(\tR\ne" +
+      "ntityTypeB\246\001\n#com.tcn.cloud.api.api.comm" +
+      "ons.auditB\031ContactmanagerEventsProtoP\001\242\002" +
+      "\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\A" +
+      "udit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023A" +
+      "pi::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
