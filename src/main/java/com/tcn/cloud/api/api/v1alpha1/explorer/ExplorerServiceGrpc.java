@@ -142,6 +142,37 @@ public final class ExplorerServiceGrpc {
     return getGetQueryExplainMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> getGetWeeksOfDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetWeeksOfData",
+      requestType = com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest,
+      com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> getGetWeeksOfDataMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest, com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> getGetWeeksOfDataMethod;
+    if ((getGetWeeksOfDataMethod = ExplorerServiceGrpc.getGetWeeksOfDataMethod) == null) {
+      synchronized (ExplorerServiceGrpc.class) {
+        if ((getGetWeeksOfDataMethod = ExplorerServiceGrpc.getGetWeeksOfDataMethod) == null) {
+          ExplorerServiceGrpc.getGetWeeksOfDataMethod = getGetWeeksOfDataMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest, com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWeeksOfData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExplorerServiceMethodDescriptorSupplier("GetWeeksOfData"))
+              .build();
+        }
+      }
+    }
+    return getGetWeeksOfDataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -226,6 +257,16 @@ public final class ExplorerServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueryExplainMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetWeeksOfData returns the number of weeks of data an org is limited to and the cutoff date.
+     * </pre>
+     */
+    default void getWeeksOfData(com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWeeksOfDataMethod(), responseObserver);
+    }
   }
 
   /**
@@ -298,6 +339,17 @@ public final class ExplorerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetQueryExplainMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetWeeksOfData returns the number of weeks of data an org is limited to and the cutoff date.
+     * </pre>
+     */
+    public void getWeeksOfData(com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetWeeksOfDataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -351,6 +403,16 @@ public final class ExplorerServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse getQueryExplain(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetQueryExplainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetWeeksOfData returns the number of weeks of data an org is limited to and the cutoff date.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse getWeeksOfData(com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetWeeksOfDataMethod(), getCallOptions(), request);
     }
   }
 
@@ -410,12 +472,24 @@ public final class ExplorerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetQueryExplainMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetWeeksOfData returns the number of weeks of data an org is limited to and the cutoff date.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse> getWeeksOfData(
+        com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetWeeksOfDataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_DATASOURCE_SCHEMAS = 0;
   private static final int METHODID_QUERY = 1;
   private static final int METHODID_GET_SUPPORT_QUERY = 2;
   private static final int METHODID_GET_QUERY_EXPLAIN = 3;
+  private static final int METHODID_GET_WEEKS_OF_DATA = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -449,6 +523,10 @@ public final class ExplorerServiceGrpc {
         case METHODID_GET_QUERY_EXPLAIN:
           serviceImpl.getQueryExplain((com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse>) responseObserver);
+          break;
+        case METHODID_GET_WEEKS_OF_DATA:
+          serviceImpl.getWeeksOfData((com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -496,6 +574,13 @@ public final class ExplorerServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainRequest,
               com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse>(
                 service, METHODID_GET_QUERY_EXPLAIN)))
+        .addMethod(
+          getGetWeeksOfDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataRequest,
+              com.tcn.cloud.api.api.v1alpha1.explorer.GetWeeksOfDataResponse>(
+                service, METHODID_GET_WEEKS_OF_DATA)))
         .build();
   }
 
@@ -548,6 +633,7 @@ public final class ExplorerServiceGrpc {
               .addMethod(getQueryMethod())
               .addMethod(getGetSupportQueryMethod())
               .addMethod(getGetQueryExplainMethod())
+              .addMethod(getGetWeeksOfDataMethod())
               .build();
         }
       }

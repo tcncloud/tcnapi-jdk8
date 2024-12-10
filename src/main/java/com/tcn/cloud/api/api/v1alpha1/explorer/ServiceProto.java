@@ -15,6 +15,16 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_GetWeeksOfDataRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_GetWeeksOfDataResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -67,66 +77,75 @@ public final class ServiceProto {
       "pi.v1alpha1.explorer\032\027annotations/authz." +
       "proto\032$api/v1alpha1/explorer/entities.pr" +
       "oto\032\034google/api/annotations.proto\032\037googl" +
-      "e/protobuf/timestamp.proto\"\231\001\n\034ListDatas" +
-      "ourceSchemasRequest\022)\n\020datasource_names\030" +
-      "\001 \003(\tR\017datasourceNames\022N\n\017datasource_typ" +
-      "e\030\002 \001(\0162%.api.v1alpha1.explorer.Datasour" +
-      "ceTypeR\016datasourceType\"X\n\035ListDatasource" +
-      "SchemasResponse\0227\n\007schemas\030\001 \003(\0132\035.api.v" +
-      "1alpha1.explorer.SchemaR\007schemas\"\266\004\n\014Que" +
-      "ryRequest\022\'\n\017datasource_name\030\001 \001(\tR\016data" +
-      "sourceName\022N\n\017datasource_type\030\002 \001(\0162%.ap" +
-      "i.v1alpha1.explorer.DatasourceTypeR\016data" +
-      "sourceType\022\034\n\010pipeline\030\003 \001(\tH\000R\010pipeline" +
-      "\022\024\n\004prql\030\004 \001(\tH\000R\004prql\022\027\n\007org_ids\030\005 \003(\tR" +
-      "\006orgIds\0229\n\nstart_time\030\006 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\tstartTime\0225\n\010end_time\030\007" +
-      " \001(\0132\032.google.protobuf.TimestampR\007endTim" +
-      "e\022\032\n\010timezone\030\010 \001(\tR\010timezone\022R\n\023pipelin" +
-      "e_parameters\030\t \001(\0132!.api.v1alpha1.explor" +
-      "er.ParametersR\022pipelineParameters\022\036\n\013ui_" +
-      "trace_id\030\n \001(\tR\tuiTraceId\022\030\n\007comment\030\013 \001" +
-      "(\tR\007comment\022;\n\006format\030\014 \001(\0162#.api.v1alph" +
-      "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
-      "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
-      "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes\"u\n\023SupportQueryRequest\022H\n\r" +
-      "query_request\030\001 \001(\0132#.api.v1alpha1.explo" +
-      "rer.QueryRequestR\014queryRequest\022\024\n\005debug\030" +
-      "\002 \001(\010R\005debug\"\241\001\n\024SupportQueryResponse\022\035\n" +
-      "\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021result_s" +
-      "ize_bytes\030\002 \001(\003R\017resultSizeBytes\022\022\n\004prql" +
-      "\030\003 \001(\tR\004prql\022\020\n\003sql\030\004 \001(\tR\003sql\022\030\n\007explai" +
-      "n\030\005 \001(\tR\007explain\"_\n\023QueryExplainRequest\022" +
-      "H\n\rquery_request\030\001 \001(\0132#.api.v1alpha1.ex" +
-      "plorer.QueryRequestR\014queryRequest\"\241\001\n\024Qu" +
-      "eryExplainResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
-      "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003sql" +
-      "\030\004 \001(\tR\003sql\022\030\n\007explain\030\005 \001(\tR\007explain2\323\005" +
-      "\n\017ExplorerService\022\313\001\n\025ListDatasourceSche" +
-      "mas\0223.api.v1alpha1.explorer.ListDatasour" +
-      "ceSchemasRequest\0324.api.v1alpha1.explorer" +
-      ".ListDatasourceSchemasResponse\"G\272\270\221\002\002\030\001\202" +
-      "\323\344\223\002:\"5/api/v1alpha1/explorer/explorer/l" +
-      "istdatasourceschemas:\001*\022\213\001\n\005Query\022#.api." +
-      "v1alpha1.explorer.QueryRequest\032$.api.v1a" +
-      "lpha1.explorer.QueryResponse\"7\272\270\221\002\002\030\001\202\323\344" +
-      "\223\002*\"%/api/v1alpha1/explorer/explorer/que" +
-      "ry:\001*\022\260\001\n\017GetSupportQuery\022*.api.v1alpha1" +
-      ".explorer.SupportQueryRequest\032+.api.v1al" +
-      "pha1.explorer.SupportQueryResponse\"D\272\270\221\002" +
-      "\005\n\003\010\372\001\202\323\344\223\0024\"//api/v1alpha1/explorer/exp" +
-      "lorer/getsupportquery:\001*\022\260\001\n\017GetQueryExp" +
-      "lain\022*.api.v1alpha1.explorer.QueryExplai" +
-      "nRequest\032+.api.v1alpha1.explorer.QueryEx" +
-      "plainResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v1" +
-      "alpha1/explorer/explorer/getqueryexplain" +
-      ":\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.e" +
-      "xplorerB\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1al" +
-      "pha1.Explorer\312\002\025Api\\V1alpha1\\Explorer\342\002!" +
-      "Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027Api:" +
-      ":V1alpha1::Explorerb\006proto3"
+      "e/protobuf/timestamp.proto\".\n\025GetWeeksOf" +
+      "DataRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\204\001\n\026G" +
+      "etWeeksOfDataResponse\022\"\n\rweeks_of_data\030\001" +
+      " \001(\005R\013weeksOfData\022F\n\021access_start_date\030\002" +
+      " \001(\0132\032.google.protobuf.TimestampR\017access" +
+      "StartDate\"\231\001\n\034ListDatasourceSchemasReque" +
+      "st\022)\n\020datasource_names\030\001 \003(\tR\017datasource" +
+      "Names\022N\n\017datasource_type\030\002 \001(\0162%.api.v1a" +
+      "lpha1.explorer.DatasourceTypeR\016datasourc" +
+      "eType\"X\n\035ListDatasourceSchemasResponse\0227" +
+      "\n\007schemas\030\001 \003(\0132\035.api.v1alpha1.explorer." +
+      "SchemaR\007schemas\"\266\004\n\014QueryRequest\022\'\n\017data" +
+      "source_name\030\001 \001(\tR\016datasourceName\022N\n\017dat" +
+      "asource_type\030\002 \001(\0162%.api.v1alpha1.explor" +
+      "er.DatasourceTypeR\016datasourceType\022\034\n\010pip" +
+      "eline\030\003 \001(\tH\000R\010pipeline\022\024\n\004prql\030\004 \001(\tH\000R" +
+      "\004prql\022\027\n\007org_ids\030\005 \003(\tR\006orgIds\0229\n\nstart_" +
+      "time\030\006 \001(\0132\032.google.protobuf.TimestampR\t" +
+      "startTime\0225\n\010end_time\030\007 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\007endTime\022\032\n\010timezone\030\010 \001" +
+      "(\tR\010timezone\022R\n\023pipeline_parameters\030\t \001(" +
+      "\0132!.api.v1alpha1.explorer.ParametersR\022pi" +
+      "pelineParameters\022\036\n\013ui_trace_id\030\n \001(\tR\tu" +
+      "iTraceId\022\030\n\007comment\030\013 \001(\tR\007comment\022;\n\006fo" +
+      "rmat\030\014 \001(\0162#.api.v1alpha1.explorer.Expor" +
+      "tFormatR\006formatB\007\n\005query\"Z\n\rQueryRespons" +
+      "e\022\035\n\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021resu" +
+      "lt_size_bytes\030\002 \001(\003R\017resultSizeBytes\"u\n\023" +
+      "SupportQueryRequest\022H\n\rquery_request\030\001 \001" +
+      "(\0132#.api.v1alpha1.explorer.QueryRequestR" +
+      "\014queryRequest\022\024\n\005debug\030\002 \001(\010R\005debug\"\241\001\n\024" +
+      "SupportQueryResponse\022\035\n\nresult_url\030\001 \001(\t" +
+      "R\tresultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017" +
+      "resultSizeBytes\022\022\n\004prql\030\003 \001(\tR\004prql\022\020\n\003s" +
+      "ql\030\004 \001(\tR\003sql\022\030\n\007explain\030\005 \001(\tR\007explain\"" +
+      "_\n\023QueryExplainRequest\022H\n\rquery_request\030" +
+      "\001 \001(\0132#.api.v1alpha1.explorer.QueryReque" +
+      "stR\014queryRequest\"\241\001\n\024QueryExplainRespons" +
+      "e\022\035\n\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021resu" +
+      "lt_size_bytes\030\002 \001(\003R\017resultSizeBytes\022\022\n\004" +
+      "prql\030\003 \001(\tR\004prql\022\020\n\003sql\030\004 \001(\tR\003sql\022\030\n\007ex" +
+      "plain\030\005 \001(\tR\007explain2\205\007\n\017ExplorerService" +
+      "\022\313\001\n\025ListDatasourceSchemas\0223.api.v1alpha" +
+      "1.explorer.ListDatasourceSchemasRequest\032" +
+      "4.api.v1alpha1.explorer.ListDatasourceSc" +
+      "hemasResponse\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v1alp" +
+      "ha1/explorer/explorer/listdatasourcesche" +
+      "mas:\001*\022\213\001\n\005Query\022#.api.v1alpha1.explorer" +
+      ".QueryRequest\032$.api.v1alpha1.explorer.Qu" +
+      "eryResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v1alpha" +
+      "1/explorer/explorer/query:\001*\022\260\001\n\017GetSupp" +
+      "ortQuery\022*.api.v1alpha1.explorer.Support" +
+      "QueryRequest\032+.api.v1alpha1.explorer.Sup" +
+      "portQueryResponse\"D\272\270\221\002\005\n\003\010\372\001\202\323\344\223\0024\"//ap" +
+      "i/v1alpha1/explorer/explorer/getsupportq" +
+      "uery:\001*\022\260\001\n\017GetQueryExplain\022*.api.v1alph" +
+      "a1.explorer.QueryExplainRequest\032+.api.v1" +
+      "alpha1.explorer.QueryExplainResponse\"D\272\270" +
+      "\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v1alpha1/explorer/e" +
+      "xplorer/getqueryexplain:\001*\022\257\001\n\016GetWeeksO" +
+      "fData\022,.api.v1alpha1.explorer.GetWeeksOf" +
+      "DataRequest\032-.api.v1alpha1.explorer.GetW" +
+      "eeksOfDataResponse\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/" +
+      "v1alpha1/explorer/explorer/getweeksofdat" +
+      "a:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1." +
+      "explorerB\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1a" +
+      "lpha1.Explorer\312\002\025Api\\V1alpha1\\Explorer\342\002" +
+      "!Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027Api" +
+      "::V1alpha1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -136,50 +155,62 @@ public final class ServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_descriptor =
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_GetWeeksOfDataRequest_descriptor,
+        new java.lang.String[] { "OrgId", });
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_explorer_GetWeeksOfDataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_GetWeeksOfDataResponse_descriptor,
+        new java.lang.String[] { "WeeksOfData", "AccessStartDate", });
+    internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_descriptor,
         new java.lang.String[] { "DatasourceNames", "DatasourceType", });
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_ListDatasourceSchemasResponse_descriptor,
         new java.lang.String[] { "Schemas", });
     internal_static_api_v1alpha1_explorer_QueryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_v1alpha1_explorer_QueryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryRequest_descriptor,
         new java.lang.String[] { "DatasourceName", "DatasourceType", "Pipeline", "Prql", "OrgIds", "StartTime", "EndTime", "Timezone", "PipelineParameters", "UiTraceId", "Comment", "Format", "Query", });
     internal_static_api_v1alpha1_explorer_QueryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_explorer_QueryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryResponse_descriptor,
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", });
     internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_explorer_SupportQueryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_SupportQueryRequest_descriptor,
         new java.lang.String[] { "QueryRequest", "Debug", });
     internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_explorer_SupportQueryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_SupportQueryResponse_descriptor,
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", "Prql", "Sql", "Explain", });
     internal_static_api_v1alpha1_explorer_QueryExplainRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_v1alpha1_explorer_QueryExplainRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryExplainRequest_descriptor,
         new java.lang.String[] { "QueryRequest", });
     internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_explorer_QueryExplainResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor,
