@@ -86,57 +86,57 @@ public final class ContactmanagerEventsProto {
       ".commons.audit.ContactManagerEntryEventR" +
       "\teditEvent\"j\n\031ContactManagerDeleteEvent\022" +
       "M\n\013deleteEvent\030\001 \001(\0132+.api.commons.audit" +
-      ".ContactManagerEntryEventR\013deleteEvent\"\362" +
+      ".ContactManagerEntryEventR\013deleteEvent\"\353" +
       "\002\n\030ContactManagerEntryEvent\0226\n\024ContactMa" +
       "nagerListId\030\001 \001(\003B\002\030\001R\024ContactManagerLis" +
       "tId\0224\n\025ContactManagerEntryId\030\002 \001(\003R\025Cont" +
       "actManagerEntryId\022B\n\032ContactManagerEntry" +
       "ListIds\030\003 \003(\003B\002\030\001R\032ContactManagerEntryLi" +
-      "stIds\022K\n\rfield_changes\030\004 \003(\0132&.api.commo" +
-      "ns.audit.ContactFieldChangesR\014fieldChang" +
-      "es\022<\n\026contact_update_task_id\030\005 \001(\003B\0020\001H\000" +
-      "R\023contactUpdateTaskId\210\001\001B\031\n\027_contact_upd" +
-      "ate_task_id\"\237\001\n\023ContactFieldChanges\022E\n\nf" +
-      "rom_value\030\001 \001(\0132&.api.commons.audit.Audi" +
-      "tedContactFieldR\tfromValue\022A\n\010to_value\030\002" +
-      " \001(\0132&.api.commons.audit.AuditedContactF" +
-      "ieldR\007toValue\"\214\001\n\023AuditedContactField\022(\n" +
-      "\020contact_field_id\030\001 \001(\003R\016contactFieldId\022" +
-      "\022\n\004name\030\002 \001(\tR\004name\022\022\n\004type\030\003 \001(\tR\004type\022" +
-      "\031\n\005value\030\004 \001(\tH\000R\005value\210\001\001B\010\n\006_value\"\316\005\n" +
-      "\035ContactManagerListUploadEvent\0222\n\024Contac" +
-      "tManagerListId\030\001 \001(\003R\024ContactManagerList" +
-      "Id\022:\n\030NumberOfContactsUploaded\030\002 \001(\003R\030Nu" +
-      "mberOfContactsUploaded\022N\n\"NumberOfSucces" +
-      "sfulContactsUploaded\030\003 \001(\003R\"NumberOfSucc" +
-      "essfulContactsUploaded\0226\n\026NumberOfFailed" +
-      "Contacts\030\004 \001(\003R\026NumberOfFailedContacts\0220" +
-      "\n\023NumberOfNewContacts\030\005 \001(\003R\023NumberOfNew" +
-      "Contacts\022<\n\031NumberOfDuplicateContacts\030\006 " +
-      "\001(\003R\031NumberOfDuplicateContacts\022I\n\016DeDupF" +
-      "ieldType\030\007 \001(\0162!.api.commons.ClassifierE" +
-      "ntityTypeR\016DeDupFieldType\022W\n\022DeDupMergeS" +
-      "trategy\030\010 \001(\0162\'.api.commons.DeDuplicatio" +
-      "nMergeStrategyR\022DeDupMergeStrategy\0229\n\031co" +
-      "ntact_manager_list_name\030\t \001(\tR\026contactMa" +
-      "nagerListName\022 \n\tfile_name\030\n \001(\tH\000R\010file" +
-      "Name\210\001\001\022$\n\016upload_task_id\030\013 \001(\003R\014uploadT" +
-      "askId\022\020\n\003ttl\030\014 \001(\003R\003ttlB\014\n\n_file_name\"\330\001" +
-      "\n\026ContactManagerKycEvent\0222\n\024ContactManag" +
-      "erListId\030\001 \001(\003R\024ContactManagerListId\0224\n\025" +
-      "ContactManagerEntryId\030\002 \001(\003R\025ContactMana" +
-      "gerEntryId\022\024\n\005types\030\003 \003(\tR\005types\022>\n\032Cont" +
-      "actManagerEntryListIds\030\004 \003(\003R\032ContactMan" +
-      "agerEntryListIds\"\276\001\n$ContactManagerEntit" +
-      "yAssociationEvent\0227\n\030contact_manager_ent" +
-      "ry_id\030\001 \001(\003R\025contactManagerEntryId\022\037\n\013fr" +
-      "om_entity\030\002 \001(\tR\nfromEntity\022\033\n\tto_entity" +
-      "\030\003 \001(\tR\010toEntity\022\037\n\013entity_type\030\004 \001(\tR\ne" +
-      "ntityTypeB\246\001\n#com.tcn.cloud.api.api.comm" +
-      "ons.auditB\031ContactmanagerEventsProtoP\001\242\002" +
-      "\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\A" +
-      "udit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023A" +
-      "pi::Commons::Auditb\006proto3"
+      "stIds\022J\n\014FieldChanges\030\004 \003(\0132&.api.common" +
+      "s.audit.ContactFieldChangesR\014FieldChange" +
+      "s\0229\n\023ContactUpdateTaskId\030\005 \001(\003B\0020\001H\000R\023Co" +
+      "ntactUpdateTaskId\210\001\001B\026\n\024_ContactUpdateTa" +
+      "skId\"\237\001\n\023ContactFieldChanges\022E\n\nfrom_val" +
+      "ue\030\001 \001(\0132&.api.commons.audit.AuditedCont" +
+      "actFieldR\tfromValue\022A\n\010to_value\030\002 \001(\0132&." +
+      "api.commons.audit.AuditedContactFieldR\007t" +
+      "oValue\"\214\001\n\023AuditedContactField\022(\n\020contac" +
+      "t_field_id\030\001 \001(\003R\016contactFieldId\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022\022\n\004type\030\003 \001(\tR\004type\022\031\n\005valu" +
+      "e\030\004 \001(\tH\000R\005value\210\001\001B\010\n\006_value\"\307\005\n\035Contac" +
+      "tManagerListUploadEvent\0222\n\024ContactManage" +
+      "rListId\030\001 \001(\003R\024ContactManagerListId\022:\n\030N" +
+      "umberOfContactsUploaded\030\002 \001(\003R\030NumberOfC" +
+      "ontactsUploaded\022N\n\"NumberOfSuccessfulCon" +
+      "tactsUploaded\030\003 \001(\003R\"NumberOfSuccessfulC" +
+      "ontactsUploaded\0226\n\026NumberOfFailedContact" +
+      "s\030\004 \001(\003R\026NumberOfFailedContacts\0220\n\023Numbe" +
+      "rOfNewContacts\030\005 \001(\003R\023NumberOfNewContact" +
+      "s\022<\n\031NumberOfDuplicateContacts\030\006 \001(\003R\031Nu" +
+      "mberOfDuplicateContacts\022I\n\016DeDupFieldTyp" +
+      "e\030\007 \001(\0162!.api.commons.ClassifierEntityTy" +
+      "peR\016DeDupFieldType\022W\n\022DeDupMergeStrategy" +
+      "\030\010 \001(\0162\'.api.commons.DeDuplicationMergeS" +
+      "trategyR\022DeDupMergeStrategy\0226\n\026ContactMa" +
+      "nagerListName\030\t \001(\tR\026ContactManagerListN" +
+      "ame\022\037\n\010FileName\030\n \001(\tH\000R\010FileName\210\001\001\022\"\n\014" +
+      "UpdateTaskId\030\013 \001(\003R\014UpdateTaskId\022\020\n\003Ttl\030" +
+      "\014 \001(\003R\003TtlB\013\n\t_FileName\"\330\001\n\026ContactManag" +
+      "erKycEvent\0222\n\024ContactManagerListId\030\001 \001(\003" +
+      "R\024ContactManagerListId\0224\n\025ContactManager" +
+      "EntryId\030\002 \001(\003R\025ContactManagerEntryId\022\024\n\005" +
+      "types\030\003 \003(\tR\005types\022>\n\032ContactManagerEntr" +
+      "yListIds\030\004 \003(\003R\032ContactManagerEntryListI" +
+      "ds\"\263\001\n$ContactManagerEntityAssociationEv" +
+      "ent\0227\n\030contact_manager_entry_id\030\001 \001(\003R\025c" +
+      "ontactManagerEntryId\022\033\n\tentity_id\030\002 \001(\tR" +
+      "\010entityId\022\030\n\007deleted\030\003 \001(\010R\007deleted\022\033\n\ti" +
+      "s_active\030\004 \001(\010R\010isActiveB\246\001\n#com.tcn.clo" +
+      "ud.api.api.commons.auditB\031Contactmanager" +
+      "EventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312" +
+      "\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\" +
+      "GPBMetadata\352\002\023Api::Commons::Auditb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -191,7 +191,7 @@ public final class ContactmanagerEventsProto {
     internal_static_api_commons_audit_ContactManagerListUploadEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerListUploadEvent_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "NumberOfContactsUploaded", "NumberOfSuccessfulContactsUploaded", "NumberOfFailedContacts", "NumberOfNewContacts", "NumberOfDuplicateContacts", "DeDupFieldType", "DeDupMergeStrategy", "ContactManagerListName", "FileName", "UploadTaskId", "Ttl", "FileName", });
+        new java.lang.String[] { "ContactManagerListId", "NumberOfContactsUploaded", "NumberOfSuccessfulContactsUploaded", "NumberOfFailedContacts", "NumberOfNewContacts", "NumberOfDuplicateContacts", "DeDupFieldType", "DeDupMergeStrategy", "ContactManagerListName", "FileName", "UpdateTaskId", "Ttl", "FileName", });
     internal_static_api_commons_audit_ContactManagerKycEvent_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_api_commons_audit_ContactManagerKycEvent_fieldAccessorTable = new
@@ -203,7 +203,7 @@ public final class ContactmanagerEventsProto {
     internal_static_api_commons_audit_ContactManagerEntityAssociationEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerEntityAssociationEvent_descriptor,
-        new java.lang.String[] { "ContactManagerEntryId", "FromEntity", "ToEntity", "EntityType", });
+        new java.lang.String[] { "ContactManagerEntryId", "EntityId", "Deleted", "IsActive", });
     com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ContactmanagerProto.getDescriptor();
   }

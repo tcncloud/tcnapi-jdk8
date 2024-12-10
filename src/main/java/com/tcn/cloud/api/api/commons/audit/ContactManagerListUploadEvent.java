@@ -173,11 +173,11 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.UNRECOGNIZED : result;
   }
 
-  public static final int CONTACT_MANAGER_LIST_NAME_FIELD_NUMBER = 9;
+  public static final int CONTACTMANAGERLISTNAME_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object contactManagerListName_ = "";
   /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
    * @return The contactManagerListName.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
    * @return The bytes for contactManagerListName.
    */
   @java.lang.Override
@@ -212,11 +212,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FILE_NAME_FIELD_NUMBER = 10;
+  public static final int FILENAME_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fileName_ = "";
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return Whether the fileName field is set.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return The fileName.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return The bytes for fileName.
    */
   @java.lang.Override
@@ -259,21 +259,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int UPLOAD_TASK_ID_FIELD_NUMBER = 11;
-  private long uploadTaskId_ = 0L;
+  public static final int UPDATETASKID_FIELD_NUMBER = 11;
+  private long updateTaskId_ = 0L;
   /**
-   * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-   * @return The uploadTaskId.
+   * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
+   * @return The updateTaskId.
    */
   @java.lang.Override
-  public long getUploadTaskId() {
-    return uploadTaskId_;
+  public long getUpdateTaskId() {
+    return updateTaskId_;
   }
 
   public static final int TTL_FIELD_NUMBER = 12;
   private long ttl_ = 0L;
   /**
-   * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+   * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
    * @return The ttl.
    */
   @java.lang.Override
@@ -325,8 +325,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, fileName_);
     }
-    if (uploadTaskId_ != 0L) {
-      output.writeInt64(11, uploadTaskId_);
+    if (updateTaskId_ != 0L) {
+      output.writeInt64(11, updateTaskId_);
     }
     if (ttl_ != 0L) {
       output.writeInt64(12, ttl_);
@@ -378,9 +378,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, fileName_);
     }
-    if (uploadTaskId_ != 0L) {
+    if (updateTaskId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(11, uploadTaskId_);
+        .computeInt64Size(11, updateTaskId_);
     }
     if (ttl_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -422,8 +422,8 @@ private static final long serialVersionUID = 0L;
       if (!getFileName()
           .equals(other.getFileName())) return false;
     }
-    if (getUploadTaskId()
-        != other.getUploadTaskId()) return false;
+    if (getUpdateTaskId()
+        != other.getUpdateTaskId()) return false;
     if (getTtl()
         != other.getTtl()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -459,15 +459,15 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + deDupFieldType_;
     hash = (37 * hash) + DEDUPMERGESTRATEGY_FIELD_NUMBER;
     hash = (53 * hash) + deDupMergeStrategy_;
-    hash = (37 * hash) + CONTACT_MANAGER_LIST_NAME_FIELD_NUMBER;
+    hash = (37 * hash) + CONTACTMANAGERLISTNAME_FIELD_NUMBER;
     hash = (53 * hash) + getContactManagerListName().hashCode();
     if (hasFileName()) {
-      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+      hash = (37 * hash) + FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getFileName().hashCode();
     }
-    hash = (37 * hash) + UPLOAD_TASK_ID_FIELD_NUMBER;
+    hash = (37 * hash) + UPDATETASKID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getUploadTaskId());
+        getUpdateTaskId());
     hash = (37 * hash) + TTL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTtl());
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
       deDupMergeStrategy_ = 0;
       contactManagerListName_ = "";
       fileName_ = "";
-      uploadTaskId_ = 0L;
+      updateTaskId_ = 0L;
       ttl_ = 0L;
       return this;
     }
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.uploadTaskId_ = uploadTaskId_;
+        result.updateTaskId_ = updateTaskId_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.ttl_ = ttl_;
@@ -770,8 +770,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
-      if (other.getUploadTaskId() != 0L) {
-        setUploadTaskId(other.getUploadTaskId());
+      if (other.getUpdateTaskId() != 0L) {
+        setUpdateTaskId(other.getUpdateTaskId());
       }
       if (other.getTtl() != 0L) {
         setTtl(other.getTtl());
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 82
             case 88: {
-              uploadTaskId_ = input.readInt64();
+              updateTaskId_ = input.readInt64();
               bitField0_ |= 0x00000400;
               break;
             } // case 88
@@ -1251,7 +1251,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object contactManagerListName_ = "";
     /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+     * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
      * @return The contactManagerListName.
      */
     public java.lang.String getContactManagerListName() {
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+     * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
      * @return The bytes for contactManagerListName.
      */
     public com.google.protobuf.ByteString
@@ -1284,7 +1284,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+     * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
      * @param value The contactManagerListName to set.
      * @return This builder for chaining.
      */
@@ -1297,7 +1297,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+     * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerListName() {
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+     * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
      * @param value The bytes for contactManagerListName to set.
      * @return This builder for chaining.
      */
@@ -1323,14 +1323,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object fileName_ = "";
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @return Whether the fileName field is set.
      */
     public boolean hasFileName() {
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @return The fileName.
      */
     public java.lang.String getFileName() {
@@ -1346,7 +1346,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @return The bytes for fileName.
      */
     public com.google.protobuf.ByteString
@@ -1363,7 +1363,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @param value The fileName to set.
      * @return This builder for chaining.
      */
@@ -1376,7 +1376,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFileName() {
@@ -1386,7 +1386,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+     * <code>optional string FileName = 10 [json_name = "FileName"];</code>
      * @param value The bytes for fileName to set.
      * @return This builder for chaining.
      */
@@ -1400,41 +1400,41 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long uploadTaskId_ ;
+    private long updateTaskId_ ;
     /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-     * @return The uploadTaskId.
+     * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
+     * @return The updateTaskId.
      */
     @java.lang.Override
-    public long getUploadTaskId() {
-      return uploadTaskId_;
+    public long getUpdateTaskId() {
+      return updateTaskId_;
     }
     /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-     * @param value The uploadTaskId to set.
+     * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
+     * @param value The updateTaskId to set.
      * @return This builder for chaining.
      */
-    public Builder setUploadTaskId(long value) {
+    public Builder setUpdateTaskId(long value) {
 
-      uploadTaskId_ = value;
+      updateTaskId_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
+     * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUploadTaskId() {
+    public Builder clearUpdateTaskId() {
       bitField0_ = (bitField0_ & ~0x00000400);
-      uploadTaskId_ = 0L;
+      updateTaskId_ = 0L;
       onChanged();
       return this;
     }
 
     private long ttl_ ;
     /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
      * @return The ttl.
      */
     @java.lang.Override
@@ -1442,7 +1442,7 @@ private static final long serialVersionUID = 0L;
       return ttl_;
     }
     /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
      * @param value The ttl to set.
      * @return This builder for chaining.
      */
@@ -1454,7 +1454,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTtl() {

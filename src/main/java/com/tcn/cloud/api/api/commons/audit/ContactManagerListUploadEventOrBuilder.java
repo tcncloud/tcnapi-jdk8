@@ -90,42 +90,42 @@ public interface ContactManagerListUploadEventOrBuilder extends
   com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy getDeDupMergeStrategy();
 
   /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
    * @return The contactManagerListName.
    */
   java.lang.String getContactManagerListName();
   /**
-   * <code>string contact_manager_list_name = 9 [json_name = "contactManagerListName"];</code>
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
    * @return The bytes for contactManagerListName.
    */
   com.google.protobuf.ByteString
       getContactManagerListNameBytes();
 
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return Whether the fileName field is set.
    */
   boolean hasFileName();
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return The fileName.
    */
   java.lang.String getFileName();
   /**
-   * <code>optional string file_name = 10 [json_name = "fileName"];</code>
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
    * @return The bytes for fileName.
    */
   com.google.protobuf.ByteString
       getFileNameBytes();
 
   /**
-   * <code>int64 upload_task_id = 11 [json_name = "uploadTaskId"];</code>
-   * @return The uploadTaskId.
+   * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
+   * @return The updateTaskId.
    */
-  long getUploadTaskId();
+  long getUpdateTaskId();
 
   /**
-   * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+   * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
    * @return The ttl.
    */
   long getTtl();

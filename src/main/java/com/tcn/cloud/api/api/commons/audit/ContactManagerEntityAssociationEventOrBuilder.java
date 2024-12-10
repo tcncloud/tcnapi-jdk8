@@ -14,38 +14,26 @@ public interface ContactManagerEntityAssociationEventOrBuilder extends
   long getContactManagerEntryId();
 
   /**
-   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-   * @return The fromEntity.
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The entityId.
    */
-  java.lang.String getFromEntity();
+  java.lang.String getEntityId();
   /**
-   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-   * @return The bytes for fromEntity.
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The bytes for entityId.
    */
   com.google.protobuf.ByteString
-      getFromEntityBytes();
+      getEntityIdBytes();
 
   /**
-   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-   * @return The toEntity.
+   * <code>bool deleted = 3 [json_name = "deleted"];</code>
+   * @return The deleted.
    */
-  java.lang.String getToEntity();
-  /**
-   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-   * @return The bytes for toEntity.
-   */
-  com.google.protobuf.ByteString
-      getToEntityBytes();
+  boolean getDeleted();
 
   /**
-   * <code>string entity_type = 4 [json_name = "entityType"];</code>
-   * @return The entityType.
+   * <code>bool is_active = 4 [json_name = "isActive"];</code>
+   * @return The isActive.
    */
-  java.lang.String getEntityType();
-  /**
-   * <code>string entity_type = 4 [json_name = "entityType"];</code>
-   * @return The bytes for entityType.
-   */
-  com.google.protobuf.ByteString
-      getEntityTypeBytes();
+  boolean getIsActive();
 }

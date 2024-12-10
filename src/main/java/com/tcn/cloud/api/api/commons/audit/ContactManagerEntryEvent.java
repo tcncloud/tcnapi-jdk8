@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
   }
   private int contactManagerEntryListIdsMemoizedSerializedSize = -1;
 
-  public static final int FIELD_CHANGES_FIELD_NUMBER = 4;
+  public static final int FIELDCHANGES_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> fieldChanges_;
   /**
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldChangesList() {
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   @java.lang.Override
   public int getFieldChangesCount() {
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index) {
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
@@ -185,10 +185,10 @@ private static final long serialVersionUID = 0L;
     return fieldChanges_.get(index);
   }
 
-  public static final int CONTACT_UPDATE_TASK_ID_FIELD_NUMBER = 5;
+  public static final int CONTACTUPDATETASKID_FIELD_NUMBER = 5;
   private long contactUpdateTaskId_ = 0L;
   /**
-   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
    * @return Whether the contactUpdateTaskId field is set.
    */
   @java.lang.Override
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
    * @return The contactUpdateTaskId.
    */
   @java.lang.Override
@@ -327,11 +327,11 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getContactManagerEntryListIdsList().hashCode();
     }
     if (getFieldChangesCount() > 0) {
-      hash = (37 * hash) + FIELD_CHANGES_FIELD_NUMBER;
+      hash = (37 * hash) + FIELDCHANGES_FIELD_NUMBER;
       hash = (53 * hash) + getFieldChangesList().hashCode();
     }
     if (hasContactUpdateTaskId()) {
-      hash = (37 * hash) + CONTACT_UPDATE_TASK_ID_FIELD_NUMBER;
+      hash = (37 * hash) + CONTACTUPDATETASKID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getContactUpdateTaskId());
     }
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> getFieldChangesList() {
       if (fieldChangesBuilder_ == null) {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public int getFieldChangesCount() {
       if (fieldChangesBuilder_ == null) {
@@ -984,7 +984,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index) {
       if (fieldChangesBuilder_ == null) {
@@ -998,7 +998,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder setFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder setFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
@@ -1037,7 +1037,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder addFieldChanges(com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
       if (fieldChangesBuilder_ == null) {
@@ -1057,7 +1057,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder addFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges value) {
@@ -1078,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder addFieldChanges(
         com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
@@ -1096,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder addFieldChanges(
         int index, com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder builderForValue) {
@@ -1114,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder addAllFieldChanges(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> values) {
@@ -1133,7 +1133,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder clearFieldChanges() {
       if (fieldChangesBuilder_ == null) {
@@ -1150,7 +1150,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public Builder removeFieldChanges(int index) {
       if (fieldChangesBuilder_ == null) {
@@ -1167,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder getFieldChangesBuilder(
         int index) {
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
         int index) {
@@ -1192,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
          getFieldChangesOrBuilderList() {
@@ -1207,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldChangesBuilder() {
       return getFieldChangesFieldBuilder().addBuilder(
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder addFieldChangesBuilder(
         int index) {
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      *tracks changes in contact fields
      * </pre>
      *
-     * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+     * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges.Builder> 
          getFieldChangesBuilderList() {
@@ -1253,7 +1253,7 @@ private static final long serialVersionUID = 0L;
 
     private long contactUpdateTaskId_ ;
     /**
-     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
      * @return Whether the contactUpdateTaskId field is set.
      */
     @java.lang.Override
@@ -1261,7 +1261,7 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
      * @return The contactUpdateTaskId.
      */
     @java.lang.Override
@@ -1269,7 +1269,7 @@ private static final long serialVersionUID = 0L;
       return contactUpdateTaskId_;
     }
     /**
-     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
      * @param value The contactUpdateTaskId to set.
      * @return This builder for chaining.
      */
@@ -1281,7 +1281,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+     * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactUpdateTaskId() {

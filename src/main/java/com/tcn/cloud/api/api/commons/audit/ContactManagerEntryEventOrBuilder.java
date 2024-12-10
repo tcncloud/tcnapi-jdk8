@@ -69,7 +69,7 @@ public interface ContactManagerEntryEventOrBuilder extends
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.audit.ContactFieldChanges> 
       getFieldChangesList();
@@ -78,7 +78,7 @@ public interface ContactManagerEntryEventOrBuilder extends
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ContactFieldChanges getFieldChanges(int index);
   /**
@@ -86,7 +86,7 @@ public interface ContactManagerEntryEventOrBuilder extends
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   int getFieldChangesCount();
   /**
@@ -94,7 +94,7 @@ public interface ContactManagerEntryEventOrBuilder extends
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder> 
       getFieldChangesOrBuilderList();
@@ -103,18 +103,18 @@ public interface ContactManagerEntryEventOrBuilder extends
    *tracks changes in contact fields
    * </pre>
    *
-   * <code>repeated .api.commons.audit.ContactFieldChanges field_changes = 4 [json_name = "fieldChanges"];</code>
+   * <code>repeated .api.commons.audit.ContactFieldChanges FieldChanges = 4 [json_name = "FieldChanges"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ContactFieldChangesOrBuilder getFieldChangesOrBuilder(
       int index);
 
   /**
-   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
    * @return Whether the contactUpdateTaskId field is set.
    */
   boolean hasContactUpdateTaskId();
   /**
-   * <code>optional int64 contact_update_task_id = 5 [json_name = "contactUpdateTaskId", jstype = JS_STRING];</code>
+   * <code>optional int64 ContactUpdateTaskId = 5 [json_name = "ContactUpdateTaskId", jstype = JS_STRING];</code>
    * @return The contactUpdateTaskId.
    */
   long getContactUpdateTaskId();

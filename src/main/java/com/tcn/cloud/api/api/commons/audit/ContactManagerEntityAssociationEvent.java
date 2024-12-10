@@ -20,9 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ContactManagerEntityAssociationEvent() {
-    fromEntity_ = "";
-    toEntity_ = "";
-    entityType_ = "";
+    entityId_ = "";
   }
 
   @java.lang.Override
@@ -56,121 +54,65 @@ private static final long serialVersionUID = 0L;
     return contactManagerEntryId_;
   }
 
-  public static final int FROM_ENTITY_FIELD_NUMBER = 2;
+  public static final int ENTITY_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object fromEntity_ = "";
+  private volatile java.lang.Object entityId_ = "";
   /**
-   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-   * @return The fromEntity.
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The entityId.
    */
   @java.lang.Override
-  public java.lang.String getFromEntity() {
-    java.lang.Object ref = fromEntity_;
+  public java.lang.String getEntityId() {
+    java.lang.Object ref = entityId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      fromEntity_ = s;
+      entityId_ = s;
       return s;
     }
   }
   /**
-   * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-   * @return The bytes for fromEntity.
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The bytes for entityId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFromEntityBytes() {
-    java.lang.Object ref = fromEntity_;
+      getEntityIdBytes() {
+    java.lang.Object ref = entityId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      fromEntity_ = b;
+      entityId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int TO_ENTITY_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object toEntity_ = "";
+  public static final int DELETED_FIELD_NUMBER = 3;
+  private boolean deleted_ = false;
   /**
-   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-   * @return The toEntity.
+   * <code>bool deleted = 3 [json_name = "deleted"];</code>
+   * @return The deleted.
    */
   @java.lang.Override
-  public java.lang.String getToEntity() {
-    java.lang.Object ref = toEntity_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      toEntity_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-   * @return The bytes for toEntity.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getToEntityBytes() {
-    java.lang.Object ref = toEntity_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      toEntity_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getDeleted() {
+    return deleted_;
   }
 
-  public static final int ENTITY_TYPE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object entityType_ = "";
+  public static final int IS_ACTIVE_FIELD_NUMBER = 4;
+  private boolean isActive_ = false;
   /**
-   * <code>string entity_type = 4 [json_name = "entityType"];</code>
-   * @return The entityType.
+   * <code>bool is_active = 4 [json_name = "isActive"];</code>
+   * @return The isActive.
    */
   @java.lang.Override
-  public java.lang.String getEntityType() {
-    java.lang.Object ref = entityType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      entityType_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string entity_type = 4 [json_name = "entityType"];</code>
-   * @return The bytes for entityType.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEntityTypeBytes() {
-    java.lang.Object ref = entityType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      entityType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getIsActive() {
+    return isActive_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -190,14 +132,14 @@ private static final long serialVersionUID = 0L;
     if (contactManagerEntryId_ != 0L) {
       output.writeInt64(1, contactManagerEntryId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEntity_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromEntity_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entityId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toEntity_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, toEntity_);
+    if (deleted_ != false) {
+      output.writeBool(3, deleted_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, entityType_);
+    if (isActive_ != false) {
+      output.writeBool(4, isActive_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -212,14 +154,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactManagerEntryId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEntity_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromEntity_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entityId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toEntity_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, toEntity_);
+    if (deleted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, deleted_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, entityType_);
+    if (isActive_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, isActive_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -238,12 +182,12 @@ private static final long serialVersionUID = 0L;
 
     if (getContactManagerEntryId()
         != other.getContactManagerEntryId()) return false;
-    if (!getFromEntity()
-        .equals(other.getFromEntity())) return false;
-    if (!getToEntity()
-        .equals(other.getToEntity())) return false;
-    if (!getEntityType()
-        .equals(other.getEntityType())) return false;
+    if (!getEntityId()
+        .equals(other.getEntityId())) return false;
+    if (getDeleted()
+        != other.getDeleted()) return false;
+    if (getIsActive()
+        != other.getIsActive()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -258,12 +202,14 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CONTACT_MANAGER_ENTRY_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getContactManagerEntryId());
-    hash = (37 * hash) + FROM_ENTITY_FIELD_NUMBER;
-    hash = (53 * hash) + getFromEntity().hashCode();
-    hash = (37 * hash) + TO_ENTITY_FIELD_NUMBER;
-    hash = (53 * hash) + getToEntity().hashCode();
-    hash = (37 * hash) + ENTITY_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getEntityType().hashCode();
+    hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getEntityId().hashCode();
+    hash = (37 * hash) + DELETED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDeleted());
+    hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsActive());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,9 +346,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       contactManagerEntryId_ = 0L;
-      fromEntity_ = "";
-      toEntity_ = "";
-      entityType_ = "";
+      entityId_ = "";
+      deleted_ = false;
+      isActive_ = false;
       return this;
     }
 
@@ -440,13 +386,13 @@ private static final long serialVersionUID = 0L;
         result.contactManagerEntryId_ = contactManagerEntryId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.fromEntity_ = fromEntity_;
+        result.entityId_ = entityId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.toEntity_ = toEntity_;
+        result.deleted_ = deleted_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.entityType_ = entityType_;
+        result.isActive_ = isActive_;
       }
     }
 
@@ -497,20 +443,16 @@ private static final long serialVersionUID = 0L;
       if (other.getContactManagerEntryId() != 0L) {
         setContactManagerEntryId(other.getContactManagerEntryId());
       }
-      if (!other.getFromEntity().isEmpty()) {
-        fromEntity_ = other.fromEntity_;
+      if (!other.getEntityId().isEmpty()) {
+        entityId_ = other.entityId_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getToEntity().isEmpty()) {
-        toEntity_ = other.toEntity_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.getDeleted() != false) {
+        setDeleted(other.getDeleted());
       }
-      if (!other.getEntityType().isEmpty()) {
-        entityType_ = other.entityType_;
-        bitField0_ |= 0x00000008;
-        onChanged();
+      if (other.getIsActive() != false) {
+        setIsActive(other.getIsActive());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -544,20 +486,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 18: {
-              fromEntity_ = input.readStringRequireUtf8();
+              entityId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              toEntity_ = input.readStringRequireUtf8();
+            case 24: {
+              deleted_ = input.readBool();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 34: {
-              entityType_ = input.readStringRequireUtf8();
+            } // case 24
+            case 32: {
+              isActive_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
-            } // case 34
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -607,218 +549,138 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object fromEntity_ = "";
+    private java.lang.Object entityId_ = "";
     /**
-     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-     * @return The fromEntity.
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @return The entityId.
      */
-    public java.lang.String getFromEntity() {
-      java.lang.Object ref = fromEntity_;
+    public java.lang.String getEntityId() {
+      java.lang.Object ref = entityId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        fromEntity_ = s;
+        entityId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-     * @return The bytes for fromEntity.
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @return The bytes for entityId.
      */
     public com.google.protobuf.ByteString
-        getFromEntityBytes() {
-      java.lang.Object ref = fromEntity_;
+        getEntityIdBytes() {
+      java.lang.Object ref = entityId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        fromEntity_ = b;
+        entityId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-     * @param value The fromEntity to set.
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @param value The entityId to set.
      * @return This builder for chaining.
      */
-    public Builder setFromEntity(
+    public Builder setEntityId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      fromEntity_ = value;
+      entityId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFromEntity() {
-      fromEntity_ = getDefaultInstance().getFromEntity();
+    public Builder clearEntityId() {
+      entityId_ = getDefaultInstance().getEntityId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string from_entity = 2 [json_name = "fromEntity"];</code>
-     * @param value The bytes for fromEntity to set.
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @param value The bytes for entityId to set.
      * @return This builder for chaining.
      */
-    public Builder setFromEntityBytes(
+    public Builder setEntityIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      fromEntity_ = value;
+      entityId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private java.lang.Object toEntity_ = "";
+    private boolean deleted_ ;
     /**
-     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-     * @return The toEntity.
+     * <code>bool deleted = 3 [json_name = "deleted"];</code>
+     * @return The deleted.
      */
-    public java.lang.String getToEntity() {
-      java.lang.Object ref = toEntity_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        toEntity_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getDeleted() {
+      return deleted_;
     }
     /**
-     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-     * @return The bytes for toEntity.
-     */
-    public com.google.protobuf.ByteString
-        getToEntityBytes() {
-      java.lang.Object ref = toEntity_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        toEntity_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-     * @param value The toEntity to set.
+     * <code>bool deleted = 3 [json_name = "deleted"];</code>
+     * @param value The deleted to set.
      * @return This builder for chaining.
      */
-    public Builder setToEntity(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      toEntity_ = value;
+    public Builder setDeleted(boolean value) {
+
+      deleted_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
+     * <code>bool deleted = 3 [json_name = "deleted"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearToEntity() {
-      toEntity_ = getDefaultInstance().getToEntity();
+    public Builder clearDeleted() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string to_entity = 3 [json_name = "toEntity"];</code>
-     * @param value The bytes for toEntity to set.
-     * @return This builder for chaining.
-     */
-    public Builder setToEntityBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      toEntity_ = value;
-      bitField0_ |= 0x00000004;
+      deleted_ = false;
       onChanged();
       return this;
     }
 
-    private java.lang.Object entityType_ = "";
+    private boolean isActive_ ;
     /**
-     * <code>string entity_type = 4 [json_name = "entityType"];</code>
-     * @return The entityType.
+     * <code>bool is_active = 4 [json_name = "isActive"];</code>
+     * @return The isActive.
      */
-    public java.lang.String getEntityType() {
-      java.lang.Object ref = entityType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        entityType_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getIsActive() {
+      return isActive_;
     }
     /**
-     * <code>string entity_type = 4 [json_name = "entityType"];</code>
-     * @return The bytes for entityType.
-     */
-    public com.google.protobuf.ByteString
-        getEntityTypeBytes() {
-      java.lang.Object ref = entityType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        entityType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string entity_type = 4 [json_name = "entityType"];</code>
-     * @param value The entityType to set.
+     * <code>bool is_active = 4 [json_name = "isActive"];</code>
+     * @param value The isActive to set.
      * @return This builder for chaining.
      */
-    public Builder setEntityType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      entityType_ = value;
+    public Builder setIsActive(boolean value) {
+
+      isActive_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string entity_type = 4 [json_name = "entityType"];</code>
+     * <code>bool is_active = 4 [json_name = "isActive"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEntityType() {
-      entityType_ = getDefaultInstance().getEntityType();
+    public Builder clearIsActive() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string entity_type = 4 [json_name = "entityType"];</code>
-     * @param value The bytes for entityType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEntityTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      entityType_ = value;
-      bitField0_ |= 0x00000008;
+      isActive_ = false;
       onChanged();
       return this;
     }
