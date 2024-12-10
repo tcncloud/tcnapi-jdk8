@@ -52,6 +52,46 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.insights.Insight.class, com.tcn.cloud.api.api.v1alpha1.insights.Insight.Builder.class);
   }
 
+  private int insightContentCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object insightContent_;
+  public enum InsightContentCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    PIPELINE(16),
+    INSIGHTCONTENT_NOT_SET(0);
+    private final int value;
+    private InsightContentCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static InsightContentCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static InsightContentCase forNumber(int value) {
+      switch (value) {
+        case 16: return PIPELINE;
+        case 0: return INSIGHTCONTENT_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public InsightContentCase
+  getInsightContentCase() {
+    return InsightContentCase.forNumber(
+        insightContentCase_);
+  }
+
   public static final int INSIGHT_ID_FIELD_NUMBER = 2;
   private long insightId_ = 0L;
   /**
@@ -486,6 +526,49 @@ private static final long serialVersionUID = 0L;
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
+  public static final int PIPELINE_FIELD_NUMBER = 16;
+  /**
+   * <pre>
+   * pipeline
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * @return Whether the pipeline field is set.
+   */
+  @java.lang.Override
+  public boolean hasPipeline() {
+    return insightContentCase_ == 16;
+  }
+  /**
+   * <pre>
+   * pipeline
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * @return The pipeline.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
+    if (insightContentCase_ == 16) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * pipeline
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
+    if (insightContentCase_ == 16) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -538,6 +621,9 @@ private static final long serialVersionUID = 0L;
     }
     if (updateTime_ != null) {
       output.writeMessage(14, getUpdateTime());
+    }
+    if (insightContentCase_ == 16) {
+      output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -595,6 +681,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getUpdateTime());
     }
+    if (insightContentCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -639,6 +729,15 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateTime()
           .equals(other.getUpdateTime())) return false;
     }
+    if (!getInsightContentCase().equals(other.getInsightContentCase())) return false;
+    switch (insightContentCase_) {
+      case 16:
+        if (!getPipeline()
+            .equals(other.getPipeline())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -681,6 +780,14 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateTime()) {
       hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateTime().hashCode();
+    }
+    switch (insightContentCase_) {
+      case 16:
+        hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
+        hash = (53 * hash) + getPipeline().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -840,6 +947,11 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_.dispose();
         updateTimeBuilder_ = null;
       }
+      if (pipelineBuilder_ != null) {
+        pipelineBuilder_.clear();
+      }
+      insightContentCase_ = 0;
+      insightContent_ = null;
       return this;
     }
 
@@ -867,6 +979,7 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.v1alpha1.insights.Insight buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.insights.Insight result = new com.tcn.cloud.api.api.v1alpha1.insights.Insight(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -915,6 +1028,15 @@ private static final long serialVersionUID = 0L;
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.insights.Insight result) {
+      result.insightContentCase_ = insightContentCase_;
+      result.insightContent_ = this.insightContent_;
+      if (insightContentCase_ == 16 &&
+          pipelineBuilder_ != null) {
+        result.insightContent_ = pipelineBuilder_.build();
       }
     }
 
@@ -1011,6 +1133,15 @@ private static final long serialVersionUID = 0L;
       if (other.hasUpdateTime()) {
         mergeUpdateTime(other.getUpdateTime());
       }
+      switch (other.getInsightContentCase()) {
+        case PIPELINE: {
+          mergePipeline(other.getPipeline());
+          break;
+        }
+        case INSIGHTCONTENT_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1106,6 +1237,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 114
+            case 130: {
+              input.readMessage(
+                  getPipelineFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              insightContentCase_ = 16;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1121,6 +1259,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int insightContentCase_ = 0;
+    private java.lang.Object insightContent_;
+    public InsightContentCase
+        getInsightContentCase() {
+      return InsightContentCase.forNumber(
+          insightContentCase_);
+    }
+
+    public Builder clearInsightContent() {
+      insightContentCase_ = 0;
+      insightContent_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private long insightId_ ;
@@ -2242,6 +2395,184 @@ private static final long serialVersionUID = 0L;
         updateTime_ = null;
       }
       return updateTimeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> pipelineBuilder_;
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * @return Whether the pipeline field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipeline() {
+      return insightContentCase_ == 16;
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * @return The pipeline.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
+      if (pipelineBuilder_ == null) {
+        if (insightContentCase_ == 16) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      } else {
+        if (insightContentCase_ == 16) {
+          return pipelineBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    public Builder setPipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (pipelineBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        insightContent_ = value;
+        onChanged();
+      } else {
+        pipelineBuilder_.setMessage(value);
+      }
+      insightContentCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    public Builder setPipeline(
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder builderForValue) {
+      if (pipelineBuilder_ == null) {
+        insightContent_ = builderForValue.build();
+        onChanged();
+      } else {
+        pipelineBuilder_.setMessage(builderForValue.build());
+      }
+      insightContentCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    public Builder mergePipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (pipelineBuilder_ == null) {
+        if (insightContentCase_ == 16 &&
+            insightContent_ != com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance()) {
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          insightContent_ = value;
+        }
+        onChanged();
+      } else {
+        if (insightContentCase_ == 16) {
+          pipelineBuilder_.mergeFrom(value);
+        } else {
+          pipelineBuilder_.setMessage(value);
+        }
+      }
+      insightContentCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    public Builder clearPipeline() {
+      if (pipelineBuilder_ == null) {
+        if (insightContentCase_ == 16) {
+          insightContentCase_ = 0;
+          insightContent_ = null;
+          onChanged();
+        }
+      } else {
+        if (insightContentCase_ == 16) {
+          insightContentCase_ = 0;
+          insightContent_ = null;
+        }
+        pipelineBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder getPipelineBuilder() {
+      return getPipelineFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
+      if ((insightContentCase_ == 16) && (pipelineBuilder_ != null)) {
+        return pipelineBuilder_.getMessageOrBuilder();
+      } else {
+        if (insightContentCase_ == 16) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * pipeline
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> 
+        getPipelineFieldBuilder() {
+      if (pipelineBuilder_ == null) {
+        if (!(insightContentCase_ == 16)) {
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+        }
+        pipelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_,
+                getParentForChildren(),
+                isClean());
+        insightContent_ = null;
+      }
+      insightContentCase_ = 16;
+      onChanged();
+      return pipelineBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
