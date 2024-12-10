@@ -675,6 +675,44 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public static final int EXPRESSION_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode expression_;
+  /**
+   * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   * @return Whether the expression field is set.
+   */
+  @java.lang.Override
+  public boolean hasExpression() {
+    return expression_ != null;
+  }
+  /**
+   * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   * @return The expression.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
+    return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
+  }
+  /**
+   * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
+    return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
+  }
+
   public static final int SIZE_FIELD_NUMBER = 2;
   private long size_ = 0L;
   /**
@@ -850,6 +888,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (expression_ != null) {
+      output.writeMessage(1, getExpression());
+    }
     if (size_ != 0L) {
       output.writeInt64(2, size_);
     }
@@ -871,6 +912,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (expression_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getExpression());
+    }
     if (size_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, size_);
@@ -901,6 +946,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition other = (com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition) obj;
 
+    if (hasExpression() != other.hasExpression()) return false;
+    if (hasExpression()) {
+      if (!getExpression()
+          .equals(other.getExpression())) return false;
+    }
     if (getSize()
         != other.getSize()) return false;
     if (!getOperationsList()
@@ -923,6 +973,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasExpression()) {
+      hash = (37 * hash) + EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getExpression().hashCode();
+    }
     hash = (37 * hash) + SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSize());
@@ -1071,6 +1125,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      expression_ = null;
+      if (expressionBuilder_ != null) {
+        expressionBuilder_.dispose();
+        expressionBuilder_ = null;
+      }
       size_ = 0L;
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
@@ -1078,7 +1137,7 @@ private static final long serialVersionUID = 0L;
         operations_ = null;
         operationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       iconName_ = "";
       iconColor_ = null;
       if (iconColorBuilder_ != null) {
@@ -1119,9 +1178,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition result) {
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.operations_ = operations_;
       } else {
@@ -1132,12 +1191,17 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.expression_ = expressionBuilder_ == null
+            ? expression_
+            : expressionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.size_ = size_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.iconName_ = iconName_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.iconColor_ = iconColorBuilder_ == null
             ? iconColor_
             : iconColorBuilder_.build();
@@ -1188,6 +1252,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.getDefaultInstance()) return this;
+      if (other.hasExpression()) {
+        mergeExpression(other.getExpression());
+      }
       if (other.getSize() != 0L) {
         setSize(other.getSize());
       }
@@ -1195,7 +1262,7 @@ private static final long serialVersionUID = 0L;
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -1208,7 +1275,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -1219,7 +1286,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getIconName().isEmpty()) {
         iconName_ = other.iconName_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasIconColor()) {
@@ -1251,9 +1318,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getExpressionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             case 16: {
               size_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
@@ -1271,14 +1345,14 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 34: {
               iconName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               input.readMessage(
                   getIconColorFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -1297,6 +1371,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+
+    private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode expression_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> expressionBuilder_;
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     * @return Whether the expression field is set.
+     */
+    public boolean hasExpression() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     * @return The expression.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
+      if (expressionBuilder_ == null) {
+        return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
+      } else {
+        return expressionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public Builder setExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
+      if (expressionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        expression_ = value;
+      } else {
+        expressionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public Builder setExpression(
+        com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder builderForValue) {
+      if (expressionBuilder_ == null) {
+        expression_ = builderForValue.build();
+      } else {
+        expressionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public Builder mergeExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
+      if (expressionBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          expression_ != null &&
+          expression_ != com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance()) {
+          getExpressionBuilder().mergeFrom(value);
+        } else {
+          expression_ = value;
+        }
+      } else {
+        expressionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public Builder clearExpression() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      expression_ = null;
+      if (expressionBuilder_ != null) {
+        expressionBuilder_.dispose();
+        expressionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getExpressionBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getExpressionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
+      if (expressionBuilder_ != null) {
+        return expressionBuilder_.getMessageOrBuilder();
+      } else {
+        return expression_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
+      }
+    }
+    /**
+     * <pre>
+     * The expression for the condition
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> 
+        getExpressionFieldBuilder() {
+      if (expressionBuilder_ == null) {
+        expressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder>(
+                getExpression(),
+                getParentForChildren(),
+                isClean());
+        expression_ = null;
+      }
+      return expressionBuilder_;
+    }
 
     private long size_ ;
     /**
@@ -1323,7 +1552,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSize(long value) {
 
       size_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1336,7 +1565,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSize() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       size_ = 0L;
       onChanged();
       return this;
@@ -1345,9 +1574,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         operations_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation>(operations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1541,7 +1770,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1646,7 +1875,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1709,7 +1938,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       iconName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1723,7 +1952,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearIconName() {
       iconName_ = getDefaultInstance().getIconName();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1741,7 +1970,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       iconName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1758,7 +1987,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the iconColor field is set.
      */
     public boolean hasIconColor() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1791,7 +2020,7 @@ private static final long serialVersionUID = 0L;
       } else {
         iconColorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1809,7 +2038,7 @@ private static final long serialVersionUID = 0L;
       } else {
         iconColorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1822,7 +2051,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeIconColor(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color value) {
       if (iconColorBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           iconColor_ != null &&
           iconColor_ != com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.getDefaultInstance()) {
           getIconColorBuilder().mergeFrom(value);
@@ -1832,7 +2061,7 @@ private static final long serialVersionUID = 0L;
       } else {
         iconColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1844,7 +2073,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public Builder clearIconColor() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       iconColor_ = null;
       if (iconColorBuilder_ != null) {
         iconColorBuilder_.dispose();
@@ -1861,7 +2090,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.Builder getIconColorBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getIconColorFieldBuilder().getBuilder();
     }

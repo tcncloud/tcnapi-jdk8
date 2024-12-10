@@ -9,6 +9,33 @@ public interface TextValueConditionOrBuilder extends
 
   /**
    * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   * @return Whether the expression field is set.
+   */
+  boolean hasExpression();
+  /**
+   * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   * @return The expression.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
+  /**
+   * <pre>
+   * The expression for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder();
+
+  /**
+   * <pre>
    * Text value size
    * </pre>
    *
