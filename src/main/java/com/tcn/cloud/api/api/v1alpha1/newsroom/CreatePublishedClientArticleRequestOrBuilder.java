@@ -46,4 +46,14 @@ public interface CreatePublishedClientArticleRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getArticleLinkBytes();
+
+  /**
+   * <pre>
+   * determines if we always show this article to the user on login
+   * </pre>
+   *
+   * <code>bool always_show = 4 [json_name = "alwaysShow"];</code>
+   * @return The alwaysShow.
+   */
+  boolean getAlwaysShow();
 }

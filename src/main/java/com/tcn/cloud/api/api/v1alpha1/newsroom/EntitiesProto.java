@@ -382,45 +382,46 @@ public final class EntitiesProto {
       "askR\tfieldMask\"p\n\032ListClientArticlesResp" +
       "onse\022R\n\017article_details\030\001 \003(\0132).api.v1al" +
       "pha1.newsroom.NewsArticleDetailsR\016articl" +
-      "eDetails\"\234\001\n#CreatePublishedClientArticl" +
+      "eDetails\"\275\001\n#CreatePublishedClientArticl" +
       "eRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rn" +
       "ewArticleSid\022&\n\017display_to_user\030\002 \001(\010R\rd" +
       "isplayToUser\022!\n\014article_link\030\003 \001(\tR\013arti" +
-      "cleLink\"\222\001\n$CreatePublishedClientArticle" +
-      "Response\022j\n\031published_article_details\030\001 " +
-      "\001(\0132..api.v1alpha1.newsroom.PublishedArt" +
-      "icleDetailsR\027publishedArticleDetails\"^\n$" +
-      "GetPublishedClientArticleByIdRequest\0226\n\025" +
-      "published_article_sid\030\001 \001(\003B\0020\001R\023publish" +
-      "edArticleSid\"\223\001\n%GetPublishedClientArtic" +
-      "leByIdResponse\022j\n\031published_article_deta" +
-      "ils\030\001 \001(\0132..api.v1alpha1.newsroom.Publis" +
-      "hedArticleDetailsR\027publishedArticleDetai" +
-      "ls\"_\n\036StoreClientArticleImageRequest\022=\n\005" +
-      "image\030\001 \001(\0132\'.api.v1alpha1.newsroom.News" +
-      "ArticleImageR\005image\"`\n\037StoreClientArticl" +
-      "eImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1al" +
-      "pha1.newsroom.NewsArticleImageR\005image\"O\n" +
-      "!ListImagesForClientArticleRequest\022*\n\017ne" +
-      "w_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"}" +
-      "\n\"ListImagesForClientArticleResponse\022W\n\023" +
-      "news_article_images\030\001 \003(\0132\'.api.v1alpha1" +
-      ".newsroom.NewsArticleImageR\021newsArticleI" +
-      "mages\"`\n\037UploadClientArticleImageRequest" +
-      "\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom." +
-      "NewsArticleImageR\005image\"a\n UploadClientA" +
-      "rticleImageResponse\022=\n\005image\030\001 \001(\0132\'.api" +
-      ".v1alpha1.newsroom.NewsArticleImageR\005ima" +
-      "ge\"$\n\"ListPublishedClientArticlesRequest" +
-      "\"\221\001\n#ListPublishedClientArticlesResponse" +
-      "\022j\n\031published_article_details\030\001 \003(\0132..ap" +
-      "i.v1alpha1.newsroom.PublishedArticleDeta" +
-      "ilsR\027publishedArticleDetailsB\256\001\n\'com.tcn" +
-      ".cloud.api.api.v1alpha1.newsroomB\rEntiti" +
-      "esProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312" +
-      "\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\N" +
-      "ewsroom\\GPBMetadata\352\002\027Api::V1alpha1::New" +
-      "sroomb\006proto3"
+      "cleLink\022\037\n\013always_show\030\004 \001(\010R\nalwaysShow" +
+      "\"\222\001\n$CreatePublishedClientArticleRespons" +
+      "e\022j\n\031published_article_details\030\001 \001(\0132..a" +
+      "pi.v1alpha1.newsroom.PublishedArticleDet" +
+      "ailsR\027publishedArticleDetails\"^\n$GetPubl" +
+      "ishedClientArticleByIdRequest\0226\n\025publish" +
+      "ed_article_sid\030\001 \001(\003B\0020\001R\023publishedArtic" +
+      "leSid\"\223\001\n%GetPublishedClientArticleByIdR" +
+      "esponse\022j\n\031published_article_details\030\001 \001" +
+      "(\0132..api.v1alpha1.newsroom.PublishedArti" +
+      "cleDetailsR\027publishedArticleDetails\"_\n\036S" +
+      "toreClientArticleImageRequest\022=\n\005image\030\001" +
+      " \001(\0132\'.api.v1alpha1.newsroom.NewsArticle" +
+      "ImageR\005image\"`\n\037StoreClientArticleImageR" +
+      "esponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.ne" +
+      "wsroom.NewsArticleImageR\005image\"O\n!ListIm" +
+      "agesForClientArticleRequest\022*\n\017new_artic" +
+      "le_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"}\n\"ListI" +
+      "magesForClientArticleResponse\022W\n\023news_ar" +
+      "ticle_images\030\001 \003(\0132\'.api.v1alpha1.newsro" +
+      "om.NewsArticleImageR\021newsArticleImages\"`" +
+      "\n\037UploadClientArticleImageRequest\022=\n\005ima" +
+      "ge\030\001 \001(\0132\'.api.v1alpha1.newsroom.NewsArt" +
+      "icleImageR\005image\"a\n UploadClientArticleI" +
+      "mageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1alph" +
+      "a1.newsroom.NewsArticleImageR\005image\"$\n\"L" +
+      "istPublishedClientArticlesRequest\"\221\001\n#Li" +
+      "stPublishedClientArticlesResponse\022j\n\031pub" +
+      "lished_article_details\030\001 \003(\0132..api.v1alp" +
+      "ha1.newsroom.PublishedArticleDetailsR\027pu" +
+      "blishedArticleDetailsB\256\001\n\'com.tcn.cloud." +
+      "api.api.v1alpha1.newsroomB\rEntitiesProto" +
+      "P\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V" +
+      "1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom" +
+      "\\GPBMetadata\352\002\027Api::V1alpha1::Newsroomb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -645,7 +646,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_descriptor,
-        new java.lang.String[] { "NewArticleSid", "DisplayToUser", "ArticleLink", });
+        new java.lang.String[] { "NewArticleSid", "DisplayToUser", "ArticleLink", "AlwaysShow", });
     internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_descriptor =
       getDescriptor().getMessageTypes().get(35);
     internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_fieldAccessorTable = new

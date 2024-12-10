@@ -120,6 +120,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ALWAYS_SHOW_FIELD_NUMBER = 4;
+  private boolean alwaysShow_ = false;
+  /**
+   * <pre>
+   * determines if we always show this article to the user on login
+   * </pre>
+   *
+   * <code>bool always_show = 4 [json_name = "alwaysShow"];</code>
+   * @return The alwaysShow.
+   */
+  @java.lang.Override
+  public boolean getAlwaysShow() {
+    return alwaysShow_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -143,6 +158,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(articleLink_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, articleLink_);
     }
+    if (alwaysShow_ != false) {
+      output.writeBool(4, alwaysShow_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -162,6 +180,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(articleLink_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, articleLink_);
+    }
+    if (alwaysShow_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, alwaysShow_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -184,6 +206,8 @@ private static final long serialVersionUID = 0L;
         != other.getDisplayToUser()) return false;
     if (!getArticleLink()
         .equals(other.getArticleLink())) return false;
+    if (getAlwaysShow()
+        != other.getAlwaysShow()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -203,6 +227,9 @@ private static final long serialVersionUID = 0L;
         getDisplayToUser());
     hash = (37 * hash) + ARTICLE_LINK_FIELD_NUMBER;
     hash = (53 * hash) + getArticleLink().hashCode();
+    hash = (37 * hash) + ALWAYS_SHOW_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAlwaysShow());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -341,6 +368,7 @@ private static final long serialVersionUID = 0L;
       newArticleSid_ = 0L;
       displayToUser_ = false;
       articleLink_ = "";
+      alwaysShow_ = false;
       return this;
     }
 
@@ -382,6 +410,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.articleLink_ = articleLink_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.alwaysShow_ = alwaysShow_;
       }
     }
 
@@ -440,6 +471,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.getAlwaysShow() != false) {
+        setAlwaysShow(other.getAlwaysShow());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -481,6 +515,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              alwaysShow_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -674,6 +713,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       articleLink_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean alwaysShow_ ;
+    /**
+     * <pre>
+     * determines if we always show this article to the user on login
+     * </pre>
+     *
+     * <code>bool always_show = 4 [json_name = "alwaysShow"];</code>
+     * @return The alwaysShow.
+     */
+    @java.lang.Override
+    public boolean getAlwaysShow() {
+      return alwaysShow_;
+    }
+    /**
+     * <pre>
+     * determines if we always show this article to the user on login
+     * </pre>
+     *
+     * <code>bool always_show = 4 [json_name = "alwaysShow"];</code>
+     * @param value The alwaysShow to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAlwaysShow(boolean value) {
+
+      alwaysShow_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * determines if we always show this article to the user on login
+     * </pre>
+     *
+     * <code>bool always_show = 4 [json_name = "alwaysShow"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAlwaysShow() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      alwaysShow_ = false;
       onChanged();
       return this;
     }
