@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
  *
  * Protobuf type {@code api.v1alpha1.wfm.ListAgentStatesForDayResponse}
  */
-public final class ListAgentStatesForDayResponse extends
+@java.lang.Deprecated public final class ListAgentStatesForDayResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListAgentStatesForDayResponse)
     ListAgentStatesForDayResponseOrBuilder {

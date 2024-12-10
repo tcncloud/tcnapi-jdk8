@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface AgentStateSequenceOrBuilder extends
+@java.lang.Deprecated public interface AgentStateSequenceOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.AgentStateSequence)
     com.google.protobuf.MessageOrBuilder {
 

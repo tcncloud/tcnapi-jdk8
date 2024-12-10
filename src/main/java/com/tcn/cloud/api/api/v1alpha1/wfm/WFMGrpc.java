@@ -9700,11 +9700,13 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * DEPRECATED as of Dec/10/2024 - Use ListRealTimeManagementStates instead.
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatesForDayMethod(), responseObserver);
@@ -13276,11 +13278,13 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * DEPRECATED as of Dec/10/2024 - Use ListRealTimeManagementStates instead.
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -16691,11 +16695,13 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * DEPRECATED as of Dec/10/2024 - Use ListRealTimeManagementStates instead.
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse listAgentStatesForDay(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentStatesForDayMethod(), getCallOptions(), request);
@@ -20151,11 +20157,13 @@ public final class WFMGrpc {
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
+     * DEPRECATED as of Dec/10/2024 - Use ListRealTimeManagementStates instead.
      * Errors:
      *   - grpc.Invalid: the &#64;start_datetime is invalid or beyond the current datetime.
      *   - grpc.Internal: error occurs when listing the agent states.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> listAgentStatesForDay(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
