@@ -264,6 +264,171 @@ public final class InsightProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_GetDefaultOutputConfigurationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_PipelineNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_PipelineNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Node_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Node_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_FromNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_FromNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_FilterNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_FilterNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_DeriveNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_DeriveNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_GroupNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_GroupNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_TakeNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_TakeNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_AggregateNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_AggregateNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_AggregationColumn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_AggregationColumn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Column_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Column_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ExpressionNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ExpressionNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_MapNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_MapNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_MapNode_Mapping_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_MapNode_Mapping_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_JoinNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_JoinNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_JoinColumn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_JoinColumn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Parent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Parent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_SelectNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_SelectNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_SelectNode_RenamedColumnsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_SelectNode_RenamedColumnsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_JsonTarget_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_JsonTarget_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_JsonNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_JsonNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_UnnestToColumnsNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_UnnestToColumnsNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Parameters_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Parameters_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Parameters_Parameter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Parameters_Parameter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_Parameters_ParametersEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_Parameters_ParametersEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ValuesReplacement_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ValuesReplacement_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ColumnReplacement_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ColumnReplacement_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ReplaceNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ReplaceNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_SortColumn_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_SortColumn_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_SortNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_SortNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_StringManipulationSplit_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_StringManipulationSplit_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_StringManipulationReplace_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_StringManipulationReplace_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_StringManipulationNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_StringManipulationNode_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -450,46 +615,181 @@ public final class InsightProto {
       "tResourceId\"\206\001\n%GetDefaultOutputConfigur" +
       "ationResponse\022]\n\024output_configuration\030\001 " +
       "\001(\0132*.api.v1alpha1.insights.OutputConfig" +
-      "urationR\023outputConfiguration*\221\002\n\027OutputC" +
-      "onfigurationType\022)\n%OUTPUT_CONFIGURATION" +
-      "_TYPE_UNSPECIFIED\020\000\022#\n\037OUTPUT_CONFIGURAT" +
-      "ION_TYPE_TABLE\020\001\022*\n&OUTPUT_CONFIGURATION" +
-      "_TYPE_MULTI_SERIES\020\002\022\'\n#OUTPUT_CONFIGURA" +
-      "TION_TYPE_PIE_CHART\020\003\022)\n%OUTPUT_CONFIGUR" +
-      "ATION_TYPE_FIXED_WIDTH\020\004\022&\n\"OUTPUT_CONFI" +
-      "GURATION_TYPE_TIMELINE\020\005*\340\002\n\rOperationTy" +
-      "pe\022\036\n\032OPERATION_TYPE_UNSPECIFIED\020\000\022\027\n\023OP" +
-      "ERATION_TYPE_DATE\020\001\022\031\n\025OPERATION_TYPE_PR" +
-      "EFIX\020\002\022\031\n\025OPERATION_TYPE_SUFFIX\020\003\022\033\n\027OPE" +
-      "RATION_TYPE_DURATION\020\004\022\026\n\022OPERATION_TYPE" +
-      "_ADD\020\005\022\033\n\027OPERATION_TYPE_SUBTRACT\020\006\022\033\n\027O" +
-      "PERATION_TYPE_MULTIPLY\020\007\022\031\n\025OPERATION_TY" +
-      "PE_DIVIDE\020\010\022 \n\034OPERATION_TYPE_FORMAT_NUM" +
-      "BER\020\t\022\034\n\030OPERATION_TYPE_PRECISION\020\n\022\026\n\022O" +
-      "PERATION_TYPE_PAD\020\013*`\n\nColumnSort\022\033\n\027COL" +
-      "UMN_SORT_UNSPECIFIED\020\000\022\031\n\025COLUMN_SORT_AS" +
-      "CENDING\020\001\022\032\n\026COLUMN_SORT_DESCENDING\020\002*\250\002" +
-      "\n$OutputConfigurationColumnSummaryType\0228" +
-      "\n4OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TY" +
-      "PE_UNSPECIFIED\020\000\0220\n,OUTPUT_CONFIGURATION" +
-      "_COLUMN_SUMMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CON" +
-      "FIGURATION_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n," +
-      "OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE" +
-      "_MIN\020\003\0220\n,OUTPUT_CONFIGURATION_COLUMN_SU" +
-      "MMARY_TYPE_MAX\020\004*\326\001\n\033InsightContextualAc" +
-      "tionType\022.\n*INSIGHT_CONTEXTUAL_ACTION_TY" +
-      "PE_UNSPECIFIED\020\000\022\'\n#INSIGHT_CONTEXTUAL_A" +
-      "CTION_TYPE_LINK\020\001\022,\n(INSIGHT_CONTEXTUAL_" +
-      "ACTION_TYPE_COMPONENT\020\002\0220\n,INSIGHT_CONTE" +
-      "XTUAL_ACTION_TYPE_DRILL_THROUGH\020\003*u\n\016Quo" +
-      "teCharacter\022\037\n\033QUOTE_CHARACTER_UNSPECIFI" +
-      "ED\020\000\022 \n\034QUOTE_CHARACTER_DOUBLE_QUOTE\020\001\022 " +
-      "\n\034QUOTE_CHARACTER_SINGLE_QUOTE\020\002B\255\001\n\'com" +
-      ".tcn.cloud.api.api.v1alpha1.insightsB\014In" +
-      "sightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insigh" +
-      "ts\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1alpha" +
-      "1\\Insights\\GPBMetadata\352\002\027Api::V1alpha1::" +
-      "Insightsb\006proto3"
+      "urationR\023outputConfiguration\"A\n\014Pipeline" +
+      "Node\0221\n\005nodes\030\001 \003(\0132\033.api.v1alpha1.insig" +
+      "hts.NodeR\005nodes\"\231\010\n\004Node\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\022\022\n\004type\030\002 \001(\tR\004type\022\024\n\005title\030\003 \001(\tR\005tit" +
+      "le\022\033\n\tinput_ids\030\004 \003(\tR\010inputIds\022\035\n\noutpu" +
+      "t_ids\030\005 \003(\tR\toutputIds\022>\n\tfrom_node\030\006 \001(" +
+      "\0132\037.api.v1alpha1.insights.FromNodeH\000R\010fr" +
+      "omNode\022D\n\013filter_node\030\007 \001(\0132!.api.v1alph" +
+      "a1.insights.FilterNodeH\000R\nfilterNode\022D\n\013" +
+      "derive_node\030\010 \001(\0132!.api.v1alpha1.insight" +
+      "s.DeriveNodeH\000R\nderiveNode\022A\n\ngroup_node" +
+      "\030\t \001(\0132 .api.v1alpha1.insights.GroupNode" +
+      "H\000R\tgroupNode\022>\n\tjoin_node\030\n \001(\0132\037.api.v" +
+      "1alpha1.insights.JoinNodeH\000R\010joinNode\022D\n" +
+      "\013select_node\030\013 \001(\0132!.api.v1alpha1.insigh" +
+      "ts.SelectNodeH\000R\nselectNode\022M\n\016aggregate" +
+      "_node\030\014 \001(\0132$.api.v1alpha1.insights.Aggr" +
+      "egateNodeH\000R\raggregateNode\022>\n\ttake_node\030" +
+      "\r \001(\0132\037.api.v1alpha1.insights.TakeNodeH\000" +
+      "R\010takeNode\022>\n\tjson_node\030\016 \001(\0132\037.api.v1al" +
+      "pha1.insights.JsonNodeH\000R\010jsonNode\022;\n\010ma" +
+      "p_node\030\017 \001(\0132\036.api.v1alpha1.insights.Map" +
+      "NodeH\000R\007mapNode\022G\n\014replace_node\030\020 \001(\0132\"." +
+      "api.v1alpha1.insights.ReplaceNodeH\000R\013rep" +
+      "laceNode\022>\n\tsort_node\030\021 \001(\0132\037.api.v1alph" +
+      "a1.insights.SortNodeH\000R\010sortNode\022i\n\030stri" +
+      "ng_manipulation_node\030\022 \001(\0132-.api.v1alpha" +
+      "1.insights.StringManipulationNodeH\000R\026str" +
+      "ingManipulationNodeB\006\n\004body\"$\n\010FromNode\022" +
+      "\030\n\007dataset\030\001 \001(\tR\007dataset\"S\n\nFilterNode\022" +
+      "E\n\nexpression\030\003 \001(\0132%.api.v1alpha1.insig" +
+      "hts.ExpressionNodeR\nexpression\"t\n\nDerive" +
+      "Node\022\037\n\013column_name\030\003 \001(\tR\ncolumnName\022E\n" +
+      "\nexpression\030\004 \001(\0132%.api.v1alpha1.insight" +
+      "s.ExpressionNodeR\nexpression\"\220\001\n\tGroupNo" +
+      "de\022(\n\020group_by_columns\030\001 \003(\tR\016groupByCol" +
+      "umns\022Y\n\023aggregation_columns\030\002 \003(\0132(.api." +
+      "v1alpha1.insights.AggregationColumnR\022agg" +
+      "regationColumns\" \n\010TakeNode\022\024\n\005limit\030\001 \001" +
+      "(\005R\005limit\"j\n\rAggregateNode\022Y\n\023aggregatio" +
+      "n_columns\030\002 \003(\0132(.api.v1alpha1.insights." +
+      "AggregationColumnR\022aggregationColumns\"\264\001" +
+      "\n\021AggregationColumn\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "(\n\020group_by_columns\030\002 \003(\tR\016groupByColumn" +
+      "s\022.\n\023column_to_aggregate\030\003 \001(\tR\021columnTo" +
+      "Aggregate\0221\n\024aggregation_function\030\004 \001(\tR" +
+      "\023aggregationFunction\"7\n\006Column\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\033\n\tdata_type\030\002 \001(\tR\010dataType\"}\n" +
+      "\016ExpressionNode\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005v" +
+      "alue\030\002 \001(\tR\005value\022A\n\010children\030\003 \003(\0132%.ap" +
+      "i.v1alpha1.insights.ExpressionNodeR\010chil" +
+      "dren\"\311\003\n\007MapNode\022<\n\nnew_column\030\001 \001(\0132\035.a" +
+      "pi.v1alpha1.insights.ColumnR\tnewColumn\022A" +
+      "\n\rcolumn_to_map\030\002 \001(\0132\035.api.v1alpha1.ins" +
+      "ights.ColumnR\013columnToMap\022B\n\010mappings\030\003 " +
+      "\003(\0132&.api.v1alpha1.insights.MapNode.Mapp" +
+      "ingR\010mappings\022J\n\rdefault_value\030\004 \001(\0132%.a" +
+      "pi.v1alpha1.insights.ExpressionNodeR\014def" +
+      "aultValue\022\035\n\nis_complex\030\005 \001(\010R\tisComplex" +
+      "\032\215\001\n\007Mapping\022C\n\tcondition\030\001 \001(\0132%.api.v1" +
+      "alpha1.insights.ExpressionNodeR\tconditio" +
+      "n\022=\n\006result\030\002 \001(\0132%.api.v1alpha1.insight" +
+      "s.ExpressionNodeR\006result\"\352\001\n\010JoinNode\022\022\n" +
+      "\004side\030\001 \001(\tR\004side\022D\n\014join_columns\030\002 \003(\0132" +
+      "!.api.v1alpha1.insights.JoinColumnR\013join" +
+      "Columns\022@\n\014first_parent\030\003 \001(\0132\035.api.v1al" +
+      "pha1.insights.ParentR\013firstParent\022B\n\rsec" +
+      "ond_parent\030\004 \001(\0132\035.api.v1alpha1.insights" +
+      ".ParentR\014secondParent\"n\n\nJoinColumn\022.\n\023f" +
+      "irst_parent_column\030\001 \001(\tR\021firstParentCol" +
+      "umn\0220\n\024second_parent_column\030\002 \001(\tR\022secon" +
+      "dParentColumn\"\315\001\n\006Parent\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\022\024\n\005title\030\002 \001(\tR\005title\022Z\n\017renamed_column" +
+      "s\030\003 \003(\01321.api.v1alpha1.insights.Parent.R" +
+      "enamedColumnsEntryR\016renamedColumns\032A\n\023Re" +
+      "namedColumnsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
+      "alue\030\002 \001(\tR\005value:\0028\001\"\311\001\n\nSelectNode\022\030\n\007" +
+      "columns\030\001 \003(\tR\007columns\022^\n\017renamed_column" +
+      "s\030\002 \003(\01325.api.v1alpha1.insights.SelectNo" +
+      "de.RenamedColumnsEntryR\016renamedColumns\032A" +
+      "\n\023RenamedColumnsEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\tR\005value:\0028\001\"m\n\nJsonTarget\022" +
+      "\035\n\npath_parts\030\001 \003(\tR\tpathParts\022\037\n\013column" +
+      "_name\030\002 \001(\tR\ncolumnName\022\037\n\013result_type\030\003" +
+      " \001(\tR\nresultType\"\335\001\n\010JsonNode\022\022\n\004type\030\001 " +
+      "\001(\tR\004type\022\037\n\013json_column\030\002 \001(\tR\njsonColu" +
+      "mn\022;\n\007targets\030\003 \003(\0132!.api.v1alpha1.insig" +
+      "hts.JsonTargetR\007targets\022_\n\026unnest_to_col" +
+      "umns_node\030\004 \001(\0132*.api.v1alpha1.insights." +
+      "UnnestToColumnsNodeR\023unnestToColumnsNode" +
+      "\"\344\002\n\023UnnestToColumnsNode\022F\n\runnest_targe" +
+      "t\030\001 \001(\0132!.api.v1alpha1.insights.JsonTarg" +
+      "etR\014unnestTarget\022@\n\nkey_target\030\002 \001(\0132!.a" +
+      "pi.v1alpha1.insights.JsonTargetR\tkeyTarg" +
+      "et\022D\n\014value_target\030\003 \001(\0132!.api.v1alpha1." +
+      "insights.JsonTargetR\013valueTarget\022\030\n\007colu" +
+      "mns\030\004 \003(\tR\007columns\022!\n\014primary_keys\030\005 \003(\t" +
+      "R\013primaryKeys\022@\n\014json_columns\030\006 \003(\0132\035.ap" +
+      "i.v1alpha1.insights.ColumnR\013jsonColumns\"" +
+      "\213\002\n\nParameters\022Q\n\nparameters\030\001 \003(\01321.api" +
+      ".v1alpha1.insights.Parameters.Parameters" +
+      "EntryR\nparameters\032>\n\tParameter\022\024\n\005value\030" +
+      "\002 \001(\tR\005value\022\033\n\tdata_type\030\003 \001(\tR\010dataTyp" +
+      "e\032j\n\017ParametersEntry\022\020\n\003key\030\001 \001(\tR\003key\022A" +
+      "\n\005value\030\002 \001(\0132+.api.v1alpha1.insights.Pa" +
+      "rameters.ParameterR\005value:\0028\001\"\264\001\n\021Values" +
+      "Replacement\022!\n\014target_value\030\001 \001(\tR\013targe" +
+      "tValue\022(\n\020target_data_type\030\002 \001(\tR\016target" +
+      "DataType\022R\n\021replacement_value\030\003 \001(\0132%.ap" +
+      "i.v1alpha1.insights.ExpressionNodeR\020repl" +
+      "acementValue\"\221\001\n\021ColumnReplacement\022!\n\014co" +
+      "lumn_names\030\001 \003(\tR\013columnNames\022Y\n\023values_" +
+      "replacements\030\002 \003(\0132(.api.v1alpha1.insigh" +
+      "ts.ValuesReplacementR\022valuesReplacements" +
+      "\"\207\001\n\013ReplaceNode\022Y\n\023column_replacements\030" +
+      "\001 \003(\0132(.api.v1alpha1.insights.ColumnRepl" +
+      "acementR\022columnReplacements\022\035\n\nis_comple" +
+      "x\030\002 \001(\010R\tisComplex\"K\n\nSortColumn\022\037\n\013colu" +
+      "mn_name\030\001 \001(\tR\ncolumnName\022\034\n\tascending\030\002" +
+      " \001(\010R\tascending\"P\n\010SortNode\022D\n\014sort_colu" +
+      "mns\030\001 \003(\0132!.api.v1alpha1.insights.SortCo" +
+      "lumnR\013sortColumns\"\217\001\n\027StringManipulation" +
+      "Split\022\031\n\010split_by\030\002 \001(\tR\007splitBy\022.\n\023is_i" +
+      "ndex_extraction\030\003 \001(\010R\021isIndexExtraction" +
+      "\022)\n\020index_extraction\030\004 \001(\005R\017indexExtract" +
+      "ion\"I\n\031StringManipulationReplace\022\026\n\006targ" +
+      "et\030\001 \001(\tR\006target\022\024\n\005value\030\002 \001(\tR\005value\"\346" +
+      "\002\n\026StringManipulationNode\022\022\n\004type\030\001 \001(\tR" +
+      "\004type\022,\n\022source_column_name\030\002 \001(\tR\020sourc" +
+      "eColumnName\022,\n\022target_column_name\030\003 \001(\tR" +
+      "\020targetColumnName\022j\n\031string_manipulation" +
+      "_split\030\004 \001(\0132..api.v1alpha1.insights.Str" +
+      "ingManipulationSplitR\027stringManipulation" +
+      "Split\022p\n\033string_manipulation_replace\030\005 \001" +
+      "(\01320.api.v1alpha1.insights.StringManipul" +
+      "ationReplaceR\031stringManipulationReplace*" +
+      "\221\002\n\027OutputConfigurationType\022)\n%OUTPUT_CO" +
+      "NFIGURATION_TYPE_UNSPECIFIED\020\000\022#\n\037OUTPUT" +
+      "_CONFIGURATION_TYPE_TABLE\020\001\022*\n&OUTPUT_CO" +
+      "NFIGURATION_TYPE_MULTI_SERIES\020\002\022\'\n#OUTPU" +
+      "T_CONFIGURATION_TYPE_PIE_CHART\020\003\022)\n%OUTP" +
+      "UT_CONFIGURATION_TYPE_FIXED_WIDTH\020\004\022&\n\"O" +
+      "UTPUT_CONFIGURATION_TYPE_TIMELINE\020\005*\340\002\n\r" +
+      "OperationType\022\036\n\032OPERATION_TYPE_UNSPECIF" +
+      "IED\020\000\022\027\n\023OPERATION_TYPE_DATE\020\001\022\031\n\025OPERAT" +
+      "ION_TYPE_PREFIX\020\002\022\031\n\025OPERATION_TYPE_SUFF" +
+      "IX\020\003\022\033\n\027OPERATION_TYPE_DURATION\020\004\022\026\n\022OPE" +
+      "RATION_TYPE_ADD\020\005\022\033\n\027OPERATION_TYPE_SUBT" +
+      "RACT\020\006\022\033\n\027OPERATION_TYPE_MULTIPLY\020\007\022\031\n\025O" +
+      "PERATION_TYPE_DIVIDE\020\010\022 \n\034OPERATION_TYPE" +
+      "_FORMAT_NUMBER\020\t\022\034\n\030OPERATION_TYPE_PRECI" +
+      "SION\020\n\022\026\n\022OPERATION_TYPE_PAD\020\013*`\n\nColumn" +
+      "Sort\022\033\n\027COLUMN_SORT_UNSPECIFIED\020\000\022\031\n\025COL" +
+      "UMN_SORT_ASCENDING\020\001\022\032\n\026COLUMN_SORT_DESC" +
+      "ENDING\020\002*\250\002\n$OutputConfigurationColumnSu" +
+      "mmaryType\0228\n4OUTPUT_CONFIGURATION_COLUMN" +
+      "_SUMMARY_TYPE_UNSPECIFIED\020\000\0220\n,OUTPUT_CO" +
+      "NFIGURATION_COLUMN_SUMMARY_TYPE_AVG\020\001\0220\n" +
+      ",OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYP" +
+      "E_SUM\020\002\0220\n,OUTPUT_CONFIGURATION_COLUMN_S" +
+      "UMMARY_TYPE_MIN\020\003\0220\n,OUTPUT_CONFIGURATIO" +
+      "N_COLUMN_SUMMARY_TYPE_MAX\020\004*\326\001\n\033InsightC" +
+      "ontextualActionType\022.\n*INSIGHT_CONTEXTUA" +
+      "L_ACTION_TYPE_UNSPECIFIED\020\000\022\'\n#INSIGHT_C" +
+      "ONTEXTUAL_ACTION_TYPE_LINK\020\001\022,\n(INSIGHT_" +
+      "CONTEXTUAL_ACTION_TYPE_COMPONENT\020\002\0220\n,IN" +
+      "SIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROU" +
+      "GH\020\003*u\n\016QuoteCharacter\022\037\n\033QUOTE_CHARACTE" +
+      "R_UNSPECIFIED\020\000\022 \n\034QUOTE_CHARACTER_DOUBL" +
+      "E_QUOTE\020\001\022 \n\034QUOTE_CHARACTER_SINGLE_QUOT" +
+      "E\020\002B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.i" +
+      "nsightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1al" +
+      "pha1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!" +
+      "Api\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api:" +
+      ":V1alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -799,6 +1099,204 @@ public final class InsightProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetDefaultOutputConfigurationResponse_descriptor,
         new java.lang.String[] { "OutputConfiguration", });
+    internal_static_api_v1alpha1_insights_PipelineNode_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_api_v1alpha1_insights_PipelineNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_PipelineNode_descriptor,
+        new java.lang.String[] { "Nodes", });
+    internal_static_api_v1alpha1_insights_Node_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_api_v1alpha1_insights_Node_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Node_descriptor,
+        new java.lang.String[] { "Id", "Type", "Title", "InputIds", "OutputIds", "FromNode", "FilterNode", "DeriveNode", "GroupNode", "JoinNode", "SelectNode", "AggregateNode", "TakeNode", "JsonNode", "MapNode", "ReplaceNode", "SortNode", "StringManipulationNode", "Body", });
+    internal_static_api_v1alpha1_insights_FromNode_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_api_v1alpha1_insights_FromNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_FromNode_descriptor,
+        new java.lang.String[] { "Dataset", });
+    internal_static_api_v1alpha1_insights_FilterNode_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_api_v1alpha1_insights_FilterNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_FilterNode_descriptor,
+        new java.lang.String[] { "Expression", });
+    internal_static_api_v1alpha1_insights_DeriveNode_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_api_v1alpha1_insights_DeriveNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_DeriveNode_descriptor,
+        new java.lang.String[] { "ColumnName", "Expression", });
+    internal_static_api_v1alpha1_insights_GroupNode_descriptor =
+      getDescriptor().getMessageTypes().get(52);
+    internal_static_api_v1alpha1_insights_GroupNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_GroupNode_descriptor,
+        new java.lang.String[] { "GroupByColumns", "AggregationColumns", });
+    internal_static_api_v1alpha1_insights_TakeNode_descriptor =
+      getDescriptor().getMessageTypes().get(53);
+    internal_static_api_v1alpha1_insights_TakeNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_TakeNode_descriptor,
+        new java.lang.String[] { "Limit", });
+    internal_static_api_v1alpha1_insights_AggregateNode_descriptor =
+      getDescriptor().getMessageTypes().get(54);
+    internal_static_api_v1alpha1_insights_AggregateNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_AggregateNode_descriptor,
+        new java.lang.String[] { "AggregationColumns", });
+    internal_static_api_v1alpha1_insights_AggregationColumn_descriptor =
+      getDescriptor().getMessageTypes().get(55);
+    internal_static_api_v1alpha1_insights_AggregationColumn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_AggregationColumn_descriptor,
+        new java.lang.String[] { "Name", "GroupByColumns", "ColumnToAggregate", "AggregationFunction", });
+    internal_static_api_v1alpha1_insights_Column_descriptor =
+      getDescriptor().getMessageTypes().get(56);
+    internal_static_api_v1alpha1_insights_Column_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Column_descriptor,
+        new java.lang.String[] { "Key", "DataType", });
+    internal_static_api_v1alpha1_insights_ExpressionNode_descriptor =
+      getDescriptor().getMessageTypes().get(57);
+    internal_static_api_v1alpha1_insights_ExpressionNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ExpressionNode_descriptor,
+        new java.lang.String[] { "Type", "Value", "Children", });
+    internal_static_api_v1alpha1_insights_MapNode_descriptor =
+      getDescriptor().getMessageTypes().get(58);
+    internal_static_api_v1alpha1_insights_MapNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_MapNode_descriptor,
+        new java.lang.String[] { "NewColumn", "ColumnToMap", "Mappings", "DefaultValue", "IsComplex", });
+    internal_static_api_v1alpha1_insights_MapNode_Mapping_descriptor =
+      internal_static_api_v1alpha1_insights_MapNode_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_insights_MapNode_Mapping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_MapNode_Mapping_descriptor,
+        new java.lang.String[] { "Condition", "Result", });
+    internal_static_api_v1alpha1_insights_JoinNode_descriptor =
+      getDescriptor().getMessageTypes().get(59);
+    internal_static_api_v1alpha1_insights_JoinNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_JoinNode_descriptor,
+        new java.lang.String[] { "Side", "JoinColumns", "FirstParent", "SecondParent", });
+    internal_static_api_v1alpha1_insights_JoinColumn_descriptor =
+      getDescriptor().getMessageTypes().get(60);
+    internal_static_api_v1alpha1_insights_JoinColumn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_JoinColumn_descriptor,
+        new java.lang.String[] { "FirstParentColumn", "SecondParentColumn", });
+    internal_static_api_v1alpha1_insights_Parent_descriptor =
+      getDescriptor().getMessageTypes().get(61);
+    internal_static_api_v1alpha1_insights_Parent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Parent_descriptor,
+        new java.lang.String[] { "Id", "Title", "RenamedColumns", });
+    internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_descriptor =
+      internal_static_api_v1alpha1_insights_Parent_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_insights_SelectNode_descriptor =
+      getDescriptor().getMessageTypes().get(62);
+    internal_static_api_v1alpha1_insights_SelectNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_SelectNode_descriptor,
+        new java.lang.String[] { "Columns", "RenamedColumns", });
+    internal_static_api_v1alpha1_insights_SelectNode_RenamedColumnsEntry_descriptor =
+      internal_static_api_v1alpha1_insights_SelectNode_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_insights_SelectNode_RenamedColumnsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_SelectNode_RenamedColumnsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_insights_JsonTarget_descriptor =
+      getDescriptor().getMessageTypes().get(63);
+    internal_static_api_v1alpha1_insights_JsonTarget_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_JsonTarget_descriptor,
+        new java.lang.String[] { "PathParts", "ColumnName", "ResultType", });
+    internal_static_api_v1alpha1_insights_JsonNode_descriptor =
+      getDescriptor().getMessageTypes().get(64);
+    internal_static_api_v1alpha1_insights_JsonNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_JsonNode_descriptor,
+        new java.lang.String[] { "Type", "JsonColumn", "Targets", "UnnestToColumnsNode", });
+    internal_static_api_v1alpha1_insights_UnnestToColumnsNode_descriptor =
+      getDescriptor().getMessageTypes().get(65);
+    internal_static_api_v1alpha1_insights_UnnestToColumnsNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_UnnestToColumnsNode_descriptor,
+        new java.lang.String[] { "UnnestTarget", "KeyTarget", "ValueTarget", "Columns", "PrimaryKeys", "JsonColumns", });
+    internal_static_api_v1alpha1_insights_Parameters_descriptor =
+      getDescriptor().getMessageTypes().get(66);
+    internal_static_api_v1alpha1_insights_Parameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Parameters_descriptor,
+        new java.lang.String[] { "Parameters", });
+    internal_static_api_v1alpha1_insights_Parameters_Parameter_descriptor =
+      internal_static_api_v1alpha1_insights_Parameters_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_insights_Parameters_Parameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Parameters_Parameter_descriptor,
+        new java.lang.String[] { "Value", "DataType", });
+    internal_static_api_v1alpha1_insights_Parameters_ParametersEntry_descriptor =
+      internal_static_api_v1alpha1_insights_Parameters_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_insights_Parameters_ParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_Parameters_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_insights_ValuesReplacement_descriptor =
+      getDescriptor().getMessageTypes().get(67);
+    internal_static_api_v1alpha1_insights_ValuesReplacement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ValuesReplacement_descriptor,
+        new java.lang.String[] { "TargetValue", "TargetDataType", "ReplacementValue", });
+    internal_static_api_v1alpha1_insights_ColumnReplacement_descriptor =
+      getDescriptor().getMessageTypes().get(68);
+    internal_static_api_v1alpha1_insights_ColumnReplacement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ColumnReplacement_descriptor,
+        new java.lang.String[] { "ColumnNames", "ValuesReplacements", });
+    internal_static_api_v1alpha1_insights_ReplaceNode_descriptor =
+      getDescriptor().getMessageTypes().get(69);
+    internal_static_api_v1alpha1_insights_ReplaceNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ReplaceNode_descriptor,
+        new java.lang.String[] { "ColumnReplacements", "IsComplex", });
+    internal_static_api_v1alpha1_insights_SortColumn_descriptor =
+      getDescriptor().getMessageTypes().get(70);
+    internal_static_api_v1alpha1_insights_SortColumn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_SortColumn_descriptor,
+        new java.lang.String[] { "ColumnName", "Ascending", });
+    internal_static_api_v1alpha1_insights_SortNode_descriptor =
+      getDescriptor().getMessageTypes().get(71);
+    internal_static_api_v1alpha1_insights_SortNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_SortNode_descriptor,
+        new java.lang.String[] { "SortColumns", });
+    internal_static_api_v1alpha1_insights_StringManipulationSplit_descriptor =
+      getDescriptor().getMessageTypes().get(72);
+    internal_static_api_v1alpha1_insights_StringManipulationSplit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_StringManipulationSplit_descriptor,
+        new java.lang.String[] { "SplitBy", "IsIndexExtraction", "IndexExtraction", });
+    internal_static_api_v1alpha1_insights_StringManipulationReplace_descriptor =
+      getDescriptor().getMessageTypes().get(73);
+    internal_static_api_v1alpha1_insights_StringManipulationReplace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_StringManipulationReplace_descriptor,
+        new java.lang.String[] { "Target", "Value", });
+    internal_static_api_v1alpha1_insights_StringManipulationNode_descriptor =
+      getDescriptor().getMessageTypes().get(74);
+    internal_static_api_v1alpha1_insights_StringManipulationNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_StringManipulationNode_descriptor,
+        new java.lang.String[] { "Type", "SourceColumnName", "TargetColumnName", "StringManipulationSplit", "StringManipulationReplace", });
     com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
