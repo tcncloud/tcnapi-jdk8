@@ -159,6 +159,86 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_UploadNewsArticleImageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_CreateClientArticleRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_CreateClientArticleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UpdateClientArticleRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_StoreClientArticleImageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_StoreClientArticleImageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UploadClientArticleImageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UploadClientArticleImageResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -270,12 +350,61 @@ public final class EntitiesProto {
       "\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom.New" +
       "sArticleImageR\005image\"_\n\036UploadNewsArticl" +
       "eImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1al" +
-      "pha1.newsroom.NewsArticleImageR\005imageB\256\001" +
-      "\n\'com.tcn.cloud.api.api.v1alpha1.newsroo" +
-      "mB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1." +
-      "Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V" +
-      "1alpha1\\Newsroom\\GPBMetadata\352\002\027Api::V1al" +
-      "pha1::Newsroomb\006proto3"
+      "pha1.newsroom.NewsArticleImageR\005image\"\222\001" +
+      "\n\032CreateClientArticleRequest\022\024\n\005title\030\001 " +
+      "\001(\tR\005title\022\030\n\007content\030\002 \001(\tR\007content\022\026\n\006" +
+      "author\030\003 \001(\tR\006author\022,\n\022image_reference_" +
+      "id\030\004 \001(\tR\020imageReferenceId\"q\n\033CreateClie" +
+      "ntArticleResponse\022R\n\017article_details\030\001 \001" +
+      "(\0132).api.v1alpha1.newsroom.NewsArticleDe" +
+      "tailsR\016articleDetails\"\253\001\n\032UpdateClientAr" +
+      "ticleRequest\022R\n\017article_details\030\001 \001(\0132)." +
+      "api.v1alpha1.newsroom.NewsArticleDetails" +
+      "R\016articleDetails\0229\n\nfield_mask\030d \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskR\tfieldMask\"q\n\033U" +
+      "pdateClientArticleResponse\022R\n\017article_de" +
+      "tails\030\001 \001(\0132).api.v1alpha1.newsroom.News" +
+      "ArticleDetailsR\016articleDetails\"\216\001\n\031ListC" +
+      "lientArticlesRequest\0226\n\010statuses\030\001 \003(\0162\032" +
+      ".api.commons.ArticleStatusR\010statuses\0229\n\n" +
+      "field_mask\030d \001(\0132\032.google.protobuf.Field" +
+      "MaskR\tfieldMask\"p\n\032ListClientArticlesRes" +
+      "ponse\022R\n\017article_details\030\001 \003(\0132).api.v1a" +
+      "lpha1.newsroom.NewsArticleDetailsR\016artic" +
+      "leDetails\"\234\001\n#CreatePublishedClientArtic" +
+      "leRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\r" +
+      "newArticleSid\022&\n\017display_to_user\030\002 \001(\010R\r" +
+      "displayToUser\022!\n\014article_link\030\003 \001(\tR\013art" +
+      "icleLink\"\222\001\n$CreatePublishedClientArticl" +
+      "eResponse\022j\n\031published_article_details\030\001" +
+      " \001(\0132..api.v1alpha1.newsroom.PublishedAr" +
+      "ticleDetailsR\027publishedArticleDetails\"^\n" +
+      "$GetPublishedClientArticleByIdRequest\0226\n" +
+      "\025published_article_sid\030\001 \001(\003B\0020\001R\023publis" +
+      "hedArticleSid\"\223\001\n%GetPublishedClientArti" +
+      "cleByIdResponse\022j\n\031published_article_det" +
+      "ails\030\001 \001(\0132..api.v1alpha1.newsroom.Publi" +
+      "shedArticleDetailsR\027publishedArticleDeta" +
+      "ils\"_\n\036StoreClientArticleImageRequest\022=\n" +
+      "\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom.New" +
+      "sArticleImageR\005image\"`\n\037StoreClientArtic" +
+      "leImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1a" +
+      "lpha1.newsroom.NewsArticleImageR\005image\"O" +
+      "\n!ListImagesForClientArticleRequest\022*\n\017n" +
+      "ew_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"" +
+      "}\n\"ListImagesForClientArticleResponse\022W\n" +
+      "\023news_article_images\030\001 \003(\0132\'.api.v1alpha" +
+      "1.newsroom.NewsArticleImageR\021newsArticle" +
+      "Images\"`\n\037UploadClientArticleImageReques" +
+      "t\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom" +
+      ".NewsArticleImageR\005image\"a\n UploadClient" +
+      "ArticleImageResponse\022=\n\005image\030\001 \001(\0132\'.ap" +
+      "i.v1alpha1.newsroom.NewsArticleImageR\005im" +
+      "ageB\256\001\n\'com.tcn.cloud.api.api.v1alpha1.n" +
+      "ewsroomB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1a" +
+      "lpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002" +
+      "!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Api" +
+      "::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -458,6 +587,102 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_UploadNewsArticleImageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_UploadNewsArticleImageResponse_descriptor,
+        new java.lang.String[] { "Image", });
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_CreateClientArticleRequest_descriptor,
+        new java.lang.String[] { "Title", "Content", "Author", "ImageReferenceId", });
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_api_v1alpha1_newsroom_CreateClientArticleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_CreateClientArticleResponse_descriptor,
+        new java.lang.String[] { "ArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UpdateClientArticleRequest_descriptor,
+        new java.lang.String[] { "ArticleDetails", "FieldMask", });
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UpdateClientArticleResponse_descriptor,
+        new java.lang.String[] { "ArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListClientArticlesRequest_descriptor,
+        new java.lang.String[] { "Statuses", "FieldMask", });
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListClientArticlesResponse_descriptor,
+        new java.lang.String[] { "ArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleRequest_descriptor,
+        new java.lang.String[] { "NewArticleSid", "DisplayToUser", "ArticleLink", });
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_CreatePublishedClientArticleResponse_descriptor,
+        new java.lang.String[] { "PublishedArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdRequest_descriptor,
+        new java.lang.String[] { "PublishedArticleSid", });
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_GetPublishedClientArticleByIdResponse_descriptor,
+        new java.lang.String[] { "PublishedArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_StoreClientArticleImageRequest_descriptor,
+        new java.lang.String[] { "Image", });
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_api_v1alpha1_newsroom_StoreClientArticleImageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_StoreClientArticleImageResponse_descriptor,
+        new java.lang.String[] { "Image", });
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleRequest_descriptor,
+        new java.lang.String[] { "NewArticleSid", });
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_ListImagesForClientArticleResponse_descriptor,
+        new java.lang.String[] { "NewsArticleImages", });
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UploadClientArticleImageRequest_descriptor,
+        new java.lang.String[] { "Image", });
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_api_v1alpha1_newsroom_UploadClientArticleImageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UploadClientArticleImageResponse_descriptor,
         new java.lang.String[] { "Image", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
