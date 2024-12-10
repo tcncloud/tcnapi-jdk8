@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     agentUserIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     scorecardIds_ = emptyLongList();
+    channelTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -354,6 +355,84 @@ private static final long serialVersionUID = 0L;
     return isDeleted_;
   }
 
+  public static final int CHANNEL_TYPES_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> channelTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType> channelTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>() {
+            public com.tcn.cloud.api.api.commons.ChannelType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return A list containing the channelTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelTypes_, channelTypes_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return The count of channelTypes.
+   */
+  @java.lang.Override
+  public int getChannelTypesCount() {
+    return channelTypes_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The channelTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index) {
+    return channelTypes_converter_.convert(channelTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for channelTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getChannelTypesValueList() {
+    return channelTypes_;
+  }
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of channelTypes at the given index.
+   */
+  @java.lang.Override
+  public int getChannelTypesValue(int index) {
+    return channelTypes_.get(index);
+  }
+  private int channelTypesMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -397,6 +476,13 @@ private static final long serialVersionUID = 0L;
     }
     if (isDeleted_ != false) {
       output.writeBool(11, isDeleted_);
+    }
+    if (getChannelTypesList().size() > 0) {
+      output.writeUInt32NoTag(114);
+      output.writeUInt32NoTag(channelTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < channelTypes_.size(); i++) {
+      output.writeEnumNoTag(channelTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -463,6 +549,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, isDeleted_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < channelTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(channelTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getChannelTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }channelTypesMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -498,6 +596,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsDeleted()
         != other.getIsDeleted()) return false;
+    if (!channelTypes_.equals(other.channelTypes_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -536,6 +635,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsDeleted());
+    if (getChannelTypesCount() > 0) {
+      hash = (37 * hash) + CHANNEL_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + channelTypes_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -688,6 +791,8 @@ private static final long serialVersionUID = 0L;
         returnFieldsBuilder_ = null;
       }
       isDeleted_ = false;
+      channelTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -731,6 +836,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.scorecardIds_ = scorecardIds_;
+      if (((bitField0_ & 0x00000080) != 0)) {
+        channelTypes_ = java.util.Collections.unmodifiableList(channelTypes_);
+        bitField0_ = (bitField0_ & ~0x00000080);
+      }
+      result.channelTypes_ = channelTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest result) {
@@ -851,6 +961,16 @@ private static final long serialVersionUID = 0L;
       if (other.getIsDeleted() != false) {
         setIsDeleted(other.getIsDeleted());
       }
+      if (!other.channelTypes_.isEmpty()) {
+        if (channelTypes_.isEmpty()) {
+          channelTypes_ = other.channelTypes_;
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          ensureChannelTypesIsMutable();
+          channelTypes_.addAll(other.channelTypes_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -940,6 +1060,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 88
+            case 112: {
+              int tmpRaw = input.readEnum();
+              ensureChannelTypesIsMutable();
+              channelTypes_.add(tmpRaw);
+              break;
+            } // case 112
+            case 114: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureChannelTypesIsMutable();
+                channelTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1900,6 +2037,194 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDeleted() {
       bitField0_ = (bitField0_ & ~0x00000040);
       isDeleted_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> channelTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureChannelTypesIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        channelTypes_ = new java.util.ArrayList<java.lang.Integer>(channelTypes_);
+        bitField0_ |= 0x00000080;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @return A list containing the channelTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelTypes_, channelTypes_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @return The count of channelTypes.
+     */
+    public int getChannelTypesCount() {
+      return channelTypes_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The channelTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index) {
+      return channelTypes_converter_.convert(channelTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The channelTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypes(
+        int index, com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelTypesIsMutable();
+      channelTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param value The channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannelTypes(com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelTypesIsMutable();
+      channelTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param values The channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannelTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ChannelType> values) {
+      ensureChannelTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.ChannelType value : values) {
+        channelTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChannelTypes() {
+      channelTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for channelTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getChannelTypesValueList() {
+      return java.util.Collections.unmodifiableList(channelTypes_);
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of channelTypes at the given index.
+     */
+    public int getChannelTypesValue(int index) {
+      return channelTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for channelTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypesValue(
+        int index, int value) {
+      ensureChannelTypesIsMutable();
+      channelTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param value The enum numeric value on the wire for channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannelTypesValue(int value) {
+      ensureChannelTypesIsMutable();
+      channelTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Filter by channel type.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+     * @param values The enum numeric values on the wire for channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannelTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureChannelTypesIsMutable();
+      for (int value : values) {
+        channelTypes_.add(value);
+      }
       onChanged();
       return this;
     }

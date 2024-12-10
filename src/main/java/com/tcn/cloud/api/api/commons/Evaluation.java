@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     callType_ = 0;
     customFields_ = java.util.Collections.emptyList();
     deletedBy_ = "";
+    channelType_ = 0;
   }
 
   @java.lang.Override
@@ -1291,6 +1292,32 @@ private static final long serialVersionUID = 0L;
     return isRecoverable_;
   }
 
+  public static final int CHANNEL_TYPE_FIELD_NUMBER = 22;
+  private int channelType_ = 0;
+  /**
+   * <pre>
+   * Channel type of the evaluated transcript.
+   * </pre>
+   *
+   * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+   * @return The enum numeric value on the wire for channelType.
+   */
+  @java.lang.Override public int getChannelTypeValue() {
+    return channelType_;
+  }
+  /**
+   * <pre>
+   * Channel type of the evaluated transcript.
+   * </pre>
+   *
+   * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1349,6 +1376,9 @@ private static final long serialVersionUID = 0L;
     }
     if (isRecoverable_ != false) {
       output.writeBool(20, isRecoverable_);
+    }
+    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+      output.writeEnum(22, channelType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1416,6 +1446,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, isRecoverable_);
     }
+    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(22, channelType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1466,6 +1500,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDeletedBy())) return false;
     if (getIsRecoverable()
         != other.getIsRecoverable()) return false;
+    if (channelType_ != other.channelType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1521,6 +1556,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_RECOVERABLE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsRecoverable());
+    hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + channelType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1692,6 +1729,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00001000);
       deletedBy_ = "";
       isRecoverable_ = false;
+      channelType_ = 0;
       return this;
     }
 
@@ -1789,6 +1827,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.isRecoverable_ = isRecoverable_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.channelType_ = channelType_;
       }
     }
 
@@ -1933,6 +1974,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsRecoverable() != false) {
         setIsRecoverable(other.getIsRecoverable());
       }
+      if (other.channelType_ != 0) {
+        setChannelTypeValue(other.getChannelTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2054,6 +2098,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 160
+            case 176: {
+              channelType_ = input.readEnum();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 176
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3615,6 +3664,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsRecoverable() {
       bitField0_ = (bitField0_ & ~0x00004000);
       isRecoverable_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int channelType_ = 0;
+    /**
+     * <pre>
+     * Channel type of the evaluated transcript.
+     * </pre>
+     *
+     * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+     * @return The enum numeric value on the wire for channelType.
+     */
+    @java.lang.Override public int getChannelTypeValue() {
+      return channelType_;
+    }
+    /**
+     * <pre>
+     * Channel type of the evaluated transcript.
+     * </pre>
+     *
+     * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+     * @param value The enum numeric value on the wire for channelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypeValue(int value) {
+      channelType_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channel type of the evaluated transcript.
+     * </pre>
+     *
+     * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+     * @return The channelType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Channel type of the evaluated transcript.
+     * </pre>
+     *
+     * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+     * @param value The channelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelType(com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00008000;
+      channelType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channel type of the evaluated transcript.
+     * </pre>
+     *
+     * <code>.api.commons.ChannelType channel_type = 22 [json_name = "channelType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChannelType() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      channelType_ = 0;
       onChanged();
       return this;
     }

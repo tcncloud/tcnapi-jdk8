@@ -237,4 +237,53 @@ public interface ListEvaluationsRequestOrBuilder extends
    * @return The isDeleted.
    */
   boolean getIsDeleted();
+
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return A list containing the channelTypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList();
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return The count of channelTypes.
+   */
+  int getChannelTypesCount();
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The channelTypes at the given index.
+   */
+  com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index);
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for channelTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getChannelTypesValueList();
+  /**
+   * <pre>
+   * Optional. Filter by channel type.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 14 [json_name = "channelTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of channelTypes at the given index.
+   */
+  int getChannelTypesValue(int index);
 }

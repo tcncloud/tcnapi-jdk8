@@ -239,6 +239,7 @@ private static final long serialVersionUID = 0L;
    *|              agent_user_id |    string |               = |       any |
    *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
    *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|               channel_type |   integer |               = |       any |
    *+----------------------------+-----------+-----------------+-----------+
    *
    *Examples:
@@ -280,6 +281,7 @@ private static final long serialVersionUID = 0L;
    *|              agent_user_id |    string |               = |       any |
    *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
    *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|               channel_type |   integer |               = |       any |
    *+----------------------------+-----------+-----------------+-----------+
    *
    *Examples:
@@ -1230,6 +1232,7 @@ private static final long serialVersionUID = 0L;
      *|              agent_user_id |    string |               = |       any |
      *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
      *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|               channel_type |   integer |               = |       any |
      *+----------------------------+-----------+-----------------+-----------+
      *
      *Examples:
@@ -1270,6 +1273,7 @@ private static final long serialVersionUID = 0L;
      *|              agent_user_id |    string |               = |       any |
      *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
      *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|               channel_type |   integer |               = |       any |
      *+----------------------------+-----------+-----------------+-----------+
      *
      *Examples:
@@ -1311,6 +1315,7 @@ private static final long serialVersionUID = 0L;
      *|              agent_user_id |    string |               = |       any |
      *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
      *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|               channel_type |   integer |               = |       any |
      *+----------------------------+-----------+-----------------+-----------+
      *
      *Examples:
@@ -1348,6 +1353,7 @@ private static final long serialVersionUID = 0L;
      *|              agent_user_id |    string |               = |       any |
      *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
      *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|               channel_type |   integer |               = |       any |
      *+----------------------------+-----------+-----------------+-----------+
      *
      *Examples:
@@ -1382,6 +1388,7 @@ private static final long serialVersionUID = 0L;
      *|              agent_user_id |    string |               = |       any |
      *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
      *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|               channel_type |   integer |               = |       any |
      *+----------------------------+-----------+-----------------+-----------+
      *
      *Examples:

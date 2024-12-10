@@ -128,6 +128,7 @@ public interface ListSmartEvaluationsRequestOrBuilder extends
    *|              agent_user_id |    string |               = |       any |
    *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
    *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|               channel_type |   integer |               = |       any |
    *+----------------------------+-----------+-----------------+-----------+
    *
    *Examples:
@@ -157,6 +158,7 @@ public interface ListSmartEvaluationsRequestOrBuilder extends
    *|              agent_user_id |    string |               = |       any |
    *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
    *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|               channel_type |   integer |               = |       any |
    *+----------------------------+-----------+-----------------+-----------+
    *
    *Examples:
