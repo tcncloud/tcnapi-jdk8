@@ -247,4 +247,33 @@ public interface InsightOrBuilder extends
    * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
+   * @return Whether the pipelineNode field is set.
+   */
+  boolean hasPipelineNode();
+  /**
+   * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
+   * @return The pipelineNode.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineNode getPipelineNode();
+  /**
+   * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineNodeOrBuilder getPipelineNodeOrBuilder();
+
+  com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }
