@@ -32,15 +32,19 @@ public interface ContactManagerListOrBuilder extends
   long getProjectId();
 
   /**
-   * <code>string file_name = 4 [json_name = "fileName"];</code>
+   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=95
    * @return The fileName.
    */
-  java.lang.String getFileName();
+  @java.lang.Deprecated java.lang.String getFileName();
   /**
-   * <code>string file_name = 4 [json_name = "fileName"];</code>
+   * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=95
    * @return The bytes for fileName.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFileNameBytes();
 
   /**
@@ -60,47 +64,57 @@ public interface ContactManagerListOrBuilder extends
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
    * @return A list containing the listDetails.
    */
-  java.util.List<java.lang.String>
+  @java.lang.Deprecated java.util.List<java.lang.String>
       getListDetailsList();
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
    * @return The count of listDetails.
    */
-  int getListDetailsCount();
+  @java.lang.Deprecated int getListDetailsCount();
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
    * @param index The index of the element to return.
    * @return The listDetails at the given index.
    */
-  java.lang.String getListDetails(int index);
+  @java.lang.Deprecated java.lang.String getListDetails(int index);
   /**
    * <pre>
    * List of Columns In The Contact List. UI to render table based on this list
    * </pre>
    *
-   * <code>repeated string list_details = 6 [json_name = "listDetails"];</code>
+   * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
    * @param index The index of the value to return.
    * @return The bytes of the listDetails at the given index.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getListDetailsBytes(int index);
 
   /**
-   * <code>int64 ttl = 7 [json_name = "ttl", jstype = JS_STRING];</code>
+   * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=99
    * @return The ttl.
    */
-  long getTtl();
+  @java.lang.Deprecated long getTtl();
 
   /**
    * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated"];</code>
@@ -133,4 +147,24 @@ public interface ContactManagerListOrBuilder extends
    * @return The status.
    */
   com.tcn.cloud.api.api.commons.ContactListStatus getStatus();
+
+  /**
+   * <pre>
+   *unique user friendly name for contact list
+   * </pre>
+   *
+   * <code>string contact_manager_list_name = 11 [json_name = "contactManagerListName"];</code>
+   * @return The contactManagerListName.
+   */
+  java.lang.String getContactManagerListName();
+  /**
+   * <pre>
+   *unique user friendly name for contact list
+   * </pre>
+   *
+   * <code>string contact_manager_list_name = 11 [json_name = "contactManagerListName"];</code>
+   * @return The bytes for contactManagerListName.
+   */
+  com.google.protobuf.ByteString
+      getContactManagerListNameBytes();
 }

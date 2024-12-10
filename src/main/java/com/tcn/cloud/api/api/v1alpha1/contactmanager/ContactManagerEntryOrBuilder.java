@@ -22,39 +22,51 @@ public interface ContactManagerEntryOrBuilder extends
   @java.lang.Deprecated long getContactManagerEntryListId();
 
   /**
-   * <code>string key = 3 [json_name = "key"];</code>
+   * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=80
    * @return The key.
    */
-  java.lang.String getKey();
+  @java.lang.Deprecated java.lang.String getKey();
   /**
-   * <code>string key = 3 [json_name = "key"];</code>
+   * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=80
    * @return The bytes for key.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getKeyBytes();
 
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The value.
    */
-  java.lang.String getValue();
+  @java.lang.Deprecated java.lang.String getValue();
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The bytes for value.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getValueBytes();
 
   /**
-   * <code>string type = 5 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The type.
    */
-  java.lang.String getType();
+  @java.lang.Deprecated java.lang.String getType();
   /**
-   * <code>string type = 5 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The bytes for type.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getTypeBytes();
 
   /**
@@ -82,4 +94,74 @@ public interface ContactManagerEntryOrBuilder extends
    * @return The status.
    */
   com.tcn.cloud.api.api.commons.ContactEntryStatus getStatus();
+
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  boolean hasDateModified();
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  com.google.protobuf.Timestamp getDateModified();
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+
+  /**
+   * <code>int64 ttl = 9 [json_name = "ttl"];</code>
+   * @return The ttl.
+   */
+  long getTtl();
+
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @return A list containing the fileName.
+   */
+  java.util.List<java.lang.String>
+      getFileNameList();
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @return The count of fileName.
+   */
+  int getFileNameCount();
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @param index The index of the element to return.
+   * @return The fileName at the given index.
+   */
+  java.lang.String getFileName(int index);
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the fileName at the given index.
+   */
+  com.google.protobuf.ByteString
+      getFileNameBytes(int index);
+
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> 
+      getFieldList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index);
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  int getFieldCount();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+      getFieldOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
+      int index);
 }
