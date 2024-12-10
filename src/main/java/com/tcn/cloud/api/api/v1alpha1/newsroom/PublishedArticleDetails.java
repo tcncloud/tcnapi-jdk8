@@ -148,6 +148,22 @@ private static final long serialVersionUID = 0L;
     return displayToUser_;
   }
 
+  public static final int ALWAYS_DISPLAY_FIELD_NUMBER = 5;
+  private boolean alwaysDisplay_ = false;
+  /**
+   * <pre>
+   * this flag determines if we show to the user every time
+   * they log in (for compliance for example)
+   * </pre>
+   *
+   * <code>bool always_display = 5 [json_name = "alwaysDisplay"];</code>
+   * @return The alwaysDisplay.
+   */
+  @java.lang.Override
+  public boolean getAlwaysDisplay() {
+    return alwaysDisplay_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -174,6 +190,9 @@ private static final long serialVersionUID = 0L;
     if (displayToUser_ != false) {
       output.writeBool(4, displayToUser_);
     }
+    if (alwaysDisplay_ != false) {
+      output.writeBool(5, alwaysDisplay_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -198,6 +217,10 @@ private static final long serialVersionUID = 0L;
     if (displayToUser_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, displayToUser_);
+    }
+    if (alwaysDisplay_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, alwaysDisplay_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -228,6 +251,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getDisplayToUser()
         != other.getDisplayToUser()) return false;
+    if (getAlwaysDisplay()
+        != other.getAlwaysDisplay()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -253,6 +278,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DISPLAY_TO_USER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDisplayToUser());
+    hash = (37 * hash) + ALWAYS_DISPLAY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAlwaysDisplay());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,6 +428,7 @@ private static final long serialVersionUID = 0L;
         datePublishedBuilder_ = null;
       }
       displayToUser_ = false;
+      alwaysDisplay_ = false;
       return this;
     }
 
@@ -448,6 +477,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.displayToUser_ = displayToUser_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.alwaysDisplay_ = alwaysDisplay_;
       }
     }
 
@@ -507,6 +539,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDisplayToUser() != false) {
         setDisplayToUser(other.getDisplayToUser());
       }
+      if (other.getAlwaysDisplay() != false) {
+        setAlwaysDisplay(other.getAlwaysDisplay());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -557,6 +592,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              alwaysDisplay_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -968,6 +1008,53 @@ private static final long serialVersionUID = 0L;
     public Builder clearDisplayToUser() {
       bitField0_ = (bitField0_ & ~0x00000008);
       displayToUser_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean alwaysDisplay_ ;
+    /**
+     * <pre>
+     * this flag determines if we show to the user every time
+     * they log in (for compliance for example)
+     * </pre>
+     *
+     * <code>bool always_display = 5 [json_name = "alwaysDisplay"];</code>
+     * @return The alwaysDisplay.
+     */
+    @java.lang.Override
+    public boolean getAlwaysDisplay() {
+      return alwaysDisplay_;
+    }
+    /**
+     * <pre>
+     * this flag determines if we show to the user every time
+     * they log in (for compliance for example)
+     * </pre>
+     *
+     * <code>bool always_display = 5 [json_name = "alwaysDisplay"];</code>
+     * @param value The alwaysDisplay to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAlwaysDisplay(boolean value) {
+
+      alwaysDisplay_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * this flag determines if we show to the user every time
+     * they log in (for compliance for example)
+     * </pre>
+     *
+     * <code>bool always_display = 5 [json_name = "alwaysDisplay"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAlwaysDisplay() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      alwaysDisplay_ = false;
       onChanged();
       return this;
     }

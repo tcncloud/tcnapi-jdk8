@@ -872,6 +872,14 @@ public enum Permission
   PERMISSION_NEWSROOM_PUBLISH(4201),
   /**
    * <pre>
+   * Enables custom newsroom articles managing within an organization
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_CLIENT_CONTROL = 4202 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_CLIENT_CONTROL(4202),
+  /**
+   * <pre>
    * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
    * </pre>
    *
@@ -1740,6 +1748,14 @@ public enum Permission
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
   /**
    * <pre>
+   * Enables custom newsroom articles managing within an organization
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_CLIENT_CONTROL = 4202 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_CLIENT_CONTROL_VALUE = 4202;
+  /**
+   * <pre>
    * ACCESS the Contact Manager APP: Routing, Listing the Contact Manager, List,Get, KYC etc.
    * </pre>
    *
@@ -1882,6 +1898,7 @@ public enum Permission
       case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;
+      case 4202: return PERMISSION_NEWSROOM_CLIENT_CONTROL;
       case 5100: return PERMISSION_CONTACTMANAGER_ADMIN;
       case 5101: return PERMISSION_CONTACTMANAGER_APP;
       default: return null;

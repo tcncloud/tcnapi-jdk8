@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\211\022\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\361 \n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -84,12 +84,59 @@ public final class ServiceProto {
       "oadNewsArticleImageRequest\0325.api.v1alpha" +
       "1.newsroom.UploadNewsArticleImageRespons" +
       "e\"B\272\270\221\002\005\n\003\010\350 \202\323\344\223\0022\"-/api/v1alpha1/newsr" +
-      "oom/uploadnewsarticleimage:\001*B\255\001\n\'com.tc" +
-      "n.cloud.api.api.v1alpha1.newsroomB\014Servi" +
-      "ceProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312" +
-      "\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\N" +
-      "ewsroom\\GPBMetadata\352\002\027Api::V1alpha1::New" +
-      "sroomb\006proto3"
+      "oom/uploadnewsarticleimage:\001*\022\275\001\n\023Create" +
+      "ClientArticle\0221.api.v1alpha1.newsroom.Cr" +
+      "eateClientArticleRequest\0322.api.v1alpha1." +
+      "newsroom.CreateClientArticleResponse\"?\272\270" +
+      "\221\002\005\n\003\010\352 \202\323\344\223\002/\"*/api/v1alpha1/newsroom/c" +
+      "reateclientarticle:\001*\022\275\001\n\023UpdateClientAr" +
+      "ticle\0221.api.v1alpha1.newsroom.UpdateClie" +
+      "ntArticleRequest\0322.api.v1alpha1.newsroom" +
+      ".UpdateClientArticleResponse\"?\272\270\221\002\005\n\003\010\352 " +
+      "\202\323\344\223\002/\"*/api/v1alpha1/newsroom/updatecli" +
+      "entarticle:\001*\022\271\001\n\022ListClientArticles\0220.a" +
+      "pi.v1alpha1.newsroom.ListClientArticlesR" +
+      "equest\0321.api.v1alpha1.newsroom.ListClien" +
+      "tArticlesResponse\">\272\270\221\002\005\n\003\010\352 \202\323\344\223\002.\")/ap" +
+      "i/v1alpha1/newsroom/listclientarticles:\001" +
+      "*\022\341\001\n\034CreatePublishedClientArticle\022:.api" +
+      ".v1alpha1.newsroom.CreatePublishedClient" +
+      "ArticleRequest\032;.api.v1alpha1.newsroom.C" +
+      "reatePublishedClientArticleResponse\"H\272\270\221" +
+      "\002\005\n\003\010\352 \202\323\344\223\0028\"3/api/v1alpha1/newsroom/cr" +
+      "eatepublishedclientarticle:\001*\022\345\001\n\035GetPub" +
+      "lishedClientArticleById\022;.api.v1alpha1.n" +
+      "ewsroom.GetPublishedClientArticleByIdReq" +
+      "uest\032<.api.v1alpha1.newsroom.GetPublishe" +
+      "dClientArticleByIdResponse\"I\272\270\221\002\005\n\003\010\352 \202\323" +
+      "\344\223\0029\"4/api/v1alpha1/newsroom/getpublishe" +
+      "dclientarticlebyid:\001*\022\315\001\n\027StoreClientArt" +
+      "icleImage\0225.api.v1alpha1.newsroom.StoreC" +
+      "lientArticleImageRequest\0326.api.v1alpha1." +
+      "newsroom.StoreClientArticleImageResponse" +
+      "\"C\272\270\221\002\005\n\003\010\352 \202\323\344\223\0023\"./api/v1alpha1/newsro" +
+      "om/storeclientarticleimage:\001*\022\331\001\n\032ListIm" +
+      "agesForClientArticle\0228.api.v1alpha1.news" +
+      "room.ListImagesForClientArticleRequest\0329" +
+      ".api.v1alpha1.newsroom.ListImagesForClie" +
+      "ntArticleResponse\"F\272\270\221\002\005\n\003\010\352 \202\323\344\223\0026\"1/ap" +
+      "i/v1alpha1/newsroom/listimagesforclienta" +
+      "rticle:\001*\022\321\001\n\030UploadClientArticleImage\0226" +
+      ".api.v1alpha1.newsroom.UploadClientArtic" +
+      "leImageRequest\0327.api.v1alpha1.newsroom.U" +
+      "ploadClientArticleImageResponse\"D\272\270\221\002\005\n\003" +
+      "\010\352 \202\323\344\223\0024\"//api/v1alpha1/newsroom/upload" +
+      "clientarticleimage:\001*\022\335\001\n\033ListPublishedC" +
+      "lientArticles\0229.api.v1alpha1.newsroom.Li" +
+      "stPublishedClientArticlesRequest\032:.api.v" +
+      "1alpha1.newsroom.ListPublishedClientArti" +
+      "clesResponse\"G\272\270\221\002\005\n\003\010\347 \202\323\344\223\0027\"2/api/v1a" +
+      "lpha1/newsroom/listpublishedclientarticl" +
+      "es:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1" +
+      ".newsroomB\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1" +
+      "alpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342" +
+      "\002!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Ap" +
+      "i::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -80,4 +80,15 @@ public interface PublishedArticleDetailsOrBuilder extends
    * @return The displayToUser.
    */
   boolean getDisplayToUser();
+
+  /**
+   * <pre>
+   * this flag determines if we show to the user every time
+   * they log in (for compliance for example)
+   * </pre>
+   *
+   * <code>bool always_display = 5 [json_name = "alwaysDisplay"];</code>
+   * @return The alwaysDisplay.
+   */
+  boolean getAlwaysDisplay();
 }

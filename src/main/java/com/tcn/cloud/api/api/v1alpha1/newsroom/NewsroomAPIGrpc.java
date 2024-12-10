@@ -392,6 +392,285 @@ public final class NewsroomAPIGrpc {
     return getUploadNewsArticleImageMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> getCreateClientArticleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateClientArticle",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> getCreateClientArticleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> getCreateClientArticleMethod;
+    if ((getCreateClientArticleMethod = NewsroomAPIGrpc.getCreateClientArticleMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getCreateClientArticleMethod = NewsroomAPIGrpc.getCreateClientArticleMethod) == null) {
+          NewsroomAPIGrpc.getCreateClientArticleMethod = getCreateClientArticleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateClientArticle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("CreateClientArticle"))
+              .build();
+        }
+      }
+    }
+    return getCreateClientArticleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> getUpdateClientArticleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateClientArticle",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> getUpdateClientArticleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> getUpdateClientArticleMethod;
+    if ((getUpdateClientArticleMethod = NewsroomAPIGrpc.getUpdateClientArticleMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getUpdateClientArticleMethod = NewsroomAPIGrpc.getUpdateClientArticleMethod) == null) {
+          NewsroomAPIGrpc.getUpdateClientArticleMethod = getUpdateClientArticleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateClientArticle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("UpdateClientArticle"))
+              .build();
+        }
+      }
+    }
+    return getUpdateClientArticleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> getListClientArticlesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListClientArticles",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> getListClientArticlesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> getListClientArticlesMethod;
+    if ((getListClientArticlesMethod = NewsroomAPIGrpc.getListClientArticlesMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getListClientArticlesMethod = NewsroomAPIGrpc.getListClientArticlesMethod) == null) {
+          NewsroomAPIGrpc.getListClientArticlesMethod = getListClientArticlesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListClientArticles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("ListClientArticles"))
+              .build();
+        }
+      }
+    }
+    return getListClientArticlesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> getCreatePublishedClientArticleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePublishedClientArticle",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> getCreatePublishedClientArticleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> getCreatePublishedClientArticleMethod;
+    if ((getCreatePublishedClientArticleMethod = NewsroomAPIGrpc.getCreatePublishedClientArticleMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getCreatePublishedClientArticleMethod = NewsroomAPIGrpc.getCreatePublishedClientArticleMethod) == null) {
+          NewsroomAPIGrpc.getCreatePublishedClientArticleMethod = getCreatePublishedClientArticleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePublishedClientArticle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("CreatePublishedClientArticle"))
+              .build();
+        }
+      }
+    }
+    return getCreatePublishedClientArticleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> getGetPublishedClientArticleByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPublishedClientArticleById",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> getGetPublishedClientArticleByIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> getGetPublishedClientArticleByIdMethod;
+    if ((getGetPublishedClientArticleByIdMethod = NewsroomAPIGrpc.getGetPublishedClientArticleByIdMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getGetPublishedClientArticleByIdMethod = NewsroomAPIGrpc.getGetPublishedClientArticleByIdMethod) == null) {
+          NewsroomAPIGrpc.getGetPublishedClientArticleByIdMethod = getGetPublishedClientArticleByIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPublishedClientArticleById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("GetPublishedClientArticleById"))
+              .build();
+        }
+      }
+    }
+    return getGetPublishedClientArticleByIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> getStoreClientArticleImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StoreClientArticleImage",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> getStoreClientArticleImageMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> getStoreClientArticleImageMethod;
+    if ((getStoreClientArticleImageMethod = NewsroomAPIGrpc.getStoreClientArticleImageMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getStoreClientArticleImageMethod = NewsroomAPIGrpc.getStoreClientArticleImageMethod) == null) {
+          NewsroomAPIGrpc.getStoreClientArticleImageMethod = getStoreClientArticleImageMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StoreClientArticleImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("StoreClientArticleImage"))
+              .build();
+        }
+      }
+    }
+    return getStoreClientArticleImageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> getListImagesForClientArticleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListImagesForClientArticle",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> getListImagesForClientArticleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> getListImagesForClientArticleMethod;
+    if ((getListImagesForClientArticleMethod = NewsroomAPIGrpc.getListImagesForClientArticleMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getListImagesForClientArticleMethod = NewsroomAPIGrpc.getListImagesForClientArticleMethod) == null) {
+          NewsroomAPIGrpc.getListImagesForClientArticleMethod = getListImagesForClientArticleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListImagesForClientArticle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("ListImagesForClientArticle"))
+              .build();
+        }
+      }
+    }
+    return getListImagesForClientArticleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> getUploadClientArticleImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadClientArticleImage",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> getUploadClientArticleImageMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> getUploadClientArticleImageMethod;
+    if ((getUploadClientArticleImageMethod = NewsroomAPIGrpc.getUploadClientArticleImageMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getUploadClientArticleImageMethod = NewsroomAPIGrpc.getUploadClientArticleImageMethod) == null) {
+          NewsroomAPIGrpc.getUploadClientArticleImageMethod = getUploadClientArticleImageMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadClientArticleImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("UploadClientArticleImage"))
+              .build();
+        }
+      }
+    }
+    return getUploadClientArticleImageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> getListPublishedClientArticlesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPublishedClientArticles",
+      requestType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest,
+      com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> getListPublishedClientArticlesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> getListPublishedClientArticlesMethod;
+    if ((getListPublishedClientArticlesMethod = NewsroomAPIGrpc.getListPublishedClientArticlesMethod) == null) {
+      synchronized (NewsroomAPIGrpc.class) {
+        if ((getListPublishedClientArticlesMethod = NewsroomAPIGrpc.getListPublishedClientArticlesMethod) == null) {
+          NewsroomAPIGrpc.getListPublishedClientArticlesMethod = getListPublishedClientArticlesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest, com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPublishedClientArticles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new NewsroomAPIMethodDescriptorSupplier("ListPublishedClientArticles"))
+              .build();
+        }
+      }
+    }
+    return getListPublishedClientArticlesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -564,6 +843,96 @@ public final class NewsroomAPIGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadNewsArticleImageMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * create a client managed news article
+     * </pre>
+     */
+    default void createClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateClientArticleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update a client managed news article
+     * </pre>
+     */
+    default void updateClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateClientArticleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list client managed news articles
+     * </pre>
+     */
+    default void listClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListClientArticlesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * create published client article
+     * </pre>
+     */
+    default void createPublishedClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePublishedClientArticleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get published client article details by the id
+     * </pre>
+     */
+    default void getPublishedClientArticleById(com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublishedClientArticleByIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client news article
+     * </pre>
+     */
+    default void storeClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStoreClientArticleImageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list newsroom client images
+     * </pre>
+     */
+    default void listImagesForClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListImagesForClientArticleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client article
+     * </pre>
+     */
+    default void uploadClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadClientArticleImageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list published client articles
+     * </pre>
+     */
+    default void listPublishedClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPublishedClientArticlesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -734,6 +1103,105 @@ public final class NewsroomAPIGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUploadNewsArticleImageMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * create a client managed news article
+     * </pre>
+     */
+    public void createClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateClientArticleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update a client managed news article
+     * </pre>
+     */
+    public void updateClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateClientArticleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list client managed news articles
+     * </pre>
+     */
+    public void listClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListClientArticlesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * create published client article
+     * </pre>
+     */
+    public void createPublishedClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePublishedClientArticleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get published client article details by the id
+     * </pre>
+     */
+    public void getPublishedClientArticleById(com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPublishedClientArticleByIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client news article
+     * </pre>
+     */
+    public void storeClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStoreClientArticleImageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list newsroom client images
+     * </pre>
+     */
+    public void listImagesForClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListImagesForClientArticleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client article
+     * </pre>
+     */
+    public void uploadClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadClientArticleImageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list published client articles
+     * </pre>
+     */
+    public void listPublishedClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPublishedClientArticlesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -875,6 +1343,96 @@ public final class NewsroomAPIGrpc {
     public com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageResponse uploadNewsArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUploadNewsArticleImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * create a client managed news article
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse createClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateClientArticleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * update a client managed news article
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse updateClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateClientArticleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * list client managed news articles
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse listClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListClientArticlesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * create published client article
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse createPublishedClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePublishedClientArticleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * get published client article details by the id
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse getPublishedClientArticleById(com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPublishedClientArticleByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client news article
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse storeClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStoreClientArticleImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * list newsroom client images
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse listImagesForClientArticle(com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListImagesForClientArticleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client article
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse uploadClientArticleImage(com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadClientArticleImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * list published client articles
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse listPublishedClientArticles(com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPublishedClientArticlesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1030,6 +1588,105 @@ public final class NewsroomAPIGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUploadNewsArticleImageMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * create a client managed news article
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse> createClientArticle(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateClientArticleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * update a client managed news article
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse> updateClientArticle(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateClientArticleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * list client managed news articles
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse> listClientArticles(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListClientArticlesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * create published client article
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse> createPublishedClientArticle(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePublishedClientArticleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * get published client article details by the id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse> getPublishedClientArticleById(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPublishedClientArticleByIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client news article
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse> storeClientArticleImage(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStoreClientArticleImageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * list newsroom client images
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse> listImagesForClientArticle(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListImagesForClientArticleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * upload newsroom image for the client article
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse> uploadClientArticleImage(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadClientArticleImageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * list published client articles
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse> listPublishedClientArticles(
+        com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPublishedClientArticlesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_NEWS_ARTICLE = 0;
@@ -1044,6 +1701,15 @@ public final class NewsroomAPIGrpc {
   private static final int METHODID_STORE_NEWS_ARTICLE_IMAGE = 9;
   private static final int METHODID_LIST_IMAGES_FOR_NEWS_ARTICLE = 10;
   private static final int METHODID_UPLOAD_NEWS_ARTICLE_IMAGE = 11;
+  private static final int METHODID_CREATE_CLIENT_ARTICLE = 12;
+  private static final int METHODID_UPDATE_CLIENT_ARTICLE = 13;
+  private static final int METHODID_LIST_CLIENT_ARTICLES = 14;
+  private static final int METHODID_CREATE_PUBLISHED_CLIENT_ARTICLE = 15;
+  private static final int METHODID_GET_PUBLISHED_CLIENT_ARTICLE_BY_ID = 16;
+  private static final int METHODID_STORE_CLIENT_ARTICLE_IMAGE = 17;
+  private static final int METHODID_LIST_IMAGES_FOR_CLIENT_ARTICLE = 18;
+  private static final int METHODID_UPLOAD_CLIENT_ARTICLE_IMAGE = 19;
+  private static final int METHODID_LIST_PUBLISHED_CLIENT_ARTICLES = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1109,6 +1775,42 @@ public final class NewsroomAPIGrpc {
         case METHODID_UPLOAD_NEWS_ARTICLE_IMAGE:
           serviceImpl.uploadNewsArticleImage((com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_CLIENT_ARTICLE:
+          serviceImpl.createClientArticle((com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_CLIENT_ARTICLE:
+          serviceImpl.updateClientArticle((com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse>) responseObserver);
+          break;
+        case METHODID_LIST_CLIENT_ARTICLES:
+          serviceImpl.listClientArticles((com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PUBLISHED_CLIENT_ARTICLE:
+          serviceImpl.createPublishedClientArticle((com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse>) responseObserver);
+          break;
+        case METHODID_GET_PUBLISHED_CLIENT_ARTICLE_BY_ID:
+          serviceImpl.getPublishedClientArticleById((com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse>) responseObserver);
+          break;
+        case METHODID_STORE_CLIENT_ARTICLE_IMAGE:
+          serviceImpl.storeClientArticleImage((com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse>) responseObserver);
+          break;
+        case METHODID_LIST_IMAGES_FOR_CLIENT_ARTICLE:
+          serviceImpl.listImagesForClientArticle((com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_CLIENT_ARTICLE_IMAGE:
+          serviceImpl.uploadClientArticleImage((com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse>) responseObserver);
+          break;
+        case METHODID_LIST_PUBLISHED_CLIENT_ARTICLES:
+          serviceImpl.listPublishedClientArticles((com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1212,6 +1914,69 @@ public final class NewsroomAPIGrpc {
               com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageRequest,
               com.tcn.cloud.api.api.v1alpha1.newsroom.UploadNewsArticleImageResponse>(
                 service, METHODID_UPLOAD_NEWS_ARTICLE_IMAGE)))
+        .addMethod(
+          getCreateClientArticleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.CreateClientArticleResponse>(
+                service, METHODID_CREATE_CLIENT_ARTICLE)))
+        .addMethod(
+          getUpdateClientArticleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.UpdateClientArticleResponse>(
+                service, METHODID_UPDATE_CLIENT_ARTICLE)))
+        .addMethod(
+          getListClientArticlesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListClientArticlesResponse>(
+                service, METHODID_LIST_CLIENT_ARTICLES)))
+        .addMethod(
+          getCreatePublishedClientArticleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.CreatePublishedClientArticleResponse>(
+                service, METHODID_CREATE_PUBLISHED_CLIENT_ARTICLE)))
+        .addMethod(
+          getGetPublishedClientArticleByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedClientArticleByIdResponse>(
+                service, METHODID_GET_PUBLISHED_CLIENT_ARTICLE_BY_ID)))
+        .addMethod(
+          getStoreClientArticleImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.StoreClientArticleImageResponse>(
+                service, METHODID_STORE_CLIENT_ARTICLE_IMAGE)))
+        .addMethod(
+          getListImagesForClientArticleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListImagesForClientArticleResponse>(
+                service, METHODID_LIST_IMAGES_FOR_CLIENT_ARTICLE)))
+        .addMethod(
+          getUploadClientArticleImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.UploadClientArticleImageResponse>(
+                service, METHODID_UPLOAD_CLIENT_ARTICLE_IMAGE)))
+        .addMethod(
+          getListPublishedClientArticlesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesRequest,
+              com.tcn.cloud.api.api.v1alpha1.newsroom.ListPublishedClientArticlesResponse>(
+                service, METHODID_LIST_PUBLISHED_CLIENT_ARTICLES)))
         .build();
   }
 
@@ -1272,6 +2037,15 @@ public final class NewsroomAPIGrpc {
               .addMethod(getStoreNewsArticleImageMethod())
               .addMethod(getListImagesForNewsArticleMethod())
               .addMethod(getUploadNewsArticleImageMethod())
+              .addMethod(getCreateClientArticleMethod())
+              .addMethod(getUpdateClientArticleMethod())
+              .addMethod(getListClientArticlesMethod())
+              .addMethod(getCreatePublishedClientArticleMethod())
+              .addMethod(getGetPublishedClientArticleByIdMethod())
+              .addMethod(getStoreClientArticleImageMethod())
+              .addMethod(getListImagesForClientArticleMethod())
+              .addMethod(getUploadClientArticleImageMethod())
+              .addMethod(getListPublishedClientArticlesMethod())
               .build();
         }
       }
