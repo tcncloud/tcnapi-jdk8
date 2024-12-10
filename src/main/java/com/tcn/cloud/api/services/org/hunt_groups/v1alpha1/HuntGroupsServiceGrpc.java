@@ -483,6 +483,68 @@ public final class HuntGroupsServiceGrpc {
     return getDeleteAgentClientInfoDisplayTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignAgentClientInfoDisplayTemplateToHuntGroups",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod;
+    if ((getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod = HuntGroupsServiceGrpc.getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod = HuntGroupsServiceGrpc.getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod) == null) {
+          HuntGroupsServiceGrpc.getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod = getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignAgentClientInfoDisplayTemplateToHuntGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("AssignAgentClientInfoDisplayTemplateToHuntGroups"))
+              .build();
+        }
+      }
+    }
+    return getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnassignAgentClientInfoDisplayTemplateFromHuntGroups",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod;
+    if ((getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod = HuntGroupsServiceGrpc.getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod = HuntGroupsServiceGrpc.getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod) == null) {
+          HuntGroupsServiceGrpc.getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod = getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignAgentClientInfoDisplayTemplateFromHuntGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("UnassignAgentClientInfoDisplayTemplateFromHuntGroups"))
+              .build();
+        }
+      }
+    }
+    return getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -693,6 +755,26 @@ public final class HuntGroupsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentClientInfoDisplayTemplateMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignAgentClientInfoDisplayTemplateToHuntGroups assigns a display template to the specified groups.
+     * </pre>
+     */
+    default void assignAgentClientInfoDisplayTemplateToHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignAgentClientInfoDisplayTemplateFromHuntGroups removes display templates from the specified groups.
+     * </pre>
+     */
+    default void unassignAgentClientInfoDisplayTemplateFromHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -902,6 +984,28 @@ public final class HuntGroupsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAgentClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignAgentClientInfoDisplayTemplateToHuntGroups assigns a display template to the specified groups.
+     * </pre>
+     */
+    public void assignAgentClientInfoDisplayTemplateToHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignAgentClientInfoDisplayTemplateFromHuntGroups removes display templates from the specified groups.
+     * </pre>
+     */
+    public void unassignAgentClientInfoDisplayTemplateFromHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1082,6 +1186,26 @@ public final class HuntGroupsServiceGrpc {
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateResponse deleteAgentClientInfoDisplayTemplate(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAgentClientInfoDisplayTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AssignAgentClientInfoDisplayTemplateToHuntGroups assigns a display template to the specified groups.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse assignAgentClientInfoDisplayTemplateToHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignAgentClientInfoDisplayTemplateFromHuntGroups removes display templates from the specified groups.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse unassignAgentClientInfoDisplayTemplateFromHuntGroups(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1267,6 +1391,28 @@ public final class HuntGroupsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAgentClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AssignAgentClientInfoDisplayTemplateToHuntGroups assigns a display template to the specified groups.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse> assignAgentClientInfoDisplayTemplateToHuntGroups(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignAgentClientInfoDisplayTemplateFromHuntGroups removes display templates from the specified groups.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse> unassignAgentClientInfoDisplayTemplateFromHuntGroups(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_HUNT_GROUP_EXILE_LINKS = 0;
@@ -1284,6 +1430,8 @@ public final class HuntGroupsServiceGrpc {
   private static final int METHODID_GET_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE = 12;
   private static final int METHODID_LIST_AGENT_CLIENT_INFO_DISPLAY_TEMPLATES = 13;
   private static final int METHODID_DELETE_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE = 14;
+  private static final int METHODID_ASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_TO_HUNT_GROUPS = 15;
+  private static final int METHODID_UNASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_FROM_HUNT_GROUPS = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1361,6 +1509,14 @@ public final class HuntGroupsServiceGrpc {
         case METHODID_DELETE_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE:
           serviceImpl.deleteAgentClientInfoDisplayTemplate((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_TO_HUNT_GROUPS:
+          serviceImpl.assignAgentClientInfoDisplayTemplateToHuntGroups((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse>) responseObserver);
+          break;
+        case METHODID_UNASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_FROM_HUNT_GROUPS:
+          serviceImpl.unassignAgentClientInfoDisplayTemplateFromHuntGroups((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1485,6 +1641,20 @@ public final class HuntGroupsServiceGrpc {
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateRequest,
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.DeleteAgentClientInfoDisplayTemplateResponse>(
                 service, METHODID_DELETE_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AssignAgentClientInfoDisplayTemplateToHuntGroupsResponse>(
+                service, METHODID_ASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_TO_HUNT_GROUPS)))
+        .addMethod(
+          getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UnassignAgentClientInfoDisplayTemplateFromHuntGroupsResponse>(
+                service, METHODID_UNASSIGN_AGENT_CLIENT_INFO_DISPLAY_TEMPLATE_FROM_HUNT_GROUPS)))
         .build();
   }
 
@@ -1548,6 +1718,8 @@ public final class HuntGroupsServiceGrpc {
               .addMethod(getGetAgentClientInfoDisplayTemplateMethod())
               .addMethod(getListAgentClientInfoDisplayTemplatesMethod())
               .addMethod(getDeleteAgentClientInfoDisplayTemplateMethod())
+              .addMethod(getAssignAgentClientInfoDisplayTemplateToHuntGroupsMethod())
+              .addMethod(getUnassignAgentClientInfoDisplayTemplateFromHuntGroupsMethod())
               .build();
         }
       }
