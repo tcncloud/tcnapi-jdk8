@@ -8,24 +8,54 @@ public interface StreamAgentEventsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   java.util.List<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent> 
       getEventList();
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent getEvent(int index);
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   int getEventCount();
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEventOrBuilder> 
       getEventOrBuilderList();
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEventOrBuilder getEventOrBuilder(

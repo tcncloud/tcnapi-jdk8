@@ -58,11 +58,19 @@ public interface CallerEventOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder();
 
   /**
+   * <pre>
+   * A JSON blob resresenting the Caller's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The eventData.
    */
   java.lang.String getEventData();
   /**
+   * <pre>
+   * A JSON blob resresenting the Caller's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The bytes for eventData.
    */

@@ -150,6 +150,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
   /**
+   * <pre>
+   * A JSON blob resresenting the Caller's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The eventData.
    */
@@ -167,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A JSON blob resresenting the Caller's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The bytes for eventData.
    */
@@ -951,6 +959,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object eventData_ = "";
     /**
+     * <pre>
+     * A JSON blob resresenting the Caller's state.
+     * </pre>
+     *
      * <code>string event_data = 6 [json_name = "eventData"];</code>
      * @return The eventData.
      */
@@ -967,6 +979,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A JSON blob resresenting the Caller's state.
+     * </pre>
+     *
      * <code>string event_data = 6 [json_name = "eventData"];</code>
      * @return The bytes for eventData.
      */
@@ -984,6 +1000,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A JSON blob resresenting the Caller's state.
+     * </pre>
+     *
      * <code>string event_data = 6 [json_name = "eventData"];</code>
      * @param value The eventData to set.
      * @return This builder for chaining.
@@ -997,6 +1017,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A JSON blob resresenting the Caller's state.
+     * </pre>
+     *
      * <code>string event_data = 6 [json_name = "eventData"];</code>
      * @return This builder for chaining.
      */
@@ -1007,6 +1031,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A JSON blob resresenting the Caller's state.
+     * </pre>
+     *
      * <code>string event_data = 6 [json_name = "eventData"];</code>
      * @param value The bytes for eventData to set.
      * @return This builder for chaining.

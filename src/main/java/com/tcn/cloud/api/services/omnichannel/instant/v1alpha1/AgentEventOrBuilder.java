@@ -59,11 +59,19 @@ public interface AgentEventOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder();
 
   /**
+   * <pre>
+   * A JSON blob representing the Agent's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The eventData.
    */
   java.lang.String getEventData();
   /**
+   * <pre>
+   * A JSON blob representing the Agent's state.
+   * </pre>
+   *
    * <code>string event_data = 6 [json_name = "eventData"];</code>
    * @return The bytes for eventData.
    */

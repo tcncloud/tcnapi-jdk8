@@ -43,6 +43,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent> event_;
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   @java.lang.Override
@@ -50,6 +56,12 @@ private static final long serialVersionUID = 0L;
     return event_;
   }
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,12 @@ private static final long serialVersionUID = 0L;
     return event_;
   }
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   @java.lang.Override
@@ -65,6 +83,12 @@ private static final long serialVersionUID = 0L;
     return event_.size();
   }
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   @java.lang.Override
@@ -72,6 +96,12 @@ private static final long serialVersionUID = 0L;
     return event_.get(index);
   }
   /**
+   * <pre>
+   * One or more agent events. The initial response will contain a full
+   * snapshot of every agent's state. Each subsequent response will contain a
+   * single event.
+   * </pre>
+   *
    * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
    */
   @java.lang.Override
@@ -467,6 +497,12 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.Builder, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEventOrBuilder> eventBuilder_;
 
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent> getEventList() {
@@ -477,6 +513,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public int getEventCount() {
@@ -487,6 +529,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent getEvent(int index) {
@@ -497,6 +545,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder setEvent(
@@ -514,6 +568,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder setEvent(
@@ -528,6 +588,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder addEvent(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent value) {
@@ -544,6 +610,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder addEvent(
@@ -561,6 +633,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder addEvent(
@@ -575,6 +653,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder addEvent(
@@ -589,6 +673,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder addAllEvent(
@@ -604,6 +694,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder clearEvent() {
@@ -617,6 +713,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public Builder removeEvent(int index) {
@@ -630,6 +732,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.Builder getEventBuilder(
@@ -637,6 +745,12 @@ private static final long serialVersionUID = 0L;
       return getEventFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEventOrBuilder getEventOrBuilder(
@@ -647,6 +761,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEventOrBuilder> 
@@ -658,6 +778,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.Builder addEventBuilder() {
@@ -665,6 +791,12 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.Builder addEventBuilder(
@@ -673,6 +805,12 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One or more agent events. The initial response will contain a full
+     * snapshot of every agent's state. Each subsequent response will contain a
+     * single event.
+     * </pre>
+     *
      * <code>repeated .services.omnichannel.instant.v1alpha1.AgentEvent event = 1 [json_name = "event"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent.Builder> 
