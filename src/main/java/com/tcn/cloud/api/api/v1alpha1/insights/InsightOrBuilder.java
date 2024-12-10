@@ -250,30 +250,30 @@ public interface InsightOrBuilder extends
 
   /**
    * <pre>
-   * pipeline node
+   * pipeline
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
-   * @return Whether the pipelineNode field is set.
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * @return Whether the pipeline field is set.
    */
-  boolean hasPipelineNode();
+  boolean hasPipeline();
   /**
    * <pre>
-   * pipeline node
+   * pipeline
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
-   * @return The pipelineNode.
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * @return The pipeline.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.PipelineNode getPipelineNode();
+  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline();
   /**
    * <pre>
-   * pipeline node
+   * pipeline
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.PipelineNode pipeline_node = 16 [json_name = "pipelineNode"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.PipelineNodeOrBuilder getPipelineNodeOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }

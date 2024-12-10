@@ -60,6 +60,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_TIMELINE = 5;</code>
    */
   OUTPUT_CONFIGURATION_TYPE_TIMELINE(5),
+  /**
+   * <pre>
+   * Output configuration for the text values format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_TEXT_VALUES = 6;</code>
+   */
+  OUTPUT_CONFIGURATION_TYPE_TEXT_VALUES(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -111,6 +119,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_TIMELINE = 5;</code>
    */
   public static final int OUTPUT_CONFIGURATION_TYPE_TIMELINE_VALUE = 5;
+  /**
+   * <pre>
+   * Output configuration for the text values format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_TEXT_VALUES = 6;</code>
+   */
+  public static final int OUTPUT_CONFIGURATION_TYPE_TEXT_VALUES_VALUE = 6;
 
 
   public final int getNumber() {
@@ -143,6 +159,7 @@ public enum OutputConfigurationType
       case 3: return OUTPUT_CONFIGURATION_TYPE_PIE_CHART;
       case 4: return OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH;
       case 5: return OUTPUT_CONFIGURATION_TYPE_TIMELINE;
+      case 6: return OUTPUT_CONFIGURATION_TYPE_TEXT_VALUES;
       default: return null;
     }
   }
