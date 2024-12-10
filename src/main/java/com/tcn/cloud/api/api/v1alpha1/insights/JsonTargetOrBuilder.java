@@ -8,23 +8,39 @@ public interface JsonTargetOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @return A list containing the pathParts.
    */
   java.util.List<java.lang.String>
       getPathPartsList();
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @return The count of pathParts.
    */
   int getPathPartsCount();
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @param index The index of the element to return.
    * @return The pathParts at the given index.
    */
   java.lang.String getPathParts(int index);
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the pathParts at the given index.
@@ -33,11 +49,19 @@ public interface JsonTargetOrBuilder extends
       getPathPartsBytes(int index);
 
   /**
+   * <pre>
+   * Column name
+   * </pre>
+   *
    * <code>string column_name = 2 [json_name = "columnName"];</code>
    * @return The columnName.
    */
   java.lang.String getColumnName();
   /**
+   * <pre>
+   * Column name
+   * </pre>
+   *
    * <code>string column_name = 2 [json_name = "columnName"];</code>
    * @return The bytes for columnName.
    */
@@ -46,7 +70,7 @@ public interface JsonTargetOrBuilder extends
 
   /**
    * <pre>
-   * string | number | boolean | array | object
+   * Result type
    * </pre>
    *
    * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -55,7 +79,7 @@ public interface JsonTargetOrBuilder extends
   java.lang.String getResultType();
   /**
    * <pre>
-   * string | number | boolean | array | object
+   * Result type
    * </pre>
    *
    * <code>string result_type = 3 [json_name = "resultType"];</code>

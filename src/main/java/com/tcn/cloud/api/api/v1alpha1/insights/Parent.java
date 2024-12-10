@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * Parent describes a join node parent
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.Parent}
  */
 public final class Parent extends
@@ -16,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Parent() {
-    id_ = "";
+    parentId_ = "";
     title_ = "";
   }
 
@@ -52,39 +56,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.insights.Parent.class, com.tcn.cloud.api.api.v1alpha1.insights.Parent.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
+  public static final int PARENT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  private volatile java.lang.Object parentId_ = "";
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <pre>
+   * parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 1 [json_name = "parentId"];</code>
+   * @return The parentId.
    */
   @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
+  public java.lang.String getParentId() {
+    java.lang.Object ref = parentId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      id_ = s;
+      parentId_ = s;
       return s;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <pre>
+   * parent_id
+   * </pre>
+   *
+   * <code>string parent_id = 1 [json_name = "parentId"];</code>
+   * @return The bytes for parentId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
+      getParentIdBytes() {
+    java.lang.Object ref = parentId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      id_ = b;
+      parentId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -95,6 +107,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object title_ = "";
   /**
+   * <pre>
+   * parent title
+   * </pre>
+   *
    * <code>string title = 2 [json_name = "title"];</code>
    * @return The title.
    */
@@ -112,6 +128,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * parent title
+   * </pre>
+   *
    * <code>string title = 2 [json_name = "title"];</code>
    * @return The bytes for title.
    */
@@ -157,6 +177,10 @@ private static final long serialVersionUID = 0L;
     return internalGetRenamedColumns().getMap().size();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -174,6 +198,10 @@ private static final long serialVersionUID = 0L;
     return getRenamedColumnsMap();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -181,6 +209,10 @@ private static final long serialVersionUID = 0L;
     return internalGetRenamedColumns().getMap();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -195,6 +227,10 @@ java.lang.String defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -223,8 +259,8 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, parentId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
@@ -244,8 +280,8 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, parentId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
@@ -275,8 +311,8 @@ java.lang.String defaultValue) {
     }
     com.tcn.cloud.api.api.v1alpha1.insights.Parent other = (com.tcn.cloud.api.api.v1alpha1.insights.Parent) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
+    if (!getParentId()
+        .equals(other.getParentId())) return false;
     if (!getTitle()
         .equals(other.getTitle())) return false;
     if (!internalGetRenamedColumns().equals(
@@ -292,8 +328,8 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + PARENT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getParentId().hashCode();
     hash = (37 * hash) + TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getTitle().hashCode();
     if (!internalGetRenamedColumns().getMap().isEmpty()) {
@@ -398,6 +434,10 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   * Parent describes a join node parent
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.Parent}
    */
   public static final class Builder extends
@@ -453,7 +493,7 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      id_ = "";
+      parentId_ = "";
       title_ = "";
       internalGetMutableRenamedColumns().clear();
       return this;
@@ -490,7 +530,7 @@ java.lang.String defaultValue) {
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.Parent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
+        result.parentId_ = parentId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.title_ = title_;
@@ -545,8 +585,8 @@ java.lang.String defaultValue) {
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.Parent other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.insights.Parent.getDefaultInstance()) return this;
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
+      if (!other.getParentId().isEmpty()) {
+        parentId_ = other.parentId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -585,7 +625,7 @@ java.lang.String defaultValue) {
               done = true;
               break;
             case 10: {
-              id_ = input.readStringRequireUtf8();
+              parentId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -620,73 +660,93 @@ java.lang.String defaultValue) {
     }
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
+    private java.lang.Object parentId_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <pre>
+     * parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 1 [json_name = "parentId"];</code>
+     * @return The parentId.
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getParentId() {
+      java.lang.Object ref = parentId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        parentId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <pre>
+     * parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 1 [json_name = "parentId"];</code>
+     * @return The bytes for parentId.
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getParentIdBytes() {
+      java.lang.Object ref = parentId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        parentId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
+     * <pre>
+     * parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 1 [json_name = "parentId"];</code>
+     * @param value The parentId to set.
      * @return This builder for chaining.
      */
-    public Builder setId(
+    public Builder setParentId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      id_ = value;
+      parentId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <pre>
+     * parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 1 [json_name = "parentId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
+    public Builder clearParentId() {
+      parentId_ = getDefaultInstance().getParentId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
+     * <pre>
+     * parent_id
+     * </pre>
+     *
+     * <code>string parent_id = 1 [json_name = "parentId"];</code>
+     * @param value The bytes for parentId to set.
      * @return This builder for chaining.
      */
-    public Builder setIdBytes(
+    public Builder setParentIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      id_ = value;
+      parentId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -694,6 +754,10 @@ java.lang.String defaultValue) {
 
     private java.lang.Object title_ = "";
     /**
+     * <pre>
+     * parent title
+     * </pre>
+     *
      * <code>string title = 2 [json_name = "title"];</code>
      * @return The title.
      */
@@ -710,6 +774,10 @@ java.lang.String defaultValue) {
       }
     }
     /**
+     * <pre>
+     * parent title
+     * </pre>
+     *
      * <code>string title = 2 [json_name = "title"];</code>
      * @return The bytes for title.
      */
@@ -727,6 +795,10 @@ java.lang.String defaultValue) {
       }
     }
     /**
+     * <pre>
+     * parent title
+     * </pre>
+     *
      * <code>string title = 2 [json_name = "title"];</code>
      * @param value The title to set.
      * @return This builder for chaining.
@@ -740,6 +812,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * parent title
+     * </pre>
+     *
      * <code>string title = 2 [json_name = "title"];</code>
      * @return This builder for chaining.
      */
@@ -750,6 +826,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * parent title
+     * </pre>
+     *
      * <code>string title = 2 [json_name = "title"];</code>
      * @param value The bytes for title to set.
      * @return This builder for chaining.
@@ -791,6 +871,10 @@ java.lang.String defaultValue) {
       return internalGetRenamedColumns().getMap().size();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -808,6 +892,10 @@ java.lang.String defaultValue) {
       return getRenamedColumnsMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -815,6 +903,10 @@ java.lang.String defaultValue) {
       return internalGetRenamedColumns().getMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -829,6 +921,10 @@ java.lang.String defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -849,6 +945,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     public Builder removeRenamedColumns(
@@ -868,6 +968,10 @@ java.lang.String defaultValue) {
       return internalGetMutableRenamedColumns().getMutableMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     public Builder putRenamedColumns(
@@ -881,6 +985,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 3 [json_name = "renamedColumns"];</code>
      */
     public Builder putAllRenamedColumns(

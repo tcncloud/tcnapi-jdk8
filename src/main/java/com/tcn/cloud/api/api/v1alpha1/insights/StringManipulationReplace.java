@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * StringManipulationReplace describes how to replace values
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.StringManipulationReplace}
  */
 public final class StringManipulationReplace extends
@@ -45,7 +49,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object target_ = "";
   /**
    * <pre>
-   * target string to replace
+   * Target string to replace
    * </pre>
    *
    * <code>string target = 1 [json_name = "target"];</code>
@@ -66,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * target string to replace
+   * Target string to replace
    * </pre>
    *
    * <code>string target = 1 [json_name = "target"];</code>
@@ -92,7 +96,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * value to replace with
+   * Value to replace with
    * </pre>
    *
    * <code>string value = 2 [json_name = "value"];</code>
@@ -113,7 +117,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * value to replace with
+   * Value to replace with
    * </pre>
    *
    * <code>string value = 2 [json_name = "value"];</code>
@@ -301,6 +305,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * StringManipulationReplace describes how to replace values
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.StringManipulationReplace}
    */
   public static final class Builder extends
@@ -487,7 +495,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object target_ = "";
     /**
      * <pre>
-     * target string to replace
+     * Target string to replace
      * </pre>
      *
      * <code>string target = 1 [json_name = "target"];</code>
@@ -507,7 +515,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target string to replace
+     * Target string to replace
      * </pre>
      *
      * <code>string target = 1 [json_name = "target"];</code>
@@ -528,7 +536,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target string to replace
+     * Target string to replace
      * </pre>
      *
      * <code>string target = 1 [json_name = "target"];</code>
@@ -545,7 +553,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target string to replace
+     * Target string to replace
      * </pre>
      *
      * <code>string target = 1 [json_name = "target"];</code>
@@ -559,7 +567,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target string to replace
+     * Target string to replace
      * </pre>
      *
      * <code>string target = 1 [json_name = "target"];</code>
@@ -579,7 +587,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * value to replace with
+     * Value to replace with
      * </pre>
      *
      * <code>string value = 2 [json_name = "value"];</code>
@@ -599,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value to replace with
+     * Value to replace with
      * </pre>
      *
      * <code>string value = 2 [json_name = "value"];</code>
@@ -620,7 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value to replace with
+     * Value to replace with
      * </pre>
      *
      * <code>string value = 2 [json_name = "value"];</code>
@@ -637,7 +645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value to replace with
+     * Value to replace with
      * </pre>
      *
      * <code>string value = 2 [json_name = "value"];</code>
@@ -651,7 +659,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value to replace with
+     * Value to replace with
      * </pre>
      *
      * <code>string value = 2 [json_name = "value"];</code>

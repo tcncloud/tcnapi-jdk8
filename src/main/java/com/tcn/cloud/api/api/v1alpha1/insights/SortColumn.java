@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * SortColumn
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.SortColumn}
  */
 public final class SortColumn extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object columnName_ = "";
   /**
+   * <pre>
+   * Column name to sort
+   * </pre>
+   *
    * <code>string column_name = 1 [json_name = "columnName"];</code>
    * @return The columnName.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Column name to sort
+   * </pre>
+   *
    * <code>string column_name = 1 [json_name = "columnName"];</code>
    * @return The bytes for columnName.
    */
@@ -81,6 +93,10 @@ private static final long serialVersionUID = 0L;
   public static final int ASCENDING_FIELD_NUMBER = 2;
   private boolean ascending_ = false;
   /**
+   * <pre>
+   * Will determine sort direction
+   * </pre>
+   *
    * <code>bool ascending = 2 [json_name = "ascending"];</code>
    * @return The ascending.
    */
@@ -258,6 +274,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SortColumn
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.SortColumn}
    */
   public static final class Builder extends
@@ -441,6 +461,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object columnName_ = "";
     /**
+     * <pre>
+     * Column name to sort
+     * </pre>
+     *
      * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @return The columnName.
      */
@@ -457,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Column name to sort
+     * </pre>
+     *
      * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @return The bytes for columnName.
      */
@@ -474,6 +502,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Column name to sort
+     * </pre>
+     *
      * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @param value The columnName to set.
      * @return This builder for chaining.
@@ -487,6 +519,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column name to sort
+     * </pre>
+     *
      * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @return This builder for chaining.
      */
@@ -497,6 +533,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column name to sort
+     * </pre>
+     *
      * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @param value The bytes for columnName to set.
      * @return This builder for chaining.
@@ -513,6 +553,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean ascending_ ;
     /**
+     * <pre>
+     * Will determine sort direction
+     * </pre>
+     *
      * <code>bool ascending = 2 [json_name = "ascending"];</code>
      * @return The ascending.
      */
@@ -521,6 +565,10 @@ private static final long serialVersionUID = 0L;
       return ascending_;
     }
     /**
+     * <pre>
+     * Will determine sort direction
+     * </pre>
+     *
      * <code>bool ascending = 2 [json_name = "ascending"];</code>
      * @param value The ascending to set.
      * @return This builder for chaining.
@@ -533,6 +581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Will determine sort direction
+     * </pre>
+     *
      * <code>bool ascending = 2 [json_name = "ascending"];</code>
      * @return This builder for chaining.
      */

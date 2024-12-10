@@ -8,23 +8,39 @@ public interface SelectNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
   java.util.List<java.lang.String>
       getColumnsList();
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @return The count of columns.
    */
   int getColumnsCount();
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
    */
   java.lang.String getColumns(int index);
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
@@ -33,10 +49,18 @@ public interface SelectNodeOrBuilder extends
       getColumnsBytes(int index);
 
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   int getRenamedColumnsCount();
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   boolean containsRenamedColumns(
@@ -48,11 +72,19 @@ public interface SelectNodeOrBuilder extends
   java.util.Map<java.lang.String, java.lang.String>
   getRenamedColumns();
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getRenamedColumnsMap();
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   /* nullable */
@@ -61,6 +93,10 @@ java.lang.String getRenamedColumnsOrDefault(
       /* nullable */
 java.lang.String defaultValue);
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   java.lang.String getRenamedColumnsOrThrow(

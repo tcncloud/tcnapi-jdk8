@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * ReplaceNode
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.ReplaceNode}
  */
 public final class ReplaceNode extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement> columnReplacements_;
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   @java.lang.Override
@@ -50,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return columnReplacements_;
   }
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return columnReplacements_;
   }
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   @java.lang.Override
@@ -65,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return columnReplacements_.size();
   }
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   @java.lang.Override
@@ -72,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return columnReplacements_.get(index);
   }
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   @java.lang.Override
@@ -83,6 +107,10 @@ private static final long serialVersionUID = 0L;
   public static final int IS_COMPLEX_FIELD_NUMBER = 2;
   private boolean isComplex_ = false;
   /**
+   * <pre>
+   * Is complex
+   * </pre>
+   *
    * <code>bool is_complex = 2 [json_name = "isComplex"];</code>
    * @return The isComplex.
    */
@@ -263,6 +291,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ReplaceNode
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.ReplaceNode}
    */
   public static final class Builder extends
@@ -502,6 +534,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement, com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacementOrBuilder> columnReplacementsBuilder_;
 
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement> getColumnReplacementsList() {
@@ -512,6 +548,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public int getColumnReplacementsCount() {
@@ -522,6 +562,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement getColumnReplacements(int index) {
@@ -532,6 +576,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder setColumnReplacements(
@@ -549,6 +597,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder setColumnReplacements(
@@ -563,6 +615,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder addColumnReplacements(com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement value) {
@@ -579,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder addColumnReplacements(
@@ -596,6 +656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder addColumnReplacements(
@@ -610,6 +674,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder addColumnReplacements(
@@ -624,6 +692,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder addAllColumnReplacements(
@@ -639,6 +711,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder clearColumnReplacements() {
@@ -652,6 +728,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public Builder removeColumnReplacements(int index) {
@@ -665,6 +745,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.Builder getColumnReplacementsBuilder(
@@ -672,6 +756,10 @@ private static final long serialVersionUID = 0L;
       return getColumnReplacementsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacementOrBuilder getColumnReplacementsOrBuilder(
@@ -682,6 +770,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacementOrBuilder> 
@@ -693,6 +785,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.Builder addColumnReplacementsBuilder() {
@@ -700,6 +796,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.Builder addColumnReplacementsBuilder(
@@ -708,6 +808,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of column replacements
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement.Builder> 
@@ -731,6 +835,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean isComplex_ ;
     /**
+     * <pre>
+     * Is complex
+     * </pre>
+     *
      * <code>bool is_complex = 2 [json_name = "isComplex"];</code>
      * @return The isComplex.
      */
@@ -739,6 +847,10 @@ private static final long serialVersionUID = 0L;
       return isComplex_;
     }
     /**
+     * <pre>
+     * Is complex
+     * </pre>
+     *
      * <code>bool is_complex = 2 [json_name = "isComplex"];</code>
      * @param value The isComplex to set.
      * @return This builder for chaining.
@@ -751,6 +863,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Is complex
+     * </pre>
+     *
      * <code>bool is_complex = 2 [json_name = "isComplex"];</code>
      * @return This builder for chaining.
      */

@@ -9,7 +9,7 @@ public interface JsonNodeOrBuilder extends
 
   /**
    * <pre>
-   * unnest_to_columns | unnest | unpack
+   * Type of operation
    * </pre>
    *
    * <code>string type = 1 [json_name = "type"];</code>
@@ -18,7 +18,7 @@ public interface JsonNodeOrBuilder extends
   java.lang.String getType();
   /**
    * <pre>
-   * unnest_to_columns | unnest | unpack
+   * Type of operation
    * </pre>
    *
    * <code>string type = 1 [json_name = "type"];</code>
@@ -28,11 +28,19 @@ public interface JsonNodeOrBuilder extends
       getTypeBytes();
 
   /**
+   * <pre>
+   * Json column to apply the operation to
+   * </pre>
+   *
    * <code>string json_column = 2 [json_name = "jsonColumn"];</code>
    * @return The jsonColumn.
    */
   java.lang.String getJsonColumn();
   /**
+   * <pre>
+   * Json column to apply the operation to
+   * </pre>
+   *
    * <code>string json_column = 2 [json_name = "jsonColumn"];</code>
    * @return The bytes for jsonColumn.
    */
@@ -40,40 +48,72 @@ public interface JsonNodeOrBuilder extends
       getJsonColumnBytes();
 
   /**
+   * <pre>
+   * List of json targets
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JsonTarget targets = 3 [json_name = "targets"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget> 
       getTargetsList();
   /**
+   * <pre>
+   * List of json targets
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JsonTarget targets = 3 [json_name = "targets"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget getTargets(int index);
   /**
+   * <pre>
+   * List of json targets
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JsonTarget targets = 3 [json_name = "targets"];</code>
    */
   int getTargetsCount();
   /**
+   * <pre>
+   * List of json targets
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JsonTarget targets = 3 [json_name = "targets"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder> 
       getTargetsOrBuilderList();
   /**
+   * <pre>
+   * List of json targets
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JsonTarget targets = 3 [json_name = "targets"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getTargetsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Unnest to column node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.UnnestToColumnsNode unnest_to_columns_node = 4 [json_name = "unnestToColumnsNode"];</code>
    * @return Whether the unnestToColumnsNode field is set.
    */
   boolean hasUnnestToColumnsNode();
   /**
+   * <pre>
+   * Unnest to column node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.UnnestToColumnsNode unnest_to_columns_node = 4 [json_name = "unnestToColumnsNode"];</code>
    * @return The unnestToColumnsNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.UnnestToColumnsNode getUnnestToColumnsNode();
   /**
+   * <pre>
+   * Unnest to column node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.UnnestToColumnsNode unnest_to_columns_node = 4 [json_name = "unnestToColumnsNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.UnnestToColumnsNodeOrBuilder getUnnestToColumnsNodeOrBuilder();

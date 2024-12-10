@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * JoinColumn describes a join column
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.JoinColumn}
  */
 public final class JoinColumn extends
@@ -44,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object firstParentColumn_ = "";
   /**
+   * <pre>
+   * First parent column
+   * </pre>
+   *
    * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
    * @return The firstParentColumn.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * First parent column
+   * </pre>
+   *
    * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
    * @return The bytes for firstParentColumn.
    */
@@ -83,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object secondParentColumn_ = "";
   /**
+   * <pre>
+   * second parent column
+   * </pre>
+   *
    * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
    * @return The secondParentColumn.
    */
@@ -100,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * second parent column
+   * </pre>
+   *
    * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
    * @return The bytes for secondParentColumn.
    */
@@ -285,6 +305,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * JoinColumn describes a join column
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.JoinColumn}
    */
   public static final class Builder extends
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object firstParentColumn_ = "";
     /**
+     * <pre>
+     * First parent column
+     * </pre>
+     *
      * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
      * @return The firstParentColumn.
      */
@@ -486,6 +514,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * First parent column
+     * </pre>
+     *
      * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
      * @return The bytes for firstParentColumn.
      */
@@ -503,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * First parent column
+     * </pre>
+     *
      * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
      * @param value The firstParentColumn to set.
      * @return This builder for chaining.
@@ -516,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent column
+     * </pre>
+     *
      * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
      * @return This builder for chaining.
      */
@@ -526,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent column
+     * </pre>
+     *
      * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
      * @param value The bytes for firstParentColumn to set.
      * @return This builder for chaining.
@@ -542,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object secondParentColumn_ = "";
     /**
+     * <pre>
+     * second parent column
+     * </pre>
+     *
      * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
      * @return The secondParentColumn.
      */
@@ -558,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * second parent column
+     * </pre>
+     *
      * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
      * @return The bytes for secondParentColumn.
      */
@@ -575,6 +627,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * second parent column
+     * </pre>
+     *
      * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
      * @param value The secondParentColumn to set.
      * @return This builder for chaining.
@@ -588,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * second parent column
+     * </pre>
+     *
      * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
      * @return This builder for chaining.
      */
@@ -598,6 +658,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * second parent column
+     * </pre>
+     *
      * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
      * @param value The bytes for secondParentColumn to set.
      * @return This builder for chaining.

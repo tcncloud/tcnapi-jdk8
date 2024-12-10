@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * Parameters
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.Parameters}
  */
 public final class Parameters extends
@@ -55,11 +59,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Parameter value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * Parameter value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
@@ -67,11 +79,19 @@ private static final long serialVersionUID = 0L;
         getValueBytes();
 
     /**
+     * <pre>
+     * Parameter data type
+     * </pre>
+     *
      * <code>string data_type = 3 [json_name = "dataType"];</code>
      * @return The dataType.
      */
     java.lang.String getDataType();
     /**
+     * <pre>
+     * Parameter data type
+     * </pre>
+     *
      * <code>string data_type = 3 [json_name = "dataType"];</code>
      * @return The bytes for dataType.
      */
@@ -119,6 +139,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
     /**
+     * <pre>
+     * Parameter value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
@@ -136,6 +160,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Parameter value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
@@ -158,6 +186,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataType_ = "";
     /**
+     * <pre>
+     * Parameter data type
+     * </pre>
+     *
      * <code>string data_type = 3 [json_name = "dataType"];</code>
      * @return The dataType.
      */
@@ -175,6 +207,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Parameter data type
+     * </pre>
+     *
      * <code>string data_type = 3 [json_name = "dataType"];</code>
      * @return The bytes for dataType.
      */
@@ -545,6 +581,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * Parameter value
+       * </pre>
+       *
        * <code>string value = 2 [json_name = "value"];</code>
        * @return The value.
        */
@@ -561,6 +601,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Parameter value
+       * </pre>
+       *
        * <code>string value = 2 [json_name = "value"];</code>
        * @return The bytes for value.
        */
@@ -578,6 +622,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Parameter value
+       * </pre>
+       *
        * <code>string value = 2 [json_name = "value"];</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -591,6 +639,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Parameter value
+       * </pre>
+       *
        * <code>string value = 2 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
@@ -601,6 +653,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Parameter value
+       * </pre>
+       *
        * <code>string value = 2 [json_name = "value"];</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
@@ -617,6 +673,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object dataType_ = "";
       /**
+       * <pre>
+       * Parameter data type
+       * </pre>
+       *
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @return The dataType.
        */
@@ -633,6 +693,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Parameter data type
+       * </pre>
+       *
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @return The bytes for dataType.
        */
@@ -650,6 +714,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Parameter data type
+       * </pre>
+       *
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @param value The dataType to set.
        * @return This builder for chaining.
@@ -663,6 +731,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Parameter data type
+       * </pre>
+       *
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @return This builder for chaining.
        */
@@ -673,6 +745,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Parameter data type
+       * </pre>
+       *
        * <code>string data_type = 3 [json_name = "dataType"];</code>
        * @param value The bytes for dataType to set.
        * @return This builder for chaining.
@@ -777,6 +853,10 @@ private static final long serialVersionUID = 0L;
     return internalGetParameters().getMap().size();
   }
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -794,6 +874,10 @@ private static final long serialVersionUID = 0L;
     return getParametersMap();
   }
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -801,6 +885,10 @@ private static final long serialVersionUID = 0L;
     return internalGetParameters().getMap();
   }
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -815,6 +903,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -998,6 +1090,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   * Parameters
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.Parameters}
    */
   public static final class Builder extends
@@ -1219,6 +1315,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return internalGetParameters().getMap().size();
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1236,6 +1336,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return getParametersMap();
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1243,6 +1347,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return internalGetParameters().getMap();
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1257,6 +1365,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1277,6 +1389,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder removeParameters(
@@ -1296,6 +1412,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return internalGetMutableParameters().getMutableMap();
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder putParameters(
@@ -1309,6 +1429,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Parameters map
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder putAllParameters(

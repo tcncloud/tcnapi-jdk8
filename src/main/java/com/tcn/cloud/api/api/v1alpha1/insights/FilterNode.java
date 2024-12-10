@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * FilterNode filters based on an expression
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.FilterNode}
  */
 public final class FilterNode extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int EXPRESSION_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode expression_;
   /**
+   * <pre>
+   * The expression to filter by
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
    * @return Whether the expression field is set.
    */
@@ -49,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return expression_ != null;
   }
   /**
+   * <pre>
+   * The expression to filter by
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
    * @return The expression.
    */
@@ -57,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
   }
   /**
+   * <pre>
+   * The expression to filter by
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
    */
   @java.lang.Override
@@ -227,6 +243,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * FilterNode filters based on an expression
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.FilterNode}
    */
   public static final class Builder extends
@@ -406,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> expressionBuilder_;
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      * @return Whether the expression field is set.
      */
@@ -413,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      * @return The expression.
      */
@@ -424,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public Builder setExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -440,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public Builder setExpression(
@@ -454,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public Builder mergeExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -473,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public Builder clearExpression() {
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getExpressionBuilder() {
@@ -494,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getExpressionFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
@@ -505,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The expression to filter by
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 3 [json_name = "expression"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

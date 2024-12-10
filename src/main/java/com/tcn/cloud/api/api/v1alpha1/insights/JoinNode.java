@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * JoinNode joins datasets
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.JoinNode}
  */
 public final class JoinNode extends
@@ -45,7 +49,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object side_ = "";
   /**
    * <pre>
-   * left | right | full | inner
+   * The type of join
    * </pre>
    *
    * <code>string side = 1 [json_name = "side"];</code>
@@ -66,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * left | right | full | inner
+   * The type of join
    * </pre>
    *
    * <code>string side = 1 [json_name = "side"];</code>
@@ -91,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn> joinColumns_;
   /**
+   * <pre>
+   * The join columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
    */
   @java.lang.Override
@@ -98,6 +106,10 @@ private static final long serialVersionUID = 0L;
     return joinColumns_;
   }
   /**
+   * <pre>
+   * The join columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
    */
   @java.lang.Override
@@ -106,6 +118,10 @@ private static final long serialVersionUID = 0L;
     return joinColumns_;
   }
   /**
+   * <pre>
+   * The join columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
    */
   @java.lang.Override
@@ -113,6 +129,10 @@ private static final long serialVersionUID = 0L;
     return joinColumns_.size();
   }
   /**
+   * <pre>
+   * The join columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
    */
   @java.lang.Override
@@ -120,6 +140,10 @@ private static final long serialVersionUID = 0L;
     return joinColumns_.get(index);
   }
   /**
+   * <pre>
+   * The join columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
    */
   @java.lang.Override
@@ -131,6 +155,10 @@ private static final long serialVersionUID = 0L;
   public static final int FIRST_PARENT_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.v1alpha1.insights.Parent firstParent_;
   /**
+   * <pre>
+   * First parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
    * @return Whether the firstParent field is set.
    */
@@ -139,6 +167,10 @@ private static final long serialVersionUID = 0L;
     return firstParent_ != null;
   }
   /**
+   * <pre>
+   * First parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
    * @return The firstParent.
    */
@@ -147,6 +179,10 @@ private static final long serialVersionUID = 0L;
     return firstParent_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.Parent.getDefaultInstance() : firstParent_;
   }
   /**
+   * <pre>
+   * First parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
    */
   @java.lang.Override
@@ -157,6 +193,10 @@ private static final long serialVersionUID = 0L;
   public static final int SECOND_PARENT_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.api.v1alpha1.insights.Parent secondParent_;
   /**
+   * <pre>
+   * Second parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
    * @return Whether the secondParent field is set.
    */
@@ -165,6 +205,10 @@ private static final long serialVersionUID = 0L;
     return secondParent_ != null;
   }
   /**
+   * <pre>
+   * Second parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
    * @return The secondParent.
    */
@@ -173,6 +217,10 @@ private static final long serialVersionUID = 0L;
     return secondParent_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.Parent.getDefaultInstance() : secondParent_;
   }
   /**
+   * <pre>
+   * Second parent
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
    */
   @java.lang.Override
@@ -382,6 +430,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * JoinNode joins datasets
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.JoinNode}
    */
   public static final class Builder extends
@@ -653,7 +705,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object side_ = "";
     /**
      * <pre>
-     * left | right | full | inner
+     * The type of join
      * </pre>
      *
      * <code>string side = 1 [json_name = "side"];</code>
@@ -673,7 +725,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * left | right | full | inner
+     * The type of join
      * </pre>
      *
      * <code>string side = 1 [json_name = "side"];</code>
@@ -694,7 +746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * left | right | full | inner
+     * The type of join
      * </pre>
      *
      * <code>string side = 1 [json_name = "side"];</code>
@@ -711,7 +763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * left | right | full | inner
+     * The type of join
      * </pre>
      *
      * <code>string side = 1 [json_name = "side"];</code>
@@ -725,7 +777,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * left | right | full | inner
+     * The type of join
      * </pre>
      *
      * <code>string side = 1 [json_name = "side"];</code>
@@ -755,6 +807,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn, com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JoinColumnOrBuilder> joinColumnsBuilder_;
 
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn> getJoinColumnsList() {
@@ -765,6 +821,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public int getJoinColumnsCount() {
@@ -775,6 +835,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn getJoinColumns(int index) {
@@ -785,6 +849,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder setJoinColumns(
@@ -802,6 +870,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder setJoinColumns(
@@ -816,6 +888,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder addJoinColumns(com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn value) {
@@ -832,6 +908,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder addJoinColumns(
@@ -849,6 +929,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder addJoinColumns(
@@ -863,6 +947,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder addJoinColumns(
@@ -877,6 +965,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder addAllJoinColumns(
@@ -892,6 +984,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder clearJoinColumns() {
@@ -905,6 +1001,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public Builder removeJoinColumns(int index) {
@@ -918,6 +1018,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.Builder getJoinColumnsBuilder(
@@ -925,6 +1029,10 @@ private static final long serialVersionUID = 0L;
       return getJoinColumnsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinColumnOrBuilder getJoinColumnsOrBuilder(
@@ -935,6 +1043,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.JoinColumnOrBuilder> 
@@ -946,6 +1058,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.Builder addJoinColumnsBuilder() {
@@ -953,6 +1069,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.Builder addJoinColumnsBuilder(
@@ -961,6 +1081,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The join columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.JoinColumn join_columns = 2 [json_name = "joinColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.JoinColumn.Builder> 
@@ -986,6 +1110,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.Parent, com.tcn.cloud.api.api.v1alpha1.insights.Parent.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ParentOrBuilder> firstParentBuilder_;
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      * @return Whether the firstParent field is set.
      */
@@ -993,6 +1121,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      * @return The firstParent.
      */
@@ -1004,6 +1136,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public Builder setFirstParent(com.tcn.cloud.api.api.v1alpha1.insights.Parent value) {
@@ -1020,6 +1156,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public Builder setFirstParent(
@@ -1034,6 +1174,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public Builder mergeFirstParent(com.tcn.cloud.api.api.v1alpha1.insights.Parent value) {
@@ -1053,6 +1197,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public Builder clearFirstParent() {
@@ -1066,6 +1214,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Parent.Builder getFirstParentBuilder() {
@@ -1074,6 +1226,10 @@ private static final long serialVersionUID = 0L;
       return getFirstParentFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ParentOrBuilder getFirstParentOrBuilder() {
@@ -1085,6 +1241,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * First parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent first_parent = 3 [json_name = "firstParent"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1105,6 +1265,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.Parent, com.tcn.cloud.api.api.v1alpha1.insights.Parent.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ParentOrBuilder> secondParentBuilder_;
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      * @return Whether the secondParent field is set.
      */
@@ -1112,6 +1276,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      * @return The secondParent.
      */
@@ -1123,6 +1291,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public Builder setSecondParent(com.tcn.cloud.api.api.v1alpha1.insights.Parent value) {
@@ -1139,6 +1311,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public Builder setSecondParent(
@@ -1153,6 +1329,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public Builder mergeSecondParent(com.tcn.cloud.api.api.v1alpha1.insights.Parent value) {
@@ -1172,6 +1352,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public Builder clearSecondParent() {
@@ -1185,6 +1369,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Parent.Builder getSecondParentBuilder() {
@@ -1193,6 +1381,10 @@ private static final long serialVersionUID = 0L;
       return getSecondParentFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ParentOrBuilder getSecondParentOrBuilder() {
@@ -1204,6 +1396,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Second parent
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Parent second_parent = 4 [json_name = "secondParent"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

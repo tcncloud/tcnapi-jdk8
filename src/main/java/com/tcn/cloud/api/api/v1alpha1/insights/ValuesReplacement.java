@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * ValuesReplacement
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.ValuesReplacement}
  */
 public final class ValuesReplacement extends
@@ -45,7 +49,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object targetValue_ = "";
   /**
    * <pre>
-   * value in the column to replace
+   * Value in the column to replace
    * </pre>
    *
    * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -66,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * value in the column to replace
+   * Value in the column to replace
    * </pre>
    *
    * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -91,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object targetDataType_ = "";
   /**
+   * <pre>
+   * Target data type of replacement
+   * </pre>
+   *
    * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
    * @return The targetDataType.
    */
@@ -108,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Target data type of replacement
+   * </pre>
+   *
    * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
    * @return The bytes for targetDataType.
    */
@@ -130,7 +142,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode replacementValue_;
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -142,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -154,7 +166,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -347,6 +359,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ValuesReplacement
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.ValuesReplacement}
    */
   public static final class Builder extends
@@ -553,7 +569,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object targetValue_ = "";
     /**
      * <pre>
-     * value in the column to replace
+     * Value in the column to replace
      * </pre>
      *
      * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -573,7 +589,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value in the column to replace
+     * Value in the column to replace
      * </pre>
      *
      * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -594,7 +610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value in the column to replace
+     * Value in the column to replace
      * </pre>
      *
      * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -611,7 +627,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value in the column to replace
+     * Value in the column to replace
      * </pre>
      *
      * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -625,7 +641,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * value in the column to replace
+     * Value in the column to replace
      * </pre>
      *
      * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -644,6 +660,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object targetDataType_ = "";
     /**
+     * <pre>
+     * Target data type of replacement
+     * </pre>
+     *
      * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
      * @return The targetDataType.
      */
@@ -660,6 +680,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Target data type of replacement
+     * </pre>
+     *
      * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
      * @return The bytes for targetDataType.
      */
@@ -677,6 +701,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Target data type of replacement
+     * </pre>
+     *
      * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
      * @param value The targetDataType to set.
      * @return This builder for chaining.
@@ -690,6 +718,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Target data type of replacement
+     * </pre>
+     *
      * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
      * @return This builder for chaining.
      */
@@ -700,6 +732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Target data type of replacement
+     * </pre>
+     *
      * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
      * @param value The bytes for targetDataType to set.
      * @return This builder for chaining.
@@ -719,7 +755,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> replacementValueBuilder_;
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -730,7 +766,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -745,7 +781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -765,7 +801,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -783,7 +819,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -806,7 +842,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -823,7 +859,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -835,7 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -850,7 +886,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * result of the replacement
+     * Result of the replacement
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>

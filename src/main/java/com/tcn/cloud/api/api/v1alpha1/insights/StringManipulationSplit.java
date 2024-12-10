@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * StringManipulationSplit describes what value to split by
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.StringManipulationSplit}
  */
 public final class StringManipulationSplit extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object splitBy_ = "";
   /**
+   * <pre>
+   * Split value
+   * </pre>
+   *
    * <code>string split_by = 2 [json_name = "splitBy"];</code>
    * @return The splitBy.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Split value
+   * </pre>
+   *
    * <code>string split_by = 2 [json_name = "splitBy"];</code>
    * @return The bytes for splitBy.
    */
@@ -82,7 +94,7 @@ private static final long serialVersionUID = 0L;
   private boolean isIndexExtraction_ = false;
   /**
    * <pre>
-   * if true, index_extraction is required
+   * If true, index_extraction is required
    * </pre>
    *
    * <code>bool is_index_extraction = 3 [json_name = "isIndexExtraction"];</code>
@@ -97,7 +109,7 @@ private static final long serialVersionUID = 0L;
   private int indexExtraction_ = 0;
   /**
    * <pre>
-   * index to extract after split
+   * Index to extract after split
    * </pre>
    *
    * <code>int32 index_extraction = 4 [json_name = "indexExtraction"];</code>
@@ -288,6 +300,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * StringManipulationSplit describes what value to split by
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.StringManipulationSplit}
    */
   public static final class Builder extends
@@ -483,6 +499,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object splitBy_ = "";
     /**
+     * <pre>
+     * Split value
+     * </pre>
+     *
      * <code>string split_by = 2 [json_name = "splitBy"];</code>
      * @return The splitBy.
      */
@@ -499,6 +519,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Split value
+     * </pre>
+     *
      * <code>string split_by = 2 [json_name = "splitBy"];</code>
      * @return The bytes for splitBy.
      */
@@ -516,6 +540,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Split value
+     * </pre>
+     *
      * <code>string split_by = 2 [json_name = "splitBy"];</code>
      * @param value The splitBy to set.
      * @return This builder for chaining.
@@ -529,6 +557,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Split value
+     * </pre>
+     *
      * <code>string split_by = 2 [json_name = "splitBy"];</code>
      * @return This builder for chaining.
      */
@@ -539,6 +571,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Split value
+     * </pre>
+     *
      * <code>string split_by = 2 [json_name = "splitBy"];</code>
      * @param value The bytes for splitBy to set.
      * @return This builder for chaining.
@@ -556,7 +592,7 @@ private static final long serialVersionUID = 0L;
     private boolean isIndexExtraction_ ;
     /**
      * <pre>
-     * if true, index_extraction is required
+     * If true, index_extraction is required
      * </pre>
      *
      * <code>bool is_index_extraction = 3 [json_name = "isIndexExtraction"];</code>
@@ -568,7 +604,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * if true, index_extraction is required
+     * If true, index_extraction is required
      * </pre>
      *
      * <code>bool is_index_extraction = 3 [json_name = "isIndexExtraction"];</code>
@@ -584,7 +620,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * if true, index_extraction is required
+     * If true, index_extraction is required
      * </pre>
      *
      * <code>bool is_index_extraction = 3 [json_name = "isIndexExtraction"];</code>
@@ -600,7 +636,7 @@ private static final long serialVersionUID = 0L;
     private int indexExtraction_ ;
     /**
      * <pre>
-     * index to extract after split
+     * Index to extract after split
      * </pre>
      *
      * <code>int32 index_extraction = 4 [json_name = "indexExtraction"];</code>
@@ -612,7 +648,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * index to extract after split
+     * Index to extract after split
      * </pre>
      *
      * <code>int32 index_extraction = 4 [json_name = "indexExtraction"];</code>
@@ -628,7 +664,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * index to extract after split
+     * Index to extract after split
      * </pre>
      *
      * <code>int32 index_extraction = 4 [json_name = "indexExtraction"];</code>

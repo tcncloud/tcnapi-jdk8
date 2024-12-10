@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * SelectNode selects a set of columns
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.SelectNode}
  */
 public final class SelectNode extends
@@ -57,6 +61,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList columns_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
@@ -65,6 +73,10 @@ private static final long serialVersionUID = 0L;
     return columns_;
   }
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @return The count of columns.
    */
@@ -72,6 +84,10 @@ private static final long serialVersionUID = 0L;
     return columns_.size();
   }
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
@@ -80,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return columns_.get(index);
   }
   /**
+   * <pre>
+   * Column names to select
+   * </pre>
+   *
    * <code>repeated string columns = 1 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
@@ -116,6 +136,10 @@ private static final long serialVersionUID = 0L;
     return internalGetRenamedColumns().getMap().size();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -133,6 +157,10 @@ private static final long serialVersionUID = 0L;
     return getRenamedColumnsMap();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -140,6 +168,10 @@ private static final long serialVersionUID = 0L;
     return internalGetRenamedColumns().getMap();
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -154,6 +186,10 @@ java.lang.String defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * map of renamed columns
+   * </pre>
+   *
    * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
    */
   @java.lang.Override
@@ -354,6 +390,10 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   * SelectNode selects a set of columns
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.SelectNode}
    */
   public static final class Builder extends
@@ -579,6 +619,10 @@ java.lang.String defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @return A list containing the columns.
      */
@@ -588,6 +632,10 @@ java.lang.String defaultValue) {
       return columns_;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @return The count of columns.
      */
@@ -595,6 +643,10 @@ java.lang.String defaultValue) {
       return columns_.size();
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param index The index of the element to return.
      * @return The columns at the given index.
@@ -603,6 +655,10 @@ java.lang.String defaultValue) {
       return columns_.get(index);
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the columns at the given index.
@@ -612,6 +668,10 @@ java.lang.String defaultValue) {
       return columns_.getByteString(index);
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param index The index to set the value at.
      * @param value The columns to set.
@@ -627,6 +687,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param value The columns to add.
      * @return This builder for chaining.
@@ -641,6 +705,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param values The columns to add.
      * @return This builder for chaining.
@@ -655,6 +723,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @return This builder for chaining.
      */
@@ -666,6 +738,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Column names to select
+     * </pre>
+     *
      * <code>repeated string columns = 1 [json_name = "columns"];</code>
      * @param value The bytes of the columns to add.
      * @return This builder for chaining.
@@ -708,6 +784,10 @@ java.lang.String defaultValue) {
       return internalGetRenamedColumns().getMap().size();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -725,6 +805,10 @@ java.lang.String defaultValue) {
       return getRenamedColumnsMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -732,6 +816,10 @@ java.lang.String defaultValue) {
       return internalGetRenamedColumns().getMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -746,6 +834,10 @@ java.lang.String defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     @java.lang.Override
@@ -766,6 +858,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     public Builder removeRenamedColumns(
@@ -785,6 +881,10 @@ java.lang.String defaultValue) {
       return internalGetMutableRenamedColumns().getMutableMap();
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     public Builder putRenamedColumns(
@@ -798,6 +898,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * map of renamed columns
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; renamed_columns = 2 [json_name = "renamedColumns"];</code>
      */
     public Builder putAllRenamedColumns(

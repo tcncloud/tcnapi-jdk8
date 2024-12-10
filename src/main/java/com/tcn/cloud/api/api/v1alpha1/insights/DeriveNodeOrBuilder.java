@@ -8,11 +8,19 @@ public interface DeriveNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Resulting column name
+   * </pre>
+   *
    * <code>string column_name = 3 [json_name = "columnName"];</code>
    * @return The columnName.
    */
   java.lang.String getColumnName();
   /**
+   * <pre>
+   * Resulting column name
+   * </pre>
+   *
    * <code>string column_name = 3 [json_name = "columnName"];</code>
    * @return The bytes for columnName.
    */
@@ -20,16 +28,28 @@ public interface DeriveNodeOrBuilder extends
       getColumnNameBytes();
 
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    * @return Whether the expression field is set.
    */
   boolean hasExpression();
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    * @return The expression.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder();

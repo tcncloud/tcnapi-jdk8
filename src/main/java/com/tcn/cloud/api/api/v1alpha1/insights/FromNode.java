@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * FromNode describes a dataset to select from
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.FromNode}
  */
 public final class FromNode extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object dataset_ = "";
   /**
+   * <pre>
+   * The dataset to select from
+   * </pre>
+   *
    * <code>string dataset = 1 [json_name = "dataset"];</code>
    * @return The dataset.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The dataset to select from
+   * </pre>
+   *
    * <code>string dataset = 1 [json_name = "dataset"];</code>
    * @return The bytes for dataset.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * FromNode describes a dataset to select from
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.FromNode}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object dataset_ = "";
     /**
+     * <pre>
+     * The dataset to select from
+     * </pre>
+     *
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The dataset to select from
+     * </pre>
+     *
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The bytes for dataset.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The dataset to select from
+     * </pre>
+     *
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @param value The dataset to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dataset to select from
+     * </pre>
+     *
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dataset to select from
+     * </pre>
+     *
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @param value The bytes for dataset to set.
      * @return This builder for chaining.

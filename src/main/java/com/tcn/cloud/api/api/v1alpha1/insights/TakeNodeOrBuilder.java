@@ -8,6 +8,10 @@ public interface TakeNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * how many to limit by
+   * </pre>
+   *
    * <code>int32 limit = 1 [json_name = "limit"];</code>
    * @return The limit.
    */

@@ -9,7 +9,7 @@ public interface ColumnReplacementOrBuilder extends
 
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -19,7 +19,7 @@ public interface ColumnReplacementOrBuilder extends
       getColumnNamesList();
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -28,7 +28,7 @@ public interface ColumnReplacementOrBuilder extends
   int getColumnNamesCount();
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -38,7 +38,7 @@ public interface ColumnReplacementOrBuilder extends
   java.lang.String getColumnNames(int index);
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -50,7 +50,7 @@ public interface ColumnReplacementOrBuilder extends
 
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -59,7 +59,7 @@ public interface ColumnReplacementOrBuilder extends
       getValuesReplacementsList();
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -67,7 +67,7 @@ public interface ColumnReplacementOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.ValuesReplacement getValuesReplacements(int index);
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -75,7 +75,7 @@ public interface ColumnReplacementOrBuilder extends
   int getValuesReplacementsCount();
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -84,7 +84,7 @@ public interface ColumnReplacementOrBuilder extends
       getValuesReplacementsOrBuilderList();
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>

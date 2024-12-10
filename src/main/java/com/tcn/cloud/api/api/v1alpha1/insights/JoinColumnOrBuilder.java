@@ -8,11 +8,19 @@ public interface JoinColumnOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * First parent column
+   * </pre>
+   *
    * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
    * @return The firstParentColumn.
    */
   java.lang.String getFirstParentColumn();
   /**
+   * <pre>
+   * First parent column
+   * </pre>
+   *
    * <code>string first_parent_column = 1 [json_name = "firstParentColumn"];</code>
    * @return The bytes for firstParentColumn.
    */
@@ -20,11 +28,19 @@ public interface JoinColumnOrBuilder extends
       getFirstParentColumnBytes();
 
   /**
+   * <pre>
+   * second parent column
+   * </pre>
+   *
    * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
    * @return The secondParentColumn.
    */
   java.lang.String getSecondParentColumn();
   /**
+   * <pre>
+   * second parent column
+   * </pre>
+   *
    * <code>string second_parent_column = 2 [json_name = "secondParentColumn"];</code>
    * @return The bytes for secondParentColumn.
    */

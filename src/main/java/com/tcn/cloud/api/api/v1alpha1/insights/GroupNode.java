@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * GroupNode groups data
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.GroupNode}
  */
 public final class GroupNode extends
@@ -46,6 +50,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList groupByColumns_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
    * @return A list containing the groupByColumns.
    */
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_;
   }
   /**
+   * <pre>
+   * Columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
    * @return The count of groupByColumns.
    */
@@ -61,6 +73,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_.size();
   }
   /**
+   * <pre>
+   * Columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
    * @param index The index of the element to return.
    * @return The groupByColumns at the given index.
@@ -69,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_.get(index);
   }
   /**
+   * <pre>
+   * Columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the groupByColumns at the given index.
@@ -82,6 +102,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn> aggregationColumns_;
   /**
+   * <pre>
+   * The aggregate columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   @java.lang.Override
@@ -89,6 +113,10 @@ private static final long serialVersionUID = 0L;
     return aggregationColumns_;
   }
   /**
+   * <pre>
+   * The aggregate columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   @java.lang.Override
@@ -97,6 +125,10 @@ private static final long serialVersionUID = 0L;
     return aggregationColumns_;
   }
   /**
+   * <pre>
+   * The aggregate columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   @java.lang.Override
@@ -104,6 +136,10 @@ private static final long serialVersionUID = 0L;
     return aggregationColumns_.size();
   }
   /**
+   * <pre>
+   * The aggregate columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   @java.lang.Override
@@ -111,6 +147,10 @@ private static final long serialVersionUID = 0L;
     return aggregationColumns_.get(index);
   }
   /**
+   * <pre>
+   * The aggregate columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   @java.lang.Override
@@ -296,6 +336,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * GroupNode groups data
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.GroupNode}
    */
   public static final class Builder extends
@@ -541,6 +585,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @return A list containing the groupByColumns.
      */
@@ -550,6 +598,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @return The count of groupByColumns.
      */
@@ -557,6 +609,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.size();
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param index The index of the element to return.
      * @return The groupByColumns at the given index.
@@ -565,6 +621,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.get(index);
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the groupByColumns at the given index.
@@ -574,6 +634,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.getByteString(index);
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param index The index to set the value at.
      * @param value The groupByColumns to set.
@@ -589,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param value The groupByColumns to add.
      * @return This builder for chaining.
@@ -603,6 +671,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param values The groupByColumns to add.
      * @return This builder for chaining.
@@ -617,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @return This builder for chaining.
      */
@@ -628,6 +704,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 1 [json_name = "groupByColumns"];</code>
      * @param value The bytes of the groupByColumns to add.
      * @return This builder for chaining.
@@ -656,6 +736,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn, com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.Builder, com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumnOrBuilder> aggregationColumnsBuilder_;
 
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn> getAggregationColumnsList() {
@@ -666,6 +750,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public int getAggregationColumnsCount() {
@@ -676,6 +764,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn getAggregationColumns(int index) {
@@ -686,6 +778,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder setAggregationColumns(
@@ -703,6 +799,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder setAggregationColumns(
@@ -717,6 +817,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder addAggregationColumns(com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn value) {
@@ -733,6 +837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder addAggregationColumns(
@@ -750,6 +858,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder addAggregationColumns(
@@ -764,6 +876,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder addAggregationColumns(
@@ -778,6 +894,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder addAllAggregationColumns(
@@ -793,6 +913,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder clearAggregationColumns() {
@@ -806,6 +930,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public Builder removeAggregationColumns(int index) {
@@ -819,6 +947,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.Builder getAggregationColumnsBuilder(
@@ -826,6 +958,10 @@ private static final long serialVersionUID = 0L;
       return getAggregationColumnsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumnOrBuilder getAggregationColumnsOrBuilder(
@@ -836,6 +972,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumnOrBuilder> 
@@ -847,6 +987,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.Builder addAggregationColumnsBuilder() {
@@ -854,6 +998,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.Builder addAggregationColumnsBuilder(
@@ -862,6 +1010,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The aggregate columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn.Builder> 

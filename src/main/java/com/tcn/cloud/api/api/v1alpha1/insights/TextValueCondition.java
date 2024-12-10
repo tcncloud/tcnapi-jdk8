@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * TextValueCondition describes the conditions to render
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.TextValueCondition}
  */
 public final class TextValueCondition extends
@@ -63,6 +67,10 @@ private static final long serialVersionUID = 0L;
     long getBlue();
   }
   /**
+   * <pre>
+   * Message for color to display
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.TextValueCondition.Color}
    */
   public static final class Color extends
@@ -313,6 +321,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Message for color to display
+     * </pre>
+     *
      * Protobuf type {@code api.v1alpha1.insights.TextValueCondition.Color}
      */
     public static final class Builder extends
@@ -666,6 +678,10 @@ private static final long serialVersionUID = 0L;
   public static final int SIZE_FIELD_NUMBER = 2;
   private long size_ = 0L;
   /**
+   * <pre>
+   * Text value size
+   * </pre>
+   *
    * <code>int64 size = 2 [json_name = "size"];</code>
    * @return The size.
    */
@@ -678,6 +694,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation> operations_;
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   @java.lang.Override
@@ -685,6 +705,10 @@ private static final long serialVersionUID = 0L;
     return operations_;
   }
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   @java.lang.Override
@@ -693,6 +717,10 @@ private static final long serialVersionUID = 0L;
     return operations_;
   }
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   @java.lang.Override
@@ -700,6 +728,10 @@ private static final long serialVersionUID = 0L;
     return operations_.size();
   }
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   @java.lang.Override
@@ -707,6 +739,10 @@ private static final long serialVersionUID = 0L;
     return operations_.get(index);
   }
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   @java.lang.Override
@@ -719,6 +755,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object iconName_ = "";
   /**
+   * <pre>
+   * Icon name
+   * </pre>
+   *
    * <code>string icon_name = 4 [json_name = "iconName"];</code>
    * @return The iconName.
    */
@@ -736,6 +776,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Icon name
+   * </pre>
+   *
    * <code>string icon_name = 4 [json_name = "iconName"];</code>
    * @return The bytes for iconName.
    */
@@ -757,6 +801,10 @@ private static final long serialVersionUID = 0L;
   public static final int ICON_COLOR_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color iconColor_;
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    * @return Whether the iconColor field is set.
    */
@@ -765,6 +813,10 @@ private static final long serialVersionUID = 0L;
     return iconColor_ != null;
   }
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    * @return The iconColor.
    */
@@ -773,6 +825,10 @@ private static final long serialVersionUID = 0L;
     return iconColor_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.getDefaultInstance() : iconColor_;
   }
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    */
   @java.lang.Override
@@ -978,6 +1034,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * TextValueCondition describes the conditions to render
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.TextValueCondition}
    */
   public static final class Builder extends
@@ -1240,6 +1300,10 @@ private static final long serialVersionUID = 0L;
 
     private long size_ ;
     /**
+     * <pre>
+     * Text value size
+     * </pre>
+     *
      * <code>int64 size = 2 [json_name = "size"];</code>
      * @return The size.
      */
@@ -1248,6 +1312,10 @@ private static final long serialVersionUID = 0L;
       return size_;
     }
     /**
+     * <pre>
+     * Text value size
+     * </pre>
+     *
      * <code>int64 size = 2 [json_name = "size"];</code>
      * @param value The size to set.
      * @return This builder for chaining.
@@ -1260,6 +1328,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Text value size
+     * </pre>
+     *
      * <code>int64 size = 2 [json_name = "size"];</code>
      * @return This builder for chaining.
      */
@@ -1283,6 +1355,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder> operationsBuilder_;
 
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation> getOperationsList() {
@@ -1293,6 +1369,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public int getOperationsCount() {
@@ -1303,6 +1383,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation getOperations(int index) {
@@ -1313,6 +1397,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder setOperations(
@@ -1330,6 +1418,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder setOperations(
@@ -1344,6 +1436,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder addOperations(com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation value) {
@@ -1360,6 +1456,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder addOperations(
@@ -1377,6 +1477,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder addOperations(
@@ -1391,6 +1495,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder addOperations(
@@ -1405,6 +1513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder addAllOperations(
@@ -1420,6 +1532,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder clearOperations() {
@@ -1433,6 +1549,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public Builder removeOperations(int index) {
@@ -1446,6 +1566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder getOperationsBuilder(
@@ -1453,6 +1577,10 @@ private static final long serialVersionUID = 0L;
       return getOperationsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder getOperationsOrBuilder(
@@ -1463,6 +1591,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder> 
@@ -1474,6 +1606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder addOperationsBuilder() {
@@ -1481,6 +1617,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder addOperationsBuilder(
@@ -1489,6 +1629,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of column operations
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.Builder> 
@@ -1512,6 +1656,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object iconName_ = "";
     /**
+     * <pre>
+     * Icon name
+     * </pre>
+     *
      * <code>string icon_name = 4 [json_name = "iconName"];</code>
      * @return The iconName.
      */
@@ -1528,6 +1676,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Icon name
+     * </pre>
+     *
      * <code>string icon_name = 4 [json_name = "iconName"];</code>
      * @return The bytes for iconName.
      */
@@ -1545,6 +1697,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Icon name
+     * </pre>
+     *
      * <code>string icon_name = 4 [json_name = "iconName"];</code>
      * @param value The iconName to set.
      * @return This builder for chaining.
@@ -1558,6 +1714,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon name
+     * </pre>
+     *
      * <code>string icon_name = 4 [json_name = "iconName"];</code>
      * @return This builder for chaining.
      */
@@ -1568,6 +1728,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon name
+     * </pre>
+     *
      * <code>string icon_name = 4 [json_name = "iconName"];</code>
      * @param value The bytes for iconName to set.
      * @return This builder for chaining.
@@ -1586,6 +1750,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color, com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.Builder, com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.ColorOrBuilder> iconColorBuilder_;
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      * @return Whether the iconColor field is set.
      */
@@ -1593,6 +1761,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      * @return The iconColor.
      */
@@ -1604,6 +1776,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public Builder setIconColor(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color value) {
@@ -1620,6 +1796,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public Builder setIconColor(
@@ -1634,6 +1814,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public Builder mergeIconColor(com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color value) {
@@ -1653,6 +1837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public Builder clearIconColor() {
@@ -1666,6 +1854,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.Builder getIconColorBuilder() {
@@ -1674,6 +1866,10 @@ private static final long serialVersionUID = 0L;
       return getIconColorFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.ColorOrBuilder getIconColorOrBuilder() {
@@ -1685,6 +1881,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Icon color
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

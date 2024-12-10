@@ -9,7 +9,7 @@ public interface StringManipulationReplaceOrBuilder extends
 
   /**
    * <pre>
-   * target string to replace
+   * Target string to replace
    * </pre>
    *
    * <code>string target = 1 [json_name = "target"];</code>
@@ -18,7 +18,7 @@ public interface StringManipulationReplaceOrBuilder extends
   java.lang.String getTarget();
   /**
    * <pre>
-   * target string to replace
+   * Target string to replace
    * </pre>
    *
    * <code>string target = 1 [json_name = "target"];</code>
@@ -29,7 +29,7 @@ public interface StringManipulationReplaceOrBuilder extends
 
   /**
    * <pre>
-   * value to replace with
+   * Value to replace with
    * </pre>
    *
    * <code>string value = 2 [json_name = "value"];</code>
@@ -38,7 +38,7 @@ public interface StringManipulationReplaceOrBuilder extends
   java.lang.String getValue();
   /**
    * <pre>
-   * value to replace with
+   * Value to replace with
    * </pre>
    *
    * <code>string value = 2 [json_name = "value"];</code>

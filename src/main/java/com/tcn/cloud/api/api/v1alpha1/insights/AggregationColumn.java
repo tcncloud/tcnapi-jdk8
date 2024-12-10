@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * AggregationColumn describes the aggregation column
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.AggregationColumn}
  */
 public final class AggregationColumn extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * column name
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * column name
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -87,6 +99,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList groupByColumns_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * which columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
    * @return A list containing the groupByColumns.
    */
@@ -95,6 +111,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_;
   }
   /**
+   * <pre>
+   * which columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
    * @return The count of groupByColumns.
    */
@@ -102,6 +122,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_.size();
   }
   /**
+   * <pre>
+   * which columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
    * @param index The index of the element to return.
    * @return The groupByColumns at the given index.
@@ -110,6 +134,10 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_.get(index);
   }
   /**
+   * <pre>
+   * which columns to group by
+   * </pre>
+   *
    * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the groupByColumns at the given index.
@@ -123,6 +151,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object columnToAggregate_ = "";
   /**
+   * <pre>
+   * which column to aggregate
+   * </pre>
+   *
    * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
    * @return The columnToAggregate.
    */
@@ -140,6 +172,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * which column to aggregate
+   * </pre>
+   *
    * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
    * @return The bytes for columnToAggregate.
    */
@@ -163,7 +199,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object aggregationFunction_ = "";
   /**
    * <pre>
-   * sum | avg | count | min | max | combine_string | unique_count
+   * the aggregation function to apply
    * </pre>
    *
    * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -184,7 +220,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * sum | avg | count | min | max | combine_string | unique_count
+   * the aggregation function to apply
    * </pre>
    *
    * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -399,6 +435,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * AggregationColumn describes the aggregation column
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.AggregationColumn}
    */
   public static final class Builder extends
@@ -620,6 +660,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * column name
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
@@ -636,6 +680,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * column name
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -653,6 +701,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * column name
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -666,6 +718,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column name
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -676,6 +732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column name
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -699,6 +759,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @return A list containing the groupByColumns.
      */
@@ -708,6 +772,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @return The count of groupByColumns.
      */
@@ -715,6 +783,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.size();
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param index The index of the element to return.
      * @return The groupByColumns at the given index.
@@ -723,6 +795,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.get(index);
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the groupByColumns at the given index.
@@ -732,6 +808,10 @@ private static final long serialVersionUID = 0L;
       return groupByColumns_.getByteString(index);
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param index The index to set the value at.
      * @param value The groupByColumns to set.
@@ -747,6 +827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param value The groupByColumns to add.
      * @return This builder for chaining.
@@ -761,6 +845,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param values The groupByColumns to add.
      * @return This builder for chaining.
@@ -775,6 +863,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @return This builder for chaining.
      */
@@ -786,6 +878,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which columns to group by
+     * </pre>
+     *
      * <code>repeated string group_by_columns = 2 [json_name = "groupByColumns"];</code>
      * @param value The bytes of the groupByColumns to add.
      * @return This builder for chaining.
@@ -803,6 +899,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object columnToAggregate_ = "";
     /**
+     * <pre>
+     * which column to aggregate
+     * </pre>
+     *
      * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
      * @return The columnToAggregate.
      */
@@ -819,6 +919,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which column to aggregate
+     * </pre>
+     *
      * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
      * @return The bytes for columnToAggregate.
      */
@@ -836,6 +940,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which column to aggregate
+     * </pre>
+     *
      * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
      * @param value The columnToAggregate to set.
      * @return This builder for chaining.
@@ -849,6 +957,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which column to aggregate
+     * </pre>
+     *
      * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
      * @return This builder for chaining.
      */
@@ -859,6 +971,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which column to aggregate
+     * </pre>
+     *
      * <code>string column_to_aggregate = 3 [json_name = "columnToAggregate"];</code>
      * @param value The bytes for columnToAggregate to set.
      * @return This builder for chaining.
@@ -876,7 +992,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object aggregationFunction_ = "";
     /**
      * <pre>
-     * sum | avg | count | min | max | combine_string | unique_count
+     * the aggregation function to apply
      * </pre>
      *
      * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -896,7 +1012,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sum | avg | count | min | max | combine_string | unique_count
+     * the aggregation function to apply
      * </pre>
      *
      * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -917,7 +1033,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sum | avg | count | min | max | combine_string | unique_count
+     * the aggregation function to apply
      * </pre>
      *
      * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -934,7 +1050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sum | avg | count | min | max | combine_string | unique_count
+     * the aggregation function to apply
      * </pre>
      *
      * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>
@@ -948,7 +1064,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sum | avg | count | min | max | combine_string | unique_count
+     * the aggregation function to apply
      * </pre>
      *
      * <code>string aggregation_function = 4 [json_name = "aggregationFunction"];</code>

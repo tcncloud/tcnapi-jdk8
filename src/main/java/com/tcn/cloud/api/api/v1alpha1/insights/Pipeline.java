@@ -5,6 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
  * <pre>
+ * Pipeline contains a set of nodes
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.insights.Pipeline}
@@ -46,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Node> nodes_;
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   @java.lang.Override
@@ -53,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return nodes_;
   }
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   @java.lang.Override
@@ -61,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return nodes_;
   }
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   @java.lang.Override
@@ -68,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return nodes_.size();
   }
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   @java.lang.Override
@@ -75,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return nodes_.get(index);
   }
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   @java.lang.Override
@@ -244,6 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Pipeline contains a set of nodes
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.insights.Pipeline}
@@ -473,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.Node, com.tcn.cloud.api.api.v1alpha1.insights.Node.Builder, com.tcn.cloud.api.api.v1alpha1.insights.NodeOrBuilder> nodesBuilder_;
 
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Node> getNodesList() {
@@ -483,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public int getNodesCount() {
@@ -493,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Node getNodes(int index) {
@@ -503,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder setNodes(
@@ -520,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder setNodes(
@@ -534,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder addNodes(com.tcn.cloud.api.api.v1alpha1.insights.Node value) {
@@ -550,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder addNodes(
@@ -567,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder addNodes(
@@ -581,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder addNodes(
@@ -595,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder addAllNodes(
@@ -610,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder clearNodes() {
@@ -623,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public Builder removeNodes(int index) {
@@ -636,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Node.Builder getNodesBuilder(
@@ -643,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getNodesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.NodeOrBuilder getNodesOrBuilder(
@@ -653,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.NodeOrBuilder> 
@@ -664,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Node.Builder addNodesBuilder() {
@@ -671,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.Node.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Node.Builder addNodesBuilder(
@@ -679,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.Node.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Pipeline nodes
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Node.Builder> 

@@ -8,41 +8,73 @@ public interface TextValueConditionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Text value size
+   * </pre>
+   *
    * <code>int64 size = 2 [json_name = "size"];</code>
    * @return The size.
    */
   long getSize();
 
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation> 
       getOperationsList();
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation getOperations(int index);
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   int getOperationsCount();
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder> 
       getOperationsOrBuilderList();
   /**
+   * <pre>
+   * List of column operations
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnOperation operations = 3 [json_name = "operations"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperationOrBuilder getOperationsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Icon name
+   * </pre>
+   *
    * <code>string icon_name = 4 [json_name = "iconName"];</code>
    * @return The iconName.
    */
   java.lang.String getIconName();
   /**
+   * <pre>
+   * Icon name
+   * </pre>
+   *
    * <code>string icon_name = 4 [json_name = "iconName"];</code>
    * @return The bytes for iconName.
    */
@@ -50,16 +82,28 @@ public interface TextValueConditionOrBuilder extends
       getIconNameBytes();
 
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    * @return Whether the iconColor field is set.
    */
   boolean hasIconColor();
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    * @return The iconColor.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color getIconColor();
   /**
+   * <pre>
+   * Icon color
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.ColorOrBuilder getIconColorOrBuilder();

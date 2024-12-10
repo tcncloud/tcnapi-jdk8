@@ -8,10 +8,18 @@ public interface ParametersOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   int getParametersCount();
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   boolean containsParameters(
@@ -23,11 +31,19 @@ public interface ParametersOrBuilder extends
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter>
   getParameters();
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter>
   getParametersMap();
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   /* nullable */
@@ -36,6 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter getParametersOrDefa
       /* nullable */
 com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter defaultValue);
   /**
+   * <pre>
+   * Parameters map
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.insights.Parameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Parameter getParametersOrThrow(

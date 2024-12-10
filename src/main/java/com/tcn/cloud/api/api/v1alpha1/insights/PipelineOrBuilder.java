@@ -8,24 +8,44 @@ public interface PipelineOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Node> 
       getNodesList();
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.Node getNodes(int index);
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   int getNodesCount();
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.NodeOrBuilder> 
       getNodesOrBuilderList();
   /**
+   * <pre>
+   * Pipeline nodes
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Node nodes = 1 [json_name = "nodes"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.NodeOrBuilder getNodesOrBuilder(

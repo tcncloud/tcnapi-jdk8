@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * ColumnReplacement
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.ColumnReplacement}
  */
 public final class ColumnReplacement extends
@@ -47,7 +51,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -59,7 +63,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -70,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -82,7 +86,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * column to replace values in
+   * Column to replace values in
    * </pre>
    *
    * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -99,7 +103,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ValuesReplacement> valuesReplacements_;
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -110,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -122,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -133,7 +137,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -144,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * values to replace
+   * Values to replace
    * </pre>
    *
    * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -332,6 +336,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ColumnReplacement
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.ColumnReplacement}
    */
   public static final class Builder extends
@@ -578,7 +586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -591,7 +599,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -602,7 +610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -614,7 +622,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -627,7 +635,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -646,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -664,7 +672,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -682,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -697,7 +705,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace values in
+     * Column to replace values in
      * </pre>
      *
      * <code>repeated string column_names = 1 [json_name = "columnNames"];</code>
@@ -729,7 +737,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -743,7 +751,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -757,7 +765,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -771,7 +779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -792,7 +800,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -810,7 +818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -830,7 +838,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -851,7 +859,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -869,7 +877,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -887,7 +895,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -906,7 +914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -923,7 +931,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -940,7 +948,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -951,7 +959,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -965,7 +973,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -980,7 +988,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -991,7 +999,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>
@@ -1003,7 +1011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * values to replace
+     * Values to replace
      * </pre>
      *
      * <code>repeated .api.v1alpha1.insights.ValuesReplacement values_replacements = 2 [json_name = "valuesReplacements"];</code>

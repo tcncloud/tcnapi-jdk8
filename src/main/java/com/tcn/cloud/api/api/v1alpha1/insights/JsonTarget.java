@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * JsonTarget
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.JsonTarget}
  */
 public final class JsonTarget extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList pathParts_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @return A list containing the pathParts.
    */
@@ -55,6 +63,10 @@ private static final long serialVersionUID = 0L;
     return pathParts_;
   }
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @return The count of pathParts.
    */
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return pathParts_.size();
   }
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @param index The index of the element to return.
    * @return The pathParts at the given index.
@@ -70,6 +86,10 @@ private static final long serialVersionUID = 0L;
     return pathParts_.get(index);
   }
   /**
+   * <pre>
+   * path parts
+   * </pre>
+   *
    * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the pathParts at the given index.
@@ -83,6 +103,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object columnName_ = "";
   /**
+   * <pre>
+   * Column name
+   * </pre>
+   *
    * <code>string column_name = 2 [json_name = "columnName"];</code>
    * @return The columnName.
    */
@@ -100,6 +124,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Column name
+   * </pre>
+   *
    * <code>string column_name = 2 [json_name = "columnName"];</code>
    * @return The bytes for columnName.
    */
@@ -123,7 +151,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resultType_ = "";
   /**
    * <pre>
-   * string | number | boolean | array | object
+   * Result type
    * </pre>
    *
    * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -144,7 +172,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * string | number | boolean | array | object
+   * Result type
    * </pre>
    *
    * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -349,6 +377,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * JsonTarget
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.JsonTarget}
    */
   public static final class Builder extends
@@ -563,6 +595,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @return A list containing the pathParts.
      */
@@ -572,6 +608,10 @@ private static final long serialVersionUID = 0L;
       return pathParts_;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @return The count of pathParts.
      */
@@ -579,6 +619,10 @@ private static final long serialVersionUID = 0L;
       return pathParts_.size();
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param index The index of the element to return.
      * @return The pathParts at the given index.
@@ -587,6 +631,10 @@ private static final long serialVersionUID = 0L;
       return pathParts_.get(index);
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the pathParts at the given index.
@@ -596,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return pathParts_.getByteString(index);
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param index The index to set the value at.
      * @param value The pathParts to set.
@@ -611,6 +663,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param value The pathParts to add.
      * @return This builder for chaining.
@@ -625,6 +681,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param values The pathParts to add.
      * @return This builder for chaining.
@@ -639,6 +699,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @return This builder for chaining.
      */
@@ -650,6 +714,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * path parts
+     * </pre>
+     *
      * <code>repeated string path_parts = 1 [json_name = "pathParts"];</code>
      * @param value The bytes of the pathParts to add.
      * @return This builder for chaining.
@@ -667,6 +735,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object columnName_ = "";
     /**
+     * <pre>
+     * Column name
+     * </pre>
+     *
      * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @return The columnName.
      */
@@ -683,6 +755,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Column name
+     * </pre>
+     *
      * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @return The bytes for columnName.
      */
@@ -700,6 +776,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Column name
+     * </pre>
+     *
      * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @param value The columnName to set.
      * @return This builder for chaining.
@@ -713,6 +793,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column name
+     * </pre>
+     *
      * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @return This builder for chaining.
      */
@@ -723,6 +807,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column name
+     * </pre>
+     *
      * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @param value The bytes for columnName to set.
      * @return This builder for chaining.
@@ -740,7 +828,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resultType_ = "";
     /**
      * <pre>
-     * string | number | boolean | array | object
+     * Result type
      * </pre>
      *
      * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -760,7 +848,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * string | number | boolean | array | object
+     * Result type
      * </pre>
      *
      * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -781,7 +869,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * string | number | boolean | array | object
+     * Result type
      * </pre>
      *
      * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -798,7 +886,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * string | number | boolean | array | object
+     * Result type
      * </pre>
      *
      * <code>string result_type = 3 [json_name = "resultType"];</code>
@@ -812,7 +900,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * string | number | boolean | array | object
+     * Result type
      * </pre>
      *
      * <code>string result_type = 3 [json_name = "resultType"];</code>

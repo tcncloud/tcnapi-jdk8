@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object sourceColumnName_ = "";
   /**
    * <pre>
-   * column to replace with
+   * Column to replace with
    * </pre>
    *
    * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * column to replace with
+   * Column to replace with
    * </pre>
    *
    * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object targetColumnName_ = "";
   /**
    * <pre>
-   * target column to replace
+   * Target column to replace
    * </pre>
    *
    * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * target column to replace
+   * Target column to replace
    * </pre>
    *
    * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -186,6 +186,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplit stringManipulationSplit_;
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -197,6 +198,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -208,6 +210,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -220,6 +223,10 @@ private static final long serialVersionUID = 0L;
   public static final int STRING_MANIPULATION_REPLACE_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace stringManipulationReplace_;
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    * @return Whether the stringManipulationReplace field is set.
    */
@@ -228,6 +235,10 @@ private static final long serialVersionUID = 0L;
     return stringManipulationReplace_ != null;
   }
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    * @return The stringManipulationReplace.
    */
@@ -236,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return stringManipulationReplace_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace.getDefaultInstance() : stringManipulationReplace_;
   }
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    */
   @java.lang.Override
@@ -784,7 +799,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object sourceColumnName_ = "";
     /**
      * <pre>
-     * column to replace with
+     * Column to replace with
      * </pre>
      *
      * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -804,7 +819,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace with
+     * Column to replace with
      * </pre>
      *
      * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -825,7 +840,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace with
+     * Column to replace with
      * </pre>
      *
      * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -842,7 +857,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace with
+     * Column to replace with
      * </pre>
      *
      * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -856,7 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * column to replace with
+     * Column to replace with
      * </pre>
      *
      * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -876,7 +891,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object targetColumnName_ = "";
     /**
      * <pre>
-     * target column to replace
+     * Target column to replace
      * </pre>
      *
      * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -896,7 +911,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target column to replace
+     * Target column to replace
      * </pre>
      *
      * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -917,7 +932,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target column to replace
+     * Target column to replace
      * </pre>
      *
      * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -934,7 +949,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target column to replace
+     * Target column to replace
      * </pre>
      *
      * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -948,7 +963,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * target column to replace
+     * Target column to replace
      * </pre>
      *
      * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -970,6 +985,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplit, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplit.Builder, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplitOrBuilder> stringManipulationSplitBuilder_;
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -980,6 +996,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -994,6 +1011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1013,6 +1031,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1030,6 +1049,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1052,6 +1072,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1068,6 +1089,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1079,6 +1101,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1093,6 +1116,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Split operation
      * </pre>
      *
      * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -1115,6 +1139,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace.Builder, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplaceOrBuilder> stringManipulationReplaceBuilder_;
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      * @return Whether the stringManipulationReplace field is set.
      */
@@ -1122,6 +1150,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      * @return The stringManipulationReplace.
      */
@@ -1133,6 +1165,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public Builder setStringManipulationReplace(com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace value) {
@@ -1149,6 +1185,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public Builder setStringManipulationReplace(
@@ -1163,6 +1203,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public Builder mergeStringManipulationReplace(com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace value) {
@@ -1182,6 +1226,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public Builder clearStringManipulationReplace() {
@@ -1195,6 +1243,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace.Builder getStringManipulationReplaceBuilder() {
@@ -1203,6 +1255,10 @@ private static final long serialVersionUID = 0L;
       return getStringManipulationReplaceFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplaceOrBuilder getStringManipulationReplaceOrBuilder() {
@@ -1214,6 +1270,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Replace operation
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

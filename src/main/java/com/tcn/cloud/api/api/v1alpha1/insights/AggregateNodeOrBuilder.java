@@ -8,24 +8,44 @@ public interface AggregateNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Aggregation columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn> 
       getAggregationColumnsList();
   /**
+   * <pre>
+   * Aggregation columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumn getAggregationColumns(int index);
   /**
+   * <pre>
+   * Aggregation columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   int getAggregationColumnsCount();
   /**
+   * <pre>
+   * Aggregation columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumnOrBuilder> 
       getAggregationColumnsOrBuilderList();
   /**
+   * <pre>
+   * Aggregation columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.AggregationColumn aggregation_columns = 2 [json_name = "aggregationColumns"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.AggregationColumnOrBuilder getAggregationColumnsOrBuilder(

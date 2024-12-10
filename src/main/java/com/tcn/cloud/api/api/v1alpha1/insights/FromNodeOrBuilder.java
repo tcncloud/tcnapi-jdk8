@@ -8,11 +8,19 @@ public interface FromNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The dataset to select from
+   * </pre>
+   *
    * <code>string dataset = 1 [json_name = "dataset"];</code>
    * @return The dataset.
    */
   java.lang.String getDataset();
   /**
+   * <pre>
+   * The dataset to select from
+   * </pre>
+   *
    * <code>string dataset = 1 [json_name = "dataset"];</code>
    * @return The bytes for dataset.
    */

@@ -8,11 +8,19 @@ public interface StringManipulationSplitOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Split value
+   * </pre>
+   *
    * <code>string split_by = 2 [json_name = "splitBy"];</code>
    * @return The splitBy.
    */
   java.lang.String getSplitBy();
   /**
+   * <pre>
+   * Split value
+   * </pre>
+   *
    * <code>string split_by = 2 [json_name = "splitBy"];</code>
    * @return The bytes for splitBy.
    */
@@ -21,7 +29,7 @@ public interface StringManipulationSplitOrBuilder extends
 
   /**
    * <pre>
-   * if true, index_extraction is required
+   * If true, index_extraction is required
    * </pre>
    *
    * <code>bool is_index_extraction = 3 [json_name = "isIndexExtraction"];</code>
@@ -31,7 +39,7 @@ public interface StringManipulationSplitOrBuilder extends
 
   /**
    * <pre>
-   * index to extract after split
+   * Index to extract after split
    * </pre>
    *
    * <code>int32 index_extraction = 4 [json_name = "indexExtraction"];</code>

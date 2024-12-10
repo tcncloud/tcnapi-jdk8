@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * Node describes the type of operations of a pipeline section
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.Node}
  */
 public final class Node extends
@@ -16,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Node() {
-    id_ = "";
+    nodeId_ = "";
     type_ = "";
     title_ = "";
     inputIds_ =
@@ -109,39 +113,47 @@ private static final long serialVersionUID = 0L;
         bodyCase_);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
+  public static final int NODE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  private volatile java.lang.Object nodeId_ = "";
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <pre>
+   * Node id
+   * </pre>
+   *
+   * <code>string node_id = 1 [json_name = "nodeId"];</code>
+   * @return The nodeId.
    */
   @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
+  public java.lang.String getNodeId() {
+    java.lang.Object ref = nodeId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      id_ = s;
+      nodeId_ = s;
       return s;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <pre>
+   * Node id
+   * </pre>
+   *
+   * <code>string node_id = 1 [json_name = "nodeId"];</code>
+   * @return The bytes for nodeId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
+      getNodeIdBytes() {
+    java.lang.Object ref = nodeId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      id_ = b;
+      nodeId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -199,6 +211,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object title_ = "";
   /**
+   * <pre>
+   * Node title
+   * </pre>
+   *
    * <code>string title = 3 [json_name = "title"];</code>
    * @return The title.
    */
@@ -216,6 +232,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Node title
+   * </pre>
+   *
    * <code>string title = 3 [json_name = "title"];</code>
    * @return The bytes for title.
    */
@@ -239,6 +259,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList inputIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @return A list containing the inputIds.
    */
@@ -247,6 +271,10 @@ private static final long serialVersionUID = 0L;
     return inputIds_;
   }
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @return The count of inputIds.
    */
@@ -254,6 +282,10 @@ private static final long serialVersionUID = 0L;
     return inputIds_.size();
   }
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @param index The index of the element to return.
    * @return The inputIds at the given index.
@@ -262,6 +294,10 @@ private static final long serialVersionUID = 0L;
     return inputIds_.get(index);
   }
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the inputIds at the given index.
@@ -276,6 +312,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList outputIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @return A list containing the outputIds.
    */
@@ -284,6 +324,10 @@ private static final long serialVersionUID = 0L;
     return outputIds_;
   }
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @return The count of outputIds.
    */
@@ -291,6 +335,10 @@ private static final long serialVersionUID = 0L;
     return outputIds_.size();
   }
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @param index The index of the element to return.
    * @return The outputIds at the given index.
@@ -299,6 +347,10 @@ private static final long serialVersionUID = 0L;
     return outputIds_.get(index);
   }
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the outputIds at the given index.
@@ -310,6 +362,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FROM_NODE_FIELD_NUMBER = 6;
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    * @return Whether the fromNode field is set.
    */
@@ -318,6 +374,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 6;
   }
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    * @return The fromNode.
    */
@@ -329,6 +389,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.FromNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    */
   @java.lang.Override
@@ -341,6 +405,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FILTER_NODE_FIELD_NUMBER = 7;
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    * @return Whether the filterNode field is set.
    */
@@ -349,6 +417,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 7;
   }
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    * @return The filterNode.
    */
@@ -360,6 +432,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.FilterNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    */
   @java.lang.Override
@@ -372,6 +448,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int DERIVE_NODE_FIELD_NUMBER = 8;
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    * @return Whether the deriveNode field is set.
    */
@@ -380,6 +460,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 8;
   }
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    * @return The deriveNode.
    */
@@ -391,6 +475,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    */
   @java.lang.Override
@@ -403,6 +491,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int GROUP_NODE_FIELD_NUMBER = 9;
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    * @return Whether the groupNode field is set.
    */
@@ -411,6 +503,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 9;
   }
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    * @return The groupNode.
    */
@@ -422,6 +518,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.GroupNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    */
   @java.lang.Override
@@ -434,6 +534,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int JOIN_NODE_FIELD_NUMBER = 10;
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    * @return Whether the joinNode field is set.
    */
@@ -442,6 +546,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 10;
   }
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    * @return The joinNode.
    */
@@ -453,6 +561,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.JoinNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    */
   @java.lang.Override
@@ -465,6 +577,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int SELECT_NODE_FIELD_NUMBER = 11;
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    * @return Whether the selectNode field is set.
    */
@@ -473,6 +589,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 11;
   }
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    * @return The selectNode.
    */
@@ -484,6 +604,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.SelectNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    */
   @java.lang.Override
@@ -496,6 +620,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGGREGATE_NODE_FIELD_NUMBER = 12;
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    * @return Whether the aggregateNode field is set.
    */
@@ -504,6 +632,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 12;
   }
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    * @return The aggregateNode.
    */
@@ -515,6 +647,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    */
   @java.lang.Override
@@ -527,6 +663,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int TAKE_NODE_FIELD_NUMBER = 13;
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    * @return Whether the takeNode field is set.
    */
@@ -535,6 +675,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 13;
   }
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    * @return The takeNode.
    */
@@ -546,6 +690,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.TakeNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    */
   @java.lang.Override
@@ -558,6 +706,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int JSON_NODE_FIELD_NUMBER = 14;
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    * @return Whether the jsonNode field is set.
    */
@@ -566,6 +718,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 14;
   }
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    * @return The jsonNode.
    */
@@ -577,6 +733,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.JsonNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    */
   @java.lang.Override
@@ -589,6 +749,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int MAP_NODE_FIELD_NUMBER = 15;
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    * @return Whether the mapNode field is set.
    */
@@ -597,6 +761,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 15;
   }
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    * @return The mapNode.
    */
@@ -608,6 +776,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.MapNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    */
   @java.lang.Override
@@ -620,6 +792,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int REPLACE_NODE_FIELD_NUMBER = 16;
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    * @return Whether the replaceNode field is set.
    */
@@ -628,6 +804,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 16;
   }
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    * @return The replaceNode.
    */
@@ -639,6 +819,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    */
   @java.lang.Override
@@ -651,6 +835,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int SORT_NODE_FIELD_NUMBER = 17;
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    * @return Whether the sortNode field is set.
    */
@@ -659,6 +847,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 17;
   }
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    * @return The sortNode.
    */
@@ -670,6 +862,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.SortNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    */
   @java.lang.Override
@@ -682,6 +878,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int STRING_MANIPULATION_NODE_FIELD_NUMBER = 18;
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    * @return Whether the stringManipulationNode field is set.
    */
@@ -690,6 +890,10 @@ private static final long serialVersionUID = 0L;
     return bodyCase_ == 18;
   }
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    * @return The stringManipulationNode.
    */
@@ -701,6 +905,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode.getDefaultInstance();
   }
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    */
   @java.lang.Override
@@ -725,8 +933,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nodeId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
@@ -788,8 +996,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nodeId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
@@ -880,8 +1088,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.insights.Node other = (com.tcn.cloud.api.api.v1alpha1.insights.Node) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
+    if (!getNodeId()
+        .equals(other.getNodeId())) return false;
     if (!getType()
         .equals(other.getType())) return false;
     if (!getTitle()
@@ -958,8 +1166,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + NODE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getNodeId().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getType().hashCode();
     hash = (37 * hash) + TITLE_FIELD_NUMBER;
@@ -1126,6 +1334,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Node describes the type of operations of a pipeline section
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.Node}
    */
   public static final class Builder extends
@@ -1159,7 +1371,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      id_ = "";
+      nodeId_ = "";
       type_ = "";
       title_ = "";
       inputIds_ =
@@ -1242,7 +1454,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.Node result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
+        result.nodeId_ = nodeId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.type_ = type_;
@@ -1361,8 +1573,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.Node other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.insights.Node.getDefaultInstance()) return this;
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
+      if (!other.getNodeId().isEmpty()) {
+        nodeId_ = other.nodeId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -1480,7 +1692,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              id_ = input.readStringRequireUtf8();
+              nodeId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -1629,73 +1841,93 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
+    private java.lang.Object nodeId_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
+     * <pre>
+     * Node id
+     * </pre>
+     *
+     * <code>string node_id = 1 [json_name = "nodeId"];</code>
+     * @return The nodeId.
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getNodeId() {
+      java.lang.Object ref = nodeId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        nodeId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <pre>
+     * Node id
+     * </pre>
+     *
+     * <code>string node_id = 1 [json_name = "nodeId"];</code>
+     * @return The bytes for nodeId.
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getNodeIdBytes() {
+      java.lang.Object ref = nodeId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        nodeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
+     * <pre>
+     * Node id
+     * </pre>
+     *
+     * <code>string node_id = 1 [json_name = "nodeId"];</code>
+     * @param value The nodeId to set.
      * @return This builder for chaining.
      */
-    public Builder setId(
+    public Builder setNodeId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      id_ = value;
+      nodeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <pre>
+     * Node id
+     * </pre>
+     *
+     * <code>string node_id = 1 [json_name = "nodeId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
+    public Builder clearNodeId() {
+      nodeId_ = getDefaultInstance().getNodeId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
+     * <pre>
+     * Node id
+     * </pre>
+     *
+     * <code>string node_id = 1 [json_name = "nodeId"];</code>
+     * @param value The bytes for nodeId to set.
      * @return This builder for chaining.
      */
-    public Builder setIdBytes(
+    public Builder setNodeIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      id_ = value;
+      nodeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -1795,6 +2027,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object title_ = "";
     /**
+     * <pre>
+     * Node title
+     * </pre>
+     *
      * <code>string title = 3 [json_name = "title"];</code>
      * @return The title.
      */
@@ -1811,6 +2047,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Node title
+     * </pre>
+     *
      * <code>string title = 3 [json_name = "title"];</code>
      * @return The bytes for title.
      */
@@ -1828,6 +2068,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Node title
+     * </pre>
+     *
      * <code>string title = 3 [json_name = "title"];</code>
      * @param value The title to set.
      * @return This builder for chaining.
@@ -1841,6 +2085,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Node title
+     * </pre>
+     *
      * <code>string title = 3 [json_name = "title"];</code>
      * @return This builder for chaining.
      */
@@ -1851,6 +2099,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Node title
+     * </pre>
+     *
      * <code>string title = 3 [json_name = "title"];</code>
      * @param value The bytes for title to set.
      * @return This builder for chaining.
@@ -1874,6 +2126,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @return A list containing the inputIds.
      */
@@ -1883,6 +2139,10 @@ private static final long serialVersionUID = 0L;
       return inputIds_;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @return The count of inputIds.
      */
@@ -1890,6 +2150,10 @@ private static final long serialVersionUID = 0L;
       return inputIds_.size();
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param index The index of the element to return.
      * @return The inputIds at the given index.
@@ -1898,6 +2162,10 @@ private static final long serialVersionUID = 0L;
       return inputIds_.get(index);
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the inputIds at the given index.
@@ -1907,6 +2175,10 @@ private static final long serialVersionUID = 0L;
       return inputIds_.getByteString(index);
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param index The index to set the value at.
      * @param value The inputIds to set.
@@ -1922,6 +2194,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param value The inputIds to add.
      * @return This builder for chaining.
@@ -1936,6 +2212,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param values The inputIds to add.
      * @return This builder for chaining.
@@ -1950,6 +2230,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @return This builder for chaining.
      */
@@ -1961,6 +2245,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Input ids of other nodes
+     * </pre>
+     *
      * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
      * @param value The bytes of the inputIds to add.
      * @return This builder for chaining.
@@ -1985,6 +2273,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @return A list containing the outputIds.
      */
@@ -1994,6 +2286,10 @@ private static final long serialVersionUID = 0L;
       return outputIds_;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @return The count of outputIds.
      */
@@ -2001,6 +2297,10 @@ private static final long serialVersionUID = 0L;
       return outputIds_.size();
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param index The index of the element to return.
      * @return The outputIds at the given index.
@@ -2009,6 +2309,10 @@ private static final long serialVersionUID = 0L;
       return outputIds_.get(index);
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the outputIds at the given index.
@@ -2018,6 +2322,10 @@ private static final long serialVersionUID = 0L;
       return outputIds_.getByteString(index);
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param index The index to set the value at.
      * @param value The outputIds to set.
@@ -2033,6 +2341,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param value The outputIds to add.
      * @return This builder for chaining.
@@ -2047,6 +2359,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param values The outputIds to add.
      * @return This builder for chaining.
@@ -2061,6 +2377,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @return This builder for chaining.
      */
@@ -2072,6 +2392,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output ids of the node
+     * </pre>
+     *
      * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
      * @param value The bytes of the outputIds to add.
      * @return This builder for chaining.
@@ -2090,6 +2414,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.FromNode, com.tcn.cloud.api.api.v1alpha1.insights.FromNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.FromNodeOrBuilder> fromNodeBuilder_;
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      * @return Whether the fromNode field is set.
      */
@@ -2098,6 +2426,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 6;
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      * @return The fromNode.
      */
@@ -2116,6 +2448,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     public Builder setFromNode(com.tcn.cloud.api.api.v1alpha1.insights.FromNode value) {
@@ -2132,6 +2468,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     public Builder setFromNode(
@@ -2146,6 +2486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     public Builder mergeFromNode(com.tcn.cloud.api.api.v1alpha1.insights.FromNode value) {
@@ -2169,6 +2513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     public Builder clearFromNode() {
@@ -2188,12 +2536,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.FromNode.Builder getFromNodeBuilder() {
       return getFromNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     @java.lang.Override
@@ -2208,6 +2564,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * From node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2232,6 +2592,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.FilterNode, com.tcn.cloud.api.api.v1alpha1.insights.FilterNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.FilterNodeOrBuilder> filterNodeBuilder_;
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      * @return Whether the filterNode field is set.
      */
@@ -2240,6 +2604,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 7;
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      * @return The filterNode.
      */
@@ -2258,6 +2626,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     public Builder setFilterNode(com.tcn.cloud.api.api.v1alpha1.insights.FilterNode value) {
@@ -2274,6 +2646,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     public Builder setFilterNode(
@@ -2288,6 +2664,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     public Builder mergeFilterNode(com.tcn.cloud.api.api.v1alpha1.insights.FilterNode value) {
@@ -2311,6 +2691,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     public Builder clearFilterNode() {
@@ -2330,12 +2714,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.FilterNode.Builder getFilterNodeBuilder() {
       return getFilterNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     @java.lang.Override
@@ -2350,6 +2742,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Filter node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2374,6 +2770,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode, com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.DeriveNodeOrBuilder> deriveNodeBuilder_;
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      * @return Whether the deriveNode field is set.
      */
@@ -2382,6 +2782,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 8;
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      * @return The deriveNode.
      */
@@ -2400,6 +2804,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     public Builder setDeriveNode(com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode value) {
@@ -2416,6 +2824,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     public Builder setDeriveNode(
@@ -2430,6 +2842,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     public Builder mergeDeriveNode(com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode value) {
@@ -2453,6 +2869,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     public Builder clearDeriveNode() {
@@ -2472,12 +2892,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode.Builder getDeriveNodeBuilder() {
       return getDeriveNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     @java.lang.Override
@@ -2492,6 +2920,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Derive node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2516,6 +2948,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.GroupNode, com.tcn.cloud.api.api.v1alpha1.insights.GroupNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.GroupNodeOrBuilder> groupNodeBuilder_;
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      * @return Whether the groupNode field is set.
      */
@@ -2524,6 +2960,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 9;
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      * @return The groupNode.
      */
@@ -2542,6 +2982,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     public Builder setGroupNode(com.tcn.cloud.api.api.v1alpha1.insights.GroupNode value) {
@@ -2558,6 +3002,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     public Builder setGroupNode(
@@ -2572,6 +3020,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     public Builder mergeGroupNode(com.tcn.cloud.api.api.v1alpha1.insights.GroupNode value) {
@@ -2595,6 +3047,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     public Builder clearGroupNode() {
@@ -2614,12 +3070,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.GroupNode.Builder getGroupNodeBuilder() {
       return getGroupNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     @java.lang.Override
@@ -2634,6 +3098,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Group node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2658,6 +3126,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.JoinNode, com.tcn.cloud.api.api.v1alpha1.insights.JoinNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JoinNodeOrBuilder> joinNodeBuilder_;
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      * @return Whether the joinNode field is set.
      */
@@ -2666,6 +3138,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 10;
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      * @return The joinNode.
      */
@@ -2684,6 +3160,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     public Builder setJoinNode(com.tcn.cloud.api.api.v1alpha1.insights.JoinNode value) {
@@ -2700,6 +3180,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     public Builder setJoinNode(
@@ -2714,6 +3198,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     public Builder mergeJoinNode(com.tcn.cloud.api.api.v1alpha1.insights.JoinNode value) {
@@ -2737,6 +3225,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     public Builder clearJoinNode() {
@@ -2756,12 +3248,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JoinNode.Builder getJoinNodeBuilder() {
       return getJoinNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     @java.lang.Override
@@ -2776,6 +3276,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Join node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2800,6 +3304,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.SelectNode, com.tcn.cloud.api.api.v1alpha1.insights.SelectNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.SelectNodeOrBuilder> selectNodeBuilder_;
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      * @return Whether the selectNode field is set.
      */
@@ -2808,6 +3316,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 11;
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      * @return The selectNode.
      */
@@ -2826,6 +3338,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     public Builder setSelectNode(com.tcn.cloud.api.api.v1alpha1.insights.SelectNode value) {
@@ -2842,6 +3358,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     public Builder setSelectNode(
@@ -2856,6 +3376,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     public Builder mergeSelectNode(com.tcn.cloud.api.api.v1alpha1.insights.SelectNode value) {
@@ -2879,6 +3403,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     public Builder clearSelectNode() {
@@ -2898,12 +3426,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SelectNode.Builder getSelectNodeBuilder() {
       return getSelectNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     @java.lang.Override
@@ -2918,6 +3454,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Select node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2942,6 +3482,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode, com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.AggregateNodeOrBuilder> aggregateNodeBuilder_;
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      * @return Whether the aggregateNode field is set.
      */
@@ -2950,6 +3494,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 12;
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      * @return The aggregateNode.
      */
@@ -2968,6 +3516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     public Builder setAggregateNode(com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode value) {
@@ -2984,6 +3536,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     public Builder setAggregateNode(
@@ -2998,6 +3554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     public Builder mergeAggregateNode(com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode value) {
@@ -3021,6 +3581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     public Builder clearAggregateNode() {
@@ -3040,12 +3604,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode.Builder getAggregateNodeBuilder() {
       return getAggregateNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     @java.lang.Override
@@ -3060,6 +3632,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Aggregate node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3084,6 +3660,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.TakeNode, com.tcn.cloud.api.api.v1alpha1.insights.TakeNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.TakeNodeOrBuilder> takeNodeBuilder_;
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      * @return Whether the takeNode field is set.
      */
@@ -3092,6 +3672,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 13;
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      * @return The takeNode.
      */
@@ -3110,6 +3694,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     public Builder setTakeNode(com.tcn.cloud.api.api.v1alpha1.insights.TakeNode value) {
@@ -3126,6 +3714,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     public Builder setTakeNode(
@@ -3140,6 +3732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     public Builder mergeTakeNode(com.tcn.cloud.api.api.v1alpha1.insights.TakeNode value) {
@@ -3163,6 +3759,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     public Builder clearTakeNode() {
@@ -3182,12 +3782,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TakeNode.Builder getTakeNodeBuilder() {
       return getTakeNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     @java.lang.Override
@@ -3202,6 +3810,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Take node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3226,6 +3838,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.JsonNode, com.tcn.cloud.api.api.v1alpha1.insights.JsonNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JsonNodeOrBuilder> jsonNodeBuilder_;
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      * @return Whether the jsonNode field is set.
      */
@@ -3234,6 +3850,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 14;
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      * @return The jsonNode.
      */
@@ -3252,6 +3872,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     public Builder setJsonNode(com.tcn.cloud.api.api.v1alpha1.insights.JsonNode value) {
@@ -3268,6 +3892,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     public Builder setJsonNode(
@@ -3282,6 +3910,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     public Builder mergeJsonNode(com.tcn.cloud.api.api.v1alpha1.insights.JsonNode value) {
@@ -3305,6 +3937,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     public Builder clearJsonNode() {
@@ -3324,12 +3960,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JsonNode.Builder getJsonNodeBuilder() {
       return getJsonNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     @java.lang.Override
@@ -3344,6 +3988,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3368,6 +4016,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.MapNode, com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.MapNodeOrBuilder> mapNodeBuilder_;
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      * @return Whether the mapNode field is set.
      */
@@ -3376,6 +4028,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 15;
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      * @return The mapNode.
      */
@@ -3394,6 +4050,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     public Builder setMapNode(com.tcn.cloud.api.api.v1alpha1.insights.MapNode value) {
@@ -3410,6 +4070,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     public Builder setMapNode(
@@ -3424,6 +4088,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     public Builder mergeMapNode(com.tcn.cloud.api.api.v1alpha1.insights.MapNode value) {
@@ -3447,6 +4115,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     public Builder clearMapNode() {
@@ -3466,12 +4138,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Builder getMapNodeBuilder() {
       return getMapNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     @java.lang.Override
@@ -3486,6 +4166,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Map node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3510,6 +4194,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode, com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNodeOrBuilder> replaceNodeBuilder_;
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      * @return Whether the replaceNode field is set.
      */
@@ -3518,6 +4206,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 16;
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      * @return The replaceNode.
      */
@@ -3536,6 +4228,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     public Builder setReplaceNode(com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode value) {
@@ -3552,6 +4248,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     public Builder setReplaceNode(
@@ -3566,6 +4266,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     public Builder mergeReplaceNode(com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode value) {
@@ -3589,6 +4293,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     public Builder clearReplaceNode() {
@@ -3608,12 +4316,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode.Builder getReplaceNodeBuilder() {
       return getReplaceNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     @java.lang.Override
@@ -3628,6 +4344,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Replace node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3652,6 +4372,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.SortNode, com.tcn.cloud.api.api.v1alpha1.insights.SortNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.SortNodeOrBuilder> sortNodeBuilder_;
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      * @return Whether the sortNode field is set.
      */
@@ -3660,6 +4384,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 17;
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      * @return The sortNode.
      */
@@ -3678,6 +4406,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     public Builder setSortNode(com.tcn.cloud.api.api.v1alpha1.insights.SortNode value) {
@@ -3694,6 +4426,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     public Builder setSortNode(
@@ -3708,6 +4444,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     public Builder mergeSortNode(com.tcn.cloud.api.api.v1alpha1.insights.SortNode value) {
@@ -3731,6 +4471,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     public Builder clearSortNode() {
@@ -3750,12 +4494,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortNode.Builder getSortNodeBuilder() {
       return getSortNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     @java.lang.Override
@@ -3770,6 +4522,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Sort node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -3794,6 +4550,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNodeOrBuilder> stringManipulationNodeBuilder_;
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      * @return Whether the stringManipulationNode field is set.
      */
@@ -3802,6 +4562,10 @@ private static final long serialVersionUID = 0L;
       return bodyCase_ == 18;
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      * @return The stringManipulationNode.
      */
@@ -3820,6 +4584,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     public Builder setStringManipulationNode(com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode value) {
@@ -3836,6 +4604,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     public Builder setStringManipulationNode(
@@ -3850,6 +4622,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     public Builder mergeStringManipulationNode(com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode value) {
@@ -3873,6 +4649,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     public Builder clearStringManipulationNode() {
@@ -3892,12 +4672,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode.Builder getStringManipulationNodeBuilder() {
       return getStringManipulationNodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     @java.lang.Override
@@ -3912,6 +4700,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * String manipulation node
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

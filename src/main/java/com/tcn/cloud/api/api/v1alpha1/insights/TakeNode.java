@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * TakeNode restricts the number of rows
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.TakeNode}
  */
 public final class TakeNode extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int LIMIT_FIELD_NUMBER = 1;
   private int limit_ = 0;
   /**
+   * <pre>
+   * how many to limit by
+   * </pre>
+   *
    * <code>int32 limit = 1 [json_name = "limit"];</code>
    * @return The limit.
    */
@@ -207,6 +215,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * TakeNode restricts the number of rows
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.TakeNode}
    */
   public static final class Builder extends
@@ -376,6 +388,10 @@ private static final long serialVersionUID = 0L;
 
     private int limit_ ;
     /**
+     * <pre>
+     * how many to limit by
+     * </pre>
+     *
      * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @return The limit.
      */
@@ -384,6 +400,10 @@ private static final long serialVersionUID = 0L;
       return limit_;
     }
     /**
+     * <pre>
+     * how many to limit by
+     * </pre>
+     *
      * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @param value The limit to set.
      * @return This builder for chaining.
@@ -396,6 +416,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * how many to limit by
+     * </pre>
+     *
      * <code>int32 limit = 1 [json_name = "limit"];</code>
      * @return This builder for chaining.
      */

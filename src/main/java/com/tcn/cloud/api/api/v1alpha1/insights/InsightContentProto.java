@@ -191,145 +191,146 @@ public final class InsightContentProto {
       "\n+api/v1alpha1/insights/insight_content." +
       "proto\022\025api.v1alpha1.insights\"=\n\010Pipeline" +
       "\0221\n\005nodes\030\001 \003(\0132\033.api.v1alpha1.insights." +
-      "NodeR\005nodes\"\231\010\n\004Node\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004" +
-      "type\030\002 \001(\tR\004type\022\024\n\005title\030\003 \001(\tR\005title\022\033" +
-      "\n\tinput_ids\030\004 \003(\tR\010inputIds\022\035\n\noutput_id" +
-      "s\030\005 \003(\tR\toutputIds\022>\n\tfrom_node\030\006 \001(\0132\037." +
-      "api.v1alpha1.insights.FromNodeH\000R\010fromNo" +
-      "de\022D\n\013filter_node\030\007 \001(\0132!.api.v1alpha1.i" +
-      "nsights.FilterNodeH\000R\nfilterNode\022D\n\013deri" +
-      "ve_node\030\010 \001(\0132!.api.v1alpha1.insights.De" +
-      "riveNodeH\000R\nderiveNode\022A\n\ngroup_node\030\t \001" +
-      "(\0132 .api.v1alpha1.insights.GroupNodeH\000R\t" +
-      "groupNode\022>\n\tjoin_node\030\n \001(\0132\037.api.v1alp" +
-      "ha1.insights.JoinNodeH\000R\010joinNode\022D\n\013sel" +
-      "ect_node\030\013 \001(\0132!.api.v1alpha1.insights.S" +
-      "electNodeH\000R\nselectNode\022M\n\016aggregate_nod" +
-      "e\030\014 \001(\0132$.api.v1alpha1.insights.Aggregat" +
-      "eNodeH\000R\raggregateNode\022>\n\ttake_node\030\r \001(" +
-      "\0132\037.api.v1alpha1.insights.TakeNodeH\000R\010ta" +
-      "keNode\022>\n\tjson_node\030\016 \001(\0132\037.api.v1alpha1" +
-      ".insights.JsonNodeH\000R\010jsonNode\022;\n\010map_no" +
-      "de\030\017 \001(\0132\036.api.v1alpha1.insights.MapNode" +
-      "H\000R\007mapNode\022G\n\014replace_node\030\020 \001(\0132\".api." +
-      "v1alpha1.insights.ReplaceNodeH\000R\013replace" +
-      "Node\022>\n\tsort_node\030\021 \001(\0132\037.api.v1alpha1.i" +
-      "nsights.SortNodeH\000R\010sortNode\022i\n\030string_m" +
-      "anipulation_node\030\022 \001(\0132-.api.v1alpha1.in" +
-      "sights.StringManipulationNodeH\000R\026stringM" +
-      "anipulationNodeB\006\n\004body\"$\n\010FromNode\022\030\n\007d" +
-      "ataset\030\001 \001(\tR\007dataset\"S\n\nFilterNode\022E\n\ne" +
-      "xpression\030\003 \001(\0132%.api.v1alpha1.insights." +
-      "ExpressionNodeR\nexpression\"t\n\nDeriveNode" +
-      "\022\037\n\013column_name\030\003 \001(\tR\ncolumnName\022E\n\nexp" +
-      "ression\030\004 \001(\0132%.api.v1alpha1.insights.Ex" +
-      "pressionNodeR\nexpression\"\220\001\n\tGroupNode\022(" +
-      "\n\020group_by_columns\030\001 \003(\tR\016groupByColumns" +
-      "\022Y\n\023aggregation_columns\030\002 \003(\0132(.api.v1al" +
-      "pha1.insights.AggregationColumnR\022aggrega" +
-      "tionColumns\" \n\010TakeNode\022\024\n\005limit\030\001 \001(\005R\005" +
-      "limit\"j\n\rAggregateNode\022Y\n\023aggregation_co" +
-      "lumns\030\002 \003(\0132(.api.v1alpha1.insights.Aggr" +
-      "egationColumnR\022aggregationColumns\"\264\001\n\021Ag" +
-      "gregationColumn\022\022\n\004name\030\001 \001(\tR\004name\022(\n\020g" +
-      "roup_by_columns\030\002 \003(\tR\016groupByColumns\022.\n" +
-      "\023column_to_aggregate\030\003 \001(\tR\021columnToAggr" +
-      "egate\0221\n\024aggregation_function\030\004 \001(\tR\023agg" +
-      "regationFunction\"7\n\006Column\022\020\n\003key\030\001 \001(\tR" +
-      "\003key\022\033\n\tdata_type\030\002 \001(\tR\010dataType\"}\n\016Exp" +
-      "ressionNode\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005value" +
-      "\030\002 \001(\tR\005value\022A\n\010children\030\003 \003(\0132%.api.v1" +
-      "alpha1.insights.ExpressionNodeR\010children" +
-      "\"\311\003\n\007MapNode\022<\n\nnew_column\030\001 \001(\0132\035.api.v" +
-      "1alpha1.insights.ColumnR\tnewColumn\022A\n\rco" +
-      "lumn_to_map\030\002 \001(\0132\035.api.v1alpha1.insight" +
-      "s.ColumnR\013columnToMap\022B\n\010mappings\030\003 \003(\0132" +
-      "&.api.v1alpha1.insights.MapNode.MappingR" +
-      "\010mappings\022J\n\rdefault_value\030\004 \001(\0132%.api.v" +
-      "1alpha1.insights.ExpressionNodeR\014default" +
-      "Value\022\035\n\nis_complex\030\005 \001(\010R\tisComplex\032\215\001\n" +
-      "\007Mapping\022C\n\tcondition\030\001 \001(\0132%.api.v1alph" +
-      "a1.insights.ExpressionNodeR\tcondition\022=\n" +
-      "\006result\030\002 \001(\0132%.api.v1alpha1.insights.Ex" +
-      "pressionNodeR\006result\"\352\001\n\010JoinNode\022\022\n\004sid" +
-      "e\030\001 \001(\tR\004side\022D\n\014join_columns\030\002 \003(\0132!.ap" +
-      "i.v1alpha1.insights.JoinColumnR\013joinColu" +
-      "mns\022@\n\014first_parent\030\003 \001(\0132\035.api.v1alpha1" +
-      ".insights.ParentR\013firstParent\022B\n\rsecond_" +
-      "parent\030\004 \001(\0132\035.api.v1alpha1.insights.Par" +
-      "entR\014secondParent\"n\n\nJoinColumn\022.\n\023first" +
-      "_parent_column\030\001 \001(\tR\021firstParentColumn\022" +
-      "0\n\024second_parent_column\030\002 \001(\tR\022secondPar" +
-      "entColumn\"\315\001\n\006Parent\022\016\n\002id\030\001 \001(\tR\002id\022\024\n\005" +
-      "title\030\002 \001(\tR\005title\022Z\n\017renamed_columns\030\003 " +
-      "\003(\01321.api.v1alpha1.insights.Parent.Renam" +
-      "edColumnsEntryR\016renamedColumns\032A\n\023Rename" +
-      "dColumnsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value" +
-      "\030\002 \001(\tR\005value:\0028\001\"\311\001\n\nSelectNode\022\030\n\007colu" +
-      "mns\030\001 \003(\tR\007columns\022^\n\017renamed_columns\030\002 " +
-      "\003(\01325.api.v1alpha1.insights.SelectNode.R" +
-      "enamedColumnsEntryR\016renamedColumns\032A\n\023Re" +
-      "namedColumnsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value:\0028\001\"m\n\nJsonTarget\022\035\n\np" +
-      "ath_parts\030\001 \003(\tR\tpathParts\022\037\n\013column_nam" +
-      "e\030\002 \001(\tR\ncolumnName\022\037\n\013result_type\030\003 \001(\t" +
-      "R\nresultType\"\335\001\n\010JsonNode\022\022\n\004type\030\001 \001(\tR" +
-      "\004type\022\037\n\013json_column\030\002 \001(\tR\njsonColumn\022;" +
-      "\n\007targets\030\003 \003(\0132!.api.v1alpha1.insights." +
-      "JsonTargetR\007targets\022_\n\026unnest_to_columns" +
-      "_node\030\004 \001(\0132*.api.v1alpha1.insights.Unne" +
-      "stToColumnsNodeR\023unnestToColumnsNode\"\344\002\n" +
-      "\023UnnestToColumnsNode\022F\n\runnest_target\030\001 " +
-      "\001(\0132!.api.v1alpha1.insights.JsonTargetR\014" +
-      "unnestTarget\022@\n\nkey_target\030\002 \001(\0132!.api.v" +
-      "1alpha1.insights.JsonTargetR\tkeyTarget\022D" +
-      "\n\014value_target\030\003 \001(\0132!.api.v1alpha1.insi" +
-      "ghts.JsonTargetR\013valueTarget\022\030\n\007columns\030" +
-      "\004 \003(\tR\007columns\022!\n\014primary_keys\030\005 \003(\tR\013pr" +
-      "imaryKeys\022@\n\014json_columns\030\006 \003(\0132\035.api.v1" +
-      "alpha1.insights.ColumnR\013jsonColumns\"\213\002\n\n" +
-      "Parameters\022Q\n\nparameters\030\001 \003(\01321.api.v1a" +
-      "lpha1.insights.Parameters.ParametersEntr" +
-      "yR\nparameters\032>\n\tParameter\022\024\n\005value\030\002 \001(" +
-      "\tR\005value\022\033\n\tdata_type\030\003 \001(\tR\010dataType\032j\n" +
-      "\017ParametersEntry\022\020\n\003key\030\001 \001(\tR\003key\022A\n\005va" +
-      "lue\030\002 \001(\0132+.api.v1alpha1.insights.Parame" +
-      "ters.ParameterR\005value:\0028\001\"\264\001\n\021ValuesRepl" +
-      "acement\022!\n\014target_value\030\001 \001(\tR\013targetVal" +
-      "ue\022(\n\020target_data_type\030\002 \001(\tR\016targetData" +
-      "Type\022R\n\021replacement_value\030\003 \001(\0132%.api.v1" +
-      "alpha1.insights.ExpressionNodeR\020replacem" +
-      "entValue\"\221\001\n\021ColumnReplacement\022!\n\014column" +
-      "_names\030\001 \003(\tR\013columnNames\022Y\n\023values_repl" +
-      "acements\030\002 \003(\0132(.api.v1alpha1.insights.V" +
-      "aluesReplacementR\022valuesReplacements\"\207\001\n" +
-      "\013ReplaceNode\022Y\n\023column_replacements\030\001 \003(" +
-      "\0132(.api.v1alpha1.insights.ColumnReplacem" +
-      "entR\022columnReplacements\022\035\n\nis_complex\030\002 " +
-      "\001(\010R\tisComplex\"K\n\nSortColumn\022\037\n\013column_n" +
-      "ame\030\001 \001(\tR\ncolumnName\022\034\n\tascending\030\002 \001(\010" +
-      "R\tascending\"P\n\010SortNode\022D\n\014sort_columns\030" +
-      "\001 \003(\0132!.api.v1alpha1.insights.SortColumn" +
-      "R\013sortColumns\"\217\001\n\027StringManipulationSpli" +
-      "t\022\031\n\010split_by\030\002 \001(\tR\007splitBy\022.\n\023is_index" +
-      "_extraction\030\003 \001(\010R\021isIndexExtraction\022)\n\020" +
-      "index_extraction\030\004 \001(\005R\017indexExtraction\"" +
-      "I\n\031StringManipulationReplace\022\026\n\006target\030\001" +
-      " \001(\tR\006target\022\024\n\005value\030\002 \001(\tR\005value\"\346\002\n\026S" +
-      "tringManipulationNode\022\022\n\004type\030\001 \001(\tR\004typ" +
-      "e\022,\n\022source_column_name\030\002 \001(\tR\020sourceCol" +
-      "umnName\022,\n\022target_column_name\030\003 \001(\tR\020tar" +
-      "getColumnName\022j\n\031string_manipulation_spl" +
-      "it\030\004 \001(\0132..api.v1alpha1.insights.StringM" +
-      "anipulationSplitR\027stringManipulationSpli" +
-      "t\022p\n\033string_manipulation_replace\030\005 \001(\01320" +
-      ".api.v1alpha1.insights.StringManipulatio" +
-      "nReplaceR\031stringManipulationReplaceB\264\001\n\'" +
-      "com.tcn.cloud.api.api.v1alpha1.insightsB" +
-      "\023InsightContentProtoP\001\242\002\003AVI\252\002\025Api.V1alp" +
-      "ha1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!A" +
-      "pi\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::" +
-      "V1alpha1::Insightsb\006proto3"
+      "NodeR\005nodes\"\242\010\n\004Node\022\027\n\007node_id\030\001 \001(\tR\006n" +
+      "odeId\022\022\n\004type\030\002 \001(\tR\004type\022\024\n\005title\030\003 \001(\t" +
+      "R\005title\022\033\n\tinput_ids\030\004 \003(\tR\010inputIds\022\035\n\n" +
+      "output_ids\030\005 \003(\tR\toutputIds\022>\n\tfrom_node" +
+      "\030\006 \001(\0132\037.api.v1alpha1.insights.FromNodeH" +
+      "\000R\010fromNode\022D\n\013filter_node\030\007 \001(\0132!.api.v" +
+      "1alpha1.insights.FilterNodeH\000R\nfilterNod" +
+      "e\022D\n\013derive_node\030\010 \001(\0132!.api.v1alpha1.in" +
+      "sights.DeriveNodeH\000R\nderiveNode\022A\n\ngroup" +
+      "_node\030\t \001(\0132 .api.v1alpha1.insights.Grou" +
+      "pNodeH\000R\tgroupNode\022>\n\tjoin_node\030\n \001(\0132\037." +
+      "api.v1alpha1.insights.JoinNodeH\000R\010joinNo" +
+      "de\022D\n\013select_node\030\013 \001(\0132!.api.v1alpha1.i" +
+      "nsights.SelectNodeH\000R\nselectNode\022M\n\016aggr" +
+      "egate_node\030\014 \001(\0132$.api.v1alpha1.insights" +
+      ".AggregateNodeH\000R\raggregateNode\022>\n\ttake_" +
+      "node\030\r \001(\0132\037.api.v1alpha1.insights.TakeN" +
+      "odeH\000R\010takeNode\022>\n\tjson_node\030\016 \001(\0132\037.api" +
+      ".v1alpha1.insights.JsonNodeH\000R\010jsonNode\022" +
+      ";\n\010map_node\030\017 \001(\0132\036.api.v1alpha1.insight" +
+      "s.MapNodeH\000R\007mapNode\022G\n\014replace_node\030\020 \001" +
+      "(\0132\".api.v1alpha1.insights.ReplaceNodeH\000" +
+      "R\013replaceNode\022>\n\tsort_node\030\021 \001(\0132\037.api.v" +
+      "1alpha1.insights.SortNodeH\000R\010sortNode\022i\n" +
+      "\030string_manipulation_node\030\022 \001(\0132-.api.v1" +
+      "alpha1.insights.StringManipulationNodeH\000" +
+      "R\026stringManipulationNodeB\006\n\004body\"$\n\010From" +
+      "Node\022\030\n\007dataset\030\001 \001(\tR\007dataset\"S\n\nFilter" +
+      "Node\022E\n\nexpression\030\003 \001(\0132%.api.v1alpha1." +
+      "insights.ExpressionNodeR\nexpression\"t\n\nD" +
+      "eriveNode\022\037\n\013column_name\030\003 \001(\tR\ncolumnNa" +
+      "me\022E\n\nexpression\030\004 \001(\0132%.api.v1alpha1.in" +
+      "sights.ExpressionNodeR\nexpression\"\220\001\n\tGr" +
+      "oupNode\022(\n\020group_by_columns\030\001 \003(\tR\016group" +
+      "ByColumns\022Y\n\023aggregation_columns\030\002 \003(\0132(" +
+      ".api.v1alpha1.insights.AggregationColumn" +
+      "R\022aggregationColumns\" \n\010TakeNode\022\024\n\005limi" +
+      "t\030\001 \001(\005R\005limit\"j\n\rAggregateNode\022Y\n\023aggre" +
+      "gation_columns\030\002 \003(\0132(.api.v1alpha1.insi" +
+      "ghts.AggregationColumnR\022aggregationColum" +
+      "ns\"\264\001\n\021AggregationColumn\022\022\n\004name\030\001 \001(\tR\004" +
+      "name\022(\n\020group_by_columns\030\002 \003(\tR\016groupByC" +
+      "olumns\022.\n\023column_to_aggregate\030\003 \001(\tR\021col" +
+      "umnToAggregate\0221\n\024aggregation_function\030\004" +
+      " \001(\tR\023aggregationFunction\"7\n\006Column\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022\033\n\tdata_type\030\002 \001(\tR\010dataTy" +
+      "pe\"}\n\016ExpressionNode\022\022\n\004type\030\001 \001(\tR\004type" +
+      "\022\024\n\005value\030\002 \001(\tR\005value\022A\n\010children\030\003 \003(\013" +
+      "2%.api.v1alpha1.insights.ExpressionNodeR" +
+      "\010children\"\311\003\n\007MapNode\022<\n\nnew_column\030\001 \001(" +
+      "\0132\035.api.v1alpha1.insights.ColumnR\tnewCol" +
+      "umn\022A\n\rcolumn_to_map\030\002 \001(\0132\035.api.v1alpha" +
+      "1.insights.ColumnR\013columnToMap\022B\n\010mappin" +
+      "gs\030\003 \003(\0132&.api.v1alpha1.insights.MapNode" +
+      ".MappingR\010mappings\022J\n\rdefault_value\030\004 \001(" +
+      "\0132%.api.v1alpha1.insights.ExpressionNode" +
+      "R\014defaultValue\022\035\n\nis_complex\030\005 \001(\010R\tisCo" +
+      "mplex\032\215\001\n\007Mapping\022C\n\tcondition\030\001 \001(\0132%.a" +
+      "pi.v1alpha1.insights.ExpressionNodeR\tcon" +
+      "dition\022=\n\006result\030\002 \001(\0132%.api.v1alpha1.in" +
+      "sights.ExpressionNodeR\006result\"\352\001\n\010JoinNo" +
+      "de\022\022\n\004side\030\001 \001(\tR\004side\022D\n\014join_columns\030\002" +
+      " \003(\0132!.api.v1alpha1.insights.JoinColumnR" +
+      "\013joinColumns\022@\n\014first_parent\030\003 \001(\0132\035.api" +
+      ".v1alpha1.insights.ParentR\013firstParent\022B" +
+      "\n\rsecond_parent\030\004 \001(\0132\035.api.v1alpha1.ins" +
+      "ights.ParentR\014secondParent\"n\n\nJoinColumn" +
+      "\022.\n\023first_parent_column\030\001 \001(\tR\021firstPare" +
+      "ntColumn\0220\n\024second_parent_column\030\002 \001(\tR\022" +
+      "secondParentColumn\"\332\001\n\006Parent\022\033\n\tparent_" +
+      "id\030\001 \001(\tR\010parentId\022\024\n\005title\030\002 \001(\tR\005title" +
+      "\022Z\n\017renamed_columns\030\003 \003(\01321.api.v1alpha1" +
+      ".insights.Parent.RenamedColumnsEntryR\016re" +
+      "namedColumns\032A\n\023RenamedColumnsEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"" +
+      "\311\001\n\nSelectNode\022\030\n\007columns\030\001 \003(\tR\007columns" +
+      "\022^\n\017renamed_columns\030\002 \003(\01325.api.v1alpha1" +
+      ".insights.SelectNode.RenamedColumnsEntry" +
+      "R\016renamedColumns\032A\n\023RenamedColumnsEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:" +
+      "\0028\001\"m\n\nJsonTarget\022\035\n\npath_parts\030\001 \003(\tR\tp" +
+      "athParts\022\037\n\013column_name\030\002 \001(\tR\ncolumnNam" +
+      "e\022\037\n\013result_type\030\003 \001(\tR\nresultType\"\335\001\n\010J" +
+      "sonNode\022\022\n\004type\030\001 \001(\tR\004type\022\037\n\013json_colu" +
+      "mn\030\002 \001(\tR\njsonColumn\022;\n\007targets\030\003 \003(\0132!." +
+      "api.v1alpha1.insights.JsonTargetR\007target" +
+      "s\022_\n\026unnest_to_columns_node\030\004 \001(\0132*.api." +
+      "v1alpha1.insights.UnnestToColumnsNodeR\023u" +
+      "nnestToColumnsNode\"\344\002\n\023UnnestToColumnsNo" +
+      "de\022F\n\runnest_target\030\001 \001(\0132!.api.v1alpha1" +
+      ".insights.JsonTargetR\014unnestTarget\022@\n\nke" +
+      "y_target\030\002 \001(\0132!.api.v1alpha1.insights.J" +
+      "sonTargetR\tkeyTarget\022D\n\014value_target\030\003 \001" +
+      "(\0132!.api.v1alpha1.insights.JsonTargetR\013v" +
+      "alueTarget\022\030\n\007columns\030\004 \003(\tR\007columns\022!\n\014" +
+      "primary_keys\030\005 \003(\tR\013primaryKeys\022@\n\014json_" +
+      "columns\030\006 \003(\0132\035.api.v1alpha1.insights.Co" +
+      "lumnR\013jsonColumns\"\213\002\n\nParameters\022Q\n\npara" +
+      "meters\030\001 \003(\01321.api.v1alpha1.insights.Par" +
+      "ameters.ParametersEntryR\nparameters\032>\n\tP" +
+      "arameter\022\024\n\005value\030\002 \001(\tR\005value\022\033\n\tdata_t" +
+      "ype\030\003 \001(\tR\010dataType\032j\n\017ParametersEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022A\n\005value\030\002 \001(\0132+.api.v1" +
+      "alpha1.insights.Parameters.ParameterR\005va" +
+      "lue:\0028\001\"\264\001\n\021ValuesReplacement\022!\n\014target_" +
+      "value\030\001 \001(\tR\013targetValue\022(\n\020target_data_" +
+      "type\030\002 \001(\tR\016targetDataType\022R\n\021replacemen" +
+      "t_value\030\003 \001(\0132%.api.v1alpha1.insights.Ex" +
+      "pressionNodeR\020replacementValue\"\221\001\n\021Colum" +
+      "nReplacement\022!\n\014column_names\030\001 \003(\tR\013colu" +
+      "mnNames\022Y\n\023values_replacements\030\002 \003(\0132(.a" +
+      "pi.v1alpha1.insights.ValuesReplacementR\022" +
+      "valuesReplacements\"\207\001\n\013ReplaceNode\022Y\n\023co" +
+      "lumn_replacements\030\001 \003(\0132(.api.v1alpha1.i" +
+      "nsights.ColumnReplacementR\022columnReplace" +
+      "ments\022\035\n\nis_complex\030\002 \001(\010R\tisComplex\"K\n\n" +
+      "SortColumn\022\037\n\013column_name\030\001 \001(\tR\ncolumnN" +
+      "ame\022\034\n\tascending\030\002 \001(\010R\tascending\"P\n\010Sor" +
+      "tNode\022D\n\014sort_columns\030\001 \003(\0132!.api.v1alph" +
+      "a1.insights.SortColumnR\013sortColumns\"\217\001\n\027" +
+      "StringManipulationSplit\022\031\n\010split_by\030\002 \001(" +
+      "\tR\007splitBy\022.\n\023is_index_extraction\030\003 \001(\010R" +
+      "\021isIndexExtraction\022)\n\020index_extraction\030\004" +
+      " \001(\005R\017indexExtraction\"I\n\031StringManipulat" +
+      "ionReplace\022\026\n\006target\030\001 \001(\tR\006target\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value\"\346\002\n\026StringManipulationN" +
+      "ode\022\022\n\004type\030\001 \001(\tR\004type\022,\n\022source_column" +
+      "_name\030\002 \001(\tR\020sourceColumnName\022,\n\022target_" +
+      "column_name\030\003 \001(\tR\020targetColumnName\022j\n\031s" +
+      "tring_manipulation_split\030\004 \001(\0132..api.v1a" +
+      "lpha1.insights.StringManipulationSplitR\027" +
+      "stringManipulationSplit\022p\n\033string_manipu" +
+      "lation_replace\030\005 \001(\01320.api.v1alpha1.insi" +
+      "ghts.StringManipulationReplaceR\031stringMa" +
+      "nipulationReplaceB\264\001\n\'com.tcn.cloud.api." +
+      "api.v1alpha1.insightsB\023InsightContentPro" +
+      "toP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002\025Api" +
+      "\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\Insigh" +
+      "ts\\GPBMetadata\352\002\027Api::V1alpha1::Insights" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -346,7 +347,7 @@ public final class InsightContentProto {
     internal_static_api_v1alpha1_insights_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_Node_descriptor,
-        new java.lang.String[] { "Id", "Type", "Title", "InputIds", "OutputIds", "FromNode", "FilterNode", "DeriveNode", "GroupNode", "JoinNode", "SelectNode", "AggregateNode", "TakeNode", "JsonNode", "MapNode", "ReplaceNode", "SortNode", "StringManipulationNode", "Body", });
+        new java.lang.String[] { "NodeId", "Type", "Title", "InputIds", "OutputIds", "FromNode", "FilterNode", "DeriveNode", "GroupNode", "JoinNode", "SelectNode", "AggregateNode", "TakeNode", "JsonNode", "MapNode", "ReplaceNode", "SortNode", "StringManipulationNode", "Body", });
     internal_static_api_v1alpha1_insights_FromNode_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_insights_FromNode_fieldAccessorTable = new
@@ -430,7 +431,7 @@ public final class InsightContentProto {
     internal_static_api_v1alpha1_insights_Parent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_Parent_descriptor,
-        new java.lang.String[] { "Id", "Title", "RenamedColumns", });
+        new java.lang.String[] { "ParentId", "Title", "RenamedColumns", });
     internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_descriptor =
       internal_static_api_v1alpha1_insights_Parent_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_insights_Parent_RenamedColumnsEntry_fieldAccessorTable = new

@@ -29,7 +29,7 @@ public interface StringManipulationNodeOrBuilder extends
 
   /**
    * <pre>
-   * column to replace with
+   * Column to replace with
    * </pre>
    *
    * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -38,7 +38,7 @@ public interface StringManipulationNodeOrBuilder extends
   java.lang.String getSourceColumnName();
   /**
    * <pre>
-   * column to replace with
+   * Column to replace with
    * </pre>
    *
    * <code>string source_column_name = 2 [json_name = "sourceColumnName"];</code>
@@ -49,7 +49,7 @@ public interface StringManipulationNodeOrBuilder extends
 
   /**
    * <pre>
-   * target column to replace
+   * Target column to replace
    * </pre>
    *
    * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -58,7 +58,7 @@ public interface StringManipulationNodeOrBuilder extends
   java.lang.String getTargetColumnName();
   /**
    * <pre>
-   * target column to replace
+   * Target column to replace
    * </pre>
    *
    * <code>string target_column_name = 3 [json_name = "targetColumnName"];</code>
@@ -69,6 +69,7 @@ public interface StringManipulationNodeOrBuilder extends
 
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -77,6 +78,7 @@ public interface StringManipulationNodeOrBuilder extends
   boolean hasStringManipulationSplit();
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -85,6 +87,7 @@ public interface StringManipulationNodeOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplit getStringManipulationSplit();
   /**
    * <pre>
+   * Split operation
    * </pre>
    *
    * <code>.api.v1alpha1.insights.StringManipulationSplit string_manipulation_split = 4 [json_name = "stringManipulationSplit"];</code>
@@ -92,16 +95,28 @@ public interface StringManipulationNodeOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationSplitOrBuilder getStringManipulationSplitOrBuilder();
 
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    * @return Whether the stringManipulationReplace field is set.
    */
   boolean hasStringManipulationReplace();
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    * @return The stringManipulationReplace.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplace getStringManipulationReplace();
   /**
+   * <pre>
+   * Replace operation
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationReplace string_manipulation_replace = 5 [json_name = "stringManipulationReplace"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationReplaceOrBuilder getStringManipulationReplaceOrBuilder();

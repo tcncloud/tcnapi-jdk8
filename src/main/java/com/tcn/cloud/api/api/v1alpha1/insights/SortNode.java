@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * SortNode describes which columns to sort
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.SortNode}
  */
 public final class SortNode extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.SortColumn> sortColumns_;
   /**
+   * <pre>
+   * Columns to sort
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
    */
   @java.lang.Override
@@ -50,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return sortColumns_;
   }
   /**
+   * <pre>
+   * Columns to sort
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return sortColumns_;
   }
   /**
+   * <pre>
+   * Columns to sort
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
    */
   @java.lang.Override
@@ -65,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return sortColumns_.size();
   }
   /**
+   * <pre>
+   * Columns to sort
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
    */
   @java.lang.Override
@@ -72,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return sortColumns_.get(index);
   }
   /**
+   * <pre>
+   * Columns to sort
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
    */
   @java.lang.Override
@@ -240,6 +264,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * SortNode describes which columns to sort
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.SortNode}
    */
   public static final class Builder extends
@@ -467,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.SortColumn, com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.Builder, com.tcn.cloud.api.api.v1alpha1.insights.SortColumnOrBuilder> sortColumnsBuilder_;
 
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.SortColumn> getSortColumnsList() {
@@ -477,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public int getSortColumnsCount() {
@@ -487,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortColumn getSortColumns(int index) {
@@ -497,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder setSortColumns(
@@ -514,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder setSortColumns(
@@ -528,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder addSortColumns(com.tcn.cloud.api.api.v1alpha1.insights.SortColumn value) {
@@ -544,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder addSortColumns(
@@ -561,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder addSortColumns(
@@ -575,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder addSortColumns(
@@ -589,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder addAllSortColumns(
@@ -604,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder clearSortColumns() {
@@ -617,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public Builder removeSortColumns(int index) {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.Builder getSortColumnsBuilder(
@@ -637,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getSortColumnsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortColumnOrBuilder getSortColumnsOrBuilder(
@@ -647,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.SortColumnOrBuilder> 
@@ -658,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.Builder addSortColumnsBuilder() {
@@ -665,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.Builder addSortColumnsBuilder(
@@ -673,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Columns to sort
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.SortColumn sort_columns = 1 [json_name = "sortColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.SortColumn.Builder> 

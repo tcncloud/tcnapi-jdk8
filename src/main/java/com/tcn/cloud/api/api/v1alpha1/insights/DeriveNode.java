@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * DeriveNode derives a new column
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.DeriveNode}
  */
 public final class DeriveNode extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object columnName_ = "";
   /**
+   * <pre>
+   * Resulting column name
+   * </pre>
+   *
    * <code>string column_name = 3 [json_name = "columnName"];</code>
    * @return The columnName.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Resulting column name
+   * </pre>
+   *
    * <code>string column_name = 3 [json_name = "columnName"];</code>
    * @return The bytes for columnName.
    */
@@ -81,6 +93,10 @@ private static final long serialVersionUID = 0L;
   public static final int EXPRESSION_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode expression_;
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    * @return Whether the expression field is set.
    */
@@ -89,6 +105,10 @@ private static final long serialVersionUID = 0L;
     return expression_ != null;
   }
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    * @return The expression.
    */
@@ -97,6 +117,10 @@ private static final long serialVersionUID = 0L;
     return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
   }
   /**
+   * <pre>
+   * Expression to apply to the new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
    */
   @java.lang.Override
@@ -277,6 +301,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * DeriveNode derives a new column
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.DeriveNode}
    */
   public static final class Builder extends
@@ -468,6 +496,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object columnName_ = "";
     /**
+     * <pre>
+     * Resulting column name
+     * </pre>
+     *
      * <code>string column_name = 3 [json_name = "columnName"];</code>
      * @return The columnName.
      */
@@ -484,6 +516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Resulting column name
+     * </pre>
+     *
      * <code>string column_name = 3 [json_name = "columnName"];</code>
      * @return The bytes for columnName.
      */
@@ -501,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Resulting column name
+     * </pre>
+     *
      * <code>string column_name = 3 [json_name = "columnName"];</code>
      * @param value The columnName to set.
      * @return This builder for chaining.
@@ -514,6 +554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Resulting column name
+     * </pre>
+     *
      * <code>string column_name = 3 [json_name = "columnName"];</code>
      * @return This builder for chaining.
      */
@@ -524,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Resulting column name
+     * </pre>
+     *
      * <code>string column_name = 3 [json_name = "columnName"];</code>
      * @param value The bytes for columnName to set.
      * @return This builder for chaining.
@@ -542,6 +590,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> expressionBuilder_;
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      * @return Whether the expression field is set.
      */
@@ -549,6 +601,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      * @return The expression.
      */
@@ -560,6 +616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public Builder setExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -576,6 +636,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public Builder setExpression(
@@ -590,6 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public Builder mergeExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -609,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public Builder clearExpression() {
@@ -622,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getExpressionBuilder() {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return getExpressionFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
@@ -641,6 +721,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Expression to apply to the new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode expression = 4 [json_name = "expression"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * UnnestToColumnsNode
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.UnnestToColumnsNode}
  */
 public final class UnnestToColumnsNode extends
@@ -47,7 +51,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget unnestTarget_;
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -59,7 +63,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -71,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -84,6 +88,10 @@ private static final long serialVersionUID = 0L;
   public static final int KEY_TARGET_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget keyTarget_;
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    * @return Whether the keyTarget field is set.
    */
@@ -92,6 +100,10 @@ private static final long serialVersionUID = 0L;
     return keyTarget_ != null;
   }
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    * @return The keyTarget.
    */
@@ -100,6 +112,10 @@ private static final long serialVersionUID = 0L;
     return keyTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.getDefaultInstance() : keyTarget_;
   }
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    */
   @java.lang.Override
@@ -110,6 +126,10 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_TARGET_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget valueTarget_;
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    * @return Whether the valueTarget field is set.
    */
@@ -118,6 +138,10 @@ private static final long serialVersionUID = 0L;
     return valueTarget_ != null;
   }
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    * @return The valueTarget.
    */
@@ -126,6 +150,10 @@ private static final long serialVersionUID = 0L;
     return valueTarget_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.getDefaultInstance() : valueTarget_;
   }
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    */
   @java.lang.Override
@@ -138,6 +166,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList columns_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
@@ -146,6 +178,10 @@ private static final long serialVersionUID = 0L;
     return columns_;
   }
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @return The count of columns.
    */
@@ -153,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return columns_.size();
   }
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
@@ -161,6 +201,10 @@ private static final long serialVersionUID = 0L;
     return columns_.get(index);
   }
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
@@ -175,6 +219,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList primaryKeys_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @return A list containing the primaryKeys.
    */
@@ -183,6 +231,10 @@ private static final long serialVersionUID = 0L;
     return primaryKeys_;
   }
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @return The count of primaryKeys.
    */
@@ -190,6 +242,10 @@ private static final long serialVersionUID = 0L;
     return primaryKeys_.size();
   }
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @param index The index of the element to return.
    * @return The primaryKeys at the given index.
@@ -198,6 +254,10 @@ private static final long serialVersionUID = 0L;
     return primaryKeys_.get(index);
   }
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the primaryKeys at the given index.
@@ -211,6 +271,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Column> jsonColumns_;
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   @java.lang.Override
@@ -218,6 +282,10 @@ private static final long serialVersionUID = 0L;
     return jsonColumns_;
   }
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   @java.lang.Override
@@ -226,6 +294,10 @@ private static final long serialVersionUID = 0L;
     return jsonColumns_;
   }
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   @java.lang.Override
@@ -233,6 +305,10 @@ private static final long serialVersionUID = 0L;
     return jsonColumns_.size();
   }
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   @java.lang.Override
@@ -240,6 +316,10 @@ private static final long serialVersionUID = 0L;
     return jsonColumns_.get(index);
   }
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   @java.lang.Override
@@ -490,6 +570,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * UnnestToColumnsNode
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.UnnestToColumnsNode}
    */
   public static final class Builder extends
@@ -813,7 +897,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget, com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder> unnestTargetBuilder_;
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -824,7 +908,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -839,7 +923,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -859,7 +943,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -877,7 +961,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -900,7 +984,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -917,7 +1001,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -929,7 +1013,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -944,7 +1028,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * when the key is a column, take the value from the column
+     * When the key is a column, take the value from the column
      * </pre>
      *
      * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -967,6 +1051,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget, com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder> keyTargetBuilder_;
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      * @return Whether the keyTarget field is set.
      */
@@ -974,6 +1062,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      * @return The keyTarget.
      */
@@ -985,6 +1077,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public Builder setKeyTarget(com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget value) {
@@ -1001,6 +1097,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public Builder setKeyTarget(
@@ -1015,6 +1115,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public Builder mergeKeyTarget(com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget value) {
@@ -1034,6 +1138,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public Builder clearKeyTarget() {
@@ -1047,6 +1155,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.Builder getKeyTargetBuilder() {
@@ -1055,6 +1167,10 @@ private static final long serialVersionUID = 0L;
       return getKeyTargetFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getKeyTargetOrBuilder() {
@@ -1066,6 +1182,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Key target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1086,6 +1206,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget, com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.Builder, com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder> valueTargetBuilder_;
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      * @return Whether the valueTarget field is set.
      */
@@ -1093,6 +1217,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      * @return The valueTarget.
      */
@@ -1104,6 +1232,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public Builder setValueTarget(com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget value) {
@@ -1120,6 +1252,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public Builder setValueTarget(
@@ -1134,6 +1270,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public Builder mergeValueTarget(com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget value) {
@@ -1153,6 +1293,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public Builder clearValueTarget() {
@@ -1166,6 +1310,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget.Builder getValueTargetBuilder() {
@@ -1174,6 +1322,10 @@ private static final long serialVersionUID = 0L;
       return getValueTargetFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getValueTargetOrBuilder() {
@@ -1185,6 +1337,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Value target
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1210,6 +1366,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @return A list containing the columns.
      */
@@ -1219,6 +1379,10 @@ private static final long serialVersionUID = 0L;
       return columns_;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @return The count of columns.
      */
@@ -1226,6 +1390,10 @@ private static final long serialVersionUID = 0L;
       return columns_.size();
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param index The index of the element to return.
      * @return The columns at the given index.
@@ -1234,6 +1402,10 @@ private static final long serialVersionUID = 0L;
       return columns_.get(index);
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the columns at the given index.
@@ -1243,6 +1415,10 @@ private static final long serialVersionUID = 0L;
       return columns_.getByteString(index);
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param index The index to set the value at.
      * @param value The columns to set.
@@ -1258,6 +1434,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param value The columns to add.
      * @return This builder for chaining.
@@ -1272,6 +1452,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param values The columns to add.
      * @return This builder for chaining.
@@ -1286,6 +1470,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @return This builder for chaining.
      */
@@ -1297,6 +1485,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Column
+     * </pre>
+     *
      * <code>repeated string columns = 4 [json_name = "columns"];</code>
      * @param value The bytes of the columns to add.
      * @return This builder for chaining.
@@ -1321,6 +1513,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @return A list containing the primaryKeys.
      */
@@ -1330,6 +1526,10 @@ private static final long serialVersionUID = 0L;
       return primaryKeys_;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @return The count of primaryKeys.
      */
@@ -1337,6 +1537,10 @@ private static final long serialVersionUID = 0L;
       return primaryKeys_.size();
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param index The index of the element to return.
      * @return The primaryKeys at the given index.
@@ -1345,6 +1549,10 @@ private static final long serialVersionUID = 0L;
       return primaryKeys_.get(index);
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the primaryKeys at the given index.
@@ -1354,6 +1562,10 @@ private static final long serialVersionUID = 0L;
       return primaryKeys_.getByteString(index);
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param index The index to set the value at.
      * @param value The primaryKeys to set.
@@ -1369,6 +1581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param value The primaryKeys to add.
      * @return This builder for chaining.
@@ -1383,6 +1599,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param values The primaryKeys to add.
      * @return This builder for chaining.
@@ -1397,6 +1617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @return This builder for chaining.
      */
@@ -1408,6 +1632,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Primary keys
+     * </pre>
+     *
      * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
      * @param value The bytes of the primaryKeys to add.
      * @return This builder for chaining.
@@ -1436,6 +1664,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.Column, com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder> jsonColumnsBuilder_;
 
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Column> getJsonColumnsList() {
@@ -1446,6 +1678,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public int getJsonColumnsCount() {
@@ -1456,6 +1692,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column getJsonColumns(int index) {
@@ -1466,6 +1706,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder setJsonColumns(
@@ -1483,6 +1727,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder setJsonColumns(
@@ -1497,6 +1745,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder addJsonColumns(com.tcn.cloud.api.api.v1alpha1.insights.Column value) {
@@ -1513,6 +1765,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder addJsonColumns(
@@ -1530,6 +1786,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder addJsonColumns(
@@ -1544,6 +1804,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder addJsonColumns(
@@ -1558,6 +1822,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder addAllJsonColumns(
@@ -1573,6 +1841,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder clearJsonColumns() {
@@ -1586,6 +1858,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public Builder removeJsonColumns(int index) {
@@ -1599,6 +1875,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder getJsonColumnsBuilder(
@@ -1606,6 +1886,10 @@ private static final long serialVersionUID = 0L;
       return getJsonColumnsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder getJsonColumnsOrBuilder(
@@ -1616,6 +1900,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder> 
@@ -1627,6 +1915,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder addJsonColumnsBuilder() {
@@ -1634,6 +1926,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.Column.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder addJsonColumnsBuilder(
@@ -1642,6 +1938,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.Column.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Json columns
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder> 

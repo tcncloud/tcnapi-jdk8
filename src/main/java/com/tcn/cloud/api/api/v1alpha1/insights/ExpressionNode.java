@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * ExpressionNode describes a set of expressions
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.ExpressionNode}
  */
 public final class ExpressionNode extends
@@ -45,6 +49,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object type_ = "";
   /**
+   * <pre>
+   * boolean_expression | number_expression | string_expression | date_extraction
+   * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+   * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+   * null | string_expression | date_extraction | json_extraction | number_expression
+   * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+   * </pre>
+   *
    * <code>string type = 1 [json_name = "type"];</code>
    * @return The type.
    */
@@ -62,6 +74,14 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * boolean_expression | number_expression | string_expression | date_extraction
+   * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+   * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+   * null | string_expression | date_extraction | json_extraction | number_expression
+   * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+   * </pre>
+   *
    * <code>string type = 1 [json_name = "type"];</code>
    * @return The bytes for type.
    */
@@ -84,6 +104,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
+   * <pre>
+   * Expression node value
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The value.
    */
@@ -101,6 +125,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Expression node value
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The bytes for value.
    */
@@ -123,6 +151,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode> children_;
   /**
+   * <pre>
+   * list of sub expressions
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
    */
   @java.lang.Override
@@ -130,6 +162,10 @@ private static final long serialVersionUID = 0L;
     return children_;
   }
   /**
+   * <pre>
+   * list of sub expressions
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
    */
   @java.lang.Override
@@ -138,6 +174,10 @@ private static final long serialVersionUID = 0L;
     return children_;
   }
   /**
+   * <pre>
+   * list of sub expressions
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
    */
   @java.lang.Override
@@ -145,6 +185,10 @@ private static final long serialVersionUID = 0L;
     return children_.size();
   }
   /**
+   * <pre>
+   * list of sub expressions
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
    */
   @java.lang.Override
@@ -152,6 +196,10 @@ private static final long serialVersionUID = 0L;
     return children_.get(index);
   }
   /**
+   * <pre>
+   * list of sub expressions
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
    */
   @java.lang.Override
@@ -340,6 +388,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ExpressionNode describes a set of expressions
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.ExpressionNode}
    */
   public static final class Builder extends
@@ -584,6 +636,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object type_ = "";
     /**
+     * <pre>
+     * boolean_expression | number_expression | string_expression | date_extraction
+     * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+     * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+     * null | string_expression | date_extraction | json_extraction | number_expression
+     * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+     * </pre>
+     *
      * <code>string type = 1 [json_name = "type"];</code>
      * @return The type.
      */
@@ -600,6 +660,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * boolean_expression | number_expression | string_expression | date_extraction
+     * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+     * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+     * null | string_expression | date_extraction | json_extraction | number_expression
+     * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+     * </pre>
+     *
      * <code>string type = 1 [json_name = "type"];</code>
      * @return The bytes for type.
      */
@@ -617,6 +685,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * boolean_expression | number_expression | string_expression | date_extraction
+     * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+     * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+     * null | string_expression | date_extraction | json_extraction | number_expression
+     * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+     * </pre>
+     *
      * <code>string type = 1 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -630,6 +706,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * boolean_expression | number_expression | string_expression | date_extraction
+     * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+     * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+     * null | string_expression | date_extraction | json_extraction | number_expression
+     * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+     * </pre>
+     *
      * <code>string type = 1 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
@@ -640,6 +724,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * boolean_expression | number_expression | string_expression | date_extraction
+     * json_extraction | open_paren | close_paren | boolean_operand | boolean_expression
+     * boolean_operator | boolean_literal | column_name | number_literal | string_literal
+     * null | string_expression | date_extraction | json_extraction | number_expression
+     * parameter | number_parameter | date_parameter | boolean_parameter | string_parameter
+     * </pre>
+     *
      * <code>string type = 1 [json_name = "type"];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
@@ -656,6 +748,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
+     * <pre>
+     * Expression node value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
@@ -672,6 +768,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Expression node value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
@@ -689,6 +789,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Expression node value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
@@ -702,6 +806,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression node value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
@@ -712,6 +820,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Expression node value
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
@@ -739,6 +851,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> childrenBuilder_;
 
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode> getChildrenList() {
@@ -749,6 +865,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public int getChildrenCount() {
@@ -759,6 +879,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getChildren(int index) {
@@ -769,6 +893,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder setChildren(
@@ -786,6 +914,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder setChildren(
@@ -800,6 +932,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder addChildren(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -816,6 +952,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder addChildren(
@@ -833,6 +973,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder addChildren(
@@ -847,6 +991,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder addChildren(
@@ -861,6 +1009,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder addAllChildren(
@@ -876,6 +1028,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder clearChildren() {
@@ -889,6 +1045,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public Builder removeChildren(int index) {
@@ -902,6 +1062,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getChildrenBuilder(
@@ -909,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       return getChildrenFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getChildrenOrBuilder(
@@ -919,6 +1087,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> 
@@ -930,6 +1102,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder addChildrenBuilder() {
@@ -937,6 +1113,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance());
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder addChildrenBuilder(
@@ -945,6 +1125,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance());
     }
     /**
+     * <pre>
+     * list of sub expressions
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.ExpressionNode children = 3 [json_name = "children"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder> 

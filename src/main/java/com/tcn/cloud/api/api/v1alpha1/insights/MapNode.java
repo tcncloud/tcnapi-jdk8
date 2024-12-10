@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
+ * <pre>
+ * MapNode maps columns
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.insights.MapNode}
  */
 public final class MapNode extends
@@ -44,31 +48,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      * @return Whether the condition field is set.
      */
     boolean hasCondition();
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      * @return The condition.
      */
     com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getCondition();
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      */
     com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getConditionOrBuilder();
 
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      * @return Whether the result field is set.
      */
     boolean hasResult();
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      * @return The result.
      */
     com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getResult();
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      */
     com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getResultOrBuilder();
@@ -111,6 +139,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONDITION_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode condition_;
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      * @return Whether the condition field is set.
      */
@@ -119,6 +151,10 @@ private static final long serialVersionUID = 0L;
       return condition_ != null;
     }
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      * @return The condition.
      */
@@ -127,6 +163,10 @@ private static final long serialVersionUID = 0L;
       return condition_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : condition_;
     }
     /**
+     * <pre>
+     * expression condition
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
      */
     @java.lang.Override
@@ -137,6 +177,10 @@ private static final long serialVersionUID = 0L;
     public static final int RESULT_FIELD_NUMBER = 2;
     private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode result_;
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      * @return Whether the result field is set.
      */
@@ -145,6 +189,10 @@ private static final long serialVersionUID = 0L;
       return result_ != null;
     }
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      * @return The result.
      */
@@ -153,6 +201,10 @@ private static final long serialVersionUID = 0L;
       return result_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : result_;
     }
     /**
+     * <pre>
+     * expression result
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
      */
     @java.lang.Override
@@ -538,6 +590,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> conditionBuilder_;
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        * @return Whether the condition field is set.
        */
@@ -545,6 +601,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        * @return The condition.
        */
@@ -556,6 +616,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public Builder setCondition(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -572,6 +636,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public Builder setCondition(
@@ -586,6 +654,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public Builder mergeCondition(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -605,6 +677,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public Builder clearCondition() {
@@ -618,6 +694,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getConditionBuilder() {
@@ -626,6 +706,10 @@ private static final long serialVersionUID = 0L;
         return getConditionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getConditionOrBuilder() {
@@ -637,6 +721,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * expression condition
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode condition = 1 [json_name = "condition"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -657,6 +745,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> resultBuilder_;
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        * @return Whether the result field is set.
        */
@@ -664,6 +756,10 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        * @return The result.
        */
@@ -675,6 +771,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public Builder setResult(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -691,6 +791,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public Builder setResult(
@@ -705,6 +809,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public Builder mergeResult(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -724,6 +832,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public Builder clearResult() {
@@ -737,6 +849,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getResultBuilder() {
@@ -745,6 +861,10 @@ private static final long serialVersionUID = 0L;
         return getResultFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getResultOrBuilder() {
@@ -756,6 +876,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * expression result
+       * </pre>
+       *
        * <code>.api.v1alpha1.insights.ExpressionNode result = 2 [json_name = "result"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -838,6 +962,10 @@ private static final long serialVersionUID = 0L;
   public static final int NEW_COLUMN_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.insights.Column newColumn_;
   /**
+   * <pre>
+   * new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
    * @return Whether the newColumn field is set.
    */
@@ -846,6 +974,10 @@ private static final long serialVersionUID = 0L;
     return newColumn_ != null;
   }
   /**
+   * <pre>
+   * new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
    * @return The newColumn.
    */
@@ -854,6 +986,10 @@ private static final long serialVersionUID = 0L;
     return newColumn_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.Column.getDefaultInstance() : newColumn_;
   }
   /**
+   * <pre>
+   * new column
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
    */
   @java.lang.Override
@@ -864,6 +1000,10 @@ private static final long serialVersionUID = 0L;
   public static final int COLUMN_TO_MAP_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.v1alpha1.insights.Column columnToMap_;
   /**
+   * <pre>
+   * column to map
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
    * @return Whether the columnToMap field is set.
    */
@@ -872,6 +1012,10 @@ private static final long serialVersionUID = 0L;
     return columnToMap_ != null;
   }
   /**
+   * <pre>
+   * column to map
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
    * @return The columnToMap.
    */
@@ -880,6 +1024,10 @@ private static final long serialVersionUID = 0L;
     return columnToMap_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.Column.getDefaultInstance() : columnToMap_;
   }
   /**
+   * <pre>
+   * column to map
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
    */
   @java.lang.Override
@@ -891,6 +1039,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping> mappings_;
   /**
+   * <pre>
+   * mappings
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
    */
   @java.lang.Override
@@ -898,6 +1050,10 @@ private static final long serialVersionUID = 0L;
     return mappings_;
   }
   /**
+   * <pre>
+   * mappings
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
    */
   @java.lang.Override
@@ -906,6 +1062,10 @@ private static final long serialVersionUID = 0L;
     return mappings_;
   }
   /**
+   * <pre>
+   * mappings
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
    */
   @java.lang.Override
@@ -913,6 +1073,10 @@ private static final long serialVersionUID = 0L;
     return mappings_.size();
   }
   /**
+   * <pre>
+   * mappings
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
    */
   @java.lang.Override
@@ -920,6 +1084,10 @@ private static final long serialVersionUID = 0L;
     return mappings_.get(index);
   }
   /**
+   * <pre>
+   * mappings
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
    */
   @java.lang.Override
@@ -931,6 +1099,10 @@ private static final long serialVersionUID = 0L;
   public static final int DEFAULT_VALUE_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode defaultValue_;
   /**
+   * <pre>
+   * default expression value
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
    * @return Whether the defaultValue field is set.
    */
@@ -939,6 +1111,10 @@ private static final long serialVersionUID = 0L;
     return defaultValue_ != null;
   }
   /**
+   * <pre>
+   * default expression value
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
    * @return The defaultValue.
    */
@@ -947,6 +1123,10 @@ private static final long serialVersionUID = 0L;
     return defaultValue_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : defaultValue_;
   }
   /**
+   * <pre>
+   * default expression value
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
    */
   @java.lang.Override
@@ -957,6 +1137,10 @@ private static final long serialVersionUID = 0L;
   public static final int IS_COMPLEX_FIELD_NUMBER = 5;
   private boolean isComplex_ = false;
   /**
+   * <pre>
+   * is complex
+   * </pre>
+   *
    * <code>bool is_complex = 5 [json_name = "isComplex"];</code>
    * @return The isComplex.
    */
@@ -1185,6 +1369,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * MapNode maps columns
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.insights.MapNode}
    */
   public static final class Builder extends
@@ -1475,6 +1663,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.Column, com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder> newColumnBuilder_;
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      * @return Whether the newColumn field is set.
      */
@@ -1482,6 +1674,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      * @return The newColumn.
      */
@@ -1493,6 +1689,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public Builder setNewColumn(com.tcn.cloud.api.api.v1alpha1.insights.Column value) {
@@ -1509,6 +1709,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public Builder setNewColumn(
@@ -1523,6 +1727,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public Builder mergeNewColumn(com.tcn.cloud.api.api.v1alpha1.insights.Column value) {
@@ -1542,6 +1750,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public Builder clearNewColumn() {
@@ -1555,6 +1767,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder getNewColumnBuilder() {
@@ -1563,6 +1779,10 @@ private static final long serialVersionUID = 0L;
       return getNewColumnFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder getNewColumnOrBuilder() {
@@ -1574,6 +1794,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * new column
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column new_column = 1 [json_name = "newColumn"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1594,6 +1818,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.Column, com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder> columnToMapBuilder_;
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      * @return Whether the columnToMap field is set.
      */
@@ -1601,6 +1829,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      * @return The columnToMap.
      */
@@ -1612,6 +1844,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public Builder setColumnToMap(com.tcn.cloud.api.api.v1alpha1.insights.Column value) {
@@ -1628,6 +1864,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public Builder setColumnToMap(
@@ -1642,6 +1882,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public Builder mergeColumnToMap(com.tcn.cloud.api.api.v1alpha1.insights.Column value) {
@@ -1661,6 +1905,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public Builder clearColumnToMap() {
@@ -1674,6 +1922,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.Column.Builder getColumnToMapBuilder() {
@@ -1682,6 +1934,10 @@ private static final long serialVersionUID = 0L;
       return getColumnToMapFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder getColumnToMapOrBuilder() {
@@ -1693,6 +1949,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * column to map
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.Column column_to_map = 2 [json_name = "columnToMap"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1722,6 +1982,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping, com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.Builder, com.tcn.cloud.api.api.v1alpha1.insights.MapNode.MappingOrBuilder> mappingsBuilder_;
 
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping> getMappingsList() {
@@ -1732,6 +1996,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public int getMappingsCount() {
@@ -1742,6 +2010,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping getMappings(int index) {
@@ -1752,6 +2024,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder setMappings(
@@ -1769,6 +2045,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder setMappings(
@@ -1783,6 +2063,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder addMappings(com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping value) {
@@ -1799,6 +2083,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder addMappings(
@@ -1816,6 +2104,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder addMappings(
@@ -1830,6 +2122,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder addMappings(
@@ -1844,6 +2140,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder addAllMappings(
@@ -1859,6 +2159,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder clearMappings() {
@@ -1872,6 +2176,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public Builder removeMappings(int index) {
@@ -1885,6 +2193,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.Builder getMappingsBuilder(
@@ -1892,6 +2204,10 @@ private static final long serialVersionUID = 0L;
       return getMappingsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.MappingOrBuilder getMappingsOrBuilder(
@@ -1902,6 +2218,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.MapNode.MappingOrBuilder> 
@@ -1913,6 +2233,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.Builder addMappingsBuilder() {
@@ -1920,6 +2244,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.getDefaultInstance());
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.Builder addMappingsBuilder(
@@ -1928,6 +2256,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.getDefaultInstance());
     }
     /**
+     * <pre>
+     * mappings
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.insights.MapNode.Mapping mappings = 3 [json_name = "mappings"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.MapNode.Mapping.Builder> 
@@ -1953,6 +2285,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> defaultValueBuilder_;
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      * @return Whether the defaultValue field is set.
      */
@@ -1960,6 +2296,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      * @return The defaultValue.
      */
@@ -1971,6 +2311,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public Builder setDefaultValue(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -1987,6 +2331,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public Builder setDefaultValue(
@@ -2001,6 +2349,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public Builder mergeDefaultValue(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
@@ -2020,6 +2372,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public Builder clearDefaultValue() {
@@ -2033,6 +2389,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getDefaultValueBuilder() {
@@ -2041,6 +2401,10 @@ private static final long serialVersionUID = 0L;
       return getDefaultValueFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getDefaultValueOrBuilder() {
@@ -2052,6 +2416,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * default expression value
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.ExpressionNode default_value = 4 [json_name = "defaultValue"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2070,6 +2438,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean isComplex_ ;
     /**
+     * <pre>
+     * is complex
+     * </pre>
+     *
      * <code>bool is_complex = 5 [json_name = "isComplex"];</code>
      * @return The isComplex.
      */
@@ -2078,6 +2450,10 @@ private static final long serialVersionUID = 0L;
       return isComplex_;
     }
     /**
+     * <pre>
+     * is complex
+     * </pre>
+     *
      * <code>bool is_complex = 5 [json_name = "isComplex"];</code>
      * @param value The isComplex to set.
      * @return This builder for chaining.
@@ -2090,6 +2466,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * is complex
+     * </pre>
+     *
      * <code>bool is_complex = 5 [json_name = "isComplex"];</code>
      * @return This builder for chaining.
      */

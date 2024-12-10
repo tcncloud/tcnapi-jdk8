@@ -8,16 +8,24 @@ public interface NodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <pre>
+   * Node id
+   * </pre>
+   *
+   * <code>string node_id = 1 [json_name = "nodeId"];</code>
+   * @return The nodeId.
    */
-  java.lang.String getId();
+  java.lang.String getNodeId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <pre>
+   * Node id
+   * </pre>
+   *
+   * <code>string node_id = 1 [json_name = "nodeId"];</code>
+   * @return The bytes for nodeId.
    */
   com.google.protobuf.ByteString
-      getIdBytes();
+      getNodeIdBytes();
 
   /**
    * <pre>
@@ -40,11 +48,19 @@ public interface NodeOrBuilder extends
       getTypeBytes();
 
   /**
+   * <pre>
+   * Node title
+   * </pre>
+   *
    * <code>string title = 3 [json_name = "title"];</code>
    * @return The title.
    */
   java.lang.String getTitle();
   /**
+   * <pre>
+   * Node title
+   * </pre>
+   *
    * <code>string title = 3 [json_name = "title"];</code>
    * @return The bytes for title.
    */
@@ -52,23 +68,39 @@ public interface NodeOrBuilder extends
       getTitleBytes();
 
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @return A list containing the inputIds.
    */
   java.util.List<java.lang.String>
       getInputIdsList();
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @return The count of inputIds.
    */
   int getInputIdsCount();
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @param index The index of the element to return.
    * @return The inputIds at the given index.
    */
   java.lang.String getInputIds(int index);
   /**
+   * <pre>
+   * Input ids of other nodes
+   * </pre>
+   *
    * <code>repeated string input_ids = 4 [json_name = "inputIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the inputIds at the given index.
@@ -77,23 +109,39 @@ public interface NodeOrBuilder extends
       getInputIdsBytes(int index);
 
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @return A list containing the outputIds.
    */
   java.util.List<java.lang.String>
       getOutputIdsList();
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @return The count of outputIds.
    */
   int getOutputIdsCount();
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @param index The index of the element to return.
    * @return The outputIds at the given index.
    */
   java.lang.String getOutputIds(int index);
   /**
+   * <pre>
+   * Output ids of the node
+   * </pre>
+   *
    * <code>repeated string output_ids = 5 [json_name = "outputIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the outputIds at the given index.
@@ -102,196 +150,352 @@ public interface NodeOrBuilder extends
       getOutputIdsBytes(int index);
 
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    * @return Whether the fromNode field is set.
    */
   boolean hasFromNode();
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    * @return The fromNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.FromNode getFromNode();
   /**
+   * <pre>
+   * From node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FromNode from_node = 6 [json_name = "fromNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.FromNodeOrBuilder getFromNodeOrBuilder();
 
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    * @return Whether the filterNode field is set.
    */
   boolean hasFilterNode();
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    * @return The filterNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.FilterNode getFilterNode();
   /**
+   * <pre>
+   * Filter node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.FilterNode filter_node = 7 [json_name = "filterNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.FilterNodeOrBuilder getFilterNodeOrBuilder();
 
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    * @return Whether the deriveNode field is set.
    */
   boolean hasDeriveNode();
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    * @return The deriveNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.DeriveNode getDeriveNode();
   /**
+   * <pre>
+   * Derive node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.DeriveNode derive_node = 8 [json_name = "deriveNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.DeriveNodeOrBuilder getDeriveNodeOrBuilder();
 
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    * @return Whether the groupNode field is set.
    */
   boolean hasGroupNode();
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    * @return The groupNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.GroupNode getGroupNode();
   /**
+   * <pre>
+   * Group node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.GroupNode group_node = 9 [json_name = "groupNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.GroupNodeOrBuilder getGroupNodeOrBuilder();
 
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    * @return Whether the joinNode field is set.
    */
   boolean hasJoinNode();
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    * @return The joinNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JoinNode getJoinNode();
   /**
+   * <pre>
+   * Join node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JoinNode join_node = 10 [json_name = "joinNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JoinNodeOrBuilder getJoinNodeOrBuilder();
 
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    * @return Whether the selectNode field is set.
    */
   boolean hasSelectNode();
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    * @return The selectNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.SelectNode getSelectNode();
   /**
+   * <pre>
+   * Select node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SelectNode select_node = 11 [json_name = "selectNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.SelectNodeOrBuilder getSelectNodeOrBuilder();
 
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    * @return Whether the aggregateNode field is set.
    */
   boolean hasAggregateNode();
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    * @return The aggregateNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.AggregateNode getAggregateNode();
   /**
+   * <pre>
+   * Aggregate node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.AggregateNode aggregate_node = 12 [json_name = "aggregateNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.AggregateNodeOrBuilder getAggregateNodeOrBuilder();
 
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    * @return Whether the takeNode field is set.
    */
   boolean hasTakeNode();
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    * @return The takeNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TakeNode getTakeNode();
   /**
+   * <pre>
+   * Take node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.TakeNode take_node = 13 [json_name = "takeNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TakeNodeOrBuilder getTakeNodeOrBuilder();
 
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    * @return Whether the jsonNode field is set.
    */
   boolean hasJsonNode();
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    * @return The jsonNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonNode getJsonNode();
   /**
+   * <pre>
+   * Json node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonNode json_node = 14 [json_name = "jsonNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonNodeOrBuilder getJsonNodeOrBuilder();
 
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    * @return Whether the mapNode field is set.
    */
   boolean hasMapNode();
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    * @return The mapNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.MapNode getMapNode();
   /**
+   * <pre>
+   * Map node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.MapNode map_node = 15 [json_name = "mapNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.MapNodeOrBuilder getMapNodeOrBuilder();
 
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    * @return Whether the replaceNode field is set.
    */
   boolean hasReplaceNode();
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    * @return The replaceNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNode getReplaceNode();
   /**
+   * <pre>
+   * Replace node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.ReplaceNode replace_node = 16 [json_name = "replaceNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ReplaceNodeOrBuilder getReplaceNodeOrBuilder();
 
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    * @return Whether the sortNode field is set.
    */
   boolean hasSortNode();
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    * @return The sortNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.SortNode getSortNode();
   /**
+   * <pre>
+   * Sort node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.SortNode sort_node = 17 [json_name = "sortNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.SortNodeOrBuilder getSortNodeOrBuilder();
 
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    * @return Whether the stringManipulationNode field is set.
    */
   boolean hasStringManipulationNode();
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    * @return The stringManipulationNode.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNode getStringManipulationNode();
   /**
+   * <pre>
+   * String manipulation node
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.StringManipulationNode string_manipulation_node = 18 [json_name = "stringManipulationNode"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.StringManipulationNodeOrBuilder getStringManipulationNodeOrBuilder();

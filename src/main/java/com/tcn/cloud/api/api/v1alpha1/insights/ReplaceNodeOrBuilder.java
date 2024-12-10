@@ -8,30 +8,54 @@ public interface ReplaceNodeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement> 
       getColumnReplacementsList();
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacement getColumnReplacements(int index);
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   int getColumnReplacementsCount();
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacementOrBuilder> 
       getColumnReplacementsOrBuilderList();
   /**
+   * <pre>
+   * List of column replacements
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.ColumnReplacement column_replacements = 1 [json_name = "columnReplacements"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnReplacementOrBuilder getColumnReplacementsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Is complex
+   * </pre>
+   *
    * <code>bool is_complex = 2 [json_name = "isComplex"];</code>
    * @return The isComplex.
    */

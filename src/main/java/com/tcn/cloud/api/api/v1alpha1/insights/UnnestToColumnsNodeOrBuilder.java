@@ -9,7 +9,7 @@ public interface UnnestToColumnsNodeOrBuilder extends
 
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -18,7 +18,7 @@ public interface UnnestToColumnsNodeOrBuilder extends
   boolean hasUnnestTarget();
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -27,7 +27,7 @@ public interface UnnestToColumnsNodeOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget getUnnestTarget();
   /**
    * <pre>
-   * when the key is a column, take the value from the column
+   * When the key is a column, take the value from the column
    * </pre>
    *
    * <code>.api.v1alpha1.insights.JsonTarget unnest_target = 1 [json_name = "unnestTarget"];</code>
@@ -35,53 +35,93 @@ public interface UnnestToColumnsNodeOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getUnnestTargetOrBuilder();
 
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    * @return Whether the keyTarget field is set.
    */
   boolean hasKeyTarget();
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    * @return The keyTarget.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget getKeyTarget();
   /**
+   * <pre>
+   * Key target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget key_target = 2 [json_name = "keyTarget"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getKeyTargetOrBuilder();
 
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    * @return Whether the valueTarget field is set.
    */
   boolean hasValueTarget();
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    * @return The valueTarget.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTarget getValueTarget();
   /**
+   * <pre>
+   * Value target
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.JsonTarget value_target = 3 [json_name = "valueTarget"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.JsonTargetOrBuilder getValueTargetOrBuilder();
 
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @return A list containing the columns.
    */
   java.util.List<java.lang.String>
       getColumnsList();
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @return The count of columns.
    */
   int getColumnsCount();
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @param index The index of the element to return.
    * @return The columns at the given index.
    */
   java.lang.String getColumns(int index);
   /**
+   * <pre>
+   * Column
+   * </pre>
+   *
    * <code>repeated string columns = 4 [json_name = "columns"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the columns at the given index.
@@ -90,23 +130,39 @@ public interface UnnestToColumnsNodeOrBuilder extends
       getColumnsBytes(int index);
 
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @return A list containing the primaryKeys.
    */
   java.util.List<java.lang.String>
       getPrimaryKeysList();
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @return The count of primaryKeys.
    */
   int getPrimaryKeysCount();
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @param index The index of the element to return.
    * @return The primaryKeys at the given index.
    */
   java.lang.String getPrimaryKeys(int index);
   /**
+   * <pre>
+   * Primary keys
+   * </pre>
+   *
    * <code>repeated string primary_keys = 5 [json_name = "primaryKeys"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the primaryKeys at the given index.
@@ -115,24 +171,44 @@ public interface UnnestToColumnsNodeOrBuilder extends
       getPrimaryKeysBytes(int index);
 
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.Column> 
       getJsonColumnsList();
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.Column getJsonColumns(int index);
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   int getJsonColumnsCount();
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder> 
       getJsonColumnsOrBuilderList();
   /**
+   * <pre>
+   * Json columns
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.insights.Column json_columns = 6 [json_name = "jsonColumns"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnOrBuilder getJsonColumnsOrBuilder(

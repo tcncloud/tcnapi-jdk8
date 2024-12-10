@@ -9,7 +9,7 @@ public interface ValuesReplacementOrBuilder extends
 
   /**
    * <pre>
-   * value in the column to replace
+   * Value in the column to replace
    * </pre>
    *
    * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -18,7 +18,7 @@ public interface ValuesReplacementOrBuilder extends
   java.lang.String getTargetValue();
   /**
    * <pre>
-   * value in the column to replace
+   * Value in the column to replace
    * </pre>
    *
    * <code>string target_value = 1 [json_name = "targetValue"];</code>
@@ -28,11 +28,19 @@ public interface ValuesReplacementOrBuilder extends
       getTargetValueBytes();
 
   /**
+   * <pre>
+   * Target data type of replacement
+   * </pre>
+   *
    * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
    * @return The targetDataType.
    */
   java.lang.String getTargetDataType();
   /**
+   * <pre>
+   * Target data type of replacement
+   * </pre>
+   *
    * <code>string target_data_type = 2 [json_name = "targetDataType"];</code>
    * @return The bytes for targetDataType.
    */
@@ -41,7 +49,7 @@ public interface ValuesReplacementOrBuilder extends
 
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -50,7 +58,7 @@ public interface ValuesReplacementOrBuilder extends
   boolean hasReplacementValue();
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>
@@ -59,7 +67,7 @@ public interface ValuesReplacementOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getReplacementValue();
   /**
    * <pre>
-   * result of the replacement
+   * Result of the replacement
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExpressionNode replacement_value = 3 [json_name = "replacementValue"];</code>

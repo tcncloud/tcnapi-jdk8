@@ -8,11 +8,19 @@ public interface ColumnOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * key is the column name
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The key.
    */
   java.lang.String getKey();
   /**
+   * <pre>
+   * key is the column name
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The bytes for key.
    */
@@ -20,11 +28,19 @@ public interface ColumnOrBuilder extends
       getKeyBytes();
 
   /**
+   * <pre>
+   * data type of column
+   * </pre>
+   *
    * <code>string data_type = 2 [json_name = "dataType"];</code>
    * @return The dataType.
    */
   java.lang.String getDataType();
   /**
+   * <pre>
+   * data type of column
+   * </pre>
+   *
    * <code>string data_type = 2 [json_name = "dataType"];</code>
    * @return The bytes for dataType.
    */
