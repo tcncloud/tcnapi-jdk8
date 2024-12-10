@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface ListAgentStatesForDayResponseOrBuilder extends
+@java.lang.Deprecated public interface ListAgentStatesForDayResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListAgentStatesForDayResponse)
     com.google.protobuf.MessageOrBuilder {
 

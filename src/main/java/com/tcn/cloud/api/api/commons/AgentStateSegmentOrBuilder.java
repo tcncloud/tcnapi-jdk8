@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface AgentStateSegmentOrBuilder extends
+@java.lang.Deprecated public interface AgentStateSegmentOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.AgentStateSegment)
     com.google.protobuf.MessageOrBuilder {
 
@@ -74,7 +74,7 @@ public interface AgentStateSegmentOrBuilder extends
    *
    * <code>int32 width_in_minutes = 3 [json_name = "widthInMinutes", deprecated = true];</code>
    * @deprecated api.commons.AgentStateSegment.width_in_minutes is deprecated.
-   *     See api/commons/wfm.proto;l=819
+   *     See api/commons/wfm.proto;l=820
    * @return The widthInMinutes.
    */
   @java.lang.Deprecated int getWidthInMinutes();
