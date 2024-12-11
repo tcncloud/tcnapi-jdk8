@@ -511,7 +511,7 @@ public interface ManualDialSettingsOrBuilder extends
    *
    * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
    * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=587
+   *     See api/commons/org/huntgroup.proto;l=589
    * @return The enableRejectOptionForApprovers.
    */
   @java.lang.Deprecated boolean getEnableRejectOptionForApprovers();
