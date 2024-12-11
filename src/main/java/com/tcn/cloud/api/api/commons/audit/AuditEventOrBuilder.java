@@ -3154,6 +3154,21 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryExpungeEventOrBuilder();
 
   /**
+   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
+   * @return Whether the contactManagerEntityAssociationEvent field is set.
+   */
+  boolean hasContactManagerEntityAssociationEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
+   * @return The contactManagerEntityAssociationEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEvent getContactManagerEntityAssociationEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntityAssociationEvent contact_manager_entity_association_event = 1209 [json_name = "contactManagerEntityAssociationEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntityAssociationEventOrBuilder getContactManagerEntityAssociationEventOrBuilder();
+
+  /**
    * <pre>
    * Organization Events
    * AccessTokensExpiringEvent is the event that is triggered when any users access tokens are expiring.

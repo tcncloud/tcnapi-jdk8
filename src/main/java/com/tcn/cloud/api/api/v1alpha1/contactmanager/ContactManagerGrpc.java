@@ -294,6 +294,37 @@ public final class ContactManagerGrpc {
     return getGetContactFieldTypeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> getListContactActivityLogMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListContactActivityLog",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> getListContactActivityLogMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> getListContactActivityLogMethod;
+    if ((getListContactActivityLogMethod = ContactManagerGrpc.getListContactActivityLogMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getListContactActivityLogMethod = ContactManagerGrpc.getListContactActivityLogMethod) == null) {
+          ContactManagerGrpc.getListContactActivityLogMethod = getListContactActivityLogMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactActivityLog"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("ListContactActivityLog"))
+              .build();
+        }
+      }
+    }
+    return getListContactActivityLogMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -420,6 +451,17 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactFieldTypeMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *List Audit history for a Contact
+     * </pre>
+     */
+    default void listContactActivityLog(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactActivityLogMethod(), responseObserver);
+    }
   }
 
   /**
@@ -536,6 +578,18 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *List Audit history for a Contact
+     * </pre>
+     */
+    public void listContactActivityLog(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListContactActivityLogMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -631,6 +685,17 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse getContactFieldType(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetContactFieldTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *List Audit history for a Contact
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse listContactActivityLog(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListContactActivityLogMethod(), getCallOptions(), request);
     }
   }
 
@@ -737,6 +802,18 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     **
+     *List Audit history for a Contact
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse> listContactActivityLog(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListContactActivityLogMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
@@ -748,6 +825,7 @@ public final class ContactManagerGrpc {
   private static final int METHODID_EDIT_CONTACT_ENTRY = 6;
   private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 7;
   private static final int METHODID_GET_CONTACT_FIELD_TYPE = 8;
+  private static final int METHODID_LIST_CONTACT_ACTIVITY_LOG = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -801,6 +879,10 @@ public final class ContactManagerGrpc {
         case METHODID_GET_CONTACT_FIELD_TYPE:
           serviceImpl.getContactFieldType((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>) responseObserver);
+          break;
+        case METHODID_LIST_CONTACT_ACTIVITY_LOG:
+          serviceImpl.listContactActivityLog((com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -883,6 +965,13 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>(
                 service, METHODID_GET_CONTACT_FIELD_TYPE)))
+        .addMethod(
+          getListContactActivityLogMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactActivityLogResponse>(
+                service, METHODID_LIST_CONTACT_ACTIVITY_LOG)))
         .build();
   }
 
@@ -940,6 +1029,7 @@ public final class ContactManagerGrpc {
               .addMethod(getEditContactEntryMethod())
               .addMethod(getListContactsByEntityMethod())
               .addMethod(getGetContactFieldTypeMethod())
+              .addMethod(getListContactActivityLogMethod())
               .build();
         }
       }

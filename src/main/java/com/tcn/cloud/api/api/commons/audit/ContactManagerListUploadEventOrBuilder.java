@@ -88,4 +88,45 @@ public interface ContactManagerListUploadEventOrBuilder extends
    * @return The deDupMergeStrategy.
    */
   com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy getDeDupMergeStrategy();
+
+  /**
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
+   * @return The contactManagerListName.
+   */
+  java.lang.String getContactManagerListName();
+  /**
+   * <code>string ContactManagerListName = 9 [json_name = "ContactManagerListName"];</code>
+   * @return The bytes for contactManagerListName.
+   */
+  com.google.protobuf.ByteString
+      getContactManagerListNameBytes();
+
+  /**
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
+   * @return Whether the fileName field is set.
+   */
+  boolean hasFileName();
+  /**
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
+   * @return The fileName.
+   */
+  java.lang.String getFileName();
+  /**
+   * <code>optional string FileName = 10 [json_name = "FileName"];</code>
+   * @return The bytes for fileName.
+   */
+  com.google.protobuf.ByteString
+      getFileNameBytes();
+
+  /**
+   * <code>int64 UpdateTaskId = 11 [json_name = "UpdateTaskId"];</code>
+   * @return The updateTaskId.
+   */
+  long getUpdateTaskId();
+
+  /**
+   * <code>int64 Ttl = 12 [json_name = "Ttl"];</code>
+   * @return The ttl.
+   */
+  long getTtl();
 }

@@ -134,6 +134,21 @@ public final class ContactmanagerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_ListContactActivityLogRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_ListContactActivityLogResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_ContactActivityLog_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_ContactActivityLog_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -243,13 +258,26 @@ public final class ContactmanagerProto {
       ".commons.ClassifierEntityTypeH\000R\tfieldTy" +
       "pe\210\001\001B\r\n\013_field_type\"_\n\033GetContactFieldT" +
       "ypeResponse\022@\n\nfield_type\030\001 \001(\0162!.api.co" +
-      "mmons.ClassifierEntityTypeR\tfieldTypeB\322\001" +
-      "\n-com.tcn.cloud.api.api.v1alpha1.contact" +
-      "managerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033A" +
-      "pi.V1alpha1.Contactmanager\312\002\033Api\\V1alpha" +
-      "1\\Contactmanager\342\002\'Api\\V1alpha1\\Contactm" +
-      "anager\\GPBMetadata\352\002\035Api::V1alpha1::Cont" +
-      "actmanagerb\006proto3"
+      "mmons.ClassifierEntityTypeR\tfieldType\"\222\001" +
+      "\n\035ListContactActivityLogRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022\035\n\nproject_id\030\002 \001(\tR\tproj" +
+      "ectId\022;\n\030contact_manager_entry_id\030\003 \001(\003B" +
+      "\0020\001R\025contactManagerEntryId\"\203\001\n\036ListConta" +
+      "ctActivityLogResponse\022a\n\024contact_activit" +
+      "y_log\030\001 \003(\0132/.api.v1alpha1.contactmanage" +
+      "r.ContactActivityLogR\022contactActivityLog" +
+      "\"\372\001\n\022ContactActivityLog\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\022\035\n\nproject_id\030\002 \001(\tR\tprojectId\022;\n" +
+      "\030contact_manager_entry_id\030\003 \001(\003B\0020\001R\025con" +
+      "tactManagerEntryId\022\035\n\nevent_user\030\004 \001(\tR\t" +
+      "eventUser\022\035\n\nevent_time\030\005 \001(\tR\teventTime" +
+      "\022\024\n\005event\030\006 \001(\tR\005event\022\035\n\nevent_type\030\007 \001" +
+      "(\tR\teventTypeB\322\001\n-com.tcn.cloud.api.api." +
+      "v1alpha1.contactmanagerB\023ContactmanagerP" +
+      "rotoP\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanag" +
+      "er\312\002\033Api\\V1alpha1\\Contactmanager\342\002\'Api\\V" +
+      "1alpha1\\Contactmanager\\GPBMetadata\352\002\035Api" +
+      "::V1alpha1::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -403,6 +431,24 @@ public final class ContactmanagerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_descriptor,
         new java.lang.String[] { "FieldType", });
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_ListContactActivityLogRequest_descriptor,
+        new java.lang.String[] { "OrgId", "ProjectId", "ContactManagerEntryId", });
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogResponse_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_contactmanager_ListContactActivityLogResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_ListContactActivityLogResponse_descriptor,
+        new java.lang.String[] { "ContactActivityLog", });
+    internal_static_api_v1alpha1_contactmanager_ContactActivityLog_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_v1alpha1_contactmanager_ContactActivityLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_ContactActivityLog_descriptor,
+        new java.lang.String[] { "OrgId", "ProjectId", "ContactManagerEntryId", "EventUser", "EventTime", "Event", "EventType", });
     com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ContactmanagerProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
