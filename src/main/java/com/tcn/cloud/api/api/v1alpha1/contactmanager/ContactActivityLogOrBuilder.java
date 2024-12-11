@@ -51,45 +51,28 @@ public interface ContactActivityLogOrBuilder extends
 
   /**
    * <pre>
-   * the retrieved audit events
+   * the retrieved audit event
    * </pre>
    *
-   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+   * <code>.api.commons.audit.AuditEvent event = 5 [json_name = "event"];</code>
+   * @return Whether the event field is set.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> 
-      getEventsList();
+  boolean hasEvent();
   /**
    * <pre>
-   * the retrieved audit events
+   * the retrieved audit event
    * </pre>
    *
-   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+   * <code>.api.commons.audit.AuditEvent event = 5 [json_name = "event"];</code>
+   * @return The event.
    */
-  com.tcn.cloud.api.api.commons.audit.AuditEvent getEvents(int index);
+  com.tcn.cloud.api.api.commons.audit.AuditEvent getEvent();
   /**
    * <pre>
-   * the retrieved audit events
+   * the retrieved audit event
    * </pre>
    *
-   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+   * <code>.api.commons.audit.AuditEvent event = 5 [json_name = "event"];</code>
    */
-  int getEventsCount();
-  /**
-   * <pre>
-   * the retrieved audit events
-   * </pre>
-   *
-   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> 
-      getEventsOrBuilderList();
-  /**
-   * <pre>
-   * the retrieved audit events
-   * </pre>
-   *
-   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
-   */
-  com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder getEventsOrBuilder(
-      int index);
+  com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder getEventOrBuilder();
 }
