@@ -1384,10 +1384,10 @@ private static final long serialVersionUID = 0L;
      * The sid in the xml_client_property table.
      * </pre>
      *
-     * <code>int64 property_sid = 5 [json_name = "propertySid"];</code>
-     * @return The propertySid.
+     * <code>int64 template_sid = 5 [json_name = "templateSid"];</code>
+     * @return The templateSid.
      */
-    long getPropertySid();
+    long getTemplateSid();
   }
   /**
    * <pre>
@@ -1554,19 +1554,19 @@ private static final long serialVersionUID = 0L;
       return definedFieldCount_;
     }
 
-    public static final int PROPERTY_SID_FIELD_NUMBER = 5;
-    private long propertySid_ = 0L;
+    public static final int TEMPLATE_SID_FIELD_NUMBER = 5;
+    private long templateSid_ = 0L;
     /**
      * <pre>
      * The sid in the xml_client_property table.
      * </pre>
      *
-     * <code>int64 property_sid = 5 [json_name = "propertySid"];</code>
-     * @return The propertySid.
+     * <code>int64 template_sid = 5 [json_name = "templateSid"];</code>
+     * @return The templateSid.
      */
     @java.lang.Override
-    public long getPropertySid() {
-      return propertySid_;
+    public long getTemplateSid() {
+      return templateSid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1595,8 +1595,8 @@ private static final long serialVersionUID = 0L;
       if (definedFieldCount_ != 0L) {
         output.writeInt64(4, definedFieldCount_);
       }
-      if (propertySid_ != 0L) {
-        output.writeInt64(5, propertySid_);
+      if (templateSid_ != 0L) {
+        output.writeInt64(5, templateSid_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1621,9 +1621,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, definedFieldCount_);
       }
-      if (propertySid_ != 0L) {
+      if (templateSid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, propertySid_);
+          .computeInt64Size(5, templateSid_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1648,8 +1648,8 @@ private static final long serialVersionUID = 0L;
           != other.getDisplayAllFields()) return false;
       if (getDefinedFieldCount()
           != other.getDefinedFieldCount()) return false;
-      if (getPropertySid()
-          != other.getPropertySid()) return false;
+      if (getTemplateSid()
+          != other.getTemplateSid()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1671,9 +1671,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEFINED_FIELD_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDefinedFieldCount());
-      hash = (37 * hash) + PROPERTY_SID_FIELD_NUMBER;
+      hash = (37 * hash) + TEMPLATE_SID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPropertySid());
+          getTemplateSid());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1813,7 +1813,7 @@ private static final long serialVersionUID = 0L;
         description_ = "";
         displayAllFields_ = false;
         definedFieldCount_ = 0L;
-        propertySid_ = 0L;
+        templateSid_ = 0L;
         return this;
       }
 
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
           result.definedFieldCount_ = definedFieldCount_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.propertySid_ = propertySid_;
+          result.templateSid_ = templateSid_;
         }
       }
 
@@ -1924,8 +1924,8 @@ private static final long serialVersionUID = 0L;
         if (other.getDefinedFieldCount() != 0L) {
           setDefinedFieldCount(other.getDefinedFieldCount());
         }
-        if (other.getPropertySid() != 0L) {
-          setPropertySid(other.getPropertySid());
+        if (other.getTemplateSid() != 0L) {
+          setTemplateSid(other.getTemplateSid());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1974,7 +1974,7 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 32
               case 40: {
-                propertySid_ = input.readInt64();
+                templateSid_ = input.readInt64();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
@@ -2267,31 +2267,31 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private long propertySid_ ;
+      private long templateSid_ ;
       /**
        * <pre>
        * The sid in the xml_client_property table.
        * </pre>
        *
-       * <code>int64 property_sid = 5 [json_name = "propertySid"];</code>
-       * @return The propertySid.
+       * <code>int64 template_sid = 5 [json_name = "templateSid"];</code>
+       * @return The templateSid.
        */
       @java.lang.Override
-      public long getPropertySid() {
-        return propertySid_;
+      public long getTemplateSid() {
+        return templateSid_;
       }
       /**
        * <pre>
        * The sid in the xml_client_property table.
        * </pre>
        *
-       * <code>int64 property_sid = 5 [json_name = "propertySid"];</code>
-       * @param value The propertySid to set.
+       * <code>int64 template_sid = 5 [json_name = "templateSid"];</code>
+       * @param value The templateSid to set.
        * @return This builder for chaining.
        */
-      public Builder setPropertySid(long value) {
+      public Builder setTemplateSid(long value) {
 
-        propertySid_ = value;
+        templateSid_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
@@ -2301,12 +2301,12 @@ private static final long serialVersionUID = 0L;
        * The sid in the xml_client_property table.
        * </pre>
        *
-       * <code>int64 property_sid = 5 [json_name = "propertySid"];</code>
+       * <code>int64 template_sid = 5 [json_name = "templateSid"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearPropertySid() {
+      public Builder clearTemplateSid() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        propertySid_ = 0L;
+        templateSid_ = 0L;
         onChanged();
         return this;
       }

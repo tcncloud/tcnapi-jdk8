@@ -598,7 +598,7 @@ public final class HuntgroupProto {
       "escription\030\002 \001(\tR\013description\022,\n\022display" +
       "_all_fields\030\003 \001(\010R\020displayAllFields\022.\n\023d" +
       "efined_field_count\030\004 \001(\003R\021definedFieldCo" +
-      "unt\022!\n\014property_sid\030\005 \001(\003R\013propertySid\032\212" +
+      "unt\022!\n\014template_sid\030\005 \001(\003R\013templateSid\032\212" +
       "\001\n\016WebLinkDetails\022\022\n\004name\030\001 \001(\tR\004name\022 \n" +
       "\013description\030\002 \001(\tR\013description\022\031\n\010base_" +
       "url\030\003 \001(\tR\007baseUrl\022\'\n\017parameter_count\030\004 " +
@@ -1328,7 +1328,7 @@ public final class HuntgroupProto {
     internal_static_api_commons_org_HuntGroupDetails_ClientInfoDisplayTemplateDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_HuntGroupDetails_ClientInfoDisplayTemplateDetails_descriptor,
-        new java.lang.String[] { "Name", "Description", "DisplayAllFields", "DefinedFieldCount", "PropertySid", });
+        new java.lang.String[] { "Name", "Description", "DisplayAllFields", "DefinedFieldCount", "TemplateSid", });
     internal_static_api_commons_org_HuntGroupDetails_WebLinkDetails_descriptor =
       internal_static_api_commons_org_HuntGroupDetails_descriptor.getNestedTypes().get(2);
     internal_static_api_commons_org_HuntGroupDetails_WebLinkDetails_fieldAccessorTable = new
