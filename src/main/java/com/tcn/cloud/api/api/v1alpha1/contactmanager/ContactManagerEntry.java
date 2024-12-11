@@ -24,6 +24,9 @@ private static final long serialVersionUID = 0L;
     value_ = "";
     type_ = "";
     status_ = 0;
+    fileName_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    field_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -62,7 +65,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
    * @return The contactManagerEntryListId.
    */
   @java.lang.Override
@@ -74,11 +77,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object key_ = "";
   /**
-   * <code>string key = 3 [json_name = "key"];</code>
+   * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The key.
    */
   @java.lang.Override
-  public java.lang.String getKey() {
+  @java.lang.Deprecated public java.lang.String getKey() {
     java.lang.Object ref = key_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -91,11 +96,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string key = 3 [json_name = "key"];</code>
+   * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The bytes for key.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getKeyBytes() {
     java.lang.Object ref = key_;
     if (ref instanceof java.lang.String) {
@@ -113,11 +120,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The value.
    */
   @java.lang.Override
-  public java.lang.String getValue() {
+  @java.lang.Deprecated public java.lang.String getValue() {
     java.lang.Object ref = value_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -130,11 +139,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The bytes for value.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getValueBytes() {
     java.lang.Object ref = value_;
     if (ref instanceof java.lang.String) {
@@ -152,11 +163,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object type_ = "";
   /**
-   * <code>string type = 5 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The type.
    */
   @java.lang.Override
-  public java.lang.String getType() {
+  @java.lang.Deprecated public java.lang.String getType() {
     java.lang.Object ref = type_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -169,11 +182,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string type = 5 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The bytes for type.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getTypeBytes() {
     java.lang.Object ref = type_;
     if (ref instanceof java.lang.String) {
@@ -231,6 +246,121 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ContactEntryStatus.UNRECOGNIZED : result;
   }
 
+  public static final int DATE_MODIFIED_FIELD_NUMBER = 8;
+  private com.google.protobuf.Timestamp dateModified_;
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  @java.lang.Override
+  public boolean hasDateModified() {
+    return dateModified_ != null;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDateModified() {
+    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  }
+
+  public static final int TTL_FIELD_NUMBER = 9;
+  private long ttl_ = 0L;
+  /**
+   * <code>int64 ttl = 9 [json_name = "ttl"];</code>
+   * @return The ttl.
+   */
+  @java.lang.Override
+  public long getTtl() {
+    return ttl_;
+  }
+
+  public static final int FILE_NAME_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList fileName_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @return A list containing the fileName.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getFileNameList() {
+    return fileName_;
+  }
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @return The count of fileName.
+   */
+  public int getFileNameCount() {
+    return fileName_.size();
+  }
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @param index The index of the element to return.
+   * @return The fileName at the given index.
+   */
+  public java.lang.String getFileName(int index) {
+    return fileName_.get(index);
+  }
+  /**
+   * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the fileName at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getFileNameBytes(int index) {
+    return fileName_.getByteString(index);
+  }
+
+  public static final int FIELD_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> field_;
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> getFieldList() {
+    return field_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+      getFieldOrBuilderList() {
+    return field_;
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  @java.lang.Override
+  public int getFieldCount() {
+    return field_.size();
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index) {
+    return field_.get(index);
+  }
+  /**
+   * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
+      int index) {
+    return field_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -266,6 +396,18 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.ContactEntryStatus.CONTACT_ENTRY_STATUS_NEW.getNumber()) {
       output.writeEnum(7, status_);
     }
+    if (dateModified_ != null) {
+      output.writeMessage(8, getDateModified());
+    }
+    if (ttl_ != 0L) {
+      output.writeInt64(9, ttl_);
+    }
+    for (int i = 0; i < fileName_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, fileName_.getRaw(i));
+    }
+    for (int i = 0; i < field_.size(); i++) {
+      output.writeMessage(11, field_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -300,6 +442,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, status_);
     }
+    if (dateModified_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getDateModified());
+    }
+    if (ttl_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, ttl_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < fileName_.size(); i++) {
+        dataSize += computeStringSizeNoTag(fileName_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getFileNameList().size();
+    }
+    for (int i = 0; i < field_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, field_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -331,6 +493,17 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDateCreated())) return false;
     }
     if (status_ != other.status_) return false;
+    if (hasDateModified() != other.hasDateModified()) return false;
+    if (hasDateModified()) {
+      if (!getDateModified()
+          .equals(other.getDateModified())) return false;
+    }
+    if (getTtl()
+        != other.getTtl()) return false;
+    if (!getFileNameList()
+        .equals(other.getFileNameList())) return false;
+    if (!getFieldList()
+        .equals(other.getFieldList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -360,6 +533,21 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    if (hasDateModified()) {
+      hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + getDateModified().hashCode();
+    }
+    hash = (37 * hash) + TTL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTtl());
+    if (getFileNameCount() > 0) {
+      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFileNameList().hashCode();
+    }
+    if (getFieldCount() > 0) {
+      hash = (37 * hash) + FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -506,6 +694,21 @@ private static final long serialVersionUID = 0L;
         dateCreatedBuilder_ = null;
       }
       status_ = 0;
+      dateModified_ = null;
+      if (dateModifiedBuilder_ != null) {
+        dateModifiedBuilder_.dispose();
+        dateModifiedBuilder_ = null;
+      }
+      ttl_ = 0L;
+      fileName_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      if (fieldBuilder_ == null) {
+        field_ = java.util.Collections.emptyList();
+      } else {
+        field_ = null;
+        fieldBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -532,9 +735,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry result = new com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry result) {
+      if (fieldBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          field_ = java.util.Collections.unmodifiableList(field_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.field_ = field_;
+      } else {
+        result.field_ = fieldBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry result) {
@@ -561,6 +777,18 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.dateModified_ = dateModifiedBuilder_ == null
+            ? dateModified_
+            : dateModifiedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.ttl_ = ttl_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        fileName_.makeImmutable();
+        result.fileName_ = fileName_;
       }
     }
 
@@ -635,6 +863,48 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
+      if (other.hasDateModified()) {
+        mergeDateModified(other.getDateModified());
+      }
+      if (other.getTtl() != 0L) {
+        setTtl(other.getTtl());
+      }
+      if (!other.fileName_.isEmpty()) {
+        if (fileName_.isEmpty()) {
+          fileName_ = other.fileName_;
+          bitField0_ |= 0x00000200;
+        } else {
+          ensureFileNameIsMutable();
+          fileName_.addAll(other.fileName_);
+        }
+        onChanged();
+      }
+      if (fieldBuilder_ == null) {
+        if (!other.field_.isEmpty()) {
+          if (field_.isEmpty()) {
+            field_ = other.field_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureFieldIsMutable();
+            field_.addAll(other.field_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.field_.isEmpty()) {
+          if (fieldBuilder_.isEmpty()) {
+            fieldBuilder_.dispose();
+            fieldBuilder_ = null;
+            field_ = other.field_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            fieldBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFieldFieldBuilder() : null;
+          } else {
+            fieldBuilder_.addAllMessages(other.field_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -698,6 +968,37 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 66: {
+              input.readMessage(
+                  getDateModifiedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 72: {
+              ttl_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFileNameIsMutable();
+              fileName_.add(s);
+              break;
+            } // case 82
+            case 90: {
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.parser(),
+                      extensionRegistry);
+              if (fieldBuilder_ == null) {
+                ensureFieldIsMutable();
+                field_.add(m);
+              } else {
+                fieldBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -751,7 +1052,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @return The contactManagerEntryListId.
      */
     @java.lang.Override
@@ -761,7 +1062,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @param value The contactManagerEntryListId to set.
      * @return This builder for chaining.
      */
@@ -775,7 +1076,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=76
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContactManagerEntryListId() {
@@ -787,10 +1088,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object key_ = "";
     /**
-     * <code>string key = 3 [json_name = "key"];</code>
+     * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return The key.
      */
-    public java.lang.String getKey() {
+    @java.lang.Deprecated public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -803,10 +1106,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 3 [json_name = "key"];</code>
+     * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return The bytes for key.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
       if (ref instanceof String) {
@@ -820,11 +1125,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string key = 3 [json_name = "key"];</code>
+     * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @param value The key to set.
      * @return This builder for chaining.
      */
-    public Builder setKey(
+    @java.lang.Deprecated public Builder setKey(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       key_ = value;
@@ -833,21 +1140,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string key = 3 [json_name = "key"];</code>
+     * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return This builder for chaining.
      */
-    public Builder clearKey() {
+    @java.lang.Deprecated public Builder clearKey() {
       key_ = getDefaultInstance().getKey();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string key = 3 [json_name = "key"];</code>
+     * <code>string key = 3 [json_name = "key", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @param value The bytes for key to set.
      * @return This builder for chaining.
      */
-    public Builder setKeyBytes(
+    @java.lang.Deprecated public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -859,10 +1170,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The value.
      */
-    public java.lang.String getValue() {
+    @java.lang.Deprecated public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -875,10 +1188,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The bytes for value.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
       if (ref instanceof String) {
@@ -892,11 +1207,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The value to set.
      * @return This builder for chaining.
      */
-    public Builder setValue(
+    @java.lang.Deprecated public Builder setValue(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       value_ = value;
@@ -905,21 +1222,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return This builder for chaining.
      */
-    public Builder clearValue() {
+    @java.lang.Deprecated public Builder clearValue() {
       value_ = getDefaultInstance().getValue();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 4 [json_name = "value", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
-    public Builder setValueBytes(
+    @java.lang.Deprecated public Builder setValueBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -931,10 +1252,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object type_ = "";
     /**
-     * <code>string type = 5 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The type.
      */
-    public java.lang.String getType() {
+    @java.lang.Deprecated public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -947,10 +1270,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 5 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The bytes for type.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof String) {
@@ -964,11 +1289,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 5 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setType(
+    @java.lang.Deprecated public Builder setType(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       type_ = value;
@@ -977,21 +1304,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type = 5 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return This builder for chaining.
      */
-    public Builder clearType() {
+    @java.lang.Deprecated public Builder clearType() {
       type_ = getDefaultInstance().getType();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
-     * <code>string type = 5 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
-    public Builder setTypeBytes(
+    @java.lang.Deprecated public Builder setTypeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1171,6 +1502,508 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp dateModified_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     * @return Whether the dateModified field is set.
+     */
+    public boolean hasDateModified() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     * @return The dateModified.
+     */
+    public com.google.protobuf.Timestamp getDateModified() {
+      if (dateModifiedBuilder_ == null) {
+        return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      } else {
+        return dateModifiedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public Builder setDateModified(com.google.protobuf.Timestamp value) {
+      if (dateModifiedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dateModified_ = value;
+      } else {
+        dateModifiedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public Builder setDateModified(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (dateModifiedBuilder_ == null) {
+        dateModified_ = builderForValue.build();
+      } else {
+        dateModifiedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
+      if (dateModifiedBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          dateModified_ != null &&
+          dateModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateModifiedBuilder().mergeFrom(value);
+        } else {
+          dateModified_ = value;
+        }
+      } else {
+        dateModifiedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public Builder clearDateModified() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      dateModified_ = null;
+      if (dateModifiedBuilder_ != null) {
+        dateModifiedBuilder_.dispose();
+        dateModifiedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getDateModifiedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+      if (dateModifiedBuilder_ != null) {
+        return dateModifiedBuilder_.getMessageOrBuilder();
+      } else {
+        return dateModified_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date_modified = 8 [json_name = "dateModified"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDateModifiedFieldBuilder() {
+      if (dateModifiedBuilder_ == null) {
+        dateModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDateModified(),
+                getParentForChildren(),
+                isClean());
+        dateModified_ = null;
+      }
+      return dateModifiedBuilder_;
+    }
+
+    private long ttl_ ;
+    /**
+     * <code>int64 ttl = 9 [json_name = "ttl"];</code>
+     * @return The ttl.
+     */
+    @java.lang.Override
+    public long getTtl() {
+      return ttl_;
+    }
+    /**
+     * <code>int64 ttl = 9 [json_name = "ttl"];</code>
+     * @param value The ttl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTtl(long value) {
+
+      ttl_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 ttl = 9 [json_name = "ttl"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTtl() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      ttl_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList fileName_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureFileNameIsMutable() {
+      if (!fileName_.isModifiable()) {
+        fileName_ = new com.google.protobuf.LazyStringArrayList(fileName_);
+      }
+      bitField0_ |= 0x00000200;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @return A list containing the fileName.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFileNameList() {
+      fileName_.makeImmutable();
+      return fileName_;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @return The count of fileName.
+     */
+    public int getFileNameCount() {
+      return fileName_.size();
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param index The index of the element to return.
+     * @return The fileName at the given index.
+     */
+    public java.lang.String getFileName(int index) {
+      return fileName_.get(index);
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fileName at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFileNameBytes(int index) {
+      return fileName_.getByteString(index);
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param index The index to set the value at.
+     * @param value The fileName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFileName(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFileNameIsMutable();
+      fileName_.set(index, value);
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param value The fileName to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFileName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFileNameIsMutable();
+      fileName_.add(value);
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param values The fileName to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllFileName(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFileNameIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, fileName_);
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFileName() {
+      fileName_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000200);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string file_name = 10 [json_name = "fileName"];</code>
+     * @param value The bytes of the fileName to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFileNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureFileNameIsMutable();
+      fileName_.add(value);
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> field_ =
+      java.util.Collections.emptyList();
+    private void ensureFieldIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        field_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField>(field_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> fieldBuilder_;
+
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> getFieldList() {
+      if (fieldBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(field_);
+      } else {
+        return fieldBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public int getFieldCount() {
+      if (fieldBuilder_ == null) {
+        return field_.size();
+      } else {
+        return fieldBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField getField(int index) {
+      if (fieldBuilder_ == null) {
+        return field_.get(index);
+      } else {
+        return fieldBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder setField(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField value) {
+      if (fieldBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldIsMutable();
+        field_.set(index, value);
+        onChanged();
+      } else {
+        fieldBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder setField(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder builderForValue) {
+      if (fieldBuilder_ == null) {
+        ensureFieldIsMutable();
+        field_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder addField(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField value) {
+      if (fieldBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldIsMutable();
+        field_.add(value);
+        onChanged();
+      } else {
+        fieldBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder addField(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField value) {
+      if (fieldBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldIsMutable();
+        field_.add(index, value);
+        onChanged();
+      } else {
+        fieldBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder addField(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder builderForValue) {
+      if (fieldBuilder_ == null) {
+        ensureFieldIsMutable();
+        field_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fieldBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder addField(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder builderForValue) {
+      if (fieldBuilder_ == null) {
+        ensureFieldIsMutable();
+        field_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder addAllField(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField> values) {
+      if (fieldBuilder_ == null) {
+        ensureFieldIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, field_);
+        onChanged();
+      } else {
+        fieldBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder clearField() {
+      if (fieldBuilder_ == null) {
+        field_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        fieldBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public Builder removeField(int index) {
+      if (fieldBuilder_ == null) {
+        ensureFieldIsMutable();
+        field_.remove(index);
+        onChanged();
+      } else {
+        fieldBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder getFieldBuilder(
+        int index) {
+      return getFieldFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
+        int index) {
+      if (fieldBuilder_ == null) {
+        return field_.get(index);  } else {
+        return fieldBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+         getFieldOrBuilderList() {
+      if (fieldBuilder_ != null) {
+        return fieldBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(field_);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder addFieldBuilder() {
+      return getFieldFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder addFieldBuilder(
+        int index) {
+      return getFieldFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.contactmanager.ContactField field = 11 [json_name = "field"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder> 
+         getFieldBuilderList() {
+      return getFieldFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder> 
+        getFieldFieldBuilder() {
+      if (fieldBuilder_ == null) {
+        fieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactField.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder>(
+                field_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        field_ = null;
+      }
+      return fieldBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

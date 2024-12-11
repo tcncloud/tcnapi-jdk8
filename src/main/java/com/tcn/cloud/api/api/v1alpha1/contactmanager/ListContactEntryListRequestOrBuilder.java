@@ -21,14 +21,14 @@ public interface ListContactEntryListRequestOrBuilder extends
   /**
    * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ListContactEntryListRequest.org_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=23
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=24
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

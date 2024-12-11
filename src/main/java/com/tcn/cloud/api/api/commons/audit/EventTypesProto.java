@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\217*\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\310*\n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -157,13 +157,14 @@ public final class EventTypesProto {
       "ENT\020\265\t\0222\n-EVENT_TYPE_CONTACT_MANAGER_VER" +
       "IFICATION_EVENT\020\266\t\022,\n\'EVENT_TYPE_CONTACT" +
       "_MANAGER_DELETE_EVENT\020\267\t\022-\n(EVENT_TYPE_C" +
-      "ONTACT_MANAGER_EXPUNGE_EVENT\020\270\t\0229\n4EVENT" +
-      "_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRIN" +
-      "G_EVENT\020\224\nB\234\001\n#com.tcn.cloud.api.api.com" +
-      "mons.auditB\017EventTypesProtoP\001\242\002\003ACA\252\002\021Ap" +
-      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
-      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
-      "ns::Auditb\006proto3"
+      "ONTACT_MANAGER_EXPUNGE_EVENT\020\270\t\0227\n2EVENT" +
+      "_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_" +
+      "EVENT\020\271\t\0229\n4EVENT_TYPE_ORGANIZATION_ACCE" +
+      "SS_TOKENS_EXPIRING_EVENT\020\224\nB\234\001\n#com.tcn." +
+      "cloud.api.api.commons.auditB\017EventTypesP" +
+      "rotoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\C" +
+      "ommons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMeta" +
+      "data\352\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
