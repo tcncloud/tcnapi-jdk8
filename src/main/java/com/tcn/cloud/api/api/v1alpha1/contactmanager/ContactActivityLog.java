@@ -19,9 +19,7 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     projectId_ = "";
     eventUser_ = "";
-    eventTime_ = "";
-    event_ = "";
-    eventType_ = "";
+    events_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -172,121 +170,65 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EVENT_TIME_FIELD_NUMBER = 5;
+  public static final int EVENTS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object eventTime_ = "";
+  private java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> events_;
   /**
-   * <code>string event_time = 5 [json_name = "eventTime"];</code>
-   * @return The eventTime.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
   @java.lang.Override
-  public java.lang.String getEventTime() {
-    java.lang.Object ref = eventTime_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      eventTime_ = s;
-      return s;
-    }
+  public java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> getEventsList() {
+    return events_;
   }
   /**
-   * <code>string event_time = 5 [json_name = "eventTime"];</code>
-   * @return The bytes for eventTime.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEventTimeBytes() {
-    java.lang.Object ref = eventTime_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      eventTime_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int EVENT_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object event_ = "";
-  /**
-   * <code>string event = 6 [json_name = "event"];</code>
-   * @return The event.
-   */
-  @java.lang.Override
-  public java.lang.String getEvent() {
-    java.lang.Object ref = event_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      event_ = s;
-      return s;
-    }
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> 
+      getEventsOrBuilderList() {
+    return events_;
   }
   /**
-   * <code>string event = 6 [json_name = "event"];</code>
-   * @return The bytes for event.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEventBytes() {
-    java.lang.Object ref = event_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      event_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int EVENT_TYPE_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object eventType_ = "";
-  /**
-   * <code>string event_type = 7 [json_name = "eventType"];</code>
-   * @return The eventType.
-   */
-  @java.lang.Override
-  public java.lang.String getEventType() {
-    java.lang.Object ref = eventType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      eventType_ = s;
-      return s;
-    }
+  public int getEventsCount() {
+    return events_.size();
   }
   /**
-   * <code>string event_type = 7 [json_name = "eventType"];</code>
-   * @return The bytes for eventType.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEventTypeBytes() {
-    java.lang.Object ref = eventType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      eventType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.commons.audit.AuditEvent getEvents(int index) {
+    return events_.get(index);
+  }
+  /**
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder getEventsOrBuilder(
+      int index) {
+    return events_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -315,14 +257,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventUser_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, eventUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventTime_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, eventTime_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, event_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, eventType_);
+    for (int i = 0; i < events_.size(); i++) {
+      output.writeMessage(5, events_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -346,14 +282,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventUser_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, eventUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventTime_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, eventTime_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, event_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, eventType_);
+    for (int i = 0; i < events_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, events_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -378,12 +309,8 @@ private static final long serialVersionUID = 0L;
         != other.getContactManagerEntryId()) return false;
     if (!getEventUser()
         .equals(other.getEventUser())) return false;
-    if (!getEventTime()
-        .equals(other.getEventTime())) return false;
-    if (!getEvent()
-        .equals(other.getEvent())) return false;
-    if (!getEventType()
-        .equals(other.getEventType())) return false;
+    if (!getEventsList()
+        .equals(other.getEventsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -404,12 +331,10 @@ private static final long serialVersionUID = 0L;
         getContactManagerEntryId());
     hash = (37 * hash) + EVENT_USER_FIELD_NUMBER;
     hash = (53 * hash) + getEventUser().hashCode();
-    hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getEventTime().hashCode();
-    hash = (37 * hash) + EVENT_FIELD_NUMBER;
-    hash = (53 * hash) + getEvent().hashCode();
-    hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getEventType().hashCode();
+    if (getEventsCount() > 0) {
+      hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getEventsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -545,9 +470,13 @@ private static final long serialVersionUID = 0L;
       projectId_ = "";
       contactManagerEntryId_ = 0L;
       eventUser_ = "";
-      eventTime_ = "";
-      event_ = "";
-      eventType_ = "";
+      if (eventsBuilder_ == null) {
+        events_ = java.util.Collections.emptyList();
+      } else {
+        events_ = null;
+        eventsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -574,9 +503,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactActivityLog buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactActivityLog result = new com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactActivityLog(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactActivityLog result) {
+      if (eventsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          events_ = java.util.Collections.unmodifiableList(events_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.events_ = events_;
+      } else {
+        result.events_ = eventsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactActivityLog result) {
@@ -592,15 +534,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.eventUser_ = eventUser_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.eventTime_ = eventTime_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.event_ = event_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.eventType_ = eventType_;
       }
     }
 
@@ -666,20 +599,31 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getEventTime().isEmpty()) {
-        eventTime_ = other.eventTime_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (!other.getEvent().isEmpty()) {
-        event_ = other.event_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
-      if (!other.getEventType().isEmpty()) {
-        eventType_ = other.eventType_;
-        bitField0_ |= 0x00000040;
-        onChanged();
+      if (eventsBuilder_ == null) {
+        if (!other.events_.isEmpty()) {
+          if (events_.isEmpty()) {
+            events_ = other.events_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureEventsIsMutable();
+            events_.addAll(other.events_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.events_.isEmpty()) {
+          if (eventsBuilder_.isEmpty()) {
+            eventsBuilder_.dispose();
+            eventsBuilder_ = null;
+            events_ = other.events_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            eventsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEventsFieldBuilder() : null;
+          } else {
+            eventsBuilder_.addAllMessages(other.events_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -728,20 +672,18 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 42: {
-              eventTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              com.tcn.cloud.api.api.commons.audit.AuditEvent m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.audit.AuditEvent.parser(),
+                      extensionRegistry);
+              if (eventsBuilder_ == null) {
+                ensureEventsIsMutable();
+                events_.add(m);
+              } else {
+                eventsBuilder_.addMessage(m);
+              }
               break;
             } // case 42
-            case 50: {
-              event_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              eventType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1007,220 +949,316 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object eventTime_ = "";
-    /**
-     * <code>string event_time = 5 [json_name = "eventTime"];</code>
-     * @return The eventTime.
-     */
-    public java.lang.String getEventTime() {
-      java.lang.Object ref = eventTime_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        eventTime_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string event_time = 5 [json_name = "eventTime"];</code>
-     * @return The bytes for eventTime.
-     */
-    public com.google.protobuf.ByteString
-        getEventTimeBytes() {
-      java.lang.Object ref = eventTime_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventTime_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string event_time = 5 [json_name = "eventTime"];</code>
-     * @param value The eventTime to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEventTime(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      eventTime_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string event_time = 5 [json_name = "eventTime"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEventTime() {
-      eventTime_ = getDefaultInstance().getEventTime();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string event_time = 5 [json_name = "eventTime"];</code>
-     * @param value The bytes for eventTime to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEventTimeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      eventTime_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
+    private java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> events_ =
+      java.util.Collections.emptyList();
+    private void ensureEventsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        events_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.audit.AuditEvent>(events_);
+        bitField0_ |= 0x00000010;
+       }
     }
 
-    private java.lang.Object event_ = "";
-    /**
-     * <code>string event = 6 [json_name = "event"];</code>
-     * @return The event.
-     */
-    public java.lang.String getEvent() {
-      java.lang.Object ref = event_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        event_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string event = 6 [json_name = "event"];</code>
-     * @return The bytes for event.
-     */
-    public com.google.protobuf.ByteString
-        getEventBytes() {
-      java.lang.Object ref = event_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        event_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string event = 6 [json_name = "event"];</code>
-     * @param value The event to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEvent(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      event_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string event = 6 [json_name = "event"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEvent() {
-      event_ = getDefaultInstance().getEvent();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string event = 6 [json_name = "event"];</code>
-     * @param value The bytes for event to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEventBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      event_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AuditEvent, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder, com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> eventsBuilder_;
 
-    private java.lang.Object eventType_ = "";
     /**
-     * <code>string event_type = 7 [json_name = "eventType"];</code>
-     * @return The eventType.
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
      */
-    public java.lang.String getEventType() {
-      java.lang.Object ref = eventType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        eventType_ = s;
-        return s;
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> getEventsList() {
+      if (eventsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(events_);
       } else {
-        return (java.lang.String) ref;
+        return eventsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>string event_type = 7 [json_name = "eventType"];</code>
-     * @return The bytes for eventType.
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
      */
-    public com.google.protobuf.ByteString
-        getEventTypeBytes() {
-      java.lang.Object ref = eventType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventType_ = b;
-        return b;
+    public int getEventsCount() {
+      if (eventsBuilder_ == null) {
+        return events_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return eventsBuilder_.getCount();
       }
     }
     /**
-     * <code>string event_type = 7 [json_name = "eventType"];</code>
-     * @param value The eventType to set.
-     * @return This builder for chaining.
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
      */
-    public Builder setEventType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      eventType_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
+    public com.tcn.cloud.api.api.commons.audit.AuditEvent getEvents(int index) {
+      if (eventsBuilder_ == null) {
+        return events_.get(index);
+      } else {
+        return eventsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder setEvents(
+        int index, com.tcn.cloud.api.api.commons.audit.AuditEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.set(index, value);
+        onChanged();
+      } else {
+        eventsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>string event_type = 7 [json_name = "eventType"];</code>
-     * @return This builder for chaining.
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
      */
-    public Builder clearEventType() {
-      eventType_ = getDefaultInstance().getEventType();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
+    public Builder setEvents(
+        int index, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>string event_type = 7 [json_name = "eventType"];</code>
-     * @param value The bytes for eventType to set.
-     * @return This builder for chaining.
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
      */
-    public Builder setEventTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      eventType_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
+    public Builder addEvents(com.tcn.cloud.api.api.commons.audit.AuditEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.add(value);
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(value);
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        int index, com.tcn.cloud.api.api.commons.audit.AuditEvent value) {
+      if (eventsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventsIsMutable();
+        events_.add(index, value);
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.add(builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder addEvents(
+        int index, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder builderForValue) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder addAllEvents(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.audit.AuditEvent> values) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, events_);
+        onChanged();
+      } else {
+        eventsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder clearEvents() {
+      if (eventsBuilder_ == null) {
+        events_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        eventsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public Builder removeEvents(int index) {
+      if (eventsBuilder_ == null) {
+        ensureEventsIsMutable();
+        events_.remove(index);
+        onChanged();
+      } else {
+        eventsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder getEventsBuilder(
+        int index) {
+      return getEventsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder getEventsOrBuilder(
+        int index) {
+      if (eventsBuilder_ == null) {
+        return events_.get(index);  } else {
+        return eventsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> 
+         getEventsOrBuilderList() {
+      if (eventsBuilder_ != null) {
+        return eventsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(events_);
+      }
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder addEventsBuilder() {
+      return getEventsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.audit.AuditEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder addEventsBuilder(
+        int index) {
+      return getEventsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.audit.AuditEvent.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the retrieved audit events
+     * </pre>
+     *
+     * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder> 
+         getEventsBuilderList() {
+      return getEventsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AuditEvent, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder, com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> 
+        getEventsFieldBuilder() {
+      if (eventsBuilder_ == null) {
+        eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.AuditEvent, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder, com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder>(
+                events_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        events_ = null;
+      }
+      return eventsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

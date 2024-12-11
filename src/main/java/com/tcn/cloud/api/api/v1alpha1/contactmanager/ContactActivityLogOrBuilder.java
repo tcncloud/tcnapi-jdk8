@@ -50,38 +50,46 @@ public interface ContactActivityLogOrBuilder extends
       getEventUserBytes();
 
   /**
-   * <code>string event_time = 5 [json_name = "eventTime"];</code>
-   * @return The eventTime.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
-  java.lang.String getEventTime();
+  java.util.List<com.tcn.cloud.api.api.commons.audit.AuditEvent> 
+      getEventsList();
   /**
-   * <code>string event_time = 5 [json_name = "eventTime"];</code>
-   * @return The bytes for eventTime.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
-  com.google.protobuf.ByteString
-      getEventTimeBytes();
-
+  com.tcn.cloud.api.api.commons.audit.AuditEvent getEvents(int index);
   /**
-   * <code>string event = 6 [json_name = "event"];</code>
-   * @return The event.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
-  java.lang.String getEvent();
+  int getEventsCount();
   /**
-   * <code>string event = 6 [json_name = "event"];</code>
-   * @return The bytes for event.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
-  com.google.protobuf.ByteString
-      getEventBytes();
-
+  java.util.List<? extends com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder> 
+      getEventsOrBuilderList();
   /**
-   * <code>string event_type = 7 [json_name = "eventType"];</code>
-   * @return The eventType.
+   * <pre>
+   * the retrieved audit events
+   * </pre>
+   *
+   * <code>repeated .api.commons.audit.AuditEvent events = 5 [json_name = "events"];</code>
    */
-  java.lang.String getEventType();
-  /**
-   * <code>string event_type = 7 [json_name = "eventType"];</code>
-   * @return The bytes for eventType.
-   */
-  com.google.protobuf.ByteString
-      getEventTypeBytes();
+  com.tcn.cloud.api.api.commons.audit.AuditEventOrBuilder getEventsOrBuilder(
+      int index);
 }
