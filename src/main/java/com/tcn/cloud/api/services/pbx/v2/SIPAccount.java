@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     ringGroupIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     orgUserId_ = "";
+    ringGroups_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -137,34 +138,58 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList ringGroupIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @return A list containing the ringGroupIds.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getRingGroupIdsList() {
     return ringGroupIds_;
   }
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @return The count of ringGroupIds.
    */
-  public int getRingGroupIdsCount() {
+  @java.lang.Deprecated public int getRingGroupIdsCount() {
     return ringGroupIds_.size();
   }
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the element to return.
    * @return The ringGroupIds at the given index.
    */
-  public java.lang.String getRingGroupIds(int index) {
+  @java.lang.Deprecated public java.lang.String getRingGroupIds(int index) {
     return ringGroupIds_.get(index);
   }
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the value to return.
    * @return The bytes of the ringGroupIds at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getRingGroupIdsBytes(int index) {
     return ringGroupIds_.getByteString(index);
   }
@@ -208,6 +233,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RING_GROUPS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> ringGroups_;
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> getRingGroupsList() {
+    return ringGroups_;
+  }
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder> 
+      getRingGroupsOrBuilderList() {
+    return ringGroups_;
+  }
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  @java.lang.Override
+  public int getRingGroupsCount() {
+    return ringGroups_.size();
+  }
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getRingGroups(int index) {
+    return ringGroups_.get(index);
+  }
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder getRingGroupsOrBuilder(
+      int index) {
+    return ringGroups_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -236,6 +302,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orgUserId_);
+    }
+    for (int i = 0; i < ringGroups_.size(); i++) {
+      output.writeMessage(6, ringGroups_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -267,6 +336,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orgUserId_);
     }
+    for (int i = 0; i < ringGroups_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, ringGroups_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -292,6 +365,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRingGroupIdsList())) return false;
     if (!getOrgUserId()
         .equals(other.getOrgUserId())) return false;
+    if (!getRingGroupsList()
+        .equals(other.getRingGroupsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -316,6 +391,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ORG_USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgUserId().hashCode();
+    if (getRingGroupsCount() > 0) {
+      hash = (37 * hash) + RING_GROUPS_FIELD_NUMBER;
+      hash = (53 * hash) + getRingGroupsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -453,6 +532,13 @@ private static final long serialVersionUID = 0L;
       ringGroupIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       orgUserId_ = "";
+      if (ringGroupsBuilder_ == null) {
+        ringGroups_ = java.util.Collections.emptyList();
+      } else {
+        ringGroups_ = null;
+        ringGroupsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -479,9 +565,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.pbx.v2.SIPAccount buildPartial() {
       com.tcn.cloud.api.services.pbx.v2.SIPAccount result = new com.tcn.cloud.api.services.pbx.v2.SIPAccount(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.pbx.v2.SIPAccount result) {
+      if (ringGroupsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          ringGroups_ = java.util.Collections.unmodifiableList(ringGroups_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.ringGroups_ = ringGroups_;
+      } else {
+        result.ringGroups_ = ringGroupsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.pbx.v2.SIPAccount result) {
@@ -576,6 +675,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (ringGroupsBuilder_ == null) {
+        if (!other.ringGroups_.isEmpty()) {
+          if (ringGroups_.isEmpty()) {
+            ringGroups_ = other.ringGroups_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureRingGroupsIsMutable();
+            ringGroups_.addAll(other.ringGroups_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.ringGroups_.isEmpty()) {
+          if (ringGroupsBuilder_.isEmpty()) {
+            ringGroupsBuilder_.dispose();
+            ringGroupsBuilder_ = null;
+            ringGroups_ = other.ringGroups_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            ringGroupsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRingGroupsFieldBuilder() : null;
+          } else {
+            ringGroupsBuilder_.addAllMessages(other.ringGroups_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -628,6 +753,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.parser(),
+                      extensionRegistry);
+              if (ringGroupsBuilder_ == null) {
+                ensureRingGroupsIsMutable();
+                ringGroups_.add(m);
+              } else {
+                ringGroupsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -830,45 +968,75 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @return A list containing the ringGroupIds.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getRingGroupIdsList() {
       ringGroupIds_.makeImmutable();
       return ringGroupIds_;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @return The count of ringGroupIds.
      */
-    public int getRingGroupIdsCount() {
+    @java.lang.Deprecated public int getRingGroupIdsCount() {
       return ringGroupIds_.size();
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index of the element to return.
      * @return The ringGroupIds at the given index.
      */
-    public java.lang.String getRingGroupIds(int index) {
+    @java.lang.Deprecated public java.lang.String getRingGroupIds(int index) {
       return ringGroupIds_.get(index);
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index of the value to return.
      * @return The bytes of the ringGroupIds at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRingGroupIdsBytes(int index) {
       return ringGroupIds_.getByteString(index);
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index to set the value at.
      * @param value The ringGroupIds to set.
      * @return This builder for chaining.
      */
-    public Builder setRingGroupIds(
+    @java.lang.Deprecated public Builder setRingGroupIds(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureRingGroupIdsIsMutable();
@@ -878,11 +1046,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param value The ringGroupIds to add.
      * @return This builder for chaining.
      */
-    public Builder addRingGroupIds(
+    @java.lang.Deprecated public Builder addRingGroupIds(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureRingGroupIdsIsMutable();
@@ -892,11 +1066,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param values The ringGroupIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllRingGroupIds(
+    @java.lang.Deprecated public Builder addAllRingGroupIds(
         java.lang.Iterable<java.lang.String> values) {
       ensureRingGroupIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -906,10 +1086,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @return This builder for chaining.
      */
-    public Builder clearRingGroupIds() {
+    @java.lang.Deprecated public Builder clearRingGroupIds() {
       ringGroupIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);;
@@ -917,11 +1103,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+     * <pre>
+     * DEPRECATED: We need names as well
+     * </pre>
+     *
+     * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+     * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+     *     See services/pbx/v2/service.proto;l=338
      * @param value The bytes of the ringGroupIds to add.
      * @return This builder for chaining.
      */
-    public Builder addRingGroupIdsBytes(
+    @java.lang.Deprecated public Builder addRingGroupIdsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1002,6 +1194,246 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> ringGroups_ =
+      java.util.Collections.emptyList();
+    private void ensureRingGroupsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        ringGroups_ = new java.util.ArrayList<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup>(ringGroups_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder> ringGroupsBuilder_;
+
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> getRingGroupsList() {
+      if (ringGroupsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ringGroups_);
+      } else {
+        return ringGroupsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public int getRingGroupsCount() {
+      if (ringGroupsBuilder_ == null) {
+        return ringGroups_.size();
+      } else {
+        return ringGroupsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getRingGroups(int index) {
+      if (ringGroupsBuilder_ == null) {
+        return ringGroups_.get(index);
+      } else {
+        return ringGroupsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder setRingGroups(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup value) {
+      if (ringGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRingGroupsIsMutable();
+        ringGroups_.set(index, value);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder setRingGroups(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder builderForValue) {
+      if (ringGroupsBuilder_ == null) {
+        ensureRingGroupsIsMutable();
+        ringGroups_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ringGroupsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder addRingGroups(com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup value) {
+      if (ringGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRingGroupsIsMutable();
+        ringGroups_.add(value);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder addRingGroups(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup value) {
+      if (ringGroupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRingGroupsIsMutable();
+        ringGroups_.add(index, value);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder addRingGroups(
+        com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder builderForValue) {
+      if (ringGroupsBuilder_ == null) {
+        ensureRingGroupsIsMutable();
+        ringGroups_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ringGroupsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder addRingGroups(
+        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder builderForValue) {
+      if (ringGroupsBuilder_ == null) {
+        ensureRingGroupsIsMutable();
+        ringGroups_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ringGroupsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder addAllRingGroups(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> values) {
+      if (ringGroupsBuilder_ == null) {
+        ensureRingGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ringGroups_);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder clearRingGroups() {
+      if (ringGroupsBuilder_ == null) {
+        ringGroups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public Builder removeRingGroups(int index) {
+      if (ringGroupsBuilder_ == null) {
+        ensureRingGroupsIsMutable();
+        ringGroups_.remove(index);
+        onChanged();
+      } else {
+        ringGroupsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder getRingGroupsBuilder(
+        int index) {
+      return getRingGroupsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder getRingGroupsOrBuilder(
+        int index) {
+      if (ringGroupsBuilder_ == null) {
+        return ringGroups_.get(index);  } else {
+        return ringGroupsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder> 
+         getRingGroupsOrBuilderList() {
+      if (ringGroupsBuilder_ != null) {
+        return ringGroupsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ringGroups_);
+      }
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder addRingGroupsBuilder() {
+      return getRingGroupsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder addRingGroupsBuilder(
+        int index) {
+      return getRingGroupsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder> 
+         getRingGroupsBuilderList() {
+      return getRingGroupsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder> 
+        getRingGroupsFieldBuilder() {
+      if (ringGroupsBuilder_ == null) {
+        ringGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder>(
+                ringGroups_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        ringGroups_ = null;
+      }
+      return ringGroupsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -499,6 +499,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -508,6 +509,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listPBXUsers(com.tcn.cloud.api.services.pbx.v2.ListPBXUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPBXUsersMethod(), responseObserver);
@@ -515,6 +517,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -526,6 +529,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     default void getPBXUser(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPBXUserMethod(), responseObserver);
@@ -777,6 +781,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -786,6 +791,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listPBXUsers(com.tcn.cloud.api.services.pbx.v2.ListPBXUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -794,6 +800,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -805,6 +812,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getPBXUser(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1058,6 +1066,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1067,6 +1076,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse listPBXUsers(com.tcn.cloud.api.services.pbx.v2.ListPBXUsersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPBXUsersMethod(), getCallOptions(), request);
@@ -1074,6 +1084,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -1085,6 +1096,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse getPBXUser(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPBXUserMethod(), getCallOptions(), request);
@@ -1325,6 +1337,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1334,6 +1347,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse> listPBXUsers(
         com.tcn.cloud.api.services.pbx.v2.ListPBXUsersRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1342,6 +1356,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -1353,6 +1368,7 @@ public final class PBXServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> getPBXUser(
         com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

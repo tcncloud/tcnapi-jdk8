@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.services.pbx.v2;
 
 /**
+ * <pre>
+ * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+ * </pre>
+ *
  * Protobuf type {@code services.pbx.v2.ListPBXUsersResponse}
  */
 public final class ListPBXUsersResponse extends
@@ -240,6 +244,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+   * </pre>
+   *
    * Protobuf type {@code services.pbx.v2.ListPBXUsersResponse}
    */
   public static final class Builder extends
