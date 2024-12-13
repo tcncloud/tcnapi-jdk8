@@ -499,7 +499,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -517,7 +517,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -781,7 +781,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -800,7 +800,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -1066,7 +1066,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1084,7 +1084,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -1337,7 +1337,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of all PBX Users associated with the authenticated callers ORG
      * Required permissions:
      *   PBX-MANAGER
@@ -1356,7 +1356,7 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+     * DEPRECATED: This method is deprecated and may be removed in future versions. (No longer need PBX Users)
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
