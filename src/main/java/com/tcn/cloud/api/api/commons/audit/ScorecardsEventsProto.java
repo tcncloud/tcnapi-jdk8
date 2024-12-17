@@ -325,7 +325,7 @@ public final class ScorecardsEventsProto {
       "t_sid\030\006 \001(\003R\rtranscriptSid\0225\n\nrisk_level" +
       "\030\007 \001(\0162\026.api.commons.RiskLevelR\triskLeve" +
       "l\022D\n\017auto_evaluation\030\010 \001(\0132\033.api.commons" +
-      ".AutoEvaluationR\016autoEvaluation\"\244\004\n$Scor" +
+      ".AutoEvaluationR\016autoEvaluation\"\255\004\n$Scor" +
       "ecardsCreateSmartEvaluationEvent\022.\n\023smar" +
       "t_evaluation_id\030\001 \001(\003R\021smartEvaluationId" +
       "\022R\n\004call\030\002 \001(\0132<.api.commons.audit.Score" +
@@ -337,13 +337,14 @@ public final class ScorecardsEventsProto {
       "ype.EnumR\010callType\0226\n\ttalk_time\030\003 \001(\0132\031." +
       "google.protobuf.DurationR\010talkTime\0228\n\nau" +
       "dio_time\030\004 \001(\0132\031.google.protobuf.Duratio" +
-      "nR\taudioTime\032L\n\003Sms\022)\n\020conversation_sid\030" +
-      "\001 \001(\003R\017conversationSid\022\032\n\010messages\030\002 \001(\003" +
-      "R\010messagesB\n\n\010metadataB\242\001\n#com.tcn.cloud" +
-      ".api.api.commons.auditB\025ScorecardsEvents" +
-      "ProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\" +
-      "Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMet" +
-      "adata\352\002\023Api::Commons::Auditb\006proto3"
+      "nR\taudioTime\032U\n\003Sms\022)\n\020conversation_sid\030" +
+      "\001 \001(\003R\017conversationSid\022#\n\rmessage_count\030" +
+      "\002 \001(\003R\014messageCountB\n\n\010metadataB\242\001\n#com." +
+      "tcn.cloud.api.api.commons.auditB\025Scoreca" +
+      "rdsEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Aud" +
+      "it\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Aud" +
+      "it\\GPBMetadata\352\002\023Api::Commons::Auditb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -509,7 +510,7 @@ public final class ScorecardsEventsProto {
     internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_descriptor,
-        new java.lang.String[] { "ConversationSid", "Messages", });
+        new java.lang.String[] { "ConversationSid", "MessageCount", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
