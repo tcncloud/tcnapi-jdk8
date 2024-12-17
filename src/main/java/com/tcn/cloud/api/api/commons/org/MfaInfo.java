@@ -2375,6 +2375,36 @@ private static final long serialVersionUID = 0L;
   public interface TotpOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.Totp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The secret key used to generate the totp code.
+     * </pre>
+     *
+     * <code>string secret = 1 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    java.lang.String getSecret();
+    /**
+     * <pre>
+     * The secret key used to generate the totp code.
+     * </pre>
+     *
+     * <code>string secret = 1 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    com.google.protobuf.ByteString
+        getSecretBytes();
+
+    /**
+     * <pre>
+     * Whether or not the secret has been verified.
+     * </pre>
+     *
+     * <code>bool verified = 2 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    boolean getVerified();
   }
   /**
    * <pre>
@@ -2393,6 +2423,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Totp() {
+      secret_ = "";
     }
 
     @java.lang.Override
@@ -2415,6 +2446,68 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.commons.org.MfaInfo.Totp.class, com.tcn.cloud.api.api.commons.org.MfaInfo.Totp.Builder.class);
     }
 
+    public static final int SECRET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
+    /**
+     * <pre>
+     * The secret key used to generate the totp code.
+     * </pre>
+     *
+     * <code>string secret = 1 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    @java.lang.Override
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secret_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The secret key used to generate the totp code.
+     * </pre>
+     *
+     * <code>string secret = 1 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERIFIED_FIELD_NUMBER = 2;
+    private boolean verified_ = false;
+    /**
+     * <pre>
+     * Whether or not the secret has been verified.
+     * </pre>
+     *
+     * <code>bool verified = 2 [json_name = "verified"];</code>
+     * @return The verified.
+     */
+    @java.lang.Override
+    public boolean getVerified() {
+      return verified_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2429,6 +2522,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, secret_);
+      }
+      if (verified_ != false) {
+        output.writeBool(2, verified_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2438,6 +2537,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, secret_);
+      }
+      if (verified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, verified_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2453,6 +2559,10 @@ private static final long serialVersionUID = 0L;
       }
       com.tcn.cloud.api.api.commons.org.MfaInfo.Totp other = (com.tcn.cloud.api.api.commons.org.MfaInfo.Totp) obj;
 
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (getVerified()
+          != other.getVerified()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2464,6 +2574,11 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SECRET_FIELD_NUMBER;
+      hash = (53 * hash) + getSecret().hashCode();
+      hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVerified());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2598,6 +2713,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        secret_ = "";
+        verified_ = false;
         return this;
       }
 
@@ -2624,8 +2742,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.MfaInfo.Totp buildPartial() {
         com.tcn.cloud.api.api.commons.org.MfaInfo.Totp result = new com.tcn.cloud.api.api.commons.org.MfaInfo.Totp(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo.Totp result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.verified_ = verified_;
+        }
       }
 
       @java.lang.Override
@@ -2672,6 +2801,14 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.Totp other) {
         if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.Totp.getDefaultInstance()) return this;
+        if (!other.getSecret().isEmpty()) {
+          secret_ = other.secret_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getVerified() != false) {
+          setVerified(other.getVerified());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2698,6 +2835,16 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 10: {
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                verified_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2711,6 +2858,143 @@ private static final long serialVersionUID = 0L;
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object secret_ = "";
+      /**
+       * <pre>
+       * The secret key used to generate the totp code.
+       * </pre>
+       *
+       * <code>string secret = 1 [json_name = "secret"];</code>
+       * @return The secret.
+       */
+      public java.lang.String getSecret() {
+        java.lang.Object ref = secret_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secret_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The secret key used to generate the totp code.
+       * </pre>
+       *
+       * <code>string secret = 1 [json_name = "secret"];</code>
+       * @return The bytes for secret.
+       */
+      public com.google.protobuf.ByteString
+          getSecretBytes() {
+        java.lang.Object ref = secret_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secret_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The secret key used to generate the totp code.
+       * </pre>
+       *
+       * <code>string secret = 1 [json_name = "secret"];</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        secret_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The secret key used to generate the totp code.
+       * </pre>
+       *
+       * <code>string secret = 1 [json_name = "secret"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret() {
+        secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The secret key used to generate the totp code.
+       * </pre>
+       *
+       * <code>string secret = 1 [json_name = "secret"];</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        secret_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean verified_ ;
+      /**
+       * <pre>
+       * Whether or not the secret has been verified.
+       * </pre>
+       *
+       * <code>bool verified = 2 [json_name = "verified"];</code>
+       * @return The verified.
+       */
+      @java.lang.Override
+      public boolean getVerified() {
+        return verified_;
+      }
+      /**
+       * <pre>
+       * Whether or not the secret has been verified.
+       * </pre>
+       *
+       * <code>bool verified = 2 [json_name = "verified"];</code>
+       * @param value The verified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerified(boolean value) {
+
+        verified_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether or not the secret has been verified.
+       * </pre>
+       *
+       * <code>bool verified = 2 [json_name = "verified"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerified() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        verified_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
