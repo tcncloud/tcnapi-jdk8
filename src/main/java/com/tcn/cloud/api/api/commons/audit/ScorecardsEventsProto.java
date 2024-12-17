@@ -129,21 +129,6 @@ public final class ScorecardsEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_ScorecardsCreateAutoEvaluationEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -155,203 +140,187 @@ public final class ScorecardsEventsProto {
     java.lang.String[] descriptorData = {
       "\n)api/commons/audit/scorecards_events.pr" +
       "oto\022\021api.commons.audit\032\025api/commons/acd." +
-      "proto\032\034api/commons/scorecards.proto\032\036goo" +
-      "gle/protobuf/duration.proto\032 google/prot" +
-      "obuf/field_mask.proto\032\037google/protobuf/t" +
-      "imestamp.proto\"\266\001\n\035ScorecardsCreateQuest" +
-      "ionEvent\022\033\n\tauthor_id\030\001 \001(\tR\010authorId\022#\n" +
-      "\rquestion_text\030\002 \001(\tR\014questionText\022 \n\013de" +
-      "scription\030\003 \001(\tR\013description\0221\n\010question" +
-      "\030\004 \001(\0132\025.api.commons.QuestionR\010question\"" +
-      "\357\001\n\035ScorecardsUpdateQuestionEvent\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\022#\n\rquestion_text\030\002 \001(" +
-      "\tR\014questionText\022 \n\013description\030\003 \001(\tR\013de" +
-      "scription\022;\n\013update_mask\030\004 \001(\0132\032.google." +
-      "protobuf.FieldMaskR\nupdateMask\0221\n\010questi" +
-      "on\030\005 \001(\0132\025.api.commons.QuestionR\010questio" +
-      "n\"\325\001\n\035ScorecardsDeleteQuestionEvent\022\027\n\007u" +
-      "ser_id\030\001 \001(\tR\006userId\022#\n\rquestion_text\030\002 " +
-      "\001(\tR\014questionText\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022!\n\014category_ids\030\004 \003(\003R\013categ" +
-      "oryIds\0221\n\010question\030\005 \001(\0132\025.api.commons.Q" +
-      "uestionR\010question\"\307\002\n\036ScorecardsCreateSc" +
-      "orecardEvent\022\033\n\tauthor_id\030\001 \001(\tR\010authorI" +
-      "d\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013description\030\003" +
-      " \001(\tR\013description\022\035\n\npass_score\030\004 \001(\001R\tp" +
-      "assScore\0225\n\nscore_type\030\005 \001(\0162\026.api.commo" +
-      "ns.ScoreTypeR\tscoreType\022D\n\017evaluation_ty" +
-      "pe\030\006 \001(\0162\033.api.commons.EvaluationTypeR\016e" +
-      "valuationType\0224\n\tscorecard\030\007 \001(\0132\026.api.c" +
-      "ommons.ScorecardR\tscorecard\"\332\003\n\036Scorecar" +
-      "dsUpdateScorecardEvent\022\027\n\007user_id\030\001 \001(\tR" +
-      "\006userId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013descrip" +
-      "tion\030\003 \001(\tR\013description\022\035\n\npass_score\030\004 " +
-      "\001(\001R\tpassScore\0225\n\nscore_type\030\005 \001(\0162\026.api" +
-      ".commons.ScoreTypeR\tscoreType\022D\n\017evaluat" +
-      "ion_type\030\006 \001(\0162\033.api.commons.EvaluationT" +
-      "ypeR\016evaluationType\022%\n\016allow_feedback\030\007 " +
-      "\001(\010R\rallowFeedback\0221\n\005state\030\010 \001(\0162\033.api." +
-      "commons.ScorecardStateR\005state\022;\n\013update_" +
-      "mask\030\t \001(\0132\032.google.protobuf.FieldMaskR\n" +
-      "updateMask\0224\n\tscorecard\030\n \001(\0132\026.api.comm" +
-      "ons.ScorecardR\tscorecard\"\366\002\n\036ScorecardsD" +
-      "eleteScorecardEvent\022\027\n\007user_id\030\001 \001(\tR\006us" +
-      "erId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013descriptio" +
-      "n\030\003 \001(\tR\013description\022\035\n\npass_score\030\004 \001(\001" +
-      "R\tpassScore\0225\n\nscore_type\030\005 \001(\0162\026.api.co" +
-      "mmons.ScoreTypeR\tscoreType\022D\n\017evaluation" +
-      "_type\030\006 \001(\0162\033.api.commons.EvaluationType" +
-      "R\016evaluationType\0221\n\005state\030\007 \001(\0162\033.api.co" +
-      "mmons.ScorecardStateR\005state\0224\n\tscorecard" +
-      "\030\010 \001(\0132\026.api.commons.ScorecardR\tscorecar" +
-      "d\"\306\002\n\035ScorecardsCloneScorecardEvent\022\033\n\ta" +
-      "uthor_id\030\001 \001(\tR\010authorId\022\024\n\005title\030\002 \001(\tR" +
-      "\005title\022 \n\013description\030\003 \001(\tR\013description" +
-      "\022\035\n\npass_score\030\004 \001(\001R\tpassScore\0225\n\nscore" +
-      "_type\030\005 \001(\0162\026.api.commons.ScoreTypeR\tsco" +
-      "reType\022D\n\017evaluation_type\030\006 \001(\0162\033.api.co" +
-      "mmons.EvaluationTypeR\016evaluationType\0224\n\t" +
-      "scorecard\030\007 \001(\0132\026.api.commons.ScorecardR" +
-      "\tscorecard\"\376\001\n\037ScorecardsCreateEvaluatio" +
-      "nEvent\022#\n\revaluation_id\030\001 \001(\003R\014evaluatio" +
-      "nId\022!\n\014scorecard_id\030\002 \001(\003R\013scorecardId\022\033" +
-      "\n\tscorer_id\030\003 \001(\tR\010scorerId\022\"\n\ragent_use" +
-      "r_id\030\004 \001(\tR\013agentUserId\022\031\n\010call_sid\030\005 \001(" +
-      "\003R\007callSid\0227\n\nevaluation\030\006 \001(\0132\027.api.com" +
-      "mons.EvaluationR\nevaluation\"\376\001\n\037Scorecar" +
-      "dsUpdateEvaluationEvent\022#\n\revaluation_id" +
-      "\030\001 \001(\003R\014evaluationId\022!\n\014scorecard_id\030\002 \001" +
-      "(\003R\013scorecardId\022\033\n\tscorer_id\030\003 \001(\tR\010scor" +
-      "erId\022\"\n\ragent_user_id\030\004 \001(\tR\013agentUserId" +
-      "\022\031\n\010call_sid\030\005 \001(\003R\007callSid\0227\n\nevaluatio" +
-      "n\030\006 \001(\0132\027.api.commons.EvaluationR\nevalua" +
-      "tion\"\372\001\n\037ScorecardsDeleteEvaluationEvent" +
-      "\022#\n\revaluation_id\030\001 \001(\003R\014evaluationId\022!\n" +
-      "\014scorecard_id\030\002 \001(\003R\013scorecardId\022\027\n\007user" +
-      "_id\030\003 \001(\tR\006userId\022\"\n\ragent_user_id\030\004 \001(\t" +
-      "R\013agentUserId\022\031\n\010call_sid\030\005 \001(\003R\007callSid" +
-      "\0227\n\nevaluation\030\006 \001(\0132\027.api.commons.Evalu" +
-      "ationR\nevaluation\"\267\001\n\034ScorecardsCreateSe" +
-      "ctionEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005t" +
-      "itle\030\002 \001(\tR\005title\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022\026\n\006weight\030\004 \001(\rR\006weight\022.\n\007s" +
-      "ection\030\005 \001(\0132\024.api.commons.SectionR\007sect" +
-      "ion\"\223\002\n\034ScorecardsUpdateSectionEvent\022\027\n\007" +
-      "user_id\030\001 \001(\tR\006userId\022\024\n\005title\030\002 \001(\tR\005ti" +
-      "tle\022 \n\013description\030\003 \001(\tR\013description\022\026\n" +
-      "\006weight\030\004 \001(\rR\006weight\022\035\n\nsort_order\030\005 \001(" +
-      "\005R\tsortOrder\022;\n\013update_mask\030\006 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskR\nupdateMask\022.\n\007sec" +
-      "tion\030\007 \001(\0132\024.api.commons.SectionR\007sectio" +
-      "n\"\267\001\n\034ScorecardsDeleteSectionEvent\022\027\n\007us" +
-      "er_id\030\001 \001(\tR\006userId\022\024\n\005title\030\002 \001(\tR\005titl" +
-      "e\022 \n\013description\030\003 \001(\tR\013description\022\026\n\006w" +
-      "eight\030\004 \001(\rR\006weight\022.\n\007section\030\005 \001(\0132\024.a" +
-      "pi.commons.SectionR\007section\"\342\001\n\035Scorecar" +
-      "dsCreateCategoryEvent\022\033\n\tauthor_id\030\001 \001(\t" +
-      "R\010authorId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013desc" +
-      "ription\030\003 \001(\tR\013description\0229\n\ncreated_at" +
-      "\030\004 \001(\0132\032.google.protobuf.TimestampR\tcrea" +
-      "tedAt\0221\n\010category\030\005 \001(\0132\025.api.commons.Ca" +
-      "tegoryR\010category\"\340\001\n\035ScorecardsUpdateCat" +
-      "egoryEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005t" +
-      "itle\030\002 \001(\tR\005title\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022;\n\013update_mask\030\004 \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskR\nupdateMask\0221\n\010cate" +
-      "gory\030\005 \001(\0132\025.api.commons.CategoryR\010categ" +
-      "ory\"\336\001\n\035ScorecardsDeleteCategoryEvent\022\027\n" +
-      "\007user_id\030\001 \001(\tR\006userId\022\024\n\005title\030\002 \001(\tR\005t" +
-      "itle\022 \n\013description\030\003 \001(\tR\013description\0229" +
-      "\n\ndeleted_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\tdeletedAt\0221\n\010category\030\005 \001(\0132\025.ap" +
-      "i.commons.CategoryR\010category\"\243\002\n\'Scoreca" +
-      "rdsCreateEvaluationQuestionEvent\0224\n\026eval" +
-      "uation_question_id\030\001 \001(\003R\024evaluationQues" +
-      "tionId\022#\n\revaluation_id\030\002 \001(\003R\014evaluatio" +
-      "nId\0222\n\025scorecard_question_id\030\003 \001(\003R\023scor" +
-      "ecardQuestionId\022\027\n\007user_id\030\004 \001(\tR\006userId" +
-      "\022P\n\023evaluation_question\030\005 \001(\0132\037.api.comm" +
-      "ons.EvaluationQuestionR\022evaluationQuesti" +
-      "on\"\222\003\n\'ScorecardsUpdateEvaluationQuestio" +
-      "nEvent\0224\n\026evaluation_question_id\030\001 \001(\003R\024" +
-      "evaluationQuestionId\022#\n\revaluation_id\030\002 " +
-      "\001(\003R\014evaluationId\0222\n\025scorecard_question_" +
-      "id\030\003 \001(\003R\023scorecardQuestionId\022\027\n\007user_id" +
-      "\030\004 \001(\tR\006userId\022\030\n\007skipped\030\005 \001(\010R\007skipped" +
-      "\022\026\n\006points\030\006 \001(\003R\006points\022;\n\013update_mask\030" +
-      "\007 \001(\0132\032.google.protobuf.FieldMaskR\nupdat" +
-      "eMask\022P\n\023evaluation_question\030\010 \001(\0132\037.api" +
-      ".commons.EvaluationQuestionR\022evaluationQ" +
-      "uestion\"\245\002\n\'ScorecardsDeleteEvaluationQu" +
-      "estionEvent\0224\n\026evaluation_question_id\030\001 " +
-      "\001(\003R\024evaluationQuestionId\022#\n\revaluation_" +
-      "id\030\002 \001(\003R\014evaluationId\0222\n\025scorecard_ques" +
-      "tion_id\030\003 \001(\003R\023scorecardQuestionId\022\027\n\007us" +
-      "er_id\030\004 \001(\tR\006userId\022R\n\024evaluation_questi" +
-      "ons\030\005 \001(\0132\037.api.commons.EvaluationQuesti" +
-      "onR\023evaluationQuestions\"\272\002\n&ScorecardsCr" +
-      "eateScorecardQuestionEvent\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\022\032\n\010question\030\002 \001(\tR\010question\022" +
-      " \n\013description\030\003 \001(\tR\013description\022\035\n\nall" +
-      "ow_skip\030\004 \001(\010R\tallowSkip\022\035\n\nmax_points\030\005" +
-      " \001(\003R\tmaxPoints\022,\n\022allow_multi_select\030\006 " +
-      "\001(\010R\020allowMultiSelect\022M\n\022scorecard_quest" +
-      "ion\030\007 \001(\0132\036.api.commons.ScorecardQuestio" +
-      "nR\021scorecardQuestion\"\226\003\n&ScorecardsUpdat" +
-      "eScorecardQuestionEvent\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022\032\n\010question\030\002 \001(\tR\010question\022 \n\013" +
-      "description\030\003 \001(\tR\013description\022\035\n\nallow_" +
-      "skip\030\004 \001(\010R\tallowSkip\022\035\n\nmax_points\030\005 \001(" +
-      "\003R\tmaxPoints\022,\n\022allow_multi_select\030\006 \001(\010" +
-      "R\020allowMultiSelect\022\035\n\nsort_order\030\007 \001(\005R\t" +
-      "sortOrder\022;\n\013update_mask\030\010 \001(\0132\032.google." +
-      "protobuf.FieldMaskR\nupdateMask\022M\n\022scorec" +
-      "ard_question\030\t \001(\0132\036.api.commons.Scoreca" +
-      "rdQuestionR\021scorecardQuestion\"\272\002\n&Scorec" +
-      "ardsDeleteScorecardQuestionEvent\022\027\n\007user" +
-      "_id\030\001 \001(\tR\006userId\022\032\n\010question\030\002 \001(\tR\010que" +
-      "stion\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "\035\n\nallow_skip\030\004 \001(\010R\tallowSkip\022\035\n\nmax_po" +
-      "ints\030\005 \001(\003R\tmaxPoints\022,\n\022allow_multi_sel" +
-      "ect\030\006 \001(\010R\020allowMultiSelect\022M\n\022scorecard" +
-      "_question\030\007 \001(\0132\036.api.commons.ScorecardQ" +
-      "uestionR\021scorecardQuestion\"\222\003\n#Scorecard" +
-      "sCreateAutoEvaluationEvent\022,\n\022auto_evalu" +
-      "ation_id\030\001 \001(\003R\020autoEvaluationId\022!\n\014scor" +
-      "ecard_id\030\002 \001(\003R\013scorecardId\022\"\n\ragent_use" +
-      "r_id\030\003 \001(\tR\013agentUserId\022\031\n\010call_sid\030\004 \001(" +
-      "\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032.api.comm" +
-      "ons.CallType.EnumR\010callType\022%\n\016transcrip" +
-      "t_sid\030\006 \001(\003R\rtranscriptSid\0225\n\nrisk_level" +
-      "\030\007 \001(\0162\026.api.commons.RiskLevelR\triskLeve" +
-      "l\022D\n\017auto_evaluation\030\010 \001(\0132\033.api.commons" +
-      ".AutoEvaluationR\016autoEvaluation\"\255\004\n$Scor" +
-      "ecardsCreateSmartEvaluationEvent\022.\n\023smar" +
-      "t_evaluation_id\030\001 \001(\003R\021smartEvaluationId" +
-      "\022R\n\004call\030\002 \001(\0132<.api.commons.audit.Score" +
-      "cardsCreateSmartEvaluationEvent.CallH\000R\004" +
-      "call\022O\n\003sms\030\003 \001(\0132;.api.commons.audit.Sc" +
-      "orecardsCreateSmartEvaluationEvent.SmsH\000" +
-      "R\003sms\032\314\001\n\004Call\022\031\n\010call_sid\030\001 \001(\003R\007callSi" +
-      "d\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallT" +
-      "ype.EnumR\010callType\0226\n\ttalk_time\030\003 \001(\0132\031." +
-      "google.protobuf.DurationR\010talkTime\0228\n\nau" +
-      "dio_time\030\004 \001(\0132\031.google.protobuf.Duratio" +
-      "nR\taudioTime\032U\n\003Sms\022)\n\020conversation_sid\030" +
-      "\001 \001(\003R\017conversationSid\022#\n\rmessage_count\030" +
-      "\002 \001(\003R\014messageCountB\n\n\010metadataB\242\001\n#com." +
-      "tcn.cloud.api.api.commons.auditB\025Scoreca" +
-      "rdsEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Aud" +
-      "it\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Aud" +
-      "it\\GPBMetadata\352\002\023Api::Commons::Auditb\006pr" +
-      "oto3"
+      "proto\032\034api/commons/scorecards.proto\032 goo" +
+      "gle/protobuf/field_mask.proto\032\037google/pr" +
+      "otobuf/timestamp.proto\"\266\001\n\035ScorecardsCre" +
+      "ateQuestionEvent\022\033\n\tauthor_id\030\001 \001(\tR\010aut" +
+      "horId\022#\n\rquestion_text\030\002 \001(\tR\014questionTe" +
+      "xt\022 \n\013description\030\003 \001(\tR\013description\0221\n\010" +
+      "question\030\004 \001(\0132\025.api.commons.QuestionR\010q" +
+      "uestion\"\357\001\n\035ScorecardsUpdateQuestionEven" +
+      "t\022\027\n\007user_id\030\001 \001(\tR\006userId\022#\n\rquestion_t" +
+      "ext\030\002 \001(\tR\014questionText\022 \n\013description\030\003" +
+      " \001(\tR\013description\022;\n\013update_mask\030\004 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\nupdateMask\0221" +
+      "\n\010question\030\005 \001(\0132\025.api.commons.QuestionR" +
+      "\010question\"\325\001\n\035ScorecardsDeleteQuestionEv" +
+      "ent\022\027\n\007user_id\030\001 \001(\tR\006userId\022#\n\rquestion" +
+      "_text\030\002 \001(\tR\014questionText\022 \n\013description" +
+      "\030\003 \001(\tR\013description\022!\n\014category_ids\030\004 \003(" +
+      "\003R\013categoryIds\0221\n\010question\030\005 \001(\0132\025.api.c" +
+      "ommons.QuestionR\010question\"\307\002\n\036Scorecards" +
+      "CreateScorecardEvent\022\033\n\tauthor_id\030\001 \001(\tR" +
+      "\010authorId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013descr" +
+      "iption\030\003 \001(\tR\013description\022\035\n\npass_score\030" +
+      "\004 \001(\001R\tpassScore\0225\n\nscore_type\030\005 \001(\0162\026.a" +
+      "pi.commons.ScoreTypeR\tscoreType\022D\n\017evalu" +
+      "ation_type\030\006 \001(\0162\033.api.commons.Evaluatio" +
+      "nTypeR\016evaluationType\0224\n\tscorecard\030\007 \001(\013" +
+      "2\026.api.commons.ScorecardR\tscorecard\"\332\003\n\036" +
+      "ScorecardsUpdateScorecardEvent\022\027\n\007user_i" +
+      "d\030\001 \001(\tR\006userId\022\024\n\005title\030\002 \001(\tR\005title\022 \n" +
+      "\013description\030\003 \001(\tR\013description\022\035\n\npass_" +
+      "score\030\004 \001(\001R\tpassScore\0225\n\nscore_type\030\005 \001" +
+      "(\0162\026.api.commons.ScoreTypeR\tscoreType\022D\n" +
+      "\017evaluation_type\030\006 \001(\0162\033.api.commons.Eva" +
+      "luationTypeR\016evaluationType\022%\n\016allow_fee" +
+      "dback\030\007 \001(\010R\rallowFeedback\0221\n\005state\030\010 \001(" +
+      "\0162\033.api.commons.ScorecardStateR\005state\022;\n" +
+      "\013update_mask\030\t \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\nupdateMask\0224\n\tscorecard\030\n \001(\0132\026." +
+      "api.commons.ScorecardR\tscorecard\"\366\002\n\036Sco" +
+      "recardsDeleteScorecardEvent\022\027\n\007user_id\030\001" +
+      " \001(\tR\006userId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013de" +
+      "scription\030\003 \001(\tR\013description\022\035\n\npass_sco" +
+      "re\030\004 \001(\001R\tpassScore\0225\n\nscore_type\030\005 \001(\0162" +
+      "\026.api.commons.ScoreTypeR\tscoreType\022D\n\017ev" +
+      "aluation_type\030\006 \001(\0162\033.api.commons.Evalua" +
+      "tionTypeR\016evaluationType\0221\n\005state\030\007 \001(\0162" +
+      "\033.api.commons.ScorecardStateR\005state\0224\n\ts" +
+      "corecard\030\010 \001(\0132\026.api.commons.ScorecardR\t" +
+      "scorecard\"\306\002\n\035ScorecardsCloneScorecardEv" +
+      "ent\022\033\n\tauthor_id\030\001 \001(\tR\010authorId\022\024\n\005titl" +
+      "e\030\002 \001(\tR\005title\022 \n\013description\030\003 \001(\tR\013des" +
+      "cription\022\035\n\npass_score\030\004 \001(\001R\tpassScore\022" +
+      "5\n\nscore_type\030\005 \001(\0162\026.api.commons.ScoreT" +
+      "ypeR\tscoreType\022D\n\017evaluation_type\030\006 \001(\0162" +
+      "\033.api.commons.EvaluationTypeR\016evaluation" +
+      "Type\0224\n\tscorecard\030\007 \001(\0132\026.api.commons.Sc" +
+      "orecardR\tscorecard\"\376\001\n\037ScorecardsCreateE" +
+      "valuationEvent\022#\n\revaluation_id\030\001 \001(\003R\014e" +
+      "valuationId\022!\n\014scorecard_id\030\002 \001(\003R\013score" +
+      "cardId\022\033\n\tscorer_id\030\003 \001(\tR\010scorerId\022\"\n\ra" +
+      "gent_user_id\030\004 \001(\tR\013agentUserId\022\031\n\010call_" +
+      "sid\030\005 \001(\003R\007callSid\0227\n\nevaluation\030\006 \001(\0132\027" +
+      ".api.commons.EvaluationR\nevaluation\"\376\001\n\037" +
+      "ScorecardsUpdateEvaluationEvent\022#\n\revalu" +
+      "ation_id\030\001 \001(\003R\014evaluationId\022!\n\014scorecar" +
+      "d_id\030\002 \001(\003R\013scorecardId\022\033\n\tscorer_id\030\003 \001" +
+      "(\tR\010scorerId\022\"\n\ragent_user_id\030\004 \001(\tR\013age" +
+      "ntUserId\022\031\n\010call_sid\030\005 \001(\003R\007callSid\0227\n\ne" +
+      "valuation\030\006 \001(\0132\027.api.commons.Evaluation" +
+      "R\nevaluation\"\372\001\n\037ScorecardsDeleteEvaluat" +
+      "ionEvent\022#\n\revaluation_id\030\001 \001(\003R\014evaluat" +
+      "ionId\022!\n\014scorecard_id\030\002 \001(\003R\013scorecardId" +
+      "\022\027\n\007user_id\030\003 \001(\tR\006userId\022\"\n\ragent_user_" +
+      "id\030\004 \001(\tR\013agentUserId\022\031\n\010call_sid\030\005 \001(\003R" +
+      "\007callSid\0227\n\nevaluation\030\006 \001(\0132\027.api.commo" +
+      "ns.EvaluationR\nevaluation\"\267\001\n\034Scorecards" +
+      "CreateSectionEvent\022\027\n\007user_id\030\001 \001(\tR\006use" +
+      "rId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013description" +
+      "\030\003 \001(\tR\013description\022\026\n\006weight\030\004 \001(\rR\006wei" +
+      "ght\022.\n\007section\030\005 \001(\0132\024.api.commons.Secti" +
+      "onR\007section\"\223\002\n\034ScorecardsUpdateSectionE" +
+      "vent\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005title\030\002" +
+      " \001(\tR\005title\022 \n\013description\030\003 \001(\tR\013descri" +
+      "ption\022\026\n\006weight\030\004 \001(\rR\006weight\022\035\n\nsort_or" +
+      "der\030\005 \001(\005R\tsortOrder\022;\n\013update_mask\030\006 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\nupdateMas" +
+      "k\022.\n\007section\030\007 \001(\0132\024.api.commons.Section" +
+      "R\007section\"\267\001\n\034ScorecardsDeleteSectionEve" +
+      "nt\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005title\030\002 \001" +
+      "(\tR\005title\022 \n\013description\030\003 \001(\tR\013descript" +
+      "ion\022\026\n\006weight\030\004 \001(\rR\006weight\022.\n\007section\030\005" +
+      " \001(\0132\024.api.commons.SectionR\007section\"\342\001\n\035" +
+      "ScorecardsCreateCategoryEvent\022\033\n\tauthor_" +
+      "id\030\001 \001(\tR\010authorId\022\024\n\005title\030\002 \001(\tR\005title" +
+      "\022 \n\013description\030\003 \001(\tR\013description\0229\n\ncr" +
+      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\tcreatedAt\0221\n\010category\030\005 \001(\0132\025.api.co" +
+      "mmons.CategoryR\010category\"\340\001\n\035ScorecardsU" +
+      "pdateCategoryEvent\022\027\n\007user_id\030\001 \001(\tR\006use" +
+      "rId\022\024\n\005title\030\002 \001(\tR\005title\022 \n\013description" +
+      "\030\003 \001(\tR\013description\022;\n\013update_mask\030\004 \001(\013" +
+      "2\032.google.protobuf.FieldMaskR\nupdateMask" +
+      "\0221\n\010category\030\005 \001(\0132\025.api.commons.Categor" +
+      "yR\010category\"\336\001\n\035ScorecardsDeleteCategory" +
+      "Event\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005title\030" +
+      "\002 \001(\tR\005title\022 \n\013description\030\003 \001(\tR\013descr" +
+      "iption\0229\n\ndeleted_at\030\004 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\tdeletedAt\0221\n\010category\030\005 " +
+      "\001(\0132\025.api.commons.CategoryR\010category\"\243\002\n" +
+      "\'ScorecardsCreateEvaluationQuestionEvent" +
+      "\0224\n\026evaluation_question_id\030\001 \001(\003R\024evalua" +
+      "tionQuestionId\022#\n\revaluation_id\030\002 \001(\003R\014e" +
+      "valuationId\0222\n\025scorecard_question_id\030\003 \001" +
+      "(\003R\023scorecardQuestionId\022\027\n\007user_id\030\004 \001(\t" +
+      "R\006userId\022P\n\023evaluation_question\030\005 \001(\0132\037." +
+      "api.commons.EvaluationQuestionR\022evaluati" +
+      "onQuestion\"\222\003\n\'ScorecardsUpdateEvaluatio" +
+      "nQuestionEvent\0224\n\026evaluation_question_id" +
+      "\030\001 \001(\003R\024evaluationQuestionId\022#\n\revaluati" +
+      "on_id\030\002 \001(\003R\014evaluationId\0222\n\025scorecard_q" +
+      "uestion_id\030\003 \001(\003R\023scorecardQuestionId\022\027\n" +
+      "\007user_id\030\004 \001(\tR\006userId\022\030\n\007skipped\030\005 \001(\010R" +
+      "\007skipped\022\026\n\006points\030\006 \001(\003R\006points\022;\n\013upda" +
+      "te_mask\030\007 \001(\0132\032.google.protobuf.FieldMas" +
+      "kR\nupdateMask\022P\n\023evaluation_question\030\010 \001" +
+      "(\0132\037.api.commons.EvaluationQuestionR\022eva" +
+      "luationQuestion\"\245\002\n\'ScorecardsDeleteEval" +
+      "uationQuestionEvent\0224\n\026evaluation_questi" +
+      "on_id\030\001 \001(\003R\024evaluationQuestionId\022#\n\reva" +
+      "luation_id\030\002 \001(\003R\014evaluationId\0222\n\025scorec" +
+      "ard_question_id\030\003 \001(\003R\023scorecardQuestion" +
+      "Id\022\027\n\007user_id\030\004 \001(\tR\006userId\022R\n\024evaluatio" +
+      "n_questions\030\005 \001(\0132\037.api.commons.Evaluati" +
+      "onQuestionR\023evaluationQuestions\"\272\002\n&Scor" +
+      "ecardsCreateScorecardQuestionEvent\022\027\n\007us" +
+      "er_id\030\001 \001(\tR\006userId\022\032\n\010question\030\002 \001(\tR\010q" +
+      "uestion\022 \n\013description\030\003 \001(\tR\013descriptio" +
+      "n\022\035\n\nallow_skip\030\004 \001(\010R\tallowSkip\022\035\n\nmax_" +
+      "points\030\005 \001(\003R\tmaxPoints\022,\n\022allow_multi_s" +
+      "elect\030\006 \001(\010R\020allowMultiSelect\022M\n\022scoreca" +
+      "rd_question\030\007 \001(\0132\036.api.commons.Scorecar" +
+      "dQuestionR\021scorecardQuestion\"\226\003\n&Scoreca" +
+      "rdsUpdateScorecardQuestionEvent\022\027\n\007user_" +
+      "id\030\001 \001(\tR\006userId\022\032\n\010question\030\002 \001(\tR\010ques" +
+      "tion\022 \n\013description\030\003 \001(\tR\013description\022\035" +
+      "\n\nallow_skip\030\004 \001(\010R\tallowSkip\022\035\n\nmax_poi" +
+      "nts\030\005 \001(\003R\tmaxPoints\022,\n\022allow_multi_sele" +
+      "ct\030\006 \001(\010R\020allowMultiSelect\022\035\n\nsort_order" +
+      "\030\007 \001(\005R\tsortOrder\022;\n\013update_mask\030\010 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\nupdateMask\022M" +
+      "\n\022scorecard_question\030\t \001(\0132\036.api.commons" +
+      ".ScorecardQuestionR\021scorecardQuestion\"\272\002" +
+      "\n&ScorecardsDeleteScorecardQuestionEvent" +
+      "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\032\n\010question\030\002 " +
+      "\001(\tR\010question\022 \n\013description\030\003 \001(\tR\013desc" +
+      "ription\022\035\n\nallow_skip\030\004 \001(\010R\tallowSkip\022\035" +
+      "\n\nmax_points\030\005 \001(\003R\tmaxPoints\022,\n\022allow_m" +
+      "ulti_select\030\006 \001(\010R\020allowMultiSelect\022M\n\022s" +
+      "corecard_question\030\007 \001(\0132\036.api.commons.Sc" +
+      "orecardQuestionR\021scorecardQuestion\"\222\003\n#S" +
+      "corecardsCreateAutoEvaluationEvent\022,\n\022au" +
+      "to_evaluation_id\030\001 \001(\003R\020autoEvaluationId" +
+      "\022!\n\014scorecard_id\030\002 \001(\003R\013scorecardId\022\"\n\ra" +
+      "gent_user_id\030\003 \001(\tR\013agentUserId\022\031\n\010call_" +
+      "sid\030\004 \001(\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032." +
+      "api.commons.CallType.EnumR\010callType\022%\n\016t" +
+      "ranscript_sid\030\006 \001(\003R\rtranscriptSid\0225\n\nri" +
+      "sk_level\030\007 \001(\0162\026.api.commons.RiskLevelR\t" +
+      "riskLevel\022D\n\017auto_evaluation\030\010 \001(\0132\033.api" +
+      ".commons.AutoEvaluationR\016autoEvaluationB" +
+      "\242\001\n#com.tcn.cloud.api.api.commons.auditB" +
+      "\025ScorecardsEventsProtoP\001\242\002\003ACA\252\002\021Api.Com" +
+      "mons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Com" +
+      "mons\\Audit\\GPBMetadata\352\002\023Api::Commons::A" +
+      "uditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -493,27 +462,8 @@ public final class ScorecardsEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ScorecardsCreateAutoEvaluationEvent_descriptor,
         new java.lang.String[] { "AutoEvaluationId", "ScorecardId", "AgentUserId", "CallSid", "CallType", "TranscriptSid", "RiskLevel", "AutoEvaluation", });
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor =
-      getDescriptor().getMessageTypes().get(23);
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor,
-        new java.lang.String[] { "SmartEvaluationId", "Call", "Sms", "Metadata", });
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_descriptor =
-      internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor.getNestedTypes().get(0);
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_descriptor,
-        new java.lang.String[] { "CallSid", "CallType", "TalkTime", "AudioTime", });
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_descriptor =
-      internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor.getNestedTypes().get(1);
-    internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Sms_descriptor,
-        new java.lang.String[] { "ConversationSid", "MessageCount", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
