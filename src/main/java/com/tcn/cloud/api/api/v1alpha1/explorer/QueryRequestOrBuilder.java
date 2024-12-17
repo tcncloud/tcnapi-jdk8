@@ -106,6 +106,33 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
+   * @return Whether the pipelineNode field is set.
+   */
+  boolean hasPipelineNode();
+  /**
+   * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
+   * @return The pipelineNode.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipelineNode();
+  /**
+   * <pre>
+   * pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineNodeOrBuilder();
+
+  /**
+   * <pre>
    * org_id for ownership of the data
    * </pre>
    *
