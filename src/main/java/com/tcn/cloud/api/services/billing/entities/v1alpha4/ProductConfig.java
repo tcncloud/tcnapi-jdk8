@@ -87,6 +87,8 @@ private static final long serialVersionUID = 0L;
     DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY_CACHED(10001),
     WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS(20000),
     WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS(20001),
+    WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE(30000),
+    WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_CALL_TRANSCRIPTS(30001),
     CONFIG_NOT_SET(0);
     private final int value;
     private ConfigCase(int value) {
@@ -147,6 +149,8 @@ private static final long serialVersionUID = 0L;
         case 10001: return DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY_CACHED;
         case 20000: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS;
         case 20001: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS;
+        case 30000: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE;
+        case 30001: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_CALL_TRANSCRIPTS;
         case 0: return CONFIG_NOT_SET;
         default: return null;
       }
@@ -1537,6 +1541,80 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
   }
 
+  public static final int WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_FIELD_NUMBER = 30000;
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundle field is set.
+   */
+  @java.lang.Override
+  public boolean hasWorkforceEngagementWorkforceOptimizationAiBundle() {
+    return configCase_ == 30000;
+  }
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundle.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundle() {
+    if (configCase_ == 30000) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleOrBuilder() {
+    if (configCase_ == 30000) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER = 30001;
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts field is set.
+   */
+  @java.lang.Override
+  public boolean hasWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts() {
+    return configCase_ == 30001;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts() {
+    if (configCase_ == 30001) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsOrBuilder() {
+    if (configCase_ == 30001) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1679,6 +1757,12 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 20001) {
       output.writeMessage(20001, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 30000) {
+      output.writeMessage(30000, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 30001) {
+      output.writeMessage(30001, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1860,6 +1944,14 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 20001) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20001, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 30000) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30000, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 30001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30001, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2050,6 +2142,14 @@ private static final long serialVersionUID = 0L;
         if (!getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts()
             .equals(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts())) return false;
         break;
+      case 30000:
+        if (!getWorkforceEngagementWorkforceOptimizationAiBundle()
+            .equals(other.getWorkforceEngagementWorkforceOptimizationAiBundle())) return false;
+        break;
+      case 30001:
+        if (!getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts()
+            .equals(other.getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts())) return false;
+        break;
       case 0:
       default:
     }
@@ -2236,6 +2336,14 @@ private static final long serialVersionUID = 0L;
       case 20001:
         hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER;
         hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts().hashCode();
+        break;
+      case 30000:
+        hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationAiBundle().hashCode();
+        break;
+      case 30001:
+        hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts().hashCode();
         break;
       case 0:
       default:
@@ -2501,6 +2609,12 @@ private static final long serialVersionUID = 0L;
       if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
         workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.clear();
       }
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ != null) {
+        workforceEngagementWorkforceOptimizationAiBundleBuilder_.clear();
+      }
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ != null) {
+        workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.clear();
+      }
       configCase_ = 0;
       config_ = null;
       return this;
@@ -2719,6 +2833,14 @@ private static final long serialVersionUID = 0L;
           workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
         result.config_ = workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.build();
       }
+      if (configCase_ == 30000 &&
+          workforceEngagementWorkforceOptimizationAiBundleBuilder_ != null) {
+        result.config_ = workforceEngagementWorkforceOptimizationAiBundleBuilder_.build();
+      }
+      if (configCase_ == 30001 &&
+          workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ != null) {
+        result.config_ = workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2936,6 +3058,14 @@ private static final long serialVersionUID = 0L;
         }
         case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS: {
           mergeWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts());
+          break;
+        }
+        case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE: {
+          mergeWorkforceEngagementWorkforceOptimizationAiBundle(other.getWorkforceEngagementWorkforceOptimizationAiBundle());
+          break;
+        }
+        case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_CALL_TRANSCRIPTS: {
+          mergeWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts(other.getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts());
           break;
         }
         case CONFIG_NOT_SET: {
@@ -3269,6 +3399,20 @@ private static final long serialVersionUID = 0L;
               configCase_ = 20001;
               break;
             } // case 160010
+            case 240002: {
+              input.readMessage(
+                  getWorkforceEngagementWorkforceOptimizationAiBundleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 30000;
+              break;
+            } // case 240002
+            case 240010: {
+              input.readMessage(
+                  getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 30001;
+              break;
+            } // case 240010
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9532,6 +9676,326 @@ private static final long serialVersionUID = 0L;
       configCase_ = 20001;
       onChanged();
       return workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforceEngagementWorkforceOptimizationAiBundleBuilder_;
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     * @return Whether the workforceEngagementWorkforceOptimizationAiBundle field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkforceEngagementWorkforceOptimizationAiBundle() {
+      return configCase_ == 30000;
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     * @return The workforceEngagementWorkforceOptimizationAiBundle.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundle() {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        if (configCase_ == 30000) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 30000) {
+          return workforceEngagementWorkforceOptimizationAiBundleBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceOptimizationAiBundle(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        workforceEngagementWorkforceOptimizationAiBundleBuilder_.setMessage(value);
+      }
+      configCase_ = 30000;
+      return this;
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceOptimizationAiBundle(
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder builderForValue) {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        workforceEngagementWorkforceOptimizationAiBundleBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 30000;
+      return this;
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    public Builder mergeWorkforceEngagementWorkforceOptimizationAiBundle(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        if (configCase_ == 30000 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 30000) {
+          workforceEngagementWorkforceOptimizationAiBundleBuilder_.mergeFrom(value);
+        } else {
+          workforceEngagementWorkforceOptimizationAiBundleBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 30000;
+      return this;
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    public Builder clearWorkforceEngagementWorkforceOptimizationAiBundle() {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        if (configCase_ == 30000) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 30000) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        workforceEngagementWorkforceOptimizationAiBundleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforceEngagementWorkforceOptimizationAiBundleBuilder() {
+      return getWorkforceEngagementWorkforceOptimizationAiBundleFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleOrBuilder() {
+      if ((configCase_ == 30000) && (workforceEngagementWorkforceOptimizationAiBundleBuilder_ != null)) {
+        return workforceEngagementWorkforceOptimizationAiBundleBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 30000) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * wfo ai bundle (30000 - 31000)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundle"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> 
+        getWorkforceEngagementWorkforceOptimizationAiBundleFieldBuilder() {
+      if (workforceEngagementWorkforceOptimizationAiBundleBuilder_ == null) {
+        if (!(configCase_ == 30000)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+        }
+        workforceEngagementWorkforceOptimizationAiBundleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 30000;
+      onChanged();
+      return workforceEngagementWorkforceOptimizationAiBundleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     * @return Whether the workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts() {
+      return configCase_ == 30001;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     * @return The workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        if (configCase_ == 30001) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 30001) {
+          return workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.setMessage(value);
+      }
+      configCase_ = 30001;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts(
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder builderForValue) {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 30001;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    public Builder mergeWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        if (configCase_ == 30001 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 30001) {
+          workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.mergeFrom(value);
+        } else {
+          workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 30001;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    public Builder clearWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        if (configCase_ == 30001) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 30001) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder() {
+      return getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsOrBuilder() {
+      if ((configCase_ == 30001) && (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ != null)) {
+        return workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 30001) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_call_transcripts = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscripts"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> 
+        getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsFieldBuilder() {
+      if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ == null) {
+        if (!(configCase_ == 30001)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+        }
+        workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 30001;
+      onChanged();
+      return workforceEngagementWorkforceOptimizationAiBundleAccumulatedCallTranscriptsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
