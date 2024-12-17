@@ -9930,14 +9930,14 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a shift instance on the published schedule for the org sending the request with the provided parameters.
-     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
-     * A shift instance will be created for each wfm agent sid provided.
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
      * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.Internal: error occurs when creating the shift instance.
-     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
     default void createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request,
@@ -10032,7 +10032,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters on the published schedule for the org sending the request.
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
@@ -13682,14 +13682,14 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a shift instance on the published schedule for the org sending the request with the provided parameters.
-     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
-     * A shift instance will be created for each wfm agent sid provided.
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
      * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.Internal: error occurs when creating the shift instance.
-     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
     public void createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request,
@@ -13790,7 +13790,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters on the published schedule for the org sending the request.
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
@@ -17293,14 +17293,14 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a shift instance on the published schedule for the org sending the request with the provided parameters.
-     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
-     * A shift instance will be created for each wfm agent sid provided.
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
      * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.Internal: error occurs when creating the shift instance.
-     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request) {
@@ -17395,7 +17395,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters on the published schedule for the org sending the request.
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
@@ -20929,14 +20929,14 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a shift instance on the published schedule for the org sending the request with the provided parameters.
-     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
-     * A shift instance will be created for each wfm agent sid provided.
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
      * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.Internal: error occurs when creating the shift instance.
-     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> createPublishedShiftWithSegments(
@@ -21037,7 +21037,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters on the published schedule for the org sending the request.
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
      * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
