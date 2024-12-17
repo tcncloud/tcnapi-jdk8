@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\265\"\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\361 \n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -132,16 +132,11 @@ public final class ServiceProto {
       "1alpha1.newsroom.ListPublishedClientArti" +
       "clesResponse\"G\272\270\221\002\005\n\003\010\347 \202\323\344\223\0027\"2/api/v1a" +
       "lpha1/newsroom/listpublishedclientarticl" +
-      "es:\001*\022\301\001\n\024GetClientArticleById\0222.api.v1a" +
-      "lpha1.newsroom.GetClientArticleByIdReque" +
-      "st\0323.api.v1alpha1.newsroom.GetClientArti" +
-      "cleByIdResponse\"@\272\270\221\002\005\n\003\010\347 \202\323\344\223\0020\"+/api/" +
-      "v1alpha1/newsroom/getclientarticlebyid:\001" +
-      "*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.new" +
-      "sroomB\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1alph" +
-      "a1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Ap" +
-      "i\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Api::V" +
-      "1alpha1::Newsroomb\006proto3"
+      "es:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1" +
+      ".newsroomB\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1" +
+      "alpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342" +
+      "\002!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Ap" +
+      "i::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

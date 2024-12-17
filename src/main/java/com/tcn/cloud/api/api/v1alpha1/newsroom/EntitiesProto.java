@@ -249,16 +249,6 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_ListPublishedClientArticlesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_newsroom_GetClientArticleByIdRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_newsroom_GetClientArticleByIdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -426,16 +416,12 @@ public final class EntitiesProto {
       "stPublishedClientArticlesResponse\022j\n\031pub" +
       "lished_article_details\030\001 \003(\0132..api.v1alp" +
       "ha1.newsroom.PublishedArticleDetailsR\027pu" +
-      "blishedArticleDetails\"I\n\033GetClientArticl" +
-      "eByIdRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020" +
-      "\001R\rnewArticleSid\"r\n\034GetClientArticleById" +
-      "Response\022R\n\017article_details\030\001 \001(\0132).api." +
-      "v1alpha1.newsroom.NewsArticleDetailsR\016ar" +
-      "ticleDetailsB\256\001\n\'com.tcn.cloud.api.api.v" +
-      "1alpha1.newsroomB\rEntitiesProtoP\001\242\002\003AVN\252" +
-      "\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\N" +
-      "ewsroom\342\002!Api\\V1alpha1\\Newsroom\\GPBMetad" +
-      "ata\352\002\027Api::V1alpha1::Newsroomb\006proto3"
+      "blishedArticleDetailsB\256\001\n\'com.tcn.cloud." +
+      "api.api.v1alpha1.newsroomB\rEntitiesProto" +
+      "P\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V" +
+      "1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom" +
+      "\\GPBMetadata\352\002\027Api::V1alpha1::Newsroomb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -727,18 +713,6 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_ListPublishedClientArticlesResponse_descriptor,
         new java.lang.String[] { "PublishedArticleDetails", });
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_newsroom_GetClientArticleByIdRequest_descriptor,
-        new java.lang.String[] { "NewArticleSid", });
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
-    internal_static_api_v1alpha1_newsroom_GetClientArticleByIdResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_newsroom_GetClientArticleByIdResponse_descriptor,
-        new java.lang.String[] { "ArticleDetails", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
