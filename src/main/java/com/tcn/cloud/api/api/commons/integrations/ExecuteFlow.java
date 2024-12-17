@@ -65,10 +65,6 @@ private static final long serialVersionUID = 0L;
     RELATIENT_CREATE_FORTIS_CCTOKEN(208),
     RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT(209),
     RELATIENT_FORTIS_TOKEN_CC_PAYMENT(210),
-    RELATIENT_GET_PATIENT_BALANCE_NEW(211),
-    RELATIENT_GET_PATIENT_CC_TOKENS_NEW(212),
-    RELATIENT_POST_PATIENT_TOKEN_NEW(213),
-    RELATIENT_POST_PATIENT_BALANCE_NEW(214),
     CYBERSOURCE_CREDIT_PAYMENT(301),
     CYBERSOURCE_ECHECK_PAYMENT(302),
     CIRCPRO_PHONE_LOOKUP_WITH_BUNDLE(401),
@@ -380,10 +376,6 @@ private static final long serialVersionUID = 0L;
         case 208: return RELATIENT_CREATE_FORTIS_CCTOKEN;
         case 209: return RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT;
         case 210: return RELATIENT_FORTIS_TOKEN_CC_PAYMENT;
-        case 211: return RELATIENT_GET_PATIENT_BALANCE_NEW;
-        case 212: return RELATIENT_GET_PATIENT_CC_TOKENS_NEW;
-        case 213: return RELATIENT_POST_PATIENT_TOKEN_NEW;
-        case 214: return RELATIENT_POST_PATIENT_BALANCE_NEW;
         case 301: return CYBERSOURCE_CREDIT_PAYMENT;
         case 302: return CYBERSOURCE_ECHECK_PAYMENT;
         case 401: return CIRCPRO_PHONE_LOOKUP_WITH_BUNDLE;
@@ -1120,130 +1112,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
-  }
-
-  public static final int RELATIENT_GET_PATIENT_BALANCE_NEW_FIELD_NUMBER = 211;
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-   * @return Whether the relatientGetPatientBalanceNew field is set.
-   */
-  @java.lang.Override
-  public boolean hasRelatientGetPatientBalanceNew() {
-    return valueCase_ == 211;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-   * @return The relatientGetPatientBalanceNew.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew getRelatientGetPatientBalanceNew() {
-    if (valueCase_ == 211) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNewOrBuilder getRelatientGetPatientBalanceNewOrBuilder() {
-    if (valueCase_ == 211) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-  }
-
-  public static final int RELATIENT_GET_PATIENT_CC_TOKENS_NEW_FIELD_NUMBER = 212;
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-   * @return Whether the relatientGetPatientCcTokensNew field is set.
-   */
-  @java.lang.Override
-  public boolean hasRelatientGetPatientCcTokensNew() {
-    return valueCase_ == 212;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-   * @return The relatientGetPatientCcTokensNew.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew getRelatientGetPatientCcTokensNew() {
-    if (valueCase_ == 212) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNewOrBuilder getRelatientGetPatientCcTokensNewOrBuilder() {
-    if (valueCase_ == 212) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-  }
-
-  public static final int RELATIENT_POST_PATIENT_TOKEN_NEW_FIELD_NUMBER = 213;
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-   * @return Whether the relatientPostPatientTokenNew field is set.
-   */
-  @java.lang.Override
-  public boolean hasRelatientPostPatientTokenNew() {
-    return valueCase_ == 213;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-   * @return The relatientPostPatientTokenNew.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew getRelatientPostPatientTokenNew() {
-    if (valueCase_ == 213) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNewOrBuilder getRelatientPostPatientTokenNewOrBuilder() {
-    if (valueCase_ == 213) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-  }
-
-  public static final int RELATIENT_POST_PATIENT_BALANCE_NEW_FIELD_NUMBER = 214;
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-   * @return Whether the relatientPostPatientBalanceNew field is set.
-   */
-  @java.lang.Override
-  public boolean hasRelatientPostPatientBalanceNew() {
-    return valueCase_ == 214;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-   * @return The relatientPostPatientBalanceNew.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew getRelatientPostPatientBalanceNew() {
-    if (valueCase_ == 214) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNewOrBuilder getRelatientPostPatientBalanceNewOrBuilder() {
-    if (valueCase_ == 214) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
   }
 
   public static final int CYBERSOURCE_CREDIT_PAYMENT_FIELD_NUMBER = 301;
@@ -9031,7 +8899,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1148
+   *     See api/commons/integrations/integrations.proto;l=1140
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9041,7 +8909,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1148
+   *     See api/commons/integrations/integrations.proto;l=1140
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9066,7 +8934,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1149
+   *     See api/commons/integrations/integrations.proto;l=1141
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9076,7 +8944,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1149
+   *     See api/commons/integrations/integrations.proto;l=1141
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9101,7 +8969,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1150
+   *     See api/commons/integrations/integrations.proto;l=1142
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9111,7 +8979,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1150
+   *     See api/commons/integrations/integrations.proto;l=1142
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9136,7 +9004,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1151
+   *     See api/commons/integrations/integrations.proto;l=1143
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9146,7 +9014,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1151
+   *     See api/commons/integrations/integrations.proto;l=1143
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9171,7 +9039,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1152
+   *     See api/commons/integrations/integrations.proto;l=1144
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9181,7 +9049,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1152
+   *     See api/commons/integrations/integrations.proto;l=1144
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9206,7 +9074,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1153
+   *     See api/commons/integrations/integrations.proto;l=1145
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9216,7 +9084,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1153
+   *     See api/commons/integrations/integrations.proto;l=1145
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9241,7 +9109,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1154
+   *     See api/commons/integrations/integrations.proto;l=1146
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9251,7 +9119,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1154
+   *     See api/commons/integrations/integrations.proto;l=1146
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10040,18 +9908,6 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 210) {
       output.writeMessage(210, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_);
-    }
-    if (valueCase_ == 211) {
-      output.writeMessage(211, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_);
-    }
-    if (valueCase_ == 212) {
-      output.writeMessage(212, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_);
-    }
-    if (valueCase_ == 213) {
-      output.writeMessage(213, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_);
-    }
-    if (valueCase_ == 214) {
-      output.writeMessage(214, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_);
     }
     if (valueCase_ == 301) {
       output.writeMessage(301, (com.tcn.cloud.api.api.commons.integrations.ExecuteCybersourceCreditPayment) value_);
@@ -10959,22 +10815,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 210) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(210, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_);
-    }
-    if (valueCase_ == 211) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(211, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_);
-    }
-    if (valueCase_ == 212) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(212, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_);
-    }
-    if (valueCase_ == 213) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(213, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_);
-    }
-    if (valueCase_ == 214) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(214, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_);
     }
     if (valueCase_ == 301) {
       size += com.google.protobuf.CodedOutputStream
@@ -12171,22 +12011,6 @@ private static final long serialVersionUID = 0L;
         if (!getRelatientFortisTokenCcPayment()
             .equals(other.getRelatientFortisTokenCcPayment())) return false;
         break;
-      case 211:
-        if (!getRelatientGetPatientBalanceNew()
-            .equals(other.getRelatientGetPatientBalanceNew())) return false;
-        break;
-      case 212:
-        if (!getRelatientGetPatientCcTokensNew()
-            .equals(other.getRelatientGetPatientCcTokensNew())) return false;
-        break;
-      case 213:
-        if (!getRelatientPostPatientTokenNew()
-            .equals(other.getRelatientPostPatientTokenNew())) return false;
-        break;
-      case 214:
-        if (!getRelatientPostPatientBalanceNew()
-            .equals(other.getRelatientPostPatientBalanceNew())) return false;
-        break;
       case 301:
         if (!getCybersourceCreditPayment()
             .equals(other.getCybersourceCreditPayment())) return false;
@@ -13379,22 +13203,6 @@ private static final long serialVersionUID = 0L;
       case 210:
         hash = (37 * hash) + RELATIENT_FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getRelatientFortisTokenCcPayment().hashCode();
-        break;
-      case 211:
-        hash = (37 * hash) + RELATIENT_GET_PATIENT_BALANCE_NEW_FIELD_NUMBER;
-        hash = (53 * hash) + getRelatientGetPatientBalanceNew().hashCode();
-        break;
-      case 212:
-        hash = (37 * hash) + RELATIENT_GET_PATIENT_CC_TOKENS_NEW_FIELD_NUMBER;
-        hash = (53 * hash) + getRelatientGetPatientCcTokensNew().hashCode();
-        break;
-      case 213:
-        hash = (37 * hash) + RELATIENT_POST_PATIENT_TOKEN_NEW_FIELD_NUMBER;
-        hash = (53 * hash) + getRelatientPostPatientTokenNew().hashCode();
-        break;
-      case 214:
-        hash = (37 * hash) + RELATIENT_POST_PATIENT_BALANCE_NEW_FIELD_NUMBER;
-        hash = (53 * hash) + getRelatientPostPatientBalanceNew().hashCode();
         break;
       case 301:
         hash = (37 * hash) + CYBERSOURCE_CREDIT_PAYMENT_FIELD_NUMBER;
@@ -14710,18 +14518,6 @@ private static final long serialVersionUID = 0L;
       if (relatientFortisTokenCcPaymentBuilder_ != null) {
         relatientFortisTokenCcPaymentBuilder_.clear();
       }
-      if (relatientGetPatientBalanceNewBuilder_ != null) {
-        relatientGetPatientBalanceNewBuilder_.clear();
-      }
-      if (relatientGetPatientCcTokensNewBuilder_ != null) {
-        relatientGetPatientCcTokensNewBuilder_.clear();
-      }
-      if (relatientPostPatientTokenNewBuilder_ != null) {
-        relatientPostPatientTokenNewBuilder_.clear();
-      }
-      if (relatientPostPatientBalanceNewBuilder_ != null) {
-        relatientPostPatientBalanceNewBuilder_.clear();
-      }
       if (cybersourceCreditPaymentBuilder_ != null) {
         cybersourceCreditPaymentBuilder_.clear();
       }
@@ -15705,22 +15501,6 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 210 &&
           relatientFortisTokenCcPaymentBuilder_ != null) {
         result.value_ = relatientFortisTokenCcPaymentBuilder_.build();
-      }
-      if (valueCase_ == 211 &&
-          relatientGetPatientBalanceNewBuilder_ != null) {
-        result.value_ = relatientGetPatientBalanceNewBuilder_.build();
-      }
-      if (valueCase_ == 212 &&
-          relatientGetPatientCcTokensNewBuilder_ != null) {
-        result.value_ = relatientGetPatientCcTokensNewBuilder_.build();
-      }
-      if (valueCase_ == 213 &&
-          relatientPostPatientTokenNewBuilder_ != null) {
-        result.value_ = relatientPostPatientTokenNewBuilder_.build();
-      }
-      if (valueCase_ == 214 &&
-          relatientPostPatientBalanceNewBuilder_ != null) {
-        result.value_ = relatientPostPatientBalanceNewBuilder_.build();
       }
       if (valueCase_ == 301 &&
           cybersourceCreditPaymentBuilder_ != null) {
@@ -16948,22 +16728,6 @@ private static final long serialVersionUID = 0L;
         }
         case RELATIENT_FORTIS_TOKEN_CC_PAYMENT: {
           mergeRelatientFortisTokenCcPayment(other.getRelatientFortisTokenCcPayment());
-          break;
-        }
-        case RELATIENT_GET_PATIENT_BALANCE_NEW: {
-          mergeRelatientGetPatientBalanceNew(other.getRelatientGetPatientBalanceNew());
-          break;
-        }
-        case RELATIENT_GET_PATIENT_CC_TOKENS_NEW: {
-          mergeRelatientGetPatientCcTokensNew(other.getRelatientGetPatientCcTokensNew());
-          break;
-        }
-        case RELATIENT_POST_PATIENT_TOKEN_NEW: {
-          mergeRelatientPostPatientTokenNew(other.getRelatientPostPatientTokenNew());
-          break;
-        }
-        case RELATIENT_POST_PATIENT_BALANCE_NEW: {
-          mergeRelatientPostPatientBalanceNew(other.getRelatientPostPatientBalanceNew());
           break;
         }
         case CYBERSOURCE_CREDIT_PAYMENT: {
@@ -18216,34 +17980,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 210;
               break;
             } // case 1682
-            case 1690: {
-              input.readMessage(
-                  getRelatientGetPatientBalanceNewFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 211;
-              break;
-            } // case 1690
-            case 1698: {
-              input.readMessage(
-                  getRelatientGetPatientCcTokensNewFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 212;
-              break;
-            } // case 1698
-            case 1706: {
-              input.readMessage(
-                  getRelatientPostPatientTokenNewFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 213;
-              break;
-            } // case 1706
-            case 1714: {
-              input.readMessage(
-                  getRelatientPostPatientBalanceNewFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 214;
-              break;
-            } // case 1714
             case 2410: {
               input.readMessage(
                   getCybersourceCreditPaymentFieldBuilder().getBuilder(),
@@ -22168,574 +21904,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 210;
       onChanged();
       return relatientFortisTokenCcPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNewOrBuilder> relatientGetPatientBalanceNewBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     * @return Whether the relatientGetPatientBalanceNew field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelatientGetPatientBalanceNew() {
-      return valueCase_ == 211;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     * @return The relatientGetPatientBalanceNew.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew getRelatientGetPatientBalanceNew() {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 211) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-      } else {
-        if (valueCase_ == 211) {
-          return relatientGetPatientBalanceNewBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    public Builder setRelatientGetPatientBalanceNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew value) {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        relatientGetPatientBalanceNewBuilder_.setMessage(value);
-      }
-      valueCase_ = 211;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    public Builder setRelatientGetPatientBalanceNew(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.Builder builderForValue) {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        relatientGetPatientBalanceNewBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 211;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    public Builder mergeRelatientGetPatientBalanceNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew value) {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 211 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 211) {
-          relatientGetPatientBalanceNewBuilder_.mergeFrom(value);
-        } else {
-          relatientGetPatientBalanceNewBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 211;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    public Builder clearRelatientGetPatientBalanceNew() {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 211) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 211) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        relatientGetPatientBalanceNewBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.Builder getRelatientGetPatientBalanceNewBuilder() {
-      return getRelatientGetPatientBalanceNewFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNewOrBuilder getRelatientGetPatientBalanceNewOrBuilder() {
-      if ((valueCase_ == 211) && (relatientGetPatientBalanceNewBuilder_ != null)) {
-        return relatientGetPatientBalanceNewBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 211) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew relatient_get_patient_balance_new = 211 [json_name = "relatientGetPatientBalanceNew"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNewOrBuilder> 
-        getRelatientGetPatientBalanceNewFieldBuilder() {
-      if (relatientGetPatientBalanceNewBuilder_ == null) {
-        if (!(valueCase_ == 211)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.getDefaultInstance();
-        }
-        relatientGetPatientBalanceNewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNewOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientBalanceNew) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 211;
-      onChanged();
-      return relatientGetPatientBalanceNewBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNewOrBuilder> relatientGetPatientCcTokensNewBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     * @return Whether the relatientGetPatientCcTokensNew field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelatientGetPatientCcTokensNew() {
-      return valueCase_ == 212;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     * @return The relatientGetPatientCcTokensNew.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew getRelatientGetPatientCcTokensNew() {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        if (valueCase_ == 212) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-      } else {
-        if (valueCase_ == 212) {
-          return relatientGetPatientCcTokensNewBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    public Builder setRelatientGetPatientCcTokensNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew value) {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        relatientGetPatientCcTokensNewBuilder_.setMessage(value);
-      }
-      valueCase_ = 212;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    public Builder setRelatientGetPatientCcTokensNew(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.Builder builderForValue) {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        relatientGetPatientCcTokensNewBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 212;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    public Builder mergeRelatientGetPatientCcTokensNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew value) {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        if (valueCase_ == 212 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 212) {
-          relatientGetPatientCcTokensNewBuilder_.mergeFrom(value);
-        } else {
-          relatientGetPatientCcTokensNewBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 212;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    public Builder clearRelatientGetPatientCcTokensNew() {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        if (valueCase_ == 212) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 212) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        relatientGetPatientCcTokensNewBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.Builder getRelatientGetPatientCcTokensNewBuilder() {
-      return getRelatientGetPatientCcTokensNewFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNewOrBuilder getRelatientGetPatientCcTokensNewOrBuilder() {
-      if ((valueCase_ == 212) && (relatientGetPatientCcTokensNewBuilder_ != null)) {
-        return relatientGetPatientCcTokensNewBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 212) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew relatient_get_patient_cc_tokens_new = 212 [json_name = "relatientGetPatientCcTokensNew"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNewOrBuilder> 
-        getRelatientGetPatientCcTokensNewFieldBuilder() {
-      if (relatientGetPatientCcTokensNewBuilder_ == null) {
-        if (!(valueCase_ == 212)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.getDefaultInstance();
-        }
-        relatientGetPatientCcTokensNewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNewOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientGetPatientCcTokensNew) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 212;
-      onChanged();
-      return relatientGetPatientCcTokensNewBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNewOrBuilder> relatientPostPatientTokenNewBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     * @return Whether the relatientPostPatientTokenNew field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelatientPostPatientTokenNew() {
-      return valueCase_ == 213;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     * @return The relatientPostPatientTokenNew.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew getRelatientPostPatientTokenNew() {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        if (valueCase_ == 213) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-      } else {
-        if (valueCase_ == 213) {
-          return relatientPostPatientTokenNewBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    public Builder setRelatientPostPatientTokenNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew value) {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        relatientPostPatientTokenNewBuilder_.setMessage(value);
-      }
-      valueCase_ = 213;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    public Builder setRelatientPostPatientTokenNew(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.Builder builderForValue) {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        relatientPostPatientTokenNewBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 213;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    public Builder mergeRelatientPostPatientTokenNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew value) {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        if (valueCase_ == 213 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 213) {
-          relatientPostPatientTokenNewBuilder_.mergeFrom(value);
-        } else {
-          relatientPostPatientTokenNewBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 213;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    public Builder clearRelatientPostPatientTokenNew() {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        if (valueCase_ == 213) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 213) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        relatientPostPatientTokenNewBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.Builder getRelatientPostPatientTokenNewBuilder() {
-      return getRelatientPostPatientTokenNewFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNewOrBuilder getRelatientPostPatientTokenNewOrBuilder() {
-      if ((valueCase_ == 213) && (relatientPostPatientTokenNewBuilder_ != null)) {
-        return relatientPostPatientTokenNewBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 213) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientTokenNew relatient_post_patient_token_new = 213 [json_name = "relatientPostPatientTokenNew"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNewOrBuilder> 
-        getRelatientPostPatientTokenNewFieldBuilder() {
-      if (relatientPostPatientTokenNewBuilder_ == null) {
-        if (!(valueCase_ == 213)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.getDefaultInstance();
-        }
-        relatientPostPatientTokenNewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNewOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientTokenNew) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 213;
-      onChanged();
-      return relatientPostPatientTokenNewBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNewOrBuilder> relatientPostPatientBalanceNewBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     * @return Whether the relatientPostPatientBalanceNew field is set.
-     */
-    @java.lang.Override
-    public boolean hasRelatientPostPatientBalanceNew() {
-      return valueCase_ == 214;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     * @return The relatientPostPatientBalanceNew.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew getRelatientPostPatientBalanceNew() {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 214) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
-      } else {
-        if (valueCase_ == 214) {
-          return relatientPostPatientBalanceNewBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    public Builder setRelatientPostPatientBalanceNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew value) {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        relatientPostPatientBalanceNewBuilder_.setMessage(value);
-      }
-      valueCase_ = 214;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    public Builder setRelatientPostPatientBalanceNew(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.Builder builderForValue) {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        relatientPostPatientBalanceNewBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 214;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    public Builder mergeRelatientPostPatientBalanceNew(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew value) {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 214 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 214) {
-          relatientPostPatientBalanceNewBuilder_.mergeFrom(value);
-        } else {
-          relatientPostPatientBalanceNewBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 214;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    public Builder clearRelatientPostPatientBalanceNew() {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        if (valueCase_ == 214) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 214) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        relatientPostPatientBalanceNewBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.Builder getRelatientPostPatientBalanceNewBuilder() {
-      return getRelatientPostPatientBalanceNewFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNewOrBuilder getRelatientPostPatientBalanceNewOrBuilder() {
-      if ((valueCase_ == 214) && (relatientPostPatientBalanceNewBuilder_ != null)) {
-        return relatientPostPatientBalanceNewBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 214) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew relatient_post_patient_balance_new = 214 [json_name = "relatientPostPatientBalanceNew"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNewOrBuilder> 
-        getRelatientPostPatientBalanceNewFieldBuilder() {
-      if (relatientPostPatientBalanceNewBuilder_ == null) {
-        if (!(valueCase_ == 214)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.getDefaultInstance();
-        }
-        relatientPostPatientBalanceNewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNewOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostPatientBalanceNew) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 214;
-      onChanged();
-      return relatientPostPatientBalanceNewBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -58385,7 +57553,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1148
+     *     See api/commons/integrations/integrations.proto;l=1140
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -58395,7 +57563,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1148
+     *     See api/commons/integrations/integrations.proto;l=1140
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -58531,7 +57699,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1149
+     *     See api/commons/integrations/integrations.proto;l=1141
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -58541,7 +57709,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1149
+     *     See api/commons/integrations/integrations.proto;l=1141
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -58677,7 +57845,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1150
+     *     See api/commons/integrations/integrations.proto;l=1142
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -58687,7 +57855,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1150
+     *     See api/commons/integrations/integrations.proto;l=1142
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -58823,7 +57991,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1151
+     *     See api/commons/integrations/integrations.proto;l=1143
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -58833,7 +58001,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1151
+     *     See api/commons/integrations/integrations.proto;l=1143
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -58969,7 +58137,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1152
+     *     See api/commons/integrations/integrations.proto;l=1144
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -58979,7 +58147,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1152
+     *     See api/commons/integrations/integrations.proto;l=1144
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -59115,7 +58283,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1153
+     *     See api/commons/integrations/integrations.proto;l=1145
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -59125,7 +58293,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1153
+     *     See api/commons/integrations/integrations.proto;l=1145
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -59261,7 +58429,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1154
+     *     See api/commons/integrations/integrations.proto;l=1146
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -59271,7 +58439,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1154
+     *     See api/commons/integrations/integrations.proto;l=1146
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
