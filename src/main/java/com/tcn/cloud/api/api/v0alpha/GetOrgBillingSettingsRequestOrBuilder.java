@@ -15,7 +15,7 @@ public interface GetOrgBillingSettingsRequestOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.GetOrgBillingSettingsRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=6192
+   *     See api/v0alpha/org.proto;l=6194
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -27,7 +27,7 @@ public interface GetOrgBillingSettingsRequestOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.GetOrgBillingSettingsRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=6192
+   *     See api/v0alpha/org.proto;l=6194
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
