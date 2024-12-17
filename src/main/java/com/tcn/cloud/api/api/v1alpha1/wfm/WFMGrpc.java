@@ -5567,6 +5567,316 @@ public final class WFMGrpc {
     return getRemoveAgentFromScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> getCreatePublishedShiftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePublishedShift",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> getCreatePublishedShiftMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> getCreatePublishedShiftMethod;
+    if ((getCreatePublishedShiftMethod = WFMGrpc.getCreatePublishedShiftMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreatePublishedShiftMethod = WFMGrpc.getCreatePublishedShiftMethod) == null) {
+          WFMGrpc.getCreatePublishedShiftMethod = getCreatePublishedShiftMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePublishedShift"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreatePublishedShift"))
+              .build();
+        }
+      }
+    }
+    return getCreatePublishedShiftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> getCreatePublishedShiftWithSegmentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePublishedShiftWithSegments",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> getCreatePublishedShiftWithSegmentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> getCreatePublishedShiftWithSegmentsMethod;
+    if ((getCreatePublishedShiftWithSegmentsMethod = WFMGrpc.getCreatePublishedShiftWithSegmentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreatePublishedShiftWithSegmentsMethod = WFMGrpc.getCreatePublishedShiftWithSegmentsMethod) == null) {
+          WFMGrpc.getCreatePublishedShiftWithSegmentsMethod = getCreatePublishedShiftWithSegmentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePublishedShiftWithSegments"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreatePublishedShiftWithSegments"))
+              .build();
+        }
+      }
+    }
+    return getCreatePublishedShiftWithSegmentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> getUpdatePublishedShiftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdatePublishedShift",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> getUpdatePublishedShiftMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> getUpdatePublishedShiftMethod;
+    if ((getUpdatePublishedShiftMethod = WFMGrpc.getUpdatePublishedShiftMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdatePublishedShiftMethod = WFMGrpc.getUpdatePublishedShiftMethod) == null) {
+          WFMGrpc.getUpdatePublishedShiftMethod = getUpdatePublishedShiftMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePublishedShift"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdatePublishedShift"))
+              .build();
+        }
+      }
+    }
+    return getUpdatePublishedShiftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> getUpdatePublishedShiftWithSegmentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdatePublishedShiftWithSegments",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> getUpdatePublishedShiftWithSegmentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> getUpdatePublishedShiftWithSegmentsMethod;
+    if ((getUpdatePublishedShiftWithSegmentsMethod = WFMGrpc.getUpdatePublishedShiftWithSegmentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdatePublishedShiftWithSegmentsMethod = WFMGrpc.getUpdatePublishedShiftWithSegmentsMethod) == null) {
+          WFMGrpc.getUpdatePublishedShiftWithSegmentsMethod = getUpdatePublishedShiftWithSegmentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePublishedShiftWithSegments"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdatePublishedShiftWithSegments"))
+              .build();
+        }
+      }
+    }
+    return getUpdatePublishedShiftWithSegmentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> getSplitPublishedShiftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SplitPublishedShift",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> getSplitPublishedShiftMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> getSplitPublishedShiftMethod;
+    if ((getSplitPublishedShiftMethod = WFMGrpc.getSplitPublishedShiftMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSplitPublishedShiftMethod = WFMGrpc.getSplitPublishedShiftMethod) == null) {
+          WFMGrpc.getSplitPublishedShiftMethod = getSplitPublishedShiftMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SplitPublishedShift"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SplitPublishedShift"))
+              .build();
+        }
+      }
+    }
+    return getSplitPublishedShiftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> getSwapPublishedShiftsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SwapPublishedShifts",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> getSwapPublishedShiftsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> getSwapPublishedShiftsMethod;
+    if ((getSwapPublishedShiftsMethod = WFMGrpc.getSwapPublishedShiftsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSwapPublishedShiftsMethod = WFMGrpc.getSwapPublishedShiftsMethod) == null) {
+          WFMGrpc.getSwapPublishedShiftsMethod = getSwapPublishedShiftsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SwapPublishedShifts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SwapPublishedShifts"))
+              .build();
+        }
+      }
+    }
+    return getSwapPublishedShiftsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> getDeletePublishedShiftsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeletePublishedShifts",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> getDeletePublishedShiftsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> getDeletePublishedShiftsMethod;
+    if ((getDeletePublishedShiftsMethod = WFMGrpc.getDeletePublishedShiftsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeletePublishedShiftsMethod = WFMGrpc.getDeletePublishedShiftsMethod) == null) {
+          WFMGrpc.getDeletePublishedShiftsMethod = getDeletePublishedShiftsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePublishedShifts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeletePublishedShifts"))
+              .build();
+        }
+      }
+    }
+    return getDeletePublishedShiftsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> getReplaceAgentOnPublishedScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReplaceAgentOnPublishedSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> getReplaceAgentOnPublishedScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> getReplaceAgentOnPublishedScheduleMethod;
+    if ((getReplaceAgentOnPublishedScheduleMethod = WFMGrpc.getReplaceAgentOnPublishedScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getReplaceAgentOnPublishedScheduleMethod = WFMGrpc.getReplaceAgentOnPublishedScheduleMethod) == null) {
+          WFMGrpc.getReplaceAgentOnPublishedScheduleMethod = getReplaceAgentOnPublishedScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReplaceAgentOnPublishedSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ReplaceAgentOnPublishedSchedule"))
+              .build();
+        }
+      }
+    }
+    return getReplaceAgentOnPublishedScheduleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> getRemoveAgentFromPublishedScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveAgentFromPublishedSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> getRemoveAgentFromPublishedScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> getRemoveAgentFromPublishedScheduleMethod;
+    if ((getRemoveAgentFromPublishedScheduleMethod = WFMGrpc.getRemoveAgentFromPublishedScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getRemoveAgentFromPublishedScheduleMethod = WFMGrpc.getRemoveAgentFromPublishedScheduleMethod) == null) {
+          WFMGrpc.getRemoveAgentFromPublishedScheduleMethod = getRemoveAgentFromPublishedScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveAgentFromPublishedSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("RemoveAgentFromPublishedSchedule"))
+              .build();
+        }
+      }
+    }
+    return getRemoveAgentFromPublishedScheduleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> getCopyShiftsToPublishedScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyShiftsToPublishedSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> getCopyShiftsToPublishedScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> getCopyShiftsToPublishedScheduleMethod;
+    if ((getCopyShiftsToPublishedScheduleMethod = WFMGrpc.getCopyShiftsToPublishedScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCopyShiftsToPublishedScheduleMethod = WFMGrpc.getCopyShiftsToPublishedScheduleMethod) == null) {
+          WFMGrpc.getCopyShiftsToPublishedScheduleMethod = getCopyShiftsToPublishedScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyShiftsToPublishedSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CopyShiftsToPublishedSchedule"))
+              .build();
+        }
+      }
+    }
+    return getCopyShiftsToPublishedScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> getCreateAgentLeavePetitionMethod;
 
@@ -8558,6 +8868,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes draft shifts. To delete published shifts use the DeletePublishedShifts endpoint.
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -8888,6 +9199,7 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the draft schedule. Published shifts require the CreatePublishedShift endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -8904,6 +9216,7 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the draft schedule. Published shifts with segments require the CreatePublishedShiftWithSegments endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -8921,6 +9234,7 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the draft schedule. To split a published shift use the SplitPublishedShift endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -8938,9 +9252,11 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -8966,9 +9282,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
@@ -8984,9 +9303,11 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShiftWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request,
@@ -9000,6 +9321,7 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
+     * This endpoint can only copy shifts to a draft schedule. To copy shifts to the published schedule use the CopyShiftsToPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -9566,6 +9888,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the draft schedule. To replace the agent on a published schedule use the ReplaceAgentOnPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -9581,6 +9904,7 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from a draft schedule. To remove agents from the published schedule use the RemoveAgentFromPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -9589,6 +9913,178 @@ public final class WFMGrpc {
     default void removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a published shift instance for the org sending the request with the provided parameters, with shift segments matching &#64;shift_template_sid.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the published schedule. Draft shifts require the CreateShiftInstanceV2 endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    default void createPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePublishedShiftMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    default void createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePublishedShiftWithSegmentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    default void updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePublishedShiftMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Runs diagnostics on the given published &#64;shift_instance for the org sending the request.
+     * If &#64;ignore_diagnostics_errors is True, the shift will be updated regardless of diagnostic errors and any diagnostics will be returned as warnings.
+     * Otherwise, the shift will only be updated if there are no diagnostic errors.
+     * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
+     * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
+     * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    default void updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePublishedShiftWithSegmentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Splits the published &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the published schedule. To split a draft shift use the SplitShiftInstance endpoint.
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    default void splitPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSplitPublishedShiftMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
+     * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when swapping the shift instances.
+     * </pre>
+     */
+    default void swapPublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSwapPublishedShiftsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the published shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes published shifts. To delete draft shifts use the DeleteShiftInstances endpoint.
+     * Errors:
+     *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
+     *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
+     *   -grpc.Internal: error occurs when removing the shift instances.
+     * </pre>
+     */
+    default void deletePublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePublishedShiftsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    default void replaceAgentOnPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReplaceAgentOnPublishedScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from published schedule over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from the published schedule. To remove agents from a draft schedule use the RemoveAgentFromSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    default void removeAgentFromPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromPublishedScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
+     * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
+     *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
+     * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when copying the shift instances.
+     * </pre>
+     */
+    default void copyShiftsToPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyShiftsToPublishedScheduleMethod(), responseObserver);
     }
 
     /**
@@ -12063,6 +12559,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes draft shifts. To delete published shifts use the DeletePublishedShifts endpoint.
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -12413,6 +12910,7 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the draft schedule. Published shifts require the CreatePublishedShift endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -12430,6 +12928,7 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the draft schedule. Published shifts with segments require the CreatePublishedShiftWithSegments endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -12448,6 +12947,7 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the draft schedule. To split a published shift use the SplitPublishedShift endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -12466,9 +12966,11 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -12496,9 +12998,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
@@ -12515,9 +13020,11 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShiftWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request,
@@ -12532,6 +13039,7 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
+     * This endpoint can only copy shifts to a draft schedule. To copy shifts to the published schedule use the CopyShiftsToPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -13136,6 +13644,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the draft schedule. To replace the agent on a published schedule use the ReplaceAgentOnPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -13152,6 +13661,7 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from a draft schedule. To remove agents from the published schedule use the RemoveAgentFromPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -13161,6 +13671,188 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a published shift instance for the org sending the request with the provided parameters, with shift segments matching &#64;shift_template_sid.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the published schedule. Draft shifts require the CreateShiftInstanceV2 endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public void createPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePublishedShiftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public void createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePublishedShiftWithSegmentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public void updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdatePublishedShiftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Runs diagnostics on the given published &#64;shift_instance for the org sending the request.
+     * If &#64;ignore_diagnostics_errors is True, the shift will be updated regardless of diagnostic errors and any diagnostics will be returned as warnings.
+     * Otherwise, the shift will only be updated if there are no diagnostic errors.
+     * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
+     * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
+     * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public void updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdatePublishedShiftWithSegmentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Splits the published &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the published schedule. To split a draft shift use the SplitShiftInstance endpoint.
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public void splitPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSplitPublishedShiftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
+     * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when swapping the shift instances.
+     * </pre>
+     */
+    public void swapPublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSwapPublishedShiftsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the published shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes published shifts. To delete draft shifts use the DeleteShiftInstances endpoint.
+     * Errors:
+     *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
+     *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
+     *   -grpc.Internal: error occurs when removing the shift instances.
+     * </pre>
+     */
+    public void deletePublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeletePublishedShiftsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public void replaceAgentOnPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReplaceAgentOnPublishedScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from published schedule over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from the published schedule. To remove agents from a draft schedule use the RemoveAgentFromSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public void removeAgentFromPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveAgentFromPublishedScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
+     * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
+     *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
+     * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when copying the shift instances.
+     * </pre>
+     */
+    public void copyShiftsToPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyShiftsToPublishedScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -15553,6 +16245,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes draft shifts. To delete published shifts use the DeletePublishedShifts endpoint.
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -15883,6 +16576,7 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the draft schedule. Published shifts require the CreatePublishedShift endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -15899,6 +16593,7 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the draft schedule. Published shifts with segments require the CreatePublishedShiftWithSegments endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -15916,6 +16611,7 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the draft schedule. To split a published shift use the SplitPublishedShift endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -15933,9 +16629,11 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -15961,9 +16659,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
@@ -15979,9 +16680,11 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShiftWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsResponse updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request) {
@@ -15995,6 +16698,7 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
+     * This endpoint can only copy shifts to a draft schedule. To copy shifts to the published schedule use the CopyShiftsToPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -16561,6 +17265,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the draft schedule. To replace the agent on a published schedule use the ReplaceAgentOnPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -16576,6 +17281,7 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from a draft schedule. To remove agents from the published schedule use the RemoveAgentFromPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -16584,6 +17290,178 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveAgentFromScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a published shift instance for the org sending the request with the provided parameters, with shift segments matching &#64;shift_template_sid.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the published schedule. Draft shifts require the CreateShiftInstanceV2 endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse createPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePublishedShiftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse createPublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePublishedShiftWithSegmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdatePublishedShiftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Runs diagnostics on the given published &#64;shift_instance for the org sending the request.
+     * If &#64;ignore_diagnostics_errors is True, the shift will be updated regardless of diagnostic errors and any diagnostics will be returned as warnings.
+     * Otherwise, the shift will only be updated if there are no diagnostic errors.
+     * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
+     * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
+     * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdatePublishedShiftWithSegmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Splits the published &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the published schedule. To split a draft shift use the SplitShiftInstance endpoint.
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse splitPublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSplitPublishedShiftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
+     * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when swapping the shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse swapPublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSwapPublishedShiftsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the published shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes published shifts. To delete draft shifts use the DeleteShiftInstances endpoint.
+     * Errors:
+     *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
+     *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
+     *   -grpc.Internal: error occurs when removing the shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse deletePublishedShifts(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeletePublishedShiftsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse replaceAgentOnPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReplaceAgentOnPublishedScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from published schedule over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from the published schedule. To remove agents from a draft schedule use the RemoveAgentFromSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse removeAgentFromPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveAgentFromPublishedScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
+     * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
+     *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
+     * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when copying the shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse copyShiftsToPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyShiftsToPublishedScheduleMethod(), getCallOptions(), request);
     }
 
     /**
@@ -18942,6 +19820,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes draft shifts. To delete published shifts use the DeletePublishedShifts endpoint.
      * Errors:
      *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
      *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
@@ -19292,6 +20171,7 @@ public final class WFMGrpc {
      * Creates a shift instance for the org sending the request with the provided parameters.
      * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
      * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the draft schedule. Published shifts require the CreatePublishedShift endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
@@ -19309,6 +20189,7 @@ public final class WFMGrpc {
      * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
      * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
      *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the draft schedule. Published shifts with segments require the CreatePublishedShiftWithSegments endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
      *   -grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
@@ -19327,6 +20208,7 @@ public final class WFMGrpc {
      * Any shift segments will be split between the two shift instances at &#64;time_to_split.
      * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
      *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the draft schedule. To split a published shift use the SplitPublishedShift endpoint.
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
      *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
@@ -19345,9 +20227,11 @@ public final class WFMGrpc {
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -19375,9 +20259,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> updateShiftInstanceV2(
@@ -19394,9 +20281,11 @@ public final class WFMGrpc {
      * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
      * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
      * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShiftWithSegments endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsResponse> updateShiftInstanceWithSegments(
@@ -19411,6 +20300,7 @@ public final class WFMGrpc {
      * If there are any overlap conflicts on &#64;destination_schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
      * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
+     * This endpoint can only copy shifts to a draft schedule. To copy shifts to the published schedule use the CopyShiftsToPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.NotFound: the &#64;shift_instance_sids or &#64;destination_schedule does not exist for the org sending the request.
@@ -20015,6 +20905,7 @@ public final class WFMGrpc {
      * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add for the given parameters and the org sending the request.
      * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
      * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the draft schedule. To replace the agent on a published schedule use the ReplaceAgentOnPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
@@ -20031,6 +20922,7 @@ public final class WFMGrpc {
      * Removes the &#64;wfm_agent_sid from &#64;schedule_selector over &#64;datetime_range for the org sending the request.
      * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
      * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from a draft schedule. To remove agents from the published schedule use the RemoveAgentFromPublishedSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
@@ -20040,6 +20932,188 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveAgentFromScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a published shift instance for the org sending the request with the provided parameters, with shift segments matching &#64;shift_template_sid.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Can only create shifts for the published schedule. Draft shifts require the CreateShiftInstanceV2 endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse> createPublishedShift(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePublishedShiftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;shift_instance with any member shift segments and shift segment call stats for the org sending the request.
+     * If &#64;ignore_diagnostics_errors any diagnostics encountered will be returned as warnings, and the shift will still be created.
+     *   Otherwise, any diagnostics triggered by the given &#64;shift_instance will be returned and the shift will not be created.
+     * Can only create shifts for the published schedule. Draft shifts with segments require the CreateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the fields referenced in &#64;shift_instance or its member shift segments don't exist for the org.
+     *   - grpc.Internal: error occurs when creating the shift instance or its members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse> createPublishedShiftWithSegments(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePublishedShiftWithSegmentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> updatePublishedShift(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdatePublishedShiftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Runs diagnostics on the given published &#64;shift_instance for the org sending the request.
+     * If &#64;ignore_diagnostics_errors is True, the shift will be updated regardless of diagnostic errors and any diagnostics will be returned as warnings.
+     * Otherwise, the shift will only be updated if there are no diagnostic errors.
+     * Only the &#64;start_datetime, &#64;is_locked, &#64;width_in_minutes and &#64;wfm_agent_sid fields of the shift will be updated.
+     * Any existing shift segments belonging to &#64;shift_instance will be deleted and replaced with the ones in the given &#64;shift_instance.
+     * If no segments are provided, the existing segments will still be deleted and the instances will be left without any.
+     * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceWithSegments endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> updatePublishedShiftWithSegments(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdatePublishedShiftWithSegmentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Splits the published &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Can only split a shift on the published schedule. To split a draft shift use the SplitShiftInstance endpoint.
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse> splitPublishedShift(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSplitPublishedShiftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
+     * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
+     * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when swapping the shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse> swapPublishedShifts(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSwapPublishedShiftsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the published shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * Only deletes published shifts. To delete draft shifts use the DeleteShiftInstances endpoint.
+     * Errors:
+     *   -grpc.Invalid: the &#64;shift_instance_sids are invalid for the org making the request.
+     *   -grpc.NotFound: the shift instances with the given &#64;shift_instance_sids don't exist.
+     *   -grpc.Internal: error occurs when removing the shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse> deletePublishedShifts(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeletePublishedShiftsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces &#64;wfm_agent_sid_to_remove with &#64;wfm_agent_sid_to_add on the shifts for the given parameters on the published schedule for the org sending the request.
+     * If &#64;skip_overlapping_shifts, shifts with an overlap conflict will be skipped, otherwise overlap conflicts will cause a diagnostic to be returned.
+     * Does not enforce skill proficiencies. To check skill proficiencies for shift replacement use ListValidAgentsForReplacement.
+     * Only replaces the agent on the published schedule. To replace the agent on a draft schedule use the ReplaceAgentOnScheduleV1 endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when replacing the &#64;wfm_agent_sid_to_remove.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse> replaceAgentOnPublishedSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReplaceAgentOnPublishedScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Removes the &#64;wfm_agent_sid from published schedule over &#64;datetime_range for the org sending the request.
+     * Creates a new unassigned agent with the same active agent group associations as &#64;wfm_agent_sid for &#64;schedule_scenario_sid.
+     * The unassigned agent will be assigned to shifts belonging to &#64;wfm_agent_sid, returning newly created unassigned agent's SID and the updated shifts.
+     * Only removes agents from the published schedule. To remove agents from a draft schedule use the RemoveAgentFromSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the unassigned agent or updating the shifts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse> removeAgentFromPublishedSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveAgentFromPublishedScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
+     * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
+     *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
+     * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: the &#64;shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when copying the shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse> copyShiftsToPublishedSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyShiftsToPublishedScheduleMethod(), getCallOptions()), request);
     }
 
     /**
@@ -20824,44 +21898,54 @@ public final class WFMGrpc {
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 176;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 177;
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 178;
-  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 179;
-  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 180;
-  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 181;
-  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 182;
-  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 183;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 184;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 185;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 186;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 187;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 188;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 189;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 190;
-  private static final int METHODID_CREATE_RGBA_COLOR = 191;
-  private static final int METHODID_LIST_RGBA_COLORS = 192;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 193;
-  private static final int METHODID_DELETE_RGBA_COLOR = 194;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 195;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 196;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 197;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 198;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 199;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 200;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 201;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 202;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 203;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 204;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 205;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 206;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 207;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 208;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 209;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 210;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 211;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 212;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 213;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 214;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 215;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 216;
+  private static final int METHODID_CREATE_PUBLISHED_SHIFT = 179;
+  private static final int METHODID_CREATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 180;
+  private static final int METHODID_UPDATE_PUBLISHED_SHIFT = 181;
+  private static final int METHODID_UPDATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 182;
+  private static final int METHODID_SPLIT_PUBLISHED_SHIFT = 183;
+  private static final int METHODID_SWAP_PUBLISHED_SHIFTS = 184;
+  private static final int METHODID_DELETE_PUBLISHED_SHIFTS = 185;
+  private static final int METHODID_REPLACE_AGENT_ON_PUBLISHED_SCHEDULE = 186;
+  private static final int METHODID_REMOVE_AGENT_FROM_PUBLISHED_SCHEDULE = 187;
+  private static final int METHODID_COPY_SHIFTS_TO_PUBLISHED_SCHEDULE = 188;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 189;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 190;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 191;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 192;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 193;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 194;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 195;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 196;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 197;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 198;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 199;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 200;
+  private static final int METHODID_CREATE_RGBA_COLOR = 201;
+  private static final int METHODID_LIST_RGBA_COLORS = 202;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 203;
+  private static final int METHODID_DELETE_RGBA_COLOR = 204;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 205;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 206;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 207;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 208;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 209;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 210;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 211;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 212;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 213;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 214;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 215;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 216;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 217;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 218;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 219;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 220;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 221;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 222;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 223;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 224;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 225;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 226;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -21595,6 +22679,46 @@ public final class WFMGrpc {
         case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
           serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PUBLISHED_SHIFT:
+          serviceImpl.createPublishedShift((com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PUBLISHED_SHIFT_WITH_SEGMENTS:
+          serviceImpl.createPublishedShiftWithSegments((com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PUBLISHED_SHIFT:
+          serviceImpl.updatePublishedShift((com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PUBLISHED_SHIFT_WITH_SEGMENTS:
+          serviceImpl.updatePublishedShiftWithSegments((com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse>) responseObserver);
+          break;
+        case METHODID_SPLIT_PUBLISHED_SHIFT:
+          serviceImpl.splitPublishedShift((com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse>) responseObserver);
+          break;
+        case METHODID_SWAP_PUBLISHED_SHIFTS:
+          serviceImpl.swapPublishedShifts((com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_PUBLISHED_SHIFTS:
+          serviceImpl.deletePublishedShifts((com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse>) responseObserver);
+          break;
+        case METHODID_REPLACE_AGENT_ON_PUBLISHED_SCHEDULE:
+          serviceImpl.replaceAgentOnPublishedSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_AGENT_FROM_PUBLISHED_SCHEDULE:
+          serviceImpl.removeAgentFromPublishedSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse>) responseObserver);
+          break;
+        case METHODID_COPY_SHIFTS_TO_PUBLISHED_SCHEDULE:
+          serviceImpl.copyShiftsToPublishedSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse>) responseObserver);
           break;
         case METHODID_CREATE_AGENT_LEAVE_PETITION:
           serviceImpl.createAgentLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest) request,
@@ -23020,6 +24144,76 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
                 service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
         .addMethod(
+          getCreatePublishedShiftMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftResponse>(
+                service, METHODID_CREATE_PUBLISHED_SHIFT)))
+        .addMethod(
+          getCreatePublishedShiftWithSegmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePublishedShiftWithSegmentsResponse>(
+                service, METHODID_CREATE_PUBLISHED_SHIFT_WITH_SEGMENTS)))
+        .addMethod(
+          getUpdatePublishedShiftMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse>(
+                service, METHODID_UPDATE_PUBLISHED_SHIFT)))
+        .addMethod(
+          getUpdatePublishedShiftWithSegmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse>(
+                service, METHODID_UPDATE_PUBLISHED_SHIFT_WITH_SEGMENTS)))
+        .addMethod(
+          getSplitPublishedShiftMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SplitPublishedShiftResponse>(
+                service, METHODID_SPLIT_PUBLISHED_SHIFT)))
+        .addMethod(
+          getSwapPublishedShiftsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SwapPublishedShiftsResponse>(
+                service, METHODID_SWAP_PUBLISHED_SHIFTS)))
+        .addMethod(
+          getDeletePublishedShiftsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePublishedShiftsResponse>(
+                service, METHODID_DELETE_PUBLISHED_SHIFTS)))
+        .addMethod(
+          getReplaceAgentOnPublishedScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ReplaceAgentOnPublishedScheduleResponse>(
+                service, METHODID_REPLACE_AGENT_ON_PUBLISHED_SCHEDULE)))
+        .addMethod(
+          getRemoveAgentFromPublishedScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromPublishedScheduleResponse>(
+                service, METHODID_REMOVE_AGENT_FROM_PUBLISHED_SCHEDULE)))
+        .addMethod(
+          getCopyShiftsToPublishedScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleResponse>(
+                service, METHODID_COPY_SHIFTS_TO_PUBLISHED_SCHEDULE)))
+        .addMethod(
           getCreateAgentLeavePetitionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -23512,6 +24706,16 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleMethod())
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
+              .addMethod(getCreatePublishedShiftMethod())
+              .addMethod(getCreatePublishedShiftWithSegmentsMethod())
+              .addMethod(getUpdatePublishedShiftMethod())
+              .addMethod(getUpdatePublishedShiftWithSegmentsMethod())
+              .addMethod(getSplitPublishedShiftMethod())
+              .addMethod(getSwapPublishedShiftsMethod())
+              .addMethod(getDeletePublishedShiftsMethod())
+              .addMethod(getReplaceAgentOnPublishedScheduleMethod())
+              .addMethod(getRemoveAgentFromPublishedScheduleMethod())
+              .addMethod(getCopyShiftsToPublishedScheduleMethod())
               .addMethod(getCreateAgentLeavePetitionMethod())
               .addMethod(getListAgentLeavePetitionsMethod())
               .addMethod(getArchiveAgentLeavePetitionMethod())
