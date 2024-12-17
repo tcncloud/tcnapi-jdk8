@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An optional field indicating the node to get shifts from.
-   * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+   * Otherwise shifts will be updated for all nodes on the published schedule.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An optional field indicating the node to get shifts from.
-   * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+   * Otherwise shifts will be updated for all nodes on the published schedule.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An optional field indicating the node to get shifts from.
-   * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+   * Otherwise shifts will be updated for all nodes on the published schedule.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -818,7 +818,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -858,7 +858,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -900,7 +900,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * An optional field indicating the node to get shifts from.
-     * Otherwise shifts will be updated for all nodes on the &#64;schedule_selector.
+     * Otherwise shifts will be updated for all nodes on the published schedule.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
