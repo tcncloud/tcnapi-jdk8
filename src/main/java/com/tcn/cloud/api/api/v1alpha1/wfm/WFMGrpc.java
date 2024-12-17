@@ -9282,6 +9282,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -9949,6 +9950,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
      * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -12991,6 +12993,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -13702,6 +13705,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
      * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -16645,6 +16649,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -17312,6 +17317,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
      * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -20238,6 +20244,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
      * Can only update a shift on the draft schedule. To update a published shift use the UpdatePublishedShift endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
@@ -20949,6 +20956,7 @@ public final class WFMGrpc {
      * <pre>
      * Updates a shift instance on the published schedule for the org sending the request with the provided parameters.
      * Can only update a shift on the published schedule. To update a draft shift use the UpdateShiftInstanceV2 endpoint.
+     * If the width of the shift is changed, the lengths of the shift segments will be adjusted proportionally.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
