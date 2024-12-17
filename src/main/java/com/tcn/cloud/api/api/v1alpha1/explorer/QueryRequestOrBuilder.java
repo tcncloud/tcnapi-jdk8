@@ -106,6 +106,33 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
+   */
+  boolean hasInsightBody();
+  /**
+   * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return The insightBody.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody();
+  /**
+   * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder();
+
+  /**
+   * <pre>
    * org_id for ownership of the data
    * </pre>
    *

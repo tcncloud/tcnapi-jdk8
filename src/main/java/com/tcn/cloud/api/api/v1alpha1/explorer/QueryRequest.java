@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PIPELINE(3),
     PRQL(4),
+    INSIGHT_BODY(13),
     QUERY_NOT_SET(0);
     private final int value;
     private QueryCase(int value) {
@@ -77,6 +78,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 3: return PIPELINE;
         case 4: return PRQL;
+        case 13: return INSIGHT_BODY;
         case 0: return QUERY_NOT_SET;
         default: return null;
       }
@@ -291,6 +293,49 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int INSIGHT_BODY_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
+   */
+  @java.lang.Override
+  public boolean hasInsightBody() {
+    return queryCase_ == 13;
+  }
+  /**
+   * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return The insightBody.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody() {
+    if (queryCase_ == 13) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * the insight body pipeline node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder() {
+    if (queryCase_ == 13) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
   }
 
   public static final int ORG_IDS_FIELD_NUMBER = 5;
@@ -679,6 +724,9 @@ private static final long serialVersionUID = 0L;
     if (format_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
       output.writeEnum(12, format_);
     }
+    if (queryCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -734,6 +782,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, format_);
     }
+    if (queryCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -786,6 +838,10 @@ private static final long serialVersionUID = 0L;
         if (!getPrql()
             .equals(other.getPrql())) return false;
         break;
+      case 13:
+        if (!getInsightBody()
+            .equals(other.getInsightBody())) return false;
+        break;
       case 0:
       default:
     }
@@ -836,6 +892,10 @@ private static final long serialVersionUID = 0L;
       case 4:
         hash = (37 * hash) + PRQL_FIELD_NUMBER;
         hash = (53 * hash) + getPrql().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + INSIGHT_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getInsightBody().hashCode();
         break;
       case 0:
       default:
@@ -977,6 +1037,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       datasourceName_ = "";
       datasourceType_ = 0;
+      if (insightBodyBuilder_ != null) {
+        insightBodyBuilder_.clear();
+      }
       orgIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       startTime_ = null;
@@ -1040,35 +1103,35 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.datasourceType_ = datasourceType_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         orgIds_.makeImmutable();
         result.orgIds_ = orgIds_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.timezone_ = timezone_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.pipelineParameters_ = pipelineParametersBuilder_ == null
             ? pipelineParameters_
             : pipelineParametersBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.uiTraceId_ = uiTraceId_;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.comment_ = comment_;
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.format_ = format_;
       }
     }
@@ -1076,6 +1139,10 @@ private static final long serialVersionUID = 0L;
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest result) {
       result.queryCase_ = queryCase_;
       result.query_ = this.query_;
+      if (queryCase_ == 13 &&
+          insightBodyBuilder_ != null) {
+        result.query_ = insightBodyBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1133,7 +1200,7 @@ private static final long serialVersionUID = 0L;
       if (!other.orgIds_.isEmpty()) {
         if (orgIds_.isEmpty()) {
           orgIds_ = other.orgIds_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
         } else {
           ensureOrgIdsIsMutable();
           orgIds_.addAll(other.orgIds_);
@@ -1148,7 +1215,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTimezone().isEmpty()) {
         timezone_ = other.timezone_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.hasPipelineParameters()) {
@@ -1156,12 +1223,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUiTraceId().isEmpty()) {
         uiTraceId_ = other.uiTraceId_;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getComment().isEmpty()) {
         comment_ = other.comment_;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.format_ != 0) {
@@ -1178,6 +1245,10 @@ private static final long serialVersionUID = 0L;
           queryCase_ = 4;
           query_ = other.query_;
           onChanged();
+          break;
+        }
+        case INSIGHT_BODY: {
+          mergeInsightBody(other.getInsightBody());
           break;
         }
         case QUERY_NOT_SET: {
@@ -1242,43 +1313,50 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
             case 58: {
               input.readMessage(
                   getEndTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 58
             case 66: {
               timezone_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 66
             case 74: {
               input.readMessage(
                   getPipelineParametersFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 74
             case 82: {
               uiTraceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 82
             case 90: {
               comment_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             } // case 90
             case 96: {
               format_ = input.readEnum();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               break;
             } // case 96
+            case 106: {
+              input.readMessage(
+                  getInsightBodyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              queryCase_ = 13;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1710,13 +1788,191 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> insightBodyBuilder_;
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     * @return Whether the insightBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsightBody() {
+      return queryCase_ == 13;
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     * @return The insightBody.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      } else {
+        if (queryCase_ == 13) {
+          return insightBodyBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    public Builder setInsightBody(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        query_ = value;
+        onChanged();
+      } else {
+        insightBodyBuilder_.setMessage(value);
+      }
+      queryCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    public Builder setInsightBody(
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder builderForValue) {
+      if (insightBodyBuilder_ == null) {
+        query_ = builderForValue.build();
+        onChanged();
+      } else {
+        insightBodyBuilder_.setMessage(builderForValue.build());
+      }
+      queryCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    public Builder mergeInsightBody(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13 &&
+            query_ != com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance()) {
+          query_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          query_ = value;
+        }
+        onChanged();
+      } else {
+        if (queryCase_ == 13) {
+          insightBodyBuilder_.mergeFrom(value);
+        } else {
+          insightBodyBuilder_.setMessage(value);
+        }
+      }
+      queryCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    public Builder clearInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13) {
+          queryCase_ = 0;
+          query_ = null;
+          onChanged();
+        }
+      } else {
+        if (queryCase_ == 13) {
+          queryCase_ = 0;
+          query_ = null;
+        }
+        insightBodyBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder getInsightBodyBuilder() {
+      return getInsightBodyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder() {
+      if ((queryCase_ == 13) && (insightBodyBuilder_ != null)) {
+        return insightBodyBuilder_.getMessageOrBuilder();
+      } else {
+        if (queryCase_ == 13) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * the insight body pipeline node
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> 
+        getInsightBodyFieldBuilder() {
+      if (insightBodyBuilder_ == null) {
+        if (!(queryCase_ == 13)) {
+          query_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+        }
+        insightBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_,
+                getParentForChildren(),
+                isClean());
+        query_ = null;
+      }
+      queryCase_ = 13;
+      onChanged();
+      return insightBodyBuilder_;
+    }
+
     private com.google.protobuf.LazyStringArrayList orgIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureOrgIdsIsMutable() {
       if (!orgIds_.isModifiable()) {
         orgIds_ = new com.google.protobuf.LazyStringArrayList(orgIds_);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -1782,7 +2038,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOrgIdsIsMutable();
       orgIds_.set(index, value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1800,7 +2056,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOrgIdsIsMutable();
       orgIds_.add(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1818,7 +2074,7 @@ private static final long serialVersionUID = 0L;
       ensureOrgIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, orgIds_);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1833,7 +2089,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOrgIds() {
       orgIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
+      bitField0_ = (bitField0_ & ~0x00000020);;
       onChanged();
       return this;
     }
@@ -1852,7 +2108,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureOrgIdsIsMutable();
       orgIds_.add(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1869,7 +2125,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1902,7 +2158,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1920,7 +2176,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1933,7 +2189,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           startTime_ != null &&
           startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
@@ -1943,7 +2199,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1955,7 +2211,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
         startTimeBuilder_.dispose();
@@ -1972,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
@@ -2024,7 +2280,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endTime field is set.
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2057,7 +2313,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2075,7 +2331,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2088,7 +2344,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           endTime_ != null &&
           endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getEndTimeBuilder().mergeFrom(value);
@@ -2098,7 +2354,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2110,7 +2366,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
      */
     public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       endTime_ = null;
       if (endTimeBuilder_ != null) {
         endTimeBuilder_.dispose();
@@ -2127,7 +2383,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getEndTimeFieldBuilder().getBuilder();
     }
@@ -2225,7 +2481,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       timezone_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2240,7 +2496,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTimezone() {
       timezone_ = getDefaultInstance().getTimezone();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2259,7 +2515,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       timezone_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2276,7 +2532,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the pipelineParameters field is set.
      */
     public boolean hasPipelineParameters() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -2309,7 +2565,7 @@ private static final long serialVersionUID = 0L;
       } else {
         pipelineParametersBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2327,7 +2583,7 @@ private static final long serialVersionUID = 0L;
       } else {
         pipelineParametersBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2340,7 +2596,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePipelineParameters(com.tcn.cloud.api.api.v1alpha1.explorer.Parameters value) {
       if (pipelineParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           pipelineParameters_ != null &&
           pipelineParameters_ != com.tcn.cloud.api.api.v1alpha1.explorer.Parameters.getDefaultInstance()) {
           getPipelineParametersBuilder().mergeFrom(value);
@@ -2350,7 +2606,7 @@ private static final long serialVersionUID = 0L;
       } else {
         pipelineParametersBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2362,7 +2618,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.explorer.Parameters pipeline_parameters = 9 [json_name = "pipelineParameters"];</code>
      */
     public Builder clearPipelineParameters() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       pipelineParameters_ = null;
       if (pipelineParametersBuilder_ != null) {
         pipelineParametersBuilder_.dispose();
@@ -2379,7 +2635,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.explorer.Parameters pipeline_parameters = 9 [json_name = "pipelineParameters"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.explorer.Parameters.Builder getPipelineParametersBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getPipelineParametersFieldBuilder().getBuilder();
     }
@@ -2474,7 +2730,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       uiTraceId_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2488,7 +2744,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearUiTraceId() {
       uiTraceId_ = getDefaultInstance().getUiTraceId();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2506,7 +2762,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       uiTraceId_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2566,7 +2822,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       comment_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2580,7 +2836,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearComment() {
       comment_ = getDefaultInstance().getComment();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2598,7 +2854,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       comment_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2626,7 +2882,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormatValue(int value) {
       format_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2656,7 +2912,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       format_ = value.getNumber();
       onChanged();
       return this;
@@ -2670,7 +2926,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormat() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       format_ = 0;
       onChanged();
       return this;
