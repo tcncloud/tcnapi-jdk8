@@ -307,5 +307,53 @@ public interface QueryRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getFormat();
 
+  /**
+   * <pre>
+   * time period quick filter
+   * if time period is used, cannot use start_time and end_time
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+   * @return The enum numeric value on the wire for timePeriod.
+   */
+  int getTimePeriodValue();
+  /**
+   * <pre>
+   * time period quick filter
+   * if time period is used, cannot use start_time and end_time
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+   * @return The timePeriod.
+   */
+  com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod();
+
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   * @return Whether the reportDate field is set.
+   */
+  boolean hasReportDate();
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   * @return The reportDate.
+   */
+  com.google.protobuf.Timestamp getReportDate();
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getReportDateOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.QueryCase getQueryCase();
 }

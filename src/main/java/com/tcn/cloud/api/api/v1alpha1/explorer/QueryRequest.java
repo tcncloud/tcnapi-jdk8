@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     uiTraceId_ = "";
     comment_ = "";
     format_ = 0;
+    timePeriod_ = 0;
   }
 
   @java.lang.Override
@@ -629,6 +630,72 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
   }
 
+  public static final int TIME_PERIOD_FIELD_NUMBER = 13;
+  private int timePeriod_ = 0;
+  /**
+   * <pre>
+   * time period quick filter
+   * if time period is used, cannot use start_time and end_time
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+   * @return The enum numeric value on the wire for timePeriod.
+   */
+  @java.lang.Override public int getTimePeriodValue() {
+    return timePeriod_;
+  }
+  /**
+   * <pre>
+   * time period quick filter
+   * if time period is used, cannot use start_time and end_time
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+   * @return The timePeriod.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod() {
+    com.tcn.cloud.api.api.commons.TimePeriod result = com.tcn.cloud.api.api.commons.TimePeriod.forNumber(timePeriod_);
+    return result == null ? com.tcn.cloud.api.api.commons.TimePeriod.UNRECOGNIZED : result;
+  }
+
+  public static final int REPORT_DATE_FIELD_NUMBER = 14;
+  private com.google.protobuf.Timestamp reportDate_;
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   * @return Whether the reportDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasReportDate() {
+    return reportDate_ != null;
+  }
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   * @return The reportDate.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getReportDate() {
+    return reportDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : reportDate_;
+  }
+  /**
+   * <pre>
+   * report_date is to seed the time period for, if empty, the default value is now
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getReportDateOrBuilder() {
+    return reportDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : reportDate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -678,6 +745,12 @@ private static final long serialVersionUID = 0L;
     }
     if (format_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
       output.writeEnum(12, format_);
+    }
+    if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
+      output.writeEnum(13, timePeriod_);
+    }
+    if (reportDate_ != null) {
+      output.writeMessage(14, getReportDate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -734,6 +807,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, format_);
     }
+    if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(13, timePeriod_);
+    }
+    if (reportDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getReportDate());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -776,6 +857,12 @@ private static final long serialVersionUID = 0L;
     if (!getComment()
         .equals(other.getComment())) return false;
     if (format_ != other.format_) return false;
+    if (timePeriod_ != other.timePeriod_) return false;
+    if (hasReportDate() != other.hasReportDate()) return false;
+    if (hasReportDate()) {
+      if (!getReportDate()
+          .equals(other.getReportDate())) return false;
+    }
     if (!getQueryCase().equals(other.getQueryCase())) return false;
     switch (queryCase_) {
       case 3:
@@ -828,6 +915,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getComment().hashCode();
     hash = (37 * hash) + FORMAT_FIELD_NUMBER;
     hash = (53 * hash) + format_;
+    hash = (37 * hash) + TIME_PERIOD_FIELD_NUMBER;
+    hash = (53 * hash) + timePeriod_;
+    if (hasReportDate()) {
+      hash = (37 * hash) + REPORT_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getReportDate().hashCode();
+    }
     switch (queryCase_) {
       case 3:
         hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
@@ -998,6 +1091,12 @@ private static final long serialVersionUID = 0L;
       uiTraceId_ = "";
       comment_ = "";
       format_ = 0;
+      timePeriod_ = 0;
+      reportDate_ = null;
+      if (reportDateBuilder_ != null) {
+        reportDateBuilder_.dispose();
+        reportDateBuilder_ = null;
+      }
       queryCase_ = 0;
       query_ = null;
       return this;
@@ -1070,6 +1169,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.format_ = format_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.timePeriod_ = timePeriod_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.reportDate_ = reportDateBuilder_ == null
+            ? reportDate_
+            : reportDateBuilder_.build();
       }
     }
 
@@ -1166,6 +1273,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.format_ != 0) {
         setFormatValue(other.getFormatValue());
+      }
+      if (other.timePeriod_ != 0) {
+        setTimePeriodValue(other.getTimePeriodValue());
+      }
+      if (other.hasReportDate()) {
+        mergeReportDate(other.getReportDate());
       }
       switch (other.getQueryCase()) {
         case PIPELINE: {
@@ -1279,6 +1392,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 96
+            case 104: {
+              timePeriod_ = input.readEnum();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 114: {
+              input.readMessage(
+                  getReportDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2674,6 +2799,239 @@ private static final long serialVersionUID = 0L;
       format_ = 0;
       onChanged();
       return this;
+    }
+
+    private int timePeriod_ = 0;
+    /**
+     * <pre>
+     * time period quick filter
+     * if time period is used, cannot use start_time and end_time
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+     * @return The enum numeric value on the wire for timePeriod.
+     */
+    @java.lang.Override public int getTimePeriodValue() {
+      return timePeriod_;
+    }
+    /**
+     * <pre>
+     * time period quick filter
+     * if time period is used, cannot use start_time and end_time
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+     * @param value The enum numeric value on the wire for timePeriod to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimePeriodValue(int value) {
+      timePeriod_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time period quick filter
+     * if time period is used, cannot use start_time and end_time
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+     * @return The timePeriod.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod() {
+      com.tcn.cloud.api.api.commons.TimePeriod result = com.tcn.cloud.api.api.commons.TimePeriod.forNumber(timePeriod_);
+      return result == null ? com.tcn.cloud.api.api.commons.TimePeriod.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * time period quick filter
+     * if time period is used, cannot use start_time and end_time
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+     * @param value The timePeriod to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimePeriod(com.tcn.cloud.api.api.commons.TimePeriod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00001000;
+      timePeriod_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time period quick filter
+     * if time period is used, cannot use start_time and end_time
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 13 [json_name = "timePeriod"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimePeriod() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      timePeriod_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp reportDate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> reportDateBuilder_;
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     * @return Whether the reportDate field is set.
+     */
+    public boolean hasReportDate() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     * @return The reportDate.
+     */
+    public com.google.protobuf.Timestamp getReportDate() {
+      if (reportDateBuilder_ == null) {
+        return reportDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : reportDate_;
+      } else {
+        return reportDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public Builder setReportDate(com.google.protobuf.Timestamp value) {
+      if (reportDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        reportDate_ = value;
+      } else {
+        reportDateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public Builder setReportDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (reportDateBuilder_ == null) {
+        reportDate_ = builderForValue.build();
+      } else {
+        reportDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public Builder mergeReportDate(com.google.protobuf.Timestamp value) {
+      if (reportDateBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          reportDate_ != null &&
+          reportDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getReportDateBuilder().mergeFrom(value);
+        } else {
+          reportDate_ = value;
+        }
+      } else {
+        reportDateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public Builder clearReportDate() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      reportDate_ = null;
+      if (reportDateBuilder_ != null) {
+        reportDateBuilder_.dispose();
+        reportDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getReportDateBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getReportDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getReportDateOrBuilder() {
+      if (reportDateBuilder_ != null) {
+        return reportDateBuilder_.getMessageOrBuilder();
+      } else {
+        return reportDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : reportDate_;
+      }
+    }
+    /**
+     * <pre>
+     * report_date is to seed the time period for, if empty, the default value is now
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp report_date = 14 [json_name = "reportDate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getReportDateFieldBuilder() {
+      if (reportDateBuilder_ == null) {
+        reportDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getReportDate(),
+                getParentForChildren(),
+                isClean());
+        reportDate_ = null;
+      }
+      return reportDateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

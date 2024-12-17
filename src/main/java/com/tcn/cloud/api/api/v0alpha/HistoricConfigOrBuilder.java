@@ -57,5 +57,24 @@ public interface HistoricConfigOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.TimeZone getTimeZone();
 
+  /**
+   * <pre>
+   * The time period quick filter
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+   * @return The enum numeric value on the wire for timePeriod.
+   */
+  int getTimePeriodValue();
+  /**
+   * <pre>
+   * The time period quick filter
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+   * @return The timePeriod.
+   */
+  com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod();
+
   com.tcn.cloud.api.api.v0alpha.HistoricConfig.TimeSpanCase getTimeSpanCase();
 }
