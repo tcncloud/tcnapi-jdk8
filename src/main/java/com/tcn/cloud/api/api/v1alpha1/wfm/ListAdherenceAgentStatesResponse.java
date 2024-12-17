@@ -41,6 +41,8 @@ private static final long serialVersionUID = 0L;
     switch (number) {
       case 1:
         return internalGetAgentStates();
+      case 3:
+        return internalGetAgentStateViolations();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -84,6 +86,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
    * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+   * If zero states are found for a given agent, that key will not be included in the resulting map.
    * </pre>
    *
    * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -106,6 +109,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
    * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+   * If zero states are found for a given agent, that key will not be included in the resulting map.
    * </pre>
    *
    * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -118,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
    * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+   * If zero states are found for a given agent, that key will not be included in the resulting map.
    * </pre>
    *
    * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -137,6 +142,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
    * <pre>
    * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
    * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+   * If zero states are found for a given agent, that key will not be included in the resulting map.
    * </pre>
    *
    * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -197,6 +203,113 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
     return latestAgentStateDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : latestAgentStateDatetime_;
   }
 
+  public static final int AGENT_STATE_VIOLATIONS_FIELD_NUMBER = 3;
+  private static final class AgentStateViolationsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>newDefaultInstance(
+                com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAdherenceAgentStatesResponse_AgentStateViolationsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.INT64,
+                0L,
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations.getDefaultInstance());
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> agentStateViolations_;
+  private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+  internalGetAgentStateViolations() {
+    if (agentStateViolations_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          AgentStateViolationsDefaultEntryHolder.defaultEntry);
+    }
+    return agentStateViolations_;
+  }
+  public int getAgentStateViolationsCount() {
+    return internalGetAgentStateViolations().getMap().size();
+  }
+  /**
+   * <pre>
+   * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+   * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+   * If zero violations are found for a given agent, that key will not be included in the resulting map.
+   * Only set when &#64;include_violations is True.
+   * </pre>
+   *
+   * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+   */
+  @java.lang.Override
+  public boolean containsAgentStateViolations(
+      long key) {
+
+    return internalGetAgentStateViolations().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getAgentStateViolationsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> getAgentStateViolations() {
+    return getAgentStateViolationsMap();
+  }
+  /**
+   * <pre>
+   * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+   * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+   * If zero violations are found for a given agent, that key will not be included in the resulting map.
+   * Only set when &#64;include_violations is True.
+   * </pre>
+   *
+   * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> getAgentStateViolationsMap() {
+    return internalGetAgentStateViolations().getMap();
+  }
+  /**
+   * <pre>
+   * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+   * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+   * If zero violations are found for a given agent, that key will not be included in the resulting map.
+   * Only set when &#64;include_violations is True.
+   * </pre>
+   *
+   * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations getAgentStateViolationsOrDefault(
+      long key,
+      /* nullable */
+com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations defaultValue) {
+
+    java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> map =
+        internalGetAgentStateViolations().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+   * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+   * If zero violations are found for a given agent, that key will not be included in the resulting map.
+   * Only set when &#64;include_violations is True.
+   * </pre>
+   *
+   * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations getAgentStateViolationsOrThrow(
+      long key) {
+
+    java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> map =
+        internalGetAgentStateViolations().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -220,6 +333,12 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
     if (latestAgentStateDatetime_ != null) {
       output.writeMessage(2, getLatestAgentStateDatetime());
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeLongMapTo(
+        output,
+        internalGetAgentStateViolations(),
+        AgentStateViolationsDefaultEntryHolder.defaultEntry,
+        3);
     getUnknownFields().writeTo(output);
   }
 
@@ -243,6 +362,16 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getLatestAgentStateDatetime());
     }
+    for (java.util.Map.Entry<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> entry
+         : internalGetAgentStateViolations().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+      agentStateViolations__ = AgentStateViolationsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, agentStateViolations__);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -265,6 +394,8 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       if (!getLatestAgentStateDatetime()
           .equals(other.getLatestAgentStateDatetime())) return false;
     }
+    if (!internalGetAgentStateViolations().equals(
+        other.internalGetAgentStateViolations())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -283,6 +414,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
     if (hasLatestAgentStateDatetime()) {
       hash = (37 * hash) + LATEST_AGENT_STATE_DATETIME_FIELD_NUMBER;
       hash = (53 * hash) + getLatestAgentStateDatetime().hashCode();
+    }
+    if (!internalGetAgentStateViolations().getMap().isEmpty()) {
+      hash = (37 * hash) + AGENT_STATE_VIOLATIONS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetAgentStateViolations().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -403,6 +538,8 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       switch (number) {
         case 1:
           return internalGetAgentStates();
+        case 3:
+          return internalGetAgentStateViolations();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -414,6 +551,8 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       switch (number) {
         case 1:
           return internalGetMutableAgentStates();
+        case 3:
+          return internalGetMutableAgentStateViolations();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -447,6 +586,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
         latestAgentStateDatetimeBuilder_.dispose();
         latestAgentStateDatetimeBuilder_ = null;
       }
+      internalGetMutableAgentStateViolations().clear();
       return this;
     }
 
@@ -488,6 +628,10 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
         result.latestAgentStateDatetime_ = latestAgentStateDatetimeBuilder_ == null
             ? latestAgentStateDatetime_
             : latestAgentStateDatetimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentStateViolations_ = internalGetAgentStateViolations();
+        result.agentStateViolations_.makeImmutable();
       }
     }
 
@@ -541,6 +685,9 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
       if (other.hasLatestAgentStateDatetime()) {
         mergeLatestAgentStateDatetime(other.getLatestAgentStateDatetime());
       }
+      internalGetMutableAgentStateViolations().mergeFrom(
+          other.internalGetAgentStateViolations());
+      bitField0_ |= 0x00000004;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -583,6 +730,15 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+              agentStateViolations__ = input.readMessage(
+                  AgentStateViolationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableAgentStateViolations().getMutableMap().put(
+                  agentStateViolations__.getKey(), agentStateViolations__.getValue());
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -630,6 +786,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -652,6 +809,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -664,6 +822,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -683,6 +842,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -708,6 +868,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -732,6 +893,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -750,6 +912,7 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
      * <pre>
      * The found agent states, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
      * Key: &#64;wfm_agent_sid - Value: List of agent states that the agent has.
+     * If zero states are found for a given agent, that key will not be included in the resulting map.
      * </pre>
      *
      * <code>map&lt;int64, .api.commons.AdherenceAgentStates&gt; agent_states = 1 [json_name = "agentStates"];</code>
@@ -933,6 +1096,182 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStates defaultValue) {
         latestAgentStateDatetime_ = null;
       }
       return latestAgentStateDatetimeBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> agentStateViolations_;
+    private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+        internalGetAgentStateViolations() {
+      if (agentStateViolations_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AgentStateViolationsDefaultEntryHolder.defaultEntry);
+      }
+      return agentStateViolations_;
+    }
+    private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+        internalGetMutableAgentStateViolations() {
+      if (agentStateViolations_ == null) {
+        agentStateViolations_ = com.google.protobuf.MapField.newMapField(
+            AgentStateViolationsDefaultEntryHolder.defaultEntry);
+      }
+      if (!agentStateViolations_.isMutable()) {
+        agentStateViolations_ = agentStateViolations_.copy();
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return agentStateViolations_;
+    }
+    public int getAgentStateViolationsCount() {
+      return internalGetAgentStateViolations().getMap().size();
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    @java.lang.Override
+    public boolean containsAgentStateViolations(
+        long key) {
+
+      return internalGetAgentStateViolations().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAgentStateViolationsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> getAgentStateViolations() {
+      return getAgentStateViolationsMap();
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> getAgentStateViolationsMap() {
+      return internalGetAgentStateViolations().getMap();
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations getAgentStateViolationsOrDefault(
+        long key,
+        /* nullable */
+com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations defaultValue) {
+
+      java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> map =
+          internalGetAgentStateViolations().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations getAgentStateViolationsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> map =
+          internalGetAgentStateViolations().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearAgentStateViolations() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      internalGetMutableAgentStateViolations().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    public Builder removeAgentStateViolations(
+        long key) {
+
+      internalGetMutableAgentStateViolations().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations>
+        getMutableAgentStateViolations() {
+      bitField0_ |= 0x00000004;
+      return internalGetMutableAgentStateViolations().getMutableMap();
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    public Builder putAgentStateViolations(
+        long key,
+        com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations value) {
+
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableAgentStateViolations().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000004;
+      return this;
+    }
+    /**
+     * <pre>
+     * The violations found, grouped by wfm_agent_sid and ordered in ascending order by start_datetime.
+     * Key: &#64;wfm_agent_sid - Value: List of agent state violations that the agent has.
+     * If zero violations are found for a given agent, that key will not be included in the resulting map.
+     * Only set when &#64;include_violations is True.
+     * </pre>
+     *
+     * <code>map&lt;int64, .api.commons.AdherenceAgentStateViolations&gt; agent_state_violations = 3 [json_name = "agentStateViolations"];</code>
+     */
+    public Builder putAllAgentStateViolations(
+        java.util.Map<java.lang.Long, com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations> values) {
+      internalGetMutableAgentStateViolations().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000004;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -169,6 +169,22 @@ private static final long serialVersionUID = 0L;
     return endDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDatetime_;
   }
 
+  public static final int INCLUDE_VIOLATIONS_FIELD_NUMBER = 4;
+  private boolean includeViolations_ = false;
+  /**
+   * <pre>
+   * Wheather or not to include violations between the agent states of the given &#64;wfm_agent_sids and
+   * their respecitive published schedule shifts.
+   * </pre>
+   *
+   * <code>bool include_violations = 4 [json_name = "includeViolations"];</code>
+   * @return The includeViolations.
+   */
+  @java.lang.Override
+  public boolean getIncludeViolations() {
+    return includeViolations_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -196,6 +212,9 @@ private static final long serialVersionUID = 0L;
     }
     if (endDatetime_ != null) {
       output.writeMessage(3, getEndDatetime());
+    }
+    if (includeViolations_ != false) {
+      output.writeBool(4, includeViolations_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,6 +247,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getEndDatetime());
     }
+    if (includeViolations_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, includeViolations_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -255,6 +278,8 @@ private static final long serialVersionUID = 0L;
       if (!getEndDatetime()
           .equals(other.getEndDatetime())) return false;
     }
+    if (getIncludeViolations()
+        != other.getIncludeViolations()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -278,6 +303,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + END_DATETIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndDatetime().hashCode();
     }
+    hash = (37 * hash) + INCLUDE_VIOLATIONS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeViolations());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -424,6 +452,7 @@ private static final long serialVersionUID = 0L;
         endDatetimeBuilder_.dispose();
         endDatetimeBuilder_ = null;
       }
+      includeViolations_ = false;
       return this;
     }
 
@@ -475,6 +504,9 @@ private static final long serialVersionUID = 0L;
         result.endDatetime_ = endDatetimeBuilder_ == null
             ? endDatetime_
             : endDatetimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeViolations_ = includeViolations_;
       }
     }
 
@@ -538,6 +570,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndDatetime()) {
         mergeEndDatetime(other.getEndDatetime());
       }
+      if (other.getIncludeViolations() != false) {
+        setIncludeViolations(other.getIncludeViolations());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -594,6 +629,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              includeViolations_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1053,6 +1093,53 @@ private static final long serialVersionUID = 0L;
         endDatetime_ = null;
       }
       return endDatetimeBuilder_;
+    }
+
+    private boolean includeViolations_ ;
+    /**
+     * <pre>
+     * Wheather or not to include violations between the agent states of the given &#64;wfm_agent_sids and
+     * their respecitive published schedule shifts.
+     * </pre>
+     *
+     * <code>bool include_violations = 4 [json_name = "includeViolations"];</code>
+     * @return The includeViolations.
+     */
+    @java.lang.Override
+    public boolean getIncludeViolations() {
+      return includeViolations_;
+    }
+    /**
+     * <pre>
+     * Wheather or not to include violations between the agent states of the given &#64;wfm_agent_sids and
+     * their respecitive published schedule shifts.
+     * </pre>
+     *
+     * <code>bool include_violations = 4 [json_name = "includeViolations"];</code>
+     * @param value The includeViolations to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeViolations(boolean value) {
+
+      includeViolations_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Wheather or not to include violations between the agent states of the given &#64;wfm_agent_sids and
+     * their respecitive published schedule shifts.
+     * </pre>
+     *
+     * <code>bool include_violations = 4 [json_name = "includeViolations"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeViolations() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      includeViolations_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

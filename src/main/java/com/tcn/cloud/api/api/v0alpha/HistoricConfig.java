@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private HistoricConfig() {
     timeZone_ = 0;
+    timePeriod_ = 0;
   }
 
   @java.lang.Override
@@ -173,6 +174,32 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
+  public static final int TIME_PERIOD_FIELD_NUMBER = 5;
+  private int timePeriod_ = 0;
+  /**
+   * <pre>
+   * The time period quick filter
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+   * @return The enum numeric value on the wire for timePeriod.
+   */
+  @java.lang.Override public int getTimePeriodValue() {
+    return timePeriod_;
+  }
+  /**
+   * <pre>
+   * The time period quick filter
+   * </pre>
+   *
+   * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+   * @return The timePeriod.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod() {
+    com.tcn.cloud.api.api.commons.TimePeriod result = com.tcn.cloud.api.api.commons.TimePeriod.forNumber(timePeriod_);
+    return result == null ? com.tcn.cloud.api.api.commons.TimePeriod.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -196,6 +223,9 @@ private static final long serialVersionUID = 0L;
     if (timeZone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(4, timeZone_);
     }
+    if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
+      output.writeEnum(5, timePeriod_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -217,6 +247,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, timeZone_);
     }
+    if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, timePeriod_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -233,6 +267,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.api.v0alpha.HistoricConfig other = (com.tcn.cloud.api.api.v0alpha.HistoricConfig) obj;
 
     if (timeZone_ != other.timeZone_) return false;
+    if (timePeriod_ != other.timePeriod_) return false;
     if (!getTimeSpanCase().equals(other.getTimeSpanCase())) return false;
     switch (timeSpanCase_) {
       case 1:
@@ -259,6 +294,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
     hash = (53 * hash) + timeZone_;
+    hash = (37 * hash) + TIME_PERIOD_FIELD_NUMBER;
+    hash = (53 * hash) + timePeriod_;
     switch (timeSpanCase_) {
       case 1:
         hash = (37 * hash) + TIME_SPAN_SIMPLE_FIELD_NUMBER;
@@ -410,6 +447,7 @@ private static final long serialVersionUID = 0L;
         timeSpanRangeBuilder_.clear();
       }
       timeZone_ = 0;
+      timePeriod_ = 0;
       timeSpanCase_ = 0;
       timeSpan_ = null;
       return this;
@@ -448,6 +486,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.timeZone_ = timeZone_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.timePeriod_ = timePeriod_;
       }
     }
 
@@ -507,6 +548,9 @@ private static final long serialVersionUID = 0L;
       if (other.timeZone_ != 0) {
         setTimeZoneValue(other.getTimeZoneValue());
       }
+      if (other.timePeriod_ != 0) {
+        setTimePeriodValue(other.getTimePeriodValue());
+      }
       switch (other.getTimeSpanCase()) {
         case TIME_SPAN_SIMPLE: {
           setTimeSpanSimpleValue(other.getTimeSpanSimpleValue());
@@ -564,6 +608,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 32
+            case 40: {
+              timePeriod_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -877,6 +926,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearTimeZone() {
       bitField0_ = (bitField0_ & ~0x00000004);
       timeZone_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int timePeriod_ = 0;
+    /**
+     * <pre>
+     * The time period quick filter
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+     * @return The enum numeric value on the wire for timePeriod.
+     */
+    @java.lang.Override public int getTimePeriodValue() {
+      return timePeriod_;
+    }
+    /**
+     * <pre>
+     * The time period quick filter
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+     * @param value The enum numeric value on the wire for timePeriod to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimePeriodValue(int value) {
+      timePeriod_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The time period quick filter
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+     * @return The timePeriod.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TimePeriod getTimePeriod() {
+      com.tcn.cloud.api.api.commons.TimePeriod result = com.tcn.cloud.api.api.commons.TimePeriod.forNumber(timePeriod_);
+      return result == null ? com.tcn.cloud.api.api.commons.TimePeriod.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The time period quick filter
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+     * @param value The timePeriod to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimePeriod(com.tcn.cloud.api.api.commons.TimePeriod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      timePeriod_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The time period quick filter
+     * </pre>
+     *
+     * <code>.api.commons.TimePeriod time_period = 5 [json_name = "timePeriod"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimePeriod() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      timePeriod_ = 0;
       onChanged();
       return this;
     }

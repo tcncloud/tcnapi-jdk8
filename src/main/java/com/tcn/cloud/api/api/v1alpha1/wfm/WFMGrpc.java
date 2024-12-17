@@ -10226,8 +10226,8 @@ public final class WFMGrpc {
      * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the &#64;end_datetime
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
      * It also returns the latest datetime amongst all the states returned.
+     * It can also include the violations against the published schedule for each of the requested agents if &#64;include_violations is set to True.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -14002,8 +14002,8 @@ public final class WFMGrpc {
      * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the &#64;end_datetime
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
      * It also returns the latest datetime amongst all the states returned.
+     * It can also include the violations against the published schedule for each of the requested agents if &#64;include_violations is set to True.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -17603,8 +17603,8 @@ public final class WFMGrpc {
      * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the &#64;end_datetime
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
      * It also returns the latest datetime amongst all the states returned.
+     * It can also include the violations against the published schedule for each of the requested agents if &#64;include_violations is set to True.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.
@@ -21263,8 +21263,8 @@ public final class WFMGrpc {
      * Gets the agent states for the given &#64;wfm_agent_sids from the given &#64;start_datetime to the &#64;end_datetime
      * or the current time if not set (start time not inclusive, end time inclusive).
      * Agent states will be grouped by wfm_agent_sid and ordered by date in ascending order.
-     * If zero states are found for a given agent, it will not be included in the resulting map.
      * It also returns the latest datetime amongst all the states returned.
+     * It can also include the violations against the published schedule for each of the requested agents if &#64;include_violations is set to True.
      * Errors:
      *   - grpc.Invalid: arguments in the request are invalid.
      *   - grpc.Internal: error occurs when getting the states.

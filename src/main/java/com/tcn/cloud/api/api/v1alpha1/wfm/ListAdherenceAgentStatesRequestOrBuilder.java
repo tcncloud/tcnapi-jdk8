@@ -98,4 +98,15 @@ public interface ListAdherenceAgentStatesRequestOrBuilder extends
    * <code>.google.protobuf.Timestamp end_datetime = 3 [json_name = "endDatetime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getEndDatetimeOrBuilder();
+
+  /**
+   * <pre>
+   * Wheather or not to include violations between the agent states of the given &#64;wfm_agent_sids and
+   * their respecitive published schedule shifts.
+   * </pre>
+   *
+   * <code>bool include_violations = 4 [json_name = "includeViolations"];</code>
+   * @return The includeViolations.
+   */
+  boolean getIncludeViolations();
 }
