@@ -109,27 +109,27 @@ public interface QueryRequestOrBuilder extends
    * pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
-   * @return Whether the pipelineNode field is set.
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
    */
-  boolean hasPipelineNode();
+  boolean hasInsightBody();
   /**
    * <pre>
    * pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
-   * @return The pipelineNode.
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return The insightBody.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipelineNode();
+  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody();
   /**
    * <pre>
    * pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline_node = 13 [json_name = "pipelineNode"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineNodeOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder();
 
   /**
    * <pre>
