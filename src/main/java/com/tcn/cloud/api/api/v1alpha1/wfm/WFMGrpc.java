@@ -9286,6 +9286,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
@@ -9305,6 +9306,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request,
@@ -9954,6 +9956,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request,
@@ -9973,6 +9976,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     default void updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request,
@@ -12997,6 +13001,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
@@ -13017,6 +13022,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request,
@@ -13709,6 +13715,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request,
@@ -13729,6 +13736,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public void updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request,
@@ -16653,6 +16661,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
@@ -16672,6 +16681,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsResponse updateShiftInstanceWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsRequest request) {
@@ -17321,6 +17331,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse updatePublishedShift(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftRequest request) {
@@ -17340,6 +17351,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse updatePublishedShiftWithSegments(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsRequest request) {
@@ -20248,6 +20260,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> updateShiftInstanceV2(
@@ -20268,6 +20281,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceWithSegmentsResponse> updateShiftInstanceWithSegments(
@@ -20960,6 +20974,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when updating the shift instance.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftResponse> updatePublishedShift(
@@ -20980,6 +20995,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when updating the &#64;shift_instance or replacing their member shift segments.
+     *   - grpc.NotFound: &#64;shift_instance_sid does not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePublishedShiftWithSegmentsResponse> updatePublishedShiftWithSegments(
