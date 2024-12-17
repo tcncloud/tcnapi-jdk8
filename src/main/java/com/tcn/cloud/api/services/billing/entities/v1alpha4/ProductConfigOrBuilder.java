@@ -694,5 +694,107 @@ public interface ProductConfigOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder();
 
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_smart_evaluations = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSmartEvaluations"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleSmartEvaluations field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations();
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_smart_evaluations = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSmartEvaluations"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleSmartEvaluations.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations();
+  /**
+   * <pre>
+   * wfo ai bundle (30000 - 31000)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_smart_evaluations = 30000 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSmartEvaluations"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluationsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_smart_evaluations = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_smart_evaluations = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_smart_evaluations = 30001 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluationsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_sentiments = 30100 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSentiments"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleSentiments field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleSentiments();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_sentiments = 30100 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSentiments"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleSentiments.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleSentiments();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_sentiments = 30100 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSentiments"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleSentimentsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_sentiments = 30103 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_sentiments = 30103 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_sentiments = 30103 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentimentsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_summaries = 30200 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSummaries"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleSummaries field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleSummaries();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_summaries = 30200 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSummaries"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleSummaries.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleSummaries();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_summaries = 30200 [json_name = "workforceEngagementWorkforceOptimizationAiBundleSummaries"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleSummariesOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_summaries = 30201 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_summaries = 30201 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries"];</code>
+   * @return The workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_ai_bundle_accumulated_summaries = 30201 [json_name = "workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesOrBuilder();
+
   com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig.ConfigCase getConfigCase();
 }
