@@ -185,6 +185,17 @@ private static final long serialVersionUID = 0L;
     return isDefaultTimeFilter_;
   }
 
+  public static final int IS_JOIN_COLUMN_FIELD_NUMBER = 8;
+  private boolean isJoinColumn_ = false;
+  /**
+   * <code>bool is_join_column = 8 [json_name = "isJoinColumn"];</code>
+   * @return The isJoinColumn.
+   */
+  @java.lang.Override
+  public boolean getIsJoinColumn() {
+    return isJoinColumn_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -219,6 +230,9 @@ private static final long serialVersionUID = 0L;
     }
     if (isDefaultTimeFilter_ != false) {
       output.writeBool(7, isDefaultTimeFilter_);
+    }
+    if (isJoinColumn_ != false) {
+      output.writeBool(8, isJoinColumn_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -255,6 +269,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, isDefaultTimeFilter_);
     }
+    if (isJoinColumn_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, isJoinColumn_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -283,6 +301,8 @@ private static final long serialVersionUID = 0L;
         != other.getIsTimeFilter()) return false;
     if (getIsDefaultTimeFilter()
         != other.getIsDefaultTimeFilter()) return false;
+    if (getIsJoinColumn()
+        != other.getIsJoinColumn()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -312,6 +332,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_DEFAULT_TIME_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsDefaultTimeFilter());
+    hash = (37 * hash) + IS_JOIN_COLUMN_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsJoinColumn());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -454,6 +477,7 @@ private static final long serialVersionUID = 0L;
       columnDescription_ = "";
       isTimeFilter_ = false;
       isDefaultTimeFilter_ = false;
+      isJoinColumn_ = false;
       return this;
     }
 
@@ -507,6 +531,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.isDefaultTimeFilter_ = isDefaultTimeFilter_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.isJoinColumn_ = isJoinColumn_;
       }
     }
 
@@ -579,6 +606,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsDefaultTimeFilter() != false) {
         setIsDefaultTimeFilter(other.getIsDefaultTimeFilter());
       }
+      if (other.getIsJoinColumn() != false) {
+        setIsJoinColumn(other.getIsJoinColumn());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -640,6 +670,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 64: {
+              isJoinColumn_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -978,6 +1013,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDefaultTimeFilter() {
       bitField0_ = (bitField0_ & ~0x00000040);
       isDefaultTimeFilter_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean isJoinColumn_ ;
+    /**
+     * <code>bool is_join_column = 8 [json_name = "isJoinColumn"];</code>
+     * @return The isJoinColumn.
+     */
+    @java.lang.Override
+    public boolean getIsJoinColumn() {
+      return isJoinColumn_;
+    }
+    /**
+     * <code>bool is_join_column = 8 [json_name = "isJoinColumn"];</code>
+     * @param value The isJoinColumn to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsJoinColumn(boolean value) {
+
+      isJoinColumn_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_join_column = 8 [json_name = "isJoinColumn"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsJoinColumn() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      isJoinColumn_ = false;
       onChanged();
       return this;
     }

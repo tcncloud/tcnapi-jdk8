@@ -38,6 +38,18 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 6:
+        return internalGetTimeFilteredDatasources();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -249,6 +261,99 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TIME_FILTERED_DATASOURCES_FIELD_NUMBER = 6;
+  private static final class TimeFilteredDatasourcesDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Boolean> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_TimeFilteredDatasourcesEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.BOOL,
+                false);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Boolean> timeFilteredDatasources_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+  internalGetTimeFilteredDatasources() {
+    if (timeFilteredDatasources_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry);
+    }
+    return timeFilteredDatasources_;
+  }
+  public int getTimeFilteredDatasourcesCount() {
+    return internalGetTimeFilteredDatasources().getMap().size();
+  }
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  @java.lang.Override
+  public boolean containsTimeFilteredDatasources(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetTimeFilteredDatasources().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getTimeFilteredDatasourcesMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Boolean> getTimeFilteredDatasources() {
+    return getTimeFilteredDatasourcesMap();
+  }
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Boolean> getTimeFilteredDatasourcesMap() {
+    return internalGetTimeFilteredDatasources().getMap();
+  }
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  @java.lang.Override
+  public boolean getTimeFilteredDatasourcesOrDefault(
+      java.lang.String key,
+      boolean defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Boolean> map =
+        internalGetTimeFilteredDatasources().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  @java.lang.Override
+  public boolean getTimeFilteredDatasourcesOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Boolean> map =
+        internalGetTimeFilteredDatasources().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -278,6 +383,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, explain_);
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetTimeFilteredDatasources(),
+        TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry,
+        6);
     getUnknownFields().writeTo(output);
   }
 
@@ -302,6 +413,16 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(explain_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, explain_);
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+         : internalGetTimeFilteredDatasources().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+      timeFilteredDatasources__ = TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, timeFilteredDatasources__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -328,6 +449,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSql())) return false;
     if (!getExplain()
         .equals(other.getExplain())) return false;
+    if (!internalGetTimeFilteredDatasources().equals(
+        other.internalGetTimeFilteredDatasources())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -350,6 +473,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSql().hashCode();
     hash = (37 * hash) + EXPLAIN_FIELD_NUMBER;
     hash = (53 * hash) + getExplain().hashCode();
+    if (!internalGetTimeFilteredDatasources().getMap().isEmpty()) {
+      hash = (37 * hash) + TIME_FILTERED_DATASOURCES_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetTimeFilteredDatasources().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -463,6 +590,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetTimeFilteredDatasources();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetMutableTimeFilteredDatasources();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -490,6 +639,7 @@ private static final long serialVersionUID = 0L;
       prql_ = "";
       sql_ = "";
       explain_ = "";
+      internalGetMutableTimeFilteredDatasources().clear();
       return this;
     }
 
@@ -537,6 +687,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.explain_ = explain_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.timeFilteredDatasources_ = internalGetTimeFilteredDatasources();
+        result.timeFilteredDatasources_.makeImmutable();
       }
     }
 
@@ -607,6 +761,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      internalGetMutableTimeFilteredDatasources().mergeFrom(
+          other.internalGetTimeFilteredDatasources());
+      bitField0_ |= 0x00000020;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -658,6 +815,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              timeFilteredDatasources__ = input.readMessage(
+                  TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableTimeFilteredDatasources().getMutableMap().put(
+                  timeFilteredDatasources__.getKey(), timeFilteredDatasources__.getValue());
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1084,6 +1250,159 @@ private static final long serialVersionUID = 0L;
       explain_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> timeFilteredDatasources_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+        internalGetTimeFilteredDatasources() {
+      if (timeFilteredDatasources_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry);
+      }
+      return timeFilteredDatasources_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+        internalGetMutableTimeFilteredDatasources() {
+      if (timeFilteredDatasources_ == null) {
+        timeFilteredDatasources_ = com.google.protobuf.MapField.newMapField(
+            TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry);
+      }
+      if (!timeFilteredDatasources_.isMutable()) {
+        timeFilteredDatasources_ = timeFilteredDatasources_.copy();
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return timeFilteredDatasources_;
+    }
+    public int getTimeFilteredDatasourcesCount() {
+      return internalGetTimeFilteredDatasources().getMap().size();
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    @java.lang.Override
+    public boolean containsTimeFilteredDatasources(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTimeFilteredDatasources().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTimeFilteredDatasourcesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getTimeFilteredDatasources() {
+      return getTimeFilteredDatasourcesMap();
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Boolean> getTimeFilteredDatasourcesMap() {
+      return internalGetTimeFilteredDatasources().getMap();
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    @java.lang.Override
+    public boolean getTimeFilteredDatasourcesOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetTimeFilteredDatasources().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    @java.lang.Override
+    public boolean getTimeFilteredDatasourcesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetTimeFilteredDatasources().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearTimeFilteredDatasources() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      internalGetMutableTimeFilteredDatasources().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    public Builder removeTimeFilteredDatasources(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableTimeFilteredDatasources().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean>
+        getMutableTimeFilteredDatasources() {
+      bitField0_ |= 0x00000020;
+      return internalGetMutableTimeFilteredDatasources().getMutableMap();
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    public Builder putTimeFilteredDatasources(
+        java.lang.String key,
+        boolean value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableTimeFilteredDatasources().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000020;
+      return this;
+    }
+    /**
+     * <pre>
+     * map of datasources and a boolean indicating if the datasource is filtered by time
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+     */
+    public Builder putAllTimeFilteredDatasources(
+        java.util.Map<java.lang.String, java.lang.Boolean> values) {
+      internalGetMutableTimeFilteredDatasources().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000020;
       return this;
     }
     @java.lang.Override

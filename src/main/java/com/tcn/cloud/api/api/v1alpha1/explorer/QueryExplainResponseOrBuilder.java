@@ -96,4 +96,56 @@ public interface QueryExplainResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getExplainBytes();
+
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  int getTimeFilteredDatasourcesCount();
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  boolean containsTimeFilteredDatasources(
+      java.lang.String key);
+  /**
+   * Use {@link #getTimeFilteredDatasourcesMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Boolean>
+  getTimeFilteredDatasources();
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Boolean>
+  getTimeFilteredDatasourcesMap();
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  boolean getTimeFilteredDatasourcesOrDefault(
+      java.lang.String key,
+      boolean defaultValue);
+  /**
+   * <pre>
+   * map of datasources and a boolean indicating if the datasource is filtered by time
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; time_filtered_datasources = 6 [json_name = "timeFilteredDatasources"];</code>
+   */
+  boolean getTimeFilteredDatasourcesOrThrow(
+      java.lang.String key);
 }

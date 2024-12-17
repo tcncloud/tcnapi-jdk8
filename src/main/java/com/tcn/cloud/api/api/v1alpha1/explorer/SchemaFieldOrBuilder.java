@@ -65,4 +65,10 @@ public interface SchemaFieldOrBuilder extends
    * @return The isDefaultTimeFilter.
    */
   boolean getIsDefaultTimeFilter();
+
+  /**
+   * <code>bool is_join_column = 8 [json_name = "isJoinColumn"];</code>
+   * @return The isJoinColumn.
+   */
+  boolean getIsJoinColumn();
 }
