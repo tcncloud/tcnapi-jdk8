@@ -106,7 +106,7 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -115,7 +115,7 @@ public interface QueryRequestOrBuilder extends
   boolean hasInsightBody();
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -124,7 +124,7 @@ public interface QueryRequestOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody();
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>

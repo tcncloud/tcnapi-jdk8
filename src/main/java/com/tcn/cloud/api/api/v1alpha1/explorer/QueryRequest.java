@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
   public static final int INSIGHT_BODY_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * pipeline node
+   * the insight body pipeline node
    * </pre>
    *
    * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1792,7 +1792,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> insightBodyBuilder_;
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1804,7 +1804,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1826,7 +1826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1846,7 +1846,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1864,7 +1864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1891,7 +1891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1914,7 +1914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1924,7 +1924,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
@@ -1942,7 +1942,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline node
+     * the insight body pipeline node
      * </pre>
      *
      * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
