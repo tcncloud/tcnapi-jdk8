@@ -35,15 +35,4 @@ public interface CopyShiftsToPublishedScheduleRequestOrBuilder extends
    * @return The shiftInstanceSids at the given index.
    */
   long getShiftInstanceSids(int index);
-
-  /**
-   * <pre>
-   * If set to true, overlapping shifts will be permitted, and return a warning diagnostic after persisting.
-   * Otherwise, any overlapping shifts for agents in the &#64;destination_schedule will return an error diagnostic and no shifts will be copied.
-   * </pre>
-   *
-   * <code>bool overlap_as_warning = 2 [json_name = "overlapAsWarning"];</code>
-   * @return The overlapAsWarning.
-   */
-  boolean getOverlapAsWarning();
 }

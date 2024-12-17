@@ -9253,9 +9253,10 @@ public final class WFMGrpc {
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -10010,9 +10011,10 @@ public final class WFMGrpc {
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
      * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -10073,7 +10075,6 @@ public final class WFMGrpc {
      * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
      * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
-     * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
      * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
@@ -12966,9 +12967,10 @@ public final class WFMGrpc {
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -13772,9 +13774,10 @@ public final class WFMGrpc {
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
      * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -13839,7 +13842,6 @@ public final class WFMGrpc {
      * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
      * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
-     * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
      * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
@@ -16628,9 +16630,10 @@ public final class WFMGrpc {
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -17385,9 +17388,10 @@ public final class WFMGrpc {
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
      * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -17448,7 +17452,6 @@ public final class WFMGrpc {
      * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
      * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
-     * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
      * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
@@ -20225,9 +20228,10 @@ public final class WFMGrpc {
      * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is only capable of swapping shifts on the draft schedule. To include shifts on the published schedule use the SwapPublishedShifts endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2 or is on a published schedule.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -21031,9 +21035,10 @@ public final class WFMGrpc {
      * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Is capable of swapping shifts on the published schedule, but is not restricted from swapping shifts on the draft schedule as well.
      * Users without permissions to swap published shifts can swap draft shifts with the SwapShiftInstances endpoint.
+     * If there is an overlap conflict with the swap, a diagnostic will be returned and the shifts will not be updated.
      * Errors:
-     *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.Invalid: one or more fields in the request have invalid values, or one of the &#64;shift_instance_sids does not belong to either &#64;wfm_agent_sid_1 nor &#64;wfm_agent_sid_2.
+     *   - grpc.NotFound: &#64;wfm_agent_sid_1, &#64;wfm_agent_sid_2, or &#64;shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -21098,7 +21103,6 @@ public final class WFMGrpc {
      * Copies the given &#64;shift_instance_sids to published schedule for the org sending the request.
      * If there are any overlap conflicts on published schedule and &#64;overlap_as_warning is set to false,
      *  then &#64;shift_instance_sids will not be copied, and a list of diagnostics detailing the overlaps will be returned.
-     * If &#64;overlap_as_warning is set to true, overlap conflicts will not prevent the shifts from being copied, and the overlap diagnostics will be returned after as warning messages instead.
      * This endpoint can only copy shifts to the published schedule. To copy shifts to a draft schedule use the CopyShiftInstancesToSchedule endpoint.
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.

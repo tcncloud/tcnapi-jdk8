@@ -84,22 +84,6 @@ private static final long serialVersionUID = 0L;
   }
   private int shiftInstanceSidsMemoizedSerializedSize = -1;
 
-  public static final int OVERLAP_AS_WARNING_FIELD_NUMBER = 2;
-  private boolean overlapAsWarning_ = false;
-  /**
-   * <pre>
-   * If set to true, overlapping shifts will be permitted, and return a warning diagnostic after persisting.
-   * Otherwise, any overlapping shifts for agents in the &#64;destination_schedule will return an error diagnostic and no shifts will be copied.
-   * </pre>
-   *
-   * <code>bool overlap_as_warning = 2 [json_name = "overlapAsWarning"];</code>
-   * @return The overlapAsWarning.
-   */
-  @java.lang.Override
-  public boolean getOverlapAsWarning() {
-    return overlapAsWarning_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,9 +105,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < shiftInstanceSids_.size(); i++) {
       output.writeInt64NoTag(shiftInstanceSids_.getLong(i));
-    }
-    if (overlapAsWarning_ != false) {
-      output.writeBool(2, overlapAsWarning_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -148,10 +129,6 @@ private static final long serialVersionUID = 0L;
       }
       shiftInstanceSidsMemoizedSerializedSize = dataSize;
     }
-    if (overlapAsWarning_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, overlapAsWarning_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -169,8 +146,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getShiftInstanceSidsList()
         .equals(other.getShiftInstanceSidsList())) return false;
-    if (getOverlapAsWarning()
-        != other.getOverlapAsWarning()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -186,9 +161,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHIFT_INSTANCE_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getShiftInstanceSidsList().hashCode();
     }
-    hash = (37 * hash) + OVERLAP_AS_WARNING_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getOverlapAsWarning());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -325,7 +297,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       shiftInstanceSids_ = emptyLongList();
-      overlapAsWarning_ = false;
       return this;
     }
 
@@ -368,9 +339,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftsToPublishedScheduleRequest result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.overlapAsWarning_ = overlapAsWarning_;
-      }
     }
 
     @java.lang.Override
@@ -427,9 +395,6 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.getOverlapAsWarning() != false) {
-        setOverlapAsWarning(other.getOverlapAsWarning());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -472,11 +437,6 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 10
-            case 16: {
-              overlapAsWarning_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -599,53 +559,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearShiftInstanceSids() {
       shiftInstanceSids_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-
-    private boolean overlapAsWarning_ ;
-    /**
-     * <pre>
-     * If set to true, overlapping shifts will be permitted, and return a warning diagnostic after persisting.
-     * Otherwise, any overlapping shifts for agents in the &#64;destination_schedule will return an error diagnostic and no shifts will be copied.
-     * </pre>
-     *
-     * <code>bool overlap_as_warning = 2 [json_name = "overlapAsWarning"];</code>
-     * @return The overlapAsWarning.
-     */
-    @java.lang.Override
-    public boolean getOverlapAsWarning() {
-      return overlapAsWarning_;
-    }
-    /**
-     * <pre>
-     * If set to true, overlapping shifts will be permitted, and return a warning diagnostic after persisting.
-     * Otherwise, any overlapping shifts for agents in the &#64;destination_schedule will return an error diagnostic and no shifts will be copied.
-     * </pre>
-     *
-     * <code>bool overlap_as_warning = 2 [json_name = "overlapAsWarning"];</code>
-     * @param value The overlapAsWarning to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOverlapAsWarning(boolean value) {
-
-      overlapAsWarning_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * If set to true, overlapping shifts will be permitted, and return a warning diagnostic after persisting.
-     * Otherwise, any overlapping shifts for agents in the &#64;destination_schedule will return an error diagnostic and no shifts will be copied.
-     * </pre>
-     *
-     * <code>bool overlap_as_warning = 2 [json_name = "overlapAsWarning"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOverlapAsWarning() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      overlapAsWarning_ = false;
       onChanged();
       return this;
     }
