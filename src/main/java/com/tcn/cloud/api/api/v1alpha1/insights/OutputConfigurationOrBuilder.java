@@ -154,6 +154,33 @@ public interface OutputConfigurationOrBuilder extends
 
   /**
    * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   * @return Whether the cardVisualization field is set.
+   */
+  boolean hasCardVisualization();
+  /**
+   * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   * @return The cardVisualization.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization getCardVisualization();
+  /**
+   * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder getCardVisualizationOrBuilder();
+
+  /**
+   * <pre>
    * create time of output configuration
    * </pre>
    *

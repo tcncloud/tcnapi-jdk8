@@ -54,6 +54,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     BLOB(7),
     TABLE_VISUALIZATION(8),
+    CARD_VISUALIZATION(11),
     BODY_NOT_SET(0);
     private final int value;
     private BodyCase(int value) {
@@ -73,6 +74,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 7: return BLOB;
         case 8: return TABLE_VISUALIZATION;
+        case 11: return CARD_VISUALIZATION;
         case 0: return BODY_NOT_SET;
         default: return null;
       }
@@ -377,6 +379,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
   }
 
+  public static final int CARD_VISUALIZATION_FIELD_NUMBER = 11;
+  /**
+   * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   * @return Whether the cardVisualization field is set.
+   */
+  @java.lang.Override
+  public boolean hasCardVisualization() {
+    return bodyCase_ == 11;
+  }
+  /**
+   * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   * @return The cardVisualization.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization getCardVisualization() {
+    if (bodyCase_ == 11) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Card visualization data for the output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder getCardVisualizationOrBuilder() {
+    if (bodyCase_ == 11) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+  }
+
   public static final int CREATE_TIME_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp createTime_;
   /**
@@ -494,6 +539,9 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       output.writeMessage(10, getUpdateTime());
     }
+    if (bodyCase_ == 11) {
+      output.writeMessage(11, (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -534,6 +582,10 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getUpdateTime());
+    }
+    if (bodyCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -579,6 +631,10 @@ private static final long serialVersionUID = 0L;
         if (!getTableVisualization()
             .equals(other.getTableVisualization())) return false;
         break;
+      case 11:
+        if (!getCardVisualization()
+            .equals(other.getCardVisualization())) return false;
+        break;
       case 0:
       default:
     }
@@ -620,6 +676,10 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + TABLE_VISUALIZATION_FIELD_NUMBER;
         hash = (53 * hash) + getTableVisualization().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + CARD_VISUALIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCardVisualization().hashCode();
         break;
       case 0:
       default:
@@ -767,6 +827,9 @@ private static final long serialVersionUID = 0L;
       if (tableVisualizationBuilder_ != null) {
         tableVisualizationBuilder_.clear();
       }
+      if (cardVisualizationBuilder_ != null) {
+        cardVisualizationBuilder_.clear();
+      }
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -828,12 +891,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isDefault_ = isDefault_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
@@ -846,6 +909,10 @@ private static final long serialVersionUID = 0L;
       if (bodyCase_ == 8 &&
           tableVisualizationBuilder_ != null) {
         result.body_ = tableVisualizationBuilder_.build();
+      }
+      if (bodyCase_ == 11 &&
+          cardVisualizationBuilder_ != null) {
+        result.body_ = cardVisualizationBuilder_.build();
       }
     }
 
@@ -931,6 +998,10 @@ private static final long serialVersionUID = 0L;
           mergeTableVisualization(other.getTableVisualization());
           break;
         }
+        case CARD_VISUALIZATION: {
+          mergeCardVisualization(other.getCardVisualization());
+          break;
+        }
         case BODY_NOT_SET: {
           break;
         }
@@ -1003,16 +1074,23 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCreateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             case 82: {
               input.readMessage(
                   getUpdateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getCardVisualizationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bodyCase_ = 11;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1733,6 +1811,184 @@ private static final long serialVersionUID = 0L;
       return tableVisualizationBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder> cardVisualizationBuilder_;
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     * @return Whether the cardVisualization field is set.
+     */
+    @java.lang.Override
+    public boolean hasCardVisualization() {
+      return bodyCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     * @return The cardVisualization.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization getCardVisualization() {
+      if (cardVisualizationBuilder_ == null) {
+        if (bodyCase_ == 11) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+      } else {
+        if (bodyCase_ == 11) {
+          return cardVisualizationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    public Builder setCardVisualization(com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization value) {
+      if (cardVisualizationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        body_ = value;
+        onChanged();
+      } else {
+        cardVisualizationBuilder_.setMessage(value);
+      }
+      bodyCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    public Builder setCardVisualization(
+        com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.Builder builderForValue) {
+      if (cardVisualizationBuilder_ == null) {
+        body_ = builderForValue.build();
+        onChanged();
+      } else {
+        cardVisualizationBuilder_.setMessage(builderForValue.build());
+      }
+      bodyCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    public Builder mergeCardVisualization(com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization value) {
+      if (cardVisualizationBuilder_ == null) {
+        if (bodyCase_ == 11 &&
+            body_ != com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance()) {
+          body_ = com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          body_ = value;
+        }
+        onChanged();
+      } else {
+        if (bodyCase_ == 11) {
+          cardVisualizationBuilder_.mergeFrom(value);
+        } else {
+          cardVisualizationBuilder_.setMessage(value);
+        }
+      }
+      bodyCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    public Builder clearCardVisualization() {
+      if (cardVisualizationBuilder_ == null) {
+        if (bodyCase_ == 11) {
+          bodyCase_ = 0;
+          body_ = null;
+          onChanged();
+        }
+      } else {
+        if (bodyCase_ == 11) {
+          bodyCase_ = 0;
+          body_ = null;
+        }
+        cardVisualizationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.Builder getCardVisualizationBuilder() {
+      return getCardVisualizationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder getCardVisualizationOrBuilder() {
+      if ((bodyCase_ == 11) && (cardVisualizationBuilder_ != null)) {
+        return cardVisualizationBuilder_.getMessageOrBuilder();
+      } else {
+        if (bodyCase_ == 11) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Card visualization data for the output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.CardVisualization card_visualization = 11 [json_name = "cardVisualization"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder> 
+        getCardVisualizationFieldBuilder() {
+      if (cardVisualizationBuilder_ == null) {
+        if (!(bodyCase_ == 11)) {
+          body_ = com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.getDefaultInstance();
+        }
+        cardVisualizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.CardVisualizationOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.CardVisualization) body_,
+                getParentForChildren(),
+                isClean());
+        body_ = null;
+      }
+      bodyCase_ = 11;
+      onChanged();
+      return cardVisualizationBuilder_;
+    }
+
     private com.google.protobuf.Timestamp createTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
@@ -1745,7 +2001,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1778,7 +2034,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1796,7 +2052,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1809,7 +2065,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000100) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1819,7 +2075,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1831,7 +2087,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1848,7 +2104,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1900,7 +2156,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updateTime field is set.
      */
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -1933,7 +2189,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1951,7 +2207,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1964,7 +2220,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           updateTime_ != null &&
           updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getUpdateTimeBuilder().mergeFrom(value);
@@ -1974,7 +2230,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1986,7 +2242,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public Builder clearUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
         updateTimeBuilder_.dispose();
@@ -2003,7 +2259,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
