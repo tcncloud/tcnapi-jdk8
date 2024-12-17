@@ -87,6 +87,106 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIOUS_MONTH = 8;</code>
      */
     PREVIOUS_MONTH(8),
+    /**
+     * <code>THIS_YEAR = 9;</code>
+     */
+    THIS_YEAR(9),
+    /**
+     * <code>THE_DAY_SO_FAR = 10;</code>
+     */
+    THE_DAY_SO_FAR(10),
+    /**
+     * <code>WEEK_TO_DATE = 11;</code>
+     */
+    WEEK_TO_DATE(11),
+    /**
+     * <code>YEAR_TO_DATE = 12;</code>
+     */
+    YEAR_TO_DATE(12),
+    /**
+     * <code>DAY_BEFORE_YESTERDAY = 13;</code>
+     */
+    DAY_BEFORE_YESTERDAY(13),
+    /**
+     * <code>PREVIOUS_WEEK = 14;</code>
+     */
+    PREVIOUS_WEEK(14),
+    /**
+     * <code>PREVIOUS_YEAR = 15;</code>
+     */
+    PREVIOUS_YEAR(15),
+    /**
+     * <code>LAST_15_MINUTES = 16;</code>
+     */
+    LAST_15_MINUTES(16),
+    /**
+     * <code>LAST_30_MINUTES = 17;</code>
+     */
+    LAST_30_MINUTES(17),
+    /**
+     * <code>LAST_1_HOUR = 18;</code>
+     */
+    LAST_1_HOUR(18),
+    /**
+     * <code>LAST_2_HOURS = 19;</code>
+     */
+    LAST_2_HOURS(19),
+    /**
+     * <code>LAST_3_HOURS = 20;</code>
+     */
+    LAST_3_HOURS(20),
+    /**
+     * <code>LAST_4_HOURS = 21;</code>
+     */
+    LAST_4_HOURS(21),
+    /**
+     * <code>LAST_6_HOURS = 22;</code>
+     */
+    LAST_6_HOURS(22),
+    /**
+     * <code>LAST_12_HOURS = 23;</code>
+     */
+    LAST_12_HOURS(23),
+    /**
+     * <code>LAST_24_HOURS = 24;</code>
+     */
+    LAST_24_HOURS(24),
+    /**
+     * <code>LAST_2_DAYS = 25;</code>
+     */
+    LAST_2_DAYS(25),
+    /**
+     * <code>LAST_3_DAYS = 26;</code>
+     */
+    LAST_3_DAYS(26),
+    /**
+     * <code>LAST_7_DAYS = 27;</code>
+     */
+    LAST_7_DAYS(27),
+    /**
+     * <code>LAST_60_DAYS = 28;</code>
+     */
+    LAST_60_DAYS(28),
+    /**
+     * <code>LAST_90_DAYS = 29;</code>
+     */
+    LAST_90_DAYS(29),
+    /**
+     * <code>LAST_6_MONTHS = 30;</code>
+     */
+    LAST_6_MONTHS(30),
+    /**
+     * <code>LAST_1_YEAR = 31;</code>
+     */
+    LAST_1_YEAR(31),
+    /**
+     * <code>LAST_2_YEARS = 32;</code>
+     */
+    LAST_2_YEARS(32),
+    /**
+     * <code>LAST_5_YEARS = 33;</code>
+     */
+    LAST_5_YEARS(33),
     UNRECOGNIZED(-1),
     ;
 
@@ -126,6 +226,106 @@ private static final long serialVersionUID = 0L;
      * <code>PREVIOUS_MONTH = 8;</code>
      */
     public static final int PREVIOUS_MONTH_VALUE = 8;
+    /**
+     * <code>THIS_YEAR = 9;</code>
+     */
+    public static final int THIS_YEAR_VALUE = 9;
+    /**
+     * <code>THE_DAY_SO_FAR = 10;</code>
+     */
+    public static final int THE_DAY_SO_FAR_VALUE = 10;
+    /**
+     * <code>WEEK_TO_DATE = 11;</code>
+     */
+    public static final int WEEK_TO_DATE_VALUE = 11;
+    /**
+     * <code>YEAR_TO_DATE = 12;</code>
+     */
+    public static final int YEAR_TO_DATE_VALUE = 12;
+    /**
+     * <code>DAY_BEFORE_YESTERDAY = 13;</code>
+     */
+    public static final int DAY_BEFORE_YESTERDAY_VALUE = 13;
+    /**
+     * <code>PREVIOUS_WEEK = 14;</code>
+     */
+    public static final int PREVIOUS_WEEK_VALUE = 14;
+    /**
+     * <code>PREVIOUS_YEAR = 15;</code>
+     */
+    public static final int PREVIOUS_YEAR_VALUE = 15;
+    /**
+     * <code>LAST_15_MINUTES = 16;</code>
+     */
+    public static final int LAST_15_MINUTES_VALUE = 16;
+    /**
+     * <code>LAST_30_MINUTES = 17;</code>
+     */
+    public static final int LAST_30_MINUTES_VALUE = 17;
+    /**
+     * <code>LAST_1_HOUR = 18;</code>
+     */
+    public static final int LAST_1_HOUR_VALUE = 18;
+    /**
+     * <code>LAST_2_HOURS = 19;</code>
+     */
+    public static final int LAST_2_HOURS_VALUE = 19;
+    /**
+     * <code>LAST_3_HOURS = 20;</code>
+     */
+    public static final int LAST_3_HOURS_VALUE = 20;
+    /**
+     * <code>LAST_4_HOURS = 21;</code>
+     */
+    public static final int LAST_4_HOURS_VALUE = 21;
+    /**
+     * <code>LAST_6_HOURS = 22;</code>
+     */
+    public static final int LAST_6_HOURS_VALUE = 22;
+    /**
+     * <code>LAST_12_HOURS = 23;</code>
+     */
+    public static final int LAST_12_HOURS_VALUE = 23;
+    /**
+     * <code>LAST_24_HOURS = 24;</code>
+     */
+    public static final int LAST_24_HOURS_VALUE = 24;
+    /**
+     * <code>LAST_2_DAYS = 25;</code>
+     */
+    public static final int LAST_2_DAYS_VALUE = 25;
+    /**
+     * <code>LAST_3_DAYS = 26;</code>
+     */
+    public static final int LAST_3_DAYS_VALUE = 26;
+    /**
+     * <code>LAST_7_DAYS = 27;</code>
+     */
+    public static final int LAST_7_DAYS_VALUE = 27;
+    /**
+     * <code>LAST_60_DAYS = 28;</code>
+     */
+    public static final int LAST_60_DAYS_VALUE = 28;
+    /**
+     * <code>LAST_90_DAYS = 29;</code>
+     */
+    public static final int LAST_90_DAYS_VALUE = 29;
+    /**
+     * <code>LAST_6_MONTHS = 30;</code>
+     */
+    public static final int LAST_6_MONTHS_VALUE = 30;
+    /**
+     * <code>LAST_1_YEAR = 31;</code>
+     */
+    public static final int LAST_1_YEAR_VALUE = 31;
+    /**
+     * <code>LAST_2_YEARS = 32;</code>
+     */
+    public static final int LAST_2_YEARS_VALUE = 32;
+    /**
+     * <code>LAST_5_YEARS = 33;</code>
+     */
+    public static final int LAST_5_YEARS_VALUE = 33;
 
 
     public final int getNumber() {
@@ -161,6 +361,31 @@ private static final long serialVersionUID = 0L;
         case 6: return THIS_MONTH;
         case 7: return THIS_DAY_LAST_WEEK;
         case 8: return PREVIOUS_MONTH;
+        case 9: return THIS_YEAR;
+        case 10: return THE_DAY_SO_FAR;
+        case 11: return WEEK_TO_DATE;
+        case 12: return YEAR_TO_DATE;
+        case 13: return DAY_BEFORE_YESTERDAY;
+        case 14: return PREVIOUS_WEEK;
+        case 15: return PREVIOUS_YEAR;
+        case 16: return LAST_15_MINUTES;
+        case 17: return LAST_30_MINUTES;
+        case 18: return LAST_1_HOUR;
+        case 19: return LAST_2_HOURS;
+        case 20: return LAST_3_HOURS;
+        case 21: return LAST_4_HOURS;
+        case 22: return LAST_6_HOURS;
+        case 23: return LAST_12_HOURS;
+        case 24: return LAST_24_HOURS;
+        case 25: return LAST_2_DAYS;
+        case 26: return LAST_3_DAYS;
+        case 27: return LAST_7_DAYS;
+        case 28: return LAST_60_DAYS;
+        case 29: return LAST_90_DAYS;
+        case 30: return LAST_6_MONTHS;
+        case 31: return LAST_1_YEAR;
+        case 32: return LAST_2_YEARS;
+        case 33: return LAST_5_YEARS;
         default: return null;
       }
     }

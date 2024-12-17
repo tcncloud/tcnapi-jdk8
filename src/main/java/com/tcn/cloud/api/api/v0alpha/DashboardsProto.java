@@ -290,101 +290,112 @@ public final class DashboardsProto {
       "view\030\002 \001(\0132\032.api.v0alpha.DashboardViewR\004" +
       "view\022\037\n\013resource_id\030\003 \001(\tR\nresourceId\"@\n" +
       "\rDashboardView\022\027\n\007org_ids\030\002 \003(\tR\006orgIdsJ" +
-      "\004\010\001\020\002J\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006\"\234\002\n\010TimeSpan\032g\n\005" +
+      "\004\010\001\020\002J\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006\"\353\005\n\010TimeSpan\032g\n\005" +
       "Range\0220\n\005start\030\001 \001(\0132\032.google.protobuf.T" +
       "imestampR\005start\022,\n\003end\030\002 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\003end\"\246\001\n\010Interval\022\t\n\005TO" +
+      "otobuf.TimestampR\003end\"\365\004\n\010Interval\022\t\n\005TO" +
       "DAY\020\000\022\r\n\tYESTERDAY\020\001\022\020\n\014LAST_30_DAYS\020\002\022\021" +
       "\n\rMONTH_TO_DATE\020\003\022\020\n\014LAST_2_WEEKS\020\004\022\r\n\tT" +
       "HIS_WEEK\020\005\022\016\n\nTHIS_MONTH\020\006\022\026\n\022THIS_DAY_L" +
-      "AST_WEEK\020\007\022\022\n\016PREVIOUS_MONTH\020\010\"\260\001\n!Creat" +
-      "eApplicationDashboardRequest\0222\n\025dashboar" +
-      "d_resource_id\030\001 \001(\tR\023dashboardResourceId" +
-      "\022\025\n\006org_id\030\002 \001(\tR\005orgId\022@\n\013application\030\003" +
-      " \001(\0162\036.annotations.perms.ApplicationR\013ap" +
-      "plication\"$\n\"CreateApplicationDashboardR" +
-      "esponse\"#\n!ListApplicationsDashboardsReq" +
-      "uest\"\251\001\n\025ApplicationDashboards\022@\n\013applic" +
-      "ation\030\001 \001(\0162\036.annotations.perms.Applicat" +
-      "ionR\013application\022N\n\023dashboard_summaries\030" +
-      "\002 \003(\0132\035.api.v0alpha.DashboardSummaryR\022da" +
-      "shboardSummaries\"\177\n\"ListApplicationsDash" +
-      "boardsResponse\022Y\n\026application_dashboards" +
-      "\030\001 \003(\0132\".api.v0alpha.ApplicationDashboar" +
-      "dsR\025applicationDashboards\"\260\001\n!DeleteAppl" +
-      "icationDashboardRequest\022@\n\013application\030\001" +
-      " \001(\0162\036.annotations.perms.ApplicationR\013ap" +
-      "plication\0222\n\025dashboard_resource_id\030\002 \001(\t" +
-      "R\023dashboardResourceId\022\025\n\006org_id\030\003 \001(\tR\005o" +
-      "rgId\"$\n\"DeleteApplicationDashboardRespon" +
-      "se2\364\023\n\nDashboards\022\235\001\n\017CreateDashboard\022#." +
-      "api.v0alpha.CreateDashboardRequest\032$.api" +
-      ".v0alpha.CreateDashboardResponse\"?\272\270\221\002\010\n" +
-      "\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/api/v0alpha/dashboards/C" +
-      "reateDashboard:\001*\022\244\001\n\014GetDashboard\022 .api" +
-      ".v0alpha.GetDashboardRequest\032\026.api.v0alp" +
-      "ha.Dashboard\"Z\272\270\221\002&\n\003\010\331\004\n\t\010\324\002\022\004\010\003\020\001\n\t\010\300\014" +
-      "\022\004\010\003\020\023\n\t\010\301\014\022\004\010\003\020\023\202\323\344\223\002)\"$/api/v0alpha/da" +
-      "shboards/GetDashboard:\001*\022\230\001\n\023GetDefaultD" +
-      "ashboard\022\'.api.v0alpha.GetDefaultDashboa" +
-      "rdRequest\032\026.api.v0alpha.Dashboard\"@\272\270\221\002\005" +
-      "\n\003\010\331\004\202\323\344\223\0020\"+/api/v0alpha/dashboards/Get" +
-      "DefaultDashboard:\001*\022\226\001\n\016ListDashboards\022\"" +
-      ".api.v0alpha.ListDashboardsRequest\032#.api" +
-      ".v0alpha.ListDashboardsResponse\";\272\270\221\002\005\n\003" +
-      "\010\331\004\202\323\344\223\002+\"&/api/v0alpha/dashboards/ListD" +
-      "ashboards:\001*\022\234\001\n\020ListProductTypes\022$.api." +
-      "v0alpha.ListProductTypesRequest\032#.api.v0" +
-      "alpha.ListProductTypesResult\"=\272\270\221\002\005\n\003\010\331\004" +
-      "\202\323\344\223\002-\"(/api/v0alpha/dashboards/ListProd" +
-      "uctTypes:\001*\022\217\001\n\017DeleteDashboard\022#.api.v0" +
-      "alpha.DeleteDashboardRequest\032\026.google.pr" +
-      "otobuf.Empty\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/api/" +
-      "v0alpha/dashboards/DeleteDashboard:\001*\022\233\001" +
-      "\n\023SetDefaultDashboard\022\'.api.v0alpha.SetD" +
-      "efaultDashboardRequest\032\026.google.protobuf" +
-      ".Empty\"C\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020\"+/api/v0alph" +
-      "a/dashboards/SetDefaultDashboard:\001*\022\217\001\n\017" +
-      "UpdateDashboard\022#.api.v0alpha.UpdateDash" +
-      "boardRequest\032\026.google.protobuf.Empty\"?\272\270" +
-      "\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/api/v0alpha/dashboar" +
-      "ds/UpdateDashboard:\001*\022\310\001\n\"UpdateDashboar" +
-      "dTitleAndDescription\0226.api.v0alpha.Updat" +
-      "eDashboardTitleAndDescriptionRequest\032\026.g" +
-      "oogle.protobuf.Empty\"R\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002" +
-      "?\":/api/v0alpha/dashboards/UpdateDashboa" +
-      "rdTitleAndDescription:\001*\022\233\001\n\023UpdateDashb" +
-      "oardView\022\'.api.v0alpha.UpdateDashboardVi" +
-      "ewRequest\032\026.google.protobuf.Empty\"C\272\270\221\002\010" +
-      "\n\006\010\331\004\010\332\004\202\323\344\223\0020\"+/api/v0alpha/dashboards/" +
-      "UpdateDashboardView:\001*\022\241\001\n\025UpdateDashboa" +
-      "rdLayout\022).api.v0alpha.UpdateDashboardLa" +
-      "youtRequest\032\026.google.protobuf.Empty\"E\272\270\221" +
-      "\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0022\"-/api/v0alpha/dashboard" +
-      "s/UpdateDashboardLayout:\001*\022\241\001\n\020PublishDa" +
-      "shboard\022$.api.v0alpha.PublishDashboardRe" +
-      "quest\032%.api.v0alpha.PublishDashboardResp" +
-      "onse\"@\272\270\221\002\010\n\006\010\373\001\010\332\004\202\323\344\223\002-\"(/api/v0alpha/" +
-      "dashboards/PublishDashboard:\001*\022\306\001\n\032Creat" +
-      "eApplicationDashboard\022..api.v0alpha.Crea" +
-      "teApplicationDashboardRequest\032/.api.v0al" +
-      "pha.CreateApplicationDashboardResponse\"G" +
-      "\272\270\221\002\005\n\003\010\332\004\202\323\344\223\0027\"2/api/v0alpha/dashboard" +
-      "s/CreateApplicationDashboard:\001*\022\306\001\n\032List" +
-      "ApplicationsDashboards\022..api.v0alpha.Lis" +
-      "tApplicationsDashboardsRequest\032/.api.v0a" +
-      "lpha.ListApplicationsDashboardsResponse\"" +
-      "G\272\270\221\002\005\n\003\010\332\004\202\323\344\223\0027\"2/api/v0alpha/dashboar" +
-      "ds/ListApplicationsDashboards:\001*\022\306\001\n\032Del" +
-      "eteApplicationDashboard\022..api.v0alpha.De" +
-      "leteApplicationDashboardRequest\032/.api.v0" +
-      "alpha.DeleteApplicationDashboardResponse" +
-      "\"G\272\270\221\002\005\n\003\010\332\004\202\323\344\223\0027\"2/api/v0alpha/dashboa" +
-      "rds/DeleteApplicationDashboard:\001*B}\n\035com" +
-      ".tcn.cloud.api.api.v0alphaB\017DashboardsPr" +
-      "otoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342" +
-      "\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alpha" +
-      "b\006proto3"
+      "AST_WEEK\020\007\022\022\n\016PREVIOUS_MONTH\020\010\022\r\n\tTHIS_Y" +
+      "EAR\020\t\022\022\n\016THE_DAY_SO_FAR\020\n\022\020\n\014WEEK_TO_DAT" +
+      "E\020\013\022\020\n\014YEAR_TO_DATE\020\014\022\030\n\024DAY_BEFORE_YEST" +
+      "ERDAY\020\r\022\021\n\rPREVIOUS_WEEK\020\016\022\021\n\rPREVIOUS_Y" +
+      "EAR\020\017\022\023\n\017LAST_15_MINUTES\020\020\022\023\n\017LAST_30_MI" +
+      "NUTES\020\021\022\017\n\013LAST_1_HOUR\020\022\022\020\n\014LAST_2_HOURS" +
+      "\020\023\022\020\n\014LAST_3_HOURS\020\024\022\020\n\014LAST_4_HOURS\020\025\022\020" +
+      "\n\014LAST_6_HOURS\020\026\022\021\n\rLAST_12_HOURS\020\027\022\021\n\rL" +
+      "AST_24_HOURS\020\030\022\017\n\013LAST_2_DAYS\020\031\022\017\n\013LAST_" +
+      "3_DAYS\020\032\022\017\n\013LAST_7_DAYS\020\033\022\020\n\014LAST_60_DAY" +
+      "S\020\034\022\020\n\014LAST_90_DAYS\020\035\022\021\n\rLAST_6_MONTHS\020\036" +
+      "\022\017\n\013LAST_1_YEAR\020\037\022\020\n\014LAST_2_YEARS\020 \022\020\n\014L" +
+      "AST_5_YEARS\020!\"\260\001\n!CreateApplicationDashb" +
+      "oardRequest\0222\n\025dashboard_resource_id\030\001 \001" +
+      "(\tR\023dashboardResourceId\022\025\n\006org_id\030\002 \001(\tR" +
+      "\005orgId\022@\n\013application\030\003 \001(\0162\036.annotation" +
+      "s.perms.ApplicationR\013application\"$\n\"Crea" +
+      "teApplicationDashboardResponse\"#\n!ListAp" +
+      "plicationsDashboardsRequest\"\251\001\n\025Applicat" +
+      "ionDashboards\022@\n\013application\030\001 \001(\0162\036.ann" +
+      "otations.perms.ApplicationR\013application\022" +
+      "N\n\023dashboard_summaries\030\002 \003(\0132\035.api.v0alp" +
+      "ha.DashboardSummaryR\022dashboardSummaries\"" +
+      "\177\n\"ListApplicationsDashboardsResponse\022Y\n" +
+      "\026application_dashboards\030\001 \003(\0132\".api.v0al" +
+      "pha.ApplicationDashboardsR\025applicationDa" +
+      "shboards\"\260\001\n!DeleteApplicationDashboardR" +
+      "equest\022@\n\013application\030\001 \001(\0162\036.annotation" +
+      "s.perms.ApplicationR\013application\0222\n\025dash" +
+      "board_resource_id\030\002 \001(\tR\023dashboardResour" +
+      "ceId\022\025\n\006org_id\030\003 \001(\tR\005orgId\"$\n\"DeleteApp" +
+      "licationDashboardResponse2\364\023\n\nDashboards" +
+      "\022\235\001\n\017CreateDashboard\022#.api.v0alpha.Creat" +
+      "eDashboardRequest\032$.api.v0alpha.CreateDa" +
+      "shboardResponse\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/a" +
+      "pi/v0alpha/dashboards/CreateDashboard:\001*" +
+      "\022\244\001\n\014GetDashboard\022 .api.v0alpha.GetDashb" +
+      "oardRequest\032\026.api.v0alpha.Dashboard\"Z\272\270\221" +
+      "\002&\n\003\010\331\004\n\t\010\324\002\022\004\010\003\020\001\n\t\010\300\014\022\004\010\003\020\023\n\t\010\301\014\022\004\010\003\020\023" +
+      "\202\323\344\223\002)\"$/api/v0alpha/dashboards/GetDashb" +
+      "oard:\001*\022\230\001\n\023GetDefaultDashboard\022\'.api.v0" +
+      "alpha.GetDefaultDashboardRequest\032\026.api.v" +
+      "0alpha.Dashboard\"@\272\270\221\002\005\n\003\010\331\004\202\323\344\223\0020\"+/api" +
+      "/v0alpha/dashboards/GetDefaultDashboard:" +
+      "\001*\022\226\001\n\016ListDashboards\022\".api.v0alpha.List" +
+      "DashboardsRequest\032#.api.v0alpha.ListDash" +
+      "boardsResponse\";\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002+\"&/api/v" +
+      "0alpha/dashboards/ListDashboards:\001*\022\234\001\n\020" +
+      "ListProductTypes\022$.api.v0alpha.ListProdu" +
+      "ctTypesRequest\032#.api.v0alpha.ListProduct" +
+      "TypesResult\"=\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002-\"(/api/v0al" +
+      "pha/dashboards/ListProductTypes:\001*\022\217\001\n\017D" +
+      "eleteDashboard\022#.api.v0alpha.DeleteDashb" +
+      "oardRequest\032\026.google.protobuf.Empty\"?\272\270\221" +
+      "\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/api/v0alpha/dashboard" +
+      "s/DeleteDashboard:\001*\022\233\001\n\023SetDefaultDashb" +
+      "oard\022\'.api.v0alpha.SetDefaultDashboardRe" +
+      "quest\032\026.google.protobuf.Empty\"C\272\270\221\002\010\n\006\010\331" +
+      "\004\010\332\004\202\323\344\223\0020\"+/api/v0alpha/dashboards/SetD" +
+      "efaultDashboard:\001*\022\217\001\n\017UpdateDashboard\022#" +
+      ".api.v0alpha.UpdateDashboardRequest\032\026.go" +
+      "ogle.protobuf.Empty\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002," +
+      "\"\'/api/v0alpha/dashboards/UpdateDashboar" +
+      "d:\001*\022\310\001\n\"UpdateDashboardTitleAndDescript" +
+      "ion\0226.api.v0alpha.UpdateDashboardTitleAn" +
+      "dDescriptionRequest\032\026.google.protobuf.Em" +
+      "pty\"R\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002?\":/api/v0alpha/d" +
+      "ashboards/UpdateDashboardTitleAndDescrip" +
+      "tion:\001*\022\233\001\n\023UpdateDashboardView\022\'.api.v0" +
+      "alpha.UpdateDashboardViewRequest\032\026.googl" +
+      "e.protobuf.Empty\"C\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020\"+/" +
+      "api/v0alpha/dashboards/UpdateDashboardVi" +
+      "ew:\001*\022\241\001\n\025UpdateDashboardLayout\022).api.v0" +
+      "alpha.UpdateDashboardLayoutRequest\032\026.goo" +
+      "gle.protobuf.Empty\"E\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0022\"" +
+      "-/api/v0alpha/dashboards/UpdateDashboard" +
+      "Layout:\001*\022\241\001\n\020PublishDashboard\022$.api.v0a" +
+      "lpha.PublishDashboardRequest\032%.api.v0alp" +
+      "ha.PublishDashboardResponse\"@\272\270\221\002\010\n\006\010\373\001\010" +
+      "\332\004\202\323\344\223\002-\"(/api/v0alpha/dashboards/Publis" +
+      "hDashboard:\001*\022\306\001\n\032CreateApplicationDashb" +
+      "oard\022..api.v0alpha.CreateApplicationDash" +
+      "boardRequest\032/.api.v0alpha.CreateApplica" +
+      "tionDashboardResponse\"G\272\270\221\002\005\n\003\010\332\004\202\323\344\223\0027\"" +
+      "2/api/v0alpha/dashboards/CreateApplicati" +
+      "onDashboard:\001*\022\306\001\n\032ListApplicationsDashb" +
+      "oards\022..api.v0alpha.ListApplicationsDash" +
+      "boardsRequest\032/.api.v0alpha.ListApplicat" +
+      "ionsDashboardsResponse\"G\272\270\221\002\005\n\003\010\332\004\202\323\344\223\0027" +
+      "\"2/api/v0alpha/dashboards/ListApplicatio" +
+      "nsDashboards:\001*\022\306\001\n\032DeleteApplicationDas" +
+      "hboard\022..api.v0alpha.DeleteApplicationDa" +
+      "shboardRequest\032/.api.v0alpha.DeleteAppli" +
+      "cationDashboardResponse\"G\272\270\221\002\005\n\003\010\332\004\202\323\344\223\002" +
+      "7\"2/api/v0alpha/dashboards/DeleteApplica" +
+      "tionDashboard:\001*B}\n\035com.tcn.cloud.api.ap" +
+      "i.v0alphaB\017DashboardsProtoP\001\242\002\003AVX\252\002\013Api" +
+      ".V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPB" +
+      "Metadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
