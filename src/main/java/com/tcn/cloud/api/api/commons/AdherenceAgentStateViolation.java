@@ -24,8 +24,6 @@ private static final long serialVersionUID = 0L;
     expectedPauseCode_ = "";
     actualRtmStates_ = java.util.Collections.emptyList();
     actualPauseCode_ = "";
-    expectedPauseCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -187,13 +185,11 @@ private static final long serialVersionUID = 0L;
    * Expected pause Code that the agent should be using if they were on Pause.
    * </pre>
    *
-   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-   * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
    * @return The expectedPauseCode.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getExpectedPauseCode() {
+  public java.lang.String getExpectedPauseCode() {
     java.lang.Object ref = expectedPauseCode_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -210,13 +206,11 @@ private static final long serialVersionUID = 0L;
    * Expected pause Code that the agent should be using if they were on Pause.
    * </pre>
    *
-   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-   * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
    * @return The bytes for expectedPauseCode.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getExpectedPauseCodeBytes() {
     java.lang.Object ref = expectedPauseCode_;
     if (ref instanceof java.lang.String) {
@@ -370,59 +364,6 @@ private static final long serialVersionUID = 0L;
     return violationDurationSeconds_;
   }
 
-  public static final int EXPECTED_PAUSE_CODES_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList expectedPauseCodes_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @return A list containing the expectedPauseCodes.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getExpectedPauseCodesList() {
-    return expectedPauseCodes_;
-  }
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @return The count of expectedPauseCodes.
-   */
-  public int getExpectedPauseCodesCount() {
-    return expectedPauseCodes_.size();
-  }
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @param index The index of the element to return.
-   * @return The expectedPauseCodes at the given index.
-   */
-  public java.lang.String getExpectedPauseCodes(int index) {
-    return expectedPauseCodes_.get(index);
-  }
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the expectedPauseCodes at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getExpectedPauseCodesBytes(int index) {
-    return expectedPauseCodes_.getByteString(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -466,9 +407,6 @@ private static final long serialVersionUID = 0L;
     }
     if (violationDurationSeconds_ != 0) {
       output.writeInt32(7, violationDurationSeconds_);
-    }
-    for (int i = 0; i < expectedPauseCodes_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, expectedPauseCodes_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -521,14 +459,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(7, violationDurationSeconds_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < expectedPauseCodes_.size(); i++) {
-        dataSize += computeStringSizeNoTag(expectedPauseCodes_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getExpectedPauseCodesList().size();
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -559,8 +489,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getActualPauseCode())) return false;
     if (getViolationDurationSeconds()
         != other.getViolationDurationSeconds()) return false;
-    if (!getExpectedPauseCodesList()
-        .equals(other.getExpectedPauseCodesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -593,10 +521,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getActualPauseCode().hashCode();
     hash = (37 * hash) + VIOLATION_DURATION_SECONDS_FIELD_NUMBER;
     hash = (53 * hash) + getViolationDurationSeconds();
-    if (getExpectedPauseCodesCount() > 0) {
-      hash = (37 * hash) + EXPECTED_PAUSE_CODES_FIELD_NUMBER;
-      hash = (53 * hash) + getExpectedPauseCodesList().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -745,8 +669,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
       actualPauseCode_ = "";
       violationDurationSeconds_ = 0;
-      expectedPauseCodes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -810,10 +732,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.violationDurationSeconds_ = violationDurationSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        expectedPauseCodes_.makeImmutable();
-        result.expectedPauseCodes_ = expectedPauseCodes_;
       }
     }
 
@@ -899,16 +817,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getViolationDurationSeconds() != 0) {
         setViolationDurationSeconds(other.getViolationDurationSeconds());
-      }
-      if (!other.expectedPauseCodes_.isEmpty()) {
-        if (expectedPauseCodes_.isEmpty()) {
-          expectedPauseCodes_ = other.expectedPauseCodes_;
-          bitField0_ |= 0x00000080;
-        } else {
-          ensureExpectedPauseCodesIsMutable();
-          expectedPauseCodes_.addAll(other.expectedPauseCodes_);
-        }
-        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -997,12 +905,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureExpectedPauseCodesIsMutable();
-              expectedPauseCodes_.add(s);
-              break;
-            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1413,12 +1315,10 @@ private static final long serialVersionUID = 0L;
      * Expected pause Code that the agent should be using if they were on Pause.
      * </pre>
      *
-     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-     * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
      * @return The expectedPauseCode.
      */
-    @java.lang.Deprecated public java.lang.String getExpectedPauseCode() {
+    public java.lang.String getExpectedPauseCode() {
       java.lang.Object ref = expectedPauseCode_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1435,12 +1335,10 @@ private static final long serialVersionUID = 0L;
      * Expected pause Code that the agent should be using if they were on Pause.
      * </pre>
      *
-     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-     * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
      * @return The bytes for expectedPauseCode.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getExpectedPauseCodeBytes() {
       java.lang.Object ref = expectedPauseCode_;
       if (ref instanceof String) {
@@ -1458,13 +1356,11 @@ private static final long serialVersionUID = 0L;
      * Expected pause Code that the agent should be using if they were on Pause.
      * </pre>
      *
-     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-     * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
      * @param value The expectedPauseCode to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setExpectedPauseCode(
+    public Builder setExpectedPauseCode(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       expectedPauseCode_ = value;
@@ -1477,12 +1373,10 @@ private static final long serialVersionUID = 0L;
      * Expected pause Code that the agent should be using if they were on Pause.
      * </pre>
      *
-     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-     * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearExpectedPauseCode() {
+    public Builder clearExpectedPauseCode() {
       expectedPauseCode_ = getDefaultInstance().getExpectedPauseCode();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -1493,13 +1387,11 @@ private static final long serialVersionUID = 0L;
      * Expected pause Code that the agent should be using if they were on Pause.
      * </pre>
      *
-     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-     * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
      * @param value The bytes for expectedPauseCode to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setExpectedPauseCodeBytes(
+    public Builder setExpectedPauseCodeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1829,153 +1721,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearViolationDurationSeconds() {
       bitField0_ = (bitField0_ & ~0x00000040);
       violationDurationSeconds_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.LazyStringArrayList expectedPauseCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureExpectedPauseCodesIsMutable() {
-      if (!expectedPauseCodes_.isModifiable()) {
-        expectedPauseCodes_ = new com.google.protobuf.LazyStringArrayList(expectedPauseCodes_);
-      }
-      bitField0_ |= 0x00000080;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @return A list containing the expectedPauseCodes.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getExpectedPauseCodesList() {
-      expectedPauseCodes_.makeImmutable();
-      return expectedPauseCodes_;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @return The count of expectedPauseCodes.
-     */
-    public int getExpectedPauseCodesCount() {
-      return expectedPauseCodes_.size();
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param index The index of the element to return.
-     * @return The expectedPauseCodes at the given index.
-     */
-    public java.lang.String getExpectedPauseCodes(int index) {
-      return expectedPauseCodes_.get(index);
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the expectedPauseCodes at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getExpectedPauseCodesBytes(int index) {
-      return expectedPauseCodes_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param index The index to set the value at.
-     * @param value The expectedPauseCodes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExpectedPauseCodes(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureExpectedPauseCodesIsMutable();
-      expectedPauseCodes_.set(index, value);
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param value The expectedPauseCodes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addExpectedPauseCodes(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureExpectedPauseCodesIsMutable();
-      expectedPauseCodes_.add(value);
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param values The expectedPauseCodes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllExpectedPauseCodes(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureExpectedPauseCodesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, expectedPauseCodes_);
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearExpectedPauseCodes() {
-      expectedPauseCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000080);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Expected pause codes that the agent should be using if they were on Pause.
-     * </pre>
-     *
-     * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-     * @param value The bytes of the expectedPauseCodes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addExpectedPauseCodesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureExpectedPauseCodesIsMutable();
-      expectedPauseCodes_.add(value);
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

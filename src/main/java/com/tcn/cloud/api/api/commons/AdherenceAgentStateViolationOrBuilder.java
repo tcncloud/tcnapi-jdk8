@@ -98,23 +98,19 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    * Expected pause Code that the agent should be using if they were on Pause.
    * </pre>
    *
-   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-   * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
    * @return The expectedPauseCode.
    */
-  @java.lang.Deprecated java.lang.String getExpectedPauseCode();
+  java.lang.String getExpectedPauseCode();
   /**
    * <pre>
    * Expected pause Code that the agent should be using if they were on Pause.
    * </pre>
    *
-   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
-   * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode"];</code>
    * @return The bytes for expectedPauseCode.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getExpectedPauseCodeBytes();
 
   /**
@@ -195,45 +191,4 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    * @return The violationDurationSeconds.
    */
   int getViolationDurationSeconds();
-
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @return A list containing the expectedPauseCodes.
-   */
-  java.util.List<java.lang.String>
-      getExpectedPauseCodesList();
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @return The count of expectedPauseCodes.
-   */
-  int getExpectedPauseCodesCount();
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @param index The index of the element to return.
-   * @return The expectedPauseCodes at the given index.
-   */
-  java.lang.String getExpectedPauseCodes(int index);
-  /**
-   * <pre>
-   * Expected pause codes that the agent should be using if they were on Pause.
-   * </pre>
-   *
-   * <code>repeated string expected_pause_codes = 8 [json_name = "expectedPauseCodes"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the expectedPauseCodes at the given index.
-   */
-  com.google.protobuf.ByteString
-      getExpectedPauseCodesBytes(int index);
 }
