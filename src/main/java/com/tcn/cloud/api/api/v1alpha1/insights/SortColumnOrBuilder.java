@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface SortColumnOrBuilder extends
+@java.lang.Deprecated public interface SortColumnOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.SortColumn)
     com.google.protobuf.MessageOrBuilder {
 

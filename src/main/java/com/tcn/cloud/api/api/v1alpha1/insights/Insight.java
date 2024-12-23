@@ -58,7 +58,8 @@ private static final long serialVersionUID = 0L;
   public enum InsightContentCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    PIPELINE(16),
+    @java.lang.Deprecated PIPELINE(16),
+    INSIGHT_BODY(17),
     INSIGHTCONTENT_NOT_SET(0);
     private final int value;
     private InsightContentCase(int value) {
@@ -77,6 +78,7 @@ private static final long serialVersionUID = 0L;
     public static InsightContentCase forNumber(int value) {
       switch (value) {
         case 16: return PIPELINE;
+        case 17: return INSIGHT_BODY;
         case 0: return INSIGHTCONTENT_NOT_SET;
         default: return null;
       }
@@ -529,26 +531,30 @@ private static final long serialVersionUID = 0L;
   public static final int PIPELINE_FIELD_NUMBER = 16;
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=29
    * @return Whether the pipeline field is set.
    */
   @java.lang.Override
-  public boolean hasPipeline() {
+  @java.lang.Deprecated public boolean hasPipeline() {
     return insightContentCase_ == 16;
   }
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=29
    * @return The pipeline.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
     if (insightContentCase_ == 16) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
     }
@@ -556,17 +562,60 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
     if (insightContentCase_ == 16) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
     }
     return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
+  }
+
+  public static final int INSIGHT_BODY_FIELD_NUMBER = 17;
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
+   */
+  @java.lang.Override
+  public boolean hasInsightBody() {
+    return insightContentCase_ == 17;
+  }
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * @return The insightBody.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getInsightBody() {
+    if (insightContentCase_ == 17) {
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getInsightBodyOrBuilder() {
+    if (insightContentCase_ == 17) {
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -624,6 +673,9 @@ private static final long serialVersionUID = 0L;
     }
     if (insightContentCase_ == 16) {
       output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_);
+    }
+    if (insightContentCase_ == 17) {
+      output.writeMessage(17, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -685,6 +737,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_);
     }
+    if (insightContentCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -734,6 +790,10 @@ private static final long serialVersionUID = 0L;
       case 16:
         if (!getPipeline()
             .equals(other.getPipeline())) return false;
+        break;
+      case 17:
+        if (!getInsightBody()
+            .equals(other.getInsightBody())) return false;
         break;
       case 0:
       default:
@@ -785,6 +845,10 @@ private static final long serialVersionUID = 0L;
       case 16:
         hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
         hash = (53 * hash) + getPipeline().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + INSIGHT_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getInsightBody().hashCode();
         break;
       case 0:
       default:
@@ -950,6 +1014,9 @@ private static final long serialVersionUID = 0L;
       if (pipelineBuilder_ != null) {
         pipelineBuilder_.clear();
       }
+      if (insightBodyBuilder_ != null) {
+        insightBodyBuilder_.clear();
+      }
       insightContentCase_ = 0;
       insightContent_ = null;
       return this;
@@ -1037,6 +1104,10 @@ private static final long serialVersionUID = 0L;
       if (insightContentCase_ == 16 &&
           pipelineBuilder_ != null) {
         result.insightContent_ = pipelineBuilder_.build();
+      }
+      if (insightContentCase_ == 17 &&
+          insightBodyBuilder_ != null) {
+        result.insightContent_ = insightBodyBuilder_.build();
       }
     }
 
@@ -1136,6 +1207,10 @@ private static final long serialVersionUID = 0L;
       switch (other.getInsightContentCase()) {
         case PIPELINE: {
           mergePipeline(other.getPipeline());
+          break;
+        }
+        case INSIGHT_BODY: {
+          mergeInsightBody(other.getInsightBody());
           break;
         }
         case INSIGHTCONTENT_NOT_SET: {
@@ -1244,6 +1319,13 @@ private static final long serialVersionUID = 0L;
               insightContentCase_ = 16;
               break;
             } // case 130
+            case 138: {
+              input.readMessage(
+                  getInsightBodyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              insightContentCase_ = 17;
+              break;
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2401,26 +2483,30 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> pipelineBuilder_;
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=29
      * @return Whether the pipeline field is set.
      */
     @java.lang.Override
-    public boolean hasPipeline() {
+    @java.lang.Deprecated public boolean hasPipeline() {
       return insightContentCase_ == 16;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=29
      * @return The pipeline.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline() {
       if (pipelineBuilder_ == null) {
         if (insightContentCase_ == 16) {
           return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_;
@@ -2435,12 +2521,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
-    public Builder setPipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+    @java.lang.Deprecated public Builder setPipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
       if (pipelineBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2455,12 +2541,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
-    public Builder setPipeline(
+    @java.lang.Deprecated public Builder setPipeline(
         com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder builderForValue) {
       if (pipelineBuilder_ == null) {
         insightContent_ = builderForValue.build();
@@ -2473,12 +2559,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
-    public Builder mergePipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+    @java.lang.Deprecated public Builder mergePipeline(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
       if (pipelineBuilder_ == null) {
         if (insightContentCase_ == 16 &&
             insightContent_ != com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance()) {
@@ -2500,12 +2586,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
-    public Builder clearPipeline() {
+    @java.lang.Deprecated public Builder clearPipeline() {
       if (pipelineBuilder_ == null) {
         if (insightContentCase_ == 16) {
           insightContentCase_ = 0;
@@ -2523,23 +2609,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder getPipelineBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder getPipelineBuilder() {
       return getPipelineFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder() {
       if ((insightContentCase_ == 16) && (pipelineBuilder_ != null)) {
         return pipelineBuilder_.getMessageOrBuilder();
       } else {
@@ -2551,10 +2637,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * pipeline
+     * pipeline [DEPRECATED: use insight_body instead]
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> 
@@ -2573,6 +2659,184 @@ private static final long serialVersionUID = 0L;
       insightContentCase_ = 16;
       onChanged();
       return pipelineBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> insightBodyBuilder_;
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * @return Whether the insightBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsightBody() {
+      return insightContentCase_ == 17;
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * @return The insightBody.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (insightContentCase_ == 17) {
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+      } else {
+        if (insightContentCase_ == 17) {
+          return insightBodyBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    public Builder setInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        insightContent_ = value;
+        onChanged();
+      } else {
+        insightBodyBuilder_.setMessage(value);
+      }
+      insightContentCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    public Builder setInsightBody(
+        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder builderForValue) {
+      if (insightBodyBuilder_ == null) {
+        insightContent_ = builderForValue.build();
+        onChanged();
+      } else {
+        insightBodyBuilder_.setMessage(builderForValue.build());
+      }
+      insightContentCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    public Builder mergeInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
+        if (insightContentCase_ == 17 &&
+            insightContent_ != com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance()) {
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          insightContent_ = value;
+        }
+        onChanged();
+      } else {
+        if (insightContentCase_ == 17) {
+          insightBodyBuilder_.mergeFrom(value);
+        } else {
+          insightBodyBuilder_.setMessage(value);
+        }
+      }
+      insightContentCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    public Builder clearInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (insightContentCase_ == 17) {
+          insightContentCase_ = 0;
+          insightContent_ = null;
+          onChanged();
+        }
+      } else {
+        if (insightContentCase_ == 17) {
+          insightContentCase_ = 0;
+          insightContent_ = null;
+        }
+        insightBodyBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder getInsightBodyBuilder() {
+      return getInsightBodyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getInsightBodyOrBuilder() {
+      if ((insightContentCase_ == 17) && (insightBodyBuilder_ != null)) {
+        return insightBodyBuilder_.getMessageOrBuilder();
+      } else {
+        if (insightContentCase_ == 17) {
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * pipeline representation of insight body
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> 
+        getInsightBodyFieldBuilder() {
+      if (insightBodyBuilder_ == null) {
+        if (!(insightContentCase_ == 17)) {
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        }
+        insightBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_,
+                getParentForChildren(),
+                isClean());
+        insightContent_ = null;
+      }
+      insightContentCase_ = 17;
+      onChanged();
+      return insightBodyBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

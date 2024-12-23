@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface StringManipulationNodeOrBuilder extends
+@java.lang.Deprecated public interface StringManipulationNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.StringManipulationNode)
     com.google.protobuf.MessageOrBuilder {
 
