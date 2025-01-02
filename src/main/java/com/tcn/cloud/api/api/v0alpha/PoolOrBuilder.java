@@ -20,30 +20,14 @@ public interface PoolOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The name.
-   */
-  java.lang.String getName();
-  /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  com.google.protobuf.ByteString
-      getNameBytes();
-
-  /**
-   * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-   * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=641
+   * <code>string desc = 3 [json_name = "desc"];</code>
    * @return The desc.
    */
-  @java.lang.Deprecated java.lang.String getDesc();
+  java.lang.String getDesc();
   /**
-   * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-   * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=641
+   * <code>string desc = 3 [json_name = "desc"];</code>
    * @return The bytes for desc.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getDescBytes();
 }

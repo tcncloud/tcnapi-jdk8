@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private Pool() {
     id_ = "";
-    name_ = "";
     desc_ = "";
   }
 
@@ -80,56 +79,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int DESC_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object desc_ = "";
   /**
-   * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-   * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=641
+   * <code>string desc = 3 [json_name = "desc"];</code>
    * @return The desc.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getDesc() {
+  public java.lang.String getDesc() {
     java.lang.Object ref = desc_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -142,13 +100,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-   * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=641
+   * <code>string desc = 3 [json_name = "desc"];</code>
    * @return The bytes for desc.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getDescBytes() {
     java.lang.Object ref = desc_;
     if (ref instanceof java.lang.String) {
@@ -179,9 +135,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, desc_);
     }
@@ -196,9 +149,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, desc_);
@@ -220,8 +170,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getId()
         .equals(other.getId())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
     if (!getDesc()
         .equals(other.getDesc())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -237,8 +185,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESC_FIELD_NUMBER;
     hash = (53 * hash) + getDesc().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -373,7 +319,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       id_ = "";
-      name_ = "";
       desc_ = "";
       return this;
     }
@@ -412,9 +357,6 @@ private static final long serialVersionUID = 0L;
         result.id_ = id_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.desc_ = desc_;
       }
     }
@@ -468,14 +410,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.getDesc().isEmpty()) {
         desc_ = other.desc_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -509,14 +446,9 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 26: {
               desc_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -608,86 +540,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object name_ = "";
-    /**
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object desc_ = "";
     /**
-     * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-     * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=641
+     * <code>string desc = 3 [json_name = "desc"];</code>
      * @return The desc.
      */
-    @java.lang.Deprecated public java.lang.String getDesc() {
+    public java.lang.String getDesc() {
       java.lang.Object ref = desc_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -700,12 +558,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-     * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=641
+     * <code>string desc = 3 [json_name = "desc"];</code>
      * @return The bytes for desc.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getDescBytes() {
       java.lang.Object ref = desc_;
       if (ref instanceof String) {
@@ -719,45 +575,39 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-     * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=641
+     * <code>string desc = 3 [json_name = "desc"];</code>
      * @param value The desc to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDesc(
+    public Builder setDesc(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       desc_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-     * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=641
+     * <code>string desc = 3 [json_name = "desc"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearDesc() {
+    public Builder clearDesc() {
       desc_ = getDefaultInstance().getDesc();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
-     * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=641
+     * <code>string desc = 3 [json_name = "desc"];</code>
      * @param value The bytes for desc to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDescBytes(
+    public Builder setDescBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       desc_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
