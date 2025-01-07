@@ -137,12 +137,6 @@ private static final long serialVersionUID = 0L;
     PAYWAY_CREATE_TOKEN_REQUEST(1802),
     PAYWAY_SUBMIT_ACH_SALE_REQUEST(1803),
     BILLINGTREE_SUBMIT_CARD_SALE_REQUEST(1901),
-    BILLINGTREE_GET_ACCESS_TOKEN(1902),
-    BILLINGTREE_TOKENIZE_CARD(1903),
-    BILLINGTREE_TOKENIZE_ACH(1904),
-    BILLINGTREE_TRANSACTION_CARD_SALE(1905),
-    BILLINGTREE_TRANSACTION_ACH_SALE(1906),
-    BILLINGTREE_QUERY_FEE(1907),
     EXPERIAN_CC_PAYMENT_REQUEST(2001),
     EXPERIAN_CC_PAYMENT_PLAN_REQUEST(2002),
     EXPERIAN_BALANCEREQUEST(2003),
@@ -354,8 +348,6 @@ private static final long serialVersionUID = 0L;
     FINVI_VELOSIDY_ONE_TIME_SALE(5502),
     FINVI_VELOSIDY_PLAN_OFFER(5503),
     FINVI_VELOSIDY_PLAN_RECURRING_CREATE(5504),
-    FINVI_VELOSIDY_PENDING_PAYMENT(5505),
-    FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE(5506),
     CLOVER_PAYMENT_CARD_SALE_TRANSACTION(5601),
     NUVEI_PAYMENT(5701),
     VALUE_NOT_SET(0);
@@ -460,12 +452,6 @@ private static final long serialVersionUID = 0L;
         case 1802: return PAYWAY_CREATE_TOKEN_REQUEST;
         case 1803: return PAYWAY_SUBMIT_ACH_SALE_REQUEST;
         case 1901: return BILLINGTREE_SUBMIT_CARD_SALE_REQUEST;
-        case 1902: return BILLINGTREE_GET_ACCESS_TOKEN;
-        case 1903: return BILLINGTREE_TOKENIZE_CARD;
-        case 1904: return BILLINGTREE_TOKENIZE_ACH;
-        case 1905: return BILLINGTREE_TRANSACTION_CARD_SALE;
-        case 1906: return BILLINGTREE_TRANSACTION_ACH_SALE;
-        case 1907: return BILLINGTREE_QUERY_FEE;
         case 2001: return EXPERIAN_CC_PAYMENT_REQUEST;
         case 2002: return EXPERIAN_CC_PAYMENT_PLAN_REQUEST;
         case 2003: return EXPERIAN_BALANCEREQUEST;
@@ -677,8 +663,6 @@ private static final long serialVersionUID = 0L;
         case 5502: return FINVI_VELOSIDY_ONE_TIME_SALE;
         case 5503: return FINVI_VELOSIDY_PLAN_OFFER;
         case 5504: return FINVI_VELOSIDY_PLAN_RECURRING_CREATE;
-        case 5505: return FINVI_VELOSIDY_PENDING_PAYMENT;
-        case 5506: return FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE;
         case 5601: return CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
         case 5701: return NUVEI_PAYMENT;
         case 0: return VALUE_NOT_SET;
@@ -3368,192 +3352,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeSubmitCardSaleRequest) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeSubmitCardSaleRequest.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_GET_ACCESS_TOKEN_FIELD_NUMBER = 1902;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   * @return Whether the billingtreeGetAccessToken field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeGetAccessToken() {
-    return valueCase_ == 1902;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   * @return The billingtreeGetAccessToken.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken getBillingtreeGetAccessToken() {
-    if (valueCase_ == 1902) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder getBillingtreeGetAccessTokenOrBuilder() {
-    if (valueCase_ == 1902) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_TOKENIZE_CARD_FIELD_NUMBER = 1903;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   * @return Whether the billingtreeTokenizeCard field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeTokenizeCard() {
-    return valueCase_ == 1903;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   * @return The billingtreeTokenizeCard.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard getBillingtreeTokenizeCard() {
-    if (valueCase_ == 1903) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder getBillingtreeTokenizeCardOrBuilder() {
-    if (valueCase_ == 1903) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_TOKENIZE_ACH_FIELD_NUMBER = 1904;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   * @return Whether the billingtreeTokenizeAch field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeTokenizeAch() {
-    return valueCase_ == 1904;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   * @return The billingtreeTokenizeAch.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch getBillingtreeTokenizeAch() {
-    if (valueCase_ == 1904) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder getBillingtreeTokenizeAchOrBuilder() {
-    if (valueCase_ == 1904) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_TRANSACTION_CARD_SALE_FIELD_NUMBER = 1905;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   * @return Whether the billingtreeTransactionCardSale field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeTransactionCardSale() {
-    return valueCase_ == 1905;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   * @return The billingtreeTransactionCardSale.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale getBillingtreeTransactionCardSale() {
-    if (valueCase_ == 1905) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder getBillingtreeTransactionCardSaleOrBuilder() {
-    if (valueCase_ == 1905) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_TRANSACTION_ACH_SALE_FIELD_NUMBER = 1906;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   * @return Whether the billingtreeTransactionAchSale field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeTransactionAchSale() {
-    return valueCase_ == 1906;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   * @return The billingtreeTransactionAchSale.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale getBillingtreeTransactionAchSale() {
-    if (valueCase_ == 1906) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder getBillingtreeTransactionAchSaleOrBuilder() {
-    if (valueCase_ == 1906) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-  }
-
-  public static final int BILLINGTREE_QUERY_FEE_FIELD_NUMBER = 1907;
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   * @return Whether the billingtreeQueryFee field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingtreeQueryFee() {
-    return valueCase_ == 1907;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   * @return The billingtreeQueryFee.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee getBillingtreeQueryFee() {
-    if (valueCase_ == 1907) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder getBillingtreeQueryFeeOrBuilder() {
-    if (valueCase_ == 1907) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
   }
 
   public static final int EXPERIAN_CC_PAYMENT_REQUEST_FIELD_NUMBER = 2001;
@@ -9233,7 +9031,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1162
+   *     See api/commons/integrations/integrations.proto;l=1148
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9243,7 +9041,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1162
+   *     See api/commons/integrations/integrations.proto;l=1148
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9268,7 +9066,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1163
+   *     See api/commons/integrations/integrations.proto;l=1149
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9278,7 +9076,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1163
+   *     See api/commons/integrations/integrations.proto;l=1149
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9303,7 +9101,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9313,7 +9111,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9338,7 +9136,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9348,7 +9146,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9373,7 +9171,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9383,7 +9181,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9408,7 +9206,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9418,7 +9216,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9443,7 +9241,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9453,7 +9251,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10125,68 +9923,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
   }
 
-  public static final int FINVI_VELOSIDY_PENDING_PAYMENT_FIELD_NUMBER = 5505;
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   * @return Whether the finviVelosidyPendingPayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasFinviVelosidyPendingPayment() {
-    return valueCase_ == 5505;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   * @return The finviVelosidyPendingPayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment getFinviVelosidyPendingPayment() {
-    if (valueCase_ == 5505) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder getFinviVelosidyPendingPaymentOrBuilder() {
-    if (valueCase_ == 5505) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-  }
-
-  public static final int FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE_FIELD_NUMBER = 5506;
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   * @return Whether the finviVelosidyPlanOneTimeFuture field is set.
-   */
-  @java.lang.Override
-  public boolean hasFinviVelosidyPlanOneTimeFuture() {
-    return valueCase_ == 5506;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   * @return The finviVelosidyPlanOneTimeFuture.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture getFinviVelosidyPlanOneTimeFuture() {
-    if (valueCase_ == 5506) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder getFinviVelosidyPlanOneTimeFutureOrBuilder() {
-    if (valueCase_ == 5506) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-  }
-
   public static final int CLOVER_PAYMENT_CARD_SALE_TRANSACTION_FIELD_NUMBER = 5601;
   /**
    * <code>.api.commons.integrations.ExecuteCloverPaymentCardSaleTransaction clover_payment_card_sale_transaction = 5601 [json_name = "cloverPaymentCardSaleTransaction"];</code>
@@ -10520,24 +10256,6 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 1901) {
       output.writeMessage(1901, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeSubmitCardSaleRequest) value_);
-    }
-    if (valueCase_ == 1902) {
-      output.writeMessage(1902, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_);
-    }
-    if (valueCase_ == 1903) {
-      output.writeMessage(1903, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_);
-    }
-    if (valueCase_ == 1904) {
-      output.writeMessage(1904, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_);
-    }
-    if (valueCase_ == 1905) {
-      output.writeMessage(1905, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_);
-    }
-    if (valueCase_ == 1906) {
-      output.writeMessage(1906, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_);
-    }
-    if (valueCase_ == 1907) {
-      output.writeMessage(1907, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_);
     }
     if (valueCase_ == 2001) {
       output.writeMessage(2001, (com.tcn.cloud.api.api.commons.integrations.ExecuteExperianCcPaymentRequest) value_);
@@ -11172,12 +10890,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5504) {
       output.writeMessage(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
     }
-    if (valueCase_ == 5505) {
-      output.writeMessage(5505, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_);
-    }
-    if (valueCase_ == 5506) {
-      output.writeMessage(5506, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_);
-    }
     if (valueCase_ == 5601) {
       output.writeMessage(5601, (com.tcn.cloud.api.api.commons.integrations.ExecuteCloverPaymentCardSaleTransaction) value_);
     }
@@ -11535,30 +11247,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 1901) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1901, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeSubmitCardSaleRequest) value_);
-    }
-    if (valueCase_ == 1902) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1902, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_);
-    }
-    if (valueCase_ == 1903) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1903, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_);
-    }
-    if (valueCase_ == 1904) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1904, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_);
-    }
-    if (valueCase_ == 1905) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1905, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_);
-    }
-    if (valueCase_ == 1906) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1906, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_);
-    }
-    if (valueCase_ == 1907) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1907, (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_);
     }
     if (valueCase_ == 2001) {
       size += com.google.protobuf.CodedOutputStream
@@ -12404,14 +12092,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
     }
-    if (valueCase_ == 5505) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5505, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_);
-    }
-    if (valueCase_ == 5506) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5506, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_);
-    }
     if (valueCase_ == 5601) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5601, (com.tcn.cloud.api.api.commons.integrations.ExecuteCloverPaymentCardSaleTransaction) value_);
@@ -12778,30 +12458,6 @@ private static final long serialVersionUID = 0L;
       case 1901:
         if (!getBillingtreeSubmitCardSaleRequest()
             .equals(other.getBillingtreeSubmitCardSaleRequest())) return false;
-        break;
-      case 1902:
-        if (!getBillingtreeGetAccessToken()
-            .equals(other.getBillingtreeGetAccessToken())) return false;
-        break;
-      case 1903:
-        if (!getBillingtreeTokenizeCard()
-            .equals(other.getBillingtreeTokenizeCard())) return false;
-        break;
-      case 1904:
-        if (!getBillingtreeTokenizeAch()
-            .equals(other.getBillingtreeTokenizeAch())) return false;
-        break;
-      case 1905:
-        if (!getBillingtreeTransactionCardSale()
-            .equals(other.getBillingtreeTransactionCardSale())) return false;
-        break;
-      case 1906:
-        if (!getBillingtreeTransactionAchSale()
-            .equals(other.getBillingtreeTransactionAchSale())) return false;
-        break;
-      case 1907:
-        if (!getBillingtreeQueryFee()
-            .equals(other.getBillingtreeQueryFee())) return false;
         break;
       case 2001:
         if (!getExperianCcPaymentRequest()
@@ -13647,14 +13303,6 @@ private static final long serialVersionUID = 0L;
         if (!getFinviVelosidyPlanRecurringCreate()
             .equals(other.getFinviVelosidyPlanRecurringCreate())) return false;
         break;
-      case 5505:
-        if (!getFinviVelosidyPendingPayment()
-            .equals(other.getFinviVelosidyPendingPayment())) return false;
-        break;
-      case 5506:
-        if (!getFinviVelosidyPlanOneTimeFuture()
-            .equals(other.getFinviVelosidyPlanOneTimeFuture())) return false;
-        break;
       case 5601:
         if (!getCloverPaymentCardSaleTransaction()
             .equals(other.getCloverPaymentCardSaleTransaction())) return false;
@@ -14019,30 +13667,6 @@ private static final long serialVersionUID = 0L;
       case 1901:
         hash = (37 * hash) + BILLINGTREE_SUBMIT_CARD_SALE_REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getBillingtreeSubmitCardSaleRequest().hashCode();
-        break;
-      case 1902:
-        hash = (37 * hash) + BILLINGTREE_GET_ACCESS_TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeGetAccessToken().hashCode();
-        break;
-      case 1903:
-        hash = (37 * hash) + BILLINGTREE_TOKENIZE_CARD_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeTokenizeCard().hashCode();
-        break;
-      case 1904:
-        hash = (37 * hash) + BILLINGTREE_TOKENIZE_ACH_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeTokenizeAch().hashCode();
-        break;
-      case 1905:
-        hash = (37 * hash) + BILLINGTREE_TRANSACTION_CARD_SALE_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeTransactionCardSale().hashCode();
-        break;
-      case 1906:
-        hash = (37 * hash) + BILLINGTREE_TRANSACTION_ACH_SALE_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeTransactionAchSale().hashCode();
-        break;
-      case 1907:
-        hash = (37 * hash) + BILLINGTREE_QUERY_FEE_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingtreeQueryFee().hashCode();
         break;
       case 2001:
         hash = (37 * hash) + EXPERIAN_CC_PAYMENT_REQUEST_FIELD_NUMBER;
@@ -14888,14 +14512,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FINVI_VELOSIDY_PLAN_RECURRING_CREATE_FIELD_NUMBER;
         hash = (53 * hash) + getFinviVelosidyPlanRecurringCreate().hashCode();
         break;
-      case 5505:
-        hash = (37 * hash) + FINVI_VELOSIDY_PENDING_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getFinviVelosidyPendingPayment().hashCode();
-        break;
-      case 5506:
-        hash = (37 * hash) + FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE_FIELD_NUMBER;
-        hash = (53 * hash) + getFinviVelosidyPlanOneTimeFuture().hashCode();
-        break;
       case 5601:
         hash = (37 * hash) + CLOVER_PAYMENT_CARD_SALE_TRANSACTION_FIELD_NUMBER;
         hash = (53 * hash) + getCloverPaymentCardSaleTransaction().hashCode();
@@ -15309,24 +14925,6 @@ private static final long serialVersionUID = 0L;
       }
       if (billingtreeSubmitCardSaleRequestBuilder_ != null) {
         billingtreeSubmitCardSaleRequestBuilder_.clear();
-      }
-      if (billingtreeGetAccessTokenBuilder_ != null) {
-        billingtreeGetAccessTokenBuilder_.clear();
-      }
-      if (billingtreeTokenizeCardBuilder_ != null) {
-        billingtreeTokenizeCardBuilder_.clear();
-      }
-      if (billingtreeTokenizeAchBuilder_ != null) {
-        billingtreeTokenizeAchBuilder_.clear();
-      }
-      if (billingtreeTransactionCardSaleBuilder_ != null) {
-        billingtreeTransactionCardSaleBuilder_.clear();
-      }
-      if (billingtreeTransactionAchSaleBuilder_ != null) {
-        billingtreeTransactionAchSaleBuilder_.clear();
-      }
-      if (billingtreeQueryFeeBuilder_ != null) {
-        billingtreeQueryFeeBuilder_.clear();
       }
       if (experianCcPaymentRequestBuilder_ != null) {
         experianCcPaymentRequestBuilder_.clear();
@@ -15961,12 +15559,6 @@ private static final long serialVersionUID = 0L;
       if (finviVelosidyPlanRecurringCreateBuilder_ != null) {
         finviVelosidyPlanRecurringCreateBuilder_.clear();
       }
-      if (finviVelosidyPendingPaymentBuilder_ != null) {
-        finviVelosidyPendingPaymentBuilder_.clear();
-      }
-      if (finviVelosidyPlanOneTimeFutureBuilder_ != null) {
-        finviVelosidyPlanOneTimeFutureBuilder_.clear();
-      }
       if (cloverPaymentCardSaleTransactionBuilder_ != null) {
         cloverPaymentCardSaleTransactionBuilder_.clear();
       }
@@ -16401,30 +15993,6 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 1901 &&
           billingtreeSubmitCardSaleRequestBuilder_ != null) {
         result.value_ = billingtreeSubmitCardSaleRequestBuilder_.build();
-      }
-      if (valueCase_ == 1902 &&
-          billingtreeGetAccessTokenBuilder_ != null) {
-        result.value_ = billingtreeGetAccessTokenBuilder_.build();
-      }
-      if (valueCase_ == 1903 &&
-          billingtreeTokenizeCardBuilder_ != null) {
-        result.value_ = billingtreeTokenizeCardBuilder_.build();
-      }
-      if (valueCase_ == 1904 &&
-          billingtreeTokenizeAchBuilder_ != null) {
-        result.value_ = billingtreeTokenizeAchBuilder_.build();
-      }
-      if (valueCase_ == 1905 &&
-          billingtreeTransactionCardSaleBuilder_ != null) {
-        result.value_ = billingtreeTransactionCardSaleBuilder_.build();
-      }
-      if (valueCase_ == 1906 &&
-          billingtreeTransactionAchSaleBuilder_ != null) {
-        result.value_ = billingtreeTransactionAchSaleBuilder_.build();
-      }
-      if (valueCase_ == 1907 &&
-          billingtreeQueryFeeBuilder_ != null) {
-        result.value_ = billingtreeQueryFeeBuilder_.build();
       }
       if (valueCase_ == 2001 &&
           experianCcPaymentRequestBuilder_ != null) {
@@ -17270,14 +16838,6 @@ private static final long serialVersionUID = 0L;
           finviVelosidyPlanRecurringCreateBuilder_ != null) {
         result.value_ = finviVelosidyPlanRecurringCreateBuilder_.build();
       }
-      if (valueCase_ == 5505 &&
-          finviVelosidyPendingPaymentBuilder_ != null) {
-        result.value_ = finviVelosidyPendingPaymentBuilder_.build();
-      }
-      if (valueCase_ == 5506 &&
-          finviVelosidyPlanOneTimeFutureBuilder_ != null) {
-        result.value_ = finviVelosidyPlanOneTimeFutureBuilder_.build();
-      }
       if (valueCase_ == 5601 &&
           cloverPaymentCardSaleTransactionBuilder_ != null) {
         result.value_ = cloverPaymentCardSaleTransactionBuilder_.build();
@@ -17676,30 +17236,6 @@ private static final long serialVersionUID = 0L;
         }
         case BILLINGTREE_SUBMIT_CARD_SALE_REQUEST: {
           mergeBillingtreeSubmitCardSaleRequest(other.getBillingtreeSubmitCardSaleRequest());
-          break;
-        }
-        case BILLINGTREE_GET_ACCESS_TOKEN: {
-          mergeBillingtreeGetAccessToken(other.getBillingtreeGetAccessToken());
-          break;
-        }
-        case BILLINGTREE_TOKENIZE_CARD: {
-          mergeBillingtreeTokenizeCard(other.getBillingtreeTokenizeCard());
-          break;
-        }
-        case BILLINGTREE_TOKENIZE_ACH: {
-          mergeBillingtreeTokenizeAch(other.getBillingtreeTokenizeAch());
-          break;
-        }
-        case BILLINGTREE_TRANSACTION_CARD_SALE: {
-          mergeBillingtreeTransactionCardSale(other.getBillingtreeTransactionCardSale());
-          break;
-        }
-        case BILLINGTREE_TRANSACTION_ACH_SALE: {
-          mergeBillingtreeTransactionAchSale(other.getBillingtreeTransactionAchSale());
-          break;
-        }
-        case BILLINGTREE_QUERY_FEE: {
-          mergeBillingtreeQueryFee(other.getBillingtreeQueryFee());
           break;
         }
         case EXPERIAN_CC_PAYMENT_REQUEST: {
@@ -18546,14 +18082,6 @@ private static final long serialVersionUID = 0L;
           mergeFinviVelosidyPlanRecurringCreate(other.getFinviVelosidyPlanRecurringCreate());
           break;
         }
-        case FINVI_VELOSIDY_PENDING_PAYMENT: {
-          mergeFinviVelosidyPendingPayment(other.getFinviVelosidyPendingPayment());
-          break;
-        }
-        case FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE: {
-          mergeFinviVelosidyPlanOneTimeFuture(other.getFinviVelosidyPlanOneTimeFuture());
-          break;
-        }
         case CLOVER_PAYMENT_CARD_SALE_TRANSACTION: {
           mergeCloverPaymentCardSaleTransaction(other.getCloverPaymentCardSaleTransaction());
           break;
@@ -19192,48 +18720,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 1901;
               break;
             } // case 15210
-            case 15218: {
-              input.readMessage(
-                  getBillingtreeGetAccessTokenFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1902;
-              break;
-            } // case 15218
-            case 15226: {
-              input.readMessage(
-                  getBillingtreeTokenizeCardFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1903;
-              break;
-            } // case 15226
-            case 15234: {
-              input.readMessage(
-                  getBillingtreeTokenizeAchFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1904;
-              break;
-            } // case 15234
-            case 15242: {
-              input.readMessage(
-                  getBillingtreeTransactionCardSaleFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1905;
-              break;
-            } // case 15242
-            case 15250: {
-              input.readMessage(
-                  getBillingtreeTransactionAchSaleFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1906;
-              break;
-            } // case 15250
-            case 15258: {
-              input.readMessage(
-                  getBillingtreeQueryFeeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 1907;
-              break;
-            } // case 15258
             case 16010: {
               input.readMessage(
                   getExperianCcPaymentRequestFieldBuilder().getBuilder(),
@@ -20711,20 +20197,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5504;
               break;
             } // case 44034
-            case 44042: {
-              input.readMessage(
-                  getFinviVelosidyPendingPaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 5505;
-              break;
-            } // case 44042
-            case 44050: {
-              input.readMessage(
-                  getFinviVelosidyPlanOneTimeFutureFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 5506;
-              break;
-            } // case 44050
             case 44810: {
               input.readMessage(
                   getCloverPaymentCardSaleTransactionFieldBuilder().getBuilder(),
@@ -32920,858 +32392,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 1901;
       onChanged();
       return billingtreeSubmitCardSaleRequestBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder> billingtreeGetAccessTokenBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     * @return Whether the billingtreeGetAccessToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeGetAccessToken() {
-      return valueCase_ == 1902;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     * @return The billingtreeGetAccessToken.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken getBillingtreeGetAccessToken() {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        if (valueCase_ == 1902) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1902) {
-          return billingtreeGetAccessTokenBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    public Builder setBillingtreeGetAccessToken(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken value) {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeGetAccessTokenBuilder_.setMessage(value);
-      }
-      valueCase_ = 1902;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    public Builder setBillingtreeGetAccessToken(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.Builder builderForValue) {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeGetAccessTokenBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1902;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    public Builder mergeBillingtreeGetAccessToken(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken value) {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        if (valueCase_ == 1902 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1902) {
-          billingtreeGetAccessTokenBuilder_.mergeFrom(value);
-        } else {
-          billingtreeGetAccessTokenBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1902;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    public Builder clearBillingtreeGetAccessToken() {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        if (valueCase_ == 1902) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1902) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeGetAccessTokenBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.Builder getBillingtreeGetAccessTokenBuilder() {
-      return getBillingtreeGetAccessTokenFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder getBillingtreeGetAccessTokenOrBuilder() {
-      if ((valueCase_ == 1902) && (billingtreeGetAccessTokenBuilder_ != null)) {
-        return billingtreeGetAccessTokenBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1902) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder> 
-        getBillingtreeGetAccessTokenFieldBuilder() {
-      if (billingtreeGetAccessTokenBuilder_ == null) {
-        if (!(valueCase_ == 1902)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.getDefaultInstance();
-        }
-        billingtreeGetAccessTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1902;
-      onChanged();
-      return billingtreeGetAccessTokenBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder> billingtreeTokenizeCardBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     * @return Whether the billingtreeTokenizeCard field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeTokenizeCard() {
-      return valueCase_ == 1903;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     * @return The billingtreeTokenizeCard.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard getBillingtreeTokenizeCard() {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        if (valueCase_ == 1903) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1903) {
-          return billingtreeTokenizeCardBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    public Builder setBillingtreeTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard value) {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeTokenizeCardBuilder_.setMessage(value);
-      }
-      valueCase_ = 1903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    public Builder setBillingtreeTokenizeCard(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.Builder builderForValue) {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeTokenizeCardBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    public Builder mergeBillingtreeTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard value) {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        if (valueCase_ == 1903 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1903) {
-          billingtreeTokenizeCardBuilder_.mergeFrom(value);
-        } else {
-          billingtreeTokenizeCardBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    public Builder clearBillingtreeTokenizeCard() {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        if (valueCase_ == 1903) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1903) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeTokenizeCardBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.Builder getBillingtreeTokenizeCardBuilder() {
-      return getBillingtreeTokenizeCardFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder getBillingtreeTokenizeCardOrBuilder() {
-      if ((valueCase_ == 1903) && (billingtreeTokenizeCardBuilder_ != null)) {
-        return billingtreeTokenizeCardBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1903) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder> 
-        getBillingtreeTokenizeCardFieldBuilder() {
-      if (billingtreeTokenizeCardBuilder_ == null) {
-        if (!(valueCase_ == 1903)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.getDefaultInstance();
-        }
-        billingtreeTokenizeCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1903;
-      onChanged();
-      return billingtreeTokenizeCardBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder> billingtreeTokenizeAchBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     * @return Whether the billingtreeTokenizeAch field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeTokenizeAch() {
-      return valueCase_ == 1904;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     * @return The billingtreeTokenizeAch.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch getBillingtreeTokenizeAch() {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        if (valueCase_ == 1904) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1904) {
-          return billingtreeTokenizeAchBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    public Builder setBillingtreeTokenizeAch(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch value) {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeTokenizeAchBuilder_.setMessage(value);
-      }
-      valueCase_ = 1904;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    public Builder setBillingtreeTokenizeAch(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.Builder builderForValue) {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeTokenizeAchBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1904;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    public Builder mergeBillingtreeTokenizeAch(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch value) {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        if (valueCase_ == 1904 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1904) {
-          billingtreeTokenizeAchBuilder_.mergeFrom(value);
-        } else {
-          billingtreeTokenizeAchBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1904;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    public Builder clearBillingtreeTokenizeAch() {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        if (valueCase_ == 1904) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1904) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeTokenizeAchBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.Builder getBillingtreeTokenizeAchBuilder() {
-      return getBillingtreeTokenizeAchFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder getBillingtreeTokenizeAchOrBuilder() {
-      if ((valueCase_ == 1904) && (billingtreeTokenizeAchBuilder_ != null)) {
-        return billingtreeTokenizeAchBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1904) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder> 
-        getBillingtreeTokenizeAchFieldBuilder() {
-      if (billingtreeTokenizeAchBuilder_ == null) {
-        if (!(valueCase_ == 1904)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.getDefaultInstance();
-        }
-        billingtreeTokenizeAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1904;
-      onChanged();
-      return billingtreeTokenizeAchBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder> billingtreeTransactionCardSaleBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     * @return Whether the billingtreeTransactionCardSale field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeTransactionCardSale() {
-      return valueCase_ == 1905;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     * @return The billingtreeTransactionCardSale.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale getBillingtreeTransactionCardSale() {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        if (valueCase_ == 1905) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1905) {
-          return billingtreeTransactionCardSaleBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    public Builder setBillingtreeTransactionCardSale(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale value) {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeTransactionCardSaleBuilder_.setMessage(value);
-      }
-      valueCase_ = 1905;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    public Builder setBillingtreeTransactionCardSale(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.Builder builderForValue) {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeTransactionCardSaleBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1905;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    public Builder mergeBillingtreeTransactionCardSale(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale value) {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        if (valueCase_ == 1905 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1905) {
-          billingtreeTransactionCardSaleBuilder_.mergeFrom(value);
-        } else {
-          billingtreeTransactionCardSaleBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1905;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    public Builder clearBillingtreeTransactionCardSale() {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        if (valueCase_ == 1905) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1905) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeTransactionCardSaleBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.Builder getBillingtreeTransactionCardSaleBuilder() {
-      return getBillingtreeTransactionCardSaleFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder getBillingtreeTransactionCardSaleOrBuilder() {
-      if ((valueCase_ == 1905) && (billingtreeTransactionCardSaleBuilder_ != null)) {
-        return billingtreeTransactionCardSaleBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1905) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder> 
-        getBillingtreeTransactionCardSaleFieldBuilder() {
-      if (billingtreeTransactionCardSaleBuilder_ == null) {
-        if (!(valueCase_ == 1905)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.getDefaultInstance();
-        }
-        billingtreeTransactionCardSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1905;
-      onChanged();
-      return billingtreeTransactionCardSaleBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder> billingtreeTransactionAchSaleBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     * @return Whether the billingtreeTransactionAchSale field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeTransactionAchSale() {
-      return valueCase_ == 1906;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     * @return The billingtreeTransactionAchSale.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale getBillingtreeTransactionAchSale() {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        if (valueCase_ == 1906) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1906) {
-          return billingtreeTransactionAchSaleBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    public Builder setBillingtreeTransactionAchSale(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale value) {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeTransactionAchSaleBuilder_.setMessage(value);
-      }
-      valueCase_ = 1906;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    public Builder setBillingtreeTransactionAchSale(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.Builder builderForValue) {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeTransactionAchSaleBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1906;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    public Builder mergeBillingtreeTransactionAchSale(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale value) {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        if (valueCase_ == 1906 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1906) {
-          billingtreeTransactionAchSaleBuilder_.mergeFrom(value);
-        } else {
-          billingtreeTransactionAchSaleBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1906;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    public Builder clearBillingtreeTransactionAchSale() {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        if (valueCase_ == 1906) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1906) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeTransactionAchSaleBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.Builder getBillingtreeTransactionAchSaleBuilder() {
-      return getBillingtreeTransactionAchSaleFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder getBillingtreeTransactionAchSaleOrBuilder() {
-      if ((valueCase_ == 1906) && (billingtreeTransactionAchSaleBuilder_ != null)) {
-        return billingtreeTransactionAchSaleBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1906) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder> 
-        getBillingtreeTransactionAchSaleFieldBuilder() {
-      if (billingtreeTransactionAchSaleBuilder_ == null) {
-        if (!(valueCase_ == 1906)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.getDefaultInstance();
-        }
-        billingtreeTransactionAchSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1906;
-      onChanged();
-      return billingtreeTransactionAchSaleBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder> billingtreeQueryFeeBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     * @return Whether the billingtreeQueryFee field is set.
-     */
-    @java.lang.Override
-    public boolean hasBillingtreeQueryFee() {
-      return valueCase_ == 1907;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     * @return The billingtreeQueryFee.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee getBillingtreeQueryFee() {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        if (valueCase_ == 1907) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
-      } else {
-        if (valueCase_ == 1907) {
-          return billingtreeQueryFeeBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    public Builder setBillingtreeQueryFee(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee value) {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        billingtreeQueryFeeBuilder_.setMessage(value);
-      }
-      valueCase_ = 1907;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    public Builder setBillingtreeQueryFee(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.Builder builderForValue) {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        billingtreeQueryFeeBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 1907;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    public Builder mergeBillingtreeQueryFee(com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee value) {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        if (valueCase_ == 1907 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 1907) {
-          billingtreeQueryFeeBuilder_.mergeFrom(value);
-        } else {
-          billingtreeQueryFeeBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 1907;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    public Builder clearBillingtreeQueryFee() {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        if (valueCase_ == 1907) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 1907) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        billingtreeQueryFeeBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.Builder getBillingtreeQueryFeeBuilder() {
-      return getBillingtreeQueryFeeFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder getBillingtreeQueryFeeOrBuilder() {
-      if ((valueCase_ == 1907) && (billingtreeQueryFeeBuilder_ != null)) {
-        return billingtreeQueryFeeBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 1907) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder> 
-        getBillingtreeQueryFeeFieldBuilder() {
-      if (billingtreeQueryFeeBuilder_ == null) {
-        if (!(valueCase_ == 1907)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.getDefaultInstance();
-        }
-        billingtreeQueryFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 1907;
-      onChanged();
-      return billingtreeQueryFeeBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -59765,7 +58385,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1162
+     *     See api/commons/integrations/integrations.proto;l=1148
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -59775,7 +58395,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1162
+     *     See api/commons/integrations/integrations.proto;l=1148
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -59911,7 +58531,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1163
+     *     See api/commons/integrations/integrations.proto;l=1149
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -59921,7 +58541,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1163
+     *     See api/commons/integrations/integrations.proto;l=1149
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -60057,7 +58677,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1164
+     *     See api/commons/integrations/integrations.proto;l=1150
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -60067,7 +58687,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1164
+     *     See api/commons/integrations/integrations.proto;l=1150
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -60203,7 +58823,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1165
+     *     See api/commons/integrations/integrations.proto;l=1151
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -60213,7 +58833,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1165
+     *     See api/commons/integrations/integrations.proto;l=1151
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -60349,7 +58969,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1166
+     *     See api/commons/integrations/integrations.proto;l=1152
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -60359,7 +58979,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1166
+     *     See api/commons/integrations/integrations.proto;l=1152
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -60495,7 +59115,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1167
+     *     See api/commons/integrations/integrations.proto;l=1153
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -60505,7 +59125,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1167
+     *     See api/commons/integrations/integrations.proto;l=1153
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -60641,7 +59261,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1168
+     *     See api/commons/integrations/integrations.proto;l=1154
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -60651,7 +59271,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1168
+     *     See api/commons/integrations/integrations.proto;l=1154
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -63762,290 +62382,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5504;
       onChanged();
       return finviVelosidyPlanRecurringCreateBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder> finviVelosidyPendingPaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     * @return Whether the finviVelosidyPendingPayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasFinviVelosidyPendingPayment() {
-      return valueCase_ == 5505;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     * @return The finviVelosidyPendingPayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment getFinviVelosidyPendingPayment() {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        if (valueCase_ == 5505) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 5505) {
-          return finviVelosidyPendingPaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    public Builder setFinviVelosidyPendingPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment value) {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        finviVelosidyPendingPaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 5505;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    public Builder setFinviVelosidyPendingPayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder builderForValue) {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        finviVelosidyPendingPaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 5505;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    public Builder mergeFinviVelosidyPendingPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment value) {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        if (valueCase_ == 5505 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 5505) {
-          finviVelosidyPendingPaymentBuilder_.mergeFrom(value);
-        } else {
-          finviVelosidyPendingPaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 5505;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    public Builder clearFinviVelosidyPendingPayment() {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        if (valueCase_ == 5505) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 5505) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        finviVelosidyPendingPaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder getFinviVelosidyPendingPaymentBuilder() {
-      return getFinviVelosidyPendingPaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder getFinviVelosidyPendingPaymentOrBuilder() {
-      if ((valueCase_ == 5505) && (finviVelosidyPendingPaymentBuilder_ != null)) {
-        return finviVelosidyPendingPaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 5505) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder> 
-        getFinviVelosidyPendingPaymentFieldBuilder() {
-      if (finviVelosidyPendingPaymentBuilder_ == null) {
-        if (!(valueCase_ == 5505)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
-        }
-        finviVelosidyPendingPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 5505;
-      onChanged();
-      return finviVelosidyPendingPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder> finviVelosidyPlanOneTimeFutureBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     * @return Whether the finviVelosidyPlanOneTimeFuture field is set.
-     */
-    @java.lang.Override
-    public boolean hasFinviVelosidyPlanOneTimeFuture() {
-      return valueCase_ == 5506;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     * @return The finviVelosidyPlanOneTimeFuture.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture getFinviVelosidyPlanOneTimeFuture() {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        if (valueCase_ == 5506) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-      } else {
-        if (valueCase_ == 5506) {
-          return finviVelosidyPlanOneTimeFutureBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    public Builder setFinviVelosidyPlanOneTimeFuture(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture value) {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        finviVelosidyPlanOneTimeFutureBuilder_.setMessage(value);
-      }
-      valueCase_ = 5506;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    public Builder setFinviVelosidyPlanOneTimeFuture(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder builderForValue) {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        finviVelosidyPlanOneTimeFutureBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 5506;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    public Builder mergeFinviVelosidyPlanOneTimeFuture(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture value) {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        if (valueCase_ == 5506 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 5506) {
-          finviVelosidyPlanOneTimeFutureBuilder_.mergeFrom(value);
-        } else {
-          finviVelosidyPlanOneTimeFutureBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 5506;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    public Builder clearFinviVelosidyPlanOneTimeFuture() {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        if (valueCase_ == 5506) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 5506) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        finviVelosidyPlanOneTimeFutureBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder getFinviVelosidyPlanOneTimeFutureBuilder() {
-      return getFinviVelosidyPlanOneTimeFutureFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder getFinviVelosidyPlanOneTimeFutureOrBuilder() {
-      if ((valueCase_ == 5506) && (finviVelosidyPlanOneTimeFutureBuilder_ != null)) {
-        return finviVelosidyPlanOneTimeFutureBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 5506) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder> 
-        getFinviVelosidyPlanOneTimeFutureFieldBuilder() {
-      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
-        if (!(valueCase_ == 5506)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
-        }
-        finviVelosidyPlanOneTimeFutureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 5506;
-      onChanged();
-      return finviVelosidyPlanOneTimeFutureBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

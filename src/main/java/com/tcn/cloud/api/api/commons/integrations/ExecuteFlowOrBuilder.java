@@ -1295,96 +1295,6 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeSubmitCardSaleRequestOrBuilder getBillingtreeSubmitCardSaleRequestOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   * @return Whether the billingtreeGetAccessToken field is set.
-   */
-  boolean hasBillingtreeGetAccessToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   * @return The billingtreeGetAccessToken.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessToken getBillingtreeGetAccessToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeGetAccessToken billingtree_get_access_token = 1902 [json_name = "billingtreeGetAccessToken"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeGetAccessTokenOrBuilder getBillingtreeGetAccessTokenOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   * @return Whether the billingtreeTokenizeCard field is set.
-   */
-  boolean hasBillingtreeTokenizeCard();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   * @return The billingtreeTokenizeCard.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCard getBillingtreeTokenizeCard();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeCard billingtree_tokenize_card = 1903 [json_name = "billingtreeTokenizeCard"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeCardOrBuilder getBillingtreeTokenizeCardOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   * @return Whether the billingtreeTokenizeAch field is set.
-   */
-  boolean hasBillingtreeTokenizeAch();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   * @return The billingtreeTokenizeAch.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAch getBillingtreeTokenizeAch();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTokenizeAch billingtree_tokenize_ach = 1904 [json_name = "billingtreeTokenizeAch"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTokenizeAchOrBuilder getBillingtreeTokenizeAchOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   * @return Whether the billingtreeTransactionCardSale field is set.
-   */
-  boolean hasBillingtreeTransactionCardSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   * @return The billingtreeTransactionCardSale.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSale getBillingtreeTransactionCardSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionCardSale billingtree_transaction_card_sale = 1905 [json_name = "billingtreeTransactionCardSale"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionCardSaleOrBuilder getBillingtreeTransactionCardSaleOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   * @return Whether the billingtreeTransactionAchSale field is set.
-   */
-  boolean hasBillingtreeTransactionAchSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   * @return The billingtreeTransactionAchSale.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSale getBillingtreeTransactionAchSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeTransactionAchSale billingtree_transaction_ach_sale = 1906 [json_name = "billingtreeTransactionAchSale"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeTransactionAchSaleOrBuilder getBillingtreeTransactionAchSaleOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   * @return Whether the billingtreeQueryFee field is set.
-   */
-  boolean hasBillingtreeQueryFee();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   * @return The billingtreeQueryFee.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFee getBillingtreeQueryFee();
-  /**
-   * <code>.api.commons.integrations.ExecuteBillingtreeQueryFee billingtree_query_fee = 1907 [json_name = "billingtreeQueryFee"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteBillingtreeQueryFeeOrBuilder getBillingtreeQueryFeeOrBuilder();
-
-  /**
    * <code>.api.commons.integrations.ExecuteExperianCcPaymentRequest experian_cc_payment_request = 2001 [json_name = "experianCcPaymentRequest"];</code>
    * @return Whether the experianCcPaymentRequest field is set.
    */
@@ -4132,14 +4042,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1162
+   *     See api/commons/integrations/integrations.proto;l=1148
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetLocations();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1162
+   *     See api/commons/integrations/integrations.proto;l=1148
    * @return The veradigmGetLocations.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations getVeradigmGetLocations();
@@ -4151,14 +4061,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1163
+   *     See api/commons/integrations/integrations.proto;l=1149
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPatientAccountBalance();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1163
+   *     See api/commons/integrations/integrations.proto;l=1149
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance getVeradigmGetPatientAccountBalance();
@@ -4170,14 +4080,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPayments();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return The veradigmGetPayments.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments getVeradigmGetPayments();
@@ -4189,14 +4099,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPlacesOfService();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService getVeradigmGetPlacesOfService();
@@ -4208,14 +4118,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSavePaymentTransaction();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction getVeradigmSavePaymentTransaction();
@@ -4227,14 +4137,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSaveRefundTransaction();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction getVeradigmSaveRefundTransaction();
@@ -4246,14 +4156,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSaveVoucherPayment();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment getVeradigmSaveVoucherPayment();
@@ -4576,36 +4486,6 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate finvi_velosidy_plan_recurring_create = 5504 [json_name = "finviVelosidyPlanRecurringCreate"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreateOrBuilder getFinviVelosidyPlanRecurringCreateOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   * @return Whether the finviVelosidyPendingPayment field is set.
-   */
-  boolean hasFinviVelosidyPendingPayment();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   * @return The finviVelosidyPendingPayment.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment getFinviVelosidyPendingPayment();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder getFinviVelosidyPendingPaymentOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   * @return Whether the finviVelosidyPlanOneTimeFuture field is set.
-   */
-  boolean hasFinviVelosidyPlanOneTimeFuture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   * @return The finviVelosidyPlanOneTimeFuture.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture getFinviVelosidyPlanOneTimeFuture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder getFinviVelosidyPlanOneTimeFutureOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteCloverPaymentCardSaleTransaction clover_payment_card_sale_transaction = 5601 [json_name = "cloverPaymentCardSaleTransaction"];</code>
