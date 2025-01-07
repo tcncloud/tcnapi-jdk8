@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
  *
  * Protobuf type {@code api.v1alpha1.insights.Parameters}
  */
-@java.lang.Deprecated public final class Parameters extends
+public final class Parameters extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.Parameters)
     ParametersOrBuilder {
@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.insights.Parameters.class, com.tcn.cloud.api.api.v1alpha1.insights.Parameters.Builder.class);
   }
 
-  @java.lang.Deprecated public interface ParameterOrBuilder extends
+  public interface ParameterOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.Parameters.Parameter)
       com.google.protobuf.MessageOrBuilder {
 
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
   /**
    * Protobuf type {@code api.v1alpha1.insights.Parameters.Parameter}
    */
-  @java.lang.Deprecated public static final class Parameter extends
+  public static final class Parameter extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.Parameters.Parameter)
       ParameterOrBuilder {

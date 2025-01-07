@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PIPELINE(3),
     PRQL(4),
-    QUERY_PIPELINE(16),
+    INSIGHT_BODY(13),
     QUERY_NOT_SET(0);
     private final int value;
     private QueryCase(int value) {
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 3: return PIPELINE;
         case 4: return PRQL;
-        case 16: return QUERY_PIPELINE;
+        case 13: return INSIGHT_BODY;
         case 0: return QUERY_NOT_SET;
         default: return null;
       }
@@ -296,47 +296,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int QUERY_PIPELINE_FIELD_NUMBER = 16;
+  public static final int INSIGHT_BODY_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * query pipeline is a structured representation of a query
+   * the insight body pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
-   * @return Whether the queryPipeline field is set.
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
    */
   @java.lang.Override
-  public boolean hasQueryPipeline() {
-    return queryCase_ == 16;
+  public boolean hasInsightBody() {
+    return queryCase_ == 13;
   }
   /**
    * <pre>
-   * query pipeline is a structured representation of a query
+   * the insight body pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
-   * @return The queryPipeline.
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * @return The insightBody.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline() {
-    if (queryCase_ == 16) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
+  public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody() {
+    if (queryCase_ == 13) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
   }
   /**
    * <pre>
-   * query pipeline is a structured representation of a query
+   * the insight body pipeline node
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder() {
-    if (queryCase_ == 16) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
+  public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder() {
+    if (queryCase_ == 13) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
   }
 
   public static final int ORG_IDS_FIELD_NUMBER = 5;
@@ -791,14 +791,14 @@ private static final long serialVersionUID = 0L;
     if (format_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
       output.writeEnum(12, format_);
     }
+    if (queryCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_);
+    }
     if (reportDate_ != null) {
       output.writeMessage(14, getReportDate());
     }
     if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
       output.writeEnum(15, timePeriod_);
-    }
-    if (queryCase_ == 16) {
-      output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -855,6 +855,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, format_);
     }
+    if (queryCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_);
+    }
     if (reportDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getReportDate());
@@ -862,10 +866,6 @@ private static final long serialVersionUID = 0L;
     if (timePeriod_ != com.tcn.cloud.api.api.commons.TimePeriod.TIME_PERIOD_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(15, timePeriod_);
-    }
-    if (queryCase_ == 16) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -925,9 +925,9 @@ private static final long serialVersionUID = 0L;
         if (!getPrql()
             .equals(other.getPrql())) return false;
         break;
-      case 16:
-        if (!getQueryPipeline()
-            .equals(other.getQueryPipeline())) return false;
+      case 13:
+        if (!getInsightBody()
+            .equals(other.getInsightBody())) return false;
         break;
       case 0:
       default:
@@ -986,9 +986,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PRQL_FIELD_NUMBER;
         hash = (53 * hash) + getPrql().hashCode();
         break;
-      case 16:
-        hash = (37 * hash) + QUERY_PIPELINE_FIELD_NUMBER;
-        hash = (53 * hash) + getQueryPipeline().hashCode();
+      case 13:
+        hash = (37 * hash) + INSIGHT_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getInsightBody().hashCode();
         break;
       case 0:
       default:
@@ -1130,8 +1130,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       datasourceName_ = "";
       datasourceType_ = 0;
-      if (queryPipelineBuilder_ != null) {
-        queryPipelineBuilder_.clear();
+      if (insightBodyBuilder_ != null) {
+        insightBodyBuilder_.clear();
       }
       orgIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
@@ -1246,9 +1246,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest result) {
       result.queryCase_ = queryCase_;
       result.query_ = this.query_;
-      if (queryCase_ == 16 &&
-          queryPipelineBuilder_ != null) {
-        result.query_ = queryPipelineBuilder_.build();
+      if (queryCase_ == 13 &&
+          insightBodyBuilder_ != null) {
+        result.query_ = insightBodyBuilder_.build();
       }
     }
 
@@ -1360,8 +1360,8 @@ private static final long serialVersionUID = 0L;
           onChanged();
           break;
         }
-        case QUERY_PIPELINE: {
-          mergeQueryPipeline(other.getQueryPipeline());
+        case INSIGHT_BODY: {
+          mergeInsightBody(other.getInsightBody());
           break;
         }
         case QUERY_NOT_SET: {
@@ -1463,6 +1463,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 96
+            case 106: {
+              input.readMessage(
+                  getInsightBodyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              queryCase_ = 13;
+              break;
+            } // case 106
             case 114: {
               input.readMessage(
                   getReportDateFieldBuilder().getBuilder(),
@@ -1475,13 +1482,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 120
-            case 130: {
-              input.readMessage(
-                  getQueryPipelineFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              queryCase_ = 16;
-              break;
-            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1914,181 +1914,181 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> queryPipelineBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> insightBodyBuilder_;
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
-     * @return Whether the queryPipeline field is set.
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     * @return Whether the insightBody field is set.
      */
     @java.lang.Override
-    public boolean hasQueryPipeline() {
-      return queryCase_ == 16;
+    public boolean hasInsightBody() {
+      return queryCase_ == 13;
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
-     * @return The queryPipeline.
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+     * @return The insightBody.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline() {
-      if (queryPipelineBuilder_ == null) {
-        if (queryCase_ == 16) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
       } else {
-        if (queryCase_ == 16) {
-          return queryPipelineBuilder_.getMessage();
+        if (queryCase_ == 13) {
+          return insightBodyBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
-    public Builder setQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
-      if (queryPipelineBuilder_ == null) {
+    public Builder setInsightBody(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         query_ = value;
         onChanged();
       } else {
-        queryPipelineBuilder_.setMessage(value);
+        insightBodyBuilder_.setMessage(value);
       }
-      queryCase_ = 16;
+      queryCase_ = 13;
       return this;
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
-    public Builder setQueryPipeline(
-        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder builderForValue) {
-      if (queryPipelineBuilder_ == null) {
+    public Builder setInsightBody(
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder builderForValue) {
+      if (insightBodyBuilder_ == null) {
         query_ = builderForValue.build();
         onChanged();
       } else {
-        queryPipelineBuilder_.setMessage(builderForValue.build());
+        insightBodyBuilder_.setMessage(builderForValue.build());
       }
-      queryCase_ = 16;
+      queryCase_ = 13;
       return this;
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
-    public Builder mergeQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
-      if (queryPipelineBuilder_ == null) {
-        if (queryCase_ == 16 &&
-            query_ != com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance()) {
-          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_)
+    public Builder mergeInsightBody(com.tcn.cloud.api.api.v1alpha1.insights.Pipeline value) {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13 &&
+            query_ != com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance()) {
+          query_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_)
               .mergeFrom(value).buildPartial();
         } else {
           query_ = value;
         }
         onChanged();
       } else {
-        if (queryCase_ == 16) {
-          queryPipelineBuilder_.mergeFrom(value);
+        if (queryCase_ == 13) {
+          insightBodyBuilder_.mergeFrom(value);
         } else {
-          queryPipelineBuilder_.setMessage(value);
+          insightBodyBuilder_.setMessage(value);
         }
       }
-      queryCase_ = 16;
+      queryCase_ = 13;
       return this;
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
-    public Builder clearQueryPipeline() {
-      if (queryPipelineBuilder_ == null) {
-        if (queryCase_ == 16) {
+    public Builder clearInsightBody() {
+      if (insightBodyBuilder_ == null) {
+        if (queryCase_ == 13) {
           queryCase_ = 0;
           query_ = null;
           onChanged();
         }
       } else {
-        if (queryCase_ == 16) {
+        if (queryCase_ == 13) {
           queryCase_ = 0;
           query_ = null;
         }
-        queryPipelineBuilder_.clear();
+        insightBodyBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder getQueryPipelineBuilder() {
-      return getQueryPipelineFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder getInsightBodyBuilder() {
+      return getInsightBodyFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder() {
-      if ((queryCase_ == 16) && (queryPipelineBuilder_ != null)) {
-        return queryPipelineBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder() {
+      if ((queryCase_ == 13) && (insightBodyBuilder_ != null)) {
+        return insightBodyBuilder_.getMessageOrBuilder();
       } else {
-        if (queryCase_ == 16) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
+        if (queryCase_ == 13) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * query pipeline is a structured representation of a query
+     * the insight body pipeline node
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> 
-        getQueryPipelineFieldBuilder() {
-      if (queryPipelineBuilder_ == null) {
-        if (!(queryCase_ == 16)) {
-          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
+        com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder> 
+        getInsightBodyFieldBuilder() {
+      if (insightBodyBuilder_ == null) {
+        if (!(queryCase_ == 13)) {
+          query_ = com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.getDefaultInstance();
         }
-        queryPipelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder>(
-                (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_,
+        insightBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.Pipeline, com.tcn.cloud.api.api.v1alpha1.insights.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) query_,
                 getParentForChildren(),
                 isClean());
         query_ = null;
       }
-      queryCase_ = 16;
+      queryCase_ = 13;
       onChanged();
-      return queryPipelineBuilder_;
+      return insightBodyBuilder_;
     }
 
     private com.google.protobuf.LazyStringArrayList orgIds_ =

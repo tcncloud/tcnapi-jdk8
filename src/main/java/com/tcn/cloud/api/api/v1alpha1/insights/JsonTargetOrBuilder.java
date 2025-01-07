@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-@java.lang.Deprecated public interface JsonTargetOrBuilder extends
+public interface JsonTargetOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.JsonTarget)
     com.google.protobuf.MessageOrBuilder {
 

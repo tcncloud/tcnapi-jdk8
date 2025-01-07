@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-@java.lang.Deprecated public interface MapNodeOrBuilder extends
+public interface MapNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.MapNode)
     com.google.protobuf.MessageOrBuilder {
 

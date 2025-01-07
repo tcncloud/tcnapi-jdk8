@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-@java.lang.Deprecated public interface ParentOrBuilder extends
+public interface ParentOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.Parent)
     com.google.protobuf.MessageOrBuilder {
 

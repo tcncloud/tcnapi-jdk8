@@ -9,37 +9,30 @@ public interface TextValueConditionOrBuilder extends
 
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=268
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    * @return Whether the expression field is set.
    */
-  @java.lang.Deprecated boolean hasExpression();
+  boolean hasExpression();
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=268
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    * @return The expression.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
+  com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder();
 
   /**
    * <pre>
@@ -141,31 +134,4 @@ public interface TextValueConditionOrBuilder extends
    * <code>.api.v1alpha1.insights.TextValueCondition.Color icon_color = 5 [json_name = "iconColor"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.ColorOrBuilder getIconColorOrBuilder();
-
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   * @return Whether the expressionNode field is set.
-   */
-  boolean hasExpressionNode();
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   * @return The expressionNode.
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode();
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder();
 }

@@ -679,44 +679,37 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode expression_;
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=268
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    * @return Whether the expression field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasExpression() {
+  public boolean hasExpression() {
     return expression_ != null;
   }
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-   * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=268
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    * @return The expression.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
     return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
   }
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+   * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
     return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
   }
 
@@ -881,44 +874,6 @@ private static final long serialVersionUID = 0L;
     return iconColor_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.TextValueCondition.Color.getDefaultInstance() : iconColor_;
   }
 
-  public static final int EXPRESSION_NODE_FIELD_NUMBER = 6;
-  private com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode expressionNode_;
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   * @return Whether the expressionNode field is set.
-   */
-  @java.lang.Override
-  public boolean hasExpressionNode() {
-    return expressionNode_ != null;
-  }
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   * @return The expressionNode.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode() {
-    return expressionNode_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.getDefaultInstance() : expressionNode_;
-  }
-  /**
-   * <pre>
-   * The expression for the condition
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder() {
-    return expressionNode_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.getDefaultInstance() : expressionNode_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -948,9 +903,6 @@ private static final long serialVersionUID = 0L;
     if (iconColor_ != null) {
       output.writeMessage(5, getIconColor());
     }
-    if (expressionNode_ != null) {
-      output.writeMessage(6, getExpressionNode());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -978,10 +930,6 @@ private static final long serialVersionUID = 0L;
     if (iconColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getIconColor());
-    }
-    if (expressionNode_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getExpressionNode());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1014,11 +962,6 @@ private static final long serialVersionUID = 0L;
       if (!getIconColor()
           .equals(other.getIconColor())) return false;
     }
-    if (hasExpressionNode() != other.hasExpressionNode()) return false;
-    if (hasExpressionNode()) {
-      if (!getExpressionNode()
-          .equals(other.getExpressionNode())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1046,10 +989,6 @@ private static final long serialVersionUID = 0L;
     if (hasIconColor()) {
       hash = (37 * hash) + ICON_COLOR_FIELD_NUMBER;
       hash = (53 * hash) + getIconColor().hashCode();
-    }
-    if (hasExpressionNode()) {
-      hash = (37 * hash) + EXPRESSION_NODE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpressionNode().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1205,11 +1144,6 @@ private static final long serialVersionUID = 0L;
         iconColorBuilder_.dispose();
         iconColorBuilder_ = null;
       }
-      expressionNode_ = null;
-      if (expressionNodeBuilder_ != null) {
-        expressionNodeBuilder_.dispose();
-        expressionNodeBuilder_ = null;
-      }
       return this;
     }
 
@@ -1271,11 +1205,6 @@ private static final long serialVersionUID = 0L;
         result.iconColor_ = iconColorBuilder_ == null
             ? iconColor_
             : iconColorBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.expressionNode_ = expressionNodeBuilder_ == null
-            ? expressionNode_
-            : expressionNodeBuilder_.build();
       }
     }
 
@@ -1363,9 +1292,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasIconColor()) {
         mergeIconColor(other.getIconColor());
       }
-      if (other.hasExpressionNode()) {
-        mergeExpressionNode(other.getExpressionNode());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1429,13 +1355,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              input.readMessage(
-                  getExpressionNodeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1458,30 +1377,24 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> expressionBuilder_;
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=268
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      * @return Whether the expression field is set.
      */
-    @java.lang.Deprecated public boolean hasExpression() {
+    public boolean hasExpression() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
-     * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-     *     See api/v1alpha1/insights/insight.proto;l=268
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      * @return The expression.
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression() {
       if (expressionBuilder_ == null) {
         return expression_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.getDefaultInstance() : expression_;
       } else {
@@ -1490,13 +1403,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public Builder setExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
+    public Builder setExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
       if (expressionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1511,13 +1423,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public Builder setExpression(
+    public Builder setExpression(
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder builderForValue) {
       if (expressionBuilder_ == null) {
         expression_ = builderForValue.build();
@@ -1530,13 +1441,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public Builder mergeExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
+    public Builder mergeExpression(com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode value) {
       if (expressionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           expression_ != null &&
@@ -1554,13 +1464,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public Builder clearExpression() {
+    public Builder clearExpression() {
       bitField0_ = (bitField0_ & ~0x00000001);
       expression_ = null;
       if (expressionBuilder_ != null) {
@@ -1572,26 +1481,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getExpressionBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder getExpressionBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getExpressionFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder getExpressionOrBuilder() {
       if (expressionBuilder_ != null) {
         return expressionBuilder_.getMessageOrBuilder();
       } else {
@@ -1601,11 +1508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED use expression_node instead
      * The expression for the condition
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
+     * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNodeOrBuilder> 
@@ -2222,161 +2128,6 @@ private static final long serialVersionUID = 0L;
         iconColor_ = null;
       }
       return iconColorBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode expressionNode_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder> expressionNodeBuilder_;
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     * @return Whether the expressionNode field is set.
-     */
-    public boolean hasExpressionNode() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     * @return The expressionNode.
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode() {
-      if (expressionNodeBuilder_ == null) {
-        return expressionNode_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.getDefaultInstance() : expressionNode_;
-      } else {
-        return expressionNodeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public Builder setExpressionNode(com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode value) {
-      if (expressionNodeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        expressionNode_ = value;
-      } else {
-        expressionNodeBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public Builder setExpressionNode(
-        com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.Builder builderForValue) {
-      if (expressionNodeBuilder_ == null) {
-        expressionNode_ = builderForValue.build();
-      } else {
-        expressionNodeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public Builder mergeExpressionNode(com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode value) {
-      if (expressionNodeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          expressionNode_ != null &&
-          expressionNode_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.getDefaultInstance()) {
-          getExpressionNodeBuilder().mergeFrom(value);
-        } else {
-          expressionNode_ = value;
-        }
-      } else {
-        expressionNodeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public Builder clearExpressionNode() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      expressionNode_ = null;
-      if (expressionNodeBuilder_ != null) {
-        expressionNodeBuilder_.dispose();
-        expressionNodeBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.Builder getExpressionNodeBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getExpressionNodeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder() {
-      if (expressionNodeBuilder_ != null) {
-        return expressionNodeBuilder_.getMessageOrBuilder();
-      } else {
-        return expressionNode_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.getDefaultInstance() : expressionNode_;
-      }
-    }
-    /**
-     * <pre>
-     * The expression for the condition
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder> 
-        getExpressionNodeFieldBuilder() {
-      if (expressionNodeBuilder_ == null) {
-        expressionNodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder>(
-                getExpressionNode(),
-                getParentForChildren(),
-                isClean());
-        expressionNode_ = null;
-      }
-      return expressionNodeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

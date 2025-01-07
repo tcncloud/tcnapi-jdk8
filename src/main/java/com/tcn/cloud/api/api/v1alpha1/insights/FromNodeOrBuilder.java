@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-@java.lang.Deprecated public interface FromNodeOrBuilder extends
+public interface FromNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.FromNode)
     com.google.protobuf.MessageOrBuilder {
 
