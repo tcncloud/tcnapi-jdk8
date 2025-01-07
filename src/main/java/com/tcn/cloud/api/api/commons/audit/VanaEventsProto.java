@@ -140,37 +140,29 @@ public final class VanaEventsProto {
       "tionR\010talkTime\0228\n\naudio_time\030\004 \001(\0132\031.goo" +
       "gle.protobuf.DurationR\taudioTime\0320\n\003Sms\022" +
       ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
-      "idB\n\n\010metadata\"\200\004\n\030VanaCreateSentimentEv" +
+      "idB\n\n\010metadata\"\350\002\n\030VanaCreateSentimentEv" +
       "ent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscriptS" +
       "id\022F\n\004call\030\002 \001(\01320.api.commons.audit.Van" +
       "aCreateSentimentEvent.CallH\000R\004call\022C\n\003sm" +
       "s\030\003 \001(\0132/.api.commons.audit.VanaCreateSe" +
-      "ntimentEvent.SmsH\000R\003sms\032\314\001\n\004Call\022\031\n\010call" +
-      "_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032" +
-      ".api.commons.CallType.EnumR\010callType\0226\n\t" +
-      "talk_time\030\003 \001(\0132\031.google.protobuf.Durati" +
-      "onR\010talkTime\0228\n\naudio_time\030\004 \001(\0132\031.googl" +
-      "e.protobuf.DurationR\taudioTime\032U\n\003Sms\022)\n" +
-      "\020conversation_sid\030\001 \001(\003R\017conversationSid" +
-      "\022#\n\rmessage_count\030\002 \001(\003R\014messageCountB\n\n" +
-      "\010metadata\"\372\003\n\026VanaCreateSummaryEvent\022%\n\016" +
-      "transcript_sid\030\001 \001(\003R\rtranscriptSid\022D\n\004c" +
-      "all\030\002 \001(\0132..api.commons.audit.VanaCreate" +
-      "SummaryEvent.CallH\000R\004call\022A\n\003sms\030\003 \001(\0132-" +
-      ".api.commons.audit.VanaCreateSummaryEven" +
-      "t.SmsH\000R\003sms\032\314\001\n\004Call\022\031\n\010call_sid\030\001 \001(\003R" +
-      "\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api.common" +
-      "s.CallType.EnumR\010callType\0226\n\ttalk_time\030\003" +
-      " \001(\0132\031.google.protobuf.DurationR\010talkTim" +
-      "e\0228\n\naudio_time\030\004 \001(\0132\031.google.protobuf." +
-      "DurationR\taudioTime\032U\n\003Sms\022)\n\020conversati" +
-      "on_sid\030\001 \001(\003R\017conversationSid\022#\n\rmessage" +
-      "_count\030\002 \001(\003R\014messageCountB\n\n\010metadataB\234" +
-      "\001\n#com.tcn.cloud.api.api.commons.auditB\017" +
-      "VanaEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Au" +
-      "dit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Au" +
-      "dit\\GPBMetadata\352\002\023Api::Commons::Auditb\006p" +
-      "roto3"
+      "ntimentEvent.SmsH\000R\003sms\032Z\n\004Call\022\031\n\010call_" +
+      "sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032." +
+      "api.commons.CallType.EnumR\010callType\0320\n\003S" +
+      "ms\022)\n\020conversation_sid\030\001 \001(\003R\017conversati" +
+      "onSidB\n\n\010metadata\"\342\002\n\026VanaCreateSummaryE" +
+      "vent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscript" +
+      "Sid\022D\n\004call\030\002 \001(\0132..api.commons.audit.Va" +
+      "naCreateSummaryEvent.CallH\000R\004call\022A\n\003sms" +
+      "\030\003 \001(\0132-.api.commons.audit.VanaCreateSum" +
+      "maryEvent.SmsH\000R\003sms\032Z\n\004Call\022\031\n\010call_sid" +
+      "\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api" +
+      ".commons.CallType.EnumR\010callType\0320\n\003Sms\022" +
+      ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
+      "idB\n\n\010metadataB\234\001\n#com.tcn.cloud.api.api" +
+      ".commons.auditB\017VanaEventsProtoP\001\242\002\003ACA\252" +
+      "\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342" +
+      "\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::C" +
+      "ommons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -244,13 +236,13 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateSentimentEvent_Call_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSentimentEvent_Call_descriptor,
-        new java.lang.String[] { "CallSid", "CallType", "TalkTime", "AudioTime", });
+        new java.lang.String[] { "CallSid", "CallType", });
     internal_static_api_commons_audit_VanaCreateSentimentEvent_Sms_descriptor =
       internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor.getNestedTypes().get(1);
     internal_static_api_commons_audit_VanaCreateSentimentEvent_Sms_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSentimentEvent_Sms_descriptor,
-        new java.lang.String[] { "ConversationSid", "MessageCount", });
+        new java.lang.String[] { "ConversationSid", });
     internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_commons_audit_VanaCreateSummaryEvent_fieldAccessorTable = new
@@ -262,13 +254,13 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Call_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSummaryEvent_Call_descriptor,
-        new java.lang.String[] { "CallSid", "CallType", "TalkTime", "AudioTime", });
+        new java.lang.String[] { "CallSid", "CallType", });
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_descriptor =
       internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor.getNestedTypes().get(1);
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_descriptor,
-        new java.lang.String[] { "ConversationSid", "MessageCount", });
+        new java.lang.String[] { "ConversationSid", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

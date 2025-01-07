@@ -9,7 +9,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
 
   /**
    * <pre>
-   * Unique id of smart evaluation created
+   * unique id of smart evaluation created
    * </pre>
    *
    * <code>int64 smart_evaluation_id = 1 [json_name = "smartEvaluationId"];</code>

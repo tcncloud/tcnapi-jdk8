@@ -8,61 +8,41 @@ public interface VanaCreateSummaryEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Required. Unique transcript id.
+   * </pre>
+   *
    * <code>int64 transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
    */
   long getTranscriptSid();
 
   /**
-   * <pre>
-   * metadata for call that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Call call = 2 [json_name = "call"];</code>
    * @return Whether the call field is set.
    */
   boolean hasCall();
   /**
-   * <pre>
-   * metadata for call that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Call call = 2 [json_name = "call"];</code>
    * @return The call.
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Call getCall();
   /**
-   * <pre>
-   * metadata for call that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Call call = 2 [json_name = "call"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.CallOrBuilder getCallOrBuilder();
 
   /**
-   * <pre>
-   * metadata for sms that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Sms sms = 3 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   boolean hasSms();
   /**
-   * <pre>
-   * metadata for sms that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Sms sms = 3 [json_name = "sms"];</code>
    * @return The sms.
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Sms getSms();
   /**
-   * <pre>
-   * metadata for sms that triggered the scorecard
-   * </pre>
-   *
    * <code>.api.commons.audit.VanaCreateSummaryEvent.Sms sms = 3 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.SmsOrBuilder getSmsOrBuilder();
