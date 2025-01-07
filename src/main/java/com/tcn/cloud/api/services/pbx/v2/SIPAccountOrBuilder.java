@@ -38,28 +38,52 @@ public interface SIPAccountOrBuilder extends
       getExtensionBytes();
 
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @return A list containing the ringGroupIds.
    */
-  java.util.List<java.lang.String>
+  @java.lang.Deprecated java.util.List<java.lang.String>
       getRingGroupIdsList();
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @return The count of ringGroupIds.
    */
-  int getRingGroupIdsCount();
+  @java.lang.Deprecated int getRingGroupIdsCount();
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the element to return.
    * @return The ringGroupIds at the given index.
    */
-  java.lang.String getRingGroupIds(int index);
+  @java.lang.Deprecated java.lang.String getRingGroupIds(int index);
   /**
-   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds"];</code>
+   * <pre>
+   * DEPRECATED: We need names as well
+   * </pre>
+   *
+   * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
+   * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the value to return.
    * @return The bytes of the ringGroupIds at the given index.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getRingGroupIdsBytes(int index);
 
   /**
@@ -73,4 +97,28 @@ public interface SIPAccountOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOrgUserIdBytes();
+
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup> 
+      getRingGroupsList();
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getRingGroups(int index);
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  int getRingGroupsCount();
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder> 
+      getRingGroupsOrBuilderList();
+  /**
+   * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder getRingGroupsOrBuilder(
+      int index);
 }

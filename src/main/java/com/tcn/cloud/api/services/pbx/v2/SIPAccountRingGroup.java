@@ -5,85 +5,117 @@ package com.tcn.cloud.api.services.pbx.v2;
 
 /**
  * <pre>
- * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+ * For displaying ring groups associated with an SIPAccount
  * </pre>
  *
- * Protobuf type {@code services.pbx.v2.GetPBXUserRequest}
+ * Protobuf type {@code services.pbx.v2.SIPAccountRingGroup}
  */
-public final class GetPBXUserRequest extends
+public final class SIPAccountRingGroup extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.pbx.v2.GetPBXUserRequest)
-    GetPBXUserRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.pbx.v2.SIPAccountRingGroup)
+    SIPAccountRingGroupOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetPBXUserRequest.newBuilder() to construct.
-  private GetPBXUserRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use SIPAccountRingGroup.newBuilder() to construct.
+  private SIPAccountRingGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetPBXUserRequest() {
-    pbxUserId_ = "";
+  private SIPAccountRingGroup() {
+    ringGroupId_ = "";
+    ringGroupName_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetPBXUserRequest();
+    return new SIPAccountRingGroup();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_GetPBXUserRequest_descriptor;
+    return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_SIPAccountRingGroup_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_GetPBXUserRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_SIPAccountRingGroup_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.class, com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.Builder.class);
+            com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.class, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder.class);
   }
 
-  public static final int PBX_USER_ID_FIELD_NUMBER = 1;
+  public static final int RING_GROUP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object pbxUserId_ = "";
+  private volatile java.lang.Object ringGroupId_ = "";
   /**
-   * <pre>
-   * Required: To fetch a specific user by ID.
-   * </pre>
-   *
-   * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-   * @return The pbxUserId.
+   * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+   * @return The ringGroupId.
    */
   @java.lang.Override
-  public java.lang.String getPbxUserId() {
-    java.lang.Object ref = pbxUserId_;
+  public java.lang.String getRingGroupId() {
+    java.lang.Object ref = ringGroupId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      pbxUserId_ = s;
+      ringGroupId_ = s;
       return s;
     }
   }
   /**
-   * <pre>
-   * Required: To fetch a specific user by ID.
-   * </pre>
-   *
-   * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-   * @return The bytes for pbxUserId.
+   * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+   * @return The bytes for ringGroupId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getPbxUserIdBytes() {
-    java.lang.Object ref = pbxUserId_;
+      getRingGroupIdBytes() {
+    java.lang.Object ref = ringGroupId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      pbxUserId_ = b;
+      ringGroupId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RING_GROUP_NAME_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ringGroupName_ = "";
+  /**
+   * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+   * @return The ringGroupName.
+   */
+  @java.lang.Override
+  public java.lang.String getRingGroupName() {
+    java.lang.Object ref = ringGroupName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ringGroupName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+   * @return The bytes for ringGroupName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getRingGroupNameBytes() {
+    java.lang.Object ref = ringGroupName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ringGroupName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +136,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxUserId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pbxUserId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ringGroupId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ringGroupId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ringGroupName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ringGroupName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +151,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxUserId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pbxUserId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ringGroupId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ringGroupId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ringGroupName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ringGroupName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,13 +167,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest other = (com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest) obj;
+    com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup other = (com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup) obj;
 
-    if (!getPbxUserId()
-        .equals(other.getPbxUserId())) return false;
+    if (!getRingGroupId()
+        .equals(other.getRingGroupId())) return false;
+    if (!getRingGroupName()
+        .equals(other.getRingGroupName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,51 +187,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PBX_USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getPbxUserId().hashCode();
+    hash = (37 * hash) + RING_GROUP_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRingGroupId().hashCode();
+    hash = (37 * hash) + RING_GROUP_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getRingGroupName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +241,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest parseFrom(
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +273,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +290,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
+   * For displaying ring groups associated with an SIPAccount
    * </pre>
    *
-   * Protobuf type {@code services.pbx.v2.GetPBXUserRequest}
+   * Protobuf type {@code services.pbx.v2.SIPAccountRingGroup}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.pbx.v2.GetPBXUserRequest)
-      com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.pbx.v2.SIPAccountRingGroup)
+      com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_GetPBXUserRequest_descriptor;
+      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_SIPAccountRingGroup_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_GetPBXUserRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_SIPAccountRingGroup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.class, com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.Builder.class);
+              com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.class, com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.newBuilder()
     private Builder() {
 
     }
@@ -284,24 +326,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      pbxUserId_ = "";
+      ringGroupId_ = "";
+      ringGroupName_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_GetPBXUserRequest_descriptor;
+      return com.tcn.cloud.api.services.pbx.v2.ServiceProto.internal_static_services_pbx_v2_SIPAccountRingGroup_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest build() {
-      com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest result = buildPartial();
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup build() {
+      com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,17 +352,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest buildPartial() {
-      com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest result = new com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest(this);
+    public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup buildPartial() {
+      com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup result = new com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.pbxUserId_ = pbxUserId_;
+        result.ringGroupId_ = ringGroupId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ringGroupName_ = ringGroupName_;
       }
     }
 
@@ -357,19 +403,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup) {
+        return mergeFrom((com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest other) {
-      if (other == com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest.getDefaultInstance()) return this;
-      if (!other.getPbxUserId().isEmpty()) {
-        pbxUserId_ = other.pbxUserId_;
+    public Builder mergeFrom(com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup other) {
+      if (other == com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup.getDefaultInstance()) return this;
+      if (!other.getRingGroupId().isEmpty()) {
+        ringGroupId_ = other.ringGroupId_;
         bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getRingGroupName().isEmpty()) {
+        ringGroupName_ = other.ringGroupName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -399,10 +450,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              pbxUserId_ = input.readStringRequireUtf8();
+              ringGroupId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              ringGroupName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -420,94 +476,146 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object pbxUserId_ = "";
+    private java.lang.Object ringGroupId_ = "";
     /**
-     * <pre>
-     * Required: To fetch a specific user by ID.
-     * </pre>
-     *
-     * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-     * @return The pbxUserId.
+     * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+     * @return The ringGroupId.
      */
-    public java.lang.String getPbxUserId() {
-      java.lang.Object ref = pbxUserId_;
+    public java.lang.String getRingGroupId() {
+      java.lang.Object ref = ringGroupId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        pbxUserId_ = s;
+        ringGroupId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <pre>
-     * Required: To fetch a specific user by ID.
-     * </pre>
-     *
-     * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-     * @return The bytes for pbxUserId.
+     * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+     * @return The bytes for ringGroupId.
      */
     public com.google.protobuf.ByteString
-        getPbxUserIdBytes() {
-      java.lang.Object ref = pbxUserId_;
+        getRingGroupIdBytes() {
+      java.lang.Object ref = ringGroupId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        pbxUserId_ = b;
+        ringGroupId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <pre>
-     * Required: To fetch a specific user by ID.
-     * </pre>
-     *
-     * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-     * @param value The pbxUserId to set.
+     * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+     * @param value The ringGroupId to set.
      * @return This builder for chaining.
      */
-    public Builder setPbxUserId(
+    public Builder setRingGroupId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      pbxUserId_ = value;
+      ringGroupId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Required: To fetch a specific user by ID.
-     * </pre>
-     *
-     * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
+     * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPbxUserId() {
-      pbxUserId_ = getDefaultInstance().getPbxUserId();
+    public Builder clearRingGroupId() {
+      ringGroupId_ = getDefaultInstance().getRingGroupId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Required: To fetch a specific user by ID.
-     * </pre>
-     *
-     * <code>string pbx_user_id = 1 [json_name = "pbxUserId"];</code>
-     * @param value The bytes for pbxUserId to set.
+     * <code>string ring_group_id = 1 [json_name = "ringGroupId"];</code>
+     * @param value The bytes for ringGroupId to set.
      * @return This builder for chaining.
      */
-    public Builder setPbxUserIdBytes(
+    public Builder setRingGroupIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      pbxUserId_ = value;
+      ringGroupId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ringGroupName_ = "";
+    /**
+     * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+     * @return The ringGroupName.
+     */
+    public java.lang.String getRingGroupName() {
+      java.lang.Object ref = ringGroupName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ringGroupName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+     * @return The bytes for ringGroupName.
+     */
+    public com.google.protobuf.ByteString
+        getRingGroupNameBytes() {
+      java.lang.Object ref = ringGroupName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ringGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+     * @param value The ringGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRingGroupName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ringGroupName_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRingGroupName() {
+      ringGroupName_ = getDefaultInstance().getRingGroupName();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ring_group_name = 2 [json_name = "ringGroupName"];</code>
+     * @param value The bytes for ringGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRingGroupNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ringGroupName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -524,23 +632,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.pbx.v2.GetPBXUserRequest)
+    // @@protoc_insertion_point(builder_scope:services.pbx.v2.SIPAccountRingGroup)
   }
 
-  // @@protoc_insertion_point(class_scope:services.pbx.v2.GetPBXUserRequest)
-  private static final com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.pbx.v2.SIPAccountRingGroup)
+  private static final com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup();
   }
 
-  public static com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetPBXUserRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetPBXUserRequest>() {
+  private static final com.google.protobuf.Parser<SIPAccountRingGroup>
+      PARSER = new com.google.protobuf.AbstractParser<SIPAccountRingGroup>() {
     @java.lang.Override
-    public GetPBXUserRequest parsePartialFrom(
+    public SIPAccountRingGroup parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +667,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetPBXUserRequest> parser() {
+  public static com.google.protobuf.Parser<SIPAccountRingGroup> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetPBXUserRequest> getParserForType() {
+  public com.google.protobuf.Parser<SIPAccountRingGroup> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroup getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

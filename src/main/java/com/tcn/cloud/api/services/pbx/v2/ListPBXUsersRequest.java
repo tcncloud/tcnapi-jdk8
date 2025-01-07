@@ -5,9 +5,7 @@ package com.tcn.cloud.api.services.pbx.v2;
 
 /**
  * <pre>
- * -------------------------
- *  RPC Messages
- * -------------------------
+ * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
  * </pre>
  *
  * Protobuf type {@code services.pbx.v2.ListPBXUsersRequest}
@@ -192,9 +190,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -------------------------
-   *  RPC Messages
-   * -------------------------
+   * DEPRECATED: This message is deprecated and may be removed in future versions. (No longer need PBX Users)
    * </pre>
    *
    * Protobuf type {@code services.pbx.v2.ListPBXUsersRequest}
