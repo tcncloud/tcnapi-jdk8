@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * how long the element sat in the queue waiting to start processing, in seconds.
+     * how long the element sat in the queue waiting to start processing, in milliseconds.
      * a large number here, means upstream of this element took a really long time.
      * the longer the DAG, the more time will be spent waiting to process, because
      * processing has to happen in order.
@@ -765,7 +765,7 @@ private static final long serialVersionUID = 0L;
     private long totalQueueWaitMilliseconds_ = 0L;
     /**
      * <pre>
-     * how long the element sat in the queue waiting to start processing, in seconds.
+     * how long the element sat in the queue waiting to start processing, in milliseconds.
      * a large number here, means upstream of this element took a really long time.
      * the longer the DAG, the more time will be spent waiting to process, because
      * processing has to happen in order.
@@ -2640,7 +2640,7 @@ private static final long serialVersionUID = 0L;
       private long totalQueueWaitMilliseconds_ ;
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
        * a large number here, means upstream of this element took a really long time.
        * the longer the DAG, the more time will be spent waiting to process, because
        * processing has to happen in order.
@@ -2655,7 +2655,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
        * a large number here, means upstream of this element took a really long time.
        * the longer the DAG, the more time will be spent waiting to process, because
        * processing has to happen in order.
@@ -2674,7 +2674,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
        * a large number here, means upstream of this element took a really long time.
        * the longer the DAG, the more time will be spent waiting to process, because
        * processing has to happen in order.
