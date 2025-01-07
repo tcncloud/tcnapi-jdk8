@@ -296,246 +296,252 @@ public final class InsightProto {
       "\n#api/v1alpha1/insights/insight.proto\022\025a" +
       "pi.v1alpha1.insights\032\032api/commons/insigh" +
       "ts.proto\032$api/v1alpha1/explorer/entities" +
-      ".proto\032+api/v1alpha1/insights/insight_co" +
-      "ntent.proto\032 google/protobuf/field_mask." +
-      "proto\032\037google/protobuf/timestamp.proto\"\311" +
-      "\005\n\007Insight\022!\n\ninsight_id\030\002 \001(\003B\0020\001R\tinsi" +
-      "ghtId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description" +
-      "\030\004 \001(\tR\013description\022;\n\014insight_type\030\005 \001(" +
-      "\0162\030.api.commons.InsightTypeR\013insightType" +
-      "\022\'\n\017insight_version\030\006 \001(\rR\016insightVersio" +
-      "n\022\022\n\004body\030\007 \001(\tR\004body\022Z\n\027insight_permiss" +
-      "ion_type\030\010 \001(\0162\".api.commons.InsightPerm" +
-      "issionTypeR\025insightPermissionType\022\037\n\013res" +
-      "ource_id\030\t \001(\tR\nresourceId\022)\n\020standard_i" +
-      "nsight\030\n \001(\010R\017standardInsight\022N\n\017datasou" +
-      "rce_type\030\013 \001(\0162%.api.v1alpha1.explorer.D" +
-      "atasourceTypeR\016datasourceType\022\'\n\017datasou" +
-      "rce_name\030\014 \001(\tR\016datasourceName\022;\n\013create" +
-      "_time\030\r \001(\0132\032.google.protobuf.TimestampR" +
-      "\ncreateTime\022;\n\013update_time\030\016 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\nupdateTime\022=\n\010pipe" +
-      "line\030\020 \001(\0132\037.api.v1alpha1.insights.Pipel" +
-      "ineH\000R\010pipelineB\021\n\017insight_content\"p\n\025Pu" +
-      "blishInsightRequest\022\037\n\013resource_id\030\001 \001(\t" +
-      "R\nresourceId\0226\n\027destination_resource_id\030" +
-      "\002 \001(\tR\025destinationResourceId\"R\n\026PublishI" +
-      "nsightResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1" +
-      "alpha1.insights.InsightR\007insight\"P\n\024Crea" +
-      "teInsightRequest\0228\n\007insight\030\001 \001(\0132\036.api." +
-      "v1alpha1.insights.InsightR\007insight\"Q\n\025Cr" +
-      "eateInsightResponse\0228\n\007insight\030\001 \001(\0132\036.a" +
-      "pi.v1alpha1.insights.InsightR\007insight\"s\n" +
-      "\023ListInsightsRequest\022\\\n\030insight_permissi" +
-      "on_types\030\002 \003(\0162\".api.commons.InsightPerm" +
-      "issionTypeR\026insightPermissionTypes\"X\n\032Li" +
-      "stInsightsStreamResponse\022:\n\010insights\030\001 \001" +
-      "(\0132\036.api.v1alpha1.insights.InsightR\010insi" +
-      "ghts\"R\n\024ListInsightsResponse\022:\n\010insights" +
-      "\030\001 \003(\0132\036.api.v1alpha1.insights.InsightR\010" +
-      "insights\"/\n\026ListOrgInsightsRequest\022\025\n\006or" +
-      "g_id\030\001 \001(\tR\005orgId\"U\n\027ListOrgInsightsResp" +
-      "onse\022:\n\010insights\030\001 \003(\0132\036.api.v1alpha1.in" +
-      "sights.InsightR\010insights\"\215\001\n\024UpdateInsig" +
-      "htRequest\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha" +
-      "1.insights.InsightR\007insight\022;\n\013update_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nup" +
-      "dateMask\"Q\n\025UpdateInsightResponse\0228\n\007ins" +
-      "ight\030\001 \001(\0132\036.api.v1alpha1.insights.Insig" +
-      "htR\007insight\"Z\n\024DeleteInsightRequest\022!\n\ni" +
-      "nsight_id\030\001 \001(\003B\0020\001R\tinsightId\022\037\n\013resour" +
-      "ce_id\030\002 \001(\tR\nresourceId\"Q\n\025DeleteInsight" +
-      "Response\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1" +
-      ".insights.InsightR\007insight\"W\n\021GetInsight" +
-      "Request\022!\n\ninsight_id\030\001 \001(\003B\0020\001R\tinsight" +
-      "Id\022\037\n\013resource_id\030\002 \001(\tR\nresourceId\"N\n\022G" +
-      "etInsightResponse\0228\n\007insight\030\001 \001(\0132\036.api" +
-      ".v1alpha1.insights.InsightR\007insight\"4\n\023G" +
-      "etVfsSchemaRequest\022\035\n\nalias_name\030\001 \001(\tR\t" +
-      "aliasName\"\307\002\n\024GetVfsSchemaResponse\022I\n\006fi" +
-      "elds\030\001 \003(\01321.api.v1alpha1.insights.GetVf" +
-      "sSchemaResponse.FieldR\006fields\022\'\n\017vfs_des" +
-      "cription\030\002 \001(\tR\016vfsDescription\022\035\n\nalias_" +
-      "name\030\003 \001(\tR\taliasName\032\233\001\n\005Field\022\037\n\013colum" +
-      "n_name\030\001 \001(\tR\ncolumnName\022B\n\013column_type\030" +
-      "\002 \001(\0162!.api.commons.InsightVfsSchemaType" +
-      "R\ncolumnType\022-\n\022column_description\030\003 \001(\t" +
-      "R\021columnDescription\"\022\n\020ListVfsesRequest\"" +
-      "-\n\021ListVfsesResponse\022\030\n\007aliases\030\001 \003(\tR\007a" +
-      "liases\"\027\n\025ListVfsSchemasRequest\"f\n\026ListV" +
-      "fsSchemasResponse\022L\n\013vfs_schemas\030\001 \003(\0132+" +
-      ".api.v1alpha1.insights.GetVfsSchemaRespo" +
-      "nseR\nvfsSchemas\"\373\001\n\022TableVisualization\022Z" +
-      "\n\024table_column_details\030\001 \003(\0132(.api.v1alp" +
-      "ha1.insights.TableColumnConfigR\022tableCol" +
-      "umnDetails\022\034\n\tdelimiter\030\002 \001(\tR\tdelimiter" +
-      "\022N\n\017quote_character\030\003 \001(\0162%.api.v1alpha1" +
-      ".insights.QuoteCharacterR\016quoteCharacter" +
-      "\022\033\n\tno_header\030\004 \001(\010R\010noHeader\"V\n\021CardVis" +
-      "ualization\022A\n\013text_values\030\001 \003(\0132 .api.v1" +
-      "alpha1.insights.TextValueR\ntextValues\"V\n" +
-      "\tTextValue\022I\n\nconditions\030\001 \003(\0132).api.v1a" +
-      "lpha1.insights.TextValueConditionR\ncondi" +
-      "tions\"\351\002\n\022TextValueCondition\022E\n\nexpressi" +
-      "on\030\001 \001(\0132%.api.v1alpha1.insights.Express" +
-      "ionNodeR\nexpression\022\022\n\004size\030\002 \001(\003R\004size\022" +
-      "F\n\noperations\030\003 \003(\0132&.api.v1alpha1.insig" +
-      "hts.ColumnOperationR\noperations\022\033\n\ticon_" +
-      "name\030\004 \001(\tR\010iconName\022N\n\nicon_color\030\005 \001(\013" +
-      "2/.api.v1alpha1.insights.TextValueCondit" +
-      "ion.ColorR\ticonColor\032C\n\005Color\022\020\n\003red\030\001 \001" +
-      "(\003R\003red\022\024\n\005green\030\002 \001(\003R\005green\022\022\n\004blue\030\003 " +
-      "\001(\003R\004blue\"\233\004\n\021TableColumnConfig\022\037\n\013colum" +
-      "n_name\030\001 \001(\tR\ncolumnName\022!\n\014column_width" +
-      "\030\002 \001(\003R\013columnWidth\022\037\n\013hide_column\030\003 \001(\010" +
-      "R\nhideColumn\022\035\n\nrenamed_as\030\004 \001(\tR\trename" +
-      "dAs\022F\n\noperations\030\005 \003(\0132&.api.v1alpha1.i" +
-      "nsights.ColumnOperationR\noperations\022b\n\016c" +
-      "olumn_summary\030\006 \001(\0162;.api.v1alpha1.insig" +
-      "hts.OutputConfigurationColumnSummaryType" +
-      "R\rcolumnSummary\022 \n\013description\030\007 \001(\tR\013de" +
-      "scription\022H\n\016sort_direction\030\010 \001(\0162!.api." +
-      "v1alpha1.insights.ColumnSortR\rsortDirect" +
-      "ion\022j\n\031insight_contextual_action\030\t \001(\0132." +
-      ".api.v1alpha1.insights.InsightContextual" +
-      "ActionR\027insightContextualAction\"1\n\014Forma" +
-      "tSeries\022!\n\014format_parts\030\001 \003(\tR\013formatPar" +
-      "ts\"i\n\014PadOperation\022#\n\rpad_character\030\001 \001(" +
-      "\tR\014padCharacter\022\031\n\010pad_left\030\002 \001(\010R\007padLe" +
-      "ft\022\031\n\010pad_size\030\003 \001(\005R\007padSize\"\254\002\n\017Column" +
-      "Operation\022K\n\016operation_type\030\001 \001(\0162$.api." +
-      "v1alpha1.insights.OperationTypeR\roperati" +
-      "onType\022!\n\013float_value\030\002 \001(\001H\000R\nfloatValu" +
-      "e\022J\n\rformat_series\030\003 \001(\0132#.api.v1alpha1." +
-      "insights.FormatSeriesH\000R\014formatSeries\022J\n" +
-      "\rpad_operation\030\004 \001(\0132#.api.v1alpha1.insi" +
-      "ghts.PadOperationH\000R\014padOperationB\021\n\017ope" +
-      "ration_value\"\276\002\n\027InsightContextualAction" +
-      "\022F\n\004type\030\001 \001(\01622.api.v1alpha1.insights.I" +
-      "nsightContextualActionTypeR\004type\0227\n\004link" +
-      "\030\002 \001(\0132!.api.v1alpha1.insights.LinkActio" +
-      "nH\000R\004link\022F\n\tcomponent\030\003 \001(\0132&.api.v1alp" +
-      "ha1.insights.ComponentActionH\000R\tcomponen" +
-      "t\022P\n\rdrill_through\030\004 \001(\0132).api.v1alpha1." +
-      "insights.DrillThroughActionH\000R\014drillThro" +
-      "ughB\010\n\006action\"\324\001\n\nLinkAction\022#\n\rlink_ele" +
-      "ments\030\001 \003(\tR\014linkElements\022^\n\017component_v" +
-      "alue\030\002 \003(\01325.api.v1alpha1.insights.LinkA" +
-      "ction.ComponentValueEntryR\016componentValu" +
-      "e\032A\n\023ComponentValueEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\340\001\n\017Compone" +
-      "ntAction\022%\n\016component_name\030\001 \001(\tR\rcompon" +
-      "entName\022c\n\017component_value\030\002 \003(\0132:.api.v" +
-      "1alpha1.insights.ComponentAction.Compone" +
-      "ntValueEntryR\016componentValue\032A\n\023Componen" +
-      "tValueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\tR\005value:\0028\001\"\254\001\n\022DrillThroughAction\022." +
-      "\n\023insight_resource_id\030\001 \001(\tR\021insightReso" +
-      "urceId\022f\n\030drill_through_parameters\030\002 \003(\013" +
-      "2,.api.v1alpha1.insights.DrillThroughPar" +
-      "ameterR\026drillThroughParameters\"_\n\025DrillT" +
-      "hroughParameter\022%\n\016parameter_name\030\001 \001(\tR" +
-      "\rparameterName\022\037\n\013column_name\030\002 \001(\tR\ncol" +
-      "umnName\"\200\005\n\023OutputConfiguration\022\037\n\013resou" +
-      "rce_id\030\001 \001(\tR\nresourceId\022<\n\032output_confi" +
-      "guration_title\030\003 \001(\tR\030outputConfiguratio" +
-      "nTitle\022j\n\031output_configuration_type\030\004 \001(" +
-      "\0162..api.v1alpha1.insights.OutputConfigur" +
-      "ationTypeR\027outputConfigurationType\022.\n\023in" +
-      "sight_resource_id\030\005 \001(\tR\021insightResource" +
-      "Id\022\035\n\nis_default\030\006 \001(\010R\tisDefault\022\024\n\004blo" +
-      "b\030\007 \001(\tH\000R\004blob\022\\\n\023table_visualization\030\010" +
-      " \001(\0132).api.v1alpha1.insights.TableVisual" +
-      "izationH\000R\022tableVisualization\022Y\n\022card_vi" +
-      "sualization\030\013 \001(\0132(.api.v1alpha1.insight" +
-      "s.CardVisualizationH\000R\021cardVisualization" +
-      "\022;\n\013create_time\030\t \001(\0132\032.google.protobuf." +
-      "TimestampR\ncreateTime\022;\n\013update_time\030\n \001" +
-      "(\0132\032.google.protobuf.TimestampR\nupdateTi" +
-      "meB\006\n\004body\"\201\001\n CreateOutputConfiguration" +
-      "Request\022]\n\024output_configuration\030\001 \001(\0132*." +
+      ".proto\032$api/v1alpha1/explorer/pipeline.p" +
+      "roto\032+api/v1alpha1/insights/insight_cont" +
+      "ent.proto\032 google/protobuf/field_mask.pr" +
+      "oto\032\037google/protobuf/timestamp.proto\"\223\006\n" +
+      "\007Insight\022!\n\ninsight_id\030\002 \001(\003B\0020\001R\tinsigh" +
+      "tId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004" +
+      " \001(\tR\013description\022;\n\014insight_type\030\005 \001(\0162" +
+      "\030.api.commons.InsightTypeR\013insightType\022\'" +
+      "\n\017insight_version\030\006 \001(\rR\016insightVersion\022" +
+      "\022\n\004body\030\007 \001(\tR\004body\022Z\n\027insight_permissio" +
+      "n_type\030\010 \001(\0162\".api.commons.InsightPermis" +
+      "sionTypeR\025insightPermissionType\022\037\n\013resou" +
+      "rce_id\030\t \001(\tR\nresourceId\022)\n\020standard_ins" +
+      "ight\030\n \001(\010R\017standardInsight\022N\n\017datasourc" +
+      "e_type\030\013 \001(\0162%.api.v1alpha1.explorer.Dat" +
+      "asourceTypeR\016datasourceType\022\'\n\017datasourc" +
+      "e_name\030\014 \001(\tR\016datasourceName\022;\n\013create_t" +
+      "ime\030\r \001(\0132\032.google.protobuf.TimestampR\nc" +
+      "reateTime\022;\n\013update_time\030\016 \001(\0132\032.google." +
+      "protobuf.TimestampR\nupdateTime\022A\n\010pipeli" +
+      "ne\030\020 \001(\0132\037.api.v1alpha1.insights.Pipelin" +
+      "eB\002\030\001H\000R\010pipeline\022D\n\014insight_body\030\021 \001(\0132" +
+      "\037.api.v1alpha1.explorer.PipelineH\000R\013insi" +
+      "ghtBodyB\021\n\017insight_content\"p\n\025PublishIns" +
+      "ightRequest\022\037\n\013resource_id\030\001 \001(\tR\nresour" +
+      "ceId\0226\n\027destination_resource_id\030\002 \001(\tR\025d" +
+      "estinationResourceId\"R\n\026PublishInsightRe" +
+      "sponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.i" +
+      "nsights.InsightR\007insight\"P\n\024CreateInsigh" +
+      "tRequest\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1" +
+      ".insights.InsightR\007insight\"Q\n\025CreateInsi" +
+      "ghtResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alp" +
+      "ha1.insights.InsightR\007insight\"s\n\023ListIns" +
+      "ightsRequest\022\\\n\030insight_permission_types" +
+      "\030\002 \003(\0162\".api.commons.InsightPermissionTy" +
+      "peR\026insightPermissionTypes\"X\n\032ListInsigh" +
+      "tsStreamResponse\022:\n\010insights\030\001 \001(\0132\036.api" +
+      ".v1alpha1.insights.InsightR\010insights\"R\n\024" +
+      "ListInsightsResponse\022:\n\010insights\030\001 \003(\0132\036" +
+      ".api.v1alpha1.insights.InsightR\010insights" +
+      "\"/\n\026ListOrgInsightsRequest\022\025\n\006org_id\030\001 \001" +
+      "(\tR\005orgId\"U\n\027ListOrgInsightsResponse\022:\n\010" +
+      "insights\030\001 \003(\0132\036.api.v1alpha1.insights.I" +
+      "nsightR\010insights\"\215\001\n\024UpdateInsightReques" +
+      "t\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insigh" +
+      "ts.InsightR\007insight\022;\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMaskR\nupdateMask" +
+      "\"Q\n\025UpdateInsightResponse\0228\n\007insight\030\001 \001" +
+      "(\0132\036.api.v1alpha1.insights.InsightR\007insi" +
+      "ght\"Z\n\024DeleteInsightRequest\022!\n\ninsight_i" +
+      "d\030\001 \001(\003B\0020\001R\tinsightId\022\037\n\013resource_id\030\002 " +
+      "\001(\tR\nresourceId\"Q\n\025DeleteInsightResponse" +
+      "\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insight" +
+      "s.InsightR\007insight\"W\n\021GetInsightRequest\022" +
+      "!\n\ninsight_id\030\001 \001(\003B\0020\001R\tinsightId\022\037\n\013re" +
+      "source_id\030\002 \001(\tR\nresourceId\"N\n\022GetInsigh" +
+      "tResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha" +
+      "1.insights.InsightR\007insight\"4\n\023GetVfsSch" +
+      "emaRequest\022\035\n\nalias_name\030\001 \001(\tR\taliasNam" +
+      "e\"\307\002\n\024GetVfsSchemaResponse\022I\n\006fields\030\001 \003" +
+      "(\01321.api.v1alpha1.insights.GetVfsSchemaR" +
+      "esponse.FieldR\006fields\022\'\n\017vfs_description" +
+      "\030\002 \001(\tR\016vfsDescription\022\035\n\nalias_name\030\003 \001" +
+      "(\tR\taliasName\032\233\001\n\005Field\022\037\n\013column_name\030\001" +
+      " \001(\tR\ncolumnName\022B\n\013column_type\030\002 \001(\0162!." +
+      "api.commons.InsightVfsSchemaTypeR\ncolumn" +
+      "Type\022-\n\022column_description\030\003 \001(\tR\021column" +
+      "Description\"\022\n\020ListVfsesRequest\"-\n\021ListV" +
+      "fsesResponse\022\030\n\007aliases\030\001 \003(\tR\007aliases\"\027" +
+      "\n\025ListVfsSchemasRequest\"f\n\026ListVfsSchema" +
+      "sResponse\022L\n\013vfs_schemas\030\001 \003(\0132+.api.v1a" +
+      "lpha1.insights.GetVfsSchemaResponseR\nvfs" +
+      "Schemas\"\373\001\n\022TableVisualization\022Z\n\024table_" +
+      "column_details\030\001 \003(\0132(.api.v1alpha1.insi" +
+      "ghts.TableColumnConfigR\022tableColumnDetai" +
+      "ls\022\034\n\tdelimiter\030\002 \001(\tR\tdelimiter\022N\n\017quot" +
+      "e_character\030\003 \001(\0162%.api.v1alpha1.insight" +
+      "s.QuoteCharacterR\016quoteCharacter\022\033\n\tno_h" +
+      "eader\030\004 \001(\010R\010noHeader\"V\n\021CardVisualizati" +
+      "on\022A\n\013text_values\030\001 \003(\0132 .api.v1alpha1.i" +
+      "nsights.TextValueR\ntextValues\"V\n\tTextVal" +
+      "ue\022I\n\nconditions\030\001 \003(\0132).api.v1alpha1.in" +
+      "sights.TextValueConditionR\nconditions\"\275\003" +
+      "\n\022TextValueCondition\022I\n\nexpression\030\001 \001(\013" +
+      "2%.api.v1alpha1.insights.ExpressionNodeB" +
+      "\002\030\001R\nexpression\022\022\n\004size\030\002 \001(\003R\004size\022F\n\no" +
+      "perations\030\003 \003(\0132&.api.v1alpha1.insights." +
+      "ColumnOperationR\noperations\022\033\n\ticon_name" +
+      "\030\004 \001(\tR\010iconName\022N\n\nicon_color\030\005 \001(\0132/.a" +
+      "pi.v1alpha1.insights.TextValueCondition." +
+      "ColorR\ticonColor\022N\n\017expression_node\030\006 \001(" +
+      "\0132%.api.v1alpha1.explorer.ExpressionNode" +
+      "R\016expressionNode\032C\n\005Color\022\020\n\003red\030\001 \001(\003R\003" +
+      "red\022\024\n\005green\030\002 \001(\003R\005green\022\022\n\004blue\030\003 \001(\003R" +
+      "\004blue\"\233\004\n\021TableColumnConfig\022\037\n\013column_na" +
+      "me\030\001 \001(\tR\ncolumnName\022!\n\014column_width\030\002 \001" +
+      "(\003R\013columnWidth\022\037\n\013hide_column\030\003 \001(\010R\nhi" +
+      "deColumn\022\035\n\nrenamed_as\030\004 \001(\tR\trenamedAs\022" +
+      "F\n\noperations\030\005 \003(\0132&.api.v1alpha1.insig" +
+      "hts.ColumnOperationR\noperations\022b\n\016colum" +
+      "n_summary\030\006 \001(\0162;.api.v1alpha1.insights." +
+      "OutputConfigurationColumnSummaryTypeR\rco" +
+      "lumnSummary\022 \n\013description\030\007 \001(\tR\013descri" +
+      "ption\022H\n\016sort_direction\030\010 \001(\0162!.api.v1al" +
+      "pha1.insights.ColumnSortR\rsortDirection\022" +
+      "j\n\031insight_contextual_action\030\t \001(\0132..api" +
+      ".v1alpha1.insights.InsightContextualActi" +
+      "onR\027insightContextualAction\"1\n\014FormatSer" +
+      "ies\022!\n\014format_parts\030\001 \003(\tR\013formatParts\"i" +
+      "\n\014PadOperation\022#\n\rpad_character\030\001 \001(\tR\014p" +
+      "adCharacter\022\031\n\010pad_left\030\002 \001(\010R\007padLeft\022\031" +
+      "\n\010pad_size\030\003 \001(\005R\007padSize\"\254\002\n\017ColumnOper" +
+      "ation\022K\n\016operation_type\030\001 \001(\0162$.api.v1al" +
+      "pha1.insights.OperationTypeR\roperationTy" +
+      "pe\022!\n\013float_value\030\002 \001(\001H\000R\nfloatValue\022J\n" +
+      "\rformat_series\030\003 \001(\0132#.api.v1alpha1.insi" +
+      "ghts.FormatSeriesH\000R\014formatSeries\022J\n\rpad" +
+      "_operation\030\004 \001(\0132#.api.v1alpha1.insights" +
+      ".PadOperationH\000R\014padOperationB\021\n\017operati" +
+      "on_value\"\276\002\n\027InsightContextualAction\022F\n\004" +
+      "type\030\001 \001(\01622.api.v1alpha1.insights.Insig" +
+      "htContextualActionTypeR\004type\0227\n\004link\030\002 \001" +
+      "(\0132!.api.v1alpha1.insights.LinkActionH\000R" +
+      "\004link\022F\n\tcomponent\030\003 \001(\0132&.api.v1alpha1." +
+      "insights.ComponentActionH\000R\tcomponent\022P\n" +
+      "\rdrill_through\030\004 \001(\0132).api.v1alpha1.insi" +
+      "ghts.DrillThroughActionH\000R\014drillThroughB" +
+      "\010\n\006action\"\324\001\n\nLinkAction\022#\n\rlink_element" +
+      "s\030\001 \003(\tR\014linkElements\022^\n\017component_value" +
+      "\030\002 \003(\01325.api.v1alpha1.insights.LinkActio" +
+      "n.ComponentValueEntryR\016componentValue\032A\n" +
+      "\023ComponentValueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
+      "\n\005value\030\002 \001(\tR\005value:\0028\001\"\340\001\n\017ComponentAc" +
+      "tion\022%\n\016component_name\030\001 \001(\tR\rcomponentN" +
+      "ame\022c\n\017component_value\030\002 \003(\0132:.api.v1alp" +
+      "ha1.insights.ComponentAction.ComponentVa" +
+      "lueEntryR\016componentValue\032A\n\023ComponentVal" +
+      "ueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
+      "R\005value:\0028\001\"\254\001\n\022DrillThroughAction\022.\n\023in" +
+      "sight_resource_id\030\001 \001(\tR\021insightResource" +
+      "Id\022f\n\030drill_through_parameters\030\002 \003(\0132,.a" +
+      "pi.v1alpha1.insights.DrillThroughParamet" +
+      "erR\026drillThroughParameters\"_\n\025DrillThrou" +
+      "ghParameter\022%\n\016parameter_name\030\001 \001(\tR\rpar" +
+      "ameterName\022\037\n\013column_name\030\002 \001(\tR\ncolumnN" +
+      "ame\"\200\005\n\023OutputConfiguration\022\037\n\013resource_" +
+      "id\030\001 \001(\tR\nresourceId\022<\n\032output_configura" +
+      "tion_title\030\003 \001(\tR\030outputConfigurationTit" +
+      "le\022j\n\031output_configuration_type\030\004 \001(\0162.." +
       "api.v1alpha1.insights.OutputConfiguratio" +
-      "nR\023outputConfiguration\"\202\001\n!CreateOutputC" +
+      "nTypeR\027outputConfigurationType\022.\n\023insigh" +
+      "t_resource_id\030\005 \001(\tR\021insightResourceId\022\035" +
+      "\n\nis_default\030\006 \001(\010R\tisDefault\022\024\n\004blob\030\007 " +
+      "\001(\tH\000R\004blob\022\\\n\023table_visualization\030\010 \001(\013" +
+      "2).api.v1alpha1.insights.TableVisualizat" +
+      "ionH\000R\022tableVisualization\022Y\n\022card_visual" +
+      "ization\030\013 \001(\0132(.api.v1alpha1.insights.Ca" +
+      "rdVisualizationH\000R\021cardVisualization\022;\n\013" +
+      "create_time\030\t \001(\0132\032.google.protobuf.Time" +
+      "stampR\ncreateTime\022;\n\013update_time\030\n \001(\0132\032" +
+      ".google.protobuf.TimestampR\nupdateTimeB\006" +
+      "\n\004body\"\201\001\n CreateOutputConfigurationRequ" +
+      "est\022]\n\024output_configuration\030\001 \001(\0132*.api." +
+      "v1alpha1.insights.OutputConfigurationR\023o" +
+      "utputConfiguration\"\202\001\n!CreateOutputConfi" +
+      "gurationResponse\022]\n\024output_configuration" +
+      "\030\001 \001(\0132*.api.v1alpha1.insights.OutputCon" +
+      "figurationR\023outputConfiguration\"Q\n\037ListO" +
+      "utputConfigurationsRequest\022.\n\023insight_re" +
+      "source_id\030\001 \001(\tR\021insightResourceId\"\203\001\n L" +
+      "istOutputConfigurationsResponse\022_\n\025outpu" +
+      "t_configurations\030\001 \003(\0132*.api.v1alpha1.in" +
+      "sights.OutputConfigurationR\024outputConfig" +
+      "urations\"\276\001\n UpdateOutputConfigurationRe" +
+      "quest\022;\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskR\nupdateMask\022]\n\024output_con" +
+      "figuration\030\003 \001(\0132*.api.v1alpha1.insights" +
+      ".OutputConfigurationR\023outputConfiguratio" +
+      "n\"\202\001\n!UpdateOutputConfigurationResponse\022" +
+      "]\n\024output_configuration\030\001 \001(\0132*.api.v1al" +
+      "pha1.insights.OutputConfigurationR\023outpu" +
+      "tConfiguration\"C\n DeleteOutputConfigurat" +
+      "ionRequest\022\037\n\013resource_id\030\001 \001(\tR\nresourc" +
+      "eId\"#\n!DeleteOutputConfigurationResponse" +
+      "\"@\n\035GetOutputConfigurationRequest\022\037\n\013res" +
+      "ource_id\030\001 \001(\tR\nresourceId\"\177\n\036GetOutputC" +
       "onfigurationResponse\022]\n\024output_configura" +
       "tion\030\001 \001(\0132*.api.v1alpha1.insights.Outpu" +
-      "tConfigurationR\023outputConfiguration\"Q\n\037L" +
-      "istOutputConfigurationsRequest\022.\n\023insigh" +
-      "t_resource_id\030\001 \001(\tR\021insightResourceId\"\203" +
-      "\001\n ListOutputConfigurationsResponse\022_\n\025o" +
-      "utput_configurations\030\001 \003(\0132*.api.v1alpha" +
-      "1.insights.OutputConfigurationR\024outputCo" +
-      "nfigurations\"\276\001\n UpdateOutputConfigurati" +
-      "onRequest\022;\n\013update_mask\030\002 \001(\0132\032.google." +
-      "protobuf.FieldMaskR\nupdateMask\022]\n\024output" +
-      "_configuration\030\003 \001(\0132*.api.v1alpha1.insi" +
-      "ghts.OutputConfigurationR\023outputConfigur" +
-      "ation\"\202\001\n!UpdateOutputConfigurationRespo" +
-      "nse\022]\n\024output_configuration\030\001 \001(\0132*.api." +
-      "v1alpha1.insights.OutputConfigurationR\023o" +
-      "utputConfiguration\"C\n DeleteOutputConfig" +
-      "urationRequest\022\037\n\013resource_id\030\001 \001(\tR\nres" +
-      "ourceId\"#\n!DeleteOutputConfigurationResp" +
-      "onse\"@\n\035GetOutputConfigurationRequest\022\037\n" +
-      "\013resource_id\030\001 \001(\tR\nresourceId\"\177\n\036GetOut" +
-      "putConfigurationResponse\022]\n\024output_confi" +
-      "guration\030\001 \001(\0132*.api.v1alpha1.insights.O" +
-      "utputConfigurationR\023outputConfiguration\"" +
-      "w\n$SetDefaultOutputConfigurationRequest\022" +
-      "\037\n\013resource_id\030\001 \001(\tR\nresourceId\022.\n\023insi" +
-      "ght_resource_id\030\002 \001(\tR\021insightResourceId" +
-      "\"\'\n%SetDefaultOutputConfigurationRespons" +
-      "e\"V\n$GetDefaultOutputConfigurationReques" +
-      "t\022.\n\023insight_resource_id\030\001 \001(\tR\021insightR" +
-      "esourceId\"\206\001\n%GetDefaultOutputConfigurat" +
-      "ionResponse\022]\n\024output_configuration\030\001 \001(" +
-      "\0132*.api.v1alpha1.insights.OutputConfigur" +
-      "ationR\023outputConfiguration*\274\002\n\027OutputCon" +
-      "figurationType\022)\n%OUTPUT_CONFIGURATION_T" +
-      "YPE_UNSPECIFIED\020\000\022#\n\037OUTPUT_CONFIGURATIO" +
-      "N_TYPE_TABLE\020\001\022*\n&OUTPUT_CONFIGURATION_T" +
-      "YPE_MULTI_SERIES\020\002\022\'\n#OUTPUT_CONFIGURATI" +
-      "ON_TYPE_PIE_CHART\020\003\022)\n%OUTPUT_CONFIGURAT" +
-      "ION_TYPE_FIXED_WIDTH\020\004\022&\n\"OUTPUT_CONFIGU" +
-      "RATION_TYPE_TIMELINE\020\005\022)\n%OUTPUT_CONFIGU" +
-      "RATION_TYPE_TEXT_VALUES\020\006*\340\002\n\rOperationT" +
-      "ype\022\036\n\032OPERATION_TYPE_UNSPECIFIED\020\000\022\027\n\023O" +
-      "PERATION_TYPE_DATE\020\001\022\031\n\025OPERATION_TYPE_P" +
-      "REFIX\020\002\022\031\n\025OPERATION_TYPE_SUFFIX\020\003\022\033\n\027OP" +
-      "ERATION_TYPE_DURATION\020\004\022\026\n\022OPERATION_TYP" +
-      "E_ADD\020\005\022\033\n\027OPERATION_TYPE_SUBTRACT\020\006\022\033\n\027" +
-      "OPERATION_TYPE_MULTIPLY\020\007\022\031\n\025OPERATION_T" +
-      "YPE_DIVIDE\020\010\022 \n\034OPERATION_TYPE_FORMAT_NU" +
-      "MBER\020\t\022\034\n\030OPERATION_TYPE_PRECISION\020\n\022\026\n\022" +
-      "OPERATION_TYPE_PAD\020\013*`\n\nColumnSort\022\033\n\027CO" +
-      "LUMN_SORT_UNSPECIFIED\020\000\022\031\n\025COLUMN_SORT_A" +
-      "SCENDING\020\001\022\032\n\026COLUMN_SORT_DESCENDING\020\002*\250" +
-      "\002\n$OutputConfigurationColumnSummaryType\022" +
-      "8\n4OUTPUT_CONFIGURATION_COLUMN_SUMMARY_T" +
-      "YPE_UNSPECIFIED\020\000\0220\n,OUTPUT_CONFIGURATIO" +
-      "N_COLUMN_SUMMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CO" +
-      "NFIGURATION_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n" +
-      ",OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYP" +
-      "E_MIN\020\003\0220\n,OUTPUT_CONFIGURATION_COLUMN_S" +
-      "UMMARY_TYPE_MAX\020\004*\326\001\n\033InsightContextualA" +
-      "ctionType\022.\n*INSIGHT_CONTEXTUAL_ACTION_T" +
-      "YPE_UNSPECIFIED\020\000\022\'\n#INSIGHT_CONTEXTUAL_" +
-      "ACTION_TYPE_LINK\020\001\022,\n(INSIGHT_CONTEXTUAL" +
-      "_ACTION_TYPE_COMPONENT\020\002\0220\n,INSIGHT_CONT" +
-      "EXTUAL_ACTION_TYPE_DRILL_THROUGH\020\003*u\n\016Qu" +
-      "oteCharacter\022\037\n\033QUOTE_CHARACTER_UNSPECIF" +
-      "IED\020\000\022 \n\034QUOTE_CHARACTER_DOUBLE_QUOTE\020\001\022" +
-      " \n\034QUOTE_CHARACTER_SINGLE_QUOTE\020\002B\255\001\n\'co" +
-      "m.tcn.cloud.api.api.v1alpha1.insightsB\014I" +
-      "nsightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insig" +
-      "hts\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1alph" +
-      "a1\\Insights\\GPBMetadata\352\002\027Api::V1alpha1:" +
-      ":Insightsb\006proto3"
+      "tConfigurationR\023outputConfiguration\"w\n$S" +
+      "etDefaultOutputConfigurationRequest\022\037\n\013r" +
+      "esource_id\030\001 \001(\tR\nresourceId\022.\n\023insight_" +
+      "resource_id\030\002 \001(\tR\021insightResourceId\"\'\n%" +
+      "SetDefaultOutputConfigurationResponse\"V\n" +
+      "$GetDefaultOutputConfigurationRequest\022.\n" +
+      "\023insight_resource_id\030\001 \001(\tR\021insightResou" +
+      "rceId\"\206\001\n%GetDefaultOutputConfigurationR" +
+      "esponse\022]\n\024output_configuration\030\001 \001(\0132*." +
+      "api.v1alpha1.insights.OutputConfiguratio" +
+      "nR\023outputConfiguration*\274\002\n\027OutputConfigu" +
+      "rationType\022)\n%OUTPUT_CONFIGURATION_TYPE_" +
+      "UNSPECIFIED\020\000\022#\n\037OUTPUT_CONFIGURATION_TY" +
+      "PE_TABLE\020\001\022*\n&OUTPUT_CONFIGURATION_TYPE_" +
+      "MULTI_SERIES\020\002\022\'\n#OUTPUT_CONFIGURATION_T" +
+      "YPE_PIE_CHART\020\003\022)\n%OUTPUT_CONFIGURATION_" +
+      "TYPE_FIXED_WIDTH\020\004\022&\n\"OUTPUT_CONFIGURATI" +
+      "ON_TYPE_TIMELINE\020\005\022)\n%OUTPUT_CONFIGURATI" +
+      "ON_TYPE_TEXT_VALUES\020\006*\340\002\n\rOperationType\022" +
+      "\036\n\032OPERATION_TYPE_UNSPECIFIED\020\000\022\027\n\023OPERA" +
+      "TION_TYPE_DATE\020\001\022\031\n\025OPERATION_TYPE_PREFI" +
+      "X\020\002\022\031\n\025OPERATION_TYPE_SUFFIX\020\003\022\033\n\027OPERAT" +
+      "ION_TYPE_DURATION\020\004\022\026\n\022OPERATION_TYPE_AD" +
+      "D\020\005\022\033\n\027OPERATION_TYPE_SUBTRACT\020\006\022\033\n\027OPER" +
+      "ATION_TYPE_MULTIPLY\020\007\022\031\n\025OPERATION_TYPE_" +
+      "DIVIDE\020\010\022 \n\034OPERATION_TYPE_FORMAT_NUMBER" +
+      "\020\t\022\034\n\030OPERATION_TYPE_PRECISION\020\n\022\026\n\022OPER" +
+      "ATION_TYPE_PAD\020\013*`\n\nColumnSort\022\033\n\027COLUMN" +
+      "_SORT_UNSPECIFIED\020\000\022\031\n\025COLUMN_SORT_ASCEN" +
+      "DING\020\001\022\032\n\026COLUMN_SORT_DESCENDING\020\002*\250\002\n$O" +
+      "utputConfigurationColumnSummaryType\0228\n4O" +
+      "UTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_" +
+      "UNSPECIFIED\020\000\0220\n,OUTPUT_CONFIGURATION_CO" +
+      "LUMN_SUMMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CONFIG" +
+      "URATION_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n,OUT" +
+      "PUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_MI" +
+      "N\020\003\0220\n,OUTPUT_CONFIGURATION_COLUMN_SUMMA" +
+      "RY_TYPE_MAX\020\004*\326\001\n\033InsightContextualActio" +
+      "nType\022.\n*INSIGHT_CONTEXTUAL_ACTION_TYPE_" +
+      "UNSPECIFIED\020\000\022\'\n#INSIGHT_CONTEXTUAL_ACTI" +
+      "ON_TYPE_LINK\020\001\022,\n(INSIGHT_CONTEXTUAL_ACT" +
+      "ION_TYPE_COMPONENT\020\002\0220\n,INSIGHT_CONTEXTU" +
+      "AL_ACTION_TYPE_DRILL_THROUGH\020\003*u\n\016QuoteC" +
+      "haracter\022\037\n\033QUOTE_CHARACTER_UNSPECIFIED\020" +
+      "\000\022 \n\034QUOTE_CHARACTER_DOUBLE_QUOTE\020\001\022 \n\034Q" +
+      "UOTE_CHARACTER_SINGLE_QUOTE\020\002B\255\001\n\'com.tc" +
+      "n.cloud.api.api.v1alpha1.insightsB\014Insig" +
+      "htProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312" +
+      "\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\I" +
+      "nsights\\GPBMetadata\352\002\027Api::V1alpha1::Ins" +
+      "ightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.insights.InsightContentProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -545,7 +551,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_Insight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_Insight_descriptor,
-        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", "ResourceId", "StandardInsight", "DatasourceType", "DatasourceName", "CreateTime", "UpdateTime", "Pipeline", "InsightContent", });
+        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", "ResourceId", "StandardInsight", "DatasourceType", "DatasourceName", "CreateTime", "UpdateTime", "Pipeline", "InsightBody", "InsightContent", });
     internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable = new
@@ -701,7 +707,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_TextValueCondition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_TextValueCondition_descriptor,
-        new java.lang.String[] { "Expression", "Size", "Operations", "IconName", "IconColor", });
+        new java.lang.String[] { "Expression", "Size", "Operations", "IconName", "IconColor", "ExpressionNode", });
     internal_static_api_v1alpha1_insights_TextValueCondition_Color_descriptor =
       internal_static_api_v1alpha1_insights_TextValueCondition_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_insights_TextValueCondition_Color_fieldAccessorTable = new
@@ -866,6 +872,7 @@ public final class InsightProto {
         new java.lang.String[] { "OutputConfiguration", });
     com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.insights.InsightContentProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface GroupNodeOrBuilder extends
+@java.lang.Deprecated public interface GroupNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.GroupNode)
     com.google.protobuf.MessageOrBuilder {
 

@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 /**
  * <pre>
  * Pipeline contains a set of nodes
+ * DEPRECATED use api.v1alpha1.explorer.pipeline.Pipeline instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.insights.Pipeline}
  */
-public final class Pipeline extends
+@java.lang.Deprecated public final class Pipeline extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.Pipeline)
     PipelineOrBuilder {
@@ -266,6 +267,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Pipeline contains a set of nodes
+   * DEPRECATED use api.v1alpha1.explorer.pipeline.Pipeline instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.insights.Pipeline}

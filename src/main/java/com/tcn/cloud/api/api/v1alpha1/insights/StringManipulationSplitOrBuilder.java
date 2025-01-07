@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface StringManipulationSplitOrBuilder extends
+@java.lang.Deprecated public interface StringManipulationSplitOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.StringManipulationSplit)
     com.google.protobuf.MessageOrBuilder {
 

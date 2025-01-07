@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface ExpressionNodeOrBuilder extends
+@java.lang.Deprecated public interface ExpressionNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.ExpressionNode)
     com.google.protobuf.MessageOrBuilder {
 

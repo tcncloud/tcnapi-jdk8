@@ -348,6 +348,8 @@ private static final long serialVersionUID = 0L;
     FINVI_VELOSIDY_ONE_TIME_SALE(5502),
     FINVI_VELOSIDY_PLAN_OFFER(5503),
     FINVI_VELOSIDY_PLAN_RECURRING_CREATE(5504),
+    FINVI_VELOSIDY_PENDING_PAYMENT(5505),
+    FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE(5506),
     CLOVER_PAYMENT_CARD_SALE_TRANSACTION(5601),
     NUVEI_PAYMENT(5701),
     VALUE_NOT_SET(0);
@@ -663,6 +665,8 @@ private static final long serialVersionUID = 0L;
         case 5502: return FINVI_VELOSIDY_ONE_TIME_SALE;
         case 5503: return FINVI_VELOSIDY_PLAN_OFFER;
         case 5504: return FINVI_VELOSIDY_PLAN_RECURRING_CREATE;
+        case 5505: return FINVI_VELOSIDY_PENDING_PAYMENT;
+        case 5506: return FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE;
         case 5601: return CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
         case 5701: return NUVEI_PAYMENT;
         case 0: return VALUE_NOT_SET;
@@ -9031,7 +9035,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1148
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9041,7 +9045,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1148
+   *     See api/commons/integrations/integrations.proto;l=1150
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9066,7 +9070,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1149
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9076,7 +9080,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1149
+   *     See api/commons/integrations/integrations.proto;l=1151
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9101,7 +9105,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1150
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9111,7 +9115,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1150
+   *     See api/commons/integrations/integrations.proto;l=1152
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9136,7 +9140,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1151
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9146,7 +9150,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1151
+   *     See api/commons/integrations/integrations.proto;l=1153
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9171,7 +9175,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1152
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9181,7 +9185,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1152
+   *     See api/commons/integrations/integrations.proto;l=1154
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9206,7 +9210,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1153
+   *     See api/commons/integrations/integrations.proto;l=1155
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9216,7 +9220,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1153
+   *     See api/commons/integrations/integrations.proto;l=1155
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9241,7 +9245,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1154
+   *     See api/commons/integrations/integrations.proto;l=1156
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9251,7 +9255,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1154
+   *     See api/commons/integrations/integrations.proto;l=1156
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9921,6 +9925,68 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_PENDING_PAYMENT_FIELD_NUMBER = 5505;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+   * @return Whether the finviVelosidyPendingPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyPendingPayment() {
+    return valueCase_ == 5505;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+   * @return The finviVelosidyPendingPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment getFinviVelosidyPendingPayment() {
+    if (valueCase_ == 5505) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder getFinviVelosidyPendingPaymentOrBuilder() {
+    if (valueCase_ == 5505) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+  }
+
+  public static final int FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE_FIELD_NUMBER = 5506;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+   * @return Whether the finviVelosidyPlanOneTimeFuture field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviVelosidyPlanOneTimeFuture() {
+    return valueCase_ == 5506;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+   * @return The finviVelosidyPlanOneTimeFuture.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture getFinviVelosidyPlanOneTimeFuture() {
+    if (valueCase_ == 5506) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder getFinviVelosidyPlanOneTimeFutureOrBuilder() {
+    if (valueCase_ == 5506) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
   }
 
   public static final int CLOVER_PAYMENT_CARD_SALE_TRANSACTION_FIELD_NUMBER = 5601;
@@ -10889,6 +10955,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5504) {
       output.writeMessage(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
+    }
+    if (valueCase_ == 5505) {
+      output.writeMessage(5505, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_);
+    }
+    if (valueCase_ == 5506) {
+      output.writeMessage(5506, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_);
     }
     if (valueCase_ == 5601) {
       output.writeMessage(5601, (com.tcn.cloud.api.api.commons.integrations.ExecuteCloverPaymentCardSaleTransaction) value_);
@@ -12091,6 +12163,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5504) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5504, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanRecurringCreate) value_);
+    }
+    if (valueCase_ == 5505) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5505, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_);
+    }
+    if (valueCase_ == 5506) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5506, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_);
     }
     if (valueCase_ == 5601) {
       size += com.google.protobuf.CodedOutputStream
@@ -13303,6 +13383,14 @@ private static final long serialVersionUID = 0L;
         if (!getFinviVelosidyPlanRecurringCreate()
             .equals(other.getFinviVelosidyPlanRecurringCreate())) return false;
         break;
+      case 5505:
+        if (!getFinviVelosidyPendingPayment()
+            .equals(other.getFinviVelosidyPendingPayment())) return false;
+        break;
+      case 5506:
+        if (!getFinviVelosidyPlanOneTimeFuture()
+            .equals(other.getFinviVelosidyPlanOneTimeFuture())) return false;
+        break;
       case 5601:
         if (!getCloverPaymentCardSaleTransaction()
             .equals(other.getCloverPaymentCardSaleTransaction())) return false;
@@ -14512,6 +14600,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FINVI_VELOSIDY_PLAN_RECURRING_CREATE_FIELD_NUMBER;
         hash = (53 * hash) + getFinviVelosidyPlanRecurringCreate().hashCode();
         break;
+      case 5505:
+        hash = (37 * hash) + FINVI_VELOSIDY_PENDING_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyPendingPayment().hashCode();
+        break;
+      case 5506:
+        hash = (37 * hash) + FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviVelosidyPlanOneTimeFuture().hashCode();
+        break;
       case 5601:
         hash = (37 * hash) + CLOVER_PAYMENT_CARD_SALE_TRANSACTION_FIELD_NUMBER;
         hash = (53 * hash) + getCloverPaymentCardSaleTransaction().hashCode();
@@ -15558,6 +15654,12 @@ private static final long serialVersionUID = 0L;
       }
       if (finviVelosidyPlanRecurringCreateBuilder_ != null) {
         finviVelosidyPlanRecurringCreateBuilder_.clear();
+      }
+      if (finviVelosidyPendingPaymentBuilder_ != null) {
+        finviVelosidyPendingPaymentBuilder_.clear();
+      }
+      if (finviVelosidyPlanOneTimeFutureBuilder_ != null) {
+        finviVelosidyPlanOneTimeFutureBuilder_.clear();
       }
       if (cloverPaymentCardSaleTransactionBuilder_ != null) {
         cloverPaymentCardSaleTransactionBuilder_.clear();
@@ -16838,6 +16940,14 @@ private static final long serialVersionUID = 0L;
           finviVelosidyPlanRecurringCreateBuilder_ != null) {
         result.value_ = finviVelosidyPlanRecurringCreateBuilder_.build();
       }
+      if (valueCase_ == 5505 &&
+          finviVelosidyPendingPaymentBuilder_ != null) {
+        result.value_ = finviVelosidyPendingPaymentBuilder_.build();
+      }
+      if (valueCase_ == 5506 &&
+          finviVelosidyPlanOneTimeFutureBuilder_ != null) {
+        result.value_ = finviVelosidyPlanOneTimeFutureBuilder_.build();
+      }
       if (valueCase_ == 5601 &&
           cloverPaymentCardSaleTransactionBuilder_ != null) {
         result.value_ = cloverPaymentCardSaleTransactionBuilder_.build();
@@ -18080,6 +18190,14 @@ private static final long serialVersionUID = 0L;
         }
         case FINVI_VELOSIDY_PLAN_RECURRING_CREATE: {
           mergeFinviVelosidyPlanRecurringCreate(other.getFinviVelosidyPlanRecurringCreate());
+          break;
+        }
+        case FINVI_VELOSIDY_PENDING_PAYMENT: {
+          mergeFinviVelosidyPendingPayment(other.getFinviVelosidyPendingPayment());
+          break;
+        }
+        case FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE: {
+          mergeFinviVelosidyPlanOneTimeFuture(other.getFinviVelosidyPlanOneTimeFuture());
           break;
         }
         case CLOVER_PAYMENT_CARD_SALE_TRANSACTION: {
@@ -20197,6 +20315,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5504;
               break;
             } // case 44034
+            case 44042: {
+              input.readMessage(
+                  getFinviVelosidyPendingPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5505;
+              break;
+            } // case 44042
+            case 44050: {
+              input.readMessage(
+                  getFinviVelosidyPlanOneTimeFutureFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5506;
+              break;
+            } // case 44050
             case 44810: {
               input.readMessage(
                   getCloverPaymentCardSaleTransactionFieldBuilder().getBuilder(),
@@ -58385,7 +58517,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1148
+     *     See api/commons/integrations/integrations.proto;l=1150
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -58395,7 +58527,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1148
+     *     See api/commons/integrations/integrations.proto;l=1150
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -58531,7 +58663,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1149
+     *     See api/commons/integrations/integrations.proto;l=1151
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -58541,7 +58673,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1149
+     *     See api/commons/integrations/integrations.proto;l=1151
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -58677,7 +58809,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1150
+     *     See api/commons/integrations/integrations.proto;l=1152
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -58687,7 +58819,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1150
+     *     See api/commons/integrations/integrations.proto;l=1152
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -58823,7 +58955,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1151
+     *     See api/commons/integrations/integrations.proto;l=1153
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -58833,7 +58965,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1151
+     *     See api/commons/integrations/integrations.proto;l=1153
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -58969,7 +59101,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1152
+     *     See api/commons/integrations/integrations.proto;l=1154
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -58979,7 +59111,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1152
+     *     See api/commons/integrations/integrations.proto;l=1154
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -59115,7 +59247,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1153
+     *     See api/commons/integrations/integrations.proto;l=1155
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -59125,7 +59257,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1153
+     *     See api/commons/integrations/integrations.proto;l=1155
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -59261,7 +59393,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1154
+     *     See api/commons/integrations/integrations.proto;l=1156
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -59271,7 +59403,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1154
+     *     See api/commons/integrations/integrations.proto;l=1156
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -62382,6 +62514,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5504;
       onChanged();
       return finviVelosidyPlanRecurringCreateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder> finviVelosidyPendingPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     * @return Whether the finviVelosidyPendingPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyPendingPayment() {
+      return valueCase_ == 5505;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     * @return The finviVelosidyPendingPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment getFinviVelosidyPendingPayment() {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        if (valueCase_ == 5505) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5505) {
+          return finviVelosidyPendingPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    public Builder setFinviVelosidyPendingPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment value) {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyPendingPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 5505;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    public Builder setFinviVelosidyPendingPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder builderForValue) {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyPendingPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5505;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    public Builder mergeFinviVelosidyPendingPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment value) {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        if (valueCase_ == 5505 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5505) {
+          finviVelosidyPendingPaymentBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyPendingPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5505;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    public Builder clearFinviVelosidyPendingPayment() {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        if (valueCase_ == 5505) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5505) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyPendingPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder getFinviVelosidyPendingPaymentBuilder() {
+      return getFinviVelosidyPendingPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder getFinviVelosidyPendingPaymentOrBuilder() {
+      if ((valueCase_ == 5505) && (finviVelosidyPendingPaymentBuilder_ != null)) {
+        return finviVelosidyPendingPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5505) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPendingPayment finvi_velosidy_pending_payment = 5505 [json_name = "finviVelosidyPendingPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder> 
+        getFinviVelosidyPendingPaymentFieldBuilder() {
+      if (finviVelosidyPendingPaymentBuilder_ == null) {
+        if (!(valueCase_ == 5505)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.getDefaultInstance();
+        }
+        finviVelosidyPendingPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPendingPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5505;
+      onChanged();
+      return finviVelosidyPendingPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder> finviVelosidyPlanOneTimeFutureBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     * @return Whether the finviVelosidyPlanOneTimeFuture field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviVelosidyPlanOneTimeFuture() {
+      return valueCase_ == 5506;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     * @return The finviVelosidyPlanOneTimeFuture.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture getFinviVelosidyPlanOneTimeFuture() {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        if (valueCase_ == 5506) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5506) {
+          return finviVelosidyPlanOneTimeFutureBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    public Builder setFinviVelosidyPlanOneTimeFuture(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture value) {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviVelosidyPlanOneTimeFutureBuilder_.setMessage(value);
+      }
+      valueCase_ = 5506;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    public Builder setFinviVelosidyPlanOneTimeFuture(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder builderForValue) {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviVelosidyPlanOneTimeFutureBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5506;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    public Builder mergeFinviVelosidyPlanOneTimeFuture(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture value) {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        if (valueCase_ == 5506 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5506) {
+          finviVelosidyPlanOneTimeFutureBuilder_.mergeFrom(value);
+        } else {
+          finviVelosidyPlanOneTimeFutureBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5506;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    public Builder clearFinviVelosidyPlanOneTimeFuture() {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        if (valueCase_ == 5506) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5506) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviVelosidyPlanOneTimeFutureBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder getFinviVelosidyPlanOneTimeFutureBuilder() {
+      return getFinviVelosidyPlanOneTimeFutureFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder getFinviVelosidyPlanOneTimeFutureOrBuilder() {
+      if ((valueCase_ == 5506) && (finviVelosidyPlanOneTimeFutureBuilder_ != null)) {
+        return finviVelosidyPlanOneTimeFutureBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5506) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture finvi_velosidy_plan_one_time_future = 5506 [json_name = "finviVelosidyPlanOneTimeFuture"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder> 
+        getFinviVelosidyPlanOneTimeFutureFieldBuilder() {
+      if (finviVelosidyPlanOneTimeFutureBuilder_ == null) {
+        if (!(valueCase_ == 5506)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.getDefaultInstance();
+        }
+        finviVelosidyPlanOneTimeFutureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFutureOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviVelosidyPlanOneTimeFuture) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5506;
+      onChanged();
+      return finviVelosidyPlanOneTimeFutureBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

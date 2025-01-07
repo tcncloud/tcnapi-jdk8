@@ -323,303 +323,305 @@ public final class WfmProto {
       "tampR\rstartDatetime\022C\n\nadm_states\030\003 \003(\0162" +
       "$.api.commons.RealTimeManagementStateR\ta" +
       "dmStates\022\035\n\npause_code\030\004 \001(\tR\tpauseCode\"" +
-      "\307\003\n\034AdherenceAgentStateViolation\022\"\n\rwfm_" +
+      "\375\003\n\034AdherenceAgentStateViolation\022\"\n\rwfm_" +
       "agent_sid\030\001 \001(\003R\013wfmAgentSid\022A\n\016start_da" +
       "tetime\030\002 \001(\0132\032.google.protobuf.Timestamp" +
       "R\rstartDatetime\022T\n\023expected_rtm_states\030\003" +
       " \003(\0162$.api.commons.RealTimeManagementSta" +
-      "teR\021expectedRtmStates\022.\n\023expected_pause_" +
-      "code\030\004 \001(\tR\021expectedPauseCode\022P\n\021actual_" +
-      "rtm_states\030\005 \003(\0162$.api.commons.RealTimeM" +
-      "anagementStateR\017actualRtmStates\022*\n\021actua" +
-      "l_pause_code\030\006 \001(\tR\017actualPauseCode\022<\n\032v" +
-      "iolation_duration_seconds\030\007 \001(\005R\030violati" +
-      "onDurationSeconds\"[\n\024AdherenceAgentState" +
-      "s\022C\n\014agent_states\030\001 \003(\0132 .api.commons.Ad" +
-      "herenceAgentStateR\013agentStates\"j\n\035Adhere" +
-      "nceAgentStateViolations\022I\n\nviolations\030\001 " +
-      "\003(\0132).api.commons.AdherenceAgentStateVio" +
-      "lationR\nviolations\"\221\005\n\022AgentLeavePetitio" +
-      "n\0229\n\027agent_leave_petition_id\030\001 \001(\003B\0020\001R\024" +
-      "agentLeavePetitionId\022\"\n\rwfm_agent_sid\030\002 " +
-      "\001(\003R\013wfmAgentSid\022N\n\017petition_status\030\003 \001(" +
-      "\0162%.api.commons.AgentLeavePetitionStatus" +
-      "R\016petitionStatus\022)\n\020petition_comment\030\004 \001" +
-      "(\tR\017petitionComment\022)\n\020response_comment\030" +
-      "\005 \001(\tR\017responseComment\022V\n\031requested_date" +
-      "time_ranges\030\006 \003(\0132\032.api.commons.Datetime" +
-      "RangeR\027requestedDatetimeRanges\022=\n\014create" +
-      "d_time\030\007 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\013createdTime\022?\n\rarchived_time\030\010 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\014archivedTime\022?" +
-      "\n\rresolved_time\030\t \001(\0132\032.google.protobuf." +
-      "TimestampR\014resolvedTime\022-\n\023resolved_by_u" +
-      "ser_id\030\n \001(\tR\020resolvedByUserId\022.\n\023reques" +
-      "ted_hours_off\030\013 \001(\002R\021requestedHoursOff\"q" +
-      "\n\014ConfigEntity\022!\n\nentity_sid\030\001 \001(\003B\0020\001R\t" +
-      "entitySid\022>\n\013entity_type\030\002 \001(\0162\035.api.com" +
-      "mons.ConfigEntityTypeR\nentityType\"\330\001\n\037Ad" +
-      "herenceRuleNotificationConfig\022T\n%adheren" +
-      "ce_rule_notification_config_id\030\001 \001(\003B\0020\001" +
-      "R!adherenceRuleNotificationConfigId\022\022\n\004n" +
-      "ame\030\002 \001(\tR\004name\022K\n\007entries\030\003 \003(\01321.api.c" +
-      "ommons.AdherenceRuleNotificationConfigEn" +
-      "tryR\007entries\"\255\003\n$AdherenceRuleNotificati" +
-      "onConfigEntry\022_\n+adherence_rule_notifica" +
-      "tion_config_entry_id\030\001 \001(\003B\0020\001R&adherenc" +
-      "eRuleNotificationConfigEntryId\022T\n%adhere" +
-      "nce_rule_notification_config_id\030\002 \001(\003B\0020" +
-      "\001R!adherenceRuleNotificationConfigId\022*\n\021" +
-      "recipient_user_id\030\003 \001(\tR\017recipientUserId" +
-      "\022]\n\023notification_medium\030\004 \001(\0162,.api.comm" +
-      "ons.AdherenceRuleNotificationMediumR\022not" +
-      "ificationMedium\022C\n\037seconds_to_wait_for_n" +
-      "o_response\030\005 \001(\005R\032secondsToWaitForNoResp" +
-      "onse\"t\n\037AdherenceDepartmentalRuleAction\022" +
-      "Q\n\013action_type\030\001 \001(\01620.api.commons.Adher" +
-      "enceDepartmentalRuleActionTypeR\nactionTy" +
-      "pe\"\320\004\n\031AdherenceDepartmentalRule\022G\n\036adhe" +
-      "rence_departmental_rule_id\030\001 \001(\003B\0020\001R\033ad" +
-      "herenceDepartmentalRuleId\022\022\n\004name\030\002 \001(\tR" +
-      "\004name\022B\n\017selected_entity\030\003 \001(\0132\031.api.com" +
-      "mons.ConfigEntityR\016selectedEntity\022]\n\025rul" +
-      "e_requirement_type\030\004 \001(\0162).api.commons.A" +
-      "dherenceRuleRequirementTypeR\023ruleRequire" +
-      "mentType\022T\n%adherence_rule_notification_" +
-      "config_id\030\005 \001(\003B\0020\001R!adherenceRuleNotifi" +
-      "cationConfigId\022>\n\nrule_range\030\006 \001(\0162\037.api" +
-      ".commons.AdherenceRuleRangeR\truleRange\022=" +
-      "\n\014custom_range\030\007 \001(\0132\032.api.commons.Datet" +
-      "imeRangeR\013customRange\022O\n\014rule_clauses\030\t " +
-      "\003(\0132,.api.commons.AdherenceDepartmentalR" +
-      "uleClauseR\013ruleClausesJ\004\010\010\020\tR\007clauses\"\214\004" +
-      "\n\037AdherenceDepartmentalRuleClause\022T\n%adh" +
-      "erence_departmental_rule_clause_id\030\001 \001(\003" +
-      "B\0020\001R!adherenceDepartmentalRuleClauseId\022" +
-      "G\n\036adherence_departmental_rule_id\030\002 \001(\003B" +
-      "\0020\001R\033adherenceDepartmentalRuleId\022D\n\006acti" +
-      "on\030\003 \001(\0132,.api.commons.AdherenceDepartme" +
-      "ntalRuleActionR\006action\022A\n\tcondition\030\004 \001(" +
-      "\0162#.api.commons.AdherenceRuleConditionR\t" +
-      "condition\022\026\n\006amount\030\005 \001(\005R\006amount\0222\n\004uni" +
-      "t\030\006 \001(\0162\036.api.commons.AdherenceRuleUnitR" +
-      "\004unit\022:\n\nper_amount\030\007 \001(\0132\033.google.proto" +
-      "buf.Int32ValueR\tperAmount\0229\n\010per_unit\030\010 " +
-      "\001(\0162\036.api.commons.AdherenceRuleUnitR\007per" +
-      "Unit\"\265\003\n\022AdherenceAgentRule\0229\n\027adherence" +
-      "_agent_rule_id\030\001 \001(\003B\0020\001R\024adherenceAgent" +
-      "RuleId\022\022\n\004name\030\002 \001(\tR\004name\022B\n\017selected_e" +
-      "ntity\030\003 \001(\0132\031.api.commons.ConfigEntityR\016" +
-      "selectedEntity\022]\n\025rule_requirement_type\030" +
-      "\004 \001(\0162).api.commons.AdherenceRuleRequire" +
-      "mentTypeR\023ruleRequirementType\022T\n%adheren" +
-      "ce_rule_notification_config_id\030\005 \001(\003B\0020\001" +
-      "R!adherenceRuleNotificationConfigId\022H\n\014r" +
-      "ule_clauses\030\007 \003(\0132%.api.commons.Adherenc" +
-      "eAgentRuleClauseR\013ruleClausesJ\004\010\006\020\007R\007cla" +
-      "uses\"f\n\030AdherenceAgentRuleAction\022J\n\013acti" +
-      "on_type\030\001 \001(\0162).api.commons.AdherenceAge" +
-      "ntRuleActionTypeR\nactionType\"\353\002\n\030Adheren" +
-      "ceAgentRuleClause\022F\n\036adherence_agent_rul" +
-      "e_clause_id\030\001 \001(\003B\0020\001R\032adherenceAgentRul" +
-      "eClauseId\0229\n\027adherence_agent_rule_id\030\002 \001" +
-      "(\003B\0020\001R\024adherenceAgentRuleId\022=\n\006action\030\003" +
-      " \001(\0132%.api.commons.AdherenceAgentRuleAct" +
-      "ionR\006action\022A\n\tcondition\030\004 \001(\0162#.api.com" +
-      "mons.AdherenceRuleConditionR\tcondition\022\026" +
-      "\n\006amount\030\005 \001(\005R\006amount\0222\n\004unit\030\006 \001(\0162\036.a" +
-      "pi.commons.AdherenceRuleUnitR\004unit*\250\001\n\036R" +
-      "egressionForecasterModelTypes\022\021\n\rRANDOM_" +
-      "FOREST\020\000\022\014\n\010ADABOOST\020\001\022\025\n\021GRADIENT_BOOST" +
-      "ING\020\002\022\025\n\021LINEAR_REGRESSION\020\003\022\016\n\nLINEAR_A" +
-      "VG\020\004\022\024\n\020SEGMENTED_LINEAR\020\005\022\007\n\003MLP\020\006\022\010\n\004A" +
-      "UTO\020\007*X\n&RegressionForecasterAvgsProcess" +
-      "ingType\022\014\n\010FORECAST\020\000\022\014\n\010AVERAGES\020\001\022\022\n\016F" +
-      "IXED_AVERAGES\020\002*d\n\022ConstraintTimeUnit\022\013\n" +
-      "\007MINUTES\020\000\022\t\n\005HOURS\020\001\022\n\n\006SHIFTS\020\002\022\010\n\004DAY" +
-      "S\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020\005\022\t\n\005YEARS\020\006*\320\003" +
-      "\n\020ConfigEntityType\022\024\n\020CALL_CENTER_NODE\020\000" +
-      "\022\017\n\013CLIENT_NODE\020\001\022\021\n\rLOCATION_NODE\020\002\022\020\n\014" +
-      "PROGRAM_NODE\020\003\022\017\n\013AGENT_GROUP\020\004\022\022\n\016SHIFT" +
-      "_TEMPLATE\020\005\022\r\n\tWFM_AGENT\020\006\022\022\n\016PLACEMENT_" +
-      "RULE\020\007\022\023\n\017CONSTRAINT_RULE\020\010\022\026\n\022NON_SKILL" +
-      "_ACTIVITY\020\t\022\026\n\022AGENT_AVAILABILITY\020\n\022\016\n\nO" +
-      "PEN_TIMES\020\013\022\027\n\023SCHEDULING_ACTIVITY\020\014\022\025\n\021" +
-      "SKILL_PROFICIENCY\020\r\022\025\n\021SCHEDULE_SCENARIO" +
-      "\020\016\022\t\n\005SKILL\020\017\022\020\n\014TOUR_PATTERN\020\020\022\025\n\021TOUR_" +
-      "WEEK_PATTERN\020\021\022\036\n\032TOUR_SHIFT_INSTANCE_CO" +
-      "NFIG\020\022\022\035\n\031TOUR_SHIFT_SEGMENT_CONFIG\020\023\022\031\n" +
-      "\025TOUR_AGENT_COLLECTION\020\024*\301\001\n\022ConstraintR" +
-      "uleType\022\021\n\rMIN_CONSEC_ON\020\000\022\021\n\rMAX_CONSEC" +
-      "_ON\020\001\022\022\n\016MIN_CONSEC_OFF\020\002\022\022\n\016MAX_CONSEC_" +
-      "OFF\020\003\022\020\n\014MIN_TOTAL_ON\020\004\022\020\n\014MAX_TOTAL_ON\020" +
-      "\005\022\021\n\rMIN_TOTAL_OFF\020\006\022\021\n\rMAX_TOTAL_OFF\020\007\022" +
-      "\023\n\017MIN_SKILL_LEVEL\020\010*3\n\020DOWPlacementType" +
-      "\022\014\n\010MUST_NOT\020\000\022\007\n\003MAY\020\001\022\010\n\004MUST\020\002*\'\n\017Ope" +
-      "nTimesOption\022\n\n\006CLOSED\020\000\022\010\n\004OPEN\020\001*P\n\022Av" +
-      "ailabilityOption\022\r\n\tAVAILABLE\020\000\022\021\n\rNOT_A" +
-      "VAILABLE\020\001\022\030\n\024PREFER_NOT_AVAILABLE\020\002*J\n\t" +
-      "DayOfWeek\022\007\n\003MON\020\000\022\007\n\003TUE\020\001\022\007\n\003WED\020\002\022\007\n\003" +
-      "THU\020\003\022\007\n\003FRI\020\004\022\007\n\003SAT\020\005\022\007\n\003SUN\020\006*^\n\026Conf" +
-      "igRelationshipType\022\026\n\022IS_ASSOCIATED_WITH" +
-      "\020\000\022\032\n\026IS_NOT_ASSOCIATED_WITH\020\001\022\020\n\014IS_MEM" +
-      "BER_OF\020\002*i\n\017DiagnosticLevel\022\017\n\013INFORMATI" +
-      "ON\020\000\022\016\n\nSUGGESTION\020\001\022\013\n\007WARNING\020\002\022\024\n\020DIA" +
-      "GNOSTIC_ERROR\020\003\022\022\n\016INTERNAL_ERROR\020\004*\276\031\n\016" +
-      "DiagnosticCode\022\013\n\007GENERAL\020\000\022\006\n\002OK\020\001\022\033\n\027N" +
-      "O_SKILLS_IN_DICTIONARY\020\002\022$\n AGENT_HAS_NO" +
-      "_SKILL_PROFICIENCIES\020\003\022\027\n\023AGENT_HAS_NO_S" +
-      "KILLS\020\004\0221\n-NO_SCHEDULING_ACTIVITIES_FOR_" +
-      "CONSTRAINT_RULES\020\005\0225\n1SCHEDULING_ACTIVIT" +
-      "Y_FOR_CONSTRAINT_RULE_NOT_FOUND\020\006\022!\n\035SHI" +
-      "FT_TEMPLATE_CANNOT_BE_NONE\020\007\022)\n%SHIFT_TE" +
-      "MPLATE_HAS_NO_PLACEMENT_RULES\020\010\022/\n+NO_ON" +
-      "CALL_IN_SHIFT_TEMPLATE_PLACEMENT_RULES\020\t" +
-      "\0229\n5MIN_GT_MAX_DURATION_IN_SHIFT_TEMPLAT" +
-      "E_PLACEMENT_RULES\020\n\022\'\n#MIN_GT_MAX_AGENTS" +
-      "_IN_SHIFT_TEMPLATE\020\013\022)\n%NO_PLACEMENT_RUL" +
-      "ES_FOR_SHIFT_TEMPLATE\020\014\022!\n\035ACTIVITIES_SH" +
-      "ORTER_THAN_SHIFT\020\r\022\037\n\033NOT_ENOUGH_AGENTS_" +
-      "FOR_SHIFT\020\016\022\037\n\033PROGRAM_HAS_NO_AGENT_GROU" +
-      "PS\020\017\022\"\n\036PROGRAM_HAS_NO_SHIFT_TEMPLATES\020\020" +
-      "\022\034\n\030LOCATION_HAS_NO_PROGRAMS\020\021\022\033\n\027CLIENT" +
-      "_HAS_NO_LOCATIONS\020\022\022\036\n\032CALL_CENTER_HAS_N" +
-      "O_CLIENTS\020\023\022\'\n#PROGRAM_HAS_INVALID_PAREN" +
-      "T_LOCATION\020\024\022&\n\"LOCATION_HAS_INVALID_PAR" +
-      "ENT_CLIENT\020\025\022)\n%CLIENT_HAS_INVALID_PAREN" +
-      "T_CALL_CENTER\020\026\022\'\n#AGENT_GROUP_HAS_INVAL" +
-      "ID_PARENT_NODE\020\027\022-\n)SHIFT_TEMPLATE_HAS_I" +
-      "NVALID_PARENT_PROGRAM\020\030\022B\n>NO_SKILL_PROF" +
-      "ICIENCY_FOR_MIN_SKILL_PROFICIENCY_CONSTR" +
-      "AINT_RULE\020\031\0225\n1TOO_MANY_AGENTS_WITH_LOCK" +
-      "ED_SHIFTS_FOR_MIN_AGENTS\020\032\022+\n\'AGENT_DOES" +
-      "_NOT_BELONG_TO_AN_AGENT_GROUP\020\033\022 \n\034INVAL" +
-      "ID_CONSTRAINT_VAL_UNITS\020\034\022\036\n\032CONSTRAINT_" +
-      "GENERAL_FAILURE\020\035\022&\n\"CANDIDATE_SHIFT_COL" +
-      "LISION_DETECTED\020\036\022\'\n#CANDIDATE_SHIFT_AGE" +
-      "NT_NOT_AVAILABLE\020\037\022\024\n\020CANDIDATE_CLOSED\020 " +
-      "\022!\n\035CONSTRAINT_ACTIVITY_NOT_FOUND\020!\022.\n*C" +
-      "ONSTRAINT_AGENT_DOES_NOT_HAVE_PROFICIENC" +
-      "Y\020\"\022(\n$CONSTRAINT_AGENT_PROFICIENCY_TOO_" +
-      "LOW\020#\022#\n\037CONSTRAINT_MAX_TOTAL_ON_FAILURE" +
-      "\020$\022#\n\037CONSTRAINT_MIN_TOTAL_ON_FAILURE\020%\022" +
-      "$\n CONSTRAINT_MAX_TOTAL_OFF_FAILURE\020&\022$\n" +
-      " CONSTRAINT_MIN_TOTAL_OFF_FAILURE\020\'\022$\n C" +
-      "ONSTRAINT_MAX_CONSEC_ON_FAILURE\020(\022$\n CON" +
-      "STRAINT_MIN_CONSEC_ON_FAILURE\020)\022%\n!CONST" +
-      "RAINT_MAX_CONSEC_OFF_FAILURE\020*\022%\n!CONSTR" +
-      "AINT_MIN_CONSEC_OFF_FAILURE\020+\022?\n;CONSTRA" +
-      "INT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR_SHIF" +
-      "T__PER_SHIFT\020,\022A\n=CONSTRAINT_CANNOT_HAVE" +
-      "_DAY_WEEK_MONTH_YEAR__PER_MINUTES_HOURS\020" +
-      "-\0222\n.CONSTRAINT_CONSECUTIVE_SHIFTS_RULE_" +
-      "NOT_ALLOWED\020.\022>\n:CONSTRAINT_WITH_LARGER_" +
-      "PERIOD_PER_SMALL_PERIOD_NOT_ALLOWED\020/\0226\n" +
-      "2CONSTRAINT_MIN_MAX_OFF_TIME_FOR_SHIFTS_" +
-      "NOT_ALLOWED\0200\022?\n;CONSTRAINT_CANNOT_HAVE_" +
-      "CONSECUTIVE_TIME_PER_MULTIPLE_SHIFTS\0201\022=" +
-      "\n9CANNOT_GENERATE_TOUR_PATTERNS_FOR_NON_" +
-      "TOUR_SHIFT_TEMPLATE\0202\022)\n%TOUR_PATTERNS_N" +
-      "EEDED_TO_SCHEDULE_TOUR\0203\022K\nGSHIFT_TEMPLA" +
-      "TE_ACTIVITY_PLACEMENT_MIN_MAX_MUST_BE_MU" +
-      "LTIPLE_OF_5_MINUTES\0204\022L\nHNO_SHIFT_TEMPLA" +
-      "TE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SH" +
-      "IFT_MIN_MAX_WIDTH\0205\022\030\n\024INVALID_TOUR_PATT" +
-      "ERN\0206\022!\n\035INVALID_TOUR_AGENT_COLLECTION\0207" +
-      "\022&\n\"INVALID_TOUR_SHIFT_INSTANCE_CONFIG\0208" +
-      "\022%\n!INVALID_TOUR_SHIFT_SEGMENT_CONFIG\0209\022" +
-      "%\n!TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP\020:\022*" +
-      "\n&TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT" +
-      "\020;\022&\n\"TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP" +
-      "\020<\0229\n5WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN" +
-      "_TOUR_WEEK_PATTERNS\020=\0227\n3WFM_AGENT_SIDS_" +
-      "NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS\020>\022B" +
-      "\n>FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_I" +
-      "N_TOUR_AGENT_COLLECTIONS\020?\022>\n:FIRST_WEEK" +
-      "_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_" +
-      "PATTERNS\020@\022<\n8SHIFT_TEMPLATE_HAS_NO_ASSO" +
-      "CIATED_SCHEDULING_AGENT_GROUPS\020A\0226\n2ATTE" +
-      "MPT_TO_BUILD_SCHEDULES_FOR_INVALID_PAREN" +
-      "T_NODE\020B\0223\n/SCHEDULABLE_AGENTS_DO_NOT_ME" +
-      "ET_TEMPLATE_MINIMUM\020C\0223\n/SCHEDULABLE_AGE" +
-      "NTS_DO_NOT_MEET_TEMPLATE_MAXIMUM\020D\022-\n)NO" +
-      "_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM\020" +
-      "E\0222\n.TOUR_AGENT_COLLECTIONS_NEEDED_TO_SC" +
-      "HEDULE_TOUR\020F\022*\n&NO_PREDICTED_CALLS_IN_S" +
-      "CHEDULING_RANGE\020G\022)\n%SHIFT_TEMPLATE_MIN_" +
-      "WIDTH_DOW_MISMATCH\020H*\312\001\n\025PerformanceMetr" +
-      "icType\022#\n\037FTE_REQUIRED_VS_ACHIEVED_SIMPL" +
-      "E\020\000\022%\n!FTE_REQUIRED_VS_ACHIEVED_EXTENDED" +
-      "\020\001\022\032\n\026SERVICE_LEVEL_ANALYSIS\020\002\022\030\n\024SERVIC" +
-      "E_LEVEL_MATRIX\020\003\022\034\n\030CONTACT_HANDLING_MET" +
-      "RICS\020\004\022\021\n\rLOAD_FORECAST\020\005*|\n\025ScheduleSho" +
-      "uldInclude\022\030\n\024ONLY_SHIFT_INSTANCES\020\000\022\034\n\030" +
-      "ONLY_PERFORMANCE_METRICS\020\001\022+\n\'SHIFT_INST" +
-      "ANCES_AND_PERFORMANCE_METRICS\020\002*(\n\014Sched" +
-      "uleType\022\t\n\005DRAFT\020\000\022\r\n\tPUBLISHED\020\001*7\n\024Sch" +
-      "edulingTargetType\022\014\n\010COVERAGE\020\000\022\021\n\rSERVI" +
-      "CE_LEVEL\020\001*Z\n\020BuildDraftStatus\022\014\n\010NO_BUI" +
-      "LD\020\000\022\017\n\013IN_PROGRESS\020\001\022\r\n\tSUCCEEDED\020\002\022\n\n\006" +
-      "FAILED\020\003\022\014\n\010CANCELED\020\004*F\n\nBitmapType\022\014\n\010" +
-      "COMPLETE\020\000\022\021\n\rONLY_WEEKMAPS\020\001\022\027\n\023ONLY_CA" +
-      "LENDAR_ITEMS\020\002*Z\n\021HistoryCacheState\022\016\n\nN" +
-      "OT_LOADED\020\000\022\013\n\007LOADING\020\001\022\024\n\020LOADING_COMP" +
-      "LETE\020\002\022\022\n\016LOADING_FAILED\020\003*S\n\021InitialSet" +
-      "upState\022\r\n\tNOT_SETUP\020\000\022\016\n\nSETTING_UP\020\001\022\022" +
-      "\n\016SETUP_COMPLETE\020\002\022\013\n\007FAILURE\020\003*\276\001\n\027Real" +
-      "TimeManagementState\022\017\n\013UNSPECIFIED\020\000\022\r\n\t" +
-      "LOGGED_IN\020\001\022\020\n\014CALL_ON_HOLD\020\004\022\021\n\rOUTBOUN" +
-      "D_CALL\020\005\022\014\n\010TRANSFER\020\007\022\016\n\nCONFERENCE\020\010\022\t" +
-      "\n\005READY\020\t\022\r\n\tNOT_READY\020\n\022\013\n\007WRAP_UP\020\013\022\016\n" +
-      "\nLOGGED_OUT\020\r\022\t\n\005PAUSE\020\016*\225\001\n\030AgentLeaveP" +
-      "etitionStatus\022\037\n\033UNSPECIFIED_PETITION_ST" +
-      "ATUS\020\000\022\024\n\020PENDING_PETITION\020\001\022\025\n\021APPROVED" +
-      "_PETITION\020\002\022\023\n\017DENIED_PETITION\020\003\022\026\n\022CANC" +
-      "ELLED_PETITION\020\004*\207\001\n SchedulingActivityC" +
-      "lassification\022 \n\034STANDARD_SCHEDULING_ACT" +
-      "IVITY\020\000\022\024\n\020ON_CALL_ACTIVITY\020\001\022\025\n\021TIME_OF" +
-      "F_ACTIVITY\020\002\022\024\n\020MEETING_ACTIVITY\020\003*\202\001\n\037A" +
-      "dherenceRuleNotificationMedium\0221\n-ADHERE" +
-      "NCE_RULE_NOTIFICATION_MEDIUM_IN_PRODUCT\020" +
-      "\000\022,\n(ADHERENCE_RULE_NOTIFICATION_MEDIUM_" +
-      "EMAIL\020\001*\251\001\n\034AdherenceRuleRequirementType" +
-      "\022,\n(ADHERENCE_RULE_REQUIREMENT_TYPE_NOT_" +
-      "USED\020\000\022,\n(ADHERENCE_RULE_REQUIREMENT_TYP" +
-      "E_OPTIONAL\020\001\022-\n)ADHERENCE_RULE_REQUIREME" +
-      "NT_TYPE_MANDATORY\020\002*\336\001\n\022AdherenceRuleRan" +
-      "ge\022%\n!ADHERENCE_RULE_RANGE_START_OF_DAY\020" +
-      "\000\022&\n\"ADHERENCE_RULE_RANGE_START_OF_WEEK\020" +
-      "\001\022\'\n#ADHERENCE_RULE_RANGE_START_OF_MONTH" +
-      "\020\002\022$\n ADHERENCE_RULE_RANGE_REST_OF_DAY\020\003" +
-      "\022*\n&ADHERENCE_RULE_RANGE_CUSTOM_DATE_RAN" +
-      "GE\020\004*a\n#AdherenceDepartmentalRuleActionT",
-      "ype\022:\n6ADHERENCE_DEPARTMENTAL_RULE_ACTIO" +
-      "N_TYPE_CALLS_ANSWERED\020\000*\312\001\n\026AdherenceRul" +
-      "eCondition\022)\n%ADHERENCE_RULE_CONDITION_G" +
-      "REATER_THAN\020\000\022/\n+ADHERENCE_RULE_CONDITIO" +
-      "N_GREATER_THAN_EQUAL\020\001\022&\n\"ADHERENCE_RULE" +
-      "_CONDITION_LESS_THAN\020\002\022,\n(ADHERENCE_RULE" +
-      "_CONDITION_LESS_THAN_EQUAL\020\003*\230\001\n\021Adheren" +
-      "ceRuleUnit\022\037\n\033ADHERENCE_RULE_UNIT_SECOND" +
-      "S\020\000\022\037\n\033ADHERENCE_RULE_UNIT_MINUTES\020\001\022\035\n\031" +
-      "ADHERENCE_RULE_UNIT_CALLS\020\002\022\"\n\036ADHERENCE" +
-      "_RULE_UNIT_PERCENTAGE\020\003*\215\004\n\034AdherenceAge" +
-      "ntRuleActionType\022,\n(ADHERENCE_AGENT_RULE" +
-      "_ACTION_TYPE_WRAP_UP\020\000\022,\n(ADHERENCE_AGEN" +
-      "T_RULE_ACTION_TYPE_WAITING\020\001\0220\n,ADHERENC" +
-      "E_AGENT_RULE_ACTION_TYPE_MANUAL_DIAL\020\002\0221" +
-      "\n-ADHERENCE_AGENT_RULE_ACTION_TYPE_PREVI" +
-      "EW_DIAL\020\003\0221\n-ADHERENCE_AGENT_RULE_ACTION" +
-      "_TYPE_ANSWER_CALLS\020\004\022,\n(ADHERENCE_AGENT_" +
-      "RULE_ACTION_TYPE_ON_CALL\020\005\022,\n(ADHERENCE_" +
-      "AGENT_RULE_ACTION_TYPE_ON_HOLD\020\006\0220\n,ADHE" +
-      "RENCE_AGENT_RULE_ACTION_TYPE_SHIFT_START" +
-      "\020\007\0225\n1ADHERENCE_AGENT_RULE_ACTION_TYPE_S" +
-      "HIFT_START_LATE\020\010\0224\n0ADHERENCE_AGENT_RUL" +
-      "E_ACTION_TYPE_SHIFT_END_EARLY\020\tBv\n\035com.t" +
-      "cn.cloud.api.api.commonsB\010WfmProtoP\001\242\002\003A" +
-      "CX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Com" +
-      "mons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "teR\021expectedRtmStates\0222\n\023expected_pause_" +
+      "code\030\004 \001(\tB\002\030\001R\021expectedPauseCode\022P\n\021act" +
+      "ual_rtm_states\030\005 \003(\0162$.api.commons.RealT" +
+      "imeManagementStateR\017actualRtmStates\022*\n\021a" +
+      "ctual_pause_code\030\006 \001(\tR\017actualPauseCode\022" +
+      "<\n\032violation_duration_seconds\030\007 \001(\005R\030vio" +
+      "lationDurationSeconds\0220\n\024expected_pause_" +
+      "codes\030\010 \003(\tR\022expectedPauseCodes\"[\n\024Adher" +
+      "enceAgentStates\022C\n\014agent_states\030\001 \003(\0132 ." +
+      "api.commons.AdherenceAgentStateR\013agentSt" +
+      "ates\"j\n\035AdherenceAgentStateViolations\022I\n" +
+      "\nviolations\030\001 \003(\0132).api.commons.Adherenc" +
+      "eAgentStateViolationR\nviolations\"\221\005\n\022Age" +
+      "ntLeavePetition\0229\n\027agent_leave_petition_" +
+      "id\030\001 \001(\003B\0020\001R\024agentLeavePetitionId\022\"\n\rwf" +
+      "m_agent_sid\030\002 \001(\003R\013wfmAgentSid\022N\n\017petiti" +
+      "on_status\030\003 \001(\0162%.api.commons.AgentLeave" +
+      "PetitionStatusR\016petitionStatus\022)\n\020petiti" +
+      "on_comment\030\004 \001(\tR\017petitionComment\022)\n\020res" +
+      "ponse_comment\030\005 \001(\tR\017responseComment\022V\n\031" +
+      "requested_datetime_ranges\030\006 \003(\0132\032.api.co" +
+      "mmons.DatetimeRangeR\027requestedDatetimeRa" +
+      "nges\022=\n\014created_time\030\007 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\013createdTime\022?\n\rarchived_" +
+      "time\030\010 \001(\0132\032.google.protobuf.TimestampR\014" +
+      "archivedTime\022?\n\rresolved_time\030\t \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\014resolvedTime\022-\n" +
+      "\023resolved_by_user_id\030\n \001(\tR\020resolvedByUs" +
+      "erId\022.\n\023requested_hours_off\030\013 \001(\002R\021reque" +
+      "stedHoursOff\"q\n\014ConfigEntity\022!\n\nentity_s" +
+      "id\030\001 \001(\003B\0020\001R\tentitySid\022>\n\013entity_type\030\002" +
+      " \001(\0162\035.api.commons.ConfigEntityTypeR\nent" +
+      "ityType\"\330\001\n\037AdherenceRuleNotificationCon" +
+      "fig\022T\n%adherence_rule_notification_confi" +
+      "g_id\030\001 \001(\003B\0020\001R!adherenceRuleNotificatio" +
+      "nConfigId\022\022\n\004name\030\002 \001(\tR\004name\022K\n\007entries" +
+      "\030\003 \003(\01321.api.commons.AdherenceRuleNotifi" +
+      "cationConfigEntryR\007entries\"\255\003\n$Adherence" +
+      "RuleNotificationConfigEntry\022_\n+adherence" +
+      "_rule_notification_config_entry_id\030\001 \001(\003" +
+      "B\0020\001R&adherenceRuleNotificationConfigEnt" +
+      "ryId\022T\n%adherence_rule_notification_conf" +
+      "ig_id\030\002 \001(\003B\0020\001R!adherenceRuleNotificati" +
+      "onConfigId\022*\n\021recipient_user_id\030\003 \001(\tR\017r" +
+      "ecipientUserId\022]\n\023notification_medium\030\004 " +
+      "\001(\0162,.api.commons.AdherenceRuleNotificat" +
+      "ionMediumR\022notificationMedium\022C\n\037seconds" +
+      "_to_wait_for_no_response\030\005 \001(\005R\032secondsT" +
+      "oWaitForNoResponse\"t\n\037AdherenceDepartmen" +
+      "talRuleAction\022Q\n\013action_type\030\001 \001(\01620.api" +
+      ".commons.AdherenceDepartmentalRuleAction" +
+      "TypeR\nactionType\"\320\004\n\031AdherenceDepartment" +
+      "alRule\022G\n\036adherence_departmental_rule_id" +
+      "\030\001 \001(\003B\0020\001R\033adherenceDepartmentalRuleId\022" +
+      "\022\n\004name\030\002 \001(\tR\004name\022B\n\017selected_entity\030\003" +
+      " \001(\0132\031.api.commons.ConfigEntityR\016selecte" +
+      "dEntity\022]\n\025rule_requirement_type\030\004 \001(\0162)" +
+      ".api.commons.AdherenceRuleRequirementTyp" +
+      "eR\023ruleRequirementType\022T\n%adherence_rule" +
+      "_notification_config_id\030\005 \001(\003B\0020\001R!adher" +
+      "enceRuleNotificationConfigId\022>\n\nrule_ran" +
+      "ge\030\006 \001(\0162\037.api.commons.AdherenceRuleRang" +
+      "eR\truleRange\022=\n\014custom_range\030\007 \001(\0132\032.api" +
+      ".commons.DatetimeRangeR\013customRange\022O\n\014r" +
+      "ule_clauses\030\t \003(\0132,.api.commons.Adherenc" +
+      "eDepartmentalRuleClauseR\013ruleClausesJ\004\010\010" +
+      "\020\tR\007clauses\"\214\004\n\037AdherenceDepartmentalRul" +
+      "eClause\022T\n%adherence_departmental_rule_c" +
+      "lause_id\030\001 \001(\003B\0020\001R!adherenceDepartmenta" +
+      "lRuleClauseId\022G\n\036adherence_departmental_" +
+      "rule_id\030\002 \001(\003B\0020\001R\033adherenceDepartmental" +
+      "RuleId\022D\n\006action\030\003 \001(\0132,.api.commons.Adh" +
+      "erenceDepartmentalRuleActionR\006action\022A\n\t" +
+      "condition\030\004 \001(\0162#.api.commons.AdherenceR" +
+      "uleConditionR\tcondition\022\026\n\006amount\030\005 \001(\005R" +
+      "\006amount\0222\n\004unit\030\006 \001(\0162\036.api.commons.Adhe" +
+      "renceRuleUnitR\004unit\022:\n\nper_amount\030\007 \001(\0132" +
+      "\033.google.protobuf.Int32ValueR\tperAmount\022" +
+      "9\n\010per_unit\030\010 \001(\0162\036.api.commons.Adherenc" +
+      "eRuleUnitR\007perUnit\"\265\003\n\022AdherenceAgentRul" +
+      "e\0229\n\027adherence_agent_rule_id\030\001 \001(\003B\0020\001R\024" +
+      "adherenceAgentRuleId\022\022\n\004name\030\002 \001(\tR\004name" +
+      "\022B\n\017selected_entity\030\003 \001(\0132\031.api.commons." +
+      "ConfigEntityR\016selectedEntity\022]\n\025rule_req" +
+      "uirement_type\030\004 \001(\0162).api.commons.Adhere" +
+      "nceRuleRequirementTypeR\023ruleRequirementT" +
+      "ype\022T\n%adherence_rule_notification_confi" +
+      "g_id\030\005 \001(\003B\0020\001R!adherenceRuleNotificatio" +
+      "nConfigId\022H\n\014rule_clauses\030\007 \003(\0132%.api.co" +
+      "mmons.AdherenceAgentRuleClauseR\013ruleClau" +
+      "sesJ\004\010\006\020\007R\007clauses\"f\n\030AdherenceAgentRule" +
+      "Action\022J\n\013action_type\030\001 \001(\0162).api.common" +
+      "s.AdherenceAgentRuleActionTypeR\nactionTy" +
+      "pe\"\353\002\n\030AdherenceAgentRuleClause\022F\n\036adher" +
+      "ence_agent_rule_clause_id\030\001 \001(\003B\0020\001R\032adh" +
+      "erenceAgentRuleClauseId\0229\n\027adherence_age" +
+      "nt_rule_id\030\002 \001(\003B\0020\001R\024adherenceAgentRule" +
+      "Id\022=\n\006action\030\003 \001(\0132%.api.commons.Adheren" +
+      "ceAgentRuleActionR\006action\022A\n\tcondition\030\004" +
+      " \001(\0162#.api.commons.AdherenceRuleConditio" +
+      "nR\tcondition\022\026\n\006amount\030\005 \001(\005R\006amount\0222\n\004" +
+      "unit\030\006 \001(\0162\036.api.commons.AdherenceRuleUn" +
+      "itR\004unit*\250\001\n\036RegressionForecasterModelTy" +
+      "pes\022\021\n\rRANDOM_FOREST\020\000\022\014\n\010ADABOOST\020\001\022\025\n\021" +
+      "GRADIENT_BOOSTING\020\002\022\025\n\021LINEAR_REGRESSION" +
+      "\020\003\022\016\n\nLINEAR_AVG\020\004\022\024\n\020SEGMENTED_LINEAR\020\005" +
+      "\022\007\n\003MLP\020\006\022\010\n\004AUTO\020\007*X\n&RegressionForecas" +
+      "terAvgsProcessingType\022\014\n\010FORECAST\020\000\022\014\n\010A" +
+      "VERAGES\020\001\022\022\n\016FIXED_AVERAGES\020\002*d\n\022Constra" +
+      "intTimeUnit\022\013\n\007MINUTES\020\000\022\t\n\005HOURS\020\001\022\n\n\006S" +
+      "HIFTS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020\005" +
+      "\022\t\n\005YEARS\020\006*\320\003\n\020ConfigEntityType\022\024\n\020CALL" +
+      "_CENTER_NODE\020\000\022\017\n\013CLIENT_NODE\020\001\022\021\n\rLOCAT" +
+      "ION_NODE\020\002\022\020\n\014PROGRAM_NODE\020\003\022\017\n\013AGENT_GR" +
+      "OUP\020\004\022\022\n\016SHIFT_TEMPLATE\020\005\022\r\n\tWFM_AGENT\020\006" +
+      "\022\022\n\016PLACEMENT_RULE\020\007\022\023\n\017CONSTRAINT_RULE\020" +
+      "\010\022\026\n\022NON_SKILL_ACTIVITY\020\t\022\026\n\022AGENT_AVAIL" +
+      "ABILITY\020\n\022\016\n\nOPEN_TIMES\020\013\022\027\n\023SCHEDULING_" +
+      "ACTIVITY\020\014\022\025\n\021SKILL_PROFICIENCY\020\r\022\025\n\021SCH" +
+      "EDULE_SCENARIO\020\016\022\t\n\005SKILL\020\017\022\020\n\014TOUR_PATT" +
+      "ERN\020\020\022\025\n\021TOUR_WEEK_PATTERN\020\021\022\036\n\032TOUR_SHI" +
+      "FT_INSTANCE_CONFIG\020\022\022\035\n\031TOUR_SHIFT_SEGME" +
+      "NT_CONFIG\020\023\022\031\n\025TOUR_AGENT_COLLECTION\020\024*\301" +
+      "\001\n\022ConstraintRuleType\022\021\n\rMIN_CONSEC_ON\020\000" +
+      "\022\021\n\rMAX_CONSEC_ON\020\001\022\022\n\016MIN_CONSEC_OFF\020\002\022" +
+      "\022\n\016MAX_CONSEC_OFF\020\003\022\020\n\014MIN_TOTAL_ON\020\004\022\020\n" +
+      "\014MAX_TOTAL_ON\020\005\022\021\n\rMIN_TOTAL_OFF\020\006\022\021\n\rMA" +
+      "X_TOTAL_OFF\020\007\022\023\n\017MIN_SKILL_LEVEL\020\010*3\n\020DO" +
+      "WPlacementType\022\014\n\010MUST_NOT\020\000\022\007\n\003MAY\020\001\022\010\n" +
+      "\004MUST\020\002*\'\n\017OpenTimesOption\022\n\n\006CLOSED\020\000\022\010" +
+      "\n\004OPEN\020\001*P\n\022AvailabilityOption\022\r\n\tAVAILA" +
+      "BLE\020\000\022\021\n\rNOT_AVAILABLE\020\001\022\030\n\024PREFER_NOT_A" +
+      "VAILABLE\020\002*J\n\tDayOfWeek\022\007\n\003MON\020\000\022\007\n\003TUE\020" +
+      "\001\022\007\n\003WED\020\002\022\007\n\003THU\020\003\022\007\n\003FRI\020\004\022\007\n\003SAT\020\005\022\007\n" +
+      "\003SUN\020\006*^\n\026ConfigRelationshipType\022\026\n\022IS_A" +
+      "SSOCIATED_WITH\020\000\022\032\n\026IS_NOT_ASSOCIATED_WI" +
+      "TH\020\001\022\020\n\014IS_MEMBER_OF\020\002*i\n\017DiagnosticLeve" +
+      "l\022\017\n\013INFORMATION\020\000\022\016\n\nSUGGESTION\020\001\022\013\n\007WA" +
+      "RNING\020\002\022\024\n\020DIAGNOSTIC_ERROR\020\003\022\022\n\016INTERNA" +
+      "L_ERROR\020\004*\276\031\n\016DiagnosticCode\022\013\n\007GENERAL\020" +
+      "\000\022\006\n\002OK\020\001\022\033\n\027NO_SKILLS_IN_DICTIONARY\020\002\022$" +
+      "\n AGENT_HAS_NO_SKILL_PROFICIENCIES\020\003\022\027\n\023" +
+      "AGENT_HAS_NO_SKILLS\020\004\0221\n-NO_SCHEDULING_A" +
+      "CTIVITIES_FOR_CONSTRAINT_RULES\020\005\0225\n1SCHE" +
+      "DULING_ACTIVITY_FOR_CONSTRAINT_RULE_NOT_" +
+      "FOUND\020\006\022!\n\035SHIFT_TEMPLATE_CANNOT_BE_NONE" +
+      "\020\007\022)\n%SHIFT_TEMPLATE_HAS_NO_PLACEMENT_RU" +
+      "LES\020\010\022/\n+NO_ONCALL_IN_SHIFT_TEMPLATE_PLA" +
+      "CEMENT_RULES\020\t\0229\n5MIN_GT_MAX_DURATION_IN" +
+      "_SHIFT_TEMPLATE_PLACEMENT_RULES\020\n\022\'\n#MIN" +
+      "_GT_MAX_AGENTS_IN_SHIFT_TEMPLATE\020\013\022)\n%NO" +
+      "_PLACEMENT_RULES_FOR_SHIFT_TEMPLATE\020\014\022!\n" +
+      "\035ACTIVITIES_SHORTER_THAN_SHIFT\020\r\022\037\n\033NOT_" +
+      "ENOUGH_AGENTS_FOR_SHIFT\020\016\022\037\n\033PROGRAM_HAS" +
+      "_NO_AGENT_GROUPS\020\017\022\"\n\036PROGRAM_HAS_NO_SHI" +
+      "FT_TEMPLATES\020\020\022\034\n\030LOCATION_HAS_NO_PROGRA" +
+      "MS\020\021\022\033\n\027CLIENT_HAS_NO_LOCATIONS\020\022\022\036\n\032CAL" +
+      "L_CENTER_HAS_NO_CLIENTS\020\023\022\'\n#PROGRAM_HAS" +
+      "_INVALID_PARENT_LOCATION\020\024\022&\n\"LOCATION_H" +
+      "AS_INVALID_PARENT_CLIENT\020\025\022)\n%CLIENT_HAS" +
+      "_INVALID_PARENT_CALL_CENTER\020\026\022\'\n#AGENT_G" +
+      "ROUP_HAS_INVALID_PARENT_NODE\020\027\022-\n)SHIFT_" +
+      "TEMPLATE_HAS_INVALID_PARENT_PROGRAM\020\030\022B\n" +
+      ">NO_SKILL_PROFICIENCY_FOR_MIN_SKILL_PROF" +
+      "ICIENCY_CONSTRAINT_RULE\020\031\0225\n1TOO_MANY_AG" +
+      "ENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS\020\032" +
+      "\022+\n\'AGENT_DOES_NOT_BELONG_TO_AN_AGENT_GR" +
+      "OUP\020\033\022 \n\034INVALID_CONSTRAINT_VAL_UNITS\020\034\022" +
+      "\036\n\032CONSTRAINT_GENERAL_FAILURE\020\035\022&\n\"CANDI" +
+      "DATE_SHIFT_COLLISION_DETECTED\020\036\022\'\n#CANDI" +
+      "DATE_SHIFT_AGENT_NOT_AVAILABLE\020\037\022\024\n\020CAND" +
+      "IDATE_CLOSED\020 \022!\n\035CONSTRAINT_ACTIVITY_NO" +
+      "T_FOUND\020!\022.\n*CONSTRAINT_AGENT_DOES_NOT_H" +
+      "AVE_PROFICIENCY\020\"\022(\n$CONSTRAINT_AGENT_PR" +
+      "OFICIENCY_TOO_LOW\020#\022#\n\037CONSTRAINT_MAX_TO" +
+      "TAL_ON_FAILURE\020$\022#\n\037CONSTRAINT_MIN_TOTAL" +
+      "_ON_FAILURE\020%\022$\n CONSTRAINT_MAX_TOTAL_OF" +
+      "F_FAILURE\020&\022$\n CONSTRAINT_MIN_TOTAL_OFF_" +
+      "FAILURE\020\'\022$\n CONSTRAINT_MAX_CONSEC_ON_FA" +
+      "ILURE\020(\022$\n CONSTRAINT_MIN_CONSEC_ON_FAIL" +
+      "URE\020)\022%\n!CONSTRAINT_MAX_CONSEC_OFF_FAILU" +
+      "RE\020*\022%\n!CONSTRAINT_MIN_CONSEC_OFF_FAILUR" +
+      "E\020+\022?\n;CONSTRAINT_CANNOT_HAVE_DAY_WEEK_M" +
+      "ONTH_YEAR_SHIFT__PER_SHIFT\020,\022A\n=CONSTRAI" +
+      "NT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER_" +
+      "MINUTES_HOURS\020-\0222\n.CONSTRAINT_CONSECUTIV" +
+      "E_SHIFTS_RULE_NOT_ALLOWED\020.\022>\n:CONSTRAIN" +
+      "T_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_NO" +
+      "T_ALLOWED\020/\0226\n2CONSTRAINT_MIN_MAX_OFF_TI" +
+      "ME_FOR_SHIFTS_NOT_ALLOWED\0200\022?\n;CONSTRAIN" +
+      "T_CANNOT_HAVE_CONSECUTIVE_TIME_PER_MULTI" +
+      "PLE_SHIFTS\0201\022=\n9CANNOT_GENERATE_TOUR_PAT" +
+      "TERNS_FOR_NON_TOUR_SHIFT_TEMPLATE\0202\022)\n%T" +
+      "OUR_PATTERNS_NEEDED_TO_SCHEDULE_TOUR\0203\022K" +
+      "\nGSHIFT_TEMPLATE_ACTIVITY_PLACEMENT_MIN_" +
+      "MAX_MUST_BE_MULTIPLE_OF_5_MINUTES\0204\022L\nHN" +
+      "O_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQU" +
+      "ENCES_MATCH_SHIFT_MIN_MAX_WIDTH\0205\022\030\n\024INV" +
+      "ALID_TOUR_PATTERN\0206\022!\n\035INVALID_TOUR_AGEN" +
+      "T_COLLECTION\0207\022&\n\"INVALID_TOUR_SHIFT_INS" +
+      "TANCE_CONFIG\0208\022%\n!INVALID_TOUR_SHIFT_SEG" +
+      "MENT_CONFIG\0209\022%\n!TOUR_SHIFT_SEGMENT_CONF" +
+      "IG_OVERLAP\020:\022*\n&TOUR_SHIFT_SEGMENT_CONFI" +
+      "G_DOES_NOT_FIT\020;\022&\n\"TOUR_SHIFT_INSTANCE_" +
+      "CONFIG_OVERLAP\020<\0229\n5WEEK_PATTERN_NUMBERS" +
+      "_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS\020=\0227\n3W" +
+      "FM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_C" +
+      "OLLECTIONS\020>\022B\n>FIST_WEEK_PATTERN_NUMBER" +
+      "S_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS\020?" +
+      "\022>\n:FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND" +
+      "_IN_TOUR_WEEK_PATTERNS\020@\022<\n8SHIFT_TEMPLA" +
+      "TE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GR" +
+      "OUPS\020A\0226\n2ATTEMPT_TO_BUILD_SCHEDULES_FOR" +
+      "_INVALID_PARENT_NODE\020B\0223\n/SCHEDULABLE_AG" +
+      "ENTS_DO_NOT_MEET_TEMPLATE_MINIMUM\020C\0223\n/S" +
+      "CHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_M" +
+      "AXIMUM\020D\022-\n)NO_OPEN_TIMES_SET_OR_INHERIT" +
+      "ED_BY_PROGRAM\020E\0222\n.TOUR_AGENT_COLLECTION" +
+      "S_NEEDED_TO_SCHEDULE_TOUR\020F\022*\n&NO_PREDIC" +
+      "TED_CALLS_IN_SCHEDULING_RANGE\020G\022)\n%SHIFT" +
+      "_TEMPLATE_MIN_WIDTH_DOW_MISMATCH\020H*\312\001\n\025P" +
+      "erformanceMetricType\022#\n\037FTE_REQUIRED_VS_" +
+      "ACHIEVED_SIMPLE\020\000\022%\n!FTE_REQUIRED_VS_ACH" +
+      "IEVED_EXTENDED\020\001\022\032\n\026SERVICE_LEVEL_ANALYS" +
+      "IS\020\002\022\030\n\024SERVICE_LEVEL_MATRIX\020\003\022\034\n\030CONTAC" +
+      "T_HANDLING_METRICS\020\004\022\021\n\rLOAD_FORECAST\020\005*" +
+      "|\n\025ScheduleShouldInclude\022\030\n\024ONLY_SHIFT_I" +
+      "NSTANCES\020\000\022\034\n\030ONLY_PERFORMANCE_METRICS\020\001" +
+      "\022+\n\'SHIFT_INSTANCES_AND_PERFORMANCE_METR" +
+      "ICS\020\002*(\n\014ScheduleType\022\t\n\005DRAFT\020\000\022\r\n\tPUBL" +
+      "ISHED\020\001*7\n\024SchedulingTargetType\022\014\n\010COVER" +
+      "AGE\020\000\022\021\n\rSERVICE_LEVEL\020\001*Z\n\020BuildDraftSt" +
+      "atus\022\014\n\010NO_BUILD\020\000\022\017\n\013IN_PROGRESS\020\001\022\r\n\tS" +
+      "UCCEEDED\020\002\022\n\n\006FAILED\020\003\022\014\n\010CANCELED\020\004*F\n\n" +
+      "BitmapType\022\014\n\010COMPLETE\020\000\022\021\n\rONLY_WEEKMAP" +
+      "S\020\001\022\027\n\023ONLY_CALENDAR_ITEMS\020\002*Z\n\021HistoryC" +
+      "acheState\022\016\n\nNOT_LOADED\020\000\022\013\n\007LOADING\020\001\022\024" +
+      "\n\020LOADING_COMPLETE\020\002\022\022\n\016LOADING_FAILED\020\003" +
+      "*S\n\021InitialSetupState\022\r\n\tNOT_SETUP\020\000\022\016\n\n" +
+      "SETTING_UP\020\001\022\022\n\016SETUP_COMPLETE\020\002\022\013\n\007FAIL" +
+      "URE\020\003*\276\001\n\027RealTimeManagementState\022\017\n\013UNS" +
+      "PECIFIED\020\000\022\r\n\tLOGGED_IN\020\001\022\020\n\014CALL_ON_HOL" +
+      "D\020\004\022\021\n\rOUTBOUND_CALL\020\005\022\014\n\010TRANSFER\020\007\022\016\n\n" +
+      "CONFERENCE\020\010\022\t\n\005READY\020\t\022\r\n\tNOT_READY\020\n\022\013" +
+      "\n\007WRAP_UP\020\013\022\016\n\nLOGGED_OUT\020\r\022\t\n\005PAUSE\020\016*\225" +
+      "\001\n\030AgentLeavePetitionStatus\022\037\n\033UNSPECIFI" +
+      "ED_PETITION_STATUS\020\000\022\024\n\020PENDING_PETITION" +
+      "\020\001\022\025\n\021APPROVED_PETITION\020\002\022\023\n\017DENIED_PETI" +
+      "TION\020\003\022\026\n\022CANCELLED_PETITION\020\004*\207\001\n Sched" +
+      "ulingActivityClassification\022 \n\034STANDARD_" +
+      "SCHEDULING_ACTIVITY\020\000\022\024\n\020ON_CALL_ACTIVIT" +
+      "Y\020\001\022\025\n\021TIME_OFF_ACTIVITY\020\002\022\024\n\020MEETING_AC" +
+      "TIVITY\020\003*\202\001\n\037AdherenceRuleNotificationMe" +
+      "dium\0221\n-ADHERENCE_RULE_NOTIFICATION_MEDI" +
+      "UM_IN_PRODUCT\020\000\022,\n(ADHERENCE_RULE_NOTIFI" +
+      "CATION_MEDIUM_EMAIL\020\001*\251\001\n\034AdherenceRuleR" +
+      "equirementType\022,\n(ADHERENCE_RULE_REQUIRE" +
+      "MENT_TYPE_NOT_USED\020\000\022,\n(ADHERENCE_RULE_R" +
+      "EQUIREMENT_TYPE_OPTIONAL\020\001\022-\n)ADHERENCE_" +
+      "RULE_REQUIREMENT_TYPE_MANDATORY\020\002*\336\001\n\022Ad" +
+      "herenceRuleRange\022%\n!ADHERENCE_RULE_RANGE" +
+      "_START_OF_DAY\020\000\022&\n\"ADHERENCE_RULE_RANGE_" +
+      "START_OF_WEEK\020\001\022\'\n#ADHERENCE_RULE_RANGE_" +
+      "START_OF_MONTH\020\002\022$\n ADHERENCE_RULE_RANGE" +
+      "_REST_OF_DAY\020\003\022*\n&ADHERENCE_RULE_RANGE_C",
+      "USTOM_DATE_RANGE\020\004*a\n#AdherenceDepartmen" +
+      "talRuleActionType\022:\n6ADHERENCE_DEPARTMEN" +
+      "TAL_RULE_ACTION_TYPE_CALLS_ANSWERED\020\000*\312\001" +
+      "\n\026AdherenceRuleCondition\022)\n%ADHERENCE_RU" +
+      "LE_CONDITION_GREATER_THAN\020\000\022/\n+ADHERENCE" +
+      "_RULE_CONDITION_GREATER_THAN_EQUAL\020\001\022&\n\"" +
+      "ADHERENCE_RULE_CONDITION_LESS_THAN\020\002\022,\n(" +
+      "ADHERENCE_RULE_CONDITION_LESS_THAN_EQUAL" +
+      "\020\003*\230\001\n\021AdherenceRuleUnit\022\037\n\033ADHERENCE_RU" +
+      "LE_UNIT_SECONDS\020\000\022\037\n\033ADHERENCE_RULE_UNIT" +
+      "_MINUTES\020\001\022\035\n\031ADHERENCE_RULE_UNIT_CALLS\020" +
+      "\002\022\"\n\036ADHERENCE_RULE_UNIT_PERCENTAGE\020\003*\215\004" +
+      "\n\034AdherenceAgentRuleActionType\022,\n(ADHERE" +
+      "NCE_AGENT_RULE_ACTION_TYPE_WRAP_UP\020\000\022,\n(" +
+      "ADHERENCE_AGENT_RULE_ACTION_TYPE_WAITING" +
+      "\020\001\0220\n,ADHERENCE_AGENT_RULE_ACTION_TYPE_M" +
+      "ANUAL_DIAL\020\002\0221\n-ADHERENCE_AGENT_RULE_ACT" +
+      "ION_TYPE_PREVIEW_DIAL\020\003\0221\n-ADHERENCE_AGE" +
+      "NT_RULE_ACTION_TYPE_ANSWER_CALLS\020\004\022,\n(AD" +
+      "HERENCE_AGENT_RULE_ACTION_TYPE_ON_CALL\020\005" +
+      "\022,\n(ADHERENCE_AGENT_RULE_ACTION_TYPE_ON_" +
+      "HOLD\020\006\0220\n,ADHERENCE_AGENT_RULE_ACTION_TY" +
+      "PE_SHIFT_START\020\007\0225\n1ADHERENCE_AGENT_RULE" +
+      "_ACTION_TYPE_SHIFT_START_LATE\020\010\0224\n0ADHER" +
+      "ENCE_AGENT_RULE_ACTION_TYPE_SHIFT_END_EA" +
+      "RLY\020\tBv\n\035com.tcn.cloud.api.api.commonsB\010" +
+      "WfmProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
+      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
+      "mmonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -758,7 +760,7 @@ public final class WfmProto {
     internal_static_api_commons_AdherenceAgentStateViolation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentStateViolation_descriptor,
-        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "ExpectedRtmStates", "ExpectedPauseCode", "ActualRtmStates", "ActualPauseCode", "ViolationDurationSeconds", });
+        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "ExpectedRtmStates", "ExpectedPauseCode", "ActualRtmStates", "ActualPauseCode", "ViolationDurationSeconds", "ExpectedPauseCodes", });
     internal_static_api_commons_AdherenceAgentStates_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable = new

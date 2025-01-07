@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
  *
  * Protobuf type {@code api.v1alpha1.insights.StringManipulationSplit}
  */
-public final class StringManipulationSplit extends
+@java.lang.Deprecated public final class StringManipulationSplit extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.StringManipulationSplit)
     StringManipulationSplitOrBuilder {

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface AggregateNodeOrBuilder extends
+@java.lang.Deprecated public interface AggregateNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.AggregateNode)
     com.google.protobuf.MessageOrBuilder {
 

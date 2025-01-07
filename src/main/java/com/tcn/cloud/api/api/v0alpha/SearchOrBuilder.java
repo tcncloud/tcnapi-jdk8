@@ -38,7 +38,7 @@ public interface SearchOrBuilder extends
    *
    * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
    * @deprecated api.v0alpha.Search.fuzziness is deprecated.
-   *     See api/v0alpha/lms.proto;l=2624
+   *     See api/v0alpha/lms.proto;l=2625
    * @return The fuzziness.
    */
   @java.lang.Deprecated long getFuzziness();
@@ -75,7 +75,7 @@ public interface SearchOrBuilder extends
    *
    * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
    * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
-   *     See api/v0alpha/lms.proto;l=2635
+   *     See api/v0alpha/lms.proto;l=2636
    * @return The caseSensitive.
    */
   @java.lang.Deprecated boolean getCaseSensitive();
