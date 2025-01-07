@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    * @return Whether the queryPipeline field is set.
    */
   @java.lang.Override
@@ -314,29 +314,29 @@ private static final long serialVersionUID = 0L;
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    * @return The queryPipeline.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getQueryPipeline() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline() {
     if (queryCase_ == 16) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_;
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
   }
   /**
    * <pre>
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getQueryPipelineOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder() {
     if (queryCase_ == 16) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_;
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
   }
 
   public static final int ORG_IDS_FIELD_NUMBER = 5;
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
       output.writeEnum(15, timePeriod_);
     }
     if (queryCase_ == 16) {
-      output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_);
+      output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
     }
     if (queryCase_ == 16) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_);
+        .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1914,13 +1914,13 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> queryPipelineBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> queryPipelineBuilder_;
     /**
      * <pre>
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      * @return Whether the queryPipeline field is set.
      */
     @java.lang.Override
@@ -1932,21 +1932,21 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      * @return The queryPipeline.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getQueryPipeline() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline() {
       if (queryPipelineBuilder_ == null) {
         if (queryCase_ == 16) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_;
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       } else {
         if (queryCase_ == 16) {
           return queryPipelineBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       }
     }
     /**
@@ -1954,9 +1954,9 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
-    public Builder setQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+    public Builder setQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
       if (queryPipelineBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1974,10 +1974,10 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
     public Builder setQueryPipeline(
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder builderForValue) {
       if (queryPipelineBuilder_ == null) {
         query_ = builderForValue.build();
         onChanged();
@@ -1992,13 +1992,13 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
-    public Builder mergeQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+    public Builder mergeQueryPipeline(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
       if (queryPipelineBuilder_ == null) {
         if (queryCase_ == 16 &&
-            query_ != com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance()) {
-          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_)
+            query_ != com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance()) {
+          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_)
               .mergeFrom(value).buildPartial();
         } else {
           query_ = value;
@@ -2019,7 +2019,7 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
     public Builder clearQueryPipeline() {
       if (queryPipelineBuilder_ == null) {
@@ -2042,9 +2042,9 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder getQueryPipelineBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder getQueryPipelineBuilder() {
       return getQueryPipelineFieldBuilder().getBuilder();
     }
     /**
@@ -2052,17 +2052,17 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getQueryPipelineOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder() {
       if ((queryCase_ == 16) && (queryPipelineBuilder_ != null)) {
         return queryPipelineBuilder_.getMessageOrBuilder();
       } else {
         if (queryCase_ == 16) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_;
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       }
     }
     /**
@@ -2070,18 +2070,18 @@ private static final long serialVersionUID = 0L;
      * query pipeline is a structured representation of a query
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> 
         getQueryPipelineFieldBuilder() {
       if (queryPipelineBuilder_ == null) {
         if (!(queryCase_ == 16)) {
-          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+          query_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
         }
         queryPipelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder>(
-                (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) query_,
+            com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_,
                 getParentForChildren(),
                 isClean());
         query_ = null;

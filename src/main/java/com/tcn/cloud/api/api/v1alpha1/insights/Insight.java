@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    * @return Whether the insightBody field is set.
    */
   @java.lang.Override
@@ -593,29 +593,29 @@ private static final long serialVersionUID = 0L;
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    * @return The insightBody.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getInsightBody() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getInsightBody() {
     if (insightContentCase_ == 17) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
   }
   /**
    * <pre>
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getInsightBodyOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getInsightBodyOrBuilder() {
     if (insightContentCase_ == 17) {
-       return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+       return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+    return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.insights.Pipeline) insightContent_);
     }
     if (insightContentCase_ == 17) {
-      output.writeMessage(17, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_);
+      output.writeMessage(17, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
     }
     if (insightContentCase_ == 17) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_);
+        .computeMessageSize(17, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2662,13 +2662,13 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> insightBodyBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> insightBodyBuilder_;
     /**
      * <pre>
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      * @return Whether the insightBody field is set.
      */
     @java.lang.Override
@@ -2680,21 +2680,21 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      * @return The insightBody.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getInsightBody() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getInsightBody() {
       if (insightBodyBuilder_ == null) {
         if (insightContentCase_ == 17) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       } else {
         if (insightContentCase_ == 17) {
           return insightBodyBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       }
     }
     /**
@@ -2702,9 +2702,9 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
-    public Builder setInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+    public Builder setInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
       if (insightBodyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2722,10 +2722,10 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
     public Builder setInsightBody(
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder builderForValue) {
       if (insightBodyBuilder_ == null) {
         insightContent_ = builderForValue.build();
         onChanged();
@@ -2740,13 +2740,13 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
-    public Builder mergeInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline value) {
+    public Builder mergeInsightBody(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline value) {
       if (insightBodyBuilder_ == null) {
         if (insightContentCase_ == 17 &&
-            insightContent_ != com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance()) {
-          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_)
+            insightContent_ != com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance()) {
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.newBuilder((com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_)
               .mergeFrom(value).buildPartial();
         } else {
           insightContent_ = value;
@@ -2767,7 +2767,7 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
     public Builder clearInsightBody() {
       if (insightBodyBuilder_ == null) {
@@ -2790,9 +2790,9 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder getInsightBodyBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder getInsightBodyBuilder() {
       return getInsightBodyFieldBuilder().getBuilder();
     }
     /**
@@ -2800,17 +2800,17 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getInsightBodyOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getInsightBodyOrBuilder() {
       if ((insightContentCase_ == 17) && (insightBodyBuilder_ != null)) {
         return insightBodyBuilder_.getMessageOrBuilder();
       } else {
         if (insightContentCase_ == 17) {
-          return (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_;
+          return (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+        return com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
       }
     }
     /**
@@ -2818,18 +2818,18 @@ private static final long serialVersionUID = 0L;
      * pipeline representation of insight body
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+     * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder> 
         getInsightBodyFieldBuilder() {
       if (insightBodyBuilder_ == null) {
         if (!(insightContentCase_ == 17)) {
-          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.getDefaultInstance();
+          insightContent_ = com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.getDefaultInstance();
         }
         insightBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder>(
-                (com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline) insightContent_,
+            com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline, com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) insightContent_,
                 getParentForChildren(),
                 isClean());
         insightContent_ = null;

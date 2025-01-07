@@ -109,7 +109,7 @@ public interface QueryRequestOrBuilder extends
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    * @return Whether the queryPipeline field is set.
    */
   boolean hasQueryPipeline();
@@ -118,18 +118,18 @@ public interface QueryRequestOrBuilder extends
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    * @return The queryPipeline.
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getQueryPipeline();
+  com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline();
   /**
    * <pre>
    * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getQueryPipelineOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder();
 
   /**
    * <pre>

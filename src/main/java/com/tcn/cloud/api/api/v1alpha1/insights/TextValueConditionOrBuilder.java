@@ -147,7 +147,7 @@ public interface TextValueConditionOrBuilder extends
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
    * @return Whether the expressionNode field is set.
    */
   boolean hasExpressionNode();
@@ -156,16 +156,16 @@ public interface TextValueConditionOrBuilder extends
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
    * @return The expressionNode.
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.ExpressionNode getExpressionNode();
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode();
   /**
    * <pre>
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.ExpressionNodeOrBuilder getExpressionNodeOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder();
 }

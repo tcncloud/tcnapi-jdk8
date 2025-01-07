@@ -284,7 +284,7 @@ public interface InsightOrBuilder extends
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    * @return Whether the insightBody field is set.
    */
   boolean hasInsightBody();
@@ -293,18 +293,18 @@ public interface InsightOrBuilder extends
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    * @return The insightBody.
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.Pipeline getInsightBody();
+  com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getInsightBody();
   /**
    * <pre>
    * pipeline representation of insight body
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.pipeline.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.pipeline.PipelineOrBuilder getInsightBodyOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getInsightBodyOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }
