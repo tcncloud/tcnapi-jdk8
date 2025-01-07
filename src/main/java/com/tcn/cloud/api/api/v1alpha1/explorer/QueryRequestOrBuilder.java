@@ -106,30 +106,30 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
-   * the insight body pipeline node
+   * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
-   * @return Whether the insightBody field is set.
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * @return Whether the queryPipeline field is set.
    */
-  boolean hasInsightBody();
+  boolean hasQueryPipeline();
   /**
    * <pre>
-   * the insight body pipeline node
+   * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
-   * @return The insightBody.
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
+   * @return The queryPipeline.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getInsightBody();
+  com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getQueryPipeline();
   /**
    * <pre>
-   * the insight body pipeline node
+   * query pipeline is a structured representation of a query
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline insight_body = 13 [json_name = "insightBody"];</code>
+   * <code>.api.v1alpha1.explorer.Pipeline query_pipeline = 16 [json_name = "queryPipeline"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getInsightBodyOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getQueryPipelineOrBuilder();
 
   /**
    * <pre>

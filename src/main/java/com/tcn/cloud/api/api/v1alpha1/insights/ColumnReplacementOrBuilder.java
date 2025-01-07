@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface ColumnReplacementOrBuilder extends
+@java.lang.Deprecated public interface ColumnReplacementOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.ColumnReplacement)
     com.google.protobuf.MessageOrBuilder {
 

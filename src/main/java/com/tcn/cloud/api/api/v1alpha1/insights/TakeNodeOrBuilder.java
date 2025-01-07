@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface TakeNodeOrBuilder extends
+@java.lang.Deprecated public interface TakeNodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.TakeNode)
     com.google.protobuf.MessageOrBuilder {
 

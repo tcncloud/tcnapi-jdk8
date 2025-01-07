@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-public interface PipelineOrBuilder extends
+@java.lang.Deprecated public interface PipelineOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.Pipeline)
     com.google.protobuf.MessageOrBuilder {
 

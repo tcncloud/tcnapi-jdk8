@@ -250,30 +250,61 @@ public interface InsightOrBuilder extends
 
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=29
    * @return Whether the pipeline field is set.
    */
-  boolean hasPipeline();
+  @java.lang.Deprecated boolean hasPipeline();
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.pipeline is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=29
    * @return The pipeline.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.Pipeline getPipeline();
   /**
    * <pre>
-   * pipeline
+   * pipeline [DEPRECATED: use insight_body instead]
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline"];</code>
+   * <code>.api.v1alpha1.insights.Pipeline pipeline = 16 [json_name = "pipeline", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.PipelineOrBuilder getPipelineOrBuilder();
+
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * @return Whether the insightBody field is set.
+   */
+  boolean hasInsightBody();
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   * @return The insightBody.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline getInsightBody();
+  /**
+   * <pre>
+   * pipeline representation of insight body
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.Pipeline insight_body = 17 [json_name = "insightBody"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getInsightBodyOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }

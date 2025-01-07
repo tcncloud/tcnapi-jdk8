@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-   *     See api/v0alpha/lms.proto;l=2367
+   *     See api/v0alpha/lms.proto;l=2368
    * @return The ttl.
    */
   @java.lang.Override
@@ -1211,7 +1211,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2367
+     *     See api/v0alpha/lms.proto;l=2368
      * @return The ttl.
      */
     @java.lang.Override
@@ -1221,7 +1221,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2367
+     *     See api/v0alpha/lms.proto;l=2368
      * @param value The ttl to set.
      * @return This builder for chaining.
      */
@@ -1235,7 +1235,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2367
+     *     See api/v0alpha/lms.proto;l=2368
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTtl() {
