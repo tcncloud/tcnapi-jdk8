@@ -19,10 +19,20 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
 
   /**
    * <pre>
+   * unique id of conversation transcript evaluated
+   * </pre>
+   *
+   * <code>int64 transcript_sid = 2 [json_name = "transcriptSid"];</code>
+   * @return The transcriptSid.
+   */
+  long getTranscriptSid();
+
+  /**
+   * <pre>
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    * @return Whether the call field is set.
    */
   boolean hasCall();
@@ -31,7 +41,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    * @return The call.
    */
   com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call getCall();
@@ -40,7 +50,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.CallOrBuilder getCallOrBuilder();
 
@@ -49,7 +59,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   boolean hasSms();
@@ -58,7 +68,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    * @return The sms.
    */
   com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms getSms();
@@ -67,7 +77,7 @@ public interface ScorecardsCreateSmartEvaluationEventOrBuilder extends
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.SmsOrBuilder getSmsOrBuilder();
 

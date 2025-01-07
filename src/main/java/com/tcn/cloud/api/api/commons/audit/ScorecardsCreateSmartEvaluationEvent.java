@@ -1183,8 +1183,8 @@ private static final long serialVersionUID = 0L;
   public enum MetadataCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    CALL(2),
-    SMS(3),
+    CALL(3),
+    SMS(4),
     METADATA_NOT_SET(0);
     private final int value;
     private MetadataCase(int value) {
@@ -1202,8 +1202,8 @@ private static final long serialVersionUID = 0L;
 
     public static MetadataCase forNumber(int value) {
       switch (value) {
-        case 2: return CALL;
-        case 3: return SMS;
+        case 3: return CALL;
+        case 4: return SMS;
         case 0: return METADATA_NOT_SET;
         default: return null;
       }
@@ -1234,30 +1234,45 @@ private static final long serialVersionUID = 0L;
     return smartEvaluationId_;
   }
 
-  public static final int CALL_FIELD_NUMBER = 2;
+  public static final int TRANSCRIPT_SID_FIELD_NUMBER = 2;
+  private long transcriptSid_ = 0L;
+  /**
+   * <pre>
+   * unique id of conversation transcript evaluated
+   * </pre>
+   *
+   * <code>int64 transcript_sid = 2 [json_name = "transcriptSid"];</code>
+   * @return The transcriptSid.
+   */
+  @java.lang.Override
+  public long getTranscriptSid() {
+    return transcriptSid_;
+  }
+
+  public static final int CALL_FIELD_NUMBER = 3;
   /**
    * <pre>
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    * @return Whether the call field is set.
    */
   @java.lang.Override
   public boolean hasCall() {
-    return metadataCase_ == 2;
+    return metadataCase_ == 3;
   }
   /**
    * <pre>
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    * @return The call.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call getCall() {
-    if (metadataCase_ == 2) {
+    if (metadataCase_ == 3) {
        return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_;
     }
     return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
@@ -1267,40 +1282,40 @@ private static final long serialVersionUID = 0L;
    * metadata for call that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.CallOrBuilder getCallOrBuilder() {
-    if (metadataCase_ == 2) {
+    if (metadataCase_ == 3) {
        return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_;
     }
     return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
   }
 
-  public static final int SMS_FIELD_NUMBER = 3;
+  public static final int SMS_FIELD_NUMBER = 4;
   /**
    * <pre>
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   @java.lang.Override
   public boolean hasSms() {
-    return metadataCase_ == 3;
+    return metadataCase_ == 4;
   }
   /**
    * <pre>
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    * @return The sms.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms getSms() {
-    if (metadataCase_ == 3) {
+    if (metadataCase_ == 4) {
        return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_;
     }
     return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
@@ -1310,11 +1325,11 @@ private static final long serialVersionUID = 0L;
    * metadata for sms that triggered the scorecard
    * </pre>
    *
-   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.SmsOrBuilder getSmsOrBuilder() {
-    if (metadataCase_ == 3) {
+    if (metadataCase_ == 4) {
        return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_;
     }
     return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
@@ -1337,11 +1352,14 @@ private static final long serialVersionUID = 0L;
     if (smartEvaluationId_ != 0L) {
       output.writeInt64(1, smartEvaluationId_);
     }
-    if (metadataCase_ == 2) {
-      output.writeMessage(2, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_);
+    if (transcriptSid_ != 0L) {
+      output.writeInt64(2, transcriptSid_);
     }
     if (metadataCase_ == 3) {
-      output.writeMessage(3, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_);
+      output.writeMessage(3, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_);
+    }
+    if (metadataCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1356,13 +1374,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, smartEvaluationId_);
     }
-    if (metadataCase_ == 2) {
+    if (transcriptSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_);
+        .computeInt64Size(2, transcriptSid_);
     }
     if (metadataCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_);
+        .computeMessageSize(3, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_);
+    }
+    if (metadataCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1381,13 +1403,15 @@ private static final long serialVersionUID = 0L;
 
     if (getSmartEvaluationId()
         != other.getSmartEvaluationId()) return false;
+    if (getTranscriptSid()
+        != other.getTranscriptSid()) return false;
     if (!getMetadataCase().equals(other.getMetadataCase())) return false;
     switch (metadataCase_) {
-      case 2:
+      case 3:
         if (!getCall()
             .equals(other.getCall())) return false;
         break;
-      case 3:
+      case 4:
         if (!getSms()
             .equals(other.getSms())) return false;
         break;
@@ -1408,12 +1432,15 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SMART_EVALUATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSmartEvaluationId());
+    hash = (37 * hash) + TRANSCRIPT_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTranscriptSid());
     switch (metadataCase_) {
-      case 2:
+      case 3:
         hash = (37 * hash) + CALL_FIELD_NUMBER;
         hash = (53 * hash) + getCall().hashCode();
         break;
-      case 3:
+      case 4:
         hash = (37 * hash) + SMS_FIELD_NUMBER;
         hash = (53 * hash) + getSms().hashCode();
         break;
@@ -1556,6 +1583,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       smartEvaluationId_ = 0L;
+      transcriptSid_ = 0L;
       if (callBuilder_ != null) {
         callBuilder_.clear();
       }
@@ -1601,16 +1629,19 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.smartEvaluationId_ = smartEvaluationId_;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.transcriptSid_ = transcriptSid_;
+      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent result) {
       result.metadataCase_ = metadataCase_;
       result.metadata_ = this.metadata_;
-      if (metadataCase_ == 2 &&
+      if (metadataCase_ == 3 &&
           callBuilder_ != null) {
         result.metadata_ = callBuilder_.build();
       }
-      if (metadataCase_ == 3 &&
+      if (metadataCase_ == 4 &&
           smsBuilder_ != null) {
         result.metadata_ = smsBuilder_.build();
       }
@@ -1663,6 +1694,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSmartEvaluationId() != 0L) {
         setSmartEvaluationId(other.getSmartEvaluationId());
       }
+      if (other.getTranscriptSid() != 0L) {
+        setTranscriptSid(other.getTranscriptSid());
+      }
       switch (other.getMetadataCase()) {
         case CALL: {
           mergeCall(other.getCall());
@@ -1707,20 +1741,25 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              input.readMessage(
-                  getCallFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              metadataCase_ = 2;
+            case 16: {
+              transcriptSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
               input.readMessage(
-                  getSmsFieldBuilder().getBuilder(),
+                  getCallFieldBuilder().getBuilder(),
                   extensionRegistry);
               metadataCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getSmsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1797,6 +1836,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long transcriptSid_ ;
+    /**
+     * <pre>
+     * unique id of conversation transcript evaluated
+     * </pre>
+     *
+     * <code>int64 transcript_sid = 2 [json_name = "transcriptSid"];</code>
+     * @return The transcriptSid.
+     */
+    @java.lang.Override
+    public long getTranscriptSid() {
+      return transcriptSid_;
+    }
+    /**
+     * <pre>
+     * unique id of conversation transcript evaluated
+     * </pre>
+     *
+     * <code>int64 transcript_sid = 2 [json_name = "transcriptSid"];</code>
+     * @param value The transcriptSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTranscriptSid(long value) {
+
+      transcriptSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * unique id of conversation transcript evaluated
+     * </pre>
+     *
+     * <code>int64 transcript_sid = 2 [json_name = "transcriptSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTranscriptSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      transcriptSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.CallOrBuilder> callBuilder_;
     /**
@@ -1804,30 +1887,30 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      * @return Whether the call field is set.
      */
     @java.lang.Override
     public boolean hasCall() {
-      return metadataCase_ == 2;
+      return metadataCase_ == 3;
     }
     /**
      * <pre>
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      * @return The call.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call getCall() {
       if (callBuilder_ == null) {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_;
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
       } else {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           return callBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
@@ -1838,7 +1921,7 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     public Builder setCall(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call value) {
       if (callBuilder_ == null) {
@@ -1850,7 +1933,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callBuilder_.setMessage(value);
       }
-      metadataCase_ = 2;
+      metadataCase_ = 3;
       return this;
     }
     /**
@@ -1858,7 +1941,7 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     public Builder setCall(
         com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.Builder builderForValue) {
@@ -1868,7 +1951,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callBuilder_.setMessage(builderForValue.build());
       }
-      metadataCase_ = 2;
+      metadataCase_ = 3;
       return this;
     }
     /**
@@ -1876,11 +1959,11 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     public Builder mergeCall(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call value) {
       if (callBuilder_ == null) {
-        if (metadataCase_ == 2 &&
+        if (metadataCase_ == 3 &&
             metadata_ != com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance()) {
           metadata_ = com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.newBuilder((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_)
               .mergeFrom(value).buildPartial();
@@ -1889,13 +1972,13 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           callBuilder_.mergeFrom(value);
         } else {
           callBuilder_.setMessage(value);
         }
       }
-      metadataCase_ = 2;
+      metadataCase_ = 3;
       return this;
     }
     /**
@@ -1903,17 +1986,17 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     public Builder clearCall() {
       if (callBuilder_ == null) {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           metadataCase_ = 0;
           metadata_ = null;
           onChanged();
         }
       } else {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           metadataCase_ = 0;
           metadata_ = null;
         }
@@ -1926,7 +2009,7 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.Builder getCallBuilder() {
       return getCallFieldBuilder().getBuilder();
@@ -1936,14 +2019,14 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.CallOrBuilder getCallOrBuilder() {
-      if ((metadataCase_ == 2) && (callBuilder_ != null)) {
+      if ((metadataCase_ == 3) && (callBuilder_ != null)) {
         return callBuilder_.getMessageOrBuilder();
       } else {
-        if (metadataCase_ == 2) {
+        if (metadataCase_ == 3) {
           return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call) metadata_;
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
@@ -1954,13 +2037,13 @@ private static final long serialVersionUID = 0L;
      * metadata for call that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 2 [json_name = "call"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call call = 3 [json_name = "call"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.CallOrBuilder> 
         getCallFieldBuilder() {
       if (callBuilder_ == null) {
-        if (!(metadataCase_ == 2)) {
+        if (!(metadataCase_ == 3)) {
           metadata_ = com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Call.getDefaultInstance();
         }
         callBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -1970,7 +2053,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         metadata_ = null;
       }
-      metadataCase_ = 2;
+      metadataCase_ = 3;
       onChanged();
       return callBuilder_;
     }
@@ -1982,30 +2065,30 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
     @java.lang.Override
     public boolean hasSms() {
-      return metadataCase_ == 3;
+      return metadataCase_ == 4;
     }
     /**
      * <pre>
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      * @return The sms.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms getSms() {
       if (smsBuilder_ == null) {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_;
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
       } else {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           return smsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
@@ -2016,7 +2099,7 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     public Builder setSms(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms value) {
       if (smsBuilder_ == null) {
@@ -2028,7 +2111,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smsBuilder_.setMessage(value);
       }
-      metadataCase_ = 3;
+      metadataCase_ = 4;
       return this;
     }
     /**
@@ -2036,7 +2119,7 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     public Builder setSms(
         com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.Builder builderForValue) {
@@ -2046,7 +2129,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smsBuilder_.setMessage(builderForValue.build());
       }
-      metadataCase_ = 3;
+      metadataCase_ = 4;
       return this;
     }
     /**
@@ -2054,11 +2137,11 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     public Builder mergeSms(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms value) {
       if (smsBuilder_ == null) {
-        if (metadataCase_ == 3 &&
+        if (metadataCase_ == 4 &&
             metadata_ != com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance()) {
           metadata_ = com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.newBuilder((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_)
               .mergeFrom(value).buildPartial();
@@ -2067,13 +2150,13 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           smsBuilder_.mergeFrom(value);
         } else {
           smsBuilder_.setMessage(value);
         }
       }
-      metadataCase_ = 3;
+      metadataCase_ = 4;
       return this;
     }
     /**
@@ -2081,17 +2164,17 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     public Builder clearSms() {
       if (smsBuilder_ == null) {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           metadataCase_ = 0;
           metadata_ = null;
           onChanged();
         }
       } else {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           metadataCase_ = 0;
           metadata_ = null;
         }
@@ -2104,7 +2187,7 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.Builder getSmsBuilder() {
       return getSmsFieldBuilder().getBuilder();
@@ -2114,14 +2197,14 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.SmsOrBuilder getSmsOrBuilder() {
-      if ((metadataCase_ == 3) && (smsBuilder_ != null)) {
+      if ((metadataCase_ == 4) && (smsBuilder_ != null)) {
         return smsBuilder_.getMessageOrBuilder();
       } else {
-        if (metadataCase_ == 3) {
+        if (metadataCase_ == 4) {
           return (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms) metadata_;
         }
         return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
@@ -2132,13 +2215,13 @@ private static final long serialVersionUID = 0L;
      * metadata for sms that triggered the scorecard
      * </pre>
      *
-     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * <code>.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms sms = 4 [json_name = "sms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.SmsOrBuilder> 
         getSmsFieldBuilder() {
       if (smsBuilder_ == null) {
-        if (!(metadataCase_ == 3)) {
+        if (!(metadataCase_ == 4)) {
           metadata_ = com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSmartEvaluationEvent.Sms.getDefaultInstance();
         }
         smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2148,7 +2231,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         metadata_ = null;
       }
-      metadataCase_ = 3;
+      metadataCase_ = 4;
       onChanged();
       return smsBuilder_;
     }

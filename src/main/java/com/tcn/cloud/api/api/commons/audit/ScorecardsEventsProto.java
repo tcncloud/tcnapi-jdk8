@@ -325,22 +325,23 @@ public final class ScorecardsEventsProto {
       "t_sid\030\006 \001(\003R\rtranscriptSid\0225\n\nrisk_level" +
       "\030\007 \001(\0162\026.api.commons.RiskLevelR\triskLeve" +
       "l\022D\n\017auto_evaluation\030\010 \001(\0132\033.api.commons" +
-      ".AutoEvaluationR\016autoEvaluation\"\225\003\n$Scor" +
+      ".AutoEvaluationR\016autoEvaluation\"\274\003\n$Scor" +
       "ecardsCreateSmartEvaluationEvent\022.\n\023smar" +
       "t_evaluation_id\030\001 \001(\003R\021smartEvaluationId" +
-      "\022R\n\004call\030\002 \001(\0132<.api.commons.audit.Score" +
-      "cardsCreateSmartEvaluationEvent.CallH\000R\004" +
-      "call\022O\n\003sms\030\003 \001(\0132;.api.commons.audit.Sc" +
-      "orecardsCreateSmartEvaluationEvent.SmsH\000" +
-      "R\003sms\032Z\n\004Call\022\031\n\010call_sid\030\001 \001(\003R\007callSid" +
-      "\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallTy" +
-      "pe.EnumR\010callType\0320\n\003Sms\022)\n\020conversation" +
-      "_sid\030\001 \001(\003R\017conversationSidB\n\n\010metadataB" +
-      "\242\001\n#com.tcn.cloud.api.api.commons.auditB" +
-      "\025ScorecardsEventsProtoP\001\242\002\003ACA\252\002\021Api.Com" +
-      "mons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Com" +
-      "mons\\Audit\\GPBMetadata\352\002\023Api::Commons::A" +
-      "uditb\006proto3"
+      "\022%\n\016transcript_sid\030\002 \001(\003R\rtranscriptSid\022" +
+      "R\n\004call\030\003 \001(\0132<.api.commons.audit.Scorec" +
+      "ardsCreateSmartEvaluationEvent.CallH\000R\004c" +
+      "all\022O\n\003sms\030\004 \001(\0132;.api.commons.audit.Sco" +
+      "recardsCreateSmartEvaluationEvent.SmsH\000R" +
+      "\003sms\032Z\n\004Call\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022" +
+      "7\n\tcall_type\030\002 \001(\0162\032.api.commons.CallTyp" +
+      "e.EnumR\010callType\0320\n\003Sms\022)\n\020conversation_" +
+      "sid\030\001 \001(\003R\017conversationSidB\n\n\010metadataB\242" +
+      "\001\n#com.tcn.cloud.api.api.commons.auditB\025" +
+      "ScorecardsEventsProtoP\001\242\002\003ACA\252\002\021Api.Comm" +
+      "ons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Comm" +
+      "ons\\Audit\\GPBMetadata\352\002\023Api::Commons::Au" +
+      "ditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -494,7 +495,7 @@ public final class ScorecardsEventsProto {
     internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor,
-        new java.lang.String[] { "SmartEvaluationId", "Call", "Sms", "Metadata", });
+        new java.lang.String[] { "SmartEvaluationId", "TranscriptSid", "Call", "Sms", "Metadata", });
     internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_descriptor =
       internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_audit_ScorecardsCreateSmartEvaluationEvent_Call_fieldAccessorTable = new
