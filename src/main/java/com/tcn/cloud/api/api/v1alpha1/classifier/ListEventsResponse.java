@@ -270,28 +270,52 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * how long the element sat in the queue waiting to start processing, in seconds.
+     * deprecated when we switched to milliseconds
+     * </pre>
+     *
+     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=183
+     * @return The totalQueueWaitSeconds.
+     */
+    @java.lang.Deprecated long getTotalQueueWaitSeconds();
+
+    /**
+     * <pre>
+     * deprecated when we switched to milliseconds
+     * </pre>
+     *
+     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=184
+     * @return The totalProcessingSeconds.
+     */
+    @java.lang.Deprecated long getTotalProcessingSeconds();
+
+    /**
+     * <pre>
+     * how long the element sat in the queue waiting to start processing, in milliseconds.
      * a large number here, means upstream of this element took a really long time.
      * the longer the DAG, the more time will be spent waiting to process, because
      * processing has to happen in order.
      * </pre>
      *
-     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
-     * @return The totalQueueWaitSeconds.
+     * <code>int64 total_queue_wait_milliseconds = 13 [json_name = "totalQueueWaitMilliseconds"];</code>
+     * @return The totalQueueWaitMilliseconds.
      */
-    long getTotalQueueWaitSeconds();
+    long getTotalQueueWaitMilliseconds();
 
     /**
      * <pre>
-     * how long the element took (in seconds) to process all the data on this hour.
+     * how long the element took (in milliseconds) to process all the data on this hour.
      * a long time here, means the element took a long time to execute its action
      * on the input records.
      * </pre>
      *
-     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
-     * @return The totalProcessingSeconds.
+     * <code>int64 total_processing_milliseconds = 14 [json_name = "totalProcessingMilliseconds"];</code>
+     * @return The totalProcessingMilliseconds.
      */
-    long getTotalProcessingSeconds();
+    long getTotalProcessingMilliseconds();
 
     /**
      * <pre>
@@ -707,17 +731,16 @@ private static final long serialVersionUID = 0L;
     private long totalQueueWaitSeconds_ = 0L;
     /**
      * <pre>
-     * how long the element sat in the queue waiting to start processing, in seconds.
-     * a large number here, means upstream of this element took a really long time.
-     * the longer the DAG, the more time will be spent waiting to process, because
-     * processing has to happen in order.
+     * deprecated when we switched to milliseconds
      * </pre>
      *
-     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
+     * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=183
      * @return The totalQueueWaitSeconds.
      */
     @java.lang.Override
-    public long getTotalQueueWaitSeconds() {
+    @java.lang.Deprecated public long getTotalQueueWaitSeconds() {
       return totalQueueWaitSeconds_;
     }
 
@@ -725,17 +748,52 @@ private static final long serialVersionUID = 0L;
     private long totalProcessingSeconds_ = 0L;
     /**
      * <pre>
-     * how long the element took (in seconds) to process all the data on this hour.
+     * deprecated when we switched to milliseconds
+     * </pre>
+     *
+     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
+     *     See api/v1alpha1/classifier/service.proto;l=184
+     * @return The totalProcessingSeconds.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public long getTotalProcessingSeconds() {
+      return totalProcessingSeconds_;
+    }
+
+    public static final int TOTAL_QUEUE_WAIT_MILLISECONDS_FIELD_NUMBER = 13;
+    private long totalQueueWaitMilliseconds_ = 0L;
+    /**
+     * <pre>
+     * how long the element sat in the queue waiting to start processing, in milliseconds.
+     * a large number here, means upstream of this element took a really long time.
+     * the longer the DAG, the more time will be spent waiting to process, because
+     * processing has to happen in order.
+     * </pre>
+     *
+     * <code>int64 total_queue_wait_milliseconds = 13 [json_name = "totalQueueWaitMilliseconds"];</code>
+     * @return The totalQueueWaitMilliseconds.
+     */
+    @java.lang.Override
+    public long getTotalQueueWaitMilliseconds() {
+      return totalQueueWaitMilliseconds_;
+    }
+
+    public static final int TOTAL_PROCESSING_MILLISECONDS_FIELD_NUMBER = 14;
+    private long totalProcessingMilliseconds_ = 0L;
+    /**
+     * <pre>
+     * how long the element took (in milliseconds) to process all the data on this hour.
      * a long time here, means the element took a long time to execute its action
      * on the input records.
      * </pre>
      *
-     * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
-     * @return The totalProcessingSeconds.
+     * <code>int64 total_processing_milliseconds = 14 [json_name = "totalProcessingMilliseconds"];</code>
+     * @return The totalProcessingMilliseconds.
      */
     @java.lang.Override
-    public long getTotalProcessingSeconds() {
-      return totalProcessingSeconds_;
+    public long getTotalProcessingMilliseconds() {
+      return totalProcessingMilliseconds_;
     }
 
     public static final int MSGS_FIELD_NUMBER = 12;
@@ -841,6 +899,12 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < msgs_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, msgs_.getRaw(i));
       }
+      if (totalQueueWaitMilliseconds_ != 0L) {
+        output.writeInt64(13, totalQueueWaitMilliseconds_);
+      }
+      if (totalProcessingMilliseconds_ != 0L) {
+        output.writeInt64(14, totalProcessingMilliseconds_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -913,6 +977,14 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getMsgsList().size();
       }
+      if (totalQueueWaitMilliseconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(13, totalQueueWaitMilliseconds_);
+      }
+      if (totalProcessingMilliseconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, totalProcessingMilliseconds_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -956,6 +1028,10 @@ private static final long serialVersionUID = 0L;
           != other.getTotalQueueWaitSeconds()) return false;
       if (getTotalProcessingSeconds()
           != other.getTotalProcessingSeconds()) return false;
+      if (getTotalQueueWaitMilliseconds()
+          != other.getTotalQueueWaitMilliseconds()) return false;
+      if (getTotalProcessingMilliseconds()
+          != other.getTotalProcessingMilliseconds()) return false;
       if (!getMsgsList()
           .equals(other.getMsgsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1006,6 +1082,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TOTAL_PROCESSING_SECONDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalProcessingSeconds());
+      hash = (37 * hash) + TOTAL_QUEUE_WAIT_MILLISECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalQueueWaitMilliseconds());
+      hash = (37 * hash) + TOTAL_PROCESSING_MILLISECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalProcessingMilliseconds());
       if (getMsgsCount() > 0) {
         hash = (37 * hash) + MSGS_FIELD_NUMBER;
         hash = (53 * hash) + getMsgsList().hashCode();
@@ -1163,6 +1245,8 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.LazyStringArrayList.emptyList();
         totalQueueWaitSeconds_ = 0L;
         totalProcessingSeconds_ = 0L;
+        totalQueueWaitMilliseconds_ = 0L;
+        totalProcessingMilliseconds_ = 0L;
         msgs_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
@@ -1239,6 +1323,12 @@ private static final long serialVersionUID = 0L;
           result.totalProcessingSeconds_ = totalProcessingSeconds_;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.totalQueueWaitMilliseconds_ = totalQueueWaitMilliseconds_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.totalProcessingMilliseconds_ = totalProcessingMilliseconds_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           msgs_.makeImmutable();
           result.msgs_ = msgs_;
         }
@@ -1344,10 +1434,16 @@ private static final long serialVersionUID = 0L;
         if (other.getTotalProcessingSeconds() != 0L) {
           setTotalProcessingSeconds(other.getTotalProcessingSeconds());
         }
+        if (other.getTotalQueueWaitMilliseconds() != 0L) {
+          setTotalQueueWaitMilliseconds(other.getTotalQueueWaitMilliseconds());
+        }
+        if (other.getTotalProcessingMilliseconds() != 0L) {
+          setTotalProcessingMilliseconds(other.getTotalProcessingMilliseconds());
+        }
         if (!other.msgs_.isEmpty()) {
           if (msgs_.isEmpty()) {
             msgs_ = other.msgs_;
-            bitField0_ |= 0x00000800;
+            bitField0_ |= 0x00002000;
           } else {
             ensureMsgsIsMutable();
             msgs_.addAll(other.msgs_);
@@ -1448,6 +1544,16 @@ private static final long serialVersionUID = 0L;
                 msgs_.add(s);
                 break;
               } // case 98
+              case 104: {
+                totalQueueWaitMilliseconds_ = input.readInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 104
+              case 112: {
+                totalProcessingMilliseconds_ = input.readInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2434,32 +2540,30 @@ private static final long serialVersionUID = 0L;
       private long totalQueueWaitSeconds_ ;
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
-       * a large number here, means upstream of this element took a really long time.
-       * the longer the DAG, the more time will be spent waiting to process, because
-       * processing has to happen in order.
+       * deprecated when we switched to milliseconds
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=183
        * @return The totalQueueWaitSeconds.
        */
       @java.lang.Override
-      public long getTotalQueueWaitSeconds() {
+      @java.lang.Deprecated public long getTotalQueueWaitSeconds() {
         return totalQueueWaitSeconds_;
       }
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
-       * a large number here, means upstream of this element took a really long time.
-       * the longer the DAG, the more time will be spent waiting to process, because
-       * processing has to happen in order.
+       * deprecated when we switched to milliseconds
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=183
        * @param value The totalQueueWaitSeconds to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalQueueWaitSeconds(long value) {
+      @java.lang.Deprecated public Builder setTotalQueueWaitSeconds(long value) {
 
         totalQueueWaitSeconds_ = value;
         bitField0_ |= 0x00000200;
@@ -2468,16 +2572,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * how long the element sat in the queue waiting to start processing, in seconds.
-       * a large number here, means upstream of this element took a really long time.
-       * the longer the DAG, the more time will be spent waiting to process, because
-       * processing has to happen in order.
+       * deprecated when we switched to milliseconds
        * </pre>
        *
-       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds"];</code>
+       * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=183
        * @return This builder for chaining.
        */
-      public Builder clearTotalQueueWaitSeconds() {
+      @java.lang.Deprecated public Builder clearTotalQueueWaitSeconds() {
         bitField0_ = (bitField0_ & ~0x00000200);
         totalQueueWaitSeconds_ = 0L;
         onChanged();
@@ -2487,30 +2590,30 @@ private static final long serialVersionUID = 0L;
       private long totalProcessingSeconds_ ;
       /**
        * <pre>
-       * how long the element took (in seconds) to process all the data on this hour.
-       * a long time here, means the element took a long time to execute its action
-       * on the input records.
+       * deprecated when we switched to milliseconds
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=184
        * @return The totalProcessingSeconds.
        */
       @java.lang.Override
-      public long getTotalProcessingSeconds() {
+      @java.lang.Deprecated public long getTotalProcessingSeconds() {
         return totalProcessingSeconds_;
       }
       /**
        * <pre>
-       * how long the element took (in seconds) to process all the data on this hour.
-       * a long time here, means the element took a long time to execute its action
-       * on the input records.
+       * deprecated when we switched to milliseconds
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=184
        * @param value The totalProcessingSeconds to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalProcessingSeconds(long value) {
+      @java.lang.Deprecated public Builder setTotalProcessingSeconds(long value) {
 
         totalProcessingSeconds_ = value;
         bitField0_ |= 0x00000400;
@@ -2519,17 +2622,120 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * how long the element took (in seconds) to process all the data on this hour.
+       * deprecated when we switched to milliseconds
+       * </pre>
+       *
+       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
+       * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
+       *     See api/v1alpha1/classifier/service.proto;l=184
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearTotalProcessingSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        totalProcessingSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalQueueWaitMilliseconds_ ;
+      /**
+       * <pre>
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
+       * a large number here, means upstream of this element took a really long time.
+       * the longer the DAG, the more time will be spent waiting to process, because
+       * processing has to happen in order.
+       * </pre>
+       *
+       * <code>int64 total_queue_wait_milliseconds = 13 [json_name = "totalQueueWaitMilliseconds"];</code>
+       * @return The totalQueueWaitMilliseconds.
+       */
+      @java.lang.Override
+      public long getTotalQueueWaitMilliseconds() {
+        return totalQueueWaitMilliseconds_;
+      }
+      /**
+       * <pre>
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
+       * a large number here, means upstream of this element took a really long time.
+       * the longer the DAG, the more time will be spent waiting to process, because
+       * processing has to happen in order.
+       * </pre>
+       *
+       * <code>int64 total_queue_wait_milliseconds = 13 [json_name = "totalQueueWaitMilliseconds"];</code>
+       * @param value The totalQueueWaitMilliseconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalQueueWaitMilliseconds(long value) {
+
+        totalQueueWaitMilliseconds_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * how long the element sat in the queue waiting to start processing, in milliseconds.
+       * a large number here, means upstream of this element took a really long time.
+       * the longer the DAG, the more time will be spent waiting to process, because
+       * processing has to happen in order.
+       * </pre>
+       *
+       * <code>int64 total_queue_wait_milliseconds = 13 [json_name = "totalQueueWaitMilliseconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalQueueWaitMilliseconds() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        totalQueueWaitMilliseconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalProcessingMilliseconds_ ;
+      /**
+       * <pre>
+       * how long the element took (in milliseconds) to process all the data on this hour.
        * a long time here, means the element took a long time to execute its action
        * on the input records.
        * </pre>
        *
-       * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds"];</code>
+       * <code>int64 total_processing_milliseconds = 14 [json_name = "totalProcessingMilliseconds"];</code>
+       * @return The totalProcessingMilliseconds.
+       */
+      @java.lang.Override
+      public long getTotalProcessingMilliseconds() {
+        return totalProcessingMilliseconds_;
+      }
+      /**
+       * <pre>
+       * how long the element took (in milliseconds) to process all the data on this hour.
+       * a long time here, means the element took a long time to execute its action
+       * on the input records.
+       * </pre>
+       *
+       * <code>int64 total_processing_milliseconds = 14 [json_name = "totalProcessingMilliseconds"];</code>
+       * @param value The totalProcessingMilliseconds to set.
        * @return This builder for chaining.
        */
-      public Builder clearTotalProcessingSeconds() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        totalProcessingSeconds_ = 0L;
+      public Builder setTotalProcessingMilliseconds(long value) {
+
+        totalProcessingMilliseconds_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * how long the element took (in milliseconds) to process all the data on this hour.
+       * a long time here, means the element took a long time to execute its action
+       * on the input records.
+       * </pre>
+       *
+       * <code>int64 total_processing_milliseconds = 14 [json_name = "totalProcessingMilliseconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalProcessingMilliseconds() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        totalProcessingMilliseconds_ = 0L;
         onChanged();
         return this;
       }
@@ -2540,7 +2746,7 @@ private static final long serialVersionUID = 0L;
         if (!msgs_.isModifiable()) {
           msgs_ = new com.google.protobuf.LazyStringArrayList(msgs_);
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
       }
       /**
        * <pre>
@@ -2606,7 +2812,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureMsgsIsMutable();
         msgs_.set(index, value);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -2624,7 +2830,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureMsgsIsMutable();
         msgs_.add(value);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -2642,7 +2848,7 @@ private static final long serialVersionUID = 0L;
         ensureMsgsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, msgs_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -2657,7 +2863,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearMsgs() {
         msgs_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);;
+        bitField0_ = (bitField0_ & ~0x00002000);;
         onChanged();
         return this;
       }
@@ -2676,7 +2882,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureMsgsIsMutable();
         msgs_.add(value);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }

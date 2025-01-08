@@ -151,9 +151,9 @@ public final class ServiceProto {
       "\032.google.protobuf.TimestampR\003end\022\035\n\ntime" +
       "_range\030\004 \001(\tR\ttimeRange\022#\n\rentrypoint_id" +
       "\030\005 \001(\tR\014entrypointId\022\033\n\tparent_id\030\006 \001(\tR" +
-      "\010parentId\"\326\004\n\022ListEventsResponse\022C\n\004rows" +
+      "\010parentId\"\345\005\n\022ListEventsResponse\022C\n\004rows" +
       "\030\001 \003(\0132/.api.v1alpha1.classifier.ListEve" +
-      "ntsResponse.RowR\004rows\032\372\003\n\003Row\022,\n\022input_r" +
+      "ntsResponse.RowR\004rows\032\211\005\n\003Row\022,\n\022input_r" +
       "ecord_count\030\001 \001(\003R\020inputRecordCount\022.\n\023o" +
       "utput_record_count\030\002 \001(\003R\021outputRecordCo" +
       "unt\0224\n\026discarded_record_count\030\003 \001(\003R\024dis" +
@@ -162,60 +162,63 @@ public final class ServiceProto {
       "2\032.google.protobuf.TimestampR\003end\022\035\n\nele" +
       "ment_id\030\006 \001(\tR\telementId\022 \n\013entrypoints\030" +
       "\007 \003(\tR\013entrypoints\022\035\n\nparent_ids\030\010 \003(\tR\t" +
-      "parentIds\022\030\n\007columns\030\t \003(\tR\007columns\0227\n\030t" +
-      "otal_queue_wait_seconds\030\n \001(\003R\025totalQueu" +
-      "eWaitSeconds\0228\n\030total_processing_seconds" +
-      "\030\013 \001(\003R\026totalProcessingSeconds\022\022\n\004msgs\030\014" +
-      " \003(\tR\004msgs\"\202\003\n\017PeekListRequest\0220\n\005begin\030" +
-      "\001 \001(\0132\032.google.protobuf.TimestampR\005begin" +
-      "\022,\n\003end\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\003end\022!\n\014external_tag\030\003 \001(\tR\013externalTa" +
-      "g\022\035\n\npage_token\030\004 \001(\tR\tpageToken\022\020\n\003asc\030" +
-      "\005 \001(\010R\003asc\022\033\n\tpage_size\030\006 \001(\005R\010pageSize\022" +
-      "\035\n\nelement_id\030\007 \001(\tR\telementId\022\030\n\007column" +
-      "s\030\010 \003(\tR\007columns\022#\n\rentrypoint_id\030\t \001(\tR" +
-      "\014entrypointId\022\033\n\tparent_id\030\n \001(\tR\010parent" +
-      "Id\022#\n\rview_discards\030\013 \001(\010R\014viewDiscards\"" +
-      "T\n\020PeekListResponse\022!\n\014json_records\030\001 \003(" +
-      "\tR\013jsonRecords\022\035\n\npage_token\030\002 \001(\tR\tpage" +
-      "Token2\210\n\n\027ClassifierFileTemplates\022\246\001\n\tPa" +
-      "rseFile\022).api.v1alpha1.classifier.ParseF" +
-      "ileRequest\032*.api.v1alpha1.classifier.Par" +
-      "seFileResponse\"B\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0022\"-/api/v" +
-      "1alpha1/classifier/file_templates/parse:" +
-      "\001*\022\240\001\n\nListEvents\022*.api.v1alpha1.classif" +
-      "ier.ListEventsRequest\032+.api.v1alpha1.cla" +
-      "ssifier.ListEventsResponse\"9\272\270\221\002\005\n\003\010\351\007\202\323" +
-      "\344\223\002)\"$/api/v1alpha1/classifier/events/li" +
-      "st:\001*\022\235\001\n\010PeekList\022(.api.v1alpha1.classi" +
-      "fier.PeekListRequest\032).api.v1alpha1.clas" +
-      "sifier.PeekListResponse\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002" +
-      ",\"\'/api/v1alpha1/classifier/events/previ" +
-      "ew:\001*\022\302\001\n\022UpdateFileTemplate\0222.api.v1alp" +
-      "ha1.classifier.UpdateFileTemplateRequest" +
-      "\0323.api.v1alpha1.classifier.UpdateFileTem" +
-      "plateResponse\"C\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023\"./api/v1" +
-      "alpha1/classifier/file_templates/update:" +
-      "\001*\022\302\001\n\022DeleteFileTemplate\0222.api.v1alpha1" +
-      ".classifier.DeleteFileTemplateRequest\0323." +
-      "api.v1alpha1.classifier.DeleteFileTempla" +
-      "teResponse\"C\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023*./api/v1alp" +
-      "ha1/classifier/file_templates/delete:\001*\022" +
-      "\275\001\n\021ListFileTemplates\0221.api.v1alpha1.cla" +
-      "ssifier.ListFileTemplatesRequest\0322.api.v" +
-      "1alpha1.classifier.ListFileTemplatesResp" +
-      "onse\"A\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0021\",/api/v1alpha1/cl" +
-      "assifier/file_templates/list:\001*\022\266\001\n\017GetF" +
-      "ileTemplate\022/.api.v1alpha1.classifier.Ge" +
-      "tFileTemplateRequest\0320.api.v1alpha1.clas" +
-      "sifier.GetFileTemplateResponse\"@\272\270\221\002\005\n\003\010" +
-      "\351\007\202\323\344\223\0020\"+/api/v1alpha1/classifier/file_" +
-      "templates/get:\001*B\267\001\n)com.tcn.cloud.api.a" +
-      "pi.v1alpha1.classifierB\014ServiceProtoP\001\242\002" +
-      "\003AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1a" +
-      "lpha1\\Classifier\342\002#Api\\V1alpha1\\Classifi" +
-      "er\\GPBMetadata\352\002\031Api::V1alpha1::Classifi" +
-      "erb\006proto3"
+      "parentIds\022\030\n\007columns\030\t \003(\tR\007columns\022;\n\030t" +
+      "otal_queue_wait_seconds\030\n \001(\003B\002\030\001R\025total" +
+      "QueueWaitSeconds\022<\n\030total_processing_sec" +
+      "onds\030\013 \001(\003B\002\030\001R\026totalProcessingSeconds\022A" +
+      "\n\035total_queue_wait_milliseconds\030\r \001(\003R\032t" +
+      "otalQueueWaitMilliseconds\022B\n\035total_proce" +
+      "ssing_milliseconds\030\016 \001(\003R\033totalProcessin" +
+      "gMilliseconds\022\022\n\004msgs\030\014 \003(\tR\004msgs\"\202\003\n\017Pe" +
+      "ekListRequest\0220\n\005begin\030\001 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\005begin\022,\n\003end\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\003end\022!\n\014externa" +
+      "l_tag\030\003 \001(\tR\013externalTag\022\035\n\npage_token\030\004" +
+      " \001(\tR\tpageToken\022\020\n\003asc\030\005 \001(\010R\003asc\022\033\n\tpag" +
+      "e_size\030\006 \001(\005R\010pageSize\022\035\n\nelement_id\030\007 \001" +
+      "(\tR\telementId\022\030\n\007columns\030\010 \003(\tR\007columns\022" +
+      "#\n\rentrypoint_id\030\t \001(\tR\014entrypointId\022\033\n\t" +
+      "parent_id\030\n \001(\tR\010parentId\022#\n\rview_discar" +
+      "ds\030\013 \001(\010R\014viewDiscards\"T\n\020PeekListRespon" +
+      "se\022!\n\014json_records\030\001 \003(\tR\013jsonRecords\022\035\n" +
+      "\npage_token\030\002 \001(\tR\tpageToken2\210\n\n\027Classif" +
+      "ierFileTemplates\022\246\001\n\tParseFile\022).api.v1a" +
+      "lpha1.classifier.ParseFileRequest\032*.api." +
+      "v1alpha1.classifier.ParseFileResponse\"B\272" +
+      "\270\221\002\005\n\003\010\351\007\202\323\344\223\0022\"-/api/v1alpha1/classifie" +
+      "r/file_templates/parse:\001*\022\240\001\n\nListEvents" +
+      "\022*.api.v1alpha1.classifier.ListEventsReq" +
+      "uest\032+.api.v1alpha1.classifier.ListEvent" +
+      "sResponse\"9\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002)\"$/api/v1alph" +
+      "a1/classifier/events/list:\001*\022\235\001\n\010PeekLis" +
+      "t\022(.api.v1alpha1.classifier.PeekListRequ" +
+      "est\032).api.v1alpha1.classifier.PeekListRe" +
+      "sponse\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v1alpha1/" +
+      "classifier/events/preview:\001*\022\302\001\n\022UpdateF" +
+      "ileTemplate\0222.api.v1alpha1.classifier.Up" +
+      "dateFileTemplateRequest\0323.api.v1alpha1.c" +
+      "lassifier.UpdateFileTemplateResponse\"C\272\270" +
+      "\221\002\005\n\003\010\351\007\202\323\344\223\0023\"./api/v1alpha1/classifier" +
+      "/file_templates/update:\001*\022\302\001\n\022DeleteFile" +
+      "Template\0222.api.v1alpha1.classifier.Delet" +
+      "eFileTemplateRequest\0323.api.v1alpha1.clas" +
+      "sifier.DeleteFileTemplateResponse\"C\272\270\221\002\005" +
+      "\n\003\010\351\007\202\323\344\223\0023*./api/v1alpha1/classifier/fi" +
+      "le_templates/delete:\001*\022\275\001\n\021ListFileTempl" +
+      "ates\0221.api.v1alpha1.classifier.ListFileT" +
+      "emplatesRequest\0322.api.v1alpha1.classifie" +
+      "r.ListFileTemplatesResponse\"A\272\270\221\002\005\n\003\010\351\007\202" +
+      "\323\344\223\0021\",/api/v1alpha1/classifier/file_tem" +
+      "plates/list:\001*\022\266\001\n\017GetFileTemplate\022/.api" +
+      ".v1alpha1.classifier.GetFileTemplateRequ" +
+      "est\0320.api.v1alpha1.classifier.GetFileTem" +
+      "plateResponse\"@\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0020\"+/api/v1" +
+      "alpha1/classifier/file_templates/get:\001*B" +
+      "\267\001\n)com.tcn.cloud.api.api.v1alpha1.class" +
+      "ifierB\014ServiceProtoP\001\242\002\003AVC\252\002\027Api.V1alph" +
+      "a1.Classifier\312\002\027Api\\V1alpha1\\Classifier\342" +
+      "\002#Api\\V1alpha1\\Classifier\\GPBMetadata\352\002\031" +
+      "Api::V1alpha1::Classifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -315,7 +318,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_classifier_ListEventsResponse_Row_descriptor,
-        new java.lang.String[] { "InputRecordCount", "OutputRecordCount", "DiscardedRecordCount", "Begin", "End", "ElementId", "Entrypoints", "ParentIds", "Columns", "TotalQueueWaitSeconds", "TotalProcessingSeconds", "Msgs", });
+        new java.lang.String[] { "InputRecordCount", "OutputRecordCount", "DiscardedRecordCount", "Begin", "End", "ElementId", "Entrypoints", "ParentIds", "Columns", "TotalQueueWaitSeconds", "TotalProcessingSeconds", "TotalQueueWaitMilliseconds", "TotalProcessingMilliseconds", "Msgs", });
     internal_static_api_v1alpha1_classifier_PeekListRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_classifier_PeekListRequest_fieldAccessorTable = new
