@@ -270,24 +270,24 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * deprecated when we switched to milliseconds
+     * DEPRECATED: We use milliseconds now for a more precise time
      * </pre>
      *
      * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=183
+     *     See api/v1alpha1/classifier/service.proto;l=184
      * @return The totalQueueWaitSeconds.
      */
     @java.lang.Deprecated long getTotalQueueWaitSeconds();
 
     /**
      * <pre>
-     * deprecated when we switched to milliseconds
+     * DEPRECATED: We use milliseconds now for a more precise time
      * </pre>
      *
      * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=184
+     *     See api/v1alpha1/classifier/service.proto;l=186
      * @return The totalProcessingSeconds.
      */
     @java.lang.Deprecated long getTotalProcessingSeconds();
@@ -731,12 +731,12 @@ private static final long serialVersionUID = 0L;
     private long totalQueueWaitSeconds_ = 0L;
     /**
      * <pre>
-     * deprecated when we switched to milliseconds
+     * DEPRECATED: We use milliseconds now for a more precise time
      * </pre>
      *
      * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=183
+     *     See api/v1alpha1/classifier/service.proto;l=184
      * @return The totalQueueWaitSeconds.
      */
     @java.lang.Override
@@ -748,12 +748,12 @@ private static final long serialVersionUID = 0L;
     private long totalProcessingSeconds_ = 0L;
     /**
      * <pre>
-     * deprecated when we switched to milliseconds
+     * DEPRECATED: We use milliseconds now for a more precise time
      * </pre>
      *
      * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=184
+     *     See api/v1alpha1/classifier/service.proto;l=186
      * @return The totalProcessingSeconds.
      */
     @java.lang.Override
@@ -2540,12 +2540,12 @@ private static final long serialVersionUID = 0L;
       private long totalQueueWaitSeconds_ ;
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=183
+       *     See api/v1alpha1/classifier/service.proto;l=184
        * @return The totalQueueWaitSeconds.
        */
       @java.lang.Override
@@ -2554,12 +2554,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=183
+       *     See api/v1alpha1/classifier/service.proto;l=184
        * @param value The totalQueueWaitSeconds to set.
        * @return This builder for chaining.
        */
@@ -2572,12 +2572,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_queue_wait_seconds = 10 [json_name = "totalQueueWaitSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_queue_wait_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=183
+       *     See api/v1alpha1/classifier/service.proto;l=184
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalQueueWaitSeconds() {
@@ -2590,12 +2590,12 @@ private static final long serialVersionUID = 0L;
       private long totalProcessingSeconds_ ;
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=184
+       *     See api/v1alpha1/classifier/service.proto;l=186
        * @return The totalProcessingSeconds.
        */
       @java.lang.Override
@@ -2604,12 +2604,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=184
+       *     See api/v1alpha1/classifier/service.proto;l=186
        * @param value The totalProcessingSeconds to set.
        * @return This builder for chaining.
        */
@@ -2622,12 +2622,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * deprecated when we switched to milliseconds
+       * DEPRECATED: We use milliseconds now for a more precise time
        * </pre>
        *
        * <code>int64 total_processing_seconds = 11 [json_name = "totalProcessingSeconds", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ListEventsResponse.Row.total_processing_seconds is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=184
+       *     See api/v1alpha1/classifier/service.proto;l=186
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalProcessingSeconds() {
