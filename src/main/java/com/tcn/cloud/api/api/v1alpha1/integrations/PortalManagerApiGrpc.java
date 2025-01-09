@@ -604,6 +604,37 @@ public final class PortalManagerApiGrpc {
     return getDeletePluginInstanceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> getDuplicatePluginInstanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DuplicatePluginInstance",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> getDuplicatePluginInstanceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> getDuplicatePluginInstanceMethod;
+    if ((getDuplicatePluginInstanceMethod = PortalManagerApiGrpc.getDuplicatePluginInstanceMethod) == null) {
+      synchronized (PortalManagerApiGrpc.class) {
+        if ((getDuplicatePluginInstanceMethod = PortalManagerApiGrpc.getDuplicatePluginInstanceMethod) == null) {
+          PortalManagerApiGrpc.getDuplicatePluginInstanceMethod = getDuplicatePluginInstanceMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DuplicatePluginInstance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes.getDefaultInstance()))
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DuplicatePluginInstance"))
+              .build();
+        }
+      }
+    }
+    return getDuplicatePluginInstanceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq,
       com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> getListPluginInstanceMethod;
 
@@ -1044,6 +1075,13 @@ public final class PortalManagerApiGrpc {
 
     /**
      */
+    default void duplicatePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDuplicatePluginInstanceMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPluginInstanceMethod(), responseObserver);
@@ -1295,6 +1333,14 @@ public final class PortalManagerApiGrpc {
 
     /**
      */
+    public void duplicatePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDuplicatePluginInstanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1520,6 +1566,13 @@ public final class PortalManagerApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes deletePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePluginInstanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes duplicatePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDuplicatePluginInstanceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1764,6 +1817,14 @@ public final class PortalManagerApiGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes> duplicatePluginInstance(
+        com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDuplicatePluginInstanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> listPluginInstance(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1852,14 +1913,15 @@ public final class PortalManagerApiGrpc {
   private static final int METHODID_UPSERT_PLUGIN_INSTANCE = 16;
   private static final int METHODID_GET_PLUGIN_INSTANCE = 17;
   private static final int METHODID_DELETE_PLUGIN_INSTANCE = 18;
-  private static final int METHODID_LIST_PLUGIN_INSTANCE = 19;
-  private static final int METHODID_LIST_FLOW_FIELD_NAMES = 20;
-  private static final int METHODID_LIST_AVAILABLE_VERIFICATION_FIELDS = 21;
-  private static final int METHODID_LIST_AVAILABLE_PAYMENT_FIELDS = 22;
-  private static final int METHODID_LIST_PORTAL_TYPES = 23;
-  private static final int METHODID_LIST_PORTAL_WORKFLOWS = 24;
-  private static final int METHODID_LIST_ALL_ACTION_DEFINITIONS = 25;
-  private static final int METHODID_LIST_PLUGINS_BY_METHOD = 26;
+  private static final int METHODID_DUPLICATE_PLUGIN_INSTANCE = 19;
+  private static final int METHODID_LIST_PLUGIN_INSTANCE = 20;
+  private static final int METHODID_LIST_FLOW_FIELD_NAMES = 21;
+  private static final int METHODID_LIST_AVAILABLE_VERIFICATION_FIELDS = 22;
+  private static final int METHODID_LIST_AVAILABLE_PAYMENT_FIELDS = 23;
+  private static final int METHODID_LIST_PORTAL_TYPES = 24;
+  private static final int METHODID_LIST_PORTAL_WORKFLOWS = 25;
+  private static final int METHODID_LIST_ALL_ACTION_DEFINITIONS = 26;
+  private static final int METHODID_LIST_PLUGINS_BY_METHOD = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1953,6 +2015,10 @@ public final class PortalManagerApiGrpc {
         case METHODID_DELETE_PLUGIN_INSTANCE:
           serviceImpl.deletePluginInstance((com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes>) responseObserver);
+          break;
+        case METHODID_DUPLICATE_PLUGIN_INSTANCE:
+          serviceImpl.duplicatePluginInstance((com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes>) responseObserver);
           break;
         case METHODID_LIST_PLUGIN_INSTANCE:
           serviceImpl.listPluginInstance((com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq) request,
@@ -2138,6 +2204,13 @@ public final class PortalManagerApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes>(
                 service, METHODID_DELETE_PLUGIN_INSTANCE)))
         .addMethod(
+          getDuplicatePluginInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.DuplicatePluginInstanceRes>(
+                service, METHODID_DUPLICATE_PLUGIN_INSTANCE)))
+        .addMethod(
           getListPluginInstanceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -2260,6 +2333,7 @@ public final class PortalManagerApiGrpc {
               .addMethod(getUpsertPluginInstanceMethod())
               .addMethod(getGetPluginInstanceMethod())
               .addMethod(getDeletePluginInstanceMethod())
+              .addMethod(getDuplicatePluginInstanceMethod())
               .addMethod(getListPluginInstanceMethod())
               .addMethod(getListFlowFieldNamesMethod())
               .addMethod(getListAvailableVerificationFieldsMethod())
