@@ -71,14 +71,6 @@ public enum EventType
    */
   VOICE_ANALYTICS_CREATE_TRANSCRIPT(106),
   /**
-   * <code>VOICE_ANALYTICS_CREATE_SENTIMENT = 107;</code>
-   */
-  VOICE_ANALYTICS_CREATE_SENTIMENT(107),
-  /**
-   * <code>VOICE_ANALYTICS_CREATE_SUMMARY = 108;</code>
-   */
-  VOICE_ANALYTICS_CREATE_SUMMARY(108),
-  /**
    * <pre>
    * Omnichannel Dashboard Application IDs
    * </pre>
@@ -756,14 +748,6 @@ public enum EventType
   SCORECARDS_UPDATE_EVALUATION_EVENT(522),
   /**
    * <pre>
-   * create smart evaluation event
-   * </pre>
-   *
-   * <code>SCORECARDS_CREATE_SMART_EVALUATION_EVENT = 523;</code>
-   */
-  SCORECARDS_CREATE_SMART_EVALUATION_EVENT(523),
-  /**
-   * <pre>
    *Tickets Events
    * create event
    * </pre>
@@ -1135,14 +1119,6 @@ public enum EventType
    * <code>VOICE_ANALYTICS_CREATE_TRANSCRIPT = 106;</code>
    */
   public static final int VOICE_ANALYTICS_CREATE_TRANSCRIPT_VALUE = 106;
-  /**
-   * <code>VOICE_ANALYTICS_CREATE_SENTIMENT = 107;</code>
-   */
-  public static final int VOICE_ANALYTICS_CREATE_SENTIMENT_VALUE = 107;
-  /**
-   * <code>VOICE_ANALYTICS_CREATE_SUMMARY = 108;</code>
-   */
-  public static final int VOICE_ANALYTICS_CREATE_SUMMARY_VALUE = 108;
   /**
    * <pre>
    * Omnichannel Dashboard Application IDs
@@ -1811,14 +1787,6 @@ public enum EventType
   public static final int SCORECARDS_UPDATE_EVALUATION_EVENT_VALUE = 522;
   /**
    * <pre>
-   * create smart evaluation event
-   * </pre>
-   *
-   * <code>SCORECARDS_CREATE_SMART_EVALUATION_EVENT = 523;</code>
-   */
-  public static final int SCORECARDS_CREATE_SMART_EVALUATION_EVENT_VALUE = 523;
-  /**
-   * <pre>
    *Tickets Events
    * create event
    * </pre>
@@ -2162,8 +2130,6 @@ public enum EventType
       case 104: return VOICE_ANALYTICS_FLAG_SUMMARY;
       case 105: return VOICE_ANALYTICS_PHRASE_CORRECTION;
       case 106: return VOICE_ANALYTICS_CREATE_TRANSCRIPT;
-      case 107: return VOICE_ANALYTICS_CREATE_SENTIMENT;
-      case 108: return VOICE_ANALYTICS_CREATE_SUMMARY;
       case 300: return OMNICHANNEL;
       case 301: return OMNICHANNEL_PROJECT;
       case 302: return OMNICHANNEL_CAMPAIGN;
@@ -2249,7 +2215,6 @@ public enum EventType
       case 520: return SCORECARDS_DELETE_SCORECARD_QUESTION_EVENT;
       case 521: return SCORECARDS_CREATE_AUTO_EVALUATION_EVENT;
       case 522: return SCORECARDS_UPDATE_EVALUATION_EVENT;
-      case 523: return SCORECARDS_CREATE_SMART_EVALUATION_EVENT;
       case 600: return TICKET_CREATE_EVENT;
       case 601: return TICKET_EDIT_EVENT;
       case 602: return TICKET_CLOSE_EVENT;
