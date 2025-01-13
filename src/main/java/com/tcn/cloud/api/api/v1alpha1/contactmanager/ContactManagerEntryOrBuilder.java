@@ -16,7 +16,7 @@ public interface ContactManagerEntryOrBuilder extends
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
    * @return The contactManagerEntryListId.
    */
   @java.lang.Deprecated long getContactManagerEntryListId();
@@ -24,14 +24,14 @@ public interface ContactManagerEntryOrBuilder extends
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The key.
    */
   @java.lang.Deprecated java.lang.String getKey();
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The bytes for key.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -40,14 +40,14 @@ public interface ContactManagerEntryOrBuilder extends
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The value.
    */
   @java.lang.Deprecated java.lang.String getValue();
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The bytes for value.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -56,14 +56,14 @@ public interface ContactManagerEntryOrBuilder extends
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
    * @return The type.
    */
   @java.lang.Deprecated java.lang.String getType();
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
    * @return The bytes for type.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

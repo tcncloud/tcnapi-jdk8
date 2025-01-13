@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
    * @return The contactManagerEntryListId.
    */
   @java.lang.Override
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The key.
    */
   @java.lang.Override
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The bytes for key.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The value.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
    * @return The type.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -1052,7 +1052,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
      * @return The contactManagerEntryListId.
      */
     @java.lang.Override
@@ -1062,7 +1062,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
      * @param value The contactManagerEntryListId to set.
      * @return This builder for chaining.
      */
@@ -1076,7 +1076,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContactManagerEntryListId() {
@@ -1090,7 +1090,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The key.
      */
     @java.lang.Deprecated public java.lang.String getKey() {
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The bytes for key.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The key to set.
      * @return This builder for chaining.
      */
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearKey() {
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The bytes for key to set.
      * @return This builder for chaining.
      */
@@ -1172,7 +1172,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The value.
      */
     @java.lang.Deprecated public java.lang.String getValue() {
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The bytes for value.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1209,7 +1209,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearValue() {
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -1254,7 +1254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
      * @return The type.
      */
     @java.lang.Deprecated public java.lang.String getType() {
@@ -1272,7 +1272,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
      * @return The bytes for type.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1291,7 +1291,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -1306,7 +1306,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearType() {
@@ -1318,7 +1318,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
