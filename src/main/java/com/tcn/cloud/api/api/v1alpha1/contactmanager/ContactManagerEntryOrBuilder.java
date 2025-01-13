@@ -164,4 +164,19 @@ public interface ContactManagerEntryOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
       int index);
+
+  /**
+   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
+   * @return Whether the expiryDate field is set.
+   */
+  boolean hasExpiryDate();
+  /**
+   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
+   * @return The expiryDate.
+   */
+  com.google.protobuf.Timestamp getExpiryDate();
+  /**
+   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder();
 }
