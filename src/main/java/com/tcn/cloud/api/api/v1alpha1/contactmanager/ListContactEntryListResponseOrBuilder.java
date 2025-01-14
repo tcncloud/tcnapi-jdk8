@@ -8,27 +8,47 @@ public interface ListContactEntryListResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> 
       getContactManagerEntryList();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index);
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
-  int getContactManagerEntryCount();
+  @java.lang.Deprecated int getContactManagerEntryCount();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
       getContactManagerEntryOrBuilderList();
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
       int index);
 
   /**
@@ -42,4 +62,48 @@ public interface ListContactEntryListResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNextPageTokenBytes();
+
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> 
+      getCmEntryList();
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getCmEntry(int index);
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  int getCmEntryCount();
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+      getCmEntryOrBuilderList();
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getCmEntryOrBuilder(
+      int index);
 }
