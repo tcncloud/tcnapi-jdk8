@@ -8,19 +8,11 @@ public interface ScrubListDeleteRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * payload
-   * </pre>
-   *
    * <code>string list_id = 10 [json_name = "listId"];</code>
    * @return The listId.
    */
   java.lang.String getListId();
   /**
-   * <pre>
-   * payload
-   * </pre>
-   *
    * <code>string list_id = 10 [json_name = "listId"];</code>
    * @return The bytes for listId.
    */

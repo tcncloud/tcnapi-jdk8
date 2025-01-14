@@ -44,10 +44,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object listId_ = "";
   /**
-   * <pre>
-   * payload
-   * </pre>
-   *
    * <code>string list_id = 10 [json_name = "listId"];</code>
    * @return The listId.
    */
@@ -65,10 +61,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * payload
-   * </pre>
-   *
    * <code>string list_id = 10 [json_name = "listId"];</code>
    * @return The bytes for listId.
    */
@@ -478,10 +470,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object listId_ = "";
     /**
-     * <pre>
-     * payload
-     * </pre>
-     *
      * <code>string list_id = 10 [json_name = "listId"];</code>
      * @return The listId.
      */
@@ -498,10 +486,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * payload
-     * </pre>
-     *
      * <code>string list_id = 10 [json_name = "listId"];</code>
      * @return The bytes for listId.
      */
@@ -519,10 +503,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * payload
-     * </pre>
-     *
      * <code>string list_id = 10 [json_name = "listId"];</code>
      * @param value The listId to set.
      * @return This builder for chaining.
@@ -536,10 +516,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * payload
-     * </pre>
-     *
      * <code>string list_id = 10 [json_name = "listId"];</code>
      * @return This builder for chaining.
      */
@@ -550,10 +526,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * payload
-     * </pre>
-     *
      * <code>string list_id = 10 [json_name = "listId"];</code>
      * @param value The bytes for listId to set.
      * @return This builder for chaining.
