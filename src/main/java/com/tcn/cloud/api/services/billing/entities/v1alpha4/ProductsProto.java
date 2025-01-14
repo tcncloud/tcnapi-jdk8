@@ -32,7 +32,7 @@ public final class ProductsProto {
       "ducts.proto\022\"services.billing.entities.v" +
       "1alpha4\0320services/billing/entities/v1alp" +
       "ha4/modules.proto\032-services/billing/enti" +
-      "ties/v1alpha4/omni.proto\"\203?\n\rProductConf" +
+      "ties/v1alpha4/omni.proto\"\324@\n\rProductConf" +
       "ig\022\217\001\n+communications_omni_chat_agent_me" +
       "ssage_unit\030\350\007 \001(\0132/.services.billing.ent" +
       "ities.v1alpha4.BasicConfigH\000R&communicat" +
@@ -203,44 +203,49 @@ public final class ProductsProto {
       "ipts\030\241\234\001 \001(\0132/.services.billing.entities" +
       ".v1alpha4.BasicConfigH\000RPworkforceEngage" +
       "mentWorkforceOptimizationVoiceAnalyticsA" +
-      "ccumulatedCallTranscripts\022\306\001\nGworkforce_" +
-      "engagement_workforce_optimization_ai_bun" +
-      "dle_smart_evaluations\030\260\352\001 \001(\0132/.services" +
-      ".billing.entities.v1alpha4.BasicConfigH\000" +
-      "R@workforceEngagementWorkforceOptimizati" +
-      "onAiBundleSmartEvaluations\022\335\001\nSworkforce" +
-      "_engagement_workforce_optimization_ai_bu" +
-      "ndle_accumulated_smart_evaluations\030\261\352\001 \001" +
-      "(\0132/.services.billing.entities.v1alpha4." +
-      "BasicConfigH\000RKworkforceEngagementWorkfo" +
-      "rceOptimizationAiBundleAccumulatedSmartE" +
-      "valuations\022\271\001\n@workforce_engagement_work" +
-      "force_optimization_ai_bundle_sentiments\030" +
-      "\272\352\001 \001(\0132/.services.billing.entities.v1al" +
-      "pha4.BasicConfigH\000R:workforceEngagementW" +
-      "orkforceOptimizationAiBundleSentiments\022\320" +
-      "\001\nLworkforce_engagement_workforce_optimi" +
-      "zation_ai_bundle_accumulated_sentiments\030" +
-      "\273\352\001 \001(\0132/.services.billing.entities.v1al" +
-      "pha4.BasicConfigH\000REworkforceEngagementW" +
-      "orkforceOptimizationAiBundleAccumulatedS" +
-      "entiments\022\267\001\n?workforce_engagement_workf" +
-      "orce_optimization_ai_bundle_summaries\030\304\352" +
-      "\001 \001(\0132/.services.billing.entities.v1alph" +
-      "a4.BasicConfigH\000R9workforceEngagementWor" +
-      "kforceOptimizationAiBundleSummaries\022\316\001\nK" +
+      "ccumulatedCallTranscripts\022\316\001\nKworkforce_" +
+      "engagement_workforce_optimization_voice_" +
+      "analytics_sms_transcripts\030\242\234\001 \001(\0132/.serv" +
+      "ices.billing.entities.v1alpha4.BasicConf" +
+      "igH\000RDworkforceEngagementWorkforceOptimi" +
+      "zationVoiceAnalyticsSmsTranscripts\022\306\001\nGw" +
+      "orkforce_engagement_workforce_optimizati" +
+      "on_ai_bundle_smart_evaluations\030\260\352\001 \001(\0132/" +
+      ".services.billing.entities.v1alpha4.Basi" +
+      "cConfigH\000R@workforceEngagementWorkforceO" +
+      "ptimizationAiBundleSmartEvaluations\022\335\001\nS" +
       "workforce_engagement_workforce_optimizat" +
-      "ion_ai_bundle_accumulated_summaries\030\305\352\001 " +
-      "\001(\0132/.services.billing.entities.v1alpha4" +
-      ".BasicConfigH\000RDworkforceEngagementWorkf" +
-      "orceOptimizationAiBundleAccumulatedSumma" +
-      "riesB\010\n\006configB\360\001\n4com.tcn.cloud.api.ser" +
-      "vices.billing.entities.v1alpha4B\rProduct" +
-      "sProtoP\001\242\002\003SBE\252\002\"Services.Billing.Entiti" +
-      "es.V1alpha4\312\002\"Services\\Billing\\Entities\\" +
-      "V1alpha4\342\002.Services\\Billing\\Entities\\V1a" +
-      "lpha4\\GPBMetadata\352\002%Services::Billing::E" +
-      "ntities::V1alpha4b\006proto3"
+      "ion_ai_bundle_accumulated_smart_evaluati" +
+      "ons\030\261\352\001 \001(\0132/.services.billing.entities." +
+      "v1alpha4.BasicConfigH\000RKworkforceEngagem" +
+      "entWorkforceOptimizationAiBundleAccumula" +
+      "tedSmartEvaluations\022\271\001\n@workforce_engage" +
+      "ment_workforce_optimization_ai_bundle_se" +
+      "ntiments\030\272\352\001 \001(\0132/.services.billing.enti" +
+      "ties.v1alpha4.BasicConfigH\000R:workforceEn" +
+      "gagementWorkforceOptimizationAiBundleSen" +
+      "timents\022\320\001\nLworkforce_engagement_workfor" +
+      "ce_optimization_ai_bundle_accumulated_se" +
+      "ntiments\030\273\352\001 \001(\0132/.services.billing.enti" +
+      "ties.v1alpha4.BasicConfigH\000REworkforceEn" +
+      "gagementWorkforceOptimizationAiBundleAcc" +
+      "umulatedSentiments\022\267\001\n?workforce_engagem" +
+      "ent_workforce_optimization_ai_bundle_sum" +
+      "maries\030\304\352\001 \001(\0132/.services.billing.entiti" +
+      "es.v1alpha4.BasicConfigH\000R9workforceEnga" +
+      "gementWorkforceOptimizationAiBundleSumma" +
+      "ries\022\316\001\nKworkforce_engagement_workforce_" +
+      "optimization_ai_bundle_accumulated_summa" +
+      "ries\030\305\352\001 \001(\0132/.services.billing.entities" +
+      ".v1alpha4.BasicConfigH\000RDworkforceEngage" +
+      "mentWorkforceOptimizationAiBundleAccumul" +
+      "atedSummariesB\010\n\006configB\360\001\n4com.tcn.clou" +
+      "d.api.services.billing.entities.v1alpha4" +
+      "B\rProductsProtoP\001\242\002\003SBE\252\002\"Services.Billi" +
+      "ng.Entities.V1alpha4\312\002\"Services\\Billing\\" +
+      "Entities\\V1alpha4\342\002.Services\\Billing\\Ent" +
+      "ities\\V1alpha4\\GPBMetadata\352\002%Services::B" +
+      "illing::Entities::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -253,7 +258,7 @@ public final class ProductsProto {
     internal_static_services_billing_entities_v1alpha4_ProductConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_ProductConfig_descriptor,
-        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "WorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleSummaries", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries", "Config", });
+        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts", "WorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleSummaries", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries", "Config", });
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ModulesProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniProto.getDescriptor();
   }

@@ -695,6 +695,21 @@ public interface ProductConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_sms_transcripts = 20002 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_sms_transcripts = 20002 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_sms_transcripts = 20002 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscriptsOrBuilder();
+
+  /**
    * <pre>
    * wfo ai bundle (30000 - 31000)
    * </pre>
