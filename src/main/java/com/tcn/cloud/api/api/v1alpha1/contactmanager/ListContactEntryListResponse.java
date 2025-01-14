@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
   private ListContactEntryListResponse() {
     contactManagerEntry_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
+    cmEntry_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -49,39 +50,59 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> contactManagerEntry_;
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
     return contactManagerEntry_;
   }
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
       getContactManagerEntryOrBuilderList() {
     return contactManagerEntry_;
   }
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getContactManagerEntryCount() {
+  @java.lang.Deprecated public int getContactManagerEntryCount() {
     return contactManagerEntry_.size();
   }
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
     return contactManagerEntry_.get(index);
   }
   /**
-   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+   * <pre>
+   * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
       int index) {
     return contactManagerEntry_.get(index);
   }
@@ -125,6 +146,67 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CM_ENTRY_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> cmEntry_;
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getCmEntryList() {
+    return cmEntry_;
+  }
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+      getCmEntryOrBuilderList() {
+    return cmEntry_;
+  }
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  @java.lang.Override
+  public int getCmEntryCount() {
+    return cmEntry_.size();
+  }
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getCmEntry(int index) {
+    return cmEntry_.get(index);
+  }
+  /**
+   * <pre>
+   * returns list of Contact Entry with embedded Contact Fields
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getCmEntryOrBuilder(
+      int index) {
+    return cmEntry_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -145,6 +227,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nextPageToken_);
     }
+    for (int i = 0; i < cmEntry_.size(); i++) {
+      output.writeMessage(4, cmEntry_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -160,6 +245,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nextPageToken_);
+    }
+    for (int i = 0; i < cmEntry_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, cmEntry_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,6 +269,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContactManagerEntryList())) return false;
     if (!getNextPageToken()
         .equals(other.getNextPageToken())) return false;
+    if (!getCmEntryList()
+        .equals(other.getCmEntryList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -197,6 +288,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getNextPageToken().hashCode();
+    if (getCmEntryCount() > 0) {
+      hash = (37 * hash) + CM_ENTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getCmEntryList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -341,6 +436,13 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
+      if (cmEntryBuilder_ == null) {
+        cmEntry_ = java.util.Collections.emptyList();
+      } else {
+        cmEntry_ = null;
+        cmEntryBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -382,6 +484,15 @@ private static final long serialVersionUID = 0L;
         result.contactManagerEntry_ = contactManagerEntry_;
       } else {
         result.contactManagerEntry_ = contactManagerEntryBuilder_.build();
+      }
+      if (cmEntryBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          cmEntry_ = java.util.Collections.unmodifiableList(cmEntry_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.cmEntry_ = cmEntry_;
+      } else {
+        result.cmEntry_ = cmEntryBuilder_.build();
       }
     }
 
@@ -467,6 +578,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (cmEntryBuilder_ == null) {
+        if (!other.cmEntry_.isEmpty()) {
+          if (cmEntry_.isEmpty()) {
+            cmEntry_ = other.cmEntry_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureCmEntryIsMutable();
+            cmEntry_.addAll(other.cmEntry_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.cmEntry_.isEmpty()) {
+          if (cmEntryBuilder_.isEmpty()) {
+            cmEntryBuilder_.dispose();
+            cmEntryBuilder_ = null;
+            cmEntry_ = other.cmEntry_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            cmEntryBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCmEntryFieldBuilder() : null;
+          } else {
+            cmEntryBuilder_.addAllMessages(other.cmEntry_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -511,6 +648,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.parser(),
+                      extensionRegistry);
+              if (cmEntryBuilder_ == null) {
+                ensureCmEntryIsMutable();
+                cmEntry_.add(m);
+              } else {
+                cmEntryBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -541,9 +691,13 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> contactManagerEntryBuilder_;
 
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getContactManagerEntryList() {
       if (contactManagerEntryBuilder_ == null) {
         return java.util.Collections.unmodifiableList(contactManagerEntry_);
       } else {
@@ -551,9 +705,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public int getContactManagerEntryCount() {
+    @java.lang.Deprecated public int getContactManagerEntryCount() {
       if (contactManagerEntryBuilder_ == null) {
         return contactManagerEntry_.size();
       } else {
@@ -561,9 +719,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getContactManagerEntry(int index) {
       if (contactManagerEntryBuilder_ == null) {
         return contactManagerEntry_.get(index);
       } else {
@@ -571,9 +733,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder setContactManagerEntry(
+    @java.lang.Deprecated public Builder setContactManagerEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
       if (contactManagerEntryBuilder_ == null) {
         if (value == null) {
@@ -588,9 +754,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder setContactManagerEntry(
+    @java.lang.Deprecated public Builder setContactManagerEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
       if (contactManagerEntryBuilder_ == null) {
         ensureContactManagerEntryIsMutable();
@@ -602,9 +772,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder addContactManagerEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+    @java.lang.Deprecated public Builder addContactManagerEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
       if (contactManagerEntryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -618,9 +792,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder addContactManagerEntry(
+    @java.lang.Deprecated public Builder addContactManagerEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
       if (contactManagerEntryBuilder_ == null) {
         if (value == null) {
@@ -635,9 +813,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder addContactManagerEntry(
+    @java.lang.Deprecated public Builder addContactManagerEntry(
         com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
       if (contactManagerEntryBuilder_ == null) {
         ensureContactManagerEntryIsMutable();
@@ -649,9 +831,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder addContactManagerEntry(
+    @java.lang.Deprecated public Builder addContactManagerEntry(
         int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
       if (contactManagerEntryBuilder_ == null) {
         ensureContactManagerEntryIsMutable();
@@ -663,9 +849,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder addAllContactManagerEntry(
+    @java.lang.Deprecated public Builder addAllContactManagerEntry(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> values) {
       if (contactManagerEntryBuilder_ == null) {
         ensureContactManagerEntryIsMutable();
@@ -678,9 +868,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder clearContactManagerEntry() {
+    @java.lang.Deprecated public Builder clearContactManagerEntry() {
       if (contactManagerEntryBuilder_ == null) {
         contactManagerEntry_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -691,9 +885,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public Builder removeContactManagerEntry(int index) {
+    @java.lang.Deprecated public Builder removeContactManagerEntry(int index) {
       if (contactManagerEntryBuilder_ == null) {
         ensureContactManagerEntryIsMutable();
         contactManagerEntry_.remove(index);
@@ -704,16 +902,24 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder getContactManagerEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder getContactManagerEntryBuilder(
         int index) {
       return getContactManagerEntryFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getContactManagerEntryOrBuilder(
         int index) {
       if (contactManagerEntryBuilder_ == null) {
         return contactManagerEntry_.get(index);  } else {
@@ -721,9 +927,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
          getContactManagerEntryOrBuilderList() {
       if (contactManagerEntryBuilder_ != null) {
         return contactManagerEntryBuilder_.getMessageOrBuilderList();
@@ -732,24 +942,36 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder() {
       return getContactManagerEntryFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addContactManagerEntryBuilder(
         int index) {
       return getContactManagerEntryFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry"];</code>
+     * <pre>
+     * returns list of Contact Entry Fields. Consumer has to consolidate by ContactManagerEntryId.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry contact_manager_entry = 2 [json_name = "contactManagerEntry", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder> 
          getContactManagerEntryBuilderList() {
       return getContactManagerEntryFieldBuilder().getBuilderList();
     }
@@ -838,6 +1060,318 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> cmEntry_ =
+      java.util.Collections.emptyList();
+    private void ensureCmEntryIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        cmEntry_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry>(cmEntry_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> cmEntryBuilder_;
+
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> getCmEntryList() {
+      if (cmEntryBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(cmEntry_);
+      } else {
+        return cmEntryBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public int getCmEntryCount() {
+      if (cmEntryBuilder_ == null) {
+        return cmEntry_.size();
+      } else {
+        return cmEntryBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry getCmEntry(int index) {
+      if (cmEntryBuilder_ == null) {
+        return cmEntry_.get(index);
+      } else {
+        return cmEntryBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder setCmEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (cmEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCmEntryIsMutable();
+        cmEntry_.set(index, value);
+        onChanged();
+      } else {
+        cmEntryBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder setCmEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (cmEntryBuilder_ == null) {
+        ensureCmEntryIsMutable();
+        cmEntry_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        cmEntryBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder addCmEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (cmEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCmEntryIsMutable();
+        cmEntry_.add(value);
+        onChanged();
+      } else {
+        cmEntryBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder addCmEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry value) {
+      if (cmEntryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCmEntryIsMutable();
+        cmEntry_.add(index, value);
+        onChanged();
+      } else {
+        cmEntryBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder addCmEntry(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (cmEntryBuilder_ == null) {
+        ensureCmEntryIsMutable();
+        cmEntry_.add(builderForValue.build());
+        onChanged();
+      } else {
+        cmEntryBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder addCmEntry(
+        int index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder builderForValue) {
+      if (cmEntryBuilder_ == null) {
+        ensureCmEntryIsMutable();
+        cmEntry_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        cmEntryBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder addAllCmEntry(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry> values) {
+      if (cmEntryBuilder_ == null) {
+        ensureCmEntryIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cmEntry_);
+        onChanged();
+      } else {
+        cmEntryBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder clearCmEntry() {
+      if (cmEntryBuilder_ == null) {
+        cmEntry_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        cmEntryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public Builder removeCmEntry(int index) {
+      if (cmEntryBuilder_ == null) {
+        ensureCmEntryIsMutable();
+        cmEntry_.remove(index);
+        onChanged();
+      } else {
+        cmEntryBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder getCmEntryBuilder(
+        int index) {
+      return getCmEntryFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder getCmEntryOrBuilder(
+        int index) {
+      if (cmEntryBuilder_ == null) {
+        return cmEntry_.get(index);  } else {
+        return cmEntryBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+         getCmEntryOrBuilderList() {
+      if (cmEntryBuilder_ != null) {
+        return cmEntryBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(cmEntry_);
+      }
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addCmEntryBuilder() {
+      return getCmEntryFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder addCmEntryBuilder(
+        int index) {
+      return getCmEntryFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * returns list of Contact Entry with embedded Contact Fields
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.contactmanager.ContactManagerEntry cm_entry = 4 [json_name = "cmEntry"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder> 
+         getCmEntryBuilderList() {
+      return getCmEntryFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder> 
+        getCmEntryFieldBuilder() {
+      if (cmEntryBuilder_ == null) {
+        cmEntryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntry.Builder, com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerEntryOrBuilder>(
+                cmEntry_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        cmEntry_ = null;
+      }
+      return cmEntryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
