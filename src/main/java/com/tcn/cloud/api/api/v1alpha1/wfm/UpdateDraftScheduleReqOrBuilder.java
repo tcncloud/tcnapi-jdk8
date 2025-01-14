@@ -112,7 +112,7 @@ public interface UpdateDraftScheduleReqOrBuilder extends
    *
    * <code>bool get_updated_shifts = 7 [json_name = "getUpdatedShifts", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.UpdateDraftScheduleReq.get_updated_shifts is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7217
+   *     See api/v1alpha1/wfm/wfm.proto;l=7211
    * @return The getUpdatedShifts.
    */
   @java.lang.Deprecated boolean getGetUpdatedShifts();
