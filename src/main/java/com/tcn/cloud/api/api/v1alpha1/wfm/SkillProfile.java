@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     skills7_ = java.util.Collections.emptyList();
+    channelTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -415,6 +416,84 @@ private static final long serialVersionUID = 0L;
     return areAveragesManual_;
   }
 
+  public static final int CHANNEL_TYPES_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> channelTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType> channelTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>() {
+            public com.tcn.cloud.api.api.commons.ChannelType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * specifies what channels this skill profile applies to.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+   * @return A list containing the channelTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelTypes_, channelTypes_converter_);
+  }
+  /**
+   * <pre>
+   * specifies what channels this skill profile applies to.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+   * @return The count of channelTypes.
+   */
+  @java.lang.Override
+  public int getChannelTypesCount() {
+    return channelTypes_.size();
+  }
+  /**
+   * <pre>
+   * specifies what channels this skill profile applies to.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The channelTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index) {
+    return channelTypes_converter_.convert(channelTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * specifies what channels this skill profile applies to.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for channelTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getChannelTypesValueList() {
+    return channelTypes_;
+  }
+  /**
+   * <pre>
+   * specifies what channels this skill profile applies to.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of channelTypes at the given index.
+   */
+  @java.lang.Override
+  public int getChannelTypesValue(int index) {
+    return channelTypes_.get(index);
+  }
+  private int channelTypesMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -429,6 +508,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (skillProfileSid_ != 0L) {
       output.writeInt64(1, skillProfileSid_);
     }
@@ -470,6 +550,13 @@ private static final long serialVersionUID = 0L;
     }
     if (areAveragesManual_ != false) {
       output.writeBool(14, areAveragesManual_);
+    }
+    if (getChannelTypesList().size() > 0) {
+      output.writeUInt32NoTag(130);
+      output.writeUInt32NoTag(channelTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < channelTypes_.size(); i++) {
+      output.writeEnumNoTag(channelTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -534,6 +621,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, areAveragesManual_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < channelTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(channelTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getChannelTypesList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }channelTypesMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -588,6 +687,7 @@ private static final long serialVersionUID = 0L;
             other.getAverageTimeToAbortInSeconds())) return false;
     if (getAreAveragesManual()
         != other.getAreAveragesManual()) return false;
+    if (!channelTypes_.equals(other.channelTypes_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -641,6 +741,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ARE_AVERAGES_MANUAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAreAveragesManual());
+    if (getChannelTypesCount() > 0) {
+      hash = (37 * hash) + CHANNEL_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + channelTypes_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -804,6 +908,8 @@ private static final long serialVersionUID = 0L;
       averageAfterCallWorkInSeconds_ = 0F;
       averageTimeToAbortInSeconds_ = 0F;
       areAveragesManual_ = false;
+      channelTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00004000);
       return this;
     }
 
@@ -846,6 +952,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.skills7_ = skills7Builder_.build();
       }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        channelTypes_ = java.util.Collections.unmodifiableList(channelTypes_);
+        bitField0_ = (bitField0_ & ~0x00004000);
+      }
+      result.channelTypes_ = channelTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile result) {
@@ -1008,6 +1119,16 @@ private static final long serialVersionUID = 0L;
       if (other.getAreAveragesManual() != false) {
         setAreAveragesManual(other.getAreAveragesManual());
       }
+      if (!other.channelTypes_.isEmpty()) {
+        if (channelTypes_.isEmpty()) {
+          channelTypes_ = other.channelTypes_;
+          bitField0_ = (bitField0_ & ~0x00004000);
+        } else {
+          ensureChannelTypesIsMutable();
+          channelTypes_.addAll(other.channelTypes_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1116,6 +1237,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 112
+            case 128: {
+              int tmpRaw = input.readEnum();
+              ensureChannelTypesIsMutable();
+              channelTypes_.add(tmpRaw);
+              break;
+            } // case 128
+            case 130: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureChannelTypesIsMutable();
+                channelTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2331,6 +2469,194 @@ private static final long serialVersionUID = 0L;
     public Builder clearAreAveragesManual() {
       bitField0_ = (bitField0_ & ~0x00002000);
       areAveragesManual_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> channelTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureChannelTypesIsMutable() {
+      if (!((bitField0_ & 0x00004000) != 0)) {
+        channelTypes_ = new java.util.ArrayList<java.lang.Integer>(channelTypes_);
+        bitField0_ |= 0x00004000;
+      }
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @return A list containing the channelTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channelTypes_, channelTypes_converter_);
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @return The count of channelTypes.
+     */
+    public int getChannelTypesCount() {
+      return channelTypes_.size();
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The channelTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index) {
+      return channelTypes_converter_.convert(channelTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The channelTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypes(
+        int index, com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelTypesIsMutable();
+      channelTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param value The channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannelTypes(com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelTypesIsMutable();
+      channelTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param values The channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannelTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ChannelType> values) {
+      ensureChannelTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.ChannelType value : values) {
+        channelTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChannelTypes() {
+      channelTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for channelTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getChannelTypesValueList() {
+      return java.util.Collections.unmodifiableList(channelTypes_);
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of channelTypes at the given index.
+     */
+    public int getChannelTypesValue(int index) {
+      return channelTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for channelTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypesValue(
+        int index, int value) {
+      ensureChannelTypesIsMutable();
+      channelTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param value The enum numeric value on the wire for channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannelTypesValue(int value) {
+      ensureChannelTypesIsMutable();
+      channelTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * specifies what channels this skill profile applies to.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channel_types = 16 [json_name = "channelTypes"];</code>
+     * @param values The enum numeric values on the wire for channelTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannelTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureChannelTypesIsMutable();
+      for (int value : values) {
+        channelTypes_.add(value);
+      }
       onChanged();
       return this;
     }
