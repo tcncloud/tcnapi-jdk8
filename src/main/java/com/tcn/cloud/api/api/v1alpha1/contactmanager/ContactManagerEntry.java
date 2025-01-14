@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
    * @return The contactManagerEntryListId.
    */
   @java.lang.Override
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The key.
    */
   @java.lang.Override
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string key = 3 [json_name = "key", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
    * @return The bytes for key.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The value.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string value = 4 [json_name = "value", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The type.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string type = 5 [json_name = "type", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -361,32 +361,6 @@ private static final long serialVersionUID = 0L;
     return field_.get(index);
   }
 
-  public static final int EXPIRY_DATE_FIELD_NUMBER = 12;
-  private com.google.protobuf.Timestamp expiryDate_;
-  /**
-   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-   * @return Whether the expiryDate field is set.
-   */
-  @java.lang.Override
-  public boolean hasExpiryDate() {
-    return expiryDate_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-   * @return The expiryDate.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getExpiryDate() {
-    return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-    return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -433,9 +407,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < field_.size(); i++) {
       output.writeMessage(11, field_.get(i));
-    }
-    if (expiryDate_ != null) {
-      output.writeMessage(12, getExpiryDate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -491,10 +462,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, field_.get(i));
     }
-    if (expiryDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, getExpiryDate());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -537,11 +504,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFileNameList())) return false;
     if (!getFieldList()
         .equals(other.getFieldList())) return false;
-    if (hasExpiryDate() != other.hasExpiryDate()) return false;
-    if (hasExpiryDate()) {
-      if (!getExpiryDate()
-          .equals(other.getExpiryDate())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -585,10 +547,6 @@ private static final long serialVersionUID = 0L;
     if (getFieldCount() > 0) {
       hash = (37 * hash) + FIELD_FIELD_NUMBER;
       hash = (53 * hash) + getFieldList().hashCode();
-    }
-    if (hasExpiryDate()) {
-      hash = (37 * hash) + EXPIRY_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpiryDate().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -751,11 +709,6 @@ private static final long serialVersionUID = 0L;
         fieldBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000400);
-      expiryDate_ = null;
-      if (expiryDateBuilder_ != null) {
-        expiryDateBuilder_.dispose();
-        expiryDateBuilder_ = null;
-      }
       return this;
     }
 
@@ -836,11 +789,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         fileName_.makeImmutable();
         result.fileName_ = fileName_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.expiryDate_ = expiryDateBuilder_ == null
-            ? expiryDate_
-            : expiryDateBuilder_.build();
       }
     }
 
@@ -957,9 +905,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.hasExpiryDate()) {
-        mergeExpiryDate(other.getExpiryDate());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1054,13 +999,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
-            case 98: {
-              input.readMessage(
-                  getExpiryDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1114,7 +1052,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @return The contactManagerEntryListId.
      */
     @java.lang.Override
@@ -1124,7 +1062,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @param value The contactManagerEntryListId to set.
      * @return This builder for chaining.
      */
@@ -1138,7 +1076,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 contact_manager_entry_list_id = 2 [json_name = "contactManagerEntryListId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.contact_manager_entry_list_id is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=78
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=77
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContactManagerEntryListId() {
@@ -1152,7 +1090,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return The key.
      */
     @java.lang.Deprecated public java.lang.String getKey() {
@@ -1170,7 +1108,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return The bytes for key.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1189,7 +1127,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @param value The key to set.
      * @return This builder for chaining.
      */
@@ -1204,7 +1142,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearKey() {
@@ -1216,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string key = 3 [json_name = "key", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.key is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=81
      * @param value The bytes for key to set.
      * @return This builder for chaining.
      */
@@ -1234,7 +1172,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The value.
      */
     @java.lang.Deprecated public java.lang.String getValue() {
@@ -1252,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return The bytes for value.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1271,7 +1209,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -1286,7 +1224,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearValue() {
@@ -1298,7 +1236,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string value = 4 [json_name = "value", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.value is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=82
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -1316,7 +1254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The type.
      */
     @java.lang.Deprecated public java.lang.String getType() {
@@ -1334,7 +1272,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return The bytes for type.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1353,7 +1291,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -1368,7 +1306,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearType() {
@@ -1380,7 +1318,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string type = 5 [json_name = "type", deprecated = true];</code>
      * @deprecated api.v1alpha1.contactmanager.ContactManagerEntry.type is deprecated.
-     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=84
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=83
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
@@ -2066,125 +2004,6 @@ private static final long serialVersionUID = 0L;
         field_ = null;
       }
       return fieldBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp expiryDate_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiryDateBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     * @return Whether the expiryDate field is set.
-     */
-    public boolean hasExpiryDate() {
-      return ((bitField0_ & 0x00000800) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     * @return The expiryDate.
-     */
-    public com.google.protobuf.Timestamp getExpiryDate() {
-      if (expiryDateBuilder_ == null) {
-        return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
-      } else {
-        return expiryDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public Builder setExpiryDate(com.google.protobuf.Timestamp value) {
-      if (expiryDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        expiryDate_ = value;
-      } else {
-        expiryDateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public Builder setExpiryDate(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (expiryDateBuilder_ == null) {
-        expiryDate_ = builderForValue.build();
-      } else {
-        expiryDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
-      if (expiryDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          expiryDate_ != null &&
-          expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getExpiryDateBuilder().mergeFrom(value);
-        } else {
-          expiryDate_ = value;
-        }
-      } else {
-        expiryDateBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public Builder clearExpiryDate() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      expiryDate_ = null;
-      if (expiryDateBuilder_ != null) {
-        expiryDateBuilder_.dispose();
-        expiryDateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return getExpiryDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      if (expiryDateBuilder_ != null) {
-        return expiryDateBuilder_.getMessageOrBuilder();
-      } else {
-        return expiryDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiry_date = 12 [json_name = "expiryDate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getExpiryDateFieldBuilder() {
-      if (expiryDateBuilder_ == null) {
-        expiryDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getExpiryDate(),
-                getParentForChildren(),
-                isClean());
-        expiryDate_ = null;
-      }
-      return expiryDateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
