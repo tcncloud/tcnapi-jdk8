@@ -29,7 +29,8 @@ public interface ListSkillProfilesReqOrBuilder extends
 
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -38,7 +39,8 @@ public interface ListSkillProfilesReqOrBuilder extends
   java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelTypesList();
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -47,7 +49,8 @@ public interface ListSkillProfilesReqOrBuilder extends
   int getChannelTypesCount();
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -57,7 +60,8 @@ public interface ListSkillProfilesReqOrBuilder extends
   com.tcn.cloud.api.api.commons.ChannelType getChannelTypes(int index);
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -67,7 +71,8 @@ public interface ListSkillProfilesReqOrBuilder extends
   getChannelTypesValueList();
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>

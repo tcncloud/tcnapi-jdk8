@@ -87,7 +87,8 @@ private static final long serialVersionUID = 0L;
           };
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -100,7 +101,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -112,7 +114,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -125,7 +128,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -138,7 +142,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * If set, will filter skill profiles by the given channel types.
+   * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+   * If left empty it will assume all channel types.
    * </pre>
    *
    * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -666,7 +671,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -678,7 +684,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -689,7 +696,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -701,7 +709,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -721,7 +730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -739,7 +749,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -757,7 +768,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -771,7 +783,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -783,7 +796,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -795,7 +809,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -812,7 +827,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
@@ -827,7 +843,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If set, will filter skill profiles by the given channel types.
+     * Channel types to filter the skill profiles on, skill profiles with any of the given channel types will be returned.
+     * If left empty it will assume all channel types.
      * </pre>
      *
      * <code>repeated .api.commons.ChannelType channel_types = 3 [json_name = "channelTypes"];</code>
