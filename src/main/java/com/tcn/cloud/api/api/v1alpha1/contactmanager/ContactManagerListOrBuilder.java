@@ -34,14 +34,14 @@ public interface ContactManagerListOrBuilder extends
   /**
    * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=96
    * @return The fileName.
    */
   @java.lang.Deprecated java.lang.String getFileName();
   /**
    * <code>string file_name = 4 [json_name = "fileName", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.file_name is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=98
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=96
    * @return The bytes for fileName.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface ContactManagerListOrBuilder extends
    *
    * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=101
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=99
    * @return A list containing the listDetails.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -78,7 +78,7 @@ public interface ContactManagerListOrBuilder extends
    *
    * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=101
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=99
    * @return The count of listDetails.
    */
   @java.lang.Deprecated int getListDetailsCount();
@@ -89,7 +89,7 @@ public interface ContactManagerListOrBuilder extends
    *
    * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=101
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=99
    * @param index The index of the element to return.
    * @return The listDetails at the given index.
    */
@@ -101,7 +101,7 @@ public interface ContactManagerListOrBuilder extends
    *
    * <code>repeated string list_details = 6 [json_name = "listDetails", deprecated = true];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.list_details is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=101
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=99
    * @param index The index of the value to return.
    * @return The bytes of the listDetails at the given index.
    */
@@ -111,7 +111,7 @@ public interface ContactManagerListOrBuilder extends
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.contactmanager.ContactManagerList.ttl is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=102
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=100
    * @return The ttl.
    */
   @java.lang.Deprecated long getTtl();
