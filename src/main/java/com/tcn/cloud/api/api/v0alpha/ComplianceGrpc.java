@@ -759,6 +759,37 @@ public final class ComplianceGrpc {
     return getProcessScrubListDeleteUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest,
+      com.google.longrunning.Operation> getScrubListDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ScrubListDelete",
+      requestType = com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest,
+      com.google.longrunning.Operation> getScrubListDeleteMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest, com.google.longrunning.Operation> getScrubListDeleteMethod;
+    if ((getScrubListDeleteMethod = ComplianceGrpc.getScrubListDeleteMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getScrubListDeleteMethod = ComplianceGrpc.getScrubListDeleteMethod) == null) {
+          ComplianceGrpc.getScrubListDeleteMethod = getScrubListDeleteMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScrubListDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ScrubListDelete"))
+              .build();
+        }
+      }
+    }
+    return getScrubListDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
       com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> getExportScrubListMethod;
 
@@ -2334,6 +2365,13 @@ public final class ComplianceGrpc {
 
     /**
      */
+    default void scrubListDelete(com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScrubListDeleteMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportScrubListMethod(), responseObserver);
@@ -3110,6 +3148,14 @@ public final class ComplianceGrpc {
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessScrubListDeleteUploadMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void scrubListDelete(com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getScrubListDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3903,6 +3949,13 @@ public final class ComplianceGrpc {
 
     /**
      */
+    public com.google.longrunning.Operation scrubListDelete(com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getScrubListDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.tcn.cloud.api.api.v0alpha.ExportScrubListRes exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExportScrubListMethod(), getCallOptions(), request);
@@ -4664,6 +4717,14 @@ public final class ComplianceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> scrubListDelete(
+        com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getScrubListDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> exportScrubList(
         com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -5266,49 +5327,50 @@ public final class ComplianceGrpc {
   private static final int METHODID_PROCESS_SCRUB_LIST_UPLOAD = 21;
   private static final int METHODID_SCRUB_LIST_DOWNLOAD = 22;
   private static final int METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD = 23;
-  private static final int METHODID_EXPORT_SCRUB_LIST = 24;
-  private static final int METHODID_PURGE_SCRUB_LIST = 25;
-  private static final int METHODID_CREATE_SCENARIO = 26;
-  private static final int METHODID_GET_SCENARIO = 27;
-  private static final int METHODID_UPDATE_SCENARIO = 28;
-  private static final int METHODID_DELETE_SCENARIO = 29;
-  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 30;
-  private static final int METHODID_LIST_ALL_SCENARIOS = 31;
-  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 32;
-  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 33;
-  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 34;
-  private static final int METHODID_ASSIGN_SCENARIO = 35;
-  private static final int METHODID_UNASSIGN_SCENARIO = 36;
-  private static final int METHODID_ENABLE_SCENARIO = 37;
-  private static final int METHODID_DISABLE_SCENARIO = 38;
-  private static final int METHODID_GET_FIELD_NAMES = 39;
-  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 40;
-  private static final int METHODID_CREATE_CONSENT_PROFILE = 41;
-  private static final int METHODID_CREATE_CONSENT = 42;
-  private static final int METHODID_GET_CONSENT_PROFILE = 43;
-  private static final int METHODID_GET_CONSENT = 44;
-  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 45;
-  private static final int METHODID_GET_CONSENT_BY_CONTENT = 46;
-  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 47;
-  private static final int METHODID_UPDATE_CONSENT = 48;
-  private static final int METHODID_EXPIRE_CONSENT = 49;
-  private static final int METHODID_REVOKE_CONSENT = 50;
-  private static final int METHODID_DELETE_CONSENT = 51;
-  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 52;
-  private static final int METHODID_CONSENT_LIST_DOWNLOAD = 53;
-  private static final int METHODID_ENABLE_CONSENT_PROFILE = 54;
-  private static final int METHODID_DISABLE_CONSENT_PROFILE = 55;
-  private static final int METHODID_LIST_CONSENT_PROFILES = 56;
-  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 57;
-  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 58;
-  private static final int METHODID_EXPORT_CONSENT_LIST = 59;
-  private static final int METHODID_LIST_CONSENT_TOPICS = 60;
-  private static final int METHODID_GET_CONSENT_TOPIC = 61;
-  private static final int METHODID_CREATE_CONSENT_TOPIC = 62;
-  private static final int METHODID_DELETE_CONSENT_TOPIC = 63;
-  private static final int METHODID_UPDATE_CONSENT_TOPIC = 64;
-  private static final int METHODID_PROCESS_OUTBOUND_CALL = 65;
-  private static final int METHODID_QUERY_HOLIDAYS = 66;
+  private static final int METHODID_SCRUB_LIST_DELETE = 24;
+  private static final int METHODID_EXPORT_SCRUB_LIST = 25;
+  private static final int METHODID_PURGE_SCRUB_LIST = 26;
+  private static final int METHODID_CREATE_SCENARIO = 27;
+  private static final int METHODID_GET_SCENARIO = 28;
+  private static final int METHODID_UPDATE_SCENARIO = 29;
+  private static final int METHODID_DELETE_SCENARIO = 30;
+  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 31;
+  private static final int METHODID_LIST_ALL_SCENARIOS = 32;
+  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 33;
+  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 34;
+  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 35;
+  private static final int METHODID_ASSIGN_SCENARIO = 36;
+  private static final int METHODID_UNASSIGN_SCENARIO = 37;
+  private static final int METHODID_ENABLE_SCENARIO = 38;
+  private static final int METHODID_DISABLE_SCENARIO = 39;
+  private static final int METHODID_GET_FIELD_NAMES = 40;
+  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 41;
+  private static final int METHODID_CREATE_CONSENT_PROFILE = 42;
+  private static final int METHODID_CREATE_CONSENT = 43;
+  private static final int METHODID_GET_CONSENT_PROFILE = 44;
+  private static final int METHODID_GET_CONSENT = 45;
+  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 46;
+  private static final int METHODID_GET_CONSENT_BY_CONTENT = 47;
+  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 48;
+  private static final int METHODID_UPDATE_CONSENT = 49;
+  private static final int METHODID_EXPIRE_CONSENT = 50;
+  private static final int METHODID_REVOKE_CONSENT = 51;
+  private static final int METHODID_DELETE_CONSENT = 52;
+  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 53;
+  private static final int METHODID_CONSENT_LIST_DOWNLOAD = 54;
+  private static final int METHODID_ENABLE_CONSENT_PROFILE = 55;
+  private static final int METHODID_DISABLE_CONSENT_PROFILE = 56;
+  private static final int METHODID_LIST_CONSENT_PROFILES = 57;
+  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 58;
+  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 59;
+  private static final int METHODID_EXPORT_CONSENT_LIST = 60;
+  private static final int METHODID_LIST_CONSENT_TOPICS = 61;
+  private static final int METHODID_GET_CONSENT_TOPIC = 62;
+  private static final int METHODID_CREATE_CONSENT_TOPIC = 63;
+  private static final int METHODID_DELETE_CONSENT_TOPIC = 64;
+  private static final int METHODID_UPDATE_CONSENT_TOPIC = 65;
+  private static final int METHODID_PROCESS_OUTBOUND_CALL = 66;
+  private static final int METHODID_QUERY_HOLIDAYS = 67;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5421,6 +5483,10 @@ public final class ComplianceGrpc {
           break;
         case METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD:
           serviceImpl.processScrubListDeleteUpload((com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_SCRUB_LIST_DELETE:
+          serviceImpl.scrubListDelete((com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_EXPORT_SCRUB_LIST:
@@ -5781,6 +5847,13 @@ public final class ComplianceGrpc {
               com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
               com.google.longrunning.Operation>(
                 service, METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD)))
+        .addMethod(
+          getScrubListDeleteMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ScrubListDeleteRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_SCRUB_LIST_DELETE)))
         .addMethod(
           getExportScrubListMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6154,6 +6227,7 @@ public final class ComplianceGrpc {
               .addMethod(getProcessScrubListUploadMethod())
               .addMethod(getScrubListDownloadMethod())
               .addMethod(getProcessScrubListDeleteUploadMethod())
+              .addMethod(getScrubListDeleteMethod())
               .addMethod(getExportScrubListMethod())
               .addMethod(getPurgeScrubListMethod())
               .addMethod(getCreateScenarioMethod())
