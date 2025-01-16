@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Script is the entity for extendend agent script details
+   * Script is the entity for extended agent script details
    * </pre>
    *
    * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script}
@@ -610,7 +610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Script is the entity for extendend agent script details
+     * Script is the entity for extended agent script details
      * </pre>
      *
      * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentScriptsResponse.Script}
