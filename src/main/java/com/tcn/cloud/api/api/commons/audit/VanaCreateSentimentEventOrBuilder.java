@@ -47,5 +47,20 @@ public interface VanaCreateSentimentEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSentimentEvent.SmsOrBuilder getSmsOrBuilder();
 
+  /**
+   * <code>.api.commons.audit.VanaCreateSentimentEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  boolean hasChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateSentimentEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateSentimentEvent.Chat getChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateSentimentEvent.Chat chat = 4 [json_name = "chat"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateSentimentEvent.ChatOrBuilder getChatOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.VanaCreateSentimentEvent.MetadataCase getMetadataCase();
 }

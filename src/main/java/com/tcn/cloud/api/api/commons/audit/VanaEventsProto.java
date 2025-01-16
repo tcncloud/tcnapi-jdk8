@@ -60,6 +60,11 @@ public final class VanaEventsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_Chat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_VanaCreateTranscriptEvent_Chat_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -75,6 +80,11 @@ public final class VanaEventsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_VanaCreateSentimentEvent_Sms_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_VanaCreateSentimentEvent_Chat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_VanaCreateSentimentEvent_Chat_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -89,6 +99,11 @@ public final class VanaEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -128,41 +143,50 @@ public final class VanaEventsProto {
       "tionR\tendOffset\022#\n\roriginal_text\030\003 \001(\tR\014" +
       "originalText\022#\n\rproposed_text\030\004 \001(\tR\014pro" +
       "posedText\022\020\n\003url\030\005 \001(\tR\003url\022\030\n\007channel\030\006" +
-      " \001(\rR\007channel\"\336\003\n\031VanaCreateTranscriptEv" +
+      " \001(\rR\007channel\"\332\004\n\031VanaCreateTranscriptEv" +
       "ent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscriptS" +
       "id\022G\n\004call\030\002 \001(\01321.api.commons.audit.Van" +
       "aCreateTranscriptEvent.CallH\000R\004call\022D\n\003s" +
       "ms\030\003 \001(\01320.api.commons.audit.VanaCreateT" +
-      "ranscriptEvent.SmsH\000R\003sms\032\314\001\n\004Call\022\031\n\010ca" +
-      "ll_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\016" +
-      "2\032.api.commons.CallType.EnumR\010callType\0226" +
-      "\n\ttalk_time\030\003 \001(\0132\031.google.protobuf.Dura" +
-      "tionR\010talkTime\0228\n\naudio_time\030\004 \001(\0132\031.goo" +
-      "gle.protobuf.DurationR\taudioTime\0320\n\003Sms\022" +
-      ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
-      "idB\n\n\010metadata\"\350\002\n\030VanaCreateSentimentEv" +
-      "ent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscriptS" +
-      "id\022F\n\004call\030\002 \001(\01320.api.commons.audit.Van" +
-      "aCreateSentimentEvent.CallH\000R\004call\022C\n\003sm" +
-      "s\030\003 \001(\0132/.api.commons.audit.VanaCreateSe" +
-      "ntimentEvent.SmsH\000R\003sms\032Z\n\004Call\022\031\n\010call_" +
-      "sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032." +
-      "api.commons.CallType.EnumR\010callType\0320\n\003S" +
-      "ms\022)\n\020conversation_sid\030\001 \001(\003R\017conversati" +
-      "onSidB\n\n\010metadata\"\342\002\n\026VanaCreateSummaryE" +
-      "vent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscript" +
-      "Sid\022D\n\004call\030\002 \001(\0132..api.commons.audit.Va" +
-      "naCreateSummaryEvent.CallH\000R\004call\022A\n\003sms" +
-      "\030\003 \001(\0132-.api.commons.audit.VanaCreateSum" +
-      "maryEvent.SmsH\000R\003sms\032Z\n\004Call\022\031\n\010call_sid" +
-      "\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api" +
-      ".commons.CallType.EnumR\010callType\0320\n\003Sms\022" +
-      ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
-      "idB\n\n\010metadataB\234\001\n#com.tcn.cloud.api.api" +
-      ".commons.auditB\017VanaEventsProtoP\001\242\002\003ACA\252" +
-      "\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342" +
-      "\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::C" +
-      "ommons::Auditb\006proto3"
+      "ranscriptEvent.SmsH\000R\003sms\022G\n\004chat\030\004 \001(\0132" +
+      "1.api.commons.audit.VanaCreateTranscript" +
+      "Event.ChatH\000R\004chat\032\314\001\n\004Call\022\031\n\010call_sid\030" +
+      "\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api." +
+      "commons.CallType.EnumR\010callType\0226\n\ttalk_" +
+      "time\030\003 \001(\0132\031.google.protobuf.DurationR\010t" +
+      "alkTime\0228\n\naudio_time\030\004 \001(\0132\031.google.pro" +
+      "tobuf.DurationR\taudioTime\0320\n\003Sms\022)\n\020conv" +
+      "ersation_sid\030\001 \001(\003R\017conversationSid\0321\n\004C" +
+      "hat\022)\n\020conversation_sid\030\001 \001(\003R\017conversat" +
+      "ionSidB\n\n\010metadata\"\343\003\n\030VanaCreateSentime" +
+      "ntEvent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscr" +
+      "iptSid\022F\n\004call\030\002 \001(\01320.api.commons.audit" +
+      ".VanaCreateSentimentEvent.CallH\000R\004call\022C" +
+      "\n\003sms\030\003 \001(\0132/.api.commons.audit.VanaCrea" +
+      "teSentimentEvent.SmsH\000R\003sms\022F\n\004chat\030\004 \001(" +
+      "\01320.api.commons.audit.VanaCreateSentimen" +
+      "tEvent.ChatH\000R\004chat\032Z\n\004Call\022\031\n\010call_sid\030" +
+      "\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api." +
+      "commons.CallType.EnumR\010callType\0320\n\003Sms\022)" +
+      "\n\020conversation_sid\030\001 \001(\003R\017conversationSi" +
+      "d\0321\n\004Chat\022)\n\020conversation_sid\030\001 \001(\003R\017con" +
+      "versationSidB\n\n\010metadata\"\333\003\n\026VanaCreateS" +
+      "ummaryEvent\022%\n\016transcript_sid\030\001 \001(\003R\rtra" +
+      "nscriptSid\022D\n\004call\030\002 \001(\0132..api.commons.a" +
+      "udit.VanaCreateSummaryEvent.CallH\000R\004call" +
+      "\022A\n\003sms\030\003 \001(\0132-.api.commons.audit.VanaCr" +
+      "eateSummaryEvent.SmsH\000R\003sms\022D\n\004chat\030\004 \001(" +
+      "\0132..api.commons.audit.VanaCreateSummaryE" +
+      "vent.ChatH\000R\004chat\032Z\n\004Call\022\031\n\010call_sid\030\001 " +
+      "\001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api.co" +
+      "mmons.CallType.EnumR\010callType\0320\n\003Sms\022)\n\020" +
+      "conversation_sid\030\001 \001(\003R\017conversationSid\032" +
+      "1\n\004Chat\022)\n\020conversation_sid\030\001 \001(\003R\017conve" +
+      "rsationSidB\n\n\010metadataB\234\001\n#com.tcn.cloud" +
+      ".api.api.commons.auditB\017VanaEventsProtoP" +
+      "\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Common" +
+      "s\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352" +
+      "\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -212,7 +236,7 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor,
-        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Metadata", });
+        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Chat", "Metadata", });
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_descriptor =
       internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_fieldAccessorTable = new
@@ -225,12 +249,18 @@ public final class VanaEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor,
         new java.lang.String[] { "ConversationSid", });
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_Chat_descriptor =
+      internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor.getNestedTypes().get(2);
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_Chat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_VanaCreateTranscriptEvent_Chat_descriptor,
+        new java.lang.String[] { "ConversationSid", });
     internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_audit_VanaCreateSentimentEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor,
-        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Metadata", });
+        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Chat", "Metadata", });
     internal_static_api_commons_audit_VanaCreateSentimentEvent_Call_descriptor =
       internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_audit_VanaCreateSentimentEvent_Call_fieldAccessorTable = new
@@ -243,12 +273,18 @@ public final class VanaEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSentimentEvent_Sms_descriptor,
         new java.lang.String[] { "ConversationSid", });
+    internal_static_api_commons_audit_VanaCreateSentimentEvent_Chat_descriptor =
+      internal_static_api_commons_audit_VanaCreateSentimentEvent_descriptor.getNestedTypes().get(2);
+    internal_static_api_commons_audit_VanaCreateSentimentEvent_Chat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_VanaCreateSentimentEvent_Chat_descriptor,
+        new java.lang.String[] { "ConversationSid", });
     internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_commons_audit_VanaCreateSummaryEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor,
-        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Metadata", });
+        new java.lang.String[] { "TranscriptSid", "Call", "Sms", "Chat", "Metadata", });
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Call_descriptor =
       internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Call_fieldAccessorTable = new
@@ -260,6 +296,12 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateSummaryEvent_Sms_descriptor,
+        new java.lang.String[] { "ConversationSid", });
+    internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor =
+      internal_static_api_commons_audit_VanaCreateSummaryEvent_descriptor.getNestedTypes().get(2);
+    internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor,
         new java.lang.String[] { "ConversationSid", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();

@@ -47,5 +47,20 @@ public interface VanaCreateSummaryEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.SmsOrBuilder getSmsOrBuilder();
 
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  boolean hasChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder getChatOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.MetadataCase getMetadataCase();
 }

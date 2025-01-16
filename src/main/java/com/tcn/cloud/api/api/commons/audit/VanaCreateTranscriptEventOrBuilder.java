@@ -43,5 +43,20 @@ public interface VanaCreateTranscriptEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder getSmsOrBuilder();
 
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  boolean hasChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Chat getChat();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Chat chat = 4 [json_name = "chat"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.ChatOrBuilder getChatOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.MetadataCase getMetadataCase();
 }

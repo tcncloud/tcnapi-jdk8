@@ -1193,6 +1193,511 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ChatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.audit.VanaCreateSummaryEvent.Chat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. Unique conversation identifier.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    long getConversationSid();
+  }
+  /**
+   * <pre>
+   * Chat is the chat metadata.
+   * </pre>
+   *
+   * Protobuf type {@code api.commons.audit.VanaCreateSummaryEvent.Chat}
+   */
+  public static final class Chat extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.audit.VanaCreateSummaryEvent.Chat)
+      ChatOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Chat.newBuilder() to construct.
+    private Chat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Chat() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Chat();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.class, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder.class);
+    }
+
+    public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
+    private long conversationSid_ = 0L;
+    /**
+     * <pre>
+     * Required. Unique conversation identifier.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (conversationSid_ != 0L) {
+        output.writeInt64(1, conversationSid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (conversationSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, conversationSid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat other = (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) obj;
+
+      if (getConversationSid()
+          != other.getConversationSid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConversationSid());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Chat is the chat metadata.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.audit.VanaCreateSummaryEvent.Chat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.audit.VanaCreateSummaryEvent.Chat)
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.class, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conversationSid_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateSummaryEvent_Chat_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat build() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat buildPartial() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat result = new com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.conversationSid_ = conversationSid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat other) {
+        if (other == com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance()) return this;
+        if (other.getConversationSid() != 0L) {
+          setConversationSid(other.getConversationSid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                conversationSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long conversationSid_ ;
+      /**
+       * <pre>
+       * Required. Unique conversation identifier.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return The conversationSid.
+       */
+      @java.lang.Override
+      public long getConversationSid() {
+        return conversationSid_;
+      }
+      /**
+       * <pre>
+       * Required. Unique conversation identifier.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @param value The conversationSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversationSid(long value) {
+
+        conversationSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Unique conversation identifier.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversationSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        conversationSid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.audit.VanaCreateSummaryEvent.Chat)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.audit.VanaCreateSummaryEvent.Chat)
+    private static final com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat();
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Chat>
+        PARSER = new com.google.protobuf.AbstractParser<Chat>() {
+      @java.lang.Override
+      public Chat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Chat> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Chat> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int metadataCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object metadata_;
@@ -1201,6 +1706,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CALL(2),
     SMS(3),
+    CHAT(4),
     METADATA_NOT_SET(0);
     private final int value;
     private MetadataCase(int value) {
@@ -1220,6 +1726,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 2: return CALL;
         case 3: return SMS;
+        case 4: return CHAT;
         case 0: return METADATA_NOT_SET;
         default: return null;
       }
@@ -1312,6 +1819,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Sms.getDefaultInstance();
   }
 
+  public static final int CHAT_FIELD_NUMBER = 4;
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  @java.lang.Override
+  public boolean hasChat() {
+    return metadataCase_ == 4;
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getChat() {
+    if (metadataCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder getChatOrBuilder() {
+    if (metadataCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1335,6 +1873,9 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 3) {
       output.writeMessage(3, (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Sms) metadata_);
     }
+    if (metadataCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1355,6 +1896,10 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Sms) metadata_);
+    }
+    if (metadataCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1383,6 +1928,10 @@ private static final long serialVersionUID = 0L;
         if (!getSms()
             .equals(other.getSms())) return false;
         break;
+      case 4:
+        if (!getChat()
+            .equals(other.getChat())) return false;
+        break;
       case 0:
       default:
     }
@@ -1408,6 +1957,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + SMS_FIELD_NUMBER;
         hash = (53 * hash) + getSms().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getChat().hashCode();
         break;
       case 0:
       default:
@@ -1554,6 +2107,9 @@ private static final long serialVersionUID = 0L;
       if (smsBuilder_ != null) {
         smsBuilder_.clear();
       }
+      if (chatBuilder_ != null) {
+        chatBuilder_.clear();
+      }
       metadataCase_ = 0;
       metadata_ = null;
       return this;
@@ -1605,6 +2161,10 @@ private static final long serialVersionUID = 0L;
       if (metadataCase_ == 3 &&
           smsBuilder_ != null) {
         result.metadata_ = smsBuilder_.build();
+      }
+      if (metadataCase_ == 4 &&
+          chatBuilder_ != null) {
+        result.metadata_ = chatBuilder_.build();
       }
     }
 
@@ -1664,6 +2224,10 @@ private static final long serialVersionUID = 0L;
           mergeSms(other.getSms());
           break;
         }
+        case CHAT: {
+          mergeChat(other.getChat());
+          break;
+        }
         case METADATA_NOT_SET: {
           break;
         }
@@ -1713,6 +2277,13 @@ private static final long serialVersionUID = 0L;
               metadataCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getChatFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2071,6 +2642,148 @@ private static final long serialVersionUID = 0L;
       metadataCase_ = 3;
       onChanged();
       return smsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder> chatBuilder_;
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     * @return Whether the chat field is set.
+     */
+    @java.lang.Override
+    public boolean hasChat() {
+      return metadataCase_ == 4;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     * @return The chat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat getChat() {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+      } else {
+        if (metadataCase_ == 4) {
+          return chatBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    public Builder setChat(com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat value) {
+      if (chatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        metadata_ = value;
+        onChanged();
+      } else {
+        chatBuilder_.setMessage(value);
+      }
+      metadataCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    public Builder setChat(
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder builderForValue) {
+      if (chatBuilder_ == null) {
+        metadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        chatBuilder_.setMessage(builderForValue.build());
+      }
+      metadataCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    public Builder mergeChat(com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat value) {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 4 &&
+            metadata_ != com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance()) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          metadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (metadataCase_ == 4) {
+          chatBuilder_.mergeFrom(value);
+        } else {
+          chatBuilder_.setMessage(value);
+        }
+      }
+      metadataCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    public Builder clearChat() {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 4) {
+          metadataCase_ = 0;
+          metadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (metadataCase_ == 4) {
+          metadataCase_ = 0;
+          metadata_ = null;
+        }
+        chatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder getChatBuilder() {
+      return getChatFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder getChatOrBuilder() {
+      if ((metadataCase_ == 4) && (chatBuilder_ != null)) {
+        return chatBuilder_.getMessageOrBuilder();
+      } else {
+        if (metadataCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateSummaryEvent.Chat chat = 4 [json_name = "chat"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder> 
+        getChatFieldBuilder() {
+      if (chatBuilder_ == null) {
+        if (!(metadataCase_ == 4)) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.getDefaultInstance();
+        }
+        chatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.ChatOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.VanaCreateSummaryEvent.Chat) metadata_,
+                getParentForChildren(),
+                isClean());
+        metadata_ = null;
+      }
+      metadataCase_ = 4;
+      onChanged();
+      return chatBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
