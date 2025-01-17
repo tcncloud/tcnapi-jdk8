@@ -82,7 +82,7 @@ public interface ShiftInstanceOrBuilder extends
    *
    * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7064
+   *     See api/v1alpha1/wfm/wfm.proto;l=7074
    * @return The originatingProgramNodeSid.
    */
   @java.lang.Deprecated long getOriginatingProgramNodeSid();

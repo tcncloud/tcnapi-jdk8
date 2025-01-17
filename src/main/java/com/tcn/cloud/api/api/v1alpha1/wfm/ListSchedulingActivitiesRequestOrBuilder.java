@@ -6,4 +6,15 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 public interface ListSchedulingActivitiesRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListSchedulingActivitiesRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * If true, inactive scheduling activities will be included in the return value.
+   * Set to false by default.
+   * </pre>
+   *
+   * <code>bool include_inactive = 1 [json_name = "includeInactive"];</code>
+   * @return The includeInactive.
+   */
+  boolean getIncludeInactive();
 }
