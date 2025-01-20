@@ -75,7 +75,22 @@ private static final long serialVersionUID = 0L;
     return reportJobId_;
   }
 
-  public static final int REPORT_NAME_FIELD_NUMBER = 3;
+  public static final int REPORT_JOB_HASH_FIELD_NUMBER = 3;
+  private long reportJobHash_ = 0L;
+  /**
+   * <pre>
+   * report job hash
+   * </pre>
+   *
+   * <code>int64 report_job_hash = 3 [json_name = "reportJobHash"];</code>
+   * @return The reportJobHash.
+   */
+  @java.lang.Override
+  public long getReportJobHash() {
+    return reportJobHash_;
+  }
+
+  public static final int REPORT_NAME_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object reportName_ = "";
   /**
@@ -83,7 +98,7 @@ private static final long serialVersionUID = 0L;
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 3 [json_name = "reportName"];</code>
+   * <code>string report_name = 4 [json_name = "reportName"];</code>
    * @return The reportName.
    */
   @java.lang.Override
@@ -104,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 3 [json_name = "reportName"];</code>
+   * <code>string report_name = 4 [json_name = "reportName"];</code>
    * @return The bytes for reportName.
    */
   @java.lang.Override
@@ -122,14 +137,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int REPORT_STATUS_FIELD_NUMBER = 4;
+  public static final int REPORT_STATUS_FIELD_NUMBER = 5;
   private int reportStatus_ = 0;
   /**
    * <pre>
    * the report lifecycle status
    * </pre>
    *
-   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+   * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
    * @return The enum numeric value on the wire for reportStatus.
    */
   @java.lang.Override public int getReportStatusValue() {
@@ -140,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * the report lifecycle status
    * </pre>
    *
-   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+   * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
    * @return The reportStatus.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ReportStatus getReportStatus() {
@@ -148,14 +163,14 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ReportStatus.UNRECOGNIZED : result;
   }
 
-  public static final int JOB_REQUESTED_TIME_FIELD_NUMBER = 5;
+  public static final int JOB_REQUESTED_TIME_FIELD_NUMBER = 6;
   private com.google.protobuf.Timestamp jobRequestedTime_;
   /**
    * <pre>
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return Whether the jobRequestedTime field is set.
    */
   @java.lang.Override
@@ -167,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return The jobRequestedTime.
    */
   @java.lang.Override
@@ -179,21 +194,21 @@ private static final long serialVersionUID = 0L;
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder() {
     return jobRequestedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
   }
 
-  public static final int JOB_COMPLETED_TIME_FIELD_NUMBER = 6;
+  public static final int JOB_COMPLETED_TIME_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp jobCompletedTime_;
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
    * @return Whether the jobCompletedTime field is set.
    */
   @java.lang.Override
@@ -205,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
    * @return The jobCompletedTime.
    */
   @java.lang.Override
@@ -217,21 +232,21 @@ private static final long serialVersionUID = 0L;
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
     return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
   }
 
-  public static final int RETRY_COUNT_FIELD_NUMBER = 7;
+  public static final int RETRY_COUNT_FIELD_NUMBER = 8;
   private long retryCount_ = 0L;
   /**
    * <pre>
    * the number of retries for this report
    * </pre>
    *
-   * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
+   * <code>int64 retry_count = 8 [json_name = "retryCount"];</code>
    * @return The retryCount.
    */
   @java.lang.Override
@@ -239,7 +254,7 @@ private static final long serialVersionUID = 0L;
     return retryCount_;
   }
 
-  public static final int FAILURE_REASON_FIELD_NUMBER = 8;
+  public static final int FAILURE_REASON_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object failureReason_ = "";
   /**
@@ -247,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The failureReason.
    */
   @java.lang.Override
@@ -268,7 +283,7 @@ private static final long serialVersionUID = 0L;
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The bytes for failureReason.
    */
   @java.lang.Override
@@ -306,23 +321,26 @@ private static final long serialVersionUID = 0L;
     if (reportJobId_ != 0L) {
       output.writeInt64(2, reportJobId_);
     }
+    if (reportJobHash_ != 0L) {
+      output.writeInt64(3, reportJobHash_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reportName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reportName_);
     }
     if (reportStatus_ != com.tcn.cloud.api.api.commons.ReportStatus.REPORT_STATUS_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, reportStatus_);
+      output.writeEnum(5, reportStatus_);
     }
     if (jobRequestedTime_ != null) {
-      output.writeMessage(5, getJobRequestedTime());
+      output.writeMessage(6, getJobRequestedTime());
     }
     if (jobCompletedTime_ != null) {
-      output.writeMessage(6, getJobCompletedTime());
+      output.writeMessage(7, getJobCompletedTime());
     }
     if (retryCount_ != 0L) {
-      output.writeInt64(7, retryCount_);
+      output.writeInt64(8, retryCount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, failureReason_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, failureReason_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -341,27 +359,31 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, reportJobId_);
     }
+    if (reportJobHash_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, reportJobHash_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reportName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reportName_);
     }
     if (reportStatus_ != com.tcn.cloud.api.api.commons.ReportStatus.REPORT_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, reportStatus_);
+        .computeEnumSize(5, reportStatus_);
     }
     if (jobRequestedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getJobRequestedTime());
+        .computeMessageSize(6, getJobRequestedTime());
     }
     if (jobCompletedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getJobCompletedTime());
+        .computeMessageSize(7, getJobCompletedTime());
     }
     if (retryCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(7, retryCount_);
+        .computeInt64Size(8, retryCount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, failureReason_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, failureReason_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -382,6 +404,8 @@ private static final long serialVersionUID = 0L;
         != other.getReportLogId()) return false;
     if (getReportJobId()
         != other.getReportJobId()) return false;
+    if (getReportJobHash()
+        != other.getReportJobHash()) return false;
     if (!getReportName()
         .equals(other.getReportName())) return false;
     if (reportStatus_ != other.reportStatus_) return false;
@@ -416,6 +440,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + REPORT_JOB_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getReportJobId());
+    hash = (37 * hash) + REPORT_JOB_HASH_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getReportJobHash());
     hash = (37 * hash) + REPORT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getReportName().hashCode();
     hash = (37 * hash) + REPORT_STATUS_FIELD_NUMBER;
@@ -570,6 +597,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       reportLogId_ = 0L;
       reportJobId_ = 0L;
+      reportJobHash_ = 0L;
       reportName_ = "";
       reportStatus_ = 0;
       jobRequestedTime_ = null;
@@ -624,25 +652,28 @@ private static final long serialVersionUID = 0L;
         result.reportJobId_ = reportJobId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.reportName_ = reportName_;
+        result.reportJobHash_ = reportJobHash_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.reportStatus_ = reportStatus_;
+        result.reportName_ = reportName_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.reportStatus_ = reportStatus_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.jobRequestedTime_ = jobRequestedTimeBuilder_ == null
             ? jobRequestedTime_
             : jobRequestedTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.jobCompletedTime_ = jobCompletedTimeBuilder_ == null
             ? jobCompletedTime_
             : jobCompletedTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.retryCount_ = retryCount_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.failureReason_ = failureReason_;
       }
     }
@@ -697,9 +728,12 @@ private static final long serialVersionUID = 0L;
       if (other.getReportJobId() != 0L) {
         setReportJobId(other.getReportJobId());
       }
+      if (other.getReportJobHash() != 0L) {
+        setReportJobHash(other.getReportJobHash());
+      }
       if (!other.getReportName().isEmpty()) {
         reportName_ = other.reportName_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.reportStatus_ != 0) {
@@ -716,7 +750,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFailureReason().isEmpty()) {
         failureReason_ = other.failureReason_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -755,40 +789,45 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              reportName_ = input.readStringRequireUtf8();
+            case 24: {
+              reportJobHash_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 32: {
-              reportStatus_ = input.readEnum();
+            } // case 24
+            case 34: {
+              reportName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
-            case 42: {
-              input.readMessage(
-                  getJobRequestedTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            } // case 34
+            case 40: {
+              reportStatus_ = input.readEnum();
               bitField0_ |= 0x00000010;
               break;
-            } // case 42
+            } // case 40
             case 50: {
               input.readMessage(
-                  getJobCompletedTimeFieldBuilder().getBuilder(),
+                  getJobRequestedTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 56: {
-              retryCount_ = input.readInt64();
+            case 58: {
+              input.readMessage(
+                  getJobCompletedTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
-            } // case 56
-            case 66: {
-              failureReason_ = input.readStringRequireUtf8();
+            } // case 58
+            case 64: {
+              retryCount_ = input.readInt64();
               bitField0_ |= 0x00000080;
               break;
-            } // case 66
+            } // case 64
+            case 74: {
+              failureReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -894,13 +933,57 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long reportJobHash_ ;
+    /**
+     * <pre>
+     * report job hash
+     * </pre>
+     *
+     * <code>int64 report_job_hash = 3 [json_name = "reportJobHash"];</code>
+     * @return The reportJobHash.
+     */
+    @java.lang.Override
+    public long getReportJobHash() {
+      return reportJobHash_;
+    }
+    /**
+     * <pre>
+     * report job hash
+     * </pre>
+     *
+     * <code>int64 report_job_hash = 3 [json_name = "reportJobHash"];</code>
+     * @param value The reportJobHash to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReportJobHash(long value) {
+
+      reportJobHash_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report job hash
+     * </pre>
+     *
+     * <code>int64 report_job_hash = 3 [json_name = "reportJobHash"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReportJobHash() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      reportJobHash_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object reportName_ = "";
     /**
      * <pre>
      * name of the report
      * </pre>
      *
-     * <code>string report_name = 3 [json_name = "reportName"];</code>
+     * <code>string report_name = 4 [json_name = "reportName"];</code>
      * @return The reportName.
      */
     public java.lang.String getReportName() {
@@ -920,7 +1003,7 @@ private static final long serialVersionUID = 0L;
      * name of the report
      * </pre>
      *
-     * <code>string report_name = 3 [json_name = "reportName"];</code>
+     * <code>string report_name = 4 [json_name = "reportName"];</code>
      * @return The bytes for reportName.
      */
     public com.google.protobuf.ByteString
@@ -941,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      * name of the report
      * </pre>
      *
-     * <code>string report_name = 3 [json_name = "reportName"];</code>
+     * <code>string report_name = 4 [json_name = "reportName"];</code>
      * @param value The reportName to set.
      * @return This builder for chaining.
      */
@@ -949,7 +1032,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       reportName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -958,12 +1041,12 @@ private static final long serialVersionUID = 0L;
      * name of the report
      * </pre>
      *
-     * <code>string report_name = 3 [json_name = "reportName"];</code>
+     * <code>string report_name = 4 [json_name = "reportName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearReportName() {
       reportName_ = getDefaultInstance().getReportName();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -972,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * name of the report
      * </pre>
      *
-     * <code>string report_name = 3 [json_name = "reportName"];</code>
+     * <code>string report_name = 4 [json_name = "reportName"];</code>
      * @param value The bytes for reportName to set.
      * @return This builder for chaining.
      */
@@ -981,7 +1064,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       reportName_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -992,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * the report lifecycle status
      * </pre>
      *
-     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+     * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
      * @return The enum numeric value on the wire for reportStatus.
      */
     @java.lang.Override public int getReportStatusValue() {
@@ -1003,13 +1086,13 @@ private static final long serialVersionUID = 0L;
      * the report lifecycle status
      * </pre>
      *
-     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+     * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
      * @param value The enum numeric value on the wire for reportStatus to set.
      * @return This builder for chaining.
      */
     public Builder setReportStatusValue(int value) {
       reportStatus_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1018,7 +1101,7 @@ private static final long serialVersionUID = 0L;
      * the report lifecycle status
      * </pre>
      *
-     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+     * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
      * @return The reportStatus.
      */
     @java.lang.Override
@@ -1031,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      * the report lifecycle status
      * </pre>
      *
-     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+     * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
      * @param value The reportStatus to set.
      * @return This builder for chaining.
      */
@@ -1039,7 +1122,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       reportStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -1049,11 +1132,11 @@ private static final long serialVersionUID = 0L;
      * the report lifecycle status
      * </pre>
      *
-     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
+     * <code>.api.commons.ReportStatus report_status = 5 [json_name = "reportStatus"];</code>
      * @return This builder for chaining.
      */
     public Builder clearReportStatus() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       reportStatus_ = 0;
       onChanged();
       return this;
@@ -1067,18 +1150,18 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      * @return Whether the jobRequestedTime field is set.
      */
     public boolean hasJobRequestedTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      * @return The jobRequestedTime.
      */
     public com.google.protobuf.Timestamp getJobRequestedTime() {
@@ -1093,7 +1176,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public Builder setJobRequestedTime(com.google.protobuf.Timestamp value) {
       if (jobRequestedTimeBuilder_ == null) {
@@ -1104,7 +1187,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobRequestedTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1113,7 +1196,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public Builder setJobRequestedTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1122,7 +1205,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobRequestedTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1131,11 +1214,11 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public Builder mergeJobRequestedTime(com.google.protobuf.Timestamp value) {
       if (jobRequestedTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           jobRequestedTime_ != null &&
           jobRequestedTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getJobRequestedTimeBuilder().mergeFrom(value);
@@ -1145,7 +1228,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobRequestedTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1154,10 +1237,10 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public Builder clearJobRequestedTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       jobRequestedTime_ = null;
       if (jobRequestedTimeBuilder_ != null) {
         jobRequestedTimeBuilder_.dispose();
@@ -1171,10 +1254,10 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getJobRequestedTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getJobRequestedTimeFieldBuilder().getBuilder();
     }
@@ -1183,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder() {
       if (jobRequestedTimeBuilder_ != null) {
@@ -1198,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1222,18 +1305,18 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      * @return Whether the jobCompletedTime field is set.
      */
     public boolean hasJobCompletedTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      * @return The jobCompletedTime.
      */
     public com.google.protobuf.Timestamp getJobCompletedTime() {
@@ -1248,7 +1331,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public Builder setJobCompletedTime(com.google.protobuf.Timestamp value) {
       if (jobCompletedTimeBuilder_ == null) {
@@ -1259,7 +1342,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobCompletedTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1268,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public Builder setJobCompletedTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1277,7 +1360,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobCompletedTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1286,11 +1369,11 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public Builder mergeJobCompletedTime(com.google.protobuf.Timestamp value) {
       if (jobCompletedTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           jobCompletedTime_ != null &&
           jobCompletedTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getJobCompletedTimeBuilder().mergeFrom(value);
@@ -1300,7 +1383,7 @@ private static final long serialVersionUID = 0L;
       } else {
         jobCompletedTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1309,10 +1392,10 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public Builder clearJobCompletedTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       jobCompletedTime_ = null;
       if (jobCompletedTimeBuilder_ != null) {
         jobCompletedTimeBuilder_.dispose();
@@ -1326,10 +1409,10 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getJobCompletedTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getJobCompletedTimeFieldBuilder().getBuilder();
     }
@@ -1338,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
       if (jobCompletedTimeBuilder_ != null) {
@@ -1353,7 +1436,7 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1375,7 +1458,7 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 8 [json_name = "retryCount"];</code>
      * @return The retryCount.
      */
     @java.lang.Override
@@ -1387,14 +1470,14 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 8 [json_name = "retryCount"];</code>
      * @param value The retryCount to set.
      * @return This builder for chaining.
      */
     public Builder setRetryCount(long value) {
 
       retryCount_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1403,11 +1486,11 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 8 [json_name = "retryCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRetryCount() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       retryCount_ = 0L;
       onChanged();
       return this;
@@ -1419,7 +1502,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return The failureReason.
      */
     public java.lang.String getFailureReason() {
@@ -1439,7 +1522,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return The bytes for failureReason.
      */
     public com.google.protobuf.ByteString
@@ -1460,7 +1543,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @param value The failureReason to set.
      * @return This builder for chaining.
      */
@@ -1468,7 +1551,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       failureReason_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1477,12 +1560,12 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFailureReason() {
       failureReason_ = getDefaultInstance().getFailureReason();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1491,7 +1574,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @param value The bytes for failureReason to set.
      * @return This builder for chaining.
      */
@@ -1500,7 +1583,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       failureReason_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
