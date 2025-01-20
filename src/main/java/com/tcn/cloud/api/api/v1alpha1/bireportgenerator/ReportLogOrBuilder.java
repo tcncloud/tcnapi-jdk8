@@ -59,30 +59,10 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
-   * id of the alarm that triggered the report job
-   * </pre>
-   *
-   * <code>string calendar_alarm_id = 5 [json_name = "calendarAlarmId"];</code>
-   * @return The calendarAlarmId.
-   */
-  java.lang.String getCalendarAlarmId();
-  /**
-   * <pre>
-   * id of the alarm that triggered the report job
-   * </pre>
-   *
-   * <code>string calendar_alarm_id = 5 [json_name = "calendarAlarmId"];</code>
-   * @return The bytes for calendarAlarmId.
-   */
-  com.google.protobuf.ByteString
-      getCalendarAlarmIdBytes();
-
-  /**
-   * <pre>
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 6 [json_name = "reportName"];</code>
+   * <code>string report_name = 5 [json_name = "reportName"];</code>
    * @return The reportName.
    */
   java.lang.String getReportName();
@@ -91,7 +71,7 @@ public interface ReportLogOrBuilder extends
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 6 [json_name = "reportName"];</code>
+   * <code>string report_name = 5 [json_name = "reportName"];</code>
    * @return The bytes for reportName.
    */
   com.google.protobuf.ByteString
@@ -102,7 +82,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 7 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return Whether the jobRequestedTime field is set.
    */
   boolean hasJobRequestedTime();
@@ -111,7 +91,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 7 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return The jobRequestedTime.
    */
   com.google.protobuf.Timestamp getJobRequestedTime();
@@ -120,7 +100,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 7 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder();
 
@@ -129,7 +109,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 8 [json_name = "jobCompleteTime"];</code>
+   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
    * @return Whether the jobCompleteTime field is set.
    */
   boolean hasJobCompleteTime();
@@ -138,7 +118,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 8 [json_name = "jobCompleteTime"];</code>
+   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
    * @return The jobCompleteTime.
    */
   com.google.protobuf.Timestamp getJobCompleteTime();
@@ -147,7 +127,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 8 [json_name = "jobCompleteTime"];</code>
+   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getJobCompleteTimeOrBuilder();
 
@@ -156,7 +136,7 @@ public interface ReportLogOrBuilder extends
    * result of the report job
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 9 [json_name = "executionResult"];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
    * @return The enum numeric value on the wire for executionResult.
    */
   int getExecutionResultValue();
@@ -165,7 +145,7 @@ public interface ReportLogOrBuilder extends
    * result of the report job
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 9 [json_name = "executionResult"];</code>
+   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
    * @return The executionResult.
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult getExecutionResult();
@@ -175,7 +155,7 @@ public interface ReportLogOrBuilder extends
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 10 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The failureReason.
    */
   java.lang.String getFailureReason();
@@ -184,7 +164,7 @@ public interface ReportLogOrBuilder extends
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 10 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The bytes for failureReason.
    */
   com.google.protobuf.ByteString
@@ -195,7 +175,7 @@ public interface ReportLogOrBuilder extends
    * current attempt number of the report job
    * </pre>
    *
-   * <code>int64 attempt_number = 11 [json_name = "attemptNumber"];</code>
+   * <code>int64 attempt_number = 10 [json_name = "attemptNumber"];</code>
    * @return The attemptNumber.
    */
   long getAttemptNumber();
@@ -205,7 +185,7 @@ public interface ReportLogOrBuilder extends
    * max attempts of the report job
    * </pre>
    *
-   * <code>int64 max_attempts = 12 [json_name = "maxAttempts"];</code>
+   * <code>int64 max_attempts = 11 [json_name = "maxAttempts"];</code>
    * @return The maxAttempts.
    */
   long getMaxAttempts();
@@ -215,7 +195,7 @@ public interface ReportLogOrBuilder extends
    * create time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 12 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
@@ -224,7 +204,7 @@ public interface ReportLogOrBuilder extends
    * create time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 12 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
@@ -233,7 +213,7 @@ public interface ReportLogOrBuilder extends
    * create time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 13 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 12 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -242,7 +222,7 @@ public interface ReportLogOrBuilder extends
    * update time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 13 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
@@ -251,7 +231,7 @@ public interface ReportLogOrBuilder extends
    * update time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 13 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
@@ -260,7 +240,7 @@ public interface ReportLogOrBuilder extends
    * update time of the report log
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 14 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 13 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }
