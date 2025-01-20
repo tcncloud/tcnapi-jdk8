@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ReportLog() {
     reportName_ = "";
     reportStatus_ = 0;
+    failureReason_ = "";
   }
 
   @java.lang.Override
@@ -238,6 +239,53 @@ private static final long serialVersionUID = 0L;
     return retryCount_;
   }
 
+  public static final int FAILURE_REASON_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object failureReason_ = "";
+  /**
+   * <pre>
+   * describes the error that last occurred for the job, if any
+   * </pre>
+   *
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * @return The failureReason.
+   */
+  @java.lang.Override
+  public java.lang.String getFailureReason() {
+    java.lang.Object ref = failureReason_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      failureReason_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * describes the error that last occurred for the job, if any
+   * </pre>
+   *
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * @return The bytes for failureReason.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFailureReasonBytes() {
+    java.lang.Object ref = failureReason_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      failureReason_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -272,6 +320,9 @@ private static final long serialVersionUID = 0L;
     }
     if (retryCount_ != 0L) {
       output.writeInt64(7, retryCount_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, failureReason_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -309,6 +360,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, retryCount_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, failureReason_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -343,6 +397,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getRetryCount()
         != other.getRetryCount()) return false;
+    if (!getFailureReason()
+        .equals(other.getFailureReason())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -375,6 +431,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RETRY_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getRetryCount());
+    hash = (37 * hash) + FAILURE_REASON_FIELD_NUMBER;
+    hash = (53 * hash) + getFailureReason().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -525,6 +583,7 @@ private static final long serialVersionUID = 0L;
         jobCompletedTimeBuilder_ = null;
       }
       retryCount_ = 0L;
+      failureReason_ = "";
       return this;
     }
 
@@ -582,6 +641,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.retryCount_ = retryCount_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.failureReason_ = failureReason_;
       }
     }
 
@@ -652,6 +714,11 @@ private static final long serialVersionUID = 0L;
       if (other.getRetryCount() != 0L) {
         setRetryCount(other.getRetryCount());
       }
+      if (!other.getFailureReason().isEmpty()) {
+        failureReason_ = other.failureReason_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -717,6 +784,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 66: {
+              failureReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1337,6 +1409,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearRetryCount() {
       bitField0_ = (bitField0_ & ~0x00000040);
       retryCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object failureReason_ = "";
+    /**
+     * <pre>
+     * describes the error that last occurred for the job, if any
+     * </pre>
+     *
+     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * @return The failureReason.
+     */
+    public java.lang.String getFailureReason() {
+      java.lang.Object ref = failureReason_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        failureReason_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * describes the error that last occurred for the job, if any
+     * </pre>
+     *
+     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * @return The bytes for failureReason.
+     */
+    public com.google.protobuf.ByteString
+        getFailureReasonBytes() {
+      java.lang.Object ref = failureReason_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        failureReason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * describes the error that last occurred for the job, if any
+     * </pre>
+     *
+     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * @param value The failureReason to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureReason(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      failureReason_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * describes the error that last occurred for the job, if any
+     * </pre>
+     *
+     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFailureReason() {
+      failureReason_ = getDefaultInstance().getFailureReason();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * describes the error that last occurred for the job, if any
+     * </pre>
+     *
+     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * @param value The bytes for failureReason to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureReasonBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      failureReason_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

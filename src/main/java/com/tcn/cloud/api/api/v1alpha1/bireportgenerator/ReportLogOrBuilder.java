@@ -129,4 +129,24 @@ public interface ReportLogOrBuilder extends
    * @return The retryCount.
    */
   long getRetryCount();
+
+  /**
+   * <pre>
+   * describes the error that last occurred for the job, if any
+   * </pre>
+   *
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * @return The failureReason.
+   */
+  java.lang.String getFailureReason();
+  /**
+   * <pre>
+   * describes the error that last occurred for the job, if any
+   * </pre>
+   *
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * @return The bytes for failureReason.
+   */
+  com.google.protobuf.ByteString
+      getFailureReasonBytes();
 }
