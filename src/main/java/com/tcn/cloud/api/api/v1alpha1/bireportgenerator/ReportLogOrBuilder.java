@@ -68,37 +68,64 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-   * @return Whether the requestedDate field is set.
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * @return Whether the jobRequestedTime field is set.
    */
-  boolean hasRequestedDate();
+  boolean hasJobRequestedTime();
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-   * @return The requestedDate.
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * @return The jobRequestedTime.
    */
-  com.google.protobuf.Timestamp getRequestedDate();
+  com.google.protobuf.Timestamp getJobRequestedTime();
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder();
+
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * @return Whether the jobCompletedTime field is set.
+   */
+  boolean hasJobCompletedTime();
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * @return The jobCompletedTime.
+   */
+  com.google.protobuf.Timestamp getJobCompletedTime();
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder();
 
   /**
    * <pre>
    * the number of retries for this report
    * </pre>
    *
-   * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
+   * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
    * @return The retryCount.
    */
   long getRetryCount();

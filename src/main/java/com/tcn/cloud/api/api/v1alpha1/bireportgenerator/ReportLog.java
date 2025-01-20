@@ -147,52 +147,90 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ReportStatus.UNRECOGNIZED : result;
   }
 
-  public static final int REQUESTED_DATE_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp requestedDate_;
+  public static final int JOB_REQUESTED_TIME_FIELD_NUMBER = 5;
+  private com.google.protobuf.Timestamp jobRequestedTime_;
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-   * @return Whether the requestedDate field is set.
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * @return Whether the jobRequestedTime field is set.
    */
   @java.lang.Override
-  public boolean hasRequestedDate() {
-    return requestedDate_ != null;
+  public boolean hasJobRequestedTime() {
+    return jobRequestedTime_ != null;
   }
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-   * @return The requestedDate.
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * @return The jobRequestedTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getRequestedDate() {
-    return requestedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
+  public com.google.protobuf.Timestamp getJobRequestedTime() {
+    return jobRequestedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
   }
   /**
    * <pre>
-   * the date that the report was requested
+   * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder() {
-    return requestedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
+  public com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder() {
+    return jobRequestedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
   }
 
-  public static final int RETRY_COUNT_FIELD_NUMBER = 6;
+  public static final int JOB_COMPLETED_TIME_FIELD_NUMBER = 6;
+  private com.google.protobuf.Timestamp jobCompletedTime_;
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * @return Whether the jobCompletedTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasJobCompletedTime() {
+    return jobCompletedTime_ != null;
+  }
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   * @return The jobCompletedTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getJobCompletedTime() {
+    return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
+  }
+  /**
+   * <pre>
+   * the time that the report job was completed
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
+    return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
+  }
+
+  public static final int RETRY_COUNT_FIELD_NUMBER = 7;
   private long retryCount_ = 0L;
   /**
    * <pre>
    * the number of retries for this report
    * </pre>
    *
-   * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
+   * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
    * @return The retryCount.
    */
   @java.lang.Override
@@ -226,11 +264,14 @@ private static final long serialVersionUID = 0L;
     if (reportStatus_ != com.tcn.cloud.api.api.commons.ReportStatus.REPORT_STATUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(4, reportStatus_);
     }
-    if (requestedDate_ != null) {
-      output.writeMessage(5, getRequestedDate());
+    if (jobRequestedTime_ != null) {
+      output.writeMessage(5, getJobRequestedTime());
+    }
+    if (jobCompletedTime_ != null) {
+      output.writeMessage(6, getJobCompletedTime());
     }
     if (retryCount_ != 0L) {
-      output.writeInt64(6, retryCount_);
+      output.writeInt64(7, retryCount_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -256,13 +297,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, reportStatus_);
     }
-    if (requestedDate_ != null) {
+    if (jobRequestedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getRequestedDate());
+        .computeMessageSize(5, getJobRequestedTime());
+    }
+    if (jobCompletedTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getJobCompletedTime());
     }
     if (retryCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, retryCount_);
+        .computeInt64Size(7, retryCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -286,10 +331,15 @@ private static final long serialVersionUID = 0L;
     if (!getReportName()
         .equals(other.getReportName())) return false;
     if (reportStatus_ != other.reportStatus_) return false;
-    if (hasRequestedDate() != other.hasRequestedDate()) return false;
-    if (hasRequestedDate()) {
-      if (!getRequestedDate()
-          .equals(other.getRequestedDate())) return false;
+    if (hasJobRequestedTime() != other.hasJobRequestedTime()) return false;
+    if (hasJobRequestedTime()) {
+      if (!getJobRequestedTime()
+          .equals(other.getJobRequestedTime())) return false;
+    }
+    if (hasJobCompletedTime() != other.hasJobCompletedTime()) return false;
+    if (hasJobCompletedTime()) {
+      if (!getJobCompletedTime()
+          .equals(other.getJobCompletedTime())) return false;
     }
     if (getRetryCount()
         != other.getRetryCount()) return false;
@@ -314,9 +364,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getReportName().hashCode();
     hash = (37 * hash) + REPORT_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + reportStatus_;
-    if (hasRequestedDate()) {
-      hash = (37 * hash) + REQUESTED_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestedDate().hashCode();
+    if (hasJobRequestedTime()) {
+      hash = (37 * hash) + JOB_REQUESTED_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getJobRequestedTime().hashCode();
+    }
+    if (hasJobCompletedTime()) {
+      hash = (37 * hash) + JOB_COMPLETED_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getJobCompletedTime().hashCode();
     }
     hash = (37 * hash) + RETRY_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -460,10 +514,15 @@ private static final long serialVersionUID = 0L;
       reportJobId_ = 0L;
       reportName_ = "";
       reportStatus_ = 0;
-      requestedDate_ = null;
-      if (requestedDateBuilder_ != null) {
-        requestedDateBuilder_.dispose();
-        requestedDateBuilder_ = null;
+      jobRequestedTime_ = null;
+      if (jobRequestedTimeBuilder_ != null) {
+        jobRequestedTimeBuilder_.dispose();
+        jobRequestedTimeBuilder_ = null;
+      }
+      jobCompletedTime_ = null;
+      if (jobCompletedTimeBuilder_ != null) {
+        jobCompletedTimeBuilder_.dispose();
+        jobCompletedTimeBuilder_ = null;
       }
       retryCount_ = 0L;
       return this;
@@ -512,11 +571,16 @@ private static final long serialVersionUID = 0L;
         result.reportStatus_ = reportStatus_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.requestedDate_ = requestedDateBuilder_ == null
-            ? requestedDate_
-            : requestedDateBuilder_.build();
+        result.jobRequestedTime_ = jobRequestedTimeBuilder_ == null
+            ? jobRequestedTime_
+            : jobRequestedTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.jobCompletedTime_ = jobCompletedTimeBuilder_ == null
+            ? jobCompletedTime_
+            : jobCompletedTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.retryCount_ = retryCount_;
       }
     }
@@ -579,8 +643,11 @@ private static final long serialVersionUID = 0L;
       if (other.reportStatus_ != 0) {
         setReportStatusValue(other.getReportStatusValue());
       }
-      if (other.hasRequestedDate()) {
-        mergeRequestedDate(other.getRequestedDate());
+      if (other.hasJobRequestedTime()) {
+        mergeJobRequestedTime(other.getJobRequestedTime());
+      }
+      if (other.hasJobCompletedTime()) {
+        mergeJobCompletedTime(other.getJobCompletedTime());
       }
       if (other.getRetryCount() != 0L) {
         setRetryCount(other.getRetryCount());
@@ -633,16 +700,23 @@ private static final long serialVersionUID = 0L;
             } // case 32
             case 42: {
               input.readMessage(
-                  getRequestedDateFieldBuilder().getBuilder(),
+                  getJobRequestedTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 48: {
-              retryCount_ = input.readInt64();
+            case 50: {
+              input.readMessage(
+                  getJobCompletedTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
-            } // case 48
+            } // case 50
+            case 56: {
+              retryCount_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -913,50 +987,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp requestedDate_;
+    private com.google.protobuf.Timestamp jobRequestedTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> requestedDateBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> jobRequestedTimeBuilder_;
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-     * @return Whether the requestedDate field is set.
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * @return Whether the jobRequestedTime field is set.
      */
-    public boolean hasRequestedDate() {
+    public boolean hasJobRequestedTime() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
-     * @return The requestedDate.
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+     * @return The jobRequestedTime.
      */
-    public com.google.protobuf.Timestamp getRequestedDate() {
-      if (requestedDateBuilder_ == null) {
-        return requestedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
+    public com.google.protobuf.Timestamp getJobRequestedTime() {
+      if (jobRequestedTimeBuilder_ == null) {
+        return jobRequestedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
       } else {
-        return requestedDateBuilder_.getMessage();
+        return jobRequestedTimeBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public Builder setRequestedDate(com.google.protobuf.Timestamp value) {
-      if (requestedDateBuilder_ == null) {
+    public Builder setJobRequestedTime(com.google.protobuf.Timestamp value) {
+      if (jobRequestedTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        requestedDate_ = value;
+        jobRequestedTime_ = value;
       } else {
-        requestedDateBuilder_.setMessage(value);
+        jobRequestedTimeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -964,17 +1038,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public Builder setRequestedDate(
+    public Builder setJobRequestedTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (requestedDateBuilder_ == null) {
-        requestedDate_ = builderForValue.build();
+      if (jobRequestedTimeBuilder_ == null) {
+        jobRequestedTime_ = builderForValue.build();
       } else {
-        requestedDateBuilder_.setMessage(builderForValue.build());
+        jobRequestedTimeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -982,22 +1056,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public Builder mergeRequestedDate(com.google.protobuf.Timestamp value) {
-      if (requestedDateBuilder_ == null) {
+    public Builder mergeJobRequestedTime(com.google.protobuf.Timestamp value) {
+      if (jobRequestedTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
-          requestedDate_ != null &&
-          requestedDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getRequestedDateBuilder().mergeFrom(value);
+          jobRequestedTime_ != null &&
+          jobRequestedTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getJobRequestedTimeBuilder().mergeFrom(value);
         } else {
-          requestedDate_ = value;
+          jobRequestedTime_ = value;
         }
       } else {
-        requestedDateBuilder_.mergeFrom(value);
+        jobRequestedTimeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1005,67 +1079,222 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public Builder clearRequestedDate() {
+    public Builder clearJobRequestedTime() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      requestedDate_ = null;
-      if (requestedDateBuilder_ != null) {
-        requestedDateBuilder_.dispose();
-        requestedDateBuilder_ = null;
+      jobRequestedTime_ = null;
+      if (jobRequestedTimeBuilder_ != null) {
+        jobRequestedTimeBuilder_.dispose();
+        jobRequestedTimeBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getRequestedDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getJobRequestedTimeBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
-      return getRequestedDateFieldBuilder().getBuilder();
+      return getJobRequestedTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder() {
-      if (requestedDateBuilder_ != null) {
-        return requestedDateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder() {
+      if (jobRequestedTimeBuilder_ != null) {
+        return jobRequestedTimeBuilder_.getMessageOrBuilder();
       } else {
-        return requestedDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
+        return jobRequestedTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
       }
     }
     /**
      * <pre>
-     * the date that the report was requested
+     * the time that the report job was requested
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
+     * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getRequestedDateFieldBuilder() {
-      if (requestedDateBuilder_ == null) {
-        requestedDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getJobRequestedTimeFieldBuilder() {
+      if (jobRequestedTimeBuilder_ == null) {
+        jobRequestedTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getRequestedDate(),
+                getJobRequestedTime(),
                 getParentForChildren(),
                 isClean());
-        requestedDate_ = null;
+        jobRequestedTime_ = null;
       }
-      return requestedDateBuilder_;
+      return jobRequestedTimeBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp jobCompletedTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> jobCompletedTimeBuilder_;
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * @return Whether the jobCompletedTime field is set.
+     */
+    public boolean hasJobCompletedTime() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     * @return The jobCompletedTime.
+     */
+    public com.google.protobuf.Timestamp getJobCompletedTime() {
+      if (jobCompletedTimeBuilder_ == null) {
+        return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
+      } else {
+        return jobCompletedTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public Builder setJobCompletedTime(com.google.protobuf.Timestamp value) {
+      if (jobCompletedTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        jobCompletedTime_ = value;
+      } else {
+        jobCompletedTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public Builder setJobCompletedTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (jobCompletedTimeBuilder_ == null) {
+        jobCompletedTime_ = builderForValue.build();
+      } else {
+        jobCompletedTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public Builder mergeJobCompletedTime(com.google.protobuf.Timestamp value) {
+      if (jobCompletedTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          jobCompletedTime_ != null &&
+          jobCompletedTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getJobCompletedTimeBuilder().mergeFrom(value);
+        } else {
+          jobCompletedTime_ = value;
+        }
+      } else {
+        jobCompletedTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public Builder clearJobCompletedTime() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      jobCompletedTime_ = null;
+      if (jobCompletedTimeBuilder_ != null) {
+        jobCompletedTimeBuilder_.dispose();
+        jobCompletedTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getJobCompletedTimeBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getJobCompletedTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
+      if (jobCompletedTimeBuilder_ != null) {
+        return jobCompletedTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return jobCompletedTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
+      }
+    }
+    /**
+     * <pre>
+     * the time that the report job was completed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getJobCompletedTimeFieldBuilder() {
+      if (jobCompletedTimeBuilder_ == null) {
+        jobCompletedTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getJobCompletedTime(),
+                getParentForChildren(),
+                isClean());
+        jobCompletedTime_ = null;
+      }
+      return jobCompletedTimeBuilder_;
     }
 
     private long retryCount_ ;
@@ -1074,7 +1303,7 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
      * @return The retryCount.
      */
     @java.lang.Override
@@ -1086,14 +1315,14 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
      * @param value The retryCount to set.
      * @return This builder for chaining.
      */
     public Builder setRetryCount(long value) {
 
       retryCount_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1102,11 +1331,11 @@ private static final long serialVersionUID = 0L;
      * the number of retries for this report
      * </pre>
      *
-     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
+     * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRetryCount() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       retryCount_ = 0L;
       onChanged();
       return this;

@@ -63,20 +63,22 @@ public final class EntitiesProto {
       "n_expression\030\022 \001(\0132\033.api.commons.CronExp" +
       "ressionR\016cronExpression\022G\n\020transfer_opti" +
       "ons\030\023 \001(\0132\034.api.commons.TransferOptionsR" +
-      "\017transferOptions\"\230\002\n\tReportLog\022\"\n\rreport" +
+      "\017transferOptions\"\351\002\n\tReportLog\022\"\n\rreport" +
       "_log_id\030\001 \001(\003R\013reportLogId\022\"\n\rreport_job" +
       "_id\030\002 \001(\003R\013reportJobId\022\037\n\013report_name\030\003 " +
       "\001(\tR\nreportName\022>\n\rreport_status\030\004 \001(\0162\031" +
       ".api.commons.ReportStatusR\014reportStatus\022" +
-      "A\n\016requested_date\030\005 \001(\0132\032.google.protobu" +
-      "f.TimestampR\rrequestedDate\022\037\n\013retry_coun" +
-      "t\030\006 \001(\003R\nretryCountB\333\001\n0com.tcn.cloud.ap" +
-      "i.api.v1alpha1.bireportgeneratorB\rEntiti" +
-      "esProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Bireportg" +
-      "enerator\312\002\036Api\\V1alpha1\\Bireportgenerato" +
-      "r\342\002*Api\\V1alpha1\\Bireportgenerator\\GPBMe" +
-      "tadata\352\002 Api::V1alpha1::Bireportgenerato" +
-      "rb\006proto3"
+      "H\n\022job_requested_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\020jobRequestedTime\022H\n\022job" +
+      "_completed_time\030\006 \001(\0132\032.google.protobuf." +
+      "TimestampR\020jobCompletedTime\022\037\n\013retry_cou" +
+      "nt\030\007 \001(\003R\nretryCountB\333\001\n0com.tcn.cloud.a" +
+      "pi.api.v1alpha1.bireportgeneratorB\rEntit" +
+      "iesProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Bireport" +
+      "generator\312\002\036Api\\V1alpha1\\Bireportgenerat" +
+      "or\342\002*Api\\V1alpha1\\Bireportgenerator\\GPBM" +
+      "etadata\352\002 Api::V1alpha1::Bireportgenerat" +
+      "orb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -98,7 +100,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_bireportgenerator_ReportLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportLog_descriptor,
-        new java.lang.String[] { "ReportLogId", "ReportJobId", "ReportName", "ReportStatus", "RequestedDate", "RetryCount", });
+        new java.lang.String[] { "ReportLogId", "ReportJobId", "ReportName", "ReportStatus", "JobRequestedTime", "JobCompletedTime", "RetryCount", });
     com.tcn.cloud.api.api.commons.BireportgeneratorProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
