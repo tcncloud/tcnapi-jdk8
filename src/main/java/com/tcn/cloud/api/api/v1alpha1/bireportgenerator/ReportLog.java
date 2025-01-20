@@ -223,42 +223,42 @@ private static final long serialVersionUID = 0L;
     return jobRequestedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobRequestedTime_;
   }
 
-  public static final int JOB_COMPLETE_TIME_FIELD_NUMBER = 7;
-  private com.google.protobuf.Timestamp jobCompleteTime_;
+  public static final int JOB_COMPLETED_TIME_FIELD_NUMBER = 7;
+  private com.google.protobuf.Timestamp jobCompletedTime_;
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-   * @return Whether the jobCompleteTime field is set.
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * @return Whether the jobCompletedTime field is set.
    */
   @java.lang.Override
-  public boolean hasJobCompleteTime() {
-    return jobCompleteTime_ != null;
+  public boolean hasJobCompletedTime() {
+    return jobCompletedTime_ != null;
   }
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-   * @return The jobCompleteTime.
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * @return The jobCompletedTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getJobCompleteTime() {
-    return jobCompleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompleteTime_;
+  public com.google.protobuf.Timestamp getJobCompletedTime() {
+    return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
   }
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getJobCompleteTimeOrBuilder() {
-    return jobCompleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompleteTime_;
+  public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
+    return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
   }
 
   public static final int EXECUTION_RESULT_FIELD_NUMBER = 8;
@@ -472,8 +472,8 @@ private static final long serialVersionUID = 0L;
     if (jobRequestedTime_ != null) {
       output.writeMessage(6, getJobRequestedTime());
     }
-    if (jobCompleteTime_ != null) {
-      output.writeMessage(7, getJobCompleteTime());
+    if (jobCompletedTime_ != null) {
+      output.writeMessage(7, getJobCompletedTime());
     }
     if (executionResult_ != com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.EXECUTION_RESULT_UNSPECIFIED.getNumber()) {
       output.writeEnum(8, executionResult_);
@@ -524,9 +524,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getJobRequestedTime());
     }
-    if (jobCompleteTime_ != null) {
+    if (jobCompletedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getJobCompleteTime());
+        .computeMessageSize(7, getJobCompletedTime());
     }
     if (executionResult_ != com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.EXECUTION_RESULT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -581,10 +581,10 @@ private static final long serialVersionUID = 0L;
       if (!getJobRequestedTime()
           .equals(other.getJobRequestedTime())) return false;
     }
-    if (hasJobCompleteTime() != other.hasJobCompleteTime()) return false;
-    if (hasJobCompleteTime()) {
-      if (!getJobCompleteTime()
-          .equals(other.getJobCompleteTime())) return false;
+    if (hasJobCompletedTime() != other.hasJobCompletedTime()) return false;
+    if (hasJobCompletedTime()) {
+      if (!getJobCompletedTime()
+          .equals(other.getJobCompletedTime())) return false;
     }
     if (executionResult_ != other.executionResult_) return false;
     if (!getFailureReason()
@@ -631,9 +631,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JOB_REQUESTED_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getJobRequestedTime().hashCode();
     }
-    if (hasJobCompleteTime()) {
-      hash = (37 * hash) + JOB_COMPLETE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getJobCompleteTime().hashCode();
+    if (hasJobCompletedTime()) {
+      hash = (37 * hash) + JOB_COMPLETED_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getJobCompletedTime().hashCode();
     }
     hash = (37 * hash) + EXECUTION_RESULT_FIELD_NUMBER;
     hash = (53 * hash) + executionResult_;
@@ -798,10 +798,10 @@ private static final long serialVersionUID = 0L;
         jobRequestedTimeBuilder_.dispose();
         jobRequestedTimeBuilder_ = null;
       }
-      jobCompleteTime_ = null;
-      if (jobCompleteTimeBuilder_ != null) {
-        jobCompleteTimeBuilder_.dispose();
-        jobCompleteTimeBuilder_ = null;
+      jobCompletedTime_ = null;
+      if (jobCompletedTimeBuilder_ != null) {
+        jobCompletedTimeBuilder_.dispose();
+        jobCompletedTimeBuilder_ = null;
       }
       executionResult_ = 0;
       failureReason_ = "";
@@ -871,9 +871,9 @@ private static final long serialVersionUID = 0L;
             : jobRequestedTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.jobCompleteTime_ = jobCompleteTimeBuilder_ == null
-            ? jobCompleteTime_
-            : jobCompleteTimeBuilder_.build();
+        result.jobCompletedTime_ = jobCompletedTimeBuilder_ == null
+            ? jobCompletedTime_
+            : jobCompletedTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.executionResult_ = executionResult_;
@@ -965,8 +965,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasJobRequestedTime()) {
         mergeJobRequestedTime(other.getJobRequestedTime());
       }
-      if (other.hasJobCompleteTime()) {
-        mergeJobCompleteTime(other.getJobCompleteTime());
+      if (other.hasJobCompletedTime()) {
+        mergeJobCompletedTime(other.getJobCompletedTime());
       }
       if (other.executionResult_ != 0) {
         setExecutionResultValue(other.getExecutionResultValue());
@@ -1048,7 +1048,7 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 58: {
               input.readMessage(
-                  getJobCompleteTimeFieldBuilder().getBuilder(),
+                  getJobCompletedTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
@@ -1575,18 +1575,18 @@ private static final long serialVersionUID = 0L;
       return jobRequestedTimeBuilder_;
     }
 
-    private com.google.protobuf.Timestamp jobCompleteTime_;
+    private com.google.protobuf.Timestamp jobCompletedTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> jobCompleteTimeBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> jobCompletedTimeBuilder_;
     /**
      * <pre>
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-     * @return Whether the jobCompleteTime field is set.
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+     * @return Whether the jobCompletedTime field is set.
      */
-    public boolean hasJobCompleteTime() {
+    public boolean hasJobCompletedTime() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
@@ -1594,14 +1594,14 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-     * @return The jobCompleteTime.
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+     * @return The jobCompletedTime.
      */
-    public com.google.protobuf.Timestamp getJobCompleteTime() {
-      if (jobCompleteTimeBuilder_ == null) {
-        return jobCompleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompleteTime_;
+    public com.google.protobuf.Timestamp getJobCompletedTime() {
+      if (jobCompletedTimeBuilder_ == null) {
+        return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
       } else {
-        return jobCompleteTimeBuilder_.getMessage();
+        return jobCompletedTimeBuilder_.getMessage();
       }
     }
     /**
@@ -1609,16 +1609,16 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public Builder setJobCompleteTime(com.google.protobuf.Timestamp value) {
-      if (jobCompleteTimeBuilder_ == null) {
+    public Builder setJobCompletedTime(com.google.protobuf.Timestamp value) {
+      if (jobCompletedTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        jobCompleteTime_ = value;
+        jobCompletedTime_ = value;
       } else {
-        jobCompleteTimeBuilder_.setMessage(value);
+        jobCompletedTimeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1629,14 +1629,14 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public Builder setJobCompleteTime(
+    public Builder setJobCompletedTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (jobCompleteTimeBuilder_ == null) {
-        jobCompleteTime_ = builderForValue.build();
+      if (jobCompletedTimeBuilder_ == null) {
+        jobCompletedTime_ = builderForValue.build();
       } else {
-        jobCompleteTimeBuilder_.setMessage(builderForValue.build());
+        jobCompletedTimeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1647,19 +1647,19 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public Builder mergeJobCompleteTime(com.google.protobuf.Timestamp value) {
-      if (jobCompleteTimeBuilder_ == null) {
+    public Builder mergeJobCompletedTime(com.google.protobuf.Timestamp value) {
+      if (jobCompletedTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0) &&
-          jobCompleteTime_ != null &&
-          jobCompleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getJobCompleteTimeBuilder().mergeFrom(value);
+          jobCompletedTime_ != null &&
+          jobCompletedTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getJobCompletedTimeBuilder().mergeFrom(value);
         } else {
-          jobCompleteTime_ = value;
+          jobCompletedTime_ = value;
         }
       } else {
-        jobCompleteTimeBuilder_.mergeFrom(value);
+        jobCompletedTimeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1670,14 +1670,14 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public Builder clearJobCompleteTime() {
+    public Builder clearJobCompletedTime() {
       bitField0_ = (bitField0_ & ~0x00000040);
-      jobCompleteTime_ = null;
-      if (jobCompleteTimeBuilder_ != null) {
-        jobCompleteTimeBuilder_.dispose();
-        jobCompleteTimeBuilder_ = null;
+      jobCompletedTime_ = null;
+      if (jobCompletedTimeBuilder_ != null) {
+        jobCompletedTimeBuilder_.dispose();
+        jobCompletedTimeBuilder_ = null;
       }
       onChanged();
       return this;
@@ -1687,26 +1687,26 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getJobCompleteTimeBuilder() {
+    public com.google.protobuf.Timestamp.Builder getJobCompletedTimeBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
-      return getJobCompleteTimeFieldBuilder().getBuilder();
+      return getJobCompletedTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getJobCompleteTimeOrBuilder() {
-      if (jobCompleteTimeBuilder_ != null) {
-        return jobCompleteTimeBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder() {
+      if (jobCompletedTimeBuilder_ != null) {
+        return jobCompletedTimeBuilder_.getMessageOrBuilder();
       } else {
-        return jobCompleteTime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : jobCompleteTime_;
+        return jobCompletedTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
       }
     }
     /**
@@ -1714,20 +1714,20 @@ private static final long serialVersionUID = 0L;
      * the time that the report job was completed
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+     * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getJobCompleteTimeFieldBuilder() {
-      if (jobCompleteTimeBuilder_ == null) {
-        jobCompleteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getJobCompletedTimeFieldBuilder() {
+      if (jobCompletedTimeBuilder_ == null) {
+        jobCompletedTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getJobCompleteTime(),
+                getJobCompletedTime(),
                 getParentForChildren(),
                 isClean());
-        jobCompleteTime_ = null;
+        jobCompletedTime_ = null;
       }
-      return jobCompleteTimeBuilder_;
+      return jobCompletedTimeBuilder_;
     }
 
     private int executionResult_ = 0;

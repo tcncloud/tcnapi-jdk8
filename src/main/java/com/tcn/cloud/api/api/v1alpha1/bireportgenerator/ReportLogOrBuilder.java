@@ -109,27 +109,27 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-   * @return Whether the jobCompleteTime field is set.
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * @return Whether the jobCompletedTime field is set.
    */
-  boolean hasJobCompleteTime();
+  boolean hasJobCompletedTime();
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
-   * @return The jobCompleteTime.
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * @return The jobCompletedTime.
    */
-  com.google.protobuf.Timestamp getJobCompleteTime();
+  com.google.protobuf.Timestamp getJobCompletedTime();
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_complete_time = 7 [json_name = "jobCompleteTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getJobCompleteTimeOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder();
 
   /**
    * <pre>
