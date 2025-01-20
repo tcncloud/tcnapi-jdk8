@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
   private int reportStatus_ = 0;
   /**
    * <pre>
-   * the report processing status
+   * the report lifecycle status
    * </pre>
    *
    * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the report processing status
+   * the report lifecycle status
    * </pre>
    *
    * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -917,7 +917,7 @@ private static final long serialVersionUID = 0L;
     private int reportStatus_ = 0;
     /**
      * <pre>
-     * the report processing status
+     * the report lifecycle status
      * </pre>
      *
      * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the report processing status
+     * the report lifecycle status
      * </pre>
      *
      * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the report processing status
+     * the report lifecycle status
      * </pre>
      *
      * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the report processing status
+     * the report lifecycle status
      * </pre>
      *
      * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -974,7 +974,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the report processing status
+     * the report lifecycle status
      * </pre>
      *
      * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>

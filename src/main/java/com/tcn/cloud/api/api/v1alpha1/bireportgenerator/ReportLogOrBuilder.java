@@ -49,7 +49,7 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
-   * the report processing status
+   * the report lifecycle status
    * </pre>
    *
    * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
@@ -58,7 +58,7 @@ public interface ReportLogOrBuilder extends
   int getReportStatusValue();
   /**
    * <pre>
-   * the report processing status
+   * the report lifecycle status
    * </pre>
    *
    * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
