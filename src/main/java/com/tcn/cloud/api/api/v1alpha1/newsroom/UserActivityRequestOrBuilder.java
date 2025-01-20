@@ -26,4 +26,14 @@ public interface UserActivityRequestOrBuilder extends
    * @return The force.
    */
   boolean getForce();
+
+  /**
+   * <pre>
+   * the unique published client article identifier
+   * </pre>
+   *
+   * <code>int64 published_client_article_sid = 3 [json_name = "publishedClientArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedClientArticleSid.
+   */
+  long getPublishedClientArticleSid();
 }
