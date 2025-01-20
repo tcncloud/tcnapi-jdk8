@@ -164,6 +164,21 @@ private static final long serialVersionUID = 0L;
     return alwaysDisplay_;
   }
 
+  public static final int IS_CLIENT_ARTICLE_FIELD_NUMBER = 6;
+  private boolean isClientArticle_ = false;
+  /**
+   * <pre>
+   * differentiate between client and tcn articles
+   * </pre>
+   *
+   * <code>bool is_client_article = 6 [json_name = "isClientArticle"];</code>
+   * @return The isClientArticle.
+   */
+  @java.lang.Override
+  public boolean getIsClientArticle() {
+    return isClientArticle_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -193,6 +208,9 @@ private static final long serialVersionUID = 0L;
     if (alwaysDisplay_ != false) {
       output.writeBool(5, alwaysDisplay_);
     }
+    if (isClientArticle_ != false) {
+      output.writeBool(6, isClientArticle_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -221,6 +239,10 @@ private static final long serialVersionUID = 0L;
     if (alwaysDisplay_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, alwaysDisplay_);
+    }
+    if (isClientArticle_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, isClientArticle_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -253,6 +275,8 @@ private static final long serialVersionUID = 0L;
         != other.getDisplayToUser()) return false;
     if (getAlwaysDisplay()
         != other.getAlwaysDisplay()) return false;
+    if (getIsClientArticle()
+        != other.getIsClientArticle()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -281,6 +305,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALWAYS_DISPLAY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAlwaysDisplay());
+    hash = (37 * hash) + IS_CLIENT_ARTICLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsClientArticle());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -429,6 +456,7 @@ private static final long serialVersionUID = 0L;
       }
       displayToUser_ = false;
       alwaysDisplay_ = false;
+      isClientArticle_ = false;
       return this;
     }
 
@@ -480,6 +508,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.alwaysDisplay_ = alwaysDisplay_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.isClientArticle_ = isClientArticle_;
       }
     }
 
@@ -542,6 +573,9 @@ private static final long serialVersionUID = 0L;
       if (other.getAlwaysDisplay() != false) {
         setAlwaysDisplay(other.getAlwaysDisplay());
       }
+      if (other.getIsClientArticle() != false) {
+        setIsClientArticle(other.getIsClientArticle());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -597,6 +631,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              isClientArticle_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1055,6 +1094,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearAlwaysDisplay() {
       bitField0_ = (bitField0_ & ~0x00000010);
       alwaysDisplay_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean isClientArticle_ ;
+    /**
+     * <pre>
+     * differentiate between client and tcn articles
+     * </pre>
+     *
+     * <code>bool is_client_article = 6 [json_name = "isClientArticle"];</code>
+     * @return The isClientArticle.
+     */
+    @java.lang.Override
+    public boolean getIsClientArticle() {
+      return isClientArticle_;
+    }
+    /**
+     * <pre>
+     * differentiate between client and tcn articles
+     * </pre>
+     *
+     * <code>bool is_client_article = 6 [json_name = "isClientArticle"];</code>
+     * @param value The isClientArticle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsClientArticle(boolean value) {
+
+      isClientArticle_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * differentiate between client and tcn articles
+     * </pre>
+     *
+     * <code>bool is_client_article = 6 [json_name = "isClientArticle"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsClientArticle() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      isClientArticle_ = false;
       onChanged();
       return this;
     }

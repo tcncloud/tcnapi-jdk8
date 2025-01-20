@@ -306,7 +306,7 @@ public final class EntitiesProto {
       "eated\022;\n\013last_edited\030\006 \001(\0132\032.google.prot" +
       "obuf.TimestampR\nlastEdited\022\026\n\006author\030\007 \001" +
       "(\tR\006author\022,\n\022image_reference_id\030\010 \001(\tR\020" +
-      "imageReferenceId\"\300\002\n\027PublishedArticleDet" +
+      "imageReferenceId\"\354\002\n\027PublishedArticleDet" +
       "ails\0226\n\025published_article_sid\030\001 \001(\003B\0020\001R" +
       "\023publishedArticleSid\022[\n\024news_article_det" +
       "ails\030\002 \001(\0132).api.v1alpha1.newsroom.NewsA" +
@@ -314,128 +314,131 @@ public final class EntitiesProto {
       "e_published\030\003 \001(\0132\032.google.protobuf.Time" +
       "stampR\rdatePublished\022&\n\017display_to_user\030" +
       "\004 \001(\010R\rdisplayToUser\022%\n\016always_display\030\005" +
-      " \001(\010R\ralwaysDisplay\"\300\002\n\014UserActivity\0225\n\025" +
-      "user_activity_log_sid\030\001 \001(\003B\0020\001R\022userAct" +
-      "ivityLogSid\022=\n\014date_created\030\002 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\013dateCreated\022k\n\025us" +
-      "er_activity_details\030\003 \001(\01327.api.v1alpha1" +
-      ".newsroom.UserActivity.UserActivityDetai" +
-      "lsR\023userActivityDetails\032M\n\023UserActivityD" +
-      "etails\0226\n\025published_article_sid\030\001 \001(\003B\0020" +
-      "\001R\023publishedArticleSid\"\226\001\n\035CreatePublish" +
-      "edArticleRequest\022*\n\017new_article_sid\030\001 \001(" +
-      "\003B\0020\001R\rnewArticleSid\022&\n\017display_to_user\030" +
-      "\002 \001(\010R\rdisplayToUser\022!\n\014article_link\030\003 \001" +
-      "(\tR\013articleLink\"\214\001\n\036CreatePublishedArtic" +
-      "leResponse\022j\n\031published_article_details\030" +
-      "\001 \001(\0132..api.v1alpha1.newsroom.PublishedA" +
-      "rticleDetailsR\027publishedArticleDetails\"\036" +
-      "\n\034ListPublishedArticlesRequest\"\213\001\n\035ListP" +
-      "ublishedArticlesResponse\022j\n\031published_ar" +
-      "ticle_details\030\001 \003(\0132..api.v1alpha1.newsr" +
-      "oom.PublishedArticleDetailsR\027publishedAr" +
-      "ticleDetails\"\204\001\n\036GetPublishedArticleById" +
-      "Request\022*\n\017new_article_sid\030\001 \001(\003B\002\030\001R\rne" +
-      "wArticleSid\0226\n\025published_article_sid\030\002 \001" +
-      "(\003B\0020\001R\023publishedArticleSid\"\215\001\n\037GetPubli" +
-      "shedArticleByIdResponse\022j\n\031published_art" +
-      "icle_details\030\001 \001(\0132..api.v1alpha1.newsro" +
-      "om.PublishedArticleDetailsR\027publishedArt" +
-      "icleDetails\"c\n\023UserActivityRequest\0226\n\025pu" +
-      "blished_article_sid\030\001 \001(\003B\0020\001R\023published" +
-      "ArticleSid\022\024\n\005force\030\002 \001(\010R\005force\"`\n\024User" +
-      "ActivityResponse\022H\n\ruser_activity\030\001 \001(\0132" +
-      "#.api.v1alpha1.newsroom.UserActivityR\014us" +
-      "erActivity\"\027\n\025GetNewsForUserRequest\"\204\001\n\026" +
-      "GetNewsForUserResponse\022j\n\031published_arti" +
-      "cle_details\030\001 \003(\0132..api.v1alpha1.newsroo" +
-      "m.PublishedArticleDetailsR\027publishedArti" +
-      "cleDetails\"]\n\034StoreNewsArticleImageReque" +
-      "st\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.newsroo" +
-      "m.NewsArticleImageR\005image\"\223\002\n\020NewsArticl" +
-      "eImage\022\022\n\004uuid\030\001 \001(\tR\004uuid\022*\n\017new_articl" +
-      "e_sid\030\002 \001(\003B\0020\001R\rnewArticleSid\022\030\n\007conten" +
-      "t\030\003 \001(\tR\007content\022!\n\014download_url\030\004 \001(\tR\013" +
-      "downloadUrl\022,\n\022image_reference_id\030\005 \001(\tR" +
-      "\020imageReferenceId\022\035\n\nimage_type\030\006 \001(\tR\ti" +
-      "mageType\0225\n\007temp_id\030\007 \001(\0132\034.google.proto" +
-      "buf.StringValueR\006tempId\"^\n\035StoreNewsArti" +
-      "cleImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1" +
-      "alpha1.newsroom.NewsArticleImageR\005image\"" +
-      "M\n\037ListImagesForNewsArticleRequest\022*\n\017ne" +
-      "w_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"{" +
-      "\n ListImagesForNewsArticleResponse\022W\n\023ne" +
-      "ws_article_images\030\001 \003(\0132\'.api.v1alpha1.n" +
-      "ewsroom.NewsArticleImageR\021newsArticleIma" +
-      "ges\"^\n\035UploadNewsArticleImageRequest\022=\n\005" +
+      " \001(\010R\ralwaysDisplay\022*\n\021is_client_article" +
+      "\030\006 \001(\010R\017isClientArticle\"\206\003\n\014UserActivity" +
+      "\0225\n\025user_activity_log_sid\030\001 \001(\003B\0020\001R\022use" +
+      "rActivityLogSid\022=\n\014date_created\030\002 \001(\0132\032." +
+      "google.protobuf.TimestampR\013dateCreated\022k" +
+      "\n\025user_activity_details\030\003 \001(\01327.api.v1al" +
+      "pha1.newsroom.UserActivity.UserActivityD" +
+      "etailsR\023userActivityDetails\032\222\001\n\023UserActi" +
+      "vityDetails\0226\n\025published_article_sid\030\001 \001" +
+      "(\003B\0020\001R\023publishedArticleSid\022C\n\034published" +
+      "_client_article_sid\030\002 \001(\003B\0020\001R\031published" +
+      "ClientArticleSid\"\226\001\n\035CreatePublishedArti" +
+      "cleRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R" +
+      "\rnewArticleSid\022&\n\017display_to_user\030\002 \001(\010R" +
+      "\rdisplayToUser\022!\n\014article_link\030\003 \001(\tR\013ar" +
+      "ticleLink\"\214\001\n\036CreatePublishedArticleResp" +
+      "onse\022j\n\031published_article_details\030\001 \001(\0132" +
+      "..api.v1alpha1.newsroom.PublishedArticle" +
+      "DetailsR\027publishedArticleDetails\"\036\n\034List" +
+      "PublishedArticlesRequest\"\213\001\n\035ListPublish" +
+      "edArticlesResponse\022j\n\031published_article_" +
+      "details\030\001 \003(\0132..api.v1alpha1.newsroom.Pu" +
+      "blishedArticleDetailsR\027publishedArticleD" +
+      "etails\"\204\001\n\036GetPublishedArticleByIdReques" +
+      "t\022*\n\017new_article_sid\030\001 \001(\003B\002\030\001R\rnewArtic" +
+      "leSid\0226\n\025published_article_sid\030\002 \001(\003B\0020\001" +
+      "R\023publishedArticleSid\"\215\001\n\037GetPublishedAr" +
+      "ticleByIdResponse\022j\n\031published_article_d" +
+      "etails\030\001 \001(\0132..api.v1alpha1.newsroom.Pub" +
+      "lishedArticleDetailsR\027publishedArticleDe" +
+      "tails\"c\n\023UserActivityRequest\0226\n\025publishe" +
+      "d_article_sid\030\001 \001(\003B\0020\001R\023publishedArticl" +
+      "eSid\022\024\n\005force\030\002 \001(\010R\005force\"`\n\024UserActivi" +
+      "tyResponse\022H\n\ruser_activity\030\001 \001(\0132#.api." +
+      "v1alpha1.newsroom.UserActivityR\014userActi" +
+      "vity\"\027\n\025GetNewsForUserRequest\"\204\001\n\026GetNew" +
+      "sForUserResponse\022j\n\031published_article_de" +
+      "tails\030\001 \003(\0132..api.v1alpha1.newsroom.Publ" +
+      "ishedArticleDetailsR\027publishedArticleDet" +
+      "ails\"]\n\034StoreNewsArticleImageRequest\022=\n\005" +
       "image\030\001 \001(\0132\'.api.v1alpha1.newsroom.News" +
-      "ArticleImageR\005image\"_\n\036UploadNewsArticle" +
-      "ImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1alp" +
-      "ha1.newsroom.NewsArticleImageR\005image\"\222\001\n" +
-      "\032CreateClientArticleRequest\022\024\n\005title\030\001 \001" +
-      "(\tR\005title\022\030\n\007content\030\002 \001(\tR\007content\022\026\n\006a" +
-      "uthor\030\003 \001(\tR\006author\022,\n\022image_reference_i" +
-      "d\030\004 \001(\tR\020imageReferenceId\"q\n\033CreateClien" +
-      "tArticleResponse\022R\n\017article_details\030\001 \001(" +
-      "\0132).api.v1alpha1.newsroom.NewsArticleDet" +
-      "ailsR\016articleDetails\"\253\001\n\032UpdateClientArt" +
-      "icleRequest\022R\n\017article_details\030\001 \001(\0132).a" +
-      "pi.v1alpha1.newsroom.NewsArticleDetailsR" +
-      "\016articleDetails\0229\n\nfield_mask\030d \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskR\tfieldMask\"q\n\033Up" +
-      "dateClientArticleResponse\022R\n\017article_det" +
-      "ails\030\001 \001(\0132).api.v1alpha1.newsroom.NewsA" +
-      "rticleDetailsR\016articleDetails\"\216\001\n\031ListCl" +
-      "ientArticlesRequest\0226\n\010statuses\030\001 \003(\0162\032." +
-      "api.commons.ArticleStatusR\010statuses\0229\n\nf" +
-      "ield_mask\030d \001(\0132\032.google.protobuf.FieldM" +
-      "askR\tfieldMask\"p\n\032ListClientArticlesResp" +
-      "onse\022R\n\017article_details\030\001 \003(\0132).api.v1al" +
-      "pha1.newsroom.NewsArticleDetailsR\016articl" +
-      "eDetails\"\275\001\n#CreatePublishedClientArticl" +
-      "eRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rn" +
-      "ewArticleSid\022&\n\017display_to_user\030\002 \001(\010R\rd" +
-      "isplayToUser\022!\n\014article_link\030\003 \001(\tR\013arti" +
-      "cleLink\022\037\n\013always_show\030\004 \001(\010R\nalwaysShow" +
-      "\"\222\001\n$CreatePublishedClientArticleRespons" +
+      "ArticleImageR\005image\"\223\002\n\020NewsArticleImage" +
+      "\022\022\n\004uuid\030\001 \001(\tR\004uuid\022*\n\017new_article_sid\030" +
+      "\002 \001(\003B\0020\001R\rnewArticleSid\022\030\n\007content\030\003 \001(" +
+      "\tR\007content\022!\n\014download_url\030\004 \001(\tR\013downlo" +
+      "adUrl\022,\n\022image_reference_id\030\005 \001(\tR\020image" +
+      "ReferenceId\022\035\n\nimage_type\030\006 \001(\tR\timageTy" +
+      "pe\0225\n\007temp_id\030\007 \001(\0132\034.google.protobuf.St" +
+      "ringValueR\006tempId\"^\n\035StoreNewsArticleIma" +
+      "geResponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1" +
+      ".newsroom.NewsArticleImageR\005image\"M\n\037Lis" +
+      "tImagesForNewsArticleRequest\022*\n\017new_arti" +
+      "cle_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"{\n List" +
+      "ImagesForNewsArticleResponse\022W\n\023news_art" +
+      "icle_images\030\001 \003(\0132\'.api.v1alpha1.newsroo" +
+      "m.NewsArticleImageR\021newsArticleImages\"^\n" +
+      "\035UploadNewsArticleImageRequest\022=\n\005image\030" +
+      "\001 \001(\0132\'.api.v1alpha1.newsroom.NewsArticl" +
+      "eImageR\005image\"_\n\036UploadNewsArticleImageR" +
+      "esponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.ne" +
+      "wsroom.NewsArticleImageR\005image\"\222\001\n\032Creat" +
+      "eClientArticleRequest\022\024\n\005title\030\001 \001(\tR\005ti" +
+      "tle\022\030\n\007content\030\002 \001(\tR\007content\022\026\n\006author\030" +
+      "\003 \001(\tR\006author\022,\n\022image_reference_id\030\004 \001(" +
+      "\tR\020imageReferenceId\"q\n\033CreateClientArtic" +
+      "leResponse\022R\n\017article_details\030\001 \001(\0132).ap" +
+      "i.v1alpha1.newsroom.NewsArticleDetailsR\016" +
+      "articleDetails\"\253\001\n\032UpdateClientArticleRe" +
+      "quest\022R\n\017article_details\030\001 \001(\0132).api.v1a" +
+      "lpha1.newsroom.NewsArticleDetailsR\016artic" +
+      "leDetails\0229\n\nfield_mask\030d \001(\0132\032.google.p" +
+      "rotobuf.FieldMaskR\tfieldMask\"q\n\033UpdateCl" +
+      "ientArticleResponse\022R\n\017article_details\030\001" +
+      " \001(\0132).api.v1alpha1.newsroom.NewsArticle" +
+      "DetailsR\016articleDetails\"\216\001\n\031ListClientAr" +
+      "ticlesRequest\0226\n\010statuses\030\001 \003(\0162\032.api.co" +
+      "mmons.ArticleStatusR\010statuses\0229\n\nfield_m" +
+      "ask\030d \001(\0132\032.google.protobuf.FieldMaskR\tf" +
+      "ieldMask\"p\n\032ListClientArticlesResponse\022R" +
+      "\n\017article_details\030\001 \003(\0132).api.v1alpha1.n" +
+      "ewsroom.NewsArticleDetailsR\016articleDetai" +
+      "ls\"\275\001\n#CreatePublishedClientArticleReque" +
+      "st\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArti" +
+      "cleSid\022&\n\017display_to_user\030\002 \001(\010R\rdisplay" +
+      "ToUser\022!\n\014article_link\030\003 \001(\tR\013articleLin" +
+      "k\022\037\n\013always_show\030\004 \001(\010R\nalwaysShow\"\222\001\n$C" +
+      "reatePublishedClientArticleResponse\022j\n\031p" +
+      "ublished_article_details\030\001 \001(\0132..api.v1a" +
+      "lpha1.newsroom.PublishedArticleDetailsR\027" +
+      "publishedArticleDetails\"^\n$GetPublishedC" +
+      "lientArticleByIdRequest\0226\n\025published_art" +
+      "icle_sid\030\001 \001(\003B\0020\001R\023publishedArticleSid\"" +
+      "\223\001\n%GetPublishedClientArticleByIdRespons" +
       "e\022j\n\031published_article_details\030\001 \001(\0132..a" +
       "pi.v1alpha1.newsroom.PublishedArticleDet" +
-      "ailsR\027publishedArticleDetails\"^\n$GetPubl" +
-      "ishedClientArticleByIdRequest\0226\n\025publish" +
-      "ed_article_sid\030\001 \001(\003B\0020\001R\023publishedArtic" +
-      "leSid\"\223\001\n%GetPublishedClientArticleByIdR" +
-      "esponse\022j\n\031published_article_details\030\001 \001" +
-      "(\0132..api.v1alpha1.newsroom.PublishedArti" +
-      "cleDetailsR\027publishedArticleDetails\"_\n\036S" +
-      "toreClientArticleImageRequest\022=\n\005image\030\001" +
-      " \001(\0132\'.api.v1alpha1.newsroom.NewsArticle" +
-      "ImageR\005image\"`\n\037StoreClientArticleImageR" +
-      "esponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.ne" +
-      "wsroom.NewsArticleImageR\005image\"O\n!ListIm" +
-      "agesForClientArticleRequest\022*\n\017new_artic" +
-      "le_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"}\n\"ListI" +
-      "magesForClientArticleResponse\022W\n\023news_ar" +
-      "ticle_images\030\001 \003(\0132\'.api.v1alpha1.newsro" +
-      "om.NewsArticleImageR\021newsArticleImages\"`" +
-      "\n\037UploadClientArticleImageRequest\022=\n\005ima" +
-      "ge\030\001 \001(\0132\'.api.v1alpha1.newsroom.NewsArt" +
-      "icleImageR\005image\"a\n UploadClientArticleI" +
-      "mageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1alph" +
-      "a1.newsroom.NewsArticleImageR\005image\"$\n\"L" +
-      "istPublishedClientArticlesRequest\"\221\001\n#Li" +
-      "stPublishedClientArticlesResponse\022j\n\031pub" +
-      "lished_article_details\030\001 \003(\0132..api.v1alp" +
-      "ha1.newsroom.PublishedArticleDetailsR\027pu" +
-      "blishedArticleDetails\"I\n\033GetClientArticl" +
-      "eByIdRequest\022*\n\017new_article_sid\030\001 \001(\003B\0020" +
-      "\001R\rnewArticleSid\"r\n\034GetClientArticleById" +
-      "Response\022R\n\017article_details\030\001 \001(\0132).api." +
-      "v1alpha1.newsroom.NewsArticleDetailsR\016ar" +
-      "ticleDetailsB\256\001\n\'com.tcn.cloud.api.api.v" +
-      "1alpha1.newsroomB\rEntitiesProtoP\001\242\002\003AVN\252" +
-      "\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\N" +
-      "ewsroom\342\002!Api\\V1alpha1\\Newsroom\\GPBMetad" +
-      "ata\352\002\027Api::V1alpha1::Newsroomb\006proto3"
+      "ailsR\027publishedArticleDetails\"_\n\036StoreCl" +
+      "ientArticleImageRequest\022=\n\005image\030\001 \001(\0132\'" +
+      ".api.v1alpha1.newsroom.NewsArticleImageR" +
+      "\005image\"`\n\037StoreClientArticleImageRespons" +
+      "e\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom" +
+      ".NewsArticleImageR\005image\"O\n!ListImagesFo" +
+      "rClientArticleRequest\022*\n\017new_article_sid" +
+      "\030\001 \001(\003B\0020\001R\rnewArticleSid\"}\n\"ListImagesF" +
+      "orClientArticleResponse\022W\n\023news_article_" +
+      "images\030\001 \003(\0132\'.api.v1alpha1.newsroom.New" +
+      "sArticleImageR\021newsArticleImages\"`\n\037Uplo" +
+      "adClientArticleImageRequest\022=\n\005image\030\001 \001" +
+      "(\0132\'.api.v1alpha1.newsroom.NewsArticleIm" +
+      "ageR\005image\"a\n UploadClientArticleImageRe" +
+      "sponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.new" +
+      "sroom.NewsArticleImageR\005image\"$\n\"ListPub" +
+      "lishedClientArticlesRequest\"\221\001\n#ListPubl" +
+      "ishedClientArticlesResponse\022j\n\031published" +
+      "_article_details\030\001 \003(\0132..api.v1alpha1.ne" +
+      "wsroom.PublishedArticleDetailsR\027publishe" +
+      "dArticleDetails\"I\n\033GetClientArticleByIdR" +
+      "equest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnew" +
+      "ArticleSid\"r\n\034GetClientArticleByIdRespon" +
+      "se\022R\n\017article_details\030\001 \001(\0132).api.v1alph" +
+      "a1.newsroom.NewsArticleDetailsR\016articleD" +
+      "etailsB\256\001\n\'com.tcn.cloud.api.api.v1alpha" +
+      "1.newsroomB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api." +
+      "V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroo" +
+      "m\342\002!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027" +
+      "Api::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -504,7 +507,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_PublishedArticleDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_PublishedArticleDetails_descriptor,
-        new java.lang.String[] { "PublishedArticleSid", "NewsArticleDetails", "DatePublished", "DisplayToUser", "AlwaysDisplay", });
+        new java.lang.String[] { "PublishedArticleSid", "NewsArticleDetails", "DatePublished", "DisplayToUser", "AlwaysDisplay", "IsClientArticle", });
     internal_static_api_v1alpha1_newsroom_UserActivity_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_api_v1alpha1_newsroom_UserActivity_fieldAccessorTable = new
@@ -516,7 +519,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_descriptor,
-        new java.lang.String[] { "PublishedArticleSid", });
+        new java.lang.String[] { "PublishedArticleSid", "PublishedClientArticleSid", });
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_fieldAccessorTable = new
