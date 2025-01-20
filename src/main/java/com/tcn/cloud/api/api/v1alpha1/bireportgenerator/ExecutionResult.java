@@ -4,19 +4,35 @@
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
 /**
+ * <pre>
+ * ExecutionResult describes the outcome of a report execution
+ * </pre>
+ *
  * Protobuf enum {@code api.v1alpha1.bireportgenerator.ExecutionResult}
  */
 public enum ExecutionResult
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * execution result not specified
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_UNSPECIFIED = 0;</code>
    */
   EXECUTION_RESULT_UNSPECIFIED(0),
   /**
+   * <pre>
+   * successful execution result
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_SUCCESS = 1;</code>
    */
   EXECUTION_RESULT_SUCCESS(1),
   /**
+   * <pre>
+   * failed execution result
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_FAILURE = 2;</code>
    */
   EXECUTION_RESULT_FAILURE(2),
@@ -24,14 +40,26 @@ public enum ExecutionResult
   ;
 
   /**
+   * <pre>
+   * execution result not specified
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_UNSPECIFIED = 0;</code>
    */
   public static final int EXECUTION_RESULT_UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * successful execution result
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_SUCCESS = 1;</code>
    */
   public static final int EXECUTION_RESULT_SUCCESS_VALUE = 1;
   /**
+   * <pre>
+   * failed execution result
+   * </pre>
+   *
    * <code>EXECUTION_RESULT_FAILURE = 2;</code>
    */
   public static final int EXECUTION_RESULT_FAILURE_VALUE = 2;
