@@ -9,18 +9,34 @@ package com.tcn.cloud.api.api.commons;
 public enum ReportStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * unspecified report status
+   * </pre>
+   *
    * <code>REPORT_STATUS_UNSPECIFIED = 0;</code>
    */
   REPORT_STATUS_UNSPECIFIED(0),
   /**
+   * <pre>
+   * report pending status
+   * </pre>
+   *
    * <code>REPORT_STATUS_PENDING = 1;</code>
    */
   REPORT_STATUS_PENDING(1),
   /**
+   * <pre>
+   * report completed status
+   * </pre>
+   *
    * <code>REPORT_STATUS_COMPLETED = 2;</code>
    */
   REPORT_STATUS_COMPLETED(2),
   /**
+   * <pre>
+   * report failed status
+   * </pre>
+   *
    * <code>REPORT_STATUS_FAILED = 3;</code>
    */
   REPORT_STATUS_FAILED(3),
@@ -28,18 +44,34 @@ public enum ReportStatus
   ;
 
   /**
+   * <pre>
+   * unspecified report status
+   * </pre>
+   *
    * <code>REPORT_STATUS_UNSPECIFIED = 0;</code>
    */
   public static final int REPORT_STATUS_UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * report pending status
+   * </pre>
+   *
    * <code>REPORT_STATUS_PENDING = 1;</code>
    */
   public static final int REPORT_STATUS_PENDING_VALUE = 1;
   /**
+   * <pre>
+   * report completed status
+   * </pre>
+   *
    * <code>REPORT_STATUS_COMPLETED = 2;</code>
    */
   public static final int REPORT_STATUS_COMPLETED_VALUE = 2;
   /**
+   * <pre>
+   * report failed status
+   * </pre>
+   *
    * <code>REPORT_STATUS_FAILED = 3;</code>
    */
   public static final int REPORT_STATUS_FAILED_VALUE = 3;
