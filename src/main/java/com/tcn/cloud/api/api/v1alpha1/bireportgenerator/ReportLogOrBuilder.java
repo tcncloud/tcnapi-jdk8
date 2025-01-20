@@ -9,10 +9,30 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
+   * org id of the report log
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * org id of the report log
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
    * report log id
    * </pre>
    *
-   * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
+   * <code>int64 report_log_id = 2 [json_name = "reportLogId"];</code>
    * @return The reportLogId.
    */
   long getReportLogId();
@@ -22,17 +42,27 @@ public interface ReportLogOrBuilder extends
    * report job id
    * </pre>
    *
-   * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+   * <code>int64 report_job_id = 3 [json_name = "reportJobId"];</code>
    * @return The reportJobId.
    */
   long getReportJobId();
 
   /**
    * <pre>
+   * unique id of the job execution
+   * </pre>
+   *
+   * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+   * @return The executionId.
+   */
+  long getExecutionId();
+
+  /**
+   * <pre>
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 3 [json_name = "reportName"];</code>
+   * <code>string report_name = 5 [json_name = "reportName"];</code>
    * @return The reportName.
    */
   java.lang.String getReportName();
@@ -41,7 +71,7 @@ public interface ReportLogOrBuilder extends
    * name of the report
    * </pre>
    *
-   * <code>string report_name = 3 [json_name = "reportName"];</code>
+   * <code>string report_name = 5 [json_name = "reportName"];</code>
    * @return The bytes for reportName.
    */
   com.google.protobuf.ByteString
@@ -49,29 +79,10 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
-   * the report lifecycle status
-   * </pre>
-   *
-   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
-   * @return The enum numeric value on the wire for reportStatus.
-   */
-  int getReportStatusValue();
-  /**
-   * <pre>
-   * the report lifecycle status
-   * </pre>
-   *
-   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
-   * @return The reportStatus.
-   */
-  com.tcn.cloud.api.api.commons.ReportStatus getReportStatus();
-
-  /**
-   * <pre>
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return Whether the jobRequestedTime field is set.
    */
   boolean hasJobRequestedTime();
@@ -80,7 +91,7 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    * @return The jobRequestedTime.
    */
   com.google.protobuf.Timestamp getJobRequestedTime();
@@ -89,80 +100,35 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 5 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder();
 
   /**
    * <pre>
-   * the time that the report job was completed
+   * result of the report job
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
-   * @return Whether the jobCompletedTime field is set.
+   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 7 [json_name = "executionResult"];</code>
+   * @return The enum numeric value on the wire for executionResult.
    */
-  boolean hasJobCompletedTime();
+  int getExecutionResultValue();
   /**
    * <pre>
-   * the time that the report job was completed
+   * result of the report job
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
-   * @return The jobCompletedTime.
+   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 7 [json_name = "executionResult"];</code>
+   * @return The executionResult.
    */
-  com.google.protobuf.Timestamp getJobCompletedTime();
-  /**
-   * <pre>
-   * the time that the report job was completed
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp job_completed_time = 6 [json_name = "jobCompletedTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder();
-
-  /**
-   * <pre>
-   * the number of retries for this report
-   * </pre>
-   *
-   * <code>int64 retry_count = 7 [json_name = "retryCount"];</code>
-   * @return The retryCount.
-   */
-  long getRetryCount();
-
-  /**
-   * <pre>
-   * the last time a retry was attempted
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
-   * @return Whether the lastRetryTime field is set.
-   */
-  boolean hasLastRetryTime();
-  /**
-   * <pre>
-   * the last time a retry was attempted
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
-   * @return The lastRetryTime.
-   */
-  com.google.protobuf.Timestamp getLastRetryTime();
-  /**
-   * <pre>
-   * the last time a retry was attempted
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getLastRetryTimeOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult getExecutionResult();
 
   /**
    * <pre>
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
    * @return The failureReason.
    */
   java.lang.String getFailureReason();
@@ -171,9 +137,29 @@ public interface ReportLogOrBuilder extends
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
    * @return The bytes for failureReason.
    */
   com.google.protobuf.ByteString
       getFailureReasonBytes();
+
+  /**
+   * <pre>
+   * current attempt number of the report job
+   * </pre>
+   *
+   * <code>int64 attempt_number = 9 [json_name = "attemptNumber"];</code>
+   * @return The attemptNumber.
+   */
+  long getAttemptNumber();
+
+  /**
+   * <pre>
+   * max attempts of the report job
+   * </pre>
+   *
+   * <code>int64 max_attempts = 10 [json_name = "maxAttempts"];</code>
+   * @return The maxAttempts.
+   */
+  long getMaxAttempts();
 }
