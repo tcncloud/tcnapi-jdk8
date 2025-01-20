@@ -132,10 +132,37 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   * @return Whether the lastRetryTime field is set.
+   */
+  boolean hasLastRetryTime();
+  /**
+   * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   * @return The lastRetryTime.
+   */
+  com.google.protobuf.Timestamp getLastRetryTime();
+  /**
+   * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastRetryTimeOrBuilder();
+
+  /**
+   * <pre>
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The failureReason.
    */
   java.lang.String getFailureReason();
@@ -144,7 +171,7 @@ public interface ReportLogOrBuilder extends
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The bytes for failureReason.
    */
   com.google.protobuf.ByteString

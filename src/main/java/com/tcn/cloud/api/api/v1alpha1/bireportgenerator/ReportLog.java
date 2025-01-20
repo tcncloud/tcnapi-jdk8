@@ -239,7 +239,45 @@ private static final long serialVersionUID = 0L;
     return retryCount_;
   }
 
-  public static final int FAILURE_REASON_FIELD_NUMBER = 8;
+  public static final int LAST_RETRY_TIME_FIELD_NUMBER = 8;
+  private com.google.protobuf.Timestamp lastRetryTime_;
+  /**
+   * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   * @return Whether the lastRetryTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastRetryTime() {
+    return lastRetryTime_ != null;
+  }
+  /**
+   * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   * @return The lastRetryTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLastRetryTime() {
+    return lastRetryTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastRetryTime_;
+  }
+  /**
+   * <pre>
+   * the last time a retry was attempted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLastRetryTimeOrBuilder() {
+    return lastRetryTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastRetryTime_;
+  }
+
+  public static final int FAILURE_REASON_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object failureReason_ = "";
   /**
@@ -247,7 +285,7 @@ private static final long serialVersionUID = 0L;
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The failureReason.
    */
   @java.lang.Override
@@ -268,7 +306,7 @@ private static final long serialVersionUID = 0L;
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
    * @return The bytes for failureReason.
    */
   @java.lang.Override
@@ -321,8 +359,11 @@ private static final long serialVersionUID = 0L;
     if (retryCount_ != 0L) {
       output.writeInt64(7, retryCount_);
     }
+    if (lastRetryTime_ != null) {
+      output.writeMessage(8, getLastRetryTime());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, failureReason_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, failureReason_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -360,8 +401,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, retryCount_);
     }
+    if (lastRetryTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getLastRetryTime());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, failureReason_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, failureReason_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -397,6 +442,11 @@ private static final long serialVersionUID = 0L;
     }
     if (getRetryCount()
         != other.getRetryCount()) return false;
+    if (hasLastRetryTime() != other.hasLastRetryTime()) return false;
+    if (hasLastRetryTime()) {
+      if (!getLastRetryTime()
+          .equals(other.getLastRetryTime())) return false;
+    }
     if (!getFailureReason()
         .equals(other.getFailureReason())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -431,6 +481,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RETRY_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getRetryCount());
+    if (hasLastRetryTime()) {
+      hash = (37 * hash) + LAST_RETRY_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getLastRetryTime().hashCode();
+    }
     hash = (37 * hash) + FAILURE_REASON_FIELD_NUMBER;
     hash = (53 * hash) + getFailureReason().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -583,6 +637,11 @@ private static final long serialVersionUID = 0L;
         jobCompletedTimeBuilder_ = null;
       }
       retryCount_ = 0L;
+      lastRetryTime_ = null;
+      if (lastRetryTimeBuilder_ != null) {
+        lastRetryTimeBuilder_.dispose();
+        lastRetryTimeBuilder_ = null;
+      }
       failureReason_ = "";
       return this;
     }
@@ -643,6 +702,11 @@ private static final long serialVersionUID = 0L;
         result.retryCount_ = retryCount_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.lastRetryTime_ = lastRetryTimeBuilder_ == null
+            ? lastRetryTime_
+            : lastRetryTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.failureReason_ = failureReason_;
       }
     }
@@ -714,9 +778,12 @@ private static final long serialVersionUID = 0L;
       if (other.getRetryCount() != 0L) {
         setRetryCount(other.getRetryCount());
       }
+      if (other.hasLastRetryTime()) {
+        mergeLastRetryTime(other.getLastRetryTime());
+      }
       if (!other.getFailureReason().isEmpty()) {
         failureReason_ = other.failureReason_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -785,10 +852,17 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 56
             case 66: {
-              failureReason_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getLastRetryTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              failureReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1413,13 +1487,168 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.Timestamp lastRetryTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastRetryTimeBuilder_;
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     * @return Whether the lastRetryTime field is set.
+     */
+    public boolean hasLastRetryTime() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     * @return The lastRetryTime.
+     */
+    public com.google.protobuf.Timestamp getLastRetryTime() {
+      if (lastRetryTimeBuilder_ == null) {
+        return lastRetryTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastRetryTime_;
+      } else {
+        return lastRetryTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public Builder setLastRetryTime(com.google.protobuf.Timestamp value) {
+      if (lastRetryTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastRetryTime_ = value;
+      } else {
+        lastRetryTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public Builder setLastRetryTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (lastRetryTimeBuilder_ == null) {
+        lastRetryTime_ = builderForValue.build();
+      } else {
+        lastRetryTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public Builder mergeLastRetryTime(com.google.protobuf.Timestamp value) {
+      if (lastRetryTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          lastRetryTime_ != null &&
+          lastRetryTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLastRetryTimeBuilder().mergeFrom(value);
+        } else {
+          lastRetryTime_ = value;
+        }
+      } else {
+        lastRetryTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public Builder clearLastRetryTime() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      lastRetryTime_ = null;
+      if (lastRetryTimeBuilder_ != null) {
+        lastRetryTimeBuilder_.dispose();
+        lastRetryTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLastRetryTimeBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getLastRetryTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastRetryTimeOrBuilder() {
+      if (lastRetryTimeBuilder_ != null) {
+        return lastRetryTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return lastRetryTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : lastRetryTime_;
+      }
+    }
+    /**
+     * <pre>
+     * the last time a retry was attempted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_retry_time = 8 [json_name = "lastRetryTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLastRetryTimeFieldBuilder() {
+      if (lastRetryTimeBuilder_ == null) {
+        lastRetryTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLastRetryTime(),
+                getParentForChildren(),
+                isClean());
+        lastRetryTime_ = null;
+      }
+      return lastRetryTimeBuilder_;
+    }
+
     private java.lang.Object failureReason_ = "";
     /**
      * <pre>
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return The failureReason.
      */
     public java.lang.String getFailureReason() {
@@ -1439,7 +1668,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return The bytes for failureReason.
      */
     public com.google.protobuf.ByteString
@@ -1460,7 +1689,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @param value The failureReason to set.
      * @return This builder for chaining.
      */
@@ -1468,7 +1697,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       failureReason_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1477,12 +1706,12 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFailureReason() {
       failureReason_ = getDefaultInstance().getFailureReason();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1491,7 +1720,7 @@ private static final long serialVersionUID = 0L;
      * describes the error that last occurred for the job, if any
      * </pre>
      *
-     * <code>string failure_reason = 8 [json_name = "failureReason"];</code>
+     * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
      * @param value The bytes for failureReason to set.
      * @return This builder for chaining.
      */
@@ -1500,7 +1729,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       failureReason_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
