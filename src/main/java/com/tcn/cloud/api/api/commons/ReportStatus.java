@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * ReportStatus describes the status of a report
+ * </pre>
+ *
  * Protobuf enum {@code api.commons.ReportStatus}
  */
 public enum ReportStatus
