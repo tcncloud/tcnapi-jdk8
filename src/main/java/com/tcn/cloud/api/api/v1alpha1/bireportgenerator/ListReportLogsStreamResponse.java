@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
 /**
+ * <pre>
+ * ListReportLogsStreamResponse is the response for listing report logs with streaming
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse}
  */
 public final class ListReportLogsStreamResponse extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int REPORT_LOG_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog reportLog_;
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    * @return Whether the reportLog field is set.
    */
@@ -49,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return reportLog_ != null;
   }
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    * @return The reportLog.
    */
@@ -57,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return reportLog_ == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog.getDefaultInstance() : reportLog_;
   }
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    */
   @java.lang.Override
@@ -227,6 +243,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListReportLogsStreamResponse is the response for listing report logs with streaming
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse}
    */
   public static final class Builder extends
@@ -406,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog.Builder, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLogOrBuilder> reportLogBuilder_;
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      * @return Whether the reportLog field is set.
      */
@@ -413,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      * @return The reportLog.
      */
@@ -424,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public Builder setReportLog(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog value) {
@@ -440,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public Builder setReportLog(
@@ -454,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public Builder mergeReportLog(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog value) {
@@ -473,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public Builder clearReportLog() {
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog.Builder getReportLogBuilder() {
@@ -494,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getReportLogFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLogOrBuilder getReportLogOrBuilder() {
@@ -505,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * report_log describes a report log
+     * </pre>
+     *
      * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

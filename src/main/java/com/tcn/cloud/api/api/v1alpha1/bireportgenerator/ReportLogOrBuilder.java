@@ -8,51 +8,97 @@ public interface ReportLogOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * report log id
+   * </pre>
+   *
    * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
    * @return The reportLogId.
    */
   long getReportLogId();
 
   /**
-   * <code>string report_name = 2 [json_name = "reportName"];</code>
+   * <pre>
+   * report job id
+   * </pre>
+   *
+   * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+   * @return The reportJobId.
+   */
+  long getReportJobId();
+
+  /**
+   * <pre>
+   * name of the report
+   * </pre>
+   *
+   * <code>string report_name = 3 [json_name = "reportName"];</code>
    * @return The reportName.
    */
   java.lang.String getReportName();
   /**
-   * <code>string report_name = 2 [json_name = "reportName"];</code>
+   * <pre>
+   * name of the report
+   * </pre>
+   *
+   * <code>string report_name = 3 [json_name = "reportName"];</code>
    * @return The bytes for reportName.
    */
   com.google.protobuf.ByteString
       getReportNameBytes();
 
   /**
-   * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+   * <pre>
+   * the report processing status
+   * </pre>
+   *
+   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
    * @return The enum numeric value on the wire for reportStatus.
    */
   int getReportStatusValue();
   /**
-   * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+   * <pre>
+   * the report processing status
+   * </pre>
+   *
+   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
    * @return The reportStatus.
    */
   com.tcn.cloud.api.api.commons.ReportStatus getReportStatus();
 
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    * @return Whether the requestedDate field is set.
    */
   boolean hasRequestedDate();
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    * @return The requestedDate.
    */
   com.google.protobuf.Timestamp getRequestedDate();
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder();
 
   /**
-   * <code>int64 retry_count = 5 [json_name = "retryCount"];</code>
+   * <pre>
+   * the number of retries for this report
+   * </pre>
+   *
+   * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
    * @return The retryCount.
    */
   long getRetryCount();

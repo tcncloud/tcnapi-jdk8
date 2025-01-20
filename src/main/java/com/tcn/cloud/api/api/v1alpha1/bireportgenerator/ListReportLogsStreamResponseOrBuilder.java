@@ -8,16 +8,28 @@ public interface ListReportLogsStreamResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    * @return Whether the reportLog field is set.
    */
   boolean hasReportLog();
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    * @return The reportLog.
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLog getReportLog();
   /**
+   * <pre>
+   * report_log describes a report log
+   * </pre>
+   *
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLogOrBuilder getReportLogOrBuilder();

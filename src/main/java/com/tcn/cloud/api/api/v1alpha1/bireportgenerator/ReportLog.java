@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
 /**
+ * <pre>
+ * ReportLog describes information on a report log
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.bireportgenerator.ReportLog}
  */
 public final class ReportLog extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   public static final int REPORT_LOG_ID_FIELD_NUMBER = 1;
   private long reportLogId_ = 0L;
   /**
+   * <pre>
+   * report log id
+   * </pre>
+   *
    * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
    * @return The reportLogId.
    */
@@ -51,11 +59,30 @@ private static final long serialVersionUID = 0L;
     return reportLogId_;
   }
 
-  public static final int REPORT_NAME_FIELD_NUMBER = 2;
+  public static final int REPORT_JOB_ID_FIELD_NUMBER = 2;
+  private long reportJobId_ = 0L;
+  /**
+   * <pre>
+   * report job id
+   * </pre>
+   *
+   * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+   * @return The reportJobId.
+   */
+  @java.lang.Override
+  public long getReportJobId() {
+    return reportJobId_;
+  }
+
+  public static final int REPORT_NAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object reportName_ = "";
   /**
-   * <code>string report_name = 2 [json_name = "reportName"];</code>
+   * <pre>
+   * name of the report
+   * </pre>
+   *
+   * <code>string report_name = 3 [json_name = "reportName"];</code>
    * @return The reportName.
    */
   @java.lang.Override
@@ -72,7 +99,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string report_name = 2 [json_name = "reportName"];</code>
+   * <pre>
+   * name of the report
+   * </pre>
+   *
+   * <code>string report_name = 3 [json_name = "reportName"];</code>
    * @return The bytes for reportName.
    */
   @java.lang.Override
@@ -90,17 +121,25 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int REPORT_STATUS_FIELD_NUMBER = 3;
+  public static final int REPORT_STATUS_FIELD_NUMBER = 4;
   private int reportStatus_ = 0;
   /**
-   * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+   * <pre>
+   * the report processing status
+   * </pre>
+   *
+   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
    * @return The enum numeric value on the wire for reportStatus.
    */
   @java.lang.Override public int getReportStatusValue() {
     return reportStatus_;
   }
   /**
-   * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+   * <pre>
+   * the report processing status
+   * </pre>
+   *
+   * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
    * @return The reportStatus.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ReportStatus getReportStatus() {
@@ -108,10 +147,14 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ReportStatus.UNRECOGNIZED : result;
   }
 
-  public static final int REQUESTED_DATE_FIELD_NUMBER = 4;
+  public static final int REQUESTED_DATE_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp requestedDate_;
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    * @return Whether the requestedDate field is set.
    */
   @java.lang.Override
@@ -119,7 +162,11 @@ private static final long serialVersionUID = 0L;
     return requestedDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    * @return The requestedDate.
    */
   @java.lang.Override
@@ -127,17 +174,25 @@ private static final long serialVersionUID = 0L;
     return requestedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+   * <pre>
+   * the date that the report was requested
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder() {
     return requestedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requestedDate_;
   }
 
-  public static final int RETRY_COUNT_FIELD_NUMBER = 5;
+  public static final int RETRY_COUNT_FIELD_NUMBER = 6;
   private long retryCount_ = 0L;
   /**
-   * <code>int64 retry_count = 5 [json_name = "retryCount"];</code>
+   * <pre>
+   * the number of retries for this report
+   * </pre>
+   *
+   * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
    * @return The retryCount.
    */
   @java.lang.Override
@@ -162,17 +217,20 @@ private static final long serialVersionUID = 0L;
     if (reportLogId_ != 0L) {
       output.writeInt64(1, reportLogId_);
     }
+    if (reportJobId_ != 0L) {
+      output.writeInt64(2, reportJobId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reportName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reportName_);
     }
     if (reportStatus_ != com.tcn.cloud.api.api.commons.ReportStatus.REPORT_STATUS_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, reportStatus_);
+      output.writeEnum(4, reportStatus_);
     }
     if (requestedDate_ != null) {
-      output.writeMessage(4, getRequestedDate());
+      output.writeMessage(5, getRequestedDate());
     }
     if (retryCount_ != 0L) {
-      output.writeInt64(5, retryCount_);
+      output.writeInt64(6, retryCount_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -187,20 +245,24 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, reportLogId_);
     }
+    if (reportJobId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, reportJobId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reportName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reportName_);
     }
     if (reportStatus_ != com.tcn.cloud.api.api.commons.ReportStatus.REPORT_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, reportStatus_);
+        .computeEnumSize(4, reportStatus_);
     }
     if (requestedDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getRequestedDate());
+        .computeMessageSize(5, getRequestedDate());
     }
     if (retryCount_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, retryCount_);
+        .computeInt64Size(6, retryCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -219,6 +281,8 @@ private static final long serialVersionUID = 0L;
 
     if (getReportLogId()
         != other.getReportLogId()) return false;
+    if (getReportJobId()
+        != other.getReportJobId()) return false;
     if (!getReportName()
         .equals(other.getReportName())) return false;
     if (reportStatus_ != other.reportStatus_) return false;
@@ -243,6 +307,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + REPORT_LOG_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getReportLogId());
+    hash = (37 * hash) + REPORT_JOB_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getReportJobId());
     hash = (37 * hash) + REPORT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getReportName().hashCode();
     hash = (37 * hash) + REPORT_STATUS_FIELD_NUMBER;
@@ -352,6 +419,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ReportLog describes information on a report log
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.bireportgenerator.ReportLog}
    */
   public static final class Builder extends
@@ -386,6 +457,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       reportLogId_ = 0L;
+      reportJobId_ = 0L;
       reportName_ = "";
       reportStatus_ = 0;
       requestedDate_ = null;
@@ -431,17 +503,20 @@ private static final long serialVersionUID = 0L;
         result.reportLogId_ = reportLogId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.reportName_ = reportName_;
+        result.reportJobId_ = reportJobId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.reportStatus_ = reportStatus_;
+        result.reportName_ = reportName_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.reportStatus_ = reportStatus_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.requestedDate_ = requestedDateBuilder_ == null
             ? requestedDate_
             : requestedDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.retryCount_ = retryCount_;
       }
     }
@@ -493,9 +568,12 @@ private static final long serialVersionUID = 0L;
       if (other.getReportLogId() != 0L) {
         setReportLogId(other.getReportLogId());
       }
+      if (other.getReportJobId() != 0L) {
+        setReportJobId(other.getReportJobId());
+      }
       if (!other.getReportName().isEmpty()) {
         reportName_ = other.reportName_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.reportStatus_ != 0) {
@@ -538,28 +616,33 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              reportName_ = input.readStringRequireUtf8();
+            case 16: {
+              reportJobId_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 24: {
-              reportStatus_ = input.readEnum();
+            } // case 16
+            case 26: {
+              reportName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
-            case 34: {
+            } // case 26
+            case 32: {
+              reportStatus_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
               input.readMessage(
                   getRequestedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 40: {
-              retryCount_ = input.readInt64();
               bitField0_ |= 0x00000010;
               break;
-            } // case 40
+            } // case 42
+            case 48: {
+              retryCount_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -579,6 +662,10 @@ private static final long serialVersionUID = 0L;
 
     private long reportLogId_ ;
     /**
+     * <pre>
+     * report log id
+     * </pre>
+     *
      * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
      * @return The reportLogId.
      */
@@ -587,6 +674,10 @@ private static final long serialVersionUID = 0L;
       return reportLogId_;
     }
     /**
+     * <pre>
+     * report log id
+     * </pre>
+     *
      * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
      * @param value The reportLogId to set.
      * @return This builder for chaining.
@@ -599,6 +690,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * report log id
+     * </pre>
+     *
      * <code>int64 report_log_id = 1 [json_name = "reportLogId"];</code>
      * @return This builder for chaining.
      */
@@ -609,9 +704,57 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long reportJobId_ ;
+    /**
+     * <pre>
+     * report job id
+     * </pre>
+     *
+     * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+     * @return The reportJobId.
+     */
+    @java.lang.Override
+    public long getReportJobId() {
+      return reportJobId_;
+    }
+    /**
+     * <pre>
+     * report job id
+     * </pre>
+     *
+     * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+     * @param value The reportJobId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReportJobId(long value) {
+
+      reportJobId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * report job id
+     * </pre>
+     *
+     * <code>int64 report_job_id = 2 [json_name = "reportJobId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReportJobId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      reportJobId_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object reportName_ = "";
     /**
-     * <code>string report_name = 2 [json_name = "reportName"];</code>
+     * <pre>
+     * name of the report
+     * </pre>
+     *
+     * <code>string report_name = 3 [json_name = "reportName"];</code>
      * @return The reportName.
      */
     public java.lang.String getReportName() {
@@ -627,7 +770,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string report_name = 2 [json_name = "reportName"];</code>
+     * <pre>
+     * name of the report
+     * </pre>
+     *
+     * <code>string report_name = 3 [json_name = "reportName"];</code>
      * @return The bytes for reportName.
      */
     public com.google.protobuf.ByteString
@@ -644,7 +791,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string report_name = 2 [json_name = "reportName"];</code>
+     * <pre>
+     * name of the report
+     * </pre>
+     *
+     * <code>string report_name = 3 [json_name = "reportName"];</code>
      * @param value The reportName to set.
      * @return This builder for chaining.
      */
@@ -652,22 +803,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       reportName_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string report_name = 2 [json_name = "reportName"];</code>
+     * <pre>
+     * name of the report
+     * </pre>
+     *
+     * <code>string report_name = 3 [json_name = "reportName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearReportName() {
       reportName_ = getDefaultInstance().getReportName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string report_name = 2 [json_name = "reportName"];</code>
+     * <pre>
+     * name of the report
+     * </pre>
+     *
+     * <code>string report_name = 3 [json_name = "reportName"];</code>
      * @param value The bytes for reportName to set.
      * @return This builder for chaining.
      */
@@ -676,32 +835,44 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       reportName_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
     private int reportStatus_ = 0;
     /**
-     * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+     * <pre>
+     * the report processing status
+     * </pre>
+     *
+     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
      * @return The enum numeric value on the wire for reportStatus.
      */
     @java.lang.Override public int getReportStatusValue() {
       return reportStatus_;
     }
     /**
-     * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+     * <pre>
+     * the report processing status
+     * </pre>
+     *
+     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
      * @param value The enum numeric value on the wire for reportStatus to set.
      * @return This builder for chaining.
      */
     public Builder setReportStatusValue(int value) {
       reportStatus_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+     * <pre>
+     * the report processing status
+     * </pre>
+     *
+     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
      * @return The reportStatus.
      */
     @java.lang.Override
@@ -710,7 +881,11 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.ReportStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+     * <pre>
+     * the report processing status
+     * </pre>
+     *
+     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
      * @param value The reportStatus to set.
      * @return This builder for chaining.
      */
@@ -718,17 +893,21 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       reportStatus_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ReportStatus report_status = 3 [json_name = "reportStatus"];</code>
+     * <pre>
+     * the report processing status
+     * </pre>
+     *
+     * <code>.api.commons.ReportStatus report_status = 4 [json_name = "reportStatus"];</code>
      * @return This builder for chaining.
      */
     public Builder clearReportStatus() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       reportStatus_ = 0;
       onChanged();
       return this;
@@ -738,14 +917,22 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> requestedDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      * @return Whether the requestedDate field is set.
      */
     public boolean hasRequestedDate() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      * @return The requestedDate.
      */
     public com.google.protobuf.Timestamp getRequestedDate() {
@@ -756,7 +943,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public Builder setRequestedDate(com.google.protobuf.Timestamp value) {
       if (requestedDateBuilder_ == null) {
@@ -767,12 +958,16 @@ private static final long serialVersionUID = 0L;
       } else {
         requestedDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public Builder setRequestedDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -781,16 +976,20 @@ private static final long serialVersionUID = 0L;
       } else {
         requestedDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public Builder mergeRequestedDate(com.google.protobuf.Timestamp value) {
       if (requestedDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           requestedDate_ != null &&
           requestedDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getRequestedDateBuilder().mergeFrom(value);
@@ -800,15 +999,19 @@ private static final long serialVersionUID = 0L;
       } else {
         requestedDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public Builder clearRequestedDate() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       requestedDate_ = null;
       if (requestedDateBuilder_ != null) {
         requestedDateBuilder_.dispose();
@@ -818,15 +1021,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getRequestedDateBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getRequestedDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getRequestedDateOrBuilder() {
       if (requestedDateBuilder_ != null) {
@@ -837,7 +1048,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp requested_date = 4 [json_name = "requestedDate"];</code>
+     * <pre>
+     * the date that the report was requested
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp requested_date = 5 [json_name = "requestedDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -855,7 +1070,11 @@ private static final long serialVersionUID = 0L;
 
     private long retryCount_ ;
     /**
-     * <code>int64 retry_count = 5 [json_name = "retryCount"];</code>
+     * <pre>
+     * the number of retries for this report
+     * </pre>
+     *
+     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
      * @return The retryCount.
      */
     @java.lang.Override
@@ -863,23 +1082,31 @@ private static final long serialVersionUID = 0L;
       return retryCount_;
     }
     /**
-     * <code>int64 retry_count = 5 [json_name = "retryCount"];</code>
+     * <pre>
+     * the number of retries for this report
+     * </pre>
+     *
+     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
      * @param value The retryCount to set.
      * @return This builder for chaining.
      */
     public Builder setRetryCount(long value) {
 
       retryCount_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 retry_count = 5 [json_name = "retryCount"];</code>
+     * <pre>
+     * the number of retries for this report
+     * </pre>
+     *
+     * <code>int64 retry_count = 6 [json_name = "retryCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRetryCount() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       retryCount_ = 0L;
       onChanged();
       return this;

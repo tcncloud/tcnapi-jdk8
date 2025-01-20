@@ -344,6 +344,9 @@ public final class BIReportGeneratorServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListReportLogsStream lists report logs with streaming
+     * </pre>
      */
     default void listReportLogsStream(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> responseObserver) {
@@ -448,6 +451,9 @@ public final class BIReportGeneratorServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListReportLogsStream lists report logs with streaming
+     * </pre>
      */
     public void listReportLogsStream(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> responseObserver) {
@@ -533,6 +539,9 @@ public final class BIReportGeneratorServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListReportLogsStream lists report logs with streaming
+     * </pre>
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> listReportLogsStream(
         com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request) {

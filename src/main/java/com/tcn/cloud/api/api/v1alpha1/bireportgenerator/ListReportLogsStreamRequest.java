@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
 /**
+ * <pre>
+ * ListReportLogsStreamRequest is the request for listing report logs with streaming
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest}
  */
 public final class ListReportLogsStreamRequest extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int START_TIME_FIELD_NUMBER = 1;
   private com.google.protobuf.Timestamp startTime_;
   /**
+   * <pre>
+   * the start time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
    * @return Whether the startTime field is set.
    */
@@ -49,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return startTime_ != null;
   }
   /**
+   * <pre>
+   * the start time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
    * @return The startTime.
    */
@@ -57,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
   /**
+   * <pre>
+   * the start time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
    */
   @java.lang.Override
@@ -67,6 +83,10 @@ private static final long serialVersionUID = 0L;
   public static final int END_TIME_FIELD_NUMBER = 2;
   private com.google.protobuf.Timestamp endTime_;
   /**
+   * <pre>
+   * the end time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
    * @return Whether the endTime field is set.
    */
@@ -75,6 +95,10 @@ private static final long serialVersionUID = 0L;
     return endTime_ != null;
   }
   /**
+   * <pre>
+   * the end time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
    * @return The endTime.
    */
@@ -83,6 +107,10 @@ private static final long serialVersionUID = 0L;
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
   }
   /**
+   * <pre>
+   * the end time window to list report logs
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
    */
   @java.lang.Override
@@ -269,6 +297,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListReportLogsStreamRequest is the request for listing report logs with streaming
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest}
    */
   public static final class Builder extends
@@ -468,6 +500,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return Whether the startTime field is set.
      */
@@ -475,6 +511,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      * @return The startTime.
      */
@@ -486,6 +526,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -502,6 +546,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(
@@ -516,6 +564,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -535,6 +587,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
@@ -548,6 +604,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -556,6 +616,10 @@ private static final long serialVersionUID = 0L;
       return getStartTimeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -567,6 +631,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the start time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -587,6 +655,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return Whether the endTime field is set.
      */
@@ -594,6 +666,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      * @return The endTime.
      */
@@ -605,6 +681,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public Builder setEndTime(com.google.protobuf.Timestamp value) {
@@ -621,6 +701,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public Builder setEndTime(
@@ -635,6 +719,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
@@ -654,6 +742,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public Builder clearEndTime() {
@@ -667,6 +759,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
@@ -675,6 +771,10 @@ private static final long serialVersionUID = 0L;
       return getEndTimeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
@@ -686,6 +786,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the end time window to list report logs
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
