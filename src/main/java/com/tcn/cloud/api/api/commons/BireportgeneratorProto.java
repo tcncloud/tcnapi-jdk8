@@ -138,11 +138,14 @@ public final class BireportgeneratorProto {
       "ME_PART_TYPE_START_DATE_TIME\020\005\022$\n FILENA" +
       "ME_PART_TYPE_END_DATE_TIME\020\006\022\'\n#FILENAME" +
       "_PART_TYPE_REPORT_DATE_TIME\020\007\022\"\n\036FILENAM" +
-      "E_PART_TYPE_STATIC_TEXT\020\010B\204\001\n\035com.tcn.cl" +
-      "oud.api.api.commonsB\026BireportgeneratorPr" +
-      "otoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342" +
-      "\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Commons" +
-      "b\006proto3"
+      "E_PART_TYPE_STATIC_TEXT\020\010*\177\n\014ReportStatu" +
+      "s\022\035\n\031REPORT_STATUS_UNSPECIFIED\020\000\022\031\n\025REPO" +
+      "RT_STATUS_PENDING\020\001\022\033\n\027REPORT_STATUS_COM" +
+      "PLETED\020\002\022\030\n\024REPORT_STATUS_FAILED\020\003B\204\001\n\035c" +
+      "om.tcn.cloud.api.api.commonsB\026Bireportge" +
+      "neratorProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api" +
+      "\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api" +
+      "::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
