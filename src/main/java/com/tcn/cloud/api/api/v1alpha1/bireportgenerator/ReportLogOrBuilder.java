@@ -29,16 +29,6 @@ public interface ReportLogOrBuilder extends
 
   /**
    * <pre>
-   * report job hash
-   * </pre>
-   *
-   * <code>int64 report_job_hash = 3 [json_name = "reportJobHash"];</code>
-   * @return The reportJobHash.
-   */
-  long getReportJobHash();
-
-  /**
-   * <pre>
    * name of the report
    * </pre>
    *
