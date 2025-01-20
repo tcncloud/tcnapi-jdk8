@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private boolean includeInactive_ = false;
   /**
    * <pre>
-   * If true, inactive scheduling activities will be included in the return value.
+   * If true, inactive member non skill actvities will be included in the return value.
    * Set to false by default.
    * </pre>
    *
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
     private boolean includeInactive_ ;
     /**
      * <pre>
-     * If true, inactive scheduling activities will be included in the return value.
+     * If true, inactive member non skill actvities will be included in the return value.
      * Set to false by default.
      * </pre>
      *
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, inactive scheduling activities will be included in the return value.
+     * If true, inactive member non skill actvities will be included in the return value.
      * Set to false by default.
      * </pre>
      *
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, inactive scheduling activities will be included in the return value.
+     * If true, inactive member non skill actvities will be included in the return value.
      * Set to false by default.
      * </pre>
      *

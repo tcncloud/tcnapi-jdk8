@@ -8108,7 +8108,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
-     * if &#64;include_inactive is true then inactive scheduling activities and member non skill activities will also be included, otherwise only active activities will be returned.
+     * if &#64;include_inactive is true then inactive member non skill activities may also be included, otherwise only active activities will be returned.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -11754,7 +11754,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
-     * if &#64;include_inactive is true then inactive scheduling activities and member non skill activities will also be included, otherwise only active activities will be returned.
+     * if &#64;include_inactive is true then inactive member non skill activities may also be included, otherwise only active activities will be returned.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -15489,7 +15489,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
-     * if &#64;include_inactive is true then inactive scheduling activities and member non skill activities will also be included, otherwise only active activities will be returned.
+     * if &#64;include_inactive is true then inactive member non skill activities may also be included, otherwise only active activities will be returned.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -19019,7 +19019,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
-     * if &#64;include_inactive is true then inactive scheduling activities and member non skill activities will also be included, otherwise only active activities will be returned.
+     * if &#64;include_inactive is true then inactive member non skill activities may also be included, otherwise only active activities will be returned.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>

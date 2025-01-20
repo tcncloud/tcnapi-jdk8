@@ -9,7 +9,7 @@ public interface ListSchedulingActivitiesRequestOrBuilder extends
 
   /**
    * <pre>
-   * If true, inactive scheduling activities will be included in the return value.
+   * If true, inactive member non skill actvities will be included in the return value.
    * Set to false by default.
    * </pre>
    *
