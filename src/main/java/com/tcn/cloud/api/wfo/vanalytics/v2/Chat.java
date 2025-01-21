@@ -3526,7 +3526,7 @@ private static final long serialVersionUID = 0L;
   private long conversationSid_ = 0L;
   /**
    * <pre>
-   * The unique identifier of the sms conversation.
+   * The unique identifier of the chat conversation.
    * </pre>
    *
    * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
@@ -3542,7 +3542,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Thread> threads_;
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -3553,7 +3553,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -3565,7 +3565,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -3576,7 +3576,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -3587,7 +3587,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -3725,7 +3725,7 @@ private static final long serialVersionUID = 0L;
   private long campaignSid_ = 0L;
   /**
    * <pre>
-   * The omni campain this sms belongs to.
+   * The omni campain this chat belongs to.
    * </pre>
    *
    * <code>int64 campaign_sid = 6 [json_name = "campaignSid", jstype = JS_STRING];</code>
@@ -4261,7 +4261,7 @@ private static final long serialVersionUID = 0L;
     private long conversationSid_ ;
     /**
      * <pre>
-     * The unique identifier of the sms conversation.
+     * The unique identifier of the chat conversation.
      * </pre>
      *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
@@ -4273,7 +4273,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the sms conversation.
+     * The unique identifier of the chat conversation.
      * </pre>
      *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
@@ -4289,7 +4289,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the sms conversation.
+     * The unique identifier of the chat conversation.
      * </pre>
      *
      * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
@@ -4316,7 +4316,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4330,7 +4330,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4344,7 +4344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4358,7 +4358,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4379,7 +4379,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4397,7 +4397,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4417,7 +4417,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4438,7 +4438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4456,7 +4456,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4474,7 +4474,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4493,7 +4493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4510,7 +4510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4527,7 +4527,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4538,7 +4538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4552,7 +4552,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4567,7 +4567,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4578,7 +4578,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -4590,7 +4590,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text from the sms in threads.
+     * The text from the chat in threads.
      * </pre>
      *
      * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -5019,7 +5019,7 @@ private static final long serialVersionUID = 0L;
     private long campaignSid_ ;
     /**
      * <pre>
-     * The omni campain this sms belongs to.
+     * The omni campain this chat belongs to.
      * </pre>
      *
      * <code>int64 campaign_sid = 6 [json_name = "campaignSid", jstype = JS_STRING];</code>
@@ -5031,7 +5031,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The omni campain this sms belongs to.
+     * The omni campain this chat belongs to.
      * </pre>
      *
      * <code>int64 campaign_sid = 6 [json_name = "campaignSid", jstype = JS_STRING];</code>
@@ -5047,7 +5047,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The omni campain this sms belongs to.
+     * The omni campain this chat belongs to.
      * </pre>
      *
      * <code>int64 campaign_sid = 6 [json_name = "campaignSid", jstype = JS_STRING];</code>

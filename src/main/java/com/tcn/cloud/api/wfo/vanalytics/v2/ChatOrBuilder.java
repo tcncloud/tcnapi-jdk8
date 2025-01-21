@@ -9,7 +9,7 @@ public interface ChatOrBuilder extends
 
   /**
    * <pre>
-   * The unique identifier of the sms conversation.
+   * The unique identifier of the chat conversation.
    * </pre>
    *
    * <code>int64 conversation_sid = 1 [json_name = "conversationSid", jstype = JS_STRING];</code>
@@ -19,7 +19,7 @@ public interface ChatOrBuilder extends
 
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -28,7 +28,7 @@ public interface ChatOrBuilder extends
       getThreadsList();
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -36,7 +36,7 @@ public interface ChatOrBuilder extends
   com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Thread getThreads(int index);
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -44,7 +44,7 @@ public interface ChatOrBuilder extends
   int getThreadsCount();
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -53,7 +53,7 @@ public interface ChatOrBuilder extends
       getThreadsOrBuilderList();
   /**
    * <pre>
-   * The text from the sms in threads.
+   * The text from the chat in threads.
    * </pre>
    *
    * <code>repeated .wfo.vanalytics.v2.Chat.Thread threads = 2 [json_name = "threads"];</code>
@@ -137,7 +137,7 @@ public interface ChatOrBuilder extends
 
   /**
    * <pre>
-   * The omni campain this sms belongs to.
+   * The omni campain this chat belongs to.
    * </pre>
    *
    * <code>int64 campaign_sid = 6 [json_name = "campaignSid", jstype = JS_STRING];</code>
