@@ -175,7 +175,7 @@ public final class EvaluationProto {
       "nRequest\022#\n\revaluation_id\030\003 \001(\003R\014evaluat" +
       "ionId\"R\n\027ScoreEvaluationResponse\0227\n\neval" +
       "uation\030\001 \001(\0132\027.api.commons.EvaluationR\ne" +
-      "valuation\"\325\003\n\026ListEvaluationsRequest\022\033\n\t" +
+      "valuation\"\376\002\n\026ListEvaluationsRequest\022\033\n\t" +
       "scorer_id\030\002 \003(\tR\010scorerId\022:\n\014completed_a" +
       "t\030\003 \001(\0132\027.api.commons.TimeFilterR\013comple" +
       "tedAt\022!\n\014category_ids\030\004 \003(\003R\013categoryIds" +
@@ -184,78 +184,75 @@ public final class EvaluationProto {
       "eturn_fields\030\n \001(\0132\032.google.protobuf.Fie" +
       "ldMaskR\014returnFields\022\035\n\nis_deleted\030\013 \001(\010" +
       "R\tisDeleted\022=\n\rchannel_types\030\016 \003(\0162\030.api" +
-      ".commons.ChannelTypeR\014channelTypes\022\031\n\010or" +
-      "der_by\030\017 \001(\tR\007orderBy\022\033\n\tpage_size\030\020 \001(\005" +
-      "R\010pageSize\022\035\n\npage_token\030\021 \001(\tR\tpageToke" +
-      "n\"|\n\027ListEvaluationsResponse\0229\n\013evaluati" +
-      "ons\030\001 \003(\0132\027.api.commons.EvaluationR\013eval" +
-      "uations\022&\n\017next_page_token\030\002 \001(\tR\rnextPa" +
-      "geToken\"\216\001\n\035PreviewEvaluationScoreReques" +
-      "t\0227\n\nevaluation\030\002 \001(\0132\027.api.commons.Eval" +
-      "uationR\nevaluation\0224\n\tscorecard\030\003 \001(\0132\026." +
-      "api.commons.ScorecardR\tscorecard\"Y\n\036Prev" +
-      "iewEvaluationScoreResponse\0227\n\nevaluation" +
-      "\030\001 \001(\0132\027.api.commons.EvaluationR\nevaluat" +
-      "ion\"\276\002\n\035ListEvaluationsByOrgIdRequest\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\022\033\n\tscorer_id\030\002 \003(\tR" +
-      "\010scorerId\022:\n\014completed_at\030\003 \001(\0132\027.api.co" +
-      "mmons.TimeFilterR\013completedAt\022!\n\014categor" +
-      "y_ids\030\004 \003(\003R\013categoryIds\022$\n\016agent_user_i" +
-      "ds\030\005 \003(\tR\014agentUserIds\022#\n\rscorecard_ids\030" +
-      "\006 \003(\003R\014scorecardIds\022?\n\rreturn_fields\030\n \001" +
-      "(\0132\032.google.protobuf.FieldMaskR\014returnFi" +
-      "elds\"\\\n\036DeleteEvaluationByOrgIdRequest\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\022#\n\revaluation_id\030\002" +
-      " \001(\003R\014evaluationId\"\243\002\n\034BulkDeleteEvaluat" +
-      "ionsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022%\n\016ev" +
-      "aluation_ids\030\002 \003(\003R\revaluationIds\022:\n\014com" +
-      "pleted_at\030\003 \001(\0132\027.api.commons.TimeFilter" +
-      "R\013completedAt\022!\n\014category_ids\030\004 \003(\003R\013cat" +
-      "egoryIds\022$\n\016agent_user_ids\030\005 \003(\tR\014agentU" +
-      "serIds\022#\n\rscorecard_ids\030\006 \003(\003R\014scorecard" +
-      "Ids\022\033\n\tscorer_id\030\007 \003(\tR\010scorerId\"5\n\035Bulk" +
-      "DeleteEvaluationsResponse\022\024\n\005count\030\001 \001(\003" +
-      "R\005count\"X\n\030RestoreEvaluationRequest\022#\n\re" +
-      "valuation_id\030\002 \001(\003R\014evaluationId\022\027\n\007user" +
-      "_id\030\003 \001(\tR\006userId\"T\n\031RestoreEvaluationRe" +
-      "sponse\0227\n\nevaluation\030\001 \001(\0132\027.api.commons" +
-      ".EvaluationR\nevaluation\"\275\002\n\037SampleAgentC" +
-      "onversationsRequest\022!\n\014scorecard_id\030\003 \001(" +
-      "\003R\013scorecardId\0229\n\nstart_time\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\tstartTime\0225\n\010end" +
-      "_time\030\005 \001(\0132\032.google.protobuf.TimestampR" +
-      "\007endTime\0222\n\025max_agent_evaluations\030\006 \001(\005R" +
-      "\023maxAgentEvaluations\022+\n\021sample_percentag" +
-      "e\030\007 \001(\005R\020samplePercentage\022$\n\016agent_user_" +
-      "ids\030\010 \003(\tR\014agentUserIds\"\177\n SampleAgentCo" +
-      "nversationsResponse\022[\n\023agent_conversatio" +
-      "ns\030\001 \003(\0132*.api.v1alpha1.scorecards.Agent" +
-      "ConversationR\022agentConversations\"\242\006\n\021Age" +
-      "ntConversation\022%\n\016transcript_sid\030\001 \001(\003R\r" +
-      "transcriptSid\0222\n\007channel\030\002 \001(\0162\030.api.com" +
-      "mons.ChannelTypeR\007channel\022\"\n\ragent_user_" +
-      "id\030\003 \001(\tR\013agentUserId\0229\n\nstart_time\030\004 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tstartTime" +
-      "\022^\n\rcall_metadata\030\n \001(\01327.api.v1alpha1.s" +
-      "corecards.AgentConversation.CallMetadata" +
-      "H\000R\014callMetadata\022[\n\014sms_metadata\030\013 \001(\01326" +
-      ".api.v1alpha1.scorecards.AgentConversati" +
-      "on.SmsMetadataH\000R\013smsMetadata\032\254\002\n\014CallMe" +
-      "tadata\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcal" +
-      "l_type\030\002 \001(\0162\032.api.commons.CallType.Enum" +
-      "R\010callType\022>\n\rcall_duration\030\003 \001(\0132\031.goog" +
-      "le.protobuf.DurationR\014callDuration\022B\n\017sp" +
-      "eech_duration\030\004 \001(\0132\031.google.protobuf.Du" +
-      "rationR\016speechDuration\022D\n\020silence_durati" +
-      "on\030\005 \001(\0132\031.google.protobuf.DurationR\017sil" +
-      "enceDuration\032[\n\013SmsMetadata\022)\n\020conversat" +
-      "ion_sid\030\001 \001(\003R\017conversationSid\022!\n\014campai" +
-      "gn_sid\030\002 \001(\003R\013campaignSidB\n\n\010metadataB\272\001" +
-      "\n)com.tcn.cloud.api.api.v1alpha1.scoreca" +
-      "rdsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
-      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
-      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
-      "\031Api::V1alpha1::Scorecardsb\006proto3"
+      ".commons.ChannelTypeR\014channelTypes\"T\n\027Li" +
+      "stEvaluationsResponse\0229\n\013evaluations\030\001 \003" +
+      "(\0132\027.api.commons.EvaluationR\013evaluations" +
+      "\"\216\001\n\035PreviewEvaluationScoreRequest\0227\n\nev" +
+      "aluation\030\002 \001(\0132\027.api.commons.EvaluationR" +
+      "\nevaluation\0224\n\tscorecard\030\003 \001(\0132\026.api.com" +
+      "mons.ScorecardR\tscorecard\"Y\n\036PreviewEval" +
+      "uationScoreResponse\0227\n\nevaluation\030\001 \001(\0132" +
+      "\027.api.commons.EvaluationR\nevaluation\"\276\002\n" +
+      "\035ListEvaluationsByOrgIdRequest\022\025\n\006org_id" +
+      "\030\001 \001(\tR\005orgId\022\033\n\tscorer_id\030\002 \003(\tR\010scorer" +
+      "Id\022:\n\014completed_at\030\003 \001(\0132\027.api.commons.T" +
+      "imeFilterR\013completedAt\022!\n\014category_ids\030\004" +
+      " \003(\003R\013categoryIds\022$\n\016agent_user_ids\030\005 \003(" +
+      "\tR\014agentUserIds\022#\n\rscorecard_ids\030\006 \003(\003R\014" +
+      "scorecardIds\022?\n\rreturn_fields\030\n \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskR\014returnFields\"\\\n" +
+      "\036DeleteEvaluationByOrgIdRequest\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022#\n\revaluation_id\030\002 \001(\003R\014e" +
+      "valuationId\"\243\002\n\034BulkDeleteEvaluationsReq" +
+      "uest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022%\n\016evaluatio" +
+      "n_ids\030\002 \003(\003R\revaluationIds\022:\n\014completed_" +
+      "at\030\003 \001(\0132\027.api.commons.TimeFilterR\013compl" +
+      "etedAt\022!\n\014category_ids\030\004 \003(\003R\013categoryId" +
+      "s\022$\n\016agent_user_ids\030\005 \003(\tR\014agentUserIds\022" +
+      "#\n\rscorecard_ids\030\006 \003(\003R\014scorecardIds\022\033\n\t" +
+      "scorer_id\030\007 \003(\tR\010scorerId\"5\n\035BulkDeleteE" +
+      "valuationsResponse\022\024\n\005count\030\001 \001(\003R\005count" +
+      "\"X\n\030RestoreEvaluationRequest\022#\n\revaluati" +
+      "on_id\030\002 \001(\003R\014evaluationId\022\027\n\007user_id\030\003 \001" +
+      "(\tR\006userId\"T\n\031RestoreEvaluationResponse\022" +
+      "7\n\nevaluation\030\001 \001(\0132\027.api.commons.Evalua" +
+      "tionR\nevaluation\"\275\002\n\037SampleAgentConversa" +
+      "tionsRequest\022!\n\014scorecard_id\030\003 \001(\003R\013scor" +
+      "ecardId\0229\n\nstart_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tstartTime\0225\n\010end_time\030\005" +
+      " \001(\0132\032.google.protobuf.TimestampR\007endTim" +
+      "e\0222\n\025max_agent_evaluations\030\006 \001(\005R\023maxAge" +
+      "ntEvaluations\022+\n\021sample_percentage\030\007 \001(\005" +
+      "R\020samplePercentage\022$\n\016agent_user_ids\030\010 \003" +
+      "(\tR\014agentUserIds\"\177\n SampleAgentConversat" +
+      "ionsResponse\022[\n\023agent_conversations\030\001 \003(" +
+      "\0132*.api.v1alpha1.scorecards.AgentConvers" +
+      "ationR\022agentConversations\"\242\006\n\021AgentConve" +
+      "rsation\022%\n\016transcript_sid\030\001 \001(\003R\rtranscr" +
+      "iptSid\0222\n\007channel\030\002 \001(\0162\030.api.commons.Ch" +
+      "annelTypeR\007channel\022\"\n\ragent_user_id\030\003 \001(" +
+      "\tR\013agentUserId\0229\n\nstart_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tstartTime\022^\n\rcal" +
+      "l_metadata\030\n \001(\01327.api.v1alpha1.scorecar" +
+      "ds.AgentConversation.CallMetadataH\000R\014cal" +
+      "lMetadata\022[\n\014sms_metadata\030\013 \001(\01326.api.v1" +
+      "alpha1.scorecards.AgentConversation.SmsM" +
+      "etadataH\000R\013smsMetadata\032\254\002\n\014CallMetadata\022" +
+      "\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030" +
+      "\002 \001(\0162\032.api.commons.CallType.EnumR\010callT" +
+      "ype\022>\n\rcall_duration\030\003 \001(\0132\031.google.prot" +
+      "obuf.DurationR\014callDuration\022B\n\017speech_du" +
+      "ration\030\004 \001(\0132\031.google.protobuf.DurationR" +
+      "\016speechDuration\022D\n\020silence_duration\030\005 \001(" +
+      "\0132\031.google.protobuf.DurationR\017silenceDur" +
+      "ation\032[\n\013SmsMetadata\022)\n\020conversation_sid" +
+      "\030\001 \001(\003R\017conversationSid\022!\n\014campaign_sid\030" +
+      "\002 \001(\003R\013campaignSidB\n\n\010metadataB\272\001\n)com.t" +
+      "cn.cloud.api.api.v1alpha1.scorecardsB\017Ev" +
+      "aluationProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Sco" +
+      "recards\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\" +
+      "V1alpha1\\Scorecards\\GPBMetadata\352\002\031Api::V" +
+      "1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -332,13 +329,13 @@ public final class EvaluationProto {
     internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_descriptor,
-        new java.lang.String[] { "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", "ReturnFields", "IsDeleted", "ChannelTypes", "OrderBy", "PageSize", "PageToken", });
+        new java.lang.String[] { "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", "ReturnFields", "IsDeleted", "ChannelTypes", });
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_descriptor,
-        new java.lang.String[] { "Evaluations", "NextPageToken", });
+        new java.lang.String[] { "Evaluations", });
     internal_static_api_v1alpha1_scorecards_PreviewEvaluationScoreRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_scorecards_PreviewEvaluationScoreRequest_fieldAccessorTable = new
