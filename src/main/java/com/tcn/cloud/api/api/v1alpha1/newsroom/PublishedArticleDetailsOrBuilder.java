@@ -91,4 +91,14 @@ public interface PublishedArticleDetailsOrBuilder extends
    * @return The alwaysDisplay.
    */
   boolean getAlwaysDisplay();
+
+  /**
+   * <pre>
+   * differentiate between client and tcn articles
+   * </pre>
+   *
+   * <code>bool is_client_article = 6 [json_name = "isClientArticle"];</code>
+   * @return The isClientArticle.
+   */
+  boolean getIsClientArticle();
 }

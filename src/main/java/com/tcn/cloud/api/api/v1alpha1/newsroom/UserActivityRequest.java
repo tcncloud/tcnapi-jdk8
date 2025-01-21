@@ -72,6 +72,21 @@ private static final long serialVersionUID = 0L;
     return force_;
   }
 
+  public static final int PUBLISHED_CLIENT_ARTICLE_SID_FIELD_NUMBER = 3;
+  private long publishedClientArticleSid_ = 0L;
+  /**
+   * <pre>
+   * the unique published client article identifier
+   * </pre>
+   *
+   * <code>int64 published_client_article_sid = 3 [json_name = "publishedClientArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedClientArticleSid.
+   */
+  @java.lang.Override
+  public long getPublishedClientArticleSid() {
+    return publishedClientArticleSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,6 +107,9 @@ private static final long serialVersionUID = 0L;
     if (force_ != false) {
       output.writeBool(2, force_);
     }
+    if (publishedClientArticleSid_ != 0L) {
+      output.writeInt64(3, publishedClientArticleSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -108,6 +126,10 @@ private static final long serialVersionUID = 0L;
     if (force_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, force_);
+    }
+    if (publishedClientArticleSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, publishedClientArticleSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +150,8 @@ private static final long serialVersionUID = 0L;
         != other.getPublishedArticleSid()) return false;
     if (getForce()
         != other.getForce()) return false;
+    if (getPublishedClientArticleSid()
+        != other.getPublishedClientArticleSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +169,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FORCE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getForce());
+    hash = (37 * hash) + PUBLISHED_CLIENT_ARTICLE_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPublishedClientArticleSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -282,6 +309,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       publishedArticleSid_ = 0L;
       force_ = false;
+      publishedClientArticleSid_ = 0L;
       return this;
     }
 
@@ -320,6 +348,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.force_ = force_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.publishedClientArticleSid_ = publishedClientArticleSid_;
       }
     }
 
@@ -373,6 +404,9 @@ private static final long serialVersionUID = 0L;
       if (other.getForce() != false) {
         setForce(other.getForce());
       }
+      if (other.getPublishedClientArticleSid() != 0L) {
+        setPublishedClientArticleSid(other.getPublishedClientArticleSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +443,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              publishedClientArticleSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -510,6 +549,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearForce() {
       bitField0_ = (bitField0_ & ~0x00000002);
       force_ = false;
+      onChanged();
+      return this;
+    }
+
+    private long publishedClientArticleSid_ ;
+    /**
+     * <pre>
+     * the unique published client article identifier
+     * </pre>
+     *
+     * <code>int64 published_client_article_sid = 3 [json_name = "publishedClientArticleSid", jstype = JS_STRING];</code>
+     * @return The publishedClientArticleSid.
+     */
+    @java.lang.Override
+    public long getPublishedClientArticleSid() {
+      return publishedClientArticleSid_;
+    }
+    /**
+     * <pre>
+     * the unique published client article identifier
+     * </pre>
+     *
+     * <code>int64 published_client_article_sid = 3 [json_name = "publishedClientArticleSid", jstype = JS_STRING];</code>
+     * @param value The publishedClientArticleSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPublishedClientArticleSid(long value) {
+
+      publishedClientArticleSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the unique published client article identifier
+     * </pre>
+     *
+     * <code>int64 published_client_article_sid = 3 [json_name = "publishedClientArticleSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPublishedClientArticleSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      publishedClientArticleSid_ = 0L;
       onChanged();
       return this;
     }
