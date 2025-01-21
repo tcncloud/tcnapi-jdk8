@@ -63,32 +63,27 @@ public final class EntitiesProto {
       "n_expression\030\022 \001(\0132\033.api.commons.CronExp" +
       "ressionR\016cronExpression\022G\n\020transfer_opti" +
       "ons\030\023 \001(\0132\034.api.commons.TransferOptionsR" +
-      "\017transferOptions\"\211\005\n\tReportLog\022\025\n\006org_id" +
+      "\017transferOptions\"\313\004\n\tReportLog\022\025\n\006org_id" +
       "\030\001 \001(\tR\005orgId\022\"\n\rreport_log_id\030\002 \001(\003R\013re" +
-      "portLogId\022\"\n\rreport_job_id\030\003 \001(\tR\013report" +
-      "JobId\022!\n\014execution_id\030\004 \001(\tR\013executionId" +
-      "\022\037\n\013report_name\030\005 \001(\tR\nreportName\022H\n\022job" +
-      "_requested_time\030\006 \001(\0132\032.google.protobuf." +
-      "TimestampR\020jobRequestedTime\022H\n\022job_compl" +
-      "eted_time\030\007 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\020jobCompletedTime\022Z\n\020execution_resul" +
-      "t\030\010 \001(\0162/.api.v1alpha1.bireportgenerator" +
-      ".ExecutionResultR\017executionResult\022%\n\016fai" +
-      "lure_reason\030\t \001(\tR\rfailureReason\022%\n\016atte" +
-      "mpt_number\030\n \001(\003R\rattemptNumber\022!\n\014max_a" +
-      "ttempts\030\013 \001(\003R\013maxAttempts\022;\n\013create_tim" +
-      "e\030\014 \001(\0132\032.google.protobuf.TimestampR\ncre" +
-      "ateTime\022;\n\013update_time\030\r \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\nupdateTime*o\n\017Executio" +
-      "nResult\022 \n\034EXECUTION_RESULT_UNSPECIFIED\020" +
-      "\000\022\034\n\030EXECUTION_RESULT_SUCCESS\020\001\022\034\n\030EXECU" +
-      "TION_RESULT_FAILURE\020\002B\333\001\n0com.tcn.cloud." +
-      "api.api.v1alpha1.bireportgeneratorB\rEnti" +
-      "tiesProtoP\001\242\002\003AVB\252\002\036Api.V1alpha1.Birepor" +
-      "tgenerator\312\002\036Api\\V1alpha1\\Bireportgenera" +
-      "tor\342\002*Api\\V1alpha1\\Bireportgenerator\\GPB" +
-      "Metadata\352\002 Api::V1alpha1::Bireportgenera" +
-      "torb\006proto3"
+      "portLogId\022&\n\rreport_job_id\030\003 \001(\003B\0020\001R\013re" +
+      "portJobId\022!\n\014execution_id\030\004 \001(\tR\013executi" +
+      "onId\022\037\n\013report_name\030\005 \001(\tR\nreportName\022H\n" +
+      "\022job_requested_time\030\006 \001(\0132\032.google.proto" +
+      "buf.TimestampR\020jobRequestedTime\022H\n\022job_c" +
+      "ompleted_time\030\007 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\020jobCompletedTime\022\030\n\007success\030\010 \001" +
+      "(\010R\007success\022%\n\016failure_reason\030\t \001(\tR\rfai" +
+      "lureReason\022%\n\016attempt_number\030\n \001(\003R\ratte" +
+      "mptNumber\022!\n\014max_attempts\030\013 \001(\003R\013maxAtte" +
+      "mpts\022;\n\013create_time\030\014 \001(\0132\032.google.proto" +
+      "buf.TimestampR\ncreateTime\022;\n\013update_time" +
+      "\030\r \001(\0132\032.google.protobuf.TimestampR\nupda" +
+      "teTimeB\333\001\n0com.tcn.cloud.api.api.v1alpha" +
+      "1.bireportgeneratorB\rEntitiesProtoP\001\242\002\003A" +
+      "VB\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036Ap" +
+      "i\\V1alpha1\\Bireportgenerator\342\002*Api\\V1alp" +
+      "ha1\\Bireportgenerator\\GPBMetadata\352\002 Api:" +
+      ":V1alpha1::Bireportgeneratorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -110,7 +105,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_bireportgenerator_ReportLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportLog_descriptor,
-        new java.lang.String[] { "OrgId", "ReportLogId", "ReportJobId", "ExecutionId", "ReportName", "JobRequestedTime", "JobCompletedTime", "ExecutionResult", "FailureReason", "AttemptNumber", "MaxAttempts", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "OrgId", "ReportLogId", "ReportJobId", "ExecutionId", "ReportName", "JobRequestedTime", "JobCompletedTime", "Success", "FailureReason", "AttemptNumber", "MaxAttempts", "CreateTime", "UpdateTime", });
     com.tcn.cloud.api.api.commons.BireportgeneratorProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();

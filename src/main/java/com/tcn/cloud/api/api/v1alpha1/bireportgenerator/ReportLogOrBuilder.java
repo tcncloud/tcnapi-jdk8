@@ -42,20 +42,10 @@ public interface ReportLogOrBuilder extends
    * report job id
    * </pre>
    *
-   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+   * <code>int64 report_job_id = 3 [json_name = "reportJobId", jstype = JS_STRING];</code>
    * @return The reportJobId.
    */
-  java.lang.String getReportJobId();
-  /**
-   * <pre>
-   * report job id
-   * </pre>
-   *
-   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
-   * @return The bytes for reportJobId.
-   */
-  com.google.protobuf.ByteString
-      getReportJobIdBytes();
+  long getReportJobId();
 
   /**
    * <pre>
@@ -156,19 +146,10 @@ public interface ReportLogOrBuilder extends
    * result of the report job
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-   * @return The enum numeric value on the wire for executionResult.
+   * <code>bool success = 8 [json_name = "success"];</code>
+   * @return The success.
    */
-  int getExecutionResultValue();
-  /**
-   * <pre>
-   * result of the report job
-   * </pre>
-   *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-   * @return The executionResult.
-   */
-  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult getExecutionResult();
+  boolean getSuccess();
 
   /**
    * <pre>

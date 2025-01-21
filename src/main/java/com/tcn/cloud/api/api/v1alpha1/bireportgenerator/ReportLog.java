@@ -21,10 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private ReportLog() {
     orgId_ = "";
-    reportJobId_ = "";
     executionId_ = "";
     reportName_ = "";
-    executionResult_ = 0;
     failureReason_ = "";
   }
 
@@ -111,50 +109,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPORT_JOB_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reportJobId_ = "";
+  private long reportJobId_ = 0L;
   /**
    * <pre>
    * report job id
    * </pre>
    *
-   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+   * <code>int64 report_job_id = 3 [json_name = "reportJobId", jstype = JS_STRING];</code>
    * @return The reportJobId.
    */
   @java.lang.Override
-  public java.lang.String getReportJobId() {
-    java.lang.Object ref = reportJobId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      reportJobId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * report job id
-   * </pre>
-   *
-   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
-   * @return The bytes for reportJobId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getReportJobIdBytes() {
-    java.lang.Object ref = reportJobId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      reportJobId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getReportJobId() {
+    return reportJobId_;
   }
 
   public static final int EXECUTION_ID_FIELD_NUMBER = 4;
@@ -327,30 +293,19 @@ private static final long serialVersionUID = 0L;
     return jobCompletedTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jobCompletedTime_;
   }
 
-  public static final int EXECUTION_RESULT_FIELD_NUMBER = 8;
-  private int executionResult_ = 0;
+  public static final int SUCCESS_FIELD_NUMBER = 8;
+  private boolean success_ = false;
   /**
    * <pre>
    * result of the report job
    * </pre>
    *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-   * @return The enum numeric value on the wire for executionResult.
+   * <code>bool success = 8 [json_name = "success"];</code>
+   * @return The success.
    */
-  @java.lang.Override public int getExecutionResultValue() {
-    return executionResult_;
-  }
-  /**
-   * <pre>
-   * result of the report job
-   * </pre>
-   *
-   * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-   * @return The executionResult.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult getExecutionResult() {
-    com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult result = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.forNumber(executionResult_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.UNRECOGNIZED : result;
+  @java.lang.Override
+  public boolean getSuccess() {
+    return success_;
   }
 
   public static final int FAILURE_REASON_FIELD_NUMBER = 9;
@@ -526,8 +481,8 @@ private static final long serialVersionUID = 0L;
     if (reportLogId_ != 0L) {
       output.writeInt64(2, reportLogId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportJobId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reportJobId_);
+    if (reportJobId_ != 0L) {
+      output.writeInt64(3, reportJobId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, executionId_);
@@ -541,8 +496,8 @@ private static final long serialVersionUID = 0L;
     if (jobCompletedTime_ != null) {
       output.writeMessage(7, getJobCompletedTime());
     }
-    if (executionResult_ != com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.EXECUTION_RESULT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(8, executionResult_);
+    if (success_ != false) {
+      output.writeBool(8, success_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, failureReason_);
@@ -575,8 +530,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, reportLogId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportJobId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reportJobId_);
+    if (reportJobId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, reportJobId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, executionId_);
@@ -592,9 +548,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getJobCompletedTime());
     }
-    if (executionResult_ != com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.EXECUTION_RESULT_UNSPECIFIED.getNumber()) {
+    if (success_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(8, executionResult_);
+        .computeBoolSize(8, success_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureReason_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, failureReason_);
@@ -634,8 +590,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (getReportLogId()
         != other.getReportLogId()) return false;
-    if (!getReportJobId()
-        .equals(other.getReportJobId())) return false;
+    if (getReportJobId()
+        != other.getReportJobId()) return false;
     if (!getExecutionId()
         .equals(other.getExecutionId())) return false;
     if (!getReportName()
@@ -650,7 +606,8 @@ private static final long serialVersionUID = 0L;
       if (!getJobCompletedTime()
           .equals(other.getJobCompletedTime())) return false;
     }
-    if (executionResult_ != other.executionResult_) return false;
+    if (getSuccess()
+        != other.getSuccess()) return false;
     if (!getFailureReason()
         .equals(other.getFailureReason())) return false;
     if (getAttemptNumber()
@@ -684,7 +641,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getReportLogId());
     hash = (37 * hash) + REPORT_JOB_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getReportJobId().hashCode();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getReportJobId());
     hash = (37 * hash) + EXECUTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getExecutionId().hashCode();
     hash = (37 * hash) + REPORT_NAME_FIELD_NUMBER;
@@ -697,8 +655,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JOB_COMPLETED_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getJobCompletedTime().hashCode();
     }
-    hash = (37 * hash) + EXECUTION_RESULT_FIELD_NUMBER;
-    hash = (53 * hash) + executionResult_;
+    hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSuccess());
     hash = (37 * hash) + FAILURE_REASON_FIELD_NUMBER;
     hash = (53 * hash) + getFailureReason().hashCode();
     hash = (37 * hash) + ATTEMPT_NUMBER_FIELD_NUMBER;
@@ -852,7 +811,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       reportLogId_ = 0L;
-      reportJobId_ = "";
+      reportJobId_ = 0L;
       executionId_ = "";
       reportName_ = "";
       jobRequestedTime_ = null;
@@ -865,7 +824,7 @@ private static final long serialVersionUID = 0L;
         jobCompletedTimeBuilder_.dispose();
         jobCompletedTimeBuilder_ = null;
       }
-      executionResult_ = 0;
+      success_ = false;
       failureReason_ = "";
       attemptNumber_ = 0L;
       maxAttempts_ = 0L;
@@ -938,7 +897,7 @@ private static final long serialVersionUID = 0L;
             : jobCompletedTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.executionResult_ = executionResult_;
+        result.success_ = success_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.failureReason_ = failureReason_;
@@ -1013,10 +972,8 @@ private static final long serialVersionUID = 0L;
       if (other.getReportLogId() != 0L) {
         setReportLogId(other.getReportLogId());
       }
-      if (!other.getReportJobId().isEmpty()) {
-        reportJobId_ = other.reportJobId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.getReportJobId() != 0L) {
+        setReportJobId(other.getReportJobId());
       }
       if (!other.getExecutionId().isEmpty()) {
         executionId_ = other.executionId_;
@@ -1034,8 +991,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasJobCompletedTime()) {
         mergeJobCompletedTime(other.getJobCompletedTime());
       }
-      if (other.executionResult_ != 0) {
-        setExecutionResultValue(other.getExecutionResultValue());
+      if (other.getSuccess() != false) {
+        setSuccess(other.getSuccess());
       }
       if (!other.getFailureReason().isEmpty()) {
         failureReason_ = other.failureReason_;
@@ -1090,11 +1047,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              reportJobId_ = input.readStringRequireUtf8();
+            case 24: {
+              reportJobId_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
+            } // case 24
             case 34: {
               executionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
@@ -1120,7 +1077,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 58
             case 64: {
-              executionResult_ = input.readEnum();
+              success_ = input.readBool();
               bitField0_ |= 0x00000080;
               break;
             } // case 64
@@ -1306,60 +1263,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object reportJobId_ = "";
+    private long reportJobId_ ;
     /**
      * <pre>
      * report job id
      * </pre>
      *
-     * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+     * <code>int64 report_job_id = 3 [json_name = "reportJobId", jstype = JS_STRING];</code>
      * @return The reportJobId.
      */
-    public java.lang.String getReportJobId() {
-      java.lang.Object ref = reportJobId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reportJobId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getReportJobId() {
+      return reportJobId_;
     }
     /**
      * <pre>
      * report job id
      * </pre>
      *
-     * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
-     * @return The bytes for reportJobId.
-     */
-    public com.google.protobuf.ByteString
-        getReportJobIdBytes() {
-      java.lang.Object ref = reportJobId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reportJobId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * report job id
-     * </pre>
-     *
-     * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+     * <code>int64 report_job_id = 3 [json_name = "reportJobId", jstype = JS_STRING];</code>
      * @param value The reportJobId to set.
      * @return This builder for chaining.
      */
-    public Builder setReportJobId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setReportJobId(long value) {
+
       reportJobId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1370,30 +1297,12 @@ private static final long serialVersionUID = 0L;
      * report job id
      * </pre>
      *
-     * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+     * <code>int64 report_job_id = 3 [json_name = "reportJobId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearReportJobId() {
-      reportJobId_ = getDefaultInstance().getReportJobId();
       bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * report job id
-     * </pre>
-     *
-     * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
-     * @param value The bytes for reportJobId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReportJobIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      reportJobId_ = value;
-      bitField0_ |= 0x00000004;
+      reportJobId_ = 0L;
       onChanged();
       return this;
     }
@@ -1892,61 +1801,32 @@ private static final long serialVersionUID = 0L;
       return jobCompletedTimeBuilder_;
     }
 
-    private int executionResult_ = 0;
+    private boolean success_ ;
     /**
      * <pre>
      * result of the report job
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-     * @return The enum numeric value on the wire for executionResult.
-     */
-    @java.lang.Override public int getExecutionResultValue() {
-      return executionResult_;
-    }
-    /**
-     * <pre>
-     * result of the report job
-     * </pre>
-     *
-     * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-     * @param value The enum numeric value on the wire for executionResult to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExecutionResultValue(int value) {
-      executionResult_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * result of the report job
-     * </pre>
-     *
-     * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-     * @return The executionResult.
+     * <code>bool success = 8 [json_name = "success"];</code>
+     * @return The success.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult getExecutionResult() {
-      com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult result = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.forNumber(executionResult_);
-      return result == null ? com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult.UNRECOGNIZED : result;
+    public boolean getSuccess() {
+      return success_;
     }
     /**
      * <pre>
      * result of the report job
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
-     * @param value The executionResult to set.
+     * <code>bool success = 8 [json_name = "success"];</code>
+     * @param value The success to set.
      * @return This builder for chaining.
      */
-    public Builder setExecutionResult(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ExecutionResult value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
+    public Builder setSuccess(boolean value) {
+
+      success_ = value;
       bitField0_ |= 0x00000080;
-      executionResult_ = value.getNumber();
       onChanged();
       return this;
     }
@@ -1955,12 +1835,12 @@ private static final long serialVersionUID = 0L;
      * result of the report job
      * </pre>
      *
-     * <code>.api.v1alpha1.bireportgenerator.ExecutionResult execution_result = 8 [json_name = "executionResult"];</code>
+     * <code>bool success = 8 [json_name = "success"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearExecutionResult() {
+    public Builder clearSuccess() {
       bitField0_ = (bitField0_ & ~0x00000080);
-      executionResult_ = 0;
+      success_ = false;
       onChanged();
       return this;
     }
