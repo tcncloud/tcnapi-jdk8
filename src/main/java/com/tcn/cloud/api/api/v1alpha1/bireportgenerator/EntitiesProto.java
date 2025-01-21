@@ -66,7 +66,7 @@ public final class EntitiesProto {
       "\017transferOptions\"\211\005\n\tReportLog\022\025\n\006org_id" +
       "\030\001 \001(\tR\005orgId\022\"\n\rreport_log_id\030\002 \001(\003R\013re" +
       "portLogId\022\"\n\rreport_job_id\030\003 \001(\003R\013report" +
-      "JobId\022!\n\014execution_id\030\004 \001(\003R\013executionId" +
+      "JobId\022!\n\014execution_id\030\004 \001(\tR\013executionId" +
       "\022\037\n\013report_name\030\005 \001(\tR\nreportName\022H\n\022job" +
       "_requested_time\030\006 \001(\0132\032.google.protobuf." +
       "TimestampR\020jobRequestedTime\022H\n\022job_compl" +

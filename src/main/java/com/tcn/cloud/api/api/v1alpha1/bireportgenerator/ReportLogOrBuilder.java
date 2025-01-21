@@ -52,10 +52,20 @@ public interface ReportLogOrBuilder extends
    * unique id of the job execution
    * </pre>
    *
-   * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+   * <code>string execution_id = 4 [json_name = "executionId"];</code>
    * @return The executionId.
    */
-  long getExecutionId();
+  java.lang.String getExecutionId();
+  /**
+   * <pre>
+   * unique id of the job execution
+   * </pre>
+   *
+   * <code>string execution_id = 4 [json_name = "executionId"];</code>
+   * @return The bytes for executionId.
+   */
+  com.google.protobuf.ByteString
+      getExecutionIdBytes();
 
   /**
    * <pre>

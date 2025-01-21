@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ReportLog() {
     orgId_ = "";
+    executionId_ = "";
     reportName_ = "";
     executionResult_ = 0;
     failureReason_ = "";
@@ -124,18 +125,50 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXECUTION_ID_FIELD_NUMBER = 4;
-  private long executionId_ = 0L;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object executionId_ = "";
   /**
    * <pre>
    * unique id of the job execution
    * </pre>
    *
-   * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+   * <code>string execution_id = 4 [json_name = "executionId"];</code>
    * @return The executionId.
    */
   @java.lang.Override
-  public long getExecutionId() {
-    return executionId_;
+  public java.lang.String getExecutionId() {
+    java.lang.Object ref = executionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      executionId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * unique id of the job execution
+   * </pre>
+   *
+   * <code>string execution_id = 4 [json_name = "executionId"];</code>
+   * @return The bytes for executionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getExecutionIdBytes() {
+    java.lang.Object ref = executionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      executionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int REPORT_NAME_FIELD_NUMBER = 5;
@@ -463,8 +496,8 @@ private static final long serialVersionUID = 0L;
     if (reportJobId_ != 0L) {
       output.writeInt64(3, reportJobId_);
     }
-    if (executionId_ != 0L) {
-      output.writeInt64(4, executionId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, executionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reportName_);
@@ -513,9 +546,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, reportJobId_);
     }
-    if (executionId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, executionId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, executionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reportName_);
@@ -572,8 +604,8 @@ private static final long serialVersionUID = 0L;
         != other.getReportLogId()) return false;
     if (getReportJobId()
         != other.getReportJobId()) return false;
-    if (getExecutionId()
-        != other.getExecutionId()) return false;
+    if (!getExecutionId()
+        .equals(other.getExecutionId())) return false;
     if (!getReportName()
         .equals(other.getReportName())) return false;
     if (hasJobRequestedTime() != other.hasJobRequestedTime()) return false;
@@ -623,8 +655,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getReportJobId());
     hash = (37 * hash) + EXECUTION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getExecutionId());
+    hash = (53 * hash) + getExecutionId().hashCode();
     hash = (37 * hash) + REPORT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getReportName().hashCode();
     if (hasJobRequestedTime()) {
@@ -791,7 +822,7 @@ private static final long serialVersionUID = 0L;
       orgId_ = "";
       reportLogId_ = 0L;
       reportJobId_ = 0L;
-      executionId_ = 0L;
+      executionId_ = "";
       reportName_ = "";
       jobRequestedTime_ = null;
       if (jobRequestedTimeBuilder_ != null) {
@@ -954,8 +985,10 @@ private static final long serialVersionUID = 0L;
       if (other.getReportJobId() != 0L) {
         setReportJobId(other.getReportJobId());
       }
-      if (other.getExecutionId() != 0L) {
-        setExecutionId(other.getExecutionId());
+      if (!other.getExecutionId().isEmpty()) {
+        executionId_ = other.executionId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
       }
       if (!other.getReportName().isEmpty()) {
         reportName_ = other.reportName_;
@@ -1029,11 +1062,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              executionId_ = input.readInt64();
+            case 34: {
+              executionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
+            } // case 34
             case 42: {
               reportName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
@@ -1284,30 +1317,60 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long executionId_ ;
+    private java.lang.Object executionId_ = "";
     /**
      * <pre>
      * unique id of the job execution
      * </pre>
      *
-     * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+     * <code>string execution_id = 4 [json_name = "executionId"];</code>
      * @return The executionId.
      */
-    @java.lang.Override
-    public long getExecutionId() {
-      return executionId_;
+    public java.lang.String getExecutionId() {
+      java.lang.Object ref = executionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executionId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * unique id of the job execution
      * </pre>
      *
-     * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+     * <code>string execution_id = 4 [json_name = "executionId"];</code>
+     * @return The bytes for executionId.
+     */
+    public com.google.protobuf.ByteString
+        getExecutionIdBytes() {
+      java.lang.Object ref = executionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * unique id of the job execution
+     * </pre>
+     *
+     * <code>string execution_id = 4 [json_name = "executionId"];</code>
      * @param value The executionId to set.
      * @return This builder for chaining.
      */
-    public Builder setExecutionId(long value) {
-
+    public Builder setExecutionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       executionId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1318,12 +1381,30 @@ private static final long serialVersionUID = 0L;
      * unique id of the job execution
      * </pre>
      *
-     * <code>int64 execution_id = 4 [json_name = "executionId"];</code>
+     * <code>string execution_id = 4 [json_name = "executionId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearExecutionId() {
+      executionId_ = getDefaultInstance().getExecutionId();
       bitField0_ = (bitField0_ & ~0x00000008);
-      executionId_ = 0L;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * unique id of the job execution
+     * </pre>
+     *
+     * <code>string execution_id = 4 [json_name = "executionId"];</code>
+     * @param value The bytes for executionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExecutionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      executionId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
