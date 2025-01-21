@@ -286,4 +286,56 @@ public interface ListEvaluationsRequestOrBuilder extends
    * @return The enum numeric value on the wire of channelTypes at the given index.
    */
   int getChannelTypesValue(int index);
+
+  /**
+   * <pre>
+   * Optional. The order evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "complete_time desc, evaluation_id desc".
+   * </pre>
+   *
+   * <code>string order_by = 15 [json_name = "orderBy"];</code>
+   * @return The orderBy.
+   */
+  java.lang.String getOrderBy();
+  /**
+   * <pre>
+   * Optional. The order evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "complete_time desc, evaluation_id desc".
+   * </pre>
+   *
+   * <code>string order_by = 15 [json_name = "orderBy"];</code>
+   * @return The bytes for orderBy.
+   */
+  com.google.protobuf.ByteString
+      getOrderByBytes();
+
+  /**
+   * <pre>
+   * Required. Number of evaluations included in response.
+   * </pre>
+   *
+   * <code>int32 page_size = 16 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  int getPageSize();
+
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 17 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  java.lang.String getPageToken();
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 17 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 }
