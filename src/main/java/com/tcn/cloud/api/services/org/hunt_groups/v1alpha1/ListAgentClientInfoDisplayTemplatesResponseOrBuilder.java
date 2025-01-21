@@ -12,42 +12,86 @@ public interface ListAgentClientInfoDisplayTemplatesResponseOrBuilder extends
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> 
       getTemplatesList();
   /**
    * <pre>
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index);
   /**
    * <pre>
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
-  int getTemplatesCount();
+  @java.lang.Deprecated int getTemplatesCount();
   /**
    * <pre>
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
       getTemplatesOrBuilderList();
   /**
    * <pre>
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> 
+      getDisplayTemplatesList();
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDisplayTemplates(int index);
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  int getDisplayTemplatesCount();
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder> 
+      getDisplayTemplatesOrBuilderList();
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder getDisplayTemplatesOrBuilder(
       int index);
 }

@@ -30,4 +30,26 @@ public interface ListEvaluationsResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.EvaluationOrBuilder getEvaluationsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Token to retrieve the next page, or empty if there are no
+   * more entries in the list.
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The nextPageToken.
+   */
+  java.lang.String getNextPageToken();
+  /**
+   * <pre>
+   * Token to retrieve the next page, or empty if there are no
+   * more entries in the list.
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The bytes for nextPageToken.
+   */
+  com.google.protobuf.ByteString
+      getNextPageTokenBytes();
 }

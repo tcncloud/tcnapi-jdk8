@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ListAgentClientInfoDisplayTemplatesResponse() {
     templates_ = java.util.Collections.emptyList();
+    displayTemplates_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,6 +44,1396 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.Builder.class);
   }
 
+  public interface TemplateInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return Whether the template field is set.
+     */
+    boolean hasTemplate();
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return The template.
+     */
+    com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate();
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder();
+
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return A list containing the huntGroupSids.
+     */
+    java.util.List<java.lang.Long> getHuntGroupSidsList();
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return The count of huntGroupSids.
+     */
+    int getHuntGroupSidsCount();
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The huntGroupSids at the given index.
+     */
+    long getHuntGroupSids(int index);
+
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @return A list containing the outboundBroadcastTemplateSids.
+     */
+    java.util.List<java.lang.Long> getOutboundBroadcastTemplateSidsList();
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @return The count of outboundBroadcastTemplateSids.
+     */
+    int getOutboundBroadcastTemplateSidsCount();
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @param index The index of the element to return.
+     * @return The outboundBroadcastTemplateSids at the given index.
+     */
+    long getOutboundBroadcastTemplateSids(int index);
+
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @return A list containing the inboundBroadcastTemplateSids.
+     */
+    java.util.List<java.lang.Long> getInboundBroadcastTemplateSidsList();
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @return The count of inboundBroadcastTemplateSids.
+     */
+    int getInboundBroadcastTemplateSidsCount();
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @param index The index of the element to return.
+     * @return The inboundBroadcastTemplateSids at the given index.
+     */
+    long getInboundBroadcastTemplateSids(int index);
+  }
+  /**
+   * <pre>
+   * The display template and related info.
+   * </pre>
+   *
+   * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo}
+   */
+  public static final class TemplateInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)
+      TemplateInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TemplateInfo.newBuilder() to construct.
+    private TemplateInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TemplateInfo() {
+      huntGroupSids_ = emptyLongList();
+      outboundBroadcastTemplateSids_ = emptyLongList();
+      inboundBroadcastTemplateSids_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TemplateInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesResponse_TemplateInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesResponse_TemplateInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder.class);
+    }
+
+    public static final int TEMPLATE_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate template_;
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return Whether the template field is set.
+     */
+    @java.lang.Override
+    public boolean hasTemplate() {
+      return template_ != null;
+    }
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     * @return The template.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate() {
+      return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+    }
+    /**
+     * <pre>
+     * The display template.
+     * </pre>
+     *
+     * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder() {
+      return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+    }
+
+    public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList huntGroupSids_;
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return A list containing the huntGroupSids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getHuntGroupSidsList() {
+      return huntGroupSids_;
+    }
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @return The count of huntGroupSids.
+     */
+    public int getHuntGroupSidsCount() {
+      return huntGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * List of any hunt groups referencing the template.
+     * </pre>
+     *
+     * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The huntGroupSids at the given index.
+     */
+    public long getHuntGroupSids(int index) {
+      return huntGroupSids_.getLong(index);
+    }
+    private int huntGroupSidsMemoizedSerializedSize = -1;
+
+    public static final int OUTBOUND_BROADCAST_TEMPLATE_SIDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList outboundBroadcastTemplateSids_;
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @return A list containing the outboundBroadcastTemplateSids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getOutboundBroadcastTemplateSidsList() {
+      return outboundBroadcastTemplateSids_;
+    }
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @return The count of outboundBroadcastTemplateSids.
+     */
+    public int getOutboundBroadcastTemplateSidsCount() {
+      return outboundBroadcastTemplateSids_.size();
+    }
+    /**
+     * <pre>
+     * List of any related outbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+     * @param index The index of the element to return.
+     * @return The outboundBroadcastTemplateSids at the given index.
+     */
+    public long getOutboundBroadcastTemplateSids(int index) {
+      return outboundBroadcastTemplateSids_.getLong(index);
+    }
+    private int outboundBroadcastTemplateSidsMemoizedSerializedSize = -1;
+
+    public static final int INBOUND_BROADCAST_TEMPLATE_SIDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList inboundBroadcastTemplateSids_;
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @return A list containing the inboundBroadcastTemplateSids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getInboundBroadcastTemplateSidsList() {
+      return inboundBroadcastTemplateSids_;
+    }
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @return The count of inboundBroadcastTemplateSids.
+     */
+    public int getInboundBroadcastTemplateSidsCount() {
+      return inboundBroadcastTemplateSids_.size();
+    }
+    /**
+     * <pre>
+     * List of any related inbound broadcast templates.
+     * </pre>
+     *
+     * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+     * @param index The index of the element to return.
+     * @return The inboundBroadcastTemplateSids at the given index.
+     */
+    public long getInboundBroadcastTemplateSids(int index) {
+      return inboundBroadcastTemplateSids_.getLong(index);
+    }
+    private int inboundBroadcastTemplateSidsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (template_ != null) {
+        output.writeMessage(1, getTemplate());
+      }
+      if (getHuntGroupSidsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(huntGroupSidsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < huntGroupSids_.size(); i++) {
+        output.writeInt64NoTag(huntGroupSids_.getLong(i));
+      }
+      if (getOutboundBroadcastTemplateSidsList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(outboundBroadcastTemplateSidsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < outboundBroadcastTemplateSids_.size(); i++) {
+        output.writeInt64NoTag(outboundBroadcastTemplateSids_.getLong(i));
+      }
+      if (getInboundBroadcastTemplateSidsList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(inboundBroadcastTemplateSidsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < inboundBroadcastTemplateSids_.size(); i++) {
+        output.writeInt64NoTag(inboundBroadcastTemplateSids_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (template_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTemplate());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < huntGroupSids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(huntGroupSids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getHuntGroupSidsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        huntGroupSidsMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < outboundBroadcastTemplateSids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(outboundBroadcastTemplateSids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getOutboundBroadcastTemplateSidsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        outboundBroadcastTemplateSidsMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < inboundBroadcastTemplateSids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(inboundBroadcastTemplateSids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getInboundBroadcastTemplateSidsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        inboundBroadcastTemplateSidsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo) obj;
+
+      if (hasTemplate() != other.hasTemplate()) return false;
+      if (hasTemplate()) {
+        if (!getTemplate()
+            .equals(other.getTemplate())) return false;
+      }
+      if (!getHuntGroupSidsList()
+          .equals(other.getHuntGroupSidsList())) return false;
+      if (!getOutboundBroadcastTemplateSidsList()
+          .equals(other.getOutboundBroadcastTemplateSidsList())) return false;
+      if (!getInboundBroadcastTemplateSidsList()
+          .equals(other.getInboundBroadcastTemplateSidsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTemplate()) {
+        hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+        hash = (53 * hash) + getTemplate().hashCode();
+      }
+      if (getHuntGroupSidsCount() > 0) {
+        hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHuntGroupSidsList().hashCode();
+      }
+      if (getOutboundBroadcastTemplateSidsCount() > 0) {
+        hash = (37 * hash) + OUTBOUND_BROADCAST_TEMPLATE_SIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutboundBroadcastTemplateSidsList().hashCode();
+      }
+      if (getInboundBroadcastTemplateSidsCount() > 0) {
+        hash = (37 * hash) + INBOUND_BROADCAST_TEMPLATE_SIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getInboundBroadcastTemplateSidsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The display template and related info.
+     * </pre>
+     *
+     * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesResponse_TemplateInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesResponse_TemplateInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        template_ = null;
+        if (templateBuilder_ != null) {
+          templateBuilder_.dispose();
+          templateBuilder_ = null;
+        }
+        huntGroupSids_ = emptyLongList();
+        outboundBroadcastTemplateSids_ = emptyLongList();
+        inboundBroadcastTemplateSids_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListAgentClientInfoDisplayTemplatesResponse_TemplateInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDefaultInstanceForType() {
+        return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo build() {
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo buildPartial() {
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          huntGroupSids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.huntGroupSids_ = huntGroupSids_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          outboundBroadcastTemplateSids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.outboundBroadcastTemplateSids_ = outboundBroadcastTemplateSids_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          inboundBroadcastTemplateSids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.inboundBroadcastTemplateSids_ = inboundBroadcastTemplateSids_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.template_ = templateBuilder_ == null
+              ? template_
+              : templateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo) {
+          return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo other) {
+        if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.getDefaultInstance()) return this;
+        if (other.hasTemplate()) {
+          mergeTemplate(other.getTemplate());
+        }
+        if (!other.huntGroupSids_.isEmpty()) {
+          if (huntGroupSids_.isEmpty()) {
+            huntGroupSids_ = other.huntGroupSids_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHuntGroupSidsIsMutable();
+            huntGroupSids_.addAll(other.huntGroupSids_);
+          }
+          onChanged();
+        }
+        if (!other.outboundBroadcastTemplateSids_.isEmpty()) {
+          if (outboundBroadcastTemplateSids_.isEmpty()) {
+            outboundBroadcastTemplateSids_ = other.outboundBroadcastTemplateSids_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureOutboundBroadcastTemplateSidsIsMutable();
+            outboundBroadcastTemplateSids_.addAll(other.outboundBroadcastTemplateSids_);
+          }
+          onChanged();
+        }
+        if (!other.inboundBroadcastTemplateSids_.isEmpty()) {
+          if (inboundBroadcastTemplateSids_.isEmpty()) {
+            inboundBroadcastTemplateSids_ = other.inboundBroadcastTemplateSids_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureInboundBroadcastTemplateSidsIsMutable();
+            inboundBroadcastTemplateSids_.addAll(other.inboundBroadcastTemplateSids_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTemplateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                long v = input.readInt64();
+                ensureHuntGroupSidsIsMutable();
+                huntGroupSids_.addLong(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureHuntGroupSidsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  huntGroupSids_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 24: {
+                long v = input.readInt64();
+                ensureOutboundBroadcastTemplateSidsIsMutable();
+                outboundBroadcastTemplateSids_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureOutboundBroadcastTemplateSidsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  outboundBroadcastTemplateSids_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 32: {
+                long v = input.readInt64();
+                ensureInboundBroadcastTemplateSidsIsMutable();
+                inboundBroadcastTemplateSids_.addLong(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureInboundBroadcastTemplateSidsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  inboundBroadcastTemplateSids_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate template_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> templateBuilder_;
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       * @return Whether the template field is set.
+       */
+      public boolean hasTemplate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       * @return The template.
+       */
+      public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate() {
+        if (templateBuilder_ == null) {
+          return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+        } else {
+          return templateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public Builder setTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
+        if (templateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          template_ = value;
+        } else {
+          templateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public Builder setTemplate(
+          com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder builderForValue) {
+        if (templateBuilder_ == null) {
+          template_ = builderForValue.build();
+        } else {
+          templateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public Builder mergeTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
+        if (templateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            template_ != null &&
+            template_ != com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance()) {
+            getTemplateBuilder().mergeFrom(value);
+          } else {
+            template_ = value;
+          }
+        } else {
+          templateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public Builder clearTemplate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        template_ = null;
+        if (templateBuilder_ != null) {
+          templateBuilder_.dispose();
+          templateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder getTemplateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTemplateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder() {
+        if (templateBuilder_ != null) {
+          return templateBuilder_.getMessageOrBuilder();
+        } else {
+          return template_ == null ?
+              com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
+        }
+      }
+      /**
+       * <pre>
+       * The display template.
+       * </pre>
+       *
+       * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
+          getTemplateFieldBuilder() {
+        if (templateBuilder_ == null) {
+          templateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder>(
+                  getTemplate(),
+                  getParentForChildren(),
+                  isClean());
+          template_ = null;
+        }
+        return templateBuilder_;
+      }
+
+      private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
+      private void ensureHuntGroupSidsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          huntGroupSids_ = mutableCopy(huntGroupSids_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @return A list containing the huntGroupSids.
+       */
+      public java.util.List<java.lang.Long>
+          getHuntGroupSidsList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @return The count of huntGroupSids.
+       */
+      public int getHuntGroupSidsCount() {
+        return huntGroupSids_.size();
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @param index The index of the element to return.
+       * @return The huntGroupSids at the given index.
+       */
+      public long getHuntGroupSids(int index) {
+        return huntGroupSids_.getLong(index);
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @param index The index to set the value at.
+       * @param value The huntGroupSids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHuntGroupSids(
+          int index, long value) {
+
+        ensureHuntGroupSidsIsMutable();
+        huntGroupSids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @param value The huntGroupSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHuntGroupSids(long value) {
+
+        ensureHuntGroupSidsIsMutable();
+        huntGroupSids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @param values The huntGroupSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllHuntGroupSids(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureHuntGroupSidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, huntGroupSids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any hunt groups referencing the template.
+       * </pre>
+       *
+       * <code>repeated int64 hunt_group_sids = 2 [json_name = "huntGroupSids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHuntGroupSids() {
+        huntGroupSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList outboundBroadcastTemplateSids_ = emptyLongList();
+      private void ensureOutboundBroadcastTemplateSidsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          outboundBroadcastTemplateSids_ = mutableCopy(outboundBroadcastTemplateSids_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @return A list containing the outboundBroadcastTemplateSids.
+       */
+      public java.util.List<java.lang.Long>
+          getOutboundBroadcastTemplateSidsList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(outboundBroadcastTemplateSids_) : outboundBroadcastTemplateSids_;
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @return The count of outboundBroadcastTemplateSids.
+       */
+      public int getOutboundBroadcastTemplateSidsCount() {
+        return outboundBroadcastTemplateSids_.size();
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @param index The index of the element to return.
+       * @return The outboundBroadcastTemplateSids at the given index.
+       */
+      public long getOutboundBroadcastTemplateSids(int index) {
+        return outboundBroadcastTemplateSids_.getLong(index);
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @param index The index to set the value at.
+       * @param value The outboundBroadcastTemplateSids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutboundBroadcastTemplateSids(
+          int index, long value) {
+
+        ensureOutboundBroadcastTemplateSidsIsMutable();
+        outboundBroadcastTemplateSids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @param value The outboundBroadcastTemplateSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOutboundBroadcastTemplateSids(long value) {
+
+        ensureOutboundBroadcastTemplateSidsIsMutable();
+        outboundBroadcastTemplateSids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @param values The outboundBroadcastTemplateSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOutboundBroadcastTemplateSids(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureOutboundBroadcastTemplateSidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, outboundBroadcastTemplateSids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related outbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 outbound_broadcast_template_sids = 3 [json_name = "outboundBroadcastTemplateSids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutboundBroadcastTemplateSids() {
+        outboundBroadcastTemplateSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList inboundBroadcastTemplateSids_ = emptyLongList();
+      private void ensureInboundBroadcastTemplateSidsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          inboundBroadcastTemplateSids_ = mutableCopy(inboundBroadcastTemplateSids_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @return A list containing the inboundBroadcastTemplateSids.
+       */
+      public java.util.List<java.lang.Long>
+          getInboundBroadcastTemplateSidsList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(inboundBroadcastTemplateSids_) : inboundBroadcastTemplateSids_;
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @return The count of inboundBroadcastTemplateSids.
+       */
+      public int getInboundBroadcastTemplateSidsCount() {
+        return inboundBroadcastTemplateSids_.size();
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @param index The index of the element to return.
+       * @return The inboundBroadcastTemplateSids at the given index.
+       */
+      public long getInboundBroadcastTemplateSids(int index) {
+        return inboundBroadcastTemplateSids_.getLong(index);
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @param index The index to set the value at.
+       * @param value The inboundBroadcastTemplateSids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInboundBroadcastTemplateSids(
+          int index, long value) {
+
+        ensureInboundBroadcastTemplateSidsIsMutable();
+        inboundBroadcastTemplateSids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @param value The inboundBroadcastTemplateSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInboundBroadcastTemplateSids(long value) {
+
+        ensureInboundBroadcastTemplateSidsIsMutable();
+        inboundBroadcastTemplateSids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @param values The inboundBroadcastTemplateSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllInboundBroadcastTemplateSids(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureInboundBroadcastTemplateSidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inboundBroadcastTemplateSids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of any related inbound broadcast templates.
+       * </pre>
+       *
+       * <code>repeated int64 inbound_broadcast_template_sids = 4 [json_name = "inboundBroadcastTemplateSids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInboundBroadcastTemplateSids() {
+        inboundBroadcastTemplateSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo)
+    private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo();
+    }
+
+    public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TemplateInfo>
+        PARSER = new com.google.protobuf.AbstractParser<TemplateInfo>() {
+      @java.lang.Override
+      public TemplateInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TemplateInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TemplateInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int TEMPLATES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> templates_;
@@ -51,10 +1442,10 @@ private static final long serialVersionUID = 0L;
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> getTemplatesList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> getTemplatesList() {
     return templates_;
   }
   /**
@@ -62,10 +1453,10 @@ private static final long serialVersionUID = 0L;
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
       getTemplatesOrBuilderList() {
     return templates_;
   }
@@ -74,10 +1465,10 @@ private static final long serialVersionUID = 0L;
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getTemplatesCount() {
+  @java.lang.Deprecated public int getTemplatesCount() {
     return templates_.size();
   }
   /**
@@ -85,10 +1476,10 @@ private static final long serialVersionUID = 0L;
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index) {
     return templates_.get(index);
   }
   /**
@@ -96,12 +1487,73 @@ private static final long serialVersionUID = 0L;
    * display templates
    * </pre>
    *
-   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+   * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
       int index) {
     return templates_.get(index);
+  }
+
+  public static final int DISPLAY_TEMPLATES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> displayTemplates_;
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> getDisplayTemplatesList() {
+    return displayTemplates_;
+  }
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder> 
+      getDisplayTemplatesOrBuilderList() {
+    return displayTemplates_;
+  }
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  @java.lang.Override
+  public int getDisplayTemplatesCount() {
+    return displayTemplates_.size();
+  }
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDisplayTemplates(int index) {
+    return displayTemplates_.get(index);
+  }
+  /**
+   * <pre>
+   * The list of templates and info.
+   * </pre>
+   *
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder getDisplayTemplatesOrBuilder(
+      int index) {
+    return displayTemplates_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -121,6 +1573,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < templates_.size(); i++) {
       output.writeMessage(1, templates_.get(i));
     }
+    for (int i = 0; i < displayTemplates_.size(); i++) {
+      output.writeMessage(2, displayTemplates_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +1588,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < templates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, templates_.get(i));
+    }
+    for (int i = 0; i < displayTemplates_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, displayTemplates_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,6 +1610,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getTemplatesList()
         .equals(other.getTemplatesList())) return false;
+    if (!getDisplayTemplatesList()
+        .equals(other.getDisplayTemplatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -165,6 +1626,10 @@ private static final long serialVersionUID = 0L;
     if (getTemplatesCount() > 0) {
       hash = (37 * hash) + TEMPLATES_FIELD_NUMBER;
       hash = (53 * hash) + getTemplatesList().hashCode();
+    }
+    if (getDisplayTemplatesCount() > 0) {
+      hash = (37 * hash) + DISPLAY_TEMPLATES_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplayTemplatesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -308,6 +1773,13 @@ private static final long serialVersionUID = 0L;
         templatesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (displayTemplatesBuilder_ == null) {
+        displayTemplates_ = java.util.Collections.emptyList();
+      } else {
+        displayTemplates_ = null;
+        displayTemplatesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -349,6 +1821,15 @@ private static final long serialVersionUID = 0L;
         result.templates_ = templates_;
       } else {
         result.templates_ = templatesBuilder_.build();
+      }
+      if (displayTemplatesBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          displayTemplates_ = java.util.Collections.unmodifiableList(displayTemplates_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.displayTemplates_ = displayTemplates_;
+      } else {
+        result.displayTemplates_ = displayTemplatesBuilder_.build();
       }
     }
 
@@ -426,6 +1907,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (displayTemplatesBuilder_ == null) {
+        if (!other.displayTemplates_.isEmpty()) {
+          if (displayTemplates_.isEmpty()) {
+            displayTemplates_ = other.displayTemplates_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDisplayTemplatesIsMutable();
+            displayTemplates_.addAll(other.displayTemplates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.displayTemplates_.isEmpty()) {
+          if (displayTemplatesBuilder_.isEmpty()) {
+            displayTemplatesBuilder_.dispose();
+            displayTemplatesBuilder_ = null;
+            displayTemplates_ = other.displayTemplates_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            displayTemplatesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDisplayTemplatesFieldBuilder() : null;
+          } else {
+            displayTemplatesBuilder_.addAllMessages(other.displayTemplates_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +1972,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.parser(),
+                      extensionRegistry);
+              if (displayTemplatesBuilder_ == null) {
+                ensureDisplayTemplatesIsMutable();
+                displayTemplates_.add(m);
+              } else {
+                displayTemplatesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -499,9 +2019,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> getTemplatesList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> getTemplatesList() {
       if (templatesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(templates_);
       } else {
@@ -513,9 +2033,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public int getTemplatesCount() {
+    @java.lang.Deprecated public int getTemplatesCount() {
       if (templatesBuilder_ == null) {
         return templates_.size();
       } else {
@@ -527,9 +2047,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplates(int index) {
       if (templatesBuilder_ == null) {
         return templates_.get(index);
       } else {
@@ -541,9 +2061,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder setTemplates(
+    @java.lang.Deprecated public Builder setTemplates(
         int index, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
       if (templatesBuilder_ == null) {
         if (value == null) {
@@ -562,9 +2082,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder setTemplates(
+    @java.lang.Deprecated public Builder setTemplates(
         int index, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder builderForValue) {
       if (templatesBuilder_ == null) {
         ensureTemplatesIsMutable();
@@ -580,9 +2100,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder addTemplates(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
+    @java.lang.Deprecated public Builder addTemplates(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
       if (templatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -600,9 +2120,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder addTemplates(
+    @java.lang.Deprecated public Builder addTemplates(
         int index, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
       if (templatesBuilder_ == null) {
         if (value == null) {
@@ -621,9 +2141,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder addTemplates(
+    @java.lang.Deprecated public Builder addTemplates(
         com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder builderForValue) {
       if (templatesBuilder_ == null) {
         ensureTemplatesIsMutable();
@@ -639,9 +2159,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder addTemplates(
+    @java.lang.Deprecated public Builder addTemplates(
         int index, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder builderForValue) {
       if (templatesBuilder_ == null) {
         ensureTemplatesIsMutable();
@@ -657,9 +2177,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder addAllTemplates(
+    @java.lang.Deprecated public Builder addAllTemplates(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate> values) {
       if (templatesBuilder_ == null) {
         ensureTemplatesIsMutable();
@@ -676,9 +2196,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder clearTemplates() {
+    @java.lang.Deprecated public Builder clearTemplates() {
       if (templatesBuilder_ == null) {
         templates_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -693,9 +2213,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public Builder removeTemplates(int index) {
+    @java.lang.Deprecated public Builder removeTemplates(int index) {
       if (templatesBuilder_ == null) {
         ensureTemplatesIsMutable();
         templates_.remove(index);
@@ -710,9 +2230,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder getTemplatesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder getTemplatesBuilder(
         int index) {
       return getTemplatesFieldBuilder().getBuilder(index);
     }
@@ -721,9 +2241,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplatesOrBuilder(
         int index) {
       if (templatesBuilder_ == null) {
         return templates_.get(index);  } else {
@@ -735,9 +2255,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> 
          getTemplatesOrBuilderList() {
       if (templatesBuilder_ != null) {
         return templatesBuilder_.getMessageOrBuilderList();
@@ -750,9 +2270,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder addTemplatesBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder addTemplatesBuilder() {
       return getTemplatesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance());
     }
@@ -761,9 +2281,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder addTemplatesBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder addTemplatesBuilder(
         int index) {
       return getTemplatesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance());
@@ -773,9 +2293,9 @@ private static final long serialVersionUID = 0L;
      * display templates
      * </pre>
      *
-     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates"];</code>
+     * <code>repeated .api.commons.org.ClientInfoDisplayTemplate templates = 1 [json_name = "templates", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder> 
          getTemplatesBuilderList() {
       return getTemplatesFieldBuilder().getBuilderList();
     }
@@ -792,6 +2312,318 @@ private static final long serialVersionUID = 0L;
         templates_ = null;
       }
       return templatesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> displayTemplates_ =
+      java.util.Collections.emptyList();
+    private void ensureDisplayTemplatesIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        displayTemplates_ = new java.util.ArrayList<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo>(displayTemplates_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder> displayTemplatesBuilder_;
+
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> getDisplayTemplatesList() {
+      if (displayTemplatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(displayTemplates_);
+      } else {
+        return displayTemplatesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public int getDisplayTemplatesCount() {
+      if (displayTemplatesBuilder_ == null) {
+        return displayTemplates_.size();
+      } else {
+        return displayTemplatesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo getDisplayTemplates(int index) {
+      if (displayTemplatesBuilder_ == null) {
+        return displayTemplates_.get(index);
+      } else {
+        return displayTemplatesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder setDisplayTemplates(
+        int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo value) {
+      if (displayTemplatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.set(index, value);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder setDisplayTemplates(
+        int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder builderForValue) {
+      if (displayTemplatesBuilder_ == null) {
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder addDisplayTemplates(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo value) {
+      if (displayTemplatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.add(value);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder addDisplayTemplates(
+        int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo value) {
+      if (displayTemplatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.add(index, value);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder addDisplayTemplates(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder builderForValue) {
+      if (displayTemplatesBuilder_ == null) {
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.add(builderForValue.build());
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder addDisplayTemplates(
+        int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder builderForValue) {
+      if (displayTemplatesBuilder_ == null) {
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder addAllDisplayTemplates(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo> values) {
+      if (displayTemplatesBuilder_ == null) {
+        ensureDisplayTemplatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, displayTemplates_);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder clearDisplayTemplates() {
+      if (displayTemplatesBuilder_ == null) {
+        displayTemplates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public Builder removeDisplayTemplates(int index) {
+      if (displayTemplatesBuilder_ == null) {
+        ensureDisplayTemplatesIsMutable();
+        displayTemplates_.remove(index);
+        onChanged();
+      } else {
+        displayTemplatesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder getDisplayTemplatesBuilder(
+        int index) {
+      return getDisplayTemplatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder getDisplayTemplatesOrBuilder(
+        int index) {
+      if (displayTemplatesBuilder_ == null) {
+        return displayTemplates_.get(index);  } else {
+        return displayTemplatesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder> 
+         getDisplayTemplatesOrBuilderList() {
+      if (displayTemplatesBuilder_ != null) {
+        return displayTemplatesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(displayTemplates_);
+      }
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder addDisplayTemplatesBuilder() {
+      return getDisplayTemplatesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder addDisplayTemplatesBuilder(
+        int index) {
+      return getDisplayTemplatesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of templates and info.
+     * </pre>
+     *
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo display_templates = 2 [json_name = "displayTemplates"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder> 
+         getDisplayTemplatesBuilderList() {
+      return getDisplayTemplatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder> 
+        getDisplayTemplatesFieldBuilder() {
+      if (displayTemplatesBuilder_ == null) {
+        displayTemplatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfo.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListAgentClientInfoDisplayTemplatesResponse.TemplateInfoOrBuilder>(
+                displayTemplates_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        displayTemplates_ = null;
+      }
+      return displayTemplatesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
