@@ -42,10 +42,20 @@ public interface ReportLogOrBuilder extends
    * report job id
    * </pre>
    *
-   * <code>int64 report_job_id = 3 [json_name = "reportJobId"];</code>
+   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
    * @return The reportJobId.
    */
-  long getReportJobId();
+  java.lang.String getReportJobId();
+  /**
+   * <pre>
+   * report job id
+   * </pre>
+   *
+   * <code>string report_job_id = 3 [json_name = "reportJobId"];</code>
+   * @return The bytes for reportJobId.
+   */
+  com.google.protobuf.ByteString
+      getReportJobIdBytes();
 
   /**
    * <pre>
