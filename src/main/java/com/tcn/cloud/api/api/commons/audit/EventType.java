@@ -490,6 +490,14 @@ public enum EventType
   OMNICHANNEL_PROVIDER_RESPONSE(364),
   /**
    * <pre>
+   *omnichannel provider message failed
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_MESSAGE_FAILED = 365;</code>
+   */
+  OMNICHANNEL_PROVIDER_MESSAGE_FAILED(365),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1545,6 +1553,14 @@ public enum EventType
   public static final int OMNICHANNEL_PROVIDER_RESPONSE_VALUE = 364;
   /**
    * <pre>
+   *omnichannel provider message failed
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_MESSAGE_FAILED = 365;</code>
+   */
+  public static final int OMNICHANNEL_PROVIDER_MESSAGE_FAILED_VALUE = 365;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -2216,6 +2232,7 @@ public enum EventType
       case 362: return OMNICHANNEL_TRANSCRIPT_SAVED;
       case 363: return OMNICHANNEL_MESSAGE_SENT;
       case 364: return OMNICHANNEL_PROVIDER_RESPONSE;
+      case 365: return OMNICHANNEL_PROVIDER_MESSAGE_FAILED;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;

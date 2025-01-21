@@ -269,6 +269,11 @@ public final class OmnichannelEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_OmnichannelProviderResponseEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelProviderMessageFailedEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelProviderMessageFailedEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -573,11 +578,23 @@ public final class OmnichannelEventsProto {
       "erId\0224\n\026provider_message_count\030\t \001(\003R\024pr" +
       "oviderMessageCount\022?\n\014message_type\030\n \001(\016" +
       "2\034.api.commons.OmniMessageTypeR\013messageT" +
-      "ypeB\243\001\n#com.tcn.cloud.api.api.commons.au" +
-      "ditB\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021Ap" +
-      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
-      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
-      "ns::Auditb\006proto3"
+      "ype\"\336\003\n%OmnichannelProviderMessageFailed" +
+      "Event\022(\n\020omni_message_sid\030\001 \001(\003R\016omniMes" +
+      "sageSid\022;\n\014channel_type\030\002 \001(\0162\030.api.comm" +
+      "ons.ChannelTypeR\013channelType\022\033\n\tsent_fro" +
+      "m\030\003 \001(\tR\010sentFrom\022\027\n\007sent_to\030\004 \001(\tR\006sent" +
+      "To\022!\n\014message_size\030\005 \001(\003R\013messageSize\022\'\n" +
+      "\017attachment_size\030\006 \001(\003R\016attachmentSize\022<" +
+      "\n\013sender_type\030\007 \001(\0162\033.api.commons.OmniSe" +
+      "nderTypeR\nsenderType\022\027\n\007user_id\030\010 \001(\tR\006u" +
+      "serId\0224\n\026provider_message_count\030\t \001(\003R\024p" +
+      "roviderMessageCount\022?\n\014message_type\030\n \001(" +
+      "\0162\034.api.commons.OmniMessageTypeR\013message" +
+      "TypeB\243\001\n#com.tcn.cloud.api.api.commons.a" +
+      "uditB\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021A" +
+      "pi.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035A" +
+      "pi\\Commons\\Audit\\GPBMetadata\352\002\023Api::Comm" +
+      "ons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -890,6 +907,12 @@ public final class OmnichannelEventsProto {
     internal_static_api_commons_audit_OmnichannelProviderResponseEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor,
+        new java.lang.String[] { "OmniMessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", "ProviderMessageCount", "MessageType", });
+    internal_static_api_commons_audit_OmnichannelProviderMessageFailedEvent_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_api_commons_audit_OmnichannelProviderMessageFailedEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelProviderMessageFailedEvent_descriptor,
         new java.lang.String[] { "OmniMessageSid", "ChannelType", "SentFrom", "SentTo", "MessageSize", "AttachmentSize", "SenderType", "UserId", "ProviderMessageCount", "MessageType", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
