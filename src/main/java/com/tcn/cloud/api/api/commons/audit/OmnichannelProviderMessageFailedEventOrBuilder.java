@@ -99,4 +99,26 @@ public interface OmnichannelProviderMessageFailedEventOrBuilder extends
    * @return The messageType.
    */
   com.tcn.cloud.api.api.commons.OmniMessageType getMessageType();
+
+  /**
+   * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+   * @return The enum numeric value on the wire for provider.
+   */
+  int getProviderValue();
+  /**
+   * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+   * @return The provider.
+   */
+  com.tcn.cloud.api.api.commons.SmsNumberProvider getProvider();
+
+  /**
+   * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.OmniMessageStatus getStatus();
 }

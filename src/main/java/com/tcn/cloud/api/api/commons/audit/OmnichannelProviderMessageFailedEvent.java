@@ -26,6 +26,8 @@ private static final long serialVersionUID = 0L;
     senderType_ = 0;
     userId_ = "";
     messageType_ = 0;
+    provider_ = 0;
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -263,6 +265,42 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OmniMessageType.UNRECOGNIZED : result;
   }
 
+  public static final int PROVIDER_FIELD_NUMBER = 11;
+  private int provider_ = 0;
+  /**
+   * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+   * @return The enum numeric value on the wire for provider.
+   */
+  @java.lang.Override public int getProviderValue() {
+    return provider_;
+  }
+  /**
+   * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+   * @return The provider.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.SmsNumberProvider getProvider() {
+    com.tcn.cloud.api.api.commons.SmsNumberProvider result = com.tcn.cloud.api.api.commons.SmsNumberProvider.forNumber(provider_);
+    return result == null ? com.tcn.cloud.api.api.commons.SmsNumberProvider.UNRECOGNIZED : result;
+  }
+
+  public static final int STATUS_FIELD_NUMBER = 12;
+  private int status_ = 0;
+  /**
+   * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.OmniMessageStatus getStatus() {
+    com.tcn.cloud.api.api.commons.OmniMessageStatus result = com.tcn.cloud.api.api.commons.OmniMessageStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.OmniMessageStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -306,6 +344,12 @@ private static final long serialVersionUID = 0L;
     }
     if (messageType_ != com.tcn.cloud.api.api.commons.OmniMessageType.OMNI_MESSAGE_TYPE_TEXT_MESSAGE.getNumber()) {
       output.writeEnum(10, messageType_);
+    }
+    if (provider_ != com.tcn.cloud.api.api.commons.SmsNumberProvider.UNKNOWN_PROVIDER.getNumber()) {
+      output.writeEnum(11, provider_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.OmniMessageStatus.OMNI_MESSAGE_CREATED.getNumber()) {
+      output.writeEnum(12, status_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -353,6 +397,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, messageType_);
     }
+    if (provider_ != com.tcn.cloud.api.api.commons.SmsNumberProvider.UNKNOWN_PROVIDER.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, provider_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.OmniMessageStatus.OMNI_MESSAGE_CREATED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(12, status_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -385,6 +437,8 @@ private static final long serialVersionUID = 0L;
     if (getProviderMessageCount()
         != other.getProviderMessageCount()) return false;
     if (messageType_ != other.messageType_) return false;
+    if (provider_ != other.provider_) return false;
+    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -420,6 +474,10 @@ private static final long serialVersionUID = 0L;
         getProviderMessageCount());
     hash = (37 * hash) + MESSAGE_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + messageType_;
+    hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+    hash = (53 * hash) + provider_;
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -565,6 +623,8 @@ private static final long serialVersionUID = 0L;
       userId_ = "";
       providerMessageCount_ = 0L;
       messageType_ = 0;
+      provider_ = 0;
+      status_ = 0;
       return this;
     }
 
@@ -627,6 +687,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.messageType_ = messageType_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.provider_ = provider_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.status_ = status_;
       }
     }
 
@@ -710,6 +776,12 @@ private static final long serialVersionUID = 0L;
       if (other.messageType_ != 0) {
         setMessageTypeValue(other.getMessageTypeValue());
       }
+      if (other.provider_ != 0) {
+        setProviderValue(other.getProviderValue());
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -786,6 +858,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 88: {
+              provider_ = input.readEnum();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1302,6 +1384,112 @@ private static final long serialVersionUID = 0L;
     public Builder clearMessageType() {
       bitField0_ = (bitField0_ & ~0x00000200);
       messageType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int provider_ = 0;
+    /**
+     * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+     * @return The enum numeric value on the wire for provider.
+     */
+    @java.lang.Override public int getProviderValue() {
+      return provider_;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+     * @param value The enum numeric value on the wire for provider to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProviderValue(int value) {
+      provider_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SmsNumberProvider getProvider() {
+      com.tcn.cloud.api.api.commons.SmsNumberProvider result = com.tcn.cloud.api.api.commons.SmsNumberProvider.forNumber(provider_);
+      return result == null ? com.tcn.cloud.api.api.commons.SmsNumberProvider.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+     * @param value The provider to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProvider(com.tcn.cloud.api.api.commons.SmsNumberProvider value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000400;
+      provider_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider = 11 [json_name = "provider"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProvider() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      provider_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniMessageStatus getStatus() {
+      com.tcn.cloud.api.api.commons.OmniMessageStatus result = com.tcn.cloud.api.api.commons.OmniMessageStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.OmniMessageStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.OmniMessageStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000800;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.OmniMessageStatus status = 12 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      status_ = 0;
       onChanged();
       return this;
     }
