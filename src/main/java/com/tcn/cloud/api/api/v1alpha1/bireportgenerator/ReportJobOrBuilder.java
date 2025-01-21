@@ -74,7 +74,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The dashboardId.
    */
   @java.lang.Deprecated java.lang.String getDashboardId();
@@ -85,7 +85,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=18
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=19
    * @return The bytes for dashboardId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -98,7 +98,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=21
    * @return The timeZone.
    */
   @java.lang.Deprecated java.lang.String getTimeZone();
@@ -109,7 +109,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=20
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=21
    * @return The bytes for timeZone.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -141,7 +141,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=25
    * @return Whether the deliveryTimes field is set.
    */
   @java.lang.Deprecated boolean hasDeliveryTimes();
@@ -152,7 +152,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=24
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=25
    * @return The deliveryTimes.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes();
@@ -172,7 +172,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @return Whether the dayFilter field is set.
    */
   @java.lang.Deprecated boolean hasDayFilter();
@@ -183,7 +183,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=26
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=27
    * @return The dayFilter.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.DayFilter getDayFilter();
@@ -203,7 +203,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @return A list containing the months.
    */
   @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList();
@@ -214,7 +214,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @return The count of months.
    */
   @java.lang.Deprecated int getMonthsCount();
@@ -225,7 +225,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @param index The index of the element to return.
    * @return The months at the given index.
    */
@@ -237,7 +237,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @return A list containing the enum numeric values on the wire for months.
    */
   @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -249,7 +249,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of months at the given index.
    */
@@ -262,7 +262,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return Whether the formatOptions field is set.
    */
   @java.lang.Deprecated boolean hasFormatOptions();
@@ -273,7 +273,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return The formatOptions.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions();
@@ -293,7 +293,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=33
    * @return Whether the deliveryOptions field is set.
    */
   @java.lang.Deprecated boolean hasDeliveryOptions();
@@ -304,7 +304,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=32
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=33
    * @return The deliveryOptions.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions();
@@ -401,7 +401,7 @@ public interface ReportJobOrBuilder extends
    *
    * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=44
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=45
    * @return The transferConfigSid.
    */
   @java.lang.Deprecated long getTransferConfigSid();
