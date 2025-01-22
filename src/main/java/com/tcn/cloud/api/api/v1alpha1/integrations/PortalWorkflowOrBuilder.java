@@ -129,7 +129,7 @@ public interface PortalWorkflowOrBuilder extends
    *
    * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1409
+   *     See api/v1alpha1/integrations/service.proto;l=1420
    * @return The headerText.
    */
   @java.lang.Deprecated java.lang.String getHeaderText();
@@ -140,7 +140,7 @@ public interface PortalWorkflowOrBuilder extends
    *
    * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1409
+   *     See api/v1alpha1/integrations/service.proto;l=1420
    * @return The bytes for headerText.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -153,7 +153,7 @@ public interface PortalWorkflowOrBuilder extends
    *
    * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1410
+   *     See api/v1alpha1/integrations/service.proto;l=1421
    * @return The footerText.
    */
   @java.lang.Deprecated java.lang.String getFooterText();
@@ -164,7 +164,7 @@ public interface PortalWorkflowOrBuilder extends
    *
    * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1410
+   *     See api/v1alpha1/integrations/service.proto;l=1421
    * @return The bytes for footerText.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

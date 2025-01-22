@@ -184,6 +184,26 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_integrationspublic_GetLinkDetailsRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -195,206 +215,230 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n-api/v1alpha1/integrationspublic/servic" +
       "e.proto\022\037api.v1alpha1.integrationspublic" +
-      "\032+api/commons/integrations/integrations." +
-      "proto\032\'api/v1alpha1/integrations/portals" +
-      ".proto\032\'api/v1alpha1/integrations/servic" +
-      "e.proto\032\034google/api/annotations.proto\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\270\001\n\006Value" +
-      "s\022K\n\006values\030\001 \003(\01323.api.v1alpha1.integra" +
-      "tionspublic.Values.ValuesEntryR\006values\032a" +
-      "\n\013ValuesEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value" +
-      "\030\002 \001(\0132&.api.v1alpha1.integrationspublic" +
-      ".ValueR\005value:\0028\001\"\345\002\n\005Value\022\031\n\007str_val\030\001" +
-      " \001(\tH\000R\006strVal\022\031\n\007num_val\030\002 \001(\001H\000R\006numVa" +
-      "l\022\033\n\010bool_val\030\003 \001(\010H\000R\007boolVal\0227\n\010time_v" +
-      "al\030\004 \001(\0132\032.google.protobuf.TimestampH\000R\007" +
-      "timeVal\022J\n\010comp_val\030\006 \001(\0132-.api.v1alpha1" +
-      ".integrationspublic.CompositeValH\000R\007comp" +
-      "Val\022\031\n\007int_val\030\007 \001(\003H\000R\006intVal\022\034\n\tsensit" +
-      "ive\030\005 \001(\010R\tsensitive\022D\n\nvalidation\030\010 \001(\016" +
-      "2$.api.commons.integrations.ValidationR\n" +
-      "validationB\005\n\003val\"Q\n\014CompositeVal\022A\n\005par" +
-      "ts\030\001 \003(\0132+.api.v1alpha1.integrationspubl" +
-      "ic.FieldOrStrR\005parts\"F\n\nFieldOrStr\022\026\n\005fi" +
-      "eld\030\001 \001(\tH\000R\005field\022\031\n\007str_val\030\002 \001(\tH\000R\006s" +
-      "trValB\005\n\003val\" \n\016PortalConfigId\022\016\n\002id\030\003 \001" +
-      "(\tR\002id\"\305\003\n\014PortalConfig\022\016\n\002id\030\025 \001(\tR\002id\022" +
-      "\022\n\004name\030\026 \001(\tR\004name\022 \n\013description\030\027 \001(\t" +
-      "R\013description\022(\n\020chat_client_link\030\002 \001(\tR" +
-      "\016chatClientLink\022#\n\rcontact_email\030\003 \001(\tR\014" +
-      "contactEmail\022#\n\rcontact_phone\030\004 \001(\tR\014con" +
-      "tactPhone\022\037\n\013postal_code\030\005 \001(\tR\npostalCo" +
-      "de\022\022\n\004city\030\006 \001(\tR\004city\022\024\n\005state\030\007 \001(\tR\005s" +
-      "tate\022!\n\014company_name\030\010 \001(\tR\013companyName\022" +
-      "\022\n\004logo\030\r \001(\014R\004logo\022#\n\rprimary_color\030\016 \001" +
-      "(\tR\014primaryColor\022\'\n\017secondary_color\030\017 \001(" +
-      "\tR\016secondaryColor\022%\n\016street_address\030\023 \001(" +
-      "\tR\rstreetAddressJ\004\010\t\020\r\"\036\n\014PortalLinkId\022\016" +
-      "\n\002id\030\003 \001(\tR\002id\"W\n\016GetLinkDataReq\022E\n\006enti" +
-      "ty\030\001 \001(\0132-.api.v1alpha1.integrationspubl" +
-      "ic.PortalLinkIdR\006entity\"\276\005\n\016GetLinkDataR" +
-      "es\022\032\n\010complete\030\002 \001(\010R\010complete\022\030\n\007expire" +
-      "d\030\003 \001(\010R\007expired\022R\n\rportal_config\030\004 \001(\0132" +
-      "-.api.v1alpha1.integrationspublic.Portal" +
-      "ConfigR\014portalConfig\022N\n\014verification\030\005 \001" +
-      "(\0132*.api.commons.integrations.Verificati" +
-      "onFlowR\014verification\022?\n\007invoice\030\006 \001(\0132%." +
-      "api.commons.integrations.InvoiceFlowR\007in" +
-      "voice\022A\n\010payments\030\007 \003(\0132%.api.commons.in" +
-      "tegrations.PaymentFlowR\010payments\022Y\n\nflow" +
-      "_forms\030\t \003(\0132:.api.v1alpha1.integrations" +
-      "public.GetLinkDataRes.FieldNamesR\tflowFo" +
-      "rms\022L\n\013portal_text\030\017 \001(\0132+.api.v1alpha1." +
-      "integrationspublic.PortalTextR\nportalTex" +
-      "t\032\244\001\n\nFieldNames\0222\n\004flow\030\010 \001(\0132\036.api.com" +
-      "mons.integrations.FlowR\004flow\022\037\n\013field_na" +
-      "mes\030\t \003(\tR\nfieldNames\022A\n\006fields\030\n \003(\0132)." +
-      "api.commons.integrations.FieldDefinition" +
-      "R\006fields\"\330\002\n\nPortalText\022/\n\023verification_" +
-      "header\030\001 \001(\tR\022verificationHeader\022/\n\023veri" +
-      "fication_footer\030\002 \001(\tR\022verificationFoote" +
-      "r\022%\n\016payment_header\030\003 \001(\tR\rpaymentHeader" +
-      "\022%\n\016payment_footer\030\004 \001(\tR\rpaymentFooter\022" +
-      "%\n\016receipt_header\030\005 \001(\tR\rreceiptHeader\022%" +
-      "\n\016receipt_footer\030\006 \001(\tR\rreceiptFooter\022%\n" +
-      "\016invoice_header\030\007 \001(\tR\rinvoiceHeader\022%\n\016" +
-      "invoice_footer\030\010 \001(\tR\rinvoiceFooter\"\316\002\n\025" +
-      "SubmitVerificationReq\022E\n\006entity\030\001 \001(\0132-." +
-      "api.v1alpha1.integrationspublic.PortalLi" +
-      "nkIdR\006entity\022\177\n\023verification_fields\030\002 \003(" +
-      "\0132N.api.v1alpha1.integrationspublic.Subm" +
-      "itVerificationReq.VerificationFieldsEntr" +
-      "yR\022verificationFields\032m\n\027VerificationFie" +
-      "ldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(" +
-      "\0132&.api.v1alpha1.integrationspublic.Valu" +
-      "eR\005value:\0028\001\"R\n\025SubmitVerificationRes\022\032\n" +
-      "\010verified\030\001 \001(\010R\010verified\022\035\n\nsession_id\030" +
-      "\002 \001(\tR\tsessionId\"{\n\023SessionKeepAliveReq\022" +
-      "E\n\006entity\030\001 \001(\0132-.api.v1alpha1.integrati" +
-      "onspublic.PortalLinkIdR\006entity\022\035\n\nsessio" +
-      "n_id\030\002 \001(\tR\tsessionId\"D\n\023SessionKeepAliv" +
-      "eRes\022\016\n\002ok\030\001 \001(\010R\002ok\022\035\n\nsession_id\030\002 \001(\t" +
-      "R\tsessionId\"u\n\rGetInvoiceReq\022E\n\006entity\030\001" +
+      "\032\025api/commons/acd.proto\032+api/commons/int" +
+      "egrations/integrations.proto\032\'api/v1alph" +
+      "a1/integrations/portals.proto\032\'api/v1alp" +
+      "ha1/integrations/service.proto\032\034google/a" +
+      "pi/annotations.proto\032\037google/protobuf/ti" +
+      "mestamp.proto\"\270\001\n\006Values\022K\n\006values\030\001 \003(\013" +
+      "23.api.v1alpha1.integrationspublic.Value" +
+      "s.ValuesEntryR\006values\032a\n\013ValuesEntry\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1al" +
+      "pha1.integrationspublic.ValueR\005value:\0028\001" +
+      "\"\345\002\n\005Value\022\031\n\007str_val\030\001 \001(\tH\000R\006strVal\022\031\n" +
+      "\007num_val\030\002 \001(\001H\000R\006numVal\022\033\n\010bool_val\030\003 \001" +
+      "(\010H\000R\007boolVal\0227\n\010time_val\030\004 \001(\0132\032.google" +
+      ".protobuf.TimestampH\000R\007timeVal\022J\n\010comp_v" +
+      "al\030\006 \001(\0132-.api.v1alpha1.integrationspubl" +
+      "ic.CompositeValH\000R\007compVal\022\031\n\007int_val\030\007 " +
+      "\001(\003H\000R\006intVal\022\034\n\tsensitive\030\005 \001(\010R\tsensit" +
+      "ive\022D\n\nvalidation\030\010 \001(\0162$.api.commons.in" +
+      "tegrations.ValidationR\nvalidationB\005\n\003val" +
+      "\"Q\n\014CompositeVal\022A\n\005parts\030\001 \003(\0132+.api.v1" +
+      "alpha1.integrationspublic.FieldOrStrR\005pa" +
+      "rts\"F\n\nFieldOrStr\022\026\n\005field\030\001 \001(\tH\000R\005fiel" +
+      "d\022\031\n\007str_val\030\002 \001(\tH\000R\006strValB\005\n\003val\" \n\016P" +
+      "ortalConfigId\022\016\n\002id\030\003 \001(\tR\002id\"\305\003\n\014Portal" +
+      "Config\022\016\n\002id\030\025 \001(\tR\002id\022\022\n\004name\030\026 \001(\tR\004na" +
+      "me\022 \n\013description\030\027 \001(\tR\013description\022(\n\020" +
+      "chat_client_link\030\002 \001(\tR\016chatClientLink\022#" +
+      "\n\rcontact_email\030\003 \001(\tR\014contactEmail\022#\n\rc" +
+      "ontact_phone\030\004 \001(\tR\014contactPhone\022\037\n\013post" +
+      "al_code\030\005 \001(\tR\npostalCode\022\022\n\004city\030\006 \001(\tR" +
+      "\004city\022\024\n\005state\030\007 \001(\tR\005state\022!\n\014company_n" +
+      "ame\030\010 \001(\tR\013companyName\022\022\n\004logo\030\r \001(\014R\004lo" +
+      "go\022#\n\rprimary_color\030\016 \001(\tR\014primaryColor\022" +
+      "\'\n\017secondary_color\030\017 \001(\tR\016secondaryColor" +
+      "\022%\n\016street_address\030\023 \001(\tR\rstreetAddressJ" +
+      "\004\010\t\020\r\"\036\n\014PortalLinkId\022\016\n\002id\030\003 \001(\tR\002id\"W\n" +
+      "\016GetLinkDataReq\022E\n\006entity\030\001 \001(\0132-.api.v1" +
+      "alpha1.integrationspublic.PortalLinkIdR\006" +
+      "entity\"\276\005\n\016GetLinkDataRes\022\032\n\010complete\030\002 " +
+      "\001(\010R\010complete\022\030\n\007expired\030\003 \001(\010R\007expired\022" +
+      "R\n\rportal_config\030\004 \001(\0132-.api.v1alpha1.in" +
+      "tegrationspublic.PortalConfigR\014portalCon" +
+      "fig\022N\n\014verification\030\005 \001(\0132*.api.commons." +
+      "integrations.VerificationFlowR\014verificat" +
+      "ion\022?\n\007invoice\030\006 \001(\0132%.api.commons.integ" +
+      "rations.InvoiceFlowR\007invoice\022A\n\010payments" +
+      "\030\007 \003(\0132%.api.commons.integrations.Paymen" +
+      "tFlowR\010payments\022Y\n\nflow_forms\030\t \003(\0132:.ap" +
+      "i.v1alpha1.integrationspublic.GetLinkDat" +
+      "aRes.FieldNamesR\tflowForms\022L\n\013portal_tex" +
+      "t\030\017 \001(\0132+.api.v1alpha1.integrationspubli" +
+      "c.PortalTextR\nportalText\032\244\001\n\nFieldNames\022" +
+      "2\n\004flow\030\010 \001(\0132\036.api.commons.integrations" +
+      ".FlowR\004flow\022\037\n\013field_names\030\t \003(\tR\nfieldN" +
+      "ames\022A\n\006fields\030\n \003(\0132).api.commons.integ" +
+      "rations.FieldDefinitionR\006fields\"\330\002\n\nPort" +
+      "alText\022/\n\023verification_header\030\001 \001(\tR\022ver" +
+      "ificationHeader\022/\n\023verification_footer\030\002" +
+      " \001(\tR\022verificationFooter\022%\n\016payment_head" +
+      "er\030\003 \001(\tR\rpaymentHeader\022%\n\016payment_foote" +
+      "r\030\004 \001(\tR\rpaymentFooter\022%\n\016receipt_header" +
+      "\030\005 \001(\tR\rreceiptHeader\022%\n\016receipt_footer\030" +
+      "\006 \001(\tR\rreceiptFooter\022%\n\016invoice_header\030\007" +
+      " \001(\tR\rinvoiceHeader\022%\n\016invoice_footer\030\010 " +
+      "\001(\tR\rinvoiceFooter\"\316\002\n\025SubmitVerificatio" +
+      "nReq\022E\n\006entity\030\001 \001(\0132-.api.v1alpha1.inte" +
+      "grationspublic.PortalLinkIdR\006entity\022\177\n\023v" +
+      "erification_fields\030\002 \003(\0132N.api.v1alpha1." +
+      "integrationspublic.SubmitVerificationReq" +
+      ".VerificationFieldsEntryR\022verificationFi" +
+      "elds\032m\n\027VerificationFieldsEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1." +
+      "integrationspublic.ValueR\005value:\0028\001\"R\n\025S" +
+      "ubmitVerificationRes\022\032\n\010verified\030\001 \001(\010R\010" +
+      "verified\022\035\n\nsession_id\030\002 \001(\tR\tsessionId\"" +
+      "{\n\023SessionKeepAliveReq\022E\n\006entity\030\001 \001(\0132-" +
+      ".api.v1alpha1.integrationspublic.PortalL" +
+      "inkIdR\006entity\022\035\n\nsession_id\030\002 \001(\tR\tsessi" +
+      "onId\"D\n\023SessionKeepAliveRes\022\016\n\002ok\030\001 \001(\010R" +
+      "\002ok\022\035\n\nsession_id\030\002 \001(\tR\tsessionId\"u\n\rGe" +
+      "tInvoiceReq\022E\n\006entity\030\001 \001(\0132-.api.v1alph" +
+      "a1.integrationspublic.PortalLinkIdR\006enti" +
+      "ty\022\035\n\nsession_id\030\002 \001(\tR\tsessionId\"\313\002\n\rGe" +
+      "tInvoiceRes\022R\n\006fields\030\001 \003(\0132:.api.v1alph" +
+      "a1.integrationspublic.GetInvoiceRes.Fiel" +
+      "dsEntryR\006fields\022\035\n\namount_due\030\002 \001(\001R\tamo" +
+      "untDue\022$\n\016amount_due_key\030\003 \001(\tR\014amountDu" +
+      "eKey\022>\n\010invoices\030\004 \001(\0132\".api.commons.int" +
+      "egrations.InvoicesR\010invoices\032a\n\013FieldsEn" +
+      "try\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.a" +
+      "pi.v1alpha1.integrationspublic.ValueR\005va" +
+      "lue:\0028\001\"\231\003\n\020SubmitPaymentReq\022E\n\006entity\030\001" +
       " \001(\0132-.api.v1alpha1.integrationspublic.P" +
       "ortalLinkIdR\006entity\022\035\n\nsession_id\030\002 \001(\tR" +
-      "\tsessionId\"\313\002\n\rGetInvoiceRes\022R\n\006fields\030\001" +
-      " \003(\0132:.api.v1alpha1.integrationspublic.G" +
-      "etInvoiceRes.FieldsEntryR\006fields\022\035\n\namou" +
-      "nt_due\030\002 \001(\001R\tamountDue\022$\n\016amount_due_ke" +
-      "y\030\003 \001(\tR\014amountDueKey\022>\n\010invoices\030\004 \001(\0132" +
-      "\".api.commons.integrations.InvoicesR\010inv" +
-      "oices\032a\n\013FieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<" +
-      "\n\005value\030\002 \001(\0132&.api.v1alpha1.integration" +
-      "spublic.ValueR\005value:\0028\001\"\231\003\n\020SubmitPayme" +
-      "ntReq\022E\n\006entity\030\001 \001(\0132-.api.v1alpha1.int" +
-      "egrationspublic.PortalLinkIdR\006entity\022\035\n\n" +
-      "session_id\030\002 \001(\tR\tsessionId\022k\n\016payment_f" +
-      "ields\030\003 \003(\0132D.api.v1alpha1.integrationsp" +
-      "ublic.SubmitPaymentReq.PaymentFieldsEntr" +
-      "yR\rpaymentFields\022H\n\014payment_flow\030\004 \001(\0132%" +
-      ".api.commons.integrations.PaymentFlowR\013p" +
-      "aymentFlow\032h\n\022PaymentFieldsEntry\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1" +
-      ".integrationspublic.ValueR\005value:\0028\001\"\225\002\n" +
-      "\020SubmitPaymentRes\022U\n\006fields\030\001 \003(\0132=.api." +
-      "v1alpha1.integrationspublic.SubmitPaymen" +
-      "tRes.FieldsEntryR\006fields\022\037\n\013amount_paid\030" +
-      "\002 \001(\001R\namountPaid\022&\n\017amount_paid_key\030\003 \001" +
-      "(\tR\ramountPaidKey\032a\n\013FieldsEntry\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1" +
-      ".integrationspublic.ValueR\005value:\0028\001\"u\n\r" +
-      "GetReceiptReq\022E\n\006entity\030\001 \001(\0132-.api.v1al" +
-      "pha1.integrationspublic.PortalLinkIdR\006en" +
-      "tity\022\035\n\nsession_id\030\002 \001(\tR\tsessionId\"\273\004\n\r" +
-      "GetReceiptRes\022\035\n\nreceipt_id\030\001 \001(\tR\trecei" +
-      "ptId\022U\n\007request\030\002 \003(\0132;.api.v1alpha1.int" +
-      "egrationspublic.GetReceiptRes.RequestEnt" +
-      "ryR\007request\022X\n\010response\030\003 \003(\0132<.api.v1al" +
-      "pha1.integrationspublic.GetReceiptRes.Re" +
-      "sponseEntryR\010response\022\037\n\013amount_paid\030\004 \001" +
-      "(\001R\namountPaid\022&\n\017amount_paid_key\030\005 \001(\tR" +
-      "\ramountPaidKey\022H\n\014payment_flow\030\006 \001(\0132%.a" +
-      "pi.commons.integrations.PaymentFlowR\013pay" +
-      "mentFlow\032b\n\014RequestEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.integra" +
-      "tionspublic.ValueR\005value:\0028\001\032c\n\rResponse" +
-      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&" +
-      ".api.v1alpha1.integrationspublic.ValueR\005" +
-      "value:\0028\001\"\264\003\n\022ProcessWorkflowReq\022$\n\016port" +
-      "al_link_id\030\001 \001(\tR\014portalLinkId\022\033\n\tportal" +
-      "_id\030\002 \001(\tR\010portalId\022\030\n\007segment\030\003 \001(\005R\007se" +
-      "gment\022\026\n\006choice\030\004 \001(\005R\006choice\022W\n\006params\030" +
-      "\005 \003(\0132?.api.v1alpha1.integrationspublic." +
-      "ProcessWorkflowReq.ParamsEntryR\006params\022N" +
-      "\n\016request_origin\030\006 \001(\0162\'.api.commons.int" +
-      "egrations.RequestOriginR\rrequestOrigin\022\035" +
-      "\n\nsession_id\030\007 \001(\tR\tsessionId\032a\n\013ParamsE" +
-      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&." +
-      "api.v1alpha1.integrationspublic.ValueR\005v" +
-      "alue:\0028\001\"\201\002\n\022ProcessWorkflowRes\022\030\n\007succe" +
-      "ss\030\001 \001(\010R\007success\022Q\n\004data\030\002 \003(\0132=.api.v1" +
-      "alpha1.integrationspublic.ProcessWorkflo" +
-      "wRes.DataEntryR\004data\022\035\n\nsession_id\030\003 \001(\t" +
-      "R\tsessionId\032_\n\tDataEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.integra" +
-      "tionspublic.ValueR\005value:\0028\001\"Z\n\021GetLinkD" +
-      "etailsReq\022E\n\006entity\030\001 \001(\0132-.api.v1alpha1" +
-      ".integrationspublic.PortalLinkIdR\006entity" +
-      "\"\264\002\n\021GetLinkDetailsRes\0229\n\006portal\030\001 \001(\0132!" +
-      ".api.v1alpha1.integrations.PortalR\006porta" +
-      "l\022R\n\rportal_config\030\002 \001(\0132-.api.v1alpha1." +
-      "integrationspublic.PortalConfigR\014portalC" +
-      "onfig\022\030\n\007expired\030\003 \001(\010R\007expired\022\034\n\tcompl" +
-      "eted\030\004 \001(\010R\tcompleted\022X\n\021portal_definiti" +
-      "on\030\005 \001(\0132+.api.v1alpha1.integrations.Por" +
-      "talDefinitionR\020portalDefinition2\270\013\n\022Inte" +
-      "grationsPublic\022\250\001\n\013GetLinkData\022/.api.v1a" +
-      "lpha1.integrationspublic.GetLinkDataReq\032" +
-      "/.api.v1alpha1.integrationspublic.GetLin" +
-      "kDataRes\"7\202\323\344\223\0021\",/api/v1alpha1/integrat" +
-      "ionspublic/getlinkdata:\001*\022\304\001\n\022SubmitVeri" +
-      "fication\0226.api.v1alpha1.integrationspubl" +
-      "ic.SubmitVerificationReq\0326.api.v1alpha1." +
-      "integrationspublic.SubmitVerificationRes" +
-      "\">\202\323\344\223\0028\"3/api/v1alpha1/integrationspubl" +
-      "ic/submitverification:\001*\022\274\001\n\020SessionKeep" +
-      "Alive\0224.api.v1alpha1.integrationspublic." +
-      "SessionKeepAliveReq\0324.api.v1alpha1.integ" +
-      "rationspublic.SessionKeepAliveRes\"<\202\323\344\223\002" +
-      "6\"1/api/v1alpha1/integrationspublic/sess" +
-      "ionkeepalive:\001*\022\244\001\n\nGetInvoice\022..api.v1a" +
-      "lpha1.integrationspublic.GetInvoiceReq\032." +
-      ".api.v1alpha1.integrationspublic.GetInvo" +
-      "iceRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integratio" +
-      "nspublic/getinvoice:\001*\022\260\001\n\rSubmitPayment" +
-      "\0221.api.v1alpha1.integrationspublic.Submi" +
-      "tPaymentReq\0321.api.v1alpha1.integrationsp" +
-      "ublic.SubmitPaymentRes\"9\202\323\344\223\0023\"./api/v1a" +
-      "lpha1/integrationspublic/submitpayment:\001" +
-      "*\022\244\001\n\nGetReceipt\022..api.v1alpha1.integrat" +
-      "ionspublic.GetReceiptReq\032..api.v1alpha1." +
-      "integrationspublic.GetReceiptRes\"6\202\323\344\223\0020" +
-      "\"+/api/v1alpha1/integrationspublic/getre" +
-      "ceipt:\001*\022\270\001\n\017ProcessWorkflow\0223.api.v1alp" +
+      "\tsessionId\022k\n\016payment_fields\030\003 \003(\0132D.api" +
+      ".v1alpha1.integrationspublic.SubmitPayme" +
+      "ntReq.PaymentFieldsEntryR\rpaymentFields\022" +
+      "H\n\014payment_flow\030\004 \001(\0132%.api.commons.inte" +
+      "grations.PaymentFlowR\013paymentFlow\032h\n\022Pay" +
+      "mentFieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005val" +
+      "ue\030\002 \001(\0132&.api.v1alpha1.integrationspubl" +
+      "ic.ValueR\005value:\0028\001\"\225\002\n\020SubmitPaymentRes" +
+      "\022U\n\006fields\030\001 \003(\0132=.api.v1alpha1.integrat" +
+      "ionspublic.SubmitPaymentRes.FieldsEntryR" +
+      "\006fields\022\037\n\013amount_paid\030\002 \001(\001R\namountPaid" +
+      "\022&\n\017amount_paid_key\030\003 \001(\tR\ramountPaidKey" +
+      "\032a\n\013FieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005val" +
+      "ue\030\002 \001(\0132&.api.v1alpha1.integrationspubl" +
+      "ic.ValueR\005value:\0028\001\"u\n\rGetReceiptReq\022E\n\006" +
+      "entity\030\001 \001(\0132-.api.v1alpha1.integrations" +
+      "public.PortalLinkIdR\006entity\022\035\n\nsession_i" +
+      "d\030\002 \001(\tR\tsessionId\"\273\004\n\rGetReceiptRes\022\035\n\n" +
+      "receipt_id\030\001 \001(\tR\treceiptId\022U\n\007request\030\002" +
+      " \003(\0132;.api.v1alpha1.integrationspublic.G" +
+      "etReceiptRes.RequestEntryR\007request\022X\n\010re" +
+      "sponse\030\003 \003(\0132<.api.v1alpha1.integrations" +
+      "public.GetReceiptRes.ResponseEntryR\010resp" +
+      "onse\022\037\n\013amount_paid\030\004 \001(\001R\namountPaid\022&\n" +
+      "\017amount_paid_key\030\005 \001(\tR\ramountPaidKey\022H\n" +
+      "\014payment_flow\030\006 \001(\0132%.api.commons.integr" +
+      "ations.PaymentFlowR\013paymentFlow\032b\n\014Reque" +
+      "stEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\013" +
+      "2&.api.v1alpha1.integrationspublic.Value" +
+      "R\005value:\0028\001\032c\n\rResponseEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.int" +
+      "egrationspublic.ValueR\005value:\0028\001\"\264\003\n\022Pro" +
+      "cessWorkflowReq\022$\n\016portal_link_id\030\001 \001(\tR" +
+      "\014portalLinkId\022\033\n\tportal_id\030\002 \001(\tR\010portal" +
+      "Id\022\030\n\007segment\030\003 \001(\005R\007segment\022\026\n\006choice\030\004" +
+      " \001(\005R\006choice\022W\n\006params\030\005 \003(\0132?.api.v1alp" +
       "ha1.integrationspublic.ProcessWorkflowRe" +
-      "q\0323.api.v1alpha1.integrationspublic.Proc" +
-      "essWorkflowRes\";\202\323\344\223\0025\"0/api/v1alpha1/in" +
-      "tegrationspublic/processworkflow:\001*\022\264\001\n\016" +
-      "GetLinkDetails\0222.api.v1alpha1.integratio" +
-      "nspublic.GetLinkDetailsReq\0322.api.v1alpha" +
-      "1.integrationspublic.GetLinkDetailsRes\":" +
-      "\202\323\344\223\0024\"//api/v1alpha1/integrationspublic" +
-      "/getlinkdetails:\001*B\337\001\n1com.tcn.cloud.api" +
-      ".api.v1alpha1.integrationspublicB\014Servic" +
-      "eProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integratio" +
-      "nspublic\312\002\037Api\\V1alpha1\\Integrationspubl" +
-      "ic\342\002+Api\\V1alpha1\\Integrationspublic\\GPB" +
-      "Metadata\352\002!Api::V1alpha1::Integrationspu" +
-      "blicb\006proto3"
+      "q.ParamsEntryR\006params\022N\n\016request_origin\030" +
+      "\006 \001(\0162\'.api.commons.integrations.Request" +
+      "OriginR\rrequestOrigin\022\035\n\nsession_id\030\007 \001(" +
+      "\tR\tsessionId\032a\n\013ParamsEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.inte" +
+      "grationspublic.ValueR\005value:\0028\001\"\201\002\n\022Proc" +
+      "essWorkflowRes\022\030\n\007success\030\001 \001(\010R\007success" +
+      "\022Q\n\004data\030\002 \003(\0132=.api.v1alpha1.integratio" +
+      "nspublic.ProcessWorkflowRes.DataEntryR\004d" +
+      "ata\022\035\n\nsession_id\030\003 \001(\tR\tsessionId\032_\n\tDa" +
+      "taEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\013" +
+      "2&.api.v1alpha1.integrationspublic.Value" +
+      "R\005value:\0028\001\"Z\n\021GetLinkDetailsReq\022E\n\006enti" +
+      "ty\030\001 \001(\0132-.api.v1alpha1.integrationspubl" +
+      "ic.PortalLinkIdR\006entity\"\264\002\n\021GetLinkDetai" +
+      "lsRes\0229\n\006portal\030\001 \001(\0132!.api.v1alpha1.int" +
+      "egrations.PortalR\006portal\022R\n\rportal_confi" +
+      "g\030\002 \001(\0132-.api.v1alpha1.integrationspubli" +
+      "c.PortalConfigR\014portalConfig\022\030\n\007expired\030" +
+      "\003 \001(\010R\007expired\022\034\n\tcompleted\030\004 \001(\010R\tcompl" +
+      "eted\022X\n\021portal_definition\030\005 \001(\0132+.api.v1" +
+      "alpha1.integrations.PortalDefinitionR\020po" +
+      "rtalDefinition\"\321\003\n\020CalculateFeesReq\0221\n\004f" +
+      "ees\030\001 \003(\0132\035.api.commons.integrations.Fee" +
+      "R\004fees\022U\n\006params\030\002 \003(\0132=.api.v1alpha1.in" +
+      "tegrationspublic.CalculateFeesReq.Params" +
+      "EntryR\006params\022,\n\022payment_amount_key\030\003 \001(" +
+      "\tR\020paymentAmountKey\022\031\n\010call_sid\030\004 \001(\003R\007c" +
+      "allSid\0227\n\tcall_type\030\005 \001(\0162\032.api.commons." +
+      "CallType.EnumR\010callType\022N\n\016request_origi" +
+      "n\030\006 \001(\0162\'.api.commons.integrations.Reque" +
+      "stOriginR\rrequestOrigin\032a\n\013ParamsEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1" +
+      "alpha1.integrationspublic.ValueR\005value:\002" +
+      "8\001\"\357\001\n\020CalculateFeesRes\022n\n\017calculated_fe" +
+      "es\030\001 \003(\0132E.api.v1alpha1.integrationspubl" +
+      "ic.CalculateFeesRes.CalculatedFeesEntryR" +
+      "\016calculatedFees\022(\n\020total_amount_due\030\002 \001(" +
+      "\tR\016totalAmountDue\032A\n\023CalculatedFeesEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value" +
+      ":\0028\0012\353\014\n\022IntegrationsPublic\022\250\001\n\013GetLinkD" +
+      "ata\022/.api.v1alpha1.integrationspublic.Ge" +
+      "tLinkDataReq\032/.api.v1alpha1.integrations" +
+      "public.GetLinkDataRes\"7\202\323\344\223\0021\",/api/v1al" +
+      "pha1/integrationspublic/getlinkdata:\001*\022\304" +
+      "\001\n\022SubmitVerification\0226.api.v1alpha1.int" +
+      "egrationspublic.SubmitVerificationReq\0326." +
+      "api.v1alpha1.integrationspublic.SubmitVe" +
+      "rificationRes\">\202\323\344\223\0028\"3/api/v1alpha1/int" +
+      "egrationspublic/submitverification:\001*\022\274\001" +
+      "\n\020SessionKeepAlive\0224.api.v1alpha1.integr" +
+      "ationspublic.SessionKeepAliveReq\0324.api.v" +
+      "1alpha1.integrationspublic.SessionKeepAl" +
+      "iveRes\"<\202\323\344\223\0026\"1/api/v1alpha1/integratio" +
+      "nspublic/sessionkeepalive:\001*\022\244\001\n\nGetInvo" +
+      "ice\022..api.v1alpha1.integrationspublic.Ge" +
+      "tInvoiceReq\032..api.v1alpha1.integrationsp" +
+      "ublic.GetInvoiceRes\"6\202\323\344\223\0020\"+/api/v1alph" +
+      "a1/integrationspublic/getinvoice:\001*\022\260\001\n\r" +
+      "SubmitPayment\0221.api.v1alpha1.integration" +
+      "spublic.SubmitPaymentReq\0321.api.v1alpha1." +
+      "integrationspublic.SubmitPaymentRes\"9\202\323\344" +
+      "\223\0023\"./api/v1alpha1/integrationspublic/su" +
+      "bmitpayment:\001*\022\244\001\n\nGetReceipt\022..api.v1al" +
+      "pha1.integrationspublic.GetReceiptReq\032.." +
+      "api.v1alpha1.integrationspublic.GetRecei" +
+      "ptRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integration" +
+      "spublic/getreceipt:\001*\022\270\001\n\017ProcessWorkflo" +
+      "w\0223.api.v1alpha1.integrationspublic.Proc" +
+      "essWorkflowReq\0323.api.v1alpha1.integratio" +
+      "nspublic.ProcessWorkflowRes\";\202\323\344\223\0025\"0/ap" +
+      "i/v1alpha1/integrationspublic/processwor" +
+      "kflow:\001*\022\264\001\n\016GetLinkDetails\0222.api.v1alph" +
+      "a1.integrationspublic.GetLinkDetailsReq\032" +
+      "2.api.v1alpha1.integrationspublic.GetLin" +
+      "kDetailsRes\":\202\323\344\223\0024\"//api/v1alpha1/integ" +
+      "rationspublic/getlinkdetails:\001*\022\260\001\n\rCalc" +
+      "ulateFees\0221.api.v1alpha1.integrationspub" +
+      "lic.CalculateFeesReq\0321.api.v1alpha1.inte" +
+      "grationspublic.CalculateFeesRes\"9\202\323\344\223\0023\"" +
+      "./api/v1alpha1/integrationspublic/calcul" +
+      "atefees:\001*B\337\001\n1com.tcn.cloud.api.api.v1a" +
+      "lpha1.integrationspublicB\014ServiceProtoP\001" +
+      "\242\002\003AVI\252\002\037Api.V1alpha1.Integrationspublic" +
+      "\312\002\037Api\\V1alpha1\\Integrationspublic\342\002+Api" +
+      "\\V1alpha1\\Integrationspublic\\GPBMetadata" +
+      "\352\002!Api::V1alpha1::Integrationspublicb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.getDescriptor(),
@@ -605,11 +649,36 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_GetLinkDetailsRes_descriptor,
         new java.lang.String[] { "Portal", "PortalConfig", "Expired", "Completed", "PortalDefinition", });
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor,
+        new java.lang.String[] { "Fees", "Params", "PaymentAmountKey", "CallSid", "CallType", "RequestOrigin", });
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_descriptor =
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor,
+        new java.lang.String[] { "CalculatedFees", "TotalAmountDue", });
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_descriptor =
+      internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.getDescriptor();
