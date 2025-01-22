@@ -44,7 +44,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @return A list containing the ringGroupIds.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -56,7 +56,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @return The count of ringGroupIds.
    */
   @java.lang.Deprecated int getRingGroupIdsCount();
@@ -67,7 +67,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the element to return.
    * @return The ringGroupIds at the given index.
    */
@@ -79,7 +79,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the value to return.
    * @return The bytes of the ringGroupIds at the given index.
    */
@@ -120,77 +120,5 @@ public interface SIPAccountOrBuilder extends
    * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
    */
   com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder getRingGroupsOrBuilder(
-      int index);
-
-  /**
-   * <code>string name = 7 [json_name = "name"];</code>
-   * @return The name.
-   */
-  java.lang.String getName();
-  /**
-   * <code>string name = 7 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  com.google.protobuf.ByteString
-      getNameBytes();
-
-  /**
-   * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-   * @return The huntGroup.
-   */
-  java.lang.String getHuntGroup();
-  /**
-   * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-   * @return The bytes for huntGroup.
-   */
-  com.google.protobuf.ByteString
-      getHuntGroupBytes();
-
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> 
-      getSkillsList();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill getSkills(int index);
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  int getSkillsCount();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder> 
-      getSkillsOrBuilderList();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder getSkillsOrBuilder(
-      int index);
-
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> 
-      getPermissionGroupsList();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup getPermissionGroups(int index);
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  int getPermissionGroupsCount();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder> 
-      getPermissionGroupsOrBuilderList();
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder getPermissionGroupsOrBuilder(
       int index);
 }

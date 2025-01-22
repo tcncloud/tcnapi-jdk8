@@ -22,10 +22,6 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     orgUserId_ = "";
     ringGroups_ = java.util.Collections.emptyList();
-    name_ = "";
-    huntGroup_ = "";
-    skills_ = java.util.Collections.emptyList();
-    permissionGroups_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -148,7 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @return A list containing the ringGroupIds.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -162,7 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @return The count of ringGroupIds.
    */
   @java.lang.Deprecated public int getRingGroupIdsCount() {
@@ -175,7 +171,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the element to return.
    * @return The ringGroupIds at the given index.
    */
@@ -189,7 +185,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=348
+   *     See services/pbx/v2/service.proto;l=338
    * @param index The index of the value to return.
    * @return The bytes of the ringGroupIds at the given index.
    */
@@ -278,166 +274,6 @@ private static final long serialVersionUID = 0L;
     return ringGroups_.get(index);
   }
 
-  public static final int NAME_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <code>string name = 7 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name = 7 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int HUNT_GROUP_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object huntGroup_ = "";
-  /**
-   * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-   * @return The huntGroup.
-   */
-  @java.lang.Override
-  public java.lang.String getHuntGroup() {
-    java.lang.Object ref = huntGroup_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      huntGroup_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-   * @return The bytes for huntGroup.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getHuntGroupBytes() {
-    java.lang.Object ref = huntGroup_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      huntGroup_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int SKILLS_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> skills_;
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> getSkillsList() {
-    return skills_;
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder> 
-      getSkillsOrBuilderList() {
-    return skills_;
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  @java.lang.Override
-  public int getSkillsCount() {
-    return skills_.size();
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill getSkills(int index) {
-    return skills_.get(index);
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder getSkillsOrBuilder(
-      int index) {
-    return skills_.get(index);
-  }
-
-  public static final int PERMISSION_GROUPS_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> permissionGroups_;
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> getPermissionGroupsList() {
-    return permissionGroups_;
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder> 
-      getPermissionGroupsOrBuilderList() {
-    return permissionGroups_;
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  @java.lang.Override
-  public int getPermissionGroupsCount() {
-    return permissionGroups_.size();
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup getPermissionGroups(int index) {
-    return permissionGroups_.get(index);
-  }
-  /**
-   * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder getPermissionGroupsOrBuilder(
-      int index) {
-    return permissionGroups_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -469,18 +305,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ringGroups_.size(); i++) {
       output.writeMessage(6, ringGroups_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroup_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, huntGroup_);
-    }
-    for (int i = 0; i < skills_.size(); i++) {
-      output.writeMessage(9, skills_.get(i));
-    }
-    for (int i = 0; i < permissionGroups_.size(); i++) {
-      output.writeMessage(10, permissionGroups_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -516,20 +340,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, ringGroups_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroup_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, huntGroup_);
-    }
-    for (int i = 0; i < skills_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, skills_.get(i));
-    }
-    for (int i = 0; i < permissionGroups_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, permissionGroups_.get(i));
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -557,14 +367,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgUserId())) return false;
     if (!getRingGroupsList()
         .equals(other.getRingGroupsList())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getHuntGroup()
-        .equals(other.getHuntGroup())) return false;
-    if (!getSkillsList()
-        .equals(other.getSkillsList())) return false;
-    if (!getPermissionGroupsList()
-        .equals(other.getPermissionGroupsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -592,18 +394,6 @@ private static final long serialVersionUID = 0L;
     if (getRingGroupsCount() > 0) {
       hash = (37 * hash) + RING_GROUPS_FIELD_NUMBER;
       hash = (53 * hash) + getRingGroupsList().hashCode();
-    }
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + HUNT_GROUP_FIELD_NUMBER;
-    hash = (53 * hash) + getHuntGroup().hashCode();
-    if (getSkillsCount() > 0) {
-      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
-      hash = (53 * hash) + getSkillsList().hashCode();
-    }
-    if (getPermissionGroupsCount() > 0) {
-      hash = (37 * hash) + PERMISSION_GROUPS_FIELD_NUMBER;
-      hash = (53 * hash) + getPermissionGroupsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -749,22 +539,6 @@ private static final long serialVersionUID = 0L;
         ringGroupsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
-      name_ = "";
-      huntGroup_ = "";
-      if (skillsBuilder_ == null) {
-        skills_ = java.util.Collections.emptyList();
-      } else {
-        skills_ = null;
-        skillsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000100);
-      if (permissionGroupsBuilder_ == null) {
-        permissionGroups_ = java.util.Collections.emptyList();
-      } else {
-        permissionGroups_ = null;
-        permissionGroupsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -807,24 +581,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.ringGroups_ = ringGroupsBuilder_.build();
       }
-      if (skillsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          skills_ = java.util.Collections.unmodifiableList(skills_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.skills_ = skills_;
-      } else {
-        result.skills_ = skillsBuilder_.build();
-      }
-      if (permissionGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
-          permissionGroups_ = java.util.Collections.unmodifiableList(permissionGroups_);
-          bitField0_ = (bitField0_ & ~0x00000200);
-        }
-        result.permissionGroups_ = permissionGroups_;
-      } else {
-        result.permissionGroups_ = permissionGroupsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.pbx.v2.SIPAccount result) {
@@ -844,12 +600,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.orgUserId_ = orgUserId_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.huntGroup_ = huntGroup_;
       }
     }
 
@@ -951,68 +701,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
-      if (!other.getHuntGroup().isEmpty()) {
-        huntGroup_ = other.huntGroup_;
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
-      if (skillsBuilder_ == null) {
-        if (!other.skills_.isEmpty()) {
-          if (skills_.isEmpty()) {
-            skills_ = other.skills_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureSkillsIsMutable();
-            skills_.addAll(other.skills_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.skills_.isEmpty()) {
-          if (skillsBuilder_.isEmpty()) {
-            skillsBuilder_.dispose();
-            skillsBuilder_ = null;
-            skills_ = other.skills_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            skillsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getSkillsFieldBuilder() : null;
-          } else {
-            skillsBuilder_.addAllMessages(other.skills_);
-          }
-        }
-      }
-      if (permissionGroupsBuilder_ == null) {
-        if (!other.permissionGroups_.isEmpty()) {
-          if (permissionGroups_.isEmpty()) {
-            permissionGroups_ = other.permissionGroups_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-          } else {
-            ensurePermissionGroupsIsMutable();
-            permissionGroups_.addAll(other.permissionGroups_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.permissionGroups_.isEmpty()) {
-          if (permissionGroupsBuilder_.isEmpty()) {
-            permissionGroupsBuilder_.dispose();
-            permissionGroupsBuilder_ = null;
-            permissionGroups_ = other.permissionGroups_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-            permissionGroupsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPermissionGroupsFieldBuilder() : null;
-          } else {
-            permissionGroupsBuilder_.addAllMessages(other.permissionGroups_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1078,42 +766,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
-            case 58: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 66: {
-              huntGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            case 74: {
-              com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill m =
-                  input.readMessage(
-                      com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.parser(),
-                      extensionRegistry);
-              if (skillsBuilder_ == null) {
-                ensureSkillsIsMutable();
-                skills_.add(m);
-              } else {
-                skillsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 74
-            case 82: {
-              com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup m =
-                  input.readMessage(
-                      com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.parser(),
-                      extensionRegistry);
-              if (permissionGroupsBuilder_ == null) {
-                ensurePermissionGroupsIsMutable();
-                permissionGroups_.add(m);
-              } else {
-                permissionGroupsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1322,7 +974,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @return A list containing the ringGroupIds.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -1337,7 +989,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @return The count of ringGroupIds.
      */
     @java.lang.Deprecated public int getRingGroupIdsCount() {
@@ -1350,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index of the element to return.
      * @return The ringGroupIds at the given index.
      */
@@ -1364,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index of the value to return.
      * @return The bytes of the ringGroupIds at the given index.
      */
@@ -1379,7 +1031,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param index The index to set the value at.
      * @param value The ringGroupIds to set.
      * @return This builder for chaining.
@@ -1400,7 +1052,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param value The ringGroupIds to add.
      * @return This builder for chaining.
      */
@@ -1420,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param values The ringGroupIds to add.
      * @return This builder for chaining.
      */
@@ -1440,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRingGroupIds() {
@@ -1457,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
      * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-     *     See services/pbx/v2/service.proto;l=348
+     *     See services/pbx/v2/service.proto;l=338
      * @param value The bytes of the ringGroupIds to add.
      * @return This builder for chaining.
      */
@@ -1782,630 +1434,6 @@ private static final long serialVersionUID = 0L;
         ringGroups_ = null;
       }
       return ringGroupsBuilder_;
-    }
-
-    private java.lang.Object name_ = "";
-    /**
-     * <code>string name = 7 [json_name = "name"];</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string name = 7 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name = 7 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 7 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 7 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object huntGroup_ = "";
-    /**
-     * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-     * @return The huntGroup.
-     */
-    public java.lang.String getHuntGroup() {
-      java.lang.Object ref = huntGroup_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        huntGroup_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-     * @return The bytes for huntGroup.
-     */
-    public com.google.protobuf.ByteString
-        getHuntGroupBytes() {
-      java.lang.Object ref = huntGroup_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        huntGroup_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-     * @param value The huntGroup to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHuntGroup(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      huntGroup_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearHuntGroup() {
-      huntGroup_ = getDefaultInstance().getHuntGroup();
-      bitField0_ = (bitField0_ & ~0x00000080);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string hunt_group = 8 [json_name = "huntGroup"];</code>
-     * @param value The bytes for huntGroup to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHuntGroupBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      huntGroup_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> skills_ =
-      java.util.Collections.emptyList();
-    private void ensureSkillsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        skills_ = new java.util.ArrayList<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill>(skills_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder> skillsBuilder_;
-
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> getSkillsList() {
-      if (skillsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(skills_);
-      } else {
-        return skillsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public int getSkillsCount() {
-      if (skillsBuilder_ == null) {
-        return skills_.size();
-      } else {
-        return skillsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill getSkills(int index) {
-      if (skillsBuilder_ == null) {
-        return skills_.get(index);
-      } else {
-        return skillsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder setSkills(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill value) {
-      if (skillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSkillsIsMutable();
-        skills_.set(index, value);
-        onChanged();
-      } else {
-        skillsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder setSkills(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder builderForValue) {
-      if (skillsBuilder_ == null) {
-        ensureSkillsIsMutable();
-        skills_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        skillsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder addSkills(com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill value) {
-      if (skillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSkillsIsMutable();
-        skills_.add(value);
-        onChanged();
-      } else {
-        skillsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder addSkills(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill value) {
-      if (skillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSkillsIsMutable();
-        skills_.add(index, value);
-        onChanged();
-      } else {
-        skillsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder addSkills(
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder builderForValue) {
-      if (skillsBuilder_ == null) {
-        ensureSkillsIsMutable();
-        skills_.add(builderForValue.build());
-        onChanged();
-      } else {
-        skillsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder addSkills(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder builderForValue) {
-      if (skillsBuilder_ == null) {
-        ensureSkillsIsMutable();
-        skills_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        skillsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder addAllSkills(
-        java.lang.Iterable<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill> values) {
-      if (skillsBuilder_ == null) {
-        ensureSkillsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, skills_);
-        onChanged();
-      } else {
-        skillsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder clearSkills() {
-      if (skillsBuilder_ == null) {
-        skills_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        skillsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public Builder removeSkills(int index) {
-      if (skillsBuilder_ == null) {
-        ensureSkillsIsMutable();
-        skills_.remove(index);
-        onChanged();
-      } else {
-        skillsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder getSkillsBuilder(
-        int index) {
-      return getSkillsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder getSkillsOrBuilder(
-        int index) {
-      if (skillsBuilder_ == null) {
-        return skills_.get(index);  } else {
-        return skillsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder> 
-         getSkillsOrBuilderList() {
-      if (skillsBuilder_ != null) {
-        return skillsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(skills_);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder addSkillsBuilder() {
-      return getSkillsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder addSkillsBuilder(
-        int index) {
-      return getSkillsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountSkill skills = 9 [json_name = "skills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder> 
-         getSkillsBuilderList() {
-      return getSkillsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder> 
-        getSkillsFieldBuilder() {
-      if (skillsBuilder_ == null) {
-        skillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkill.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountSkillOrBuilder>(
-                skills_,
-                ((bitField0_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        skills_ = null;
-      }
-      return skillsBuilder_;
-    }
-
-    private java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> permissionGroups_ =
-      java.util.Collections.emptyList();
-    private void ensurePermissionGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
-        permissionGroups_ = new java.util.ArrayList<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup>(permissionGroups_);
-        bitField0_ |= 0x00000200;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder> permissionGroupsBuilder_;
-
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> getPermissionGroupsList() {
-      if (permissionGroupsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(permissionGroups_);
-      } else {
-        return permissionGroupsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public int getPermissionGroupsCount() {
-      if (permissionGroupsBuilder_ == null) {
-        return permissionGroups_.size();
-      } else {
-        return permissionGroupsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup getPermissionGroups(int index) {
-      if (permissionGroupsBuilder_ == null) {
-        return permissionGroups_.get(index);
-      } else {
-        return permissionGroupsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder setPermissionGroups(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup value) {
-      if (permissionGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.set(index, value);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder setPermissionGroups(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder builderForValue) {
-      if (permissionGroupsBuilder_ == null) {
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder addPermissionGroups(com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup value) {
-      if (permissionGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.add(value);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder addPermissionGroups(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup value) {
-      if (permissionGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.add(index, value);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder addPermissionGroups(
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder builderForValue) {
-      if (permissionGroupsBuilder_ == null) {
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.add(builderForValue.build());
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder addPermissionGroups(
-        int index, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder builderForValue) {
-      if (permissionGroupsBuilder_ == null) {
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder addAllPermissionGroups(
-        java.lang.Iterable<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup> values) {
-      if (permissionGroupsBuilder_ == null) {
-        ensurePermissionGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, permissionGroups_);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder clearPermissionGroups() {
-      if (permissionGroupsBuilder_ == null) {
-        permissionGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public Builder removePermissionGroups(int index) {
-      if (permissionGroupsBuilder_ == null) {
-        ensurePermissionGroupsIsMutable();
-        permissionGroups_.remove(index);
-        onChanged();
-      } else {
-        permissionGroupsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder getPermissionGroupsBuilder(
-        int index) {
-      return getPermissionGroupsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder getPermissionGroupsOrBuilder(
-        int index) {
-      if (permissionGroupsBuilder_ == null) {
-        return permissionGroups_.get(index);  } else {
-        return permissionGroupsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder> 
-         getPermissionGroupsOrBuilderList() {
-      if (permissionGroupsBuilder_ != null) {
-        return permissionGroupsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(permissionGroups_);
-      }
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder addPermissionGroupsBuilder() {
-      return getPermissionGroupsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder addPermissionGroupsBuilder(
-        int index) {
-      return getPermissionGroupsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .services.pbx.v2.SIPAccountPermissionGroup permission_groups = 10 [json_name = "permissionGroups"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder> 
-         getPermissionGroupsBuilderList() {
-      return getPermissionGroupsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder> 
-        getPermissionGroupsFieldBuilder() {
-      if (permissionGroupsBuilder_ == null) {
-        permissionGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroup.Builder, com.tcn.cloud.api.services.pbx.v2.SIPAccountPermissionGroupOrBuilder>(
-                permissionGroups_,
-                ((bitField0_ & 0x00000200) != 0),
-                getParentForChildren(),
-                isClean());
-        permissionGroups_ = null;
-      }
-      return permissionGroupsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
