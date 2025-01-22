@@ -14,7 +14,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=383
+   *     See api/v1alpha1/org/user.proto;l=385
    * @return The userId.
    */
   @java.lang.Deprecated java.lang.String getUserId();
@@ -25,7 +25,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.user_id is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=383
+   *     See api/v1alpha1/org/user.proto;l=385
    * @return The bytes for userId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -38,7 +38,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=385
+   *     See api/v1alpha1/org/user.proto;l=387
    * @return The firstName.
    */
   @java.lang.Deprecated java.lang.String getFirstName();
@@ -49,7 +49,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.first_name is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=385
+   *     See api/v1alpha1/org/user.proto;l=387
    * @return The bytes for firstName.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -62,7 +62,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=387
+   *     See api/v1alpha1/org/user.proto;l=389
    * @return The lastName.
    */
   @java.lang.Deprecated java.lang.String getLastName();
@@ -73,7 +73,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.last_name is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=387
+   *     See api/v1alpha1/org/user.proto;l=389
    * @return The bytes for lastName.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -86,7 +86,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string username = 4 [json_name = "username", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=389
+   *     See api/v1alpha1/org/user.proto;l=391
    * @return The username.
    */
   @java.lang.Deprecated java.lang.String getUsername();
@@ -97,7 +97,7 @@ public interface ListPublicUsersResponseOrBuilder extends
    *
    * <code>string username = 4 [json_name = "username", deprecated = true];</code>
    * @deprecated api.v1alpha1.org.ListPublicUsersResponse.username is deprecated.
-   *     See api/v1alpha1/org/user.proto;l=389
+   *     See api/v1alpha1/org/user.proto;l=391
    * @return The bytes for username.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
