@@ -19,7 +19,6 @@ private static final long serialVersionUID = 0L;
     identifier_ = "";
     displayLabel_ = "";
     memberType_ = 0;
-    phoneNumber_ = "";
   }
 
   @java.lang.Override
@@ -182,56 +181,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.TransferMemberType.UNRECOGNIZED : result;
   }
 
-  public static final int PHONE_NUMBER_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object phoneNumber_ = "";
-  /**
-   * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-   * @return The phoneNumber.
-   */
-  @java.lang.Override
-  public java.lang.String getPhoneNumber() {
-    java.lang.Object ref = phoneNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      phoneNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-   * @return The bytes for phoneNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPhoneNumberBytes() {
-    java.lang.Object ref = phoneNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      phoneNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int IS_MUTED_FIELD_NUMBER = 5;
-  private boolean isMuted_ = false;
-  /**
-   * <code>bool is_muted = 5 [json_name = "isMuted"];</code>
-   * @return The isMuted.
-   */
-  @java.lang.Override
-  public boolean getIsMuted() {
-    return isMuted_;
-  }
-
   public static final int AGENT_SESSION_FIELD_NUMBER = 100;
   /**
    * <code>.api.commons.AgentSession agent_session = 100 [json_name = "agentSession"];</code>
@@ -369,12 +318,6 @@ private static final long serialVersionUID = 0L;
     if (memberType_ != com.tcn.cloud.api.api.commons.TransferMemberType.TransferMemberType_AGENT.getNumber()) {
       output.writeEnum(3, memberType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, phoneNumber_);
-    }
-    if (isMuted_ != false) {
-      output.writeBool(5, isMuted_);
-    }
     if (locatableDataCase_ == 100) {
       output.writeMessage(100, (com.tcn.cloud.api.api.commons.AgentSession) locatableData_);
     }
@@ -402,13 +345,6 @@ private static final long serialVersionUID = 0L;
     if (memberType_ != com.tcn.cloud.api.api.commons.TransferMemberType.TransferMemberType_AGENT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, memberType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, phoneNumber_);
-    }
-    if (isMuted_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, isMuted_);
     }
     if (locatableDataCase_ == 100) {
       size += com.google.protobuf.CodedOutputStream
@@ -441,10 +377,6 @@ private static final long serialVersionUID = 0L;
     if (!getDisplayLabel()
         .equals(other.getDisplayLabel())) return false;
     if (memberType_ != other.memberType_) return false;
-    if (!getPhoneNumber()
-        .equals(other.getPhoneNumber())) return false;
-    if (getIsMuted()
-        != other.getIsMuted()) return false;
     if (!getLocatableDataCase().equals(other.getLocatableDataCase())) return false;
     switch (locatableDataCase_) {
       case 100:
@@ -479,11 +411,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDisplayLabel().hashCode();
     hash = (37 * hash) + MEMBER_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + memberType_;
-    hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getPhoneNumber().hashCode();
-    hash = (37 * hash) + IS_MUTED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsMuted());
     switch (locatableDataCase_) {
       case 100:
         hash = (37 * hash) + AGENT_SESSION_FIELD_NUMBER;
@@ -634,8 +561,6 @@ private static final long serialVersionUID = 0L;
       identifier_ = "";
       displayLabel_ = "";
       memberType_ = 0;
-      phoneNumber_ = "";
-      isMuted_ = false;
       if (agentSessionBuilder_ != null) {
         agentSessionBuilder_.clear();
       }
@@ -686,12 +611,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.memberType_ = memberType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.phoneNumber_ = phoneNumber_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.isMuted_ = isMuted_;
       }
     }
 
@@ -765,14 +684,6 @@ private static final long serialVersionUID = 0L;
       if (other.memberType_ != 0) {
         setMemberTypeValue(other.getMemberTypeValue());
       }
-      if (!other.getPhoneNumber().isEmpty()) {
-        phoneNumber_ = other.phoneNumber_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
-      if (other.getIsMuted() != false) {
-        setIsMuted(other.getIsMuted());
-      }
       switch (other.getLocatableDataCase()) {
         case AGENT_SESSION: {
           mergeAgentSession(other.getAgentSession());
@@ -833,16 +744,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 34: {
-              phoneNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 40: {
-              isMuted_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
             case 802: {
               input.readMessage(
                   getAgentSessionFieldBuilder().getBuilder(),
@@ -1088,110 +989,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearMemberType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       memberType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object phoneNumber_ = "";
-    /**
-     * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-     * @return The phoneNumber.
-     */
-    public java.lang.String getPhoneNumber() {
-      java.lang.Object ref = phoneNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        phoneNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-     * @return The bytes for phoneNumber.
-     */
-    public com.google.protobuf.ByteString
-        getPhoneNumberBytes() {
-      java.lang.Object ref = phoneNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        phoneNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-     * @param value The phoneNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPhoneNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      phoneNumber_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPhoneNumber() {
-      phoneNumber_ = getDefaultInstance().getPhoneNumber();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
-     * @param value The bytes for phoneNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPhoneNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      phoneNumber_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private boolean isMuted_ ;
-    /**
-     * <code>bool is_muted = 5 [json_name = "isMuted"];</code>
-     * @return The isMuted.
-     */
-    @java.lang.Override
-    public boolean getIsMuted() {
-      return isMuted_;
-    }
-    /**
-     * <code>bool is_muted = 5 [json_name = "isMuted"];</code>
-     * @param value The isMuted to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIsMuted(boolean value) {
-
-      isMuted_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool is_muted = 5 [json_name = "isMuted"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIsMuted() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      isMuted_ = false;
       onChanged();
       return this;
     }
