@@ -73,4 +73,19 @@ public interface ProcessScrubListUploadReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCountryCodeBytes();
+
+  /**
+   * <code>.api.commons.Decompositions decompositions = 13 [json_name = "decompositions"];</code>
+   * @return Whether the decompositions field is set.
+   */
+  boolean hasDecompositions();
+  /**
+   * <code>.api.commons.Decompositions decompositions = 13 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  com.tcn.cloud.api.api.commons.Decompositions getDecompositions();
+  /**
+   * <code>.api.commons.Decompositions decompositions = 13 [json_name = "decompositions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder();
 }

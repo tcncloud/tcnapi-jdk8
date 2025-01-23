@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     invalidEntries_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     invalidList_ = java.util.Collections.emptyList();
+    countryCode_ = "";
   }
 
   @java.lang.Override
@@ -219,6 +220,71 @@ private static final long serialVersionUID = 0L;
     return invalidList_.get(index);
   }
 
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
+  /**
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  @java.lang.Override
+  public java.lang.String getCountryCode() {
+    java.lang.Object ref = countryCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      countryCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The bytes for countryCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCountryCodeBytes() {
+    java.lang.Object ref = countryCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      countryCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DECOMPOSITIONS_FIELD_NUMBER = 9;
+  private com.tcn.cloud.api.api.commons.Decompositions decompositions_;
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   * @return Whether the decompositions field is set.
+   */
+  @java.lang.Override
+  public boolean hasDecompositions() {
+    return decompositions_ != null;
+  }
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Decompositions getDecompositions() {
+    return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+  }
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder() {
+    return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -253,6 +319,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < invalidList_.size(); i++) {
       output.writeMessage(7, invalidList_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, countryCode_);
+    }
+    if (decompositions_ != null) {
+      output.writeMessage(9, getDecompositions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -294,6 +366,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, invalidList_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, countryCode_);
+    }
+    if (decompositions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getDecompositions());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -322,6 +401,13 @@ private static final long serialVersionUID = 0L;
         != other.getTotalInvalid()) return false;
     if (!getInvalidListList()
         .equals(other.getInvalidListList())) return false;
+    if (!getCountryCode()
+        .equals(other.getCountryCode())) return false;
+    if (hasDecompositions() != other.hasDecompositions()) return false;
+    if (hasDecompositions()) {
+      if (!getDecompositions()
+          .equals(other.getDecompositions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -353,6 +439,12 @@ private static final long serialVersionUID = 0L;
     if (getInvalidListCount() > 0) {
       hash = (37 * hash) + INVALID_LIST_FIELD_NUMBER;
       hash = (53 * hash) + getInvalidListList().hashCode();
+    }
+    hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCountryCode().hashCode();
+    if (hasDecompositions()) {
+      hash = (37 * hash) + DECOMPOSITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getDecompositions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -499,6 +591,12 @@ private static final long serialVersionUID = 0L;
         invalidListBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000040);
+      countryCode_ = "";
+      decompositions_ = null;
+      if (decompositionsBuilder_ != null) {
+        decompositionsBuilder_.dispose();
+        decompositionsBuilder_ = null;
+      }
       return this;
     }
 
@@ -563,6 +661,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.totalInvalid_ = totalInvalid_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.decompositions_ = decompositionsBuilder_ == null
+            ? decompositions_
+            : decompositionsBuilder_.build();
       }
     }
 
@@ -663,6 +769,14 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getCountryCode().isEmpty()) {
+        countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.hasDecompositions()) {
+        mergeDecompositions(other.getDecompositions());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -733,6 +847,18 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 58
+            case 66: {
+              countryCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getDecompositionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1338,6 +1464,197 @@ private static final long serialVersionUID = 0L;
         invalidList_ = null;
       }
       return invalidListBuilder_;
+    }
+
+    private java.lang.Object countryCode_ = "";
+    /**
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return The countryCode.
+     */
+    public java.lang.String getCountryCode() {
+      java.lang.Object ref = countryCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countryCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return The bytes for countryCode.
+     */
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @param value The countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      countryCode_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCode() {
+      countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @param value The bytes for countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      countryCode_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Decompositions decompositions_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder> decompositionsBuilder_;
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     * @return Whether the decompositions field is set.
+     */
+    public boolean hasDecompositions() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     * @return The decompositions.
+     */
+    public com.tcn.cloud.api.api.commons.Decompositions getDecompositions() {
+      if (decompositionsBuilder_ == null) {
+        return decompositions_ == null ? com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+      } else {
+        return decompositionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public Builder setDecompositions(com.tcn.cloud.api.api.commons.Decompositions value) {
+      if (decompositionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        decompositions_ = value;
+      } else {
+        decompositionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public Builder setDecompositions(
+        com.tcn.cloud.api.api.commons.Decompositions.Builder builderForValue) {
+      if (decompositionsBuilder_ == null) {
+        decompositions_ = builderForValue.build();
+      } else {
+        decompositionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public Builder mergeDecompositions(com.tcn.cloud.api.api.commons.Decompositions value) {
+      if (decompositionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          decompositions_ != null &&
+          decompositions_ != com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance()) {
+          getDecompositionsBuilder().mergeFrom(value);
+        } else {
+          decompositions_ = value;
+        }
+      } else {
+        decompositionsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public Builder clearDecompositions() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      decompositions_ = null;
+      if (decompositionsBuilder_ != null) {
+        decompositionsBuilder_.dispose();
+        decompositionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Decompositions.Builder getDecompositionsBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getDecompositionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder() {
+      if (decompositionsBuilder_ != null) {
+        return decompositionsBuilder_.getMessageOrBuilder();
+      } else {
+        return decompositions_ == null ?
+            com.tcn.cloud.api.api.commons.Decompositions.getDefaultInstance() : decompositions_;
+      }
+    }
+    /**
+     * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder> 
+        getDecompositionsFieldBuilder() {
+      if (decompositionsBuilder_ == null) {
+        decompositionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Decompositions, com.tcn.cloud.api.api.commons.Decompositions.Builder, com.tcn.cloud.api.api.commons.DecompositionsOrBuilder>(
+                getDecompositions(),
+                getParentForChildren(),
+                isClean());
+        decompositions_ = null;
+      }
+      return decompositionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
