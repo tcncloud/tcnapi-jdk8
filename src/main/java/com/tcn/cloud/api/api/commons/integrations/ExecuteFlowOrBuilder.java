@@ -4147,14 +4147,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1167
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetLocations();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1164
+   *     See api/commons/integrations/integrations.proto;l=1167
    * @return The veradigmGetLocations.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations getVeradigmGetLocations();
@@ -4166,14 +4166,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1168
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPatientAccountBalance();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1165
+   *     See api/commons/integrations/integrations.proto;l=1168
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance getVeradigmGetPatientAccountBalance();
@@ -4185,14 +4185,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1169
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPayments();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1166
+   *     See api/commons/integrations/integrations.proto;l=1169
    * @return The veradigmGetPayments.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments getVeradigmGetPayments();
@@ -4204,14 +4204,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1170
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmGetPlacesOfService();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1167
+   *     See api/commons/integrations/integrations.proto;l=1170
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService getVeradigmGetPlacesOfService();
@@ -4223,14 +4223,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1171
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSavePaymentTransaction();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1168
+   *     See api/commons/integrations/integrations.proto;l=1171
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction getVeradigmSavePaymentTransaction();
@@ -4242,14 +4242,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1169
+   *     See api/commons/integrations/integrations.proto;l=1172
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSaveRefundTransaction();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1169
+   *     See api/commons/integrations/integrations.proto;l=1172
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction getVeradigmSaveRefundTransaction();
@@ -4261,14 +4261,14 @@ public interface ExecuteFlowOrBuilder extends
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1170
+   *     See api/commons/integrations/integrations.proto;l=1173
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Deprecated boolean hasVeradigmSaveVoucherPayment();
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1170
+   *     See api/commons/integrations/integrations.proto;l=1173
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment getVeradigmSaveVoucherPayment();
@@ -4411,6 +4411,51 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPayment veradigm_practice_management_save_voucher_payment = 4809 [json_name = "veradigmPracticeManagementSaveVoucherPayment"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPaymentOrBuilder getVeradigmPracticeManagementSaveVoucherPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetPractitioners veradigm_practice_management_get_practitioners = 4810 [json_name = "veradigmPracticeManagementGetPractitioners"];</code>
+   * @return Whether the veradigmPracticeManagementGetPractitioners field is set.
+   */
+  boolean hasVeradigmPracticeManagementGetPractitioners();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetPractitioners veradigm_practice_management_get_practitioners = 4810 [json_name = "veradigmPracticeManagementGetPractitioners"];</code>
+   * @return The veradigmPracticeManagementGetPractitioners.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetPractitioners getVeradigmPracticeManagementGetPractitioners();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetPractitioners veradigm_practice_management_get_practitioners = 4810 [json_name = "veradigmPracticeManagementGetPractitioners"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetPractitionersOrBuilder getVeradigmPracticeManagementGetPractitionersOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetTransactionCodes veradigm_practice_management_get_transaction_codes = 4811 [json_name = "veradigmPracticeManagementGetTransactionCodes"];</code>
+   * @return Whether the veradigmPracticeManagementGetTransactionCodes field is set.
+   */
+  boolean hasVeradigmPracticeManagementGetTransactionCodes();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetTransactionCodes veradigm_practice_management_get_transaction_codes = 4811 [json_name = "veradigmPracticeManagementGetTransactionCodes"];</code>
+   * @return The veradigmPracticeManagementGetTransactionCodes.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetTransactionCodes getVeradigmPracticeManagementGetTransactionCodes();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetTransactionCodes veradigm_practice_management_get_transaction_codes = 4811 [json_name = "veradigmPracticeManagementGetTransactionCodes"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetTransactionCodesOrBuilder getVeradigmPracticeManagementGetTransactionCodesOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetDepartments veradigm_practice_management_get_departments = 4812 [json_name = "veradigmPracticeManagementGetDepartments"];</code>
+   * @return Whether the veradigmPracticeManagementGetDepartments field is set.
+   */
+  boolean hasVeradigmPracticeManagementGetDepartments();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetDepartments veradigm_practice_management_get_departments = 4812 [json_name = "veradigmPracticeManagementGetDepartments"];</code>
+   * @return The veradigmPracticeManagementGetDepartments.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetDepartments getVeradigmPracticeManagementGetDepartments();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmPracticeManagementGetDepartments veradigm_practice_management_get_departments = 4812 [json_name = "veradigmPracticeManagementGetDepartments"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementGetDepartmentsOrBuilder getVeradigmPracticeManagementGetDepartmentsOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4901 [json_name = "pdcflowTokenizeCreditCard"];</code>
