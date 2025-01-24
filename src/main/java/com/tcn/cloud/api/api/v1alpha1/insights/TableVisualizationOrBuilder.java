@@ -99,4 +99,44 @@ public interface TableVisualizationOrBuilder extends
    * @return The noHeader.
    */
   boolean getNoHeader();
+
+  /**
+   * <pre>
+   * Header background color
+   * </pre>
+   *
+   * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+   * @return The headerBackgroundColor.
+   */
+  java.lang.String getHeaderBackgroundColor();
+  /**
+   * <pre>
+   * Header background color
+   * </pre>
+   *
+   * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+   * @return The bytes for headerBackgroundColor.
+   */
+  com.google.protobuf.ByteString
+      getHeaderBackgroundColorBytes();
+
+  /**
+   * <pre>
+   * Header text color
+   * </pre>
+   *
+   * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+   * @return The headerTextColor.
+   */
+  java.lang.String getHeaderTextColor();
+  /**
+   * <pre>
+   * Header text color
+   * </pre>
+   *
+   * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+   * @return The bytes for headerTextColor.
+   */
+  com.google.protobuf.ByteString
+      getHeaderTextColorBytes();
 }
