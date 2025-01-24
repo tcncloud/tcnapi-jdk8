@@ -59,6 +59,29 @@ public interface AgentEventOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder();
 
   /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The agentName.
+   */
+  java.lang.String getAgentName();
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The bytes for agentName.
+   */
+  com.google.protobuf.ByteString
+      getAgentNameBytes();
+
+  /**
+   * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.AgentStatus.Enum getStatus();
+
+  /**
    * <pre>
    * A JSON blob representing the Agent's state.
    * </pre>

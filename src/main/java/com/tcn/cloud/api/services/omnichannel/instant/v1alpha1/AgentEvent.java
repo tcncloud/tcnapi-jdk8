@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private AgentEvent() {
     orgId_ = "";
     userId_ = "";
+    agentName_ = "";
+    status_ = 0;
     eventData_ = "";
   }
 
@@ -167,6 +169,63 @@ private static final long serialVersionUID = 0L;
     return eventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eventTime_;
   }
 
+  public static final int AGENT_NAME_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentName_ = "";
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The agentName.
+   */
+  @java.lang.Override
+  public java.lang.String getAgentName() {
+    java.lang.Object ref = agentName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      agentName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The bytes for agentName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAgentNameBytes() {
+    java.lang.Object ref = agentName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      agentName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STATUS_FIELD_NUMBER = 8;
+  private int status_ = 0;
+  /**
+   * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.AgentStatus.Enum getStatus() {
+    com.tcn.cloud.api.api.commons.AgentStatus.Enum result = com.tcn.cloud.api.api.commons.AgentStatus.Enum.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.AgentStatus.Enum.UNRECOGNIZED : result;
+  }
+
   public static final int EVENT_DATA_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
@@ -246,6 +305,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, eventData_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, agentName_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.AgentStatus.Enum.UNAVALIABLE.getNumber()) {
+      output.writeEnum(8, status_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -276,6 +341,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, eventData_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, agentName_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.AgentStatus.Enum.UNAVALIABLE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, status_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -304,6 +376,9 @@ private static final long serialVersionUID = 0L;
       if (!getEventTime()
           .equals(other.getEventTime())) return false;
     }
+    if (!getAgentName()
+        .equals(other.getAgentName())) return false;
+    if (status_ != other.status_) return false;
     if (!getEventData()
         .equals(other.getEventData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -331,6 +406,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEventTime().hashCode();
     }
+    hash = (37 * hash) + AGENT_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getAgentName().hashCode();
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getEventData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -473,6 +552,8 @@ private static final long serialVersionUID = 0L;
         eventTimeBuilder_.dispose();
         eventTimeBuilder_ = null;
       }
+      agentName_ = "";
+      status_ = 0;
       eventData_ = "";
       return this;
     }
@@ -525,6 +606,12 @@ private static final long serialVersionUID = 0L;
             : eventTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.agentName_ = agentName_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.eventData_ = eventData_;
       }
     }
@@ -592,9 +679,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasEventTime()) {
         mergeEventTime(other.getEventTime());
       }
+      if (!other.getAgentName().isEmpty()) {
+        agentName_ = other.agentName_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       if (!other.getEventData().isEmpty()) {
         eventData_ = other.eventData_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -652,9 +747,19 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               eventData_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 50
+            case 58: {
+              agentName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 64: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -999,6 +1104,131 @@ private static final long serialVersionUID = 0L;
       return eventTimeBuilder_;
     }
 
+    private java.lang.Object agentName_ = "";
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return The agentName.
+     */
+    public java.lang.String getAgentName() {
+      java.lang.Object ref = agentName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return The bytes for agentName.
+     */
+    public com.google.protobuf.ByteString
+        getAgentNameBytes() {
+      java.lang.Object ref = agentName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @param value The agentName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      agentName_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentName() {
+      agentName_ = getDefaultInstance().getAgentName();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @param value The bytes for agentName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      agentName_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AgentStatus.Enum getStatus() {
+      com.tcn.cloud.api.api.commons.AgentStatus.Enum result = com.tcn.cloud.api.api.commons.AgentStatus.Enum.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.AgentStatus.Enum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.AgentStatus.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.AgentStatus.Enum status = 8 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      status_ = 0;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object eventData_ = "";
     /**
      * <pre>
@@ -1054,7 +1284,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1068,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEventData() {
       eventData_ = getDefaultInstance().getEventData();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1086,7 +1316,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

@@ -65,38 +65,41 @@ public final class ServiceProto {
       "StreamCallerEventsRequest\022\025\n\006org_id\030\001 \001(" +
       "\tR\005orgId\"f\n\032StreamCallerEventsResponse\022H" +
       "\n\005event\030\001 \003(\01322.services.omnichannel.ins" +
-      "tant.v1alpha1.CallerEventR\005event\"\322\001\n\nAge" +
+      "tant.v1alpha1.CallerEventR\005event\"\250\002\n\nAge" +
       "ntEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nclient" +
       "_sid\030\002 \001(\003R\tclientSid\022\033\n\tagent_sid\030\003 \001(\003" +
       "R\010agentSid\022\027\n\007user_id\030\004 \001(\tR\006userId\0229\n\ne" +
       "vent_time\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\teventTime\022\035\n\nevent_data\030\006 \001(\tR\teven" +
-      "tData\"\371\001\n\013CallerEvent\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\022\035\n\nclient_sid\030\002 \001(\003R\tclientSid\022\035\n\nc" +
-      "aller_sid\030\003 \001(\003R\tcallerSid\022;\n\013caller_typ" +
-      "e\030\004 \001(\0162\032.api.commons.CallType.EnumR\ncal" +
-      "lerType\0229\n\nevent_time\030\005 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\teventTime\022\035\n\nevent_data" +
-      "\030\006 \001(\tR\teventData2\354\003\n\022InstantDataService" +
-      "\022\347\001\n\021StreamAgentEvents\022?.services.omnich" +
-      "annel.instant.v1alpha1.StreamAgentEvents" +
-      "Request\032@.services.omnichannel.instant.v" +
-      "1alpha1.StreamAgentEventsResponse\"M\272\270\221\002\005" +
-      "\n\003\010\260\t\202\323\344\223\002=\"8/services/omnichannel/insta" +
-      "nt/v1alpha1/streamAgentEvents:\001*0\001\022\353\001\n\022S" +
-      "treamCallerEvents\022@.services.omnichannel" +
-      ".instant.v1alpha1.StreamCallerEventsRequ" +
-      "est\032A.services.omnichannel.instant.v1alp" +
-      "ha1.StreamCallerEventsResponse\"N\272\270\221\002\005\n\003\010" +
-      "\260\t\202\323\344\223\002>\"9/services/omnichannel/instant/" +
-      "v1alpha1/streamCallerEvents:\001*0\001B\376\001\n7com" +
-      ".tcn.cloud.api.services.omnichannel.inst" +
-      "ant.v1alpha1B\014ServiceProtoP\001\242\002\003SOI\252\002%Ser" +
-      "vices.Omnichannel.Instant.V1alpha1\312\002%Ser" +
-      "vices\\Omnichannel\\Instant\\V1alpha1\342\0021Ser" +
-      "vices\\Omnichannel\\Instant\\V1alpha1\\GPBMe" +
-      "tadata\352\002(Services::Omnichannel::Instant:" +
-      ":V1alpha1b\006proto3"
+      "ampR\teventTime\022\035\n\nagent_name\030\007 \001(\tR\tagen" +
+      "tName\0225\n\006status\030\010 \001(\0162\035.api.commons.Agen" +
+      "tStatus.EnumR\006status\022\035\n\nevent_data\030\006 \001(\t" +
+      "R\teventData\"\261\002\n\013CallerEvent\022\025\n\006org_id\030\001 " +
+      "\001(\tR\005orgId\022\035\n\nclient_sid\030\002 \001(\003R\tclientSi" +
+      "d\022\035\n\ncaller_sid\030\003 \001(\003R\tcallerSid\022;\n\013call" +
+      "er_type\030\004 \001(\0162\032.api.commons.CallType.Enu" +
+      "mR\ncallerType\0229\n\nevent_time\030\005 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\teventTime\0226\n\006stat" +
+      "us\030\007 \001(\0162\036.api.commons.CallerStatus.Enum" +
+      "R\006status\022\035\n\nevent_data\030\006 \001(\tR\teventData2" +
+      "\354\003\n\022InstantDataService\022\347\001\n\021StreamAgentEv" +
+      "ents\022?.services.omnichannel.instant.v1al" +
+      "pha1.StreamAgentEventsRequest\032@.services" +
+      ".omnichannel.instant.v1alpha1.StreamAgen" +
+      "tEventsResponse\"M\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002=\"8/serv" +
+      "ices/omnichannel/instant/v1alpha1/stream" +
+      "AgentEvents:\001*0\001\022\353\001\n\022StreamCallerEvents\022" +
+      "@.services.omnichannel.instant.v1alpha1." +
+      "StreamCallerEventsRequest\032A.services.omn" +
+      "ichannel.instant.v1alpha1.StreamCallerEv" +
+      "entsResponse\"N\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002>\"9/service" +
+      "s/omnichannel/instant/v1alpha1/streamCal" +
+      "lerEvents:\001*0\001B\376\001\n7com.tcn.cloud.api.ser" +
+      "vices.omnichannel.instant.v1alpha1B\014Serv" +
+      "iceProtoP\001\242\002\003SOI\252\002%Services.Omnichannel." +
+      "Instant.V1alpha1\312\002%Services\\Omnichannel\\" +
+      "Instant\\V1alpha1\342\0021Services\\Omnichannel\\" +
+      "Instant\\V1alpha1\\GPBMetadata\352\002(Services:" +
+      ":Omnichannel::Instant::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -135,13 +138,13 @@ public final class ServiceProto {
     internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_instant_v1alpha1_AgentEvent_descriptor,
-        new java.lang.String[] { "OrgId", "ClientSid", "AgentSid", "UserId", "EventTime", "EventData", });
+        new java.lang.String[] { "OrgId", "ClientSid", "AgentSid", "UserId", "EventTime", "AgentName", "Status", "EventData", });
     internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_instant_v1alpha1_CallerEvent_descriptor,
-        new java.lang.String[] { "OrgId", "ClientSid", "CallerSid", "CallerType", "EventTime", "EventData", });
+        new java.lang.String[] { "OrgId", "ClientSid", "CallerSid", "CallerType", "EventTime", "Status", "EventData", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);

@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private CallerEvent() {
     orgId_ = "";
     callerType_ = 0;
+    status_ = 0;
     eventData_ = "";
   }
 
@@ -146,6 +147,24 @@ private static final long serialVersionUID = 0L;
     return eventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eventTime_;
   }
 
+  public static final int STATUS_FIELD_NUMBER = 7;
+  private int status_ = 0;
+  /**
+   * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.CallerStatus.Enum getStatus() {
+    com.tcn.cloud.api.api.commons.CallerStatus.Enum result = com.tcn.cloud.api.api.commons.CallerStatus.Enum.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.CallerStatus.Enum.UNRECOGNIZED : result;
+  }
+
   public static final int EVENT_DATA_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
@@ -225,6 +244,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, eventData_);
     }
+    if (status_ != com.tcn.cloud.api.api.commons.CallerStatus.Enum.UNAVALIABLE.getNumber()) {
+      output.writeEnum(7, status_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -256,6 +278,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, eventData_);
     }
+    if (status_ != com.tcn.cloud.api.api.commons.CallerStatus.Enum.UNAVALIABLE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, status_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -283,6 +309,7 @@ private static final long serialVersionUID = 0L;
       if (!getEventTime()
           .equals(other.getEventTime())) return false;
     }
+    if (status_ != other.status_) return false;
     if (!getEventData()
         .equals(other.getEventData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -310,6 +337,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEventTime().hashCode();
     }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getEventData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -452,6 +481,7 @@ private static final long serialVersionUID = 0L;
         eventTimeBuilder_.dispose();
         eventTimeBuilder_ = null;
       }
+      status_ = 0;
       eventData_ = "";
       return this;
     }
@@ -504,6 +534,9 @@ private static final long serialVersionUID = 0L;
             : eventTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.eventData_ = eventData_;
       }
     }
@@ -569,9 +602,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasEventTime()) {
         mergeEventTime(other.getEventTime());
       }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       if (!other.getEventData().isEmpty()) {
         eventData_ = other.eventData_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -629,9 +665,14 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               eventData_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
+            case 56: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -957,6 +998,59 @@ private static final long serialVersionUID = 0L;
       return eventTimeBuilder_;
     }
 
+    private int status_ = 0;
+    /**
+     * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CallerStatus.Enum getStatus() {
+      com.tcn.cloud.api.api.commons.CallerStatus.Enum result = com.tcn.cloud.api.api.commons.CallerStatus.Enum.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.CallerStatus.Enum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.CallerStatus.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      status_ = 0;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object eventData_ = "";
     /**
      * <pre>
@@ -1012,7 +1106,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1026,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEventData() {
       eventData_ = getDefaultInstance().getEventData();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1044,7 +1138,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

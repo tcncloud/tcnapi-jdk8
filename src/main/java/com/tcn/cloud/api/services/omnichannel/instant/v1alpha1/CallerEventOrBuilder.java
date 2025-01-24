@@ -58,6 +58,17 @@ public interface CallerEventOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder();
 
   /**
+   * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <code>.api.commons.CallerStatus.Enum status = 7 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.CallerStatus.Enum getStatus();
+
+  /**
    * <pre>
    * A JSON blob resresenting the Caller's state.
    * </pre>
