@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private TransferOptions() {
     transferConfigSid_ = "";
     filenameParts_ = java.util.Collections.emptyList();
+    deliveryDefinitionTitle_ = "";
   }
 
   @java.lang.Override
@@ -152,6 +153,53 @@ private static final long serialVersionUID = 0L;
     return filenameParts_.get(index);
   }
 
+  public static final int DELIVERY_DEFINITION_TITLE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object deliveryDefinitionTitle_ = "";
+  /**
+   * <pre>
+   * delivery_definition_title is the title of the delivery definition.
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The deliveryDefinitionTitle.
+   */
+  @java.lang.Override
+  public java.lang.String getDeliveryDefinitionTitle() {
+    java.lang.Object ref = deliveryDefinitionTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deliveryDefinitionTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * delivery_definition_title is the title of the delivery definition.
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The bytes for deliveryDefinitionTitle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDeliveryDefinitionTitleBytes() {
+    java.lang.Object ref = deliveryDefinitionTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deliveryDefinitionTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -172,6 +220,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < filenameParts_.size(); i++) {
       output.writeMessage(2, filenameParts_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryDefinitionTitle_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, deliveryDefinitionTitle_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -187,6 +238,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < filenameParts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, filenameParts_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryDefinitionTitle_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, deliveryDefinitionTitle_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -207,6 +261,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTransferConfigSid())) return false;
     if (!getFilenamePartsList()
         .equals(other.getFilenamePartsList())) return false;
+    if (!getDeliveryDefinitionTitle()
+        .equals(other.getDeliveryDefinitionTitle())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -224,6 +280,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FILENAME_PARTS_FIELD_NUMBER;
       hash = (53 * hash) + getFilenamePartsList().hashCode();
     }
+    hash = (37 * hash) + DELIVERY_DEFINITION_TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getDeliveryDefinitionTitle().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -367,6 +425,7 @@ private static final long serialVersionUID = 0L;
         filenamePartsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      deliveryDefinitionTitle_ = "";
       return this;
     }
 
@@ -415,6 +474,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.transferConfigSid_ = transferConfigSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.deliveryDefinitionTitle_ = deliveryDefinitionTitle_;
       }
     }
 
@@ -493,6 +555,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getDeliveryDefinitionTitle().isEmpty()) {
+        deliveryDefinitionTitle_ = other.deliveryDefinitionTitle_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -537,6 +604,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              deliveryDefinitionTitle_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -956,6 +1028,98 @@ private static final long serialVersionUID = 0L;
         filenameParts_ = null;
       }
       return filenamePartsBuilder_;
+    }
+
+    private java.lang.Object deliveryDefinitionTitle_ = "";
+    /**
+     * <pre>
+     * delivery_definition_title is the title of the delivery definition.
+     * </pre>
+     *
+     * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+     * @return The deliveryDefinitionTitle.
+     */
+    public java.lang.String getDeliveryDefinitionTitle() {
+      java.lang.Object ref = deliveryDefinitionTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deliveryDefinitionTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * delivery_definition_title is the title of the delivery definition.
+     * </pre>
+     *
+     * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+     * @return The bytes for deliveryDefinitionTitle.
+     */
+    public com.google.protobuf.ByteString
+        getDeliveryDefinitionTitleBytes() {
+      java.lang.Object ref = deliveryDefinitionTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deliveryDefinitionTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * delivery_definition_title is the title of the delivery definition.
+     * </pre>
+     *
+     * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+     * @param value The deliveryDefinitionTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeliveryDefinitionTitle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      deliveryDefinitionTitle_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delivery_definition_title is the title of the delivery definition.
+     * </pre>
+     *
+     * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeliveryDefinitionTitle() {
+      deliveryDefinitionTitle_ = getDefaultInstance().getDeliveryDefinitionTitle();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * delivery_definition_title is the title of the delivery definition.
+     * </pre>
+     *
+     * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+     * @param value The bytes for deliveryDefinitionTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeliveryDefinitionTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      deliveryDefinitionTitle_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

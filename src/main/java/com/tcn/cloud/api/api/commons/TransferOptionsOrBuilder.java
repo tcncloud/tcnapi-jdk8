@@ -70,4 +70,24 @@ public interface TransferOptionsOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.FilenamePartOrBuilder getFilenamePartsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * delivery_definition_title is the title of the delivery definition.
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The deliveryDefinitionTitle.
+   */
+  java.lang.String getDeliveryDefinitionTitle();
+  /**
+   * <pre>
+   * delivery_definition_title is the title of the delivery definition.
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 3 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The bytes for deliveryDefinitionTitle.
+   */
+  com.google.protobuf.ByteString
+      getDeliveryDefinitionTitleBytes();
 }
