@@ -144,4 +144,19 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * @return The requestOrigin.
    */
   com.tcn.cloud.api.api.commons.integrations.RequestOrigin getRequestOrigin();
+
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 7 [json_name = "entity"];</code>
+   * @return Whether the entity field is set.
+   */
+  boolean hasEntity();
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 7 [json_name = "entity"];</code>
+   * @return The entity.
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId getEntity();
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 7 [json_name = "entity"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder getEntityOrBuilder();
 }
