@@ -10,14 +10,14 @@ package com.tcn.cloud.api.api.commons.audit;
   /**
    * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=47
+   *     See api/commons/audit/billing_events.proto;l=55
    * @return The invoiceId.
    */
   @java.lang.Deprecated java.lang.String getInvoiceId();
   /**
    * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=47
+   *     See api/commons/audit/billing_events.proto;l=55
    * @return The bytes for invoiceId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -26,14 +26,14 @@ package com.tcn.cloud.api.api.commons.audit;
   /**
    * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=48
+   *     See api/commons/audit/billing_events.proto;l=56
    * @return The userId.
    */
   @java.lang.Deprecated java.lang.String getUserId();
   /**
    * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=48
+   *     See api/commons/audit/billing_events.proto;l=56
    * @return The bytes for userId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
