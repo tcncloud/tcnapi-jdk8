@@ -90,33 +90,6 @@ public interface ChatOrBuilder extends
 
   /**
    * <pre>
-   * The email data.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.Chat.Email email = 4 [json_name = "email"];</code>
-   * @return Whether the email field is set.
-   */
-  boolean hasEmail();
-  /**
-   * <pre>
-   * The email data.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.Chat.Email email = 4 [json_name = "email"];</code>
-   * @return The email.
-   */
-  com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Email getEmail();
-  /**
-   * <pre>
-   * The email data.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.Chat.Email email = 4 [json_name = "email"];</code>
-   */
-  com.tcn.cloud.api.wfo.vanalytics.v2.Chat.EmailOrBuilder getEmailOrBuilder();
-
-  /**
-   * <pre>
    * The customer name.
    * </pre>
    *
@@ -144,4 +117,24 @@ public interface ChatOrBuilder extends
    * @return The campaignSid.
    */
   long getCampaignSid();
+
+  /**
+   * <pre>
+   * The email address.
+   * </pre>
+   *
+   * <code>string email_address = 7 [json_name = "emailAddress"];</code>
+   * @return The emailAddress.
+   */
+  java.lang.String getEmailAddress();
+  /**
+   * <pre>
+   * The email address.
+   * </pre>
+   *
+   * <code>string email_address = 7 [json_name = "emailAddress"];</code>
+   * @return The bytes for emailAddress.
+   */
+  com.google.protobuf.ByteString
+      getEmailAddressBytes();
 }

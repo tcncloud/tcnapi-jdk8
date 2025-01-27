@@ -41,7 +41,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=531
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -52,7 +52,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=531
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
@@ -280,31 +280,4 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getSkillsOrBuilder();
-
-  /**
-   * <pre>
-   * Query constraints on email.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Email email = 11 [json_name = "email"];</code>
-   * @return Whether the email field is set.
-   */
-  boolean hasEmail();
-  /**
-   * <pre>
-   * Query constraints on email.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Email email = 11 [json_name = "email"];</code>
-   * @return The email.
-   */
-  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Email getEmail();
-  /**
-   * <pre>
-   * Query constraints on email.
-   * </pre>
-   *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Email email = 11 [json_name = "email"];</code>
-   */
-  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.EmailOrBuilder getEmailOrBuilder();
 }
