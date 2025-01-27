@@ -1154,14 +1154,14 @@ private static final long serialVersionUID = 0L;
   }
   private int channelTypesMemoizedSerializedSize;
 
-  public static final int SMS_FIELD_NUMBER = 17;
+  public static final int SMS_FIELD_NUMBER = 16;
   private com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms_;
   /**
    * <pre>
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   @java.lang.Override
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    * @return The sms.
    */
   @java.lang.Override
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder() {
@@ -1257,7 +1257,7 @@ private static final long serialVersionUID = 0L;
       output.writeEnumNoTag(channelTypes_.get(i));
     }
     if (sms_ != null) {
-      output.writeMessage(17, getSms());
+      output.writeMessage(16, getSms());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1336,7 +1336,7 @@ private static final long serialVersionUID = 0L;
     }
     if (sms_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, getSms());
+        .computeMessageSize(16, getSms());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1981,13 +1981,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 122
-            case 138: {
+            case 130: {
               input.readMessage(
                   getSmsFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00008000;
               break;
-            } // case 138
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3403,7 +3403,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
     public boolean hasSms() {
@@ -3414,7 +3414,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      * @return The sms.
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getSms() {
@@ -3429,7 +3429,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public Builder setSms(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata value) {
       if (smsBuilder_ == null) {
@@ -3449,7 +3449,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public Builder setSms(
         com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder builderForValue) {
@@ -3467,7 +3467,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public Builder mergeSms(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata value) {
       if (smsBuilder_ == null) {
@@ -3490,7 +3490,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public Builder clearSms() {
       bitField0_ = (bitField0_ & ~0x00008000);
@@ -3507,7 +3507,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder getSmsBuilder() {
       bitField0_ |= 0x00008000;
@@ -3519,7 +3519,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder() {
       if (smsBuilder_ != null) {
@@ -3534,7 +3534,7 @@ private static final long serialVersionUID = 0L;
      * metadata related to sms conversations.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder> 

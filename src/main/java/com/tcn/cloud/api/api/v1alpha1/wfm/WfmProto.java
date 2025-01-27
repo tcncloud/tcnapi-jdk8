@@ -2712,7 +2712,7 @@ public final class WfmProto {
       "onds\022.\n\023are_averages_manual\030\016 \001(\010R\021areAv" +
       "eragesManual\022=\n\rchannel_types\030\017 \003(\0162\030.ap" +
       "i.commons.ChannelTypeR\014channelTypes\022<\n\003s" +
-      "ms\030\021 \001(\0132*.api.v1alpha1.wfm.SkillProfile" +
+      "ms\030\020 \001(\0132*.api.v1alpha1.wfm.SkillProfile" +
       ".SmsMetadataR\003sms\032h\n\013SmsMetadata\022Y\n\033aver" +
       "age_conversation_length\030\001 \001(\0132\031.google.p" +
       "rotobuf.DurationR\031averageConversationLen" +

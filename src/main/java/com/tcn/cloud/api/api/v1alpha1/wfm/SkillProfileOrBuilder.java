@@ -289,7 +289,7 @@ public interface SkillProfileOrBuilder extends
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   boolean hasSms();
@@ -298,7 +298,7 @@ public interface SkillProfileOrBuilder extends
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    * @return The sms.
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getSms();
@@ -307,7 +307,7 @@ public interface SkillProfileOrBuilder extends
    * metadata related to sms conversations.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder();
 }
