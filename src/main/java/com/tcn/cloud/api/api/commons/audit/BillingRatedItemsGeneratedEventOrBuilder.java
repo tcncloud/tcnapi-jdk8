@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingRatedItemsGeneratedEventOrBuilder extends
+@java.lang.Deprecated public interface BillingRatedItemsGeneratedEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingRatedItemsGeneratedEvent)
     com.google.protobuf.MessageOrBuilder {
 

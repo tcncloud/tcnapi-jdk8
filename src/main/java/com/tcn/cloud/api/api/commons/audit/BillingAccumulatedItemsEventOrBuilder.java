@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingAccumulatedItemEventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingAccumulatedItemEvent)
+public interface BillingAccumulatedItemsEventOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingAccumulatedItemsEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -43,14 +43,14 @@ public interface BillingAccumulatedItemEventOrBuilder extends
   long getEventLogIds(int index);
 
   /**
-   * <code>string cycle = 4 [json_name = "cycle"];</code>
-   * @return The cycle.
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The billingCycle.
    */
-  java.lang.String getCycle();
+  java.lang.String getBillingCycle();
   /**
-   * <code>string cycle = 4 [json_name = "cycle"];</code>
-   * @return The bytes for cycle.
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The bytes for billingCycle.
    */
   com.google.protobuf.ByteString
-      getCycleBytes();
+      getBillingCycleBytes();
 }

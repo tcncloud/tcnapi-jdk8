@@ -985,8 +985,9 @@ public enum EventType
   @java.lang.Deprecated
   EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION(1010),
   /**
-   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011;</code>
+   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED(1011),
   /**
    * <code>EVENT_TYPE_BILLING_ACCUMULATED_ITEM = 1012;</code>
@@ -2041,9 +2042,9 @@ public enum EventType
    */
   @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION_VALUE = 1010;
   /**
-   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011;</code>
+   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED_VALUE = 1011;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED_VALUE = 1011;
   /**
    * <code>EVENT_TYPE_BILLING_ACCUMULATED_ITEM = 1012;</code>
    */
