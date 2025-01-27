@@ -63,12 +63,39 @@ public interface TranscriptOrBuilder extends
 
   /**
    * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  boolean hasChat();
+  /**
+   * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Chat getChat();
+  /**
+   * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder getChatOrBuilder();
+
+  /**
+   * <pre>
    * The communication channel of the transcript.
    * </pre>
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=36
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The enum numeric value on the wire for channel.
    */
   @java.lang.Deprecated int getChannelValue();
@@ -79,7 +106,7 @@ public interface TranscriptOrBuilder extends
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=36
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.ChannelType getChannel();
