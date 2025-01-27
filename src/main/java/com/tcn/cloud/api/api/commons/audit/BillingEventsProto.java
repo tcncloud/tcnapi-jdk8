@@ -15,10 +15,10 @@ public final class BillingEventsProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor;
+    internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_audit_BillingAccumulatedItemsEvent_fieldAccessorTable;
+      internal_static_api_commons_audit_BillingAccumulateItemsEvent_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_audit_BillingCommitBillingPlanEvent_descriptor;
   static final 
@@ -94,62 +94,62 @@ public final class BillingEventsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n&api/commons/audit/billing_events.proto" +
-      "\022\021api.commons.audit\"\241\001\n\034BillingAccumulat" +
-      "edItemsEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022!\n\014p" +
-      "roduct_type\030\002 \001(\005R\013productType\022\"\n\revent_" +
-      "log_ids\030\003 \003(\003R\013eventLogIds\022#\n\rbilling_cy" +
-      "cle\030\004 \001(\tR\014billingCycle\"d\n\035BillingCommit" +
-      "BillingPlanEvent\022&\n\017billing_plan_id\030\001 \001(" +
-      "\tR\rbillingPlanId\022\027\n\007user_id\030\002 \001(\tR\006userI" +
-      "d:\002\030\001\"_\n\035BillingCreateBillingPlanEvent\022!" +
-      "\n\014billing_plan\030\001 \001(\tR\013billingPlan\022\027\n\007use" +
-      "r_id\030\002 \001(\tR\006userId:\002\030\001\"Z\n\031BillingCreateI" +
-      "nvoiceEvent\022\034\n\007invoice\030\001 \001(\tB\002\030\001R\007invoic" +
-      "e\022\033\n\007user_id\030\002 \001(\tB\002\030\001R\006userId:\002\030\001\"h\n Bi" +
-      "llingCreateRateDefinitionEvent\022\'\n\017rate_d" +
-      "efinition\030\001 \001(\tR\016rateDefinition\022\027\n\007user_" +
-      "id\030\002 \001(\tR\006userId:\002\030\001\"d\n\035BillingDeleteBil" +
-      "lingPlanEvent\022&\n\017billing_plan_id\030\001 \001(\tR\r" +
-      "billingPlanId\022\027\n\007user_id\030\002 \001(\tR\006userId:\002" +
-      "\030\001\"_\n\031BillingDeleteInvoiceEvent\022!\n\ninvoi" +
-      "ce_id\030\001 \001(\tB\002\030\001R\tinvoiceId\022\033\n\007user_id\030\002 " +
-      "\001(\tB\002\030\001R\006userId:\002\030\001\"m\n BillingDeleteRate" +
-      "DefinitionEvent\022,\n\022rate_definition_id\030\001 " +
-      "\001(\tR\020rateDefinitionId\022\027\n\007user_id\030\002 \001(\tR\006" +
-      "userId:\002\030\001\"W\n\031BillingExportInvoiceEvent\022" +
-      "\035\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\022\027\n\007user_i" +
-      "d\030\002 \001(\tR\006userId:\002\030\001\"_\n\035BillingUpdateBill" +
-      "ingPlanEvent\022!\n\014billing_plan\030\001 \001(\tR\013bill" +
-      "ingPlan\022\027\n\007user_id\030\002 \001(\tR\006userId:\002\030\001\"Z\n\031" +
-      "BillingUpdateInvoiceEvent\022\034\n\007invoice\030\001 \001" +
-      "(\tB\002\030\001R\007invoice\022\033\n\007user_id\030\002 \001(\tB\002\030\001R\006us" +
-      "erId:\002\030\001\"h\n BillingUpdateRateDefinitionE" +
-      "vent\022\'\n\017rate_definition\030\001 \001(\tR\016rateDefin" +
-      "ition\022\027\n\007user_id\030\002 \001(\tR\006userId:\002\030\001\"\372\002\n\037B" +
-      "illingRatedItemsGeneratedEvent\022]\n\013rated_" +
-      "items\030\001 \003(\0132<.api.commons.audit.BillingR" +
-      "atedItemsGeneratedEvent.RatedItemR\nrated" +
-      "Items\032\363\001\n\tRatedItem\022\"\n\rrated_item_id\030\001 \001" +
-      "(\tR\013ratedItemId\022#\n\rbilling_cycle\030\002 \001(\tR\014" +
-      "billingCycle\022 \n\014event_log_id\030\003 \001(\tR\neven" +
-      "tLogId\022\037\n\013module_name\030\004 \001(\tR\nmoduleName\022" +
-      "\025\n\006org_id\030\005 \001(\tR\005orgId\022,\n\022rate_definitio" +
-      "n_id\030\006 \001(\tR\020rateDefinitionId\022\025\n\006sku_id\030\007" +
-      " \001(\tR\005skuId:\002\030\001B\237\001\n#com.tcn.cloud.api.ap" +
-      "i.commons.auditB\022BillingEventsProtoP\001\242\002\003" +
-      "ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Au" +
-      "dit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Ap" +
-      "i::Commons::Auditb\006proto3"
+      "\022\021api.commons.audit\"\240\001\n\033BillingAccumulat" +
+      "eItemsEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022!\n\014pr" +
+      "oduct_type\030\002 \001(\005R\013productType\022\"\n\revent_l" +
+      "og_ids\030\003 \003(\003R\013eventLogIds\022#\n\rbilling_cyc" +
+      "le\030\004 \001(\tR\014billingCycle\"d\n\035BillingCommitB" +
+      "illingPlanEvent\022&\n\017billing_plan_id\030\001 \001(\t" +
+      "R\rbillingPlanId\022\027\n\007user_id\030\002 \001(\tR\006userId" +
+      ":\002\030\001\"_\n\035BillingCreateBillingPlanEvent\022!\n" +
+      "\014billing_plan\030\001 \001(\tR\013billingPlan\022\027\n\007user" +
+      "_id\030\002 \001(\tR\006userId:\002\030\001\"Z\n\031BillingCreateIn" +
+      "voiceEvent\022\034\n\007invoice\030\001 \001(\tB\002\030\001R\007invoice" +
+      "\022\033\n\007user_id\030\002 \001(\tB\002\030\001R\006userId:\002\030\001\"h\n Bil" +
+      "lingCreateRateDefinitionEvent\022\'\n\017rate_de" +
+      "finition\030\001 \001(\tR\016rateDefinition\022\027\n\007user_i" +
+      "d\030\002 \001(\tR\006userId:\002\030\001\"d\n\035BillingDeleteBill" +
+      "ingPlanEvent\022&\n\017billing_plan_id\030\001 \001(\tR\rb" +
+      "illingPlanId\022\027\n\007user_id\030\002 \001(\tR\006userId:\002\030" +
+      "\001\"_\n\031BillingDeleteInvoiceEvent\022!\n\ninvoic" +
+      "e_id\030\001 \001(\tB\002\030\001R\tinvoiceId\022\033\n\007user_id\030\002 \001" +
+      "(\tB\002\030\001R\006userId:\002\030\001\"m\n BillingDeleteRateD" +
+      "efinitionEvent\022,\n\022rate_definition_id\030\001 \001" +
+      "(\tR\020rateDefinitionId\022\027\n\007user_id\030\002 \001(\tR\006u" +
+      "serId:\002\030\001\"W\n\031BillingExportInvoiceEvent\022\035" +
+      "\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\022\027\n\007user_id" +
+      "\030\002 \001(\tR\006userId:\002\030\001\"_\n\035BillingUpdateBilli" +
+      "ngPlanEvent\022!\n\014billing_plan\030\001 \001(\tR\013billi" +
+      "ngPlan\022\027\n\007user_id\030\002 \001(\tR\006userId:\002\030\001\"Z\n\031B" +
+      "illingUpdateInvoiceEvent\022\034\n\007invoice\030\001 \001(" +
+      "\tB\002\030\001R\007invoice\022\033\n\007user_id\030\002 \001(\tB\002\030\001R\006use" +
+      "rId:\002\030\001\"h\n BillingUpdateRateDefinitionEv" +
+      "ent\022\'\n\017rate_definition\030\001 \001(\tR\016rateDefini" +
+      "tion\022\027\n\007user_id\030\002 \001(\tR\006userId:\002\030\001\"\372\002\n\037Bi" +
+      "llingRatedItemsGeneratedEvent\022]\n\013rated_i" +
+      "tems\030\001 \003(\0132<.api.commons.audit.BillingRa" +
+      "tedItemsGeneratedEvent.RatedItemR\nratedI" +
+      "tems\032\363\001\n\tRatedItem\022\"\n\rrated_item_id\030\001 \001(" +
+      "\tR\013ratedItemId\022#\n\rbilling_cycle\030\002 \001(\tR\014b" +
+      "illingCycle\022 \n\014event_log_id\030\003 \001(\tR\nevent" +
+      "LogId\022\037\n\013module_name\030\004 \001(\tR\nmoduleName\022\025" +
+      "\n\006org_id\030\005 \001(\tR\005orgId\022,\n\022rate_definition" +
+      "_id\030\006 \001(\tR\020rateDefinitionId\022\025\n\006sku_id\030\007 " +
+      "\001(\tR\005skuId:\002\030\001B\237\001\n#com.tcn.cloud.api.api" +
+      ".commons.auditB\022BillingEventsProtoP\001\242\002\003A" +
+      "CA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Aud" +
+      "it\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api" +
+      "::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor =
+    internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_api_commons_audit_BillingAccumulatedItemsEvent_fieldAccessorTable = new
+    internal_static_api_commons_audit_BillingAccumulateItemsEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor,
+        internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor,
         new java.lang.String[] { "OrgId", "ProductType", "EventLogIds", "BillingCycle", });
     internal_static_api_commons_audit_BillingCommitBillingPlanEvent_descriptor =
       getDescriptor().getMessageTypes().get(1);

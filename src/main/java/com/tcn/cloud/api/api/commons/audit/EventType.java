@@ -990,9 +990,9 @@ public enum EventType
   @java.lang.Deprecated
   EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED(1011),
   /**
-   * <code>EVENT_TYPE_BILLING_ACCUMULATED_ITEM = 1012;</code>
+   * <code>EVENT_TYPE_BILLING_ACCUMULATE_ITEMS = 1012;</code>
    */
-  EVENT_TYPE_BILLING_ACCUMULATED_ITEM(1012),
+  EVENT_TYPE_BILLING_ACCUMULATE_ITEMS(1012),
   /**
    * <pre>
    * Delivery Events
@@ -2046,9 +2046,9 @@ public enum EventType
    */
   @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED_VALUE = 1011;
   /**
-   * <code>EVENT_TYPE_BILLING_ACCUMULATED_ITEM = 1012;</code>
+   * <code>EVENT_TYPE_BILLING_ACCUMULATE_ITEMS = 1012;</code>
    */
-  public static final int EVENT_TYPE_BILLING_ACCUMULATED_ITEM_VALUE = 1012;
+  public static final int EVENT_TYPE_BILLING_ACCUMULATE_ITEMS_VALUE = 1012;
   /**
    * <pre>
    * Delivery Events
@@ -2310,7 +2310,7 @@ public enum EventType
       case 1009: return EVENT_TYPE_BILLING_UPDATE_INVOICE;
       case 1010: return EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION;
       case 1011: return EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED;
-      case 1012: return EVENT_TYPE_BILLING_ACCUMULATED_ITEM;
+      case 1012: return EVENT_TYPE_BILLING_ACCUMULATE_ITEMS;
       case 1100: return EVENT_TYPE_DELIVERY_FAILURE;
       case 1101: return EVENT_TYPE_DELIVERY_SUCCESS;
       case 1200: return EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT;

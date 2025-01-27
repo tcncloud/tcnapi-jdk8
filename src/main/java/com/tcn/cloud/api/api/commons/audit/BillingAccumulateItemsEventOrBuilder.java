@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingAccumulatedItemsEventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingAccumulatedItemsEvent)
+public interface BillingAccumulateItemsEventOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingAccumulateItemsEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**

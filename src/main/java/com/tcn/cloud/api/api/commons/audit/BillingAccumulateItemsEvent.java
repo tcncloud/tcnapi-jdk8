@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- * BillingAccumulatedItemsEvent is fired when a rated item needs to be accumulated
+ * BillingAccumulateItemsEvent is fired when a rated item needs to be accumulated
  * </pre>
  *
- * Protobuf type {@code api.commons.audit.BillingAccumulatedItemsEvent}
+ * Protobuf type {@code api.commons.audit.BillingAccumulateItemsEvent}
  */
-public final class BillingAccumulatedItemsEvent extends
+public final class BillingAccumulateItemsEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.audit.BillingAccumulatedItemsEvent)
-    BillingAccumulatedItemsEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.audit.BillingAccumulateItemsEvent)
+    BillingAccumulateItemsEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BillingAccumulatedItemsEvent.newBuilder() to construct.
-  private BillingAccumulatedItemsEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use BillingAccumulateItemsEvent.newBuilder() to construct.
+  private BillingAccumulateItemsEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BillingAccumulatedItemsEvent() {
+  private BillingAccumulateItemsEvent() {
     orgId_ = "";
     eventLogIds_ = emptyLongList();
     billingCycle_ = "";
@@ -29,20 +29,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BillingAccumulatedItemsEvent();
+    return new BillingAccumulateItemsEvent();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor;
+    return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulatedItemsEvent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulateItemsEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.class, com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.Builder.class);
+            com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.class, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder.class);
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -237,10 +237,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent other = (com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent) obj;
+    com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent other = (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) obj;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
@@ -276,44 +276,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -321,26 +321,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -370,29 +370,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * BillingAccumulatedItemsEvent is fired when a rated item needs to be accumulated
+   * BillingAccumulateItemsEvent is fired when a rated item needs to be accumulated
    * </pre>
    *
-   * Protobuf type {@code api.commons.audit.BillingAccumulatedItemsEvent}
+   * Protobuf type {@code api.commons.audit.BillingAccumulateItemsEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.audit.BillingAccumulatedItemsEvent)
-      com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.audit.BillingAccumulateItemsEvent)
+      com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulatedItemsEvent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulateItemsEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.class, com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.Builder.class);
+              com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.class, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.newBuilder()
     private Builder() {
 
     }
@@ -416,17 +416,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulatedItemsEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.BillingEventsProto.internal_static_api_commons_audit_BillingAccumulateItemsEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent build() {
-      com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent build() {
+      com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -434,15 +434,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent buildPartial() {
-      com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent result = new com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent(this);
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent buildPartial() {
+      com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result = new com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result) {
       if (((bitField0_ & 0x00000004) != 0)) {
         eventLogIds_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
       result.eventLogIds_ = eventLogIds_;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
@@ -497,16 +497,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent other) {
-      if (other == com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent other) {
+      if (other == com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
         bitField0_ |= 0x00000001;
@@ -873,23 +873,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.audit.BillingAccumulatedItemsEvent)
+    // @@protoc_insertion_point(builder_scope:api.commons.audit.BillingAccumulateItemsEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.audit.BillingAccumulatedItemsEvent)
-  private static final com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.audit.BillingAccumulateItemsEvent)
+  private static final com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent();
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BillingAccumulatedItemsEvent>
-      PARSER = new com.google.protobuf.AbstractParser<BillingAccumulatedItemsEvent>() {
+  private static final com.google.protobuf.Parser<BillingAccumulateItemsEvent>
+      PARSER = new com.google.protobuf.AbstractParser<BillingAccumulateItemsEvent>() {
     @java.lang.Override
-    public BillingAccumulatedItemsEvent parsePartialFrom(
+    public BillingAccumulateItemsEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -908,17 +908,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<BillingAccumulatedItemsEvent> parser() {
+  public static com.google.protobuf.Parser<BillingAccumulateItemsEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BillingAccumulatedItemsEvent> getParserForType() {
+  public com.google.protobuf.Parser<BillingAccumulateItemsEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.BillingAccumulatedItemsEvent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
