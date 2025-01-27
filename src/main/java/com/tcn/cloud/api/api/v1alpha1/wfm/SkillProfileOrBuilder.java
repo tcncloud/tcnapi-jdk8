@@ -283,31 +283,4 @@ public interface SkillProfileOrBuilder extends
    * @return The enum numeric value on the wire of channelTypes at the given index.
    */
   int getChannelTypesValue(int index);
-
-  /**
-   * <pre>
-   * metadata related to sms conversations.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
-   * @return Whether the sms field is set.
-   */
-  boolean hasSms();
-  /**
-   * <pre>
-   * metadata related to sms conversations.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
-   * @return The sms.
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getSms();
-  /**
-   * <pre>
-   * metadata related to sms conversations.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 17 [json_name = "sms"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder();
 }

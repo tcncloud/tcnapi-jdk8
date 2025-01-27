@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=7077
+   *     See api/v1alpha1/wfm/wfm.proto;l=7070
    * @return The originatingProgramNodeSid.
    */
   @java.lang.Override
@@ -1342,7 +1342,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7077
+     *     See api/v1alpha1/wfm/wfm.proto;l=7070
      * @return The originatingProgramNodeSid.
      */
     @java.lang.Override
@@ -1356,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7077
+     *     See api/v1alpha1/wfm/wfm.proto;l=7070
      * @param value The originatingProgramNodeSid to set.
      * @return This builder for chaining.
      */
@@ -1374,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=7077
+     *     See api/v1alpha1/wfm/wfm.proto;l=7070
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearOriginatingProgramNodeSid() {
