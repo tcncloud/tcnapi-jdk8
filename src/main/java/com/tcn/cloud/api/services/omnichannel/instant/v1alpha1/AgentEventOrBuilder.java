@@ -59,6 +59,30 @@ public interface AgentEventOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder();
 
   /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The agentName.
+   */
+  java.lang.String getAgentName();
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The bytes for agentName.
+   */
+  com.google.protobuf.ByteString
+      getAgentNameBytes();
+
+  /**
+   * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+   * @return The huntGroupName.
+   */
+  java.lang.String getHuntGroupName();
+  /**
+   * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+   * @return The bytes for huntGroupName.
+   */
+  com.google.protobuf.ByteString
+      getHuntGroupNameBytes();
+
+  /**
    * <pre>
    * A JSON blob representing the Agent's state.
    * </pre>

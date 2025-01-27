@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private AgentEvent() {
     orgId_ = "";
     userId_ = "";
+    agentName_ = "";
+    huntGroupName_ = "";
     eventData_ = "";
   }
 
@@ -167,6 +169,84 @@ private static final long serialVersionUID = 0L;
     return eventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eventTime_;
   }
 
+  public static final int AGENT_NAME_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentName_ = "";
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The agentName.
+   */
+  @java.lang.Override
+  public java.lang.String getAgentName() {
+    java.lang.Object ref = agentName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      agentName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string agent_name = 7 [json_name = "agentName"];</code>
+   * @return The bytes for agentName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAgentNameBytes() {
+    java.lang.Object ref = agentName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      agentName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int HUNT_GROUP_NAME_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object huntGroupName_ = "";
+  /**
+   * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+   * @return The huntGroupName.
+   */
+  @java.lang.Override
+  public java.lang.String getHuntGroupName() {
+    java.lang.Object ref = huntGroupName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      huntGroupName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+   * @return The bytes for huntGroupName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHuntGroupNameBytes() {
+    java.lang.Object ref = huntGroupName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      huntGroupName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int EVENT_DATA_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
@@ -246,6 +326,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, eventData_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, agentName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, huntGroupName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -276,6 +362,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventData_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, eventData_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, agentName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, huntGroupName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -304,6 +396,10 @@ private static final long serialVersionUID = 0L;
       if (!getEventTime()
           .equals(other.getEventTime())) return false;
     }
+    if (!getAgentName()
+        .equals(other.getAgentName())) return false;
+    if (!getHuntGroupName()
+        .equals(other.getHuntGroupName())) return false;
     if (!getEventData()
         .equals(other.getEventData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -331,6 +427,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EVENT_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEventTime().hashCode();
     }
+    hash = (37 * hash) + AGENT_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getAgentName().hashCode();
+    hash = (37 * hash) + HUNT_GROUP_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getHuntGroupName().hashCode();
     hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getEventData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -473,6 +573,8 @@ private static final long serialVersionUID = 0L;
         eventTimeBuilder_.dispose();
         eventTimeBuilder_ = null;
       }
+      agentName_ = "";
+      huntGroupName_ = "";
       eventData_ = "";
       return this;
     }
@@ -525,6 +627,12 @@ private static final long serialVersionUID = 0L;
             : eventTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.agentName_ = agentName_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.huntGroupName_ = huntGroupName_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.eventData_ = eventData_;
       }
     }
@@ -592,9 +700,19 @@ private static final long serialVersionUID = 0L;
       if (other.hasEventTime()) {
         mergeEventTime(other.getEventTime());
       }
+      if (!other.getAgentName().isEmpty()) {
+        agentName_ = other.agentName_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.getHuntGroupName().isEmpty()) {
+        huntGroupName_ = other.huntGroupName_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       if (!other.getEventData().isEmpty()) {
         eventData_ = other.eventData_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -652,9 +770,19 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               eventData_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 50
+            case 58: {
+              agentName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 66: {
+              huntGroupName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -999,6 +1127,150 @@ private static final long serialVersionUID = 0L;
       return eventTimeBuilder_;
     }
 
+    private java.lang.Object agentName_ = "";
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return The agentName.
+     */
+    public java.lang.String getAgentName() {
+      java.lang.Object ref = agentName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return The bytes for agentName.
+     */
+    public com.google.protobuf.ByteString
+        getAgentNameBytes() {
+      java.lang.Object ref = agentName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @param value The agentName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      agentName_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentName() {
+      agentName_ = getDefaultInstance().getAgentName();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agent_name = 7 [json_name = "agentName"];</code>
+     * @param value The bytes for agentName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      agentName_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object huntGroupName_ = "";
+    /**
+     * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+     * @return The huntGroupName.
+     */
+    public java.lang.String getHuntGroupName() {
+      java.lang.Object ref = huntGroupName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        huntGroupName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+     * @return The bytes for huntGroupName.
+     */
+    public com.google.protobuf.ByteString
+        getHuntGroupNameBytes() {
+      java.lang.Object ref = huntGroupName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        huntGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+     * @param value The huntGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      huntGroupName_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupName() {
+      huntGroupName_ = getDefaultInstance().getHuntGroupName();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string hunt_group_name = 8 [json_name = "huntGroupName"];</code>
+     * @param value The bytes for huntGroupName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      huntGroupName_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object eventData_ = "";
     /**
      * <pre>
@@ -1054,7 +1326,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1068,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEventData() {
       eventData_ = getDefaultInstance().getEventData();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1086,7 +1358,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       eventData_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
