@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
-@java.lang.Deprecated public interface ListReportLogsStreamResponseOrBuilder extends
+public interface ListReportLogsStreamResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse)
     com.google.protobuf.MessageOrBuilder {
 

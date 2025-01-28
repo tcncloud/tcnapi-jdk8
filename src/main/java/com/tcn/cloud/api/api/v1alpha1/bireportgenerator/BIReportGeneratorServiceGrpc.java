@@ -235,37 +235,6 @@ public final class BIReportGeneratorServiceGrpc {
     return getListReportLogsStreamMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest,
-      com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> getListReportLogsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListReportLogs",
-      requestType = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest,
-      com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> getListReportLogsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> getListReportLogsMethod;
-    if ((getListReportLogsMethod = BIReportGeneratorServiceGrpc.getListReportLogsMethod) == null) {
-      synchronized (BIReportGeneratorServiceGrpc.class) {
-        if ((getListReportLogsMethod = BIReportGeneratorServiceGrpc.getListReportLogsMethod) == null) {
-          BIReportGeneratorServiceGrpc.getListReportLogsMethod = getListReportLogsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListReportLogs"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BIReportGeneratorServiceMethodDescriptorSupplier("ListReportLogs"))
-              .build();
-        }
-      }
-    }
-    return getListReportLogsMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -376,24 +345,12 @@ public final class BIReportGeneratorServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: Use ListReportLogs instead
      * ListReportLogsStream lists report logs with streaming
      * </pre>
      */
-    @java.lang.Deprecated
     default void listReportLogsStream(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListReportLogsStreamMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListReportLogs lists report logs with pagination
-     * </pre>
-     */
-    default void listReportLogs(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListReportLogsMethod(), responseObserver);
     }
   }
 
@@ -495,26 +452,13 @@ public final class BIReportGeneratorServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: Use ListReportLogs instead
      * ListReportLogsStream lists report logs with streaming
      * </pre>
      */
-    @java.lang.Deprecated
     public void listReportLogsStream(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListReportLogsStreamMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListReportLogs lists report logs with pagination
-     * </pre>
-     */
-    public void listReportLogs(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListReportLogsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -596,25 +540,13 @@ public final class BIReportGeneratorServiceGrpc {
 
     /**
      * <pre>
-     * DEPRECATED: Use ListReportLogs instead
      * ListReportLogsStream lists report logs with streaming
      * </pre>
      */
-    @java.lang.Deprecated
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse> listReportLogsStream(
         com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListReportLogsStreamMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListReportLogs lists report logs with pagination
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse listReportLogs(com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListReportLogsMethod(), getCallOptions(), request);
     }
   }
 
@@ -699,17 +631,6 @@ public final class BIReportGeneratorServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateReportMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * ListReportLogs lists report logs with pagination
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse> listReportLogs(
-        com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListReportLogsMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_REPORT_JOB = 0;
@@ -719,7 +640,6 @@ public final class BIReportGeneratorServiceGrpc {
   private static final int METHODID_GET_REPORT_JOB = 4;
   private static final int METHODID_GENERATE_REPORT = 5;
   private static final int METHODID_LIST_REPORT_LOGS_STREAM = 6;
-  private static final int METHODID_LIST_REPORT_LOGS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -765,10 +685,6 @@ public final class BIReportGeneratorServiceGrpc {
         case METHODID_LIST_REPORT_LOGS_STREAM:
           serviceImpl.listReportLogsStream((com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse>) responseObserver);
-          break;
-        case METHODID_LIST_REPORT_LOGS:
-          serviceImpl.listReportLogs((com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -837,13 +753,6 @@ public final class BIReportGeneratorServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest,
               com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsStreamResponse>(
                 service, METHODID_LIST_REPORT_LOGS_STREAM)))
-        .addMethod(
-          getListReportLogsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsRequest,
-              com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ListReportLogsResponse>(
-                service, METHODID_LIST_REPORT_LOGS)))
         .build();
   }
 
@@ -899,7 +808,6 @@ public final class BIReportGeneratorServiceGrpc {
               .addMethod(getGetReportJobMethod())
               .addMethod(getGenerateReportMethod())
               .addMethod(getListReportLogsStreamMethod())
-              .addMethod(getListReportLogsMethod())
               .build();
         }
       }

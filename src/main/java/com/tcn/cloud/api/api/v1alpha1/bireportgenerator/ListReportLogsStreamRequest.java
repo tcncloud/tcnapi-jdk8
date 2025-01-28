@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
  *
  * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest}
  */
-@java.lang.Deprecated public final class ListReportLogsStreamRequest extends
+public final class ListReportLogsStreamRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest)
     ListReportLogsStreamRequestOrBuilder {
