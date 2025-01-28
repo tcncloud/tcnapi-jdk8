@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.bireportgenerator;
 
 /**
+ * <pre>
+ * ListReportLogsResponse is the response for listing report logs
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsResponse}
  */
 public final class ListReportLogsResponse extends
@@ -318,6 +322,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListReportLogsResponse is the response for listing report logs
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.bireportgenerator.ListReportLogsResponse}
    */
   public static final class Builder extends
