@@ -95,6 +95,30 @@ public interface AgentEventOrBuilder extends
       getHuntGroupNameBytes();
 
   /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.org.Skill> 
+      getSkillsList();
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.Skill getSkills(int index);
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  int getSkillsCount();
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
+      getSkillsOrBuilderList();
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
+      int index);
+
+  /**
    * <pre>
    * A JSON blob representing the Agent's state.
    * </pre>

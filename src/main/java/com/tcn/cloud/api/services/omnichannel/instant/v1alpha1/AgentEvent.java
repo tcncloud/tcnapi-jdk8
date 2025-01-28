@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     agentFirstName_ = "";
     agentLastName_ = "";
     huntGroupName_ = "";
+    skills_ = java.util.Collections.emptyList();
     eventData_ = "";
   }
 
@@ -287,6 +288,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SKILLS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.org.Skill> skills_;
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.org.Skill> getSkillsList() {
+    return skills_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
+      getSkillsOrBuilderList() {
+    return skills_;
+  }
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public int getSkillsCount() {
+    return skills_.size();
+  }
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.Skill getSkills(int index) {
+    return skills_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
+      int index) {
+    return skills_.get(index);
+  }
+
   public static final int EVENT_DATA_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
@@ -375,6 +417,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, huntGroupName_);
     }
+    for (int i = 0; i < skills_.size(); i++) {
+      output.writeMessage(10, skills_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -414,6 +459,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, huntGroupName_);
     }
+    for (int i = 0; i < skills_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, skills_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -448,6 +497,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentLastName())) return false;
     if (!getHuntGroupName()
         .equals(other.getHuntGroupName())) return false;
+    if (!getSkillsList()
+        .equals(other.getSkillsList())) return false;
     if (!getEventData()
         .equals(other.getEventData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -481,6 +532,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAgentLastName().hashCode();
     hash = (37 * hash) + HUNT_GROUP_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getHuntGroupName().hashCode();
+    if (getSkillsCount() > 0) {
+      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillsList().hashCode();
+    }
     hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getEventData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -626,6 +681,13 @@ private static final long serialVersionUID = 0L;
       agentFirstName_ = "";
       agentLastName_ = "";
       huntGroupName_ = "";
+      if (skillsBuilder_ == null) {
+        skills_ = java.util.Collections.emptyList();
+      } else {
+        skills_ = null;
+        skillsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
       eventData_ = "";
       return this;
     }
@@ -653,9 +715,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent buildPartial() {
       com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent result = new com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent result) {
+      if (skillsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          skills_ = java.util.Collections.unmodifiableList(skills_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.skills_ = skills_;
+      } else {
+        result.skills_ = skillsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.omnichannel.instant.v1alpha1.AgentEvent result) {
@@ -686,7 +761,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.huntGroupName_ = huntGroupName_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.eventData_ = eventData_;
       }
     }
@@ -769,9 +844,35 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (skillsBuilder_ == null) {
+        if (!other.skills_.isEmpty()) {
+          if (skills_.isEmpty()) {
+            skills_ = other.skills_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureSkillsIsMutable();
+            skills_.addAll(other.skills_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.skills_.isEmpty()) {
+          if (skillsBuilder_.isEmpty()) {
+            skillsBuilder_.dispose();
+            skillsBuilder_ = null;
+            skills_ = other.skills_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            skillsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSkillsFieldBuilder() : null;
+          } else {
+            skillsBuilder_.addAllMessages(other.skills_);
+          }
+        }
+      }
       if (!other.getEventData().isEmpty()) {
         eventData_ = other.eventData_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -829,7 +930,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               eventData_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 50
             case 58: {
@@ -847,6 +948,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 74
+            case 82: {
+              com.tcn.cloud.api.api.commons.org.Skill m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.Skill.parser(),
+                      extensionRegistry);
+              if (skillsBuilder_ == null) {
+                ensureSkillsIsMutable();
+                skills_.add(m);
+              } else {
+                skillsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1407,6 +1521,246 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Skill> skills_ =
+      java.util.Collections.emptyList();
+    private void ensureSkillsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        skills_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Skill>(skills_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Skill, com.tcn.cloud.api.api.commons.org.Skill.Builder, com.tcn.cloud.api.api.commons.org.SkillOrBuilder> skillsBuilder_;
+
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Skill> getSkillsList() {
+      if (skillsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(skills_);
+      } else {
+        return skillsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public int getSkillsCount() {
+      if (skillsBuilder_ == null) {
+        return skills_.size();
+      } else {
+        return skillsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Skill getSkills(int index) {
+      if (skillsBuilder_ == null) {
+        return skills_.get(index);
+      } else {
+        return skillsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(
+        int index, com.tcn.cloud.api.api.commons.org.Skill value) {
+      if (skillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSkillsIsMutable();
+        skills_.set(index, value);
+        onChanged();
+      } else {
+        skillsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(
+        int index, com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
+      if (skillsBuilder_ == null) {
+        ensureSkillsIsMutable();
+        skills_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        skillsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder addSkills(com.tcn.cloud.api.api.commons.org.Skill value) {
+      if (skillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSkillsIsMutable();
+        skills_.add(value);
+        onChanged();
+      } else {
+        skillsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder addSkills(
+        int index, com.tcn.cloud.api.api.commons.org.Skill value) {
+      if (skillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSkillsIsMutable();
+        skills_.add(index, value);
+        onChanged();
+      } else {
+        skillsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder addSkills(
+        com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
+      if (skillsBuilder_ == null) {
+        ensureSkillsIsMutable();
+        skills_.add(builderForValue.build());
+        onChanged();
+      } else {
+        skillsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder addSkills(
+        int index, com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
+      if (skillsBuilder_ == null) {
+        ensureSkillsIsMutable();
+        skills_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        skillsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder addAllSkills(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Skill> values) {
+      if (skillsBuilder_ == null) {
+        ensureSkillsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, skills_);
+        onChanged();
+      } else {
+        skillsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder clearSkills() {
+      if (skillsBuilder_ == null) {
+        skills_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        skillsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder removeSkills(int index) {
+      if (skillsBuilder_ == null) {
+        ensureSkillsIsMutable();
+        skills_.remove(index);
+        onChanged();
+      } else {
+        skillsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Skill.Builder getSkillsBuilder(
+        int index) {
+      return getSkillsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
+        int index) {
+      if (skillsBuilder_ == null) {
+        return skills_.get(index);  } else {
+        return skillsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
+         getSkillsOrBuilderList() {
+      if (skillsBuilder_ != null) {
+        return skillsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(skills_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Skill.Builder addSkillsBuilder() {
+      return getSkillsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.org.Skill.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.Skill.Builder addSkillsBuilder(
+        int index) {
+      return getSkillsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.org.Skill.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.org.Skill skills = 10 [json_name = "skills"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Skill.Builder> 
+         getSkillsBuilderList() {
+      return getSkillsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.Skill, com.tcn.cloud.api.api.commons.org.Skill.Builder, com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
+        getSkillsFieldBuilder() {
+      if (skillsBuilder_ == null) {
+        skillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.Skill, com.tcn.cloud.api.api.commons.org.Skill.Builder, com.tcn.cloud.api.api.commons.org.SkillOrBuilder>(
+                skills_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        skills_ = null;
+      }
+      return skillsBuilder_;
+    }
+
     private java.lang.Object eventData_ = "";
     /**
      * <pre>
@@ -1462,7 +1816,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       eventData_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1476,7 +1830,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEventData() {
       eventData_ = getDefaultInstance().getEventData();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1494,7 +1848,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       eventData_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
