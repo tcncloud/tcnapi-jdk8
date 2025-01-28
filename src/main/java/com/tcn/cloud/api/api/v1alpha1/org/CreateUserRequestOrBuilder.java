@@ -459,4 +459,14 @@ public interface CreateUserRequestOrBuilder extends
    * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
    */
   com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the user needs to set their password upon initial login
+   * </pre>
+   *
+   * <code>bool password_reset_required = 20 [json_name = "passwordResetRequired"];</code>
+   * @return The passwordResetRequired.
+   */
+  boolean getPasswordResetRequired();
 }
