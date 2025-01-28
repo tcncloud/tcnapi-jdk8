@@ -104,4 +104,31 @@ public interface ScrubListResOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder getInvalidListOrBuilder(
       int index);
+
+  /**
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  java.lang.String getCountryCode();
+  /**
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The bytes for countryCode.
+   */
+  com.google.protobuf.ByteString
+      getCountryCodeBytes();
+
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   * @return Whether the decompositions field is set.
+   */
+  boolean hasDecompositions();
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   * @return The decompositions.
+   */
+  com.tcn.cloud.api.api.commons.Decompositions getDecompositions();
+  /**
+   * <code>.api.commons.Decompositions decompositions = 9 [json_name = "decompositions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DecompositionsOrBuilder getDecompositionsOrBuilder();
 }
