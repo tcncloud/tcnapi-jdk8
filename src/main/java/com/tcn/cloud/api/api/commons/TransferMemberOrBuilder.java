@@ -43,6 +43,24 @@ public interface TransferMemberOrBuilder extends
   com.tcn.cloud.api.api.commons.TransferMemberType getMemberType();
 
   /**
+   * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
+   * @return The phoneNumber.
+   */
+  java.lang.String getPhoneNumber();
+  /**
+   * <code>string phone_number = 4 [json_name = "phoneNumber"];</code>
+   * @return The bytes for phoneNumber.
+   */
+  com.google.protobuf.ByteString
+      getPhoneNumberBytes();
+
+  /**
+   * <code>bool is_muted = 5 [json_name = "isMuted"];</code>
+   * @return The isMuted.
+   */
+  boolean getIsMuted();
+
+  /**
    * <code>.api.commons.AgentSession agent_session = 100 [json_name = "agentSession"];</code>
    * @return Whether the agentSession field is set.
    */
