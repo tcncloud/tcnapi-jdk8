@@ -92,54 +92,62 @@ public interface ReportLogOrBuilder extends
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=65
    * @return Whether the jobRequestedTime field is set.
    */
-  boolean hasJobRequestedTime();
+  @java.lang.Deprecated boolean hasJobRequestedTime();
   /**
    * <pre>
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=65
    * @return The jobRequestedTime.
    */
-  com.google.protobuf.Timestamp getJobRequestedTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getJobRequestedTime();
   /**
    * <pre>
    * the time that the report job was requested
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getJobRequestedTimeOrBuilder();
 
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=67
    * @return Whether the jobCompletedTime field is set.
    */
-  boolean hasJobCompletedTime();
+  @java.lang.Deprecated boolean hasJobCompletedTime();
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=67
    * @return The jobCompletedTime.
    */
-  com.google.protobuf.Timestamp getJobCompletedTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getJobCompletedTime();
   /**
    * <pre>
    * the time that the report job was completed
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime"];</code>
+   * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getJobCompletedTimeOrBuilder();
 
   /**
    * <pre>
@@ -156,19 +164,23 @@ public interface ReportLogOrBuilder extends
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=71
    * @return The failureReason.
    */
-  java.lang.String getFailureReason();
+  @java.lang.Deprecated java.lang.String getFailureReason();
   /**
    * <pre>
    * describes the error that last occurred for the job, if any
    * </pre>
    *
-   * <code>string failure_reason = 9 [json_name = "failureReason"];</code>
+   * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=71
    * @return The bytes for failureReason.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFailureReasonBytes();
 
   /**
@@ -186,10 +198,12 @@ public interface ReportLogOrBuilder extends
    * max attempts of the report job
    * </pre>
    *
-   * <code>int64 max_attempts = 11 [json_name = "maxAttempts"];</code>
+   * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=75
    * @return The maxAttempts.
    */
-  long getMaxAttempts();
+  @java.lang.Deprecated long getMaxAttempts();
 
   /**
    * <pre>
@@ -244,4 +258,291 @@ public interface ReportLogOrBuilder extends
    * <code>.google.protobuf.Timestamp update_time = 13 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * dashboard title of the report
+   * </pre>
+   *
+   * <code>string dashboard_title = 14 [json_name = "dashboardTitle"];</code>
+   * @return The dashboardTitle.
+   */
+  java.lang.String getDashboardTitle();
+  /**
+   * <pre>
+   * dashboard title of the report
+   * </pre>
+   *
+   * <code>string dashboard_title = 14 [json_name = "dashboardTitle"];</code>
+   * @return The bytes for dashboardTitle.
+   */
+  com.google.protobuf.ByteString
+      getDashboardTitleBytes();
+
+  /**
+   * <pre>
+   * scheduled time is the time that the report is scheduled to run
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp scheduled_time = 15 [json_name = "scheduledTime"];</code>
+   * @return Whether the scheduledTime field is set.
+   */
+  boolean hasScheduledTime();
+  /**
+   * <pre>
+   * scheduled time is the time that the report is scheduled to run
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp scheduled_time = 15 [json_name = "scheduledTime"];</code>
+   * @return The scheduledTime.
+   */
+  com.google.protobuf.Timestamp getScheduledTime();
+  /**
+   * <pre>
+   * scheduled time is the time that the report is scheduled to run
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp scheduled_time = 15 [json_name = "scheduledTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getScheduledTimeOrBuilder();
+
+  /**
+   * <pre>
+   * execution start time is the actual time that the report started processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_start_time = 16 [json_name = "executionStartTime"];</code>
+   * @return Whether the executionStartTime field is set.
+   */
+  boolean hasExecutionStartTime();
+  /**
+   * <pre>
+   * execution start time is the actual time that the report started processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_start_time = 16 [json_name = "executionStartTime"];</code>
+   * @return The executionStartTime.
+   */
+  com.google.protobuf.Timestamp getExecutionStartTime();
+  /**
+   * <pre>
+   * execution start time is the actual time that the report started processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_start_time = 16 [json_name = "executionStartTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getExecutionStartTimeOrBuilder();
+
+  /**
+   * <pre>
+   * execution end time is the time the report finished processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_end_time = 17 [json_name = "executionEndTime"];</code>
+   * @return Whether the executionEndTime field is set.
+   */
+  boolean hasExecutionEndTime();
+  /**
+   * <pre>
+   * execution end time is the time the report finished processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_end_time = 17 [json_name = "executionEndTime"];</code>
+   * @return The executionEndTime.
+   */
+  com.google.protobuf.Timestamp getExecutionEndTime();
+  /**
+   * <pre>
+   * execution end time is the time the report finished processing
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp execution_end_time = 17 [json_name = "executionEndTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getExecutionEndTimeOrBuilder();
+
+  /**
+   * <pre>
+   * report start date is the beginning date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_start_date = 18 [json_name = "reportStartDate"];</code>
+   * @return Whether the reportStartDate field is set.
+   */
+  boolean hasReportStartDate();
+  /**
+   * <pre>
+   * report start date is the beginning date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_start_date = 18 [json_name = "reportStartDate"];</code>
+   * @return The reportStartDate.
+   */
+  com.google.protobuf.Timestamp getReportStartDate();
+  /**
+   * <pre>
+   * report start date is the beginning date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_start_date = 18 [json_name = "reportStartDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getReportStartDateOrBuilder();
+
+  /**
+   * <pre>
+   * report end date is the ending date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_end_date = 19 [json_name = "reportEndDate"];</code>
+   * @return Whether the reportEndDate field is set.
+   */
+  boolean hasReportEndDate();
+  /**
+   * <pre>
+   * report end date is the ending date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_end_date = 19 [json_name = "reportEndDate"];</code>
+   * @return The reportEndDate.
+   */
+  com.google.protobuf.Timestamp getReportEndDate();
+  /**
+   * <pre>
+   * report end date is the ending date of the report period
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp report_end_date = 19 [json_name = "reportEndDate"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getReportEndDateOrBuilder();
+
+  /**
+   * <pre>
+   * comments describe any errors or empty reports during processing
+   * </pre>
+   *
+   * <code>repeated string comments = 20 [json_name = "comments"];</code>
+   * @return A list containing the comments.
+   */
+  java.util.List<java.lang.String>
+      getCommentsList();
+  /**
+   * <pre>
+   * comments describe any errors or empty reports during processing
+   * </pre>
+   *
+   * <code>repeated string comments = 20 [json_name = "comments"];</code>
+   * @return The count of comments.
+   */
+  int getCommentsCount();
+  /**
+   * <pre>
+   * comments describe any errors or empty reports during processing
+   * </pre>
+   *
+   * <code>repeated string comments = 20 [json_name = "comments"];</code>
+   * @param index The index of the element to return.
+   * @return The comments at the given index.
+   */
+  java.lang.String getComments(int index);
+  /**
+   * <pre>
+   * comments describe any errors or empty reports during processing
+   * </pre>
+   *
+   * <code>repeated string comments = 20 [json_name = "comments"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the comments at the given index.
+   */
+  com.google.protobuf.ByteString
+      getCommentsBytes(int index);
+
+  /**
+   * <pre>
+   * timezone is the IANA timezone string of the report
+   * </pre>
+   *
+   * <code>string timezone = 21 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  java.lang.String getTimezone();
+  /**
+   * <pre>
+   * timezone is the IANA timezone string of the report
+   * </pre>
+   *
+   * <code>string timezone = 21 [json_name = "timezone"];</code>
+   * @return The bytes for timezone.
+   */
+  com.google.protobuf.ByteString
+      getTimezoneBytes();
+
+  /**
+   * <pre>
+   * filenames are the successfully delivered files of the report
+   * </pre>
+   *
+   * <code>repeated string filenames = 22 [json_name = "filenames"];</code>
+   * @return A list containing the filenames.
+   */
+  java.util.List<java.lang.String>
+      getFilenamesList();
+  /**
+   * <pre>
+   * filenames are the successfully delivered files of the report
+   * </pre>
+   *
+   * <code>repeated string filenames = 22 [json_name = "filenames"];</code>
+   * @return The count of filenames.
+   */
+  int getFilenamesCount();
+  /**
+   * <pre>
+   * filenames are the successfully delivered files of the report
+   * </pre>
+   *
+   * <code>repeated string filenames = 22 [json_name = "filenames"];</code>
+   * @param index The index of the element to return.
+   * @return The filenames at the given index.
+   */
+  java.lang.String getFilenames(int index);
+  /**
+   * <pre>
+   * filenames are the successfully delivered files of the report
+   * </pre>
+   *
+   * <code>repeated string filenames = 22 [json_name = "filenames"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the filenames at the given index.
+   */
+  com.google.protobuf.ByteString
+      getFilenamesBytes(int index);
+
+  /**
+   * <pre>
+   * insight count of the report
+   * </pre>
+   *
+   * <code>int64 insight_count = 23 [json_name = "insightCount"];</code>
+   * @return The insightCount.
+   */
+  long getInsightCount();
+
+  /**
+   * <pre>
+   * delivery definition title is the name of the delivery definition of the report
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 24 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The deliveryDefinitionTitle.
+   */
+  java.lang.String getDeliveryDefinitionTitle();
+  /**
+   * <pre>
+   * delivery definition title is the name of the delivery definition of the report
+   * </pre>
+   *
+   * <code>string delivery_definition_title = 24 [json_name = "deliveryDefinitionTitle"];</code>
+   * @return The bytes for deliveryDefinitionTitle.
+   */
+  com.google.protobuf.ByteString
+      getDeliveryDefinitionTitleBytes();
 }
