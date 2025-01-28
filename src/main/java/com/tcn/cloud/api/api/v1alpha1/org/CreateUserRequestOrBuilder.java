@@ -462,7 +462,7 @@ public interface CreateUserRequestOrBuilder extends
 
   /**
    * <pre>
-   * Whether the user needs to reset their password upon first login
+   * Whether the user needs to set their password upon initial login
    * </pre>
    *
    * <code>bool password_reset_required = 20 [json_name = "passwordResetRequired"];</code>
