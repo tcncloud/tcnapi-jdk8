@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     tableColumnDetails_ = java.util.Collections.emptyList();
     delimiter_ = "";
     quoteCharacter_ = 0;
+    headerBackgroundColor_ = "";
+    headerTextColor_ = "";
   }
 
   @java.lang.Override
@@ -194,6 +196,100 @@ private static final long serialVersionUID = 0L;
     return noHeader_;
   }
 
+  public static final int HEADER_BACKGROUND_COLOR_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headerBackgroundColor_ = "";
+  /**
+   * <pre>
+   * Header background color
+   * </pre>
+   *
+   * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+   * @return The headerBackgroundColor.
+   */
+  @java.lang.Override
+  public java.lang.String getHeaderBackgroundColor() {
+    java.lang.Object ref = headerBackgroundColor_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      headerBackgroundColor_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Header background color
+   * </pre>
+   *
+   * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+   * @return The bytes for headerBackgroundColor.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHeaderBackgroundColorBytes() {
+    java.lang.Object ref = headerBackgroundColor_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      headerBackgroundColor_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int HEADER_TEXT_COLOR_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headerTextColor_ = "";
+  /**
+   * <pre>
+   * Header text color
+   * </pre>
+   *
+   * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+   * @return The headerTextColor.
+   */
+  @java.lang.Override
+  public java.lang.String getHeaderTextColor() {
+    java.lang.Object ref = headerTextColor_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      headerTextColor_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Header text color
+   * </pre>
+   *
+   * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+   * @return The bytes for headerTextColor.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHeaderTextColorBytes() {
+    java.lang.Object ref = headerTextColor_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      headerTextColor_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -220,6 +316,12 @@ private static final long serialVersionUID = 0L;
     if (noHeader_ != false) {
       output.writeBool(4, noHeader_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerBackgroundColor_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, headerBackgroundColor_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerTextColor_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, headerTextColor_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -244,6 +346,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, noHeader_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerBackgroundColor_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, headerBackgroundColor_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerTextColor_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, headerTextColor_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -266,6 +374,10 @@ private static final long serialVersionUID = 0L;
     if (quoteCharacter_ != other.quoteCharacter_) return false;
     if (getNoHeader()
         != other.getNoHeader()) return false;
+    if (!getHeaderBackgroundColor()
+        .equals(other.getHeaderBackgroundColor())) return false;
+    if (!getHeaderTextColor()
+        .equals(other.getHeaderTextColor())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -288,6 +400,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NO_HEADER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getNoHeader());
+    hash = (37 * hash) + HEADER_BACKGROUND_COLOR_FIELD_NUMBER;
+    hash = (53 * hash) + getHeaderBackgroundColor().hashCode();
+    hash = (37 * hash) + HEADER_TEXT_COLOR_FIELD_NUMBER;
+    hash = (53 * hash) + getHeaderTextColor().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -433,6 +549,8 @@ private static final long serialVersionUID = 0L;
       delimiter_ = "";
       quoteCharacter_ = 0;
       noHeader_ = false;
+      headerBackgroundColor_ = "";
+      headerTextColor_ = "";
       return this;
     }
 
@@ -487,6 +605,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.noHeader_ = noHeader_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.headerBackgroundColor_ = headerBackgroundColor_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.headerTextColor_ = headerTextColor_;
       }
     }
 
@@ -571,6 +695,16 @@ private static final long serialVersionUID = 0L;
       if (other.getNoHeader() != false) {
         setNoHeader(other.getNoHeader());
       }
+      if (!other.getHeaderBackgroundColor().isEmpty()) {
+        headerBackgroundColor_ = other.headerBackgroundColor_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getHeaderTextColor().isEmpty()) {
+        headerTextColor_ = other.headerTextColor_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -625,6 +759,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              headerBackgroundColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              headerTextColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1159,6 +1303,190 @@ private static final long serialVersionUID = 0L;
     public Builder clearNoHeader() {
       bitField0_ = (bitField0_ & ~0x00000008);
       noHeader_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object headerBackgroundColor_ = "";
+    /**
+     * <pre>
+     * Header background color
+     * </pre>
+     *
+     * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+     * @return The headerBackgroundColor.
+     */
+    public java.lang.String getHeaderBackgroundColor() {
+      java.lang.Object ref = headerBackgroundColor_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerBackgroundColor_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Header background color
+     * </pre>
+     *
+     * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+     * @return The bytes for headerBackgroundColor.
+     */
+    public com.google.protobuf.ByteString
+        getHeaderBackgroundColorBytes() {
+      java.lang.Object ref = headerBackgroundColor_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerBackgroundColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Header background color
+     * </pre>
+     *
+     * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+     * @param value The headerBackgroundColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderBackgroundColor(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      headerBackgroundColor_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Header background color
+     * </pre>
+     *
+     * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeaderBackgroundColor() {
+      headerBackgroundColor_ = getDefaultInstance().getHeaderBackgroundColor();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Header background color
+     * </pre>
+     *
+     * <code>string header_background_color = 5 [json_name = "headerBackgroundColor"];</code>
+     * @param value The bytes for headerBackgroundColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderBackgroundColorBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      headerBackgroundColor_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object headerTextColor_ = "";
+    /**
+     * <pre>
+     * Header text color
+     * </pre>
+     *
+     * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+     * @return The headerTextColor.
+     */
+    public java.lang.String getHeaderTextColor() {
+      java.lang.Object ref = headerTextColor_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerTextColor_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Header text color
+     * </pre>
+     *
+     * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+     * @return The bytes for headerTextColor.
+     */
+    public com.google.protobuf.ByteString
+        getHeaderTextColorBytes() {
+      java.lang.Object ref = headerTextColor_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerTextColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Header text color
+     * </pre>
+     *
+     * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+     * @param value The headerTextColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderTextColor(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      headerTextColor_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Header text color
+     * </pre>
+     *
+     * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHeaderTextColor() {
+      headerTextColor_ = getDefaultInstance().getHeaderTextColor();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Header text color
+     * </pre>
+     *
+     * <code>string header_text_color = 6 [json_name = "headerTextColor"];</code>
+     * @param value The bytes for headerTextColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHeaderTextColorBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      headerTextColor_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
