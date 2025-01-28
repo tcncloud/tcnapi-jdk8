@@ -45,6 +45,11 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_wfm_SkillProfile_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_wfm_SkillProfileGroup_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2672,41 +2677,46 @@ public final class WfmProto {
       "a1.wfm\032\027annotations/authz.proto\032\035api/com" +
       "mons/omnichannel.proto\032\025api/commons/org." +
       "proto\032\025api/commons/wfm.proto\032\034google/api" +
-      "/annotations.proto\032\037google/protobuf/time" +
-      "stamp.proto\032\036google/protobuf/wrappers.pr" +
-      "oto\"\"\n PerformInitialClientSetupRequest\"" +
-      "g\n!PerformInitialClientSetupResponse\022B\n\014" +
-      "setup_status\030\001 \001(\0132\037.api.commons.Initial" +
-      "SetupStatusR\013setupStatus\"$\n\"CreateInitia" +
-      "lDemoActivitiesRequest\"%\n#CreateInitialD" +
-      "emoActivitiesResponse\"\212\002\n\005Skill\022\033\n\tskill" +
-      "_sid\030\001 \001(\003R\010skillSid\022G\n\021client_skill_typ" +
-      "e\030\002 \001(\0162\033.api.commons.SkillType.EnumR\017cl" +
-      "ientSkillType\022\022\n\004name\030\003 \001(\tR\004name\022;\n\013del" +
-      "ete_date\030\004 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\ndeleteDate\022(\n\020client_skill_sid\030\005 \001(\003" +
-      "R\016clientSkillSid\022 \n\013proficiency\030\006 \001(\005R\013p" +
-      "roficiency\"\226\006\n\014SkillProfile\022*\n\021skill_pro" +
-      "file_sid\030\001 \001(\003R\017skillProfileSid\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descri" +
-      "ption\022;\n\013create_date\030\004 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\ncreateDate\022\030\n\007unnamed\030\005 " +
-      "\001(\010R\007unnamed\022I\n\023inactive_as_of_date\030\006 \001(" +
-      "\0132\032.google.protobuf.TimestampR\020inactiveA" +
-      "sOfDate\022/\n\006skills\030\007 \003(\0132\027.api.v1alpha1.w" +
-      "fm.SkillR\006skills\022!\n\014skills_count\030\010 \001(\005R\013" +
-      "skillsCount\022\036\n\noccurrence\030\t \001(\002R\noccurre" +
-      "nce\022I\n\"average_speed_of_answer_in_second" +
-      "s\030\n \001(\002R\035averageSpeedOfAnswerInSeconds\022B" +
-      "\n\036average_handle_time_in_seconds\030\013 \001(\002R\032" +
-      "averageHandleTimeInSeconds\022I\n\"average_af" +
-      "ter_call_work_in_seconds\030\014 \001(\002R\035averageA" +
-      "fterCallWorkInSeconds\022E\n average_time_to" +
-      "_abort_in_seconds\030\r \001(\002R\033averageTimeToAb" +
-      "ortInSeconds\022.\n\023are_averages_manual\030\016 \001(" +
-      "\010R\021areAveragesManual\022=\n\rchannel_types\030\017 " +
-      "\003(\0162\030.api.commons.ChannelTypeR\014channelTy" +
-      "pes\"\225\005\n\021SkillProfileGroup\0229\n\027skill_profi" +
+      "/annotations.proto\032\036google/protobuf/dura" +
+      "tion.proto\032\037google/protobuf/timestamp.pr" +
+      "oto\032\036google/protobuf/wrappers.proto\"\"\n P" +
+      "erformInitialClientSetupRequest\"g\n!Perfo" +
+      "rmInitialClientSetupResponse\022B\n\014setup_st" +
+      "atus\030\001 \001(\0132\037.api.commons.InitialSetupSta" +
+      "tusR\013setupStatus\"$\n\"CreateInitialDemoAct" +
+      "ivitiesRequest\"%\n#CreateInitialDemoActiv" +
+      "itiesResponse\"\212\002\n\005Skill\022\033\n\tskill_sid\030\001 \001" +
+      "(\003R\010skillSid\022G\n\021client_skill_type\030\002 \001(\0162" +
+      "\033.api.commons.SkillType.EnumR\017clientSkil" +
+      "lType\022\022\n\004name\030\003 \001(\tR\004name\022;\n\013delete_date" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\ndele" +
+      "teDate\022(\n\020client_skill_sid\030\005 \001(\003R\016client" +
+      "SkillSid\022 \n\013proficiency\030\006 \001(\005R\013proficien" +
+      "cy\"\276\007\n\014SkillProfile\022*\n\021skill_profile_sid" +
+      "\030\001 \001(\003R\017skillProfileSid\022\022\n\004name\030\002 \001(\tR\004n" +
+      "ame\022 \n\013description\030\003 \001(\tR\013description\022;\n" +
+      "\013create_date\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\ncreateDate\022\030\n\007unnamed\030\005 \001(\010R\007unn" +
+      "amed\022I\n\023inactive_as_of_date\030\006 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\020inactiveAsOfDate\022" +
+      "/\n\006skills\030\007 \003(\0132\027.api.v1alpha1.wfm.Skill" +
+      "R\006skills\022!\n\014skills_count\030\010 \001(\005R\013skillsCo" +
+      "unt\022\036\n\noccurrence\030\t \001(\002R\noccurrence\022I\n\"a" +
+      "verage_speed_of_answer_in_seconds\030\n \001(\002R" +
+      "\035averageSpeedOfAnswerInSeconds\022B\n\036averag" +
+      "e_handle_time_in_seconds\030\013 \001(\002R\032averageH" +
+      "andleTimeInSeconds\022I\n\"average_after_call" +
+      "_work_in_seconds\030\014 \001(\002R\035averageAfterCall" +
+      "WorkInSeconds\022E\n average_time_to_abort_i" +
+      "n_seconds\030\r \001(\002R\033averageTimeToAbortInSec" +
+      "onds\022.\n\023are_averages_manual\030\016 \001(\010R\021areAv" +
+      "eragesManual\022=\n\rchannel_types\030\017 \003(\0162\030.ap" +
+      "i.commons.ChannelTypeR\014channelTypes\022<\n\003s" +
+      "ms\030\020 \001(\0132*.api.v1alpha1.wfm.SkillProfile" +
+      ".SmsMetadataR\003sms\032h\n\013SmsMetadata\022Y\n\033aver" +
+      "age_conversation_length\030\001 \001(\0132\031.google.p" +
+      "rotobuf.DurationR\031averageConversationLen" +
+      "gth\"\225\005\n\021SkillProfileGroup\0229\n\027skill_profi" +
       "le_group_sid\030\001 \001(\003B\0020\001R\024skillProfileGrou" +
       "pSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030" +
       "\003 \001(\tR\013description\022;\n\013create_time\030\004 \001(\0132" +
@@ -3062,12 +3072,12 @@ public final class WfmProto {
       "ds\030\003 \001(\002R\032averageHandleTimeInSeconds\022I\n\"" +
       "average_after_call_work_in_seconds\030\004 \001(\002" +
       "R\035averageAfterCallWorkInSeconds\022E\n avera" +
-      "ge_time_to_abort_in_seconds\030\005 \001(\002R\033avera" +
+      "ge_time_to_abort_in_seconds\030\005 \001(\002R\033avera",
       "geTimeToAbortInSeconds\022B\n\036skill_profile_" +
       "sids_to_forecast\030\006 \003(\003R\032skillProfileSids" +
       "ToForecast\"\035\n\033UpsertRegressionForecastRe" +
       "s\"X\n\032UpsertForecastDataDeltaReq\022:\n\005delta" +
-      "\030\001 \001(\0132$.api.v1alpha1.wfm.CallDataByInte",
+      "\030\001 \001(\0132$.api.v1alpha1.wfm.CallDataByInte" +
       "rvalR\005delta\"X\n\032UpsertForecastDataDeltaRe" +
       "s\022:\n\005delta\030\001 \001(\0132$.api.v1alpha1.wfm.Call" +
       "DataByIntervalR\005delta\"[\n\033UpsertForecastD" +
@@ -3462,12 +3472,12 @@ public final class WfmProto {
       " \003(\0132\032.api.v1alpha1.wfm.WFMAgentR\twfmAge" +
       "nts\";\n\023ListWFMAgentSidsReq\022$\n\016tcn_agent_" +
       "sids\030\001 \003(\003R\014tcnAgentSids\"\223\001\n\023ListWFMAgen" +
-      "tSidsRes\022C\n\004sids\030\001 \003(\0132/.api.v1alpha1.wf" +
+      "tSidsRes\022C\n\004sids\030\001 \003(\0132/.api.v1alpha1.wf",
       "m.ListWFMAgentSidsRes.SidsEntryR\004sids\0327\n" +
       "\tSidsEntry\022\020\n\003key\030\001 \001(\003R\003key\022\024\n\005value\030\002 " +
       "\001(\003R\005value:\0028\001\" \n\036ListUnassignedWFMAgent" +
       "sRequest\"\\\n\037ListUnassignedWFMAgentsRespo" +
-      "nse\0229\n\nwfm_agents\030\001 \003(\0132\032.api.v1alpha1.w",
+      "nse\0229\n\nwfm_agents\030\001 \003(\0132\032.api.v1alpha1.w" +
       "fm.WFMAgentR\twfmAgents\"R\n(ListWFMAgentsA" +
       "ssociatedWithAgentGroupReq\022&\n\017agent_grou" +
       "p_sid\030\001 \001(\003R\ragentGroupSid\"P\n(ListWFMAge" +
@@ -3862,12 +3872,12 @@ public final class WfmProto {
       "yR\014nodesChecked\"\311\003\n\021PublishedSchedule\0224\n" +
       "\026published_schedule_sid\030\001 \001(\003R\024published" +
       "ScheduleSid\0229\n\ncreated_at\030\002 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tcreatedAt\022B\n\017last_u" +
+      ".protobuf.TimestampR\tcreatedAt\022B\n\017last_u",
       "pdated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
       "ampR\rlastUpdatedAt\022H\n\017shift_instances\030\004 " +
       "\003(\0132\037.api.v1alpha1.wfm.ShiftInstanceR\016sh" +
       "iftInstances\022X\n\023performance_metrics\030\005 \003(" +
-      "\0132#.api.v1alpha1.wfm.PerformanceMetricB\002",
+      "\0132#.api.v1alpha1.wfm.PerformanceMetricB\002" +
       "\030\001R\022performanceMetrics\022[\n\026performance_me" +
       "trics_v2\030\006 \003(\0132%.api.v1alpha1.wfm.Perfor" +
       "manceMetricV2R\024performanceMetricsV2\"\227\005\n\r" +
@@ -4262,12 +4272,12 @@ public final class WfmProto {
       "edule_selector\030\001 \001(\0132\035.api.commons.Sched" +
       "uleSelectorR\020scheduleSelector\022C\n\rnode_se" +
       "lector\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentEn" +
-      "tityR\014nodeSelector\022A\n\016datetime_range\030\003 \001" +
+      "tityR\014nodeSelector\022A\n\016datetime_range\030\003 \001",
       "(\0132\032.api.commons.DatetimeRangeR\rdatetime" +
       "Range\0222\n\025invert_datetime_range\030\004 \001(\010R\023in" +
       "vertDatetimeRange\0220\n\024start_datetimes_onl" +
       "y\030\005 \001(\010R\022startDatetimesOnly\022#\n\rdelete_lo" +
-      "cked\030\006 \001(\010R\014deleteLocked\"R\n\020ClearSchedul",
+      "cked\030\006 \001(\010R\014deleteLocked\"R\n\020ClearSchedul" +
       "eRes\022>\n\013diagnostics\030\001 \003(\0132\034.api.v1alpha1" +
       ".wfm.DiagnosticR\013diagnostics\"F\n\026DeleteDr" +
       "aftScheduleReq\022,\n\022draft_schedule_sid\030\001 \001" +
@@ -4662,12 +4672,12 @@ public final class WfmProto {
       "\022A\n\016datetime_range\030\001 \001(\0132\032.api.commons.D" +
       "atetimeRangeR\rdatetimeRange\022\"\n\rwfm_agent" +
       "_sid\030\002 \001(\003R\013wfmAgentSid\022J\n\021schedule_sele" +
-      "ctor\030\003 \001(\0132\035.api.commons.ScheduleSelecto" +
+      "ctor\030\003 \001(\0132\035.api.commons.ScheduleSelecto",
       "rR\020scheduleSelector\022C\n\rnode_selector\030\004 \001" +
       "(\0132\036.api.v1alpha1.wfm.ParentEntityR\014node" +
       "Selector\0222\n\025schedule_scenario_sid\030\005 \001(\003R" +
       "\023scheduleScenarioSid\"\242\001\n\037RemoveAgentFrom" +
-      "ScheduleResponse\0227\n\030unassigned_wfm_agent",
+      "ScheduleResponse\0227\n\030unassigned_wfm_agent" +
       "_sid\030\001 \001(\003R\025unassignedWfmAgentSid\022F\n\016upd" +
       "ated_shifts\030\002 \003(\0132\037.api.v1alpha1.wfm.Shi" +
       "ftInstanceR\rupdatedShifts\"\233\004\n ListValidA" +
@@ -5062,12 +5072,12 @@ public final class WfmProto {
       "\323\344\223\0020\"+/api/v1alpha1/wfm/getclienthistor" +
       "ycacheinfo:\001*\022\241\001\n\022ListHistoricalData\022\'.a" +
       "pi.v1alpha1.wfm.ListHistoricalDataReq\032\'." +
-      "api.v1alpha1.wfm.ListHistoricalDataRes\"9" +
+      "api.v1alpha1.wfm.ListHistoricalDataRes\"9",
       "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/list" +
       "historicaldata:\001*\022\275\001\n\031UpsertHistoricalDa" +
       "taDelta\022..api.v1alpha1.wfm.UpsertHistori" +
       "calDataDeltaReq\032..api.v1alpha1.wfm.Upser" +
-      "tHistoricalDataDeltaRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002",
+      "tHistoricalDataDeltaRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002" +
       "0\"+/api/v1alpha1/wfm/upserthistoricaldat" +
       "adelta:\001*\022\301\001\n\032UpsertHistoricalDataDeltas" +
       "\022/.api.v1alpha1.wfm.UpsertHistoricalData" +
@@ -5462,12 +5472,12 @@ public final class WfmProto {
       "acementRule\022(.api.v1alpha1.wfm.UpdatePla" +
       "cementRuleReq\032(.api.v1alpha1.wfm.UpdateP" +
       "lacementRuleRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/" +
-      "v1alpha/wfm/updateplacementrule:\001*\022\245\001\n\023D" +
+      "v1alpha/wfm/updateplacementrule:\001*\022\245\001\n\023D",
       "eletePlacementRule\022(.api.v1alpha1.wfm.De" +
       "letePlacementRuleReq\032(.api.v1alpha1.wfm." +
       "DeletePlacementRuleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*" +
       "\"%/api/v1alpha1/wfm/deleteplacementrule:" +
-      "\001*\022\261\001\n\026CreateOpenTimesPattern\022+.api.v1al",
+      "\001*\022\261\001\n\026CreateOpenTimesPattern\022+.api.v1al" +
       "pha1.wfm.CreateOpenTimesPatternReq\032+.api" +
       ".v1alpha1.wfm.CreateOpenTimesPatternRes\"" +
       "=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/cre" +
@@ -5862,12 +5872,12 @@ public final class WfmProto {
       "dule\0220.api.v1alpha1.wfm.RemoveAgentFromS" +
       "cheduleRequest\0321.api.v1alpha1.wfm.Remove" +
       "AgentFromScheduleResponse\"E\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\0025\"0/api/v1alpha1/wfm/removeagentfromsc" +
+      "\223\0025\"0/api/v1alpha1/wfm/removeagentfromsc",
       "hedulerequest:\001*\022\262\001\n\024CreatePublishedShif" +
       "t\022-.api.v1alpha1.wfm.CreatePublishedShif" +
       "tRequest\032..api.v1alpha1.wfm.CreatePublis" +
       "hedShiftResponse\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api" +
-      "/v1alpha1/wfm/createpublishedshift:\001*\022\342\001",
+      "/v1alpha1/wfm/createpublishedshift:\001*\022\342\001" +
       "\n CreatePublishedShiftWithSegments\0229.api" +
       ".v1alpha1.wfm.CreatePublishedShiftWithSe" +
       "gmentsRequest\032:.api.v1alpha1.wfm.CreateP" +
@@ -6130,6 +6140,7 @@ public final class WfmProto {
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.WfmProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         });
@@ -6168,7 +6179,13 @@ public final class WfmProto {
     internal_static_api_v1alpha1_wfm_SkillProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_SkillProfile_descriptor,
-        new java.lang.String[] { "SkillProfileSid", "Name", "Description", "CreateDate", "Unnamed", "InactiveAsOfDate", "Skills7", "SkillsCount8", "Occurrence", "AverageSpeedOfAnswerInSeconds", "AverageHandleTimeInSeconds", "AverageAfterCallWorkInSeconds", "AverageTimeToAbortInSeconds", "AreAveragesManual", "ChannelTypes", });
+        new java.lang.String[] { "SkillProfileSid", "Name", "Description", "CreateDate", "Unnamed", "InactiveAsOfDate", "Skills7", "SkillsCount8", "Occurrence", "AverageSpeedOfAnswerInSeconds", "AverageHandleTimeInSeconds", "AverageAfterCallWorkInSeconds", "AverageTimeToAbortInSeconds", "AreAveragesManual", "ChannelTypes", "Sms", });
+    internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor =
+      internal_static_api_v1alpha1_wfm_SkillProfile_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor,
+        new java.lang.String[] { "AverageConversationLength", });
     internal_static_api_v1alpha1_wfm_SkillProfileGroup_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_wfm_SkillProfileGroup_fieldAccessorTable = new
@@ -9318,6 +9335,7 @@ public final class WfmProto {
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.WfmProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

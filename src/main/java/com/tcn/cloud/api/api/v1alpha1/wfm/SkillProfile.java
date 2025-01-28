@@ -46,6 +46,666 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.class, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.Builder.class);
   }
 
+  public interface SmsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.SkillProfile.SmsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     * @return Whether the averageConversationLength field is set.
+     */
+    boolean hasAverageConversationLength();
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     * @return The averageConversationLength.
+     */
+    com.google.protobuf.Duration getAverageConversationLength();
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAverageConversationLengthOrBuilder();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.wfm.SkillProfile.SmsMetadata}
+   */
+  public static final class SmsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.SkillProfile.SmsMetadata)
+      SmsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SmsMetadata.newBuilder() to construct.
+    private SmsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SmsMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SmsMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.class, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder.class);
+    }
+
+    public static final int AVERAGE_CONVERSATION_LENGTH_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration averageConversationLength_;
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     * @return Whether the averageConversationLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasAverageConversationLength() {
+      return averageConversationLength_ != null;
+    }
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     * @return The averageConversationLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAverageConversationLength() {
+      return averageConversationLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : averageConversationLength_;
+    }
+    /**
+     * <pre>
+     * average lenth of a conversation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAverageConversationLengthOrBuilder() {
+      return averageConversationLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : averageConversationLength_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (averageConversationLength_ != null) {
+        output.writeMessage(1, getAverageConversationLength());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (averageConversationLength_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAverageConversationLength());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata other = (com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata) obj;
+
+      if (hasAverageConversationLength() != other.hasAverageConversationLength()) return false;
+      if (hasAverageConversationLength()) {
+        if (!getAverageConversationLength()
+            .equals(other.getAverageConversationLength())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAverageConversationLength()) {
+        hash = (37 * hash) + AVERAGE_CONVERSATION_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getAverageConversationLength().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.wfm.SkillProfile.SmsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.SkillProfile.SmsMetadata)
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.class, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        averageConversationLength_ = null;
+        if (averageConversationLengthBuilder_ != null) {
+          averageConversationLengthBuilder_.dispose();
+          averageConversationLengthBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_SmsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata build() {
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata result = new com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.averageConversationLength_ = averageConversationLengthBuilder_ == null
+              ? averageConversationLength_
+              : averageConversationLengthBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance()) return this;
+        if (other.hasAverageConversationLength()) {
+          mergeAverageConversationLength(other.getAverageConversationLength());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAverageConversationLengthFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Duration averageConversationLength_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> averageConversationLengthBuilder_;
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       * @return Whether the averageConversationLength field is set.
+       */
+      public boolean hasAverageConversationLength() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       * @return The averageConversationLength.
+       */
+      public com.google.protobuf.Duration getAverageConversationLength() {
+        if (averageConversationLengthBuilder_ == null) {
+          return averageConversationLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : averageConversationLength_;
+        } else {
+          return averageConversationLengthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public Builder setAverageConversationLength(com.google.protobuf.Duration value) {
+        if (averageConversationLengthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          averageConversationLength_ = value;
+        } else {
+          averageConversationLengthBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public Builder setAverageConversationLength(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (averageConversationLengthBuilder_ == null) {
+          averageConversationLength_ = builderForValue.build();
+        } else {
+          averageConversationLengthBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public Builder mergeAverageConversationLength(com.google.protobuf.Duration value) {
+        if (averageConversationLengthBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            averageConversationLength_ != null &&
+            averageConversationLength_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getAverageConversationLengthBuilder().mergeFrom(value);
+          } else {
+            averageConversationLength_ = value;
+          }
+        } else {
+          averageConversationLengthBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public Builder clearAverageConversationLength() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        averageConversationLength_ = null;
+        if (averageConversationLengthBuilder_ != null) {
+          averageConversationLengthBuilder_.dispose();
+          averageConversationLengthBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getAverageConversationLengthBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAverageConversationLengthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAverageConversationLengthOrBuilder() {
+        if (averageConversationLengthBuilder_ != null) {
+          return averageConversationLengthBuilder_.getMessageOrBuilder();
+        } else {
+          return averageConversationLength_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : averageConversationLength_;
+        }
+      }
+      /**
+       * <pre>
+       * average lenth of a conversation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration average_conversation_length = 1 [json_name = "averageConversationLength"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAverageConversationLengthFieldBuilder() {
+        if (averageConversationLengthBuilder_ == null) {
+          averageConversationLengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAverageConversationLength(),
+                  getParentForChildren(),
+                  isClean());
+          averageConversationLength_ = null;
+        }
+        return averageConversationLengthBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.SkillProfile.SmsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.SkillProfile.SmsMetadata)
+    private static final com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SmsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<SmsMetadata>() {
+      @java.lang.Override
+      public SmsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SmsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SmsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
   private long skillProfileSid_ = 0L;
   /**
@@ -494,6 +1154,44 @@ private static final long serialVersionUID = 0L;
   }
   private int channelTypesMemoizedSerializedSize;
 
+  public static final int SMS_FIELD_NUMBER = 16;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms_;
+  /**
+   * <pre>
+   * metadata related to sms conversations.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+   * @return Whether the sms field is set.
+   */
+  @java.lang.Override
+  public boolean hasSms() {
+    return sms_ != null;
+  }
+  /**
+   * <pre>
+   * metadata related to sms conversations.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+   * @return The sms.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getSms() {
+    return sms_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance() : sms_;
+  }
+  /**
+   * <pre>
+   * metadata related to sms conversations.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder() {
+    return sms_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance() : sms_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -557,6 +1255,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < channelTypes_.size(); i++) {
       output.writeEnumNoTag(channelTypes_.get(i));
+    }
+    if (sms_ != null) {
+      output.writeMessage(16, getSms());
     }
     getUnknownFields().writeTo(output);
   }
@@ -633,6 +1334,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }channelTypesMemoizedSerializedSize = dataSize;
     }
+    if (sms_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, getSms());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -688,6 +1393,11 @@ private static final long serialVersionUID = 0L;
     if (getAreAveragesManual()
         != other.getAreAveragesManual()) return false;
     if (!channelTypes_.equals(other.channelTypes_)) return false;
+    if (hasSms() != other.hasSms()) return false;
+    if (hasSms()) {
+      if (!getSms()
+          .equals(other.getSms())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -744,6 +1454,10 @@ private static final long serialVersionUID = 0L;
     if (getChannelTypesCount() > 0) {
       hash = (37 * hash) + CHANNEL_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + channelTypes_.hashCode();
+    }
+    if (hasSms()) {
+      hash = (37 * hash) + SMS_FIELD_NUMBER;
+      hash = (53 * hash) + getSms().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -910,6 +1624,11 @@ private static final long serialVersionUID = 0L;
       areAveragesManual_ = false;
       channelTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00004000);
+      sms_ = null;
+      if (smsBuilder_ != null) {
+        smsBuilder_.dispose();
+        smsBuilder_ = null;
+      }
       return this;
     }
 
@@ -1003,6 +1722,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.areAveragesManual_ = areAveragesManual_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.sms_ = smsBuilder_ == null
+            ? sms_
+            : smsBuilder_.build();
       }
     }
 
@@ -1129,6 +1853,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasSms()) {
+        mergeSms(other.getSms());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1254,6 +1981,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 122
+            case 130: {
+              input.readMessage(
+                  getSmsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2659,6 +3393,161 @@ private static final long serialVersionUID = 0L;
       }
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder> smsBuilder_;
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     * @return Whether the sms field is set.
+     */
+    public boolean hasSms() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     * @return The sms.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata getSms() {
+      if (smsBuilder_ == null) {
+        return sms_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance() : sms_;
+      } else {
+        return smsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public Builder setSms(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata value) {
+      if (smsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sms_ = value;
+      } else {
+        smsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public Builder setSms(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder builderForValue) {
+      if (smsBuilder_ == null) {
+        sms_ = builderForValue.build();
+      } else {
+        smsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public Builder mergeSms(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata value) {
+      if (smsBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          sms_ != null &&
+          sms_ != com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance()) {
+          getSmsBuilder().mergeFrom(value);
+        } else {
+          sms_ = value;
+        }
+      } else {
+        smsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public Builder clearSms() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      sms_ = null;
+      if (smsBuilder_ != null) {
+        smsBuilder_.dispose();
+        smsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder getSmsBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getSmsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder() {
+      if (smsBuilder_ != null) {
+        return smsBuilder_.getMessageOrBuilder();
+      } else {
+        return sms_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.getDefaultInstance() : sms_;
+      }
+    }
+    /**
+     * <pre>
+     * metadata related to sms conversations.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder> 
+        getSmsFieldBuilder() {
+      if (smsBuilder_ == null) {
+        smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder>(
+                getSms(),
+                getParentForChildren(),
+                isClean());
+        sms_ = null;
+      }
+      return smsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
