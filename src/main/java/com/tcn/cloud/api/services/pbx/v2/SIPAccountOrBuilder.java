@@ -44,7 +44,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=338
+   *     See services/pbx/v2/service.proto;l=353
    * @return A list containing the ringGroupIds.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -56,7 +56,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=338
+   *     See services/pbx/v2/service.proto;l=353
    * @return The count of ringGroupIds.
    */
   @java.lang.Deprecated int getRingGroupIdsCount();
@@ -67,7 +67,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=338
+   *     See services/pbx/v2/service.proto;l=353
    * @param index The index of the element to return.
    * @return The ringGroupIds at the given index.
    */
@@ -79,7 +79,7 @@ public interface SIPAccountOrBuilder extends
    *
    * <code>repeated string ring_group_ids = 4 [json_name = "ringGroupIds", deprecated = true];</code>
    * @deprecated services.pbx.v2.SIPAccount.ring_group_ids is deprecated.
-   *     See services/pbx/v2/service.proto;l=338
+   *     See services/pbx/v2/service.proto;l=353
    * @param index The index of the value to return.
    * @return The bytes of the ringGroupIds at the given index.
    */
@@ -120,5 +120,92 @@ public interface SIPAccountOrBuilder extends
    * <code>repeated .services.pbx.v2.SIPAccountRingGroup ring_groups = 6 [json_name = "ringGroups"];</code>
    */
   com.tcn.cloud.api.services.pbx.v2.SIPAccountRingGroupOrBuilder getRingGroupsOrBuilder(
+      int index);
+
+  /**
+   * <code>string org_username = 7 [json_name = "orgUsername"];</code>
+   * @return The orgUsername.
+   */
+  java.lang.String getOrgUsername();
+  /**
+   * <code>string org_username = 7 [json_name = "orgUsername"];</code>
+   * @return The bytes for orgUsername.
+   */
+  com.google.protobuf.ByteString
+      getOrgUsernameBytes();
+
+  /**
+   * <code>string org_full_name = 8 [json_name = "orgFullName"];</code>
+   * @return The orgFullName.
+   */
+  java.lang.String getOrgFullName();
+  /**
+   * <code>string org_full_name = 8 [json_name = "orgFullName"];</code>
+   * @return The bytes for orgFullName.
+   */
+  com.google.protobuf.ByteString
+      getOrgFullNameBytes();
+
+  /**
+   * <code>.services.pbx.v2.OrgHuntGroup org_hunt_group = 9 [json_name = "orgHuntGroup"];</code>
+   * @return Whether the orgHuntGroup field is set.
+   */
+  boolean hasOrgHuntGroup();
+  /**
+   * <code>.services.pbx.v2.OrgHuntGroup org_hunt_group = 9 [json_name = "orgHuntGroup"];</code>
+   * @return The orgHuntGroup.
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgHuntGroup getOrgHuntGroup();
+  /**
+   * <code>.services.pbx.v2.OrgHuntGroup org_hunt_group = 9 [json_name = "orgHuntGroup"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgHuntGroupOrBuilder getOrgHuntGroupOrBuilder();
+
+  /**
+   * <code>repeated .services.pbx.v2.OrgSkill org_skills = 10 [json_name = "orgSkills"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.pbx.v2.OrgSkill> 
+      getOrgSkillsList();
+  /**
+   * <code>repeated .services.pbx.v2.OrgSkill org_skills = 10 [json_name = "orgSkills"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgSkill getOrgSkills(int index);
+  /**
+   * <code>repeated .services.pbx.v2.OrgSkill org_skills = 10 [json_name = "orgSkills"];</code>
+   */
+  int getOrgSkillsCount();
+  /**
+   * <code>repeated .services.pbx.v2.OrgSkill org_skills = 10 [json_name = "orgSkills"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.OrgSkillOrBuilder> 
+      getOrgSkillsOrBuilderList();
+  /**
+   * <code>repeated .services.pbx.v2.OrgSkill org_skills = 10 [json_name = "orgSkills"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgSkillOrBuilder getOrgSkillsOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .services.pbx.v2.OrgPermissionGroup org_permission_groups = 11 [json_name = "orgPermissionGroups"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.pbx.v2.OrgPermissionGroup> 
+      getOrgPermissionGroupsList();
+  /**
+   * <code>repeated .services.pbx.v2.OrgPermissionGroup org_permission_groups = 11 [json_name = "orgPermissionGroups"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgPermissionGroup getOrgPermissionGroups(int index);
+  /**
+   * <code>repeated .services.pbx.v2.OrgPermissionGroup org_permission_groups = 11 [json_name = "orgPermissionGroups"];</code>
+   */
+  int getOrgPermissionGroupsCount();
+  /**
+   * <code>repeated .services.pbx.v2.OrgPermissionGroup org_permission_groups = 11 [json_name = "orgPermissionGroups"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.pbx.v2.OrgPermissionGroupOrBuilder> 
+      getOrgPermissionGroupsOrBuilderList();
+  /**
+   * <code>repeated .services.pbx.v2.OrgPermissionGroup org_permission_groups = 11 [json_name = "orgPermissionGroups"];</code>
+   */
+  com.tcn.cloud.api.services.pbx.v2.OrgPermissionGroupOrBuilder getOrgPermissionGroupsOrBuilder(
       int index);
 }
