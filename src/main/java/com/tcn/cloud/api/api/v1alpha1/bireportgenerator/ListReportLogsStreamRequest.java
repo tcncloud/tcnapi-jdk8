@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListReportLogsStreamRequest() {
+    pageToken_ = "";
   }
 
   @java.lang.Override
@@ -49,11 +50,13 @@ private static final long serialVersionUID = 0L;
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=169
    * @return Whether the startTime field is set.
    */
   @java.lang.Override
-  public boolean hasStartTime() {
+  @java.lang.Deprecated public boolean hasStartTime() {
     return startTime_ != null;
   }
   /**
@@ -61,11 +64,13 @@ private static final long serialVersionUID = 0L;
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=169
    * @return The startTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getStartTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getStartTime() {
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
   /**
@@ -73,10 +78,10 @@ private static final long serialVersionUID = 0L;
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
 
@@ -87,11 +92,13 @@ private static final long serialVersionUID = 0L;
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=171
    * @return Whether the endTime field is set.
    */
   @java.lang.Override
-  public boolean hasEndTime() {
+  @java.lang.Deprecated public boolean hasEndTime() {
     return endTime_ != null;
   }
   /**
@@ -99,11 +106,13 @@ private static final long serialVersionUID = 0L;
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=171
    * @return The endTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getEndTime() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getEndTime() {
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
   }
   /**
@@ -111,11 +120,73 @@ private static final long serialVersionUID = 0L;
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+  }
+
+  public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+  private long pageSize_ = 0L;
+  /**
+   * <pre>
+   * number of items per page
+   * </pre>
+   *
+   * <code>int64 page_size = 3 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  @java.lang.Override
+  public long getPageSize() {
+    return pageSize_;
+  }
+
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  @java.lang.Override
+  public java.lang.String getPageToken() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pageToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPageTokenBytes() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pageToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,6 +209,12 @@ private static final long serialVersionUID = 0L;
     if (endTime_ != null) {
       output.writeMessage(2, getEndTime());
     }
+    if (pageSize_ != 0L) {
+      output.writeInt64(3, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -154,6 +231,13 @@ private static final long serialVersionUID = 0L;
     if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEndTime());
+    }
+    if (pageSize_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,6 +264,10 @@ private static final long serialVersionUID = 0L;
       if (!getEndTime()
           .equals(other.getEndTime())) return false;
     }
+    if (getPageSize()
+        != other.getPageSize()) return false;
+    if (!getPageToken()
+        .equals(other.getPageToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,6 +287,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime().hashCode();
     }
+    hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPageSize());
+    hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getPageToken().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +437,8 @@ private static final long serialVersionUID = 0L;
         endTimeBuilder_.dispose();
         endTimeBuilder_ = null;
       }
+      pageSize_ = 0L;
+      pageToken_ = "";
       return this;
     }
 
@@ -386,6 +481,12 @@ private static final long serialVersionUID = 0L;
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pageSize_ = pageSize_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pageToken_ = pageToken_;
       }
     }
 
@@ -439,6 +540,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndTime()) {
         mergeEndTime(other.getEndTime());
       }
+      if (other.getPageSize() != 0L) {
+        setPageSize(other.getPageSize());
+      }
+      if (!other.getPageToken().isEmpty()) {
+        pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -479,6 +588,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              pageSize_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              pageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -504,10 +623,12 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+     *     See api/v1alpha1/bireportgenerator/service.proto;l=169
      * @return Whether the startTime field is set.
      */
-    public boolean hasStartTime() {
+    @java.lang.Deprecated public boolean hasStartTime() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -515,10 +636,12 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+     *     See api/v1alpha1/bireportgenerator/service.proto;l=169
      * @return The startTime.
      */
-    public com.google.protobuf.Timestamp getStartTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getStartTime() {
       if (startTimeBuilder_ == null) {
         return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
       } else {
@@ -530,9 +653,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public Builder setStartTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -550,9 +673,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public Builder setStartTime(
+    @java.lang.Deprecated public Builder setStartTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startTimeBuilder_ == null) {
         startTime_ = builderForValue.build();
@@ -568,9 +691,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           startTime_ != null &&
@@ -591,9 +714,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public Builder clearStartTime() {
+    @java.lang.Deprecated public Builder clearStartTime() {
       bitField0_ = (bitField0_ & ~0x00000001);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
@@ -608,9 +731,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
@@ -620,9 +743,9 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       if (startTimeBuilder_ != null) {
         return startTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -635,7 +758,7 @@ private static final long serialVersionUID = 0L;
      * the start time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -659,10 +782,12 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+     *     See api/v1alpha1/bireportgenerator/service.proto;l=171
      * @return Whether the endTime field is set.
      */
-    public boolean hasEndTime() {
+    @java.lang.Deprecated public boolean hasEndTime() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -670,10 +795,12 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+     *     See api/v1alpha1/bireportgenerator/service.proto;l=171
      * @return The endTime.
      */
-    public com.google.protobuf.Timestamp getEndTime() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getEndTime() {
       if (endTimeBuilder_ == null) {
         return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
       } else {
@@ -685,9 +812,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public Builder setEndTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -705,9 +832,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public Builder setEndTime(
+    @java.lang.Deprecated public Builder setEndTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (endTimeBuilder_ == null) {
         endTime_ = builderForValue.build();
@@ -723,9 +850,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           endTime_ != null &&
@@ -746,9 +873,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public Builder clearEndTime() {
+    @java.lang.Deprecated public Builder clearEndTime() {
       bitField0_ = (bitField0_ & ~0x00000002);
       endTime_ = null;
       if (endTimeBuilder_ != null) {
@@ -763,9 +890,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getEndTimeFieldBuilder().getBuilder();
@@ -775,9 +902,9 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
       if (endTimeBuilder_ != null) {
         return endTimeBuilder_.getMessageOrBuilder();
       } else {
@@ -790,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * the end time window to list report logs
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -804,6 +931,142 @@ private static final long serialVersionUID = 0L;
         endTime_ = null;
       }
       return endTimeBuilder_;
+    }
+
+    private long pageSize_ ;
+    /**
+     * <pre>
+     * number of items per page
+     * </pre>
+     *
+     * <code>int64 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <pre>
+     * number of items per page
+     * </pre>
+     *
+     * <code>int64 page_size = 3 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageSize(long value) {
+
+      pageSize_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * number of items per page
+     * </pre>
+     *
+     * <code>int64 page_size = 3 [json_name = "pageSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageSize() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      pageSize_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pageToken_ = "";
+    /**
+     * <pre>
+     * token for the next page
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * token for the next page
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * token for the next page
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pageToken_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * token for the next page
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageToken() {
+      pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * token for the next page
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pageToken_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

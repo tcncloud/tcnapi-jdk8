@@ -33,4 +33,24 @@ public interface ListReportLogsStreamResponseOrBuilder extends
    * <code>.api.v1alpha1.bireportgenerator.ReportLog report_log = 1 [json_name = "reportLog"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportLogOrBuilder getReportLogOrBuilder();
+
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The nextPageToken.
+   */
+  java.lang.String getNextPageToken();
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The bytes for nextPageToken.
+   */
+  com.google.protobuf.ByteString
+      getNextPageTokenBytes();
 }

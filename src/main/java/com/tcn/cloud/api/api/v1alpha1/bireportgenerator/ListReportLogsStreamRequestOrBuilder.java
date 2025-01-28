@@ -12,52 +12,90 @@ public interface ListReportLogsStreamRequestOrBuilder extends
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=169
    * @return Whether the startTime field is set.
    */
-  boolean hasStartTime();
+  @java.lang.Deprecated boolean hasStartTime();
   /**
    * <pre>
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.start_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=169
    * @return The startTime.
    */
-  com.google.protobuf.Timestamp getStartTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getStartTime();
   /**
    * <pre>
    * the start time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
   /**
    * <pre>
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=171
    * @return Whether the endTime field is set.
    */
-  boolean hasEndTime();
+  @java.lang.Deprecated boolean hasEndTime();
   /**
    * <pre>
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.bireportgenerator.ListReportLogsStreamRequest.end_time is deprecated.
+   *     See api/v1alpha1/bireportgenerator/service.proto;l=171
    * @return The endTime.
    */
-  com.google.protobuf.Timestamp getEndTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getEndTime();
   /**
    * <pre>
    * the end time window to list report logs
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+  /**
+   * <pre>
+   * number of items per page
+   * </pre>
+   *
+   * <code>int64 page_size = 3 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  long getPageSize();
+
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  java.lang.String getPageToken();
+  /**
+   * <pre>
+   * token for the next page
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 }
