@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons.audit;
 /**
  * Protobuf type {@code api.commons.audit.BillingRatedItemsGeneratedEvent}
  */
-public final class BillingRatedItemsGeneratedEvent extends
+@java.lang.Deprecated public final class BillingRatedItemsGeneratedEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.audit.BillingRatedItemsGeneratedEvent)
     BillingRatedItemsGeneratedEventOrBuilder {
