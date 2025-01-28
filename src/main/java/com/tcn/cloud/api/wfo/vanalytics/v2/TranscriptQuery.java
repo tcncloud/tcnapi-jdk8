@@ -16577,6 +16577,33 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms sms = 2 [json_name = "sms"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SmsOrBuilder getSmsOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     * @return Whether the chat field is set.
+     */
+    boolean hasChat();
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     * @return The chat.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getChat();
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder getChatOrBuilder();
   }
   /**
    * <pre>
@@ -16693,6 +16720,44 @@ private static final long serialVersionUID = 0L;
       return sms_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.getDefaultInstance() : sms_;
     }
 
+    public static final int CHAT_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat chat_;
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     * @return Whether the chat field is set.
+     */
+    @java.lang.Override
+    public boolean hasChat() {
+      return chat_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     * @return The chat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getChat() {
+      return chat_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance() : chat_;
+    }
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder getChatOrBuilder() {
+      return chat_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance() : chat_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16713,6 +16778,9 @@ private static final long serialVersionUID = 0L;
       if (sms_ != null) {
         output.writeMessage(2, getSms());
       }
+      if (chat_ != null) {
+        output.writeMessage(3, getChat());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -16729,6 +16797,10 @@ private static final long serialVersionUID = 0L;
       if (sms_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSms());
+      }
+      if (chat_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getChat());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -16755,6 +16827,11 @@ private static final long serialVersionUID = 0L;
         if (!getSms()
             .equals(other.getSms())) return false;
       }
+      if (hasChat() != other.hasChat()) return false;
+      if (hasChat()) {
+        if (!getChat()
+            .equals(other.getChat())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -16773,6 +16850,10 @@ private static final long serialVersionUID = 0L;
       if (hasSms()) {
         hash = (37 * hash) + SMS_FIELD_NUMBER;
         hash = (53 * hash) + getSms().hashCode();
+      }
+      if (hasChat()) {
+        hash = (37 * hash) + CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getChat().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -16919,6 +17000,11 @@ private static final long serialVersionUID = 0L;
           smsBuilder_.dispose();
           smsBuilder_ = null;
         }
+        chat_ = null;
+        if (chatBuilder_ != null) {
+          chatBuilder_.dispose();
+          chatBuilder_ = null;
+        }
         return this;
       }
 
@@ -16961,6 +17047,11 @@ private static final long serialVersionUID = 0L;
           result.sms_ = smsBuilder_ == null
               ? sms_
               : smsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chat_ = chatBuilder_ == null
+              ? chat_
+              : chatBuilder_.build();
         }
       }
 
@@ -17014,6 +17105,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasSms()) {
           mergeSms(other.getSms());
         }
+        if (other.hasChat()) {
+          mergeChat(other.getChat());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -17054,6 +17148,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getChatFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17379,6 +17480,161 @@ private static final long serialVersionUID = 0L;
           sms_ = null;
         }
         return smsBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat chat_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder> chatBuilder_;
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       * @return Whether the chat field is set.
+       */
+      public boolean hasChat() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       * @return The chat.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getChat() {
+        if (chatBuilder_ == null) {
+          return chat_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance() : chat_;
+        } else {
+          return chatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public Builder setChat(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat value) {
+        if (chatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chat_ = value;
+        } else {
+          chatBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public Builder setChat(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder builderForValue) {
+        if (chatBuilder_ == null) {
+          chat_ = builderForValue.build();
+        } else {
+          chatBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public Builder mergeChat(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat value) {
+        if (chatBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            chat_ != null &&
+            chat_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance()) {
+            getChatBuilder().mergeFrom(value);
+          } else {
+            chat_ = value;
+          }
+        } else {
+          chatBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public Builder clearChat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        chat_ = null;
+        if (chatBuilder_ != null) {
+          chatBuilder_.dispose();
+          chatBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder getChatBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getChatFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder getChatOrBuilder() {
+        if (chatBuilder_ != null) {
+          return chatBuilder_.getMessageOrBuilder();
+        } else {
+          return chat_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance() : chat_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on chat metadata.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat chat = 3 [json_name = "chat"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder> 
+          getChatFieldBuilder() {
+        if (chatBuilder_ == null) {
+          chatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder>(
+                  getChat(),
+                  getParentForChildren(),
+                  isClean());
+          chat_ = null;
+        }
+        return chatBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -52813,6 +53069,4202 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ChatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Chat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return Whether the conversationSid field is set.
+     */
+    boolean hasConversationSid();
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getConversationSid();
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder getConversationSidOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return Whether the campaignSid field is set.
+     */
+    boolean hasCampaignSid();
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getCampaignSid();
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder getCampaignSidOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     * @return Whether the customerName field is set.
+     */
+    boolean hasCustomerName();
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     * @return The customerName.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getCustomerName();
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder getCustomerNameOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     * @return Whether the emailAddress field is set.
+     */
+    boolean hasEmailAddress();
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     * @return The emailAddress.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getEmailAddress();
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder getEmailAddressOrBuilder();
+  }
+  /**
+   * <pre>
+   * Query constraints on chat metadata.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat}
+   */
+  public static final class Chat extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Chat)
+      ChatOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Chat.newBuilder() to construct.
+    private Chat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Chat() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Chat();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder.class);
+    }
+
+    public interface ConversationSidOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.Long> getAnyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      long getAny(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid}
+     */
+    public static final class ConversationSid extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)
+        ConversationSidOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ConversationSid.newBuilder() to construct.
+      private ConversationSid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ConversationSid() {
+        any_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ConversationSid();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_ConversationSid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_ConversationSid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList any_;
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a conversation sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public long getAny(int index) {
+        return any_.getLong(index);
+      }
+      private int anyMemoizedSerializedSize = -1;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeInt64NoTag(any_.getLong(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(any_.getLong(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_ConversationSid_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_ConversationSid_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = emptyLongList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_ConversationSid_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  long v = input.readInt64();
+                  ensureAnyIsMutable();
+                  any_.addLong(v);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureAnyIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    any_.addLong(input.readInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Internal.LongList any_ = emptyLongList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = mutableCopy(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<java.lang.Long>
+            getAnyList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(any_) : any_;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public long getAny(int index) {
+          return any_.getLong(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, long value) {
+
+          ensureAnyIsMutable();
+          any_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(long value) {
+
+          ensureAnyIsMutable();
+          any_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a conversation sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ConversationSid>
+          PARSER = new com.google.protobuf.AbstractParser<ConversationSid>() {
+        @java.lang.Override
+        public ConversationSid parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ConversationSid> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ConversationSid> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CampaignSidOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.Long> getAnyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      long getAny(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid}
+     */
+    public static final class CampaignSid extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)
+        CampaignSidOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CampaignSid.newBuilder() to construct.
+      private CampaignSid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CampaignSid() {
+        any_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CampaignSid();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CampaignSid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CampaignSid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList any_;
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public long getAny(int index) {
+        return any_.getLong(index);
+      }
+      private int anyMemoizedSerializedSize = -1;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeInt64NoTag(any_.getLong(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(any_.getLong(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CampaignSid_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CampaignSid_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = emptyLongList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CampaignSid_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  long v = input.readInt64();
+                  ensureAnyIsMutable();
+                  any_.addLong(v);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureAnyIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    any_.addLong(input.readInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Internal.LongList any_ = emptyLongList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = mutableCopy(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<java.lang.Long>
+            getAnyList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(any_) : any_;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public long getAny(int index) {
+          return any_.getLong(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, long value) {
+
+          ensureAnyIsMutable();
+          any_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(long value) {
+
+          ensureAnyIsMutable();
+          any_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CampaignSid>
+          PARSER = new com.google.protobuf.AbstractParser<CampaignSid>() {
+        @java.lang.Override
+        public CampaignSid parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CampaignSid> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CampaignSid> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CustomerNameOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.String>
+          getAnyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      java.lang.String getAny(int index);
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      com.google.protobuf.ByteString
+          getAnyBytes(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName}
+     */
+    public static final class CustomerName extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)
+        CustomerNameOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CustomerName.newBuilder() to construct.
+      private CustomerName(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CustomerName() {
+        any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CustomerName();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CustomerName_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CustomerName_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList any_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public java.lang.String getAny(int index) {
+        return any_.get(index);
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have a customer name
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAnyBytes(int index) {
+        return any_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < any_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, any_.getRaw(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += computeStringSizeNoTag(any_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getAnyList().size();
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CustomerName_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CustomerName_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_CustomerName_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            result.any_ = any_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAnyIsMutable();
+                  any_.add(s);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!any_.isModifiable()) {
+            any_ = new com.google.protobuf.LazyStringArrayList(any_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getAnyList() {
+          any_.makeImmutable();
+          return any_;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public java.lang.String getAny(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the any at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getAnyBytes(int index) {
+          return any_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have a customer name
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The bytes of the any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CustomerName>
+          PARSER = new com.google.protobuf.AbstractParser<CustomerName>() {
+        @java.lang.Override
+        public CustomerName parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CustomerName> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CustomerName> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface EmailAddressOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.String>
+          getAnyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      java.lang.String getAny(int index);
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      com.google.protobuf.ByteString
+          getAnyBytes(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress}
+     */
+    public static final class EmailAddress extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)
+        EmailAddressOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EmailAddress.newBuilder() to construct.
+      private EmailAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EmailAddress() {
+        any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EmailAddress();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_EmailAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_EmailAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList any_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public java.lang.String getAny(int index) {
+        return any_.get(index);
+      }
+      /**
+       * <pre>
+       * Requires all chat specific transcript hits to have an email address
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAnyBytes(int index) {
+        return any_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < any_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, any_.getRaw(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += computeStringSizeNoTag(any_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getAnyList().size();
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_EmailAddress_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_EmailAddress_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_EmailAddress_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            result.any_ = any_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAnyIsMutable();
+                  any_.add(s);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!any_.isModifiable()) {
+            any_ = new com.google.protobuf.LazyStringArrayList(any_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getAnyList() {
+          any_.makeImmutable();
+          return any_;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public java.lang.String getAny(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the any at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getAnyBytes(int index) {
+          return any_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all chat specific transcript hits to have an email address
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The bytes of the any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<EmailAddress>
+          PARSER = new com.google.protobuf.AbstractParser<EmailAddress>() {
+        @java.lang.Override
+        public EmailAddress parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<EmailAddress> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EmailAddress> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversationSid_;
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return Whether the conversationSid field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversationSid() {
+      return conversationSid_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getConversationSid() {
+      return conversationSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance() : conversationSid_;
+    }
+    /**
+     * <pre>
+     * Query constraints on conversation sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder getConversationSidOrBuilder() {
+      return conversationSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance() : conversationSid_;
+    }
+
+    public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaignSid_;
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return Whether the campaignSid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignSid() {
+      return campaignSid_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getCampaignSid() {
+      return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance() : campaignSid_;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder getCampaignSidOrBuilder() {
+      return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance() : campaignSid_;
+    }
+
+    public static final int CUSTOMER_NAME_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customerName_;
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     * @return Whether the customerName field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerName() {
+      return customerName_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     * @return The customerName.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getCustomerName() {
+      return customerName_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance() : customerName_;
+    }
+    /**
+     * <pre>
+     * Query constraints on customer name.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder getCustomerNameOrBuilder() {
+      return customerName_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance() : customerName_;
+    }
+
+    public static final int EMAIL_ADDRESS_FIELD_NUMBER = 4;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress emailAddress_;
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     * @return Whether the emailAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmailAddress() {
+      return emailAddress_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     * @return The emailAddress.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getEmailAddress() {
+      return emailAddress_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance() : emailAddress_;
+    }
+    /**
+     * <pre>
+     * Query constraints on email address.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder getEmailAddressOrBuilder() {
+      return emailAddress_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance() : emailAddress_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (conversationSid_ != null) {
+        output.writeMessage(1, getConversationSid());
+      }
+      if (campaignSid_ != null) {
+        output.writeMessage(2, getCampaignSid());
+      }
+      if (customerName_ != null) {
+        output.writeMessage(3, getCustomerName());
+      }
+      if (emailAddress_ != null) {
+        output.writeMessage(4, getEmailAddress());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (conversationSid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConversationSid());
+      }
+      if (campaignSid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCampaignSid());
+      }
+      if (customerName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCustomerName());
+      }
+      if (emailAddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEmailAddress());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat) obj;
+
+      if (hasConversationSid() != other.hasConversationSid()) return false;
+      if (hasConversationSid()) {
+        if (!getConversationSid()
+            .equals(other.getConversationSid())) return false;
+      }
+      if (hasCampaignSid() != other.hasCampaignSid()) return false;
+      if (hasCampaignSid()) {
+        if (!getCampaignSid()
+            .equals(other.getCampaignSid())) return false;
+      }
+      if (hasCustomerName() != other.hasCustomerName()) return false;
+      if (hasCustomerName()) {
+        if (!getCustomerName()
+            .equals(other.getCustomerName())) return false;
+      }
+      if (hasEmailAddress() != other.hasEmailAddress()) return false;
+      if (hasEmailAddress()) {
+        if (!getEmailAddress()
+            .equals(other.getEmailAddress())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConversationSid()) {
+        hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+        hash = (53 * hash) + getConversationSid().hashCode();
+      }
+      if (hasCampaignSid()) {
+        hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignSid().hashCode();
+      }
+      if (hasCustomerName()) {
+        hash = (37 * hash) + CUSTOMER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerName().hashCode();
+      }
+      if (hasEmailAddress()) {
+        hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getEmailAddress().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Query constraints on chat metadata.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Chat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Chat)
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conversationSid_ = null;
+        if (conversationSidBuilder_ != null) {
+          conversationSidBuilder_.dispose();
+          conversationSidBuilder_ = null;
+        }
+        campaignSid_ = null;
+        if (campaignSidBuilder_ != null) {
+          campaignSidBuilder_.dispose();
+          campaignSidBuilder_ = null;
+        }
+        customerName_ = null;
+        if (customerNameBuilder_ != null) {
+          customerNameBuilder_.dispose();
+          customerNameBuilder_ = null;
+        }
+        emailAddress_ = null;
+        if (emailAddressBuilder_ != null) {
+          emailAddressBuilder_.dispose();
+          emailAddressBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Chat_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.conversationSid_ = conversationSidBuilder_ == null
+              ? conversationSid_
+              : conversationSidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.campaignSid_ = campaignSidBuilder_ == null
+              ? campaignSid_
+              : campaignSidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.customerName_ = customerNameBuilder_ == null
+              ? customerName_
+              : customerNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.emailAddress_ = emailAddressBuilder_ == null
+              ? emailAddress_
+              : emailAddressBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.getDefaultInstance()) return this;
+        if (other.hasConversationSid()) {
+          mergeConversationSid(other.getConversationSid());
+        }
+        if (other.hasCampaignSid()) {
+          mergeCampaignSid(other.getCampaignSid());
+        }
+        if (other.hasCustomerName()) {
+          mergeCustomerName(other.getCustomerName());
+        }
+        if (other.hasEmailAddress()) {
+          mergeEmailAddress(other.getEmailAddress());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConversationSidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCampaignSidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCustomerNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getEmailAddressFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversationSid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder> conversationSidBuilder_;
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return Whether the conversationSid field is set.
+       */
+      public boolean hasConversationSid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return The conversationSid.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid getConversationSid() {
+        if (conversationSidBuilder_ == null) {
+          return conversationSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance() : conversationSid_;
+        } else {
+          return conversationSidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public Builder setConversationSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid value) {
+        if (conversationSidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          conversationSid_ = value;
+        } else {
+          conversationSidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public Builder setConversationSid(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder builderForValue) {
+        if (conversationSidBuilder_ == null) {
+          conversationSid_ = builderForValue.build();
+        } else {
+          conversationSidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public Builder mergeConversationSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid value) {
+        if (conversationSidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            conversationSid_ != null &&
+            conversationSid_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance()) {
+            getConversationSidBuilder().mergeFrom(value);
+          } else {
+            conversationSid_ = value;
+          }
+        } else {
+          conversationSidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public Builder clearConversationSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        conversationSid_ = null;
+        if (conversationSidBuilder_ != null) {
+          conversationSidBuilder_.dispose();
+          conversationSidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder getConversationSidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getConversationSidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder getConversationSidOrBuilder() {
+        if (conversationSidBuilder_ != null) {
+          return conversationSidBuilder_.getMessageOrBuilder();
+        } else {
+          return conversationSid_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.getDefaultInstance() : conversationSid_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on conversation sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder> 
+          getConversationSidFieldBuilder() {
+        if (conversationSidBuilder_ == null) {
+          conversationSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.ConversationSidOrBuilder>(
+                  getConversationSid(),
+                  getParentForChildren(),
+                  isClean());
+          conversationSid_ = null;
+        }
+        return conversationSidBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaignSid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder> campaignSidBuilder_;
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return Whether the campaignSid field is set.
+       */
+      public boolean hasCampaignSid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return The campaignSid.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid getCampaignSid() {
+        if (campaignSidBuilder_ == null) {
+          return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance() : campaignSid_;
+        } else {
+          return campaignSidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder setCampaignSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid value) {
+        if (campaignSidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignSid_ = value;
+        } else {
+          campaignSidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder setCampaignSid(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder builderForValue) {
+        if (campaignSidBuilder_ == null) {
+          campaignSid_ = builderForValue.build();
+        } else {
+          campaignSidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder mergeCampaignSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid value) {
+        if (campaignSidBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            campaignSid_ != null &&
+            campaignSid_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance()) {
+            getCampaignSidBuilder().mergeFrom(value);
+          } else {
+            campaignSid_ = value;
+          }
+        } else {
+          campaignSidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder clearCampaignSid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        campaignSid_ = null;
+        if (campaignSidBuilder_ != null) {
+          campaignSidBuilder_.dispose();
+          campaignSidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder getCampaignSidBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCampaignSidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder getCampaignSidOrBuilder() {
+        if (campaignSidBuilder_ != null) {
+          return campaignSidBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignSid_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.getDefaultInstance() : campaignSid_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder> 
+          getCampaignSidFieldBuilder() {
+        if (campaignSidBuilder_ == null) {
+          campaignSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CampaignSidOrBuilder>(
+                  getCampaignSid(),
+                  getParentForChildren(),
+                  isClean());
+          campaignSid_ = null;
+        }
+        return campaignSidBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customerName_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder> customerNameBuilder_;
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       * @return Whether the customerName field is set.
+       */
+      public boolean hasCustomerName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       * @return The customerName.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName getCustomerName() {
+        if (customerNameBuilder_ == null) {
+          return customerName_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance() : customerName_;
+        } else {
+          return customerNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public Builder setCustomerName(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName value) {
+        if (customerNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customerName_ = value;
+        } else {
+          customerNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public Builder setCustomerName(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder builderForValue) {
+        if (customerNameBuilder_ == null) {
+          customerName_ = builderForValue.build();
+        } else {
+          customerNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public Builder mergeCustomerName(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName value) {
+        if (customerNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            customerName_ != null &&
+            customerName_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance()) {
+            getCustomerNameBuilder().mergeFrom(value);
+          } else {
+            customerName_ = value;
+          }
+        } else {
+          customerNameBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public Builder clearCustomerName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        customerName_ = null;
+        if (customerNameBuilder_ != null) {
+          customerNameBuilder_.dispose();
+          customerNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder getCustomerNameBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCustomerNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder getCustomerNameOrBuilder() {
+        if (customerNameBuilder_ != null) {
+          return customerNameBuilder_.getMessageOrBuilder();
+        } else {
+          return customerName_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.getDefaultInstance() : customerName_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on customer name.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName customer_name = 3 [json_name = "customerName"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder> 
+          getCustomerNameFieldBuilder() {
+        if (customerNameBuilder_ == null) {
+          customerNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerName.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.CustomerNameOrBuilder>(
+                  getCustomerName(),
+                  getParentForChildren(),
+                  isClean());
+          customerName_ = null;
+        }
+        return customerNameBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress emailAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder> emailAddressBuilder_;
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       * @return Whether the emailAddress field is set.
+       */
+      public boolean hasEmailAddress() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       * @return The emailAddress.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress getEmailAddress() {
+        if (emailAddressBuilder_ == null) {
+          return emailAddress_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance() : emailAddress_;
+        } else {
+          return emailAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public Builder setEmailAddress(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress value) {
+        if (emailAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          emailAddress_ = value;
+        } else {
+          emailAddressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public Builder setEmailAddress(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder builderForValue) {
+        if (emailAddressBuilder_ == null) {
+          emailAddress_ = builderForValue.build();
+        } else {
+          emailAddressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public Builder mergeEmailAddress(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress value) {
+        if (emailAddressBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            emailAddress_ != null &&
+            emailAddress_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance()) {
+            getEmailAddressBuilder().mergeFrom(value);
+          } else {
+            emailAddress_ = value;
+          }
+        } else {
+          emailAddressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public Builder clearEmailAddress() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        emailAddress_ = null;
+        if (emailAddressBuilder_ != null) {
+          emailAddressBuilder_.dispose();
+          emailAddressBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder getEmailAddressBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEmailAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder getEmailAddressOrBuilder() {
+        if (emailAddressBuilder_ != null) {
+          return emailAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return emailAddress_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance() : emailAddress_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on email address.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder> 
+          getEmailAddressFieldBuilder() {
+        if (emailAddressBuilder_ == null) {
+          emailAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder>(
+                  getEmailAddress(),
+                  getParentForChildren(),
+                  isClean());
+          emailAddress_ = null;
+        }
+        return emailAddressBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Chat)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Chat)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Chat>
+        PARSER = new com.google.protobuf.AbstractParser<Chat>() {
+      @java.lang.Override
+      public Chat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Chat> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Chat> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ThreadsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Threads)
       com.google.protobuf.MessageOrBuilder {
@@ -68647,7 +73099,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=472
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -68661,7 +73113,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=472
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return The channel.
    */
   @java.lang.Override
@@ -69815,7 +74267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=472
+     *     See wfo/vanalytics/v2/transcript.proto;l=525
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -69828,7 +74280,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=472
+     *     See wfo/vanalytics/v2/transcript.proto;l=525
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {

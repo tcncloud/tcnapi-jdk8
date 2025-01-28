@@ -1027,6 +1027,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CALL(1),
     SMS(2),
+    CHAT(3),
     METADATA_NOT_SET(0);
     private final int value;
     private MetadataCase(int value) {
@@ -1046,6 +1047,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return CALL;
         case 2: return SMS;
+        case 3: return CHAT;
         case 0: return METADATA_NOT_SET;
         default: return null;
       }
@@ -1147,6 +1149,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.wfo.vanalytics.v2.Sms.getDefaultInstance();
   }
 
+  public static final int CHAT_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   * @return Whether the chat field is set.
+   */
+  @java.lang.Override
+  public boolean hasChat() {
+    return metadataCase_ == 3;
+  }
+  /**
+   * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   * @return The chat.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.Chat getChat() {
+    if (metadataCase_ == 3) {
+       return (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_;
+    }
+    return com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Chat specific transcript metadata.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder getChatOrBuilder() {
+    if (metadataCase_ == 3) {
+       return (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_;
+    }
+    return com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+  }
+
   public static final int CHANNEL_FIELD_NUMBER = 12;
   private int channel_ = 0;
   /**
@@ -1156,7 +1201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=36
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The enum numeric value on the wire for channel.
    */
   @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
@@ -1169,7 +1214,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=36
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The channel.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
@@ -1364,6 +1409,9 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
     }
+    if (metadataCase_ == 3) {
+      output.writeMessage(3, (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_);
+    }
     if (channel_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(12, channel_);
     }
@@ -1398,6 +1446,10 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
+    }
+    if (metadataCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_);
     }
     if (channel_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -1471,6 +1523,10 @@ private static final long serialVersionUID = 0L;
         if (!getSms()
             .equals(other.getSms())) return false;
         break;
+      case 3:
+        if (!getChat()
+            .equals(other.getChat())) return false;
+        break;
       case 0:
       default:
     }
@@ -1514,6 +1570,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + SMS_FIELD_NUMBER;
         hash = (53 * hash) + getSms().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getChat().hashCode();
         break;
       case 0:
       default:
@@ -1659,6 +1719,9 @@ private static final long serialVersionUID = 0L;
       if (smsBuilder_ != null) {
         smsBuilder_.clear();
       }
+      if (chatBuilder_ != null) {
+        chatBuilder_.clear();
+      }
       channel_ = 0;
       startTime_ = null;
       if (startTimeBuilder_ != null) {
@@ -1717,28 +1780,28 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.channel_ = channel_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.flagSummary_ = flagSummaryBuilder_ == null
             ? flagSummary_
             : flagSummaryBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.summary_ = summaryBuilder_ == null
             ? summary_
             : summaryBuilder_.build();
@@ -1755,6 +1818,10 @@ private static final long serialVersionUID = 0L;
       if (metadataCase_ == 2 &&
           smsBuilder_ != null) {
         result.metadata_ = smsBuilder_.build();
+      }
+      if (metadataCase_ == 3 &&
+          chatBuilder_ != null) {
+        result.metadata_ = chatBuilder_.build();
       }
     }
 
@@ -1829,6 +1896,10 @@ private static final long serialVersionUID = 0L;
           mergeSms(other.getSms());
           break;
         }
+        case CHAT: {
+          mergeChat(other.getChat());
+          break;
+        }
         case METADATA_NOT_SET: {
           break;
         }
@@ -1873,42 +1944,49 @@ private static final long serialVersionUID = 0L;
               metadataCase_ = 2;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getChatFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 3;
+              break;
+            } // case 26
             case 96: {
               channel_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 96
             case 106: {
               input.readMessage(
                   getStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 106
             case 122: {
               input.readMessage(
                   getDeleteTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 122
             case 130: {
               input.readMessage(
                   getFlagSummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 130
             case 136: {
               transcriptSid_ = input.readInt64();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 136
             case 146: {
               input.readMessage(
                   getSummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 146
             default: {
@@ -2299,6 +2377,184 @@ private static final long serialVersionUID = 0L;
       return smsBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder> chatBuilder_;
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     * @return Whether the chat field is set.
+     */
+    @java.lang.Override
+    public boolean hasChat() {
+      return metadataCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     * @return The chat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Chat getChat() {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 3) {
+          return (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_;
+        }
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+      } else {
+        if (metadataCase_ == 3) {
+          return chatBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    public Builder setChat(com.tcn.cloud.api.wfo.vanalytics.v2.Chat value) {
+      if (chatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        metadata_ = value;
+        onChanged();
+      } else {
+        chatBuilder_.setMessage(value);
+      }
+      metadataCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    public Builder setChat(
+        com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Builder builderForValue) {
+      if (chatBuilder_ == null) {
+        metadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        chatBuilder_.setMessage(builderForValue.build());
+      }
+      metadataCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    public Builder mergeChat(com.tcn.cloud.api.wfo.vanalytics.v2.Chat value) {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 3 &&
+            metadata_ != com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance()) {
+          metadata_ = com.tcn.cloud.api.wfo.vanalytics.v2.Chat.newBuilder((com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          metadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (metadataCase_ == 3) {
+          chatBuilder_.mergeFrom(value);
+        } else {
+          chatBuilder_.setMessage(value);
+        }
+      }
+      metadataCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    public Builder clearChat() {
+      if (chatBuilder_ == null) {
+        if (metadataCase_ == 3) {
+          metadataCase_ = 0;
+          metadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (metadataCase_ == 3) {
+          metadataCase_ = 0;
+          metadata_ = null;
+        }
+        chatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Builder getChatBuilder() {
+      return getChatFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder getChatOrBuilder() {
+      if ((metadataCase_ == 3) && (chatBuilder_ != null)) {
+        return chatBuilder_.getMessageOrBuilder();
+      } else {
+        if (metadataCase_ == 3) {
+          return (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_;
+        }
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Chat specific transcript metadata.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Chat chat = 3 [json_name = "chat"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder> 
+        getChatFieldBuilder() {
+      if (chatBuilder_ == null) {
+        if (!(metadataCase_ == 3)) {
+          metadata_ = com.tcn.cloud.api.wfo.vanalytics.v2.Chat.getDefaultInstance();
+        }
+        chatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.Chat, com.tcn.cloud.api.wfo.vanalytics.v2.Chat.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.ChatOrBuilder>(
+                (com.tcn.cloud.api.wfo.vanalytics.v2.Chat) metadata_,
+                getParentForChildren(),
+                isClean());
+        metadata_ = null;
+      }
+      metadataCase_ = 3;
+      onChanged();
+      return chatBuilder_;
+    }
+
     private int channel_ = 0;
     /**
      * <pre>
@@ -2307,7 +2563,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=36
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return The enum numeric value on the wire for channel.
      */
     @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
@@ -2320,13 +2576,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=36
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @param value The enum numeric value on the wire for channel to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setChannelValue(int value) {
       channel_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2337,7 +2593,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=36
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return The channel.
      */
     @java.lang.Override
@@ -2352,7 +2608,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=36
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @param value The channel to set.
      * @return This builder for chaining.
      */
@@ -2360,7 +2616,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       channel_ = value.getNumber();
       onChanged();
       return this;
@@ -2372,11 +2628,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=36
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearChannel() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       channel_ = 0;
       onChanged();
       return this;
@@ -2394,7 +2650,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -2427,7 +2683,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2445,7 +2701,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2458,7 +2714,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           startTime_ != null &&
           startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
@@ -2468,7 +2724,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2480,7 +2736,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
         startTimeBuilder_.dispose();
@@ -2497,7 +2753,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_time = 13 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
@@ -2549,7 +2805,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the deleteTime field is set.
      */
     public boolean hasDeleteTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -2582,7 +2838,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2600,7 +2856,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2613,7 +2869,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           deleteTime_ != null &&
           deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getDeleteTimeBuilder().mergeFrom(value);
@@ -2623,7 +2879,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2635,7 +2891,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public Builder clearDeleteTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
         deleteTimeBuilder_.dispose();
@@ -2652,7 +2908,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp delete_time = 15 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
@@ -2704,7 +2960,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the flagSummary field is set.
      */
     public boolean hasFlagSummary() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -2737,7 +2993,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2755,7 +3011,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2768,7 +3024,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFlagSummary(com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary value) {
       if (flagSummaryBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           flagSummary_ != null &&
           flagSummary_ != com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.getDefaultInstance()) {
           getFlagSummaryBuilder().mergeFrom(value);
@@ -2778,7 +3034,7 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2790,7 +3046,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public Builder clearFlagSummary() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       flagSummary_ = null;
       if (flagSummaryBuilder_ != null) {
         flagSummaryBuilder_.dispose();
@@ -2807,7 +3063,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.FlagSummary flag_summary = 16 [json_name = "flagSummary"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.FlagSummary.Builder getFlagSummaryBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getFlagSummaryFieldBuilder().getBuilder();
     }
@@ -2872,7 +3128,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTranscriptSid(long value) {
 
       transcriptSid_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2885,7 +3141,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSid() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       transcriptSid_ = 0L;
       onChanged();
       return this;
@@ -2903,7 +3159,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the summary field is set.
      */
     public boolean hasSummary() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -2936,7 +3192,7 @@ private static final long serialVersionUID = 0L;
       } else {
         summaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2954,7 +3210,7 @@ private static final long serialVersionUID = 0L;
       } else {
         summaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2967,7 +3223,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSummary(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary value) {
       if (summaryBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000100) != 0) &&
           summary_ != null &&
           summary_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.getDefaultInstance()) {
           getSummaryBuilder().mergeFrom(value);
@@ -2977,7 +3233,7 @@ private static final long serialVersionUID = 0L;
       } else {
         summaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2989,7 +3245,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
      */
     public Builder clearSummary() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       summary_ = null;
       if (summaryBuilder_ != null) {
         summaryBuilder_.dispose();
@@ -3006,7 +3262,7 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptSummary summary = 18 [json_name = "summary"];</code>
      */
     public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptSummary.Builder getSummaryBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getSummaryFieldBuilder().getBuilder();
     }
