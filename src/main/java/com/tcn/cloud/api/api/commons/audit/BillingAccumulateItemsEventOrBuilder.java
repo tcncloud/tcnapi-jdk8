@@ -55,17 +55,26 @@ public interface BillingAccumulateItemsEventOrBuilder extends
       getBillingCycleBytes();
 
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-   * @return Whether the payload field is set.
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
-  boolean hasPayload();
+  java.util.List<com.google.protobuf.Any> 
+      getEventDataList();
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-   * @return The payload.
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
-  com.google.protobuf.Any getPayload();
+  com.google.protobuf.Any getEventData(int index);
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
-  com.google.protobuf.AnyOrBuilder getPayloadOrBuilder();
+  int getEventDataCount();
+  /**
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+      getEventDataOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   */
+  com.google.protobuf.AnyOrBuilder getEventDataOrBuilder(
+      int index);
 }

@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     eventLogIds_ = emptyLongList();
     billingCycle_ = "";
+    eventData_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -163,30 +164,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PAYLOAD_FIELD_NUMBER = 5;
-  private com.google.protobuf.Any payload_;
+  public static final int EVENT_DATA_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.protobuf.Any> eventData_;
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-   * @return Whether the payload field is set.
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
   @java.lang.Override
-  public boolean hasPayload() {
-    return payload_ != null;
+  public java.util.List<com.google.protobuf.Any> getEventDataList() {
+    return eventData_;
   }
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-   * @return The payload.
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Any getPayload() {
-    return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+  public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+      getEventDataOrBuilderList() {
+    return eventData_;
   }
   /**
-   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.AnyOrBuilder getPayloadOrBuilder() {
-    return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+  public int getEventDataCount() {
+    return eventData_.size();
+  }
+  /**
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Any getEventData(int index) {
+    return eventData_.get(index);
+  }
+  /**
+   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.AnyOrBuilder getEventDataOrBuilder(
+      int index) {
+    return eventData_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -220,8 +236,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingCycle_);
     }
-    if (payload_ != null) {
-      output.writeMessage(5, getPayload());
+    for (int i = 0; i < eventData_.size(); i++) {
+      output.writeMessage(5, eventData_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -256,9 +272,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingCycle_);
     }
-    if (payload_ != null) {
+    for (int i = 0; i < eventData_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getPayload());
+        .computeMessageSize(5, eventData_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -283,11 +299,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEventLogIdsList())) return false;
     if (!getBillingCycle()
         .equals(other.getBillingCycle())) return false;
-    if (hasPayload() != other.hasPayload()) return false;
-    if (hasPayload()) {
-      if (!getPayload()
-          .equals(other.getPayload())) return false;
-    }
+    if (!getEventDataList()
+        .equals(other.getEventDataList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -309,9 +322,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + BILLING_CYCLE_FIELD_NUMBER;
     hash = (53 * hash) + getBillingCycle().hashCode();
-    if (hasPayload()) {
-      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
-      hash = (53 * hash) + getPayload().hashCode();
+    if (getEventDataCount() > 0) {
+      hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getEventDataList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -452,11 +465,13 @@ private static final long serialVersionUID = 0L;
       productType_ = 0;
       eventLogIds_ = emptyLongList();
       billingCycle_ = "";
-      payload_ = null;
-      if (payloadBuilder_ != null) {
-        payloadBuilder_.dispose();
-        payloadBuilder_ = null;
+      if (eventDataBuilder_ == null) {
+        eventData_ = java.util.Collections.emptyList();
+      } else {
+        eventData_ = null;
+        eventDataBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -495,6 +510,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.eventLogIds_ = eventLogIds_;
+      if (eventDataBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          eventData_ = java.util.Collections.unmodifiableList(eventData_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.eventData_ = eventData_;
+      } else {
+        result.eventData_ = eventDataBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result) {
@@ -507,11 +531,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.billingCycle_ = billingCycle_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.payload_ = payloadBuilder_ == null
-            ? payload_
-            : payloadBuilder_.build();
       }
     }
 
@@ -582,8 +601,31 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.hasPayload()) {
-        mergePayload(other.getPayload());
+      if (eventDataBuilder_ == null) {
+        if (!other.eventData_.isEmpty()) {
+          if (eventData_.isEmpty()) {
+            eventData_ = other.eventData_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureEventDataIsMutable();
+            eventData_.addAll(other.eventData_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.eventData_.isEmpty()) {
+          if (eventDataBuilder_.isEmpty()) {
+            eventDataBuilder_.dispose();
+            eventDataBuilder_ = null;
+            eventData_ = other.eventData_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            eventDataBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEventDataFieldBuilder() : null;
+          } else {
+            eventDataBuilder_.addAllMessages(other.eventData_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -643,10 +685,16 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 42: {
-              input.readMessage(
-                  getPayloadFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
+              com.google.protobuf.Any m =
+                  input.readMessage(
+                      com.google.protobuf.Any.parser(),
+                      extensionRegistry);
+              if (eventDataBuilder_ == null) {
+                ensureEventDataIsMutable();
+                eventData_.add(m);
+              } else {
+                eventDataBuilder_.addMessage(m);
+              }
               break;
             } // case 42
             default: {
@@ -923,123 +971,244 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Any payload_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> payloadBuilder_;
-    /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-     * @return Whether the payload field is set.
-     */
-    public boolean hasPayload() {
-      return ((bitField0_ & 0x00000010) != 0);
+    private java.util.List<com.google.protobuf.Any> eventData_ =
+      java.util.Collections.emptyList();
+    private void ensureEventDataIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        eventData_ = new java.util.ArrayList<com.google.protobuf.Any>(eventData_);
+        bitField0_ |= 0x00000010;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> eventDataBuilder_;
+
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
-     * @return The payload.
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public com.google.protobuf.Any getPayload() {
-      if (payloadBuilder_ == null) {
-        return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+    public java.util.List<com.google.protobuf.Any> getEventDataList() {
+      if (eventDataBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(eventData_);
       } else {
-        return payloadBuilder_.getMessage();
+        return eventDataBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public Builder setPayload(com.google.protobuf.Any value) {
-      if (payloadBuilder_ == null) {
+    public int getEventDataCount() {
+      if (eventDataBuilder_ == null) {
+        return eventData_.size();
+      } else {
+        return eventDataBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public com.google.protobuf.Any getEventData(int index) {
+      if (eventDataBuilder_ == null) {
+        return eventData_.get(index);
+      } else {
+        return eventDataBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public Builder setEventData(
+        int index, com.google.protobuf.Any value) {
+      if (eventDataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        payload_ = value;
+        ensureEventDataIsMutable();
+        eventData_.set(index, value);
+        onChanged();
       } else {
-        payloadBuilder_.setMessage(value);
+        eventDataBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public Builder setPayload(
-        com.google.protobuf.Any.Builder builderForValue) {
-      if (payloadBuilder_ == null) {
-        payload_ = builderForValue.build();
+    public Builder setEventData(
+        int index, com.google.protobuf.Any.Builder builderForValue) {
+      if (eventDataBuilder_ == null) {
+        ensureEventDataIsMutable();
+        eventData_.set(index, builderForValue.build());
+        onChanged();
       } else {
-        payloadBuilder_.setMessage(builderForValue.build());
+        eventDataBuilder_.setMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public Builder mergePayload(com.google.protobuf.Any value) {
-      if (payloadBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          payload_ != null &&
-          payload_ != com.google.protobuf.Any.getDefaultInstance()) {
-          getPayloadBuilder().mergeFrom(value);
-        } else {
-          payload_ = value;
+    public Builder addEventData(com.google.protobuf.Any value) {
+      if (eventDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
         }
+        ensureEventDataIsMutable();
+        eventData_.add(value);
+        onChanged();
       } else {
-        payloadBuilder_.mergeFrom(value);
+        eventDataBuilder_.addMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public Builder clearPayload() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      payload_ = null;
-      if (payloadBuilder_ != null) {
-        payloadBuilder_.dispose();
-        payloadBuilder_ = null;
+    public Builder addEventData(
+        int index, com.google.protobuf.Any value) {
+      if (eventDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventDataIsMutable();
+        eventData_.add(index, value);
+        onChanged();
+      } else {
+        eventDataBuilder_.addMessage(index, value);
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public com.google.protobuf.Any.Builder getPayloadBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getPayloadFieldBuilder().getBuilder();
+    public Builder addEventData(
+        com.google.protobuf.Any.Builder builderForValue) {
+      if (eventDataBuilder_ == null) {
+        ensureEventDataIsMutable();
+        eventData_.add(builderForValue.build());
+        onChanged();
+      } else {
+        eventDataBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    public com.google.protobuf.AnyOrBuilder getPayloadOrBuilder() {
-      if (payloadBuilder_ != null) {
-        return payloadBuilder_.getMessageOrBuilder();
+    public Builder addEventData(
+        int index, com.google.protobuf.Any.Builder builderForValue) {
+      if (eventDataBuilder_ == null) {
+        ensureEventDataIsMutable();
+        eventData_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        return payload_ == null ?
-            com.google.protobuf.Any.getDefaultInstance() : payload_;
+        eventDataBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public Builder addAllEventData(
+        java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+      if (eventDataBuilder_ == null) {
+        ensureEventDataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, eventData_);
+        onChanged();
+      } else {
+        eventDataBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public Builder clearEventData() {
+      if (eventDataBuilder_ == null) {
+        eventData_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        eventDataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public Builder removeEventData(int index) {
+      if (eventDataBuilder_ == null) {
+        ensureEventDataIsMutable();
+        eventData_.remove(index);
+        onChanged();
+      } else {
+        eventDataBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public com.google.protobuf.Any.Builder getEventDataBuilder(
+        int index) {
+      return getEventDataFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public com.google.protobuf.AnyOrBuilder getEventDataOrBuilder(
+        int index) {
+      if (eventDataBuilder_ == null) {
+        return eventData_.get(index);  } else {
+        return eventDataBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+         getEventDataOrBuilderList() {
+      if (eventDataBuilder_ != null) {
+        return eventDataBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(eventData_);
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public com.google.protobuf.Any.Builder addEventDataBuilder() {
+      return getEventDataFieldBuilder().addBuilder(
+          com.google.protobuf.Any.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public com.google.protobuf.Any.Builder addEventDataBuilder(
+        int index) {
+      return getEventDataFieldBuilder().addBuilder(
+          index, com.google.protobuf.Any.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+     */
+    public java.util.List<com.google.protobuf.Any.Builder> 
+         getEventDataBuilderList() {
+      return getEventDataFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
-        getPayloadFieldBuilder() {
-      if (payloadBuilder_ == null) {
-        payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getEventDataFieldBuilder() {
+      if (eventDataBuilder_ == null) {
+        eventDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                getPayload(),
+                eventData_,
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
-        payload_ = null;
+        eventData_ = null;
       }
-      return payloadBuilder_;
+      return eventDataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
