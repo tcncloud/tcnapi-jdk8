@@ -55,26 +55,19 @@ public interface BillingAccumulateItemsEventOrBuilder extends
       getBillingCycleBytes();
 
   /**
-   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @return A list containing the eventData.
    */
-  java.util.List<com.google.protobuf.Any> 
-      getEventDataList();
+  java.util.List<com.google.protobuf.ByteString> getEventDataList();
   /**
-   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
-   */
-  com.google.protobuf.Any getEventData(int index);
-  /**
-   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @return The count of eventData.
    */
   int getEventDataCount();
   /**
-   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @param index The index of the element to return.
+   * @return The eventData at the given index.
    */
-  java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-      getEventDataOrBuilderList();
-  /**
-   * <code>repeated .google.protobuf.Any event_data = 5 [json_name = "eventData"];</code>
-   */
-  com.google.protobuf.AnyOrBuilder getEventDataOrBuilder(
-      int index);
+  com.google.protobuf.ByteString getEventData(int index);
 }
