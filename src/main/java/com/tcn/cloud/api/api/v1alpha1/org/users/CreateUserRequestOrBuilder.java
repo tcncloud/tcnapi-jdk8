@@ -432,14 +432,4 @@ public interface CreateUserRequestOrBuilder extends
    * @return The huntGroupSid.
    */
   long getHuntGroupSid();
-
-  /**
-   * <pre>
-   * Whether the user needs to set their password upon initial login
-   * </pre>
-   *
-   * <code>bool password_reset_required = 19 [json_name = "passwordResetRequired"];</code>
-   * @return The passwordResetRequired.
-   */
-  boolean getPasswordResetRequired();
 }

@@ -828,21 +828,6 @@ private static final long serialVersionUID = 0L;
     return huntGroupSid_;
   }
 
-  public static final int PASSWORD_RESET_REQUIRED_FIELD_NUMBER = 19;
-  private boolean passwordResetRequired_ = false;
-  /**
-   * <pre>
-   * Whether the user needs to set their password upon initial login
-   * </pre>
-   *
-   * <code>bool password_reset_required = 19 [json_name = "passwordResetRequired"];</code>
-   * @return The passwordResetRequired.
-   */
-  @java.lang.Override
-  public boolean getPasswordResetRequired() {
-    return passwordResetRequired_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -907,9 +892,6 @@ private static final long serialVersionUID = 0L;
     }
     if (huntGroupSid_ != 0L) {
       output.writeInt64(18, huntGroupSid_);
-    }
-    if (passwordResetRequired_ != false) {
-      output.writeBool(19, passwordResetRequired_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -994,10 +976,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(18, huntGroupSid_);
     }
-    if (passwordResetRequired_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(19, passwordResetRequired_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1049,8 +1027,6 @@ private static final long serialVersionUID = 0L;
     }
     if (getHuntGroupSid()
         != other.getHuntGroupSid()) return false;
-    if (getPasswordResetRequired()
-        != other.getPasswordResetRequired()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1107,9 +1083,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getHuntGroupSid());
-    hash = (37 * hash) + PASSWORD_RESET_REQUIRED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getPasswordResetRequired());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1270,7 +1243,6 @@ private static final long serialVersionUID = 0L;
         timeZoneOverrideBuilder_ = null;
       }
       huntGroupSid_ = 0L;
-      passwordResetRequired_ = false;
       return this;
     }
 
@@ -1360,9 +1332,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.huntGroupSid_ = huntGroupSid_;
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.passwordResetRequired_ = passwordResetRequired_;
       }
     }
 
@@ -1509,9 +1478,6 @@ private static final long serialVersionUID = 0L;
       if (other.getHuntGroupSid() != 0L) {
         setHuntGroupSid(other.getHuntGroupSid());
       }
-      if (other.getPasswordResetRequired() != false) {
-        setPasswordResetRequired(other.getPasswordResetRequired());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1629,11 +1595,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 144
-            case 152: {
-              passwordResetRequired_ = input.readBool();
-              bitField0_ |= 0x00020000;
-              break;
-            } // case 152
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3442,50 +3403,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearHuntGroupSid() {
       bitField0_ = (bitField0_ & ~0x00010000);
       huntGroupSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private boolean passwordResetRequired_ ;
-    /**
-     * <pre>
-     * Whether the user needs to set their password upon initial login
-     * </pre>
-     *
-     * <code>bool password_reset_required = 19 [json_name = "passwordResetRequired"];</code>
-     * @return The passwordResetRequired.
-     */
-    @java.lang.Override
-    public boolean getPasswordResetRequired() {
-      return passwordResetRequired_;
-    }
-    /**
-     * <pre>
-     * Whether the user needs to set their password upon initial login
-     * </pre>
-     *
-     * <code>bool password_reset_required = 19 [json_name = "passwordResetRequired"];</code>
-     * @param value The passwordResetRequired to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPasswordResetRequired(boolean value) {
-
-      passwordResetRequired_ = value;
-      bitField0_ |= 0x00020000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Whether the user needs to set their password upon initial login
-     * </pre>
-     *
-     * <code>bool password_reset_required = 19 [json_name = "passwordResetRequired"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPasswordResetRequired() {
-      bitField0_ = (bitField0_ & ~0x00020000);
-      passwordResetRequired_ = false;
       onChanged();
       return this;
     }
