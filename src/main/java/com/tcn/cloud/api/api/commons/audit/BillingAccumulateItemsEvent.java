@@ -163,6 +163,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PAYLOAD_FIELD_NUMBER = 5;
+  private com.google.protobuf.Any payload_;
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * @return Whether the payload field is set.
+   */
+  @java.lang.Override
+  public boolean hasPayload() {
+    return payload_ != null;
+  }
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * @return The payload.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Any getPayload() {
+    return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+  }
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.AnyOrBuilder getPayloadOrBuilder() {
+    return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -193,6 +219,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingCycle_);
+    }
+    if (payload_ != null) {
+      output.writeMessage(5, getPayload());
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,6 +256,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingCycle_);
     }
+    if (payload_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getPayload());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -250,6 +283,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEventLogIdsList())) return false;
     if (!getBillingCycle()
         .equals(other.getBillingCycle())) return false;
+    if (hasPayload() != other.hasPayload()) return false;
+    if (hasPayload()) {
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -271,6 +309,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + BILLING_CYCLE_FIELD_NUMBER;
     hash = (53 * hash) + getBillingCycle().hashCode();
+    if (hasPayload()) {
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -410,6 +452,11 @@ private static final long serialVersionUID = 0L;
       productType_ = 0;
       eventLogIds_ = emptyLongList();
       billingCycle_ = "";
+      payload_ = null;
+      if (payloadBuilder_ != null) {
+        payloadBuilder_.dispose();
+        payloadBuilder_ = null;
+      }
       return this;
     }
 
@@ -460,6 +507,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.billingCycle_ = billingCycle_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.payload_ = payloadBuilder_ == null
+            ? payload_
+            : payloadBuilder_.build();
       }
     }
 
@@ -530,6 +582,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.hasPayload()) {
+        mergePayload(other.getPayload());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -587,6 +642,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getPayloadFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -859,6 +921,125 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Any payload_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> payloadBuilder_;
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * @return Whether the payload field is set.
+     */
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    public com.google.protobuf.Any getPayload() {
+      if (payloadBuilder_ == null) {
+        return payload_ == null ? com.google.protobuf.Any.getDefaultInstance() : payload_;
+      } else {
+        return payloadBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public Builder setPayload(com.google.protobuf.Any value) {
+      if (payloadBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+      } else {
+        payloadBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public Builder setPayload(
+        com.google.protobuf.Any.Builder builderForValue) {
+      if (payloadBuilder_ == null) {
+        payload_ = builderForValue.build();
+      } else {
+        payloadBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public Builder mergePayload(com.google.protobuf.Any value) {
+      if (payloadBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          payload_ != null &&
+          payload_ != com.google.protobuf.Any.getDefaultInstance()) {
+          getPayloadBuilder().mergeFrom(value);
+        } else {
+          payload_ = value;
+        }
+      } else {
+        payloadBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public Builder clearPayload() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      payload_ = null;
+      if (payloadBuilder_ != null) {
+        payloadBuilder_.dispose();
+        payloadBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public com.google.protobuf.Any.Builder getPayloadBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getPayloadFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    public com.google.protobuf.AnyOrBuilder getPayloadOrBuilder() {
+      if (payloadBuilder_ != null) {
+        return payloadBuilder_.getMessageOrBuilder();
+      } else {
+        return payload_ == null ?
+            com.google.protobuf.Any.getDefaultInstance() : payload_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+        getPayloadFieldBuilder() {
+      if (payloadBuilder_ == null) {
+        payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                getPayload(),
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      return payloadBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

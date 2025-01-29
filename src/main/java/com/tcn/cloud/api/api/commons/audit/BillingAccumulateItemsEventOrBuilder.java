@@ -53,4 +53,19 @@ public interface BillingAccumulateItemsEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBillingCycleBytes();
+
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * @return Whether the payload field is set.
+   */
+  boolean hasPayload();
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   * @return The payload.
+   */
+  com.google.protobuf.Any getPayload();
+  /**
+   * <code>.google.protobuf.Any payload = 5 [json_name = "payload"];</code>
+   */
+  com.google.protobuf.AnyOrBuilder getPayloadOrBuilder();
 }
