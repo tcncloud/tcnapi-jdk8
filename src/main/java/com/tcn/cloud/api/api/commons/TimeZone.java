@@ -368,6 +368,22 @@ public enum TimeZone
    * <code>TIME_ZONE_AMERICA_SANTIAGO = 44;</code>
    */
   TIME_ZONE_AMERICA_SANTIAGO(44),
+  /**
+   * <pre>
+   * America/Bogota
+   * </pre>
+   *
+   * <code>TIME_ZONE_AMERICA_BOGOTA = 45;</code>
+   */
+  TIME_ZONE_AMERICA_BOGOTA(45),
+  /**
+   * <pre>
+   * America/Lima
+   * </pre>
+   *
+   * <code>TIME_ZONE_AMERICA_LIMA = 46;</code>
+   */
+  TIME_ZONE_AMERICA_LIMA(46),
   UNRECOGNIZED(-1),
   ;
 
@@ -731,6 +747,22 @@ public enum TimeZone
    * <code>TIME_ZONE_AMERICA_SANTIAGO = 44;</code>
    */
   public static final int TIME_ZONE_AMERICA_SANTIAGO_VALUE = 44;
+  /**
+   * <pre>
+   * America/Bogota
+   * </pre>
+   *
+   * <code>TIME_ZONE_AMERICA_BOGOTA = 45;</code>
+   */
+  public static final int TIME_ZONE_AMERICA_BOGOTA_VALUE = 45;
+  /**
+   * <pre>
+   * America/Lima
+   * </pre>
+   *
+   * <code>TIME_ZONE_AMERICA_LIMA = 46;</code>
+   */
+  public static final int TIME_ZONE_AMERICA_LIMA_VALUE = 46;
 
 
   public final int getNumber() {
@@ -802,6 +834,8 @@ public enum TimeZone
       case 42: return TIME_ZONE_ASIA_SINGAPORE;
       case 43: return TIME_ZONE_ASIA_JAPAN;
       case 44: return TIME_ZONE_AMERICA_SANTIAGO;
+      case 45: return TIME_ZONE_AMERICA_BOGOTA;
+      case 46: return TIME_ZONE_AMERICA_LIMA;
       default: return null;
     }
   }
