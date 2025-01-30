@@ -263,6 +263,37 @@ public final class IntegrationsPublicGrpc {
     return getGetLinkDetailsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq,
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> getCalculateFeesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CalculateFees",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq,
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> getCalculateFeesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> getCalculateFeesMethod;
+    if ((getCalculateFeesMethod = IntegrationsPublicGrpc.getCalculateFeesMethod) == null) {
+      synchronized (IntegrationsPublicGrpc.class) {
+        if ((getCalculateFeesMethod = IntegrationsPublicGrpc.getCalculateFeesMethod) == null) {
+          IntegrationsPublicGrpc.getCalculateFeesMethod = getCalculateFeesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateFees"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsPublicMethodDescriptorSupplier("CalculateFees"))
+              .build();
+        }
+      }
+    }
+    return getCalculateFeesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -366,6 +397,13 @@ public final class IntegrationsPublicGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLinkDetailsMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void calculateFees(com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateFeesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -458,6 +496,14 @@ public final class IntegrationsPublicGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLinkDetailsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void calculateFees(com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -530,6 +576,13 @@ public final class IntegrationsPublicGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsRes getLinkDetails(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLinkDetailsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes calculateFees(com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCalculateFeesMethod(), getCallOptions(), request);
     }
   }
 
@@ -612,6 +665,14 @@ public final class IntegrationsPublicGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLinkDetailsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> calculateFees(
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_LINK_DATA = 0;
@@ -622,6 +683,7 @@ public final class IntegrationsPublicGrpc {
   private static final int METHODID_GET_RECEIPT = 5;
   private static final int METHODID_PROCESS_WORKFLOW = 6;
   private static final int METHODID_GET_LINK_DETAILS = 7;
+  private static final int METHODID_CALCULATE_FEES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -671,6 +733,10 @@ public final class IntegrationsPublicGrpc {
         case METHODID_GET_LINK_DETAILS:
           serviceImpl.getLinkDetails((com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsRes>) responseObserver);
+          break;
+        case METHODID_CALCULATE_FEES:
+          serviceImpl.calculateFees((com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -746,6 +812,13 @@ public final class IntegrationsPublicGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsReq,
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDetailsRes>(
                 service, METHODID_GET_LINK_DETAILS)))
+        .addMethod(
+          getCalculateFeesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq,
+              com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>(
+                service, METHODID_CALCULATE_FEES)))
         .build();
   }
 
@@ -802,6 +875,7 @@ public final class IntegrationsPublicGrpc {
               .addMethod(getGetReceiptMethod())
               .addMethod(getProcessWorkflowMethod())
               .addMethod(getGetLinkDetailsMethod())
+              .addMethod(getCalculateFeesMethod())
               .build();
         }
       }

@@ -33,4 +33,93 @@ public interface GoSettingsOrBuilder extends
    * <code>.google.api.CommonLanguageSettings common = 1 [json_name = "common"];</code>
    */
   com.google.api.CommonLanguageSettingsOrBuilder getCommonOrBuilder();
+
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  int getRenamedServicesCount();
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  boolean containsRenamedServices(
+      java.lang.String key);
+  /**
+   * Use {@link #getRenamedServicesMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getRenamedServices();
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.String>
+  getRenamedServicesMap();
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  /* nullable */
+java.lang.String getRenamedServicesOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue);
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  java.lang.String getRenamedServicesOrThrow(
+      java.lang.String key);
 }

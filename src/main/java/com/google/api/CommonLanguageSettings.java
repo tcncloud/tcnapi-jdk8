@@ -175,6 +175,44 @@ private static final long serialVersionUID = 0L;
   }
   private int destinationsMemoizedSerializedSize;
 
+  public static final int SELECTIVE_GAPIC_GENERATION_FIELD_NUMBER = 3;
+  private com.google.api.SelectiveGapicGeneration selectiveGapicGeneration_;
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   * @return Whether the selectiveGapicGeneration field is set.
+   */
+  @java.lang.Override
+  public boolean hasSelectiveGapicGeneration() {
+    return selectiveGapicGeneration_ != null;
+  }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   * @return The selectiveGapicGeneration.
+   */
+  @java.lang.Override
+  public com.google.api.SelectiveGapicGeneration getSelectiveGapicGeneration() {
+    return selectiveGapicGeneration_ == null ? com.google.api.SelectiveGapicGeneration.getDefaultInstance() : selectiveGapicGeneration_;
+  }
+  /**
+   * <pre>
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * </pre>
+   *
+   * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+   */
+  @java.lang.Override
+  public com.google.api.SelectiveGapicGenerationOrBuilder getSelectiveGapicGenerationOrBuilder() {
+    return selectiveGapicGeneration_ == null ? com.google.api.SelectiveGapicGeneration.getDefaultInstance() : selectiveGapicGeneration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -200,6 +238,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < destinations_.size(); i++) {
       output.writeEnumNoTag(destinations_.get(i));
     }
+    if (selectiveGapicGeneration_ != null) {
+      output.writeMessage(3, getSelectiveGapicGeneration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -224,6 +265,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }destinationsMemoizedSerializedSize = dataSize;
     }
+    if (selectiveGapicGeneration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getSelectiveGapicGeneration());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -242,6 +287,11 @@ private static final long serialVersionUID = 0L;
     if (!getReferenceDocsUri()
         .equals(other.getReferenceDocsUri())) return false;
     if (!destinations_.equals(other.destinations_)) return false;
+    if (hasSelectiveGapicGeneration() != other.hasSelectiveGapicGeneration()) return false;
+    if (hasSelectiveGapicGeneration()) {
+      if (!getSelectiveGapicGeneration()
+          .equals(other.getSelectiveGapicGeneration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -258,6 +308,10 @@ private static final long serialVersionUID = 0L;
     if (getDestinationsCount() > 0) {
       hash = (37 * hash) + DESTINATIONS_FIELD_NUMBER;
       hash = (53 * hash) + destinations_.hashCode();
+    }
+    if (hasSelectiveGapicGeneration()) {
+      hash = (37 * hash) + SELECTIVE_GAPIC_GENERATION_FIELD_NUMBER;
+      hash = (53 * hash) + getSelectiveGapicGeneration().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -397,6 +451,11 @@ private static final long serialVersionUID = 0L;
       referenceDocsUri_ = "";
       destinations_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
+      selectiveGapicGeneration_ = null;
+      if (selectiveGapicGenerationBuilder_ != null) {
+        selectiveGapicGenerationBuilder_.dispose();
+        selectiveGapicGenerationBuilder_ = null;
+      }
       return this;
     }
 
@@ -441,6 +500,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.referenceDocsUri_ = referenceDocsUri_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.selectiveGapicGeneration_ = selectiveGapicGenerationBuilder_ == null
+            ? selectiveGapicGeneration_
+            : selectiveGapicGenerationBuilder_.build();
       }
     }
 
@@ -503,6 +567,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasSelectiveGapicGeneration()) {
+        mergeSelectiveGapicGeneration(other.getSelectiveGapicGeneration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -551,6 +618,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getSelectiveGapicGenerationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -861,6 +935,161 @@ private static final long serialVersionUID = 0L;
       }
       onChanged();
       return this;
+    }
+
+    private com.google.api.SelectiveGapicGeneration selectiveGapicGeneration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.api.SelectiveGapicGeneration, com.google.api.SelectiveGapicGeneration.Builder, com.google.api.SelectiveGapicGenerationOrBuilder> selectiveGapicGenerationBuilder_;
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     * @return Whether the selectiveGapicGeneration field is set.
+     */
+    public boolean hasSelectiveGapicGeneration() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     * @return The selectiveGapicGeneration.
+     */
+    public com.google.api.SelectiveGapicGeneration getSelectiveGapicGeneration() {
+      if (selectiveGapicGenerationBuilder_ == null) {
+        return selectiveGapicGeneration_ == null ? com.google.api.SelectiveGapicGeneration.getDefaultInstance() : selectiveGapicGeneration_;
+      } else {
+        return selectiveGapicGenerationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder setSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+      if (selectiveGapicGenerationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        selectiveGapicGeneration_ = value;
+      } else {
+        selectiveGapicGenerationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder setSelectiveGapicGeneration(
+        com.google.api.SelectiveGapicGeneration.Builder builderForValue) {
+      if (selectiveGapicGenerationBuilder_ == null) {
+        selectiveGapicGeneration_ = builderForValue.build();
+      } else {
+        selectiveGapicGenerationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder mergeSelectiveGapicGeneration(com.google.api.SelectiveGapicGeneration value) {
+      if (selectiveGapicGenerationBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          selectiveGapicGeneration_ != null &&
+          selectiveGapicGeneration_ != com.google.api.SelectiveGapicGeneration.getDefaultInstance()) {
+          getSelectiveGapicGenerationBuilder().mergeFrom(value);
+        } else {
+          selectiveGapicGeneration_ = value;
+        }
+      } else {
+        selectiveGapicGenerationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public Builder clearSelectiveGapicGeneration() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      selectiveGapicGeneration_ = null;
+      if (selectiveGapicGenerationBuilder_ != null) {
+        selectiveGapicGenerationBuilder_.dispose();
+        selectiveGapicGenerationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public com.google.api.SelectiveGapicGeneration.Builder getSelectiveGapicGenerationBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getSelectiveGapicGenerationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    public com.google.api.SelectiveGapicGenerationOrBuilder getSelectiveGapicGenerationOrBuilder() {
+      if (selectiveGapicGenerationBuilder_ != null) {
+        return selectiveGapicGenerationBuilder_.getMessageOrBuilder();
+      } else {
+        return selectiveGapicGeneration_ == null ?
+            com.google.api.SelectiveGapicGeneration.getDefaultInstance() : selectiveGapicGeneration_;
+      }
+    }
+    /**
+     * <pre>
+     * Configuration for which RPCs should be generated in the GAPIC client.
+     * </pre>
+     *
+     * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.api.SelectiveGapicGeneration, com.google.api.SelectiveGapicGeneration.Builder, com.google.api.SelectiveGapicGenerationOrBuilder> 
+        getSelectiveGapicGenerationFieldBuilder() {
+      if (selectiveGapicGenerationBuilder_ == null) {
+        selectiveGapicGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.api.SelectiveGapicGeneration, com.google.api.SelectiveGapicGeneration.Builder, com.google.api.SelectiveGapicGenerationOrBuilder>(
+                getSelectiveGapicGeneration(),
+                getParentForChildren(),
+                isClean());
+        selectiveGapicGeneration_ = null;
+      }
+      return selectiveGapicGenerationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
