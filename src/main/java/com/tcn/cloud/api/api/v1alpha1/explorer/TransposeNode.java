@@ -22,9 +22,8 @@ private static final long serialVersionUID = 0L;
   private TransposeNode() {
     groupByColumns_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    pivotColumn_ = "";
-    valueColumn_ = "";
-    sourceVariants_ = java.util.Collections.emptyList();
+    keyColumn_ = "";
+    options_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -45,6 +44,962 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.class, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.Builder.class);
+  }
+
+  public interface optionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.TransposeNode.option)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the extracted column name
+     * </pre>
+     *
+     * <code>string key_name = 2 [json_name = "keyName"];</code>
+     * @return The keyName.
+     */
+    java.lang.String getKeyName();
+    /**
+     * <pre>
+     * the extracted column name
+     * </pre>
+     *
+     * <code>string key_name = 2 [json_name = "keyName"];</code>
+     * @return The bytes for keyName.
+     */
+    com.google.protobuf.ByteString
+        getKeyNameBytes();
+
+    /**
+     * <pre>
+     * the column that contains the extracted values
+     * </pre>
+     *
+     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+     * @return The valueColumn.
+     */
+    java.lang.String getValueColumn();
+    /**
+     * <pre>
+     * the column that contains the extracted values
+     * </pre>
+     *
+     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+     * @return The bytes for valueColumn.
+     */
+    com.google.protobuf.ByteString
+        getValueColumnBytes();
+
+    /**
+     * <pre>
+     * resulting type of the extracted column
+     * </pre>
+     *
+     * <code>string value_type = 4 [json_name = "valueType"];</code>
+     * @return The valueType.
+     */
+    java.lang.String getValueType();
+    /**
+     * <pre>
+     * resulting type of the extracted column
+     * </pre>
+     *
+     * <code>string value_type = 4 [json_name = "valueType"];</code>
+     * @return The bytes for valueType.
+     */
+    com.google.protobuf.ByteString
+        getValueTypeBytes();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.explorer.TransposeNode.option}
+   */
+  public static final class option extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.explorer.TransposeNode.option)
+      optionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use option.newBuilder() to construct.
+    private option(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private option() {
+      keyName_ = "";
+      valueColumn_ = "";
+      valueType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new option();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.class, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder.class);
+    }
+
+    public static final int KEY_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyName_ = "";
+    /**
+     * <pre>
+     * the extracted column name
+     * </pre>
+     *
+     * <code>string key_name = 2 [json_name = "keyName"];</code>
+     * @return The keyName.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyName() {
+      java.lang.Object ref = keyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the extracted column name
+     * </pre>
+     *
+     * <code>string key_name = 2 [json_name = "keyName"];</code>
+     * @return The bytes for keyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyNameBytes() {
+      java.lang.Object ref = keyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_COLUMN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valueColumn_ = "";
+    /**
+     * <pre>
+     * the column that contains the extracted values
+     * </pre>
+     *
+     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+     * @return The valueColumn.
+     */
+    @java.lang.Override
+    public java.lang.String getValueColumn() {
+      java.lang.Object ref = valueColumn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueColumn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the column that contains the extracted values
+     * </pre>
+     *
+     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+     * @return The bytes for valueColumn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueColumnBytes() {
+      java.lang.Object ref = valueColumn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueColumn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_TYPE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valueType_ = "";
+    /**
+     * <pre>
+     * resulting type of the extracted column
+     * </pre>
+     *
+     * <code>string value_type = 4 [json_name = "valueType"];</code>
+     * @return The valueType.
+     */
+    @java.lang.Override
+    public java.lang.String getValueType() {
+      java.lang.Object ref = valueType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * resulting type of the extracted column
+     * </pre>
+     *
+     * <code>string value_type = 4 [json_name = "valueType"];</code>
+     * @return The bytes for valueType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueTypeBytes() {
+      java.lang.Object ref = valueType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueColumn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueColumn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, valueType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueColumn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueColumn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, valueType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option other = (com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option) obj;
+
+      if (!getKeyName()
+          .equals(other.getKeyName())) return false;
+      if (!getValueColumn()
+          .equals(other.getValueColumn())) return false;
+      if (!getValueType()
+          .equals(other.getValueType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyName().hashCode();
+      hash = (37 * hash) + VALUE_COLUMN_FIELD_NUMBER;
+      hash = (53 * hash) + getValueColumn().hashCode();
+      hash = (37 * hash) + VALUE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getValueType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.explorer.TransposeNode.option}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.explorer.TransposeNode.option)
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.class, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        keyName_ = "";
+        valueColumn_ = "";
+        valueType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option build() {
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option result = new com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keyName_ = keyName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.valueColumn_ = valueColumn_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.valueType_ = valueType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.getDefaultInstance()) return this;
+        if (!other.getKeyName().isEmpty()) {
+          keyName_ = other.keyName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValueColumn().isEmpty()) {
+          valueColumn_ = other.valueColumn_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValueType().isEmpty()) {
+          valueType_ = other.valueType_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                keyName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 26: {
+                valueColumn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 34: {
+                valueType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object keyName_ = "";
+      /**
+       * <pre>
+       * the extracted column name
+       * </pre>
+       *
+       * <code>string key_name = 2 [json_name = "keyName"];</code>
+       * @return The keyName.
+       */
+      public java.lang.String getKeyName() {
+        java.lang.Object ref = keyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the extracted column name
+       * </pre>
+       *
+       * <code>string key_name = 2 [json_name = "keyName"];</code>
+       * @return The bytes for keyName.
+       */
+      public com.google.protobuf.ByteString
+          getKeyNameBytes() {
+        java.lang.Object ref = keyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the extracted column name
+       * </pre>
+       *
+       * <code>string key_name = 2 [json_name = "keyName"];</code>
+       * @param value The keyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the extracted column name
+       * </pre>
+       *
+       * <code>string key_name = 2 [json_name = "keyName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyName() {
+        keyName_ = getDefaultInstance().getKeyName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the extracted column name
+       * </pre>
+       *
+       * <code>string key_name = 2 [json_name = "keyName"];</code>
+       * @param value The bytes for keyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueColumn_ = "";
+      /**
+       * <pre>
+       * the column that contains the extracted values
+       * </pre>
+       *
+       * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+       * @return The valueColumn.
+       */
+      public java.lang.String getValueColumn() {
+        java.lang.Object ref = valueColumn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valueColumn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the column that contains the extracted values
+       * </pre>
+       *
+       * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+       * @return The bytes for valueColumn.
+       */
+      public com.google.protobuf.ByteString
+          getValueColumnBytes() {
+        java.lang.Object ref = valueColumn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueColumn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the column that contains the extracted values
+       * </pre>
+       *
+       * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+       * @param value The valueColumn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueColumn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valueColumn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the column that contains the extracted values
+       * </pre>
+       *
+       * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueColumn() {
+        valueColumn_ = getDefaultInstance().getValueColumn();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the column that contains the extracted values
+       * </pre>
+       *
+       * <code>string value_column = 3 [json_name = "valueColumn"];</code>
+       * @param value The bytes for valueColumn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueColumnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valueColumn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueType_ = "";
+      /**
+       * <pre>
+       * resulting type of the extracted column
+       * </pre>
+       *
+       * <code>string value_type = 4 [json_name = "valueType"];</code>
+       * @return The valueType.
+       */
+      public java.lang.String getValueType() {
+        java.lang.Object ref = valueType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valueType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * resulting type of the extracted column
+       * </pre>
+       *
+       * <code>string value_type = 4 [json_name = "valueType"];</code>
+       * @return The bytes for valueType.
+       */
+      public com.google.protobuf.ByteString
+          getValueTypeBytes() {
+        java.lang.Object ref = valueType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * resulting type of the extracted column
+       * </pre>
+       *
+       * <code>string value_type = 4 [json_name = "valueType"];</code>
+       * @param value The valueType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valueType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * resulting type of the extracted column
+       * </pre>
+       *
+       * <code>string value_type = 4 [json_name = "valueType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueType() {
+        valueType_ = getDefaultInstance().getValueType();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * resulting type of the extracted column
+       * </pre>
+       *
+       * <code>string value_type = 4 [json_name = "valueType"];</code>
+       * @param value The bytes for valueType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valueType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.explorer.TransposeNode.option)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.explorer.TransposeNode.option)
+    private static final com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<option>
+        PARSER = new com.google.protobuf.AbstractParser<option>() {
+      @java.lang.Override
+      public option parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<option> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<option> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public static final int GROUP_BY_COLUMNS_FIELD_NUMBER = 1;
@@ -100,159 +1055,112 @@ private static final long serialVersionUID = 0L;
     return groupByColumns_.getByteString(index);
   }
 
-  public static final int PIVOT_COLUMN_FIELD_NUMBER = 2;
+  public static final int KEY_COLUMN_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object pivotColumn_ = "";
+  private volatile java.lang.Object keyColumn_ = "";
   /**
    * <pre>
-   * the column to pivot on
+   * column to pivot on
    * </pre>
    *
-   * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-   * @return The pivotColumn.
+   * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+   * @return The keyColumn.
    */
   @java.lang.Override
-  public java.lang.String getPivotColumn() {
-    java.lang.Object ref = pivotColumn_;
+  public java.lang.String getKeyColumn() {
+    java.lang.Object ref = keyColumn_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      pivotColumn_ = s;
+      keyColumn_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * the column to pivot on
+   * column to pivot on
    * </pre>
    *
-   * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-   * @return The bytes for pivotColumn.
+   * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+   * @return The bytes for keyColumn.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getPivotColumnBytes() {
-    java.lang.Object ref = pivotColumn_;
+      getKeyColumnBytes() {
+    java.lang.Object ref = keyColumn_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      pivotColumn_ = b;
+      keyColumn_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int VALUE_COLUMN_FIELD_NUMBER = 3;
+  public static final int OPTIONS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object valueColumn_ = "";
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> options_;
   /**
    * <pre>
-   * the column that contains the values
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-   * @return The valueColumn.
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
   @java.lang.Override
-  public java.lang.String getValueColumn() {
-    java.lang.Object ref = valueColumn_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      valueColumn_ = s;
-      return s;
-    }
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> getOptionsList() {
+    return options_;
   }
   /**
    * <pre>
-   * the column that contains the values
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-   * @return The bytes for valueColumn.
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getValueColumnBytes() {
-    java.lang.Object ref = valueColumn_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      valueColumn_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int SOURCE_VARIANTS_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column> sourceVariants_;
-  /**
-   * <pre>
-   * the values in the pivot column to extract
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column> getSourceVariantsList() {
-    return sourceVariants_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> 
+      getOptionsOrBuilderList() {
+    return options_;
   }
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder> 
-      getSourceVariantsOrBuilderList() {
-    return sourceVariants_;
+  public int getOptionsCount() {
+    return options_.size();
   }
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
   @java.lang.Override
-  public int getSourceVariantsCount() {
-    return sourceVariants_.size();
+  public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getOptions(int index) {
+    return options_.get(index);
   }
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.Column getSourceVariants(int index) {
-    return sourceVariants_.get(index);
-  }
-  /**
-   * <pre>
-   * the values in the pivot column to extract
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder getSourceVariantsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder getOptionsOrBuilder(
       int index) {
-    return sourceVariants_.get(index);
+    return options_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -272,14 +1180,11 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < groupByColumns_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupByColumns_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pivotColumn_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pivotColumn_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyColumn_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyColumn_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueColumn_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueColumn_);
-    }
-    for (int i = 0; i < sourceVariants_.size(); i++) {
-      output.writeMessage(4, sourceVariants_.get(i));
+    for (int i = 0; i < options_.size(); i++) {
+      output.writeMessage(3, options_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -298,15 +1203,12 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getGroupByColumnsList().size();
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pivotColumn_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pivotColumn_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyColumn_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyColumn_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueColumn_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueColumn_);
-    }
-    for (int i = 0; i < sourceVariants_.size(); i++) {
+    for (int i = 0; i < options_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, sourceVariants_.get(i));
+        .computeMessageSize(3, options_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -325,12 +1227,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getGroupByColumnsList()
         .equals(other.getGroupByColumnsList())) return false;
-    if (!getPivotColumn()
-        .equals(other.getPivotColumn())) return false;
-    if (!getValueColumn()
-        .equals(other.getValueColumn())) return false;
-    if (!getSourceVariantsList()
-        .equals(other.getSourceVariantsList())) return false;
+    if (!getKeyColumn()
+        .equals(other.getKeyColumn())) return false;
+    if (!getOptionsList()
+        .equals(other.getOptionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -346,13 +1246,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GROUP_BY_COLUMNS_FIELD_NUMBER;
       hash = (53 * hash) + getGroupByColumnsList().hashCode();
     }
-    hash = (37 * hash) + PIVOT_COLUMN_FIELD_NUMBER;
-    hash = (53 * hash) + getPivotColumn().hashCode();
-    hash = (37 * hash) + VALUE_COLUMN_FIELD_NUMBER;
-    hash = (53 * hash) + getValueColumn().hashCode();
-    if (getSourceVariantsCount() > 0) {
-      hash = (37 * hash) + SOURCE_VARIANTS_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceVariantsList().hashCode();
+    hash = (37 * hash) + KEY_COLUMN_FIELD_NUMBER;
+    hash = (53 * hash) + getKeyColumn().hashCode();
+    if (getOptionsCount() > 0) {
+      hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOptionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -491,15 +1389,14 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       groupByColumns_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      pivotColumn_ = "";
-      valueColumn_ = "";
-      if (sourceVariantsBuilder_ == null) {
-        sourceVariants_ = java.util.Collections.emptyList();
+      keyColumn_ = "";
+      if (optionsBuilder_ == null) {
+        options_ = java.util.Collections.emptyList();
       } else {
-        sourceVariants_ = null;
-        sourceVariantsBuilder_.clear();
+        options_ = null;
+        optionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -533,14 +1430,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode result) {
-      if (sourceVariantsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          sourceVariants_ = java.util.Collections.unmodifiableList(sourceVariants_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+      if (optionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          options_ = java.util.Collections.unmodifiableList(options_);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.sourceVariants_ = sourceVariants_;
+        result.options_ = options_;
       } else {
-        result.sourceVariants_ = sourceVariantsBuilder_.build();
+        result.options_ = optionsBuilder_.build();
       }
     }
 
@@ -551,10 +1448,7 @@ private static final long serialVersionUID = 0L;
         result.groupByColumns_ = groupByColumns_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.pivotColumn_ = pivotColumn_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.valueColumn_ = valueColumn_;
+        result.keyColumn_ = keyColumn_;
       }
     }
 
@@ -612,39 +1506,34 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (!other.getPivotColumn().isEmpty()) {
-        pivotColumn_ = other.pivotColumn_;
+      if (!other.getKeyColumn().isEmpty()) {
+        keyColumn_ = other.keyColumn_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getValueColumn().isEmpty()) {
-        valueColumn_ = other.valueColumn_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      if (sourceVariantsBuilder_ == null) {
-        if (!other.sourceVariants_.isEmpty()) {
-          if (sourceVariants_.isEmpty()) {
-            sourceVariants_ = other.sourceVariants_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+      if (optionsBuilder_ == null) {
+        if (!other.options_.isEmpty()) {
+          if (options_.isEmpty()) {
+            options_ = other.options_;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureSourceVariantsIsMutable();
-            sourceVariants_.addAll(other.sourceVariants_);
+            ensureOptionsIsMutable();
+            options_.addAll(other.options_);
           }
           onChanged();
         }
       } else {
-        if (!other.sourceVariants_.isEmpty()) {
-          if (sourceVariantsBuilder_.isEmpty()) {
-            sourceVariantsBuilder_.dispose();
-            sourceVariantsBuilder_ = null;
-            sourceVariants_ = other.sourceVariants_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-            sourceVariantsBuilder_ = 
+        if (!other.options_.isEmpty()) {
+          if (optionsBuilder_.isEmpty()) {
+            optionsBuilder_.dispose();
+            optionsBuilder_ = null;
+            options_ = other.options_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            optionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getSourceVariantsFieldBuilder() : null;
+                 getOptionsFieldBuilder() : null;
           } else {
-            sourceVariantsBuilder_.addAllMessages(other.sourceVariants_);
+            optionsBuilder_.addAllMessages(other.options_);
           }
         }
       }
@@ -681,28 +1570,23 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              pivotColumn_ = input.readStringRequireUtf8();
+              keyColumn_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              valueColumn_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              com.tcn.cloud.api.api.v1alpha1.explorer.Column m =
+              com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.explorer.Column.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.parser(),
                       extensionRegistry);
-              if (sourceVariantsBuilder_ == null) {
-                ensureSourceVariantsIsMutable();
-                sourceVariants_.add(m);
+              if (optionsBuilder_ == null) {
+                ensureOptionsIsMutable();
+                options_.add(m);
               } else {
-                sourceVariantsBuilder_.addMessage(m);
+                optionsBuilder_.addMessage(m);
               }
               break;
-            } // case 34
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -867,22 +1751,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object pivotColumn_ = "";
+    private java.lang.Object keyColumn_ = "";
     /**
      * <pre>
-     * the column to pivot on
+     * column to pivot on
      * </pre>
      *
-     * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-     * @return The pivotColumn.
+     * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+     * @return The keyColumn.
      */
-    public java.lang.String getPivotColumn() {
-      java.lang.Object ref = pivotColumn_;
+    public java.lang.String getKeyColumn() {
+      java.lang.Object ref = keyColumn_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        pivotColumn_ = s;
+        keyColumn_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -890,20 +1774,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the column to pivot on
+     * column to pivot on
      * </pre>
      *
-     * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-     * @return The bytes for pivotColumn.
+     * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+     * @return The bytes for keyColumn.
      */
     public com.google.protobuf.ByteString
-        getPivotColumnBytes() {
-      java.lang.Object ref = pivotColumn_;
+        getKeyColumnBytes() {
+      java.lang.Object ref = keyColumn_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        pivotColumn_ = b;
+        keyColumn_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -911,456 +1795,364 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the column to pivot on
+     * column to pivot on
      * </pre>
      *
-     * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-     * @param value The pivotColumn to set.
+     * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+     * @param value The keyColumn to set.
      * @return This builder for chaining.
      */
-    public Builder setPivotColumn(
+    public Builder setKeyColumn(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      pivotColumn_ = value;
+      keyColumn_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the column to pivot on
+     * column to pivot on
      * </pre>
      *
-     * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
+     * <code>string key_column = 2 [json_name = "keyColumn"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPivotColumn() {
-      pivotColumn_ = getDefaultInstance().getPivotColumn();
+    public Builder clearKeyColumn() {
+      keyColumn_ = getDefaultInstance().getKeyColumn();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the column to pivot on
+     * column to pivot on
      * </pre>
      *
-     * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-     * @param value The bytes for pivotColumn to set.
+     * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+     * @param value The bytes for keyColumn to set.
      * @return This builder for chaining.
      */
-    public Builder setPivotColumnBytes(
+    public Builder setKeyColumnBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      pivotColumn_ = value;
+      keyColumn_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private java.lang.Object valueColumn_ = "";
-    /**
-     * <pre>
-     * the column that contains the values
-     * </pre>
-     *
-     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-     * @return The valueColumn.
-     */
-    public java.lang.String getValueColumn() {
-      java.lang.Object ref = valueColumn_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        valueColumn_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the column that contains the values
-     * </pre>
-     *
-     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-     * @return The bytes for valueColumn.
-     */
-    public com.google.protobuf.ByteString
-        getValueColumnBytes() {
-      java.lang.Object ref = valueColumn_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        valueColumn_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the column that contains the values
-     * </pre>
-     *
-     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-     * @param value The valueColumn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValueColumn(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      valueColumn_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the column that contains the values
-     * </pre>
-     *
-     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearValueColumn() {
-      valueColumn_ = getDefaultInstance().getValueColumn();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the column that contains the values
-     * </pre>
-     *
-     * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-     * @param value The bytes for valueColumn to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValueColumnBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      valueColumn_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column> sourceVariants_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> options_ =
       java.util.Collections.emptyList();
-    private void ensureSourceVariantsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        sourceVariants_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.Column>(sourceVariants_);
-        bitField0_ |= 0x00000008;
+    private void ensureOptionsIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        options_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option>(options_);
+        bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.Column, com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder> sourceVariantsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> optionsBuilder_;
 
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column> getSourceVariantsList() {
-      if (sourceVariantsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(sourceVariants_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> getOptionsList() {
+      if (optionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(options_);
       } else {
-        return sourceVariantsBuilder_.getMessageList();
+        return optionsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public int getSourceVariantsCount() {
-      if (sourceVariantsBuilder_ == null) {
-        return sourceVariants_.size();
+    public int getOptionsCount() {
+      if (optionsBuilder_ == null) {
+        return options_.size();
       } else {
-        return sourceVariantsBuilder_.getCount();
+        return optionsBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Column getSourceVariants(int index) {
-      if (sourceVariantsBuilder_ == null) {
-        return sourceVariants_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getOptions(int index) {
+      if (optionsBuilder_ == null) {
+        return options_.get(index);
       } else {
-        return sourceVariantsBuilder_.getMessage(index);
+        return optionsBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder setSourceVariants(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.Column value) {
-      if (sourceVariantsBuilder_ == null) {
+    public Builder setOptions(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option value) {
+      if (optionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.set(index, value);
+        ensureOptionsIsMutable();
+        options_.set(index, value);
         onChanged();
       } else {
-        sourceVariantsBuilder_.setMessage(index, value);
+        optionsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder setSourceVariants(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder builderForValue) {
-      if (sourceVariantsBuilder_ == null) {
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.set(index, builderForValue.build());
+    public Builder setOptions(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder builderForValue) {
+      if (optionsBuilder_ == null) {
+        ensureOptionsIsMutable();
+        options_.set(index, builderForValue.build());
         onChanged();
       } else {
-        sourceVariantsBuilder_.setMessage(index, builderForValue.build());
+        optionsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder addSourceVariants(com.tcn.cloud.api.api.v1alpha1.explorer.Column value) {
-      if (sourceVariantsBuilder_ == null) {
+    public Builder addOptions(com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option value) {
+      if (optionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.add(value);
+        ensureOptionsIsMutable();
+        options_.add(value);
         onChanged();
       } else {
-        sourceVariantsBuilder_.addMessage(value);
+        optionsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder addSourceVariants(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.Column value) {
-      if (sourceVariantsBuilder_ == null) {
+    public Builder addOptions(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option value) {
+      if (optionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.add(index, value);
+        ensureOptionsIsMutable();
+        options_.add(index, value);
         onChanged();
       } else {
-        sourceVariantsBuilder_.addMessage(index, value);
+        optionsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder addSourceVariants(
-        com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder builderForValue) {
-      if (sourceVariantsBuilder_ == null) {
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.add(builderForValue.build());
+    public Builder addOptions(
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder builderForValue) {
+      if (optionsBuilder_ == null) {
+        ensureOptionsIsMutable();
+        options_.add(builderForValue.build());
         onChanged();
       } else {
-        sourceVariantsBuilder_.addMessage(builderForValue.build());
+        optionsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder addSourceVariants(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder builderForValue) {
-      if (sourceVariantsBuilder_ == null) {
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.add(index, builderForValue.build());
+    public Builder addOptions(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder builderForValue) {
+      if (optionsBuilder_ == null) {
+        ensureOptionsIsMutable();
+        options_.add(index, builderForValue.build());
         onChanged();
       } else {
-        sourceVariantsBuilder_.addMessage(index, builderForValue.build());
+        optionsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder addAllSourceVariants(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.Column> values) {
-      if (sourceVariantsBuilder_ == null) {
-        ensureSourceVariantsIsMutable();
+    public Builder addAllOptions(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> values) {
+      if (optionsBuilder_ == null) {
+        ensureOptionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sourceVariants_);
+            values, options_);
         onChanged();
       } else {
-        sourceVariantsBuilder_.addAllMessages(values);
+        optionsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder clearSourceVariants() {
-      if (sourceVariantsBuilder_ == null) {
-        sourceVariants_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+    public Builder clearOptions() {
+      if (optionsBuilder_ == null) {
+        options_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
-        sourceVariantsBuilder_.clear();
+        optionsBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public Builder removeSourceVariants(int index) {
-      if (sourceVariantsBuilder_ == null) {
-        ensureSourceVariantsIsMutable();
-        sourceVariants_.remove(index);
+    public Builder removeOptions(int index) {
+      if (optionsBuilder_ == null) {
+        ensureOptionsIsMutable();
+        options_.remove(index);
         onChanged();
       } else {
-        sourceVariantsBuilder_.remove(index);
+        optionsBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder getSourceVariantsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder getOptionsBuilder(
         int index) {
-      return getSourceVariantsFieldBuilder().getBuilder(index);
+      return getOptionsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder getSourceVariantsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder getOptionsOrBuilder(
         int index) {
-      if (sourceVariantsBuilder_ == null) {
-        return sourceVariants_.get(index);  } else {
-        return sourceVariantsBuilder_.getMessageOrBuilder(index);
+      if (optionsBuilder_ == null) {
+        return options_.get(index);  } else {
+        return optionsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder> 
-         getSourceVariantsOrBuilderList() {
-      if (sourceVariantsBuilder_ != null) {
-        return sourceVariantsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> 
+         getOptionsOrBuilderList() {
+      if (optionsBuilder_ != null) {
+        return optionsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(sourceVariants_);
+        return java.util.Collections.unmodifiableList(options_);
       }
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder addSourceVariantsBuilder() {
-      return getSourceVariantsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.explorer.Column.getDefaultInstance());
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder addOptionsBuilder() {
+      return getOptionsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.getDefaultInstance());
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder addSourceVariantsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder addOptionsBuilder(
         int index) {
-      return getSourceVariantsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.explorer.Column.getDefaultInstance());
+      return getOptionsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.getDefaultInstance());
     }
     /**
      * <pre>
-     * the values in the pivot column to extract
+     * options describe the extracted columns
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+     * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder> 
-         getSourceVariantsBuilderList() {
-      return getSourceVariantsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder> 
+         getOptionsBuilderList() {
+      return getOptionsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.Column, com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder> 
-        getSourceVariantsFieldBuilder() {
-      if (sourceVariantsBuilder_ == null) {
-        sourceVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.Column, com.tcn.cloud.api.api.v1alpha1.explorer.Column.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder>(
-                sourceVariants_,
-                ((bitField0_ & 0x00000008) != 0),
+        com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> 
+        getOptionsFieldBuilder() {
+      if (optionsBuilder_ == null) {
+        optionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder>(
+                options_,
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
-        sourceVariants_ = null;
+        options_ = null;
       }
-      return sourceVariantsBuilder_;
+      return optionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -50,85 +50,65 @@ public interface TransposeNodeOrBuilder extends
 
   /**
    * <pre>
-   * the column to pivot on
+   * column to pivot on
    * </pre>
    *
-   * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-   * @return The pivotColumn.
+   * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+   * @return The keyColumn.
    */
-  java.lang.String getPivotColumn();
+  java.lang.String getKeyColumn();
   /**
    * <pre>
-   * the column to pivot on
+   * column to pivot on
    * </pre>
    *
-   * <code>string pivot_column = 2 [json_name = "pivotColumn"];</code>
-   * @return The bytes for pivotColumn.
+   * <code>string key_column = 2 [json_name = "keyColumn"];</code>
+   * @return The bytes for keyColumn.
    */
   com.google.protobuf.ByteString
-      getPivotColumnBytes();
+      getKeyColumnBytes();
 
   /**
    * <pre>
-   * the column that contains the values
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-   * @return The valueColumn.
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
-  java.lang.String getValueColumn();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> 
+      getOptionsList();
   /**
    * <pre>
-   * the column that contains the values
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>string value_column = 3 [json_name = "valueColumn"];</code>
-   * @return The bytes for valueColumn.
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
-  com.google.protobuf.ByteString
-      getValueColumnBytes();
-
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getOptions(int index);
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Column> 
-      getSourceVariantsList();
+  int getOptionsCount();
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.Column getSourceVariants(int index);
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> 
+      getOptionsOrBuilderList();
   /**
    * <pre>
-   * the values in the pivot column to extract
+   * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
    */
-  int getSourceVariantsCount();
-  /**
-   * <pre>
-   * the values in the pivot column to extract
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder> 
-      getSourceVariantsOrBuilderList();
-  /**
-   * <pre>
-   * the values in the pivot column to extract
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.Column source_variants = 4 [json_name = "sourceVariants"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOrBuilder getSourceVariantsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder getOptionsOrBuilder(
       int index);
 }

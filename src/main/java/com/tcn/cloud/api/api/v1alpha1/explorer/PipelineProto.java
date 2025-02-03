@@ -169,6 +169,11 @@ public final class PipelineProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -310,17 +315,18 @@ public final class PipelineProto {
       "R\027stringManipulationSplit\022p\n\033string_mani" +
       "pulation_replace\030\005 \001(\01320.api.v1alpha1.ex" +
       "plorer.StringManipulationReplaceR\031string" +
-      "ManipulationReplace\"\307\001\n\rTransposeNode\022(\n" +
+      "ManipulationReplace\"\206\002\n\rTransposeNode\022(\n" +
       "\020group_by_columns\030\001 \003(\tR\016groupByColumns\022" +
-      "!\n\014pivot_column\030\002 \001(\tR\013pivotColumn\022!\n\014va" +
-      "lue_column\030\003 \001(\tR\013valueColumn\022F\n\017source_" +
-      "variants\030\004 \003(\0132\035.api.v1alpha1.explorer.C" +
-      "olumnR\016sourceVariantsB\256\001\n\'com.tcn.cloud." +
-      "api.api.v1alpha1.explorerB\rPipelineProto" +
-      "P\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V" +
-      "1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer" +
-      "\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006" +
-      "proto3"
+      "\035\n\nkey_column\030\002 \001(\tR\tkeyColumn\022E\n\007option" +
+      "s\030\003 \003(\0132+.api.v1alpha1.explorer.Transpos" +
+      "eNode.optionR\007options\032e\n\006option\022\031\n\010key_n" +
+      "ame\030\002 \001(\tR\007keyName\022!\n\014value_column\030\003 \001(\t" +
+      "R\013valueColumn\022\035\n\nvalue_type\030\004 \001(\tR\tvalue" +
+      "TypeB\256\001\n\'com.tcn.cloud.api.api.v1alpha1." +
+      "explorerB\rPipelineProtoP\001\242\002\003AVE\252\002\025Api.V1" +
+      "alpha1.Explorer\312\002\025Api\\V1alpha1\\Explorer\342" +
+      "\002!Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027Ap" +
+      "i::V1alpha1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -511,7 +517,13 @@ public final class PipelineProto {
     internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_TransposeNode_descriptor,
-        new java.lang.String[] { "GroupByColumns", "PivotColumn", "ValueColumn", "SourceVariants", });
+        new java.lang.String[] { "GroupByColumns", "KeyColumn", "Options", });
+    internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor =
+      internal_static_api_v1alpha1_explorer_TransposeNode_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor,
+        new java.lang.String[] { "KeyName", "ValueColumn", "ValueType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
