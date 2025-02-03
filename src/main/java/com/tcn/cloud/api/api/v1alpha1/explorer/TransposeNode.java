@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
  * <pre>
- * Transpose node will pivot a dataset based off of the pivot column and target values
+ * Transpose node will pivot a dataset based off of the key column
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.explorer.TransposeNode}
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Transpose node will pivot a dataset based off of the pivot column and target values
+   * Transpose node will pivot a dataset based off of the key column
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.explorer.TransposeNode}
