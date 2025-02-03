@@ -167,6 +167,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Deprecated BILLING_UPDATE_INVOICE_EVENT(1009),
     @java.lang.Deprecated BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
     BILLING_RATED_ITEMS_GENERATED_EVENT(1011),
+    BILLING_ACCUMULATE_ITEMS_EVENT(1012),
     DELIVERY_FAILURE_EVENT(1100),
     DELIVERY_SUCCESS_EVENT(1101),
     CONTACT_MANAGER_ENTRY_ADD_EVENT(1200),
@@ -311,6 +312,7 @@ private static final long serialVersionUID = 0L;
         case 1009: return BILLING_UPDATE_INVOICE_EVENT;
         case 1010: return BILLING_UPDATE_RATE_DEFINITION_EVENT;
         case 1011: return BILLING_RATED_ITEMS_GENERATED_EVENT;
+        case 1012: return BILLING_ACCUMULATE_ITEMS_EVENT;
         case 1100: return DELIVERY_FAILURE_EVENT;
         case 1101: return DELIVERY_SUCCESS_EVENT;
         case 1200: return CONTACT_MANAGER_ENTRY_ADD_EVENT;
@@ -5322,6 +5324,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.BillingRatedItemsGeneratedEvent.getDefaultInstance();
   }
 
+  public static final int BILLING_ACCUMULATE_ITEMS_EVENT_FIELD_NUMBER = 1012;
+  /**
+   * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+   * @return Whether the billingAccumulateItemsEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingAccumulateItemsEvent() {
+    return eventCase_ == 1012;
+  }
+  /**
+   * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+   * @return The billingAccumulateItemsEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent getBillingAccumulateItemsEvent() {
+    if (eventCase_ == 1012) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder getBillingAccumulateItemsEventOrBuilder() {
+    if (eventCase_ == 1012) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+  }
+
   public static final int DELIVERY_FAILURE_EVENT_FIELD_NUMBER = 1100;
   /**
    * <pre>
@@ -5474,7 +5507,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=273
+   *     See api/commons/audit/audit.proto;l=274
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Override
@@ -5484,7 +5517,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=273
+   *     See api/commons/audit/audit.proto;l=274
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Override
@@ -5509,7 +5542,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=274
+   *     See api/commons/audit/audit.proto;l=275
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Override
@@ -5519,7 +5552,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=274
+   *     See api/commons/audit/audit.proto;l=275
    * @return The contactManagerKycEvent.
    */
   @java.lang.Override
@@ -6146,6 +6179,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1011) {
       output.writeMessage(1011, (com.tcn.cloud.api.api.commons.audit.BillingRatedItemsGeneratedEvent) event_);
     }
+    if (eventCase_ == 1012) {
+      output.writeMessage(1012, (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_);
+    }
     if (eventCase_ == 1100) {
       output.writeMessage(1100, (com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent) event_);
     }
@@ -6669,6 +6705,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1011) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1011, (com.tcn.cloud.api.api.commons.audit.BillingRatedItemsGeneratedEvent) event_);
+    }
+    if (eventCase_ == 1012) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1012, (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_);
     }
     if (eventCase_ == 1100) {
       size += com.google.protobuf.CodedOutputStream
@@ -7209,6 +7249,10 @@ private static final long serialVersionUID = 0L;
         if (!getBillingRatedItemsGeneratedEvent()
             .equals(other.getBillingRatedItemsGeneratedEvent())) return false;
         break;
+      case 1012:
+        if (!getBillingAccumulateItemsEvent()
+            .equals(other.getBillingAccumulateItemsEvent())) return false;
+        break;
       case 1100:
         if (!getDeliveryFailureEvent()
             .equals(other.getDeliveryFailureEvent())) return false;
@@ -7745,6 +7789,10 @@ private static final long serialVersionUID = 0L;
       case 1011:
         hash = (37 * hash) + BILLING_RATED_ITEMS_GENERATED_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getBillingRatedItemsGeneratedEvent().hashCode();
+        break;
+      case 1012:
+        hash = (37 * hash) + BILLING_ACCUMULATE_ITEMS_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingAccumulateItemsEvent().hashCode();
         break;
       case 1100:
         hash = (37 * hash) + DELIVERY_FAILURE_EVENT_FIELD_NUMBER;
@@ -8291,6 +8339,9 @@ private static final long serialVersionUID = 0L;
       }
       if (billingRatedItemsGeneratedEventBuilder_ != null) {
         billingRatedItemsGeneratedEventBuilder_.clear();
+      }
+      if (billingAccumulateItemsEventBuilder_ != null) {
+        billingAccumulateItemsEventBuilder_.clear();
       }
       if (deliveryFailureEventBuilder_ != null) {
         deliveryFailureEventBuilder_.clear();
@@ -8867,6 +8918,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 1011 &&
           billingRatedItemsGeneratedEventBuilder_ != null) {
         result.event_ = billingRatedItemsGeneratedEventBuilder_.build();
+      }
+      if (eventCase_ == 1012 &&
+          billingAccumulateItemsEventBuilder_ != null) {
+        result.event_ = billingAccumulateItemsEventBuilder_.build();
       }
       if (eventCase_ == 1100 &&
           deliveryFailureEventBuilder_ != null) {
@@ -9447,6 +9502,10 @@ private static final long serialVersionUID = 0L;
         }
         case BILLING_RATED_ITEMS_GENERATED_EVENT: {
           mergeBillingRatedItemsGeneratedEvent(other.getBillingRatedItemsGeneratedEvent());
+          break;
+        }
+        case BILLING_ACCUMULATE_ITEMS_EVENT: {
+          mergeBillingAccumulateItemsEvent(other.getBillingAccumulateItemsEvent());
           break;
         }
         case DELIVERY_FAILURE_EVENT: {
@@ -10361,6 +10420,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1011;
               break;
             } // case 8090
+            case 8098: {
+              input.readMessage(
+                  getBillingAccumulateItemsEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1012;
+              break;
+            } // case 8098
             case 8802: {
               input.readMessage(
                   getDeliveryFailureEventFieldBuilder().getBuilder(),
@@ -30693,6 +30759,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder> billingAccumulateItemsEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     * @return Whether the billingAccumulateItemsEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingAccumulateItemsEvent() {
+      return eventCase_ == 1012;
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     * @return The billingAccumulateItemsEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent getBillingAccumulateItemsEvent() {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        if (eventCase_ == 1012) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1012) {
+          return billingAccumulateItemsEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    public Builder setBillingAccumulateItemsEvent(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent value) {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingAccumulateItemsEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1012;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    public Builder setBillingAccumulateItemsEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder builderForValue) {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingAccumulateItemsEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1012;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    public Builder mergeBillingAccumulateItemsEvent(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent value) {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        if (eventCase_ == 1012 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1012) {
+          billingAccumulateItemsEventBuilder_.mergeFrom(value);
+        } else {
+          billingAccumulateItemsEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1012;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    public Builder clearBillingAccumulateItemsEvent() {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        if (eventCase_ == 1012) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1012) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingAccumulateItemsEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder getBillingAccumulateItemsEventBuilder() {
+      return getBillingAccumulateItemsEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder getBillingAccumulateItemsEventOrBuilder() {
+      if ((eventCase_ == 1012) && (billingAccumulateItemsEventBuilder_ != null)) {
+        return billingAccumulateItemsEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1012) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingAccumulateItemsEvent billing_accumulate_items_event = 1012 [json_name = "billingAccumulateItemsEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder> 
+        getBillingAccumulateItemsEventFieldBuilder() {
+      if (billingAccumulateItemsEventBuilder_ == null) {
+        if (!(eventCase_ == 1012)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.getDefaultInstance();
+        }
+        billingAccumulateItemsEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1012;
+      onChanged();
+      return billingAccumulateItemsEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.DeliveryFailureEventOrBuilder> deliveryFailureEventBuilder_;
     /**
      * <pre>
@@ -31337,7 +31545,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=273
+     *     See api/commons/audit/audit.proto;l=274
      * @return Whether the contactManagerDeleteEvent field is set.
      */
     @java.lang.Override
@@ -31347,7 +31555,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=273
+     *     See api/commons/audit/audit.proto;l=274
      * @return The contactManagerDeleteEvent.
      */
     @java.lang.Override
@@ -31483,7 +31691,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=274
+     *     See api/commons/audit/audit.proto;l=275
      * @return Whether the contactManagerKycEvent field is set.
      */
     @java.lang.Override
@@ -31493,7 +31701,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=274
+     *     See api/commons/audit/audit.proto;l=275
      * @return The contactManagerKycEvent.
      */
     @java.lang.Override
