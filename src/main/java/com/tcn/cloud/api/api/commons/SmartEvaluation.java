@@ -345,6 +345,36 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
+  public static final int CALL_SID_FIELD_NUMBER = 13;
+  private long callSid_ = 0L;
+  /**
+   * <pre>
+   * Call sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 call_sid = 13 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  @java.lang.Override
+  public long getCallSid() {
+    return callSid_;
+  }
+
+  public static final int CONVERSATION_SID_FIELD_NUMBER = 14;
+  private long conversationSid_ = 0L;
+  /**
+   * <pre>
+   * Conversation sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_sid = 14 [json_name = "conversationSid", jstype = JS_STRING];</code>
+   * @return The conversationSid.
+   */
+  @java.lang.Override
+  public long getConversationSid() {
+    return conversationSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -391,6 +421,12 @@ private static final long serialVersionUID = 0L;
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(12, channelType_);
+    }
+    if (callSid_ != 0L) {
+      output.writeInt64(13, callSid_);
+    }
+    if (conversationSid_ != 0L) {
+      output.writeInt64(14, conversationSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -444,6 +480,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, channelType_);
     }
+    if (callSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(13, callSid_);
+    }
+    if (conversationSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(14, conversationSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -487,6 +531,10 @@ private static final long serialVersionUID = 0L;
     if (!getSmartEvaluationSectionsList()
         .equals(other.getSmartEvaluationSectionsList())) return false;
     if (channelType_ != other.channelType_) return false;
+    if (getCallSid()
+        != other.getCallSid()) return false;
+    if (getConversationSid()
+        != other.getConversationSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -530,6 +578,12 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
+    hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCallSid());
+    hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getConversationSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -690,6 +744,8 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000200);
       channelType_ = 0;
+      callSid_ = 0L;
+      conversationSid_ = 0L;
       return this;
     }
 
@@ -769,6 +825,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.callSid_ = callSid_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.conversationSid_ = conversationSid_;
       }
     }
 
@@ -874,6 +936,12 @@ private static final long serialVersionUID = 0L;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
+      if (other.getCallSid() != 0L) {
+        setCallSid(other.getCallSid());
+      }
+      if (other.getConversationSid() != 0L) {
+        setConversationSid(other.getConversationSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -967,6 +1035,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 96
+            case 104: {
+              callSid_ = input.readInt64();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 104
+            case 112: {
+              conversationSid_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2031,6 +2109,94 @@ private static final long serialVersionUID = 0L;
     public Builder clearChannelType() {
       bitField0_ = (bitField0_ & ~0x00000400);
       channelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long callSid_ ;
+    /**
+     * <pre>
+     * Call sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 call_sid = 13 [json_name = "callSid"];</code>
+     * @return The callSid.
+     */
+    @java.lang.Override
+    public long getCallSid() {
+      return callSid_;
+    }
+    /**
+     * <pre>
+     * Call sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 call_sid = 13 [json_name = "callSid"];</code>
+     * @param value The callSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallSid(long value) {
+
+      callSid_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Call sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 call_sid = 13 [json_name = "callSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallSid() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      callSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long conversationSid_ ;
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 14 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
+    }
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 14 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @param value The conversationSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversationSid(long value) {
+
+      conversationSid_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 14 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversationSid() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      conversationSid_ = 0L;
       onChanged();
       return this;
     }

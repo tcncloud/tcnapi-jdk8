@@ -1318,6 +1318,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
+  public static final int CONVERSATION_SID_FIELD_NUMBER = 23;
+  private long conversationSid_ = 0L;
+  /**
+   * <pre>
+   * Conversation sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_sid = 23 [json_name = "conversationSid", jstype = JS_STRING];</code>
+   * @return The conversationSid.
+   */
+  @java.lang.Override
+  public long getConversationSid() {
+    return conversationSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1379,6 +1394,9 @@ private static final long serialVersionUID = 0L;
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(22, channelType_);
+    }
+    if (conversationSid_ != 0L) {
+      output.writeInt64(23, conversationSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1450,6 +1468,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(22, channelType_);
     }
+    if (conversationSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(23, conversationSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1501,6 +1523,8 @@ private static final long serialVersionUID = 0L;
     if (getIsRecoverable()
         != other.getIsRecoverable()) return false;
     if (channelType_ != other.channelType_) return false;
+    if (getConversationSid()
+        != other.getConversationSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1558,6 +1582,9 @@ private static final long serialVersionUID = 0L;
         getIsRecoverable());
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
+    hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getConversationSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1730,6 +1757,7 @@ private static final long serialVersionUID = 0L;
       deletedBy_ = "";
       isRecoverable_ = false;
       channelType_ = 0;
+      conversationSid_ = 0L;
       return this;
     }
 
@@ -1830,6 +1858,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.conversationSid_ = conversationSid_;
       }
     }
 
@@ -1977,6 +2008,9 @@ private static final long serialVersionUID = 0L;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
+      if (other.getConversationSid() != 0L) {
+        setConversationSid(other.getConversationSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2103,6 +2137,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 176
+            case 184: {
+              conversationSid_ = input.readInt64();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 184
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3737,6 +3776,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearChannelType() {
       bitField0_ = (bitField0_ & ~0x00008000);
       channelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long conversationSid_ ;
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 23 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
+    }
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 23 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @param value The conversationSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversationSid(long value) {
+
+      conversationSid_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversation sid of the evaluated transcript.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 23 [json_name = "conversationSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversationSid() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      conversationSid_ = 0L;
       onChanged();
       return this;
     }

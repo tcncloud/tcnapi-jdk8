@@ -203,4 +203,24 @@ public interface SmartEvaluationOrBuilder extends
    * @return The channelType.
    */
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+
+  /**
+   * <pre>
+   * Call sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 call_sid = 13 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  long getCallSid();
+
+  /**
+   * <pre>
+   * Conversation sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_sid = 14 [json_name = "conversationSid", jstype = JS_STRING];</code>
+   * @return The conversationSid.
+   */
+  long getConversationSid();
 }
