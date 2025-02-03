@@ -100,27 +100,33 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList eventLogIds_;
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return A list containing the eventLogIds.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
+  @java.lang.Deprecated public java.util.List<java.lang.Long>
       getEventLogIdsList() {
     return eventLogIds_;
   }
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return The count of eventLogIds.
    */
-  public int getEventLogIdsCount() {
+  @java.lang.Deprecated public int getEventLogIdsCount() {
     return eventLogIds_.size();
   }
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @param index The index of the element to return.
    * @return The eventLogIds at the given index.
    */
-  public long getEventLogIds(int index) {
+  @java.lang.Deprecated public long getEventLogIds(int index) {
     return eventLogIds_.getLong(index);
   }
   private int eventLogIdsMemoizedSerializedSize = -1;
@@ -785,36 +791,44 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return A list containing the eventLogIds.
      */
-    public java.util.List<java.lang.Long>
+    @java.lang.Deprecated public java.util.List<java.lang.Long>
         getEventLogIdsList() {
       return ((bitField0_ & 0x00000004) != 0) ?
                java.util.Collections.unmodifiableList(eventLogIds_) : eventLogIds_;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return The count of eventLogIds.
      */
-    public int getEventLogIdsCount() {
+    @java.lang.Deprecated public int getEventLogIdsCount() {
       return eventLogIds_.size();
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param index The index of the element to return.
      * @return The eventLogIds at the given index.
      */
-    public long getEventLogIds(int index) {
+    @java.lang.Deprecated public long getEventLogIds(int index) {
       return eventLogIds_.getLong(index);
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param index The index to set the value at.
      * @param value The eventLogIds to set.
      * @return This builder for chaining.
      */
-    public Builder setEventLogIds(
+    @java.lang.Deprecated public Builder setEventLogIds(
         int index, long value) {
 
       ensureEventLogIdsIsMutable();
@@ -823,11 +837,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param value The eventLogIds to add.
      * @return This builder for chaining.
      */
-    public Builder addEventLogIds(long value) {
+    @java.lang.Deprecated public Builder addEventLogIds(long value) {
 
       ensureEventLogIdsIsMutable();
       eventLogIds_.addLong(value);
@@ -835,11 +851,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param values The eventLogIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllEventLogIds(
+    @java.lang.Deprecated public Builder addAllEventLogIds(
         java.lang.Iterable<? extends java.lang.Long> values) {
       ensureEventLogIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -848,10 +866,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return This builder for chaining.
      */
-    public Builder clearEventLogIds() {
+    @java.lang.Deprecated public Builder clearEventLogIds() {
       eventLogIds_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();

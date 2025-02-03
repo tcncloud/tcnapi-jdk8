@@ -26,21 +26,27 @@ public interface BillingAccumulateItemsEventOrBuilder extends
   int getProductType();
 
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return A list containing the eventLogIds.
    */
-  java.util.List<java.lang.Long> getEventLogIdsList();
+  @java.lang.Deprecated java.util.List<java.lang.Long> getEventLogIdsList();
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return The count of eventLogIds.
    */
-  int getEventLogIdsCount();
+  @java.lang.Deprecated int getEventLogIdsCount();
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @param index The index of the element to return.
    * @return The eventLogIds at the given index.
    */
-  long getEventLogIds(int index);
+  @java.lang.Deprecated long getEventLogIds(int index);
 
   /**
    * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
