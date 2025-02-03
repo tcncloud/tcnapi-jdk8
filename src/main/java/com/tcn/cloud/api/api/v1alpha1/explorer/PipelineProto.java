@@ -164,6 +164,11 @@ public final class PipelineProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_StringManipulationNode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_explorer_TransposeNode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -176,7 +181,7 @@ public final class PipelineProto {
       "\n$api/v1alpha1/explorer/pipeline.proto\022\025" +
       "api.v1alpha1.explorer\"=\n\010Pipeline\0221\n\005nod" +
       "es\030\001 \003(\0132\033.api.v1alpha1.explorer.NodeR\005n" +
-      "odes\"\242\010\n\004Node\022\027\n\007node_id\030\001 \001(\tR\006nodeId\022\022" +
+      "odes\"\361\010\n\004Node\022\027\n\007node_id\030\001 \001(\tR\006nodeId\022\022" +
       "\n\004type\030\002 \001(\tR\004type\022\024\n\005title\030\003 \001(\tR\005title" +
       "\022\033\n\tinput_ids\030\004 \003(\tR\010inputIds\022\035\n\noutput_" +
       "ids\030\005 \003(\tR\toutputIds\022>\n\tfrom_node\030\006 \001(\0132" +
@@ -202,113 +207,120 @@ public final class PipelineProto {
       ".explorer.SortNodeH\000R\010sortNode\022i\n\030string" +
       "_manipulation_node\030\022 \001(\0132-.api.v1alpha1." +
       "explorer.StringManipulationNodeH\000R\026strin" +
-      "gManipulationNodeB\006\n\004body\"$\n\010FromNode\022\030\n" +
-      "\007dataset\030\001 \001(\tR\007dataset\"S\n\nFilterNode\022E\n" +
-      "\nexpression\030\003 \001(\0132%.api.v1alpha1.explore" +
-      "r.ExpressionNodeR\nexpression\"t\n\nDeriveNo" +
-      "de\022\037\n\013column_name\030\003 \001(\tR\ncolumnName\022E\n\ne" +
-      "xpression\030\004 \001(\0132%.api.v1alpha1.explorer." +
-      "ExpressionNodeR\nexpression\"\220\001\n\tGroupNode" +
-      "\022(\n\020group_by_columns\030\001 \003(\tR\016groupByColum" +
-      "ns\022Y\n\023aggregation_columns\030\002 \003(\0132(.api.v1" +
-      "alpha1.explorer.AggregationColumnR\022aggre" +
-      "gationColumns\" \n\010TakeNode\022\024\n\005limit\030\001 \001(\005" +
-      "R\005limit\"j\n\rAggregateNode\022Y\n\023aggregation_" +
-      "columns\030\002 \003(\0132(.api.v1alpha1.explorer.Ag" +
-      "gregationColumnR\022aggregationColumns\"\264\001\n\021" +
-      "AggregationColumn\022\022\n\004name\030\001 \001(\tR\004name\022(\n" +
-      "\020group_by_columns\030\002 \003(\tR\016groupByColumns\022" +
-      ".\n\023column_to_aggregate\030\003 \001(\tR\021columnToAg" +
-      "gregate\0221\n\024aggregation_function\030\004 \001(\tR\023a" +
-      "ggregationFunction\"7\n\006Column\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\033\n\tdata_type\030\002 \001(\tR\010dataType\"}\n\016E" +
-      "xpressionNode\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005val" +
-      "ue\030\002 \001(\tR\005value\022A\n\010children\030\003 \003(\0132%.api." +
-      "v1alpha1.explorer.ExpressionNodeR\010childr" +
-      "en\"\311\003\n\007MapNode\022<\n\nnew_column\030\001 \001(\0132\035.api" +
-      ".v1alpha1.explorer.ColumnR\tnewColumn\022A\n\r" +
-      "column_to_map\030\002 \001(\0132\035.api.v1alpha1.explo" +
-      "rer.ColumnR\013columnToMap\022B\n\010mappings\030\003 \003(" +
-      "\0132&.api.v1alpha1.explorer.MapNode.Mappin" +
-      "gR\010mappings\022J\n\rdefault_value\030\004 \001(\0132%.api" +
-      ".v1alpha1.explorer.ExpressionNodeR\014defau" +
-      "ltValue\022\035\n\nis_complex\030\005 \001(\010R\tisComplex\032\215" +
-      "\001\n\007Mapping\022C\n\tcondition\030\001 \001(\0132%.api.v1al" +
-      "pha1.explorer.ExpressionNodeR\tcondition\022" +
-      "=\n\006result\030\002 \001(\0132%.api.v1alpha1.explorer." +
-      "ExpressionNodeR\006result\"\352\001\n\010JoinNode\022\022\n\004s" +
-      "ide\030\001 \001(\tR\004side\022D\n\014join_columns\030\002 \003(\0132!." +
-      "api.v1alpha1.explorer.JoinColumnR\013joinCo" +
-      "lumns\022@\n\014first_parent\030\003 \001(\0132\035.api.v1alph" +
-      "a1.explorer.ParentR\013firstParent\022B\n\rsecon" +
-      "d_parent\030\004 \001(\0132\035.api.v1alpha1.explorer.P" +
-      "arentR\014secondParent\"n\n\nJoinColumn\022.\n\023fir" +
-      "st_parent_column\030\001 \001(\tR\021firstParentColum" +
-      "n\0220\n\024second_parent_column\030\002 \001(\tR\022secondP" +
-      "arentColumn\"\332\001\n\006Parent\022\033\n\tparent_id\030\001 \001(" +
-      "\tR\010parentId\022\024\n\005title\030\002 \001(\tR\005title\022Z\n\017ren" +
-      "amed_columns\030\003 \003(\01321.api.v1alpha1.explor" +
-      "er.Parent.RenamedColumnsEntryR\016renamedCo" +
-      "lumns\032A\n\023RenamedColumnsEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\311\001\n\nSel" +
-      "ectNode\022\030\n\007columns\030\001 \003(\tR\007columns\022^\n\017ren" +
-      "amed_columns\030\002 \003(\01325.api.v1alpha1.explor" +
-      "er.SelectNode.RenamedColumnsEntryR\016renam" +
-      "edColumns\032A\n\023RenamedColumnsEntry\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"m\n\n" +
-      "JsonTarget\022\035\n\npath_parts\030\001 \003(\tR\tpathPart" +
-      "s\022\037\n\013column_name\030\002 \001(\tR\ncolumnName\022\037\n\013re" +
-      "sult_type\030\003 \001(\tR\nresultType\"\335\001\n\010JsonNode" +
-      "\022\022\n\004type\030\001 \001(\tR\004type\022\037\n\013json_column\030\002 \001(" +
-      "\tR\njsonColumn\022;\n\007targets\030\003 \003(\0132!.api.v1a" +
-      "lpha1.explorer.JsonTargetR\007targets\022_\n\026un" +
-      "nest_to_columns_node\030\004 \001(\0132*.api.v1alpha" +
-      "1.explorer.UnnestToColumnsNodeR\023unnestTo" +
-      "ColumnsNode\"\344\002\n\023UnnestToColumnsNode\022F\n\ru" +
-      "nnest_target\030\001 \001(\0132!.api.v1alpha1.explor" +
-      "er.JsonTargetR\014unnestTarget\022@\n\nkey_targe" +
-      "t\030\002 \001(\0132!.api.v1alpha1.explorer.JsonTarg" +
-      "etR\tkeyTarget\022D\n\014value_target\030\003 \001(\0132!.ap" +
-      "i.v1alpha1.explorer.JsonTargetR\013valueTar" +
-      "get\022\030\n\007columns\030\004 \003(\tR\007columns\022!\n\014primary" +
-      "_keys\030\005 \003(\tR\013primaryKeys\022@\n\014json_columns" +
-      "\030\006 \003(\0132\035.api.v1alpha1.explorer.ColumnR\013j" +
-      "sonColumns\"\264\001\n\021ValuesReplacement\022!\n\014targ" +
-      "et_value\030\001 \001(\tR\013targetValue\022(\n\020target_da" +
-      "ta_type\030\002 \001(\tR\016targetDataType\022R\n\021replace" +
-      "ment_value\030\003 \001(\0132%.api.v1alpha1.explorer" +
-      ".ExpressionNodeR\020replacementValue\"\221\001\n\021Co" +
-      "lumnReplacement\022!\n\014column_names\030\001 \003(\tR\013c" +
-      "olumnNames\022Y\n\023values_replacements\030\002 \003(\0132" +
-      "(.api.v1alpha1.explorer.ValuesReplacemen" +
-      "tR\022valuesReplacements\"\207\001\n\013ReplaceNode\022Y\n" +
-      "\023column_replacements\030\001 \003(\0132(.api.v1alpha" +
-      "1.explorer.ColumnReplacementR\022columnRepl" +
-      "acements\022\035\n\nis_complex\030\002 \001(\010R\tisComplex\"" +
-      "K\n\nSortColumn\022\037\n\013column_name\030\001 \001(\tR\ncolu" +
-      "mnName\022\034\n\tascending\030\002 \001(\010R\tascending\"P\n\010" +
-      "SortNode\022D\n\014sort_columns\030\001 \003(\0132!.api.v1a" +
-      "lpha1.explorer.SortColumnR\013sortColumns\"\217" +
-      "\001\n\027StringManipulationSplit\022\031\n\010split_by\030\002" +
-      " \001(\tR\007splitBy\022.\n\023is_index_extraction\030\003 \001" +
-      "(\010R\021isIndexExtraction\022)\n\020index_extractio" +
-      "n\030\004 \001(\005R\017indexExtraction\"I\n\031StringManipu" +
-      "lationReplace\022\026\n\006target\030\001 \001(\tR\006target\022\024\n" +
-      "\005value\030\002 \001(\tR\005value\"\346\002\n\026StringManipulati" +
-      "onNode\022\022\n\004type\030\001 \001(\tR\004type\022,\n\022source_col" +
-      "umn_name\030\002 \001(\tR\020sourceColumnName\022,\n\022targ" +
-      "et_column_name\030\003 \001(\tR\020targetColumnName\022j" +
-      "\n\031string_manipulation_split\030\004 \001(\0132..api." +
-      "v1alpha1.explorer.StringManipulationSpli" +
-      "tR\027stringManipulationSplit\022p\n\033string_man" +
-      "ipulation_replace\030\005 \001(\01320.api.v1alpha1.e" +
-      "xplorer.StringManipulationReplaceR\031strin" +
-      "gManipulationReplaceB\256\001\n\'com.tcn.cloud.a" +
-      "pi.api.v1alpha1.explorerB\rPipelineProtoP" +
-      "\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1" +
-      "alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\" +
-      "GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006p" +
-      "roto3"
+      "gManipulationNode\022M\n\016transpose_node\030\023 \001(" +
+      "\0132$.api.v1alpha1.explorer.TransposeNodeH" +
+      "\000R\rtransposeNodeB\006\n\004body\"$\n\010FromNode\022\030\n\007" +
+      "dataset\030\001 \001(\tR\007dataset\"S\n\nFilterNode\022E\n\n" +
+      "expression\030\003 \001(\0132%.api.v1alpha1.explorer" +
+      ".ExpressionNodeR\nexpression\"t\n\nDeriveNod" +
+      "e\022\037\n\013column_name\030\003 \001(\tR\ncolumnName\022E\n\nex" +
+      "pression\030\004 \001(\0132%.api.v1alpha1.explorer.E" +
+      "xpressionNodeR\nexpression\"\220\001\n\tGroupNode\022" +
+      "(\n\020group_by_columns\030\001 \003(\tR\016groupByColumn" +
+      "s\022Y\n\023aggregation_columns\030\002 \003(\0132(.api.v1a" +
+      "lpha1.explorer.AggregationColumnR\022aggreg" +
+      "ationColumns\" \n\010TakeNode\022\024\n\005limit\030\001 \001(\005R" +
+      "\005limit\"j\n\rAggregateNode\022Y\n\023aggregation_c" +
+      "olumns\030\002 \003(\0132(.api.v1alpha1.explorer.Agg" +
+      "regationColumnR\022aggregationColumns\"\264\001\n\021A" +
+      "ggregationColumn\022\022\n\004name\030\001 \001(\tR\004name\022(\n\020" +
+      "group_by_columns\030\002 \003(\tR\016groupByColumns\022." +
+      "\n\023column_to_aggregate\030\003 \001(\tR\021columnToAgg" +
+      "regate\0221\n\024aggregation_function\030\004 \001(\tR\023ag" +
+      "gregationFunction\"7\n\006Column\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\033\n\tdata_type\030\002 \001(\tR\010dataType\"}\n\016Ex" +
+      "pressionNode\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005valu" +
+      "e\030\002 \001(\tR\005value\022A\n\010children\030\003 \003(\0132%.api.v" +
+      "1alpha1.explorer.ExpressionNodeR\010childre" +
+      "n\"\311\003\n\007MapNode\022<\n\nnew_column\030\001 \001(\0132\035.api." +
+      "v1alpha1.explorer.ColumnR\tnewColumn\022A\n\rc" +
+      "olumn_to_map\030\002 \001(\0132\035.api.v1alpha1.explor" +
+      "er.ColumnR\013columnToMap\022B\n\010mappings\030\003 \003(\013" +
+      "2&.api.v1alpha1.explorer.MapNode.Mapping" +
+      "R\010mappings\022J\n\rdefault_value\030\004 \001(\0132%.api." +
+      "v1alpha1.explorer.ExpressionNodeR\014defaul" +
+      "tValue\022\035\n\nis_complex\030\005 \001(\010R\tisComplex\032\215\001" +
+      "\n\007Mapping\022C\n\tcondition\030\001 \001(\0132%.api.v1alp" +
+      "ha1.explorer.ExpressionNodeR\tcondition\022=" +
+      "\n\006result\030\002 \001(\0132%.api.v1alpha1.explorer.E" +
+      "xpressionNodeR\006result\"\352\001\n\010JoinNode\022\022\n\004si" +
+      "de\030\001 \001(\tR\004side\022D\n\014join_columns\030\002 \003(\0132!.a" +
+      "pi.v1alpha1.explorer.JoinColumnR\013joinCol" +
+      "umns\022@\n\014first_parent\030\003 \001(\0132\035.api.v1alpha" +
+      "1.explorer.ParentR\013firstParent\022B\n\rsecond" +
+      "_parent\030\004 \001(\0132\035.api.v1alpha1.explorer.Pa" +
+      "rentR\014secondParent\"n\n\nJoinColumn\022.\n\023firs" +
+      "t_parent_column\030\001 \001(\tR\021firstParentColumn" +
+      "\0220\n\024second_parent_column\030\002 \001(\tR\022secondPa" +
+      "rentColumn\"\332\001\n\006Parent\022\033\n\tparent_id\030\001 \001(\t" +
+      "R\010parentId\022\024\n\005title\030\002 \001(\tR\005title\022Z\n\017rena" +
+      "med_columns\030\003 \003(\01321.api.v1alpha1.explore" +
+      "r.Parent.RenamedColumnsEntryR\016renamedCol" +
+      "umns\032A\n\023RenamedColumnsEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\311\001\n\nSele" +
+      "ctNode\022\030\n\007columns\030\001 \003(\tR\007columns\022^\n\017rena" +
+      "med_columns\030\002 \003(\01325.api.v1alpha1.explore" +
+      "r.SelectNode.RenamedColumnsEntryR\016rename" +
+      "dColumns\032A\n\023RenamedColumnsEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"m\n\nJ" +
+      "sonTarget\022\035\n\npath_parts\030\001 \003(\tR\tpathParts" +
+      "\022\037\n\013column_name\030\002 \001(\tR\ncolumnName\022\037\n\013res" +
+      "ult_type\030\003 \001(\tR\nresultType\"\335\001\n\010JsonNode\022" +
+      "\022\n\004type\030\001 \001(\tR\004type\022\037\n\013json_column\030\002 \001(\t" +
+      "R\njsonColumn\022;\n\007targets\030\003 \003(\0132!.api.v1al" +
+      "pha1.explorer.JsonTargetR\007targets\022_\n\026unn" +
+      "est_to_columns_node\030\004 \001(\0132*.api.v1alpha1" +
+      ".explorer.UnnestToColumnsNodeR\023unnestToC" +
+      "olumnsNode\"\344\002\n\023UnnestToColumnsNode\022F\n\run" +
+      "nest_target\030\001 \001(\0132!.api.v1alpha1.explore" +
+      "r.JsonTargetR\014unnestTarget\022@\n\nkey_target" +
+      "\030\002 \001(\0132!.api.v1alpha1.explorer.JsonTarge" +
+      "tR\tkeyTarget\022D\n\014value_target\030\003 \001(\0132!.api" +
+      ".v1alpha1.explorer.JsonTargetR\013valueTarg" +
+      "et\022\030\n\007columns\030\004 \003(\tR\007columns\022!\n\014primary_" +
+      "keys\030\005 \003(\tR\013primaryKeys\022@\n\014json_columns\030" +
+      "\006 \003(\0132\035.api.v1alpha1.explorer.ColumnR\013js" +
+      "onColumns\"\264\001\n\021ValuesReplacement\022!\n\014targe" +
+      "t_value\030\001 \001(\tR\013targetValue\022(\n\020target_dat" +
+      "a_type\030\002 \001(\tR\016targetDataType\022R\n\021replacem" +
+      "ent_value\030\003 \001(\0132%.api.v1alpha1.explorer." +
+      "ExpressionNodeR\020replacementValue\"\221\001\n\021Col" +
+      "umnReplacement\022!\n\014column_names\030\001 \003(\tR\013co" +
+      "lumnNames\022Y\n\023values_replacements\030\002 \003(\0132(" +
+      ".api.v1alpha1.explorer.ValuesReplacement" +
+      "R\022valuesReplacements\"\207\001\n\013ReplaceNode\022Y\n\023" +
+      "column_replacements\030\001 \003(\0132(.api.v1alpha1" +
+      ".explorer.ColumnReplacementR\022columnRepla" +
+      "cements\022\035\n\nis_complex\030\002 \001(\010R\tisComplex\"K" +
+      "\n\nSortColumn\022\037\n\013column_name\030\001 \001(\tR\ncolum" +
+      "nName\022\034\n\tascending\030\002 \001(\010R\tascending\"P\n\010S" +
+      "ortNode\022D\n\014sort_columns\030\001 \003(\0132!.api.v1al" +
+      "pha1.explorer.SortColumnR\013sortColumns\"\217\001" +
+      "\n\027StringManipulationSplit\022\031\n\010split_by\030\002 " +
+      "\001(\tR\007splitBy\022.\n\023is_index_extraction\030\003 \001(" +
+      "\010R\021isIndexExtraction\022)\n\020index_extraction" +
+      "\030\004 \001(\005R\017indexExtraction\"I\n\031StringManipul" +
+      "ationReplace\022\026\n\006target\030\001 \001(\tR\006target\022\024\n\005" +
+      "value\030\002 \001(\tR\005value\"\346\002\n\026StringManipulatio" +
+      "nNode\022\022\n\004type\030\001 \001(\tR\004type\022,\n\022source_colu" +
+      "mn_name\030\002 \001(\tR\020sourceColumnName\022,\n\022targe" +
+      "t_column_name\030\003 \001(\tR\020targetColumnName\022j\n" +
+      "\031string_manipulation_split\030\004 \001(\0132..api.v" +
+      "1alpha1.explorer.StringManipulationSplit" +
+      "R\027stringManipulationSplit\022p\n\033string_mani" +
+      "pulation_replace\030\005 \001(\01320.api.v1alpha1.ex" +
+      "plorer.StringManipulationReplaceR\031string" +
+      "ManipulationReplace\"\307\001\n\rTransposeNode\022(\n" +
+      "\020group_by_columns\030\001 \003(\tR\016groupByColumns\022" +
+      "!\n\014pivot_column\030\002 \001(\tR\013pivotColumn\022!\n\014va" +
+      "lue_column\030\003 \001(\tR\013valueColumn\022F\n\017source_" +
+      "variants\030\004 \003(\0132\035.api.v1alpha1.explorer.C" +
+      "olumnR\016sourceVariantsB\256\001\n\'com.tcn.cloud." +
+      "api.api.v1alpha1.explorerB\rPipelineProto" +
+      "P\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V" +
+      "1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer" +
+      "\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -325,7 +337,7 @@ public final class PipelineProto {
     internal_static_api_v1alpha1_explorer_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_Node_descriptor,
-        new java.lang.String[] { "NodeId", "Type", "Title", "InputIds", "OutputIds", "FromNode", "FilterNode", "DeriveNode", "GroupNode", "JoinNode", "SelectNode", "AggregateNode", "TakeNode", "JsonNode", "MapNode", "ReplaceNode", "SortNode", "StringManipulationNode", "Body", });
+        new java.lang.String[] { "NodeId", "Type", "Title", "InputIds", "OutputIds", "FromNode", "FilterNode", "DeriveNode", "GroupNode", "JoinNode", "SelectNode", "AggregateNode", "TakeNode", "JsonNode", "MapNode", "ReplaceNode", "SortNode", "StringManipulationNode", "TransposeNode", "Body", });
     internal_static_api_v1alpha1_explorer_FromNode_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_explorer_FromNode_fieldAccessorTable = new
@@ -494,6 +506,12 @@ public final class PipelineProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_StringManipulationNode_descriptor,
         new java.lang.String[] { "Type", "SourceColumnName", "TargetColumnName", "StringManipulationSplit", "StringManipulationReplace", });
+    internal_static_api_v1alpha1_explorer_TransposeNode_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_explorer_TransposeNode_descriptor,
+        new java.lang.String[] { "GroupByColumns", "PivotColumn", "ValueColumn", "SourceVariants", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
