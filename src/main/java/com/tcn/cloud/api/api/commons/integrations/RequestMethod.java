@@ -1284,6 +1284,14 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_NUVEI_PAYMENT = 5701;</code>
    */
   REQUEST_METHOD_NUVEI_PAYMENT(5701),
+  /**
+   * <code>REQUEST_METHOD_CALLIPAY_CC_PAYMENT = 5801;</code>
+   */
+  REQUEST_METHOD_CALLIPAY_CC_PAYMENT(5801),
+  /**
+   * <code>REQUEST_METHOD_CALLIPAY_CHECK_PAYMENT = 5802;</code>
+   */
+  REQUEST_METHOD_CALLIPAY_CHECK_PAYMENT(5802),
   UNRECOGNIZED(-1),
   ;
 
@@ -2549,6 +2557,14 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_NUVEI_PAYMENT = 5701;</code>
    */
   public static final int REQUEST_METHOD_NUVEI_PAYMENT_VALUE = 5701;
+  /**
+   * <code>REQUEST_METHOD_CALLIPAY_CC_PAYMENT = 5801;</code>
+   */
+  public static final int REQUEST_METHOD_CALLIPAY_CC_PAYMENT_VALUE = 5801;
+  /**
+   * <code>REQUEST_METHOD_CALLIPAY_CHECK_PAYMENT = 5802;</code>
+   */
+  public static final int REQUEST_METHOD_CALLIPAY_CHECK_PAYMENT_VALUE = 5802;
 
 
   public final int getNumber() {
@@ -2888,6 +2904,8 @@ public enum RequestMethod
       case 5506: return REQUEST_METHOD_FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE;
       case 5601: return REQUEST_METHOD_CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
       case 5701: return REQUEST_METHOD_NUVEI_PAYMENT;
+      case 5801: return REQUEST_METHOD_CALLIPAY_CC_PAYMENT;
+      case 5802: return REQUEST_METHOD_CALLIPAY_CHECK_PAYMENT;
       default: return null;
     }
   }

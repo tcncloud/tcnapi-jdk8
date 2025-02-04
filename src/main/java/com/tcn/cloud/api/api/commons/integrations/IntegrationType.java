@@ -245,6 +245,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_NUVEI = 5700;</code>
    */
   INTEGRATION_TYPE_NUVEI(5700),
+  /**
+   * <code>INTEGRATION_TYPE_CALLIPAY = 5800;</code>
+   */
+  INTEGRATION_TYPE_CALLIPAY(5800),
   UNRECOGNIZED(-1),
   ;
 
@@ -480,6 +484,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_NUVEI = 5700;</code>
    */
   public static final int INTEGRATION_TYPE_NUVEI_VALUE = 5700;
+  /**
+   * <code>INTEGRATION_TYPE_CALLIPAY = 5800;</code>
+   */
+  public static final int INTEGRATION_TYPE_CALLIPAY_VALUE = 5800;
 
 
   public final int getNumber() {
@@ -564,6 +572,7 @@ public enum IntegrationType
       case 5500: return INTEGRATION_TYPE_FINVI_VELOSIDY;
       case 5600: return INTEGRATION_TYPE_CLOVER;
       case 5700: return INTEGRATION_TYPE_NUVEI;
+      case 5800: return INTEGRATION_TYPE_CALLIPAY;
       default: return null;
     }
   }
