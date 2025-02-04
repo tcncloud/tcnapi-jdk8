@@ -277,12 +277,32 @@ public interface AutoEvaluationOrBuilder extends
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
 
   /**
-   * <pre>
-   * Conversation sid of the evaluated transcript.
-   * </pre>
-   *
-   * <code>int64 conversation_sid = 20 [json_name = "conversationSid", jstype = JS_STRING];</code>
-   * @return The conversationSid.
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   * @return Whether the callInfo field is set.
    */
-  long getConversationSid();
+  boolean hasCallInfo();
+  /**
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   * @return The callInfo.
+   */
+  com.tcn.cloud.api.api.commons.CallInfo getCallInfo();
+  /**
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   * @return Whether the conversationInfo field is set.
+   */
+  boolean hasConversationInfo();
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   * @return The conversationInfo.
+   */
+  com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo();
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder();
 }

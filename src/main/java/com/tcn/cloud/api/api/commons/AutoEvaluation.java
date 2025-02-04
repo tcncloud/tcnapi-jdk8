@@ -1631,19 +1631,56 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
-  public static final int CONVERSATION_SID_FIELD_NUMBER = 20;
-  private long conversationSid_ = 0L;
+  public static final int CALL_INFO_FIELD_NUMBER = 20;
+  private com.tcn.cloud.api.api.commons.CallInfo callInfo_;
   /**
-   * <pre>
-   * Conversation sid of the evaluated transcript.
-   * </pre>
-   *
-   * <code>int64 conversation_sid = 20 [json_name = "conversationSid", jstype = JS_STRING];</code>
-   * @return The conversationSid.
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   * @return Whether the callInfo field is set.
    */
   @java.lang.Override
-  public long getConversationSid() {
-    return conversationSid_;
+  public boolean hasCallInfo() {
+    return callInfo_ != null;
+  }
+  /**
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   * @return The callInfo.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallInfo getCallInfo() {
+    return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+  }
+  /**
+   * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder() {
+    return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+  }
+
+  public static final int CONVERSATION_INFO_FIELD_NUMBER = 21;
+  private com.tcn.cloud.api.api.commons.ConversationInfo conversationInfo_;
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   * @return Whether the conversationInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversationInfo() {
+    return conversationInfo_ != null;
+  }
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   * @return The conversationInfo.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo() {
+    return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+  }
+  /**
+   * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder() {
+    return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1705,8 +1742,11 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(19, channelType_);
     }
-    if (conversationSid_ != 0L) {
-      output.writeInt64(20, conversationSid_);
+    if (callInfo_ != null) {
+      output.writeMessage(20, getCallInfo());
+    }
+    if (conversationInfo_ != null) {
+      output.writeMessage(21, getConversationInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1776,9 +1816,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(19, channelType_);
     }
-    if (conversationSid_ != 0L) {
+    if (callInfo_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(20, conversationSid_);
+        .computeMessageSize(20, getCallInfo());
+    }
+    if (conversationInfo_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getConversationInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1834,8 +1878,16 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCategoryInfo())) return false;
     }
     if (channelType_ != other.channelType_) return false;
-    if (getConversationSid()
-        != other.getConversationSid()) return false;
+    if (hasCallInfo() != other.hasCallInfo()) return false;
+    if (hasCallInfo()) {
+      if (!getCallInfo()
+          .equals(other.getCallInfo())) return false;
+    }
+    if (hasConversationInfo() != other.hasConversationInfo()) return false;
+    if (hasConversationInfo()) {
+      if (!getConversationInfo()
+          .equals(other.getConversationInfo())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1892,9 +1944,14 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
-    hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getConversationSid());
+    if (hasCallInfo()) {
+      hash = (37 * hash) + CALL_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getCallInfo().hashCode();
+    }
+    if (hasConversationInfo()) {
+      hash = (37 * hash) + CONVERSATION_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getConversationInfo().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2067,7 +2124,16 @@ private static final long serialVersionUID = 0L;
         categoryInfoBuilder_ = null;
       }
       channelType_ = 0;
-      conversationSid_ = 0L;
+      callInfo_ = null;
+      if (callInfoBuilder_ != null) {
+        callInfoBuilder_.dispose();
+        callInfoBuilder_ = null;
+      }
+      conversationInfo_ = null;
+      if (conversationInfoBuilder_ != null) {
+        conversationInfoBuilder_.dispose();
+        conversationInfoBuilder_ = null;
+      }
       return this;
     }
 
@@ -2165,7 +2231,14 @@ private static final long serialVersionUID = 0L;
         result.channelType_ = channelType_;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.conversationSid_ = conversationSid_;
+        result.callInfo_ = callInfoBuilder_ == null
+            ? callInfo_
+            : callInfoBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.conversationInfo_ = conversationInfoBuilder_ == null
+            ? conversationInfo_
+            : conversationInfoBuilder_.build();
       }
     }
 
@@ -2283,8 +2356,11 @@ private static final long serialVersionUID = 0L;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
-      if (other.getConversationSid() != 0L) {
-        setConversationSid(other.getConversationSid());
+      if (other.hasCallInfo()) {
+        mergeCallInfo(other.getCallInfo());
+      }
+      if (other.hasConversationInfo()) {
+        mergeConversationInfo(other.getConversationInfo());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2403,11 +2479,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 152
-            case 160: {
-              conversationSid_ = input.readInt64();
+            case 162: {
+              input.readMessage(
+                  getCallInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00008000;
               break;
-            } // case 160
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getConversationInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3860,48 +3945,242 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long conversationSid_ ;
+    private com.tcn.cloud.api.api.commons.CallInfo callInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder> callInfoBuilder_;
     /**
-     * <pre>
-     * Conversation sid of the evaluated transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_sid = 20 [json_name = "conversationSid", jstype = JS_STRING];</code>
-     * @return The conversationSid.
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     * @return Whether the callInfo field is set.
      */
-    @java.lang.Override
-    public long getConversationSid() {
-      return conversationSid_;
+    public boolean hasCallInfo() {
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
-     * <pre>
-     * Conversation sid of the evaluated transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_sid = 20 [json_name = "conversationSid", jstype = JS_STRING];</code>
-     * @param value The conversationSid to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     * @return The callInfo.
      */
-    public Builder setConversationSid(long value) {
-
-      conversationSid_ = value;
+    public com.tcn.cloud.api.api.commons.CallInfo getCallInfo() {
+      if (callInfoBuilder_ == null) {
+        return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+      } else {
+        return callInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    public Builder setCallInfo(com.tcn.cloud.api.api.commons.CallInfo value) {
+      if (callInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callInfo_ = value;
+      } else {
+        callInfoBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Conversation sid of the evaluated transcript.
-     * </pre>
-     *
-     * <code>int64 conversation_sid = 20 [json_name = "conversationSid", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
      */
-    public Builder clearConversationSid() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      conversationSid_ = 0L;
+    public Builder setCallInfo(
+        com.tcn.cloud.api.api.commons.CallInfo.Builder builderForValue) {
+      if (callInfoBuilder_ == null) {
+        callInfo_ = builderForValue.build();
+      } else {
+        callInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    public Builder mergeCallInfo(com.tcn.cloud.api.api.commons.CallInfo value) {
+      if (callInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          callInfo_ != null &&
+          callInfo_ != com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance()) {
+          getCallInfoBuilder().mergeFrom(value);
+        } else {
+          callInfo_ = value;
+        }
+      } else {
+        callInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    public Builder clearCallInfo() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      callInfo_ = null;
+      if (callInfoBuilder_ != null) {
+        callInfoBuilder_.dispose();
+        callInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallInfo.Builder getCallInfoBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getCallInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder() {
+      if (callInfoBuilder_ != null) {
+        return callInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return callInfo_ == null ?
+            com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+      }
+    }
+    /**
+     * <code>.api.commons.CallInfo call_info = 20 [json_name = "callInfo"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder> 
+        getCallInfoFieldBuilder() {
+      if (callInfoBuilder_ == null) {
+        callInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder>(
+                getCallInfo(),
+                getParentForChildren(),
+                isClean());
+        callInfo_ = null;
+      }
+      return callInfoBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.ConversationInfo conversationInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder> conversationInfoBuilder_;
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     * @return Whether the conversationInfo field is set.
+     */
+    public boolean hasConversationInfo() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     * @return The conversationInfo.
+     */
+    public com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo() {
+      if (conversationInfoBuilder_ == null) {
+        return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+      } else {
+        return conversationInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public Builder setConversationInfo(com.tcn.cloud.api.api.commons.ConversationInfo value) {
+      if (conversationInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversationInfo_ = value;
+      } else {
+        conversationInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public Builder setConversationInfo(
+        com.tcn.cloud.api.api.commons.ConversationInfo.Builder builderForValue) {
+      if (conversationInfoBuilder_ == null) {
+        conversationInfo_ = builderForValue.build();
+      } else {
+        conversationInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public Builder mergeConversationInfo(com.tcn.cloud.api.api.commons.ConversationInfo value) {
+      if (conversationInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          conversationInfo_ != null &&
+          conversationInfo_ != com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance()) {
+          getConversationInfoBuilder().mergeFrom(value);
+        } else {
+          conversationInfo_ = value;
+        }
+      } else {
+        conversationInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public Builder clearConversationInfo() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      conversationInfo_ = null;
+      if (conversationInfoBuilder_ != null) {
+        conversationInfoBuilder_.dispose();
+        conversationInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConversationInfo.Builder getConversationInfoBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getConversationInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder() {
+      if (conversationInfoBuilder_ != null) {
+        return conversationInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return conversationInfo_ == null ?
+            com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationInfo conversation_info = 21 [json_name = "conversationInfo"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder> 
+        getConversationInfoFieldBuilder() {
+      if (conversationInfoBuilder_ == null) {
+        conversationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder>(
+                getConversationInfo(),
+                getParentForChildren(),
+                isClean());
+        conversationInfo_ = null;
+      }
+      return conversationInfoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

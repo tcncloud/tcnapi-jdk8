@@ -135,6 +135,16 @@ public final class ScorecardsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SmartEvaluation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_CallInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_CallInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_ConversationInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_ConversationInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_SmartEvaluationSection_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -178,7 +188,7 @@ public final class ScorecardsProto {
       "\010isSystem\022>\n\rcategory_type\030\014 \001(\0162\031.api.c" +
       "ommons.CategoryTypeR\014categoryType\0227\n\030ski" +
       "ll_profile_group_sids\030\r \003(\003R\025skillProfil" +
-      "eGroupSids\"\355\006\n\nEvaluation\022#\n\revaluation_" +
+      "eGroupSids\"\276\007\n\nEvaluation\022#\n\revaluation_" +
       "id\030\002 \001(\003R\014evaluationId\022!\n\014scorecard_id\030\003" +
       " \001(\003R\013scorecardId\022\033\n\tscorer_id\030\004 \001(\tR\010sc" +
       "orerId\022\031\n\010call_sid\030\006 \001(\003R\007callSid\022\024\n\005sco" +
@@ -197,231 +207,241 @@ public final class ScorecardsProto {
       "eldR\014customFields\022\035\n\ndeleted_by\030\022 \001(\tR\td" +
       "eletedBy\022%\n\016is_recoverable\030\024 \001(\010R\risReco" +
       "verable\022;\n\014channel_type\030\026 \001(\0162\030.api.comm" +
-      "ons.ChannelTypeR\013channelType\022-\n\020conversa" +
-      "tion_sid\030\027 \001(\003B\0020\001R\017conversationSid\0325\n\013C" +
-      "ustomField\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005field\030\002 " +
-      "\001(\tR\005field\"\260\004\n\021EvaluationSection\0222\n\025eval" +
-      "uation_section_id\030\002 \001(\003R\023evaluationSecti" +
-      "onId\022#\n\revaluation_id\030\003 \001(\003R\014evaluationI" +
-      "d\022\035\n\nsection_id\030\004 \001(\003R\tsectionId\022\026\n\006poin" +
-      "ts\030\005 \001(\005R\006points\022\'\n\017possible_points\030\006 \001(" +
-      "\005R\016possiblePoints\022\035\n\nsort_order\030\007 \001(\005R\ts" +
-      "ortOrder\0229\n\ndeleted_at\030\010 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tdeletedAt\0229\n\ncreated_a" +
-      "t\030\t \001(\0132\032.google.protobuf.TimestampR\tcre" +
-      "atedAt\022R\n\024evaluation_questions\030\n \003(\0132\037.a" +
-      "pi.commons.EvaluationQuestionR\023evaluatio" +
-      "nQuestions\022_\n\031auto_evaluation_questions\030" +
-      "\013 \003(\0132#.api.commons.AutoEvaluationQuesti" +
-      "onR\027autoEvaluationQuestions\022\030\n\007skipped\030\014" +
-      " \001(\010R\007skipped\"\271\004\n\022EvaluationQuestion\0224\n\026" +
-      "evaluation_question_id\030\002 \001(\003R\024evaluation" +
-      "QuestionId\022#\n\revaluation_id\030\003 \001(\003R\014evalu" +
-      "ationId\0222\n\025scorecard_question_id\030\004 \001(\003R\023" +
-      "scorecardQuestionId\022\030\n\007skipped\030\005 \001(\010R\007sk" +
-      "ipped\022\026\n\006points\030\006 \001(\003R\006points\022@\n\007answers" +
-      "\030\007 \003(\0132&.api.commons.EvaluationQuestion." +
-      "AnswerR\007answers\0222\n\025evaluation_section_id" +
-      "\030\010 \001(\003R\023evaluationSectionId\022\030\n\007comment\030\t" +
-      " \001(\tR\007comment\022\035\n\nsort_order\030\n \001(\005R\tsortO" +
-      "rder\032\262\001\n\006Answer\022#\n\ranswer_option\030\001 \001(\tR\014" +
-      "answerOption\022\034\n\006points\030\002 \001(\rB\002\030\001H\000R\006poin" +
-      "ts\0224\n\tfail_type\030\003 \001(\0162\025.api.commons.Fail" +
-      "TypeH\000R\010failType\022%\n\ranswer_points\030\004 \001(\005H" +
-      "\000R\014answerPointsB\010\n\006result\"\271\007\n\016AutoEvalua" +
-      "tion\022,\n\022auto_evaluation_id\030\002 \001(\003R\020autoEv" +
-      "aluationId\022!\n\014scorecard_id\030\003 \001(\003R\013scorec" +
-      "ardId\022\031\n\010call_sid\030\004 \001(\003R\007callSid\022\"\n\ragen" +
-      "t_user_id\030\005 \001(\tR\013agentUserId\022\\\n\030auto_eva" +
-      "luation_sections\030\006 \003(\0132\".api.commons.Aut" +
-      "oEvaluationSectionR\026autoEvaluationSectio" +
-      "ns\022=\n\014completed_at\030\007 \001(\0132\032.google.protob" +
-      "uf.TimestampR\013completedAt\0229\n\ndeleted_at\030" +
-      "\010 \001(\0132\032.google.protobuf.TimestampR\tdelet" +
-      "edAt\0227\n\tcall_type\030\t \001(\0162\032.api.commons.Ca" +
-      "llType.EnumR\010callType\022%\n\016transcript_sid\030" +
-      "\n \001(\003R\rtranscriptSid\022-\n\022expression_match" +
-      "ed\030\013 \001(\010R\021expressionMatched\0225\n\nrisk_leve" +
-      "l\030\014 \001(\0162\026.api.commons.RiskLevelR\triskLev" +
-      "el\022\037\n\013call_length\030\020 \001(\005R\ncallLength\022P\n\016s" +
-      "corecard_info\030\021 \001(\0132).api.commons.AutoEv" +
-      "aluation.ScorecardInfoR\rscorecardInfo\022M\n" +
-      "\rcategory_info\030\022 \001(\0132(.api.commons.AutoE" +
-      "valuation.CategoryInfoR\014categoryInfo\022;\n\014" +
-      "channel_type\030\023 \001(\0162\030.api.commons.Channel" +
-      "TypeR\013channelType\022-\n\020conversation_sid\030\024 " +
-      "\001(\003B\0020\001R\017conversationSid\032%\n\rScorecardInf" +
-      "o\022\024\n\005title\030\001 \001(\tR\005title\032$\n\014CategoryInfo\022" +
-      "\024\n\005title\030\001 \001(\tR\005title\"\243\003\n\026AutoEvaluation" +
-      "Question\022=\n\033auto_evaluation_question_id\030" +
-      "\002 \001(\003R\030autoEvaluationQuestionId\022,\n\022auto_" +
-      "evaluation_id\030\003 \001(\003R\020autoEvaluationId\022;\n" +
-      "\032auto_evaluation_section_id\030\004 \001(\003R\027autoE" +
-      "valuationSectionId\022(\n\020auto_question_id\030\005" +
-      " \001(\003R\016autoQuestionId\022\030\n\007flagged\030\006 \003(\003R\007f" +
-      "lagged\022\026\n\006passed\030\007 \001(\010R\006passed\022\035\n\nsort_o" +
-      "rder\030\010 \001(\005R\tsortOrder\0225\n\nrisk_level\030\013 \001(" +
-      "\0162\026.api.commons.RiskLevelR\triskLevel\022-\n\022" +
-      "expression_matched\030\016 \001(\010R\021expressionMatc" +
-      "hed\"\316\003\n\025AutoEvaluationSection\022;\n\032auto_ev" +
-      "aluation_section_id\030\002 \001(\003R\027autoEvaluatio" +
-      "nSectionId\022,\n\022auto_evaluation_id\030\003 \001(\003R\020" +
-      "autoEvaluationId\022\035\n\nsection_id\030\004 \001(\003R\tse" +
-      "ctionId\022\035\n\nsort_order\030\005 \001(\005R\tsortOrder\0229" +
-      "\n\ndeleted_at\030\006 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\tdeletedAt\0229\n\ncreated_at\030\007 \001(\0132\032." +
-      "google.protobuf.TimestampR\tcreatedAt\022_\n\031" +
-      "auto_evaluation_questions\030\010 \003(\0132#.api.co" +
-      "mmons.AutoEvaluationQuestionR\027autoEvalua" +
-      "tionQuestions\0225\n\nrisk_level\030\t \001(\0162\026.api." +
-      "commons.RiskLevelR\triskLevel\"\357\001\n\010Questio" +
-      "n\022\037\n\013question_id\030\002 \001(\003R\nquestionId\022\033\n\tau" +
-      "thor_id\030\003 \001(\tR\010authorId\022\032\n\010question\030\004 \001(" +
-      "\tR\010question\022 \n\013description\030\005 \001(\tR\013descri" +
-      "ption\0225\n\ncategories\030\006 \003(\0132\025.api.commons." +
-      "CategoryR\ncategories\0220\n\005focus\030\007 \001(\0162\032.ap" +
-      "i.commons.QuestionFocusR\005focus\"\263\005\n\021Score" +
-      "cardQuestion\0222\n\025scorecard_question_id\030\002 " +
-      "\001(\003R\023scorecardQuestionId\022\032\n\010question\030\003 \001" +
-      "(\tR\010question\022 \n\013description\030\004 \001(\tR\013descr" +
-      "iption\022\037\n\013question_id\030\005 \001(\003R\nquestionId\022" +
-      "\035\n\nallow_skip\030\006 \001(\010R\tallowSkip\022?\n\007answer" +
-      "s\030\007 \003(\0132%.api.commons.ScorecardQuestion." +
-      "AnswerR\007answers\022M\n\014multi_select\030\010 \001(\0132*." +
-      "api.commons.ScorecardQuestion.MultiSelec" +
-      "tR\013multiSelect\022!\n\014scorecard_id\030\t \001(\003R\013sc" +
-      "orecardId\022\035\n\nsection_id\030\n \001(\003R\tsectionId" +
-      "\022\030\n\007version\030\013 \001(\005R\007version\022\035\n\nsort_order" +
-      "\030\014 \001(\005R\tsortOrder\032\262\001\n\006Answer\022#\n\ranswer_o" +
-      "ption\030\001 \001(\tR\014answerOption\022\034\n\006points\030\002 \001(" +
-      "\rB\002\030\001H\000R\006points\0224\n\tfail_type\030\003 \001(\0162\025.api" +
-      ".commons.FailTypeH\000R\010failType\022%\n\ranswer_" +
-      "points\030\004 \001(\005H\000R\014answerPointsB\010\n\006result\032," +
-      "\n\013MultiSelect\022\035\n\nmax_points\030\001 \001(\003R\tmaxPo" +
-      "ints\"\231\003\n\007Section\022\035\n\nsection_id\030\002 \001(\003R\tse" +
-      "ctionId\022!\n\014scorecard_id\030\003 \001(\003R\013scorecard" +
-      "Id\022\024\n\005title\030\004 \001(\tR\005title\022 \n\013description\030" +
-      "\005 \001(\tR\013description\022\026\n\006weight\030\006 \001(\rR\006weig" +
-      "ht\022<\n\tquestions\030\007 \003(\0132\036.api.commons.Scor" +
-      "ecardQuestionR\tquestions\022\030\n\007version\030\010 \001(" +
-      "\005R\007version\022\035\n\nsort_order\030\t \001(\005R\tsortOrde" +
-      "r\022@\n\016auto_questions\030\013 \003(\0132\031.api.commons." +
-      "AutoQuestionR\rautoQuestions\022C\n\017smart_que" +
-      "stions\030\014 \003(\0132\032.api.commons.SmartQuestion" +
-      "R\016smartQuestions\"\245\007\n\tScorecard\022!\n\014scorec" +
-      "ard_id\030\002 \001(\003R\013scorecardId\022\033\n\tauthor_id\030\003" +
-      " \001(\tR\010authorId\022\024\n\005title\030\004 \001(\tR\005title\022 \n\013" +
-      "description\030\005 \001(\tR\013description\022\035\n\npass_s" +
-      "core\030\006 \001(\001R\tpassScore\0225\n\nscore_type\030\007 \001(" +
-      "\0162\026.api.commons.ScoreTypeR\tscoreType\022D\n\017" +
-      "evaluation_type\030\010 \001(\0162\033.api.commons.Eval" +
-      "uationTypeR\016evaluationType\022%\n\016allow_feed" +
-      "back\030\n \001(\010R\rallowFeedback\022-\n\022distribute_" +
-      "weights\030\013 \001(\010R\021distributeWeights\0221\n\010cate" +
-      "gory\030\014 \001(\0132\025.api.commons.CategoryR\010categ" +
-      "ory\0220\n\010sections\030\r \003(\0132\024.api.commons.Sect" +
-      "ionR\010sections\022\030\n\007version\030\016 \001(\005R\007version\022" +
-      "1\n\005state\030\017 \001(\0162\033.api.commons.ScorecardSt" +
-      "ateR\005state\022\036\n\tis_ad_hoc\030\020 \001(\010B\002\030\001R\007isAdH" +
-      "oc\022*\n\021custom_field_keys\030\023 \003(\tR\017customFie" +
-      "ldKeys\0229\n\ncall_types\030\024 \003(\0162\032.api.commons" +
-      ".CallType.EnumR\tcallTypes\0229\n\nupdated_at\030" +
-      "\025 \001(\0132\032.google.protobuf.TimestampR\tupdat" +
-      "edAt\0224\n\010channels\030\026 \003(\0162\030.api.commons.Cha" +
-      "nnelTypeR\010channels\022I\n\023minimum_call_lengt" +
-      "h\030\027 \001(\0132\031.google.protobuf.DurationR\021mini" +
-      "mumCallLength\0229\n\031minimum_sms_message_cou" +
-      "nt\030\030 \001(\005R\026minimumSmsMessageCount\"\255\005\n\014Aut" +
-      "oQuestion\022(\n\020auto_question_id\030\002 \001(\003R\016aut" +
-      "oQuestionId\022\031\n\010flag_sid\030\003 \001(\003R\007flagSid\022!" +
-      "\n\014scorecard_id\030\005 \001(\003R\013scorecardId\022&\n\017aut" +
-      "o_section_id\030\006 \001(\003R\rautoSectionId\022\035\n\nsor" +
-      "t_order\030\007 \001(\005R\tsortOrder\022K\n\017flag_express" +
-      "ion\030\n \001(\0132\".api.commons.AutoQuestion.Fla" +
-      "gExprR\016flagExpression\022\032\n\010question\030\013 \001(\tR" +
-      "\010question\022 \n\013description\030\014 \001(\tR\013descript" +
-      "ion\022\037\n\013question_id\030\r \001(\003R\nquestionId\0225\n\n" +
-      "risk_level\030\016 \001(\0162\026.api.commons.RiskLevel" +
-      "R\triskLevel\032\212\002\n\010FlagExpr\0224\n\003and\030\001 \003(\0132\"." +
-      "api.commons.AutoQuestion.FlagExprR\003and\0222" +
-      "\n\002or\030\002 \003(\0132\".api.commons.AutoQuestion.Fl" +
-      "agExprR\002or\022;\n\004flag\030\003 \001(\0132\'.api.commons.A" +
-      "utoQuestion.FlagExpr.FlagR\004flag\0224\n\003not\030\004" +
-      " \001(\0132\".api.commons.AutoQuestion.FlagExpr" +
-      "R\003not\032!\n\004Flag\022\031\n\010flag_sid\030\001 \001(\003R\007flagSid" +
-      "\"\346\003\n\rSmartQuestion\022*\n\021smart_question_id\030" +
-      "\002 \001(\003R\017smartQuestionId\022!\n\014scorecard_id\030\003" +
-      " \001(\003R\013scorecardId\022\035\n\nsection_id\030\004 \001(\003R\ts" +
-      "ectionId\022\037\n\013question_id\030\005 \001(\003R\nquestionI" +
-      "d\022 \n\013description\030\006 \001(\tR\013description\022\032\n\010q" +
-      "uestion\030\007 \001(\tR\010question\022;\n\007answers\030\010 \003(\013" +
-      "2!.api.commons.SmartQuestion.AnswerR\007ans" +
-      "wers\0220\n\005focus\030\013 \001(\0162\032.api.commons.Questi" +
-      "onFocusR\005focus\022\035\n\nsort_order\030\014 \001(\005R\tsort" +
-      "Order\032z\n\006Answer\022\026\n\006answer\030\001 \001(\tR\006answer\022" +
-      "\030\n\006points\030\002 \001(\005H\000R\006points\0224\n\tfail_type\030\003" +
-      " \001(\0162\025.api.commons.FailTypeH\000R\010failTypeB" +
-      "\010\n\006result\"\201\005\n\017SmartEvaluation\022.\n\023smart_e" +
-      "valuation_id\030\002 \001(\003R\021smartEvaluationId\022!\n" +
-      "\014scorecard_id\030\003 \001(\003R\013scorecardId\022%\n\016tran" +
-      "script_sid\030\004 \001(\003R\rtranscriptSid\022\"\n\ragent" +
-      "_user_id\030\005 \001(\tR\013agentUserId\022\024\n\005score\030\006 \001" +
-      "(\001R\005score\022\'\n\017scoring_version\030\007 \001(\005R\016scor" +
-      "ingVersion\022+\n\021scorecard_version\030\010 \001(\005R\020s" +
-      "corecardVersion\022?\n\rcomplete_time\030\t \001(\0132\032" +
-      ".google.protobuf.TimestampR\014completeTime" +
-      "\022;\n\013delete_time\030\n \001(\0132\032.google.protobuf." +
-      "TimestampR\ndeleteTime\022_\n\031smart_evaluatio" +
-      "n_sections\030\013 \003(\0132#.api.commons.SmartEval" +
-      "uationSectionR\027smartEvaluationSections\022;" +
-      "\n\014channel_type\030\014 \001(\0162\030.api.commons.Chann" +
-      "elTypeR\013channelType\022\031\n\010call_sid\030\r \001(\003R\007c" +
-      "allSid\022-\n\020conversation_sid\030\016 \001(\003B\0020\001R\017co" +
-      "nversationSid\"\326\002\n\026SmartEvaluationSection" +
-      "\022\035\n\nsection_id\030\004 \001(\003R\tsectionId\022\026\n\006point" +
-      "s\030\005 \001(\005R\006points\022\'\n\017possible_points\030\006 \001(\005" +
-      "R\016possiblePoints\022;\n\013create_time\030\007 \001(\0132\032." +
-      "google.protobuf.TimestampR\ncreateTime\022;\n" +
-      "\013delete_time\030\010 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\ndeleteTime\022b\n\032smart_evaluation_q" +
-      "uestions\030\t \003(\0132$.api.commons.SmartEvalua" +
-      "tionQuestionR\030smartEvaluationQuestions\"\355" +
-      "\003\n\027SmartEvaluationQuestion\022*\n\021smart_ques" +
-      "tion_id\030\005 \001(\003R\017smartQuestionId\022\026\n\006points" +
-      "\030\006 \001(\005R\006points\022\'\n\017possible_points\030\007 \001(\005R" +
-      "\016possiblePoints\022C\n\006answer\030\010 \001(\0132+.api.co" +
-      "mmons.SmartEvaluationQuestion.AnswerR\006an" +
-      "swer\022;\n\013create_time\030\t \001(\0132\032.google.proto" +
-      "buf.TimestampR\ncreateTime\022;\n\013delete_time" +
-      "\030\n \001(\0132\032.google.protobuf.TimestampR\ndele" +
-      "teTime\032\245\001\n\006Answer\022\026\n\006answer\030\001 \001(\tR\006answe" +
-      "r\022\034\n\006points\030\002 \001(\rB\002\030\001H\000R\006points\0224\n\tfail_" +
-      "type\030\003 \001(\0162\025.api.commons.FailTypeH\000R\010fai" +
-      "lType\022%\n\ranswer_points\030\004 \001(\005H\000R\014answerPo" +
-      "intsB\010\n\006result*=\n\014CategoryType\022\013\n\007INVALI" +
-      "D\020\000\022\017\n\013SKILL_CALLS\020\001\022\017\n\013MANUAL_DIAL\020\002*L\n" +
-      "\016EvaluationType\022\023\n\017EVALUATE_MANUAL\020\000\022\021\n\r" +
-      "EVALUATE_AUTO\020\001\022\022\n\016EVALUATE_SMART\020\002*V\n\tS" +
-      "coreType\022\024\n\020SCORE_SIMPLE_SUM\020\000\022\026\n\022SCORE_" +
-      "WEIGHTED_SUM\020\001\022\033\n\027SCORE_EVEN_WEIGHTED_SU" +
-      "M\020\002*C\n\010FailType\022\021\n\rFAIL_QUESTION\020\000\022\020\n\014FA" +
-      "IL_SECTION\020\001\022\022\n\016FAIL_SCORECARD\020\002*f\n\rQues" +
-      "tionFocus\022\036\n\032QUESTION_FOCUS_UNSPECIFIED\020" +
-      "\000\022\030\n\024QUESTION_FOCUS_AGENT\020\001\022\033\n\027QUESTION_" +
-      "FOCUS_CUSTOMER\020\002*\267\001\n\016ScorecardState\022\026\n\022S" +
-      "CORECARD_IS_DRAFT\020\000\022\026\n\022SCORECARD_IS_READ" +
-      "Y\020\001\022\027\n\023SCORECARD_IS_IN_USE\020\002\022\031\n\025SCORECAR" +
-      "D_IS_TEMPLATE\020\003\022\037\n\033SCORECARD_IS_READY_DI" +
-      "SABLED\020\004\022 \n\034SCORECARD_IS_IN_USE_DISABLED" +
-      "\020\005*[\n\017EvaluationState\022\032\n\026EVALUATION_IN_P" +
-      "ROGRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001\022\025\n\021EVAL" +
-      "UATION_FAILED\020\002*z\n\tRiskLevel\022\023\n\017RISK_LEV" +
-      "EL_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n\021RISK_LE" +
-      "VEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003\022\030\n\024RIS" +
-      "K_LEVEL_RISK_FREE\020\004B}\n\035com.tcn.cloud.api" +
-      ".api.commonsB\017ScorecardsProtoP\001\242\002\003ACX\252\002\013" +
-      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
-      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ons.ChannelTypeR\013channelType\0222\n\tcall_inf" +
+      "o\030\027 \001(\0132\025.api.commons.CallInfoR\010callInfo" +
+      "\022J\n\021conversation_info\030\030 \001(\0132\035.api.common" +
+      "s.ConversationInfoR\020conversationInfo\0325\n\013" +
+      "CustomField\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005field\030\002" +
+      " \001(\tR\005field\"\260\004\n\021EvaluationSection\0222\n\025eva" +
+      "luation_section_id\030\002 \001(\003R\023evaluationSect" +
+      "ionId\022#\n\revaluation_id\030\003 \001(\003R\014evaluation" +
+      "Id\022\035\n\nsection_id\030\004 \001(\003R\tsectionId\022\026\n\006poi" +
+      "nts\030\005 \001(\005R\006points\022\'\n\017possible_points\030\006 \001" +
+      "(\005R\016possiblePoints\022\035\n\nsort_order\030\007 \001(\005R\t" +
+      "sortOrder\0229\n\ndeleted_at\030\010 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\tdeletedAt\0229\n\ncreated_" +
+      "at\030\t \001(\0132\032.google.protobuf.TimestampR\tcr" +
+      "eatedAt\022R\n\024evaluation_questions\030\n \003(\0132\037." +
+      "api.commons.EvaluationQuestionR\023evaluati" +
+      "onQuestions\022_\n\031auto_evaluation_questions" +
+      "\030\013 \003(\0132#.api.commons.AutoEvaluationQuest" +
+      "ionR\027autoEvaluationQuestions\022\030\n\007skipped\030" +
+      "\014 \001(\010R\007skipped\"\271\004\n\022EvaluationQuestion\0224\n" +
+      "\026evaluation_question_id\030\002 \001(\003R\024evaluatio" +
+      "nQuestionId\022#\n\revaluation_id\030\003 \001(\003R\014eval" +
+      "uationId\0222\n\025scorecard_question_id\030\004 \001(\003R" +
+      "\023scorecardQuestionId\022\030\n\007skipped\030\005 \001(\010R\007s" +
+      "kipped\022\026\n\006points\030\006 \001(\003R\006points\022@\n\007answer" +
+      "s\030\007 \003(\0132&.api.commons.EvaluationQuestion" +
+      ".AnswerR\007answers\0222\n\025evaluation_section_i" +
+      "d\030\010 \001(\003R\023evaluationSectionId\022\030\n\007comment\030" +
+      "\t \001(\tR\007comment\022\035\n\nsort_order\030\n \001(\005R\tsort" +
+      "Order\032\262\001\n\006Answer\022#\n\ranswer_option\030\001 \001(\tR" +
+      "\014answerOption\022\034\n\006points\030\002 \001(\rB\002\030\001H\000R\006poi" +
+      "nts\0224\n\tfail_type\030\003 \001(\0162\025.api.commons.Fai" +
+      "lTypeH\000R\010failType\022%\n\ranswer_points\030\004 \001(\005" +
+      "H\000R\014answerPointsB\010\n\006result\"\212\010\n\016AutoEvalu" +
+      "ation\022,\n\022auto_evaluation_id\030\002 \001(\003R\020autoE" +
+      "valuationId\022!\n\014scorecard_id\030\003 \001(\003R\013score" +
+      "cardId\022\031\n\010call_sid\030\004 \001(\003R\007callSid\022\"\n\rage" +
+      "nt_user_id\030\005 \001(\tR\013agentUserId\022\\\n\030auto_ev" +
+      "aluation_sections\030\006 \003(\0132\".api.commons.Au" +
+      "toEvaluationSectionR\026autoEvaluationSecti" +
+      "ons\022=\n\014completed_at\030\007 \001(\0132\032.google.proto" +
+      "buf.TimestampR\013completedAt\0229\n\ndeleted_at" +
+      "\030\010 \001(\0132\032.google.protobuf.TimestampR\tdele" +
+      "tedAt\0227\n\tcall_type\030\t \001(\0162\032.api.commons.C" +
+      "allType.EnumR\010callType\022%\n\016transcript_sid" +
+      "\030\n \001(\003R\rtranscriptSid\022-\n\022expression_matc" +
+      "hed\030\013 \001(\010R\021expressionMatched\0225\n\nrisk_lev" +
+      "el\030\014 \001(\0162\026.api.commons.RiskLevelR\triskLe" +
+      "vel\022\037\n\013call_length\030\020 \001(\005R\ncallLength\022P\n\016" +
+      "scorecard_info\030\021 \001(\0132).api.commons.AutoE" +
+      "valuation.ScorecardInfoR\rscorecardInfo\022M" +
+      "\n\rcategory_info\030\022 \001(\0132(.api.commons.Auto" +
+      "Evaluation.CategoryInfoR\014categoryInfo\022;\n" +
+      "\014channel_type\030\023 \001(\0162\030.api.commons.Channe" +
+      "lTypeR\013channelType\0222\n\tcall_info\030\024 \001(\0132\025." +
+      "api.commons.CallInfoR\010callInfo\022J\n\021conver" +
+      "sation_info\030\025 \001(\0132\035.api.commons.Conversa" +
+      "tionInfoR\020conversationInfo\032%\n\rScorecardI" +
+      "nfo\022\024\n\005title\030\001 \001(\tR\005title\032$\n\014CategoryInf" +
+      "o\022\024\n\005title\030\001 \001(\tR\005title\"\243\003\n\026AutoEvaluati" +
+      "onQuestion\022=\n\033auto_evaluation_question_i" +
+      "d\030\002 \001(\003R\030autoEvaluationQuestionId\022,\n\022aut" +
+      "o_evaluation_id\030\003 \001(\003R\020autoEvaluationId\022" +
+      ";\n\032auto_evaluation_section_id\030\004 \001(\003R\027aut" +
+      "oEvaluationSectionId\022(\n\020auto_question_id" +
+      "\030\005 \001(\003R\016autoQuestionId\022\030\n\007flagged\030\006 \003(\003R" +
+      "\007flagged\022\026\n\006passed\030\007 \001(\010R\006passed\022\035\n\nsort" +
+      "_order\030\010 \001(\005R\tsortOrder\0225\n\nrisk_level\030\013 " +
+      "\001(\0162\026.api.commons.RiskLevelR\triskLevel\022-" +
+      "\n\022expression_matched\030\016 \001(\010R\021expressionMa" +
+      "tched\"\316\003\n\025AutoEvaluationSection\022;\n\032auto_" +
+      "evaluation_section_id\030\002 \001(\003R\027autoEvaluat" +
+      "ionSectionId\022,\n\022auto_evaluation_id\030\003 \001(\003" +
+      "R\020autoEvaluationId\022\035\n\nsection_id\030\004 \001(\003R\t" +
+      "sectionId\022\035\n\nsort_order\030\005 \001(\005R\tsortOrder" +
+      "\0229\n\ndeleted_at\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tdeletedAt\0229\n\ncreated_at\030\007 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tcreatedAt\022_" +
+      "\n\031auto_evaluation_questions\030\010 \003(\0132#.api." +
+      "commons.AutoEvaluationQuestionR\027autoEval" +
+      "uationQuestions\0225\n\nrisk_level\030\t \001(\0162\026.ap" +
+      "i.commons.RiskLevelR\triskLevel\"\357\001\n\010Quest" +
+      "ion\022\037\n\013question_id\030\002 \001(\003R\nquestionId\022\033\n\t" +
+      "author_id\030\003 \001(\tR\010authorId\022\032\n\010question\030\004 " +
+      "\001(\tR\010question\022 \n\013description\030\005 \001(\tR\013desc" +
+      "ription\0225\n\ncategories\030\006 \003(\0132\025.api.common" +
+      "s.CategoryR\ncategories\0220\n\005focus\030\007 \001(\0162\032." +
+      "api.commons.QuestionFocusR\005focus\"\263\005\n\021Sco" +
+      "recardQuestion\0222\n\025scorecard_question_id\030" +
+      "\002 \001(\003R\023scorecardQuestionId\022\032\n\010question\030\003" +
+      " \001(\tR\010question\022 \n\013description\030\004 \001(\tR\013des" +
+      "cription\022\037\n\013question_id\030\005 \001(\003R\nquestionI" +
+      "d\022\035\n\nallow_skip\030\006 \001(\010R\tallowSkip\022?\n\007answ" +
+      "ers\030\007 \003(\0132%.api.commons.ScorecardQuestio" +
+      "n.AnswerR\007answers\022M\n\014multi_select\030\010 \001(\0132" +
+      "*.api.commons.ScorecardQuestion.MultiSel" +
+      "ectR\013multiSelect\022!\n\014scorecard_id\030\t \001(\003R\013" +
+      "scorecardId\022\035\n\nsection_id\030\n \001(\003R\tsection" +
+      "Id\022\030\n\007version\030\013 \001(\005R\007version\022\035\n\nsort_ord" +
+      "er\030\014 \001(\005R\tsortOrder\032\262\001\n\006Answer\022#\n\ranswer" +
+      "_option\030\001 \001(\tR\014answerOption\022\034\n\006points\030\002 " +
+      "\001(\rB\002\030\001H\000R\006points\0224\n\tfail_type\030\003 \001(\0162\025.a" +
+      "pi.commons.FailTypeH\000R\010failType\022%\n\ranswe" +
+      "r_points\030\004 \001(\005H\000R\014answerPointsB\010\n\006result" +
+      "\032,\n\013MultiSelect\022\035\n\nmax_points\030\001 \001(\003R\tmax" +
+      "Points\"\231\003\n\007Section\022\035\n\nsection_id\030\002 \001(\003R\t" +
+      "sectionId\022!\n\014scorecard_id\030\003 \001(\003R\013scoreca" +
+      "rdId\022\024\n\005title\030\004 \001(\tR\005title\022 \n\013descriptio" +
+      "n\030\005 \001(\tR\013description\022\026\n\006weight\030\006 \001(\rR\006we" +
+      "ight\022<\n\tquestions\030\007 \003(\0132\036.api.commons.Sc" +
+      "orecardQuestionR\tquestions\022\030\n\007version\030\010 " +
+      "\001(\005R\007version\022\035\n\nsort_order\030\t \001(\005R\tsortOr" +
+      "der\022@\n\016auto_questions\030\013 \003(\0132\031.api.common" +
+      "s.AutoQuestionR\rautoQuestions\022C\n\017smart_q" +
+      "uestions\030\014 \003(\0132\032.api.commons.SmartQuesti" +
+      "onR\016smartQuestions\"\245\007\n\tScorecard\022!\n\014scor" +
+      "ecard_id\030\002 \001(\003R\013scorecardId\022\033\n\tauthor_id" +
+      "\030\003 \001(\tR\010authorId\022\024\n\005title\030\004 \001(\tR\005title\022 " +
+      "\n\013description\030\005 \001(\tR\013description\022\035\n\npass" +
+      "_score\030\006 \001(\001R\tpassScore\0225\n\nscore_type\030\007 " +
+      "\001(\0162\026.api.commons.ScoreTypeR\tscoreType\022D" +
+      "\n\017evaluation_type\030\010 \001(\0162\033.api.commons.Ev" +
+      "aluationTypeR\016evaluationType\022%\n\016allow_fe" +
+      "edback\030\n \001(\010R\rallowFeedback\022-\n\022distribut" +
+      "e_weights\030\013 \001(\010R\021distributeWeights\0221\n\010ca" +
+      "tegory\030\014 \001(\0132\025.api.commons.CategoryR\010cat" +
+      "egory\0220\n\010sections\030\r \003(\0132\024.api.commons.Se" +
+      "ctionR\010sections\022\030\n\007version\030\016 \001(\005R\007versio" +
+      "n\0221\n\005state\030\017 \001(\0162\033.api.commons.Scorecard" +
+      "StateR\005state\022\036\n\tis_ad_hoc\030\020 \001(\010B\002\030\001R\007isA" +
+      "dHoc\022*\n\021custom_field_keys\030\023 \003(\tR\017customF" +
+      "ieldKeys\0229\n\ncall_types\030\024 \003(\0162\032.api.commo" +
+      "ns.CallType.EnumR\tcallTypes\0229\n\nupdated_a" +
+      "t\030\025 \001(\0132\032.google.protobuf.TimestampR\tupd" +
+      "atedAt\0224\n\010channels\030\026 \003(\0162\030.api.commons.C" +
+      "hannelTypeR\010channels\022I\n\023minimum_call_len" +
+      "gth\030\027 \001(\0132\031.google.protobuf.DurationR\021mi" +
+      "nimumCallLength\0229\n\031minimum_sms_message_c" +
+      "ount\030\030 \001(\005R\026minimumSmsMessageCount\"\255\005\n\014A" +
+      "utoQuestion\022(\n\020auto_question_id\030\002 \001(\003R\016a" +
+      "utoQuestionId\022\031\n\010flag_sid\030\003 \001(\003R\007flagSid" +
+      "\022!\n\014scorecard_id\030\005 \001(\003R\013scorecardId\022&\n\017a" +
+      "uto_section_id\030\006 \001(\003R\rautoSectionId\022\035\n\ns" +
+      "ort_order\030\007 \001(\005R\tsortOrder\022K\n\017flag_expre" +
+      "ssion\030\n \001(\0132\".api.commons.AutoQuestion.F" +
+      "lagExprR\016flagExpression\022\032\n\010question\030\013 \001(" +
+      "\tR\010question\022 \n\013description\030\014 \001(\tR\013descri" +
+      "ption\022\037\n\013question_id\030\r \001(\003R\nquestionId\0225" +
+      "\n\nrisk_level\030\016 \001(\0162\026.api.commons.RiskLev" +
+      "elR\triskLevel\032\212\002\n\010FlagExpr\0224\n\003and\030\001 \003(\0132" +
+      "\".api.commons.AutoQuestion.FlagExprR\003and" +
+      "\0222\n\002or\030\002 \003(\0132\".api.commons.AutoQuestion." +
+      "FlagExprR\002or\022;\n\004flag\030\003 \001(\0132\'.api.commons" +
+      ".AutoQuestion.FlagExpr.FlagR\004flag\0224\n\003not" +
+      "\030\004 \001(\0132\".api.commons.AutoQuestion.FlagEx" +
+      "prR\003not\032!\n\004Flag\022\031\n\010flag_sid\030\001 \001(\003R\007flagS" +
+      "id\"\346\003\n\rSmartQuestion\022*\n\021smart_question_i" +
+      "d\030\002 \001(\003R\017smartQuestionId\022!\n\014scorecard_id" +
+      "\030\003 \001(\003R\013scorecardId\022\035\n\nsection_id\030\004 \001(\003R" +
+      "\tsectionId\022\037\n\013question_id\030\005 \001(\003R\nquestio" +
+      "nId\022 \n\013description\030\006 \001(\tR\013description\022\032\n" +
+      "\010question\030\007 \001(\tR\010question\022;\n\007answers\030\010 \003" +
+      "(\0132!.api.commons.SmartQuestion.AnswerR\007a" +
+      "nswers\0220\n\005focus\030\013 \001(\0162\032.api.commons.Ques" +
+      "tionFocusR\005focus\022\035\n\nsort_order\030\014 \001(\005R\tso" +
+      "rtOrder\032z\n\006Answer\022\026\n\006answer\030\001 \001(\tR\006answe" +
+      "r\022\030\n\006points\030\002 \001(\005H\000R\006points\0224\n\tfail_type" +
+      "\030\003 \001(\0162\025.api.commons.FailTypeH\000R\010failTyp" +
+      "eB\010\n\006result\"\267\005\n\017SmartEvaluation\022.\n\023smart" +
+      "_evaluation_id\030\002 \001(\003R\021smartEvaluationId\022" +
+      "!\n\014scorecard_id\030\003 \001(\003R\013scorecardId\022%\n\016tr" +
+      "anscript_sid\030\004 \001(\003R\rtranscriptSid\022\"\n\rage" +
+      "nt_user_id\030\005 \001(\tR\013agentUserId\022\024\n\005score\030\006" +
+      " \001(\001R\005score\022\'\n\017scoring_version\030\007 \001(\005R\016sc" +
+      "oringVersion\022+\n\021scorecard_version\030\010 \001(\005R" +
+      "\020scorecardVersion\022?\n\rcomplete_time\030\t \001(\013" +
+      "2\032.google.protobuf.TimestampR\014completeTi" +
+      "me\022;\n\013delete_time\030\n \001(\0132\032.google.protobu" +
+      "f.TimestampR\ndeleteTime\022_\n\031smart_evaluat" +
+      "ion_sections\030\013 \003(\0132#.api.commons.SmartEv" +
+      "aluationSectionR\027smartEvaluationSections" +
+      "\022;\n\014channel_type\030\014 \001(\0162\030.api.commons.Cha" +
+      "nnelTypeR\013channelType\0222\n\tcall_info\030\r \001(\013" +
+      "2\025.api.commons.CallInfoR\010callInfo\022J\n\021con" +
+      "versation_info\030\016 \001(\0132\035.api.commons.Conve" +
+      "rsationInfoR\020conversationInfo\"^\n\010CallInf" +
+      "o\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_typ" +
+      "e\030\002 \001(\0162\032.api.commons.CallType.EnumR\010cal" +
+      "lType\"A\n\020ConversationInfo\022-\n\020conversatio" +
+      "n_sid\030\001 \001(\003B\0020\001R\017conversationSid\"\326\002\n\026Sma" +
+      "rtEvaluationSection\022\035\n\nsection_id\030\004 \001(\003R" +
+      "\tsectionId\022\026\n\006points\030\005 \001(\005R\006points\022\'\n\017po" +
+      "ssible_points\030\006 \001(\005R\016possiblePoints\022;\n\013c" +
+      "reate_time\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tampR\ncreateTime\022;\n\013delete_time\030\010 \001(\0132\032." +
+      "google.protobuf.TimestampR\ndeleteTime\022b\n" +
+      "\032smart_evaluation_questions\030\t \003(\0132$.api." +
+      "commons.SmartEvaluationQuestionR\030smartEv" +
+      "aluationQuestions\"\355\003\n\027SmartEvaluationQue" +
+      "stion\022*\n\021smart_question_id\030\005 \001(\003R\017smartQ" +
+      "uestionId\022\026\n\006points\030\006 \001(\005R\006points\022\'\n\017pos" +
+      "sible_points\030\007 \001(\005R\016possiblePoints\022C\n\006an" +
+      "swer\030\010 \001(\0132+.api.commons.SmartEvaluation" +
+      "Question.AnswerR\006answer\022;\n\013create_time\030\t" +
+      " \001(\0132\032.google.protobuf.TimestampR\ncreate" +
+      "Time\022;\n\013delete_time\030\n \001(\0132\032.google.proto" +
+      "buf.TimestampR\ndeleteTime\032\245\001\n\006Answer\022\026\n\006" +
+      "answer\030\001 \001(\tR\006answer\022\034\n\006points\030\002 \001(\rB\002\030\001" +
+      "H\000R\006points\0224\n\tfail_type\030\003 \001(\0162\025.api.comm" +
+      "ons.FailTypeH\000R\010failType\022%\n\ranswer_point" +
+      "s\030\004 \001(\005H\000R\014answerPointsB\010\n\006result*=\n\014Cat" +
+      "egoryType\022\013\n\007INVALID\020\000\022\017\n\013SKILL_CALLS\020\001\022" +
+      "\017\n\013MANUAL_DIAL\020\002*L\n\016EvaluationType\022\023\n\017EV" +
+      "ALUATE_MANUAL\020\000\022\021\n\rEVALUATE_AUTO\020\001\022\022\n\016EV" +
+      "ALUATE_SMART\020\002*V\n\tScoreType\022\024\n\020SCORE_SIM" +
+      "PLE_SUM\020\000\022\026\n\022SCORE_WEIGHTED_SUM\020\001\022\033\n\027SCO" +
+      "RE_EVEN_WEIGHTED_SUM\020\002*C\n\010FailType\022\021\n\rFA" +
+      "IL_QUESTION\020\000\022\020\n\014FAIL_SECTION\020\001\022\022\n\016FAIL_" +
+      "SCORECARD\020\002*f\n\rQuestionFocus\022\036\n\032QUESTION" +
+      "_FOCUS_UNSPECIFIED\020\000\022\030\n\024QUESTION_FOCUS_A" +
+      "GENT\020\001\022\033\n\027QUESTION_FOCUS_CUSTOMER\020\002*\267\001\n\016" +
+      "ScorecardState\022\026\n\022SCORECARD_IS_DRAFT\020\000\022\026" +
+      "\n\022SCORECARD_IS_READY\020\001\022\027\n\023SCORECARD_IS_I" +
+      "N_USE\020\002\022\031\n\025SCORECARD_IS_TEMPLATE\020\003\022\037\n\033SC" +
+      "ORECARD_IS_READY_DISABLED\020\004\022 \n\034SCORECARD" +
+      "_IS_IN_USE_DISABLED\020\005*[\n\017EvaluationState" +
+      "\022\032\n\026EVALUATION_IN_PROGRESS\020\000\022\025\n\021EVALUATI" +
+      "ON_PASSED\020\001\022\025\n\021EVALUATION_FAILED\020\002*z\n\tRi" +
+      "skLevel\022\023\n\017RISK_LEVEL_NONE\020\000\022\022\n\016RISK_LEV" +
+      "EL_LOW\020\001\022\025\n\021RISK_LEVEL_MEDIUM\020\002\022\023\n\017RISK_" +
+      "LEVEL_HIGH\020\003\022\030\n\024RISK_LEVEL_RISK_FREE\020\004B}" +
+      "\n\035com.tcn.cloud.api.api.commonsB\017Scoreca" +
+      "rdsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
+      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
+      "mmonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -448,7 +468,7 @@ public final class ScorecardsProto {
     internal_static_api_commons_Evaluation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Evaluation_descriptor,
-        new java.lang.String[] { "EvaluationId", "ScorecardId", "ScorerId", "CallSid", "Score", "EvaluationState", "EvaluationSections", "CompletedAt", "DeletedAt", "AgentUserId", "CallType", "TranscriptSid", "CustomFields", "DeletedBy", "IsRecoverable", "ChannelType", "ConversationSid", });
+        new java.lang.String[] { "EvaluationId", "ScorecardId", "ScorerId", "CallSid", "Score", "EvaluationState", "EvaluationSections", "CompletedAt", "DeletedAt", "AgentUserId", "CallType", "TranscriptSid", "CustomFields", "DeletedBy", "IsRecoverable", "ChannelType", "CallInfo", "ConversationInfo", });
     internal_static_api_commons_Evaluation_CustomField_descriptor =
       internal_static_api_commons_Evaluation_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_Evaluation_CustomField_fieldAccessorTable = new
@@ -478,7 +498,7 @@ public final class ScorecardsProto {
     internal_static_api_commons_AutoEvaluation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AutoEvaluation_descriptor,
-        new java.lang.String[] { "AutoEvaluationId", "ScorecardId", "CallSid", "AgentUserId", "AutoEvaluationSections", "CompletedAt", "DeletedAt", "CallType", "TranscriptSid", "ExpressionMatched", "RiskLevel", "CallLength", "ScorecardInfo", "CategoryInfo", "ChannelType", "ConversationSid", });
+        new java.lang.String[] { "AutoEvaluationId", "ScorecardId", "CallSid", "AgentUserId", "AutoEvaluationSections", "CompletedAt", "DeletedAt", "CallType", "TranscriptSid", "ExpressionMatched", "RiskLevel", "CallLength", "ScorecardInfo", "CategoryInfo", "ChannelType", "CallInfo", "ConversationInfo", });
     internal_static_api_commons_AutoEvaluation_ScorecardInfo_descriptor =
       internal_static_api_commons_AutoEvaluation_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_AutoEvaluation_ScorecardInfo_fieldAccessorTable = new
@@ -574,15 +594,27 @@ public final class ScorecardsProto {
     internal_static_api_commons_SmartEvaluation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SmartEvaluation_descriptor,
-        new java.lang.String[] { "SmartEvaluationId", "ScorecardId", "TranscriptSid", "AgentUserId", "Score", "ScoringVersion", "ScorecardVersion", "CompleteTime", "DeleteTime", "SmartEvaluationSections", "ChannelType", "CallSid", "ConversationSid", });
-    internal_static_api_commons_SmartEvaluationSection_descriptor =
+        new java.lang.String[] { "SmartEvaluationId", "ScorecardId", "TranscriptSid", "AgentUserId", "Score", "ScoringVersion", "ScorecardVersion", "CompleteTime", "DeleteTime", "SmartEvaluationSections", "ChannelType", "CallInfo", "ConversationInfo", });
+    internal_static_api_commons_CallInfo_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_api_commons_CallInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_CallInfo_descriptor,
+        new java.lang.String[] { "CallSid", "CallType", });
+    internal_static_api_commons_ConversationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_commons_ConversationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_ConversationInfo_descriptor,
+        new java.lang.String[] { "ConversationSid", });
+    internal_static_api_commons_SmartEvaluationSection_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_commons_SmartEvaluationSection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SmartEvaluationSection_descriptor,
         new java.lang.String[] { "SectionId", "Points", "PossiblePoints", "CreateTime", "DeleteTime", "SmartEvaluationQuestions", });
     internal_static_api_commons_SmartEvaluationQuestion_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_commons_SmartEvaluationQuestion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SmartEvaluationQuestion_descriptor,
