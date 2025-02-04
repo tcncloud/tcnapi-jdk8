@@ -87,10 +87,10 @@ public final class OperationsProto {
       "\n#google/longrunning/operations.proto\022\022g" +
       "oogle.longrunning\032\034google/api/annotation" +
       "s.proto\032\027google/api/client.proto\032\031google" +
-      "/protobuf/any.proto\032\036google/protobuf/dur" +
-      "ation.proto\032\033google/protobuf/empty.proto" +
-      "\032\027google/rpc/status.proto\032 google/protob" +
-      "uf/descriptor.proto\"\317\001\n\tOperation\022\022\n\004nam" +
+      "/protobuf/any.proto\032 google/protobuf/des" +
+      "criptor.proto\032\036google/protobuf/duration." +
+      "proto\032\033google/protobuf/empty.proto\032\027goog" +
+      "le/rpc/status.proto\"\317\001\n\tOperation\022\022\n\004nam" +
       "e\030\001 \001(\tR\004name\0220\n\010metadata\030\002 \001(\0132\024.google" +
       ".protobuf.AnyR\010metadata\022\022\n\004done\030\003 \001(\010R\004d" +
       "one\022*\n\005error\030\004 \001(\0132\022.google.rpc.StatusH\000" +
@@ -143,10 +143,10 @@ public final class OperationsProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
+          com.google.protobuf.DescriptorProtos.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
         });
     internal_static_google_longrunning_Operation_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -207,10 +207,10 @@ public final class OperationsProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
+    com.google.protobuf.DescriptorProtos.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -52,6 +52,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     INVOICE_TEMPLATE(1),
     RECEIPT_TEMPLATE(2),
+    PAYMENT_TEMPLATE(3),
     VAL_NOT_SET(0);
     private final int value;
     private ValCase(int value) {
@@ -71,6 +72,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return INVOICE_TEMPLATE;
         case 2: return RECEIPT_TEMPLATE;
+        case 3: return PAYMENT_TEMPLATE;
         case 0: return VAL_NOT_SET;
         default: return null;
       }
@@ -148,6 +150,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
   }
 
+  public static final int PAYMENT_TEMPLATE_FIELD_NUMBER = 3;
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   * @return Whether the paymentTemplate field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaymentTemplate() {
+    return valCase_ == 3;
+  }
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   * @return The paymentTemplate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.Payment getPaymentTemplate() {
+    if (valCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.integrations.Payment) val_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder getPaymentTemplateOrBuilder() {
+    if (valCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.integrations.Payment) val_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -168,6 +201,9 @@ private static final long serialVersionUID = 0L;
     if (valCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.commons.integrations.Receipt) val_);
     }
+    if (valCase_ == 3) {
+      output.writeMessage(3, (com.tcn.cloud.api.api.commons.integrations.Payment) val_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -184,6 +220,10 @@ private static final long serialVersionUID = 0L;
     if (valCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.api.commons.integrations.Receipt) val_);
+    }
+    if (valCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.tcn.cloud.api.api.commons.integrations.Payment) val_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -210,6 +250,10 @@ private static final long serialVersionUID = 0L;
         if (!getReceiptTemplate()
             .equals(other.getReceiptTemplate())) return false;
         break;
+      case 3:
+        if (!getPaymentTemplate()
+            .equals(other.getPaymentTemplate())) return false;
+        break;
       case 0:
       default:
     }
@@ -232,6 +276,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + RECEIPT_TEMPLATE_FIELD_NUMBER;
         hash = (53 * hash) + getReceiptTemplate().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + PAYMENT_TEMPLATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentTemplate().hashCode();
         break;
       case 0:
       default:
@@ -379,6 +427,9 @@ private static final long serialVersionUID = 0L;
       if (receiptTemplateBuilder_ != null) {
         receiptTemplateBuilder_.clear();
       }
+      if (paymentTemplateBuilder_ != null) {
+        paymentTemplateBuilder_.clear();
+      }
       valCase_ = 0;
       val_ = null;
       return this;
@@ -427,6 +478,10 @@ private static final long serialVersionUID = 0L;
       if (valCase_ == 2 &&
           receiptTemplateBuilder_ != null) {
         result.val_ = receiptTemplateBuilder_.build();
+      }
+      if (valCase_ == 3 &&
+          paymentTemplateBuilder_ != null) {
+        result.val_ = paymentTemplateBuilder_.build();
       }
     }
 
@@ -483,6 +538,10 @@ private static final long serialVersionUID = 0L;
           mergeReceiptTemplate(other.getReceiptTemplate());
           break;
         }
+        case PAYMENT_TEMPLATE: {
+          mergePaymentTemplate(other.getPaymentTemplate());
+          break;
+        }
         case VAL_NOT_SET: {
           break;
         }
@@ -527,6 +586,13 @@ private static final long serialVersionUID = 0L;
               valCase_ = 2;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getPaymentTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valCase_ = 3;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -841,6 +907,148 @@ private static final long serialVersionUID = 0L;
       valCase_ = 2;
       onChanged();
       return receiptTemplateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.Payment, com.tcn.cloud.api.api.commons.integrations.Payment.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder> paymentTemplateBuilder_;
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     * @return Whether the paymentTemplate field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentTemplate() {
+      return valCase_ == 3;
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     * @return The paymentTemplate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.Payment getPaymentTemplate() {
+      if (paymentTemplateBuilder_ == null) {
+        if (valCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.integrations.Payment) val_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+      } else {
+        if (valCase_ == 3) {
+          return paymentTemplateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    public Builder setPaymentTemplate(com.tcn.cloud.api.api.commons.integrations.Payment value) {
+      if (paymentTemplateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        val_ = value;
+        onChanged();
+      } else {
+        paymentTemplateBuilder_.setMessage(value);
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    public Builder setPaymentTemplate(
+        com.tcn.cloud.api.api.commons.integrations.Payment.Builder builderForValue) {
+      if (paymentTemplateBuilder_ == null) {
+        val_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentTemplateBuilder_.setMessage(builderForValue.build());
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    public Builder mergePaymentTemplate(com.tcn.cloud.api.api.commons.integrations.Payment value) {
+      if (paymentTemplateBuilder_ == null) {
+        if (valCase_ == 3 &&
+            val_ != com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance()) {
+          val_ = com.tcn.cloud.api.api.commons.integrations.Payment.newBuilder((com.tcn.cloud.api.api.commons.integrations.Payment) val_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          val_ = value;
+        }
+        onChanged();
+      } else {
+        if (valCase_ == 3) {
+          paymentTemplateBuilder_.mergeFrom(value);
+        } else {
+          paymentTemplateBuilder_.setMessage(value);
+        }
+      }
+      valCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    public Builder clearPaymentTemplate() {
+      if (paymentTemplateBuilder_ == null) {
+        if (valCase_ == 3) {
+          valCase_ = 0;
+          val_ = null;
+          onChanged();
+        }
+      } else {
+        if (valCase_ == 3) {
+          valCase_ = 0;
+          val_ = null;
+        }
+        paymentTemplateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.Payment.Builder getPaymentTemplateBuilder() {
+      return getPaymentTemplateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder getPaymentTemplateOrBuilder() {
+      if ((valCase_ == 3) && (paymentTemplateBuilder_ != null)) {
+        return paymentTemplateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.integrations.Payment) val_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.Payment, com.tcn.cloud.api.api.commons.integrations.Payment.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder> 
+        getPaymentTemplateFieldBuilder() {
+      if (paymentTemplateBuilder_ == null) {
+        if (!(valCase_ == 3)) {
+          val_ = com.tcn.cloud.api.api.commons.integrations.Payment.getDefaultInstance();
+        }
+        paymentTemplateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.Payment, com.tcn.cloud.api.api.commons.integrations.Payment.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.Payment) val_,
+                getParentForChildren(),
+                isClean());
+        val_ = null;
+      }
+      valCase_ = 3;
+      onChanged();
+      return paymentTemplateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

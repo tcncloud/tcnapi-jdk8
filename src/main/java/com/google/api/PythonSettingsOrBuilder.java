@@ -33,4 +33,31 @@ public interface PythonSettingsOrBuilder extends
    * <code>.google.api.CommonLanguageSettings common = 1 [json_name = "common"];</code>
    */
   com.google.api.CommonLanguageSettingsOrBuilder getCommonOrBuilder();
+
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   * @return Whether the experimentalFeatures field is set.
+   */
+  boolean hasExperimentalFeatures();
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   * @return The experimentalFeatures.
+   */
+  com.google.api.PythonSettings.ExperimentalFeatures getExperimentalFeatures();
+  /**
+   * <pre>
+   * Experimental features to be included during client library generation.
+   * </pre>
+   *
+   * <code>.google.api.PythonSettings.ExperimentalFeatures experimental_features = 2 [json_name = "experimentalFeatures"];</code>
+   */
+  com.google.api.PythonSettings.ExperimentalFeaturesOrBuilder getExperimentalFeaturesOrBuilder();
 }

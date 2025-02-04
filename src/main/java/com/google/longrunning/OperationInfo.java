@@ -9,13 +9,12 @@ package com.google.longrunning;
  *
  * Example:
  *
- *   rpc LongRunningRecognize(LongRunningRecognizeRequest)
- *       returns (google.longrunning.Operation) {
- *     option (google.longrunning.operation_info) = {
- *       response_type: "LongRunningRecognizeResponse"
- *       metadata_type: "LongRunningRecognizeMetadata"
- *     };
- *   }
+ *     rpc Export(ExportRequest) returns (google.longrunning.Operation) {
+ *       option (google.longrunning.operation_info) = {
+ *         response_type: "ExportResponse"
+ *         metadata_type: "ExportMetadata"
+ *       };
+ *     }
  * </pre>
  *
  * Protobuf type {@code google.longrunning.OperationInfo}
@@ -346,13 +345,12 @@ private static final long serialVersionUID = 0L;
    *
    * Example:
    *
-   *   rpc LongRunningRecognize(LongRunningRecognizeRequest)
-   *       returns (google.longrunning.Operation) {
-   *     option (google.longrunning.operation_info) = {
-   *       response_type: "LongRunningRecognizeResponse"
-   *       metadata_type: "LongRunningRecognizeMetadata"
-   *     };
-   *   }
+   *     rpc Export(ExportRequest) returns (google.longrunning.Operation) {
+   *       option (google.longrunning.operation_info) = {
+   *         response_type: "ExportResponse"
+   *         metadata_type: "ExportMetadata"
+   *       };
+   *     }
    * </pre>
    *
    * Protobuf type {@code google.longrunning.OperationInfo}

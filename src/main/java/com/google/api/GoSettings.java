@@ -34,6 +34,18 @@ private static final long serialVersionUID = 0L;
     return com.google.api.ClientProto.internal_static_google_api_GoSettings_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 2:
+        return internalGetRenamedServices();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -80,6 +92,129 @@ private static final long serialVersionUID = 0L;
     return common_ == null ? com.google.api.CommonLanguageSettings.getDefaultInstance() : common_;
   }
 
+  public static final int RENAMED_SERVICES_FIELD_NUMBER = 2;
+  private static final class RenamedServicesDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.google.api.ClientProto.internal_static_google_api_GoSettings_RenamedServicesEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> renamedServices_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetRenamedServices() {
+    if (renamedServices_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          RenamedServicesDefaultEntryHolder.defaultEntry);
+    }
+    return renamedServices_;
+  }
+  public int getRenamedServicesCount() {
+    return internalGetRenamedServices().getMap().size();
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+  public boolean containsRenamedServices(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetRenamedServices().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getRenamedServicesMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getRenamedServices() {
+    return getRenamedServicesMap();
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getRenamedServicesMap() {
+    return internalGetRenamedServices().getMap();
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getRenamedServicesOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetRenamedServices().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * Map of service names to renamed services. Keys are the package relative
+   * service names and values are the name to be used for the service client
+   * and call options.
+   *
+   * publishing:
+   *   go_settings:
+   *     renamed_services:
+   *       Publisher: TopicAdmin
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getRenamedServicesOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetRenamedServices().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +232,12 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       output.writeMessage(1, getCommon());
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetRenamedServices(),
+        RenamedServicesDefaultEntryHolder.defaultEntry,
+        2);
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +250,16 @@ private static final long serialVersionUID = 0L;
     if (common_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommon());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetRenamedServices().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      renamedServices__ = RenamedServicesDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, renamedServices__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,6 +281,8 @@ private static final long serialVersionUID = 0L;
       if (!getCommon()
           .equals(other.getCommon())) return false;
     }
+    if (!internalGetRenamedServices().equals(
+        other.internalGetRenamedServices())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -144,6 +297,10 @@ private static final long serialVersionUID = 0L;
     if (hasCommon()) {
       hash = (37 * hash) + COMMON_FIELD_NUMBER;
       hash = (53 * hash) + getCommon().hashCode();
+    }
+    if (!internalGetRenamedServices().getMap().isEmpty()) {
+      hash = (37 * hash) + RENAMED_SERVICES_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetRenamedServices().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -258,6 +415,28 @@ private static final long serialVersionUID = 0L;
       return com.google.api.ClientProto.internal_static_google_api_GoSettings_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetRenamedServices();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMutableRenamedServices();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -285,6 +464,7 @@ private static final long serialVersionUID = 0L;
         commonBuilder_.dispose();
         commonBuilder_ = null;
       }
+      internalGetMutableRenamedServices().clear();
       return this;
     }
 
@@ -322,6 +502,10 @@ private static final long serialVersionUID = 0L;
         result.common_ = commonBuilder_ == null
             ? common_
             : commonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.renamedServices_ = internalGetRenamedServices();
+        result.renamedServices_.makeImmutable();
       }
     }
 
@@ -372,6 +556,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCommon()) {
         mergeCommon(other.getCommon());
       }
+      internalGetMutableRenamedServices().mergeFrom(
+          other.internalGetRenamedServices());
+      bitField0_ |= 0x00000002;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -405,6 +592,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              renamedServices__ = input.readMessage(
+                  RenamedServicesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableRenamedServices().getMutableMap().put(
+                  renamedServices__.getKey(), renamedServices__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +771,210 @@ private static final long serialVersionUID = 0L;
         common_ = null;
       }
       return commonBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> renamedServices_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetRenamedServices() {
+      if (renamedServices_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            RenamedServicesDefaultEntryHolder.defaultEntry);
+      }
+      return renamedServices_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableRenamedServices() {
+      if (renamedServices_ == null) {
+        renamedServices_ = com.google.protobuf.MapField.newMapField(
+            RenamedServicesDefaultEntryHolder.defaultEntry);
+      }
+      if (!renamedServices_.isMutable()) {
+        renamedServices_ = renamedServices_.copy();
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return renamedServices_;
+    }
+    public int getRenamedServicesCount() {
+      return internalGetRenamedServices().getMap().size();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+    public boolean containsRenamedServices(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetRenamedServices().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getRenamedServicesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getRenamedServices() {
+      return getRenamedServicesMap();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getRenamedServicesMap() {
+      return internalGetRenamedServices().getMap();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getRenamedServicesOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetRenamedServices().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getRenamedServicesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetRenamedServices().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearRenamedServices() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      internalGetMutableRenamedServices().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    public Builder removeRenamedServices(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableRenamedServices().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableRenamedServices() {
+      bitField0_ |= 0x00000002;
+      return internalGetMutableRenamedServices().getMutableMap();
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    public Builder putRenamedServices(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableRenamedServices().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of service names to renamed services. Keys are the package relative
+     * service names and values are the name to be used for the service client
+     * and call options.
+     *
+     * publishing:
+     *   go_settings:
+     *     renamed_services:
+     *       Publisher: TopicAdmin
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; renamed_services = 2 [json_name = "renamedServices"];</code>
+     */
+    public Builder putAllRenamedServices(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableRenamedServices().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000002;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

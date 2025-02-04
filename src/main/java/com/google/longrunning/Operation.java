@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
   public static final int RESPONSE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * The normal response of the operation in case of success.  If the original
+   * The normal, successful response of the operation.  If the original
    * method returns no data on success, such as `Delete`, the response is
    * `google.protobuf.Empty`.  If the original method is standard
    * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The normal response of the operation in case of success.  If the original
+   * The normal, successful response of the operation.  If the original
    * method returns no data on success, such as `Delete`, the response is
    * `google.protobuf.Empty`.  If the original method is standard
    * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The normal response of the operation in case of success.  If the original
+   * The normal, successful response of the operation.  If the original
    * method returns no data on success, such as `Delete`, the response is
    * `google.protobuf.Empty`.  If the original method is standard
    * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1318,7 +1318,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> responseBuilder_;
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1337,7 +1337,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1366,7 +1366,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1393,7 +1393,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1418,7 +1418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1482,7 +1482,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The normal response of the operation in case of success.  If the original
+     * The normal, successful response of the operation.  If the original
      * method returns no data on success, such as `Delete`, the response is
      * `google.protobuf.Empty`.  If the original method is standard
      * `Get`/`Create`/`Update`, the response should be the resource.  For other

@@ -37,5 +37,20 @@ public interface TemplateOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder getReceiptTemplateOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   * @return Whether the paymentTemplate field is set.
+   */
+  boolean hasPaymentTemplate();
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   * @return The paymentTemplate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.Payment getPaymentTemplate();
+  /**
+   * <code>.api.commons.integrations.Payment payment_template = 3 [json_name = "paymentTemplate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentOrBuilder getPaymentTemplateOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Template.ValCase getValCase();
 }
