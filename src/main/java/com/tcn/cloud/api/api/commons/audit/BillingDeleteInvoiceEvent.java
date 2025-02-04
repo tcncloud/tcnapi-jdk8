@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=55
+   *     See api/commons/audit/billing_events.proto;l=56
    * @return The invoiceId.
    */
   @java.lang.Override
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=55
+   *     See api/commons/audit/billing_events.proto;l=56
    * @return The bytes for invoiceId.
    */
   @java.lang.Override
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=56
+   *     See api/commons/audit/billing_events.proto;l=57
    * @return The userId.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-   *     See api/commons/audit/billing_events.proto;l=56
+   *     See api/commons/audit/billing_events.proto;l=57
    * @return The bytes for userId.
    */
   @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=55
+     *     See api/commons/audit/billing_events.proto;l=56
      * @return The invoiceId.
      */
     @java.lang.Deprecated public java.lang.String getInvoiceId() {
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=55
+     *     See api/commons/audit/billing_events.proto;l=56
      * @return The bytes for invoiceId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=55
+     *     See api/commons/audit/billing_events.proto;l=56
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=55
+     *     See api/commons/audit/billing_events.proto;l=56
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearInvoiceId() {
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string invoice_id = 1 [json_name = "invoiceId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.invoice_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=55
+     *     See api/commons/audit/billing_events.proto;l=56
      * @param value The bytes for invoiceId to set.
      * @return This builder for chaining.
      */
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=56
+     *     See api/commons/audit/billing_events.proto;l=57
      * @return The userId.
      */
     @java.lang.Deprecated public java.lang.String getUserId() {
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=56
+     *     See api/commons/audit/billing_events.proto;l=57
      * @return The bytes for userId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=56
+     *     See api/commons/audit/billing_events.proto;l=57
      * @param value The userId to set.
      * @return This builder for chaining.
      */
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=56
+     *     See api/commons/audit/billing_events.proto;l=57
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearUserId() {
@@ -634,7 +634,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 2 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.commons.audit.BillingDeleteInvoiceEvent.user_id is deprecated.
-     *     See api/commons/audit/billing_events.proto;l=56
+     *     See api/commons/audit/billing_events.proto;l=57
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */

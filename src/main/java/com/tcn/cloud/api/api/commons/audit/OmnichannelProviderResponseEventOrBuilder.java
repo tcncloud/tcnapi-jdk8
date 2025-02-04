@@ -99,4 +99,15 @@ public interface OmnichannelProviderResponseEventOrBuilder extends
    * @return The messageType.
    */
   com.tcn.cloud.api.api.commons.OmniMessageType getMessageType();
+
+  /**
+   * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+   * @return The enum numeric value on the wire for providerType.
+   */
+  int getProviderTypeValue();
+  /**
+   * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+   * @return The providerType.
+   */
+  com.tcn.cloud.api.api.commons.SmsNumberProvider getProviderType();
 }

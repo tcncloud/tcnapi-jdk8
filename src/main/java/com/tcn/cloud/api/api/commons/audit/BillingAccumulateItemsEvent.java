@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     eventLogIds_ = emptyLongList();
     billingCycle_ = "";
+    eventData_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -99,27 +100,33 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList eventLogIds_;
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return A list containing the eventLogIds.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
+  @java.lang.Deprecated public java.util.List<java.lang.Long>
       getEventLogIdsList() {
     return eventLogIds_;
   }
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @return The count of eventLogIds.
    */
-  public int getEventLogIdsCount() {
+  @java.lang.Deprecated public int getEventLogIdsCount() {
     return eventLogIds_.size();
   }
   /**
-   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+   * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+   * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+   *     See api/commons/audit/billing_events.proto;l=13
    * @param index The index of the element to return.
    * @return The eventLogIds at the given index.
    */
-  public long getEventLogIds(int index) {
+  @java.lang.Deprecated public long getEventLogIds(int index) {
     return eventLogIds_.getLong(index);
   }
   private int eventLogIdsMemoizedSerializedSize = -1;
@@ -163,6 +170,34 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EVENT_DATA_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.protobuf.ByteString> eventData_;
+  /**
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @return A list containing the eventData.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.protobuf.ByteString>
+      getEventDataList() {
+    return eventData_;
+  }
+  /**
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @return The count of eventData.
+   */
+  public int getEventDataCount() {
+    return eventData_.size();
+  }
+  /**
+   * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+   * @param index The index of the element to return.
+   * @return The eventData at the given index.
+   */
+  public com.google.protobuf.ByteString getEventData(int index) {
+    return eventData_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -193,6 +228,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingCycle_);
+    }
+    for (int i = 0; i < eventData_.size(); i++) {
+      output.writeBytes(5, eventData_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,6 +265,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingCycle_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < eventData_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeBytesSizeNoTag(eventData_.get(i));
+      }
+      size += dataSize;
+      size += 1 * getEventDataList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -250,6 +297,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEventLogIdsList())) return false;
     if (!getBillingCycle()
         .equals(other.getBillingCycle())) return false;
+    if (!getEventDataList()
+        .equals(other.getEventDataList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -271,6 +320,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + BILLING_CYCLE_FIELD_NUMBER;
     hash = (53 * hash) + getBillingCycle().hashCode();
+    if (getEventDataCount() > 0) {
+      hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getEventDataList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -410,6 +463,7 @@ private static final long serialVersionUID = 0L;
       productType_ = 0;
       eventLogIds_ = emptyLongList();
       billingCycle_ = "";
+      eventData_ = java.util.Collections.emptyList();
       return this;
     }
 
@@ -448,6 +502,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.eventLogIds_ = eventLogIds_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        eventData_ = java.util.Collections.unmodifiableList(eventData_);
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.eventData_ = eventData_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingAccumulateItemsEvent result) {
@@ -530,6 +589,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.eventData_.isEmpty()) {
+        if (eventData_.isEmpty()) {
+          eventData_ = other.eventData_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureEventDataIsMutable();
+          eventData_.addAll(other.eventData_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -587,6 +656,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              com.google.protobuf.ByteString v = input.readBytes();
+              ensureEventDataIsMutable();
+              eventData_.add(v);
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -716,36 +791,44 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return A list containing the eventLogIds.
      */
-    public java.util.List<java.lang.Long>
+    @java.lang.Deprecated public java.util.List<java.lang.Long>
         getEventLogIdsList() {
       return ((bitField0_ & 0x00000004) != 0) ?
                java.util.Collections.unmodifiableList(eventLogIds_) : eventLogIds_;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return The count of eventLogIds.
      */
-    public int getEventLogIdsCount() {
+    @java.lang.Deprecated public int getEventLogIdsCount() {
       return eventLogIds_.size();
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param index The index of the element to return.
      * @return The eventLogIds at the given index.
      */
-    public long getEventLogIds(int index) {
+    @java.lang.Deprecated public long getEventLogIds(int index) {
       return eventLogIds_.getLong(index);
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param index The index to set the value at.
      * @param value The eventLogIds to set.
      * @return This builder for chaining.
      */
-    public Builder setEventLogIds(
+    @java.lang.Deprecated public Builder setEventLogIds(
         int index, long value) {
 
       ensureEventLogIdsIsMutable();
@@ -754,11 +837,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param value The eventLogIds to add.
      * @return This builder for chaining.
      */
-    public Builder addEventLogIds(long value) {
+    @java.lang.Deprecated public Builder addEventLogIds(long value) {
 
       ensureEventLogIdsIsMutable();
       eventLogIds_.addLong(value);
@@ -766,11 +851,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @param values The eventLogIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllEventLogIds(
+    @java.lang.Deprecated public Builder addAllEventLogIds(
         java.lang.Iterable<? extends java.lang.Long> values) {
       ensureEventLogIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -779,10 +866,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds"];</code>
+     * <code>repeated int64 event_log_ids = 3 [json_name = "eventLogIds", deprecated = true];</code>
+     * @deprecated api.commons.audit.BillingAccumulateItemsEvent.event_log_ids is deprecated.
+     *     See api/commons/audit/billing_events.proto;l=13
      * @return This builder for chaining.
      */
-    public Builder clearEventLogIds() {
+    @java.lang.Deprecated public Builder clearEventLogIds() {
       eventLogIds_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
@@ -857,6 +946,87 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       billingCycle_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.protobuf.ByteString> eventData_ = java.util.Collections.emptyList();
+    private void ensureEventDataIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        eventData_ = new java.util.ArrayList<com.google.protobuf.ByteString>(eventData_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @return A list containing the eventData.
+     */
+    public java.util.List<com.google.protobuf.ByteString>
+        getEventDataList() {
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(eventData_) : eventData_;
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @return The count of eventData.
+     */
+    public int getEventDataCount() {
+      return eventData_.size();
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @param index The index of the element to return.
+     * @return The eventData at the given index.
+     */
+    public com.google.protobuf.ByteString getEventData(int index) {
+      return eventData_.get(index);
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @param index The index to set the value at.
+     * @param value The eventData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventData(
+        int index, com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEventDataIsMutable();
+      eventData_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @param value The eventData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEventData(com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureEventDataIsMutable();
+      eventData_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @param values The eventData to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEventData(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureEventDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, eventData_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes event_data = 5 [json_name = "eventData"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventData() {
+      eventData_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }

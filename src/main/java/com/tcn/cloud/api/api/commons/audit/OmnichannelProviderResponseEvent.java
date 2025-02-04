@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     senderType_ = 0;
     userId_ = "";
     messageType_ = 0;
+    providerType_ = 0;
   }
 
   @java.lang.Override
@@ -263,6 +264,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OmniMessageType.UNRECOGNIZED : result;
   }
 
+  public static final int PROVIDER_TYPE_FIELD_NUMBER = 11;
+  private int providerType_ = 0;
+  /**
+   * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+   * @return The enum numeric value on the wire for providerType.
+   */
+  @java.lang.Override public int getProviderTypeValue() {
+    return providerType_;
+  }
+  /**
+   * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+   * @return The providerType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.SmsNumberProvider getProviderType() {
+    com.tcn.cloud.api.api.commons.SmsNumberProvider result = com.tcn.cloud.api.api.commons.SmsNumberProvider.forNumber(providerType_);
+    return result == null ? com.tcn.cloud.api.api.commons.SmsNumberProvider.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -306,6 +325,9 @@ private static final long serialVersionUID = 0L;
     }
     if (messageType_ != com.tcn.cloud.api.api.commons.OmniMessageType.OMNI_MESSAGE_TYPE_TEXT_MESSAGE.getNumber()) {
       output.writeEnum(10, messageType_);
+    }
+    if (providerType_ != com.tcn.cloud.api.api.commons.SmsNumberProvider.UNKNOWN_PROVIDER.getNumber()) {
+      output.writeEnum(11, providerType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -353,6 +375,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, messageType_);
     }
+    if (providerType_ != com.tcn.cloud.api.api.commons.SmsNumberProvider.UNKNOWN_PROVIDER.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, providerType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -385,6 +411,7 @@ private static final long serialVersionUID = 0L;
     if (getProviderMessageCount()
         != other.getProviderMessageCount()) return false;
     if (messageType_ != other.messageType_) return false;
+    if (providerType_ != other.providerType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -420,6 +447,8 @@ private static final long serialVersionUID = 0L;
         getProviderMessageCount());
     hash = (37 * hash) + MESSAGE_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + messageType_;
+    hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + providerType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -565,6 +594,7 @@ private static final long serialVersionUID = 0L;
       userId_ = "";
       providerMessageCount_ = 0L;
       messageType_ = 0;
+      providerType_ = 0;
       return this;
     }
 
@@ -627,6 +657,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.messageType_ = messageType_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.providerType_ = providerType_;
       }
     }
 
@@ -710,6 +743,9 @@ private static final long serialVersionUID = 0L;
       if (other.messageType_ != 0) {
         setMessageTypeValue(other.getMessageTypeValue());
       }
+      if (other.providerType_ != 0) {
+        setProviderTypeValue(other.getProviderTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -786,6 +822,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 88: {
+              providerType_ = input.readEnum();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1302,6 +1343,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearMessageType() {
       bitField0_ = (bitField0_ & ~0x00000200);
       messageType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int providerType_ = 0;
+    /**
+     * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+     * @return The enum numeric value on the wire for providerType.
+     */
+    @java.lang.Override public int getProviderTypeValue() {
+      return providerType_;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+     * @param value The enum numeric value on the wire for providerType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProviderTypeValue(int value) {
+      providerType_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+     * @return The providerType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SmsNumberProvider getProviderType() {
+      com.tcn.cloud.api.api.commons.SmsNumberProvider result = com.tcn.cloud.api.api.commons.SmsNumberProvider.forNumber(providerType_);
+      return result == null ? com.tcn.cloud.api.api.commons.SmsNumberProvider.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+     * @param value The providerType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProviderType(com.tcn.cloud.api.api.commons.SmsNumberProvider value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000400;
+      providerType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsNumberProvider provider_type = 11 [json_name = "providerType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProviderType() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      providerType_ = 0;
       onChanged();
       return this;
     }
