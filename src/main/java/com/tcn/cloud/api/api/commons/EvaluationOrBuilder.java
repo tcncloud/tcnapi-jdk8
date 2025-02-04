@@ -305,4 +305,14 @@ public interface EvaluationOrBuilder extends
    * @return The channelType.
    */
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+
+  /**
+   * <pre>
+   * Conversation sid of the evaluated transcript.
+   * </pre>
+   *
+   * <code>int64 conversation_sid = 23 [json_name = "conversationSid", jstype = JS_STRING];</code>
+   * @return The conversationSid.
+   */
+  long getConversationSid();
 }
