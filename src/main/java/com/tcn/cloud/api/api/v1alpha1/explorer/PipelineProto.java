@@ -170,10 +170,10 @@ public final class PipelineProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_TransposeNode_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor;
+    internal_static_api_v1alpha1_explorer_TransposeNode_Option_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable;
+      internal_static_api_v1alpha1_explorer_TransposeNode_Option_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -319,7 +319,7 @@ public final class PipelineProto {
       "\020group_by_columns\030\001 \003(\tR\016groupByColumns\022" +
       "\035\n\nkey_column\030\002 \001(\tR\tkeyColumn\022E\n\007option" +
       "s\030\003 \003(\0132+.api.v1alpha1.explorer.Transpos" +
-      "eNode.optionR\007options\032e\n\006option\022\031\n\010key_n" +
+      "eNode.OptionR\007options\032e\n\006Option\022\031\n\010key_n" +
       "ame\030\002 \001(\tR\007keyName\022!\n\014value_column\030\003 \001(\t" +
       "R\013valueColumn\022\035\n\nvalue_type\030\004 \001(\tR\tvalue" +
       "TypeB\256\001\n\'com.tcn.cloud.api.api.v1alpha1." +
@@ -518,11 +518,11 @@ public final class PipelineProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_TransposeNode_descriptor,
         new java.lang.String[] { "GroupByColumns", "KeyColumn", "Options", });
-    internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor =
+    internal_static_api_v1alpha1_explorer_TransposeNode_Option_descriptor =
       internal_static_api_v1alpha1_explorer_TransposeNode_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_explorer_TransposeNode_option_fieldAccessorTable = new
+    internal_static_api_v1alpha1_explorer_TransposeNode_Option_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_explorer_TransposeNode_option_descriptor,
+        internal_static_api_v1alpha1_explorer_TransposeNode_Option_descriptor,
         new java.lang.String[] { "KeyName", "ValueColumn", "ValueType", });
   }
 

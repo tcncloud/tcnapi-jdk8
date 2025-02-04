@@ -73,24 +73,24 @@ public interface TransposeNodeOrBuilder extends
    * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.Option options = 3 [json_name = "options"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.Option> 
       getOptionsList();
   /**
    * <pre>
    * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.Option options = 3 [json_name = "options"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.option getOptions(int index);
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.Option getOptions(int index);
   /**
    * <pre>
    * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.Option options = 3 [json_name = "options"];</code>
    */
   int getOptionsCount();
   /**
@@ -98,17 +98,17 @@ public interface TransposeNodeOrBuilder extends
    * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.Option options = 3 [json_name = "options"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.OptionOrBuilder> 
       getOptionsOrBuilderList();
   /**
    * <pre>
    * options describe the extracted columns
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.TransposeNode.option options = 3 [json_name = "options"];</code>
+   * <code>repeated .api.v1alpha1.explorer.TransposeNode.Option options = 3 [json_name = "options"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.optionOrBuilder getOptionsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode.OptionOrBuilder getOptionsOrBuilder(
       int index);
 }
