@@ -500,5 +500,32 @@ public interface NodeOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.StringManipulationNodeOrBuilder getStringManipulationNodeOrBuilder();
 
+  /**
+   * <pre>
+   * Transpose node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.TransposeNode transpose_node = 19 [json_name = "transposeNode"];</code>
+   * @return Whether the transposeNode field is set.
+   */
+  boolean hasTransposeNode();
+  /**
+   * <pre>
+   * Transpose node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.TransposeNode transpose_node = 19 [json_name = "transposeNode"];</code>
+   * @return The transposeNode.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNode getTransposeNode();
+  /**
+   * <pre>
+   * Transpose node
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.TransposeNode transpose_node = 19 [json_name = "transposeNode"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.TransposeNodeOrBuilder getTransposeNodeOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.explorer.Node.BodyCase getBodyCase();
 }
