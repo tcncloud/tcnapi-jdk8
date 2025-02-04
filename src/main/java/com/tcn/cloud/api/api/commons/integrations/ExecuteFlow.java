@@ -362,8 +362,6 @@ private static final long serialVersionUID = 0L;
     FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE(5506),
     CLOVER_PAYMENT_CARD_SALE_TRANSACTION(5601),
     NUVEI_PAYMENT(5701),
-    CALLIPAY_CC_PAYMENT(5801),
-    CALLIPAY_CHECK_PAYMENT(5802),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -691,8 +689,6 @@ private static final long serialVersionUID = 0L;
         case 5506: return FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE;
         case 5601: return CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
         case 5701: return NUVEI_PAYMENT;
-        case 5801: return CALLIPAY_CC_PAYMENT;
-        case 5802: return CALLIPAY_CHECK_PAYMENT;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -9276,7 +9272,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1171
+   *     See api/commons/integrations/integrations.proto;l=1167
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9286,7 +9282,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1171
+   *     See api/commons/integrations/integrations.proto;l=1167
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9311,7 +9307,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1172
+   *     See api/commons/integrations/integrations.proto;l=1168
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9321,7 +9317,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1172
+   *     See api/commons/integrations/integrations.proto;l=1168
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9346,7 +9342,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1173
+   *     See api/commons/integrations/integrations.proto;l=1169
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9356,7 +9352,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1173
+   *     See api/commons/integrations/integrations.proto;l=1169
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9381,7 +9377,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1174
+   *     See api/commons/integrations/integrations.proto;l=1170
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9391,7 +9387,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1174
+   *     See api/commons/integrations/integrations.proto;l=1170
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9416,7 +9412,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1175
+   *     See api/commons/integrations/integrations.proto;l=1171
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9426,7 +9422,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1175
+   *     See api/commons/integrations/integrations.proto;l=1171
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9451,7 +9447,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1176
+   *     See api/commons/integrations/integrations.proto;l=1172
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9461,7 +9457,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1176
+   *     See api/commons/integrations/integrations.proto;l=1172
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9486,7 +9482,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1177
+   *     See api/commons/integrations/integrations.proto;l=1173
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9496,7 +9492,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1177
+   *     See api/commons/integrations/integrations.proto;l=1173
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10383,68 +10379,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment.getDefaultInstance();
-  }
-
-  public static final int CALLIPAY_CC_PAYMENT_FIELD_NUMBER = 5801;
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-   * @return Whether the callipayCcPayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasCallipayCcPayment() {
-    return valueCase_ == 5801;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-   * @return The callipayCcPayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment getCallipayCcPayment() {
-    if (valueCase_ == 5801) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder getCallipayCcPaymentOrBuilder() {
-    if (valueCase_ == 5801) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-  }
-
-  public static final int CALLIPAY_CHECK_PAYMENT_FIELD_NUMBER = 5802;
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-   * @return Whether the callipayCheckPayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasCallipayCheckPayment() {
-    return valueCase_ == 5802;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-   * @return The callipayCheckPayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment getCallipayCheckPayment() {
-    if (valueCase_ == 5802) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder getCallipayCheckPaymentOrBuilder() {
-    if (valueCase_ == 5802) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -11393,12 +11327,6 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5701) {
       output.writeMessage(5701, (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_);
-    }
-    if (valueCase_ == 5801) {
-      output.writeMessage(5801, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_);
-    }
-    if (valueCase_ == 5802) {
-      output.writeMessage(5802, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -12651,14 +12579,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5701, (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_);
-    }
-    if (valueCase_ == 5801) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5801, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_);
-    }
-    if (valueCase_ == 5802) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5802, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -13919,14 +13839,6 @@ private static final long serialVersionUID = 0L;
         if (!getNuveiPayment()
             .equals(other.getNuveiPayment())) return false;
         break;
-      case 5801:
-        if (!getCallipayCcPayment()
-            .equals(other.getCallipayCcPayment())) return false;
-        break;
-      case 5802:
-        if (!getCallipayCheckPayment()
-            .equals(other.getCallipayCheckPayment())) return false;
-        break;
       case 0:
       default:
     }
@@ -15184,14 +15096,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + NUVEI_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getNuveiPayment().hashCode();
         break;
-      case 5801:
-        hash = (37 * hash) + CALLIPAY_CC_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCallipayCcPayment().hashCode();
-        break;
-      case 5802:
-        hash = (37 * hash) + CALLIPAY_CHECK_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCallipayCheckPayment().hashCode();
-        break;
       case 0:
       default:
     }
@@ -16272,12 +16176,6 @@ private static final long serialVersionUID = 0L;
       }
       if (nuveiPaymentBuilder_ != null) {
         nuveiPaymentBuilder_.clear();
-      }
-      if (callipayCcPaymentBuilder_ != null) {
-        callipayCcPaymentBuilder_.clear();
-      }
-      if (callipayCheckPaymentBuilder_ != null) {
-        callipayCheckPaymentBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -17608,14 +17506,6 @@ private static final long serialVersionUID = 0L;
           nuveiPaymentBuilder_ != null) {
         result.value_ = nuveiPaymentBuilder_.build();
       }
-      if (valueCase_ == 5801 &&
-          callipayCcPaymentBuilder_ != null) {
-        result.value_ = callipayCcPaymentBuilder_.build();
-      }
-      if (valueCase_ == 5802 &&
-          callipayCheckPaymentBuilder_ != null) {
-        result.value_ = callipayCheckPaymentBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -18906,14 +18796,6 @@ private static final long serialVersionUID = 0L;
         }
         case NUVEI_PAYMENT: {
           mergeNuveiPayment(other.getNuveiPayment());
-          break;
-        }
-        case CALLIPAY_CC_PAYMENT: {
-          mergeCallipayCcPayment(other.getCallipayCcPayment());
-          break;
-        }
-        case CALLIPAY_CHECK_PAYMENT: {
-          mergeCallipayCheckPayment(other.getCallipayCheckPayment());
           break;
         }
         case VALUE_NOT_SET: {
@@ -21121,20 +21003,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5701;
               break;
             } // case 45610
-            case 46410: {
-              input.readMessage(
-                  getCallipayCcPaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 5801;
-              break;
-            } // case 46410
-            case 46418: {
-              input.readMessage(
-                  getCallipayCheckPaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 5802;
-              break;
-            } // case 46418
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -60303,7 +60171,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1171
+     *     See api/commons/integrations/integrations.proto;l=1167
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -60313,7 +60181,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1171
+     *     See api/commons/integrations/integrations.proto;l=1167
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -60449,7 +60317,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1172
+     *     See api/commons/integrations/integrations.proto;l=1168
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -60459,7 +60327,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1172
+     *     See api/commons/integrations/integrations.proto;l=1168
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -60595,7 +60463,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1173
+     *     See api/commons/integrations/integrations.proto;l=1169
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -60605,7 +60473,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1173
+     *     See api/commons/integrations/integrations.proto;l=1169
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -60741,7 +60609,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1174
+     *     See api/commons/integrations/integrations.proto;l=1170
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -60751,7 +60619,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1174
+     *     See api/commons/integrations/integrations.proto;l=1170
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -60887,7 +60755,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1175
+     *     See api/commons/integrations/integrations.proto;l=1171
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -60897,7 +60765,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1175
+     *     See api/commons/integrations/integrations.proto;l=1171
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -61033,7 +60901,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1176
+     *     See api/commons/integrations/integrations.proto;l=1172
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -61043,7 +60911,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1176
+     *     See api/commons/integrations/integrations.proto;l=1172
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -61179,7 +61047,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1177
+     *     See api/commons/integrations/integrations.proto;l=1173
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -61189,7 +61057,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1177
+     *     See api/commons/integrations/integrations.proto;l=1173
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -65294,290 +65162,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5701;
       onChanged();
       return nuveiPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder> callipayCcPaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     * @return Whether the callipayCcPayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasCallipayCcPayment() {
-      return valueCase_ == 5801;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     * @return The callipayCcPayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment getCallipayCcPayment() {
-      if (callipayCcPaymentBuilder_ == null) {
-        if (valueCase_ == 5801) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 5801) {
-          return callipayCcPaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    public Builder setCallipayCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment value) {
-      if (callipayCcPaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        callipayCcPaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 5801;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    public Builder setCallipayCcPayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder builderForValue) {
-      if (callipayCcPaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        callipayCcPaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 5801;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    public Builder mergeCallipayCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment value) {
-      if (callipayCcPaymentBuilder_ == null) {
-        if (valueCase_ == 5801 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 5801) {
-          callipayCcPaymentBuilder_.mergeFrom(value);
-        } else {
-          callipayCcPaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 5801;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    public Builder clearCallipayCcPayment() {
-      if (callipayCcPaymentBuilder_ == null) {
-        if (valueCase_ == 5801) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 5801) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        callipayCcPaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder getCallipayCcPaymentBuilder() {
-      return getCallipayCcPaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder getCallipayCcPaymentOrBuilder() {
-      if ((valueCase_ == 5801) && (callipayCcPaymentBuilder_ != null)) {
-        return callipayCcPaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 5801) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder> 
-        getCallipayCcPaymentFieldBuilder() {
-      if (callipayCcPaymentBuilder_ == null) {
-        if (!(valueCase_ == 5801)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
-        }
-        callipayCcPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 5801;
-      onChanged();
-      return callipayCcPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder> callipayCheckPaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     * @return Whether the callipayCheckPayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasCallipayCheckPayment() {
-      return valueCase_ == 5802;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     * @return The callipayCheckPayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment getCallipayCheckPayment() {
-      if (callipayCheckPaymentBuilder_ == null) {
-        if (valueCase_ == 5802) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 5802) {
-          return callipayCheckPaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    public Builder setCallipayCheckPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment value) {
-      if (callipayCheckPaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        callipayCheckPaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 5802;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    public Builder setCallipayCheckPayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder builderForValue) {
-      if (callipayCheckPaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        callipayCheckPaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 5802;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    public Builder mergeCallipayCheckPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment value) {
-      if (callipayCheckPaymentBuilder_ == null) {
-        if (valueCase_ == 5802 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 5802) {
-          callipayCheckPaymentBuilder_.mergeFrom(value);
-        } else {
-          callipayCheckPaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 5802;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    public Builder clearCallipayCheckPayment() {
-      if (callipayCheckPaymentBuilder_ == null) {
-        if (valueCase_ == 5802) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 5802) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        callipayCheckPaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder getCallipayCheckPaymentBuilder() {
-      return getCallipayCheckPaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder getCallipayCheckPaymentOrBuilder() {
-      if ((valueCase_ == 5802) && (callipayCheckPaymentBuilder_ != null)) {
-        return callipayCheckPaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 5802) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder> 
-        getCallipayCheckPaymentFieldBuilder() {
-      if (callipayCheckPaymentBuilder_ == null) {
-        if (!(valueCase_ == 5802)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
-        }
-        callipayCheckPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 5802;
-      onChanged();
-      return callipayCheckPaymentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
