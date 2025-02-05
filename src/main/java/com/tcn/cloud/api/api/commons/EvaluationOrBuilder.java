@@ -307,32 +307,32 @@ public interface EvaluationOrBuilder extends
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
 
   /**
-   * <code>.api.commons.CallInfo call_info = 23 [json_name = "callInfo"];</code>
-   * @return Whether the callInfo field is set.
+   * <code>.api.commons.CallMetadata call_metadata = 23 [json_name = "callMetadata"];</code>
+   * @return Whether the callMetadata field is set.
    */
-  boolean hasCallInfo();
+  boolean hasCallMetadata();
   /**
-   * <code>.api.commons.CallInfo call_info = 23 [json_name = "callInfo"];</code>
-   * @return The callInfo.
+   * <code>.api.commons.CallMetadata call_metadata = 23 [json_name = "callMetadata"];</code>
+   * @return The callMetadata.
    */
-  com.tcn.cloud.api.api.commons.CallInfo getCallInfo();
+  com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata();
   /**
-   * <code>.api.commons.CallInfo call_info = 23 [json_name = "callInfo"];</code>
+   * <code>.api.commons.CallMetadata call_metadata = 23 [json_name = "callMetadata"];</code>
    */
-  com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder();
+  com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder();
 
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 24 [json_name = "conversationInfo"];</code>
-   * @return Whether the conversationInfo field is set.
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 24 [json_name = "conversationMetadata"];</code>
+   * @return Whether the conversationMetadata field is set.
    */
-  boolean hasConversationInfo();
+  boolean hasConversationMetadata();
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 24 [json_name = "conversationInfo"];</code>
-   * @return The conversationInfo.
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 24 [json_name = "conversationMetadata"];</code>
+   * @return The conversationMetadata.
    */
-  com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo();
+  com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata();
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 24 [json_name = "conversationInfo"];</code>
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 24 [json_name = "conversationMetadata"];</code>
    */
-  com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder();
+  com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder();
 }

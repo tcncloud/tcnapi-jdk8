@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface CallInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.CallInfo)
+public interface CallMetadataOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.CallMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**

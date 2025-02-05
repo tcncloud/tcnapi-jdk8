@@ -345,56 +345,56 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
-  public static final int CALL_INFO_FIELD_NUMBER = 13;
-  private com.tcn.cloud.api.api.commons.CallInfo callInfo_;
+  public static final int CALL_METADATA_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.commons.CallMetadata callMetadata_;
   /**
-   * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
-   * @return Whether the callInfo field is set.
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+   * @return Whether the callMetadata field is set.
    */
   @java.lang.Override
-  public boolean hasCallInfo() {
-    return callInfo_ != null;
+  public boolean hasCallMetadata() {
+    return callMetadata_ != null;
   }
   /**
-   * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
-   * @return The callInfo.
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+   * @return The callMetadata.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallInfo getCallInfo() {
-    return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+  public com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata() {
+    return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
   }
   /**
-   * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder() {
-    return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+  public com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder() {
+    return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
   }
 
-  public static final int CONVERSATION_INFO_FIELD_NUMBER = 14;
-  private com.tcn.cloud.api.api.commons.ConversationInfo conversationInfo_;
+  public static final int CONVERSATION_METADATA_FIELD_NUMBER = 14;
+  private com.tcn.cloud.api.api.commons.ConversationMetadata conversationMetadata_;
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
-   * @return Whether the conversationInfo field is set.
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+   * @return Whether the conversationMetadata field is set.
    */
   @java.lang.Override
-  public boolean hasConversationInfo() {
-    return conversationInfo_ != null;
+  public boolean hasConversationMetadata() {
+    return conversationMetadata_ != null;
   }
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
-   * @return The conversationInfo.
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+   * @return The conversationMetadata.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo() {
-    return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+  public com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata() {
+    return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
   }
   /**
-   * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder() {
-    return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+  public com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder() {
+    return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -444,11 +444,11 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(12, channelType_);
     }
-    if (callInfo_ != null) {
-      output.writeMessage(13, getCallInfo());
+    if (callMetadata_ != null) {
+      output.writeMessage(13, getCallMetadata());
     }
-    if (conversationInfo_ != null) {
-      output.writeMessage(14, getConversationInfo());
+    if (conversationMetadata_ != null) {
+      output.writeMessage(14, getConversationMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -502,13 +502,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, channelType_);
     }
-    if (callInfo_ != null) {
+    if (callMetadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, getCallInfo());
+        .computeMessageSize(13, getCallMetadata());
     }
-    if (conversationInfo_ != null) {
+    if (conversationMetadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, getConversationInfo());
+        .computeMessageSize(14, getConversationMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -553,15 +553,15 @@ private static final long serialVersionUID = 0L;
     if (!getSmartEvaluationSectionsList()
         .equals(other.getSmartEvaluationSectionsList())) return false;
     if (channelType_ != other.channelType_) return false;
-    if (hasCallInfo() != other.hasCallInfo()) return false;
-    if (hasCallInfo()) {
-      if (!getCallInfo()
-          .equals(other.getCallInfo())) return false;
+    if (hasCallMetadata() != other.hasCallMetadata()) return false;
+    if (hasCallMetadata()) {
+      if (!getCallMetadata()
+          .equals(other.getCallMetadata())) return false;
     }
-    if (hasConversationInfo() != other.hasConversationInfo()) return false;
-    if (hasConversationInfo()) {
-      if (!getConversationInfo()
-          .equals(other.getConversationInfo())) return false;
+    if (hasConversationMetadata() != other.hasConversationMetadata()) return false;
+    if (hasConversationMetadata()) {
+      if (!getConversationMetadata()
+          .equals(other.getConversationMetadata())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -606,13 +606,13 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
-    if (hasCallInfo()) {
-      hash = (37 * hash) + CALL_INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getCallInfo().hashCode();
+    if (hasCallMetadata()) {
+      hash = (37 * hash) + CALL_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getCallMetadata().hashCode();
     }
-    if (hasConversationInfo()) {
-      hash = (37 * hash) + CONVERSATION_INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getConversationInfo().hashCode();
+    if (hasConversationMetadata()) {
+      hash = (37 * hash) + CONVERSATION_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getConversationMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -774,15 +774,15 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000200);
       channelType_ = 0;
-      callInfo_ = null;
-      if (callInfoBuilder_ != null) {
-        callInfoBuilder_.dispose();
-        callInfoBuilder_ = null;
+      callMetadata_ = null;
+      if (callMetadataBuilder_ != null) {
+        callMetadataBuilder_.dispose();
+        callMetadataBuilder_ = null;
       }
-      conversationInfo_ = null;
-      if (conversationInfoBuilder_ != null) {
-        conversationInfoBuilder_.dispose();
-        conversationInfoBuilder_ = null;
+      conversationMetadata_ = null;
+      if (conversationMetadataBuilder_ != null) {
+        conversationMetadataBuilder_.dispose();
+        conversationMetadataBuilder_ = null;
       }
       return this;
     }
@@ -865,14 +865,14 @@ private static final long serialVersionUID = 0L;
         result.channelType_ = channelType_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.callInfo_ = callInfoBuilder_ == null
-            ? callInfo_
-            : callInfoBuilder_.build();
+        result.callMetadata_ = callMetadataBuilder_ == null
+            ? callMetadata_
+            : callMetadataBuilder_.build();
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.conversationInfo_ = conversationInfoBuilder_ == null
-            ? conversationInfo_
-            : conversationInfoBuilder_.build();
+        result.conversationMetadata_ = conversationMetadataBuilder_ == null
+            ? conversationMetadata_
+            : conversationMetadataBuilder_.build();
       }
     }
 
@@ -978,11 +978,11 @@ private static final long serialVersionUID = 0L;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
-      if (other.hasCallInfo()) {
-        mergeCallInfo(other.getCallInfo());
+      if (other.hasCallMetadata()) {
+        mergeCallMetadata(other.getCallMetadata());
       }
-      if (other.hasConversationInfo()) {
-        mergeConversationInfo(other.getConversationInfo());
+      if (other.hasConversationMetadata()) {
+        mergeConversationMetadata(other.getConversationMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1079,14 +1079,14 @@ private static final long serialVersionUID = 0L;
             } // case 96
             case 106: {
               input.readMessage(
-                  getCallInfoFieldBuilder().getBuilder(),
+                  getCallMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000800;
               break;
             } // case 106
             case 114: {
               input.readMessage(
-                  getConversationInfoFieldBuilder().getBuilder(),
+                  getConversationMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00001000;
               break;
@@ -2159,242 +2159,242 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.CallInfo callInfo_;
+    private com.tcn.cloud.api.api.commons.CallMetadata callMetadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder> callInfoBuilder_;
+        com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder> callMetadataBuilder_;
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
-     * @return Whether the callInfo field is set.
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+     * @return Whether the callMetadata field is set.
      */
-    public boolean hasCallInfo() {
+    public boolean hasCallMetadata() {
       return ((bitField0_ & 0x00000800) != 0);
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
-     * @return The callInfo.
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+     * @return The callMetadata.
      */
-    public com.tcn.cloud.api.api.commons.CallInfo getCallInfo() {
-      if (callInfoBuilder_ == null) {
-        return callInfo_ == null ? com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+    public com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata() {
+      if (callMetadataBuilder_ == null) {
+        return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
       } else {
-        return callInfoBuilder_.getMessage();
+        return callMetadataBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public Builder setCallInfo(com.tcn.cloud.api.api.commons.CallInfo value) {
-      if (callInfoBuilder_ == null) {
+    public Builder setCallMetadata(com.tcn.cloud.api.api.commons.CallMetadata value) {
+      if (callMetadataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        callInfo_ = value;
+        callMetadata_ = value;
       } else {
-        callInfoBuilder_.setMessage(value);
+        callMetadataBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public Builder setCallInfo(
-        com.tcn.cloud.api.api.commons.CallInfo.Builder builderForValue) {
-      if (callInfoBuilder_ == null) {
-        callInfo_ = builderForValue.build();
+    public Builder setCallMetadata(
+        com.tcn.cloud.api.api.commons.CallMetadata.Builder builderForValue) {
+      if (callMetadataBuilder_ == null) {
+        callMetadata_ = builderForValue.build();
       } else {
-        callInfoBuilder_.setMessage(builderForValue.build());
+        callMetadataBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public Builder mergeCallInfo(com.tcn.cloud.api.api.commons.CallInfo value) {
-      if (callInfoBuilder_ == null) {
+    public Builder mergeCallMetadata(com.tcn.cloud.api.api.commons.CallMetadata value) {
+      if (callMetadataBuilder_ == null) {
         if (((bitField0_ & 0x00000800) != 0) &&
-          callInfo_ != null &&
-          callInfo_ != com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance()) {
-          getCallInfoBuilder().mergeFrom(value);
+          callMetadata_ != null &&
+          callMetadata_ != com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance()) {
+          getCallMetadataBuilder().mergeFrom(value);
         } else {
-          callInfo_ = value;
+          callMetadata_ = value;
         }
       } else {
-        callInfoBuilder_.mergeFrom(value);
+        callMetadataBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public Builder clearCallInfo() {
+    public Builder clearCallMetadata() {
       bitField0_ = (bitField0_ & ~0x00000800);
-      callInfo_ = null;
-      if (callInfoBuilder_ != null) {
-        callInfoBuilder_.dispose();
-        callInfoBuilder_ = null;
+      callMetadata_ = null;
+      if (callMetadataBuilder_ != null) {
+        callMetadataBuilder_.dispose();
+        callMetadataBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallInfo.Builder getCallInfoBuilder() {
+    public com.tcn.cloud.api.api.commons.CallMetadata.Builder getCallMetadataBuilder() {
       bitField0_ |= 0x00000800;
       onChanged();
-      return getCallInfoFieldBuilder().getBuilder();
+      return getCallMetadataFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallInfoOrBuilder getCallInfoOrBuilder() {
-      if (callInfoBuilder_ != null) {
-        return callInfoBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder() {
+      if (callMetadataBuilder_ != null) {
+        return callMetadataBuilder_.getMessageOrBuilder();
       } else {
-        return callInfo_ == null ?
-            com.tcn.cloud.api.api.commons.CallInfo.getDefaultInstance() : callInfo_;
+        return callMetadata_ == null ?
+            com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
       }
     }
     /**
-     * <code>.api.commons.CallInfo call_info = 13 [json_name = "callInfo"];</code>
+     * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder> 
-        getCallInfoFieldBuilder() {
-      if (callInfoBuilder_ == null) {
-        callInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.CallInfo, com.tcn.cloud.api.api.commons.CallInfo.Builder, com.tcn.cloud.api.api.commons.CallInfoOrBuilder>(
-                getCallInfo(),
+        com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder> 
+        getCallMetadataFieldBuilder() {
+      if (callMetadataBuilder_ == null) {
+        callMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder>(
+                getCallMetadata(),
                 getParentForChildren(),
                 isClean());
-        callInfo_ = null;
+        callMetadata_ = null;
       }
-      return callInfoBuilder_;
+      return callMetadataBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.ConversationInfo conversationInfo_;
+    private com.tcn.cloud.api.api.commons.ConversationMetadata conversationMetadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder> conversationInfoBuilder_;
+        com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder> conversationMetadataBuilder_;
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
-     * @return Whether the conversationInfo field is set.
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+     * @return Whether the conversationMetadata field is set.
      */
-    public boolean hasConversationInfo() {
+    public boolean hasConversationMetadata() {
       return ((bitField0_ & 0x00001000) != 0);
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
-     * @return The conversationInfo.
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+     * @return The conversationMetadata.
      */
-    public com.tcn.cloud.api.api.commons.ConversationInfo getConversationInfo() {
-      if (conversationInfoBuilder_ == null) {
-        return conversationInfo_ == null ? com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+    public com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata() {
+      if (conversationMetadataBuilder_ == null) {
+        return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
       } else {
-        return conversationInfoBuilder_.getMessage();
+        return conversationMetadataBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public Builder setConversationInfo(com.tcn.cloud.api.api.commons.ConversationInfo value) {
-      if (conversationInfoBuilder_ == null) {
+    public Builder setConversationMetadata(com.tcn.cloud.api.api.commons.ConversationMetadata value) {
+      if (conversationMetadataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        conversationInfo_ = value;
+        conversationMetadata_ = value;
       } else {
-        conversationInfoBuilder_.setMessage(value);
+        conversationMetadataBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public Builder setConversationInfo(
-        com.tcn.cloud.api.api.commons.ConversationInfo.Builder builderForValue) {
-      if (conversationInfoBuilder_ == null) {
-        conversationInfo_ = builderForValue.build();
+    public Builder setConversationMetadata(
+        com.tcn.cloud.api.api.commons.ConversationMetadata.Builder builderForValue) {
+      if (conversationMetadataBuilder_ == null) {
+        conversationMetadata_ = builderForValue.build();
       } else {
-        conversationInfoBuilder_.setMessage(builderForValue.build());
+        conversationMetadataBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public Builder mergeConversationInfo(com.tcn.cloud.api.api.commons.ConversationInfo value) {
-      if (conversationInfoBuilder_ == null) {
+    public Builder mergeConversationMetadata(com.tcn.cloud.api.api.commons.ConversationMetadata value) {
+      if (conversationMetadataBuilder_ == null) {
         if (((bitField0_ & 0x00001000) != 0) &&
-          conversationInfo_ != null &&
-          conversationInfo_ != com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance()) {
-          getConversationInfoBuilder().mergeFrom(value);
+          conversationMetadata_ != null &&
+          conversationMetadata_ != com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance()) {
+          getConversationMetadataBuilder().mergeFrom(value);
         } else {
-          conversationInfo_ = value;
+          conversationMetadata_ = value;
         }
       } else {
-        conversationInfoBuilder_.mergeFrom(value);
+        conversationMetadataBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public Builder clearConversationInfo() {
+    public Builder clearConversationMetadata() {
       bitField0_ = (bitField0_ & ~0x00001000);
-      conversationInfo_ = null;
-      if (conversationInfoBuilder_ != null) {
-        conversationInfoBuilder_.dispose();
-        conversationInfoBuilder_ = null;
+      conversationMetadata_ = null;
+      if (conversationMetadataBuilder_ != null) {
+        conversationMetadataBuilder_.dispose();
+        conversationMetadataBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.ConversationInfo.Builder getConversationInfoBuilder() {
+    public com.tcn.cloud.api.api.commons.ConversationMetadata.Builder getConversationMetadataBuilder() {
       bitField0_ |= 0x00001000;
       onChanged();
-      return getConversationInfoFieldBuilder().getBuilder();
+      return getConversationMetadataFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
-    public com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder getConversationInfoOrBuilder() {
-      if (conversationInfoBuilder_ != null) {
-        return conversationInfoBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder() {
+      if (conversationMetadataBuilder_ != null) {
+        return conversationMetadataBuilder_.getMessageOrBuilder();
       } else {
-        return conversationInfo_ == null ?
-            com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance() : conversationInfo_;
+        return conversationMetadata_ == null ?
+            com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
       }
     }
     /**
-     * <code>.api.commons.ConversationInfo conversation_info = 14 [json_name = "conversationInfo"];</code>
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder> 
-        getConversationInfoFieldBuilder() {
-      if (conversationInfoBuilder_ == null) {
-        conversationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.ConversationInfo, com.tcn.cloud.api.api.commons.ConversationInfo.Builder, com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder>(
-                getConversationInfo(),
+        com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder> 
+        getConversationMetadataFieldBuilder() {
+      if (conversationMetadataBuilder_ == null) {
+        conversationMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder>(
+                getConversationMetadata(),
                 getParentForChildren(),
                 isClean());
-        conversationInfo_ = null;
+        conversationMetadata_ = null;
       }
-      return conversationInfoBuilder_;
+      return conversationMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

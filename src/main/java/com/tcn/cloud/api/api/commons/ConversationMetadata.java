@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * Protobuf type {@code api.commons.ConversationInfo}
+ * Protobuf type {@code api.commons.ConversationMetadata}
  */
-public final class ConversationInfo extends
+public final class ConversationMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.ConversationInfo)
-    ConversationInfoOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.ConversationMetadata)
+    ConversationMetadataOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ConversationInfo.newBuilder() to construct.
-  private ConversationInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ConversationMetadata.newBuilder() to construct.
+  private ConversationMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ConversationInfo() {
+  private ConversationMetadata() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ConversationInfo();
+    return new ConversationMetadata();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationInfo_descriptor;
+    return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationMetadata_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationInfo_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationMetadata_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.ConversationInfo.class, com.tcn.cloud.api.api.commons.ConversationInfo.Builder.class);
+            com.tcn.cloud.api.api.commons.ConversationMetadata.class, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder.class);
   }
 
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
@@ -89,10 +89,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.ConversationInfo)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.ConversationMetadata)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.ConversationInfo other = (com.tcn.cloud.api.api.commons.ConversationInfo) obj;
+    com.tcn.cloud.api.api.commons.ConversationMetadata other = (com.tcn.cloud.api.api.commons.ConversationMetadata) obj;
 
     if (getConversationSid()
         != other.getConversationSid()) return false;
@@ -115,44 +115,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -160,26 +160,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.ConversationInfo parseFrom(
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.ConversationInfo prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.ConversationMetadata prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -208,26 +208,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.ConversationInfo}
+   * Protobuf type {@code api.commons.ConversationMetadata}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.ConversationInfo)
-      com.tcn.cloud.api.api.commons.ConversationInfoOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.ConversationMetadata)
+      com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationInfo_descriptor;
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationInfo_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.ConversationInfo.class, com.tcn.cloud.api.api.commons.ConversationInfo.Builder.class);
+              com.tcn.cloud.api.api.commons.ConversationMetadata.class, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.ConversationInfo.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.ConversationMetadata.newBuilder()
     private Builder() {
 
     }
@@ -248,17 +248,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationInfo_descriptor;
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_ConversationMetadata_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConversationInfo getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.ConversationMetadata getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConversationInfo build() {
-      com.tcn.cloud.api.api.commons.ConversationInfo result = buildPartial();
+    public com.tcn.cloud.api.api.commons.ConversationMetadata build() {
+      com.tcn.cloud.api.api.commons.ConversationMetadata result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -266,14 +266,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConversationInfo buildPartial() {
-      com.tcn.cloud.api.api.commons.ConversationInfo result = new com.tcn.cloud.api.api.commons.ConversationInfo(this);
+    public com.tcn.cloud.api.api.commons.ConversationMetadata buildPartial() {
+      com.tcn.cloud.api.api.commons.ConversationMetadata result = new com.tcn.cloud.api.api.commons.ConversationMetadata(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.ConversationInfo result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ConversationMetadata result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.conversationSid_ = conversationSid_;
@@ -314,16 +314,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.ConversationInfo) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.ConversationInfo)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.ConversationMetadata) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.ConversationMetadata)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.ConversationInfo other) {
-      if (other == com.tcn.cloud.api.api.commons.ConversationInfo.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.ConversationMetadata other) {
+      if (other == com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance()) return this;
       if (other.getConversationSid() != 0L) {
         setConversationSid(other.getConversationSid());
       }
@@ -419,23 +419,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.ConversationInfo)
+    // @@protoc_insertion_point(builder_scope:api.commons.ConversationMetadata)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.ConversationInfo)
-  private static final com.tcn.cloud.api.api.commons.ConversationInfo DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.ConversationMetadata)
+  private static final com.tcn.cloud.api.api.commons.ConversationMetadata DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.ConversationInfo();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.ConversationMetadata();
   }
 
-  public static com.tcn.cloud.api.api.commons.ConversationInfo getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.ConversationMetadata getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ConversationInfo>
-      PARSER = new com.google.protobuf.AbstractParser<ConversationInfo>() {
+  private static final com.google.protobuf.Parser<ConversationMetadata>
+      PARSER = new com.google.protobuf.AbstractParser<ConversationMetadata>() {
     @java.lang.Override
-    public ConversationInfo parsePartialFrom(
+    public ConversationMetadata parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -454,17 +454,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ConversationInfo> parser() {
+  public static com.google.protobuf.Parser<ConversationMetadata> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ConversationInfo> getParserForType() {
+  public com.google.protobuf.Parser<ConversationMetadata> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ConversationInfo getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.ConversationMetadata getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

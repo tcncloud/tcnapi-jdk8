@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ConversationInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.ConversationInfo)
+public interface ConversationMetadataOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.ConversationMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**
