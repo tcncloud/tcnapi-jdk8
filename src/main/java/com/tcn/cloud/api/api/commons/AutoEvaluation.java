@@ -1260,11 +1260,13 @@ private static final long serialVersionUID = 0L;
    * sid of the call being evaluated
    * </pre>
    *
-   * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+   * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+   *     See api/commons/scorecards.proto;l=198
    * @return The callSid.
    */
   @java.lang.Override
-  public long getCallSid() {
+  @java.lang.Deprecated public long getCallSid() {
     return callSid_;
   }
 
@@ -1439,10 +1441,12 @@ private static final long serialVersionUID = 0L;
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=203
    * @return The enum numeric value on the wire for callType.
    */
-  @java.lang.Override public int getCallTypeValue() {
+  @java.lang.Override @java.lang.Deprecated public int getCallTypeValue() {
     return callType_;
   }
   /**
@@ -1450,10 +1454,12 @@ private static final long serialVersionUID = 0L;
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=203
    * @return The callType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
     com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
@@ -1631,6 +1637,58 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
+  public static final int CALL_METADATA_FIELD_NUMBER = 20;
+  private com.tcn.cloud.api.api.commons.CallMetadata callMetadata_;
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+   * @return Whether the callMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasCallMetadata() {
+    return callMetadata_ != null;
+  }
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+   * @return The callMetadata.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata() {
+    return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
+  }
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder() {
+    return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
+  }
+
+  public static final int CONVERSATION_METADATA_FIELD_NUMBER = 21;
+  private com.tcn.cloud.api.api.commons.ConversationMetadata conversationMetadata_;
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+   * @return Whether the conversationMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversationMetadata() {
+    return conversationMetadata_ != null;
+  }
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+   * @return The conversationMetadata.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata() {
+    return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
+  }
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder() {
+    return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1689,6 +1747,12 @@ private static final long serialVersionUID = 0L;
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(19, channelType_);
+    }
+    if (callMetadata_ != null) {
+      output.writeMessage(20, getCallMetadata());
+    }
+    if (conversationMetadata_ != null) {
+      output.writeMessage(21, getConversationMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1758,6 +1822,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(19, channelType_);
     }
+    if (callMetadata_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getCallMetadata());
+    }
+    if (conversationMetadata_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getConversationMetadata());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1812,6 +1884,16 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCategoryInfo())) return false;
     }
     if (channelType_ != other.channelType_) return false;
+    if (hasCallMetadata() != other.hasCallMetadata()) return false;
+    if (hasCallMetadata()) {
+      if (!getCallMetadata()
+          .equals(other.getCallMetadata())) return false;
+    }
+    if (hasConversationMetadata() != other.hasConversationMetadata()) return false;
+    if (hasConversationMetadata()) {
+      if (!getConversationMetadata()
+          .equals(other.getConversationMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1868,6 +1950,14 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
+    if (hasCallMetadata()) {
+      hash = (37 * hash) + CALL_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getCallMetadata().hashCode();
+    }
+    if (hasConversationMetadata()) {
+      hash = (37 * hash) + CONVERSATION_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getConversationMetadata().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2040,6 +2130,16 @@ private static final long serialVersionUID = 0L;
         categoryInfoBuilder_ = null;
       }
       channelType_ = 0;
+      callMetadata_ = null;
+      if (callMetadataBuilder_ != null) {
+        callMetadataBuilder_.dispose();
+        callMetadataBuilder_ = null;
+      }
+      conversationMetadata_ = null;
+      if (conversationMetadataBuilder_ != null) {
+        conversationMetadataBuilder_.dispose();
+        conversationMetadataBuilder_ = null;
+      }
       return this;
     }
 
@@ -2135,6 +2235,16 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.callMetadata_ = callMetadataBuilder_ == null
+            ? callMetadata_
+            : callMetadataBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.conversationMetadata_ = conversationMetadataBuilder_ == null
+            ? conversationMetadata_
+            : conversationMetadataBuilder_.build();
       }
     }
 
@@ -2251,6 +2361,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
+      }
+      if (other.hasCallMetadata()) {
+        mergeCallMetadata(other.getCallMetadata());
+      }
+      if (other.hasConversationMetadata()) {
+        mergeConversationMetadata(other.getConversationMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2369,6 +2485,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 152
+            case 162: {
+              input.readMessage(
+                  getCallMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getConversationMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2480,11 +2610,13 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @return The callSid.
      */
     @java.lang.Override
-    public long getCallSid() {
+    @java.lang.Deprecated public long getCallSid() {
       return callSid_;
     }
     /**
@@ -2492,11 +2624,13 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @param value The callSid to set.
      * @return This builder for chaining.
      */
-    public Builder setCallSid(long value) {
+    @java.lang.Deprecated public Builder setCallSid(long value) {
 
       callSid_ = value;
       bitField0_ |= 0x00000004;
@@ -2508,10 +2642,12 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @return This builder for chaining.
      */
-    public Builder clearCallSid() {
+    @java.lang.Deprecated public Builder clearCallSid() {
       bitField0_ = (bitField0_ & ~0x00000004);
       callSid_ = 0L;
       onChanged();
@@ -3166,10 +3302,12 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return The enum numeric value on the wire for callType.
      */
-    @java.lang.Override public int getCallTypeValue() {
+    @java.lang.Override @java.lang.Deprecated public int getCallTypeValue() {
       return callType_;
     }
     /**
@@ -3177,11 +3315,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @param value The enum numeric value on the wire for callType to set.
      * @return This builder for chaining.
      */
-    public Builder setCallTypeValue(int value) {
+    @java.lang.Deprecated public Builder setCallTypeValue(int value) {
       callType_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -3192,11 +3332,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return The callType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
       com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
@@ -3205,11 +3347,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @param value The callType to set.
      * @return This builder for chaining.
      */
-    public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+    @java.lang.Deprecated public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -3223,10 +3367,12 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return This builder for chaining.
      */
-    public Builder clearCallType() {
+    @java.lang.Deprecated public Builder clearCallType() {
       bitField0_ = (bitField0_ & ~0x00000080);
       callType_ = 0;
       onChanged();
@@ -3819,6 +3965,244 @@ private static final long serialVersionUID = 0L;
       channelType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.CallMetadata callMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder> callMetadataBuilder_;
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     * @return Whether the callMetadata field is set.
+     */
+    public boolean hasCallMetadata() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     * @return The callMetadata.
+     */
+    public com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata() {
+      if (callMetadataBuilder_ == null) {
+        return callMetadata_ == null ? com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
+      } else {
+        return callMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public Builder setCallMetadata(com.tcn.cloud.api.api.commons.CallMetadata value) {
+      if (callMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callMetadata_ = value;
+      } else {
+        callMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public Builder setCallMetadata(
+        com.tcn.cloud.api.api.commons.CallMetadata.Builder builderForValue) {
+      if (callMetadataBuilder_ == null) {
+        callMetadata_ = builderForValue.build();
+      } else {
+        callMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public Builder mergeCallMetadata(com.tcn.cloud.api.api.commons.CallMetadata value) {
+      if (callMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          callMetadata_ != null &&
+          callMetadata_ != com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance()) {
+          getCallMetadataBuilder().mergeFrom(value);
+        } else {
+          callMetadata_ = value;
+        }
+      } else {
+        callMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public Builder clearCallMetadata() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      callMetadata_ = null;
+      if (callMetadataBuilder_ != null) {
+        callMetadataBuilder_.dispose();
+        callMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallMetadata.Builder getCallMetadataBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getCallMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder() {
+      if (callMetadataBuilder_ != null) {
+        return callMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return callMetadata_ == null ?
+            com.tcn.cloud.api.api.commons.CallMetadata.getDefaultInstance() : callMetadata_;
+      }
+    }
+    /**
+     * <code>.api.commons.CallMetadata call_metadata = 20 [json_name = "callMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder> 
+        getCallMetadataFieldBuilder() {
+      if (callMetadataBuilder_ == null) {
+        callMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallMetadata, com.tcn.cloud.api.api.commons.CallMetadata.Builder, com.tcn.cloud.api.api.commons.CallMetadataOrBuilder>(
+                getCallMetadata(),
+                getParentForChildren(),
+                isClean());
+        callMetadata_ = null;
+      }
+      return callMetadataBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.ConversationMetadata conversationMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder> conversationMetadataBuilder_;
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     * @return Whether the conversationMetadata field is set.
+     */
+    public boolean hasConversationMetadata() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     * @return The conversationMetadata.
+     */
+    public com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata() {
+      if (conversationMetadataBuilder_ == null) {
+        return conversationMetadata_ == null ? com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
+      } else {
+        return conversationMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public Builder setConversationMetadata(com.tcn.cloud.api.api.commons.ConversationMetadata value) {
+      if (conversationMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversationMetadata_ = value;
+      } else {
+        conversationMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public Builder setConversationMetadata(
+        com.tcn.cloud.api.api.commons.ConversationMetadata.Builder builderForValue) {
+      if (conversationMetadataBuilder_ == null) {
+        conversationMetadata_ = builderForValue.build();
+      } else {
+        conversationMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public Builder mergeConversationMetadata(com.tcn.cloud.api.api.commons.ConversationMetadata value) {
+      if (conversationMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          conversationMetadata_ != null &&
+          conversationMetadata_ != com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance()) {
+          getConversationMetadataBuilder().mergeFrom(value);
+        } else {
+          conversationMetadata_ = value;
+        }
+      } else {
+        conversationMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public Builder clearConversationMetadata() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      conversationMetadata_ = null;
+      if (conversationMetadataBuilder_ != null) {
+        conversationMetadataBuilder_.dispose();
+        conversationMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConversationMetadata.Builder getConversationMetadataBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getConversationMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder() {
+      if (conversationMetadataBuilder_ != null) {
+        return conversationMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return conversationMetadata_ == null ?
+            com.tcn.cloud.api.api.commons.ConversationMetadata.getDefaultInstance() : conversationMetadata_;
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationMetadata conversation_metadata = 21 [json_name = "conversationMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder> 
+        getConversationMetadataFieldBuilder() {
+      if (conversationMetadataBuilder_ == null) {
+        conversationMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConversationMetadata, com.tcn.cloud.api.api.commons.ConversationMetadata.Builder, com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder>(
+                getConversationMetadata(),
+                getParentForChildren(),
+                isClean());
+        conversationMetadata_ = null;
+      }
+      return conversationMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

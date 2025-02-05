@@ -203,4 +203,34 @@ public interface SmartEvaluationOrBuilder extends
    * @return The channelType.
    */
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+   * @return Whether the callMetadata field is set.
+   */
+  boolean hasCallMetadata();
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+   * @return The callMetadata.
+   */
+  com.tcn.cloud.api.api.commons.CallMetadata getCallMetadata();
+  /**
+   * <code>.api.commons.CallMetadata call_metadata = 13 [json_name = "callMetadata"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CallMetadataOrBuilder getCallMetadataOrBuilder();
+
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+   * @return Whether the conversationMetadata field is set.
+   */
+  boolean hasConversationMetadata();
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+   * @return The conversationMetadata.
+   */
+  com.tcn.cloud.api.api.commons.ConversationMetadata getConversationMetadata();
+  /**
+   * <code>.api.commons.ConversationMetadata conversation_metadata = 14 [json_name = "conversationMetadata"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ConversationMetadataOrBuilder getConversationMetadataOrBuilder();
 }
