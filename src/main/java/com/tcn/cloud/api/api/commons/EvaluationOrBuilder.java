@@ -52,10 +52,12 @@ public interface EvaluationOrBuilder extends
    * sid of the call being evaluated
    * </pre>
    *
-   * <code>int64 call_sid = 6 [json_name = "callSid"];</code>
+   * <code>int64 call_sid = 6 [json_name = "callSid", deprecated = true];</code>
+   * @deprecated api.commons.Evaluation.call_sid is deprecated.
+   *     See api/commons/scorecards.proto;l=125
    * @return The callSid.
    */
-  long getCallSid();
+  @java.lang.Deprecated long getCallSid();
 
   /**
    * <pre>
@@ -189,19 +191,23 @@ public interface EvaluationOrBuilder extends
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 14 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 14 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.Evaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=136
    * @return The enum numeric value on the wire for callType.
    */
-  int getCallTypeValue();
+  @java.lang.Deprecated int getCallTypeValue();
   /**
    * <pre>
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 14 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 14 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.Evaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=136
    * @return The callType.
    */
-  com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 
   /**
    * <pre>

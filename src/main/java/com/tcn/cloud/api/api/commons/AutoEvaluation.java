@@ -1260,11 +1260,13 @@ private static final long serialVersionUID = 0L;
    * sid of the call being evaluated
    * </pre>
    *
-   * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+   * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+   *     See api/commons/scorecards.proto;l=198
    * @return The callSid.
    */
   @java.lang.Override
-  public long getCallSid() {
+  @java.lang.Deprecated public long getCallSid() {
     return callSid_;
   }
 
@@ -1439,10 +1441,12 @@ private static final long serialVersionUID = 0L;
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=203
    * @return The enum numeric value on the wire for callType.
    */
-  @java.lang.Override public int getCallTypeValue() {
+  @java.lang.Override @java.lang.Deprecated public int getCallTypeValue() {
     return callType_;
   }
   /**
@@ -1450,10 +1454,12 @@ private static final long serialVersionUID = 0L;
    * call type of call being evaluated
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+   * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+   * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+   *     See api/commons/scorecards.proto;l=203
    * @return The callType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
     com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
@@ -2604,11 +2610,13 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @return The callSid.
      */
     @java.lang.Override
-    public long getCallSid() {
+    @java.lang.Deprecated public long getCallSid() {
       return callSid_;
     }
     /**
@@ -2616,11 +2624,13 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @param value The callSid to set.
      * @return This builder for chaining.
      */
-    public Builder setCallSid(long value) {
+    @java.lang.Deprecated public Builder setCallSid(long value) {
 
       callSid_ = value;
       bitField0_ |= 0x00000004;
@@ -2632,10 +2642,12 @@ private static final long serialVersionUID = 0L;
      * sid of the call being evaluated
      * </pre>
      *
-     * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
+     * <code>int64 call_sid = 4 [json_name = "callSid", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_sid is deprecated.
+     *     See api/commons/scorecards.proto;l=198
      * @return This builder for chaining.
      */
-    public Builder clearCallSid() {
+    @java.lang.Deprecated public Builder clearCallSid() {
       bitField0_ = (bitField0_ & ~0x00000004);
       callSid_ = 0L;
       onChanged();
@@ -3290,10 +3302,12 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return The enum numeric value on the wire for callType.
      */
-    @java.lang.Override public int getCallTypeValue() {
+    @java.lang.Override @java.lang.Deprecated public int getCallTypeValue() {
       return callType_;
     }
     /**
@@ -3301,11 +3315,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @param value The enum numeric value on the wire for callType to set.
      * @return This builder for chaining.
      */
-    public Builder setCallTypeValue(int value) {
+    @java.lang.Deprecated public Builder setCallTypeValue(int value) {
       callType_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -3316,11 +3332,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return The callType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
       com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
@@ -3329,11 +3347,13 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @param value The callType to set.
      * @return This builder for chaining.
      */
-    public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+    @java.lang.Deprecated public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -3347,10 +3367,12 @@ private static final long serialVersionUID = 0L;
      * call type of call being evaluated
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 9 [json_name = "callType", deprecated = true];</code>
+     * @deprecated api.commons.AutoEvaluation.call_type is deprecated.
+     *     See api/commons/scorecards.proto;l=203
      * @return This builder for chaining.
      */
-    public Builder clearCallType() {
+    @java.lang.Deprecated public Builder clearCallType() {
       bitField0_ = (bitField0_ & ~0x00000080);
       callType_ = 0;
       onChanged();
