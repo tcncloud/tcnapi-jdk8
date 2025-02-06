@@ -14,7 +14,7 @@ public interface GetDeliveryDefinitionByNameReqOrBuilder extends
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=416
+   *     See api/v1alpha1/delivery/service.proto;l=431
    * @return The name.
    */
   @java.lang.Deprecated java.lang.String getName();
@@ -25,7 +25,7 @@ public interface GetDeliveryDefinitionByNameReqOrBuilder extends
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=416
+   *     See api/v1alpha1/delivery/service.proto;l=431
    * @return The bytes for name.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

@@ -22,7 +22,7 @@ public interface SFTPTransportOrBuilder extends
   /**
    * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=716
+   *     See api/v1alpha1/delivery/service.proto;l=731
    * @return The port.
    */
   @java.lang.Deprecated int getPort();

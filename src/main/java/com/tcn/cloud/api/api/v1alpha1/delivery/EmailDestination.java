@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=598
+   *     See api/v1alpha1/delivery/service.proto;l=613
    * @return The toAddr.
    */
   @java.lang.Override
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=598
+   *     See api/v1alpha1/delivery/service.proto;l=613
    * @return The bytes for toAddr.
    */
   @java.lang.Override
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=598
+     *     See api/v1alpha1/delivery/service.proto;l=613
      * @return The toAddr.
      */
     @java.lang.Deprecated public java.lang.String getToAddr() {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=598
+     *     See api/v1alpha1/delivery/service.proto;l=613
      * @return The bytes for toAddr.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=598
+     *     See api/v1alpha1/delivery/service.proto;l=613
      * @param value The toAddr to set.
      * @return This builder for chaining.
      */
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=598
+     *     See api/v1alpha1/delivery/service.proto;l=613
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearToAddr() {
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=598
+     *     See api/v1alpha1/delivery/service.proto;l=613
      * @param value The bytes for toAddr to set.
      * @return This builder for chaining.
      */

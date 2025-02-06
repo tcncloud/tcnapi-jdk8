@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=716
+   *     See api/v1alpha1/delivery/service.proto;l=731
    * @return The port.
    */
   @java.lang.Override
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=716
+     *     See api/v1alpha1/delivery/service.proto;l=731
      * @return The port.
      */
     @java.lang.Override
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=716
+     *     See api/v1alpha1/delivery/service.proto;l=731
      * @param value The port to set.
      * @return This builder for chaining.
      */
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int32 port = 2 [json_name = "port", deprecated = true];</code>
      * @deprecated api.v1alpha1.delivery.SFTPTransport.port is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=716
+     *     See api/v1alpha1/delivery/service.proto;l=731
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPort() {
