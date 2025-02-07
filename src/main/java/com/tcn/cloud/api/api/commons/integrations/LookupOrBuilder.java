@@ -10,7 +10,6 @@ public interface LookupOrBuilder extends
   /**
    * <pre>
    * use the data from this plugin instance to the request for the the lookup.
-   * optional
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
@@ -20,7 +19,6 @@ public interface LookupOrBuilder extends
   /**
    * <pre>
    * use the data from this plugin instance to the request for the the lookup.
-   * optional
    * </pre>
    *
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>

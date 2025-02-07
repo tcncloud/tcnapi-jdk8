@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private int integerValue_ = 0;
   /**
    * <pre>
-   * Whole number part of the percentage. Ex: 5 in 5.25%
+   * Whole number part of the percentage. Ex: 5 in 5.23%
    * </pre>
    *
    * <code>int32 integer_value = 1 [json_name = "integerValue"];</code>
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
   private int fractionalValue_ = 0;
   /**
    * <pre>
-   * Decimal portion (e.g., 25 in 5.25%), limited to 4 digits.
+   * Decimal portion (e.g., 2300 is .23 in 5.23%, 230 is .023 in 5.023%, 23 is .0023 in 5.0023%, 2 is .0002 in 5.0002%), limited to 4 digits.
    * </pre>
    *
    * <code>int32 fractional_value = 2 [json_name = "fractionalValue"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
     private int integerValue_ ;
     /**
      * <pre>
-     * Whole number part of the percentage. Ex: 5 in 5.25%
+     * Whole number part of the percentage. Ex: 5 in 5.23%
      * </pre>
      *
      * <code>int32 integer_value = 1 [json_name = "integerValue"];</code>
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whole number part of the percentage. Ex: 5 in 5.25%
+     * Whole number part of the percentage. Ex: 5 in 5.23%
      * </pre>
      *
      * <code>int32 integer_value = 1 [json_name = "integerValue"];</code>
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whole number part of the percentage. Ex: 5 in 5.25%
+     * Whole number part of the percentage. Ex: 5 in 5.23%
      * </pre>
      *
      * <code>int32 integer_value = 1 [json_name = "integerValue"];</code>
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
     private int fractionalValue_ ;
     /**
      * <pre>
-     * Decimal portion (e.g., 25 in 5.25%), limited to 4 digits.
+     * Decimal portion (e.g., 2300 is .23 in 5.23%, 230 is .023 in 5.023%, 23 is .0023 in 5.0023%, 2 is .0002 in 5.0002%), limited to 4 digits.
      * </pre>
      *
      * <code>int32 fractional_value = 2 [json_name = "fractionalValue"];</code>
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Decimal portion (e.g., 25 in 5.25%), limited to 4 digits.
+     * Decimal portion (e.g., 2300 is .23 in 5.23%, 230 is .023 in 5.023%, 23 is .0023 in 5.0023%, 2 is .0002 in 5.0002%), limited to 4 digits.
      * </pre>
      *
      * <code>int32 fractional_value = 2 [json_name = "fractionalValue"];</code>
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Decimal portion (e.g., 25 in 5.25%), limited to 4 digits.
+     * Decimal portion (e.g., 2300 is .23 in 5.23%, 230 is .023 in 5.023%, 23 is .0023 in 5.0023%, 2 is .0002 in 5.0002%), limited to 4 digits.
      * </pre>
      *
      * <code>int32 fractional_value = 2 [json_name = "fractionalValue"];</code>
