@@ -12,7 +12,7 @@ public interface ListReasonCodesRequestOrBuilder extends
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @return A list containing the schedulingActivitySids.
    */
   java.util.List<java.lang.Long> getSchedulingActivitySidsList();
@@ -21,7 +21,7 @@ public interface ListReasonCodesRequestOrBuilder extends
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @return The count of schedulingActivitySids.
    */
   int getSchedulingActivitySidsCount();
@@ -30,7 +30,7 @@ public interface ListReasonCodesRequestOrBuilder extends
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @param index The index of the element to return.
    * @return The schedulingActivitySids at the given index.
    */

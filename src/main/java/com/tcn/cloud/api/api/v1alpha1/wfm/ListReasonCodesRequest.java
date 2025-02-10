@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @return A list containing the schedulingActivitySids.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @return The count of schedulingActivitySids.
    */
   public int getSchedulingActivitySidsCount() {
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
    * Scheduling Activity SIDs to get the reason codes for.
    * </pre>
    *
-   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+   * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
    * @param index The index of the element to return.
    * @return The schedulingActivitySids at the given index.
    */
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @return A list containing the schedulingActivitySids.
      */
     public java.util.List<java.lang.Long>
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @return The count of schedulingActivitySids.
      */
     public int getSchedulingActivitySidsCount() {
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @param index The index of the element to return.
      * @return The schedulingActivitySids at the given index.
      */
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @param index The index to set the value at.
      * @param value The schedulingActivitySids to set.
      * @return This builder for chaining.
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @param value The schedulingActivitySids to add.
      * @return This builder for chaining.
      */
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @param values The schedulingActivitySids to add.
      * @return This builder for chaining.
      */
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
      * Scheduling Activity SIDs to get the reason codes for.
      * </pre>
      *
-     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids", jstype = JS_STRING];</code>
+     * <code>repeated int64 scheduling_activity_sids = 1 [json_name = "schedulingActivitySids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSchedulingActivitySids() {
