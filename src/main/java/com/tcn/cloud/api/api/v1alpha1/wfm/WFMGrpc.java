@@ -3490,6 +3490,130 @@ public final class WFMGrpc {
     return getListConfigEntitiesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> getCreateReasonCodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateReasonCode",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> getCreateReasonCodeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> getCreateReasonCodeMethod;
+    if ((getCreateReasonCodeMethod = WFMGrpc.getCreateReasonCodeMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateReasonCodeMethod = WFMGrpc.getCreateReasonCodeMethod) == null) {
+          WFMGrpc.getCreateReasonCodeMethod = getCreateReasonCodeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateReasonCode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateReasonCode"))
+              .build();
+        }
+      }
+    }
+    return getCreateReasonCodeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> getUpdateReasonCodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateReasonCode",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> getUpdateReasonCodeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> getUpdateReasonCodeMethod;
+    if ((getUpdateReasonCodeMethod = WFMGrpc.getUpdateReasonCodeMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateReasonCodeMethod = WFMGrpc.getUpdateReasonCodeMethod) == null) {
+          WFMGrpc.getUpdateReasonCodeMethod = getUpdateReasonCodeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateReasonCode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateReasonCode"))
+              .build();
+        }
+      }
+    }
+    return getUpdateReasonCodeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> getGetDefaultReasonCodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDefaultReasonCode",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> getGetDefaultReasonCodeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> getGetDefaultReasonCodeMethod;
+    if ((getGetDefaultReasonCodeMethod = WFMGrpc.getGetDefaultReasonCodeMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetDefaultReasonCodeMethod = WFMGrpc.getGetDefaultReasonCodeMethod) == null) {
+          WFMGrpc.getGetDefaultReasonCodeMethod = getGetDefaultReasonCodeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultReasonCode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDefaultReasonCode"))
+              .build();
+        }
+      }
+    }
+    return getGetDefaultReasonCodeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> getListReasonCodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListReasonCodes",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> getListReasonCodesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> getListReasonCodesMethod;
+    if ((getListReasonCodesMethod = WFMGrpc.getListReasonCodesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListReasonCodesMethod = WFMGrpc.getListReasonCodesMethod) == null) {
+          WFMGrpc.getListReasonCodesMethod = getListReasonCodesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListReasonCodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListReasonCodes"))
+              .build();
+        }
+      }
+    }
+    return getListReasonCodesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes> getDeleteShiftInstancesMethod;
 
@@ -8093,6 +8217,7 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -8109,6 +8234,7 @@ public final class WFMGrpc {
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
      * Scheduling activities are not checked for an active or inactive state, and neither are their member activities.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -8121,6 +8247,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the on call scheduling activity for the org sending the request.
+     * Reason codes will be included with the returned scheduling activity.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8865,6 +8992,69 @@ public final class WFMGrpc {
     default void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConfigEntitiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when creating the reason code.
+     * </pre>
+     */
+    default void createReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateReasonCodeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when updating the reason code.
+     * </pre>
+     */
+    default void updateReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateReasonCodeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the default reason code for the given &#64;scheduling_activity_sid and the org sending the request.
+     * If there is currently no default reason code for the scheduling activity, returns nil instead.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when getting the default reason code.
+     * </pre>
+     */
+    default void getDefaultReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultReasonCodeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the reason codes for &#64;scheduling_activity_sids and the org sending the request.
+     * If include_inactive is set to true, inactivate reason codes will be included in the response.
+     * Otherwise, only active reason codes will be included.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when listing the reason codes.
+     * </pre>
+     */
+    default void listReasonCodes(com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListReasonCodesMethod(), responseObserver);
     }
 
     /**
@@ -11738,6 +11928,7 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -11755,6 +11946,7 @@ public final class WFMGrpc {
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
      * Scheduling activities are not checked for an active or inactive state, and neither are their member activities.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -11768,6 +11960,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the on call scheduling activity for the org sending the request.
+     * Reason codes will be included with the returned scheduling activity.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12558,6 +12751,73 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListConfigEntitiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when creating the reason code.
+     * </pre>
+     */
+    public void createReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateReasonCodeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when updating the reason code.
+     * </pre>
+     */
+    public void updateReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateReasonCodeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the default reason code for the given &#64;scheduling_activity_sid and the org sending the request.
+     * If there is currently no default reason code for the scheduling activity, returns nil instead.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when getting the default reason code.
+     * </pre>
+     */
+    public void getDefaultReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDefaultReasonCodeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the reason codes for &#64;scheduling_activity_sids and the org sending the request.
+     * If include_inactive is set to true, inactivate reason codes will be included in the response.
+     * Otherwise, only active reason codes will be included.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when listing the reason codes.
+     * </pre>
+     */
+    public void listReasonCodes(com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListReasonCodesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -15474,6 +15734,7 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -15490,6 +15751,7 @@ public final class WFMGrpc {
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
      * Scheduling activities are not checked for an active or inactive state, and neither are their member activities.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -15502,6 +15764,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the on call scheduling activity for the org sending the request.
+     * Reason codes will be included with the returned scheduling activity.
      * Required permissions:
      *   NONE
      * Errors:
@@ -16246,6 +16509,69 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListConfigEntitiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when creating the reason code.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse createReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateReasonCodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when updating the reason code.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse updateReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateReasonCodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the default reason code for the given &#64;scheduling_activity_sid and the org sending the request.
+     * If there is currently no default reason code for the scheduling activity, returns nil instead.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when getting the default reason code.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse getDefaultReasonCode(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDefaultReasonCodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the reason codes for &#64;scheduling_activity_sids and the org sending the request.
+     * If include_inactive is set to true, inactivate reason codes will be included in the response.
+     * Otherwise, only active reason codes will be included.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when listing the reason codes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse listReasonCodes(com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListReasonCodesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -19003,6 +19329,7 @@ public final class WFMGrpc {
      * If the rule will belong to a wfm agent, the agent group must be supplied instead to get a relevant set of candidate scheduling activities.
      * Member non skill activity of each scheduling activity will be included in the response.
      * The on call scheduling activity will always be included.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Invalid: the &#64;parent_of_rule is invalid.
      *   - grpc.NotFound: &#64;parent_of_rule doesn't exist
@@ -19020,6 +19347,7 @@ public final class WFMGrpc {
      * Lists all the scheduling activities for the org making the request.
      * Their member non skill activities and pause codes will always be included.
      * Scheduling activities are not checked for an active or inactive state, and neither are their member activities.
+     * Reason codes will be included with the returned scheduling activities.
      * Errors:
      *   - grpc.Internal: error occurs when getting the activities or its members.
      * </pre>
@@ -19033,6 +19361,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the on call scheduling activity for the org sending the request.
+     * Reason codes will be included with the returned scheduling activity.
      * Required permissions:
      *   NONE
      * Errors:
@@ -19823,6 +20152,73 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListConfigEntitiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when creating the reason code.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse> createReasonCode(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateReasonCodeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given reason code for the org sending the request.
+     * If &#64;reason_code.is_default is true and there is already a default reason code for the &#64;reason_code.scheduling_activity_sid, the existing default reason code must be set to is_default=false first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.AlreadyExists: the &#64;reason_code is set to default, but there is already a default reason code for the scheduling activity.
+     *   - grpc.Internal: error occours when updating the reason code.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse> updateReasonCode(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateReasonCodeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the default reason code for the given &#64;scheduling_activity_sid and the org sending the request.
+     * If there is currently no default reason code for the scheduling activity, returns nil instead.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when getting the default reason code.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse> getDefaultReasonCode(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDefaultReasonCodeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the reason codes for &#64;scheduling_activity_sids and the org sending the request.
+     * If include_inactive is set to true, inactivate reason codes will be included in the response.
+     * Otherwise, only active reason codes will be included.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occours when listing the reason codes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse> listReasonCodes(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListReasonCodesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -21839,121 +22235,125 @@ public final class WFMGrpc {
   private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 109;
   private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 110;
   private static final int METHODID_LIST_CONFIG_ENTITIES = 111;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 112;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 113;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 114;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 115;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 116;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 117;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 118;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 119;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 120;
-  private static final int METHODID_POLL_BUILD_IN_PROGRESS = 121;
-  private static final int METHODID_CANCEL_BUILD_IN_PROGRESS = 122;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 123;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 124;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 125;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 126;
-  private static final int METHODID_CLEAR_SCHEDULE = 127;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 128;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 129;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 130;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 131;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 132;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 133;
-  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 134;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 135;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 136;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 137;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 138;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 139;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 140;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 141;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 142;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 143;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 144;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 145;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 146;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 147;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 148;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 149;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 150;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 151;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 152;
-  private static final int METHODID_GET_TOUR_PATTERN = 153;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 154;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 155;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 156;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 157;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 158;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 159;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 160;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 161;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 162;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 163;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 164;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 165;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 166;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 167;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 168;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 169;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 170;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 171;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 172;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 173;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 174;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 175;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 176;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 177;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 178;
-  private static final int METHODID_CREATE_PUBLISHED_SHIFT = 179;
-  private static final int METHODID_CREATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 180;
-  private static final int METHODID_UPDATE_PUBLISHED_SHIFT = 181;
-  private static final int METHODID_UPDATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 182;
-  private static final int METHODID_SPLIT_PUBLISHED_SHIFT = 183;
-  private static final int METHODID_SWAP_PUBLISHED_SHIFTS = 184;
-  private static final int METHODID_DELETE_PUBLISHED_SHIFTS = 185;
-  private static final int METHODID_REPLACE_AGENT_ON_PUBLISHED_SCHEDULE = 186;
-  private static final int METHODID_REMOVE_AGENT_FROM_PUBLISHED_SCHEDULE = 187;
-  private static final int METHODID_COPY_SHIFTS_TO_PUBLISHED_SCHEDULE = 188;
-  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 189;
-  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 190;
-  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 191;
-  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 192;
-  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 193;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 194;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 195;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 196;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 197;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 198;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 199;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 200;
-  private static final int METHODID_CREATE_RGBA_COLOR = 201;
-  private static final int METHODID_LIST_RGBA_COLORS = 202;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 203;
-  private static final int METHODID_DELETE_RGBA_COLOR = 204;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 205;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 206;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 207;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 208;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 209;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 210;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 211;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 212;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 213;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 214;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 215;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 216;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 217;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 218;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 219;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 220;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 221;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 222;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 223;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 224;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 225;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 226;
+  private static final int METHODID_CREATE_REASON_CODE = 112;
+  private static final int METHODID_UPDATE_REASON_CODE = 113;
+  private static final int METHODID_GET_DEFAULT_REASON_CODE = 114;
+  private static final int METHODID_LIST_REASON_CODES = 115;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 116;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 117;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 118;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 119;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 120;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 121;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 122;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 123;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 124;
+  private static final int METHODID_POLL_BUILD_IN_PROGRESS = 125;
+  private static final int METHODID_CANCEL_BUILD_IN_PROGRESS = 126;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 127;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 128;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 129;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 130;
+  private static final int METHODID_CLEAR_SCHEDULE = 131;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 132;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 133;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 134;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 135;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 136;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_WITH_SEGMENTS = 137;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 138;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 139;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 140;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 141;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 142;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 143;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 144;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 145;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 146;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 147;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 148;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 149;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 150;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 151;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 152;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 153;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 154;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 155;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 156;
+  private static final int METHODID_GET_TOUR_PATTERN = 157;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 158;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 159;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 160;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 161;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 162;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 163;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 164;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 165;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 166;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 167;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 168;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 169;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 170;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 171;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 172;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 173;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 174;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 175;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 176;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 177;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 178;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 179;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 180;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 181;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 182;
+  private static final int METHODID_CREATE_PUBLISHED_SHIFT = 183;
+  private static final int METHODID_CREATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 184;
+  private static final int METHODID_UPDATE_PUBLISHED_SHIFT = 185;
+  private static final int METHODID_UPDATE_PUBLISHED_SHIFT_WITH_SEGMENTS = 186;
+  private static final int METHODID_SPLIT_PUBLISHED_SHIFT = 187;
+  private static final int METHODID_SWAP_PUBLISHED_SHIFTS = 188;
+  private static final int METHODID_DELETE_PUBLISHED_SHIFTS = 189;
+  private static final int METHODID_REPLACE_AGENT_ON_PUBLISHED_SCHEDULE = 190;
+  private static final int METHODID_REMOVE_AGENT_FROM_PUBLISHED_SCHEDULE = 191;
+  private static final int METHODID_COPY_SHIFTS_TO_PUBLISHED_SCHEDULE = 192;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 193;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 194;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 195;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 196;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 197;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 198;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 199;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 200;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 201;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 202;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 203;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 204;
+  private static final int METHODID_CREATE_RGBA_COLOR = 205;
+  private static final int METHODID_LIST_RGBA_COLORS = 206;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 207;
+  private static final int METHODID_DELETE_RGBA_COLOR = 208;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 209;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 210;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 211;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 212;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 213;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 214;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 215;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 216;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 217;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 218;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 219;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 220;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 221;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 222;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 223;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 224;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 225;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 226;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 227;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 228;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 229;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 230;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -22419,6 +22819,22 @@ public final class WFMGrpc {
         case METHODID_LIST_CONFIG_ENTITIES:
           serviceImpl.listConfigEntities((com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>) responseObserver);
+          break;
+        case METHODID_CREATE_REASON_CODE:
+          serviceImpl.createReasonCode((com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_REASON_CODE:
+          serviceImpl.updateReasonCode((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse>) responseObserver);
+          break;
+        case METHODID_GET_DEFAULT_REASON_CODE:
+          serviceImpl.getDefaultReasonCode((com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse>) responseObserver);
+          break;
+        case METHODID_LIST_REASON_CODES:
+          serviceImpl.listReasonCodes((com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse>) responseObserver);
           break;
         case METHODID_DELETE_SHIFT_INSTANCES:
           serviceImpl.deleteShiftInstances((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq) request,
@@ -23683,6 +24099,34 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>(
                 service, METHODID_LIST_CONFIG_ENTITIES)))
         .addMethod(
+          getCreateReasonCodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateReasonCodeResponse>(
+                service, METHODID_CREATE_REASON_CODE)))
+        .addMethod(
+          getUpdateReasonCodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateReasonCodeResponse>(
+                service, METHODID_UPDATE_REASON_CODE)))
+        .addMethod(
+          getGetDefaultReasonCodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultReasonCodeResponse>(
+                service, METHODID_GET_DEFAULT_REASON_CODE)))
+        .addMethod(
+          getListReasonCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListReasonCodesResponse>(
+                service, METHODID_LIST_REASON_CODES)))
+        .addMethod(
           getDeleteShiftInstancesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -24647,6 +25091,10 @@ public final class WFMGrpc {
               .addMethod(getCreateScheduleScenarioWithNodesMethod())
               .addMethod(getUpdateScheduleScenarioMethod())
               .addMethod(getListConfigEntitiesMethod())
+              .addMethod(getCreateReasonCodeMethod())
+              .addMethod(getUpdateReasonCodeMethod())
+              .addMethod(getGetDefaultReasonCodeMethod())
+              .addMethod(getListReasonCodesMethod())
               .addMethod(getDeleteShiftInstancesMethod())
               .addMethod(getBuildNodeDiagnosticsMethod())
               .addMethod(getBuildGlobalDiagnosticsMethod())
