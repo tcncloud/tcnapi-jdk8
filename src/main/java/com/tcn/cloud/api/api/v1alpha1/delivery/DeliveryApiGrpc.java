@@ -852,35 +852,35 @@ public final class DeliveryApiGrpc {
     return getListSMSNumbersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> getSendTestEmailMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SendTestEmail",
-      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes.class,
+      fullMethodName = SERVICE_NAME + '/' + "TriggerTestOutboundDelivery",
+      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> getSendTestEmailMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq, com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> getSendTestEmailMethod;
-    if ((getSendTestEmailMethod = DeliveryApiGrpc.getSendTestEmailMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod;
+    if ((getTriggerTestOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod) == null) {
       synchronized (DeliveryApiGrpc.class) {
-        if ((getSendTestEmailMethod = DeliveryApiGrpc.getSendTestEmailMethod) == null) {
-          DeliveryApiGrpc.getSendTestEmailMethod = getSendTestEmailMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq, com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes>newBuilder()
+        if ((getTriggerTestOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod) == null) {
+          DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod = getTriggerTestOutboundDeliveryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendTestEmail"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TriggerTestOutboundDelivery"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("SendTestEmail"))
+                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes.getDefaultInstance()))
+              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("TriggerTestOutboundDelivery"))
               .build();
         }
       }
     }
-    return getSendTestEmailMethod;
+    return getTriggerTestOutboundDeliveryMethod;
   }
 
   /**
@@ -1122,9 +1122,9 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    default void sendTestEmail(com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendTestEmailMethod(), responseObserver);
+    default void triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerTestOutboundDeliveryMethod(), responseObserver);
     }
   }
 
@@ -1373,10 +1373,10 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public void sendTestEmail(com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> responseObserver) {
+    public void triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSendTestEmailMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTriggerTestOutboundDeliveryMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1587,9 +1587,9 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes sendTestEmail(com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq request) {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSendTestEmailMethod(), getCallOptions(), request);
+          getChannel(), getTriggerTestOutboundDeliveryMethod(), getCallOptions(), request);
     }
   }
 
@@ -1827,10 +1827,10 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes> sendTestEmail(
-        com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> triggerTestOutboundDelivery(
+        com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSendTestEmailMethod(), getCallOptions()), request);
+          getChannel().newCall(getTriggerTestOutboundDeliveryMethod(), getCallOptions()), request);
     }
   }
 
@@ -1861,7 +1861,7 @@ public final class DeliveryApiGrpc {
   private static final int METHODID_LIST_ENCRYPTIONS = 24;
   private static final int METHODID_UPDATE_ENCRYPTION = 25;
   private static final int METHODID_LIST_SMSNUMBERS = 26;
-  private static final int METHODID_SEND_TEST_EMAIL = 27;
+  private static final int METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1988,9 +1988,9 @@ public final class DeliveryApiGrpc {
           serviceImpl.listSMSNumbers((com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>) responseObserver);
           break;
-        case METHODID_SEND_TEST_EMAIL:
-          serviceImpl.sendTestEmail((com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes>) responseObserver);
+        case METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY:
+          serviceImpl.triggerTestOutboundDelivery((com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2200,12 +2200,12 @@ public final class DeliveryApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>(
                 service, METHODID_LIST_SMSNUMBERS)))
         .addMethod(
-          getSendTestEmailMethod(),
+          getTriggerTestOutboundDeliveryMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.SendTestEmailRes>(
-                service, METHODID_SEND_TEST_EMAIL)))
+              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
+              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>(
+                service, METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY)))
         .build();
   }
 
@@ -2281,7 +2281,7 @@ public final class DeliveryApiGrpc {
               .addMethod(getListEncryptionsMethod())
               .addMethod(getUpdateEncryptionMethod())
               .addMethod(getListSMSNumbersMethod())
-              .addMethod(getSendTestEmailMethod())
+              .addMethod(getTriggerTestOutboundDeliveryMethod())
               .build();
         }
       }

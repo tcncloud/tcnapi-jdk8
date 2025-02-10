@@ -14,7 +14,7 @@ public interface EmailTransportOrBuilder extends
    *
    * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=741
+   *     See api/v1alpha1/delivery/service.proto;l=743
    * @return The fromAddress.
    */
   @java.lang.Deprecated java.lang.String getFromAddress();
@@ -25,7 +25,7 @@ public interface EmailTransportOrBuilder extends
    *
    * <code>string from_address = 1 [json_name = "fromAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.from_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=741
+   *     See api/v1alpha1/delivery/service.proto;l=743
    * @return The bytes for fromAddress.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -38,7 +38,7 @@ public interface EmailTransportOrBuilder extends
    *
    * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=743
+   *     See api/v1alpha1/delivery/service.proto;l=745
    * @return The toAddress.
    */
   @java.lang.Deprecated java.lang.String getToAddress();
@@ -49,7 +49,7 @@ public interface EmailTransportOrBuilder extends
    *
    * <code>string to_address = 2 [json_name = "toAddress", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailTransport.to_address is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=743
+   *     See api/v1alpha1/delivery/service.proto;l=745
    * @return The bytes for toAddress.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
