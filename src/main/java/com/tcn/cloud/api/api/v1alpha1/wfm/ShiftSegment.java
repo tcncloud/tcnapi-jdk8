@@ -235,21 +235,6 @@ private static final long serialVersionUID = 0L;
     return callStatsBySkillCollection_.get(index);
   }
 
-  public static final int REASON_CODE_ID_FIELD_NUMBER = 10;
-  private long reasonCodeId_ = 0L;
-  /**
-   * <pre>
-   * The reason code ID associated with the shift segment.
-   * </pre>
-   *
-   * <code>int64 reason_code_id = 10 [json_name = "reasonCodeId", jstype = JS_STRING];</code>
-   * @return The reasonCodeId.
-   */
-  @java.lang.Override
-  public long getReasonCodeId() {
-    return reasonCodeId_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -287,9 +272,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < callStatsBySkillCollection_.size(); i++) {
       output.writeMessage(9, callStatsBySkillCollection_.get(i));
-    }
-    if (reasonCodeId_ != 0L) {
-      output.writeInt64(10, reasonCodeId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -332,10 +314,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, callStatsBySkillCollection_.get(i));
     }
-    if (reasonCodeId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(10, reasonCodeId_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -370,8 +348,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCallStatsBySkillCollectionList()
         .equals(other.getCallStatsBySkillCollectionList())) return false;
-    if (getReasonCodeId()
-        != other.getReasonCodeId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -406,9 +382,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CALL_STATS_BY_SKILL_COLLECTION_FIELD_NUMBER;
       hash = (53 * hash) + getCallStatsBySkillCollectionList().hashCode();
     }
-    hash = (37 * hash) + REASON_CODE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getReasonCodeId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -562,7 +535,6 @@ private static final long serialVersionUID = 0L;
         callStatsBySkillCollectionBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000080);
-      reasonCodeId_ = 0L;
       return this;
     }
 
@@ -631,9 +603,6 @@ private static final long serialVersionUID = 0L;
         result.schedulingActivity_ = schedulingActivityBuilder_ == null
             ? schedulingActivity_
             : schedulingActivityBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.reasonCodeId_ = reasonCodeId_;
       }
     }
 
@@ -728,9 +697,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.getReasonCodeId() != 0L) {
-        setReasonCodeId(other.getReasonCodeId());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -807,11 +773,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 74
-            case 80: {
-              reasonCodeId_ = input.readInt64();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1567,50 +1528,6 @@ private static final long serialVersionUID = 0L;
         callStatsBySkillCollection_ = null;
       }
       return callStatsBySkillCollectionBuilder_;
-    }
-
-    private long reasonCodeId_ ;
-    /**
-     * <pre>
-     * The reason code ID associated with the shift segment.
-     * </pre>
-     *
-     * <code>int64 reason_code_id = 10 [json_name = "reasonCodeId", jstype = JS_STRING];</code>
-     * @return The reasonCodeId.
-     */
-    @java.lang.Override
-    public long getReasonCodeId() {
-      return reasonCodeId_;
-    }
-    /**
-     * <pre>
-     * The reason code ID associated with the shift segment.
-     * </pre>
-     *
-     * <code>int64 reason_code_id = 10 [json_name = "reasonCodeId", jstype = JS_STRING];</code>
-     * @param value The reasonCodeId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReasonCodeId(long value) {
-
-      reasonCodeId_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The reason code ID associated with the shift segment.
-     * </pre>
-     *
-     * <code>int64 reason_code_id = 10 [json_name = "reasonCodeId", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearReasonCodeId() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      reasonCodeId_ = 0L;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

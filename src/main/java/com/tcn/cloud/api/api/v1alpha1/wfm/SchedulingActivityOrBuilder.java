@@ -143,48 +143,4 @@ public interface SchedulingActivityOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPauseCodesBytes(int index);
-
-  /**
-   * <pre>
-   * List of all reason codes associated with this activity.
-   * </pre>
-   *
-   * <code>repeated .api.commons.ReasonCode reason_codes = 7 [json_name = "reasonCodes"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.ReasonCode> 
-      getReasonCodesList();
-  /**
-   * <pre>
-   * List of all reason codes associated with this activity.
-   * </pre>
-   *
-   * <code>repeated .api.commons.ReasonCode reason_codes = 7 [json_name = "reasonCodes"];</code>
-   */
-  com.tcn.cloud.api.api.commons.ReasonCode getReasonCodes(int index);
-  /**
-   * <pre>
-   * List of all reason codes associated with this activity.
-   * </pre>
-   *
-   * <code>repeated .api.commons.ReasonCode reason_codes = 7 [json_name = "reasonCodes"];</code>
-   */
-  int getReasonCodesCount();
-  /**
-   * <pre>
-   * List of all reason codes associated with this activity.
-   * </pre>
-   *
-   * <code>repeated .api.commons.ReasonCode reason_codes = 7 [json_name = "reasonCodes"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.ReasonCodeOrBuilder> 
-      getReasonCodesOrBuilderList();
-  /**
-   * <pre>
-   * List of all reason codes associated with this activity.
-   * </pre>
-   *
-   * <code>repeated .api.commons.ReasonCode reason_codes = 7 [json_name = "reasonCodes"];</code>
-   */
-  com.tcn.cloud.api.api.commons.ReasonCodeOrBuilder getReasonCodesOrBuilder(
-      int index);
 }

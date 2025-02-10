@@ -140,14 +140,4 @@ public interface ShiftSegmentOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatOrBuilder getCallStatsBySkillCollectionOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * The reason code ID associated with the shift segment.
-   * </pre>
-   *
-   * <code>int64 reason_code_id = 10 [json_name = "reasonCodeId", jstype = JS_STRING];</code>
-   * @return The reasonCodeId.
-   */
-  long getReasonCodeId();
 }
