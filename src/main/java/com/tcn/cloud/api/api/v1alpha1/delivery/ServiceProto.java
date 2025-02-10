@@ -792,7 +792,7 @@ public final class ServiceProto {
       "astEditedB\014\n\nencryption\"\023\n\021ListSMSNumber" +
       "sReq\"L\n\021ListSMSNumbersRes\0227\n\013sms_numbers" +
       "\030\001 \003(\0132\026.api.commons.SmsNumberR\nsmsNumbe" +
-      "rs2\210)\n\013DeliveryApi\022\270\001\n\024CreateTransferCon" +
+      "rs2\226)\n\013DeliveryApi\022\270\001\n\024CreateTransferCon" +
       "fig\022..api.v1alpha1.delivery.CreateTransf" +
       "erConfigReq\032..api.v1alpha1.delivery.Crea" +
       "teTransferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/" +
@@ -918,17 +918,17 @@ public final class ServiceProto {
       "pi.v1alpha1.delivery.ListSMSNumbersReq\032(" +
       ".api.v1alpha1.delivery.ListSMSNumbersRes" +
       "\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/delive" +
-      "ry/listsmsnumbers:\001*\022\306\001\n\033TriggerTestOutb" +
+      "ry/listsmsnumbers:\001*\022\324\001\n\033TriggerTestOutb" +
       "oundDelivery\0225.api.v1alpha1.delivery.Tri" +
       "ggerTestOutboundDeliveryReq\0325.api.v1alph" +
       "a1.delivery.TriggerTestOutboundDeliveryR" +
-      "es\"9\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002)\"$/api/v1alpha1/deli" +
-      "very/sendtestemail:\001*B\255\001\n\'com.tcn.cloud." +
-      "api.api.v1alpha1.deliveryB\014ServiceProtoP" +
-      "\001\242\002\003AVD\252\002\025Api.V1alpha1.Delivery\312\002\025Api\\V1" +
-      "alpha1\\Delivery\342\002!Api\\V1alpha1\\Delivery\\" +
-      "GPBMetadata\352\002\027Api::V1alpha1::Deliveryb\006p" +
-      "roto3"
+      "es\"G\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0027\"2/api/v1alpha1/deli" +
+      "very/triggertestoutbounddelivery:\001*B\255\001\n\'" +
+      "com.tcn.cloud.api.api.v1alpha1.deliveryB" +
+      "\014ServiceProtoP\001\242\002\003AVD\252\002\025Api.V1alpha1.Del" +
+      "ivery\312\002\025Api\\V1alpha1\\Delivery\342\002!Api\\V1al" +
+      "pha1\\Delivery\\GPBMetadata\352\002\027Api::V1alpha" +
+      "1::Deliveryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
