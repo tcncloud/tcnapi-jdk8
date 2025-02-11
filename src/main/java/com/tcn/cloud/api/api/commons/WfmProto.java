@@ -335,7 +335,7 @@ public final class WfmProto {
       "\002 \001(\0132\032.google.protobuf.TimestampR\rstart" +
       "Datetime\022C\n\nadm_states\030\003 \003(\0162$.api.commo" +
       "ns.RealTimeManagementStateR\tadmStates\022\035\n" +
-      "\npause_code\030\004 \001(\tR\tpauseCode\"\375\003\n\034Adheren" +
+      "\npause_code\030\004 \001(\tR\tpauseCode\"\315\004\n\034Adheren" +
       "ceAgentStateViolation\022\"\n\rwfm_agent_sid\030\001" +
       " \001(\003R\013wfmAgentSid\022A\n\016start_datetime\030\002 \001(" +
       "\0132\032.google.protobuf.TimestampR\rstartDate" +
@@ -348,7 +348,9 @@ public final class WfmProto {
       "_code\030\006 \001(\tR\017actualPauseCode\022<\n\032violatio" +
       "n_duration_seconds\030\007 \001(\005R\030violationDurat" +
       "ionSeconds\0220\n\024expected_pause_codes\030\010 \003(\t" +
-      "R\022expectedPauseCodes\"[\n\024AdherenceAgentSt" +
+      "R\022expectedPauseCodes\022N\n\"adherence_agent_" +
+      "state_violation_id\030\t \001(\003B\0020\001R\036adherenceA" +
+      "gentStateViolationId\"[\n\024AdherenceAgentSt" +
       "ates\022C\n\014agent_states\030\001 \003(\0132 .api.commons" +
       ".AdherenceAgentStateR\013agentStates\"j\n\035Adh" +
       "erenceAgentStateViolations\022I\n\nviolations" +
@@ -595,9 +597,9 @@ public final class WfmProto {
       "_OFF_ACTIVITY\020\002\022\024\n\020MEETING_ACTIVITY\020\003*\202\001" +
       "\n\037AdherenceRuleNotificationMedium\0221\n-ADH" +
       "ERENCE_RULE_NOTIFICATION_MEDIUM_IN_PRODU" +
-      "CT\020\000\022,\n(ADHERENCE_RULE_NOTIFICATION_MEDI" +
+      "CT\020\000\022,\n(ADHERENCE_RULE_NOTIFICATION_MEDI",
       "UM_EMAIL\020\001*\251\001\n\034AdherenceRuleRequirementT" +
-      "ype\022,\n(ADHERENCE_RULE_REQUIREMENT_TYPE_N",
+      "ype\022,\n(ADHERENCE_RULE_REQUIREMENT_TYPE_N" +
       "OT_USED\020\000\022,\n(ADHERENCE_RULE_REQUIREMENT_" +
       "TYPE_OPTIONAL\020\001\022-\n)ADHERENCE_RULE_REQUIR" +
       "EMENT_TYPE_MANDATORY\020\002*\336\001\n\022AdherenceRule" +
@@ -779,7 +781,7 @@ public final class WfmProto {
     internal_static_api_commons_AdherenceAgentStateViolation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AdherenceAgentStateViolation_descriptor,
-        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "ExpectedRtmStates", "ExpectedPauseCode", "ActualRtmStates", "ActualPauseCode", "ViolationDurationSeconds", "ExpectedPauseCodes", });
+        new java.lang.String[] { "WfmAgentSid", "StartDatetime", "ExpectedRtmStates", "ExpectedPauseCode", "ActualRtmStates", "ActualPauseCode", "ViolationDurationSeconds", "ExpectedPauseCodes", "AdherenceAgentStateViolationId", });
     internal_static_api_commons_AdherenceAgentStates_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_commons_AdherenceAgentStates_fieldAccessorTable = new

@@ -236,4 +236,14 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getExpectedPauseCodesBytes(int index);
+
+  /**
+   * <pre>
+   * ID of the violation.
+   * </pre>
+   *
+   * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+   * @return The adherenceAgentStateViolationId.
+   */
+  long getAdherenceAgentStateViolationId();
 }
