@@ -39,7 +39,7 @@ public interface ListCustomFieldsResponseOrBuilder extends
 
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -48,7 +48,7 @@ public interface ListCustomFieldsResponseOrBuilder extends
       getCustomFieldsList();
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -56,7 +56,7 @@ public interface ListCustomFieldsResponseOrBuilder extends
   com.tcn.cloud.api.api.commons.CustomField getCustomFields(int index);
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -64,7 +64,7 @@ public interface ListCustomFieldsResponseOrBuilder extends
   int getCustomFieldsCount();
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -73,7 +73,7 @@ public interface ListCustomFieldsResponseOrBuilder extends
       getCustomFieldsOrBuilderList();
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>

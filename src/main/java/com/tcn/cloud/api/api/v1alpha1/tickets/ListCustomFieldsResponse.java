@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.commons.CustomField> customFields_;
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of custom_fields
+   * list of custom sfields
    * </pre>
    *
    * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -771,7 +771,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -806,7 +806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -937,7 +937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -979,7 +979,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of custom_fields
+     * list of custom sfields
      * </pre>
      *
      * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
