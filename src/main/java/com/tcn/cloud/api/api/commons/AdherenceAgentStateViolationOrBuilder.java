@@ -100,7 +100,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    *
    * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
    * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   *     See api/commons/wfm.proto;l=875
    * @return The expectedPauseCode.
    */
   @java.lang.Deprecated java.lang.String getExpectedPauseCode();
@@ -111,7 +111,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    *
    * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
    * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   *     See api/commons/wfm.proto;l=875
    * @return The bytes for expectedPauseCode.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -236,4 +236,14 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getExpectedPauseCodesBytes(int index);
+
+  /**
+   * <pre>
+   * ID of the violation.
+   * </pre>
+   *
+   * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+   * @return The adherenceAgentStateViolationId.
+   */
+  long getAdherenceAgentStateViolationId();
 }

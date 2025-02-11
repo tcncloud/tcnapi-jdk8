@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5450
+   *     See api/v1alpha1/wfm/wfm.proto;l=5528
    * @return The shrinkageIsPercentage.
    */
   @java.lang.Override
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5452
+   *     See api/v1alpha1/wfm/wfm.proto;l=5530
    * @return The shrinkageValue.
    */
   @java.lang.Override
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5471
+   *     See api/v1alpha1/wfm/wfm.proto;l=5549
    * @return Whether the originSid field is set.
    */
   @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5471
+   *     See api/v1alpha1/wfm/wfm.proto;l=5549
    * @return The originSid.
    */
   @java.lang.Override
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5450
+     *     See api/v1alpha1/wfm/wfm.proto;l=5528
      * @return The shrinkageIsPercentage.
      */
     @java.lang.Override
@@ -2356,7 +2356,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5450
+     *     See api/v1alpha1/wfm/wfm.proto;l=5528
      * @param value The shrinkageIsPercentage to set.
      * @return This builder for chaining.
      */
@@ -2374,7 +2374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5450
+     *     See api/v1alpha1/wfm/wfm.proto;l=5528
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearShrinkageIsPercentage() {
@@ -2392,7 +2392,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5452
+     *     See api/v1alpha1/wfm/wfm.proto;l=5530
      * @return The shrinkageValue.
      */
     @java.lang.Override
@@ -2406,7 +2406,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5452
+     *     See api/v1alpha1/wfm/wfm.proto;l=5530
      * @param value The shrinkageValue to set.
      * @return This builder for chaining.
      */
@@ -2424,7 +2424,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5452
+     *     See api/v1alpha1/wfm/wfm.proto;l=5530
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearShrinkageValue() {
@@ -4673,7 +4673,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5471
+     *     See api/v1alpha1/wfm/wfm.proto;l=5549
      * @return Whether the originSid field is set.
      */
     @java.lang.Deprecated public boolean hasOriginSid() {
@@ -4687,7 +4687,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5471
+     *     See api/v1alpha1/wfm/wfm.proto;l=5549
      * @return The originSid.
      */
     @java.lang.Deprecated public com.google.protobuf.Int64Value getOriginSid() {

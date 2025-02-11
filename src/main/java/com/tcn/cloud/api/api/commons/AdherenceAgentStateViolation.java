@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
    * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   *     See api/commons/wfm.proto;l=875
    * @return The expectedPauseCode.
    */
   @java.lang.Override
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
    * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-   *     See api/commons/wfm.proto;l=857
+   *     See api/commons/wfm.proto;l=875
    * @return The bytes for expectedPauseCode.
    */
   @java.lang.Override
@@ -423,6 +423,21 @@ private static final long serialVersionUID = 0L;
     return expectedPauseCodes_.getByteString(index);
   }
 
+  public static final int ADHERENCE_AGENT_STATE_VIOLATION_ID_FIELD_NUMBER = 9;
+  private long adherenceAgentStateViolationId_ = 0L;
+  /**
+   * <pre>
+   * ID of the violation.
+   * </pre>
+   *
+   * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+   * @return The adherenceAgentStateViolationId.
+   */
+  @java.lang.Override
+  public long getAdherenceAgentStateViolationId() {
+    return adherenceAgentStateViolationId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -469,6 +484,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < expectedPauseCodes_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, expectedPauseCodes_.getRaw(i));
+    }
+    if (adherenceAgentStateViolationId_ != 0L) {
+      output.writeInt64(9, adherenceAgentStateViolationId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -529,6 +547,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getExpectedPauseCodesList().size();
     }
+    if (adherenceAgentStateViolationId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, adherenceAgentStateViolationId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -561,6 +583,8 @@ private static final long serialVersionUID = 0L;
         != other.getViolationDurationSeconds()) return false;
     if (!getExpectedPauseCodesList()
         .equals(other.getExpectedPauseCodesList())) return false;
+    if (getAdherenceAgentStateViolationId()
+        != other.getAdherenceAgentStateViolationId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -597,6 +621,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXPECTED_PAUSE_CODES_FIELD_NUMBER;
       hash = (53 * hash) + getExpectedPauseCodesList().hashCode();
     }
+    hash = (37 * hash) + ADHERENCE_AGENT_STATE_VIOLATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAdherenceAgentStateViolationId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -747,6 +774,7 @@ private static final long serialVersionUID = 0L;
       violationDurationSeconds_ = 0;
       expectedPauseCodes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      adherenceAgentStateViolationId_ = 0L;
       return this;
     }
 
@@ -814,6 +842,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         expectedPauseCodes_.makeImmutable();
         result.expectedPauseCodes_ = expectedPauseCodes_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.adherenceAgentStateViolationId_ = adherenceAgentStateViolationId_;
       }
     }
 
@@ -910,6 +941,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getAdherenceAgentStateViolationId() != 0L) {
+        setAdherenceAgentStateViolationId(other.getAdherenceAgentStateViolationId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1003,6 +1037,11 @@ private static final long serialVersionUID = 0L;
               expectedPauseCodes_.add(s);
               break;
             } // case 66
+            case 72: {
+              adherenceAgentStateViolationId_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1415,7 +1454,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
      * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     *     See api/commons/wfm.proto;l=875
      * @return The expectedPauseCode.
      */
     @java.lang.Deprecated public java.lang.String getExpectedPauseCode() {
@@ -1437,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
      * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     *     See api/commons/wfm.proto;l=875
      * @return The bytes for expectedPauseCode.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1460,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
      * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     *     See api/commons/wfm.proto;l=875
      * @param value The expectedPauseCode to set.
      * @return This builder for chaining.
      */
@@ -1479,7 +1518,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
      * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     *     See api/commons/wfm.proto;l=875
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearExpectedPauseCode() {
@@ -1495,7 +1534,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string expected_pause_code = 4 [json_name = "expectedPauseCode", deprecated = true];</code>
      * @deprecated api.commons.AdherenceAgentStateViolation.expected_pause_code is deprecated.
-     *     See api/commons/wfm.proto;l=857
+     *     See api/commons/wfm.proto;l=875
      * @param value The bytes for expectedPauseCode to set.
      * @return This builder for chaining.
      */
@@ -1976,6 +2015,50 @@ private static final long serialVersionUID = 0L;
       ensureExpectedPauseCodesIsMutable();
       expectedPauseCodes_.add(value);
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private long adherenceAgentStateViolationId_ ;
+    /**
+     * <pre>
+     * ID of the violation.
+     * </pre>
+     *
+     * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+     * @return The adherenceAgentStateViolationId.
+     */
+    @java.lang.Override
+    public long getAdherenceAgentStateViolationId() {
+      return adherenceAgentStateViolationId_;
+    }
+    /**
+     * <pre>
+     * ID of the violation.
+     * </pre>
+     *
+     * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+     * @param value The adherenceAgentStateViolationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdherenceAgentStateViolationId(long value) {
+
+      adherenceAgentStateViolationId_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the violation.
+     * </pre>
+     *
+     * <code>int64 adherence_agent_state_violation_id = 9 [json_name = "adherenceAgentStateViolationId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdherenceAgentStateViolationId() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      adherenceAgentStateViolationId_ = 0L;
       onChanged();
       return this;
     }

@@ -360,6 +360,36 @@ public final class TicketProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_tickets_EntityRef_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -550,18 +580,40 @@ public final class TicketProto {
       "ts.EntityRefR\tentityRef\"1\n\035ListTicketsBy" +
       "EntityRefRequest\022\020\n\003uri\030\001 \001(\tR\003uri\"O\n\036Li" +
       "stTicketsByEntityRefResponse\022-\n\007tickets\030" +
-      "\001 \003(\0132\023.api.commons.TicketR\007tickets\"r\n\tE" +
-      "ntityRef\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregio" +
-      "n_id\030\002 \001(\tR\010regionId\022\037\n\013ticket_code\030\003 \001(" +
-      "\tR\nticketCode\022\020\n\003uri\030\004 \001(\tR\003uri*?\n\013Actio" +
-      "nTypes\022\006\n\002NA\020\000\022\014\n\010Callback\020\001\022\r\n\tEmailbac" +
-      "k\020\002\022\013\n\007Smsback\020\003*3\n\rSLAConditions\022\010\n\004Non" +
-      "e\020\000\022\013\n\007Respond\020\001\022\013\n\007Resolve\020\002B\247\001\n&com.tc" +
-      "n.cloud.api.api.v1alpha1.ticketsB\013Ticket" +
-      "ProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024A" +
-      "pi\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Ticke" +
-      "ts\\GPBMetadata\352\002\026Api::V1alpha1::Ticketsb" +
-      "\006proto3"
+      "\001 \003(\0132\023.api.commons.TicketR\007tickets\"\233\001\n\030" +
+      "CreateCustomFieldRequest\022\037\n\013ticket_code\030" +
+      "\001 \001(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020" +
+      "\001R\tprojectId\022;\n\014custom_field\030\003 \003(\0132\030.api" +
+      ".commons.CustomFieldR\013customField\"\234\001\n\031Cr" +
+      "eateCustomFieldResponse\022\037\n\013ticket_code\030\001" +
+      " \001(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001" +
+      "R\tprojectId\022;\n\014custom_field\030\003 \003(\0132\030.api." +
+      "commons.CustomFieldR\013customField\"\225\001\n\026Edi" +
+      "tCustomFieldRequest\022\037\n\013ticket_code\030\001 \001(\t" +
+      "R\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tpr" +
+      "ojectId\0227\n\nedit_value\030\003 \003(\0132\030.api.common" +
+      "s.CustomFieldR\teditValue\"\247\001\n\027EditCustomF" +
+      "ieldResponse\022\037\n\013ticket_code\030\001 \001(\tR\nticke" +
+      "tCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tprojectId" +
+      "\022H\n\023edited_custom_field\030\003 \003(\0132\030.api.comm" +
+      "ons.CustomFieldR\021editedCustomField\"]\n\027Li" +
+      "stCustomFieldsRequest\022\037\n\013ticket_code\030\001 \001" +
+      "(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\t" +
+      "projectId\"\235\001\n\030ListCustomFieldsResponse\022\037" +
+      "\n\013ticket_code\030\001 \001(\tR\nticketCode\022!\n\nproje" +
+      "ct_id\030\002 \001(\003B\0020\001R\tprojectId\022=\n\rcustom_fie" +
+      "lds\030\003 \003(\0132\030.api.commons.CustomFieldR\014cus" +
+      "tomFields\"r\n\tEntityRef\022\025\n\006org_id\030\001 \001(\tR\005" +
+      "orgId\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022\037\n\013ti" +
+      "cket_code\030\003 \001(\tR\nticketCode\022\020\n\003uri\030\004 \001(\t" +
+      "R\003uri*?\n\013ActionTypes\022\006\n\002NA\020\000\022\014\n\010Callback" +
+      "\020\001\022\r\n\tEmailback\020\002\022\013\n\007Smsback\020\003*3\n\rSLACon" +
+      "ditions\022\010\n\004None\020\000\022\013\n\007Respond\020\001\022\013\n\007Resolv" +
+      "e\020\002B\247\001\n&com.tcn.cloud.api.api.v1alpha1.t" +
+      "icketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alph" +
+      "a1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\" +
+      "V1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1al" +
+      "pha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -984,8 +1036,44 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListTicketsByEntityRefResponse_descriptor,
         new java.lang.String[] { "Tickets", });
-    internal_static_api_v1alpha1_tickets_EntityRef_descriptor =
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_descriptor =
       getDescriptor().getMessageTypes().get(69);
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomField", });
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor =
+      getDescriptor().getMessageTypes().get(70);
+    internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomField", });
+    internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_descriptor =
+      getDescriptor().getMessageTypes().get(71);
+    internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", "EditValue", });
+    internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor =
+      getDescriptor().getMessageTypes().get(72);
+    internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", "EditedCustomField", });
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(73);
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", });
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(74);
+    internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_descriptor,
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomFields", });
+    internal_static_api_v1alpha1_tickets_EntityRef_descriptor =
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_v1alpha1_tickets_EntityRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EntityRef_descriptor,
