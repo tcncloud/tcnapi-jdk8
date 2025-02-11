@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private EditCustomFieldRequest() {
     ticketCode_ = "";
+    editValue_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -47,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ticketCode_ = "";
   /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
    * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
    * @return The ticketCode.
    */
@@ -64,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
    * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
    * @return The bytes for ticketCode.
    */
@@ -82,56 +91,80 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EDIT_VALUE_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.commons.CustomField editValue_;
+  public static final int CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER = 2;
+  private long customFieldProjectId_ = 0L;
   /**
-   * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
-   * @return Whether the editValue field is set.
+   * <pre>
+   * custom_field_project_id
+   * </pre>
+   *
+   * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+   * @return The customFieldProjectId.
    */
   @java.lang.Override
-  public boolean hasEditValue() {
-    return editValue_ != null;
-  }
-  /**
-   * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
-   * @return The editValue.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomField getEditValue() {
-    return editValue_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : editValue_;
-  }
-  /**
-   * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditValueOrBuilder() {
-    return editValue_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : editValue_;
+  public long getCustomFieldProjectId() {
+    return customFieldProjectId_;
   }
 
-  public static final int EDITED_FIELDS_MASK_FIELD_NUMBER = 3;
-  private com.google.protobuf.FieldMask editedFieldsMask_;
+  public static final int EDIT_VALUE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.CustomField> editValue_;
   /**
-   * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-   * @return Whether the editedFieldsMask field is set.
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
    */
   @java.lang.Override
-  public boolean hasEditedFieldsMask() {
-    return editedFieldsMask_ != null;
+  public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getEditValueList() {
+    return editValue_;
   }
   /**
-   * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-   * @return The editedFieldsMask.
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMask getEditedFieldsMask() {
-    return editedFieldsMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : editedFieldsMask_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
+      getEditValueOrBuilderList() {
+    return editValue_;
   }
   /**
-   * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMaskOrBuilder getEditedFieldsMaskOrBuilder() {
-    return editedFieldsMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : editedFieldsMask_;
+  public int getEditValueCount() {
+    return editValue_.size();
+  }
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CustomField getEditValue(int index) {
+    return editValue_.get(index);
+  }
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditValueOrBuilder(
+      int index) {
+    return editValue_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -151,11 +184,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ticketCode_);
     }
-    if (editValue_ != null) {
-      output.writeMessage(2, getEditValue());
+    if (customFieldProjectId_ != 0L) {
+      output.writeInt64(2, customFieldProjectId_);
     }
-    if (editedFieldsMask_ != null) {
-      output.writeMessage(3, getEditedFieldsMask());
+    for (int i = 0; i < editValue_.size(); i++) {
+      output.writeMessage(3, editValue_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -169,13 +202,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ticketCode_);
     }
-    if (editValue_ != null) {
+    if (customFieldProjectId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getEditValue());
+        .computeInt64Size(2, customFieldProjectId_);
     }
-    if (editedFieldsMask_ != null) {
+    for (int i = 0; i < editValue_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getEditedFieldsMask());
+        .computeMessageSize(3, editValue_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -194,16 +227,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getTicketCode()
         .equals(other.getTicketCode())) return false;
-    if (hasEditValue() != other.hasEditValue()) return false;
-    if (hasEditValue()) {
-      if (!getEditValue()
-          .equals(other.getEditValue())) return false;
-    }
-    if (hasEditedFieldsMask() != other.hasEditedFieldsMask()) return false;
-    if (hasEditedFieldsMask()) {
-      if (!getEditedFieldsMask()
-          .equals(other.getEditedFieldsMask())) return false;
-    }
+    if (getCustomFieldProjectId()
+        != other.getCustomFieldProjectId()) return false;
+    if (!getEditValueList()
+        .equals(other.getEditValueList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -217,13 +244,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketCode().hashCode();
-    if (hasEditValue()) {
+    hash = (37 * hash) + CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCustomFieldProjectId());
+    if (getEditValueCount() > 0) {
       hash = (37 * hash) + EDIT_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getEditValue().hashCode();
-    }
-    if (hasEditedFieldsMask()) {
-      hash = (37 * hash) + EDITED_FIELDS_MASK_FIELD_NUMBER;
-      hash = (53 * hash) + getEditedFieldsMask().hashCode();
+      hash = (53 * hash) + getEditValueList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -361,16 +387,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       ticketCode_ = "";
-      editValue_ = null;
-      if (editValueBuilder_ != null) {
-        editValueBuilder_.dispose();
-        editValueBuilder_ = null;
+      customFieldProjectId_ = 0L;
+      if (editValueBuilder_ == null) {
+        editValue_ = java.util.Collections.emptyList();
+      } else {
+        editValue_ = null;
+        editValueBuilder_.clear();
       }
-      editedFieldsMask_ = null;
-      if (editedFieldsMaskBuilder_ != null) {
-        editedFieldsMaskBuilder_.dispose();
-        editedFieldsMaskBuilder_ = null;
-      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -397,9 +421,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest result) {
+      if (editValueBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          editValue_ = java.util.Collections.unmodifiableList(editValue_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.editValue_ = editValue_;
+      } else {
+        result.editValue_ = editValueBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest result) {
@@ -408,14 +445,7 @@ private static final long serialVersionUID = 0L;
         result.ticketCode_ = ticketCode_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.editValue_ = editValueBuilder_ == null
-            ? editValue_
-            : editValueBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.editedFieldsMask_ = editedFieldsMaskBuilder_ == null
-            ? editedFieldsMask_
-            : editedFieldsMaskBuilder_.build();
+        result.customFieldProjectId_ = customFieldProjectId_;
       }
     }
 
@@ -468,11 +498,34 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasEditValue()) {
-        mergeEditValue(other.getEditValue());
+      if (other.getCustomFieldProjectId() != 0L) {
+        setCustomFieldProjectId(other.getCustomFieldProjectId());
       }
-      if (other.hasEditedFieldsMask()) {
-        mergeEditedFieldsMask(other.getEditedFieldsMask());
+      if (editValueBuilder_ == null) {
+        if (!other.editValue_.isEmpty()) {
+          if (editValue_.isEmpty()) {
+            editValue_ = other.editValue_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureEditValueIsMutable();
+            editValue_.addAll(other.editValue_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.editValue_.isEmpty()) {
+          if (editValueBuilder_.isEmpty()) {
+            editValueBuilder_.dispose();
+            editValueBuilder_ = null;
+            editValue_ = other.editValue_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            editValueBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEditValueFieldBuilder() : null;
+          } else {
+            editValueBuilder_.addAllMessages(other.editValue_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -505,18 +558,22 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getEditValueFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 16: {
+              customFieldProjectId_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
-              input.readMessage(
-                  getEditedFieldsMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
+              com.tcn.cloud.api.api.commons.CustomField m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.CustomField.parser(),
+                      extensionRegistry);
+              if (editValueBuilder_ == null) {
+                ensureEditValueIsMutable();
+                editValue_.add(m);
+              } else {
+                editValueBuilder_.addMessage(m);
+              }
               break;
             } // case 26
             default: {
@@ -538,6 +595,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ticketCode_ = "";
     /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
      * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
      * @return The ticketCode.
      */
@@ -554,6 +615,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
      * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
      * @return The bytes for ticketCode.
      */
@@ -571,6 +636,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
      * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
      * @param value The ticketCode to set.
      * @return This builder for chaining.
@@ -584,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
      * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
      * @return This builder for chaining.
      */
@@ -594,6 +667,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
      * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
      * @param value The bytes for ticketCode to set.
      * @return This builder for chaining.
@@ -608,242 +685,360 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.CustomField editValue_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> editValueBuilder_;
+    private long customFieldProjectId_ ;
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
-     * @return Whether the editValue field is set.
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @return The customFieldProjectId.
      */
-    public boolean hasEditValue() {
-      return ((bitField0_ & 0x00000002) != 0);
+    @java.lang.Override
+    public long getCustomFieldProjectId() {
+      return customFieldProjectId_;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
-     * @return The editValue.
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @param value The customFieldProjectId to set.
+     * @return This builder for chaining.
      */
-    public com.tcn.cloud.api.api.commons.CustomField getEditValue() {
+    public Builder setCustomFieldProjectId(long value) {
+
+      customFieldProjectId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomFieldProjectId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      customFieldProjectId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.CustomField> editValue_ =
+      java.util.Collections.emptyList();
+    private void ensureEditValueIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        editValue_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomField>(editValue_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> editValueBuilder_;
+
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getEditValueList() {
       if (editValueBuilder_ == null) {
-        return editValue_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : editValue_;
+        return java.util.Collections.unmodifiableList(editValue_);
       } else {
-        return editValueBuilder_.getMessage();
+        return editValueBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
-    public Builder setEditValue(com.tcn.cloud.api.api.commons.CustomField value) {
+    public int getEditValueCount() {
+      if (editValueBuilder_ == null) {
+        return editValue_.size();
+      } else {
+        return editValueBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField getEditValue(int index) {
+      if (editValueBuilder_ == null) {
+        return editValue_.get(index);
+      } else {
+        return editValueBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public Builder setEditValue(
+        int index, com.tcn.cloud.api.api.commons.CustomField value) {
       if (editValueBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        editValue_ = value;
+        ensureEditValueIsMutable();
+        editValue_.set(index, value);
+        onChanged();
       } else {
-        editValueBuilder_.setMessage(value);
+        editValueBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
     public Builder setEditValue(
+        int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
+      if (editValueBuilder_ == null) {
+        ensureEditValueIsMutable();
+        editValue_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        editValueBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public Builder addEditValue(com.tcn.cloud.api.api.commons.CustomField value) {
+      if (editValueBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEditValueIsMutable();
+        editValue_.add(value);
+        onChanged();
+      } else {
+        editValueBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public Builder addEditValue(
+        int index, com.tcn.cloud.api.api.commons.CustomField value) {
+      if (editValueBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEditValueIsMutable();
+        editValue_.add(index, value);
+        onChanged();
+      } else {
+        editValueBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public Builder addEditValue(
         com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
       if (editValueBuilder_ == null) {
-        editValue_ = builderForValue.build();
+        ensureEditValueIsMutable();
+        editValue_.add(builderForValue.build());
+        onChanged();
       } else {
-        editValueBuilder_.setMessage(builderForValue.build());
+        editValueBuilder_.addMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
-    public Builder mergeEditValue(com.tcn.cloud.api.api.commons.CustomField value) {
+    public Builder addEditValue(
+        int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
       if (editValueBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          editValue_ != null &&
-          editValue_ != com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance()) {
-          getEditValueBuilder().mergeFrom(value);
-        } else {
-          editValue_ = value;
-        }
+        ensureEditValueIsMutable();
+        editValue_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        editValueBuilder_.mergeFrom(value);
+        editValueBuilder_.addMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public Builder addAllEditValue(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CustomField> values) {
+      if (editValueBuilder_ == null) {
+        ensureEditValueIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, editValue_);
+        onChanged();
+      } else {
+        editValueBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
     public Builder clearEditValue() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      editValue_ = null;
-      if (editValueBuilder_ != null) {
-        editValueBuilder_.dispose();
-        editValueBuilder_ = null;
+      if (editValueBuilder_ == null) {
+        editValue_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        editValueBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField.Builder getEditValueBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getEditValueFieldBuilder().getBuilder();
+    public Builder removeEditValue(int index) {
+      if (editValueBuilder_ == null) {
+        ensureEditValueIsMutable();
+        editValue_.remove(index);
+        onChanged();
+      } else {
+        editValueBuilder_.remove(index);
+      }
+      return this;
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditValueOrBuilder() {
-      if (editValueBuilder_ != null) {
-        return editValueBuilder_.getMessageOrBuilder();
-      } else {
-        return editValue_ == null ?
-            com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : editValue_;
+    public com.tcn.cloud.api.api.commons.CustomField.Builder getEditValueBuilder(
+        int index) {
+      return getEditValueFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditValueOrBuilder(
+        int index) {
+      if (editValueBuilder_ == null) {
+        return editValue_.get(index);  } else {
+        return editValueBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.api.commons.CustomField edit_value = 2 [json_name = "editValue"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
+         getEditValueOrBuilderList() {
+      if (editValueBuilder_ != null) {
+        return editValueBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(editValue_);
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addEditValueBuilder() {
+      return getEditValueFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addEditValueBuilder(
+        int index) {
+      return getEditValueFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomField.Builder> 
+         getEditValueBuilderList() {
+      return getEditValueFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
         getEditValueFieldBuilder() {
       if (editValueBuilder_ == null) {
-        editValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        editValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder>(
-                getEditValue(),
+                editValue_,
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         editValue_ = null;
       }
       return editValueBuilder_;
-    }
-
-    private com.google.protobuf.FieldMask editedFieldsMask_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> editedFieldsMaskBuilder_;
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     * @return Whether the editedFieldsMask field is set.
-     */
-    public boolean hasEditedFieldsMask() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     * @return The editedFieldsMask.
-     */
-    public com.google.protobuf.FieldMask getEditedFieldsMask() {
-      if (editedFieldsMaskBuilder_ == null) {
-        return editedFieldsMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : editedFieldsMask_;
-      } else {
-        return editedFieldsMaskBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public Builder setEditedFieldsMask(com.google.protobuf.FieldMask value) {
-      if (editedFieldsMaskBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        editedFieldsMask_ = value;
-      } else {
-        editedFieldsMaskBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public Builder setEditedFieldsMask(
-        com.google.protobuf.FieldMask.Builder builderForValue) {
-      if (editedFieldsMaskBuilder_ == null) {
-        editedFieldsMask_ = builderForValue.build();
-      } else {
-        editedFieldsMaskBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public Builder mergeEditedFieldsMask(com.google.protobuf.FieldMask value) {
-      if (editedFieldsMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          editedFieldsMask_ != null &&
-          editedFieldsMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getEditedFieldsMaskBuilder().mergeFrom(value);
-        } else {
-          editedFieldsMask_ = value;
-        }
-      } else {
-        editedFieldsMaskBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public Builder clearEditedFieldsMask() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      editedFieldsMask_ = null;
-      if (editedFieldsMaskBuilder_ != null) {
-        editedFieldsMaskBuilder_.dispose();
-        editedFieldsMaskBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public com.google.protobuf.FieldMask.Builder getEditedFieldsMaskBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getEditedFieldsMaskFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    public com.google.protobuf.FieldMaskOrBuilder getEditedFieldsMaskOrBuilder() {
-      if (editedFieldsMaskBuilder_ != null) {
-        return editedFieldsMaskBuilder_.getMessageOrBuilder();
-      } else {
-        return editedFieldsMask_ == null ?
-            com.google.protobuf.FieldMask.getDefaultInstance() : editedFieldsMask_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-        getEditedFieldsMaskFieldBuilder() {
-      if (editedFieldsMaskBuilder_ == null) {
-        editedFieldsMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                getEditedFieldsMask(),
-                getParentForChildren(),
-                isClean());
-        editedFieldsMask_ = null;
-      }
-      return editedFieldsMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

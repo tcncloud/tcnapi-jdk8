@@ -5,43 +5,43 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
  * <pre>
- * CreateCustomFieldResponse
+ * EditCustomFieldResponse -
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.tickets.CreateCustomFieldResponse}
+ * Protobuf type {@code api.v1alpha1.tickets.EditCustomFieldResponse}
  */
-public final class CreateCustomFieldResponse extends
+public final class EditCustomFieldResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.CreateCustomFieldResponse)
-    CreateCustomFieldResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.EditCustomFieldResponse)
+    EditCustomFieldResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreateCustomFieldResponse.newBuilder() to construct.
-  private CreateCustomFieldResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use EditCustomFieldResponse.newBuilder() to construct.
+  private EditCustomFieldResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreateCustomFieldResponse() {
+  private EditCustomFieldResponse() {
     ticketCode_ = "";
-    customField_ = java.util.Collections.emptyList();
+    editedCustomField_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreateCustomFieldResponse();
+    return new EditCustomFieldResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.Builder.class);
   }
 
   public static final int TICKET_CODE_FIELD_NUMBER = 1;
@@ -106,65 +106,65 @@ private static final long serialVersionUID = 0L;
     return customFieldProjectId_;
   }
 
-  public static final int CUSTOM_FIELD_FIELD_NUMBER = 3;
+  public static final int EDITED_CUSTOM_FIELD_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.CustomField> customField_;
+  private java.util.List<com.tcn.cloud.api.api.commons.CustomField> editedCustomField_;
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getCustomFieldList() {
-    return customField_;
+  public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getEditedCustomFieldList() {
+    return editedCustomField_;
   }
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
-      getCustomFieldOrBuilderList() {
-    return customField_;
+      getEditedCustomFieldOrBuilderList() {
+    return editedCustomField_;
   }
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   @java.lang.Override
-  public int getCustomFieldCount() {
-    return customField_.size();
+  public int getEditedCustomFieldCount() {
+    return editedCustomField_.size();
   }
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomField getCustomField(int index) {
-    return customField_.get(index);
+  public com.tcn.cloud.api.api.commons.CustomField getEditedCustomField(int index) {
+    return editedCustomField_.get(index);
   }
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder(
+  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditedCustomFieldOrBuilder(
       int index) {
-    return customField_.get(index);
+    return editedCustomField_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -187,8 +187,8 @@ private static final long serialVersionUID = 0L;
     if (customFieldProjectId_ != 0L) {
       output.writeInt64(2, customFieldProjectId_);
     }
-    for (int i = 0; i < customField_.size(); i++) {
-      output.writeMessage(3, customField_.get(i));
+    for (int i = 0; i < editedCustomField_.size(); i++) {
+      output.writeMessage(3, editedCustomField_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -206,9 +206,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, customFieldProjectId_);
     }
-    for (int i = 0; i < customField_.size(); i++) {
+    for (int i = 0; i < editedCustomField_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, customField_.get(i));
+        .computeMessageSize(3, editedCustomField_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -220,17 +220,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse) obj;
 
     if (!getTicketCode()
         .equals(other.getTicketCode())) return false;
     if (getCustomFieldProjectId()
         != other.getCustomFieldProjectId()) return false;
-    if (!getCustomFieldList()
-        .equals(other.getCustomFieldList())) return false;
+    if (!getEditedCustomFieldList()
+        .equals(other.getEditedCustomFieldList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -247,53 +247,53 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCustomFieldProjectId());
-    if (getCustomFieldCount() > 0) {
-      hash = (37 * hash) + CUSTOM_FIELD_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomFieldList().hashCode();
+    if (getEditedCustomFieldCount() > 0) {
+      hash = (37 * hash) + EDITED_CUSTOM_FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getEditedCustomFieldList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -301,26 +301,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -350,29 +350,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * CreateCustomFieldResponse
+   * EditCustomFieldResponse -
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.tickets.CreateCustomFieldResponse}
+   * Protobuf type {@code api.v1alpha1.tickets.EditCustomFieldResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.CreateCustomFieldResponse)
-      com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.EditCustomFieldResponse)
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.newBuilder()
     private Builder() {
 
     }
@@ -388,11 +388,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketCode_ = "";
       customFieldProjectId_ = 0L;
-      if (customFieldBuilder_ == null) {
-        customField_ = java.util.Collections.emptyList();
+      if (editedCustomFieldBuilder_ == null) {
+        editedCustomField_ = java.util.Collections.emptyList();
       } else {
-        customField_ = null;
-        customFieldBuilder_.clear();
+        editedCustomField_ = null;
+        editedCustomFieldBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       return this;
@@ -401,17 +401,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -419,27 +419,27 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse result = new com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse result = new com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse result) {
-      if (customFieldBuilder_ == null) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse result) {
+      if (editedCustomFieldBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
-          customField_ = java.util.Collections.unmodifiableList(customField_);
+          editedCustomField_ = java.util.Collections.unmodifiableList(editedCustomField_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.customField_ = customField_;
+        result.editedCustomField_ = editedCustomField_;
       } else {
-        result.customField_ = customFieldBuilder_.build();
+        result.editedCustomField_ = editedCustomFieldBuilder_.build();
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.ticketCode_ = ticketCode_;
@@ -483,16 +483,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.getDefaultInstance()) return this;
       if (!other.getTicketCode().isEmpty()) {
         ticketCode_ = other.ticketCode_;
         bitField0_ |= 0x00000001;
@@ -501,29 +501,29 @@ private static final long serialVersionUID = 0L;
       if (other.getCustomFieldProjectId() != 0L) {
         setCustomFieldProjectId(other.getCustomFieldProjectId());
       }
-      if (customFieldBuilder_ == null) {
-        if (!other.customField_.isEmpty()) {
-          if (customField_.isEmpty()) {
-            customField_ = other.customField_;
+      if (editedCustomFieldBuilder_ == null) {
+        if (!other.editedCustomField_.isEmpty()) {
+          if (editedCustomField_.isEmpty()) {
+            editedCustomField_ = other.editedCustomField_;
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureCustomFieldIsMutable();
-            customField_.addAll(other.customField_);
+            ensureEditedCustomFieldIsMutable();
+            editedCustomField_.addAll(other.editedCustomField_);
           }
           onChanged();
         }
       } else {
-        if (!other.customField_.isEmpty()) {
-          if (customFieldBuilder_.isEmpty()) {
-            customFieldBuilder_.dispose();
-            customFieldBuilder_ = null;
-            customField_ = other.customField_;
+        if (!other.editedCustomField_.isEmpty()) {
+          if (editedCustomFieldBuilder_.isEmpty()) {
+            editedCustomFieldBuilder_.dispose();
+            editedCustomFieldBuilder_ = null;
+            editedCustomField_ = other.editedCustomField_;
             bitField0_ = (bitField0_ & ~0x00000004);
-            customFieldBuilder_ = 
+            editedCustomFieldBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getCustomFieldFieldBuilder() : null;
+                 getEditedCustomFieldFieldBuilder() : null;
           } else {
-            customFieldBuilder_.addAllMessages(other.customField_);
+            editedCustomFieldBuilder_.addAllMessages(other.editedCustomField_);
           }
         }
       }
@@ -568,11 +568,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.CustomField.parser(),
                       extensionRegistry);
-              if (customFieldBuilder_ == null) {
-                ensureCustomFieldIsMutable();
-                customField_.add(m);
+              if (editedCustomFieldBuilder_ == null) {
+                ensureEditedCustomFieldIsMutable();
+                editedCustomField_.add(m);
               } else {
-                customFieldBuilder_.addMessage(m);
+                editedCustomFieldBuilder_.addMessage(m);
               }
               break;
             } // case 26
@@ -729,30 +729,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.CustomField> customField_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.CustomField> editedCustomField_ =
       java.util.Collections.emptyList();
-    private void ensureCustomFieldIsMutable() {
+    private void ensureEditedCustomFieldIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        customField_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomField>(customField_);
+        editedCustomField_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomField>(editedCustomField_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> customFieldBuilder_;
+        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> editedCustomFieldBuilder_;
 
     /**
      * <pre>
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getCustomFieldList() {
-      if (customFieldBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(customField_);
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getEditedCustomFieldList() {
+      if (editedCustomFieldBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(editedCustomField_);
       } else {
-        return customFieldBuilder_.getMessageList();
+        return editedCustomFieldBuilder_.getMessageList();
       }
     }
     /**
@@ -760,13 +760,13 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public int getCustomFieldCount() {
-      if (customFieldBuilder_ == null) {
-        return customField_.size();
+    public int getEditedCustomFieldCount() {
+      if (editedCustomFieldBuilder_ == null) {
+        return editedCustomField_.size();
       } else {
-        return customFieldBuilder_.getCount();
+        return editedCustomFieldBuilder_.getCount();
       }
     }
     /**
@@ -774,13 +774,13 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField getCustomField(int index) {
-      if (customFieldBuilder_ == null) {
-        return customField_.get(index);
+    public com.tcn.cloud.api.api.commons.CustomField getEditedCustomField(int index) {
+      if (editedCustomFieldBuilder_ == null) {
+        return editedCustomField_.get(index);
       } else {
-        return customFieldBuilder_.getMessage(index);
+        return editedCustomFieldBuilder_.getMessage(index);
       }
     }
     /**
@@ -788,19 +788,19 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder setCustomField(
+    public Builder setEditedCustomField(
         int index, com.tcn.cloud.api.api.commons.CustomField value) {
-      if (customFieldBuilder_ == null) {
+      if (editedCustomFieldBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldIsMutable();
-        customField_.set(index, value);
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.set(index, value);
         onChanged();
       } else {
-        customFieldBuilder_.setMessage(index, value);
+        editedCustomFieldBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -809,16 +809,16 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder setCustomField(
+    public Builder setEditedCustomField(
         int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
-      if (customFieldBuilder_ == null) {
-        ensureCustomFieldIsMutable();
-        customField_.set(index, builderForValue.build());
+      if (editedCustomFieldBuilder_ == null) {
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.set(index, builderForValue.build());
         onChanged();
       } else {
-        customFieldBuilder_.setMessage(index, builderForValue.build());
+        editedCustomFieldBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -827,18 +827,18 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder addCustomField(com.tcn.cloud.api.api.commons.CustomField value) {
-      if (customFieldBuilder_ == null) {
+    public Builder addEditedCustomField(com.tcn.cloud.api.api.commons.CustomField value) {
+      if (editedCustomFieldBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldIsMutable();
-        customField_.add(value);
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.add(value);
         onChanged();
       } else {
-        customFieldBuilder_.addMessage(value);
+        editedCustomFieldBuilder_.addMessage(value);
       }
       return this;
     }
@@ -847,19 +847,19 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder addCustomField(
+    public Builder addEditedCustomField(
         int index, com.tcn.cloud.api.api.commons.CustomField value) {
-      if (customFieldBuilder_ == null) {
+      if (editedCustomFieldBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldIsMutable();
-        customField_.add(index, value);
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.add(index, value);
         onChanged();
       } else {
-        customFieldBuilder_.addMessage(index, value);
+        editedCustomFieldBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -868,16 +868,16 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder addCustomField(
+    public Builder addEditedCustomField(
         com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
-      if (customFieldBuilder_ == null) {
-        ensureCustomFieldIsMutable();
-        customField_.add(builderForValue.build());
+      if (editedCustomFieldBuilder_ == null) {
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.add(builderForValue.build());
         onChanged();
       } else {
-        customFieldBuilder_.addMessage(builderForValue.build());
+        editedCustomFieldBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -886,16 +886,16 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder addCustomField(
+    public Builder addEditedCustomField(
         int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
-      if (customFieldBuilder_ == null) {
-        ensureCustomFieldIsMutable();
-        customField_.add(index, builderForValue.build());
+      if (editedCustomFieldBuilder_ == null) {
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.add(index, builderForValue.build());
         onChanged();
       } else {
-        customFieldBuilder_.addMessage(index, builderForValue.build());
+        editedCustomFieldBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -904,17 +904,17 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder addAllCustomField(
+    public Builder addAllEditedCustomField(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CustomField> values) {
-      if (customFieldBuilder_ == null) {
-        ensureCustomFieldIsMutable();
+      if (editedCustomFieldBuilder_ == null) {
+        ensureEditedCustomFieldIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, customField_);
+            values, editedCustomField_);
         onChanged();
       } else {
-        customFieldBuilder_.addAllMessages(values);
+        editedCustomFieldBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -923,15 +923,15 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder clearCustomField() {
-      if (customFieldBuilder_ == null) {
-        customField_ = java.util.Collections.emptyList();
+    public Builder clearEditedCustomField() {
+      if (editedCustomFieldBuilder_ == null) {
+        editedCustomField_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
-        customFieldBuilder_.clear();
+        editedCustomFieldBuilder_.clear();
       }
       return this;
     }
@@ -940,15 +940,15 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public Builder removeCustomField(int index) {
-      if (customFieldBuilder_ == null) {
-        ensureCustomFieldIsMutable();
-        customField_.remove(index);
+    public Builder removeEditedCustomField(int index) {
+      if (editedCustomFieldBuilder_ == null) {
+        ensureEditedCustomFieldIsMutable();
+        editedCustomField_.remove(index);
         onChanged();
       } else {
-        customFieldBuilder_.remove(index);
+        editedCustomFieldBuilder_.remove(index);
       }
       return this;
     }
@@ -957,24 +957,24 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField.Builder getCustomFieldBuilder(
+    public com.tcn.cloud.api.api.commons.CustomField.Builder getEditedCustomFieldBuilder(
         int index) {
-      return getCustomFieldFieldBuilder().getBuilder(index);
+      return getEditedCustomFieldFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder(
+    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditedCustomFieldOrBuilder(
         int index) {
-      if (customFieldBuilder_ == null) {
-        return customField_.get(index);  } else {
-        return customFieldBuilder_.getMessageOrBuilder(index);
+      if (editedCustomFieldBuilder_ == null) {
+        return editedCustomField_.get(index);  } else {
+        return editedCustomFieldBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -982,14 +982,14 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
-         getCustomFieldOrBuilderList() {
-      if (customFieldBuilder_ != null) {
-        return customFieldBuilder_.getMessageOrBuilderList();
+         getEditedCustomFieldOrBuilderList() {
+      if (editedCustomFieldBuilder_ != null) {
+        return editedCustomFieldBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(customField_);
+        return java.util.Collections.unmodifiableList(editedCustomField_);
       }
     }
     /**
@@ -997,10 +997,10 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField.Builder addCustomFieldBuilder() {
-      return getCustomFieldFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addEditedCustomFieldBuilder() {
+      return getEditedCustomFieldFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
     }
     /**
@@ -1008,11 +1008,11 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField.Builder addCustomFieldBuilder(
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addEditedCustomFieldBuilder(
         int index) {
-      return getCustomFieldFieldBuilder().addBuilder(
+      return getEditedCustomFieldFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
     }
     /**
@@ -1020,25 +1020,25 @@ private static final long serialVersionUID = 0L;
      * repeated custom fields
      * </pre>
      *
-     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.CustomField.Builder> 
-         getCustomFieldBuilderList() {
-      return getCustomFieldFieldBuilder().getBuilderList();
+         getEditedCustomFieldBuilderList() {
+      return getEditedCustomFieldFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
-        getCustomFieldFieldBuilder() {
-      if (customFieldBuilder_ == null) {
-        customFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getEditedCustomFieldFieldBuilder() {
+      if (editedCustomFieldBuilder_ == null) {
+        editedCustomFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder>(
-                customField_,
+                editedCustomField_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
-        customField_ = null;
+        editedCustomField_ = null;
       }
-      return customFieldBuilder_;
+      return editedCustomFieldBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -1053,23 +1053,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.CreateCustomFieldResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.EditCustomFieldResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.CreateCustomFieldResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.EditCustomFieldResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreateCustomFieldResponse>
-      PARSER = new com.google.protobuf.AbstractParser<CreateCustomFieldResponse>() {
+  private static final com.google.protobuf.Parser<EditCustomFieldResponse>
+      PARSER = new com.google.protobuf.AbstractParser<EditCustomFieldResponse>() {
     @java.lang.Override
-    public CreateCustomFieldResponse parsePartialFrom(
+    public EditCustomFieldResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1088,17 +1088,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CreateCustomFieldResponse> parser() {
+  public static com.google.protobuf.Parser<EditCustomFieldResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreateCustomFieldResponse> getParserForType() {
+  public com.google.protobuf.Parser<EditCustomFieldResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

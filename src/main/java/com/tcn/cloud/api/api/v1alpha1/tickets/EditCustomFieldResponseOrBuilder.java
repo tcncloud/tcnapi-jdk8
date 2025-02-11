@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface EditCustomFieldRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.EditCustomFieldRequest)
+public interface EditCustomFieldResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.EditCustomFieldResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -42,42 +42,42 @@ public interface EditCustomFieldRequestOrBuilder extends
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.CustomField> 
-      getEditValueList();
+      getEditedCustomFieldList();
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
-  com.tcn.cloud.api.api.commons.CustomField getEditValue(int index);
+  com.tcn.cloud.api.api.commons.CustomField getEditedCustomField(int index);
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
-  int getEditValueCount();
+  int getEditedCustomFieldCount();
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
-      getEditValueOrBuilderList();
+      getEditedCustomFieldOrBuilderList();
   /**
    * <pre>
    * repeated custom fields
    * </pre>
    *
-   * <code>repeated .api.commons.CustomField edit_value = 3 [json_name = "editValue"];</code>
+   * <code>repeated .api.commons.CustomField edited_custom_field = 3 [json_name = "editedCustomField"];</code>
    */
-  com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditValueOrBuilder(
+  com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getEditedCustomFieldOrBuilder(
       int index);
 }

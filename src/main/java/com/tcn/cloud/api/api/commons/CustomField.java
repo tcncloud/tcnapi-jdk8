@@ -20,12 +20,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CustomField() {
-    ticketCode_ = "";
     customFieldName_ = "";
     customFieldValue_ = "";
     customFieldType_ = "";
-    customFieldOptions_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    customFieldOptions_ = "";
   }
 
   @java.lang.Override
@@ -48,84 +46,22 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.CustomField.class, com.tcn.cloud.api.api.commons.CustomField.Builder.class);
   }
 
-  public static final int CUSTOM_FILED_SID_FIELD_NUMBER = 1;
-  private long customFiledSid_ = 0L;
+  public static final int CUSTOM_FIELD_SID_FIELD_NUMBER = 1;
+  private long customFieldSid_ = 0L;
   /**
    * <pre>
    * The snowflake id of a custom field.
    * </pre>
    *
-   * <code>int64 custom_filed_sid = 1 [json_name = "customFiledSid", jstype = JS_STRING];</code>
-   * @return The customFiledSid.
+   * <code>int64 custom_field_sid = 1 [json_name = "customFieldSid", jstype = JS_STRING];</code>
+   * @return The customFieldSid.
    */
   @java.lang.Override
-  public long getCustomFiledSid() {
-    return customFiledSid_;
+  public long getCustomFieldSid() {
+    return customFieldSid_;
   }
 
-  public static final int PROJECT_ID_FIELD_NUMBER = 2;
-  private long projectId_ = 0L;
-  /**
-   * <pre>
-   * project_id details
-   * </pre>
-   *
-   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
-   * @return The projectId.
-   */
-  @java.lang.Override
-  public long getProjectId() {
-    return projectId_;
-  }
-
-  public static final int TICKET_CODE_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ticketCode_ = "";
-  /**
-   * <pre>
-   * ticket_code details
-   * </pre>
-   *
-   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-   * @return The ticketCode.
-   */
-  @java.lang.Override
-  public java.lang.String getTicketCode() {
-    java.lang.Object ref = ticketCode_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      ticketCode_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * ticket_code details
-   * </pre>
-   *
-   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-   * @return The bytes for ticketCode.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTicketCodeBytes() {
-    java.lang.Object ref = ticketCode_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      ticketCode_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CUSTOM_FIELD_NAME_FIELD_NUMBER = 4;
+  public static final int CUSTOM_FIELD_NAME_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customFieldName_ = "";
   /**
@@ -133,7 +69,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
    * @return The customFieldName.
    */
   @java.lang.Override
@@ -154,7 +90,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
    * @return The bytes for customFieldName.
    */
   @java.lang.Override
@@ -172,7 +108,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CUSTOM_FIELD_VALUE_FIELD_NUMBER = 5;
+  public static final int CUSTOM_FIELD_VALUE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customFieldValue_ = "";
   /**
@@ -180,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_value
    * </pre>
    *
-   * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+   * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
    * @return The customFieldValue.
    */
   @java.lang.Override
@@ -201,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_value
    * </pre>
    *
-   * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+   * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
    * @return The bytes for customFieldValue.
    */
   @java.lang.Override
@@ -219,7 +155,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CUSTOM_FIELD_TYPE_FIELD_NUMBER = 6;
+  public static final int CUSTOM_FIELD_TYPE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customFieldType_ = "";
   /**
@@ -227,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
    * @return The customFieldType.
    */
   @java.lang.Override
@@ -248,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
    * @return The bytes for customFieldType.
    */
   @java.lang.Override
@@ -266,57 +202,66 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CUSTOM_FIELD_OPTIONS_FIELD_NUMBER = 7;
+  public static final int CUSTOM_FIELD_OPTIONS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList customFieldOptions_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private volatile java.lang.Object customFieldOptions_ = "";
   /**
    * <pre>
    * custom_field_options
    * </pre>
    *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return A list containing the customFieldOptions.
+   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+   * @return The customFieldOptions.
    */
-  public com.google.protobuf.ProtocolStringList
-      getCustomFieldOptionsList() {
-    return customFieldOptions_;
+  @java.lang.Override
+  public java.lang.String getCustomFieldOptions() {
+    java.lang.Object ref = customFieldOptions_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customFieldOptions_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
    * custom_field_options
    * </pre>
    *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return The count of customFieldOptions.
+   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+   * @return The bytes for customFieldOptions.
    */
-  public int getCustomFieldOptionsCount() {
-    return customFieldOptions_.size();
-  }
-  /**
-   * <pre>
-   * custom_field_options
-   * </pre>
-   *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @param index The index of the element to return.
-   * @return The customFieldOptions at the given index.
-   */
-  public java.lang.String getCustomFieldOptions(int index) {
-    return customFieldOptions_.get(index);
-  }
-  /**
-   * <pre>
-   * custom_field_options
-   * </pre>
-   *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the customFieldOptions at the given index.
-   */
+  @java.lang.Override
   public com.google.protobuf.ByteString
-      getCustomFieldOptionsBytes(int index) {
-    return customFieldOptions_.getByteString(index);
+      getCustomFieldOptionsBytes() {
+    java.lang.Object ref = customFieldOptions_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customFieldOptions_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int IS_DELETED_FIELD_NUMBER = 6;
+  private boolean isDeleted_ = false;
+  /**
+   * <pre>
+   * True/False Identifies if a custom fields deleted
+   * </pre>
+   *
+   * <code>bool is_deleted = 6 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
+   */
+  @java.lang.Override
+  public boolean getIsDeleted() {
+    return isDeleted_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -333,26 +278,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (customFiledSid_ != 0L) {
-      output.writeInt64(1, customFiledSid_);
-    }
-    if (projectId_ != 0L) {
-      output.writeInt64(2, projectId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketCode_);
+    if (customFieldSid_ != 0L) {
+      output.writeInt64(1, customFieldSid_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, customFieldName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, customFieldName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldValue_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customFieldValue_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customFieldValue_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, customFieldType_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, customFieldType_);
     }
-    for (int i = 0; i < customFieldOptions_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customFieldOptions_.getRaw(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customFieldOptions_);
+    }
+    if (isDeleted_ != false) {
+      output.writeBool(6, isDeleted_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -363,33 +305,25 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (customFiledSid_ != 0L) {
+    if (customFieldSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, customFiledSid_);
-    }
-    if (projectId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, projectId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ticketCode_);
+        .computeInt64Size(1, customFieldSid_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, customFieldName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, customFieldName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldValue_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customFieldValue_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customFieldValue_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, customFieldType_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, customFieldType_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < customFieldOptions_.size(); i++) {
-        dataSize += computeStringSizeNoTag(customFieldOptions_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getCustomFieldOptionsList().size();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customFieldOptions_);
+    }
+    if (isDeleted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, isDeleted_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -406,20 +340,18 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.CustomField other = (com.tcn.cloud.api.api.commons.CustomField) obj;
 
-    if (getCustomFiledSid()
-        != other.getCustomFiledSid()) return false;
-    if (getProjectId()
-        != other.getProjectId()) return false;
-    if (!getTicketCode()
-        .equals(other.getTicketCode())) return false;
+    if (getCustomFieldSid()
+        != other.getCustomFieldSid()) return false;
     if (!getCustomFieldName()
         .equals(other.getCustomFieldName())) return false;
     if (!getCustomFieldValue()
         .equals(other.getCustomFieldValue())) return false;
     if (!getCustomFieldType()
         .equals(other.getCustomFieldType())) return false;
-    if (!getCustomFieldOptionsList()
-        .equals(other.getCustomFieldOptionsList())) return false;
+    if (!getCustomFieldOptions()
+        .equals(other.getCustomFieldOptions())) return false;
+    if (getIsDeleted()
+        != other.getIsDeleted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -431,24 +363,20 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CUSTOM_FILED_SID_FIELD_NUMBER;
+    hash = (37 * hash) + CUSTOM_FIELD_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getCustomFiledSid());
-    hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getProjectId());
-    hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getTicketCode().hashCode();
+        getCustomFieldSid());
     hash = (37 * hash) + CUSTOM_FIELD_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getCustomFieldName().hashCode();
     hash = (37 * hash) + CUSTOM_FIELD_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getCustomFieldValue().hashCode();
     hash = (37 * hash) + CUSTOM_FIELD_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getCustomFieldType().hashCode();
-    if (getCustomFieldOptionsCount() > 0) {
-      hash = (37 * hash) + CUSTOM_FIELD_OPTIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomFieldOptionsList().hashCode();
-    }
+    hash = (37 * hash) + CUSTOM_FIELD_OPTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomFieldOptions().hashCode();
+    hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsDeleted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -584,14 +512,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      customFiledSid_ = 0L;
-      projectId_ = 0L;
-      ticketCode_ = "";
+      customFieldSid_ = 0L;
       customFieldName_ = "";
       customFieldValue_ = "";
       customFieldType_ = "";
-      customFieldOptions_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      customFieldOptions_ = "";
+      isDeleted_ = false;
       return this;
     }
 
@@ -626,26 +552,22 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.CustomField result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.customFiledSid_ = customFiledSid_;
+        result.customFieldSid_ = customFieldSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.projectId_ = projectId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.ticketCode_ = ticketCode_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.customFieldName_ = customFieldName_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.customFieldValue_ = customFieldValue_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.customFieldType_ = customFieldType_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        customFieldOptions_.makeImmutable();
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.customFieldOptions_ = customFieldOptions_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.isDeleted_ = isDeleted_;
       }
     }
 
@@ -693,41 +615,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.CustomField other) {
       if (other == com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance()) return this;
-      if (other.getCustomFiledSid() != 0L) {
-        setCustomFiledSid(other.getCustomFiledSid());
-      }
-      if (other.getProjectId() != 0L) {
-        setProjectId(other.getProjectId());
-      }
-      if (!other.getTicketCode().isEmpty()) {
-        ticketCode_ = other.ticketCode_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.getCustomFieldSid() != 0L) {
+        setCustomFieldSid(other.getCustomFieldSid());
       }
       if (!other.getCustomFieldName().isEmpty()) {
         customFieldName_ = other.customFieldName_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCustomFieldValue().isEmpty()) {
         customFieldValue_ = other.customFieldValue_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCustomFieldType().isEmpty()) {
         customFieldType_ = other.customFieldType_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.customFieldOptions_.isEmpty()) {
-        if (customFieldOptions_.isEmpty()) {
-          customFieldOptions_ = other.customFieldOptions_;
-          bitField0_ |= 0x00000040;
-        } else {
-          ensureCustomFieldOptionsIsMutable();
-          customFieldOptions_.addAll(other.customFieldOptions_);
-        }
+      if (!other.getCustomFieldOptions().isEmpty()) {
+        customFieldOptions_ = other.customFieldOptions_;
+        bitField0_ |= 0x00000010;
         onChanged();
+      }
+      if (other.getIsDeleted() != false) {
+        setIsDeleted(other.getIsDeleted());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -756,41 +668,35 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              customFiledSid_ = input.readInt64();
+              customFieldSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              projectId_ = input.readInt64();
+            case 18: {
+              customFieldName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             case 26: {
-              ticketCode_ = input.readStringRequireUtf8();
+              customFieldValue_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
-              customFieldName_ = input.readStringRequireUtf8();
+              customFieldType_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              customFieldValue_ = input.readStringRequireUtf8();
+              customFieldOptions_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              customFieldType_ = input.readStringRequireUtf8();
+            case 48: {
+              isDeleted_ = input.readBool();
               bitField0_ |= 0x00000020;
               break;
-            } // case 50
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureCustomFieldOptionsIsMutable();
-              customFieldOptions_.add(s);
-              break;
-            } // case 58
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -808,31 +714,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long customFiledSid_ ;
+    private long customFieldSid_ ;
     /**
      * <pre>
      * The snowflake id of a custom field.
      * </pre>
      *
-     * <code>int64 custom_filed_sid = 1 [json_name = "customFiledSid", jstype = JS_STRING];</code>
-     * @return The customFiledSid.
+     * <code>int64 custom_field_sid = 1 [json_name = "customFieldSid", jstype = JS_STRING];</code>
+     * @return The customFieldSid.
      */
     @java.lang.Override
-    public long getCustomFiledSid() {
-      return customFiledSid_;
+    public long getCustomFieldSid() {
+      return customFieldSid_;
     }
     /**
      * <pre>
      * The snowflake id of a custom field.
      * </pre>
      *
-     * <code>int64 custom_filed_sid = 1 [json_name = "customFiledSid", jstype = JS_STRING];</code>
-     * @param value The customFiledSid to set.
+     * <code>int64 custom_field_sid = 1 [json_name = "customFieldSid", jstype = JS_STRING];</code>
+     * @param value The customFieldSid to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomFiledSid(long value) {
+    public Builder setCustomFieldSid(long value) {
 
-      customFiledSid_ = value;
+      customFieldSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -842,148 +748,12 @@ private static final long serialVersionUID = 0L;
      * The snowflake id of a custom field.
      * </pre>
      *
-     * <code>int64 custom_filed_sid = 1 [json_name = "customFiledSid", jstype = JS_STRING];</code>
+     * <code>int64 custom_field_sid = 1 [json_name = "customFieldSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomFiledSid() {
+    public Builder clearCustomFieldSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      customFiledSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long projectId_ ;
-    /**
-     * <pre>
-     * project_id details
-     * </pre>
-     *
-     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
-     * @return The projectId.
-     */
-    @java.lang.Override
-    public long getProjectId() {
-      return projectId_;
-    }
-    /**
-     * <pre>
-     * project_id details
-     * </pre>
-     *
-     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
-     * @param value The projectId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectId(long value) {
-
-      projectId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * project_id details
-     * </pre>
-     *
-     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      projectId_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object ticketCode_ = "";
-    /**
-     * <pre>
-     * ticket_code details
-     * </pre>
-     *
-     * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-     * @return The ticketCode.
-     */
-    public java.lang.String getTicketCode() {
-      java.lang.Object ref = ticketCode_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ticketCode_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * ticket_code details
-     * </pre>
-     *
-     * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-     * @return The bytes for ticketCode.
-     */
-    public com.google.protobuf.ByteString
-        getTicketCodeBytes() {
-      java.lang.Object ref = ticketCode_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ticketCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * ticket_code details
-     * </pre>
-     *
-     * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-     * @param value The ticketCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketCode(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ticketCode_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ticket_code details
-     * </pre>
-     *
-     * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTicketCode() {
-      ticketCode_ = getDefaultInstance().getTicketCode();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ticket_code details
-     * </pre>
-     *
-     * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-     * @param value The bytes for ticketCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketCodeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ticketCode_ = value;
-      bitField0_ |= 0x00000004;
+      customFieldSid_ = 0L;
       onChanged();
       return this;
     }
@@ -994,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_name
      * </pre>
      *
-     * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+     * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
      * @return The customFieldName.
      */
     public java.lang.String getCustomFieldName() {
@@ -1014,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_name
      * </pre>
      *
-     * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+     * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
      * @return The bytes for customFieldName.
      */
     public com.google.protobuf.ByteString
@@ -1035,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_name
      * </pre>
      *
-     * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+     * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
      * @param value The customFieldName to set.
      * @return This builder for chaining.
      */
@@ -1043,7 +813,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customFieldName_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1052,12 +822,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_name
      * </pre>
      *
-     * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+     * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomFieldName() {
       customFieldName_ = getDefaultInstance().getCustomFieldName();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1066,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_name
      * </pre>
      *
-     * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+     * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
      * @param value The bytes for customFieldName to set.
      * @return This builder for chaining.
      */
@@ -1075,7 +845,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       customFieldName_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1086,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_value
      * </pre>
      *
-     * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+     * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
      * @return The customFieldValue.
      */
     public java.lang.String getCustomFieldValue() {
@@ -1106,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_value
      * </pre>
      *
-     * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+     * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
      * @return The bytes for customFieldValue.
      */
     public com.google.protobuf.ByteString
@@ -1127,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_value
      * </pre>
      *
-     * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+     * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
      * @param value The customFieldValue to set.
      * @return This builder for chaining.
      */
@@ -1135,7 +905,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customFieldValue_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1144,12 +914,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_value
      * </pre>
      *
-     * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+     * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomFieldValue() {
       customFieldValue_ = getDefaultInstance().getCustomFieldValue();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1158,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_value
      * </pre>
      *
-     * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+     * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
      * @param value The bytes for customFieldValue to set.
      * @return This builder for chaining.
      */
@@ -1167,7 +937,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       customFieldValue_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1178,7 +948,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
      * @return The customFieldType.
      */
     public java.lang.String getCustomFieldType() {
@@ -1198,7 +968,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
      * @return The bytes for customFieldType.
      */
     public com.google.protobuf.ByteString
@@ -1219,7 +989,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
      * @param value The customFieldType to set.
      * @return This builder for chaining.
      */
@@ -1227,7 +997,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customFieldType_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1236,12 +1006,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomFieldType() {
       customFieldType_ = getDefaultInstance().getCustomFieldType();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1250,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
      * @param value The bytes for customFieldType to set.
      * @return This builder for chaining.
      */
@@ -1259,102 +1029,67 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       customFieldType_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList customFieldOptions_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureCustomFieldOptionsIsMutable() {
-      if (!customFieldOptions_.isModifiable()) {
-        customFieldOptions_ = new com.google.protobuf.LazyStringArrayList(customFieldOptions_);
+    private java.lang.Object customFieldOptions_ = "";
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+     * @return The customFieldOptions.
+     */
+    public java.lang.String getCustomFieldOptions() {
+      java.lang.Object ref = customFieldOptions_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customFieldOptions_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
-      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
      * custom_field_options
      * </pre>
      *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @return A list containing the customFieldOptions.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCustomFieldOptionsList() {
-      customFieldOptions_.makeImmutable();
-      return customFieldOptions_;
-    }
-    /**
-     * <pre>
-     * custom_field_options
-     * </pre>
-     *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @return The count of customFieldOptions.
-     */
-    public int getCustomFieldOptionsCount() {
-      return customFieldOptions_.size();
-    }
-    /**
-     * <pre>
-     * custom_field_options
-     * </pre>
-     *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param index The index of the element to return.
-     * @return The customFieldOptions at the given index.
-     */
-    public java.lang.String getCustomFieldOptions(int index) {
-      return customFieldOptions_.get(index);
-    }
-    /**
-     * <pre>
-     * custom_field_options
-     * </pre>
-     *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the customFieldOptions at the given index.
+     * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+     * @return The bytes for customFieldOptions.
      */
     public com.google.protobuf.ByteString
-        getCustomFieldOptionsBytes(int index) {
-      return customFieldOptions_.getByteString(index);
+        getCustomFieldOptionsBytes() {
+      java.lang.Object ref = customFieldOptions_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customFieldOptions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
     /**
      * <pre>
      * custom_field_options
      * </pre>
      *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param index The index to set the value at.
+     * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
      * @param value The customFieldOptions to set.
      * @return This builder for chaining.
      */
     public Builder setCustomFieldOptions(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureCustomFieldOptionsIsMutable();
-      customFieldOptions_.set(index, value);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * custom_field_options
-     * </pre>
-     *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param value The customFieldOptions to add.
-     * @return This builder for chaining.
-     */
-    public Builder addCustomFieldOptions(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureCustomFieldOptionsIsMutable();
-      customFieldOptions_.add(value);
-      bitField0_ |= 0x00000040;
+      customFieldOptions_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1363,31 +1098,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_options
      * </pre>
      *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param values The customFieldOptions to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllCustomFieldOptions(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureCustomFieldOptionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, customFieldOptions_);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * custom_field_options
-     * </pre>
-     *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomFieldOptions() {
-      customFieldOptions_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
+      customFieldOptions_ = getDefaultInstance().getCustomFieldOptions();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1396,17 +1112,60 @@ private static final long serialVersionUID = 0L;
      * custom_field_options
      * </pre>
      *
-     * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-     * @param value The bytes of the customFieldOptions to add.
+     * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+     * @param value The bytes for customFieldOptions to set.
      * @return This builder for chaining.
      */
-    public Builder addCustomFieldOptionsBytes(
+    public Builder setCustomFieldOptionsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureCustomFieldOptionsIsMutable();
-      customFieldOptions_.add(value);
-      bitField0_ |= 0x00000040;
+      customFieldOptions_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private boolean isDeleted_ ;
+    /**
+     * <pre>
+     * True/False Identifies if a custom fields deleted
+     * </pre>
+     *
+     * <code>bool is_deleted = 6 [json_name = "isDeleted"];</code>
+     * @return The isDeleted.
+     */
+    @java.lang.Override
+    public boolean getIsDeleted() {
+      return isDeleted_;
+    }
+    /**
+     * <pre>
+     * True/False Identifies if a custom fields deleted
+     * </pre>
+     *
+     * <code>bool is_deleted = 6 [json_name = "isDeleted"];</code>
+     * @param value The isDeleted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsDeleted(boolean value) {
+
+      isDeleted_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True/False Identifies if a custom fields deleted
+     * </pre>
+     *
+     * <code>bool is_deleted = 6 [json_name = "isDeleted"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsDeleted() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      isDeleted_ = false;
       onChanged();
       return this;
     }

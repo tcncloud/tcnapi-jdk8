@@ -105,44 +105,6 @@ private static final long serialVersionUID = 0L;
     return customFieldProjectId_;
   }
 
-  public static final int REQUEST_MASK_FIELD_NUMBER = 3;
-  private com.google.protobuf.FieldMask requestMask_;
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   * @return Whether the requestMask field is set.
-   */
-  @java.lang.Override
-  public boolean hasRequestMask() {
-    return requestMask_ != null;
-  }
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   * @return The requestMask.
-   */
-  @java.lang.Override
-  public com.google.protobuf.FieldMask getRequestMask() {
-    return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
-  }
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder() {
-    return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -163,9 +125,6 @@ private static final long serialVersionUID = 0L;
     if (customFieldProjectId_ != 0L) {
       output.writeInt64(2, customFieldProjectId_);
     }
-    if (requestMask_ != null) {
-      output.writeMessage(3, getRequestMask());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -181,10 +140,6 @@ private static final long serialVersionUID = 0L;
     if (customFieldProjectId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, customFieldProjectId_);
-    }
-    if (requestMask_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getRequestMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -205,11 +160,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTicketCode())) return false;
     if (getCustomFieldProjectId()
         != other.getCustomFieldProjectId()) return false;
-    if (hasRequestMask() != other.hasRequestMask()) return false;
-    if (hasRequestMask()) {
-      if (!getRequestMask()
-          .equals(other.getRequestMask())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -226,10 +176,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCustomFieldProjectId());
-    if (hasRequestMask()) {
-      hash = (37 * hash) + REQUEST_MASK_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestMask().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -367,11 +313,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketCode_ = "";
       customFieldProjectId_ = 0L;
-      requestMask_ = null;
-      if (requestMaskBuilder_ != null) {
-        requestMaskBuilder_.dispose();
-        requestMaskBuilder_ = null;
-      }
       return this;
     }
 
@@ -410,11 +351,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.customFieldProjectId_ = customFieldProjectId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.requestMask_ = requestMaskBuilder_ == null
-            ? requestMask_
-            : requestMaskBuilder_.build();
       }
     }
 
@@ -470,9 +406,6 @@ private static final long serialVersionUID = 0L;
       if (other.getCustomFieldProjectId() != 0L) {
         setCustomFieldProjectId(other.getCustomFieldProjectId());
       }
-      if (other.hasRequestMask()) {
-        mergeRequestMask(other.getRequestMask());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -509,13 +442,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              input.readMessage(
-                  getRequestMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -667,161 +593,6 @@ private static final long serialVersionUID = 0L;
       customFieldProjectId_ = 0L;
       onChanged();
       return this;
-    }
-
-    private com.google.protobuf.FieldMask requestMask_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> requestMaskBuilder_;
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     * @return Whether the requestMask field is set.
-     */
-    public boolean hasRequestMask() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     * @return The requestMask.
-     */
-    public com.google.protobuf.FieldMask getRequestMask() {
-      if (requestMaskBuilder_ == null) {
-        return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
-      } else {
-        return requestMaskBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public Builder setRequestMask(com.google.protobuf.FieldMask value) {
-      if (requestMaskBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        requestMask_ = value;
-      } else {
-        requestMaskBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public Builder setRequestMask(
-        com.google.protobuf.FieldMask.Builder builderForValue) {
-      if (requestMaskBuilder_ == null) {
-        requestMask_ = builderForValue.build();
-      } else {
-        requestMaskBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public Builder mergeRequestMask(com.google.protobuf.FieldMask value) {
-      if (requestMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          requestMask_ != null &&
-          requestMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getRequestMaskBuilder().mergeFrom(value);
-        } else {
-          requestMask_ = value;
-        }
-      } else {
-        requestMaskBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public Builder clearRequestMask() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      requestMask_ = null;
-      if (requestMaskBuilder_ != null) {
-        requestMaskBuilder_.dispose();
-        requestMaskBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public com.google.protobuf.FieldMask.Builder getRequestMaskBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getRequestMaskFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    public com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder() {
-      if (requestMaskBuilder_ != null) {
-        return requestMaskBuilder_.getMessageOrBuilder();
-      } else {
-        return requestMask_ == null ?
-            com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
-      }
-    }
-    /**
-     * <pre>
-     * FieldMask
-     * </pre>
-     *
-     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-        getRequestMaskFieldBuilder() {
-      if (requestMaskBuilder_ == null) {
-        requestMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                getRequestMask(),
-                getParentForChildren(),
-                isClean());
-        requestMask_ = null;
-      }
-      return requestMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

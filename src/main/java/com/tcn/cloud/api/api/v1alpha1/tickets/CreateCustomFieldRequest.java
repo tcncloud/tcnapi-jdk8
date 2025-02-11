@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateCustomFieldRequest() {
+    ticketCode_ = "";
+    customField_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -42,30 +44,127 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest.Builder.class);
   }
 
-  public static final int CUSTOM_FIELD_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.CustomField customField_;
+  public static final int TICKET_CODE_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ticketCode_ = "";
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-   * @return Whether the customField field is set.
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
    */
   @java.lang.Override
-  public boolean hasCustomField() {
-    return customField_ != null;
+  public java.lang.String getTicketCode() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ticketCode_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-   * @return The customField.
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomField getCustomField() {
-    return customField_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : customField_;
+  public com.google.protobuf.ByteString
+      getTicketCodeBytes() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ticketCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER = 2;
+  private long customFieldProjectId_ = 0L;
+  /**
+   * <pre>
+   * custom_field_project_id
+   * </pre>
+   *
+   * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+   * @return The customFieldProjectId.
+   */
+  @java.lang.Override
+  public long getCustomFieldProjectId() {
+    return customFieldProjectId_;
+  }
+
+  public static final int CUSTOM_FIELD_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.CustomField> customField_;
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getCustomFieldList() {
+    return customField_;
   }
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder() {
-    return customField_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : customField_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
+      getCustomFieldOrBuilderList() {
+    return customField_;
+  }
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  @java.lang.Override
+  public int getCustomFieldCount() {
+    return customField_.size();
+  }
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CustomField getCustomField(int index) {
+    return customField_.get(index);
+  }
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder(
+      int index) {
+    return customField_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -82,8 +181,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (customField_ != null) {
-      output.writeMessage(1, getCustomField());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ticketCode_);
+    }
+    if (customFieldProjectId_ != 0L) {
+      output.writeInt64(2, customFieldProjectId_);
+    }
+    for (int i = 0; i < customField_.size(); i++) {
+      output.writeMessage(3, customField_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -94,9 +199,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (customField_ != null) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ticketCode_);
+    }
+    if (customFieldProjectId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getCustomField());
+        .computeInt64Size(2, customFieldProjectId_);
+    }
+    for (int i = 0; i < customField_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, customField_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -113,11 +225,12 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest) obj;
 
-    if (hasCustomField() != other.hasCustomField()) return false;
-    if (hasCustomField()) {
-      if (!getCustomField()
-          .equals(other.getCustomField())) return false;
-    }
+    if (!getTicketCode()
+        .equals(other.getTicketCode())) return false;
+    if (getCustomFieldProjectId()
+        != other.getCustomFieldProjectId()) return false;
+    if (!getCustomFieldList()
+        .equals(other.getCustomFieldList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -129,9 +242,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasCustomField()) {
+    hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getTicketCode().hashCode();
+    hash = (37 * hash) + CUSTOM_FIELD_PROJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCustomFieldProjectId());
+    if (getCustomFieldCount() > 0) {
       hash = (37 * hash) + CUSTOM_FIELD_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomField().hashCode();
+      hash = (53 * hash) + getCustomFieldList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -268,11 +386,15 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      customField_ = null;
-      if (customFieldBuilder_ != null) {
-        customFieldBuilder_.dispose();
-        customFieldBuilder_ = null;
+      ticketCode_ = "";
+      customFieldProjectId_ = 0L;
+      if (customFieldBuilder_ == null) {
+        customField_ = java.util.Collections.emptyList();
+      } else {
+        customField_ = null;
+        customFieldBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -299,17 +421,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest result) {
+      if (customFieldBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          customField_ = java.util.Collections.unmodifiableList(customField_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.customField_ = customField_;
+      } else {
+        result.customField_ = customFieldBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.customField_ = customFieldBuilder_ == null
-            ? customField_
-            : customFieldBuilder_.build();
+        result.ticketCode_ = ticketCode_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.customFieldProjectId_ = customFieldProjectId_;
       }
     }
 
@@ -357,8 +493,39 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.CreateCustomFieldRequest.getDefaultInstance()) return this;
-      if (other.hasCustomField()) {
-        mergeCustomField(other.getCustomField());
+      if (!other.getTicketCode().isEmpty()) {
+        ticketCode_ = other.ticketCode_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.getCustomFieldProjectId() != 0L) {
+        setCustomFieldProjectId(other.getCustomFieldProjectId());
+      }
+      if (customFieldBuilder_ == null) {
+        if (!other.customField_.isEmpty()) {
+          if (customField_.isEmpty()) {
+            customField_ = other.customField_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureCustomFieldIsMutable();
+            customField_.addAll(other.customField_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.customField_.isEmpty()) {
+          if (customFieldBuilder_.isEmpty()) {
+            customFieldBuilder_.dispose();
+            customFieldBuilder_ = null;
+            customField_ = other.customField_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            customFieldBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCustomFieldFieldBuilder() : null;
+          } else {
+            customFieldBuilder_.addAllMessages(other.customField_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -387,12 +554,28 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getCustomFieldFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              ticketCode_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              customFieldProjectId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              com.tcn.cloud.api.api.commons.CustomField m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.CustomField.parser(),
+                      extensionRegistry);
+              if (customFieldBuilder_ == null) {
+                ensureCustomFieldIsMutable();
+                customField_.add(m);
+              } else {
+                customFieldBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -410,118 +593,447 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.CustomField customField_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> customFieldBuilder_;
+    private java.lang.Object ticketCode_ = "";
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-     * @return Whether the customField field is set.
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+     * @return The ticketCode.
      */
-    public boolean hasCustomField() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-     * @return The customField.
-     */
-    public com.tcn.cloud.api.api.commons.CustomField getCustomField() {
-      if (customFieldBuilder_ == null) {
-        return customField_ == null ? com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : customField_;
+    public java.lang.String getTicketCode() {
+      java.lang.Object ref = ticketCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ticketCode_ = s;
+        return s;
       } else {
-        return customFieldBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+     * @return The bytes for ticketCode.
      */
-    public Builder setCustomField(com.tcn.cloud.api.api.commons.CustomField value) {
+    public com.google.protobuf.ByteString
+        getTicketCodeBytes() {
+      java.lang.Object ref = ticketCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ticketCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+     * @param value The ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ticketCode_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCode() {
+      ticketCode_ = getDefaultInstance().getTicketCode();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+     * @param value The bytes for ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ticketCode_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long customFieldProjectId_ ;
+    /**
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @return The customFieldProjectId.
+     */
+    @java.lang.Override
+    public long getCustomFieldProjectId() {
+      return customFieldProjectId_;
+    }
+    /**
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @param value The customFieldProjectId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldProjectId(long value) {
+
+      customFieldProjectId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_project_id
+     * </pre>
+     *
+     * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomFieldProjectId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      customFieldProjectId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.CustomField> customField_ =
+      java.util.Collections.emptyList();
+    private void ensureCustomFieldIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        customField_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomField>(customField_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> customFieldBuilder_;
+
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomField> getCustomFieldList() {
+      if (customFieldBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(customField_);
+      } else {
+        return customFieldBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public int getCustomFieldCount() {
+      if (customFieldBuilder_ == null) {
+        return customField_.size();
+      } else {
+        return customFieldBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField getCustomField(int index) {
+      if (customFieldBuilder_ == null) {
+        return customField_.get(index);
+      } else {
+        return customFieldBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public Builder setCustomField(
+        int index, com.tcn.cloud.api.api.commons.CustomField value) {
       if (customFieldBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        customField_ = value;
+        ensureCustomFieldIsMutable();
+        customField_.set(index, value);
+        onChanged();
       } else {
-        customFieldBuilder_.setMessage(value);
+        customFieldBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
     public Builder setCustomField(
+        int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
+      if (customFieldBuilder_ == null) {
+        ensureCustomFieldIsMutable();
+        customField_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        customFieldBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public Builder addCustomField(com.tcn.cloud.api.api.commons.CustomField value) {
+      if (customFieldBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomFieldIsMutable();
+        customField_.add(value);
+        onChanged();
+      } else {
+        customFieldBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public Builder addCustomField(
+        int index, com.tcn.cloud.api.api.commons.CustomField value) {
+      if (customFieldBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomFieldIsMutable();
+        customField_.add(index, value);
+        onChanged();
+      } else {
+        customFieldBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public Builder addCustomField(
         com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
       if (customFieldBuilder_ == null) {
-        customField_ = builderForValue.build();
+        ensureCustomFieldIsMutable();
+        customField_.add(builderForValue.build());
+        onChanged();
       } else {
-        customFieldBuilder_.setMessage(builderForValue.build());
+        customFieldBuilder_.addMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
-    public Builder mergeCustomField(com.tcn.cloud.api.api.commons.CustomField value) {
+    public Builder addCustomField(
+        int index, com.tcn.cloud.api.api.commons.CustomField.Builder builderForValue) {
       if (customFieldBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          customField_ != null &&
-          customField_ != com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance()) {
-          getCustomFieldBuilder().mergeFrom(value);
-        } else {
-          customField_ = value;
-        }
+        ensureCustomFieldIsMutable();
+        customField_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        customFieldBuilder_.mergeFrom(value);
+        customFieldBuilder_.addMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public Builder addAllCustomField(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CustomField> values) {
+      if (customFieldBuilder_ == null) {
+        ensureCustomFieldIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customField_);
+        onChanged();
+      } else {
+        customFieldBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
     public Builder clearCustomField() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      customField_ = null;
-      if (customFieldBuilder_ != null) {
-        customFieldBuilder_.dispose();
-        customFieldBuilder_ = null;
+      if (customFieldBuilder_ == null) {
+        customField_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        customFieldBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomField.Builder getCustomFieldBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getCustomFieldFieldBuilder().getBuilder();
+    public Builder removeCustomField(int index) {
+      if (customFieldBuilder_ == null) {
+        ensureCustomFieldIsMutable();
+        customField_.remove(index);
+        onChanged();
+      } else {
+        customFieldBuilder_.remove(index);
+      }
+      return this;
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder() {
-      if (customFieldBuilder_ != null) {
-        return customFieldBuilder_.getMessageOrBuilder();
-      } else {
-        return customField_ == null ?
-            com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance() : customField_;
+    public com.tcn.cloud.api.api.commons.CustomField.Builder getCustomFieldBuilder(
+        int index) {
+      return getCustomFieldFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder(
+        int index) {
+      if (customFieldBuilder_ == null) {
+        return customField_.get(index);  } else {
+        return customFieldBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
+         getCustomFieldOrBuilderList() {
+      if (customFieldBuilder_ != null) {
+        return customFieldBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(customField_);
+      }
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addCustomFieldBuilder() {
+      return getCustomFieldFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CustomField.Builder addCustomFieldBuilder(
+        int index) {
+      return getCustomFieldFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.CustomField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * repeated custom fields
+     * </pre>
+     *
+     * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomField.Builder> 
+         getCustomFieldBuilderList() {
+      return getCustomFieldFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
         getCustomFieldFieldBuilder() {
       if (customFieldBuilder_ == null) {
-        customFieldBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        customFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.CustomField, com.tcn.cloud.api.api.commons.CustomField.Builder, com.tcn.cloud.api.api.commons.CustomFieldOrBuilder>(
-                getCustomField(),
+                customField_,
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         customField_ = null;

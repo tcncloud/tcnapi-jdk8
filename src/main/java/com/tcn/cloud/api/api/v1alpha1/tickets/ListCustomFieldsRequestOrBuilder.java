@@ -36,31 +36,4 @@ public interface ListCustomFieldsRequestOrBuilder extends
    * @return The customFieldProjectId.
    */
   long getCustomFieldProjectId();
-
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   * @return Whether the requestMask field is set.
-   */
-  boolean hasRequestMask();
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   * @return The requestMask.
-   */
-  com.google.protobuf.FieldMask getRequestMask();
-  /**
-   * <pre>
-   * FieldMask
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
-   */
-  com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder();
 }

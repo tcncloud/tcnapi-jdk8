@@ -1135,28 +1135,28 @@ public final class TicketsGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest,
-      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> getEditCustomFieldMethod;
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> getEditCustomFieldMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "EditCustomField",
       requestType = com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest,
-      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> getEditCustomFieldMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> getEditCustomFieldMethod;
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> getEditCustomFieldMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> getEditCustomFieldMethod;
     if ((getEditCustomFieldMethod = TicketsGrpc.getEditCustomFieldMethod) == null) {
       synchronized (TicketsGrpc.class) {
         if ((getEditCustomFieldMethod = TicketsGrpc.getEditCustomFieldMethod) == null) {
           TicketsGrpc.getEditCustomFieldMethod = getEditCustomFieldMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditCustomField"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse.getDefaultInstance()))
               .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("EditCustomField"))
               .build();
         }
@@ -1620,7 +1620,7 @@ public final class TicketsGrpc {
      * </pre>
      */
     default void editCustomField(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditCustomFieldMethod(), responseObserver);
     }
 
@@ -2077,7 +2077,7 @@ public final class TicketsGrpc {
      * </pre>
      */
     public void editCustomField(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEditCustomFieldMethod(), getCallOptions()), request, responseObserver);
     }
@@ -2485,7 +2485,7 @@ public final class TicketsGrpc {
      * Public method to Edit a Custom Field
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse editCustomField(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse editCustomField(com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEditCustomFieldMethod(), getCallOptions(), request);
     }
@@ -2928,7 +2928,7 @@ public final class TicketsGrpc {
      * Public method to Edit a Custom Field
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse> editCustomField(
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse> editCustomField(
         com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEditCustomFieldMethod(), getCallOptions()), request);
@@ -3148,7 +3148,7 @@ public final class TicketsGrpc {
           break;
         case METHODID_EDIT_CUSTOM_FIELD:
           serviceImpl.editCustomField((com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse>) responseObserver);
           break;
         case METHODID_LIST_CUSTOM_FIELDS:
           serviceImpl.listCustomFields((com.tcn.cloud.api.api.v1alpha1.tickets.ListCustomFieldsRequest) request,
@@ -3429,7 +3429,7 @@ public final class TicketsGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldRequest,
-              com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFiledResponse>(
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditCustomFieldResponse>(
                 service, METHODID_EDIT_CUSTOM_FIELD)))
         .addMethod(
           getListCustomFieldsMethod(),

@@ -12,47 +12,17 @@ public interface CustomFieldOrBuilder extends
    * The snowflake id of a custom field.
    * </pre>
    *
-   * <code>int64 custom_filed_sid = 1 [json_name = "customFiledSid", jstype = JS_STRING];</code>
-   * @return The customFiledSid.
+   * <code>int64 custom_field_sid = 1 [json_name = "customFieldSid", jstype = JS_STRING];</code>
+   * @return The customFieldSid.
    */
-  long getCustomFiledSid();
-
-  /**
-   * <pre>
-   * project_id details
-   * </pre>
-   *
-   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
-   * @return The projectId.
-   */
-  long getProjectId();
-
-  /**
-   * <pre>
-   * ticket_code details
-   * </pre>
-   *
-   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-   * @return The ticketCode.
-   */
-  java.lang.String getTicketCode();
-  /**
-   * <pre>
-   * ticket_code details
-   * </pre>
-   *
-   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
-   * @return The bytes for ticketCode.
-   */
-  com.google.protobuf.ByteString
-      getTicketCodeBytes();
+  long getCustomFieldSid();
 
   /**
    * <pre>
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
    * @return The customFieldName.
    */
   java.lang.String getCustomFieldName();
@@ -61,7 +31,7 @@ public interface CustomFieldOrBuilder extends
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * <code>string custom_field_name = 2 [json_name = "customFieldName"];</code>
    * @return The bytes for customFieldName.
    */
   com.google.protobuf.ByteString
@@ -72,7 +42,7 @@ public interface CustomFieldOrBuilder extends
    * custom_field_value
    * </pre>
    *
-   * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+   * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
    * @return The customFieldValue.
    */
   java.lang.String getCustomFieldValue();
@@ -81,7 +51,7 @@ public interface CustomFieldOrBuilder extends
    * custom_field_value
    * </pre>
    *
-   * <code>string custom_field_value = 5 [json_name = "customFieldValue"];</code>
+   * <code>string custom_field_value = 3 [json_name = "customFieldValue"];</code>
    * @return The bytes for customFieldValue.
    */
   com.google.protobuf.ByteString
@@ -92,7 +62,7 @@ public interface CustomFieldOrBuilder extends
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
    * @return The customFieldType.
    */
   java.lang.String getCustomFieldType();
@@ -101,7 +71,7 @@ public interface CustomFieldOrBuilder extends
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 6 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
    * @return The bytes for customFieldType.
    */
   com.google.protobuf.ByteString
@@ -112,39 +82,28 @@ public interface CustomFieldOrBuilder extends
    * custom_field_options
    * </pre>
    *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return A list containing the customFieldOptions.
+   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+   * @return The customFieldOptions.
    */
-  java.util.List<java.lang.String>
-      getCustomFieldOptionsList();
+  java.lang.String getCustomFieldOptions();
   /**
    * <pre>
    * custom_field_options
    * </pre>
    *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return The count of customFieldOptions.
-   */
-  int getCustomFieldOptionsCount();
-  /**
-   * <pre>
-   * custom_field_options
-   * </pre>
-   *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @param index The index of the element to return.
-   * @return The customFieldOptions at the given index.
-   */
-  java.lang.String getCustomFieldOptions(int index);
-  /**
-   * <pre>
-   * custom_field_options
-   * </pre>
-   *
-   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the customFieldOptions at the given index.
+   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
+   * @return The bytes for customFieldOptions.
    */
   com.google.protobuf.ByteString
-      getCustomFieldOptionsBytes(int index);
+      getCustomFieldOptionsBytes();
+
+  /**
+   * <pre>
+   * True/False Identifies if a custom fields deleted
+   * </pre>
+   *
+   * <code>bool is_deleted = 6 [json_name = "isDeleted"];</code>
+   * @return The isDeleted.
+   */
+  boolean getIsDeleted();
 }

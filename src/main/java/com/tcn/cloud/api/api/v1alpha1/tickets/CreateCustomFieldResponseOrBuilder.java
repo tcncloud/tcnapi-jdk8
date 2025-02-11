@@ -8,17 +8,76 @@ public interface CreateCustomFieldResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-   * @return Whether the customField field is set.
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
    */
-  boolean hasCustomField();
+  java.lang.String getTicketCode();
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
-   * @return The customField.
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
    */
-  com.tcn.cloud.api.api.commons.CustomField getCustomField();
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
+
   /**
-   * <code>.api.commons.CustomField custom_field = 1 [json_name = "customField"];</code>
+   * <pre>
+   * custom_field_project_id
+   * </pre>
+   *
+   * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
+   * @return The customFieldProjectId.
    */
-  com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder();
+  long getCustomFieldProjectId();
+
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.CustomField> 
+      getCustomFieldList();
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CustomField getCustomField(int index);
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  int getCustomFieldCount();
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
+      getCustomFieldOrBuilderList();
+  /**
+   * <pre>
+   * repeated custom fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_field = 3 [json_name = "customField"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldOrBuilder(
+      int index);
 }

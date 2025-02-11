@@ -190,7 +190,7 @@ public final class ServiceProto {
       "ha1/tickets/tickets/createcustomfield:\001*" +
       "\022\262\001\n\017EditCustomField\022,.api.v1alpha1.tick" +
       "ets.EditCustomFieldRequest\032-.api.v1alpha" +
-      "1.tickets.EditCustomFiledResponse\"B\272\270\221\002\005" +
+      "1.tickets.EditCustomFieldResponse\"B\272\270\221\002\005" +
       "\n\003\010\235\030\202\323\344\223\0022\"-/api/v1alpha1/tickets/ticke" +
       "ts/editcustomfield:\001*\022\272\001\n\020ListCustomFiel" +
       "ds\022-.api.v1alpha1.tickets.ListCustomFiel" +
