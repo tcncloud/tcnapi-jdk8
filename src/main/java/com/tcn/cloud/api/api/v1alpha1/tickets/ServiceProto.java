@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\3200\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\3774\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -183,11 +183,25 @@ public final class ServiceProto {
       "api.v1alpha1.tickets.ListEntityRefsByTic" +
       "ketResponse\"N\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0029\"4/api" +
       "/v1alpha1/tickets/tickets/listentityrefs" +
-      "byticket:\001*B\250\001\n&com.tcn.cloud.api.api.v1" +
-      "alpha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024A" +
-      "pi.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Ticke" +
-      "ts\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026" +
-      "Api::V1alpha1::Ticketsb\006proto3"
+      "byticket:\001*\022\272\001\n\021CreateCustomField\022..api." +
+      "v1alpha1.tickets.CreateCustomFieldReques" +
+      "t\032/.api.v1alpha1.tickets.CreateCustomFie" +
+      "ldResponse\"D\272\270\221\002\005\n\003\010\235\030\202\323\344\223\0024\"//api/v1alp" +
+      "ha1/tickets/tickets/createcustomfield:\001*" +
+      "\022\262\001\n\017EditCustomField\022,.api.v1alpha1.tick" +
+      "ets.EditCustomFieldRequest\032-.api.v1alpha" +
+      "1.tickets.EditCustomFiledResponse\"B\272\270\221\002\005" +
+      "\n\003\010\235\030\202\323\344\223\0022\"-/api/v1alpha1/tickets/ticke" +
+      "ts/editcustomfield:\001*\022\272\001\n\020ListCustomFiel" +
+      "ds\022-.api.v1alpha1.tickets.ListCustomFiel" +
+      "dsRequest\032..api.v1alpha1.tickets.ListCus" +
+      "tomFieldsResponse\"G\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0022" +
+      "\"-/api/v1alpha1/tickets/tickets/listcust" +
+      "omfield:\001*B\250\001\n&com.tcn.cloud.api.api.v1a" +
+      "lpha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024Ap" +
+      "i.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Ticket" +
+      "s\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026A" +
+      "pi::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
