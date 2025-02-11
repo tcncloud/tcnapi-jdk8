@@ -112,18 +112,39 @@ public interface CustomFieldOrBuilder extends
    * custom_field_options
    * </pre>
    *
-   * <code>string field_options = 7 [json_name = "fieldOptions"];</code>
-   * @return The fieldOptions.
+   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return A list containing the customFieldOptions.
    */
-  java.lang.String getFieldOptions();
+  java.util.List<java.lang.String>
+      getCustomFieldOptionsList();
   /**
    * <pre>
    * custom_field_options
    * </pre>
    *
-   * <code>string field_options = 7 [json_name = "fieldOptions"];</code>
-   * @return The bytes for fieldOptions.
+   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return The count of customFieldOptions.
+   */
+  int getCustomFieldOptionsCount();
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @param index The index of the element to return.
+   * @return The customFieldOptions at the given index.
+   */
+  java.lang.String getCustomFieldOptions(int index);
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>repeated string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the customFieldOptions at the given index.
    */
   com.google.protobuf.ByteString
-      getFieldOptionsBytes();
+      getCustomFieldOptionsBytes(int index);
 }

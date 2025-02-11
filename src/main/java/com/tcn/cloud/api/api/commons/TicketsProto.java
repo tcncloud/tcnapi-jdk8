@@ -319,25 +319,25 @@ public final class TicketsProto {
       "\n\rEditAttribute\022\035\n\010col_desc\030\001 \001(\003B\0020\001R\007c" +
       "olDesc\022\031\n\010from_val\030\002 \001(\tR\007fromVal\022\025\n\006to_" +
       "val\030\003 \001(\tR\005toVal\022\033\n\tis_edited\030\004 \001(\010R\010isE" +
-      "dited\"\252\002\n\013CustomField\022,\n\020custom_filed_si" +
+      "dited\"\267\002\n\013CustomField\022,\n\020custom_filed_si" +
       "d\030\001 \001(\003B\0020\001R\016customFiledSid\022!\n\nproject_i" +
       "d\030\002 \001(\003B\0020\001R\tprojectId\022\037\n\013ticket_code\030\003 " +
       "\001(\tR\nticketCode\022*\n\021custom_filed_name\030\004 \001" +
       "(\tR\017customFiledName\022,\n\022custom_field_valu" +
       "e\030\005 \001(\tR\020customFieldValue\022*\n\021custom_fiel" +
-      "d_type\030\006 \001(\tR\017customFieldType\022#\n\rfield_o" +
-      "ptions\030\007 \001(\tR\014fieldOptions*\213\001\n\tTimeScale" +
-      "\022\025\n\021TIME_SCALE_MINUTE\020\000\022\023\n\017TIME_SCALE_HO" +
-      "UR\020\001\022\022\n\016TIME_SCALE_DAY\020\002\022\023\n\017TIME_SCALE_W" +
-      "EEK\020\003\022\024\n\020TIME_SCALE_MONTH\020\004\022\023\n\017TIME_SCAL" +
-      "E_YEAR\020\005*V\n\014TicketStatus\022\025\n\021TICKET_STATU" +
-      "S_NEW\020\000\022\026\n\022TICKET_STATUS_OPEN\020\001\022\027\n\023TICKE" +
-      "T_STATUS_CLOSE\020\002*?\n\017PhoneNumberType\022\n\n\006M" +
-      "OBILE\020\000\022\t\n\005OTHER\020\001\022\021\n\rINVALID_ERROR\020\002\032\002\030" +
-      "\001Bz\n\035com.tcn.cloud.api.api.commonsB\014Tick" +
-      "etsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
-      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
-      "mmonsb\006proto3"
+      "d_type\030\006 \001(\tR\017customFieldType\0220\n\024custom_" +
+      "field_options\030\007 \003(\tR\022customFieldOptions*" +
+      "\213\001\n\tTimeScale\022\025\n\021TIME_SCALE_MINUTE\020\000\022\023\n\017" +
+      "TIME_SCALE_HOUR\020\001\022\022\n\016TIME_SCALE_DAY\020\002\022\023\n" +
+      "\017TIME_SCALE_WEEK\020\003\022\024\n\020TIME_SCALE_MONTH\020\004" +
+      "\022\023\n\017TIME_SCALE_YEAR\020\005*V\n\014TicketStatus\022\025\n" +
+      "\021TICKET_STATUS_NEW\020\000\022\026\n\022TICKET_STATUS_OP" +
+      "EN\020\001\022\027\n\023TICKET_STATUS_CLOSE\020\002*?\n\017PhoneNu" +
+      "mberType\022\n\n\006MOBILE\020\000\022\t\n\005OTHER\020\001\022\021\n\rINVAL" +
+      "ID_ERROR\020\002\032\002\030\001Bz\n\035com.tcn.cloud.api.api." +
+      "commonsB\014TicketsProtoP\001\242\002\003ACX\252\002\013Api.Comm" +
+      "ons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetad" +
+      "ata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -511,7 +511,7 @@ public final class TicketsProto {
     internal_static_api_commons_CustomField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_CustomField_descriptor,
-        new java.lang.String[] { "CustomFiledSid", "ProjectId", "TicketCode", "CustomFiledName", "CustomFieldValue", "CustomFieldType", "FieldOptions", });
+        new java.lang.String[] { "CustomFiledSid", "ProjectId", "TicketCode", "CustomFiledName", "CustomFieldValue", "CustomFieldType", "CustomFieldOptions", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
