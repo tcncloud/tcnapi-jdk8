@@ -370,31 +370,37 @@ public final class LearnProto {
       "\"E\n\024UploadStaticImageReq\022-\n\005image\030\001 \001(\0132" +
       "\027.api.v0alpha.LearnImageR\005image\"E\n\024Uploa" +
       "dStaticImageRes\022-\n\005image\030\001 \001(\0132\027.api.v0a" +
-      "lpha.LearnImageR\005image2\252\032\n\005Learn\022a\n\005Exis" +
+      "lpha.LearnImageR\005image2\232\034\n\005Learn\022a\n\005Exis" +
       "t\022\025.api.v0alpha.ExistReq\032\025.api.v0alpha.E" +
       "xistRes\"*\272\270\221\002\002\030\001\202\323\344\223\002\035\"\030/api/v0alpha/lea" +
       "rn/exist:\001*\022i\n\007Content\022\027.api.v0alpha.Con" +
       "tentReq\032\027.api.v0alpha.ContentRes\",\272\270\221\002\002\030" +
-      "\001\202\323\344\223\002\037\"\032/api/v0alpha/learn/content:\001*\022q" +
-      "\n\nExportMany\022\032.api.v0alpha.ExportManyReq" +
-      "\032\026.api.v0alpha.ExportRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"" +
-      "\035/api/v0alpha/learn/exportmany:\001*\022z\n\rSea" +
-      "rchContent\022\035.api.v0alpha.SearchContentRe" +
-      "q\032\026.api.v0alpha.SearchRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%" +
-      "\" /api/v0alpha/learn/searchcontent:\001*\022\204\001" +
-      "\n\021ListSearchResults\022\035.api.v0alpha.Search" +
-      "ContentReq\032\026.api.v0alpha.SearchRes\"6\272\270\221\002" +
-      "\002\030\001\202\323\344\223\002)\"$/api/v0alpha/learn/listsearch" +
-      "results:\001*0\001\022u\n\nStandalone\022\032.api.v0alpha" +
-      ".StandaloneReq\032\032.api.v0alpha.StandaloneR" +
-      "es\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/api/v0alpha/learn/st" +
-      "andalone:\001*\022\223\001\n\021ContentEditorData\022!.api." +
-      "v0alpha.ContentEditorDataReq\032!.api.v0alp" +
-      "ha.ContentEditorDataRes\"8\272\270\221\002\004\n\002\010\n\202\323\344\223\002)" +
-      "\"$/api/v0alpha/learn/contenteditordata:\001" +
-      "*\022g\n\006Update\022\026.api.v0alpha.UpdateReq\032\026.ap" +
-      "i.v0alpha.UpdateRes\"-\272\270\221\002\004\n\002\010\n\202\323\344\223\002\036\"\031/a" +
-      "pi/v0alpha/learn/update:\001*\022\217\001\n\020StoreStat" +
+      "\001\202\323\344\223\002\037\"\032/api/v0alpha/learn/content:\001*\022w" +
+      "\n\rContentStream\022\027.api.v0alpha.ContentReq" +
+      "\032\027.api.v0alpha.ContentRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%" +
+      "\" /api/v0alpha/learn/contentstream:\001*0\001\022" +
+      "q\n\nExportMany\022\032.api.v0alpha.ExportManyRe" +
+      "q\032\026.api.v0alpha.ExportRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"" +
+      "\"\035/api/v0alpha/learn/exportmany:\001*\022z\n\rSe" +
+      "archContent\022\035.api.v0alpha.SearchContentR" +
+      "eq\032\026.api.v0alpha.SearchRes\"2\272\270\221\002\002\030\001\202\323\344\223\002" +
+      "%\" /api/v0alpha/learn/searchcontent:\001*\022\204" +
+      "\001\n\021ListSearchResults\022\035.api.v0alpha.Searc" +
+      "hContentReq\032\026.api.v0alpha.SearchRes\"6\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/learn/listsearc" +
+      "hresults:\001*0\001\022u\n\nStandalone\022\032.api.v0alph" +
+      "a.StandaloneReq\032\032.api.v0alpha.Standalone" +
+      "Res\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/api/v0alpha/learn/s" +
+      "tandalone:\001*\022\223\001\n\021ContentEditorData\022!.api" +
+      ".v0alpha.ContentEditorDataReq\032!.api.v0al" +
+      "pha.ContentEditorDataRes\"8\272\270\221\002\004\n\002\010\n\202\323\344\223\002" +
+      ")\"$/api/v0alpha/learn/contenteditordata:" +
+      "\001*\022g\n\006Update\022\026.api.v0alpha.UpdateReq\032\026.a" +
+      "pi.v0alpha.UpdateRes\"-\272\270\221\002\004\n\002\010\n\202\323\344\223\002\036\"\031/" +
+      "api/v0alpha/learn/update:\001*\022u\n\014UpdateStr" +
+      "eam\022\026.api.v0alpha.UpdateReq\032\026.api.v0alph" +
+      "a.UpdateRes\"3\272\270\221\002\004\n\002\010\n\202\323\344\223\002$\"\037/api/v0alp" +
+      "ha/learn/updatestream:\001*(\001\022\217\001\n\020StoreStat" +
       "icImage\022 .api.v0alpha.StoreStaticImageRe" +
       "q\032 .api.v0alpha.StoreStaticImageRes\"7\272\270\221" +
       "\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/learn/storest" +

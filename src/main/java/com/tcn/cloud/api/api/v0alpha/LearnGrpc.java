@@ -80,6 +80,37 @@ public final class LearnGrpc {
     return getContentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentReq,
+      com.tcn.cloud.api.api.v0alpha.ContentRes> getContentStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ContentStream",
+      requestType = com.tcn.cloud.api.api.v0alpha.ContentReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ContentRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentReq,
+      com.tcn.cloud.api.api.v0alpha.ContentRes> getContentStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentReq, com.tcn.cloud.api.api.v0alpha.ContentRes> getContentStreamMethod;
+    if ((getContentStreamMethod = LearnGrpc.getContentStreamMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getContentStreamMethod = LearnGrpc.getContentStreamMethod) == null) {
+          LearnGrpc.getContentStreamMethod = getContentStreamMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ContentReq, com.tcn.cloud.api.api.v0alpha.ContentRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ContentStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ContentReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ContentRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ContentStream"))
+              .build();
+        }
+      }
+    }
+    return getContentStreamMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
       com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod;
 
@@ -264,6 +295,37 @@ public final class LearnGrpc {
       }
     }
     return getUpdateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateReq,
+      com.tcn.cloud.api.api.v0alpha.UpdateRes> getUpdateStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateStream",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateReq,
+      com.tcn.cloud.api.api.v0alpha.UpdateRes> getUpdateStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateReq, com.tcn.cloud.api.api.v0alpha.UpdateRes> getUpdateStreamMethod;
+    if ((getUpdateStreamMethod = LearnGrpc.getUpdateStreamMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getUpdateStreamMethod = LearnGrpc.getUpdateStreamMethod) == null) {
+          LearnGrpc.getUpdateStreamMethod = getUpdateStreamMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateReq, com.tcn.cloud.api.api.v0alpha.UpdateRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("UpdateStream"))
+              .build();
+        }
+      }
+    }
+    return getUpdateStreamMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
@@ -866,6 +928,16 @@ public final class LearnGrpc {
 
     /**
      * <pre>
+     * streams the content for a single page
+     * </pre>
+     */
+    default void contentStream(com.tcn.cloud.api.api.v0alpha.ContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentStreamMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * exports multiple pages of the learning center markdown as PDF
      * </pre>
      */
@@ -925,6 +997,16 @@ public final class LearnGrpc {
     default void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update contents for a single page
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateReq> updateStream(
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUpdateStreamMethod(), responseObserver);
     }
 
     /**
@@ -1157,6 +1239,17 @@ public final class LearnGrpc {
 
     /**
      * <pre>
+     * streams the content for a single page
+     * </pre>
+     */
+    public void contentStream(com.tcn.cloud.api.api.v0alpha.ContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getContentStreamMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * exports multiple pages of the learning center markdown as PDF
      * </pre>
      */
@@ -1222,6 +1315,17 @@ public final class LearnGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update contents for a single page
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateReq> updateStream(
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getUpdateStreamMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -1451,6 +1555,17 @@ public final class LearnGrpc {
     public com.tcn.cloud.api.api.v0alpha.ContentRes content(com.tcn.cloud.api.api.v0alpha.ContentReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * streams the content for a single page
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ContentRes> contentStream(
+        com.tcn.cloud.api.api.v0alpha.ContentReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getContentStreamMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1949,29 +2064,31 @@ public final class LearnGrpc {
 
   private static final int METHODID_EXIST = 0;
   private static final int METHODID_CONTENT = 1;
-  private static final int METHODID_EXPORT_MANY = 2;
-  private static final int METHODID_SEARCH_CONTENT = 3;
-  private static final int METHODID_LIST_SEARCH_RESULTS = 4;
-  private static final int METHODID_STANDALONE = 5;
-  private static final int METHODID_CONTENT_EDITOR_DATA = 6;
-  private static final int METHODID_UPDATE = 7;
-  private static final int METHODID_STORE_STATIC_IMAGE = 8;
-  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 9;
-  private static final int METHODID_DELETE_STANDALONE = 10;
-  private static final int METHODID_SNIPPET = 11;
-  private static final int METHODID_DELETE_LEARN_PAGES = 12;
-  private static final int METHODID_CREATE_EDIT_VERSION = 13;
-  private static final int METHODID_PUBLISH_VERSION = 14;
-  private static final int METHODID_CONTENT_BY_VERSION = 15;
-  private static final int METHODID_UPDATE_BY_VERSION = 16;
-  private static final int METHODID_LIST_SEARCH_RESULTS_BY_VERSION = 17;
-  private static final int METHODID_REVIEW_FILE_VERSIONS = 18;
-  private static final int METHODID_REVIEW_VERSION = 19;
-  private static final int METHODID_EXPORT_MANY_STREAM = 20;
-  private static final int METHODID_LIST_VERSIONS = 21;
-  private static final int METHODID_REVIEW_VERSION_STREAM = 22;
-  private static final int METHODID_DELETE_VERSION = 23;
-  private static final int METHODID_UPLOAD_STATIC_IMAGE = 24;
+  private static final int METHODID_CONTENT_STREAM = 2;
+  private static final int METHODID_EXPORT_MANY = 3;
+  private static final int METHODID_SEARCH_CONTENT = 4;
+  private static final int METHODID_LIST_SEARCH_RESULTS = 5;
+  private static final int METHODID_STANDALONE = 6;
+  private static final int METHODID_CONTENT_EDITOR_DATA = 7;
+  private static final int METHODID_UPDATE = 8;
+  private static final int METHODID_STORE_STATIC_IMAGE = 9;
+  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 10;
+  private static final int METHODID_DELETE_STANDALONE = 11;
+  private static final int METHODID_SNIPPET = 12;
+  private static final int METHODID_DELETE_LEARN_PAGES = 13;
+  private static final int METHODID_CREATE_EDIT_VERSION = 14;
+  private static final int METHODID_PUBLISH_VERSION = 15;
+  private static final int METHODID_CONTENT_BY_VERSION = 16;
+  private static final int METHODID_UPDATE_BY_VERSION = 17;
+  private static final int METHODID_LIST_SEARCH_RESULTS_BY_VERSION = 18;
+  private static final int METHODID_REVIEW_FILE_VERSIONS = 19;
+  private static final int METHODID_REVIEW_VERSION = 20;
+  private static final int METHODID_EXPORT_MANY_STREAM = 21;
+  private static final int METHODID_LIST_VERSIONS = 22;
+  private static final int METHODID_REVIEW_VERSION_STREAM = 23;
+  private static final int METHODID_DELETE_VERSION = 24;
+  private static final int METHODID_UPLOAD_STATIC_IMAGE = 25;
+  private static final int METHODID_UPDATE_STREAM = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1996,6 +2113,10 @@ public final class LearnGrpc {
           break;
         case METHODID_CONTENT:
           serviceImpl.content((com.tcn.cloud.api.api.v0alpha.ContentReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes>) responseObserver);
+          break;
+        case METHODID_CONTENT_STREAM:
+          serviceImpl.contentStream((com.tcn.cloud.api.api.v0alpha.ContentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes>) responseObserver);
           break;
         case METHODID_EXPORT_MANY:
@@ -2100,6 +2221,9 @@ public final class LearnGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_UPDATE_STREAM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.updateStream(
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -2122,6 +2246,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.ContentReq,
               com.tcn.cloud.api.api.v0alpha.ContentRes>(
                 service, METHODID_CONTENT)))
+        .addMethod(
+          getContentStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ContentReq,
+              com.tcn.cloud.api.api.v0alpha.ContentRes>(
+                service, METHODID_CONTENT_STREAM)))
         .addMethod(
           getExportManyMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2164,6 +2295,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateReq,
               com.tcn.cloud.api.api.v0alpha.UpdateRes>(
                 service, METHODID_UPDATE)))
+        .addMethod(
+          getUpdateStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateRes>(
+                service, METHODID_UPDATE_STREAM)))
         .addMethod(
           getStoreStaticImageMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2333,12 +2471,14 @@ public final class LearnGrpc {
               .setSchemaDescriptor(new LearnFileDescriptorSupplier())
               .addMethod(getExistMethod())
               .addMethod(getContentMethod())
+              .addMethod(getContentStreamMethod())
               .addMethod(getExportManyMethod())
               .addMethod(getSearchContentMethod())
               .addMethod(getListSearchResultsMethod())
               .addMethod(getStandaloneMethod())
               .addMethod(getContentEditorDataMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getUpdateStreamMethod())
               .addMethod(getStoreStaticImageMethod())
               .addMethod(getUploadDynamicScreenshotMethod())
               .addMethod(getDeleteStandaloneMethod())
