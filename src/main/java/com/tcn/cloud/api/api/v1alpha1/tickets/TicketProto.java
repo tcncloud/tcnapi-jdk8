@@ -580,29 +580,26 @@ public final class TicketProto {
       "ts.EntityRefR\tentityRef\"1\n\035ListTicketsBy" +
       "EntityRefRequest\022\020\n\003uri\030\001 \001(\tR\003uri\"O\n\036Li" +
       "stTicketsByEntityRefResponse\022-\n\007tickets\030" +
-      "\001 \003(\0132\023.api.commons.TicketR\007tickets\"\263\001\n\030" +
+      "\001 \003(\0132\023.api.commons.TicketR\007tickets\"\233\001\n\030" +
       "CreateCustomFieldRequest\022\037\n\013ticket_code\030" +
-      "\001 \001(\tR\nticketCode\0229\n\027custom_field_projec" +
-      "t_id\030\002 \001(\003B\0020\001R\024customFieldProjectId\022;\n\014" +
-      "custom_field\030\003 \003(\0132\030.api.commons.CustomF" +
-      "ieldR\013customField\"\264\001\n\031CreateCustomFieldR" +
-      "esponse\022\037\n\013ticket_code\030\001 \001(\tR\nticketCode" +
-      "\0229\n\027custom_field_project_id\030\002 \001(\003B\0020\001R\024c" +
-      "ustomFieldProjectId\022;\n\014custom_field\030\003 \003(" +
-      "\0132\030.api.commons.CustomFieldR\013customField" +
-      "\"\255\001\n\026EditCustomFieldRequest\022\037\n\013ticket_co" +
-      "de\030\001 \001(\tR\nticketCode\0229\n\027custom_field_pro" +
-      "ject_id\030\002 \001(\003B\0020\001R\024customFieldProjectId\022" +
-      "7\n\nedit_value\030\003 \003(\0132\030.api.commons.Custom" +
-      "FieldR\teditValue\"\277\001\n\027EditCustomFieldResp" +
-      "onse\022\037\n\013ticket_code\030\001 \001(\tR\nticketCode\0229\n" +
-      "\027custom_field_project_id\030\002 \001(\003B\0020\001R\024cust" +
-      "omFieldProjectId\022H\n\023edited_custom_field\030" +
-      "\003 \003(\0132\030.api.commons.CustomFieldR\021editedC" +
-      "ustomField\"u\n\027ListCustomFieldsRequest\022\037\n" +
-      "\013ticket_code\030\001 \001(\tR\nticketCode\0229\n\027custom" +
-      "_field_project_id\030\002 \001(\003B\0020\001R\024customField" +
-      "ProjectId\"Y\n\030ListCustomFieldsResponse\022=\n" +
+      "\001 \001(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020" +
+      "\001R\tprojectId\022;\n\014custom_field\030\003 \003(\0132\030.api" +
+      ".commons.CustomFieldR\013customField\"\234\001\n\031Cr" +
+      "eateCustomFieldResponse\022\037\n\013ticket_code\030\001" +
+      " \001(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001" +
+      "R\tprojectId\022;\n\014custom_field\030\003 \003(\0132\030.api." +
+      "commons.CustomFieldR\013customField\"\225\001\n\026Edi" +
+      "tCustomFieldRequest\022\037\n\013ticket_code\030\001 \001(\t" +
+      "R\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tpr" +
+      "ojectId\0227\n\nedit_value\030\003 \003(\0132\030.api.common" +
+      "s.CustomFieldR\teditValue\"\247\001\n\027EditCustomF" +
+      "ieldResponse\022\037\n\013ticket_code\030\001 \001(\tR\nticke" +
+      "tCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tprojectId" +
+      "\022H\n\023edited_custom_field\030\003 \003(\0132\030.api.comm" +
+      "ons.CustomFieldR\021editedCustomField\"]\n\027Li" +
+      "stCustomFieldsRequest\022\037\n\013ticket_code\030\001 \001" +
+      "(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\t" +
+      "projectId\"Y\n\030ListCustomFieldsResponse\022=\n" +
       "\rcustom_fields\030\001 \003(\0132\030.api.commons.Custo" +
       "mFieldR\014customFields\"r\n\tEntityRef\022\025\n\006org" +
       "_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010reg" +
@@ -1042,31 +1039,31 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateCustomFieldRequest_descriptor,
-        new java.lang.String[] { "TicketCode", "CustomFieldProjectId", "CustomField", });
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomField", });
     internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor =
       getDescriptor().getMessageTypes().get(70);
     internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateCustomFieldResponse_descriptor,
-        new java.lang.String[] { "TicketCode", "CustomFieldProjectId", "CustomField", });
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomField", });
     internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_descriptor =
       getDescriptor().getMessageTypes().get(71);
     internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditCustomFieldRequest_descriptor,
-        new java.lang.String[] { "TicketCode", "CustomFieldProjectId", "EditValue", });
+        new java.lang.String[] { "TicketCode", "ProjectId", "EditValue", });
     internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor =
       getDescriptor().getMessageTypes().get(72);
     internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditCustomFieldResponse_descriptor,
-        new java.lang.String[] { "TicketCode", "CustomFieldProjectId", "EditedCustomField", });
+        new java.lang.String[] { "TicketCode", "ProjectId", "EditedCustomField", });
     internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_descriptor =
       getDescriptor().getMessageTypes().get(73);
     internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListCustomFieldsRequest_descriptor,
-        new java.lang.String[] { "TicketCode", "CustomFieldProjectId", });
+        new java.lang.String[] { "TicketCode", "ProjectId", });
     internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_descriptor =
       getDescriptor().getMessageTypes().get(74);
     internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_fieldAccessorTable = new

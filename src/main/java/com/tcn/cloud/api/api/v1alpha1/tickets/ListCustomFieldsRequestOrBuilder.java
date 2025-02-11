@@ -29,11 +29,11 @@ public interface ListCustomFieldsRequestOrBuilder extends
 
   /**
    * <pre>
-   * custom_field_project_id
+   * project_id
    * </pre>
    *
-   * <code>int64 custom_field_project_id = 2 [json_name = "customFieldProjectId", jstype = JS_STRING];</code>
-   * @return The customFieldProjectId.
+   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
    */
-  long getCustomFieldProjectId();
+  long getProjectId();
 }
