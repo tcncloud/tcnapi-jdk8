@@ -79,23 +79,30 @@ public interface CustomFieldOrBuilder extends
 
   /**
    * <pre>
-   * custom_field_options
+   * date_modified
    * </pre>
    *
-   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
-   * @return The customFieldOptions.
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
    */
-  java.lang.String getCustomFieldOptions();
+  boolean hasDateModified();
   /**
    * <pre>
-   * custom_field_options
+   * date_modified
    * </pre>
    *
-   * <code>string custom_field_options = 5 [json_name = "customFieldOptions"];</code>
-   * @return The bytes for customFieldOptions.
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return The dateModified.
    */
-  com.google.protobuf.ByteString
-      getCustomFieldOptionsBytes();
+  com.google.protobuf.Timestamp getDateModified();
+  /**
+   * <pre>
+   * date_modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
 
   /**
    * <pre>
