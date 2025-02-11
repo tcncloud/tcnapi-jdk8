@@ -599,19 +599,21 @@ public final class TicketProto {
       "ons.CustomFieldR\021editedCustomField\"]\n\027Li" +
       "stCustomFieldsRequest\022\037\n\013ticket_code\030\001 \001" +
       "(\tR\nticketCode\022!\n\nproject_id\030\002 \001(\003B\0020\001R\t" +
-      "projectId\"Y\n\030ListCustomFieldsResponse\022=\n" +
-      "\rcustom_fields\030\001 \003(\0132\030.api.commons.Custo" +
-      "mFieldR\014customFields\"r\n\tEntityRef\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010reg" +
-      "ionId\022\037\n\013ticket_code\030\003 \001(\tR\nticketCode\022\020" +
-      "\n\003uri\030\004 \001(\tR\003uri*?\n\013ActionTypes\022\006\n\002NA\020\000\022" +
-      "\014\n\010Callback\020\001\022\r\n\tEmailback\020\002\022\013\n\007Smsback\020" +
-      "\003*3\n\rSLAConditions\022\010\n\004None\020\000\022\013\n\007Respond\020" +
-      "\001\022\013\n\007Resolve\020\002B\247\001\n&com.tcn.cloud.api.api" +
-      ".v1alpha1.ticketsB\013TicketProtoP\001\242\002\003AVT\252\002" +
-      "\024Api.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tic" +
-      "kets\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352" +
-      "\002\026Api::V1alpha1::Ticketsb\006proto3"
+      "projectId\"\235\001\n\030ListCustomFieldsResponse\022\037" +
+      "\n\013ticket_code\030\001 \001(\tR\nticketCode\022!\n\nproje" +
+      "ct_id\030\002 \001(\003B\0020\001R\tprojectId\022=\n\rcustom_fie" +
+      "lds\030\003 \003(\0132\030.api.commons.CustomFieldR\014cus" +
+      "tomFields\"r\n\tEntityRef\022\025\n\006org_id\030\001 \001(\tR\005" +
+      "orgId\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022\037\n\013ti" +
+      "cket_code\030\003 \001(\tR\nticketCode\022\020\n\003uri\030\004 \001(\t" +
+      "R\003uri*?\n\013ActionTypes\022\006\n\002NA\020\000\022\014\n\010Callback" +
+      "\020\001\022\r\n\tEmailback\020\002\022\013\n\007Smsback\020\003*3\n\rSLACon" +
+      "ditions\022\010\n\004None\020\000\022\013\n\007Respond\020\001\022\013\n\007Resolv" +
+      "e\020\002B\247\001\n&com.tcn.cloud.api.api.v1alpha1.t" +
+      "icketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alph" +
+      "a1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\" +
+      "V1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1al" +
+      "pha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1069,7 +1071,7 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListCustomFieldsResponse_descriptor,
-        new java.lang.String[] { "CustomFields", });
+        new java.lang.String[] { "TicketCode", "ProjectId", "CustomFields", });
     internal_static_api_v1alpha1_tickets_EntityRef_descriptor =
       getDescriptor().getMessageTypes().get(75);
     internal_static_api_v1alpha1_tickets_EntityRef_fieldAccessorTable = new

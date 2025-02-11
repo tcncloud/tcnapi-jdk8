@@ -8,25 +8,75 @@ public interface ListCustomFieldsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.CustomField custom_fields = 1 [json_name = "customFields"];</code>
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 1 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
+
+  /**
+   * <pre>
+   * project_id
+   * </pre>
+   *
+   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
+   */
+  long getProjectId();
+
+  /**
+   * <pre>
+   * list of custom_fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.CustomField> 
       getCustomFieldsList();
   /**
-   * <code>repeated .api.commons.CustomField custom_fields = 1 [json_name = "customFields"];</code>
+   * <pre>
+   * list of custom_fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
    */
   com.tcn.cloud.api.api.commons.CustomField getCustomFields(int index);
   /**
-   * <code>repeated .api.commons.CustomField custom_fields = 1 [json_name = "customFields"];</code>
+   * <pre>
+   * list of custom_fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
    */
   int getCustomFieldsCount();
   /**
-   * <code>repeated .api.commons.CustomField custom_fields = 1 [json_name = "customFields"];</code>
+   * <pre>
+   * list of custom_fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldOrBuilder> 
       getCustomFieldsOrBuilderList();
   /**
-   * <code>repeated .api.commons.CustomField custom_fields = 1 [json_name = "customFields"];</code>
+   * <pre>
+   * list of custom_fields
+   * </pre>
+   *
+   * <code>repeated .api.commons.CustomField custom_fields = 3 [json_name = "customFields"];</code>
    */
   com.tcn.cloud.api.api.commons.CustomFieldOrBuilder getCustomFieldsOrBuilder(
       int index);
