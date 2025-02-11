@@ -362,6 +362,12 @@ private static final long serialVersionUID = 0L;
     FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE(5506),
     CLOVER_PAYMENT_CARD_SALE_TRANSACTION(5601),
     NUVEI_PAYMENT(5701),
+    CALLIPAY_CC_PAYMENT(5801),
+    CALLIPAY_CHECK_PAYMENT(5802),
+    TRATTA_CC_CHARGE(5901),
+    TRATTA_ACH_CHARGE(5902),
+    TRATTA_CC_CHARGE_POST_DATED(5903),
+    TRATTA_ACH_CHARGE_POST_DATED(5904),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -689,6 +695,12 @@ private static final long serialVersionUID = 0L;
         case 5506: return FINVI_VELOSIDY_PLAN_ONE_TIME_FUTURE;
         case 5601: return CLOVER_PAYMENT_CARD_SALE_TRANSACTION;
         case 5701: return NUVEI_PAYMENT;
+        case 5801: return CALLIPAY_CC_PAYMENT;
+        case 5802: return CALLIPAY_CHECK_PAYMENT;
+        case 5901: return TRATTA_CC_CHARGE;
+        case 5902: return TRATTA_ACH_CHARGE;
+        case 5903: return TRATTA_CC_CHARGE_POST_DATED;
+        case 5904: return TRATTA_ACH_CHARGE_POST_DATED;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -9272,7 +9284,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1219
+   *     See api/commons/integrations/integrations.proto;l=1229
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9282,7 +9294,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1219
+   *     See api/commons/integrations/integrations.proto;l=1229
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9307,7 +9319,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1220
+   *     See api/commons/integrations/integrations.proto;l=1230
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9317,7 +9329,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1220
+   *     See api/commons/integrations/integrations.proto;l=1230
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9342,7 +9354,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1221
+   *     See api/commons/integrations/integrations.proto;l=1231
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9352,7 +9364,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1221
+   *     See api/commons/integrations/integrations.proto;l=1231
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9377,7 +9389,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1222
+   *     See api/commons/integrations/integrations.proto;l=1232
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9387,7 +9399,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1222
+   *     See api/commons/integrations/integrations.proto;l=1232
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9412,7 +9424,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1223
+   *     See api/commons/integrations/integrations.proto;l=1233
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9422,7 +9434,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1223
+   *     See api/commons/integrations/integrations.proto;l=1233
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9447,7 +9459,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1224
+   *     See api/commons/integrations/integrations.proto;l=1234
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9457,7 +9469,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1224
+   *     See api/commons/integrations/integrations.proto;l=1234
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9482,7 +9494,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1225
+   *     See api/commons/integrations/integrations.proto;l=1235
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9492,7 +9504,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1225
+   *     See api/commons/integrations/integrations.proto;l=1235
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10379,6 +10391,192 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment.getDefaultInstance();
+  }
+
+  public static final int CALLIPAY_CC_PAYMENT_FIELD_NUMBER = 5801;
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+   * @return Whether the callipayCcPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasCallipayCcPayment() {
+    return valueCase_ == 5801;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+   * @return The callipayCcPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment getCallipayCcPayment() {
+    if (valueCase_ == 5801) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder getCallipayCcPaymentOrBuilder() {
+    if (valueCase_ == 5801) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+  }
+
+  public static final int CALLIPAY_CHECK_PAYMENT_FIELD_NUMBER = 5802;
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+   * @return Whether the callipayCheckPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasCallipayCheckPayment() {
+    return valueCase_ == 5802;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+   * @return The callipayCheckPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment getCallipayCheckPayment() {
+    if (valueCase_ == 5802) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder getCallipayCheckPaymentOrBuilder() {
+    if (valueCase_ == 5802) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+  }
+
+  public static final int TRATTA_CC_CHARGE_FIELD_NUMBER = 5901;
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+   * @return Whether the trattaCcCharge field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrattaCcCharge() {
+    return valueCase_ == 5901;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+   * @return The trattaCcCharge.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge getTrattaCcCharge() {
+    if (valueCase_ == 5901) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargeOrBuilder getTrattaCcChargeOrBuilder() {
+    if (valueCase_ == 5901) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+  }
+
+  public static final int TRATTA_ACH_CHARGE_FIELD_NUMBER = 5902;
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+   * @return Whether the trattaAchCharge field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrattaAchCharge() {
+    return valueCase_ == 5902;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+   * @return The trattaAchCharge.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge getTrattaAchCharge() {
+    if (valueCase_ == 5902) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargeOrBuilder getTrattaAchChargeOrBuilder() {
+    if (valueCase_ == 5902) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+  }
+
+  public static final int TRATTA_CC_CHARGE_POST_DATED_FIELD_NUMBER = 5903;
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+   * @return Whether the trattaCcChargePostDated field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrattaCcChargePostDated() {
+    return valueCase_ == 5903;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+   * @return The trattaCcChargePostDated.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated getTrattaCcChargePostDated() {
+    if (valueCase_ == 5903) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDatedOrBuilder getTrattaCcChargePostDatedOrBuilder() {
+    if (valueCase_ == 5903) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+  }
+
+  public static final int TRATTA_ACH_CHARGE_POST_DATED_FIELD_NUMBER = 5904;
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+   * @return Whether the trattaAchChargePostDated field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrattaAchChargePostDated() {
+    return valueCase_ == 5904;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+   * @return The trattaAchChargePostDated.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated getTrattaAchChargePostDated() {
+    if (valueCase_ == 5904) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDatedOrBuilder getTrattaAchChargePostDatedOrBuilder() {
+    if (valueCase_ == 5904) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -11327,6 +11525,24 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5701) {
       output.writeMessage(5701, (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_);
+    }
+    if (valueCase_ == 5801) {
+      output.writeMessage(5801, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_);
+    }
+    if (valueCase_ == 5802) {
+      output.writeMessage(5802, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_);
+    }
+    if (valueCase_ == 5901) {
+      output.writeMessage(5901, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_);
+    }
+    if (valueCase_ == 5902) {
+      output.writeMessage(5902, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_);
+    }
+    if (valueCase_ == 5903) {
+      output.writeMessage(5903, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_);
+    }
+    if (valueCase_ == 5904) {
+      output.writeMessage(5904, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -12579,6 +12795,30 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5701, (com.tcn.cloud.api.api.commons.integrations.ExecuteNuveiPayment) value_);
+    }
+    if (valueCase_ == 5801) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5801, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_);
+    }
+    if (valueCase_ == 5802) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5802, (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_);
+    }
+    if (valueCase_ == 5901) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5901, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_);
+    }
+    if (valueCase_ == 5902) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5902, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_);
+    }
+    if (valueCase_ == 5903) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5903, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_);
+    }
+    if (valueCase_ == 5904) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5904, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -13839,6 +14079,30 @@ private static final long serialVersionUID = 0L;
         if (!getNuveiPayment()
             .equals(other.getNuveiPayment())) return false;
         break;
+      case 5801:
+        if (!getCallipayCcPayment()
+            .equals(other.getCallipayCcPayment())) return false;
+        break;
+      case 5802:
+        if (!getCallipayCheckPayment()
+            .equals(other.getCallipayCheckPayment())) return false;
+        break;
+      case 5901:
+        if (!getTrattaCcCharge()
+            .equals(other.getTrattaCcCharge())) return false;
+        break;
+      case 5902:
+        if (!getTrattaAchCharge()
+            .equals(other.getTrattaAchCharge())) return false;
+        break;
+      case 5903:
+        if (!getTrattaCcChargePostDated()
+            .equals(other.getTrattaCcChargePostDated())) return false;
+        break;
+      case 5904:
+        if (!getTrattaAchChargePostDated()
+            .equals(other.getTrattaAchChargePostDated())) return false;
+        break;
       case 0:
       default:
     }
@@ -15096,6 +15360,30 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + NUVEI_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getNuveiPayment().hashCode();
         break;
+      case 5801:
+        hash = (37 * hash) + CALLIPAY_CC_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCallipayCcPayment().hashCode();
+        break;
+      case 5802:
+        hash = (37 * hash) + CALLIPAY_CHECK_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCallipayCheckPayment().hashCode();
+        break;
+      case 5901:
+        hash = (37 * hash) + TRATTA_CC_CHARGE_FIELD_NUMBER;
+        hash = (53 * hash) + getTrattaCcCharge().hashCode();
+        break;
+      case 5902:
+        hash = (37 * hash) + TRATTA_ACH_CHARGE_FIELD_NUMBER;
+        hash = (53 * hash) + getTrattaAchCharge().hashCode();
+        break;
+      case 5903:
+        hash = (37 * hash) + TRATTA_CC_CHARGE_POST_DATED_FIELD_NUMBER;
+        hash = (53 * hash) + getTrattaCcChargePostDated().hashCode();
+        break;
+      case 5904:
+        hash = (37 * hash) + TRATTA_ACH_CHARGE_POST_DATED_FIELD_NUMBER;
+        hash = (53 * hash) + getTrattaAchChargePostDated().hashCode();
+        break;
       case 0:
       default:
     }
@@ -16176,6 +16464,24 @@ private static final long serialVersionUID = 0L;
       }
       if (nuveiPaymentBuilder_ != null) {
         nuveiPaymentBuilder_.clear();
+      }
+      if (callipayCcPaymentBuilder_ != null) {
+        callipayCcPaymentBuilder_.clear();
+      }
+      if (callipayCheckPaymentBuilder_ != null) {
+        callipayCheckPaymentBuilder_.clear();
+      }
+      if (trattaCcChargeBuilder_ != null) {
+        trattaCcChargeBuilder_.clear();
+      }
+      if (trattaAchChargeBuilder_ != null) {
+        trattaAchChargeBuilder_.clear();
+      }
+      if (trattaCcChargePostDatedBuilder_ != null) {
+        trattaCcChargePostDatedBuilder_.clear();
+      }
+      if (trattaAchChargePostDatedBuilder_ != null) {
+        trattaAchChargePostDatedBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -17506,6 +17812,30 @@ private static final long serialVersionUID = 0L;
           nuveiPaymentBuilder_ != null) {
         result.value_ = nuveiPaymentBuilder_.build();
       }
+      if (valueCase_ == 5801 &&
+          callipayCcPaymentBuilder_ != null) {
+        result.value_ = callipayCcPaymentBuilder_.build();
+      }
+      if (valueCase_ == 5802 &&
+          callipayCheckPaymentBuilder_ != null) {
+        result.value_ = callipayCheckPaymentBuilder_.build();
+      }
+      if (valueCase_ == 5901 &&
+          trattaCcChargeBuilder_ != null) {
+        result.value_ = trattaCcChargeBuilder_.build();
+      }
+      if (valueCase_ == 5902 &&
+          trattaAchChargeBuilder_ != null) {
+        result.value_ = trattaAchChargeBuilder_.build();
+      }
+      if (valueCase_ == 5903 &&
+          trattaCcChargePostDatedBuilder_ != null) {
+        result.value_ = trattaCcChargePostDatedBuilder_.build();
+      }
+      if (valueCase_ == 5904 &&
+          trattaAchChargePostDatedBuilder_ != null) {
+        result.value_ = trattaAchChargePostDatedBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -18796,6 +19126,30 @@ private static final long serialVersionUID = 0L;
         }
         case NUVEI_PAYMENT: {
           mergeNuveiPayment(other.getNuveiPayment());
+          break;
+        }
+        case CALLIPAY_CC_PAYMENT: {
+          mergeCallipayCcPayment(other.getCallipayCcPayment());
+          break;
+        }
+        case CALLIPAY_CHECK_PAYMENT: {
+          mergeCallipayCheckPayment(other.getCallipayCheckPayment());
+          break;
+        }
+        case TRATTA_CC_CHARGE: {
+          mergeTrattaCcCharge(other.getTrattaCcCharge());
+          break;
+        }
+        case TRATTA_ACH_CHARGE: {
+          mergeTrattaAchCharge(other.getTrattaAchCharge());
+          break;
+        }
+        case TRATTA_CC_CHARGE_POST_DATED: {
+          mergeTrattaCcChargePostDated(other.getTrattaCcChargePostDated());
+          break;
+        }
+        case TRATTA_ACH_CHARGE_POST_DATED: {
+          mergeTrattaAchChargePostDated(other.getTrattaAchChargePostDated());
           break;
         }
         case VALUE_NOT_SET: {
@@ -21003,6 +21357,48 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5701;
               break;
             } // case 45610
+            case 46410: {
+              input.readMessage(
+                  getCallipayCcPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5801;
+              break;
+            } // case 46410
+            case 46418: {
+              input.readMessage(
+                  getCallipayCheckPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5802;
+              break;
+            } // case 46418
+            case 47210: {
+              input.readMessage(
+                  getTrattaCcChargeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5901;
+              break;
+            } // case 47210
+            case 47218: {
+              input.readMessage(
+                  getTrattaAchChargeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5902;
+              break;
+            } // case 47218
+            case 47226: {
+              input.readMessage(
+                  getTrattaCcChargePostDatedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5903;
+              break;
+            } // case 47226
+            case 47234: {
+              input.readMessage(
+                  getTrattaAchChargePostDatedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 5904;
+              break;
+            } // case 47234
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -60171,7 +60567,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1219
+     *     See api/commons/integrations/integrations.proto;l=1229
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -60181,7 +60577,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1219
+     *     See api/commons/integrations/integrations.proto;l=1229
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -60317,7 +60713,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1220
+     *     See api/commons/integrations/integrations.proto;l=1230
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -60327,7 +60723,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1220
+     *     See api/commons/integrations/integrations.proto;l=1230
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -60463,7 +60859,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1221
+     *     See api/commons/integrations/integrations.proto;l=1231
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -60473,7 +60869,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1221
+     *     See api/commons/integrations/integrations.proto;l=1231
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -60609,7 +61005,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1222
+     *     See api/commons/integrations/integrations.proto;l=1232
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -60619,7 +61015,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1222
+     *     See api/commons/integrations/integrations.proto;l=1232
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -60755,7 +61151,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1223
+     *     See api/commons/integrations/integrations.proto;l=1233
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -60765,7 +61161,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1223
+     *     See api/commons/integrations/integrations.proto;l=1233
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -60901,7 +61297,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1224
+     *     See api/commons/integrations/integrations.proto;l=1234
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -60911,7 +61307,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1224
+     *     See api/commons/integrations/integrations.proto;l=1234
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -61047,7 +61443,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1225
+     *     See api/commons/integrations/integrations.proto;l=1235
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -61057,7 +61453,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1225
+     *     See api/commons/integrations/integrations.proto;l=1235
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -65162,6 +65558,858 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5701;
       onChanged();
       return nuveiPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder> callipayCcPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     * @return Whether the callipayCcPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallipayCcPayment() {
+      return valueCase_ == 5801;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     * @return The callipayCcPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment getCallipayCcPayment() {
+      if (callipayCcPaymentBuilder_ == null) {
+        if (valueCase_ == 5801) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5801) {
+          return callipayCcPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    public Builder setCallipayCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment value) {
+      if (callipayCcPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        callipayCcPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 5801;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    public Builder setCallipayCcPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder builderForValue) {
+      if (callipayCcPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        callipayCcPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5801;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    public Builder mergeCallipayCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment value) {
+      if (callipayCcPaymentBuilder_ == null) {
+        if (valueCase_ == 5801 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5801) {
+          callipayCcPaymentBuilder_.mergeFrom(value);
+        } else {
+          callipayCcPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5801;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    public Builder clearCallipayCcPayment() {
+      if (callipayCcPaymentBuilder_ == null) {
+        if (valueCase_ == 5801) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5801) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        callipayCcPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder getCallipayCcPaymentBuilder() {
+      return getCallipayCcPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder getCallipayCcPaymentOrBuilder() {
+      if ((valueCase_ == 5801) && (callipayCcPaymentBuilder_ != null)) {
+        return callipayCcPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5801) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCcPayment callipay_cc_payment = 5801 [json_name = "callipayCcPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder> 
+        getCallipayCcPaymentFieldBuilder() {
+      if (callipayCcPaymentBuilder_ == null) {
+        if (!(valueCase_ == 5801)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.getDefaultInstance();
+        }
+        callipayCcPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCcPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5801;
+      onChanged();
+      return callipayCcPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder> callipayCheckPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     * @return Whether the callipayCheckPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallipayCheckPayment() {
+      return valueCase_ == 5802;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     * @return The callipayCheckPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment getCallipayCheckPayment() {
+      if (callipayCheckPaymentBuilder_ == null) {
+        if (valueCase_ == 5802) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5802) {
+          return callipayCheckPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    public Builder setCallipayCheckPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment value) {
+      if (callipayCheckPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        callipayCheckPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 5802;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    public Builder setCallipayCheckPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder builderForValue) {
+      if (callipayCheckPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        callipayCheckPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5802;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    public Builder mergeCallipayCheckPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment value) {
+      if (callipayCheckPaymentBuilder_ == null) {
+        if (valueCase_ == 5802 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5802) {
+          callipayCheckPaymentBuilder_.mergeFrom(value);
+        } else {
+          callipayCheckPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5802;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    public Builder clearCallipayCheckPayment() {
+      if (callipayCheckPaymentBuilder_ == null) {
+        if (valueCase_ == 5802) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5802) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        callipayCheckPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder getCallipayCheckPaymentBuilder() {
+      return getCallipayCheckPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder getCallipayCheckPaymentOrBuilder() {
+      if ((valueCase_ == 5802) && (callipayCheckPaymentBuilder_ != null)) {
+        return callipayCheckPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5802) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteCallipayCheckPayment callipay_check_payment = 5802 [json_name = "callipayCheckPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder> 
+        getCallipayCheckPaymentFieldBuilder() {
+      if (callipayCheckPaymentBuilder_ == null) {
+        if (!(valueCase_ == 5802)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.getDefaultInstance();
+        }
+        callipayCheckPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteCallipayCheckPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5802;
+      onChanged();
+      return callipayCheckPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargeOrBuilder> trattaCcChargeBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     * @return Whether the trattaCcCharge field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrattaCcCharge() {
+      return valueCase_ == 5901;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     * @return The trattaCcCharge.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge getTrattaCcCharge() {
+      if (trattaCcChargeBuilder_ == null) {
+        if (valueCase_ == 5901) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5901) {
+          return trattaCcChargeBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    public Builder setTrattaCcCharge(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge value) {
+      if (trattaCcChargeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        trattaCcChargeBuilder_.setMessage(value);
+      }
+      valueCase_ = 5901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    public Builder setTrattaCcCharge(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.Builder builderForValue) {
+      if (trattaCcChargeBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        trattaCcChargeBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    public Builder mergeTrattaCcCharge(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge value) {
+      if (trattaCcChargeBuilder_ == null) {
+        if (valueCase_ == 5901 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5901) {
+          trattaCcChargeBuilder_.mergeFrom(value);
+        } else {
+          trattaCcChargeBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    public Builder clearTrattaCcCharge() {
+      if (trattaCcChargeBuilder_ == null) {
+        if (valueCase_ == 5901) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5901) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        trattaCcChargeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.Builder getTrattaCcChargeBuilder() {
+      return getTrattaCcChargeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargeOrBuilder getTrattaCcChargeOrBuilder() {
+      if ((valueCase_ == 5901) && (trattaCcChargeBuilder_ != null)) {
+        return trattaCcChargeBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5901) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcCharge tratta_cc_charge = 5901 [json_name = "trattaCcCharge"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargeOrBuilder> 
+        getTrattaCcChargeFieldBuilder() {
+      if (trattaCcChargeBuilder_ == null) {
+        if (!(valueCase_ == 5901)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.getDefaultInstance();
+        }
+        trattaCcChargeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargeOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcCharge) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5901;
+      onChanged();
+      return trattaCcChargeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargeOrBuilder> trattaAchChargeBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     * @return Whether the trattaAchCharge field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrattaAchCharge() {
+      return valueCase_ == 5902;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     * @return The trattaAchCharge.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge getTrattaAchCharge() {
+      if (trattaAchChargeBuilder_ == null) {
+        if (valueCase_ == 5902) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5902) {
+          return trattaAchChargeBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    public Builder setTrattaAchCharge(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge value) {
+      if (trattaAchChargeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        trattaAchChargeBuilder_.setMessage(value);
+      }
+      valueCase_ = 5902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    public Builder setTrattaAchCharge(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.Builder builderForValue) {
+      if (trattaAchChargeBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        trattaAchChargeBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    public Builder mergeTrattaAchCharge(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge value) {
+      if (trattaAchChargeBuilder_ == null) {
+        if (valueCase_ == 5902 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5902) {
+          trattaAchChargeBuilder_.mergeFrom(value);
+        } else {
+          trattaAchChargeBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    public Builder clearTrattaAchCharge() {
+      if (trattaAchChargeBuilder_ == null) {
+        if (valueCase_ == 5902) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5902) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        trattaAchChargeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.Builder getTrattaAchChargeBuilder() {
+      return getTrattaAchChargeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargeOrBuilder getTrattaAchChargeOrBuilder() {
+      if ((valueCase_ == 5902) && (trattaAchChargeBuilder_ != null)) {
+        return trattaAchChargeBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5902) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchCharge tratta_ach_charge = 5902 [json_name = "trattaAchCharge"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargeOrBuilder> 
+        getTrattaAchChargeFieldBuilder() {
+      if (trattaAchChargeBuilder_ == null) {
+        if (!(valueCase_ == 5902)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.getDefaultInstance();
+        }
+        trattaAchChargeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargeOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchCharge) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5902;
+      onChanged();
+      return trattaAchChargeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDatedOrBuilder> trattaCcChargePostDatedBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     * @return Whether the trattaCcChargePostDated field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrattaCcChargePostDated() {
+      return valueCase_ == 5903;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     * @return The trattaCcChargePostDated.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated getTrattaCcChargePostDated() {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5903) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5903) {
+          return trattaCcChargePostDatedBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    public Builder setTrattaCcChargePostDated(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated value) {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        trattaCcChargePostDatedBuilder_.setMessage(value);
+      }
+      valueCase_ = 5903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    public Builder setTrattaCcChargePostDated(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.Builder builderForValue) {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        trattaCcChargePostDatedBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    public Builder mergeTrattaCcChargePostDated(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated value) {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5903 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5903) {
+          trattaCcChargePostDatedBuilder_.mergeFrom(value);
+        } else {
+          trattaCcChargePostDatedBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    public Builder clearTrattaCcChargePostDated() {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5903) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5903) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        trattaCcChargePostDatedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.Builder getTrattaCcChargePostDatedBuilder() {
+      return getTrattaCcChargePostDatedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDatedOrBuilder getTrattaCcChargePostDatedOrBuilder() {
+      if ((valueCase_ == 5903) && (trattaCcChargePostDatedBuilder_ != null)) {
+        return trattaCcChargePostDatedBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5903) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaCcChargePostDated tratta_cc_charge_post_dated = 5903 [json_name = "trattaCcChargePostDated"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDatedOrBuilder> 
+        getTrattaCcChargePostDatedFieldBuilder() {
+      if (trattaCcChargePostDatedBuilder_ == null) {
+        if (!(valueCase_ == 5903)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.getDefaultInstance();
+        }
+        trattaCcChargePostDatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDatedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaCcChargePostDated) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5903;
+      onChanged();
+      return trattaCcChargePostDatedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDatedOrBuilder> trattaAchChargePostDatedBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     * @return Whether the trattaAchChargePostDated field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrattaAchChargePostDated() {
+      return valueCase_ == 5904;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     * @return The trattaAchChargePostDated.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated getTrattaAchChargePostDated() {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5904) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
+      } else {
+        if (valueCase_ == 5904) {
+          return trattaAchChargePostDatedBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    public Builder setTrattaAchChargePostDated(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated value) {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        trattaAchChargePostDatedBuilder_.setMessage(value);
+      }
+      valueCase_ = 5904;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    public Builder setTrattaAchChargePostDated(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.Builder builderForValue) {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        trattaAchChargePostDatedBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 5904;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    public Builder mergeTrattaAchChargePostDated(com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated value) {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5904 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 5904) {
+          trattaAchChargePostDatedBuilder_.mergeFrom(value);
+        } else {
+          trattaAchChargePostDatedBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 5904;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    public Builder clearTrattaAchChargePostDated() {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        if (valueCase_ == 5904) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 5904) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        trattaAchChargePostDatedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.Builder getTrattaAchChargePostDatedBuilder() {
+      return getTrattaAchChargePostDatedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDatedOrBuilder getTrattaAchChargePostDatedOrBuilder() {
+      if ((valueCase_ == 5904) && (trattaAchChargePostDatedBuilder_ != null)) {
+        return trattaAchChargePostDatedBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 5904) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteTrattaAchChargePostDated tratta_ach_charge_post_dated = 5904 [json_name = "trattaAchChargePostDated"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDatedOrBuilder> 
+        getTrattaAchChargePostDatedFieldBuilder() {
+      if (trattaAchChargePostDatedBuilder_ == null) {
+        if (!(valueCase_ == 5904)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
+        }
+        trattaAchChargePostDatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDatedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 5904;
+      onChanged();
+      return trattaAchChargePostDatedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
