@@ -322,8 +322,8 @@ public final class TicketsProto {
       "dited\"\267\002\n\013CustomField\022,\n\020custom_filed_si" +
       "d\030\001 \001(\003B\0020\001R\016customFiledSid\022!\n\nproject_i" +
       "d\030\002 \001(\003B\0020\001R\tprojectId\022\037\n\013ticket_code\030\003 " +
-      "\001(\tR\nticketCode\022*\n\021custom_filed_name\030\004 \001" +
-      "(\tR\017customFiledName\022,\n\022custom_field_valu" +
+      "\001(\tR\nticketCode\022*\n\021custom_field_name\030\004 \001" +
+      "(\tR\017customFieldName\022,\n\022custom_field_valu" +
       "e\030\005 \001(\tR\020customFieldValue\022*\n\021custom_fiel" +
       "d_type\030\006 \001(\tR\017customFieldType\0220\n\024custom_" +
       "field_options\030\007 \003(\tR\022customFieldOptions*" +
@@ -511,7 +511,7 @@ public final class TicketsProto {
     internal_static_api_commons_CustomField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_CustomField_descriptor,
-        new java.lang.String[] { "CustomFiledSid", "ProjectId", "TicketCode", "CustomFiledName", "CustomFieldValue", "CustomFieldType", "CustomFieldOptions", });
+        new java.lang.String[] { "CustomFiledSid", "ProjectId", "TicketCode", "CustomFieldName", "CustomFieldValue", "CustomFieldType", "CustomFieldOptions", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

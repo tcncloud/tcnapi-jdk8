@@ -52,20 +52,20 @@ public interface CustomFieldOrBuilder extends
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_filed_name = 4 [json_name = "customFiledName"];</code>
-   * @return The customFiledName.
+   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * @return The customFieldName.
    */
-  java.lang.String getCustomFiledName();
+  java.lang.String getCustomFieldName();
   /**
    * <pre>
    * custom_field_name
    * </pre>
    *
-   * <code>string custom_filed_name = 4 [json_name = "customFiledName"];</code>
-   * @return The bytes for customFiledName.
+   * <code>string custom_field_name = 4 [json_name = "customFieldName"];</code>
+   * @return The bytes for customFieldName.
    */
   com.google.protobuf.ByteString
-      getCustomFiledNameBytes();
+      getCustomFieldNameBytes();
 
   /**
    * <pre>
