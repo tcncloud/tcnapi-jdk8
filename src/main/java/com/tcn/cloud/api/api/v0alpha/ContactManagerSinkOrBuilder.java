@@ -151,4 +151,31 @@ public interface ContactManagerSinkOrBuilder extends
    * <code>.google.protobuf.Duration lifetime = 9 [json_name = "lifetime"];</code>
    */
   com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder();
+
+  /**
+   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
+
+  /**
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 11 [json_name = "deDuplicationInfo"];</code>
+   * @return Whether the deDuplicationInfo field is set.
+   */
+  boolean hasDeDuplicationInfo();
+  /**
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 11 [json_name = "deDuplicationInfo"];</code>
+   * @return The deDuplicationInfo.
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo();
+  /**
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 11 [json_name = "deDuplicationInfo"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder();
 }
