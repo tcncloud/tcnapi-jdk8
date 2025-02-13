@@ -113,4 +113,43 @@ public interface CustomFieldOrBuilder extends
    * @return The isDeleted.
    */
   boolean getIsDeleted();
+
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return The customFieldOptions.
+   */
+  java.lang.String getCustomFieldOptions();
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return The bytes for customFieldOptions.
+   */
+  com.google.protobuf.ByteString
+      getCustomFieldOptionsBytes();
+
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+   * @return The enum numeric value on the wire for customFieldTypes.
+   */
+  int getCustomFieldTypesValue();
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+   * @return The customFieldTypes.
+   */
+  com.tcn.cloud.api.api.commons.CustomFieldTypes getCustomFieldTypes();
 }

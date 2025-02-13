@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     customFieldName_ = "";
     customFieldValue_ = "";
     customFieldType_ = "";
+    customFieldOptions_ = "";
+    customFieldTypes_ = 0;
   }
 
   @java.lang.Override
@@ -254,6 +256,79 @@ private static final long serialVersionUID = 0L;
     return isDeleted_;
   }
 
+  public static final int CUSTOM_FIELD_OPTIONS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customFieldOptions_ = "";
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return The customFieldOptions.
+   */
+  @java.lang.Override
+  public java.lang.String getCustomFieldOptions() {
+    java.lang.Object ref = customFieldOptions_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customFieldOptions_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * custom_field_options
+   * </pre>
+   *
+   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+   * @return The bytes for customFieldOptions.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCustomFieldOptionsBytes() {
+    java.lang.Object ref = customFieldOptions_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customFieldOptions_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CUSTOM_FIELD_TYPES_FIELD_NUMBER = 8;
+  private int customFieldTypes_ = 0;
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+   * @return The enum numeric value on the wire for customFieldTypes.
+   */
+  @java.lang.Override public int getCustomFieldTypesValue() {
+    return customFieldTypes_;
+  }
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+   * @return The customFieldTypes.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.CustomFieldTypes getCustomFieldTypes() {
+    com.tcn.cloud.api.api.commons.CustomFieldTypes result = com.tcn.cloud.api.api.commons.CustomFieldTypes.forNumber(customFieldTypes_);
+    return result == null ? com.tcn.cloud.api.api.commons.CustomFieldTypes.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -286,6 +361,12 @@ private static final long serialVersionUID = 0L;
     if (isDeleted_ != false) {
       output.writeBool(6, isDeleted_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customFieldOptions_);
+    }
+    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.STRING.getNumber()) {
+      output.writeEnum(8, customFieldTypes_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -315,6 +396,13 @@ private static final long serialVersionUID = 0L;
     if (isDeleted_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, isDeleted_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, customFieldOptions_);
+    }
+    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.STRING.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, customFieldTypes_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -346,6 +434,9 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsDeleted()
         != other.getIsDeleted()) return false;
+    if (!getCustomFieldOptions()
+        .equals(other.getCustomFieldOptions())) return false;
+    if (customFieldTypes_ != other.customFieldTypes_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -373,6 +464,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsDeleted());
+    hash = (37 * hash) + CUSTOM_FIELD_OPTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomFieldOptions().hashCode();
+    hash = (37 * hash) + CUSTOM_FIELD_TYPES_FIELD_NUMBER;
+    hash = (53 * hash) + customFieldTypes_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -518,6 +613,8 @@ private static final long serialVersionUID = 0L;
         dateModifiedBuilder_ = null;
       }
       isDeleted_ = false;
+      customFieldOptions_ = "";
+      customFieldTypes_ = 0;
       return this;
     }
 
@@ -570,6 +667,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.isDeleted_ = isDeleted_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.customFieldOptions_ = customFieldOptions_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.customFieldTypes_ = customFieldTypes_;
       }
     }
 
@@ -641,6 +744,14 @@ private static final long serialVersionUID = 0L;
       if (other.getIsDeleted() != false) {
         setIsDeleted(other.getIsDeleted());
       }
+      if (!other.getCustomFieldOptions().isEmpty()) {
+        customFieldOptions_ = other.customFieldOptions_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      if (other.customFieldTypes_ != 0) {
+        setCustomFieldTypesValue(other.getCustomFieldTypesValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -699,6 +810,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              customFieldOptions_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 64: {
+              customFieldTypes_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1231,6 +1352,171 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDeleted() {
       bitField0_ = (bitField0_ & ~0x00000020);
       isDeleted_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object customFieldOptions_ = "";
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * @return The customFieldOptions.
+     */
+    public java.lang.String getCustomFieldOptions() {
+      java.lang.Object ref = customFieldOptions_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customFieldOptions_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * @return The bytes for customFieldOptions.
+     */
+    public com.google.protobuf.ByteString
+        getCustomFieldOptionsBytes() {
+      java.lang.Object ref = customFieldOptions_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customFieldOptions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * @param value The customFieldOptions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldOptions(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      customFieldOptions_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomFieldOptions() {
+      customFieldOptions_ = getDefaultInstance().getCustomFieldOptions();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_options
+     * </pre>
+     *
+     * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
+     * @param value The bytes for customFieldOptions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldOptionsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      customFieldOptions_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private int customFieldTypes_ = 0;
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+     * @return The enum numeric value on the wire for customFieldTypes.
+     */
+    @java.lang.Override public int getCustomFieldTypesValue() {
+      return customFieldTypes_;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+     * @param value The enum numeric value on the wire for customFieldTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldTypesValue(int value) {
+      customFieldTypes_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+     * @return The customFieldTypes.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CustomFieldTypes getCustomFieldTypes() {
+      com.tcn.cloud.api.api.commons.CustomFieldTypes result = com.tcn.cloud.api.api.commons.CustomFieldTypes.forNumber(customFieldTypes_);
+      return result == null ? com.tcn.cloud.api.api.commons.CustomFieldTypes.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+     * @param value The customFieldTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldTypes(com.tcn.cloud.api.api.commons.CustomFieldTypes value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      customFieldTypes_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomFieldTypes() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      customFieldTypes_ = 0;
       onChanged();
       return this;
     }
