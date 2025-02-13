@@ -337,12 +337,12 @@ public final class TicketsProto {
       "NEW\020\000\022\026\n\022TICKET_STATUS_OPEN\020\001\022\027\n\023TICKET_" +
       "STATUS_CLOSE\020\002*?\n\017PhoneNumberType\022\n\n\006MOB" +
       "ILE\020\000\022\t\n\005OTHER\020\001\022\021\n\rINVALID_ERROR\020\002\032\002\030\001*" +
-      "_\n\020CustomFieldTypes\022\n\n\006STRING\020\000\022\n\n\006NUMBE" +
-      "R\020\001\022\016\n\nNDATEUMBER\020\002\022\020\n\014MULTI_SELECT\020\003\022\021\n" +
-      "\rSINGLE_SELECT\020\004Bz\n\035com.tcn.cloud.api.ap" +
-      "i.commonsB\014TicketsProtoP\001\242\002\003ACX\252\002\013Api.Co" +
-      "mmons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMet" +
-      "adata\352\002\014Api::Commonsb\006proto3"
+      "f\n\020CustomFieldTypes\022\013\n\007BOOLEAN\020\000\022\n\n\006STRI" +
+      "NG\020\001\022\n\n\006NUMBER\020\002\022\010\n\004DATE\020\003\022\020\n\014MULTI_SELE" +
+      "CT\020\004\022\021\n\rSINGLE_SELECT\020\005Bz\n\035com.tcn.cloud" +
+      ".api.api.commonsB\014TicketsProtoP\001\242\002\003ACX\252\002" +
+      "\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons" +
+      "\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

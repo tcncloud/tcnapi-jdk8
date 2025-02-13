@@ -13,48 +13,56 @@ package com.tcn.cloud.api.api.commons;
 public enum CustomFieldTypes
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>STRING = 0;</code>
+   * <code>BOOLEAN = 0;</code>
    */
-  STRING(0),
+  BOOLEAN(0),
   /**
-   * <code>NUMBER = 1;</code>
+   * <code>STRING = 1;</code>
    */
-  NUMBER(1),
+  STRING(1),
   /**
-   * <code>NDATEUMBER = 2;</code>
+   * <code>NUMBER = 2;</code>
    */
-  NDATEUMBER(2),
+  NUMBER(2),
   /**
-   * <code>MULTI_SELECT = 3;</code>
+   * <code>DATE = 3;</code>
    */
-  MULTI_SELECT(3),
+  DATE(3),
   /**
-   * <code>SINGLE_SELECT = 4;</code>
+   * <code>MULTI_SELECT = 4;</code>
    */
-  SINGLE_SELECT(4),
+  MULTI_SELECT(4),
+  /**
+   * <code>SINGLE_SELECT = 5;</code>
+   */
+  SINGLE_SELECT(5),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>STRING = 0;</code>
+   * <code>BOOLEAN = 0;</code>
    */
-  public static final int STRING_VALUE = 0;
+  public static final int BOOLEAN_VALUE = 0;
   /**
-   * <code>NUMBER = 1;</code>
+   * <code>STRING = 1;</code>
    */
-  public static final int NUMBER_VALUE = 1;
+  public static final int STRING_VALUE = 1;
   /**
-   * <code>NDATEUMBER = 2;</code>
+   * <code>NUMBER = 2;</code>
    */
-  public static final int NDATEUMBER_VALUE = 2;
+  public static final int NUMBER_VALUE = 2;
   /**
-   * <code>MULTI_SELECT = 3;</code>
+   * <code>DATE = 3;</code>
    */
-  public static final int MULTI_SELECT_VALUE = 3;
+  public static final int DATE_VALUE = 3;
   /**
-   * <code>SINGLE_SELECT = 4;</code>
+   * <code>MULTI_SELECT = 4;</code>
    */
-  public static final int SINGLE_SELECT_VALUE = 4;
+  public static final int MULTI_SELECT_VALUE = 4;
+  /**
+   * <code>SINGLE_SELECT = 5;</code>
+   */
+  public static final int SINGLE_SELECT_VALUE = 5;
 
 
   public final int getNumber() {
@@ -81,11 +89,12 @@ public enum CustomFieldTypes
    */
   public static CustomFieldTypes forNumber(int value) {
     switch (value) {
-      case 0: return STRING;
-      case 1: return NUMBER;
-      case 2: return NDATEUMBER;
-      case 3: return MULTI_SELECT;
-      case 4: return SINGLE_SELECT;
+      case 0: return BOOLEAN;
+      case 1: return STRING;
+      case 2: return NUMBER;
+      case 3: return DATE;
+      case 4: return MULTI_SELECT;
+      case 5: return SINGLE_SELECT;
       default: return null;
     }
   }
