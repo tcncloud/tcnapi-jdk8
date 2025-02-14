@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, customFieldOptions_);
     }
-    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.BOOLEAN.getNumber()) {
+    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.CUSTOMFIELD_TYPES_BOOLEAN.getNumber()) {
       output.writeEnum(8, customFieldTypes_);
     }
     getUnknownFields().writeTo(output);
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldOptions_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, customFieldOptions_);
     }
-    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.BOOLEAN.getNumber()) {
+    if (customFieldTypes_ != com.tcn.cloud.api.api.commons.CustomFieldTypes.CUSTOMFIELD_TYPES_BOOLEAN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, customFieldTypes_);
     }

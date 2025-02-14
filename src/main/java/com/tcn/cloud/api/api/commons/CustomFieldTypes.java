@@ -13,56 +13,56 @@ package com.tcn.cloud.api.api.commons;
 public enum CustomFieldTypes
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>BOOLEAN = 0;</code>
+   * <code>CUSTOMFIELD_TYPES_BOOLEAN = 0;</code>
    */
-  BOOLEAN(0),
+  CUSTOMFIELD_TYPES_BOOLEAN(0),
   /**
-   * <code>STRING = 1;</code>
+   * <code>CUSTOMFIELD_TYPES_STRING = 1;</code>
    */
-  STRING(1),
+  CUSTOMFIELD_TYPES_STRING(1),
   /**
-   * <code>NUMBER = 2;</code>
+   * <code>CUSTOMFIELD_TYPES_NUMBER = 2;</code>
    */
-  NUMBER(2),
+  CUSTOMFIELD_TYPES_NUMBER(2),
   /**
-   * <code>DATE = 3;</code>
+   * <code>CUSTOMFIELD_TYPES_DATETIME = 3;</code>
    */
-  DATE(3),
+  CUSTOMFIELD_TYPES_DATETIME(3),
   /**
-   * <code>MULTI_SELECT = 4;</code>
+   * <code>CUSTOMFIELD_TYPES_MULTISELECT = 4;</code>
    */
-  MULTI_SELECT(4),
+  CUSTOMFIELD_TYPES_MULTISELECT(4),
   /**
-   * <code>SINGLE_SELECT = 5;</code>
+   * <code>CUSTOMFIELD_TYPES_SINGLESELECT = 5;</code>
    */
-  SINGLE_SELECT(5),
+  CUSTOMFIELD_TYPES_SINGLESELECT(5),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>BOOLEAN = 0;</code>
+   * <code>CUSTOMFIELD_TYPES_BOOLEAN = 0;</code>
    */
-  public static final int BOOLEAN_VALUE = 0;
+  public static final int CUSTOMFIELD_TYPES_BOOLEAN_VALUE = 0;
   /**
-   * <code>STRING = 1;</code>
+   * <code>CUSTOMFIELD_TYPES_STRING = 1;</code>
    */
-  public static final int STRING_VALUE = 1;
+  public static final int CUSTOMFIELD_TYPES_STRING_VALUE = 1;
   /**
-   * <code>NUMBER = 2;</code>
+   * <code>CUSTOMFIELD_TYPES_NUMBER = 2;</code>
    */
-  public static final int NUMBER_VALUE = 2;
+  public static final int CUSTOMFIELD_TYPES_NUMBER_VALUE = 2;
   /**
-   * <code>DATE = 3;</code>
+   * <code>CUSTOMFIELD_TYPES_DATETIME = 3;</code>
    */
-  public static final int DATE_VALUE = 3;
+  public static final int CUSTOMFIELD_TYPES_DATETIME_VALUE = 3;
   /**
-   * <code>MULTI_SELECT = 4;</code>
+   * <code>CUSTOMFIELD_TYPES_MULTISELECT = 4;</code>
    */
-  public static final int MULTI_SELECT_VALUE = 4;
+  public static final int CUSTOMFIELD_TYPES_MULTISELECT_VALUE = 4;
   /**
-   * <code>SINGLE_SELECT = 5;</code>
+   * <code>CUSTOMFIELD_TYPES_SINGLESELECT = 5;</code>
    */
-  public static final int SINGLE_SELECT_VALUE = 5;
+  public static final int CUSTOMFIELD_TYPES_SINGLESELECT_VALUE = 5;
 
 
   public final int getNumber() {
@@ -89,12 +89,12 @@ public enum CustomFieldTypes
    */
   public static CustomFieldTypes forNumber(int value) {
     switch (value) {
-      case 0: return BOOLEAN;
-      case 1: return STRING;
-      case 2: return NUMBER;
-      case 3: return DATE;
-      case 4: return MULTI_SELECT;
-      case 5: return SINGLE_SELECT;
+      case 0: return CUSTOMFIELD_TYPES_BOOLEAN;
+      case 1: return CUSTOMFIELD_TYPES_STRING;
+      case 2: return CUSTOMFIELD_TYPES_NUMBER;
+      case 3: return CUSTOMFIELD_TYPES_DATETIME;
+      case 4: return CUSTOMFIELD_TYPES_MULTISELECT;
+      case 5: return CUSTOMFIELD_TYPES_SINGLESELECT;
       default: return null;
     }
   }
