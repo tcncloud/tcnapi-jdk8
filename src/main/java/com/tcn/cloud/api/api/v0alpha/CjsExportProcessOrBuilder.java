@@ -138,10 +138,4 @@ public interface CjsExportProcessOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUpdateKeyFieldBytes();
-
-  /**
-   * <code>bool replace_invalid_with_null = 11 [json_name = "replaceInvalidWithNull"];</code>
-   * @return The replaceInvalidWithNull.
-   */
-  boolean getReplaceInvalidWithNull();
 }
