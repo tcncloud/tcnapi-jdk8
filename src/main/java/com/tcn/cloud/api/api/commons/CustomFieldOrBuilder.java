@@ -62,19 +62,23 @@ public interface CustomFieldOrBuilder extends
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The customFieldType.
    */
-  java.lang.String getCustomFieldType();
+  @java.lang.Deprecated java.lang.String getCustomFieldType();
   /**
    * <pre>
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The bytes for customFieldType.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCustomFieldTypeBytes();
 
   /**
@@ -116,40 +120,20 @@ public interface CustomFieldOrBuilder extends
 
   /**
    * <pre>
-   * custom_field_options
+   * custom_field_enum_type
    * </pre>
    *
-   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return The customFieldOptions.
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The enum numeric value on the wire for ticketCustomFieldType.
    */
-  java.lang.String getCustomFieldOptions();
-  /**
-   * <pre>
-   * custom_field_options
-   * </pre>
-   *
-   * <code>string custom_field_options = 7 [json_name = "customFieldOptions"];</code>
-   * @return The bytes for customFieldOptions.
-   */
-  com.google.protobuf.ByteString
-      getCustomFieldOptionsBytes();
-
+  int getTicketCustomFieldTypeValue();
   /**
    * <pre>
    * custom_field_enum_type
    * </pre>
    *
-   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
-   * @return The enum numeric value on the wire for customFieldTypes.
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The ticketCustomFieldType.
    */
-  int getCustomFieldTypesValue();
-  /**
-   * <pre>
-   * custom_field_enum_type
-   * </pre>
-   *
-   * <code>.api.commons.CustomFieldTypes custom_field_types = 8 [json_name = "customFieldTypes"];</code>
-   * @return The customFieldTypes.
-   */
-  com.tcn.cloud.api.api.commons.CustomFieldTypes getCustomFieldTypes();
+  com.tcn.cloud.api.api.commons.TicketCustomFieldType getTicketCustomFieldType();
 }
