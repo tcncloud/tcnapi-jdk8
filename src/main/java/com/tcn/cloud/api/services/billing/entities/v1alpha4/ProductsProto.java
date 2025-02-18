@@ -32,7 +32,7 @@ public final class ProductsProto {
       "ducts.proto\022\"services.billing.entities.v" +
       "1alpha4\0320services/billing/entities/v1alp" +
       "ha4/modules.proto\032-services/billing/enti" +
-      "ties/v1alpha4/omni.proto\"\324@\n\rProductConf" +
+      "ties/v1alpha4/omni.proto\"\205B\n\rProductConf" +
       "ig\022\217\001\n+communications_omni_chat_agent_me" +
       "ssage_unit\030\350\007 \001(\0132/.services.billing.ent" +
       "ities.v1alpha4.BasicConfigH\000R&communicat" +
@@ -239,13 +239,18 @@ public final class ProductsProto {
       "ries\030\305\352\001 \001(\0132/.services.billing.entities" +
       ".v1alpha4.BasicConfigH\000RDworkforceEngage" +
       "mentWorkforceOptimizationAiBundleAccumul" +
-      "atedSummariesB\010\n\006configB\360\001\n4com.tcn.clou" +
-      "d.api.services.billing.entities.v1alpha4" +
-      "B\rProductsProtoP\001\242\002\003SBE\252\002\"Services.Billi" +
-      "ng.Entities.V1alpha4\312\002\"Services\\Billing\\" +
-      "Entities\\V1alpha4\342\002.Services\\Billing\\Ent" +
-      "ities\\V1alpha4\\GPBMetadata\352\002%Services::B" +
-      "illing::Entities::V1alpha4b\006proto3"
+      "atedSummaries\022\256\001\n:workforce_engagement_w" +
+      "orkforce_management_scheduler_agents\030\300\270\002" +
+      " \001(\0132/.services.billing.entities.v1alpha" +
+      "4.BasicConfigH\000R5workforceEngagementWork" +
+      "forceManagementSchedulerAgentsB\010\n\006config" +
+      "B\360\001\n4com.tcn.cloud.api.services.billing." +
+      "entities.v1alpha4B\rProductsProtoP\001\242\002\003SBE" +
+      "\252\002\"Services.Billing.Entities.V1alpha4\312\002\"" +
+      "Services\\Billing\\Entities\\V1alpha4\342\002.Ser" +
+      "vices\\Billing\\Entities\\V1alpha4\\GPBMetad" +
+      "ata\352\002%Services::Billing::Entities::V1alp" +
+      "ha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -258,7 +263,7 @@ public final class ProductsProto {
     internal_static_services_billing_entities_v1alpha4_ProductConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_ProductConfig_descriptor,
-        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts", "WorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleSummaries", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries", "Config", });
+        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsSmsTranscripts", "WorkforceEngagementWorkforceOptimizationAiBundleSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSmartEvaluations", "WorkforceEngagementWorkforceOptimizationAiBundleSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSentiments", "WorkforceEngagementWorkforceOptimizationAiBundleSummaries", "WorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries", "WorkforceEngagementWorkforceManagementSchedulerAgents", "Config", });
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ModulesProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniProto.getDescriptor();
   }

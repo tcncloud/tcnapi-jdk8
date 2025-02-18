@@ -1097,6 +1097,15 @@ public enum EventType
    * <code>EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT = 1300;</code>
    */
   EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT(1300),
+  /**
+   * <pre>
+   * Workforce Management Events
+   * publish schedule event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT = 1400;</code>
+   */
+  EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT(1400),
   UNRECOGNIZED(-1),
   ;
 
@@ -2151,6 +2160,15 @@ public enum EventType
    * <code>EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT = 1300;</code>
    */
   public static final int EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT_VALUE = 1300;
+  /**
+   * <pre>
+   * Workforce Management Events
+   * publish schedule event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT = 1400;</code>
+   */
+  public static final int EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT_VALUE = 1400;
 
 
   public final int getNumber() {
@@ -2324,6 +2342,7 @@ public enum EventType
       case 1208: return EVENT_TYPE_CONTACT_MANAGER_EXPUNGE_EVENT;
       case 1209: return EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT;
       case 1300: return EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT;
+      case 1400: return EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT;
       default: return null;
     }
   }

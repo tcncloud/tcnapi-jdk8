@@ -811,5 +811,32 @@ public interface ProductConfigOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesOrBuilder();
 
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   * @return Whether the workforceEngagementWorkforceManagementSchedulerAgents field is set.
+   */
+  boolean hasWorkforceEngagementWorkforceManagementSchedulerAgents();
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   * @return The workforceEngagementWorkforceManagementSchedulerAgents.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceManagementSchedulerAgents();
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceManagementSchedulerAgentsOrBuilder();
+
   com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig.ConfigCase getConfigCase();
 }
