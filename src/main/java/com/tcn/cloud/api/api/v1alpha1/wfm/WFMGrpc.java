@@ -10495,11 +10495,15 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the adherence agent states using the given parameters for the org sending the request.
-     * Accepts filtering by either &#64;wfm_agent_sids, &#64;start_datetime, or both. At least one of the two fields must be set.
+     * Accepts filtering by either &#64;wfm_agent_sids, &#64;datetime_range, or both. At least one of the two fields must be set.
      * If &#64;wfm_agent_sids is nil, violations will be returned for all agents after &#64;start_datetime.
      * If &#64;wfm_agent_sids is set, violations will only be returned for those agents.
-     * If &#64;start_datetime is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned and the &#64;end_datetime field will be ignored.
-     * If &#64;end_datetime is left blank, violations will be returned up to the present point in time, otherwise the violations that start after &#64;end_datetime will not be returned.
+     * If &#64;datetime_range is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned.
+     * If &#64;datetime_range is set, any violations that start within &#64;datetime_range will be included.
+     * If &#64;include_resolved is true, resolved and unresolved violations will be returned. Otherwise only unresolved violations will be included in the response.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when getting the violations.
      * </pre>
      */
     default void listAdherenceAgentStateViolations(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest request,
@@ -10512,7 +10516,10 @@ public final class WFMGrpc {
      * Resolves the given adherence agent state violation.
      * If the violation is already resolved, then the original resolution will be overwritten.
      * Only updates the &#64;resolved_activity_sid, &#64;resolved_reason_code_id, &#64;resolution_comment, and &#64;resolved_by_user_id fields.
-     * The &#64;resolved_by_user_id field will be obtained from the context, and ignored if provided in the &#64;resolved_violation object.
+     * The &#64;resolved_by_user_id field will be ignored and overwritten to match the user sending the request.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when resolving the violation.
      * </pre>
      */
     default void resolveAdherenceAgentStateViolation(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationRequest request,
@@ -14372,11 +14379,15 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the adherence agent states using the given parameters for the org sending the request.
-     * Accepts filtering by either &#64;wfm_agent_sids, &#64;start_datetime, or both. At least one of the two fields must be set.
+     * Accepts filtering by either &#64;wfm_agent_sids, &#64;datetime_range, or both. At least one of the two fields must be set.
      * If &#64;wfm_agent_sids is nil, violations will be returned for all agents after &#64;start_datetime.
      * If &#64;wfm_agent_sids is set, violations will only be returned for those agents.
-     * If &#64;start_datetime is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned and the &#64;end_datetime field will be ignored.
-     * If &#64;end_datetime is left blank, violations will be returned up to the present point in time, otherwise the violations that start after &#64;end_datetime will not be returned.
+     * If &#64;datetime_range is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned.
+     * If &#64;datetime_range is set, any violations that start within &#64;datetime_range will be included.
+     * If &#64;include_resolved is true, resolved and unresolved violations will be returned. Otherwise only unresolved violations will be included in the response.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when getting the violations.
      * </pre>
      */
     public void listAdherenceAgentStateViolations(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest request,
@@ -14390,7 +14401,10 @@ public final class WFMGrpc {
      * Resolves the given adherence agent state violation.
      * If the violation is already resolved, then the original resolution will be overwritten.
      * Only updates the &#64;resolved_activity_sid, &#64;resolved_reason_code_id, &#64;resolution_comment, and &#64;resolved_by_user_id fields.
-     * The &#64;resolved_by_user_id field will be obtained from the context, and ignored if provided in the &#64;resolved_violation object.
+     * The &#64;resolved_by_user_id field will be ignored and overwritten to match the user sending the request.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when resolving the violation.
      * </pre>
      */
     public void resolveAdherenceAgentStateViolation(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationRequest request,
@@ -18070,11 +18084,15 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the adherence agent states using the given parameters for the org sending the request.
-     * Accepts filtering by either &#64;wfm_agent_sids, &#64;start_datetime, or both. At least one of the two fields must be set.
+     * Accepts filtering by either &#64;wfm_agent_sids, &#64;datetime_range, or both. At least one of the two fields must be set.
      * If &#64;wfm_agent_sids is nil, violations will be returned for all agents after &#64;start_datetime.
      * If &#64;wfm_agent_sids is set, violations will only be returned for those agents.
-     * If &#64;start_datetime is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned and the &#64;end_datetime field will be ignored.
-     * If &#64;end_datetime is left blank, violations will be returned up to the present point in time, otherwise the violations that start after &#64;end_datetime will not be returned.
+     * If &#64;datetime_range is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned.
+     * If &#64;datetime_range is set, any violations that start within &#64;datetime_range will be included.
+     * If &#64;include_resolved is true, resolved and unresolved violations will be returned. Otherwise only unresolved violations will be included in the response.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when getting the violations.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsResponse listAdherenceAgentStateViolations(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest request) {
@@ -18087,7 +18105,10 @@ public final class WFMGrpc {
      * Resolves the given adherence agent state violation.
      * If the violation is already resolved, then the original resolution will be overwritten.
      * Only updates the &#64;resolved_activity_sid, &#64;resolved_reason_code_id, &#64;resolution_comment, and &#64;resolved_by_user_id fields.
-     * The &#64;resolved_by_user_id field will be obtained from the context, and ignored if provided in the &#64;resolved_violation object.
+     * The &#64;resolved_by_user_id field will be ignored and overwritten to match the user sending the request.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when resolving the violation.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationResponse resolveAdherenceAgentStateViolation(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationRequest request) {
@@ -21831,11 +21852,15 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the adherence agent states using the given parameters for the org sending the request.
-     * Accepts filtering by either &#64;wfm_agent_sids, &#64;start_datetime, or both. At least one of the two fields must be set.
+     * Accepts filtering by either &#64;wfm_agent_sids, &#64;datetime_range, or both. At least one of the two fields must be set.
      * If &#64;wfm_agent_sids is nil, violations will be returned for all agents after &#64;start_datetime.
      * If &#64;wfm_agent_sids is set, violations will only be returned for those agents.
-     * If &#64;start_datetime is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned and the &#64;end_datetime field will be ignored.
-     * If &#64;end_datetime is left blank, violations will be returned up to the present point in time, otherwise the violations that start after &#64;end_datetime will not be returned.
+     * If &#64;datetime_range is nil, violations starting at any point in time for &#64;wfm_agent_sids will be returned.
+     * If &#64;datetime_range is set, any violations that start within &#64;datetime_range will be included.
+     * If &#64;include_resolved is true, resolved and unresolved violations will be returned. Otherwise only unresolved violations will be included in the response.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when getting the violations.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsResponse> listAdherenceAgentStateViolations(
@@ -21849,7 +21874,10 @@ public final class WFMGrpc {
      * Resolves the given adherence agent state violation.
      * If the violation is already resolved, then the original resolution will be overwritten.
      * Only updates the &#64;resolved_activity_sid, &#64;resolved_reason_code_id, &#64;resolution_comment, and &#64;resolved_by_user_id fields.
-     * The &#64;resolved_by_user_id field will be obtained from the context, and ignored if provided in the &#64;resolved_violation object.
+     * The &#64;resolved_by_user_id field will be ignored and overwritten to match the user sending the request.
+     * Errors:
+     *   - grpc.Invalid: arguments in the request are invalid.
+     *   - grpc.Internal: error occurs when resolving the violation.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationResponse> resolveAdherenceAgentStateViolation(

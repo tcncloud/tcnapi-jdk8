@@ -43,89 +43,48 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest.Builder.class);
   }
 
-  public static final int START_DATETIME_FIELD_NUMBER = 1;
-  private com.google.protobuf.Timestamp startDatetime_;
+  public static final int DATETIME_RANGE_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.DatetimeRange datetimeRange_;
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-   * @return Whether the startDatetime field is set.
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+   * @return Whether the datetimeRange field is set.
    */
   @java.lang.Override
-  public boolean hasStartDatetime() {
-    return startDatetime_ != null;
+  public boolean hasDatetimeRange() {
+    return datetimeRange_ != null;
   }
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-   * @return The startDatetime.
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+   * @return The datetimeRange.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getStartDatetime() {
-    return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
+  public com.tcn.cloud.api.api.commons.DatetimeRange getDatetimeRange() {
+    return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder() {
-    return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
-  }
-
-  public static final int END_DATETIME_FIELD_NUMBER = 2;
-  private com.google.protobuf.Timestamp endDatetime_;
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   * @return Whether the endDatetime field is set.
-   */
-  @java.lang.Override
-  public boolean hasEndDatetime() {
-    return endDatetime_ != null;
-  }
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   * @return The endDatetime.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getEndDatetime() {
-    return endDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDatetime_;
-  }
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getEndDatetimeOrBuilder() {
-    return endDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDatetime_;
+  public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
+    return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
-  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 3;
+  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
@@ -134,7 +93,7 @@ private static final long serialVersionUID = 0L;
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @return A list containing the wfmAgentSids.
    */
   @java.lang.Override
@@ -148,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @return The count of wfmAgentSids.
    */
   public int getWfmAgentSidsCount() {
@@ -160,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @param index The index of the element to return.
    * @return The wfmAgentSids at the given index.
    */
@@ -169,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
   private int wfmAgentSidsMemoizedSerializedSize = -1;
 
-  public static final int INCLUDE_RESOLVED_FIELD_NUMBER = 4;
+  public static final int INCLUDE_RESOLVED_FIELD_NUMBER = 3;
   private boolean includeResolved_ = false;
   /**
    * <pre>
@@ -177,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * Otherwise, only unresolved violations will be included.
    * </pre>
    *
-   * <code>bool include_resolved = 4 [json_name = "includeResolved"];</code>
+   * <code>bool include_resolved = 3 [json_name = "includeResolved"];</code>
    * @return The includeResolved.
    */
   @java.lang.Override
@@ -200,21 +159,18 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (startDatetime_ != null) {
-      output.writeMessage(1, getStartDatetime());
-    }
-    if (endDatetime_ != null) {
-      output.writeMessage(2, getEndDatetime());
+    if (datetimeRange_ != null) {
+      output.writeMessage(1, getDatetimeRange());
     }
     if (getWfmAgentSidsList().size() > 0) {
-      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(18);
       output.writeUInt32NoTag(wfmAgentSidsMemoizedSerializedSize);
     }
     for (int i = 0; i < wfmAgentSids_.size(); i++) {
       output.writeInt64NoTag(wfmAgentSids_.getLong(i));
     }
     if (includeResolved_ != false) {
-      output.writeBool(4, includeResolved_);
+      output.writeBool(3, includeResolved_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -225,13 +181,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (startDatetime_ != null) {
+    if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getStartDatetime());
-    }
-    if (endDatetime_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getEndDatetime());
+        .computeMessageSize(1, getDatetimeRange());
     }
     {
       int dataSize = 0;
@@ -249,7 +201,7 @@ private static final long serialVersionUID = 0L;
     }
     if (includeResolved_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, includeResolved_);
+        .computeBoolSize(3, includeResolved_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -266,15 +218,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest) obj;
 
-    if (hasStartDatetime() != other.hasStartDatetime()) return false;
-    if (hasStartDatetime()) {
-      if (!getStartDatetime()
-          .equals(other.getStartDatetime())) return false;
-    }
-    if (hasEndDatetime() != other.hasEndDatetime()) return false;
-    if (hasEndDatetime()) {
-      if (!getEndDatetime()
-          .equals(other.getEndDatetime())) return false;
+    if (hasDatetimeRange() != other.hasDatetimeRange()) return false;
+    if (hasDatetimeRange()) {
+      if (!getDatetimeRange()
+          .equals(other.getDatetimeRange())) return false;
     }
     if (!getWfmAgentSidsList()
         .equals(other.getWfmAgentSidsList())) return false;
@@ -291,13 +238,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasStartDatetime()) {
-      hash = (37 * hash) + START_DATETIME_FIELD_NUMBER;
-      hash = (53 * hash) + getStartDatetime().hashCode();
-    }
-    if (hasEndDatetime()) {
-      hash = (37 * hash) + END_DATETIME_FIELD_NUMBER;
-      hash = (53 * hash) + getEndDatetime().hashCode();
+    if (hasDatetimeRange()) {
+      hash = (37 * hash) + DATETIME_RANGE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatetimeRange().hashCode();
     }
     if (getWfmAgentSidsCount() > 0) {
       hash = (37 * hash) + WFM_AGENT_SIDS_FIELD_NUMBER;
@@ -441,15 +384,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      startDatetime_ = null;
-      if (startDatetimeBuilder_ != null) {
-        startDatetimeBuilder_.dispose();
-        startDatetimeBuilder_ = null;
-      }
-      endDatetime_ = null;
-      if (endDatetimeBuilder_ != null) {
-        endDatetimeBuilder_.dispose();
-        endDatetimeBuilder_ = null;
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
+        datetimeRangeBuilder_ = null;
       }
       wfmAgentSids_ = emptyLongList();
       includeResolved_ = false;
@@ -486,9 +424,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         wfmAgentSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.wfmAgentSids_ = wfmAgentSids_;
     }
@@ -496,16 +434,11 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.startDatetime_ = startDatetimeBuilder_ == null
-            ? startDatetime_
-            : startDatetimeBuilder_.build();
+        result.datetimeRange_ = datetimeRangeBuilder_ == null
+            ? datetimeRange_
+            : datetimeRangeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.endDatetime_ = endDatetimeBuilder_ == null
-            ? endDatetime_
-            : endDatetimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.includeResolved_ = includeResolved_;
       }
     }
@@ -554,16 +487,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentStateViolationsRequest.getDefaultInstance()) return this;
-      if (other.hasStartDatetime()) {
-        mergeStartDatetime(other.getStartDatetime());
-      }
-      if (other.hasEndDatetime()) {
-        mergeEndDatetime(other.getEndDatetime());
+      if (other.hasDatetimeRange()) {
+        mergeDatetimeRange(other.getDatetimeRange());
       }
       if (!other.wfmAgentSids_.isEmpty()) {
         if (wfmAgentSids_.isEmpty()) {
           wfmAgentSids_ = other.wfmAgentSids_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureWfmAgentSidsIsMutable();
           wfmAgentSids_.addAll(other.wfmAgentSids_);
@@ -601,25 +531,18 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getStartDatetimeFieldBuilder().getBuilder(),
+                  getDatetimeRangeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getEndDatetimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
+            case 16: {
               long v = input.readInt64();
               ensureWfmAgentSidsIsMutable();
               wfmAgentSids_.addLong(v);
               break;
-            } // case 24
-            case 26: {
+            } // case 16
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureWfmAgentSidsIsMutable();
@@ -628,12 +551,12 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 26
-            case 32: {
+            } // case 18
+            case 24: {
               includeResolved_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
-            } // case 32
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -651,50 +574,53 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Timestamp startDatetime_;
+    private com.tcn.cloud.api.api.commons.DatetimeRange datetimeRange_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDatetimeBuilder_;
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> datetimeRangeBuilder_;
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-     * @return Whether the startDatetime field is set.
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+     * @return Whether the datetimeRange field is set.
      */
-    public boolean hasStartDatetime() {
+    public boolean hasDatetimeRange() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-     * @return The startDatetime.
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+     * @return The datetimeRange.
      */
-    public com.google.protobuf.Timestamp getStartDatetime() {
-      if (startDatetimeBuilder_ == null) {
-        return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
+    public com.tcn.cloud.api.api.commons.DatetimeRange getDatetimeRange() {
+      if (datetimeRangeBuilder_ == null) {
+        return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
       } else {
-        return startDatetimeBuilder_.getMessage();
+        return datetimeRangeBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public Builder setStartDatetime(com.google.protobuf.Timestamp value) {
-      if (startDatetimeBuilder_ == null) {
+    public Builder setDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (datetimeRangeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        startDatetime_ = value;
+        datetimeRange_ = value;
       } else {
-        startDatetimeBuilder_.setMessage(value);
+        datetimeRangeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -702,17 +628,18 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public Builder setStartDatetime(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (startDatetimeBuilder_ == null) {
-        startDatetime_ = builderForValue.build();
+    public Builder setDatetimeRange(
+        com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
+      if (datetimeRangeBuilder_ == null) {
+        datetimeRange_ = builderForValue.build();
       } else {
-        startDatetimeBuilder_.setMessage(builderForValue.build());
+        datetimeRangeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -720,22 +647,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public Builder mergeStartDatetime(com.google.protobuf.Timestamp value) {
-      if (startDatetimeBuilder_ == null) {
+    public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (datetimeRangeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          startDatetime_ != null &&
-          startDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getStartDatetimeBuilder().mergeFrom(value);
+          datetimeRange_ != null &&
+          datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getDatetimeRangeBuilder().mergeFrom(value);
         } else {
-          startDatetime_ = value;
+          datetimeRange_ = value;
         }
       } else {
-        startDatetimeBuilder_.mergeFrom(value);
+        datetimeRangeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
@@ -743,247 +671,78 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public Builder clearStartDatetime() {
+    public Builder clearDatetimeRange() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      startDatetime_ = null;
-      if (startDatetimeBuilder_ != null) {
-        startDatetimeBuilder_.dispose();
-        startDatetimeBuilder_ = null;
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
+        datetimeRangeBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getStartDatetimeBuilder() {
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getStartDatetimeFieldBuilder().getBuilder();
+      return getDatetimeRangeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder() {
-      if (startDatetimeBuilder_ != null) {
-        return startDatetimeBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
+      if (datetimeRangeBuilder_ != null) {
+        return datetimeRangeBuilder_.getMessageOrBuilder();
       } else {
-        return startDatetime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
+        return datetimeRange_ == null ?
+            com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
       }
     }
     /**
      * <pre>
-     * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+     * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+     * Any violation that starts within the given range will be included in the response.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+     * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getStartDatetimeFieldBuilder() {
-      if (startDatetimeBuilder_ == null) {
-        startDatetimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getStartDatetime(),
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
+        getDatetimeRangeFieldBuilder() {
+      if (datetimeRangeBuilder_ == null) {
+        datetimeRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder>(
+                getDatetimeRange(),
                 getParentForChildren(),
                 isClean());
-        startDatetime_ = null;
+        datetimeRange_ = null;
       }
-      return startDatetimeBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp endDatetime_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDatetimeBuilder_;
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     * @return Whether the endDatetime field is set.
-     */
-    public boolean hasEndDatetime() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     * @return The endDatetime.
-     */
-    public com.google.protobuf.Timestamp getEndDatetime() {
-      if (endDatetimeBuilder_ == null) {
-        return endDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDatetime_;
-      } else {
-        return endDatetimeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public Builder setEndDatetime(com.google.protobuf.Timestamp value) {
-      if (endDatetimeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        endDatetime_ = value;
-      } else {
-        endDatetimeBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public Builder setEndDatetime(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (endDatetimeBuilder_ == null) {
-        endDatetime_ = builderForValue.build();
-      } else {
-        endDatetimeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public Builder mergeEndDatetime(com.google.protobuf.Timestamp value) {
-      if (endDatetimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          endDatetime_ != null &&
-          endDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getEndDatetimeBuilder().mergeFrom(value);
-        } else {
-          endDatetime_ = value;
-        }
-      } else {
-        endDatetimeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public Builder clearEndDatetime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      endDatetime_ = null;
-      if (endDatetimeBuilder_ != null) {
-        endDatetimeBuilder_.dispose();
-        endDatetimeBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getEndDatetimeBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getEndDatetimeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getEndDatetimeOrBuilder() {
-      if (endDatetimeBuilder_ != null) {
-        return endDatetimeBuilder_.getMessageOrBuilder();
-      } else {
-        return endDatetime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : endDatetime_;
-      }
-    }
-    /**
-     * <pre>
-     * The final datetime that returned violations will have started within.
-     * If &#64;start_datetime is nil, this field will be ignored.
-     * If left blank, violations will be returned up to the present point in time.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getEndDatetimeFieldBuilder() {
-      if (endDatetimeBuilder_ == null) {
-        endDatetimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getEndDatetime(),
-                getParentForChildren(),
-                isClean());
-        endDatetime_ = null;
-      }
-      return endDatetimeBuilder_;
+      return datetimeRangeBuilder_;
     }
 
     private com.google.protobuf.Internal.LongList wfmAgentSids_ = emptyLongList();
     private void ensureWfmAgentSidsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         wfmAgentSids_ = mutableCopy(wfmAgentSids_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
@@ -992,12 +751,12 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @return A list containing the wfmAgentSids.
      */
     public java.util.List<java.lang.Long>
         getWfmAgentSidsList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
+      return ((bitField0_ & 0x00000002) != 0) ?
                java.util.Collections.unmodifiableList(wfmAgentSids_) : wfmAgentSids_;
     }
     /**
@@ -1006,7 +765,7 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @return The count of wfmAgentSids.
      */
     public int getWfmAgentSidsCount() {
@@ -1018,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @param index The index of the element to return.
      * @return The wfmAgentSids at the given index.
      */
@@ -1031,7 +790,7 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @param index The index to set the value at.
      * @param value The wfmAgentSids to set.
      * @return This builder for chaining.
@@ -1050,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @param value The wfmAgentSids to add.
      * @return This builder for chaining.
      */
@@ -1067,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @param values The wfmAgentSids to add.
      * @return This builder for chaining.
      */
@@ -1085,12 +844,12 @@ private static final long serialVersionUID = 0L;
      * If left empty, violations will be returned for all agents.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWfmAgentSids() {
       wfmAgentSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1102,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * Otherwise, only unresolved violations will be included.
      * </pre>
      *
-     * <code>bool include_resolved = 4 [json_name = "includeResolved"];</code>
+     * <code>bool include_resolved = 3 [json_name = "includeResolved"];</code>
      * @return The includeResolved.
      */
     @java.lang.Override
@@ -1115,14 +874,14 @@ private static final long serialVersionUID = 0L;
      * Otherwise, only unresolved violations will be included.
      * </pre>
      *
-     * <code>bool include_resolved = 4 [json_name = "includeResolved"];</code>
+     * <code>bool include_resolved = 3 [json_name = "includeResolved"];</code>
      * @param value The includeResolved to set.
      * @return This builder for chaining.
      */
     public Builder setIncludeResolved(boolean value) {
 
       includeResolved_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1132,11 +891,11 @@ private static final long serialVersionUID = 0L;
      * Otherwise, only unresolved violations will be included.
      * </pre>
      *
-     * <code>bool include_resolved = 4 [json_name = "includeResolved"];</code>
+     * <code>bool include_resolved = 3 [json_name = "includeResolved"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeResolved() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       includeResolved_ = false;
       onChanged();
       return this;

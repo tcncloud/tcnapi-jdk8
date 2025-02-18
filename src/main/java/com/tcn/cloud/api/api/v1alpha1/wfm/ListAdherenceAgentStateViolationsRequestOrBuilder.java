@@ -9,63 +9,33 @@ public interface ListAdherenceAgentStateViolationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-   * @return Whether the startDatetime field is set.
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+   * @return Whether the datetimeRange field is set.
    */
-  boolean hasStartDatetime();
+  boolean hasDatetimeRange();
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
-   * @return The startDatetime.
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
+   * @return The datetimeRange.
    */
-  com.google.protobuf.Timestamp getStartDatetime();
+  com.tcn.cloud.api.api.commons.DatetimeRange getDatetimeRange();
   /**
    * <pre>
-   * The starting datetime to get violations after. If left empty, violations will be obtained across all datetimes.
+   * The datetime range to get violations across. If left empty, violations will be obtained across all datetimes.
+   * Any violation that starts within the given range will be included in the response.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
+   * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder();
-
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   * @return Whether the endDatetime field is set.
-   */
-  boolean hasEndDatetime();
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   * @return The endDatetime.
-   */
-  com.google.protobuf.Timestamp getEndDatetime();
-  /**
-   * <pre>
-   * The final datetime that returned violations will have started within.
-   * If &#64;start_datetime is nil, this field will be ignored.
-   * If left blank, violations will be returned up to the present point in time.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_datetime = 2 [json_name = "endDatetime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getEndDatetimeOrBuilder();
+  com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder();
 
   /**
    * <pre>
@@ -73,7 +43,7 @@ public interface ListAdherenceAgentStateViolationsRequestOrBuilder extends
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @return A list containing the wfmAgentSids.
    */
   java.util.List<java.lang.Long> getWfmAgentSidsList();
@@ -83,7 +53,7 @@ public interface ListAdherenceAgentStateViolationsRequestOrBuilder extends
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @return The count of wfmAgentSids.
    */
   int getWfmAgentSidsCount();
@@ -93,7 +63,7 @@ public interface ListAdherenceAgentStateViolationsRequestOrBuilder extends
    * If left empty, violations will be returned for all agents.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 3 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 2 [json_name = "wfmAgentSids"];</code>
    * @param index The index of the element to return.
    * @return The wfmAgentSids at the given index.
    */
@@ -105,7 +75,7 @@ public interface ListAdherenceAgentStateViolationsRequestOrBuilder extends
    * Otherwise, only unresolved violations will be included.
    * </pre>
    *
-   * <code>bool include_resolved = 4 [json_name = "includeResolved"];</code>
+   * <code>bool include_resolved = 3 [json_name = "includeResolved"];</code>
    * @return The includeResolved.
    */
   boolean getIncludeResolved();
