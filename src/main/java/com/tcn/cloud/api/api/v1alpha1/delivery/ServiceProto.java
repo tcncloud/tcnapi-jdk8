@@ -15,15 +15,15 @@ public final class ServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor;
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_fieldAccessorTable;
+      internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryRes_descriptor;
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryRes_fieldAccessorTable;
+      internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_delivery_CreateTransferConfigReq_descriptor;
   static final 
@@ -489,10 +489,10 @@ public final class ServiceProto {
       "ommons/omnichannel.proto\032\025api/commons/or" +
       "g.proto\032\034google/api/annotations.proto\032 g" +
       "oogle/protobuf/field_mask.proto\032\037google/" +
-      "protobuf/timestamp.proto\"P\n\036TriggerTestO" +
+      "protobuf/timestamp.proto\"P\n\036TriggerDemoO" +
       "utboundDeliveryReq\022.\n\022TransferConfigName" +
-      "\030\001 \001(\tR\022TransferConfigName\" \n\036TriggerTes" +
-      "tOutboundDeliveryRes\"\210\001\n\027CreateTransferC" +
+      "\030\001 \001(\tR\022TransferConfigName\" \n\036TriggerDem" +
+      "oOutboundDeliveryRes\"\210\001\n\027CreateTransferC" +
       "onfigReq\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1." +
       "delivery.TransferConfigR\006entity\022.\n\004mask\030" +
       "\002 \001(\0132\032.google.protobuf.FieldMaskR\004mask\"" +
@@ -918,12 +918,12 @@ public final class ServiceProto {
       "pi.v1alpha1.delivery.ListSMSNumbersReq\032(" +
       ".api.v1alpha1.delivery.ListSMSNumbersRes" +
       "\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/delive" +
-      "ry/listsmsnumbers:\001*\022\324\001\n\033TriggerTestOutb" +
+      "ry/listsmsnumbers:\001*\022\324\001\n\033TriggerDemoOutb" +
       "oundDelivery\0225.api.v1alpha1.delivery.Tri" +
-      "ggerTestOutboundDeliveryReq\0325.api.v1alph" +
-      "a1.delivery.TriggerTestOutboundDeliveryR" +
+      "ggerDemoOutboundDeliveryReq\0325.api.v1alph" +
+      "a1.delivery.TriggerDemoOutboundDeliveryR" +
       "es\"G\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0027\"2/api/v1alpha1/deli" +
-      "very/triggertestoutbounddelivery:\001*B\255\001\n\'" +
+      "very/triggerdemooutbounddelivery:\001*B\255\001\n\'" +
       "com.tcn.cloud.api.api.v1alpha1.deliveryB" +
       "\014ServiceProtoP\001\242\002\003AVD\252\002\025Api.V1alpha1.Del" +
       "ivery\312\002\025Api\\V1alpha1\\Delivery\342\002!Api\\V1al" +
@@ -941,17 +941,17 @@ public final class ServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor =
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_fieldAccessorTable = new
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor,
+        internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor,
         new java.lang.String[] { "TransferConfigName", });
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryRes_descriptor =
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryRes_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryRes_fieldAccessorTable = new
+    internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryRes_descriptor,
+        internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_delivery_CreateTransferConfigReq_descriptor =
       getDescriptor().getMessageTypes().get(2);

@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v1alpha1.delivery;
 
 /**
- * Protobuf type {@code api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq}
+ * Protobuf type {@code api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq}
  */
-public final class TriggerTestOutboundDeliveryReq extends
+public final class TriggerDemoOutboundDeliveryReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)
-    TriggerTestOutboundDeliveryReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)
+    TriggerDemoOutboundDeliveryReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use TriggerTestOutboundDeliveryReq.newBuilder() to construct.
-  private TriggerTestOutboundDeliveryReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use TriggerDemoOutboundDeliveryReq.newBuilder() to construct.
+  private TriggerDemoOutboundDeliveryReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private TriggerTestOutboundDeliveryReq() {
+  private TriggerDemoOutboundDeliveryReq() {
     transferConfigName_ = "";
   }
 
@@ -23,20 +23,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new TriggerTestOutboundDeliveryReq();
+    return new TriggerDemoOutboundDeliveryReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.Builder.class);
   }
 
   public static final int TRANSFERCONFIGNAME_FIELD_NUMBER = 1;
@@ -117,10 +117,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq) obj;
 
     if (!getTransferConfigName()
         .equals(other.getTransferConfigName())) return false;
@@ -142,44 +142,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -187,26 +187,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -235,26 +235,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq}
+   * Protobuf type {@code api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)
-      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.newBuilder()
     private Builder() {
 
     }
@@ -275,17 +275,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerTestOutboundDeliveryReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_TriggerDemoOutboundDeliveryReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq build() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq build() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -293,14 +293,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.transferConfigName_ = transferConfigName_;
@@ -341,16 +341,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.getDefaultInstance()) return this;
       if (!other.getTransferConfigName().isEmpty()) {
         transferConfigName_ = other.transferConfigName_;
         bitField0_ |= 0x00000001;
@@ -488,23 +488,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)
+  private static final com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TriggerTestOutboundDeliveryReq>
-      PARSER = new com.google.protobuf.AbstractParser<TriggerTestOutboundDeliveryReq>() {
+  private static final com.google.protobuf.Parser<TriggerDemoOutboundDeliveryReq>
+      PARSER = new com.google.protobuf.AbstractParser<TriggerDemoOutboundDeliveryReq>() {
     @java.lang.Override
-    public TriggerTestOutboundDeliveryReq parsePartialFrom(
+    public TriggerDemoOutboundDeliveryReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -523,17 +523,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<TriggerTestOutboundDeliveryReq> parser() {
+  public static com.google.protobuf.Parser<TriggerDemoOutboundDeliveryReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<TriggerTestOutboundDeliveryReq> getParserForType() {
+  public com.google.protobuf.Parser<TriggerDemoOutboundDeliveryReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

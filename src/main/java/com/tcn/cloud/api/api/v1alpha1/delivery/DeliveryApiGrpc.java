@@ -852,35 +852,35 @@ public final class DeliveryApiGrpc {
     return getListSMSNumbersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> getTriggerDemoOutboundDeliveryMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TriggerTestOutboundDelivery",
-      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes.class,
+      fullMethodName = SERVICE_NAME + '/' + "TriggerDemoOutboundDelivery",
+      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> getTriggerTestOutboundDeliveryMethod;
-    if ((getTriggerTestOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> getTriggerDemoOutboundDeliveryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> getTriggerDemoOutboundDeliveryMethod;
+    if ((getTriggerDemoOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerDemoOutboundDeliveryMethod) == null) {
       synchronized (DeliveryApiGrpc.class) {
-        if ((getTriggerTestOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod) == null) {
-          DeliveryApiGrpc.getTriggerTestOutboundDeliveryMethod = getTriggerTestOutboundDeliveryMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>newBuilder()
+        if ((getTriggerDemoOutboundDeliveryMethod = DeliveryApiGrpc.getTriggerDemoOutboundDeliveryMethod) == null) {
+          DeliveryApiGrpc.getTriggerDemoOutboundDeliveryMethod = getTriggerDemoOutboundDeliveryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq, com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TriggerTestOutboundDelivery"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TriggerDemoOutboundDelivery"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes.getDefaultInstance()))
-              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("TriggerTestOutboundDelivery"))
+                  com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes.getDefaultInstance()))
+              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("TriggerDemoOutboundDelivery"))
               .build();
         }
       }
     }
-    return getTriggerTestOutboundDeliveryMethod;
+    return getTriggerDemoOutboundDeliveryMethod;
   }
 
   /**
@@ -1122,9 +1122,9 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    default void triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerTestOutboundDeliveryMethod(), responseObserver);
+    default void triggerDemoOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerDemoOutboundDeliveryMethod(), responseObserver);
     }
   }
 
@@ -1373,10 +1373,10 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public void triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> responseObserver) {
+    public void triggerDemoOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getTriggerTestOutboundDeliveryMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTriggerDemoOutboundDeliveryMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1587,9 +1587,9 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes triggerTestOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request) {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes triggerDemoOutboundDelivery(com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getTriggerTestOutboundDeliveryMethod(), getCallOptions(), request);
+          getChannel(), getTriggerDemoOutboundDeliveryMethod(), getCallOptions(), request);
     }
   }
 
@@ -1827,10 +1827,10 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes> triggerTestOutboundDelivery(
-        com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes> triggerDemoOutboundDelivery(
+        com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getTriggerTestOutboundDeliveryMethod(), getCallOptions()), request);
+          getChannel().newCall(getTriggerDemoOutboundDeliveryMethod(), getCallOptions()), request);
     }
   }
 
@@ -1861,7 +1861,7 @@ public final class DeliveryApiGrpc {
   private static final int METHODID_LIST_ENCRYPTIONS = 24;
   private static final int METHODID_UPDATE_ENCRYPTION = 25;
   private static final int METHODID_LIST_SMSNUMBERS = 26;
-  private static final int METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY = 27;
+  private static final int METHODID_TRIGGER_DEMO_OUTBOUND_DELIVERY = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1988,9 +1988,9 @@ public final class DeliveryApiGrpc {
           serviceImpl.listSMSNumbers((com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>) responseObserver);
           break;
-        case METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY:
-          serviceImpl.triggerTestOutboundDelivery((com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>) responseObserver);
+        case METHODID_TRIGGER_DEMO_OUTBOUND_DELIVERY:
+          serviceImpl.triggerDemoOutboundDelivery((com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2200,12 +2200,12 @@ public final class DeliveryApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.delivery.ListSMSNumbersRes>(
                 service, METHODID_LIST_SMSNUMBERS)))
         .addMethod(
-          getTriggerTestOutboundDeliveryMethod(),
+          getTriggerDemoOutboundDeliveryMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerTestOutboundDeliveryRes>(
-                service, METHODID_TRIGGER_TEST_OUTBOUND_DELIVERY)))
+              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq,
+              com.tcn.cloud.api.api.v1alpha1.delivery.TriggerDemoOutboundDeliveryRes>(
+                service, METHODID_TRIGGER_DEMO_OUTBOUND_DELIVERY)))
         .build();
   }
 
@@ -2281,7 +2281,7 @@ public final class DeliveryApiGrpc {
               .addMethod(getListEncryptionsMethod())
               .addMethod(getUpdateEncryptionMethod())
               .addMethod(getListSMSNumbersMethod())
-              .addMethod(getTriggerTestOutboundDeliveryMethod())
+              .addMethod(getTriggerDemoOutboundDeliveryMethod())
               .build();
         }
       }

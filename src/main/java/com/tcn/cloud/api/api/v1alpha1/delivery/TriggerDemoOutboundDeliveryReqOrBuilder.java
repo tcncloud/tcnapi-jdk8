@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.delivery;
 
-public interface TriggerTestOutboundDeliveryReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.delivery.TriggerTestOutboundDeliveryReq)
+public interface TriggerDemoOutboundDeliveryReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.delivery.TriggerDemoOutboundDeliveryReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
