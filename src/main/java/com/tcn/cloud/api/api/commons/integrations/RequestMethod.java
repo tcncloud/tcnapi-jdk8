@@ -730,10 +730,6 @@ public enum RequestMethod
    */
   REQUEST_METHOD_PAY_SCOUT_GET_CONSUMER_FEE(3105),
   /**
-   * <code>REQUEST_METHOD_PAY_SCOUT_STORE_TOKEN = 3106;</code>
-   */
-  REQUEST_METHOD_PAY_SCOUT_STORE_TOKEN(3106),
-  /**
    * <code>REQUEST_METHOD_I2C_ECHO = 3201;</code>
    */
   REQUEST_METHOD_I2C_ECHO(3201),
@@ -2032,10 +2028,6 @@ public enum RequestMethod
    */
   public static final int REQUEST_METHOD_PAY_SCOUT_GET_CONSUMER_FEE_VALUE = 3105;
   /**
-   * <code>REQUEST_METHOD_PAY_SCOUT_STORE_TOKEN = 3106;</code>
-   */
-  public static final int REQUEST_METHOD_PAY_SCOUT_STORE_TOKEN_VALUE = 3106;
-  /**
    * <code>REQUEST_METHOD_I2C_ECHO = 3201;</code>
    */
   public static final int REQUEST_METHOD_I2C_ECHO_VALUE = 3201;
@@ -2810,7 +2802,6 @@ public enum RequestMethod
       case 3103: return REQUEST_METHOD_PAY_SCOUT_CREDIT_CARD_SALE_RECURRING;
       case 3104: return REQUEST_METHOD_PAY_SCOUT_ECHECK_SALE_RECURRING;
       case 3105: return REQUEST_METHOD_PAY_SCOUT_GET_CONSUMER_FEE;
-      case 3106: return REQUEST_METHOD_PAY_SCOUT_STORE_TOKEN;
       case 3201: return REQUEST_METHOD_I2C_ECHO;
       case 3202: return REQUEST_METHOD_I2C_BALANCE_INQUIRY;
       case 3203: return REQUEST_METHOD_I2C_VERIFY_USER;
