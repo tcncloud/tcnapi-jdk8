@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     customFieldName_ = "";
     customFieldValue_ = "";
     customFieldType_ = "";
+    ticketCustomFieldType_ = 0;
   }
 
   @java.lang.Override
@@ -162,11 +163,13 @@ private static final long serialVersionUID = 0L;
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The customFieldType.
    */
   @java.lang.Override
-  public java.lang.String getCustomFieldType() {
+  @java.lang.Deprecated public java.lang.String getCustomFieldType() {
     java.lang.Object ref = customFieldType_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -183,11 +186,13 @@ private static final long serialVersionUID = 0L;
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The bytes for customFieldType.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCustomFieldTypeBytes() {
     java.lang.Object ref = customFieldType_;
     if (ref instanceof java.lang.String) {
@@ -254,6 +259,32 @@ private static final long serialVersionUID = 0L;
     return isDeleted_;
   }
 
+  public static final int TICKET_CUSTOM_FIELD_TYPE_FIELD_NUMBER = 8;
+  private int ticketCustomFieldType_ = 0;
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The enum numeric value on the wire for ticketCustomFieldType.
+   */
+  @java.lang.Override public int getTicketCustomFieldTypeValue() {
+    return ticketCustomFieldType_;
+  }
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The ticketCustomFieldType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TicketCustomFieldType getTicketCustomFieldType() {
+    com.tcn.cloud.api.api.commons.TicketCustomFieldType result = com.tcn.cloud.api.api.commons.TicketCustomFieldType.forNumber(ticketCustomFieldType_);
+    return result == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -286,6 +317,9 @@ private static final long serialVersionUID = 0L;
     if (isDeleted_ != false) {
       output.writeBool(6, isDeleted_);
     }
+    if (ticketCustomFieldType_ != com.tcn.cloud.api.api.commons.TicketCustomFieldType.TICKET_CUSTOMFIELD_TYPE_BOOLEAN.getNumber()) {
+      output.writeEnum(8, ticketCustomFieldType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -315,6 +349,10 @@ private static final long serialVersionUID = 0L;
     if (isDeleted_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, isDeleted_);
+    }
+    if (ticketCustomFieldType_ != com.tcn.cloud.api.api.commons.TicketCustomFieldType.TICKET_CUSTOMFIELD_TYPE_BOOLEAN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, ticketCustomFieldType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -346,6 +384,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsDeleted()
         != other.getIsDeleted()) return false;
+    if (ticketCustomFieldType_ != other.ticketCustomFieldType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -373,6 +412,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsDeleted());
+    hash = (37 * hash) + TICKET_CUSTOM_FIELD_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + ticketCustomFieldType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -518,6 +559,7 @@ private static final long serialVersionUID = 0L;
         dateModifiedBuilder_ = null;
       }
       isDeleted_ = false;
+      ticketCustomFieldType_ = 0;
       return this;
     }
 
@@ -570,6 +612,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.isDeleted_ = isDeleted_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.ticketCustomFieldType_ = ticketCustomFieldType_;
       }
     }
 
@@ -641,6 +686,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsDeleted() != false) {
         setIsDeleted(other.getIsDeleted());
       }
+      if (other.ticketCustomFieldType_ != 0) {
+        setTicketCustomFieldTypeValue(other.getTicketCustomFieldTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -699,6 +747,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 64: {
+              ticketCustomFieldType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -950,10 +1003,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+     * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+     *     See api/commons/tickets.proto;l=419
      * @return The customFieldType.
      */
-    public java.lang.String getCustomFieldType() {
+    @java.lang.Deprecated public java.lang.String getCustomFieldType() {
       java.lang.Object ref = customFieldType_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -970,10 +1025,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+     * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+     *     See api/commons/tickets.proto;l=419
      * @return The bytes for customFieldType.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCustomFieldTypeBytes() {
       java.lang.Object ref = customFieldType_;
       if (ref instanceof String) {
@@ -991,11 +1048,13 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+     * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+     *     See api/commons/tickets.proto;l=419
      * @param value The customFieldType to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomFieldType(
+    @java.lang.Deprecated public Builder setCustomFieldType(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customFieldType_ = value;
@@ -1008,10 +1067,12 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+     * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+     *     See api/commons/tickets.proto;l=419
      * @return This builder for chaining.
      */
-    public Builder clearCustomFieldType() {
+    @java.lang.Deprecated public Builder clearCustomFieldType() {
       customFieldType_ = getDefaultInstance().getCustomFieldType();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
@@ -1022,11 +1083,13 @@ private static final long serialVersionUID = 0L;
      * custom_field_type
      * </pre>
      *
-     * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+     * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+     * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+     *     See api/commons/tickets.proto;l=419
      * @param value The bytes for customFieldType to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomFieldTypeBytes(
+    @java.lang.Deprecated public Builder setCustomFieldTypeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1231,6 +1294,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDeleted() {
       bitField0_ = (bitField0_ & ~0x00000020);
       isDeleted_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int ticketCustomFieldType_ = 0;
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+     * @return The enum numeric value on the wire for ticketCustomFieldType.
+     */
+    @java.lang.Override public int getTicketCustomFieldTypeValue() {
+      return ticketCustomFieldType_;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+     * @param value The enum numeric value on the wire for ticketCustomFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCustomFieldTypeValue(int value) {
+      ticketCustomFieldType_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+     * @return The ticketCustomFieldType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldType getTicketCustomFieldType() {
+      com.tcn.cloud.api.api.commons.TicketCustomFieldType result = com.tcn.cloud.api.api.commons.TicketCustomFieldType.forNumber(ticketCustomFieldType_);
+      return result == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+     * @param value The ticketCustomFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCustomFieldType(com.tcn.cloud.api.api.commons.TicketCustomFieldType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      ticketCustomFieldType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom_field_enum_type
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCustomFieldType() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      ticketCustomFieldType_ = 0;
       onChanged();
       return this;
     }

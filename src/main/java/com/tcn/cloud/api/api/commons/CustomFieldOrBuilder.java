@@ -62,19 +62,23 @@ public interface CustomFieldOrBuilder extends
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The customFieldType.
    */
-  java.lang.String getCustomFieldType();
+  @java.lang.Deprecated java.lang.String getCustomFieldType();
   /**
    * <pre>
    * custom_field_type
    * </pre>
    *
-   * <code>string custom_field_type = 4 [json_name = "customFieldType"];</code>
+   * <code>string custom_field_type = 4 [json_name = "customFieldType", deprecated = true];</code>
+   * @deprecated api.commons.CustomField.custom_field_type is deprecated.
+   *     See api/commons/tickets.proto;l=419
    * @return The bytes for customFieldType.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCustomFieldTypeBytes();
 
   /**
@@ -113,4 +117,23 @@ public interface CustomFieldOrBuilder extends
    * @return The isDeleted.
    */
   boolean getIsDeleted();
+
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The enum numeric value on the wire for ticketCustomFieldType.
+   */
+  int getTicketCustomFieldTypeValue();
+  /**
+   * <pre>
+   * custom_field_enum_type
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldType ticket_custom_field_type = 8 [json_name = "ticketCustomFieldType"];</code>
+   * @return The ticketCustomFieldType.
+   */
+  com.tcn.cloud.api.api.commons.TicketCustomFieldType getTicketCustomFieldType();
 }
