@@ -289,7 +289,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the scheduling activity that the agent should be reported as.
+   * The ID of the scheduling activity that the agent will be reported as.
    * </pre>
    *
    * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
@@ -299,7 +299,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the reason code that the agent should be reported as.
+   * The ID of the reason code that the agent will be reported as.
    * </pre>
    *
    * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
@@ -329,7 +329,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
 
   /**
    * <pre>
-   * ID of the user who resolved this resolution.
+   * ID of the user who resolved this violation.
    * </pre>
    *
    * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -338,7 +338,7 @@ public interface AdherenceAgentStateViolationOrBuilder extends
   java.lang.String getResolvedByUserId();
   /**
    * <pre>
-   * ID of the user who resolved this resolution.
+   * ID of the user who resolved this violation.
    * </pre>
    *
    * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>

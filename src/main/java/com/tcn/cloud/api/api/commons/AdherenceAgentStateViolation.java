@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
   private long resolvedActivitySid_ = 0L;
   /**
    * <pre>
-   * The ID of the scheduling activity that the agent should be reported as.
+   * The ID of the scheduling activity that the agent will be reported as.
    * </pre>
    *
    * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
   private long resolvedReasonCodeId_ = 0L;
   /**
    * <pre>
-   * The ID of the reason code that the agent should be reported as.
+   * The ID of the reason code that the agent will be reported as.
    * </pre>
    *
    * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resolvedByUserId_ = "";
   /**
    * <pre>
-   * ID of the user who resolved this resolution.
+   * ID of the user who resolved this violation.
    * </pre>
    *
    * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ID of the user who resolved this resolution.
+   * ID of the user who resolved this violation.
    * </pre>
    *
    * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -2620,7 +2620,7 @@ private static final long serialVersionUID = 0L;
     private long resolvedActivitySid_ ;
     /**
      * <pre>
-     * The ID of the scheduling activity that the agent should be reported as.
+     * The ID of the scheduling activity that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
@@ -2632,7 +2632,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the scheduling activity that the agent should be reported as.
+     * The ID of the scheduling activity that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
@@ -2648,7 +2648,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the scheduling activity that the agent should be reported as.
+     * The ID of the scheduling activity that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
@@ -2664,7 +2664,7 @@ private static final long serialVersionUID = 0L;
     private long resolvedReasonCodeId_ ;
     /**
      * <pre>
-     * The ID of the reason code that the agent should be reported as.
+     * The ID of the reason code that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
@@ -2676,7 +2676,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the reason code that the agent should be reported as.
+     * The ID of the reason code that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
@@ -2692,7 +2692,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the reason code that the agent should be reported as.
+     * The ID of the reason code that the agent will be reported as.
      * </pre>
      *
      * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
@@ -2800,7 +2800,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resolvedByUserId_ = "";
     /**
      * <pre>
-     * ID of the user who resolved this resolution.
+     * ID of the user who resolved this violation.
      * </pre>
      *
      * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -2820,7 +2820,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the user who resolved this resolution.
+     * ID of the user who resolved this violation.
      * </pre>
      *
      * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -2841,7 +2841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the user who resolved this resolution.
+     * ID of the user who resolved this violation.
      * </pre>
      *
      * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -2858,7 +2858,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the user who resolved this resolution.
+     * ID of the user who resolved this violation.
      * </pre>
      *
      * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
@@ -2872,7 +2872,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the user who resolved this resolution.
+     * ID of the user who resolved this violation.
      * </pre>
      *
      * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
