@@ -246,4 +246,104 @@ public interface AdherenceAgentStateViolationOrBuilder extends
    * @return The adherenceAgentStateViolationId.
    */
   long getAdherenceAgentStateViolationId();
+
+  /**
+   * <pre>
+   * The ID of the activity that the agent was scheduled for.
+   * </pre>
+   *
+   * <code>int64 expected_scheduling_activity_sid = 10 [json_name = "expectedSchedulingActivitySid", jstype = JS_STRING];</code>
+   * @return The expectedSchedulingActivitySid.
+   */
+  long getExpectedSchedulingActivitySid();
+
+  /**
+   * <pre>
+   * The ID of the reason code that the agent was scheduled for.
+   * </pre>
+   *
+   * <code>int64 expected_reason_code_id = 11 [json_name = "expectedReasonCodeId", jstype = JS_STRING];</code>
+   * @return The expectedReasonCodeId.
+   */
+  long getExpectedReasonCodeId();
+
+  /**
+   * <pre>
+   * The ID of the activity that the agent's pause code indicated they were actually doing.
+   * </pre>
+   *
+   * <code>int64 actual_scheduling_activity_sid = 12 [json_name = "actualSchedulingActivitySid", jstype = JS_STRING];</code>
+   * @return The actualSchedulingActivitySid.
+   */
+  long getActualSchedulingActivitySid();
+
+  /**
+   * <pre>
+   * The ID of the reason code that the agent's pause code indicated they were actually doing.
+   * </pre>
+   *
+   * <code>int64 actual_reason_code_id = 13 [json_name = "actualReasonCodeId", jstype = JS_STRING];</code>
+   * @return The actualReasonCodeId.
+   */
+  long getActualReasonCodeId();
+
+  /**
+   * <pre>
+   * The ID of the scheduling activity that the agent should be reported as.
+   * </pre>
+   *
+   * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
+   * @return The resolvedActivitySid.
+   */
+  long getResolvedActivitySid();
+
+  /**
+   * <pre>
+   * The ID of the reason code that the agent should be reported as.
+   * </pre>
+   *
+   * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
+   * @return The resolvedReasonCodeId.
+   */
+  long getResolvedReasonCodeId();
+
+  /**
+   * <pre>
+   * The comment left by the user upon resolution.
+   * </pre>
+   *
+   * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+   * @return The resolutionComment.
+   */
+  java.lang.String getResolutionComment();
+  /**
+   * <pre>
+   * The comment left by the user upon resolution.
+   * </pre>
+   *
+   * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+   * @return The bytes for resolutionComment.
+   */
+  com.google.protobuf.ByteString
+      getResolutionCommentBytes();
+
+  /**
+   * <pre>
+   * ID of the user who resolved this resolution.
+   * </pre>
+   *
+   * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+   * @return The resolvedByUserId.
+   */
+  java.lang.String getResolvedByUserId();
+  /**
+   * <pre>
+   * ID of the user who resolved this resolution.
+   * </pre>
+   *
+   * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+   * @return The bytes for resolvedByUserId.
+   */
+  com.google.protobuf.ByteString
+      getResolvedByUserIdBytes();
 }
