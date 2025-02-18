@@ -283,6 +283,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int REPLACE_INVALID_WITH_NULL_FIELD_NUMBER = 11;
+  private boolean replaceInvalidWithNull_ = false;
+  /**
+   * <code>bool replace_invalid_with_null = 11 [json_name = "replaceInvalidWithNull"];</code>
+   * @return The replaceInvalidWithNull.
+   */
+  @java.lang.Override
+  public boolean getReplaceInvalidWithNull() {
+    return replaceInvalidWithNull_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -318,6 +329,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updateKeyField_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, updateKeyField_);
     }
+    if (replaceInvalidWithNull_ != false) {
+      output.writeBool(11, replaceInvalidWithNull_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -352,6 +366,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updateKeyField_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, updateKeyField_);
     }
+    if (replaceInvalidWithNull_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, replaceInvalidWithNull_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -383,6 +401,8 @@ private static final long serialVersionUID = 0L;
         != other.getUpdate()) return false;
     if (!getUpdateKeyField()
         .equals(other.getUpdateKeyField())) return false;
+    if (getReplaceInvalidWithNull()
+        != other.getReplaceInvalidWithNull()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -412,6 +432,9 @@ private static final long serialVersionUID = 0L;
         getUpdate());
     hash = (37 * hash) + UPDATE_KEY_FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getUpdateKeyField().hashCode();
+    hash = (37 * hash) + REPLACE_INVALID_WITH_NULL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReplaceInvalidWithNull());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -554,6 +577,7 @@ private static final long serialVersionUID = 0L;
       overwrite_ = false;
       update_ = false;
       updateKeyField_ = "";
+      replaceInvalidWithNull_ = false;
       return this;
     }
 
@@ -609,6 +633,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.updateKeyField_ = updateKeyField_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.replaceInvalidWithNull_ = replaceInvalidWithNull_;
       }
     }
 
@@ -683,6 +710,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000040;
         onChanged();
       }
+      if (other.getReplaceInvalidWithNull() != false) {
+        setReplaceInvalidWithNull(other.getReplaceInvalidWithNull());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -746,6 +776,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 82
+            case 88: {
+              replaceInvalidWithNull_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1367,6 +1402,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       updateKeyField_ = value;
       bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private boolean replaceInvalidWithNull_ ;
+    /**
+     * <code>bool replace_invalid_with_null = 11 [json_name = "replaceInvalidWithNull"];</code>
+     * @return The replaceInvalidWithNull.
+     */
+    @java.lang.Override
+    public boolean getReplaceInvalidWithNull() {
+      return replaceInvalidWithNull_;
+    }
+    /**
+     * <code>bool replace_invalid_with_null = 11 [json_name = "replaceInvalidWithNull"];</code>
+     * @param value The replaceInvalidWithNull to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReplaceInvalidWithNull(boolean value) {
+
+      replaceInvalidWithNull_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool replace_invalid_with_null = 11 [json_name = "replaceInvalidWithNull"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReplaceInvalidWithNull() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      replaceInvalidWithNull_ = false;
       onChanged();
       return this;
     }

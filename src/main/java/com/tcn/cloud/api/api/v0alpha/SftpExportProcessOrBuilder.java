@@ -178,7 +178,7 @@ public interface SftpExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1906
+   *     See api/v0alpha/lms.proto;l=1907
    * @return Whether the filePattern field is set.
    */
   @java.lang.Deprecated boolean hasFilePattern();
@@ -189,7 +189,7 @@ public interface SftpExportProcessOrBuilder extends
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1906
+   *     See api/v0alpha/lms.proto;l=1907
    * @return The filePattern.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.FilePattern getFilePattern();
