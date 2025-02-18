@@ -16,7 +16,7 @@ public interface Room303TransportOrBuilder extends
    *
    * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=738
+   *     See api/v1alpha1/delivery/service.proto;l=755
    * @return Whether the systemMessage field is set.
    */
   @java.lang.Deprecated boolean hasSystemMessage();
@@ -29,7 +29,7 @@ public interface Room303TransportOrBuilder extends
    *
    * <code>.api.v1alpha1.delivery.Room303SystemMessage system_message = 1 [json_name = "systemMessage", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.Room303Transport.system_message is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=738
+   *     See api/v1alpha1/delivery/service.proto;l=755
    * @return The systemMessage.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.delivery.Room303SystemMessage getSystemMessage();

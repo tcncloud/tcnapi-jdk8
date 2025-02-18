@@ -14,7 +14,7 @@ public interface EmailDestinationOrBuilder extends
    *
    * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=598
+   *     See api/v1alpha1/delivery/service.proto;l=615
    * @return The toAddr.
    */
   @java.lang.Deprecated java.lang.String getToAddr();
@@ -25,7 +25,7 @@ public interface EmailDestinationOrBuilder extends
    *
    * <code>string to_addr = 1 [json_name = "toAddr", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.EmailDestination.to_addr is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=598
+   *     See api/v1alpha1/delivery/service.proto;l=615
    * @return The bytes for toAddr.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
