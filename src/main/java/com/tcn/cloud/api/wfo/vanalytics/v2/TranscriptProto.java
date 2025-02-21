@@ -1085,11 +1085,15 @@ public final class TranscriptProto {
       "istAgentResponseValuesResponse\022\026\n\006values" +
       "\030\001 \003(\tR\006values*V\n\014ReviewStatus\022\026\n\022REVIEW" +
       "_STATUS_TODO\020\000\022\026\n\022REVIEW_STATUS_DONE\020\001\022\026" +
-      "\n\022REVIEW_STATUS_NONE\020\002B\234\001\n#com.tcn.cloud" +
-      ".api.wfo.vanalytics.v2B\017TranscriptProtoP" +
-      "\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312\002\021Wfo\\Vanaly" +
-      "tics\\V2\342\002\035Wfo\\Vanalytics\\V2\\GPBMetadata\352" +
-      "\002\023Wfo::Vanalytics::V2b\006proto3"
+      "\n\022REVIEW_STATUS_NONE\020\002*\202\001\n\020ConversationK" +
+      "ind\022\032\n\026CONVERSATION_KIND_CALL\020\000\022\031\n\025CONVE" +
+      "RSATION_KIND_SMS\020\001\022\032\n\026CONVERSATION_KIND_" +
+      "CHAT\020\002\022\033\n\027CONVERSATION_KIND_EMAIL\020\003B\234\001\n#" +
+      "com.tcn.cloud.api.wfo.vanalytics.v2B\017Tra" +
+      "nscriptProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2" +
+      "\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2" +
+      "\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

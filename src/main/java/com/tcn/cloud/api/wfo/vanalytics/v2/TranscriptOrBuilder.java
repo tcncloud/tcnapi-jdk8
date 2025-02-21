@@ -95,7 +95,7 @@ public interface TranscriptOrBuilder extends
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=38
+   *     See wfo/vanalytics/v2/transcript.proto;l=46
    * @return The enum numeric value on the wire for channel.
    */
   @java.lang.Deprecated int getChannelValue();
@@ -106,7 +106,7 @@ public interface TranscriptOrBuilder extends
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=38
+   *     See wfo/vanalytics/v2/transcript.proto;l=46
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.ChannelType getChannel();
