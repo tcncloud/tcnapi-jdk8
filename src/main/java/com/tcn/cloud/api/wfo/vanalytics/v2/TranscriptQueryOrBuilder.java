@@ -41,7 +41,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=533
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -52,7 +52,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=533
+   *     See wfo/vanalytics/v2/transcript.proto;l=525
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();

@@ -1201,7 +1201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=46
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The enum numeric value on the wire for channel.
    */
   @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=46
+   *     See wfo/vanalytics/v2/transcript.proto;l=38
    * @return The channel.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
@@ -2563,7 +2563,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=46
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return The enum numeric value on the wire for channel.
      */
     @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
@@ -2576,7 +2576,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=46
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @param value The enum numeric value on the wire for channel to set.
      * @return This builder for chaining.
      */
@@ -2593,7 +2593,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=46
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return The channel.
      */
     @java.lang.Override
@@ -2608,7 +2608,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=46
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @param value The channel to set.
      * @return This builder for chaining.
      */
@@ -2628,7 +2628,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=46
+     *     See wfo/vanalytics/v2/transcript.proto;l=38
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearChannel() {
