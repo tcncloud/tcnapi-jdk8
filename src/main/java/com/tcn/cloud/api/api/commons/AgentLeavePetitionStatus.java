@@ -156,7 +156,7 @@ public enum AgentLeavePetitionStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(21);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(22);
   }
 
   private static final AgentLeavePetitionStatus[] VALUES = values();

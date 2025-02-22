@@ -241,7 +241,7 @@ public enum AdherenceAgentRuleActionType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(29);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(30);
   }
 
   private static final AdherenceAgentRuleActionType[] VALUES = values();

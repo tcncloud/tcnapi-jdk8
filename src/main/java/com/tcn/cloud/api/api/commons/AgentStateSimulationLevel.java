@@ -5,32 +5,50 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Types of departmental rule actions.
+ * The AgentStateSimulationLevel, which is used to demo agent states on the adherence app, when there are no states to view otherwise.
  * </pre>
  *
- * Protobuf enum {@code api.commons.AdherenceDepartmentalRuleActionType}
+ * Protobuf enum {@code api.commons.AgentStateSimulationLevel}
  */
-public enum AdherenceDepartmentalRuleActionType
+public enum AgentStateSimulationLevel
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * Number of calls answered.
+   * Not set or no simulation active.
+   * The default level of simulation.
    * </pre>
    *
-   * <code>ADHERENCE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_ANSWERED = 0;</code>
+   * <code>NO_SIMULATION = 0;</code>
    */
-  ADHERENCE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_ANSWERED(0),
+  NO_SIMULATION(0),
+  /**
+   * <pre>
+   * Simulates the agent states, but not the predicted calls.
+   * </pre>
+   *
+   * <code>SIMULATED_AGENT_STATES = 1;</code>
+   */
+  SIMULATED_AGENT_STATES(1),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * Number of calls answered.
+   * Not set or no simulation active.
+   * The default level of simulation.
    * </pre>
    *
-   * <code>ADHERENCE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_ANSWERED = 0;</code>
+   * <code>NO_SIMULATION = 0;</code>
    */
-  public static final int ADHERENCE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_ANSWERED_VALUE = 0;
+  public static final int NO_SIMULATION_VALUE = 0;
+  /**
+   * <pre>
+   * Simulates the agent states, but not the predicted calls.
+   * </pre>
+   *
+   * <code>SIMULATED_AGENT_STATES = 1;</code>
+   */
+  public static final int SIMULATED_AGENT_STATES_VALUE = 1;
 
 
   public final int getNumber() {
@@ -47,7 +65,7 @@ public enum AdherenceDepartmentalRuleActionType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static AdherenceDepartmentalRuleActionType valueOf(int value) {
+  public static AgentStateSimulationLevel valueOf(int value) {
     return forNumber(value);
   }
 
@@ -55,22 +73,23 @@ public enum AdherenceDepartmentalRuleActionType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static AdherenceDepartmentalRuleActionType forNumber(int value) {
+  public static AgentStateSimulationLevel forNumber(int value) {
     switch (value) {
-      case 0: return ADHERENCE_DEPARTMENTAL_RULE_ACTION_TYPE_CALLS_ANSWERED;
+      case 0: return NO_SIMULATION;
+      case 1: return SIMULATED_AGENT_STATES;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<AdherenceDepartmentalRuleActionType>
+  public static com.google.protobuf.Internal.EnumLiteMap<AgentStateSimulationLevel>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      AdherenceDepartmentalRuleActionType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<AdherenceDepartmentalRuleActionType>() {
-          public AdherenceDepartmentalRuleActionType findValueByNumber(int number) {
-            return AdherenceDepartmentalRuleActionType.forNumber(number);
+      AgentStateSimulationLevel> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<AgentStateSimulationLevel>() {
+          public AgentStateSimulationLevel findValueByNumber(int number) {
+            return AgentStateSimulationLevel.forNumber(number);
           }
         };
 
@@ -88,12 +107,12 @@ public enum AdherenceDepartmentalRuleActionType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(27);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(21);
   }
 
-  private static final AdherenceDepartmentalRuleActionType[] VALUES = values();
+  private static final AgentStateSimulationLevel[] VALUES = values();
 
-  public static AdherenceDepartmentalRuleActionType valueOf(
+  public static AgentStateSimulationLevel valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -107,10 +126,10 @@ public enum AdherenceDepartmentalRuleActionType
 
   private final int value;
 
-  private AdherenceDepartmentalRuleActionType(int value) {
+  private AgentStateSimulationLevel(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.AdherenceDepartmentalRuleActionType)
+  // @@protoc_insertion_point(enum_scope:api.commons.AgentStateSimulationLevel)
 }
 

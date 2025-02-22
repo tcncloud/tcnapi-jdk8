@@ -7179,6 +7179,37 @@ public final class WFMGrpc {
     return getAgentCancelLeavePetitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAgentStateSimulationLevelForOrg",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod;
+    if ((getSetAgentStateSimulationLevelForOrgMethod = WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSetAgentStateSimulationLevelForOrgMethod = WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod) == null) {
+          WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod = getSetAgentStateSimulationLevelForOrgMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAgentStateSimulationLevelForOrg"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetAgentStateSimulationLevelForOrg"))
+              .build();
+        }
+      }
+    }
+    return getSetAgentStateSimulationLevelForOrgMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -10841,6 +10872,22 @@ public final class WFMGrpc {
     default void agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentCancelLeavePetitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    default void setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAgentStateSimulationLevelForOrgMethod(), responseObserver);
     }
   }
 
@@ -14720,6 +14767,23 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public void setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -18358,6 +18422,22 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAgentCancelLeavePetitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions(), request);
     }
   }
 
@@ -22121,6 +22201,23 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> setAgentStateSimulationLevelForOrg(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -22354,6 +22451,7 @@ public final class WFMGrpc {
   private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 228;
   private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 229;
   private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 230;
+  private static final int METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG = 231;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -23295,6 +23393,10 @@ public final class WFMGrpc {
         case METHODID_AGENT_CANCEL_LEAVE_PETITION:
           serviceImpl.agentCancelLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>) responseObserver);
+          break;
+        case METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG:
+          serviceImpl.setAgentStateSimulationLevelForOrg((com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -24931,6 +25033,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>(
                 service, METHODID_AGENT_CANCEL_LEAVE_PETITION)))
+        .addMethod(
+          getSetAgentStateSimulationLevelForOrgMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>(
+                service, METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG)))
         .build();
   }
 
@@ -25210,6 +25319,7 @@ public final class WFMGrpc {
               .addMethod(getAgentListLeavePetitionsMethod())
               .addMethod(getAgentCreateLeavePetitionMethod())
               .addMethod(getAgentCancelLeavePetitionMethod())
+              .addMethod(getSetAgentStateSimulationLevelForOrgMethod())
               .build();
         }
       }
