@@ -153,15 +153,19 @@ public interface ContactManagerSinkOrBuilder extends
   com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder();
 
   /**
-   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+   *     See api/v0alpha/lms.proto;l=2373
    * @return The userId.
    */
-  java.lang.String getUserId();
+  @java.lang.Deprecated java.lang.String getUserId();
   /**
-   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+   *     See api/v0alpha/lms.proto;l=2373
    * @return The bytes for userId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getUserIdBytes();
 
   /**
