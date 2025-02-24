@@ -30,14 +30,16 @@ public final class TicketsEventsProto {
     java.lang.String[] descriptorData = {
       "\n&api/commons/audit/tickets_events.proto" +
       "\022\021api.commons.audit\032\031api/commons/tickets" +
-      ".proto\"j\n\013TicketEvent\0227\n\neditticket\030\001 \001(" +
-      "\0132\027.api.commons.EditTicketR\neditticket\022\"" +
-      "\n\rcreated_by_id\030\002 \001(\tR\013createdByIdB\237\001\n#c" +
-      "om.tcn.cloud.api.api.commons.auditB\022Tick" +
-      "etsEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Aud" +
-      "it\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Aud" +
-      "it\\GPBMetadata\352\002\023Api::Commons::Auditb\006pr" +
-      "oto3"
+      ".proto\"\320\001\n\013TicketEvent\0227\n\neditticket\030\001 \001" +
+      "(\0132\027.api.commons.EditTicketR\neditticket\022" +
+      "\"\n\rcreated_by_id\030\002 \001(\tR\013createdById\022d\n\031t" +
+      "icketcustomfieldauditlog\030\003 \001(\0132&.api.com" +
+      "mons.TicketCustomFieldAuditLogR\031ticketcu" +
+      "stomfieldauditlogB\237\001\n#com.tcn.cloud.api." +
+      "api.commons.auditB\022TicketsEventsProtoP\001\242" +
+      "\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\" +
+      "Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023" +
+      "Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49,7 +51,7 @@ public final class TicketsEventsProto {
     internal_static_api_commons_audit_TicketEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_TicketEvent_descriptor,
-        new java.lang.String[] { "Editticket", "CreatedById", });
+        new java.lang.String[] { "Editticket", "CreatedById", "Ticketcustomfieldauditlog", });
     com.tcn.cloud.api.api.commons.TicketsProto.getDescriptor();
   }
 

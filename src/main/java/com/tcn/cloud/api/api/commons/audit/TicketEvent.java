@@ -104,6 +104,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TICKETCUSTOMFIELDAUDITLOG_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog_;
+  /**
+   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+   * @return Whether the ticketcustomfieldauditlog field is set.
+   */
+  @java.lang.Override
+  public boolean hasTicketcustomfieldauditlog() {
+    return ticketcustomfieldauditlog_ != null;
+  }
+  /**
+   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+   * @return The ticketcustomfieldauditlog.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketcustomfieldauditlog() {
+    return ticketcustomfieldauditlog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketcustomfieldauditlog_;
+  }
+  /**
+   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketcustomfieldauditlogOrBuilder() {
+    return ticketcustomfieldauditlog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketcustomfieldauditlog_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -124,6 +150,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, createdById_);
     }
+    if (ticketcustomfieldauditlog_ != null) {
+      output.writeMessage(3, getTicketcustomfieldauditlog());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -139,6 +168,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, createdById_);
+    }
+    if (ticketcustomfieldauditlog_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getTicketcustomfieldauditlog());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -162,6 +195,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCreatedById()
         .equals(other.getCreatedById())) return false;
+    if (hasTicketcustomfieldauditlog() != other.hasTicketcustomfieldauditlog()) return false;
+    if (hasTicketcustomfieldauditlog()) {
+      if (!getTicketcustomfieldauditlog()
+          .equals(other.getTicketcustomfieldauditlog())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -179,6 +217,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatedById().hashCode();
+    if (hasTicketcustomfieldauditlog()) {
+      hash = (37 * hash) + TICKETCUSTOMFIELDAUDITLOG_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketcustomfieldauditlog().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -316,6 +358,11 @@ private static final long serialVersionUID = 0L;
         editticketBuilder_ = null;
       }
       createdById_ = "";
+      ticketcustomfieldauditlog_ = null;
+      if (ticketcustomfieldauditlogBuilder_ != null) {
+        ticketcustomfieldauditlogBuilder_.dispose();
+        ticketcustomfieldauditlogBuilder_ = null;
+      }
       return this;
     }
 
@@ -356,6 +403,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.createdById_ = createdById_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.ticketcustomfieldauditlog_ = ticketcustomfieldauditlogBuilder_ == null
+            ? ticketcustomfieldauditlog_
+            : ticketcustomfieldauditlogBuilder_.build();
       }
     }
 
@@ -411,6 +463,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.hasTicketcustomfieldauditlog()) {
+        mergeTicketcustomfieldauditlog(other.getTicketcustomfieldauditlog());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -449,6 +504,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getTicketcustomfieldauditlogFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -655,6 +717,125 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder> ticketcustomfieldauditlogBuilder_;
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     * @return Whether the ticketcustomfieldauditlog field is set.
+     */
+    public boolean hasTicketcustomfieldauditlog() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     * @return The ticketcustomfieldauditlog.
+     */
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketcustomfieldauditlog() {
+      if (ticketcustomfieldauditlogBuilder_ == null) {
+        return ticketcustomfieldauditlog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketcustomfieldauditlog_;
+      } else {
+        return ticketcustomfieldauditlogBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public Builder setTicketcustomfieldauditlog(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog value) {
+      if (ticketcustomfieldauditlogBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ticketcustomfieldauditlog_ = value;
+      } else {
+        ticketcustomfieldauditlogBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public Builder setTicketcustomfieldauditlog(
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder builderForValue) {
+      if (ticketcustomfieldauditlogBuilder_ == null) {
+        ticketcustomfieldauditlog_ = builderForValue.build();
+      } else {
+        ticketcustomfieldauditlogBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public Builder mergeTicketcustomfieldauditlog(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog value) {
+      if (ticketcustomfieldauditlogBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          ticketcustomfieldauditlog_ != null &&
+          ticketcustomfieldauditlog_ != com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance()) {
+          getTicketcustomfieldauditlogBuilder().mergeFrom(value);
+        } else {
+          ticketcustomfieldauditlog_ = value;
+        }
+      } else {
+        ticketcustomfieldauditlogBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public Builder clearTicketcustomfieldauditlog() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      ticketcustomfieldauditlog_ = null;
+      if (ticketcustomfieldauditlogBuilder_ != null) {
+        ticketcustomfieldauditlogBuilder_.dispose();
+        ticketcustomfieldauditlogBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder getTicketcustomfieldauditlogBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getTicketcustomfieldauditlogFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketcustomfieldauditlogOrBuilder() {
+      if (ticketcustomfieldauditlogBuilder_ != null) {
+        return ticketcustomfieldauditlogBuilder_.getMessageOrBuilder();
+      } else {
+        return ticketcustomfieldauditlog_ == null ?
+            com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketcustomfieldauditlog_;
+      }
+    }
+    /**
+     * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder> 
+        getTicketcustomfieldauditlogFieldBuilder() {
+      if (ticketcustomfieldauditlogBuilder_ == null) {
+        ticketcustomfieldauditlogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder>(
+                getTicketcustomfieldauditlog(),
+                getParentForChildren(),
+                isClean());
+        ticketcustomfieldauditlog_ = null;
+      }
+      return ticketcustomfieldauditlogBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
