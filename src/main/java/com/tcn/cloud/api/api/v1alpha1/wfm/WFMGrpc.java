@@ -6187,6 +6187,37 @@ public final class WFMGrpc {
     return getHelloWorldWFMAdherenceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceDiagnostics",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod;
+    if ((getListAdherenceDiagnosticsMethod = WFMGrpc.getListAdherenceDiagnosticsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListAdherenceDiagnosticsMethod = WFMGrpc.getListAdherenceDiagnosticsMethod) == null) {
+          WFMGrpc.getListAdherenceDiagnosticsMethod = getListAdherenceDiagnosticsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceDiagnostics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceDiagnostics"))
+              .build();
+        }
+      }
+    }
+    return getListAdherenceDiagnosticsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
 
@@ -10385,6 +10416,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    default void listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceDiagnosticsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -14231,6 +14276,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public void listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAdherenceDiagnosticsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -17898,6 +17958,20 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse helloWorldWFMAdherence(com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHelloWorldWFMAdherenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAdherenceDiagnosticsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -21632,6 +21706,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> listAdherenceDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAdherenceDiagnosticsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -22322,38 +22411,39 @@ public final class WFMGrpc {
   private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 196;
   private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 197;
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 198;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 199;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 200;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 201;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 202;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 203;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 204;
-  private static final int METHODID_CREATE_RGBA_COLOR = 205;
-  private static final int METHODID_LIST_RGBA_COLORS = 206;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 207;
-  private static final int METHODID_DELETE_RGBA_COLOR = 208;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 209;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 210;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 211;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 212;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 213;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 214;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 215;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 216;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 217;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 218;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 219;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 220;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 221;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 222;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 223;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 224;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 225;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 226;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 227;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 228;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 229;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 230;
+  private static final int METHODID_LIST_ADHERENCE_DIAGNOSTICS = 199;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 200;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 201;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 202;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 203;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 204;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 205;
+  private static final int METHODID_CREATE_RGBA_COLOR = 206;
+  private static final int METHODID_LIST_RGBA_COLORS = 207;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 208;
+  private static final int METHODID_DELETE_RGBA_COLOR = 209;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 210;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 211;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 212;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 213;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 214;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 215;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 216;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 217;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 218;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 219;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 220;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 221;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 222;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 223;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 224;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 225;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 226;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 227;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 228;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 229;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 230;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 231;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -23167,6 +23257,10 @@ public final class WFMGrpc {
         case METHODID_HELLO_WORLD_WFMADHERENCE:
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ADHERENCE_DIAGNOSTICS:
+          serviceImpl.listAdherenceDiagnostics((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>) responseObserver);
           break;
         case METHODID_LIST_AGENT_STATES_FOR_DAY:
           serviceImpl.listAgentStatesForDay((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest) request,
@@ -24708,6 +24802,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
                 service, METHODID_HELLO_WORLD_WFMADHERENCE)))
         .addMethod(
+          getListAdherenceDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>(
+                service, METHODID_LIST_ADHERENCE_DIAGNOSTICS)))
+        .addMethod(
           getListAgentStatesForDayMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -25178,6 +25279,7 @@ public final class WFMGrpc {
               .addMethod(getResolveAgentLeavePetitionMethod())
               .addMethod(getCancelAgentLeavePetitionMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
+              .addMethod(getListAdherenceDiagnosticsMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
               .addMethod(getListAdherenceAgentStatesMethod())

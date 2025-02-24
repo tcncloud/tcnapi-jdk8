@@ -5109,7 +5109,7 @@ public final class WfmProto {
       "d\030\001 \001(\003B\0020\001R\024agentLeavePetitionId\"u\n Age" +
       "ntCancelLeavePetitionResponse\022Q\n\024agent_l" +
       "eave_petition\030\001 \001(\0132\037.api.commons.AgentL" +
-      "eavePetitionR\022agentLeavePetition2\345\337\002\n\003WF" +
+      "eavePetitionR\022agentLeavePetition2\255\341\002\n\003WF" +
       "M\022\313\001\n\031PerformInitialClientSetup\0222.api.v1" +
       "alpha1.wfm.PerformInitialClientSetupRequ" +
       "est\0323.api.v1alpha1.wfm.PerformInitialCli" +
@@ -6062,7 +6062,12 @@ public final class WfmProto {
       "ha1.wfm.HelloWorldWFMAdherenceRequest\0320." +
       "api.v1alpha1.wfm.HelloWorldWFMAdherenceR" +
       "esponse\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1" +
-      "/wfm/helloworldwfmadherence:\001*\022\271\001\n\025ListA" +
+      "/wfm/helloworldwfmadherence:\001*\022\305\001\n\030ListA" +
+      "dherenceDiagnostics\0221.api.v1alpha1.wfm.L" +
+      "istAdherenceDiagnosticsRequest\0322.api.v1a" +
+      "lpha1.wfm.ListAdherenceDiagnosticsRespon" +
+      "se\"B\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/w" +
+      "fm/listadherencediagnostics:\001*\022\271\001\n\025ListA" +
       "gentStatesForDay\022..api.v1alpha1.wfm.List" +
       "AgentStatesForDayRequest\032/.api.v1alpha1." +
       "wfm.ListAgentStatesForDayResponse\"?\210\002\001\272\270" +
