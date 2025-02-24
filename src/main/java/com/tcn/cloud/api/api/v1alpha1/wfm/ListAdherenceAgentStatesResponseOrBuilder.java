@@ -172,4 +172,48 @@ com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations defaultValue);
    */
   com.tcn.cloud.api.api.commons.AdherenceAgentStateViolations getAgentStateViolationsOrThrow(
       long key);
+
+  /**
+   * <pre>
+   * Any diagnostics encountered when getting the agent states or violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
+  /**
+   * <pre>
+   * Any diagnostics encountered when getting the agent states or violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
+  /**
+   * <pre>
+   * Any diagnostics encountered when getting the agent states or violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  int getDiagnosticsCount();
+  /**
+   * <pre>
+   * Any diagnostics encountered when getting the agent states or violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
+  /**
+   * <pre>
+   * Any diagnostics encountered when getting the agent states or violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 5 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index);
 }
