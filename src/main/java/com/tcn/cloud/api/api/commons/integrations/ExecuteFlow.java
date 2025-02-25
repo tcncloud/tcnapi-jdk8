@@ -220,6 +220,7 @@ private static final long serialVersionUID = 0L;
     ELAVON_DELETE_INSTALLMENT(2909),
     ELAVON_MCC_CREDIT_CARD_SALE(2910),
     ELAVON_ELECTRONIC_CHECK_PURCHASE(2911),
+    ELAVON_SUBMIT_INSTALLMENT_SALE(2912),
     GLOBALPAYMENTS_CARD_SALE(3001),
     GLOBALPAYMENTS_GET_TRANSACTION_BY_ID(3002),
     GLOBALPAYMENTS_LIST_TRANSACTIONS(3003),
@@ -369,6 +370,10 @@ private static final long serialVersionUID = 0L;
     TRATTA_ACH_CHARGE(5902),
     TRATTA_CC_CHARGE_POST_DATED(5903),
     TRATTA_ACH_CHARGE_POST_DATED(5904),
+    FORTIS_CREATE_ACHTOKEN(6001),
+    FORTIS_CREATE_CCTOKEN(6002),
+    FORTIS_TOKEN_ACH_DEBIT_PAYMENT(6003),
+    FORTIS_TOKEN_CC_PAYMENT(6004),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -554,6 +559,7 @@ private static final long serialVersionUID = 0L;
         case 2909: return ELAVON_DELETE_INSTALLMENT;
         case 2910: return ELAVON_MCC_CREDIT_CARD_SALE;
         case 2911: return ELAVON_ELECTRONIC_CHECK_PURCHASE;
+        case 2912: return ELAVON_SUBMIT_INSTALLMENT_SALE;
         case 3001: return GLOBALPAYMENTS_CARD_SALE;
         case 3002: return GLOBALPAYMENTS_GET_TRANSACTION_BY_ID;
         case 3003: return GLOBALPAYMENTS_LIST_TRANSACTIONS;
@@ -703,6 +709,10 @@ private static final long serialVersionUID = 0L;
         case 5902: return TRATTA_ACH_CHARGE;
         case 5903: return TRATTA_CC_CHARGE_POST_DATED;
         case 5904: return TRATTA_ACH_CHARGE_POST_DATED;
+        case 6001: return FORTIS_CREATE_ACHTOKEN;
+        case 6002: return FORTIS_CREATE_CCTOKEN;
+        case 6003: return FORTIS_TOKEN_ACH_DEBIT_PAYMENT;
+        case 6004: return FORTIS_TOKEN_CC_PAYMENT;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -5965,6 +5975,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase.getDefaultInstance();
   }
 
+  public static final int ELAVON_SUBMIT_INSTALLMENT_SALE_FIELD_NUMBER = 2912;
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   * @return Whether the elavonSubmitInstallmentSale field is set.
+   */
+  @java.lang.Override
+  public boolean hasElavonSubmitInstallmentSale() {
+    return valueCase_ == 2912;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   * @return The elavonSubmitInstallmentSale.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale getElavonSubmitInstallmentSale() {
+    if (valueCase_ == 2912) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder getElavonSubmitInstallmentSaleOrBuilder() {
+    if (valueCase_ == 2912) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+  }
+
   public static final int GLOBALPAYMENTS_CARD_SALE_FIELD_NUMBER = 3001;
   /**
    * <code>.api.commons.integrations.ExecuteGlobalPaymentsCardSale globalPayments_card_sale = 3001 [json_name = "globalPaymentsCardSale"];</code>
@@ -9317,7 +9358,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1231
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9327,7 +9368,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1231
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9352,7 +9393,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1232
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9362,7 +9403,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1232
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9387,7 +9428,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1233
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9397,7 +9438,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1233
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9422,7 +9463,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1234
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9432,7 +9473,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1234
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9457,7 +9498,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1235
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9467,7 +9508,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1235
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9492,7 +9533,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1236
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9502,7 +9543,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1236
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9527,7 +9568,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1237
+   *     See api/commons/integrations/integrations.proto;l=1245
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9537,7 +9578,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1237
+   *     See api/commons/integrations/integrations.proto;l=1245
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10612,6 +10653,130 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated.getDefaultInstance();
   }
 
+  public static final int FORTIS_CREATE_ACHTOKEN_FIELD_NUMBER = 6001;
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+   * @return Whether the fortisCreateAchtoken field is set.
+   */
+  @java.lang.Override
+  public boolean hasFortisCreateAchtoken() {
+    return valueCase_ == 6001;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+   * @return The fortisCreateAchtoken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken getFortisCreateAchtoken() {
+    if (valueCase_ == 6001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtokenOrBuilder getFortisCreateAchtokenOrBuilder() {
+    if (valueCase_ == 6001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+  }
+
+  public static final int FORTIS_CREATE_CCTOKEN_FIELD_NUMBER = 6002;
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+   * @return Whether the fortisCreateCctoken field is set.
+   */
+  @java.lang.Override
+  public boolean hasFortisCreateCctoken() {
+    return valueCase_ == 6002;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+   * @return The fortisCreateCctoken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken getFortisCreateCctoken() {
+    if (valueCase_ == 6002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctokenOrBuilder getFortisCreateCctokenOrBuilder() {
+    if (valueCase_ == 6002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+  }
+
+  public static final int FORTIS_TOKEN_ACH_DEBIT_PAYMENT_FIELD_NUMBER = 6003;
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+   * @return Whether the fortisTokenAchDebitPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasFortisTokenAchDebitPayment() {
+    return valueCase_ == 6003;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+   * @return The fortisTokenAchDebitPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment getFortisTokenAchDebitPayment() {
+    if (valueCase_ == 6003) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPaymentOrBuilder getFortisTokenAchDebitPaymentOrBuilder() {
+    if (valueCase_ == 6003) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+  }
+
+  public static final int FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER = 6004;
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+   * @return Whether the fortisTokenCcPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasFortisTokenCcPayment() {
+    return valueCase_ == 6004;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+   * @return The fortisTokenCcPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment getFortisTokenCcPayment() {
+    if (valueCase_ == 6004) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPaymentOrBuilder getFortisTokenCcPaymentOrBuilder() {
+    if (valueCase_ == 6004) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -11133,6 +11298,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2911) {
       output.writeMessage(2911, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase) value_);
     }
+    if (valueCase_ == 2912) {
+      output.writeMessage(2912, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_);
+    }
     if (valueCase_ == 3001) {
       output.writeMessage(3001, (com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale) value_);
     }
@@ -11579,6 +11747,18 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 5904) {
       output.writeMessage(5904, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_);
+    }
+    if (valueCase_ == 6001) {
+      output.writeMessage(6001, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_);
+    }
+    if (valueCase_ == 6002) {
+      output.writeMessage(6002, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_);
+    }
+    if (valueCase_ == 6003) {
+      output.writeMessage(6003, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_);
+    }
+    if (valueCase_ == 6004) {
+      output.writeMessage(6004, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -12264,6 +12444,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2911, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase) value_);
     }
+    if (valueCase_ == 2912) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2912, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_);
+    }
     if (valueCase_ == 3001) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3001, (com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale) value_);
@@ -12859,6 +13043,22 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 5904) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5904, (com.tcn.cloud.api.api.commons.integrations.ExecuteTrattaAchChargePostDated) value_);
+    }
+    if (valueCase_ == 6001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6001, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_);
+    }
+    if (valueCase_ == 6002) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6002, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_);
+    }
+    if (valueCase_ == 6003) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6003, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_);
+    }
+    if (valueCase_ == 6004) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6004, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -13551,6 +13751,10 @@ private static final long serialVersionUID = 0L;
         if (!getElavonElectronicCheckPurchase()
             .equals(other.getElavonElectronicCheckPurchase())) return false;
         break;
+      case 2912:
+        if (!getElavonSubmitInstallmentSale()
+            .equals(other.getElavonSubmitInstallmentSale())) return false;
+        break;
       case 3001:
         if (!getGlobalPaymentsCardSale()
             .equals(other.getGlobalPaymentsCardSale())) return false;
@@ -14146,6 +14350,22 @@ private static final long serialVersionUID = 0L;
       case 5904:
         if (!getTrattaAchChargePostDated()
             .equals(other.getTrattaAchChargePostDated())) return false;
+        break;
+      case 6001:
+        if (!getFortisCreateAchtoken()
+            .equals(other.getFortisCreateAchtoken())) return false;
+        break;
+      case 6002:
+        if (!getFortisCreateCctoken()
+            .equals(other.getFortisCreateCctoken())) return false;
+        break;
+      case 6003:
+        if (!getFortisTokenAchDebitPayment()
+            .equals(other.getFortisTokenAchDebitPayment())) return false;
+        break;
+      case 6004:
+        if (!getFortisTokenCcPayment()
+            .equals(other.getFortisTokenCcPayment())) return false;
         break;
       case 0:
       default:
@@ -14836,6 +15056,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ELAVON_ELECTRONIC_CHECK_PURCHASE_FIELD_NUMBER;
         hash = (53 * hash) + getElavonElectronicCheckPurchase().hashCode();
         break;
+      case 2912:
+        hash = (37 * hash) + ELAVON_SUBMIT_INSTALLMENT_SALE_FIELD_NUMBER;
+        hash = (53 * hash) + getElavonSubmitInstallmentSale().hashCode();
+        break;
       case 3001:
         hash = (37 * hash) + GLOBALPAYMENTS_CARD_SALE_FIELD_NUMBER;
         hash = (53 * hash) + getGlobalPaymentsCardSale().hashCode();
@@ -15432,6 +15656,22 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TRATTA_ACH_CHARGE_POST_DATED_FIELD_NUMBER;
         hash = (53 * hash) + getTrattaAchChargePostDated().hashCode();
         break;
+      case 6001:
+        hash = (37 * hash) + FORTIS_CREATE_ACHTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getFortisCreateAchtoken().hashCode();
+        break;
+      case 6002:
+        hash = (37 * hash) + FORTIS_CREATE_CCTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getFortisCreateCctoken().hashCode();
+        break;
+      case 6003:
+        hash = (37 * hash) + FORTIS_TOKEN_ACH_DEBIT_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getFortisTokenAchDebitPayment().hashCode();
+        break;
+      case 6004:
+        hash = (37 * hash) + FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getFortisTokenCcPayment().hashCode();
+        break;
       case 0:
       default:
     }
@@ -15582,6 +15822,7 @@ private static final long serialVersionUID = 0L;
       bitField7_ = 0;
       bitField8_ = 0;
       bitField9_ = 0;
+      bitField10_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -16087,6 +16328,9 @@ private static final long serialVersionUID = 0L;
       if (elavonElectronicCheckPurchaseBuilder_ != null) {
         elavonElectronicCheckPurchaseBuilder_.clear();
       }
+      if (elavonSubmitInstallmentSaleBuilder_ != null) {
+        elavonSubmitInstallmentSaleBuilder_.clear();
+      }
       if (globalPaymentsCardSaleBuilder_ != null) {
         globalPaymentsCardSaleBuilder_.clear();
       }
@@ -16534,6 +16778,18 @@ private static final long serialVersionUID = 0L;
       if (trattaAchChargePostDatedBuilder_ != null) {
         trattaAchChargePostDatedBuilder_.clear();
       }
+      if (fortisCreateAchtokenBuilder_ != null) {
+        fortisCreateAchtokenBuilder_.clear();
+      }
+      if (fortisCreateCctokenBuilder_ != null) {
+        fortisCreateCctokenBuilder_.clear();
+      }
+      if (fortisTokenAchDebitPaymentBuilder_ != null) {
+        fortisTokenAchDebitPaymentBuilder_.clear();
+      }
+      if (fortisTokenCcPaymentBuilder_ != null) {
+        fortisTokenCcPaymentBuilder_.clear();
+      }
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -16572,6 +16828,7 @@ private static final long serialVersionUID = 0L;
       if (bitField7_ != 0) { buildPartial7(result); }
       if (bitField8_ != 0) { buildPartial8(result); }
       if (bitField9_ != 0) { buildPartial9(result); }
+      if (bitField10_ != 0) { buildPartial10(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -16618,6 +16875,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial9(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField9_ = bitField9_;
+    }
+
+    private void buildPartial10(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField10_ = bitField10_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -17295,6 +17556,10 @@ private static final long serialVersionUID = 0L;
           elavonElectronicCheckPurchaseBuilder_ != null) {
         result.value_ = elavonElectronicCheckPurchaseBuilder_.build();
       }
+      if (valueCase_ == 2912 &&
+          elavonSubmitInstallmentSaleBuilder_ != null) {
+        result.value_ = elavonSubmitInstallmentSaleBuilder_.build();
+      }
       if (valueCase_ == 3001 &&
           globalPaymentsCardSaleBuilder_ != null) {
         result.value_ = globalPaymentsCardSaleBuilder_.build();
@@ -17890,6 +18155,22 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 5904 &&
           trattaAchChargePostDatedBuilder_ != null) {
         result.value_ = trattaAchChargePostDatedBuilder_.build();
+      }
+      if (valueCase_ == 6001 &&
+          fortisCreateAchtokenBuilder_ != null) {
+        result.value_ = fortisCreateAchtokenBuilder_.build();
+      }
+      if (valueCase_ == 6002 &&
+          fortisCreateCctokenBuilder_ != null) {
+        result.value_ = fortisCreateCctokenBuilder_.build();
+      }
+      if (valueCase_ == 6003 &&
+          fortisTokenAchDebitPaymentBuilder_ != null) {
+        result.value_ = fortisTokenAchDebitPaymentBuilder_.build();
+      }
+      if (valueCase_ == 6004 &&
+          fortisTokenCcPaymentBuilder_ != null) {
+        result.value_ = fortisTokenCcPaymentBuilder_.build();
       }
     }
 
@@ -18615,6 +18896,10 @@ private static final long serialVersionUID = 0L;
           mergeElavonElectronicCheckPurchase(other.getElavonElectronicCheckPurchase());
           break;
         }
+        case ELAVON_SUBMIT_INSTALLMENT_SALE: {
+          mergeElavonSubmitInstallmentSale(other.getElavonSubmitInstallmentSale());
+          break;
+        }
         case GLOBALPAYMENTS_CARD_SALE: {
           mergeGlobalPaymentsCardSale(other.getGlobalPaymentsCardSale());
           break;
@@ -19209,6 +19494,22 @@ private static final long serialVersionUID = 0L;
         }
         case TRATTA_ACH_CHARGE_POST_DATED: {
           mergeTrattaAchChargePostDated(other.getTrattaAchChargePostDated());
+          break;
+        }
+        case FORTIS_CREATE_ACHTOKEN: {
+          mergeFortisCreateAchtoken(other.getFortisCreateAchtoken());
+          break;
+        }
+        case FORTIS_CREATE_CCTOKEN: {
+          mergeFortisCreateCctoken(other.getFortisCreateCctoken());
+          break;
+        }
+        case FORTIS_TOKEN_ACH_DEBIT_PAYMENT: {
+          mergeFortisTokenAchDebitPayment(other.getFortisTokenAchDebitPayment());
+          break;
+        }
+        case FORTIS_TOKEN_CC_PAYMENT: {
+          mergeFortisTokenCcPayment(other.getFortisTokenCcPayment());
           break;
         }
         case VALUE_NOT_SET: {
@@ -20422,6 +20723,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2911;
               break;
             } // case 23290
+            case 23298: {
+              input.readMessage(
+                  getElavonSubmitInstallmentSaleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2912;
+              break;
+            } // case 23298
             case 24010: {
               input.readMessage(
                   getGlobalPaymentsCardSaleFieldBuilder().getBuilder(),
@@ -21465,6 +21773,34 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 5904;
               break;
             } // case 47234
+            case 48010: {
+              input.readMessage(
+                  getFortisCreateAchtokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 6001;
+              break;
+            } // case 48010
+            case 48018: {
+              input.readMessage(
+                  getFortisCreateCctokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 6002;
+              break;
+            } // case 48018
+            case 48026: {
+              input.readMessage(
+                  getFortisTokenAchDebitPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 6003;
+              break;
+            } // case 48026
+            case 48034: {
+              input.readMessage(
+                  getFortisTokenCcPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 6004;
+              break;
+            } // case 48034
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -21505,6 +21841,7 @@ private static final long serialVersionUID = 0L;
     private int bitField7_;
     private int bitField8_;
     private int bitField9_;
+    private int bitField10_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -45435,6 +45772,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder> elavonSubmitInstallmentSaleBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     * @return Whether the elavonSubmitInstallmentSale field is set.
+     */
+    @java.lang.Override
+    public boolean hasElavonSubmitInstallmentSale() {
+      return valueCase_ == 2912;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     * @return The elavonSubmitInstallmentSale.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale getElavonSubmitInstallmentSale() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2912) {
+          return elavonSubmitInstallmentSaleBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder setElavonSubmitInstallmentSale(com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale value) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        elavonSubmitInstallmentSaleBuilder_.setMessage(value);
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder setElavonSubmitInstallmentSale(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder builderForValue) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        elavonSubmitInstallmentSaleBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder mergeElavonSubmitInstallmentSale(com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale value) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2912) {
+          elavonSubmitInstallmentSaleBuilder_.mergeFrom(value);
+        } else {
+          elavonSubmitInstallmentSaleBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder clearElavonSubmitInstallmentSale() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2912) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        elavonSubmitInstallmentSaleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder getElavonSubmitInstallmentSaleBuilder() {
+      return getElavonSubmitInstallmentSaleFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder getElavonSubmitInstallmentSaleOrBuilder() {
+      if ((valueCase_ == 2912) && (elavonSubmitInstallmentSaleBuilder_ != null)) {
+        return elavonSubmitInstallmentSaleBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2912) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder> 
+        getElavonSubmitInstallmentSaleFieldBuilder() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (!(valueCase_ == 2912)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+        }
+        elavonSubmitInstallmentSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2912;
+      onChanged();
+      return elavonSubmitInstallmentSaleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSaleOrBuilder> globalPaymentsCardSaleBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteGlobalPaymentsCardSale globalPayments_card_sale = 3001 [json_name = "globalPaymentsCardSale"];</code>
@@ -60775,7 +61254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1231
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -60785,7 +61264,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1231
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -60921,7 +61400,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1232
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -60931,7 +61410,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1232
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -61067,7 +61546,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1233
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -61077,7 +61556,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1233
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -61213,7 +61692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1234
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -61223,7 +61702,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1234
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -61359,7 +61838,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1235
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -61369,7 +61848,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1235
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -61505,7 +61984,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1236
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -61515,7 +61994,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1236
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -61651,7 +62130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1237
+     *     See api/commons/integrations/integrations.proto;l=1245
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -61661,7 +62140,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1237
+     *     See api/commons/integrations/integrations.proto;l=1245
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -66618,6 +67097,574 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 5904;
       onChanged();
       return trattaAchChargePostDatedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtokenOrBuilder> fortisCreateAchtokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     * @return Whether the fortisCreateAchtoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasFortisCreateAchtoken() {
+      return valueCase_ == 6001;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     * @return The fortisCreateAchtoken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken getFortisCreateAchtoken() {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        if (valueCase_ == 6001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 6001) {
+          return fortisCreateAchtokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    public Builder setFortisCreateAchtoken(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken value) {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        fortisCreateAchtokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 6001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    public Builder setFortisCreateAchtoken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.Builder builderForValue) {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        fortisCreateAchtokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 6001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    public Builder mergeFortisCreateAchtoken(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken value) {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        if (valueCase_ == 6001 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 6001) {
+          fortisCreateAchtokenBuilder_.mergeFrom(value);
+        } else {
+          fortisCreateAchtokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 6001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    public Builder clearFortisCreateAchtoken() {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        if (valueCase_ == 6001) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 6001) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        fortisCreateAchtokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.Builder getFortisCreateAchtokenBuilder() {
+      return getFortisCreateAchtokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtokenOrBuilder getFortisCreateAchtokenOrBuilder() {
+      if ((valueCase_ == 6001) && (fortisCreateAchtokenBuilder_ != null)) {
+        return fortisCreateAchtokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 6001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateAchtoken fortis_create_achtoken = 6001 [json_name = "fortisCreateAchtoken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtokenOrBuilder> 
+        getFortisCreateAchtokenFieldBuilder() {
+      if (fortisCreateAchtokenBuilder_ == null) {
+        if (!(valueCase_ == 6001)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.getDefaultInstance();
+        }
+        fortisCreateAchtokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateAchtoken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 6001;
+      onChanged();
+      return fortisCreateAchtokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctokenOrBuilder> fortisCreateCctokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     * @return Whether the fortisCreateCctoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasFortisCreateCctoken() {
+      return valueCase_ == 6002;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     * @return The fortisCreateCctoken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken getFortisCreateCctoken() {
+      if (fortisCreateCctokenBuilder_ == null) {
+        if (valueCase_ == 6002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 6002) {
+          return fortisCreateCctokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    public Builder setFortisCreateCctoken(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken value) {
+      if (fortisCreateCctokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        fortisCreateCctokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 6002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    public Builder setFortisCreateCctoken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.Builder builderForValue) {
+      if (fortisCreateCctokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        fortisCreateCctokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 6002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    public Builder mergeFortisCreateCctoken(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken value) {
+      if (fortisCreateCctokenBuilder_ == null) {
+        if (valueCase_ == 6002 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 6002) {
+          fortisCreateCctokenBuilder_.mergeFrom(value);
+        } else {
+          fortisCreateCctokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 6002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    public Builder clearFortisCreateCctoken() {
+      if (fortisCreateCctokenBuilder_ == null) {
+        if (valueCase_ == 6002) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 6002) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        fortisCreateCctokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.Builder getFortisCreateCctokenBuilder() {
+      return getFortisCreateCctokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctokenOrBuilder getFortisCreateCctokenOrBuilder() {
+      if ((valueCase_ == 6002) && (fortisCreateCctokenBuilder_ != null)) {
+        return fortisCreateCctokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 6002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisCreateCctoken fortis_create_cctoken = 6002 [json_name = "fortisCreateCctoken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctokenOrBuilder> 
+        getFortisCreateCctokenFieldBuilder() {
+      if (fortisCreateCctokenBuilder_ == null) {
+        if (!(valueCase_ == 6002)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.getDefaultInstance();
+        }
+        fortisCreateCctokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisCreateCctoken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 6002;
+      onChanged();
+      return fortisCreateCctokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPaymentOrBuilder> fortisTokenAchDebitPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     * @return Whether the fortisTokenAchDebitPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasFortisTokenAchDebitPayment() {
+      return valueCase_ == 6003;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     * @return The fortisTokenAchDebitPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment getFortisTokenAchDebitPayment() {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 6003) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 6003) {
+          return fortisTokenAchDebitPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    public Builder setFortisTokenAchDebitPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment value) {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        fortisTokenAchDebitPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 6003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    public Builder setFortisTokenAchDebitPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.Builder builderForValue) {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        fortisTokenAchDebitPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 6003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    public Builder mergeFortisTokenAchDebitPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment value) {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 6003 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 6003) {
+          fortisTokenAchDebitPaymentBuilder_.mergeFrom(value);
+        } else {
+          fortisTokenAchDebitPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 6003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    public Builder clearFortisTokenAchDebitPayment() {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 6003) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 6003) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        fortisTokenAchDebitPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.Builder getFortisTokenAchDebitPaymentBuilder() {
+      return getFortisTokenAchDebitPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPaymentOrBuilder getFortisTokenAchDebitPaymentOrBuilder() {
+      if ((valueCase_ == 6003) && (fortisTokenAchDebitPaymentBuilder_ != null)) {
+        return fortisTokenAchDebitPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 6003) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenAchDebitPayment fortis_token_ach_debit_payment = 6003 [json_name = "fortisTokenAchDebitPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPaymentOrBuilder> 
+        getFortisTokenAchDebitPaymentFieldBuilder() {
+      if (fortisTokenAchDebitPaymentBuilder_ == null) {
+        if (!(valueCase_ == 6003)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.getDefaultInstance();
+        }
+        fortisTokenAchDebitPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenAchDebitPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 6003;
+      onChanged();
+      return fortisTokenAchDebitPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPaymentOrBuilder> fortisTokenCcPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     * @return Whether the fortisTokenCcPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasFortisTokenCcPayment() {
+      return valueCase_ == 6004;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     * @return The fortisTokenCcPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment getFortisTokenCcPayment() {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 6004) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 6004) {
+          return fortisTokenCcPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    public Builder setFortisTokenCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment value) {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        fortisTokenCcPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 6004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    public Builder setFortisTokenCcPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.Builder builderForValue) {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        fortisTokenCcPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 6004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    public Builder mergeFortisTokenCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment value) {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 6004 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 6004) {
+          fortisTokenCcPaymentBuilder_.mergeFrom(value);
+        } else {
+          fortisTokenCcPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 6004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    public Builder clearFortisTokenCcPayment() {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 6004) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 6004) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        fortisTokenCcPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.Builder getFortisTokenCcPaymentBuilder() {
+      return getFortisTokenCcPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPaymentOrBuilder getFortisTokenCcPaymentOrBuilder() {
+      if ((valueCase_ == 6004) && (fortisTokenCcPaymentBuilder_ != null)) {
+        return fortisTokenCcPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 6004) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFortisTokenCcPayment fortis_token_cc_payment = 6004 [json_name = "fortisTokenCcPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPaymentOrBuilder> 
+        getFortisTokenCcPaymentFieldBuilder() {
+      if (fortisTokenCcPaymentBuilder_ == null) {
+        if (!(valueCase_ == 6004)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
+        }
+        fortisTokenCcPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 6004;
+      onChanged();
+      return fortisTokenCcPaymentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
