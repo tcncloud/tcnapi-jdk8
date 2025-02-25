@@ -888,9 +888,9 @@ public enum EventType
    * ticket-custom-field-event
    * </pre>
    *
-   * <code>TICKET_CUSTOM_FIELD_ADD_EVENT = 616;</code>
+   * <code>TICKET_CUSTOM_FIELD_CREATE_EVENT = 616;</code>
    */
-  TICKET_CUSTOM_FIELD_ADD_EVENT(616),
+  TICKET_CUSTOM_FIELD_CREATE_EVENT(616),
   /**
    * <pre>
    * ticket-custom-field-edit-event
@@ -1972,9 +1972,9 @@ public enum EventType
    * ticket-custom-field-event
    * </pre>
    *
-   * <code>TICKET_CUSTOM_FIELD_ADD_EVENT = 616;</code>
+   * <code>TICKET_CUSTOM_FIELD_CREATE_EVENT = 616;</code>
    */
-  public static final int TICKET_CUSTOM_FIELD_ADD_EVENT_VALUE = 616;
+  public static final int TICKET_CUSTOM_FIELD_CREATE_EVENT_VALUE = 616;
   /**
    * <pre>
    * ticket-custom-field-edit-event
@@ -2324,7 +2324,7 @@ public enum EventType
       case 613: return TICKET_TEMPLATE_STATE_CHANGE_EVENT;
       case 614: return TICKET_PROJECT_STATE_CHANGE_EVENT;
       case 615: return TICKET_CONTACT_ADD_EVENT;
-      case 616: return TICKET_CUSTOM_FIELD_ADD_EVENT;
+      case 616: return TICKET_CUSTOM_FIELD_CREATE_EVENT;
       case 617: return TICKET_CUSTOM_FIELD_EDIT_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;

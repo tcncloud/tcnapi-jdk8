@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.commons.audit;
 
 /**
- * Protobuf type {@code api.commons.audit.TicketEvent}
+ * Protobuf type {@code api.commons.audit.TicketCustomFieldEditEvent}
  */
-public final class TicketEvent extends
+public final class TicketCustomFieldEditEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.audit.TicketEvent)
-    TicketEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.audit.TicketCustomFieldEditEvent)
+    TicketCustomFieldEditEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use TicketEvent.newBuilder() to construct.
-  private TicketEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use TicketCustomFieldEditEvent.newBuilder() to construct.
+  private TicketCustomFieldEditEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private TicketEvent() {
+  private TicketCustomFieldEditEvent() {
     createdById_ = "";
   }
 
@@ -23,46 +23,46 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new TicketEvent();
+    return new TicketCustomFieldEditEvent();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_descriptor;
+    return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketCustomFieldEditEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketCustomFieldEditEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.audit.TicketEvent.class, com.tcn.cloud.api.api.commons.audit.TicketEvent.Builder.class);
+            com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.class, com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.Builder.class);
   }
 
-  public static final int EDITTICKET_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.EditTicket editticket_;
+  public static final int TICKET_CUSTOM_FIELD_AUDIT_LOG_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog ticketCustomFieldAuditLog_;
   /**
-   * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
-   * @return Whether the editticket field is set.
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
+   * @return Whether the ticketCustomFieldAuditLog field is set.
    */
   @java.lang.Override
-  public boolean hasEditticket() {
-    return editticket_ != null;
+  public boolean hasTicketCustomFieldAuditLog() {
+    return ticketCustomFieldAuditLog_ != null;
   }
   /**
-   * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
-   * @return The editticket.
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
+   * @return The ticketCustomFieldAuditLog.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.EditTicket getEditticket() {
-    return editticket_ == null ? com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
+  public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketCustomFieldAuditLog() {
+    return ticketCustomFieldAuditLog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketCustomFieldAuditLog_;
   }
   /**
-   * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.EditTicketOrBuilder getEditticketOrBuilder() {
-    return editticket_ == null ? com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
+  public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketCustomFieldAuditLogOrBuilder() {
+    return ticketCustomFieldAuditLog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketCustomFieldAuditLog_;
   }
 
   public static final int CREATED_BY_ID_FIELD_NUMBER = 2;
@@ -118,8 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (editticket_ != null) {
-      output.writeMessage(1, getEditticket());
+    if (ticketCustomFieldAuditLog_ != null) {
+      output.writeMessage(1, getTicketCustomFieldAuditLog());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, createdById_);
@@ -133,9 +133,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (editticket_ != null) {
+    if (ticketCustomFieldAuditLog_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getEditticket());
+        .computeMessageSize(1, getTicketCustomFieldAuditLog());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, createdById_);
@@ -150,15 +150,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.TicketEvent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.audit.TicketEvent other = (com.tcn.cloud.api.api.commons.audit.TicketEvent) obj;
+    com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent other = (com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent) obj;
 
-    if (hasEditticket() != other.hasEditticket()) return false;
-    if (hasEditticket()) {
-      if (!getEditticket()
-          .equals(other.getEditticket())) return false;
+    if (hasTicketCustomFieldAuditLog() != other.hasTicketCustomFieldAuditLog()) return false;
+    if (hasTicketCustomFieldAuditLog()) {
+      if (!getTicketCustomFieldAuditLog()
+          .equals(other.getTicketCustomFieldAuditLog())) return false;
     }
     if (!getCreatedById()
         .equals(other.getCreatedById())) return false;
@@ -173,9 +173,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasEditticket()) {
-      hash = (37 * hash) + EDITTICKET_FIELD_NUMBER;
-      hash = (53 * hash) + getEditticket().hashCode();
+    if (hasTicketCustomFieldAuditLog()) {
+      hash = (37 * hash) + TICKET_CUSTOM_FIELD_AUDIT_LOG_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketCustomFieldAuditLog().hashCode();
     }
     hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatedById().hashCode();
@@ -184,44 +184,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,26 +229,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.TicketEvent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -277,26 +277,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.audit.TicketEvent}
+   * Protobuf type {@code api.commons.audit.TicketCustomFieldEditEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.audit.TicketEvent)
-      com.tcn.cloud.api.api.commons.audit.TicketEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.audit.TicketCustomFieldEditEvent)
+      com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketCustomFieldEditEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketCustomFieldEditEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.audit.TicketEvent.class, com.tcn.cloud.api.api.commons.audit.TicketEvent.Builder.class);
+              com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.class, com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.audit.TicketEvent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.newBuilder()
     private Builder() {
 
     }
@@ -310,10 +310,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      editticket_ = null;
-      if (editticketBuilder_ != null) {
-        editticketBuilder_.dispose();
-        editticketBuilder_ = null;
+      ticketCustomFieldAuditLog_ = null;
+      if (ticketCustomFieldAuditLogBuilder_ != null) {
+        ticketCustomFieldAuditLogBuilder_.dispose();
+        ticketCustomFieldAuditLogBuilder_ = null;
       }
       createdById_ = "";
       return this;
@@ -322,17 +322,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketCustomFieldEditEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.TicketEvent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.audit.TicketEvent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.TicketEvent build() {
-      com.tcn.cloud.api.api.commons.audit.TicketEvent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent build() {
+      com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -340,19 +340,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.TicketEvent buildPartial() {
-      com.tcn.cloud.api.api.commons.audit.TicketEvent result = new com.tcn.cloud.api.api.commons.audit.TicketEvent(this);
+    public com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent buildPartial() {
+      com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent result = new com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.TicketEvent result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.editticket_ = editticketBuilder_ == null
-            ? editticket_
-            : editticketBuilder_.build();
+        result.ticketCustomFieldAuditLog_ = ticketCustomFieldAuditLogBuilder_ == null
+            ? ticketCustomFieldAuditLog_
+            : ticketCustomFieldAuditLogBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.createdById_ = createdById_;
@@ -393,18 +393,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.audit.TicketEvent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.audit.TicketEvent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.TicketEvent other) {
-      if (other == com.tcn.cloud.api.api.commons.audit.TicketEvent.getDefaultInstance()) return this;
-      if (other.hasEditticket()) {
-        mergeEditticket(other.getEditticket());
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent other) {
+      if (other == com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent.getDefaultInstance()) return this;
+      if (other.hasTicketCustomFieldAuditLog()) {
+        mergeTicketCustomFieldAuditLog(other.getTicketCustomFieldAuditLog());
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getEditticketFieldBuilder().getBuilder(),
+                  getTicketCustomFieldAuditLogFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -466,123 +466,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.EditTicket editticket_;
+    private com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog ticketCustomFieldAuditLog_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.EditTicket, com.tcn.cloud.api.api.commons.EditTicket.Builder, com.tcn.cloud.api.api.commons.EditTicketOrBuilder> editticketBuilder_;
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder> ticketCustomFieldAuditLogBuilder_;
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
-     * @return Whether the editticket field is set.
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
+     * @return Whether the ticketCustomFieldAuditLog field is set.
      */
-    public boolean hasEditticket() {
+    public boolean hasTicketCustomFieldAuditLog() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
-     * @return The editticket.
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
+     * @return The ticketCustomFieldAuditLog.
      */
-    public com.tcn.cloud.api.api.commons.EditTicket getEditticket() {
-      if (editticketBuilder_ == null) {
-        return editticket_ == null ? com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketCustomFieldAuditLog() {
+      if (ticketCustomFieldAuditLogBuilder_ == null) {
+        return ticketCustomFieldAuditLog_ == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketCustomFieldAuditLog_;
       } else {
-        return editticketBuilder_.getMessage();
+        return ticketCustomFieldAuditLogBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public Builder setEditticket(com.tcn.cloud.api.api.commons.EditTicket value) {
-      if (editticketBuilder_ == null) {
+    public Builder setTicketCustomFieldAuditLog(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog value) {
+      if (ticketCustomFieldAuditLogBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        editticket_ = value;
+        ticketCustomFieldAuditLog_ = value;
       } else {
-        editticketBuilder_.setMessage(value);
+        ticketCustomFieldAuditLogBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public Builder setEditticket(
-        com.tcn.cloud.api.api.commons.EditTicket.Builder builderForValue) {
-      if (editticketBuilder_ == null) {
-        editticket_ = builderForValue.build();
+    public Builder setTicketCustomFieldAuditLog(
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder builderForValue) {
+      if (ticketCustomFieldAuditLogBuilder_ == null) {
+        ticketCustomFieldAuditLog_ = builderForValue.build();
       } else {
-        editticketBuilder_.setMessage(builderForValue.build());
+        ticketCustomFieldAuditLogBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public Builder mergeEditticket(com.tcn.cloud.api.api.commons.EditTicket value) {
-      if (editticketBuilder_ == null) {
+    public Builder mergeTicketCustomFieldAuditLog(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog value) {
+      if (ticketCustomFieldAuditLogBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          editticket_ != null &&
-          editticket_ != com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance()) {
-          getEditticketBuilder().mergeFrom(value);
+          ticketCustomFieldAuditLog_ != null &&
+          ticketCustomFieldAuditLog_ != com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance()) {
+          getTicketCustomFieldAuditLogBuilder().mergeFrom(value);
         } else {
-          editticket_ = value;
+          ticketCustomFieldAuditLog_ = value;
         }
       } else {
-        editticketBuilder_.mergeFrom(value);
+        ticketCustomFieldAuditLogBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public Builder clearEditticket() {
+    public Builder clearTicketCustomFieldAuditLog() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      editticket_ = null;
-      if (editticketBuilder_ != null) {
-        editticketBuilder_.dispose();
-        editticketBuilder_ = null;
+      ticketCustomFieldAuditLog_ = null;
+      if (ticketCustomFieldAuditLogBuilder_ != null) {
+        ticketCustomFieldAuditLogBuilder_.dispose();
+        ticketCustomFieldAuditLogBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public com.tcn.cloud.api.api.commons.EditTicket.Builder getEditticketBuilder() {
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder getTicketCustomFieldAuditLogBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getEditticketFieldBuilder().getBuilder();
+      return getTicketCustomFieldAuditLogFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
-    public com.tcn.cloud.api.api.commons.EditTicketOrBuilder getEditticketOrBuilder() {
-      if (editticketBuilder_ != null) {
-        return editticketBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketCustomFieldAuditLogOrBuilder() {
+      if (ticketCustomFieldAuditLogBuilder_ != null) {
+        return ticketCustomFieldAuditLogBuilder_.getMessageOrBuilder();
       } else {
-        return editticket_ == null ?
-            com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
+        return ticketCustomFieldAuditLog_ == null ?
+            com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance() : ticketCustomFieldAuditLog_;
       }
     }
     /**
-     * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
+     * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 1 [json_name = "ticketCustomFieldAuditLog"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.EditTicket, com.tcn.cloud.api.api.commons.EditTicket.Builder, com.tcn.cloud.api.api.commons.EditTicketOrBuilder> 
-        getEditticketFieldBuilder() {
-      if (editticketBuilder_ == null) {
-        editticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.EditTicket, com.tcn.cloud.api.api.commons.EditTicket.Builder, com.tcn.cloud.api.api.commons.EditTicketOrBuilder>(
-                getEditticket(),
+        com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder> 
+        getTicketCustomFieldAuditLogFieldBuilder() {
+      if (ticketCustomFieldAuditLogBuilder_ == null) {
+        ticketCustomFieldAuditLogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder>(
+                getTicketCustomFieldAuditLog(),
                 getParentForChildren(),
                 isClean());
-        editticket_ = null;
+        ticketCustomFieldAuditLog_ = null;
       }
-      return editticketBuilder_;
+      return ticketCustomFieldAuditLogBuilder_;
     }
 
     private java.lang.Object createdById_ = "";
@@ -669,23 +669,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.audit.TicketEvent)
+    // @@protoc_insertion_point(builder_scope:api.commons.audit.TicketCustomFieldEditEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.audit.TicketEvent)
-  private static final com.tcn.cloud.api.api.commons.audit.TicketEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.audit.TicketCustomFieldEditEvent)
+  private static final com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.TicketEvent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent();
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.TicketEvent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TicketEvent>
-      PARSER = new com.google.protobuf.AbstractParser<TicketEvent>() {
+  private static final com.google.protobuf.Parser<TicketCustomFieldEditEvent>
+      PARSER = new com.google.protobuf.AbstractParser<TicketCustomFieldEditEvent>() {
     @java.lang.Override
-    public TicketEvent parsePartialFrom(
+    public TicketCustomFieldEditEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -704,17 +704,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<TicketEvent> parser() {
+  public static com.google.protobuf.Parser<TicketCustomFieldEditEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<TicketEvent> getParserForType() {
+  public com.google.protobuf.Parser<TicketCustomFieldEditEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.TicketEvent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.audit.TicketCustomFieldEditEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

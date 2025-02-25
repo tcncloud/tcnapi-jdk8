@@ -33,19 +33,4 @@ public interface TicketEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCreatedByIdBytes();
-
-  /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
-   * @return Whether the ticketCustomFieldAuditLog field is set.
-   */
-  boolean hasTicketCustomFieldAuditLog();
-  /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
-   * @return The ticketCustomFieldAuditLog.
-   */
-  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketCustomFieldAuditLog();
-  /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketCustomFieldAuditLogOrBuilder();
 }
