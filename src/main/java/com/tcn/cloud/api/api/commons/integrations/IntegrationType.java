@@ -253,10 +253,6 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_TRATTA = 5900;</code>
    */
   INTEGRATION_TYPE_TRATTA(5900),
-  /**
-   * <code>INTEGRATION_TYPE_FORTIS = 6000;</code>
-   */
-  INTEGRATION_TYPE_FORTIS(6000),
   UNRECOGNIZED(-1),
   ;
 
@@ -500,10 +496,6 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_TRATTA = 5900;</code>
    */
   public static final int INTEGRATION_TYPE_TRATTA_VALUE = 5900;
-  /**
-   * <code>INTEGRATION_TYPE_FORTIS = 6000;</code>
-   */
-  public static final int INTEGRATION_TYPE_FORTIS_VALUE = 6000;
 
 
   public final int getNumber() {
@@ -590,7 +582,6 @@ public enum IntegrationType
       case 5700: return INTEGRATION_TYPE_NUVEI;
       case 5800: return INTEGRATION_TYPE_CALLIPAY;
       case 5900: return INTEGRATION_TYPE_TRATTA;
-      case 6000: return INTEGRATION_TYPE_FORTIS;
       default: return null;
     }
   }
