@@ -843,6 +843,44 @@ private static final long serialVersionUID = 0L;
     return passwordResetRequired_;
   }
 
+  public static final int LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER = 20;
+  private com.tcn.cloud.api.api.commons.LocalePreferences localePreferencesOverride_;
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+   * @return Whether the localePreferencesOverride field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocalePreferencesOverride() {
+    return localePreferencesOverride_ != null;
+  }
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+   * @return The localePreferencesOverride.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride() {
+    return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+  }
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder() {
+    return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -910,6 +948,9 @@ private static final long serialVersionUID = 0L;
     }
     if (passwordResetRequired_ != false) {
       output.writeBool(19, passwordResetRequired_);
+    }
+    if (localePreferencesOverride_ != null) {
+      output.writeMessage(20, getLocalePreferencesOverride());
     }
     getUnknownFields().writeTo(output);
   }
@@ -998,6 +1039,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(19, passwordResetRequired_);
     }
+    if (localePreferencesOverride_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getLocalePreferencesOverride());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1051,6 +1096,11 @@ private static final long serialVersionUID = 0L;
         != other.getHuntGroupSid()) return false;
     if (getPasswordResetRequired()
         != other.getPasswordResetRequired()) return false;
+    if (hasLocalePreferencesOverride() != other.hasLocalePreferencesOverride()) return false;
+    if (hasLocalePreferencesOverride()) {
+      if (!getLocalePreferencesOverride()
+          .equals(other.getLocalePreferencesOverride())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1110,6 +1160,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PASSWORD_RESET_REQUIRED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPasswordResetRequired());
+    if (hasLocalePreferencesOverride()) {
+      hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1271,6 +1325,11 @@ private static final long serialVersionUID = 0L;
       }
       huntGroupSid_ = 0L;
       passwordResetRequired_ = false;
+      localePreferencesOverride_ = null;
+      if (localePreferencesOverrideBuilder_ != null) {
+        localePreferencesOverrideBuilder_.dispose();
+        localePreferencesOverrideBuilder_ = null;
+      }
       return this;
     }
 
@@ -1363,6 +1422,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.passwordResetRequired_ = passwordResetRequired_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.localePreferencesOverride_ = localePreferencesOverrideBuilder_ == null
+            ? localePreferencesOverride_
+            : localePreferencesOverrideBuilder_.build();
       }
     }
 
@@ -1512,6 +1576,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPasswordResetRequired() != false) {
         setPasswordResetRequired(other.getPasswordResetRequired());
       }
+      if (other.hasLocalePreferencesOverride()) {
+        mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1634,6 +1701,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00020000;
               break;
             } // case 152
+            case 162: {
+              input.readMessage(
+                  getLocalePreferencesOverrideFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3488,6 +3562,161 @@ private static final long serialVersionUID = 0L;
       passwordResetRequired_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.LocalePreferences localePreferencesOverride_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> localePreferencesOverrideBuilder_;
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     * @return Whether the localePreferencesOverride field is set.
+     */
+    public boolean hasLocalePreferencesOverride() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     * @return The localePreferencesOverride.
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride() {
+      if (localePreferencesOverrideBuilder_ == null) {
+        return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+      } else {
+        return localePreferencesOverrideBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder setLocalePreferencesOverride(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localePreferencesOverride_ = value;
+      } else {
+        localePreferencesOverrideBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder setLocalePreferencesOverride(
+        com.tcn.cloud.api.api.commons.LocalePreferences.Builder builderForValue) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        localePreferencesOverride_ = builderForValue.build();
+      } else {
+        localePreferencesOverrideBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder mergeLocalePreferencesOverride(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0) &&
+          localePreferencesOverride_ != null &&
+          localePreferencesOverride_ != com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance()) {
+          getLocalePreferencesOverrideBuilder().mergeFrom(value);
+        } else {
+          localePreferencesOverride_ = value;
+        }
+      } else {
+        localePreferencesOverrideBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder clearLocalePreferencesOverride() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      localePreferencesOverride_ = null;
+      if (localePreferencesOverrideBuilder_ != null) {
+        localePreferencesOverrideBuilder_.dispose();
+        localePreferencesOverrideBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences.Builder getLocalePreferencesOverrideBuilder() {
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return getLocalePreferencesOverrideFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder() {
+      if (localePreferencesOverrideBuilder_ != null) {
+        return localePreferencesOverrideBuilder_.getMessageOrBuilder();
+      } else {
+        return localePreferencesOverride_ == null ?
+            com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+      }
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 20 [json_name = "localePreferencesOverride"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> 
+        getLocalePreferencesOverrideFieldBuilder() {
+      if (localePreferencesOverrideBuilder_ == null) {
+        localePreferencesOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder>(
+                getLocalePreferencesOverride(),
+                getParentForChildren(),
+                isClean());
+        localePreferencesOverride_ = null;
+      }
+      return localePreferencesOverrideBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
