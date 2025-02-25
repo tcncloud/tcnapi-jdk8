@@ -220,6 +220,7 @@ private static final long serialVersionUID = 0L;
     ELAVON_DELETE_INSTALLMENT(2909),
     ELAVON_MCC_CREDIT_CARD_SALE(2910),
     ELAVON_ELECTRONIC_CHECK_PURCHASE(2911),
+    ELAVON_SUBMIT_INSTALLMENT_SALE(2912),
     GLOBALPAYMENTS_CARD_SALE(3001),
     GLOBALPAYMENTS_GET_TRANSACTION_BY_ID(3002),
     GLOBALPAYMENTS_LIST_TRANSACTIONS(3003),
@@ -558,6 +559,7 @@ private static final long serialVersionUID = 0L;
         case 2909: return ELAVON_DELETE_INSTALLMENT;
         case 2910: return ELAVON_MCC_CREDIT_CARD_SALE;
         case 2911: return ELAVON_ELECTRONIC_CHECK_PURCHASE;
+        case 2912: return ELAVON_SUBMIT_INSTALLMENT_SALE;
         case 3001: return GLOBALPAYMENTS_CARD_SALE;
         case 3002: return GLOBALPAYMENTS_GET_TRANSACTION_BY_ID;
         case 3003: return GLOBALPAYMENTS_LIST_TRANSACTIONS;
@@ -5973,6 +5975,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase.getDefaultInstance();
   }
 
+  public static final int ELAVON_SUBMIT_INSTALLMENT_SALE_FIELD_NUMBER = 2912;
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   * @return Whether the elavonSubmitInstallmentSale field is set.
+   */
+  @java.lang.Override
+  public boolean hasElavonSubmitInstallmentSale() {
+    return valueCase_ == 2912;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   * @return The elavonSubmitInstallmentSale.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale getElavonSubmitInstallmentSale() {
+    if (valueCase_ == 2912) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder getElavonSubmitInstallmentSaleOrBuilder() {
+    if (valueCase_ == 2912) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+  }
+
   public static final int GLOBALPAYMENTS_CARD_SALE_FIELD_NUMBER = 3001;
   /**
    * <code>.api.commons.integrations.ExecuteGlobalPaymentsCardSale globalPayments_card_sale = 3001 [json_name = "globalPaymentsCardSale"];</code>
@@ -9325,7 +9358,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1236
+   *     See api/commons/integrations/integrations.proto;l=1238
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9335,7 +9368,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1236
+   *     See api/commons/integrations/integrations.proto;l=1238
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9360,7 +9393,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1237
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9370,7 +9403,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1237
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9395,7 +9428,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1238
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9405,7 +9438,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1238
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9430,7 +9463,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1239
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9440,7 +9473,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1239
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9465,7 +9498,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1240
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9475,7 +9508,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1240
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9500,7 +9533,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1241
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9510,7 +9543,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1241
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9535,7 +9568,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1242
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9545,7 +9578,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1242
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -11265,6 +11298,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2911) {
       output.writeMessage(2911, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase) value_);
     }
+    if (valueCase_ == 2912) {
+      output.writeMessage(2912, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_);
+    }
     if (valueCase_ == 3001) {
       output.writeMessage(3001, (com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale) value_);
     }
@@ -12407,6 +12443,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2911) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2911, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonElectronicCheckPurchase) value_);
+    }
+    if (valueCase_ == 2912) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2912, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_);
     }
     if (valueCase_ == 3001) {
       size += com.google.protobuf.CodedOutputStream
@@ -13711,6 +13751,10 @@ private static final long serialVersionUID = 0L;
         if (!getElavonElectronicCheckPurchase()
             .equals(other.getElavonElectronicCheckPurchase())) return false;
         break;
+      case 2912:
+        if (!getElavonSubmitInstallmentSale()
+            .equals(other.getElavonSubmitInstallmentSale())) return false;
+        break;
       case 3001:
         if (!getGlobalPaymentsCardSale()
             .equals(other.getGlobalPaymentsCardSale())) return false;
@@ -15012,6 +15056,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ELAVON_ELECTRONIC_CHECK_PURCHASE_FIELD_NUMBER;
         hash = (53 * hash) + getElavonElectronicCheckPurchase().hashCode();
         break;
+      case 2912:
+        hash = (37 * hash) + ELAVON_SUBMIT_INSTALLMENT_SALE_FIELD_NUMBER;
+        hash = (53 * hash) + getElavonSubmitInstallmentSale().hashCode();
+        break;
       case 3001:
         hash = (37 * hash) + GLOBALPAYMENTS_CARD_SALE_FIELD_NUMBER;
         hash = (53 * hash) + getGlobalPaymentsCardSale().hashCode();
@@ -16280,6 +16328,9 @@ private static final long serialVersionUID = 0L;
       if (elavonElectronicCheckPurchaseBuilder_ != null) {
         elavonElectronicCheckPurchaseBuilder_.clear();
       }
+      if (elavonSubmitInstallmentSaleBuilder_ != null) {
+        elavonSubmitInstallmentSaleBuilder_.clear();
+      }
       if (globalPaymentsCardSaleBuilder_ != null) {
         globalPaymentsCardSaleBuilder_.clear();
       }
@@ -17504,6 +17555,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2911 &&
           elavonElectronicCheckPurchaseBuilder_ != null) {
         result.value_ = elavonElectronicCheckPurchaseBuilder_.build();
+      }
+      if (valueCase_ == 2912 &&
+          elavonSubmitInstallmentSaleBuilder_ != null) {
+        result.value_ = elavonSubmitInstallmentSaleBuilder_.build();
       }
       if (valueCase_ == 3001 &&
           globalPaymentsCardSaleBuilder_ != null) {
@@ -18839,6 +18894,10 @@ private static final long serialVersionUID = 0L;
         }
         case ELAVON_ELECTRONIC_CHECK_PURCHASE: {
           mergeElavonElectronicCheckPurchase(other.getElavonElectronicCheckPurchase());
+          break;
+        }
+        case ELAVON_SUBMIT_INSTALLMENT_SALE: {
+          mergeElavonSubmitInstallmentSale(other.getElavonSubmitInstallmentSale());
           break;
         }
         case GLOBALPAYMENTS_CARD_SALE: {
@@ -20664,6 +20723,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2911;
               break;
             } // case 23290
+            case 23298: {
+              input.readMessage(
+                  getElavonSubmitInstallmentSaleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2912;
+              break;
+            } // case 23298
             case 24010: {
               input.readMessage(
                   getGlobalPaymentsCardSaleFieldBuilder().getBuilder(),
@@ -45706,6 +45772,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder> elavonSubmitInstallmentSaleBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     * @return Whether the elavonSubmitInstallmentSale field is set.
+     */
+    @java.lang.Override
+    public boolean hasElavonSubmitInstallmentSale() {
+      return valueCase_ == 2912;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     * @return The elavonSubmitInstallmentSale.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale getElavonSubmitInstallmentSale() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2912) {
+          return elavonSubmitInstallmentSaleBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder setElavonSubmitInstallmentSale(com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale value) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        elavonSubmitInstallmentSaleBuilder_.setMessage(value);
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder setElavonSubmitInstallmentSale(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder builderForValue) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        elavonSubmitInstallmentSaleBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder mergeElavonSubmitInstallmentSale(com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale value) {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2912) {
+          elavonSubmitInstallmentSaleBuilder_.mergeFrom(value);
+        } else {
+          elavonSubmitInstallmentSaleBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2912;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public Builder clearElavonSubmitInstallmentSale() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (valueCase_ == 2912) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2912) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        elavonSubmitInstallmentSaleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder getElavonSubmitInstallmentSaleBuilder() {
+      return getElavonSubmitInstallmentSaleFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder getElavonSubmitInstallmentSaleOrBuilder() {
+      if ((valueCase_ == 2912) && (elavonSubmitInstallmentSaleBuilder_ != null)) {
+        return elavonSubmitInstallmentSaleBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2912) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteElavonSubmitInstallmentSale elavon_submit_installment_sale = 2912 [json_name = "elavonSubmitInstallmentSale"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder> 
+        getElavonSubmitInstallmentSaleFieldBuilder() {
+      if (elavonSubmitInstallmentSaleBuilder_ == null) {
+        if (!(valueCase_ == 2912)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.getDefaultInstance();
+        }
+        elavonSubmitInstallmentSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSaleOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonSubmitInstallmentSale) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2912;
+      onChanged();
+      return elavonSubmitInstallmentSaleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteGlobalPaymentsCardSaleOrBuilder> globalPaymentsCardSaleBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteGlobalPaymentsCardSale globalPayments_card_sale = 3001 [json_name = "globalPaymentsCardSale"];</code>
@@ -61046,7 +61254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1236
+     *     See api/commons/integrations/integrations.proto;l=1238
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -61056,7 +61264,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1236
+     *     See api/commons/integrations/integrations.proto;l=1238
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -61192,7 +61400,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1237
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -61202,7 +61410,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1237
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -61338,7 +61546,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1238
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -61348,7 +61556,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1238
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -61484,7 +61692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1239
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -61494,7 +61702,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1239
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -61630,7 +61838,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1240
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -61640,7 +61848,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1240
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -61776,7 +61984,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1241
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -61786,7 +61994,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1241
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -61922,7 +62130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1242
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -61932,7 +62140,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1242
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
