@@ -26,6 +26,8 @@ private static final long serialVersionUID = 0L;
     actualPauseCode_ = "";
     expectedPauseCodes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    resolutionComment_ = "";
+    resolvedByUserId_ = "";
   }
 
   @java.lang.Override
@@ -438,6 +440,190 @@ private static final long serialVersionUID = 0L;
     return adherenceAgentStateViolationId_;
   }
 
+  public static final int EXPECTED_SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 10;
+  private long expectedSchedulingActivitySid_ = 0L;
+  /**
+   * <pre>
+   * The ID of the activity that the agent was scheduled for.
+   * </pre>
+   *
+   * <code>int64 expected_scheduling_activity_sid = 10 [json_name = "expectedSchedulingActivitySid", jstype = JS_STRING];</code>
+   * @return The expectedSchedulingActivitySid.
+   */
+  @java.lang.Override
+  public long getExpectedSchedulingActivitySid() {
+    return expectedSchedulingActivitySid_;
+  }
+
+  public static final int EXPECTED_REASON_CODE_ID_FIELD_NUMBER = 11;
+  private long expectedReasonCodeId_ = 0L;
+  /**
+   * <pre>
+   * The ID of the reason code that the agent was scheduled for.
+   * </pre>
+   *
+   * <code>int64 expected_reason_code_id = 11 [json_name = "expectedReasonCodeId", jstype = JS_STRING];</code>
+   * @return The expectedReasonCodeId.
+   */
+  @java.lang.Override
+  public long getExpectedReasonCodeId() {
+    return expectedReasonCodeId_;
+  }
+
+  public static final int ACTUAL_SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 12;
+  private long actualSchedulingActivitySid_ = 0L;
+  /**
+   * <pre>
+   * The ID of the activity that the agent's pause code indicated they were actually doing.
+   * </pre>
+   *
+   * <code>int64 actual_scheduling_activity_sid = 12 [json_name = "actualSchedulingActivitySid", jstype = JS_STRING];</code>
+   * @return The actualSchedulingActivitySid.
+   */
+  @java.lang.Override
+  public long getActualSchedulingActivitySid() {
+    return actualSchedulingActivitySid_;
+  }
+
+  public static final int ACTUAL_REASON_CODE_ID_FIELD_NUMBER = 13;
+  private long actualReasonCodeId_ = 0L;
+  /**
+   * <pre>
+   * The ID of the reason code that the agent's pause code indicated they were actually doing.
+   * </pre>
+   *
+   * <code>int64 actual_reason_code_id = 13 [json_name = "actualReasonCodeId", jstype = JS_STRING];</code>
+   * @return The actualReasonCodeId.
+   */
+  @java.lang.Override
+  public long getActualReasonCodeId() {
+    return actualReasonCodeId_;
+  }
+
+  public static final int RESOLVED_ACTIVITY_SID_FIELD_NUMBER = 14;
+  private long resolvedActivitySid_ = 0L;
+  /**
+   * <pre>
+   * The ID of the scheduling activity that the agent will be reported as.
+   * </pre>
+   *
+   * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
+   * @return The resolvedActivitySid.
+   */
+  @java.lang.Override
+  public long getResolvedActivitySid() {
+    return resolvedActivitySid_;
+  }
+
+  public static final int RESOLVED_REASON_CODE_ID_FIELD_NUMBER = 15;
+  private long resolvedReasonCodeId_ = 0L;
+  /**
+   * <pre>
+   * The ID of the reason code that the agent will be reported as.
+   * </pre>
+   *
+   * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
+   * @return The resolvedReasonCodeId.
+   */
+  @java.lang.Override
+  public long getResolvedReasonCodeId() {
+    return resolvedReasonCodeId_;
+  }
+
+  public static final int RESOLUTION_COMMENT_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resolutionComment_ = "";
+  /**
+   * <pre>
+   * The comment left by the user upon resolution.
+   * </pre>
+   *
+   * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+   * @return The resolutionComment.
+   */
+  @java.lang.Override
+  public java.lang.String getResolutionComment() {
+    java.lang.Object ref = resolutionComment_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resolutionComment_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The comment left by the user upon resolution.
+   * </pre>
+   *
+   * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+   * @return The bytes for resolutionComment.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResolutionCommentBytes() {
+    java.lang.Object ref = resolutionComment_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resolutionComment_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RESOLVED_BY_USER_ID_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resolvedByUserId_ = "";
+  /**
+   * <pre>
+   * ID of the user who resolved this violation.
+   * </pre>
+   *
+   * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+   * @return The resolvedByUserId.
+   */
+  @java.lang.Override
+  public java.lang.String getResolvedByUserId() {
+    java.lang.Object ref = resolvedByUserId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resolvedByUserId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * ID of the user who resolved this violation.
+   * </pre>
+   *
+   * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+   * @return The bytes for resolvedByUserId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResolvedByUserIdBytes() {
+    java.lang.Object ref = resolvedByUserId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resolvedByUserId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -487,6 +673,30 @@ private static final long serialVersionUID = 0L;
     }
     if (adherenceAgentStateViolationId_ != 0L) {
       output.writeInt64(9, adherenceAgentStateViolationId_);
+    }
+    if (expectedSchedulingActivitySid_ != 0L) {
+      output.writeInt64(10, expectedSchedulingActivitySid_);
+    }
+    if (expectedReasonCodeId_ != 0L) {
+      output.writeInt64(11, expectedReasonCodeId_);
+    }
+    if (actualSchedulingActivitySid_ != 0L) {
+      output.writeInt64(12, actualSchedulingActivitySid_);
+    }
+    if (actualReasonCodeId_ != 0L) {
+      output.writeInt64(13, actualReasonCodeId_);
+    }
+    if (resolvedActivitySid_ != 0L) {
+      output.writeInt64(14, resolvedActivitySid_);
+    }
+    if (resolvedReasonCodeId_ != 0L) {
+      output.writeInt64(15, resolvedReasonCodeId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolutionComment_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, resolutionComment_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedByUserId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, resolvedByUserId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -551,6 +761,36 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, adherenceAgentStateViolationId_);
     }
+    if (expectedSchedulingActivitySid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(10, expectedSchedulingActivitySid_);
+    }
+    if (expectedReasonCodeId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(11, expectedReasonCodeId_);
+    }
+    if (actualSchedulingActivitySid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(12, actualSchedulingActivitySid_);
+    }
+    if (actualReasonCodeId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(13, actualReasonCodeId_);
+    }
+    if (resolvedActivitySid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(14, resolvedActivitySid_);
+    }
+    if (resolvedReasonCodeId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(15, resolvedReasonCodeId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolutionComment_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, resolutionComment_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedByUserId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, resolvedByUserId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -585,6 +825,22 @@ private static final long serialVersionUID = 0L;
         .equals(other.getExpectedPauseCodesList())) return false;
     if (getAdherenceAgentStateViolationId()
         != other.getAdherenceAgentStateViolationId()) return false;
+    if (getExpectedSchedulingActivitySid()
+        != other.getExpectedSchedulingActivitySid()) return false;
+    if (getExpectedReasonCodeId()
+        != other.getExpectedReasonCodeId()) return false;
+    if (getActualSchedulingActivitySid()
+        != other.getActualSchedulingActivitySid()) return false;
+    if (getActualReasonCodeId()
+        != other.getActualReasonCodeId()) return false;
+    if (getResolvedActivitySid()
+        != other.getResolvedActivitySid()) return false;
+    if (getResolvedReasonCodeId()
+        != other.getResolvedReasonCodeId()) return false;
+    if (!getResolutionComment()
+        .equals(other.getResolutionComment())) return false;
+    if (!getResolvedByUserId()
+        .equals(other.getResolvedByUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -624,6 +880,28 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ADHERENCE_AGENT_STATE_VIOLATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAdherenceAgentStateViolationId());
+    hash = (37 * hash) + EXPECTED_SCHEDULING_ACTIVITY_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getExpectedSchedulingActivitySid());
+    hash = (37 * hash) + EXPECTED_REASON_CODE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getExpectedReasonCodeId());
+    hash = (37 * hash) + ACTUAL_SCHEDULING_ACTIVITY_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getActualSchedulingActivitySid());
+    hash = (37 * hash) + ACTUAL_REASON_CODE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getActualReasonCodeId());
+    hash = (37 * hash) + RESOLVED_ACTIVITY_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getResolvedActivitySid());
+    hash = (37 * hash) + RESOLVED_REASON_CODE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getResolvedReasonCodeId());
+    hash = (37 * hash) + RESOLUTION_COMMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getResolutionComment().hashCode();
+    hash = (37 * hash) + RESOLVED_BY_USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getResolvedByUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -775,6 +1053,14 @@ private static final long serialVersionUID = 0L;
       expectedPauseCodes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       adherenceAgentStateViolationId_ = 0L;
+      expectedSchedulingActivitySid_ = 0L;
+      expectedReasonCodeId_ = 0L;
+      actualSchedulingActivitySid_ = 0L;
+      actualReasonCodeId_ = 0L;
+      resolvedActivitySid_ = 0L;
+      resolvedReasonCodeId_ = 0L;
+      resolutionComment_ = "";
+      resolvedByUserId_ = "";
       return this;
     }
 
@@ -845,6 +1131,30 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.adherenceAgentStateViolationId_ = adherenceAgentStateViolationId_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.expectedSchedulingActivitySid_ = expectedSchedulingActivitySid_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.expectedReasonCodeId_ = expectedReasonCodeId_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.actualSchedulingActivitySid_ = actualSchedulingActivitySid_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.actualReasonCodeId_ = actualReasonCodeId_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.resolvedActivitySid_ = resolvedActivitySid_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.resolvedReasonCodeId_ = resolvedReasonCodeId_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.resolutionComment_ = resolutionComment_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.resolvedByUserId_ = resolvedByUserId_;
       }
     }
 
@@ -944,6 +1254,34 @@ private static final long serialVersionUID = 0L;
       if (other.getAdherenceAgentStateViolationId() != 0L) {
         setAdherenceAgentStateViolationId(other.getAdherenceAgentStateViolationId());
       }
+      if (other.getExpectedSchedulingActivitySid() != 0L) {
+        setExpectedSchedulingActivitySid(other.getExpectedSchedulingActivitySid());
+      }
+      if (other.getExpectedReasonCodeId() != 0L) {
+        setExpectedReasonCodeId(other.getExpectedReasonCodeId());
+      }
+      if (other.getActualSchedulingActivitySid() != 0L) {
+        setActualSchedulingActivitySid(other.getActualSchedulingActivitySid());
+      }
+      if (other.getActualReasonCodeId() != 0L) {
+        setActualReasonCodeId(other.getActualReasonCodeId());
+      }
+      if (other.getResolvedActivitySid() != 0L) {
+        setResolvedActivitySid(other.getResolvedActivitySid());
+      }
+      if (other.getResolvedReasonCodeId() != 0L) {
+        setResolvedReasonCodeId(other.getResolvedReasonCodeId());
+      }
+      if (!other.getResolutionComment().isEmpty()) {
+        resolutionComment_ = other.resolutionComment_;
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      if (!other.getResolvedByUserId().isEmpty()) {
+        resolvedByUserId_ = other.resolvedByUserId_;
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1042,6 +1380,46 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              expectedSchedulingActivitySid_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              expectedReasonCodeId_ = input.readInt64();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              actualSchedulingActivitySid_ = input.readInt64();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            case 104: {
+              actualReasonCodeId_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              resolvedActivitySid_ = input.readInt64();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            case 120: {
+              resolvedReasonCodeId_ = input.readInt64();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            case 130: {
+              resolutionComment_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            case 138: {
+              resolvedByUserId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2059,6 +2437,454 @@ private static final long serialVersionUID = 0L;
     public Builder clearAdherenceAgentStateViolationId() {
       bitField0_ = (bitField0_ & ~0x00000100);
       adherenceAgentStateViolationId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long expectedSchedulingActivitySid_ ;
+    /**
+     * <pre>
+     * The ID of the activity that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_scheduling_activity_sid = 10 [json_name = "expectedSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @return The expectedSchedulingActivitySid.
+     */
+    @java.lang.Override
+    public long getExpectedSchedulingActivitySid() {
+      return expectedSchedulingActivitySid_;
+    }
+    /**
+     * <pre>
+     * The ID of the activity that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_scheduling_activity_sid = 10 [json_name = "expectedSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @param value The expectedSchedulingActivitySid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedSchedulingActivitySid(long value) {
+
+      expectedSchedulingActivitySid_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the activity that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_scheduling_activity_sid = 10 [json_name = "expectedSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExpectedSchedulingActivitySid() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      expectedSchedulingActivitySid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long expectedReasonCodeId_ ;
+    /**
+     * <pre>
+     * The ID of the reason code that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_reason_code_id = 11 [json_name = "expectedReasonCodeId", jstype = JS_STRING];</code>
+     * @return The expectedReasonCodeId.
+     */
+    @java.lang.Override
+    public long getExpectedReasonCodeId() {
+      return expectedReasonCodeId_;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_reason_code_id = 11 [json_name = "expectedReasonCodeId", jstype = JS_STRING];</code>
+     * @param value The expectedReasonCodeId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpectedReasonCodeId(long value) {
+
+      expectedReasonCodeId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent was scheduled for.
+     * </pre>
+     *
+     * <code>int64 expected_reason_code_id = 11 [json_name = "expectedReasonCodeId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExpectedReasonCodeId() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      expectedReasonCodeId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long actualSchedulingActivitySid_ ;
+    /**
+     * <pre>
+     * The ID of the activity that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_scheduling_activity_sid = 12 [json_name = "actualSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @return The actualSchedulingActivitySid.
+     */
+    @java.lang.Override
+    public long getActualSchedulingActivitySid() {
+      return actualSchedulingActivitySid_;
+    }
+    /**
+     * <pre>
+     * The ID of the activity that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_scheduling_activity_sid = 12 [json_name = "actualSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @param value The actualSchedulingActivitySid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActualSchedulingActivitySid(long value) {
+
+      actualSchedulingActivitySid_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the activity that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_scheduling_activity_sid = 12 [json_name = "actualSchedulingActivitySid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearActualSchedulingActivitySid() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      actualSchedulingActivitySid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long actualReasonCodeId_ ;
+    /**
+     * <pre>
+     * The ID of the reason code that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_reason_code_id = 13 [json_name = "actualReasonCodeId", jstype = JS_STRING];</code>
+     * @return The actualReasonCodeId.
+     */
+    @java.lang.Override
+    public long getActualReasonCodeId() {
+      return actualReasonCodeId_;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_reason_code_id = 13 [json_name = "actualReasonCodeId", jstype = JS_STRING];</code>
+     * @param value The actualReasonCodeId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActualReasonCodeId(long value) {
+
+      actualReasonCodeId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent's pause code indicated they were actually doing.
+     * </pre>
+     *
+     * <code>int64 actual_reason_code_id = 13 [json_name = "actualReasonCodeId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearActualReasonCodeId() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      actualReasonCodeId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long resolvedActivitySid_ ;
+    /**
+     * <pre>
+     * The ID of the scheduling activity that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
+     * @return The resolvedActivitySid.
+     */
+    @java.lang.Override
+    public long getResolvedActivitySid() {
+      return resolvedActivitySid_;
+    }
+    /**
+     * <pre>
+     * The ID of the scheduling activity that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
+     * @param value The resolvedActivitySid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolvedActivitySid(long value) {
+
+      resolvedActivitySid_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the scheduling activity that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_activity_sid = 14 [json_name = "resolvedActivitySid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResolvedActivitySid() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      resolvedActivitySid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long resolvedReasonCodeId_ ;
+    /**
+     * <pre>
+     * The ID of the reason code that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
+     * @return The resolvedReasonCodeId.
+     */
+    @java.lang.Override
+    public long getResolvedReasonCodeId() {
+      return resolvedReasonCodeId_;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
+     * @param value The resolvedReasonCodeId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolvedReasonCodeId(long value) {
+
+      resolvedReasonCodeId_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the reason code that the agent will be reported as.
+     * </pre>
+     *
+     * <code>int64 resolved_reason_code_id = 15 [json_name = "resolvedReasonCodeId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResolvedReasonCodeId() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      resolvedReasonCodeId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object resolutionComment_ = "";
+    /**
+     * <pre>
+     * The comment left by the user upon resolution.
+     * </pre>
+     *
+     * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+     * @return The resolutionComment.
+     */
+    public java.lang.String getResolutionComment() {
+      java.lang.Object ref = resolutionComment_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resolutionComment_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The comment left by the user upon resolution.
+     * </pre>
+     *
+     * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+     * @return The bytes for resolutionComment.
+     */
+    public com.google.protobuf.ByteString
+        getResolutionCommentBytes() {
+      java.lang.Object ref = resolutionComment_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resolutionComment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The comment left by the user upon resolution.
+     * </pre>
+     *
+     * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+     * @param value The resolutionComment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolutionComment(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resolutionComment_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The comment left by the user upon resolution.
+     * </pre>
+     *
+     * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResolutionComment() {
+      resolutionComment_ = getDefaultInstance().getResolutionComment();
+      bitField0_ = (bitField0_ & ~0x00008000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The comment left by the user upon resolution.
+     * </pre>
+     *
+     * <code>string resolution_comment = 16 [json_name = "resolutionComment"];</code>
+     * @param value The bytes for resolutionComment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolutionCommentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resolutionComment_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object resolvedByUserId_ = "";
+    /**
+     * <pre>
+     * ID of the user who resolved this violation.
+     * </pre>
+     *
+     * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+     * @return The resolvedByUserId.
+     */
+    public java.lang.String getResolvedByUserId() {
+      java.lang.Object ref = resolvedByUserId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resolvedByUserId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the user who resolved this violation.
+     * </pre>
+     *
+     * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+     * @return The bytes for resolvedByUserId.
+     */
+    public com.google.protobuf.ByteString
+        getResolvedByUserIdBytes() {
+      java.lang.Object ref = resolvedByUserId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resolvedByUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the user who resolved this violation.
+     * </pre>
+     *
+     * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+     * @param value The resolvedByUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolvedByUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resolvedByUserId_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the user who resolved this violation.
+     * </pre>
+     *
+     * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResolvedByUserId() {
+      resolvedByUserId_ = getDefaultInstance().getResolvedByUserId();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the user who resolved this violation.
+     * </pre>
+     *
+     * <code>string resolved_by_user_id = 17 [json_name = "resolvedByUserId"];</code>
+     * @param value The bytes for resolvedByUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResolvedByUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resolvedByUserId_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
