@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
    * The unique identifier of the custom field.
    * </pre>
    *
-   * <code>int64 custom_field_id = 1 [json_name = "customFieldId"];</code>
+   * <code>int64 custom_field_id = 1 [json_name = "customFieldId", jstype = JS_STRING];</code>
    * @return The customFieldId.
    */
   @java.lang.Override
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the custom field.
      * </pre>
      *
-     * <code>int64 custom_field_id = 1 [json_name = "customFieldId"];</code>
+     * <code>int64 custom_field_id = 1 [json_name = "customFieldId", jstype = JS_STRING];</code>
      * @return The customFieldId.
      */
     @java.lang.Override
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the custom field.
      * </pre>
      *
-     * <code>int64 custom_field_id = 1 [json_name = "customFieldId"];</code>
+     * <code>int64 custom_field_id = 1 [json_name = "customFieldId", jstype = JS_STRING];</code>
      * @param value The customFieldId to set.
      * @return This builder for chaining.
      */
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * The unique identifier of the custom field.
      * </pre>
      *
-     * <code>int64 custom_field_id = 1 [json_name = "customFieldId"];</code>
+     * <code>int64 custom_field_id = 1 [json_name = "customFieldId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomFieldId() {

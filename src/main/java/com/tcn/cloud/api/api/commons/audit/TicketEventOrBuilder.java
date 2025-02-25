@@ -35,17 +35,17 @@ public interface TicketEventOrBuilder extends
       getCreatedByIdBytes();
 
   /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
-   * @return Whether the ticketcustomfieldauditlog field is set.
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
+   * @return Whether the ticketCustomFieldAuditLog field is set.
    */
-  boolean hasTicketcustomfieldauditlog();
+  boolean hasTicketCustomFieldAuditLog();
   /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
-   * @return The ticketcustomfieldauditlog.
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
+   * @return The ticketCustomFieldAuditLog.
    */
-  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketcustomfieldauditlog();
+  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog getTicketCustomFieldAuditLog();
   /**
-   * <code>.api.commons.TicketCustomFieldAuditLog ticketcustomfieldauditlog = 3 [json_name = "ticketcustomfieldauditlog"];</code>
+   * <code>.api.commons.TicketCustomFieldAuditLog ticket_custom_field_audit_log = 3 [json_name = "ticketCustomFieldAuditLog"];</code>
    */
-  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketcustomfieldauditlogOrBuilder();
+  com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLogOrBuilder getTicketCustomFieldAuditLogOrBuilder();
 }

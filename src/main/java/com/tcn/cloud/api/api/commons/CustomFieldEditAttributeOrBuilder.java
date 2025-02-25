@@ -12,7 +12,7 @@ public interface CustomFieldEditAttributeOrBuilder extends
    * The unique identifier of the custom field.
    * </pre>
    *
-   * <code>int64 custom_field_id = 1 [json_name = "customFieldId"];</code>
+   * <code>int64 custom_field_id = 1 [json_name = "customFieldId", jstype = JS_STRING];</code>
    * @return The customFieldId.
    */
   long getCustomFieldId();
