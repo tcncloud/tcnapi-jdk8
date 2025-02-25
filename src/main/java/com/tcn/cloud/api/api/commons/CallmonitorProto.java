@@ -39,16 +39,16 @@ public final class CallmonitorProto {
       "urationMillis\022H\n\022monitor_start_time\030\010 \001(" +
       "\0132\032.google.protobuf.TimestampR\020monitorSt" +
       "artTime\022D\n\020monitor_end_time\030\t \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\016monitorEndTime*\272\001" +
+      "le.protobuf.TimestampR\016monitorEndTime*\337\001" +
       "\n\026HoldQueueMonitorStatus\022)\n%HOLD_QUEUE_M" +
       "ONITOR_STATUS_UNSPECIFIED\020\000\022(\n$HOLD_QUEU" +
       "E_MONITOR_STATUS_MONITORING\020\001\022%\n!HOLD_QU" +
       "EUE_MONITOR_STATUS_SUCCESS\020\002\022$\n HOLD_QUE" +
-      "UE_MONITOR_STATUS_FAILED\020\003B~\n\035com.tcn.cl" +
-      "oud.api.api.commonsB\020CallmonitorProtoP\001\242" +
-      "\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\" +
-      "Commons\\GPBMetadata\352\002\014Api::Commonsb\006prot" +
-      "o3"
+      "UE_MONITOR_STATUS_FAILED\020\003\022#\n\037HOLD_QUEUE" +
+      "_MONITOR_STATUS_ENDED\020\004B~\n\035com.tcn.cloud" +
+      ".api.api.commonsB\020CallmonitorProtoP\001\242\002\003A" +
+      "CX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Com" +
+      "mons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

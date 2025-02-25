@@ -24,6 +24,10 @@ public enum HoldQueueMonitorStatus
    * <code>HOLD_QUEUE_MONITOR_STATUS_FAILED = 3;</code>
    */
   HOLD_QUEUE_MONITOR_STATUS_FAILED(3),
+  /**
+   * <code>HOLD_QUEUE_MONITOR_STATUS_ENDED = 4;</code>
+   */
+  HOLD_QUEUE_MONITOR_STATUS_ENDED(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,6 +47,10 @@ public enum HoldQueueMonitorStatus
    * <code>HOLD_QUEUE_MONITOR_STATUS_FAILED = 3;</code>
    */
   public static final int HOLD_QUEUE_MONITOR_STATUS_FAILED_VALUE = 3;
+  /**
+   * <code>HOLD_QUEUE_MONITOR_STATUS_ENDED = 4;</code>
+   */
+  public static final int HOLD_QUEUE_MONITOR_STATUS_ENDED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -73,6 +81,7 @@ public enum HoldQueueMonitorStatus
       case 1: return HOLD_QUEUE_MONITOR_STATUS_MONITORING;
       case 2: return HOLD_QUEUE_MONITOR_STATUS_SUCCESS;
       case 3: return HOLD_QUEUE_MONITOR_STATUS_FAILED;
+      case 4: return HOLD_QUEUE_MONITOR_STATUS_ENDED;
       default: return null;
     }
   }
