@@ -6187,6 +6187,37 @@ public final class WFMGrpc {
     return getHelloWorldWFMAdherenceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceDiagnostics",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> getListAdherenceDiagnosticsMethod;
+    if ((getListAdherenceDiagnosticsMethod = WFMGrpc.getListAdherenceDiagnosticsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListAdherenceDiagnosticsMethod = WFMGrpc.getListAdherenceDiagnosticsMethod) == null) {
+          WFMGrpc.getListAdherenceDiagnosticsMethod = getListAdherenceDiagnosticsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceDiagnostics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceDiagnostics"))
+              .build();
+        }
+      }
+    }
+    return getListAdherenceDiagnosticsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse> getListAgentStatesForDayMethod;
 
@@ -7239,6 +7270,37 @@ public final class WFMGrpc {
       }
     }
     return getAgentCancelLeavePetitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAgentStateSimulationLevelForOrg",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> getSetAgentStateSimulationLevelForOrgMethod;
+    if ((getSetAgentStateSimulationLevelForOrgMethod = WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSetAgentStateSimulationLevelForOrgMethod = WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod) == null) {
+          WFMGrpc.getSetAgentStateSimulationLevelForOrgMethod = getSetAgentStateSimulationLevelForOrgMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest, com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAgentStateSimulationLevelForOrg"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetAgentStateSimulationLevelForOrg"))
+              .build();
+        }
+      }
+    }
+    return getSetAgentStateSimulationLevelForOrgMethod;
   }
 
   /**
@@ -10447,6 +10509,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    default void listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceDiagnosticsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -10938,6 +11014,22 @@ public final class WFMGrpc {
     default void agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentCancelLeavePetitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    default void setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAgentStateSimulationLevelForOrgMethod(), responseObserver);
     }
   }
 
@@ -14328,6 +14420,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public void listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAdherenceDiagnosticsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -14853,6 +14960,23 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public void setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -18036,6 +18160,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse listAdherenceDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAdherenceDiagnosticsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -18527,6 +18665,22 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse agentCancelLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAgentCancelLeavePetitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse setAgentStateSimulationLevelForOrg(com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions(), request);
     }
   }
 
@@ -21801,6 +21955,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists any diagnostics found in the WFM Adherence App for the org sending the request.
+     * Provides details on any changes the user needs to make for the app to work properly, such as activities that need to have a default reason code assigned.
+     * Errors:
+     *   - grpc.Internal: error occurs when generating the diagnostics.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse> listAdherenceDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAdherenceDiagnosticsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * List the real time agent states for published schedule and the org sending the request, starting on the given &#64;start_datetime.
      * If the &#64;end_datetime is set, all agent state sequences will be returned for the range between &#64;start_datetime and &#64;end_datetime.
      * If &#64;end_datetime is not set, the agent state sequences will be returned over a 24 hour period or until the current time, whichever is shorter.
@@ -22327,6 +22496,23 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAgentCancelLeavePetitionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Sets the adherence service to the &#64;agent_state_simulation_level for the org sending the request.
+     * By setting the &#64;agent_state_simulation_level to NO_SIMULATION, the adherence manager will function normally, using the live agent states.
+     * By setting the &#64;agent_state_simulation_level to SIMULATED_AGENT_STATES, the adherence manager will instead simulate agent states and their violations.
+     * This allows demonstrations of the adherence functions of the app to be done before the client has any agents working.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;agent_state_simulation_level is invalid
+     *   - grpc.Internal: error occurs when updating the simulation level for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse> setAgentStateSimulationLevelForOrg(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAgentStateSimulationLevelForOrgMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -22528,40 +22714,42 @@ public final class WFMGrpc {
   private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 196;
   private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 197;
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 198;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 199;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 200;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 201;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_STATE_VIOLATIONS = 202;
-  private static final int METHODID_RESOLVE_ADHERENCE_AGENT_STATE_VIOLATION = 203;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 204;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 205;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 206;
-  private static final int METHODID_CREATE_RGBA_COLOR = 207;
-  private static final int METHODID_LIST_RGBA_COLORS = 208;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 209;
-  private static final int METHODID_DELETE_RGBA_COLOR = 210;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 211;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 212;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 213;
-  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 214;
-  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 215;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 216;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 217;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 218;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 219;
-  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 220;
-  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 221;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 222;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 223;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 224;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 225;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 226;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 227;
-  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 228;
-  private static final int METHODID_AGENT_GET_SCHEDULE = 229;
-  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 230;
-  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 231;
-  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 232;
+  private static final int METHODID_LIST_ADHERENCE_DIAGNOSTICS = 199;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 200;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 201;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATES = 202;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_STATE_VIOLATIONS = 203;
+  private static final int METHODID_RESOLVE_ADHERENCE_AGENT_STATE_VIOLATION = 204;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 205;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 206;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 207;
+  private static final int METHODID_CREATE_RGBA_COLOR = 208;
+  private static final int METHODID_LIST_RGBA_COLORS = 209;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 210;
+  private static final int METHODID_DELETE_RGBA_COLOR = 211;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 212;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 213;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 214;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 215;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 216;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 217;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 218;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 219;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 220;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 221;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 222;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 223;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 224;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 225;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 226;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 227;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 228;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 229;
+  private static final int METHODID_AGENT_GET_SCHEDULE = 230;
+  private static final int METHODID_AGENT_LIST_LEAVE_PETITIONS = 231;
+  private static final int METHODID_AGENT_CREATE_LEAVE_PETITION = 232;
+  private static final int METHODID_AGENT_CANCEL_LEAVE_PETITION = 233;
+  private static final int METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG = 234;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -23376,6 +23564,10 @@ public final class WFMGrpc {
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>) responseObserver);
           break;
+        case METHODID_LIST_ADHERENCE_DIAGNOSTICS:
+          serviceImpl.listAdherenceDiagnostics((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>) responseObserver);
+          break;
         case METHODID_LIST_AGENT_STATES_FOR_DAY:
           serviceImpl.listAgentStatesForDay((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentStatesForDayResponse>) responseObserver);
@@ -23511,6 +23703,10 @@ public final class WFMGrpc {
         case METHODID_AGENT_CANCEL_LEAVE_PETITION:
           serviceImpl.agentCancelLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>) responseObserver);
+          break;
+        case METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG:
+          serviceImpl.setAgentStateSimulationLevelForOrg((com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -24924,6 +25120,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse>(
                 service, METHODID_HELLO_WORLD_WFMADHERENCE)))
         .addMethod(
+          getListAdherenceDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDiagnosticsResponse>(
+                service, METHODID_LIST_ADHERENCE_DIAGNOSTICS)))
+        .addMethod(
           getListAgentStatesForDayMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -25161,6 +25364,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.AgentCancelLeavePetitionResponse>(
                 service, METHODID_AGENT_CANCEL_LEAVE_PETITION)))
+        .addMethod(
+          getSetAgentStateSimulationLevelForOrgMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetAgentStateSimulationLevelForOrgResponse>(
+                service, METHODID_SET_AGENT_STATE_SIMULATION_LEVEL_FOR_ORG)))
         .build();
   }
 
@@ -25408,6 +25618,7 @@ public final class WFMGrpc {
               .addMethod(getResolveAgentLeavePetitionMethod())
               .addMethod(getCancelAgentLeavePetitionMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
+              .addMethod(getListAdherenceDiagnosticsMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
               .addMethod(getListAdherenceAgentStatesMethod())
@@ -25442,6 +25653,7 @@ public final class WFMGrpc {
               .addMethod(getAgentListLeavePetitionsMethod())
               .addMethod(getAgentCreateLeavePetitionMethod())
               .addMethod(getAgentCancelLeavePetitionMethod())
+              .addMethod(getSetAgentStateSimulationLevelForOrgMethod())
               .build();
         }
       }

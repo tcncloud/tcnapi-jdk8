@@ -139,7 +139,7 @@ public enum SchedulingActivityClassification
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(22);
+    return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(23);
   }
 
   private static final SchedulingActivityClassification[] VALUES = values();

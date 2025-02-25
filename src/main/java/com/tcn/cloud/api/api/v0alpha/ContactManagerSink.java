@@ -1212,11 +1212,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
   /**
-   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+   *     See api/v0alpha/lms.proto;l=2373
    * @return The userId.
    */
   @java.lang.Override
-  public java.lang.String getUserId() {
+  @java.lang.Deprecated public java.lang.String getUserId() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -1229,11 +1231,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string user_id = 10 [json_name = "userId"];</code>
+   * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+   *     See api/v0alpha/lms.proto;l=2373
    * @return The bytes for userId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUserIdBytes() {
     java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
@@ -2447,10 +2451,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userId_ = "";
     /**
-     * <code>string user_id = 10 [json_name = "userId"];</code>
+     * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+     *     See api/v0alpha/lms.proto;l=2373
      * @return The userId.
      */
-    public java.lang.String getUserId() {
+    @java.lang.Deprecated public java.lang.String getUserId() {
       java.lang.Object ref = userId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2463,10 +2469,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 10 [json_name = "userId"];</code>
+     * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+     *     See api/v0alpha/lms.proto;l=2373
      * @return The bytes for userId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUserIdBytes() {
       java.lang.Object ref = userId_;
       if (ref instanceof String) {
@@ -2480,11 +2488,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_id = 10 [json_name = "userId"];</code>
+     * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+     *     See api/v0alpha/lms.proto;l=2373
      * @param value The userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserId(
+    @java.lang.Deprecated public Builder setUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userId_ = value;
@@ -2493,21 +2503,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_id = 10 [json_name = "userId"];</code>
+     * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+     *     See api/v0alpha/lms.proto;l=2373
      * @return This builder for chaining.
      */
-    public Builder clearUserId() {
+    @java.lang.Deprecated public Builder clearUserId() {
       userId_ = getDefaultInstance().getUserId();
       bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
-     * <code>string user_id = 10 [json_name = "userId"];</code>
+     * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
+     *     See api/v0alpha/lms.proto;l=2373
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserIdBytes(
+    @java.lang.Deprecated public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
