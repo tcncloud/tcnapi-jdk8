@@ -6,4 +6,48 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 public interface ResolveAdherenceAgentStateViolationResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ResolveAdherenceAgentStateViolationResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Any diagnostics encountered when resolving the the violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
+  /**
+   * <pre>
+   * Any diagnostics encountered when resolving the the violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
+  /**
+   * <pre>
+   * Any diagnostics encountered when resolving the the violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
+   */
+  int getDiagnosticsCount();
+  /**
+   * <pre>
+   * Any diagnostics encountered when resolving the the violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
+  /**
+   * <pre>
+   * Any diagnostics encountered when resolving the the violations.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index);
 }
