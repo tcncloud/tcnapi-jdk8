@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TicketCustomFieldAuditLog() {
-    customFieldEditAttributes_ = java.util.Collections.emptyList();
+    customFieldAttributes_ = java.util.Collections.emptyList();
     ticketCode_ = "";
   }
 
@@ -44,65 +44,65 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.class, com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.Builder.class);
   }
 
-  public static final int CUSTOM_FIELD_EDIT_ATTRIBUTES_FIELD_NUMBER = 1;
+  public static final int CUSTOM_FIELD_ATTRIBUTES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> customFieldEditAttributes_;
+  private java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute> customFieldAttributes_;
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> getCustomFieldEditAttributesList() {
-    return customFieldEditAttributes_;
+  public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute> getCustomFieldAttributesList() {
+    return customFieldAttributes_;
   }
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder> 
-      getCustomFieldEditAttributesOrBuilderList() {
-    return customFieldEditAttributes_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder> 
+      getCustomFieldAttributesOrBuilderList() {
+    return customFieldAttributes_;
   }
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
   @java.lang.Override
-  public int getCustomFieldEditAttributesCount() {
-    return customFieldEditAttributes_.size();
+  public int getCustomFieldAttributesCount() {
+    return customFieldAttributes_.size();
   }
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getCustomFieldEditAttributes(int index) {
-    return customFieldEditAttributes_.get(index);
+  public com.tcn.cloud.api.api.commons.CustomFieldAttribute getCustomFieldAttributes(int index) {
+    return customFieldAttributes_.get(index);
   }
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder getCustomFieldEditAttributesOrBuilder(
+  public com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder getCustomFieldAttributesOrBuilder(
       int index) {
-    return customFieldEditAttributes_.get(index);
+    return customFieldAttributes_.get(index);
   }
 
   public static final int TICKET_CODE_FIELD_NUMBER = 2;
@@ -166,8 +166,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < customFieldEditAttributes_.size(); i++) {
-      output.writeMessage(1, customFieldEditAttributes_.get(i));
+    for (int i = 0; i < customFieldAttributes_.size(); i++) {
+      output.writeMessage(1, customFieldAttributes_.get(i));
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketCode_);
@@ -181,9 +181,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < customFieldEditAttributes_.size(); i++) {
+    for (int i = 0; i < customFieldAttributes_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, customFieldEditAttributes_.get(i));
+        .computeMessageSize(1, customFieldAttributes_.get(i));
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketCode_);
@@ -203,8 +203,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog other = (com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog) obj;
 
-    if (!getCustomFieldEditAttributesList()
-        .equals(other.getCustomFieldEditAttributesList())) return false;
+    if (!getCustomFieldAttributesList()
+        .equals(other.getCustomFieldAttributesList())) return false;
     if (!getTicketCode()
         .equals(other.getTicketCode())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -218,9 +218,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getCustomFieldEditAttributesCount() > 0) {
-      hash = (37 * hash) + CUSTOM_FIELD_EDIT_ATTRIBUTES_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomFieldEditAttributesList().hashCode();
+    if (getCustomFieldAttributesCount() > 0) {
+      hash = (37 * hash) + CUSTOM_FIELD_ATTRIBUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomFieldAttributesList().hashCode();
     }
     hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketCode().hashCode();
@@ -359,11 +359,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (customFieldEditAttributesBuilder_ == null) {
-        customFieldEditAttributes_ = java.util.Collections.emptyList();
+      if (customFieldAttributesBuilder_ == null) {
+        customFieldAttributes_ = java.util.Collections.emptyList();
       } else {
-        customFieldEditAttributes_ = null;
-        customFieldEditAttributesBuilder_.clear();
+        customFieldAttributes_ = null;
+        customFieldAttributesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       ticketCode_ = "";
@@ -400,14 +400,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog result) {
-      if (customFieldEditAttributesBuilder_ == null) {
+      if (customFieldAttributesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          customFieldEditAttributes_ = java.util.Collections.unmodifiableList(customFieldEditAttributes_);
+          customFieldAttributes_ = java.util.Collections.unmodifiableList(customFieldAttributes_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.customFieldEditAttributes_ = customFieldEditAttributes_;
+        result.customFieldAttributes_ = customFieldAttributes_;
       } else {
-        result.customFieldEditAttributes_ = customFieldEditAttributesBuilder_.build();
+        result.customFieldAttributes_ = customFieldAttributesBuilder_.build();
       }
     }
 
@@ -462,29 +462,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog other) {
       if (other == com.tcn.cloud.api.api.commons.TicketCustomFieldAuditLog.getDefaultInstance()) return this;
-      if (customFieldEditAttributesBuilder_ == null) {
-        if (!other.customFieldEditAttributes_.isEmpty()) {
-          if (customFieldEditAttributes_.isEmpty()) {
-            customFieldEditAttributes_ = other.customFieldEditAttributes_;
+      if (customFieldAttributesBuilder_ == null) {
+        if (!other.customFieldAttributes_.isEmpty()) {
+          if (customFieldAttributes_.isEmpty()) {
+            customFieldAttributes_ = other.customFieldAttributes_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureCustomFieldEditAttributesIsMutable();
-            customFieldEditAttributes_.addAll(other.customFieldEditAttributes_);
+            ensureCustomFieldAttributesIsMutable();
+            customFieldAttributes_.addAll(other.customFieldAttributes_);
           }
           onChanged();
         }
       } else {
-        if (!other.customFieldEditAttributes_.isEmpty()) {
-          if (customFieldEditAttributesBuilder_.isEmpty()) {
-            customFieldEditAttributesBuilder_.dispose();
-            customFieldEditAttributesBuilder_ = null;
-            customFieldEditAttributes_ = other.customFieldEditAttributes_;
+        if (!other.customFieldAttributes_.isEmpty()) {
+          if (customFieldAttributesBuilder_.isEmpty()) {
+            customFieldAttributesBuilder_.dispose();
+            customFieldAttributesBuilder_ = null;
+            customFieldAttributes_ = other.customFieldAttributes_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            customFieldEditAttributesBuilder_ = 
+            customFieldAttributesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getCustomFieldEditAttributesFieldBuilder() : null;
+                 getCustomFieldAttributesFieldBuilder() : null;
           } else {
-            customFieldEditAttributesBuilder_.addAllMessages(other.customFieldEditAttributes_);
+            customFieldAttributesBuilder_.addAllMessages(other.customFieldAttributes_);
           }
         }
       }
@@ -520,15 +520,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.CustomFieldEditAttribute m =
+              com.tcn.cloud.api.api.commons.CustomFieldAttribute m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.parser(),
+                      com.tcn.cloud.api.api.commons.CustomFieldAttribute.parser(),
                       extensionRegistry);
-              if (customFieldEditAttributesBuilder_ == null) {
-                ensureCustomFieldEditAttributesIsMutable();
-                customFieldEditAttributes_.add(m);
+              if (customFieldAttributesBuilder_ == null) {
+                ensureCustomFieldAttributesIsMutable();
+                customFieldAttributes_.add(m);
               } else {
-                customFieldEditAttributesBuilder_.addMessage(m);
+                customFieldAttributesBuilder_.addMessage(m);
               }
               break;
             } // case 10
@@ -554,316 +554,316 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> customFieldEditAttributes_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute> customFieldAttributes_ =
       java.util.Collections.emptyList();
-    private void ensureCustomFieldEditAttributesIsMutable() {
+    private void ensureCustomFieldAttributesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        customFieldEditAttributes_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute>(customFieldEditAttributes_);
+        customFieldAttributes_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CustomFieldAttribute>(customFieldAttributes_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CustomFieldEditAttribute, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder> customFieldEditAttributesBuilder_;
+        com.tcn.cloud.api.api.commons.CustomFieldAttribute, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder> customFieldAttributesBuilder_;
 
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> getCustomFieldEditAttributesList() {
-      if (customFieldEditAttributesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(customFieldEditAttributes_);
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute> getCustomFieldAttributesList() {
+      if (customFieldAttributesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(customFieldAttributes_);
       } else {
-        return customFieldEditAttributesBuilder_.getMessageList();
+        return customFieldAttributesBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public int getCustomFieldEditAttributesCount() {
-      if (customFieldEditAttributesBuilder_ == null) {
-        return customFieldEditAttributes_.size();
+    public int getCustomFieldAttributesCount() {
+      if (customFieldAttributesBuilder_ == null) {
+        return customFieldAttributes_.size();
       } else {
-        return customFieldEditAttributesBuilder_.getCount();
+        return customFieldAttributesBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getCustomFieldEditAttributes(int index) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        return customFieldEditAttributes_.get(index);
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute getCustomFieldAttributes(int index) {
+      if (customFieldAttributesBuilder_ == null) {
+        return customFieldAttributes_.get(index);
       } else {
-        return customFieldEditAttributesBuilder_.getMessage(index);
+        return customFieldAttributesBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder setCustomFieldEditAttributes(
-        int index, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute value) {
-      if (customFieldEditAttributesBuilder_ == null) {
+    public Builder setCustomFieldAttributes(
+        int index, com.tcn.cloud.api.api.commons.CustomFieldAttribute value) {
+      if (customFieldAttributesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.set(index, value);
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.set(index, value);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.setMessage(index, value);
+        customFieldAttributesBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder setCustomFieldEditAttributes(
-        int index, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder builderForValue) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.set(index, builderForValue.build());
+    public Builder setCustomFieldAttributes(
+        int index, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder builderForValue) {
+      if (customFieldAttributesBuilder_ == null) {
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.set(index, builderForValue.build());
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.setMessage(index, builderForValue.build());
+        customFieldAttributesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder addCustomFieldEditAttributes(com.tcn.cloud.api.api.commons.CustomFieldEditAttribute value) {
-      if (customFieldEditAttributesBuilder_ == null) {
+    public Builder addCustomFieldAttributes(com.tcn.cloud.api.api.commons.CustomFieldAttribute value) {
+      if (customFieldAttributesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.add(value);
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.add(value);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.addMessage(value);
+        customFieldAttributesBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder addCustomFieldEditAttributes(
-        int index, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute value) {
-      if (customFieldEditAttributesBuilder_ == null) {
+    public Builder addCustomFieldAttributes(
+        int index, com.tcn.cloud.api.api.commons.CustomFieldAttribute value) {
+      if (customFieldAttributesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.add(index, value);
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.add(index, value);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.addMessage(index, value);
+        customFieldAttributesBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder addCustomFieldEditAttributes(
-        com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder builderForValue) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.add(builderForValue.build());
+    public Builder addCustomFieldAttributes(
+        com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder builderForValue) {
+      if (customFieldAttributesBuilder_ == null) {
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.add(builderForValue.build());
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.addMessage(builderForValue.build());
+        customFieldAttributesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder addCustomFieldEditAttributes(
-        int index, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder builderForValue) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.add(index, builderForValue.build());
+    public Builder addCustomFieldAttributes(
+        int index, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder builderForValue) {
+      if (customFieldAttributesBuilder_ == null) {
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.add(index, builderForValue.build());
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.addMessage(index, builderForValue.build());
+        customFieldAttributesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder addAllCustomFieldEditAttributes(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> values) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        ensureCustomFieldEditAttributesIsMutable();
+    public Builder addAllCustomFieldAttributes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CustomFieldAttribute> values) {
+      if (customFieldAttributesBuilder_ == null) {
+        ensureCustomFieldAttributesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, customFieldEditAttributes_);
+            values, customFieldAttributes_);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.addAllMessages(values);
+        customFieldAttributesBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder clearCustomFieldEditAttributes() {
-      if (customFieldEditAttributesBuilder_ == null) {
-        customFieldEditAttributes_ = java.util.Collections.emptyList();
+    public Builder clearCustomFieldAttributes() {
+      if (customFieldAttributesBuilder_ == null) {
+        customFieldAttributes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.clear();
+        customFieldAttributesBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public Builder removeCustomFieldEditAttributes(int index) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        ensureCustomFieldEditAttributesIsMutable();
-        customFieldEditAttributes_.remove(index);
+    public Builder removeCustomFieldAttributes(int index) {
+      if (customFieldAttributesBuilder_ == null) {
+        ensureCustomFieldAttributesIsMutable();
+        customFieldAttributes_.remove(index);
         onChanged();
       } else {
-        customFieldEditAttributesBuilder_.remove(index);
+        customFieldAttributesBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder getCustomFieldEditAttributesBuilder(
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder getCustomFieldAttributesBuilder(
         int index) {
-      return getCustomFieldEditAttributesFieldBuilder().getBuilder(index);
+      return getCustomFieldAttributesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder getCustomFieldEditAttributesOrBuilder(
+    public com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder getCustomFieldAttributesOrBuilder(
         int index) {
-      if (customFieldEditAttributesBuilder_ == null) {
-        return customFieldEditAttributes_.get(index);  } else {
-        return customFieldEditAttributesBuilder_.getMessageOrBuilder(index);
+      if (customFieldAttributesBuilder_ == null) {
+        return customFieldAttributes_.get(index);  } else {
+        return customFieldAttributesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder> 
-         getCustomFieldEditAttributesOrBuilderList() {
-      if (customFieldEditAttributesBuilder_ != null) {
-        return customFieldEditAttributesBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder> 
+         getCustomFieldAttributesOrBuilderList() {
+      if (customFieldAttributesBuilder_ != null) {
+        return customFieldAttributesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(customFieldEditAttributes_);
+        return java.util.Collections.unmodifiableList(customFieldAttributes_);
       }
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder addCustomFieldEditAttributesBuilder() {
-      return getCustomFieldEditAttributesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.getDefaultInstance());
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder addCustomFieldAttributesBuilder() {
+      return getCustomFieldAttributesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.CustomFieldAttribute.getDefaultInstance());
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder addCustomFieldEditAttributesBuilder(
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder addCustomFieldAttributesBuilder(
         int index) {
-      return getCustomFieldEditAttributesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.getDefaultInstance());
+      return getCustomFieldAttributesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.CustomFieldAttribute.getDefaultInstance());
     }
     /**
      * <pre>
-     * The list of edited attributes.
+     * The list of custom field  attributes.
      * </pre>
      *
-     * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+     * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder> 
-         getCustomFieldEditAttributesBuilderList() {
-      return getCustomFieldEditAttributesFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder> 
+         getCustomFieldAttributesBuilderList() {
+      return getCustomFieldAttributesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.CustomFieldEditAttribute, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder> 
-        getCustomFieldEditAttributesFieldBuilder() {
-      if (customFieldEditAttributesBuilder_ == null) {
-        customFieldEditAttributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.CustomFieldEditAttribute, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder>(
-                customFieldEditAttributes_,
+        com.tcn.cloud.api.api.commons.CustomFieldAttribute, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder> 
+        getCustomFieldAttributesFieldBuilder() {
+      if (customFieldAttributesBuilder_ == null) {
+        customFieldAttributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CustomFieldAttribute, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder, com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder>(
+                customFieldAttributes_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        customFieldEditAttributes_ = null;
+        customFieldAttributes_ = null;
       }
-      return customFieldEditAttributesBuilder_;
+      return customFieldAttributesBuilder_;
     }
 
     private java.lang.Object ticketCode_ = "";

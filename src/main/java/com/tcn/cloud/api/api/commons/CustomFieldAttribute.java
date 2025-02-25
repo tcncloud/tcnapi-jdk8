@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * CustomFieldEditAttribute - Represents a single edited attribute within a ticket's custom field.
+ * CustomFieldAttribute - Represents a single edited attribute within a ticket's custom field.
  * </pre>
  *
- * Protobuf type {@code api.commons.CustomFieldEditAttribute}
+ * Protobuf type {@code api.commons.CustomFieldAttribute}
  */
-public final class CustomFieldEditAttribute extends
+public final class CustomFieldAttribute extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.CustomFieldEditAttribute)
-    CustomFieldEditAttributeOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.CustomFieldAttribute)
+    CustomFieldAttributeOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CustomFieldEditAttribute.newBuilder() to construct.
-  private CustomFieldEditAttribute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CustomFieldAttribute.newBuilder() to construct.
+  private CustomFieldAttribute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CustomFieldEditAttribute() {
+  private CustomFieldAttribute() {
     customFieldType_ = 0;
     editedValue_ = "";
     previousValue_ = "";
@@ -29,20 +29,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CustomFieldEditAttribute();
+    return new CustomFieldAttribute();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldEditAttribute_descriptor;
+    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldAttribute_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldEditAttribute_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldAttribute_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.class, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder.class);
+            com.tcn.cloud.api.api.commons.CustomFieldAttribute.class, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder.class);
   }
 
   public static final int CUSTOM_FIELD_ID_FIELD_NUMBER = 1;
@@ -91,7 +91,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object editedValue_ = "";
   /**
    * <pre>
-   * The new value of the attribute after editing.
+   * The new value of the attribute after editing - only for edit event.
    * </pre>
    *
    * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The new value of the attribute after editing.
+   * The new value of the attribute after editing - only for edit event.
    * </pre>
    *
    * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object previousValue_ = "";
   /**
    * <pre>
-   * The previous value of the attribute before editing.
+   * The previous value of the attribute before editing - only for edit events.
    * </pre>
    *
    * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The previous value of the attribute before editing.
+   * The previous value of the attribute before editing - only for edit events.
    * </pre>
    *
    * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -239,10 +239,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.CustomFieldEditAttribute)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.CustomFieldAttribute)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.CustomFieldEditAttribute other = (com.tcn.cloud.api.api.commons.CustomFieldEditAttribute) obj;
+    com.tcn.cloud.api.api.commons.CustomFieldAttribute other = (com.tcn.cloud.api.api.commons.CustomFieldAttribute) obj;
 
     if (getCustomFieldId()
         != other.getCustomFieldId()) return false;
@@ -276,44 +276,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -321,26 +321,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute parseFrom(
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.CustomFieldEditAttribute prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.CustomFieldAttribute prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -370,29 +370,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * CustomFieldEditAttribute - Represents a single edited attribute within a ticket's custom field.
+   * CustomFieldAttribute - Represents a single edited attribute within a ticket's custom field.
    * </pre>
    *
-   * Protobuf type {@code api.commons.CustomFieldEditAttribute}
+   * Protobuf type {@code api.commons.CustomFieldAttribute}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.CustomFieldEditAttribute)
-      com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.CustomFieldAttribute)
+      com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldEditAttribute_descriptor;
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldAttribute_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldEditAttribute_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldAttribute_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.class, com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.Builder.class);
+              com.tcn.cloud.api.api.commons.CustomFieldAttribute.class, com.tcn.cloud.api.api.commons.CustomFieldAttribute.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.CustomFieldAttribute.newBuilder()
     private Builder() {
 
     }
@@ -416,17 +416,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldEditAttribute_descriptor;
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_CustomFieldAttribute_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.CustomFieldAttribute.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute build() {
-      com.tcn.cloud.api.api.commons.CustomFieldEditAttribute result = buildPartial();
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute build() {
+      com.tcn.cloud.api.api.commons.CustomFieldAttribute result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -434,14 +434,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute buildPartial() {
-      com.tcn.cloud.api.api.commons.CustomFieldEditAttribute result = new com.tcn.cloud.api.api.commons.CustomFieldEditAttribute(this);
+    public com.tcn.cloud.api.api.commons.CustomFieldAttribute buildPartial() {
+      com.tcn.cloud.api.api.commons.CustomFieldAttribute result = new com.tcn.cloud.api.api.commons.CustomFieldAttribute(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.CustomFieldEditAttribute result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.CustomFieldAttribute result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.customFieldId_ = customFieldId_;
@@ -491,16 +491,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.CustomFieldEditAttribute) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.CustomFieldEditAttribute)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.CustomFieldAttribute) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.CustomFieldAttribute)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.CustomFieldEditAttribute other) {
-      if (other == com.tcn.cloud.api.api.commons.CustomFieldEditAttribute.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.CustomFieldAttribute other) {
+      if (other == com.tcn.cloud.api.api.commons.CustomFieldAttribute.getDefaultInstance()) return this;
       if (other.getCustomFieldId() != 0L) {
         setCustomFieldId(other.getCustomFieldId());
       }
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object editedValue_ = "";
     /**
      * <pre>
-     * The new value of the attribute after editing.
+     * The new value of the attribute after editing - only for edit event.
      * </pre>
      *
      * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The new value of the attribute after editing.
+     * The new value of the attribute after editing - only for edit event.
      * </pre>
      *
      * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The new value of the attribute after editing.
+     * The new value of the attribute after editing - only for edit event.
      * </pre>
      *
      * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The new value of the attribute after editing.
+     * The new value of the attribute after editing - only for edit event.
      * </pre>
      *
      * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The new value of the attribute after editing.
+     * The new value of the attribute after editing - only for edit event.
      * </pre>
      *
      * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object previousValue_ = "";
     /**
      * <pre>
-     * The previous value of the attribute before editing.
+     * The previous value of the attribute before editing - only for edit events.
      * </pre>
      *
      * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The previous value of the attribute before editing.
+     * The previous value of the attribute before editing - only for edit events.
      * </pre>
      *
      * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The previous value of the attribute before editing.
+     * The previous value of the attribute before editing - only for edit events.
      * </pre>
      *
      * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The previous value of the attribute before editing.
+     * The previous value of the attribute before editing - only for edit events.
      * </pre>
      *
      * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The previous value of the attribute before editing.
+     * The previous value of the attribute before editing - only for edit events.
      * </pre>
      *
      * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -893,23 +893,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.CustomFieldEditAttribute)
+    // @@protoc_insertion_point(builder_scope:api.commons.CustomFieldAttribute)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.CustomFieldEditAttribute)
-  private static final com.tcn.cloud.api.api.commons.CustomFieldEditAttribute DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.CustomFieldAttribute)
+  private static final com.tcn.cloud.api.api.commons.CustomFieldAttribute DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.CustomFieldEditAttribute();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.CustomFieldAttribute();
   }
 
-  public static com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.CustomFieldAttribute getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CustomFieldEditAttribute>
-      PARSER = new com.google.protobuf.AbstractParser<CustomFieldEditAttribute>() {
+  private static final com.google.protobuf.Parser<CustomFieldAttribute>
+      PARSER = new com.google.protobuf.AbstractParser<CustomFieldAttribute>() {
     @java.lang.Override
-    public CustomFieldEditAttribute parsePartialFrom(
+    public CustomFieldAttribute parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -928,17 +928,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CustomFieldEditAttribute> parser() {
+  public static com.google.protobuf.Parser<CustomFieldAttribute> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CustomFieldEditAttribute> getParserForType() {
+  public com.google.protobuf.Parser<CustomFieldAttribute> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.CustomFieldAttribute getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

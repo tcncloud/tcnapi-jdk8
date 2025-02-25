@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface CustomFieldEditAttributeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.CustomFieldEditAttribute)
+public interface CustomFieldAttributeOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.CustomFieldAttribute)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -38,7 +38,7 @@ public interface CustomFieldEditAttributeOrBuilder extends
 
   /**
    * <pre>
-   * The new value of the attribute after editing.
+   * The new value of the attribute after editing - only for edit event.
    * </pre>
    *
    * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -47,7 +47,7 @@ public interface CustomFieldEditAttributeOrBuilder extends
   java.lang.String getEditedValue();
   /**
    * <pre>
-   * The new value of the attribute after editing.
+   * The new value of the attribute after editing - only for edit event.
    * </pre>
    *
    * <code>string edited_value = 3 [json_name = "editedValue"];</code>
@@ -58,7 +58,7 @@ public interface CustomFieldEditAttributeOrBuilder extends
 
   /**
    * <pre>
-   * The previous value of the attribute before editing.
+   * The previous value of the attribute before editing - only for edit events.
    * </pre>
    *
    * <code>string previous_value = 4 [json_name = "previousValue"];</code>
@@ -67,7 +67,7 @@ public interface CustomFieldEditAttributeOrBuilder extends
   java.lang.String getPreviousValue();
   /**
    * <pre>
-   * The previous value of the attribute before editing.
+   * The previous value of the attribute before editing - only for edit events.
    * </pre>
    *
    * <code>string previous_value = 4 [json_name = "previousValue"];</code>

@@ -9,46 +9,46 @@ public interface TicketCustomFieldAuditLogOrBuilder extends
 
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.CustomFieldEditAttribute> 
-      getCustomFieldEditAttributesList();
+  java.util.List<com.tcn.cloud.api.api.commons.CustomFieldAttribute> 
+      getCustomFieldAttributesList();
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
-  com.tcn.cloud.api.api.commons.CustomFieldEditAttribute getCustomFieldEditAttributes(int index);
+  com.tcn.cloud.api.api.commons.CustomFieldAttribute getCustomFieldAttributes(int index);
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
-  int getCustomFieldEditAttributesCount();
+  int getCustomFieldAttributesCount();
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder> 
-      getCustomFieldEditAttributesOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder> 
+      getCustomFieldAttributesOrBuilderList();
   /**
    * <pre>
-   * The list of edited attributes.
+   * The list of custom field  attributes.
    * </pre>
    *
-   * <code>repeated .api.commons.CustomFieldEditAttribute custom_field_edit_attributes = 1 [json_name = "customFieldEditAttributes"];</code>
+   * <code>repeated .api.commons.CustomFieldAttribute custom_field_attributes = 1 [json_name = "customFieldAttributes"];</code>
    */
-  com.tcn.cloud.api.api.commons.CustomFieldEditAttributeOrBuilder getCustomFieldEditAttributesOrBuilder(
+  com.tcn.cloud.api.api.commons.CustomFieldAttributeOrBuilder getCustomFieldAttributesOrBuilder(
       int index);
 
   /**
