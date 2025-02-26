@@ -1037,6 +1037,21 @@ java.lang.String defaultValue) {
     return countryCode_;
   }
 
+  public static final int COUNTRY_CODE_SID_FIELD_NUMBER = 27;
+  private long countryCodeSid_ = 0L;
+  /**
+   * <pre>
+   * country code sid
+   * </pre>
+   *
+   * <code>int64 country_code_sid = 27 [json_name = "countryCodeSid"];</code>
+   * @return The countryCodeSid.
+   */
+  @java.lang.Override
+  public long getCountryCodeSid() {
+    return countryCodeSid_;
+  }
+
   public static final int POSTAL_CODE_FIELD_FIELD_NUMBER = 25;
   @SuppressWarnings("serial")
   private volatile java.lang.Object postalCodeField_ = "";
@@ -1214,6 +1229,9 @@ java.lang.String defaultValue) {
     if (timeoutMessageConfig_ != null) {
       output.writeMessage(26, getTimeoutMessageConfig());
     }
+    if (countryCodeSid_ != 0L) {
+      output.writeInt64(27, countryCodeSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1332,6 +1350,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(26, getTimeoutMessageConfig());
     }
+    if (countryCodeSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(27, countryCodeSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1447,6 +1469,8 @@ java.lang.String defaultValue) {
         other.internalGetProviderMetadata())) return false;
     if (getCountryCode()
         != other.getCountryCode()) return false;
+    if (getCountryCodeSid()
+        != other.getCountryCodeSid()) return false;
     if (!getPostalCodeField()
         .equals(other.getPostalCodeField())) return false;
     if (hasTimeoutMessageConfig() != other.hasTimeoutMessageConfig()) return false;
@@ -1555,6 +1579,9 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountryCode();
+    hash = (37 * hash) + COUNTRY_CODE_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCountryCodeSid());
     hash = (37 * hash) + POSTAL_CODE_FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getPostalCodeField().hashCode();
     if (hasTimeoutMessageConfig()) {
@@ -1826,6 +1853,7 @@ java.lang.String defaultValue) {
       }
       internalGetMutableProviderMetadata().clear();
       countryCode_ = 0;
+      countryCodeSid_ = 0L;
       postalCodeField_ = "";
       timeoutMessageConfig_ = null;
       if (timeoutMessageConfigBuilder_ != null) {
@@ -1989,9 +2017,12 @@ java.lang.String defaultValue) {
         result.countryCode_ = countryCode_;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
-        result.postalCodeField_ = postalCodeField_;
+        result.countryCodeSid_ = countryCodeSid_;
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.postalCodeField_ = postalCodeField_;
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
         result.timeoutMessageConfig_ = timeoutMessageConfigBuilder_ == null
             ? timeoutMessageConfig_
             : timeoutMessageConfigBuilder_.build();
@@ -2164,9 +2195,12 @@ java.lang.String defaultValue) {
       if (other.getCountryCode() != 0) {
         setCountryCode(other.getCountryCode());
       }
+      if (other.getCountryCodeSid() != 0L) {
+        setCountryCodeSid(other.getCountryCodeSid());
+      }
       if (!other.getPostalCodeField().isEmpty()) {
         postalCodeField_ = other.postalCodeField_;
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x01000000;
         onChanged();
       }
       if (other.hasTimeoutMessageConfig()) {
@@ -2372,16 +2406,21 @@ java.lang.String defaultValue) {
             } // case 192
             case 202: {
               postalCodeField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 202
             case 210: {
               input.readMessage(
                   getTimeoutMessageConfigFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 210
+            case 216: {
+              countryCodeSid_ = input.readInt64();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 216
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6176,6 +6215,50 @@ java.lang.String defaultValue) {
       return this;
     }
 
+    private long countryCodeSid_ ;
+    /**
+     * <pre>
+     * country code sid
+     * </pre>
+     *
+     * <code>int64 country_code_sid = 27 [json_name = "countryCodeSid"];</code>
+     * @return The countryCodeSid.
+     */
+    @java.lang.Override
+    public long getCountryCodeSid() {
+      return countryCodeSid_;
+    }
+    /**
+     * <pre>
+     * country code sid
+     * </pre>
+     *
+     * <code>int64 country_code_sid = 27 [json_name = "countryCodeSid"];</code>
+     * @param value The countryCodeSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCodeSid(long value) {
+
+      countryCodeSid_ = value;
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * country code sid
+     * </pre>
+     *
+     * <code>int64 country_code_sid = 27 [json_name = "countryCodeSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCodeSid() {
+      bitField0_ = (bitField0_ & ~0x00800000);
+      countryCodeSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object postalCodeField_ = "";
     /**
      * <pre>
@@ -6231,7 +6314,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       postalCodeField_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -6245,7 +6328,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearPostalCodeField() {
       postalCodeField_ = getDefaultInstance().getPostalCodeField();
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       onChanged();
       return this;
     }
@@ -6263,7 +6346,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       postalCodeField_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -6280,7 +6363,7 @@ java.lang.String defaultValue) {
      * @return Whether the timeoutMessageConfig field is set.
      */
     public boolean hasTimeoutMessageConfig() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -6313,7 +6396,7 @@ java.lang.String defaultValue) {
       } else {
         timeoutMessageConfigBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -6331,7 +6414,7 @@ java.lang.String defaultValue) {
       } else {
         timeoutMessageConfigBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -6344,7 +6427,7 @@ java.lang.String defaultValue) {
      */
     public Builder mergeTimeoutMessageConfig(com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig value) {
       if (timeoutMessageConfigBuilder_ == null) {
-        if (((bitField0_ & 0x01000000) != 0) &&
+        if (((bitField0_ & 0x02000000) != 0) &&
           timeoutMessageConfig_ != null &&
           timeoutMessageConfig_ != com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance()) {
           getTimeoutMessageConfigBuilder().mergeFrom(value);
@@ -6354,7 +6437,7 @@ java.lang.String defaultValue) {
       } else {
         timeoutMessageConfigBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -6366,7 +6449,7 @@ java.lang.String defaultValue) {
      * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
      */
     public Builder clearTimeoutMessageConfig() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       timeoutMessageConfig_ = null;
       if (timeoutMessageConfigBuilder_ != null) {
         timeoutMessageConfigBuilder_.dispose();
@@ -6383,7 +6466,7 @@ java.lang.String defaultValue) {
      * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
      */
     public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder getTimeoutMessageConfigBuilder() {
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return getTimeoutMessageConfigFieldBuilder().getBuilder();
     }

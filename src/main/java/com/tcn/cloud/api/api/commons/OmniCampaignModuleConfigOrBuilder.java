@@ -699,6 +699,16 @@ java.lang.String defaultValue);
 
   /**
    * <pre>
+   * country code sid
+   * </pre>
+   *
+   * <code>int64 country_code_sid = 27 [json_name = "countryCodeSid"];</code>
+   * @return The countryCodeSid.
+   */
+  long getCountryCodeSid();
+
+  /**
+   * <pre>
    * postal code field
    * </pre>
    *
