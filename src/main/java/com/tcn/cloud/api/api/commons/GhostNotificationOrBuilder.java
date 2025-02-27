@@ -243,5 +243,59 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder();
 
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   * @return Whether the agentMessageReceived field is set.
+   */
+  boolean hasAgentMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   * @return The agentMessageReceived.
+   */
+  com.tcn.cloud.api.api.commons.AgentMessageReceived getAgentMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AgentMessageReceivedOrBuilder getAgentMessageReceivedOrBuilder();
+
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return Whether the conversationAssigned field is set.
+   */
+  boolean hasConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return The conversationAssigned.
+   */
+  com.tcn.cloud.api.api.commons.ConversationAssigned getConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ConversationAssignedOrBuilder getConversationAssignedOrBuilder();
+
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }
