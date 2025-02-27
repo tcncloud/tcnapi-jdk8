@@ -40,10 +40,10 @@ public final class GhostnotifierProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AuthTokenExpiration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_ConverastionAssigned_descriptor;
+    internal_static_api_commons_ConversationAssigned_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_ConverastionAssigned_fieldAccessorTable;
+      internal_static_api_commons_ConversationAssigned_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_AgentMessageReceived_descriptor;
   static final 
@@ -84,7 +84,7 @@ public final class GhostnotifierProto {
       "ved\030\014 \001(\0132!.api.commons.AgentMessageRece" +
       "ivedH\000R\024agentMessageReceived\022X\n\025conversa" +
       "tion_assigned\030\r \001(\0132!.api.commons.Conver" +
-      "astionAssignedH\000R\024conversationAssignedB\t" +
+      "sationAssignedH\000R\024conversationAssignedB\t" +
       "\n\007payloadJ\004\010\n\020\013R\025auth_token_expiration\"6" +
       "\n\006Status\022\022\n\004code\030\001 \001(\005R\004code\022\030\n\007message\030" +
       "\002 \001(\tR\007message\"\362\005\n\034AgentQueuedCallsNotif" +
@@ -109,7 +109,7 @@ public final class GhostnotifierProto {
       "icationType\"g\n\023AuthTokenExpiration\022\024\n\005to" +
       "ken\030\001 \001(\tR\005token\022:\n\nexpiration\030\002 \001(\0132\032.g" +
       "oogle.protobuf.TimestampR\nexpiration\"?\n\024" +
-      "ConverastionAssigned\022\'\n\017conversation_id\030" +
+      "ConversationAssigned\022\'\n\017conversation_id\030" +
       "\001 \001(\tR\016conversationId\"[\n\024AgentMessageRec" +
       "eived\022)\n\020conversation_sid\030\001 \001(\tR\017convers" +
       "ationSid\022\030\n\007message\030\002 \001(\tR\007messageB\200\001\n\035c" +
@@ -156,11 +156,11 @@ public final class GhostnotifierProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AuthTokenExpiration_descriptor,
         new java.lang.String[] { "Token", "Expiration", });
-    internal_static_api_commons_ConverastionAssigned_descriptor =
+    internal_static_api_commons_ConversationAssigned_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_api_commons_ConverastionAssigned_fieldAccessorTable = new
+    internal_static_api_commons_ConversationAssigned_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_ConverastionAssigned_descriptor,
+        internal_static_api_commons_ConversationAssigned_descriptor,
         new java.lang.String[] { "ConversationId", });
     internal_static_api_commons_AgentMessageReceived_descriptor =
       getDescriptor().getMessageTypes().get(5);

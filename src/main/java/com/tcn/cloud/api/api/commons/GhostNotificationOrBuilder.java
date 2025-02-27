@@ -275,7 +275,7 @@ public interface GhostNotificationOrBuilder extends
    * notification that a conversations has been assigned to an agent
    * </pre>
    *
-   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
    * @return Whether the conversationAssigned field is set.
    */
   boolean hasConversationAssigned();
@@ -284,18 +284,18 @@ public interface GhostNotificationOrBuilder extends
    * notification that a conversations has been assigned to an agent
    * </pre>
    *
-   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
    * @return The conversationAssigned.
    */
-  com.tcn.cloud.api.api.commons.ConverastionAssigned getConversationAssigned();
+  com.tcn.cloud.api.api.commons.ConversationAssigned getConversationAssigned();
   /**
    * <pre>
    * notification that a conversations has been assigned to an agent
    * </pre>
    *
-   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
    */
-  com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder getConversationAssignedOrBuilder();
+  com.tcn.cloud.api.api.commons.ConversationAssignedOrBuilder getConversationAssignedOrBuilder();
 
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }

@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ConverastionAssignedOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.ConverastionAssigned)
+public interface ConversationAssignedOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.ConversationAssigned)
     com.google.protobuf.MessageOrBuilder {
 
   /**
