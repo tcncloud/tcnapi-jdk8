@@ -243,5 +243,32 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder();
 
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   * @return Whether the agentMessageReceived field is set.
+   */
+  boolean hasAgentMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   * @return The agentMessageReceived.
+   */
+  com.tcn.cloud.api.api.commons.AgentMessageReceived getAgentMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received by an agent
+   * </pre>
+   *
+   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AgentMessageReceivedOrBuilder getAgentMessageReceivedOrBuilder();
+
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }
