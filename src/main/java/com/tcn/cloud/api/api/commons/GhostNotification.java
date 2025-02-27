@@ -59,6 +59,7 @@ private static final long serialVersionUID = 0L;
     AGENT_QUEUED_CALLS_NOTIFICATION(9),
     AUTH_TOKEN_EXPIRATION_NOTIFICATION(11),
     AGENT_MESSAGE_RECEIVED(12),
+    CONVERSATION_ASSIGNED(13),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -85,6 +86,7 @@ private static final long serialVersionUID = 0L;
         case 9: return AGENT_QUEUED_CALLS_NOTIFICATION;
         case 11: return AUTH_TOKEN_EXPIRATION_NOTIFICATION;
         case 12: return AGENT_MESSAGE_RECEIVED;
+        case 13: return CONVERSATION_ASSIGNED;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -534,6 +536,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.AgentMessageReceived.getDefaultInstance();
   }
 
+  public static final int CONVERSATION_ASSIGNED_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return Whether the conversationAssigned field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversationAssigned() {
+    return payloadCase_ == 13;
+  }
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return The conversationAssigned.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConverastionAssigned getConversationAssigned() {
+    if (payloadCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder getConversationAssignedOrBuilder() {
+    if (payloadCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -577,6 +622,9 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 12) {
       output.writeMessage(12, (com.tcn.cloud.api.api.commons.AgentMessageReceived) payload_);
+    }
+    if (payloadCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -625,6 +673,10 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.tcn.cloud.api.api.commons.AgentMessageReceived) payload_);
+    }
+    if (payloadCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -681,6 +733,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentMessageReceived()
             .equals(other.getAgentMessageReceived())) return false;
         break;
+      case 13:
+        if (!getConversationAssigned()
+            .equals(other.getConversationAssigned())) return false;
+        break;
       case 0:
       default:
     }
@@ -733,6 +789,10 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + AGENT_MESSAGE_RECEIVED_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageReceived().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + CONVERSATION_ASSIGNED_FIELD_NUMBER;
+        hash = (53 * hash) + getConversationAssigned().hashCode();
         break;
       case 0:
       default:
@@ -901,6 +961,9 @@ private static final long serialVersionUID = 0L;
       if (agentMessageReceivedBuilder_ != null) {
         agentMessageReceivedBuilder_.clear();
       }
+      if (conversationAssignedBuilder_ != null) {
+        conversationAssignedBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -980,6 +1043,10 @@ private static final long serialVersionUID = 0L;
       if (payloadCase_ == 12 &&
           agentMessageReceivedBuilder_ != null) {
         result.payload_ = agentMessageReceivedBuilder_.build();
+      }
+      if (payloadCase_ == 13 &&
+          conversationAssignedBuilder_ != null) {
+        result.payload_ = conversationAssignedBuilder_.build();
       }
     }
 
@@ -1067,6 +1134,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGENT_MESSAGE_RECEIVED: {
           mergeAgentMessageReceived(other.getAgentMessageReceived());
+          break;
+        }
+        case CONVERSATION_ASSIGNED: {
+          mergeConversationAssigned(other.getConversationAssigned());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1167,6 +1238,13 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 12;
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getConversationAssignedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 13;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2891,6 +2969,184 @@ private static final long serialVersionUID = 0L;
       payloadCase_ = 12;
       onChanged();
       return agentMessageReceivedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConverastionAssigned, com.tcn.cloud.api.api.commons.ConverastionAssigned.Builder, com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder> conversationAssignedBuilder_;
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     * @return Whether the conversationAssigned field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversationAssigned() {
+      return payloadCase_ == 13;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     * @return The conversationAssigned.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConverastionAssigned getConversationAssigned() {
+      if (conversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 13) {
+          return conversationAssignedBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    public Builder setConversationAssigned(com.tcn.cloud.api.api.commons.ConverastionAssigned value) {
+      if (conversationAssignedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        conversationAssignedBuilder_.setMessage(value);
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    public Builder setConversationAssigned(
+        com.tcn.cloud.api.api.commons.ConverastionAssigned.Builder builderForValue) {
+      if (conversationAssignedBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversationAssignedBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    public Builder mergeConversationAssigned(com.tcn.cloud.api.api.commons.ConverastionAssigned value) {
+      if (conversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13 &&
+            payload_ != com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.ConverastionAssigned.newBuilder((com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 13) {
+          conversationAssignedBuilder_.mergeFrom(value);
+        } else {
+          conversationAssignedBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    public Builder clearConversationAssigned() {
+      if (conversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 13) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        conversationAssignedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConverastionAssigned.Builder getConversationAssignedBuilder() {
+      return getConversationAssignedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder getConversationAssignedOrBuilder() {
+      if ((payloadCase_ == 13) && (conversationAssignedBuilder_ != null)) {
+        return conversationAssignedBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned to an agent
+     * </pre>
+     *
+     * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConverastionAssigned, com.tcn.cloud.api.api.commons.ConverastionAssigned.Builder, com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder> 
+        getConversationAssignedFieldBuilder() {
+      if (conversationAssignedBuilder_ == null) {
+        if (!(payloadCase_ == 13)) {
+          payload_ = com.tcn.cloud.api.api.commons.ConverastionAssigned.getDefaultInstance();
+        }
+        conversationAssignedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConverastionAssigned, com.tcn.cloud.api.api.commons.ConverastionAssigned.Builder, com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.ConverastionAssigned) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 13;
+      onChanged();
+      return conversationAssignedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

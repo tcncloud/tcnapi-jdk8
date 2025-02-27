@@ -26,24 +26,4 @@ public interface ConverastionAssignedOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConversationIdBytes();
-
-  /**
-   * <pre>
-   * The agent id of who the conversation was assigned to
-   * </pre>
-   *
-   * <code>string assigned_to = 2 [json_name = "assignedTo"];</code>
-   * @return The assignedTo.
-   */
-  java.lang.String getAssignedTo();
-  /**
-   * <pre>
-   * The agent id of who the conversation was assigned to
-   * </pre>
-   *
-   * <code>string assigned_to = 2 [json_name = "assignedTo"];</code>
-   * @return The bytes for assignedTo.
-   */
-  com.google.protobuf.ByteString
-      getAssignedToBytes();
 }

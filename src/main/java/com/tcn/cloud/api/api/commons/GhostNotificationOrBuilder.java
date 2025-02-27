@@ -270,5 +270,32 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AgentMessageReceivedOrBuilder getAgentMessageReceivedOrBuilder();
 
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return Whether the conversationAssigned field is set.
+   */
+  boolean hasConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * @return The conversationAssigned.
+   */
+  com.tcn.cloud.api.api.commons.ConverastionAssigned getConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned to an agent
+   * </pre>
+   *
+   * <code>.api.commons.ConverastionAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ConverastionAssignedOrBuilder getConversationAssignedOrBuilder();
+
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }
