@@ -167,27 +167,10 @@ public interface UpdateMyUserRequestOrBuilder extends
    * If the user wants notification sounds to play
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
-   * @return Whether the playNotificationSounds field is set.
-   */
-  boolean hasPlayNotificationSounds();
-  /**
-   * <pre>
-   * If the user wants notification sounds to play
-   * </pre>
-   *
-   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
+   * <code>bool play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
    * @return The playNotificationSounds.
    */
-  com.google.protobuf.BoolValue getPlayNotificationSounds();
-  /**
-   * <pre>
-   * If the user wants notification sounds to play
-   * </pre>
-   *
-   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
-   */
-  com.google.protobuf.BoolValueOrBuilder getPlayNotificationSoundsOrBuilder();
+  boolean getPlayNotificationSounds();
 
   /**
    * <pre>
