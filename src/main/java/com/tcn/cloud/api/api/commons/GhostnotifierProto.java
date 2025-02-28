@@ -39,16 +39,6 @@ public final class GhostnotifierProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AuthTokenExpiration_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_ConversationAssigned_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_ConversationAssigned_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_AgentMessageReceived_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_AgentMessageReceived_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -62,7 +52,7 @@ public final class GhostnotifierProto {
       "ommons\032\025api/commons/acd.proto\032\035api/commo" +
       "ns/omnichannel.proto\032\031google/protobuf/an" +
       "y.proto\032\037google/protobuf/timestamp.proto" +
-      "\"\273\007\n\021GhostNotification\022!\n\014reference_id\030\001" +
+      "\"\206\006\n\021GhostNotification\022!\n\014reference_id\030\001" +
       " \001(\tR\013referenceId\022(\n\003any\030\002 \001(\0132\024.google." +
       "protobuf.AnyH\000R\003any\022-\n\006status\030\003 \001(\0132\023.ap" +
       "i.commons.StatusH\000R\006status\022L\n\021omni_conve" +
@@ -80,43 +70,34 @@ public final class GhostnotifierProto {
       "tQueuedCallsNotification\022o\n\"auth_token_e" +
       "xpiration_notification\030\013 \001(\0132 .api.commo" +
       "ns.AuthTokenExpirationH\000R\037authTokenExpir" +
-      "ationNotification\022Y\n\026agent_message_recei" +
-      "ved\030\014 \001(\0132!.api.commons.AgentMessageRece" +
-      "ivedH\000R\024agentMessageReceived\022X\n\025conversa" +
-      "tion_assigned\030\r \001(\0132!.api.commons.Conver" +
-      "sationAssignedH\000R\024conversationAssignedB\t" +
-      "\n\007payloadJ\004\010\n\020\013R\025auth_token_expiration\"6" +
-      "\n\006Status\022\022\n\004code\030\001 \001(\005R\004code\022\030\n\007message\030" +
-      "\002 \001(\tR\007message\"\362\005\n\034AgentQueuedCallsNotif" +
-      "ication\022d\n\021agent_queue_calls\030\020 \003(\01328.api" +
-      ".commons.AgentQueuedCallsNotification.Qu" +
-      "euedCallDataR\017agentQueueCalls\022\\\n\ron_hold" +
-      "_calls\030\021 \003(\01328.api.commons.AgentQueuedCa" +
-      "llsNotification.QueuedCallDataR\013onHoldCa" +
-      "lls\022U\n\thqm_calls\030\022 \003(\01328.api.commons.Age" +
-      "ntQueuedCallsNotification.QueuedCallData" +
-      "R\010hqmCalls\032\266\003\n\016QueuedCallData\022\031\n\010call_si" +
-      "d\030\001 \001(\003R\007callSid\022!\n\014phone_number\030\002 \001(\tR\013" +
-      "phoneNumber\022\033\n\tcaller_id\030\003 \001(\tR\010callerId" +
-      "\0227\n\tcall_type\030\004 \001(\0162\032.api.commons.CallTy" +
-      "pe.EnumR\010callType\0229\n\nstart_date\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampR\tstartDate\0227\n\t" +
-      "hold_date\030\006 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\010holdDate\022\026\n\006skills\030\007 \003(\tR\006skills\022%\n" +
-      "\016agent_specific\030\010 \001(\010R\ragentSpecific\022]\n\030" +
-      "queued_notification_type\030\t \001(\0162#.api.com" +
-      "mons.QueuedNotificationTypeR\026queuedNotif" +
-      "icationType\"g\n\023AuthTokenExpiration\022\024\n\005to" +
-      "ken\030\001 \001(\tR\005token\022:\n\nexpiration\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\nexpiration\"?\n\024" +
-      "ConversationAssigned\022\'\n\017conversation_id\030" +
-      "\001 \001(\tR\016conversationId\"[\n\024AgentMessageRec" +
-      "eived\022)\n\020conversation_sid\030\001 \001(\tR\017convers" +
-      "ationSid\022\030\n\007message\030\002 \001(\tR\007messageB\200\001\n\035c" +
-      "om.tcn.cloud.api.api.commonsB\022Ghostnotif" +
-      "ierProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
-      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
-      "mmonsb\006proto3"
+      "ationNotificationB\t\n\007payloadJ\004\010\n\020\013R\025auth" +
+      "_token_expiration\"6\n\006Status\022\022\n\004code\030\001 \001(" +
+      "\005R\004code\022\030\n\007message\030\002 \001(\tR\007message\"\362\005\n\034Ag" +
+      "entQueuedCallsNotification\022d\n\021agent_queu" +
+      "e_calls\030\020 \003(\01328.api.commons.AgentQueuedC" +
+      "allsNotification.QueuedCallDataR\017agentQu" +
+      "eueCalls\022\\\n\ron_hold_calls\030\021 \003(\01328.api.co" +
+      "mmons.AgentQueuedCallsNotification.Queue" +
+      "dCallDataR\013onHoldCalls\022U\n\thqm_calls\030\022 \003(" +
+      "\01328.api.commons.AgentQueuedCallsNotifica" +
+      "tion.QueuedCallDataR\010hqmCalls\032\266\003\n\016Queued" +
+      "CallData\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022!\n\014p" +
+      "hone_number\030\002 \001(\tR\013phoneNumber\022\033\n\tcaller" +
+      "_id\030\003 \001(\tR\010callerId\0227\n\tcall_type\030\004 \001(\0162\032" +
+      ".api.commons.CallType.EnumR\010callType\0229\n\n" +
+      "start_date\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tstartDate\0227\n\thold_date\030\006 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\010holdDate\022\026\n\006skil" +
+      "ls\030\007 \003(\tR\006skills\022%\n\016agent_specific\030\010 \001(\010" +
+      "R\ragentSpecific\022]\n\030queued_notification_t" +
+      "ype\030\t \001(\0162#.api.commons.QueuedNotificati" +
+      "onTypeR\026queuedNotificationType\"g\n\023AuthTo" +
+      "kenExpiration\022\024\n\005token\030\001 \001(\tR\005token\022:\n\ne" +
+      "xpiration\030\002 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\nexpirationB\200\001\n\035com.tcn.cloud.api.ap" +
+      "i.commonsB\022GhostnotifierProtoP\001\242\002\003ACX\252\002\013" +
+      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
+      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -131,7 +112,7 @@ public final class GhostnotifierProto {
     internal_static_api_commons_GhostNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_GhostNotification_descriptor,
-        new java.lang.String[] { "ReferenceId", "Any", "Status", "OmniConversation", "BackofficeMessage", "DirectedCallRinging", "DirectedCallHangup", "AgentQueuedCallsNotification", "AuthTokenExpirationNotification", "AgentMessageReceived", "ConversationAssigned", "Payload", });
+        new java.lang.String[] { "ReferenceId", "Any", "Status", "OmniConversation", "BackofficeMessage", "DirectedCallRinging", "DirectedCallHangup", "AgentQueuedCallsNotification", "AuthTokenExpirationNotification", "Payload", });
     internal_static_api_commons_Status_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_Status_fieldAccessorTable = new
@@ -156,18 +137,6 @@ public final class GhostnotifierProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AuthTokenExpiration_descriptor,
         new java.lang.String[] { "Token", "Expiration", });
-    internal_static_api_commons_ConversationAssigned_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_api_commons_ConversationAssigned_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_ConversationAssigned_descriptor,
-        new java.lang.String[] { "ConversationId", });
-    internal_static_api_commons_AgentMessageReceived_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_api_commons_AgentMessageReceived_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_AgentMessageReceived_descriptor,
-        new java.lang.String[] { "ConversationSid", "Message", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
