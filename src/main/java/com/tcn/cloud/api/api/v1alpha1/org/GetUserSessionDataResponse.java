@@ -789,6 +789,33 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder();
+
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return Whether the playNotificationSounds field is set.
+     */
+    boolean hasPlayNotificationSounds();
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    com.google.protobuf.BoolValue getPlayNotificationSounds();
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPlayNotificationSoundsOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.GetUserSessionDataResponse.User}
@@ -2844,6 +2871,44 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return accessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
     }
 
+    public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 37;
+    private com.google.protobuf.BoolValue playNotificationSounds_;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return Whether the playNotificationSounds field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayNotificationSounds() {
+      return playNotificationSounds_ != null;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPlayNotificationSounds() {
+      return playNotificationSounds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : playNotificationSounds_;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPlayNotificationSoundsOrBuilder() {
+      return playNotificationSounds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : playNotificationSounds_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2953,6 +3018,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (accessTokenExpiration_ != null) {
         output.writeMessage(36, getAccessTokenExpiration());
+      }
+      if (playNotificationSounds_ != null) {
+        output.writeMessage(37, getPlayNotificationSounds());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3096,6 +3164,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(36, getAccessTokenExpiration());
       }
+      if (playNotificationSounds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, getPlayNotificationSounds());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3195,6 +3267,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasAccessTokenExpiration()) {
         if (!getAccessTokenExpiration()
             .equals(other.getAccessTokenExpiration())) return false;
+      }
+      if (hasPlayNotificationSounds() != other.hasPlayNotificationSounds()) return false;
+      if (hasPlayNotificationSounds()) {
+        if (!getPlayNotificationSounds()
+            .equals(other.getPlayNotificationSounds())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3298,6 +3375,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasAccessTokenExpiration()) {
         hash = (37 * hash) + ACCESS_TOKEN_EXPIRATION_FIELD_NUMBER;
         hash = (53 * hash) + getAccessTokenExpiration().hashCode();
+      }
+      if (hasPlayNotificationSounds()) {
+        hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayNotificationSounds().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3519,6 +3600,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           accessTokenExpirationBuilder_.dispose();
           accessTokenExpirationBuilder_ = null;
         }
+        playNotificationSounds_ = null;
+        if (playNotificationSoundsBuilder_ != null) {
+          playNotificationSoundsBuilder_.dispose();
+          playNotificationSoundsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3665,6 +3751,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           result.accessTokenExpiration_ = accessTokenExpirationBuilder_ == null
               ? accessTokenExpiration_
               : accessTokenExpirationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.playNotificationSounds_ = playNotificationSoundsBuilder_ == null
+              ? playNotificationSounds_
+              : playNotificationSoundsBuilder_.build();
         }
       }
 
@@ -3858,6 +3949,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (other.hasAccessTokenExpiration()) {
           mergeAccessTokenExpiration(other.getAccessTokenExpiration());
+        }
+        if (other.hasPlayNotificationSounds()) {
+          mergePlayNotificationSounds(other.getPlayNotificationSounds());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4064,6 +4158,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                 bitField0_ |= 0x40000000;
                 break;
               } // case 290
+              case 298: {
+                input.readMessage(
+                    getPlayNotificationSoundsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x80000000;
+                break;
+              } // case 298
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7478,6 +7579,161 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           accessTokenExpiration_ = null;
         }
         return accessTokenExpirationBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue playNotificationSounds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> playNotificationSoundsBuilder_;
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       * @return Whether the playNotificationSounds field is set.
+       */
+      public boolean hasPlayNotificationSounds() {
+        return ((bitField0_ & 0x80000000) != 0);
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       * @return The playNotificationSounds.
+       */
+      public com.google.protobuf.BoolValue getPlayNotificationSounds() {
+        if (playNotificationSoundsBuilder_ == null) {
+          return playNotificationSounds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : playNotificationSounds_;
+        } else {
+          return playNotificationSoundsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public Builder setPlayNotificationSounds(com.google.protobuf.BoolValue value) {
+        if (playNotificationSoundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          playNotificationSounds_ = value;
+        } else {
+          playNotificationSoundsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public Builder setPlayNotificationSounds(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (playNotificationSoundsBuilder_ == null) {
+          playNotificationSounds_ = builderForValue.build();
+        } else {
+          playNotificationSoundsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public Builder mergePlayNotificationSounds(com.google.protobuf.BoolValue value) {
+        if (playNotificationSoundsBuilder_ == null) {
+          if (((bitField0_ & 0x80000000) != 0) &&
+            playNotificationSounds_ != null &&
+            playNotificationSounds_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+            getPlayNotificationSoundsBuilder().mergeFrom(value);
+          } else {
+            playNotificationSounds_ = value;
+          }
+        } else {
+          playNotificationSoundsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public Builder clearPlayNotificationSounds() {
+        bitField0_ = (bitField0_ & ~0x80000000);
+        playNotificationSounds_ = null;
+        if (playNotificationSoundsBuilder_ != null) {
+          playNotificationSoundsBuilder_.dispose();
+          playNotificationSoundsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPlayNotificationSoundsBuilder() {
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return getPlayNotificationSoundsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPlayNotificationSoundsOrBuilder() {
+        if (playNotificationSoundsBuilder_ != null) {
+          return playNotificationSoundsBuilder_.getMessageOrBuilder();
+        } else {
+          return playNotificationSounds_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : playNotificationSounds_;
+        }
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPlayNotificationSoundsFieldBuilder() {
+        if (playNotificationSoundsBuilder_ == null) {
+          playNotificationSoundsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPlayNotificationSounds(),
+                  getParentForChildren(),
+                  isClean());
+          playNotificationSounds_ = null;
+        }
+        return playNotificationSoundsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

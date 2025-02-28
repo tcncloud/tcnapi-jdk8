@@ -164,6 +164,33 @@ public interface UpdateMyUserRequestOrBuilder extends
 
   /**
    * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
+   * @return Whether the playNotificationSounds field is set.
+   */
+  boolean hasPlayNotificationSounds();
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  com.google.protobuf.BoolValue getPlayNotificationSounds();
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getPlayNotificationSoundsOrBuilder();
+
+  /**
+   * <pre>
    * Mask to filter fields on organization entities in response.
    * </pre>
    *
