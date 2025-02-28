@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private OmnichannelBeginWrapUpEvent() {
     channelType_ = 0;
     userId_ = "";
+    customerName_ = "";
   }
 
   @java.lang.Override
@@ -261,6 +262,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CUSTOMER_NAME_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerName_ = "";
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 8 [json_name = "customerName"];</code>
+   * @return The customerName.
+   */
+  @java.lang.Override
+  public java.lang.String getCustomerName() {
+    java.lang.Object ref = customerName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customerName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 8 [json_name = "customerName"];</code>
+   * @return The bytes for customerName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCustomerNameBytes() {
+    java.lang.Object ref = customerName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customerName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -295,6 +343,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, userId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, customerName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -331,6 +382,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, userId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, customerName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -369,6 +423,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUserId()
         .equals(other.getUserId())) return false;
+    if (!getCustomerName()
+        .equals(other.getCustomerName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -402,6 +458,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + CUSTOMER_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomerName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -556,6 +614,7 @@ private static final long serialVersionUID = 0L;
         asmSessionSidBuilder_ = null;
       }
       userId_ = "";
+      customerName_ = "";
       return this;
     }
 
@@ -615,6 +674,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.customerName_ = customerName_;
       }
     }
 
@@ -685,6 +747,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000040;
         onChanged();
       }
+      if (!other.getCustomerName().isEmpty()) {
+        customerName_ = other.customerName_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -752,6 +819,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              customerName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1483,6 +1555,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       userId_ = value;
       bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object customerName_ = "";
+    /**
+     * <pre>
+     * customer name
+     * </pre>
+     *
+     * <code>string customer_name = 8 [json_name = "customerName"];</code>
+     * @return The customerName.
+     */
+    public java.lang.String getCustomerName() {
+      java.lang.Object ref = customerName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * customer name
+     * </pre>
+     *
+     * <code>string customer_name = 8 [json_name = "customerName"];</code>
+     * @return The bytes for customerName.
+     */
+    public com.google.protobuf.ByteString
+        getCustomerNameBytes() {
+      java.lang.Object ref = customerName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * customer name
+     * </pre>
+     *
+     * <code>string customer_name = 8 [json_name = "customerName"];</code>
+     * @param value The customerName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      customerName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * customer name
+     * </pre>
+     *
+     * <code>string customer_name = 8 [json_name = "customerName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomerName() {
+      customerName_ = getDefaultInstance().getCustomerName();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * customer name
+     * </pre>
+     *
+     * <code>string customer_name = 8 [json_name = "customerName"];</code>
+     * @param value The bytes for customerName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      customerName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

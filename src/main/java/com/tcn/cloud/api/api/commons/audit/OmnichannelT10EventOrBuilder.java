@@ -99,4 +99,24 @@ public interface OmnichannelT10EventOrBuilder extends
    * <code>.api.commons.OmniMessage message = 5 [json_name = "message"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniMessageOrBuilder getMessageOrBuilder();
+
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 6 [json_name = "customerName"];</code>
+   * @return The customerName.
+   */
+  java.lang.String getCustomerName();
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 6 [json_name = "customerName"];</code>
+   * @return The bytes for customerName.
+   */
+  com.google.protobuf.ByteString
+      getCustomerNameBytes();
 }

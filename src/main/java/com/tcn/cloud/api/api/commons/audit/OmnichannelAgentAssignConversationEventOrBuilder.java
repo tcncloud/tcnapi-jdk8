@@ -146,4 +146,24 @@ public interface OmnichannelAgentAssignConversationEventOrBuilder extends
    * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 8 [json_name = "customerName"];</code>
+   * @return The customerName.
+   */
+  java.lang.String getCustomerName();
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 8 [json_name = "customerName"];</code>
+   * @return The bytes for customerName.
+   */
+  com.google.protobuf.ByteString
+      getCustomerNameBytes();
 }

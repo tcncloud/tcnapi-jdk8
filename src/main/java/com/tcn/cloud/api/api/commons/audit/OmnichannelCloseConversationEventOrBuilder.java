@@ -107,4 +107,24 @@ public interface OmnichannelCloseConversationEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 5 [json_name = "customerName"];</code>
+   * @return The customerName.
+   */
+  java.lang.String getCustomerName();
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 5 [json_name = "customerName"];</code>
+   * @return The bytes for customerName.
+   */
+  com.google.protobuf.ByteString
+      getCustomerNameBytes();
 }

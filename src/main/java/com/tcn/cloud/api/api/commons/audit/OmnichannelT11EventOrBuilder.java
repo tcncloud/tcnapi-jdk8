@@ -72,4 +72,24 @@ public interface OmnichannelT11EventOrBuilder extends
    * <code>.api.commons.OmniConversation conversation = 4 [json_name = "conversation"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder();
+
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 5 [json_name = "customerName"];</code>
+   * @return The customerName.
+   */
+  java.lang.String getCustomerName();
+  /**
+   * <pre>
+   * customer name
+   * </pre>
+   *
+   * <code>string customer_name = 5 [json_name = "customerName"];</code>
+   * @return The bytes for customerName.
+   */
+  com.google.protobuf.ByteString
+      getCustomerNameBytes();
 }
