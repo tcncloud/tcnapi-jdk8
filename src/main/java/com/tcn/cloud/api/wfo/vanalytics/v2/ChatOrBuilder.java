@@ -137,4 +137,58 @@ public interface ChatOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEmailAddressBytes();
+
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Chat.AgentResponse&gt; agent_response = 8 [json_name = "agentResponse"];</code>
+   */
+  int getAgentResponseCount();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Chat.AgentResponse&gt; agent_response = 8 [json_name = "agentResponse"];</code>
+   */
+  boolean containsAgentResponse(
+      java.lang.String key);
+  /**
+   * Use {@link #getAgentResponseMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Chat.AgentResponse>
+  getAgentResponse();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Chat.AgentResponse&gt; agent_response = 8 [json_name = "agentResponse"];</code>
+   */
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Chat.AgentResponse>
+  getAgentResponseMap();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Chat.AgentResponse&gt; agent_response = 8 [json_name = "agentResponse"];</code>
+   */
+  /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Chat.AgentResponse getAgentResponseOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Chat.AgentResponse defaultValue);
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Chat.AgentResponse&gt; agent_response = 8 [json_name = "agentResponse"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Chat.AgentResponse getAgentResponseOrThrow(
+      java.lang.String key);
 }
