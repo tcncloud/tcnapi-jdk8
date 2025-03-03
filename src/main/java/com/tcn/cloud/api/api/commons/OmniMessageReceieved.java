@@ -8,18 +8,18 @@ package com.tcn.cloud.api.api.commons;
  * Alert that a message has been received by an agent
  * </pre>
  *
- * Protobuf type {@code api.commons.AgentMessageReceived}
+ * Protobuf type {@code api.commons.OmniMessageReceieved}
  */
-public final class AgentMessageReceived extends
+public final class OmniMessageReceieved extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.AgentMessageReceived)
-    AgentMessageReceivedOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.OmniMessageReceieved)
+    OmniMessageReceievedOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AgentMessageReceived.newBuilder() to construct.
-  private AgentMessageReceived(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniMessageReceieved.newBuilder() to construct.
+  private OmniMessageReceieved(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AgentMessageReceived() {
+  private OmniMessageReceieved() {
     conversationSid_ = "";
     message_ = "";
   }
@@ -28,20 +28,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AgentMessageReceived();
+    return new OmniMessageReceieved();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentMessageReceived_descriptor;
+    return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_OmniMessageReceieved_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentMessageReceived_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_OmniMessageReceieved_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.AgentMessageReceived.class, com.tcn.cloud.api.api.commons.AgentMessageReceived.Builder.class);
+            com.tcn.cloud.api.api.commons.OmniMessageReceieved.class, com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder.class);
   }
 
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
@@ -183,10 +183,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.AgentMessageReceived)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.OmniMessageReceieved)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.AgentMessageReceived other = (com.tcn.cloud.api.api.commons.AgentMessageReceived) obj;
+    com.tcn.cloud.api.api.commons.OmniMessageReceieved other = (com.tcn.cloud.api.api.commons.OmniMessageReceieved) obj;
 
     if (!getConversationSid()
         .equals(other.getConversationSid())) return false;
@@ -212,44 +212,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +257,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.AgentMessageReceived prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.OmniMessageReceieved prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -309,26 +309,26 @@ private static final long serialVersionUID = 0L;
    * Alert that a message has been received by an agent
    * </pre>
    *
-   * Protobuf type {@code api.commons.AgentMessageReceived}
+   * Protobuf type {@code api.commons.OmniMessageReceieved}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.AgentMessageReceived)
-      com.tcn.cloud.api.api.commons.AgentMessageReceivedOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.OmniMessageReceieved)
+      com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentMessageReceived_descriptor;
+      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_OmniMessageReceieved_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentMessageReceived_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_OmniMessageReceieved_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.AgentMessageReceived.class, com.tcn.cloud.api.api.commons.AgentMessageReceived.Builder.class);
+              com.tcn.cloud.api.api.commons.OmniMessageReceieved.class, com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.AgentMessageReceived.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.OmniMessageReceieved.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentMessageReceived_descriptor;
+      return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_OmniMessageReceieved_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.AgentMessageReceived getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.AgentMessageReceived.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.OmniMessageReceieved getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.AgentMessageReceived build() {
-      com.tcn.cloud.api.api.commons.AgentMessageReceived result = buildPartial();
+    public com.tcn.cloud.api.api.commons.OmniMessageReceieved build() {
+      com.tcn.cloud.api.api.commons.OmniMessageReceieved result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.AgentMessageReceived buildPartial() {
-      com.tcn.cloud.api.api.commons.AgentMessageReceived result = new com.tcn.cloud.api.api.commons.AgentMessageReceived(this);
+    public com.tcn.cloud.api.api.commons.OmniMessageReceieved buildPartial() {
+      com.tcn.cloud.api.api.commons.OmniMessageReceieved result = new com.tcn.cloud.api.api.commons.OmniMessageReceieved(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.AgentMessageReceived result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.OmniMessageReceieved result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.conversationSid_ = conversationSid_;
@@ -419,16 +419,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.AgentMessageReceived) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.AgentMessageReceived)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.OmniMessageReceieved) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.OmniMessageReceieved)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.AgentMessageReceived other) {
-      if (other == com.tcn.cloud.api.api.commons.AgentMessageReceived.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.OmniMessageReceieved other) {
+      if (other == com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance()) return this;
       if (!other.getConversationSid().isEmpty()) {
         conversationSid_ = other.conversationSid_;
         bitField0_ |= 0x00000001;
@@ -688,23 +688,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.AgentMessageReceived)
+    // @@protoc_insertion_point(builder_scope:api.commons.OmniMessageReceieved)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.AgentMessageReceived)
-  private static final com.tcn.cloud.api.api.commons.AgentMessageReceived DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.OmniMessageReceieved)
+  private static final com.tcn.cloud.api.api.commons.OmniMessageReceieved DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.AgentMessageReceived();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.OmniMessageReceieved();
   }
 
-  public static com.tcn.cloud.api.api.commons.AgentMessageReceived getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.OmniMessageReceieved getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AgentMessageReceived>
-      PARSER = new com.google.protobuf.AbstractParser<AgentMessageReceived>() {
+  private static final com.google.protobuf.Parser<OmniMessageReceieved>
+      PARSER = new com.google.protobuf.AbstractParser<OmniMessageReceieved>() {
     @java.lang.Override
-    public AgentMessageReceived parsePartialFrom(
+    public OmniMessageReceieved parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +723,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AgentMessageReceived> parser() {
+  public static com.google.protobuf.Parser<OmniMessageReceieved> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AgentMessageReceived> getParserForType() {
+  public com.google.protobuf.Parser<OmniMessageReceieved> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AgentMessageReceived getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.OmniMessageReceieved getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

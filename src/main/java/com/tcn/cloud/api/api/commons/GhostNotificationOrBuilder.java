@@ -245,57 +245,57 @@ public interface GhostNotificationOrBuilder extends
 
   /**
    * <pre>
-   * notification that a message has been received by an agent
+   * notification that a message has been received
    * </pre>
    *
-   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
-   * @return Whether the agentMessageReceived field is set.
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return Whether the omniMessageReceived field is set.
    */
-  boolean hasAgentMessageReceived();
+  boolean hasOmniMessageReceived();
   /**
    * <pre>
-   * notification that a message has been received by an agent
+   * notification that a message has been received
    * </pre>
    *
-   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
-   * @return The agentMessageReceived.
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return The omniMessageReceived.
    */
-  com.tcn.cloud.api.api.commons.AgentMessageReceived getAgentMessageReceived();
+  com.tcn.cloud.api.api.commons.OmniMessageReceieved getOmniMessageReceived();
   /**
    * <pre>
-   * notification that a message has been received by an agent
+   * notification that a message has been received
    * </pre>
    *
-   * <code>.api.commons.AgentMessageReceived agent_message_received = 12 [json_name = "agentMessageReceived"];</code>
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
    */
-  com.tcn.cloud.api.api.commons.AgentMessageReceivedOrBuilder getAgentMessageReceivedOrBuilder();
+  com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder getOmniMessageReceivedOrBuilder();
 
   /**
    * <pre>
-   * notification that a conversations has been assigned to an agent
+   * notification that a conversations has been assigned
    * </pre>
    *
-   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
-   * @return Whether the conversationAssigned field is set.
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return Whether the omniConversationAssigned field is set.
    */
-  boolean hasConversationAssigned();
+  boolean hasOmniConversationAssigned();
   /**
    * <pre>
-   * notification that a conversations has been assigned to an agent
+   * notification that a conversations has been assigned
    * </pre>
    *
-   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
-   * @return The conversationAssigned.
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return The omniConversationAssigned.
    */
-  com.tcn.cloud.api.api.commons.ConversationAssigned getConversationAssigned();
+  com.tcn.cloud.api.api.commons.OmniConversationAssigned getOmniConversationAssigned();
   /**
    * <pre>
-   * notification that a conversations has been assigned to an agent
+   * notification that a conversations has been assigned
    * </pre>
    *
-   * <code>.api.commons.ConversationAssigned conversation_assigned = 13 [json_name = "conversationAssigned"];</code>
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
    */
-  com.tcn.cloud.api.api.commons.ConversationAssignedOrBuilder getConversationAssignedOrBuilder();
+  com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder getOmniConversationAssignedOrBuilder();
 
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }

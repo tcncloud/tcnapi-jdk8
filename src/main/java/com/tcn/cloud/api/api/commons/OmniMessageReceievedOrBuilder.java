@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface AgentMessageReceivedOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.AgentMessageReceived)
+public interface OmniMessageReceievedOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.OmniMessageReceieved)
     com.google.protobuf.MessageOrBuilder {
 
   /**
