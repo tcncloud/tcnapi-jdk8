@@ -24,10 +24,6 @@ public enum DatasourceType
    * <code>DATASOURCE_TYPE_CLICKHOUSE = 2;</code>
    */
   DATASOURCE_TYPE_CLICKHOUSE(2),
-  /**
-   * <code>DATASOURCE_TYPE_INSTANT_DATA = 3;</code>
-   */
-  DATASOURCE_TYPE_INSTANT_DATA(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,10 +39,6 @@ public enum DatasourceType
    * <code>DATASOURCE_TYPE_CLICKHOUSE = 2;</code>
    */
   public static final int DATASOURCE_TYPE_CLICKHOUSE_VALUE = 2;
-  /**
-   * <code>DATASOURCE_TYPE_INSTANT_DATA = 3;</code>
-   */
-  public static final int DATASOURCE_TYPE_INSTANT_DATA_VALUE = 3;
 
 
   public final int getNumber() {
@@ -76,7 +68,6 @@ public enum DatasourceType
       case 0: return DATASOURCE_TYPE_UNSPECIFIED;
       case 1: return DATASOURCE_TYPE_VFS;
       case 2: return DATASOURCE_TYPE_CLICKHOUSE;
-      case 3: return DATASOURCE_TYPE_INSTANT_DATA;
       default: return null;
     }
   }

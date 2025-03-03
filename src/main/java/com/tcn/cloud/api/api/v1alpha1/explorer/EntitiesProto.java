@@ -82,15 +82,14 @@ public final class EntitiesProto {
       "MA_TYPE_INT_ARRAY\020\010\022\033\n\027SCHEMA_TYPE_FLOAT" +
       "_ARRAY\020\t\022\034\n\030SCHEMA_TYPE_STRING_ARRAY\020\n\022\032" +
       "\n\026SCHEMA_TYPE_BOOL_ARRAY\020\013\022\023\n\017SCHEMA_TYP" +
-      "E_MAP\020\014*\214\001\n\016DatasourceType\022\037\n\033DATASOURCE" +
-      "_TYPE_UNSPECIFIED\020\000\022\027\n\023DATASOURCE_TYPE_V" +
-      "FS\020\001\022\036\n\032DATASOURCE_TYPE_CLICKHOUSE\020\002\022 \n\034" +
-      "DATASOURCE_TYPE_INSTANT_DATA\020\003B\256\001\n\'com.t" +
-      "cn.cloud.api.api.v1alpha1.explorerB\rEnti" +
-      "tiesProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explore" +
-      "r\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1alpha1" +
-      "\\Explorer\\GPBMetadata\352\002\027Api::V1alpha1::E" +
-      "xplorerb\006proto3"
+      "E_MAP\020\014*j\n\016DatasourceType\022\037\n\033DATASOURCE_" +
+      "TYPE_UNSPECIFIED\020\000\022\027\n\023DATASOURCE_TYPE_VF" +
+      "S\020\001\022\036\n\032DATASOURCE_TYPE_CLICKHOUSE\020\002B\256\001\n\'" +
+      "com.tcn.cloud.api.api.v1alpha1.explorerB" +
+      "\rEntitiesProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Ex" +
+      "plorer\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1a" +
+      "lpha1\\Explorer\\GPBMetadata\352\002\027Api::V1alph" +
+      "a1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
