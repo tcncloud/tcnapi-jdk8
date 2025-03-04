@@ -83,6 +83,8 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_SINK(77),
     SUM(78),
     FINVI_ENTRYPOINT(79),
+    CONTACT_MANAGEMENT_ENRICHMENT(80),
+    TICKET_EXCHANGE_SINK(81),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -138,6 +140,8 @@ private static final long serialVersionUID = 0L;
         case 77: return CONTACT_MANAGER_SINK;
         case 78: return SUM;
         case 79: return FINVI_ENTRYPOINT;
+        case 80: return CONTACT_MANAGEMENT_ENRICHMENT;
+        case 81: return TICKET_EXCHANGE_SINK;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -1517,6 +1521,92 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
   }
 
+  public static final int CONTACT_MANAGEMENT_ENRICHMENT_FIELD_NUMBER = 80;
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   * @return Whether the contactManagementEnrichment field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagementEnrichment() {
+    return procCase_ == 80;
+  }
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   * @return The contactManagementEnrichment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment getContactManagementEnrichment() {
+    if (procCase_ == 80) {
+       return (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder getContactManagementEnrichmentOrBuilder() {
+    if (procCase_ == 80) {
+       return (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+  }
+
+  public static final int TICKET_EXCHANGE_SINK_FIELD_NUMBER = 81;
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   * @return Whether the ticketExchangeSink field is set.
+   */
+  @java.lang.Override
+  public boolean hasTicketExchangeSink() {
+    return procCase_ == 81;
+  }
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   * @return The ticketExchangeSink.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.TicketExchangeSink getTicketExchangeSink() {
+    if (procCase_ == 81) {
+       return (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder getTicketExchangeSinkOrBuilder() {
+    if (procCase_ == 81) {
+       return (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1647,6 +1737,12 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 79) {
       output.writeMessage(79, (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_);
+    }
+    if (procCase_ == 80) {
+      output.writeMessage(80, (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_);
+    }
+    if (procCase_ == 81) {
+      output.writeMessage(81, (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1811,6 +1907,14 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 79) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(79, (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_);
+    }
+    if (procCase_ == 80) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(80, (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_);
+    }
+    if (procCase_ == 81) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(81, (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1983,6 +2087,14 @@ private static final long serialVersionUID = 0L;
         if (!getFinviEntrypoint()
             .equals(other.getFinviEntrypoint())) return false;
         break;
+      case 80:
+        if (!getContactManagementEnrichment()
+            .equals(other.getContactManagementEnrichment())) return false;
+        break;
+      case 81:
+        if (!getTicketExchangeSink()
+            .equals(other.getTicketExchangeSink())) return false;
+        break;
       case 0:
       default:
     }
@@ -2151,6 +2263,14 @@ private static final long serialVersionUID = 0L;
       case 79:
         hash = (37 * hash) + FINVI_ENTRYPOINT_FIELD_NUMBER;
         hash = (53 * hash) + getFinviEntrypoint().hashCode();
+        break;
+      case 80:
+        hash = (37 * hash) + CONTACT_MANAGEMENT_ENRICHMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagementEnrichment().hashCode();
+        break;
+      case 81:
+        hash = (37 * hash) + TICKET_EXCHANGE_SINK_FIELD_NUMBER;
+        hash = (53 * hash) + getTicketExchangeSink().hashCode();
         break;
       case 0:
       default:
@@ -2402,6 +2522,12 @@ private static final long serialVersionUID = 0L;
       if (finviEntrypointBuilder_ != null) {
         finviEntrypointBuilder_.clear();
       }
+      if (contactManagementEnrichmentBuilder_ != null) {
+        contactManagementEnrichmentBuilder_.clear();
+      }
+      if (ticketExchangeSinkBuilder_ != null) {
+        ticketExchangeSinkBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2602,6 +2728,14 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 79 &&
           finviEntrypointBuilder_ != null) {
         result.proc_ = finviEntrypointBuilder_.build();
+      }
+      if (procCase_ == 80 &&
+          contactManagementEnrichmentBuilder_ != null) {
+        result.proc_ = contactManagementEnrichmentBuilder_.build();
+      }
+      if (procCase_ == 81 &&
+          ticketExchangeSinkBuilder_ != null) {
+        result.proc_ = ticketExchangeSinkBuilder_.build();
       }
     }
 
@@ -2805,6 +2939,14 @@ private static final long serialVersionUID = 0L;
         }
         case FINVI_ENTRYPOINT: {
           mergeFinviEntrypoint(other.getFinviEntrypoint());
+          break;
+        }
+        case CONTACT_MANAGEMENT_ENRICHMENT: {
+          mergeContactManagementEnrichment(other.getContactManagementEnrichment());
+          break;
+        }
+        case TICKET_EXCHANGE_SINK: {
+          mergeTicketExchangeSink(other.getTicketExchangeSink());
           break;
         }
         case PROC_NOT_SET: {
@@ -3108,6 +3250,20 @@ private static final long serialVersionUID = 0L;
               procCase_ = 79;
               break;
             } // case 634
+            case 642: {
+              input.readMessage(
+                  getContactManagementEnrichmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 80;
+              break;
+            } // case 642
+            case 650: {
+              input.readMessage(
+                  getTicketExchangeSinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 81;
+              break;
+            } // case 650
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9024,6 +9180,362 @@ private static final long serialVersionUID = 0L;
       procCase_ = 79;
       onChanged();
       return finviEntrypointBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder> contactManagementEnrichmentBuilder_;
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     * @return Whether the contactManagementEnrichment field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagementEnrichment() {
+      return procCase_ == 80;
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     * @return The contactManagementEnrichment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment getContactManagementEnrichment() {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        if (procCase_ == 80) {
+          return (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+      } else {
+        if (procCase_ == 80) {
+          return contactManagementEnrichmentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    public Builder setContactManagementEnrichment(com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment value) {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        contactManagementEnrichmentBuilder_.setMessage(value);
+      }
+      procCase_ = 80;
+      return this;
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    public Builder setContactManagementEnrichment(
+        com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder builderForValue) {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagementEnrichmentBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 80;
+      return this;
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    public Builder mergeContactManagementEnrichment(com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment value) {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        if (procCase_ == 80 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.newBuilder((com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 80) {
+          contactManagementEnrichmentBuilder_.mergeFrom(value);
+        } else {
+          contactManagementEnrichmentBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 80;
+      return this;
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    public Builder clearContactManagementEnrichment() {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        if (procCase_ == 80) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 80) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        contactManagementEnrichmentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder getContactManagementEnrichmentBuilder() {
+      return getContactManagementEnrichmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder getContactManagementEnrichmentOrBuilder() {
+      if ((procCase_ == 80) && (contactManagementEnrichmentBuilder_ != null)) {
+        return contactManagementEnrichmentBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 80) {
+          return (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Will import a list of contact manager temp file from lms
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder> 
+        getContactManagementEnrichmentFieldBuilder() {
+      if (contactManagementEnrichmentBuilder_ == null) {
+        if (!(procCase_ == 80)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDefaultInstance();
+        }
+        contactManagementEnrichmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 80;
+      onChanged();
+      return contactManagementEnrichmentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.TicketExchangeSink, com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.Builder, com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder> ticketExchangeSinkBuilder_;
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     * @return Whether the ticketExchangeSink field is set.
+     */
+    @java.lang.Override
+    public boolean hasTicketExchangeSink() {
+      return procCase_ == 81;
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     * @return The ticketExchangeSink.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.TicketExchangeSink getTicketExchangeSink() {
+      if (ticketExchangeSinkBuilder_ == null) {
+        if (procCase_ == 81) {
+          return (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+      } else {
+        if (procCase_ == 81) {
+          return ticketExchangeSinkBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    public Builder setTicketExchangeSink(com.tcn.cloud.api.api.v0alpha.TicketExchangeSink value) {
+      if (ticketExchangeSinkBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        ticketExchangeSinkBuilder_.setMessage(value);
+      }
+      procCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    public Builder setTicketExchangeSink(
+        com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.Builder builderForValue) {
+      if (ticketExchangeSinkBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        ticketExchangeSinkBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    public Builder mergeTicketExchangeSink(com.tcn.cloud.api.api.v0alpha.TicketExchangeSink value) {
+      if (ticketExchangeSinkBuilder_ == null) {
+        if (procCase_ == 81 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.newBuilder((com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 81) {
+          ticketExchangeSinkBuilder_.mergeFrom(value);
+        } else {
+          ticketExchangeSinkBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    public Builder clearTicketExchangeSink() {
+      if (ticketExchangeSinkBuilder_ == null) {
+        if (procCase_ == 81) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 81) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        ticketExchangeSinkBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.Builder getTicketExchangeSinkBuilder() {
+      return getTicketExchangeSinkFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder getTicketExchangeSinkOrBuilder() {
+      if ((procCase_ == 81) && (ticketExchangeSinkBuilder_ != null)) {
+        return ticketExchangeSinkBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 81) {
+          return (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * TicketExchangeSink
+     * </pre>
+     *
+     * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.TicketExchangeSink, com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.Builder, com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder> 
+        getTicketExchangeSinkFieldBuilder() {
+      if (ticketExchangeSinkBuilder_ == null) {
+        if (!(procCase_ == 81)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.getDefaultInstance();
+        }
+        ticketExchangeSinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.TicketExchangeSink, com.tcn.cloud.api.api.v0alpha.TicketExchangeSink.Builder, com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.TicketExchangeSink) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 81;
+      onChanged();
+      return ticketExchangeSinkBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
