@@ -12,20 +12,10 @@ public interface OmniMessageReceievedOrBuilder extends
    * the sid for the conversation the message was sent in
    * </pre>
    *
-   * <code>string conversation_sid = 1 [json_name = "conversationSid"];</code>
+   * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
    * @return The conversationSid.
    */
-  java.lang.String getConversationSid();
-  /**
-   * <pre>
-   * the sid for the conversation the message was sent in
-   * </pre>
-   *
-   * <code>string conversation_sid = 1 [json_name = "conversationSid"];</code>
-   * @return The bytes for conversationSid.
-   */
-  com.google.protobuf.ByteString
-      getConversationSidBytes();
+  long getConversationSid();
 
   /**
    * <pre>

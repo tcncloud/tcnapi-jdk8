@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniConversationAssigned() {
-    conversationId_ = "";
   }
 
   @java.lang.Override
@@ -43,51 +42,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OmniConversationAssigned.class, com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder.class);
   }
 
-  public static final int CONVERSATION_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object conversationId_ = "";
+  public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
+  private long conversationSid_ = 0L;
   /**
    * <pre>
    * The conversation id
    * </pre>
    *
-   * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-   * @return The conversationId.
+   * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+   * @return The conversationSid.
    */
   @java.lang.Override
-  public java.lang.String getConversationId() {
-    java.lang.Object ref = conversationId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      conversationId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The conversation id
-   * </pre>
-   *
-   * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-   * @return The bytes for conversationId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getConversationIdBytes() {
-    java.lang.Object ref = conversationId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      conversationId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getConversationSid() {
+    return conversationSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -104,8 +71,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversationId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, conversationId_);
+    if (conversationSid_ != 0L) {
+      output.writeInt64(1, conversationSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +83,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversationId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, conversationId_);
+    if (conversationSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, conversationSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,8 +102,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.OmniConversationAssigned other = (com.tcn.cloud.api.api.commons.OmniConversationAssigned) obj;
 
-    if (!getConversationId()
-        .equals(other.getConversationId())) return false;
+    if (getConversationSid()
+        != other.getConversationSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,8 +115,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONVERSATION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getConversationId().hashCode();
+    hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getConversationSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -284,7 +253,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      conversationId_ = "";
+      conversationSid_ = 0L;
       return this;
     }
 
@@ -319,7 +288,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.OmniConversationAssigned result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.conversationId_ = conversationId_;
+        result.conversationSid_ = conversationSid_;
       }
     }
 
@@ -367,10 +336,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.OmniConversationAssigned other) {
       if (other == com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance()) return this;
-      if (!other.getConversationId().isEmpty()) {
-        conversationId_ = other.conversationId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.getConversationSid() != 0L) {
+        setConversationSid(other.getConversationSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -398,11 +365,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              conversationId_ = input.readStringRequireUtf8();
+            case 8: {
+              conversationSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -420,61 +387,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object conversationId_ = "";
+    private long conversationSid_ ;
     /**
      * <pre>
      * The conversation id
      * </pre>
      *
-     * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-     * @return The conversationId.
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
      */
-    public java.lang.String getConversationId() {
-      java.lang.Object ref = conversationId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        conversationId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
     }
     /**
      * <pre>
      * The conversation id
      * </pre>
      *
-     * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-     * @return The bytes for conversationId.
-     */
-    public com.google.protobuf.ByteString
-        getConversationIdBytes() {
-      java.lang.Object ref = conversationId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        conversationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The conversation id
-     * </pre>
-     *
-     * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-     * @param value The conversationId to set.
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @param value The conversationSid to set.
      * @return This builder for chaining.
      */
-    public Builder setConversationId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      conversationId_ = value;
+    public Builder setConversationSid(long value) {
+
+      conversationSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -484,30 +421,12 @@ private static final long serialVersionUID = 0L;
      * The conversation id
      * </pre>
      *
-     * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearConversationId() {
-      conversationId_ = getDefaultInstance().getConversationId();
+    public Builder clearConversationSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The conversation id
-     * </pre>
-     *
-     * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-     * @param value The bytes for conversationId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConversationIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      conversationId_ = value;
-      bitField0_ |= 0x00000001;
+      conversationSid_ = 0L;
       onChanged();
       return this;
     }

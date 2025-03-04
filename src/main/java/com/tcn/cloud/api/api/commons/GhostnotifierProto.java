@@ -109,14 +109,14 @@ public final class GhostnotifierProto {
       "queuedNotificationType\"g\n\023AuthTokenExpir" +
       "ation\022\024\n\005token\030\001 \001(\tR\005token\022:\n\nexpiratio" +
       "n\030\002 \001(\0132\032.google.protobuf.TimestampR\nexp" +
-      "iration\"C\n\030OmniConversationAssigned\022\'\n\017c" +
-      "onversation_id\030\001 \001(\tR\016conversationId\"[\n\024" +
-      "OmniMessageReceieved\022)\n\020conversation_sid" +
-      "\030\001 \001(\tR\017conversationSid\022\030\n\007message\030\002 \001(\t" +
-      "R\007messageB\200\001\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\022GhostnotifierProtoP\001\242\002\003ACX\252\002\013Api.Co" +
-      "mmons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMet" +
-      "adata\352\002\014Api::Commonsb\006proto3"
+      "iration\"E\n\030OmniConversationAssigned\022)\n\020c" +
+      "onversation_sid\030\001 \001(\003R\017conversationSid\"[" +
+      "\n\024OmniMessageReceieved\022)\n\020conversation_s" +
+      "id\030\001 \001(\003R\017conversationSid\022\030\n\007message\030\002 \001" +
+      "(\tR\007messageB\200\001\n\035com.tcn.cloud.api.api.co" +
+      "mmonsB\022GhostnotifierProtoP\001\242\002\003ACX\252\002\013Api." +
+      "Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBM" +
+      "etadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -161,7 +161,7 @@ public final class GhostnotifierProto {
     internal_static_api_commons_OmniConversationAssigned_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniConversationAssigned_descriptor,
-        new java.lang.String[] { "ConversationId", });
+        new java.lang.String[] { "ConversationSid", });
     internal_static_api_commons_OmniMessageReceieved_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_OmniMessageReceieved_fieldAccessorTable = new

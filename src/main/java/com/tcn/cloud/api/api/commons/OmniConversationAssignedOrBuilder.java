@@ -12,18 +12,8 @@ public interface OmniConversationAssignedOrBuilder extends
    * The conversation id
    * </pre>
    *
-   * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-   * @return The conversationId.
+   * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+   * @return The conversationSid.
    */
-  java.lang.String getConversationId();
-  /**
-   * <pre>
-   * The conversation id
-   * </pre>
-   *
-   * <code>string conversation_id = 1 [json_name = "conversationId"];</code>
-   * @return The bytes for conversationId.
-   */
-  com.google.protobuf.ByteString
-      getConversationIdBytes();
+  long getConversationSid();
 }
