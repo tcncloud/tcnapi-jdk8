@@ -94,6 +94,7 @@ private static final long serialVersionUID = 0L;
     WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SENTIMENTS(30011),
     WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_SUMMARIES(30020),
     WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SUMMARIES(30021),
+    WORKFORCE_ENGAGEMENT_WORKFORCE_MANAGEMENT_SCHEDULER_AGENTS(40000),
     CONFIG_NOT_SET(0);
     private final int value;
     private ConfigCase(int value) {
@@ -161,6 +162,7 @@ private static final long serialVersionUID = 0L;
         case 30011: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SENTIMENTS;
         case 30020: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_SUMMARIES;
         case 30021: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SUMMARIES;
+        case 40000: return WORKFORCE_ENGAGEMENT_WORKFORCE_MANAGEMENT_SCHEDULER_AGENTS;
         case 0: return CONFIG_NOT_SET;
         default: return null;
       }
@@ -1780,6 +1782,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
   }
 
+  public static final int WORKFORCE_ENGAGEMENT_WORKFORCE_MANAGEMENT_SCHEDULER_AGENTS_FIELD_NUMBER = 40000;
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   * @return Whether the workforceEngagementWorkforceManagementSchedulerAgents field is set.
+   */
+  @java.lang.Override
+  public boolean hasWorkforceEngagementWorkforceManagementSchedulerAgents() {
+    return configCase_ == 40000;
+  }
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   * @return The workforceEngagementWorkforceManagementSchedulerAgents.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceManagementSchedulerAgents() {
+    if (configCase_ == 40000) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * workforce management (40000 - 49999)
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceManagementSchedulerAgentsOrBuilder() {
+    if (configCase_ == 40000) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1943,6 +1988,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 30021) {
       output.writeMessage(30021, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 40000) {
+      output.writeMessage(40000, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2152,6 +2200,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 30021) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(30021, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
+    }
+    if (configCase_ == 40000) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(40000, (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2370,6 +2422,10 @@ private static final long serialVersionUID = 0L;
         if (!getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries()
             .equals(other.getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries())) return false;
         break;
+      case 40000:
+        if (!getWorkforceEngagementWorkforceManagementSchedulerAgents()
+            .equals(other.getWorkforceEngagementWorkforceManagementSchedulerAgents())) return false;
+        break;
       case 0:
       default:
     }
@@ -2584,6 +2640,10 @@ private static final long serialVersionUID = 0L;
       case 30021:
         hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SUMMARIES_FIELD_NUMBER;
         hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries().hashCode();
+        break;
+      case 40000:
+        hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_MANAGEMENT_SCHEDULER_AGENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkforceEngagementWorkforceManagementSchedulerAgents().hashCode();
         break;
       case 0:
       default:
@@ -2870,6 +2930,9 @@ private static final long serialVersionUID = 0L;
       if (workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesBuilder_ != null) {
         workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesBuilder_.clear();
       }
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ != null) {
+        workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.clear();
+      }
       configCase_ = 0;
       config_ = null;
       return this;
@@ -3116,6 +3179,10 @@ private static final long serialVersionUID = 0L;
           workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesBuilder_ != null) {
         result.config_ = workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesBuilder_.build();
       }
+      if (configCase_ == 40000 &&
+          workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ != null) {
+        result.config_ = workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -3361,6 +3428,10 @@ private static final long serialVersionUID = 0L;
         }
         case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_AI_BUNDLE_ACCUMULATED_SUMMARIES: {
           mergeWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries(other.getWorkforceEngagementWorkforceOptimizationAiBundleAccumulatedSummaries());
+          break;
+        }
+        case WORKFORCE_ENGAGEMENT_WORKFORCE_MANAGEMENT_SCHEDULER_AGENTS: {
+          mergeWorkforceEngagementWorkforceManagementSchedulerAgents(other.getWorkforceEngagementWorkforceManagementSchedulerAgents());
           break;
         }
         case CONFIG_NOT_SET: {
@@ -3743,6 +3814,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 30021;
               break;
             } // case 240170
+            case 320002: {
+              input.readMessage(
+                  getWorkforceEngagementWorkforceManagementSchedulerAgentsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 40000;
+              break;
+            } // case 320002
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -11036,6 +11114,184 @@ private static final long serialVersionUID = 0L;
       configCase_ = 30021;
       onChanged();
       return workforceEngagementWorkforceOptimizationAiBundleAccumulatedSummariesBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforceEngagementWorkforceManagementSchedulerAgentsBuilder_;
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     * @return Whether the workforceEngagementWorkforceManagementSchedulerAgents field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkforceEngagementWorkforceManagementSchedulerAgents() {
+      return configCase_ == 40000;
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     * @return The workforceEngagementWorkforceManagementSchedulerAgents.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceManagementSchedulerAgents() {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        if (configCase_ == 40000) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 40000) {
+          return workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceManagementSchedulerAgents(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.setMessage(value);
+      }
+      configCase_ = 40000;
+      return this;
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    public Builder setWorkforceEngagementWorkforceManagementSchedulerAgents(
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder builderForValue) {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 40000;
+      return this;
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    public Builder mergeWorkforceEngagementWorkforceManagementSchedulerAgents(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        if (configCase_ == 40000 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 40000) {
+          workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.mergeFrom(value);
+        } else {
+          workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 40000;
+      return this;
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    public Builder clearWorkforceEngagementWorkforceManagementSchedulerAgents() {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        if (configCase_ == 40000) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 40000) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforceEngagementWorkforceManagementSchedulerAgentsBuilder() {
+      return getWorkforceEngagementWorkforceManagementSchedulerAgentsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceManagementSchedulerAgentsOrBuilder() {
+      if ((configCase_ == 40000) && (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ != null)) {
+        return workforceEngagementWorkforceManagementSchedulerAgentsBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 40000) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * workforce management (40000 - 49999)
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_management_scheduler_agents = 40000 [json_name = "workforceEngagementWorkforceManagementSchedulerAgents"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> 
+        getWorkforceEngagementWorkforceManagementSchedulerAgentsFieldBuilder() {
+      if (workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ == null) {
+        if (!(configCase_ == 40000)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
+        }
+        workforceEngagementWorkforceManagementSchedulerAgentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 40000;
+      onChanged();
+      return workforceEngagementWorkforceManagementSchedulerAgentsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

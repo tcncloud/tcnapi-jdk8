@@ -43,434 +43,438 @@ public final class AuditProto {
       "ation_events.proto\032)api/commons/audit/sc" +
       "orecards_events.proto\032&api/commons/audit" +
       "/tickets_events.proto\032#api/commons/audit" +
-      "/vana_events.proto\032\037google/protobuf/time" +
-      "stamp.proto\"\205\204\001\n\nAuditEvent\022\025\n\006org_id\030\001 " +
-      "\001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022" +
-      "\035\n\ncluster_id\030\003 \001(\tR\tclusterId\0229\n\nevent_" +
-      "time\030\004 \001(\0132\032.google.protobuf.TimestampR\t" +
-      "eventTime\022\031\n\010audit_id\030\005 \001(\tR\007auditId\022;\n\n" +
-      "event_type\030\n \001(\0162\034.api.commons.audit.Eve" +
-      "ntTypeR\teventType\022A\n\014_dummy_event\030d \001(\0132" +
-      "\035.api.commons.audit.DummyEventH\000R\nDummyE" +
-      "vent\022K\n\017vana_flag_event\030\310\001 \001(\0132 .api.com" +
-      "mons.audit.VanaFlagEventH\000R\rvanaFlagEven" +
-      "t\022^\n\026vana_flag_review_event\030\311\001 \001(\0132&.api" +
-      ".commons.audit.VanaFlagReviewEventH\000R\023va" +
-      "naFlagReviewEvent\022g\n\031vana_billing_report" +
-      "_event\030\312\001 \001(\0132).api.commons.audit.VanaBi" +
-      "llingReportEventH\000R\026vanaBillingReportEve" +
-      "nt\022a\n\027vana_flag_summary_event\030\313\001 \001(\0132\'.a" +
-      "pi.commons.audit.VanaFlagSummaryEventH\000R" +
-      "\024vanaFlagSummaryEvent\022p\n\034vana_phrase_cor" +
-      "rection_event\030\314\001 \001(\0132,.api.commons.audit" +
-      ".VanaPhraseCorrectionEventH\000R\031vanaPhrase" +
-      "CorrectionEvent\022p\n\034vana_create_transcrip" +
-      "t_event\030\315\001 \001(\0132,.api.commons.audit.VanaC" +
-      "reateTranscriptEventH\000R\031vanaCreateTransc" +
-      "riptEvent\022m\n\033vana_create_sentiment_event" +
-      "\030\316\001 \001(\0132+.api.commons.audit.VanaCreateSe" +
-      "ntimentEventH\000R\030vanaCreateSentimentEvent" +
-      "\022g\n\031vana_create_summary_event\030\317\001 \001(\0132).a" +
-      "pi.commons.audit.VanaCreateSummaryEventH" +
-      "\000R\026vanaCreateSummaryEvent\022|\n omnichannel" +
-      "_create_project_event\030\254\002 \001(\01320.api.commo" +
-      "ns.audit.OmnichannelCreateProjectEventH\000" +
-      "R\035omnichannelCreateProjectEvent\022\177\n!omnic" +
-      "hannel_create_campaign_event\030\255\002 \001(\01321.ap" +
-      "i.commons.audit.OmnichannelCreateCampaig" +
-      "nEventH\000R\036omnichannelCreateCampaignEvent" +
-      "\022\214\001\n&omnichannel_daily_project_report_ev" +
-      "ent\030\256\002 \001(\01325.api.commons.audit.Omnichann" +
-      "elDailyProjectReportEventH\000R\"omnichannel" +
-      "DailyProjectReportEvent\022\233\001\n+omnichannel_" +
-      "daily_conversation_report_event\030\257\002 \001(\0132:" +
-      ".api.commons.audit.OmnichannelDailyConve" +
-      "rsationReportEventH\000R\'omnichannelDailyCo" +
-      "nversationReportEvent\022\233\001\n+omnichannel_ag" +
-      "ent_assign_conversation_event\030\261\002 \001(\0132:.a" +
-      "pi.commons.audit.OmnichannelAgentAssignC" +
-      "onversationEventH\000R\'omnichannelAgentAssi" +
+      "/vana_events.proto\032\"api/commons/audit/wf" +
+      "m_events.proto\032\037google/protobuf/timestam" +
+      "p.proto\"\361\204\001\n\nAuditEvent\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022\035\n\nc" +
+      "luster_id\030\003 \001(\tR\tclusterId\0229\n\nevent_time" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\teven" +
+      "tTime\022\031\n\010audit_id\030\005 \001(\tR\007auditId\022;\n\neven" +
+      "t_type\030\n \001(\0162\034.api.commons.audit.EventTy" +
+      "peR\teventType\022A\n\014_dummy_event\030d \001(\0132\035.ap" +
+      "i.commons.audit.DummyEventH\000R\nDummyEvent" +
+      "\022K\n\017vana_flag_event\030\310\001 \001(\0132 .api.commons" +
+      ".audit.VanaFlagEventH\000R\rvanaFlagEvent\022^\n" +
+      "\026vana_flag_review_event\030\311\001 \001(\0132&.api.com" +
+      "mons.audit.VanaFlagReviewEventH\000R\023vanaFl" +
+      "agReviewEvent\022g\n\031vana_billing_report_eve" +
+      "nt\030\312\001 \001(\0132).api.commons.audit.VanaBillin" +
+      "gReportEventH\000R\026vanaBillingReportEvent\022a" +
+      "\n\027vana_flag_summary_event\030\313\001 \001(\0132\'.api.c" +
+      "ommons.audit.VanaFlagSummaryEventH\000R\024van" +
+      "aFlagSummaryEvent\022p\n\034vana_phrase_correct" +
+      "ion_event\030\314\001 \001(\0132,.api.commons.audit.Van" +
+      "aPhraseCorrectionEventH\000R\031vanaPhraseCorr" +
+      "ectionEvent\022p\n\034vana_create_transcript_ev" +
+      "ent\030\315\001 \001(\0132,.api.commons.audit.VanaCreat" +
+      "eTranscriptEventH\000R\031vanaCreateTranscript" +
+      "Event\022m\n\033vana_create_sentiment_event\030\316\001 " +
+      "\001(\0132+.api.commons.audit.VanaCreateSentim" +
+      "entEventH\000R\030vanaCreateSentimentEvent\022g\n\031" +
+      "vana_create_summary_event\030\317\001 \001(\0132).api.c" +
+      "ommons.audit.VanaCreateSummaryEventH\000R\026v" +
+      "anaCreateSummaryEvent\022|\n omnichannel_cre" +
+      "ate_project_event\030\254\002 \001(\01320.api.commons.a" +
+      "udit.OmnichannelCreateProjectEventH\000R\035om" +
+      "nichannelCreateProjectEvent\022\177\n!omnichann" +
+      "el_create_campaign_event\030\255\002 \001(\01321.api.co" +
+      "mmons.audit.OmnichannelCreateCampaignEve" +
+      "ntH\000R\036omnichannelCreateCampaignEvent\022\214\001\n" +
+      "&omnichannel_daily_project_report_event\030" +
+      "\256\002 \001(\01325.api.commons.audit.OmnichannelDa" +
+      "ilyProjectReportEventH\000R\"omnichannelDail" +
+      "yProjectReportEvent\022\233\001\n+omnichannel_dail" +
+      "y_conversation_report_event\030\257\002 \001(\0132:.api" +
+      ".commons.audit.OmnichannelDailyConversat" +
+      "ionReportEventH\000R\'omnichannelDailyConver" +
+      "sationReportEvent\022\233\001\n+omnichannel_agent_" +
+      "assign_conversation_event\030\261\002 \001(\0132:.api.c" +
+      "ommons.audit.OmnichannelAgentAssignConve" +
+      "rsationEventH\000R\'omnichannelAgentAssignCo" +
+      "nversationEvent\022\241\001\n-omnichannel_agent_un" +
+      "assign_conversation_event\030\262\002 \001(\0132<.api.c" +
+      "ommons.audit.OmnichannelAgentUnassignCon" +
+      "versationEventH\000R)omnichannelAgentUnassi" +
       "gnConversationEvent\022\241\001\n-omnichannel_agen" +
-      "t_unassign_conversation_event\030\262\002 \001(\0132<.a" +
-      "pi.commons.audit.OmnichannelAgentUnassig" +
-      "nConversationEventH\000R)omnichannelAgentUn" +
-      "assignConversationEvent\022\241\001\n-omnichannel_" +
-      "agent_reassign_conversation_event\030\263\002 \001(\013" +
-      "2<.api.commons.audit.OmnichannelAgentRea" +
-      "ssignConversationEventH\000R)omnichannelAge" +
-      "ntReassignConversationEvent\022]\n\025omnichann" +
-      "el_t10_event\030\264\002 \001(\0132&.api.commons.audit." +
-      "OmnichannelT10EventH\000R\023omnichannelT10Eve" +
-      "nt\022\223\001\n\'omnichannel_customer_text_Message" +
-      "_event\030\265\002 \001(\01326.api.commons.audit.Omnich" +
-      "annelCustomerTextMessageEventB\002\030\001H\000R#omn" +
-      "ichannelCustomerTextMessageEvent\022\212\001\n$omn" +
-      "ichannel_agent_text_message_event\030\266\002 \001(\013" +
-      "23.api.commons.audit.OmnichannelAgentTex" +
-      "tMessageEventB\002\030\001H\000R omnichannelAgentTex" +
-      "tMessageEvent\022z\n omnichannel_finish_wrap" +
-      "_up_event\030\267\002 \001(\0132/.api.commons.audit.Omn" +
-      "ichannelFinishWrapUpEventH\000R\034omnichannel" +
-      "FinishWrapUpEvent\022w\n\037omnichannel_begin_w" +
-      "rap_up_event\030\270\002 \001(\0132..api.commons.audit." +
-      "OmnichannelBeginWrapUpEventH\000R\033omnichann" +
-      "elBeginWrapUpEvent\022]\n\025omnichannel_t11_ev" +
-      "ent\030\271\002 \001(\0132&.api.commons.audit.Omnichann" +
-      "elT11EventH\000R\023omnichannelT11Event\022\213\001\n%om" +
-      "nichannel_create_conversation_event\030\272\002 \001" +
-      "(\01325.api.commons.audit.OmnichannelCreate" +
-      "ConversationEventH\000R\"omnichannelCreateCo" +
-      "nversationEvent\022y\n\037omnichannel_agent_sus" +
-      "pend_event\030\273\002 \001(\0132/.api.commons.audit.Om" +
-      "nichannelAgentSuspendEventH\000R\034omnichanne" +
-      "lAgentSuspendEvent\022\210\001\n$omnichannel_close" +
-      "_conversation_event\030\302\002 \001(\01324.api.commons" +
-      ".audit.OmnichannelCloseConversationEvent" +
-      "H\000R!omnichannelCloseConversationEvent\022\220\001" +
-      "\n&omnichannel_manager_text_message_event" +
-      "\030\314\002 \001(\01325.api.commons.audit.OmnichannelM" +
-      "anagerTextMessageEventB\002\030\001H\000R\"omnichanne" +
-      "lManagerTextMessageEvent\022\177\n!omnichannel_" +
-      "update_campaign_event\030\312\002 \001(\01321.api.commo" +
-      "ns.audit.OmnichannelUpdateCampaignEventH" +
-      "\000R\036omnichannelUpdateCampaignEvent\022\253\001\n1om" +
-      "nichannel_set_conversation_collected_dat" +
-      "a_event\030\313\002 \001(\0132?.api.commons.audit.Omnic" +
-      "hannelSetConversationCollectedDataEventH" +
-      "\000R,omnichannelSetConversationCollectedDa" +
-      "taEvent\022\205\001\n#omnichannel_complete_campaig" +
-      "n_event\030\334\002 \001(\01323.api.commons.audit.Omnic" +
-      "hannelCompleteCampaignEventH\000R omnichann" +
-      "elCompleteCampaignEvent\022\202\001\n\"omnichannel_" +
-      "archive_campaign_event\030\315\002 \001(\01322.api.comm" +
-      "ons.audit.OmnichannelArchiveCampaignEven" +
-      "tH\000R\037omnichannelArchiveCampaignEvent\022|\n " +
-      "omnichannel_pause_campaign_event\030\316\002 \001(\0132" +
-      "0.api.commons.audit.OmnichannelPauseCamp" +
-      "aignEventH\000R\035omnichannelPauseCampaignEve" +
-      "nt\022\177\n!omnichannel_resume_campaign_event\030" +
-      "\317\002 \001(\01321.api.commons.audit.OmnichannelRe" +
-      "sumeCampaignEventH\000R\036omnichannelResumeCa" +
-      "mpaignEvent\022|\n omnichannel_start_campaig" +
-      "n_event\030\320\002 \001(\01320.api.commons.audit.Omnic" +
-      "hannelStartCampaignEventH\000R\035omnichannelS" +
-      "tartCampaignEvent\022\177\n!omnichannel_schedul" +
-      "e_module_event\030\321\002 \001(\01321.api.commons.audi" +
-      "t.OmnichannelScheduleModuleEventH\000R\036omni" +
-      "channelScheduleModuleEvent\022v\n\036omnichanne" +
-      "l_start_module_event\030\322\002 \001(\0132..api.common" +
-      "s.audit.OmnichannelStartModuleEventH\000R\033o" +
-      "mnichannelStartModuleEvent\022v\n\036omnichanne" +
-      "l_pause_module_event\030\323\002 \001(\0132..api.common" +
-      "s.audit.OmnichannelPauseModuleEventH\000R\033o" +
-      "mnichannelPauseModuleEvent\022y\n\037omnichanne" +
-      "l_resume_module_event\030\324\002 \001(\0132/.api.commo" +
-      "ns.audit.OmnichannelResumeModuleEventH\000R" +
-      "\034omnichannelResumeModuleEvent\022v\n\036omnicha" +
-      "nnel_error_module_event\030\325\002 \001(\0132..api.com" +
-      "mons.audit.OmnichannelErrorModuleEventH\000" +
-      "R\033omnichannelErrorModuleEvent\022|\n omnicha" +
-      "nnel_success_module_event\030\326\002 \001(\01320.api.c" +
-      "ommons.audit.OmnichannelSuccessModuleEve" +
-      "ntH\000R\035omnichannelSuccessModuleEvent\022s\n\035o" +
-      "mnichannel_fail_module_event\030\327\002 \001(\0132-.ap" +
-      "i.commons.audit.OmnichannelFailModuleEve" +
-      "ntH\000R\032omnichannelFailModuleEvent\022\177\n!omni" +
-      "channel_complete_module_event\030\330\002 \001(\01321.a" +
-      "pi.commons.audit.OmnichannelCompleteModu" +
-      "leEventH\000R\036omnichannelCompleteModuleEven" +
-      "t\022|\n omnichannel_archive_module_event\030\331\002" +
-      " \001(\01320.api.commons.audit.OmnichannelArch" +
-      "iveModuleEventH\000R\035omnichannelArchiveModu" +
-      "leEvent\022y\n\037omnichannel_update_module_eve" +
-      "nt\030\332\002 \001(\0132/.api.commons.audit.Omnichanne" +
-      "lUpdateModuleEventH\000R\034omnichannelUpdateM" +
-      "oduleEvent\022\236\001\n-omnichannel_add_sms_messa" +
-      "ge_sent_module_event\030\333\002 \001(\01327.api.common" +
-      "s.audit.OmnichannelSmsMessageSentModuleE" +
-      "ventB\002\030\001H\000R\'omnichannelAddSmsMessageSent" +
-      "ModuleEvent\022\220\001\n&omnichannel_module_initi" +
-      "al_reply_event\030\335\002 \001(\01325.api.commons.audi" +
-      "t.OmnichannelModuleInitialReplyEventB\002\030\001" +
-      "H\000R\"omnichannelModuleInitialReplyEvent\022\207" +
-      "\001\n#omnichannel_task_message_sent_event\030\336" +
-      "\002 \001(\01322.api.commons.audit.OmnichannelTas" +
-      "kMessageSentEventB\002\030\001H\000R\037omnichannelTask" +
-      "MessageSentEvent\022\214\001\n&omnichannel_connect" +
-      "ed_inbox_poll_event\030\337\002 \001(\01325.api.commons" +
-      ".audit.OmnichannelConnectedInboxPollEven" +
-      "tH\000R\"omnichannelConnectedInboxPollEvent\022" +
-      "\225\001\n)omnichannel_connected_inbox_created_" +
-      "event\030\340\002 \001(\01328.api.commons.audit.Omnicha" +
-      "nnelConnectedInboxCreatedEventH\000R%omnich" +
-      "annelConnectedInboxCreatedEvent\022\215\001\n%omni" +
-      "channel_agent_message_units_event\030\341\002 \001(\013" +
-      "24.api.commons.audit.OmnichannelAgentMes" +
-      "sageUnitsEventB\002\030\001H\000R!omnichannelAgentMe" +
-      "ssageUnitsEvent\022\223\001\n\'omnichannel_manager_" +
-      "message_units_event\030\342\002 \001(\01326.api.commons" +
-      ".audit.OmnichannelManagerMessageUnitsEve" +
-      "ntB\002\030\001H\000R#omnichannelManagerMessageUnits" +
-      "Event\022\226\001\n(omnichannel_customer_message_u" +
-      "nits_event\030\343\002 \001(\01327.api.commons.audit.Om" +
-      "nichannelCustomerMessageUnitsEventB\002\030\001H\000" +
-      "R$omnichannelCustomerMessageUnitsEvent\022\220" +
-      "\001\n&omnichannel_system_message_units_even" +
-      "t\030\344\002 \001(\01325.api.commons.audit.Omnichannel" +
-      "SystemMessageUnitsEventB\002\030\001H\000R\"omnichann" +
-      "elSystemMessageUnitsEvent\022\203\001\n#omnichanne" +
-      "l_payment_link_sent_event\030\345\002 \001(\01322.api.c" +
-      "ommons.audit.OmnichannelPaymentLinkSentE" +
-      "ventH\000R\037omnichannelPaymentLinkSentEvent\022" +
-      "\242\001\n.omnichannel_manual_approve_task_acce" +
-      "pted_event\030\346\002 \001(\0132<.api.commons.audit.Om" +
-      "nichannelManualApproveTaskAcceptedEventH" +
-      "\000R)omnichannelManualApproveTaskAcceptedE" +
-      "vent\022\242\001\n.omnichannel_manual_approve_task" +
-      "_rejected_event\030\347\002 \001(\0132<.api.commons.aud" +
-      "it.OmnichannelManualApproveTaskRejectedE" +
-      "ventH\000R)omnichannelManualApproveTaskReje" +
-      "ctedEvent\022\237\001\n-omnichannel_manual_approve" +
-      "_task_timeout_event\030\350\002 \001(\0132;.api.commons" +
-      ".audit.OmnichannelManualApproveTaskTimeo" +
-      "utEventH\000R(omnichannelManualApproveTaskT" +
-      "imeoutEvent\022\237\001\n-omnichannel_manual_appro" +
-      "ve_task_requeue_event\030\351\002 \001(\0132;.api.commo" +
-      "ns.audit.OmnichannelManualApproveTaskReq" +
-      "ueueEventH\000R(omnichannelManualApproveTas" +
-      "kRequeueEvent\022\202\001\n\"omnichannel_transcript" +
-      "_saved_event\030\352\002 \001(\01322.api.commons.audit." +
-      "OmnichannelTranscriptSavedEventH\000R\037omnic" +
-      "hannelTranscriptSavedEvent\022v\n\036omnichanne" +
-      "l_message_sent_event\030\353\002 \001(\0132..api.common" +
-      "s.audit.OmnichannelMessageSentEventH\000R\033o" +
-      "mnichannelMessageSentEvent\022\205\001\n#omnichann" +
-      "el_provider_response_event\030\354\002 \001(\01323.api." +
-      "commons.audit.OmnichannelProviderRespons" +
-      "eEventH\000R omnichannelProviderResponseEve" +
-      "nt\022\225\001\n)omnichannel_provider_message_fail" +
-      "ed_event\030\355\002 \001(\01328.api.commons.audit.Omni" +
-      "channelProviderMessageFailedEventH\000R%omn" +
-      "ichannelProviderMessageFailedEvent\022[\n\025as" +
-      "m_agent_login_event\030\220\003 \001(\0132%.api.commons" +
-      ".audit.AsmAgentLoginEventH\000R\022asmAgentLog" +
-      "inEvent\022X\n\024asm_open_voice_event\030\221\003 \001(\0132$" +
-      ".api.commons.audit.AsmOpenVoiceEventH\000R\021" +
-      "asmOpenVoiceEvent\022e\n\031asm_open_omni_agent" +
-      "_event\030\222\003 \001(\0132(.api.commons.audit.AsmOpe" +
-      "nOmniAgentEventH\000R\025asmOpenOmniAgentEvent" +
-      "\022y\n\037asm_activate_conversation_event\030\223\003 \001" +
-      "(\0132/.api.commons.audit.AsmActivateConver" +
-      "sationEventH\000R\034asmActivateConversationEv" +
-      "ent\022\177\n!asm_deactivate_conversation_event" +
-      "\030\224\003 \001(\01321.api.commons.audit.AsmDeactivat" +
-      "eConversationEventH\000R\036asmDeactivateConve" +
-      "rsationEvent\022q\n\035asm_agent_state_changed_" +
-      "event\030\225\003 \001(\0132,.api.commons.audit.AsmAgen" +
-      "tStateChangedEventH\000R\031asmAgentStateChang" +
-      "edEvent\022^\n\026asm_agent_logout_event\030\226\003 \001(\013" +
-      "2&.api.commons.audit.AsmAgentLogoutEvent" +
-      "H\000R\023asmAgentLogoutEvent\022K\n\017asm_pause_eve" +
-      "nt\030\227\003 \001(\0132 .api.commons.audit.AsmPauseEv" +
-      "entH\000R\rasmPauseEvent\022N\n\020asm_resume_event" +
-      "\030\230\003 \001(\0132!.api.commons.audit.AsmResumeEve" +
-      "ntH\000R\016asmResumeEvent\022s\n\035asm_conversation" +
-      "_pulled_event\030\231\003 \001(\0132-.api.commons.audit" +
-      ".AsmConversationPulledEventH\000R\032asmConver" +
-      "sationPulledEvent\022|\n scorecards_create_q" +
-      "uestion_event\030\364\003 \001(\01320.api.commons.audit" +
-      ".ScorecardsCreateQuestionEventH\000R\035scorec" +
-      "ardsCreateQuestionEvent\022|\n scorecards_up" +
-      "date_question_event\030\365\003 \001(\01320.api.commons" +
-      ".audit.ScorecardsUpdateQuestionEventH\000R\035" +
-      "scorecardsUpdateQuestionEvent\022|\n scoreca" +
-      "rds_delete_question_event\030\366\003 \001(\01320.api.c" +
-      "ommons.audit.ScorecardsDeleteQuestionEve" +
-      "ntH\000R\035scorecardsDeleteQuestionEvent\022\177\n!s" +
-      "corecards_create_scorecard_event\030\367\003 \001(\0132" +
-      "1.api.commons.audit.ScorecardsCreateScor" +
-      "ecardEventH\000R\036scorecardsCreateScorecardE" +
-      "vent\022\177\n!scorecards_update_scorecard_even" +
-      "t\030\370\003 \001(\01321.api.commons.audit.ScorecardsU" +
-      "pdateScorecardEventH\000R\036scorecardsUpdateS" +
-      "corecardEvent\022\177\n!scorecards_delete_score" +
-      "card_event\030\371\003 \001(\01321.api.commons.audit.Sc" +
-      "orecardsDeleteScorecardEventH\000R\036scorecar" +
-      "dsDeleteScorecardEvent\022|\n scorecards_clo" +
-      "ne_scorecard_event\030\372\003 \001(\01320.api.commons." +
-      "audit.ScorecardsCloneScorecardEventH\000R\035s" +
-      "corecardsCloneScorecardEvent\022\202\001\n\"scoreca" +
-      "rds_create_evaluation_event\030\373\003 \001(\01322.api" +
-      ".commons.audit.ScorecardsCreateEvaluatio" +
-      "nEventH\000R\037scorecardsCreateEvaluationEven" +
-      "t\022\202\001\n\"scorecards_delete_evaluation_event" +
-      "\030\374\003 \001(\01322.api.commons.audit.ScorecardsDe" +
-      "leteEvaluationEventH\000R\037scorecardsDeleteE" +
-      "valuationEvent\022y\n\037scorecards_create_sect" +
-      "ion_event\030\375\003 \001(\0132/.api.commons.audit.Sco" +
-      "recardsCreateSectionEventH\000R\034scorecardsC" +
-      "reateSectionEvent\022y\n\037scorecards_update_s" +
-      "ection_event\030\376\003 \001(\0132/.api.commons.audit." +
-      "ScorecardsUpdateSectionEventH\000R\034scorecar" +
-      "dsUpdateSectionEvent\022y\n\037scorecards_delet" +
-      "e_section_event\030\377\003 \001(\0132/.api.commons.aud" +
-      "it.ScorecardsDeleteSectionEventH\000R\034score" +
-      "cardsDeleteSectionEvent\022|\n scorecards_cr" +
-      "eate_category_event\030\200\004 \001(\01320.api.commons" +
-      ".audit.ScorecardsCreateCategoryEventH\000R\035" +
-      "scorecardsCreateCategoryEvent\022|\n scoreca" +
-      "rds_update_category_event\030\201\004 \001(\01320.api.c" +
-      "ommons.audit.ScorecardsUpdateCategoryEve" +
-      "ntH\000R\035scorecardsUpdateCategoryEvent\022|\n s" +
-      "corecards_delete_category_event\030\202\004 \001(\01320" +
-      ".api.commons.audit.ScorecardsDeleteCateg" +
-      "oryEventH\000R\035scorecardsDeleteCategoryEven" +
-      "t\022\233\001\n+scorecards_create_evaluation_quest" +
-      "ion_event\030\203\004 \001(\0132:.api.commons.audit.Sco" +
-      "recardsCreateEvaluationQuestionEventH\000R\'" +
-      "scorecardsCreateEvaluationQuestionEvent\022" +
-      "\233\001\n+scorecards_update_evaluation_questio" +
-      "n_event\030\204\004 \001(\0132:.api.commons.audit.Score" +
-      "cardsUpdateEvaluationQuestionEventH\000R\'sc" +
-      "orecardsUpdateEvaluationQuestionEvent\022\233\001" +
-      "\n+scorecards_delete_evaluation_question_" +
-      "event\030\205\004 \001(\0132:.api.commons.audit.Scoreca" +
-      "rdsDeleteEvaluationQuestionEventH\000R\'scor" +
-      "ecardsDeleteEvaluationQuestionEvent\022\230\001\n*" +
-      "scorecards_create_scorecard_question_eve" +
-      "nt\030\206\004 \001(\01329.api.commons.audit.Scorecards" +
-      "CreateScorecardQuestionEventH\000R&scorecar" +
-      "dsCreateScorecardQuestionEvent\022\230\001\n*score" +
-      "cards_update_scorecard_question_event\030\207\004" +
-      " \001(\01329.api.commons.audit.ScorecardsUpdat" +
-      "eScorecardQuestionEventH\000R&scorecardsUpd" +
-      "ateScorecardQuestionEvent\022\230\001\n*scorecards" +
-      "_delete_scorecard_question_event\030\210\004 \001(\0132" +
-      "9.api.commons.audit.ScorecardsDeleteScor" +
-      "ecardQuestionEventH\000R&scorecardsDeleteSc" +
-      "orecardQuestionEvent\022\217\001\n\'scorecards_crea" +
-      "te_auto_evaluation_event\030\211\004 \001(\01326.api.co" +
-      "mmons.audit.ScorecardsCreateAutoEvaluati" +
-      "onEventH\000R#scorecardsCreateAutoEvaluatio" +
-      "nEvent\022\202\001\n\"scorecards_update_evaluation_" +
-      "event\030\212\004 \001(\01322.api.commons.audit.Scoreca" +
-      "rdsUpdateEvaluationEventH\000R\037scorecardsUp" +
-      "dateEvaluationEvent\022\222\001\n(scorecards_creat" +
-      "e_smart_evaluation_event\030\213\004 \001(\01327.api.co" +
-      "mmons.audit.ScorecardsCreateSmartEvaluat" +
-      "ionEventH\000R$scorecardsCreateSmartEvaluat" +
-      "ionEvent\022D\n\014ticket_event\030\331\004 \001(\0132\036.api.co" +
-      "mmons.audit.TicketEventH\000R\013ticketEvent\022z" +
-      "\n ticket_custom_field_create_event\030\350\004 \001(" +
-      "\0132/.api.commons.audit.TicketCustomFieldC" +
-      "reateEventH\000R\034ticketCustomFieldCreateEve" +
-      "nt\022t\n\036ticket_custom_field_edit_event\030\351\004 " +
-      "\001(\0132-.api.commons.audit.TicketCustomFiel" +
-      "dEditEventH\000R\032ticketCustomFieldEditEvent" +
-      "\022j\n\032compliance_rnd_query_event\030\274\005 \001(\0132*." +
-      "api.commons.audit.ComplianceRndQueryEven" +
-      "tH\000R\027complianceRndQueryEvent\022w\n!complian" +
-      "ce_rnd_query_cached_event\030\275\005 \001(\0132*.api.c" +
-      "ommons.audit.ComplianceRndQueryEventH\000R\035" +
-      "complianceRndQueryCachedEvent\022\250\001\n0agent_" +
-      "training_create_learning_opportunity_eve" +
-      "nt\030\240\006 \001(\0132>.api.commons.audit.AgentTrain" +
-      "ingCreateLearningOpportunityEventH\000R+age" +
-      "ntTrainingCreateLearningOpportunityEvent" +
-      "\022j\n\032lms_pipeline_failure_event\030\204\007 \001(\0132*." +
-      "api.commons.audit.LMSPipelineFailureEven" +
-      "tH\000R\027lmsPipelineFailureEvent\022n\n\034lms_pipe" +
-      "line_no_output_event\030\205\007 \001(\0132+.api.common" +
-      "s.audit.LMSPipelineNoOutputEventH\000R\030lmsP" +
-      "ipelineNoOutputEvent\022s\n\035lms_pipeline_suc" +
-      "cessful_event\030\206\007 \001(\0132-.api.commons.audit" +
-      ".LMSPipelineSuccessfulEventH\000R\032lmsPipeli" +
-      "neSuccessfulEvent\022\201\001\n!billing_commit_bil" +
-      "ling_plan_event\030\350\007 \001(\01320.api.commons.aud" +
-      "it.BillingCommitBillingPlanEventB\002\030\001H\000R\035" +
-      "billingCommitBillingPlanEvent\022\201\001\n!billin" +
-      "g_create_billing_plan_event\030\351\007 \001(\01320.api" +
-      ".commons.audit.BillingCreateBillingPlanE" +
-      "ventB\002\030\001H\000R\035billingCreateBillingPlanEven" +
-      "t\022t\n\034billing_create_invoice_event\030\352\007 \001(\013" +
-      "2,.api.commons.audit.BillingCreateInvoic" +
-      "eEventB\002\030\001H\000R\031billingCreateInvoiceEvent\022" +
-      "\212\001\n$billing_create_rate_definition_event" +
-      "\030\353\007 \001(\01323.api.commons.audit.BillingCreat" +
-      "eRateDefinitionEventB\002\030\001H\000R billingCreat" +
-      "eRateDefinitionEvent\022\201\001\n!billing_delete_" +
-      "billing_plan_event\030\354\007 \001(\01320.api.commons." +
-      "audit.BillingDeleteBillingPlanEventB\002\030\001H" +
-      "\000R\035billingDeleteBillingPlanEvent\022t\n\034bill" +
-      "ing_delete_invoice_event\030\355\007 \001(\0132,.api.co" +
-      "mmons.audit.BillingDeleteInvoiceEventB\002\030" +
-      "\001H\000R\031billingDeleteInvoiceEvent\022\212\001\n$billi" +
-      "ng_delete_rate_definition_event\030\356\007 \001(\01323" +
-      ".api.commons.audit.BillingDeleteRateDefi" +
-      "nitionEventB\002\030\001H\000R billingDeleteRateDefi" +
-      "nitionEvent\022t\n\034billing_export_invoice_ev" +
-      "ent\030\357\007 \001(\0132,.api.commons.audit.BillingEx" +
-      "portInvoiceEventB\002\030\001H\000R\031billingExportInv" +
-      "oiceEvent\022\201\001\n!billing_update_billing_pla" +
-      "n_event\030\360\007 \001(\01320.api.commons.audit.Billi" +
-      "ngUpdateBillingPlanEventB\002\030\001H\000R\035billingU" +
-      "pdateBillingPlanEvent\022t\n\034billing_update_" +
-      "invoice_event\030\361\007 \001(\0132,.api.commons.audit" +
-      ".BillingUpdateInvoiceEventB\002\030\001H\000R\031billin" +
-      "gUpdateInvoiceEvent\022\212\001\n$billing_update_r" +
-      "ate_definition_event\030\362\007 \001(\01323.api.common" +
-      "s.audit.BillingUpdateRateDefinitionEvent" +
-      "B\002\030\001H\000R billingUpdateRateDefinitionEvent" +
-      "\022\203\001\n#billing_rated_items_generated_event" +
-      "\030\363\007 \001(\01322.api.commons.audit.BillingRated" +
-      "ItemsGeneratedEventH\000R\037billingRatedItems" +
-      "GeneratedEvent\022v\n\036billing_accumulate_ite" +
-      "ms_event\030\364\007 \001(\0132..api.commons.audit.Bill" +
-      "ingAccumulateItemsEventH\000R\033billingAccumu" +
-      "lateItemsEvent\022`\n\026delivery_failure_event",
-      "\030\314\010 \001(\0132\'.api.commons.audit.DeliveryFail" +
-      "ureEventH\000R\024deliveryFailureEvent\022`\n\026deli" +
-      "very_success_event\030\315\010 \001(\0132\'.api.commons." +
-      "audit.DeliverySuccessEventH\000R\024deliverySu" +
-      "ccessEvent\022w\n\037contact_manager_entry_add_" +
-      "event\030\260\t \001(\0132..api.commons.audit.Contact" +
-      "ManagerEntryAddEventH\000R\033contactManagerEn" +
-      "tryAddEvent\022\201\001\n#contact_manager_entry_ge" +
-      "t_enc_event\030\261\t \001(\01321.api.commons.audit.C" +
-      "ontactManagerEntryGetEncEventH\000R\036contact" +
-      "ManagerEntryGetEncEvent\022t\n\034contact_manag" +
-      "er_delete_event\030\262\t \001(\0132,.api.commons.aud" +
-      "it.ContactManagerDeleteEventB\002\030\001H\000R\031cont" +
-      "actManagerDeleteEvent\022k\n\031contact_manager" +
-      "_kyc_event\030\263\t \001(\0132).api.commons.audit.Co" +
-      "ntactManagerKycEventB\002\030\001H\000R\026contactManag" +
-      "erKycEvent\022z\n contact_manager_entry_edit" +
-      "_event\030\264\t \001(\0132/.api.commons.audit.Contac" +
-      "tManagerEntryEditEventH\000R\034contactManager" +
-      "EntryEditEvent\022}\n!contact_manager_list_u" +
-      "pload_event\030\265\t \001(\01320.api.commons.audit.C" +
-      "ontactManagerListUploadEventH\000R\035contactM" +
-      "anagerListUploadEvent\022\200\001\n&contact_manage" +
-      "r_kyc_verification_event\030\266\t \001(\0132).api.co" +
-      "mmons.audit.ContactManagerKycEventH\000R\"co" +
-      "ntactManagerKycVerificationEvent\022{\n\"cont" +
-      "act_manager_entry_delete_event\030\267\t \001(\0132,." +
-      "api.commons.audit.ContactManagerDeleteEv" +
-      "entH\000R\036contactManagerEntryDeleteEvent\022}\n" +
-      "#contact_manager_entry_expunge_event\030\270\t " +
-      "\001(\0132,.api.commons.audit.ContactManagerDe" +
-      "leteEventH\000R\037contactManagerEntryExpungeE" +
-      "vent\022\222\001\n(contact_manager_entity_associat" +
-      "ion_event\030\271\t \001(\01327.api.commons.audit.Con" +
-      "tactManagerEntityAssociationEventH\000R$con" +
-      "tactManagerEntityAssociationEvent\022p\n\034acc" +
-      "ess_tokens_expiring_event\030\224\n \001(\0132,.api.c" +
-      "ommons.audit.AccessTokensExpiringEventH\000" +
-      "R\031accessTokensExpiringEventB\007\n\005eventB\227\001\n" +
-      "#com.tcn.cloud.api.api.commons.auditB\nAu" +
-      "ditProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021A" +
-      "pi\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPB" +
-      "Metadata\352\002\023Api::Commons::Auditb\006proto3"
+      "t_reassign_conversation_event\030\263\002 \001(\0132<.a" +
+      "pi.commons.audit.OmnichannelAgentReassig" +
+      "nConversationEventH\000R)omnichannelAgentRe" +
+      "assignConversationEvent\022]\n\025omnichannel_t" +
+      "10_event\030\264\002 \001(\0132&.api.commons.audit.Omni" +
+      "channelT10EventH\000R\023omnichannelT10Event\022\223" +
+      "\001\n\'omnichannel_customer_text_Message_eve" +
+      "nt\030\265\002 \001(\01326.api.commons.audit.Omnichanne" +
+      "lCustomerTextMessageEventB\002\030\001H\000R#omnicha" +
+      "nnelCustomerTextMessageEvent\022\212\001\n$omnicha" +
+      "nnel_agent_text_message_event\030\266\002 \001(\01323.a" +
+      "pi.commons.audit.OmnichannelAgentTextMes" +
+      "sageEventB\002\030\001H\000R omnichannelAgentTextMes" +
+      "sageEvent\022z\n omnichannel_finish_wrap_up_" +
+      "event\030\267\002 \001(\0132/.api.commons.audit.Omnicha" +
+      "nnelFinishWrapUpEventH\000R\034omnichannelFini" +
+      "shWrapUpEvent\022w\n\037omnichannel_begin_wrap_" +
+      "up_event\030\270\002 \001(\0132..api.commons.audit.Omni" +
+      "channelBeginWrapUpEventH\000R\033omnichannelBe" +
+      "ginWrapUpEvent\022]\n\025omnichannel_t11_event\030" +
+      "\271\002 \001(\0132&.api.commons.audit.OmnichannelT1" +
+      "1EventH\000R\023omnichannelT11Event\022\213\001\n%omnich" +
+      "annel_create_conversation_event\030\272\002 \001(\01325" +
+      ".api.commons.audit.OmnichannelCreateConv" +
+      "ersationEventH\000R\"omnichannelCreateConver" +
+      "sationEvent\022y\n\037omnichannel_agent_suspend" +
+      "_event\030\273\002 \001(\0132/.api.commons.audit.Omnich" +
+      "annelAgentSuspendEventH\000R\034omnichannelAge" +
+      "ntSuspendEvent\022\210\001\n$omnichannel_close_con" +
+      "versation_event\030\302\002 \001(\01324.api.commons.aud" +
+      "it.OmnichannelCloseConversationEventH\000R!" +
+      "omnichannelCloseConversationEvent\022\220\001\n&om" +
+      "nichannel_manager_text_message_event\030\314\002 " +
+      "\001(\01325.api.commons.audit.OmnichannelManag" +
+      "erTextMessageEventB\002\030\001H\000R\"omnichannelMan" +
+      "agerTextMessageEvent\022\177\n!omnichannel_upda" +
+      "te_campaign_event\030\312\002 \001(\01321.api.commons.a" +
+      "udit.OmnichannelUpdateCampaignEventH\000R\036o" +
+      "mnichannelUpdateCampaignEvent\022\253\001\n1omnich" +
+      "annel_set_conversation_collected_data_ev" +
+      "ent\030\313\002 \001(\0132?.api.commons.audit.Omnichann" +
+      "elSetConversationCollectedDataEventH\000R,o" +
+      "mnichannelSetConversationCollectedDataEv" +
+      "ent\022\205\001\n#omnichannel_complete_campaign_ev" +
+      "ent\030\334\002 \001(\01323.api.commons.audit.Omnichann" +
+      "elCompleteCampaignEventH\000R omnichannelCo" +
+      "mpleteCampaignEvent\022\202\001\n\"omnichannel_arch" +
+      "ive_campaign_event\030\315\002 \001(\01322.api.commons." +
+      "audit.OmnichannelArchiveCampaignEventH\000R" +
+      "\037omnichannelArchiveCampaignEvent\022|\n omni" +
+      "channel_pause_campaign_event\030\316\002 \001(\01320.ap" +
+      "i.commons.audit.OmnichannelPauseCampaign" +
+      "EventH\000R\035omnichannelPauseCampaignEvent\022\177" +
+      "\n!omnichannel_resume_campaign_event\030\317\002 \001" +
+      "(\01321.api.commons.audit.OmnichannelResume" +
+      "CampaignEventH\000R\036omnichannelResumeCampai" +
+      "gnEvent\022|\n omnichannel_start_campaign_ev" +
+      "ent\030\320\002 \001(\01320.api.commons.audit.Omnichann" +
+      "elStartCampaignEventH\000R\035omnichannelStart" +
+      "CampaignEvent\022\177\n!omnichannel_schedule_mo" +
+      "dule_event\030\321\002 \001(\01321.api.commons.audit.Om" +
+      "nichannelScheduleModuleEventH\000R\036omnichan" +
+      "nelScheduleModuleEvent\022v\n\036omnichannel_st" +
+      "art_module_event\030\322\002 \001(\0132..api.commons.au" +
+      "dit.OmnichannelStartModuleEventH\000R\033omnic" +
+      "hannelStartModuleEvent\022v\n\036omnichannel_pa" +
+      "use_module_event\030\323\002 \001(\0132..api.commons.au" +
+      "dit.OmnichannelPauseModuleEventH\000R\033omnic" +
+      "hannelPauseModuleEvent\022y\n\037omnichannel_re" +
+      "sume_module_event\030\324\002 \001(\0132/.api.commons.a" +
+      "udit.OmnichannelResumeModuleEventH\000R\034omn" +
+      "ichannelResumeModuleEvent\022v\n\036omnichannel" +
+      "_error_module_event\030\325\002 \001(\0132..api.commons" +
+      ".audit.OmnichannelErrorModuleEventH\000R\033om" +
+      "nichannelErrorModuleEvent\022|\n omnichannel" +
+      "_success_module_event\030\326\002 \001(\01320.api.commo" +
+      "ns.audit.OmnichannelSuccessModuleEventH\000" +
+      "R\035omnichannelSuccessModuleEvent\022s\n\035omnic" +
+      "hannel_fail_module_event\030\327\002 \001(\0132-.api.co" +
+      "mmons.audit.OmnichannelFailModuleEventH\000" +
+      "R\032omnichannelFailModuleEvent\022\177\n!omnichan" +
+      "nel_complete_module_event\030\330\002 \001(\01321.api.c" +
+      "ommons.audit.OmnichannelCompleteModuleEv" +
+      "entH\000R\036omnichannelCompleteModuleEvent\022|\n" +
+      " omnichannel_archive_module_event\030\331\002 \001(\013" +
+      "20.api.commons.audit.OmnichannelArchiveM" +
+      "oduleEventH\000R\035omnichannelArchiveModuleEv" +
+      "ent\022y\n\037omnichannel_update_module_event\030\332" +
+      "\002 \001(\0132/.api.commons.audit.OmnichannelUpd" +
+      "ateModuleEventH\000R\034omnichannelUpdateModul" +
+      "eEvent\022\236\001\n-omnichannel_add_sms_message_s" +
+      "ent_module_event\030\333\002 \001(\01327.api.commons.au" +
+      "dit.OmnichannelSmsMessageSentModuleEvent" +
+      "B\002\030\001H\000R\'omnichannelAddSmsMessageSentModu" +
+      "leEvent\022\220\001\n&omnichannel_module_initial_r" +
+      "eply_event\030\335\002 \001(\01325.api.commons.audit.Om" +
+      "nichannelModuleInitialReplyEventB\002\030\001H\000R\"" +
+      "omnichannelModuleInitialReplyEvent\022\207\001\n#o" +
+      "mnichannel_task_message_sent_event\030\336\002 \001(" +
+      "\01322.api.commons.audit.OmnichannelTaskMes" +
+      "sageSentEventB\002\030\001H\000R\037omnichannelTaskMess" +
+      "ageSentEvent\022\214\001\n&omnichannel_connected_i" +
+      "nbox_poll_event\030\337\002 \001(\01325.api.commons.aud" +
+      "it.OmnichannelConnectedInboxPollEventH\000R" +
+      "\"omnichannelConnectedInboxPollEvent\022\225\001\n)" +
+      "omnichannel_connected_inbox_created_even" +
+      "t\030\340\002 \001(\01328.api.commons.audit.Omnichannel" +
+      "ConnectedInboxCreatedEventH\000R%omnichanne" +
+      "lConnectedInboxCreatedEvent\022\215\001\n%omnichan" +
+      "nel_agent_message_units_event\030\341\002 \001(\01324.a" +
+      "pi.commons.audit.OmnichannelAgentMessage" +
+      "UnitsEventB\002\030\001H\000R!omnichannelAgentMessag" +
+      "eUnitsEvent\022\223\001\n\'omnichannel_manager_mess" +
+      "age_units_event\030\342\002 \001(\01326.api.commons.aud" +
+      "it.OmnichannelManagerMessageUnitsEventB\002" +
+      "\030\001H\000R#omnichannelManagerMessageUnitsEven" +
+      "t\022\226\001\n(omnichannel_customer_message_units" +
+      "_event\030\343\002 \001(\01327.api.commons.audit.Omnich" +
+      "annelCustomerMessageUnitsEventB\002\030\001H\000R$om" +
+      "nichannelCustomerMessageUnitsEvent\022\220\001\n&o" +
+      "mnichannel_system_message_units_event\030\344\002" +
+      " \001(\01325.api.commons.audit.OmnichannelSyst" +
+      "emMessageUnitsEventB\002\030\001H\000R\"omnichannelSy" +
+      "stemMessageUnitsEvent\022\203\001\n#omnichannel_pa" +
+      "yment_link_sent_event\030\345\002 \001(\01322.api.commo" +
+      "ns.audit.OmnichannelPaymentLinkSentEvent" +
+      "H\000R\037omnichannelPaymentLinkSentEvent\022\242\001\n." +
+      "omnichannel_manual_approve_task_accepted" +
+      "_event\030\346\002 \001(\0132<.api.commons.audit.Omnich" +
+      "annelManualApproveTaskAcceptedEventH\000R)o" +
+      "mnichannelManualApproveTaskAcceptedEvent" +
+      "\022\242\001\n.omnichannel_manual_approve_task_rej" +
+      "ected_event\030\347\002 \001(\0132<.api.commons.audit.O" +
+      "mnichannelManualApproveTaskRejectedEvent" +
+      "H\000R)omnichannelManualApproveTaskRejected" +
+      "Event\022\237\001\n-omnichannel_manual_approve_tas" +
+      "k_timeout_event\030\350\002 \001(\0132;.api.commons.aud" +
+      "it.OmnichannelManualApproveTaskTimeoutEv" +
+      "entH\000R(omnichannelManualApproveTaskTimeo" +
+      "utEvent\022\237\001\n-omnichannel_manual_approve_t" +
+      "ask_requeue_event\030\351\002 \001(\0132;.api.commons.a" +
+      "udit.OmnichannelManualApproveTaskRequeue" +
+      "EventH\000R(omnichannelManualApproveTaskReq" +
+      "ueueEvent\022\202\001\n\"omnichannel_transcript_sav" +
+      "ed_event\030\352\002 \001(\01322.api.commons.audit.Omni" +
+      "channelTranscriptSavedEventH\000R\037omnichann" +
+      "elTranscriptSavedEvent\022v\n\036omnichannel_me" +
+      "ssage_sent_event\030\353\002 \001(\0132..api.commons.au" +
+      "dit.OmnichannelMessageSentEventH\000R\033omnic" +
+      "hannelMessageSentEvent\022\205\001\n#omnichannel_p" +
+      "rovider_response_event\030\354\002 \001(\01323.api.comm" +
+      "ons.audit.OmnichannelProviderResponseEve" +
+      "ntH\000R omnichannelProviderResponseEvent\022\225" +
+      "\001\n)omnichannel_provider_message_failed_e" +
+      "vent\030\355\002 \001(\01328.api.commons.audit.Omnichan" +
+      "nelProviderMessageFailedEventH\000R%omnicha" +
+      "nnelProviderMessageFailedEvent\022[\n\025asm_ag" +
+      "ent_login_event\030\220\003 \001(\0132%.api.commons.aud" +
+      "it.AsmAgentLoginEventH\000R\022asmAgentLoginEv" +
+      "ent\022X\n\024asm_open_voice_event\030\221\003 \001(\0132$.api" +
+      ".commons.audit.AsmOpenVoiceEventH\000R\021asmO" +
+      "penVoiceEvent\022e\n\031asm_open_omni_agent_eve" +
+      "nt\030\222\003 \001(\0132(.api.commons.audit.AsmOpenOmn" +
+      "iAgentEventH\000R\025asmOpenOmniAgentEvent\022y\n\037" +
+      "asm_activate_conversation_event\030\223\003 \001(\0132/" +
+      ".api.commons.audit.AsmActivateConversati" +
+      "onEventH\000R\034asmActivateConversationEvent\022" +
+      "\177\n!asm_deactivate_conversation_event\030\224\003 " +
+      "\001(\01321.api.commons.audit.AsmDeactivateCon" +
+      "versationEventH\000R\036asmDeactivateConversat" +
+      "ionEvent\022q\n\035asm_agent_state_changed_even" +
+      "t\030\225\003 \001(\0132,.api.commons.audit.AsmAgentSta" +
+      "teChangedEventH\000R\031asmAgentStateChangedEv" +
+      "ent\022^\n\026asm_agent_logout_event\030\226\003 \001(\0132&.a" +
+      "pi.commons.audit.AsmAgentLogoutEventH\000R\023" +
+      "asmAgentLogoutEvent\022K\n\017asm_pause_event\030\227" +
+      "\003 \001(\0132 .api.commons.audit.AsmPauseEventH" +
+      "\000R\rasmPauseEvent\022N\n\020asm_resume_event\030\230\003 " +
+      "\001(\0132!.api.commons.audit.AsmResumeEventH\000" +
+      "R\016asmResumeEvent\022s\n\035asm_conversation_pul" +
+      "led_event\030\231\003 \001(\0132-.api.commons.audit.Asm" +
+      "ConversationPulledEventH\000R\032asmConversati" +
+      "onPulledEvent\022|\n scorecards_create_quest" +
+      "ion_event\030\364\003 \001(\01320.api.commons.audit.Sco" +
+      "recardsCreateQuestionEventH\000R\035scorecards" +
+      "CreateQuestionEvent\022|\n scorecards_update" +
+      "_question_event\030\365\003 \001(\01320.api.commons.aud" +
+      "it.ScorecardsUpdateQuestionEventH\000R\035scor" +
+      "ecardsUpdateQuestionEvent\022|\n scorecards_" +
+      "delete_question_event\030\366\003 \001(\01320.api.commo" +
+      "ns.audit.ScorecardsDeleteQuestionEventH\000" +
+      "R\035scorecardsDeleteQuestionEvent\022\177\n!score" +
+      "cards_create_scorecard_event\030\367\003 \001(\01321.ap" +
+      "i.commons.audit.ScorecardsCreateScorecar" +
+      "dEventH\000R\036scorecardsCreateScorecardEvent" +
+      "\022\177\n!scorecards_update_scorecard_event\030\370\003" +
+      " \001(\01321.api.commons.audit.ScorecardsUpdat" +
+      "eScorecardEventH\000R\036scorecardsUpdateScore" +
+      "cardEvent\022\177\n!scorecards_delete_scorecard" +
+      "_event\030\371\003 \001(\01321.api.commons.audit.Scorec" +
+      "ardsDeleteScorecardEventH\000R\036scorecardsDe" +
+      "leteScorecardEvent\022|\n scorecards_clone_s" +
+      "corecard_event\030\372\003 \001(\01320.api.commons.audi" +
+      "t.ScorecardsCloneScorecardEventH\000R\035score" +
+      "cardsCloneScorecardEvent\022\202\001\n\"scorecards_" +
+      "create_evaluation_event\030\373\003 \001(\01322.api.com" +
+      "mons.audit.ScorecardsCreateEvaluationEve" +
+      "ntH\000R\037scorecardsCreateEvaluationEvent\022\202\001" +
+      "\n\"scorecards_delete_evaluation_event\030\374\003 " +
+      "\001(\01322.api.commons.audit.ScorecardsDelete" +
+      "EvaluationEventH\000R\037scorecardsDeleteEvalu" +
+      "ationEvent\022y\n\037scorecards_create_section_" +
+      "event\030\375\003 \001(\0132/.api.commons.audit.Scoreca" +
+      "rdsCreateSectionEventH\000R\034scorecardsCreat" +
+      "eSectionEvent\022y\n\037scorecards_update_secti" +
+      "on_event\030\376\003 \001(\0132/.api.commons.audit.Scor" +
+      "ecardsUpdateSectionEventH\000R\034scorecardsUp" +
+      "dateSectionEvent\022y\n\037scorecards_delete_se" +
+      "ction_event\030\377\003 \001(\0132/.api.commons.audit.S" +
+      "corecardsDeleteSectionEventH\000R\034scorecard" +
+      "sDeleteSectionEvent\022|\n scorecards_create" +
+      "_category_event\030\200\004 \001(\01320.api.commons.aud" +
+      "it.ScorecardsCreateCategoryEventH\000R\035scor" +
+      "ecardsCreateCategoryEvent\022|\n scorecards_" +
+      "update_category_event\030\201\004 \001(\01320.api.commo" +
+      "ns.audit.ScorecardsUpdateCategoryEventH\000" +
+      "R\035scorecardsUpdateCategoryEvent\022|\n score" +
+      "cards_delete_category_event\030\202\004 \001(\01320.api" +
+      ".commons.audit.ScorecardsDeleteCategoryE" +
+      "ventH\000R\035scorecardsDeleteCategoryEvent\022\233\001" +
+      "\n+scorecards_create_evaluation_question_" +
+      "event\030\203\004 \001(\0132:.api.commons.audit.Scoreca" +
+      "rdsCreateEvaluationQuestionEventH\000R\'scor" +
+      "ecardsCreateEvaluationQuestionEvent\022\233\001\n+" +
+      "scorecards_update_evaluation_question_ev" +
+      "ent\030\204\004 \001(\0132:.api.commons.audit.Scorecard" +
+      "sUpdateEvaluationQuestionEventH\000R\'scorec" +
+      "ardsUpdateEvaluationQuestionEvent\022\233\001\n+sc" +
+      "orecards_delete_evaluation_question_even" +
+      "t\030\205\004 \001(\0132:.api.commons.audit.ScorecardsD" +
+      "eleteEvaluationQuestionEventH\000R\'scorecar" +
+      "dsDeleteEvaluationQuestionEvent\022\230\001\n*scor" +
+      "ecards_create_scorecard_question_event\030\206" +
+      "\004 \001(\01329.api.commons.audit.ScorecardsCrea" +
+      "teScorecardQuestionEventH\000R&scorecardsCr" +
+      "eateScorecardQuestionEvent\022\230\001\n*scorecard" +
+      "s_update_scorecard_question_event\030\207\004 \001(\013" +
+      "29.api.commons.audit.ScorecardsUpdateSco" +
+      "recardQuestionEventH\000R&scorecardsUpdateS" +
+      "corecardQuestionEvent\022\230\001\n*scorecards_del" +
+      "ete_scorecard_question_event\030\210\004 \001(\01329.ap" +
+      "i.commons.audit.ScorecardsDeleteScorecar" +
+      "dQuestionEventH\000R&scorecardsDeleteScorec" +
+      "ardQuestionEvent\022\217\001\n\'scorecards_create_a" +
+      "uto_evaluation_event\030\211\004 \001(\01326.api.common" +
+      "s.audit.ScorecardsCreateAutoEvaluationEv" +
+      "entH\000R#scorecardsCreateAutoEvaluationEve" +
+      "nt\022\202\001\n\"scorecards_update_evaluation_even" +
+      "t\030\212\004 \001(\01322.api.commons.audit.ScorecardsU" +
+      "pdateEvaluationEventH\000R\037scorecardsUpdate" +
+      "EvaluationEvent\022\222\001\n(scorecards_create_sm" +
+      "art_evaluation_event\030\213\004 \001(\01327.api.common" +
+      "s.audit.ScorecardsCreateSmartEvaluationE" +
+      "ventH\000R$scorecardsCreateSmartEvaluationE" +
+      "vent\022D\n\014ticket_event\030\331\004 \001(\0132\036.api.common" +
+      "s.audit.TicketEventH\000R\013ticketEvent\022z\n ti" +
+      "cket_custom_field_create_event\030\350\004 \001(\0132/." +
+      "api.commons.audit.TicketCustomFieldCreat" +
+      "eEventH\000R\034ticketCustomFieldCreateEvent\022t" +
+      "\n\036ticket_custom_field_edit_event\030\351\004 \001(\0132" +
+      "-.api.commons.audit.TicketCustomFieldEdi" +
+      "tEventH\000R\032ticketCustomFieldEditEvent\022j\n\032" +
+      "compliance_rnd_query_event\030\274\005 \001(\0132*.api." +
+      "commons.audit.ComplianceRndQueryEventH\000R" +
+      "\027complianceRndQueryEvent\022w\n!compliance_r" +
+      "nd_query_cached_event\030\275\005 \001(\0132*.api.commo" +
+      "ns.audit.ComplianceRndQueryEventH\000R\035comp" +
+      "lianceRndQueryCachedEvent\022\250\001\n0agent_trai" +
+      "ning_create_learning_opportunity_event\030\240" +
+      "\006 \001(\0132>.api.commons.audit.AgentTrainingC" +
+      "reateLearningOpportunityEventH\000R+agentTr" +
+      "ainingCreateLearningOpportunityEvent\022j\n\032" +
+      "lms_pipeline_failure_event\030\204\007 \001(\0132*.api." +
+      "commons.audit.LMSPipelineFailureEventH\000R" +
+      "\027lmsPipelineFailureEvent\022n\n\034lms_pipeline" +
+      "_no_output_event\030\205\007 \001(\0132+.api.commons.au" +
+      "dit.LMSPipelineNoOutputEventH\000R\030lmsPipel" +
+      "ineNoOutputEvent\022s\n\035lms_pipeline_success" +
+      "ful_event\030\206\007 \001(\0132-.api.commons.audit.LMS" +
+      "PipelineSuccessfulEventH\000R\032lmsPipelineSu" +
+      "ccessfulEvent\022\201\001\n!billing_commit_billing" +
+      "_plan_event\030\350\007 \001(\01320.api.commons.audit.B" +
+      "illingCommitBillingPlanEventB\002\030\001H\000R\035bill" +
+      "ingCommitBillingPlanEvent\022\201\001\n!billing_cr" +
+      "eate_billing_plan_event\030\351\007 \001(\01320.api.com" +
+      "mons.audit.BillingCreateBillingPlanEvent" +
+      "B\002\030\001H\000R\035billingCreateBillingPlanEvent\022t\n" +
+      "\034billing_create_invoice_event\030\352\007 \001(\0132,.a" +
+      "pi.commons.audit.BillingCreateInvoiceEve" +
+      "ntB\002\030\001H\000R\031billingCreateInvoiceEvent\022\212\001\n$" +
+      "billing_create_rate_definition_event\030\353\007 " +
+      "\001(\01323.api.commons.audit.BillingCreateRat" +
+      "eDefinitionEventB\002\030\001H\000R billingCreateRat" +
+      "eDefinitionEvent\022\201\001\n!billing_delete_bill" +
+      "ing_plan_event\030\354\007 \001(\01320.api.commons.audi" +
+      "t.BillingDeleteBillingPlanEventB\002\030\001H\000R\035b" +
+      "illingDeleteBillingPlanEvent\022t\n\034billing_" +
+      "delete_invoice_event\030\355\007 \001(\0132,.api.common" +
+      "s.audit.BillingDeleteInvoiceEventB\002\030\001H\000R" +
+      "\031billingDeleteInvoiceEvent\022\212\001\n$billing_d" +
+      "elete_rate_definition_event\030\356\007 \001(\01323.api" +
+      ".commons.audit.BillingDeleteRateDefiniti" +
+      "onEventB\002\030\001H\000R billingDeleteRateDefiniti" +
+      "onEvent\022t\n\034billing_export_invoice_event\030" +
+      "\357\007 \001(\0132,.api.commons.audit.BillingExport" +
+      "InvoiceEventB\002\030\001H\000R\031billingExportInvoice" +
+      "Event\022\201\001\n!billing_update_billing_plan_ev" +
+      "ent\030\360\007 \001(\01320.api.commons.audit.BillingUp" +
+      "dateBillingPlanEventB\002\030\001H\000R\035billingUpdat" +
+      "eBillingPlanEvent\022t\n\034billing_update_invo" +
+      "ice_event\030\361\007 \001(\0132,.api.commons.audit.Bil" +
+      "lingUpdateInvoiceEventB\002\030\001H\000R\031billingUpd" +
+      "ateInvoiceEvent\022\212\001\n$billing_update_rate_" +
+      "definition_event\030\362\007 \001(\01323.api.commons.au" +
+      "dit.BillingUpdateRateDefinitionEventB\002\030\001" +
+      "H\000R billingUpdateRateDefinitionEvent\022\203\001\n" +
+      "#billing_rated_items_generated_event\030\363\007 " +
+      "\001(\01322.api.commons.audit.BillingRatedItem" +
+      "sGeneratedEventH\000R\037billingRatedItemsGene" +
+      "ratedEvent\022v\n\036billing_accumulate_items_e" +
+      "vent\030\364\007 \001(\0132..api.commons.audit.BillingA" +
+      "ccumulateItemsEventH\000R\033billingAccumulate",
+      "ItemsEvent\022`\n\026delivery_failure_event\030\314\010 " +
+      "\001(\0132\'.api.commons.audit.DeliveryFailureE" +
+      "ventH\000R\024deliveryFailureEvent\022`\n\026delivery" +
+      "_success_event\030\315\010 \001(\0132\'.api.commons.audi" +
+      "t.DeliverySuccessEventH\000R\024deliverySucces" +
+      "sEvent\022w\n\037contact_manager_entry_add_even" +
+      "t\030\260\t \001(\0132..api.commons.audit.ContactMana" +
+      "gerEntryAddEventH\000R\033contactManagerEntryA" +
+      "ddEvent\022\201\001\n#contact_manager_entry_get_en" +
+      "c_event\030\261\t \001(\01321.api.commons.audit.Conta" +
+      "ctManagerEntryGetEncEventH\000R\036contactMana" +
+      "gerEntryGetEncEvent\022t\n\034contact_manager_d" +
+      "elete_event\030\262\t \001(\0132,.api.commons.audit.C" +
+      "ontactManagerDeleteEventB\002\030\001H\000R\031contactM" +
+      "anagerDeleteEvent\022k\n\031contact_manager_kyc" +
+      "_event\030\263\t \001(\0132).api.commons.audit.Contac" +
+      "tManagerKycEventB\002\030\001H\000R\026contactManagerKy" +
+      "cEvent\022z\n contact_manager_entry_edit_eve" +
+      "nt\030\264\t \001(\0132/.api.commons.audit.ContactMan" +
+      "agerEntryEditEventH\000R\034contactManagerEntr" +
+      "yEditEvent\022}\n!contact_manager_list_uploa" +
+      "d_event\030\265\t \001(\01320.api.commons.audit.Conta" +
+      "ctManagerListUploadEventH\000R\035contactManag" +
+      "erListUploadEvent\022\200\001\n&contact_manager_ky" +
+      "c_verification_event\030\266\t \001(\0132).api.common" +
+      "s.audit.ContactManagerKycEventH\000R\"contac" +
+      "tManagerKycVerificationEvent\022{\n\"contact_" +
+      "manager_entry_delete_event\030\267\t \001(\0132,.api." +
+      "commons.audit.ContactManagerDeleteEventH" +
+      "\000R\036contactManagerEntryDeleteEvent\022}\n#con" +
+      "tact_manager_entry_expunge_event\030\270\t \001(\0132" +
+      ",.api.commons.audit.ContactManagerDelete" +
+      "EventH\000R\037contactManagerEntryExpungeEvent" +
+      "\022\222\001\n(contact_manager_entity_association_" +
+      "event\030\271\t \001(\01327.api.commons.audit.Contact" +
+      "ManagerEntityAssociationEventH\000R$contact" +
+      "ManagerEntityAssociationEvent\022p\n\034access_" +
+      "tokens_expiring_event\030\224\n \001(\0132,.api.commo" +
+      "ns.audit.AccessTokensExpiringEventH\000R\031ac" +
+      "cessTokensExpiringEvent\022j\n\032wfm_publish_s" +
+      "chedule_event\030\370\n \001(\0132*.api.commons.audit" +
+      ".WFMPublishScheduleEventH\000R\027wfmPublishSc" +
+      "heduleEventB\007\n\005eventB\227\001\n#com.tcn.cloud.a" +
+      "pi.api.commons.auditB\nAuditProtoP\001\242\002\003ACA" +
+      "\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit" +
+      "\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::" +
+      "Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -489,6 +493,7 @@ public final class AuditProto {
           com.tcn.cloud.api.api.commons.audit.ScorecardsEventsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.audit.VanaEventsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.audit.WfmEventsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_commons_audit_AuditEvent_descriptor =
@@ -496,7 +501,7 @@ public final class AuditProto {
     internal_static_api_commons_audit_AuditEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AuditEvent_descriptor,
-        new java.lang.String[] { "OrgId", "RegionId", "ClusterId", "EventTime", "AuditId", "EventType", "DummyEvent", "VanaFlagEvent", "VanaFlagReviewEvent", "VanaBillingReportEvent", "VanaFlagSummaryEvent", "VanaPhraseCorrectionEvent", "VanaCreateTranscriptEvent", "VanaCreateSentimentEvent", "VanaCreateSummaryEvent", "OmnichannelCreateProjectEvent", "OmnichannelCreateCampaignEvent", "OmnichannelDailyProjectReportEvent", "OmnichannelDailyConversationReportEvent", "OmnichannelAgentAssignConversationEvent", "OmnichannelAgentUnassignConversationEvent", "OmnichannelAgentReassignConversationEvent", "OmnichannelT10Event", "OmnichannelCustomerTextMessageEvent", "OmnichannelAgentTextMessageEvent", "OmnichannelFinishWrapUpEvent", "OmnichannelBeginWrapUpEvent", "OmnichannelT11Event", "OmnichannelCreateConversationEvent", "OmnichannelAgentSuspendEvent", "OmnichannelCloseConversationEvent", "OmnichannelManagerTextMessageEvent", "OmnichannelUpdateCampaignEvent", "OmnichannelSetConversationCollectedDataEvent", "OmnichannelCompleteCampaignEvent", "OmnichannelArchiveCampaignEvent", "OmnichannelPauseCampaignEvent", "OmnichannelResumeCampaignEvent", "OmnichannelStartCampaignEvent", "OmnichannelScheduleModuleEvent", "OmnichannelStartModuleEvent", "OmnichannelPauseModuleEvent", "OmnichannelResumeModuleEvent", "OmnichannelErrorModuleEvent", "OmnichannelSuccessModuleEvent", "OmnichannelFailModuleEvent", "OmnichannelCompleteModuleEvent", "OmnichannelArchiveModuleEvent", "OmnichannelUpdateModuleEvent", "OmnichannelAddSmsMessageSentModuleEvent", "OmnichannelModuleInitialReplyEvent", "OmnichannelTaskMessageSentEvent", "OmnichannelConnectedInboxPollEvent", "OmnichannelConnectedInboxCreatedEvent", "OmnichannelAgentMessageUnitsEvent", "OmnichannelManagerMessageUnitsEvent", "OmnichannelCustomerMessageUnitsEvent", "OmnichannelSystemMessageUnitsEvent", "OmnichannelPaymentLinkSentEvent", "OmnichannelManualApproveTaskAcceptedEvent", "OmnichannelManualApproveTaskRejectedEvent", "OmnichannelManualApproveTaskTimeoutEvent", "OmnichannelManualApproveTaskRequeueEvent", "OmnichannelTranscriptSavedEvent", "OmnichannelMessageSentEvent", "OmnichannelProviderResponseEvent", "OmnichannelProviderMessageFailedEvent", "AsmAgentLoginEvent", "AsmOpenVoiceEvent", "AsmOpenOmniAgentEvent", "AsmActivateConversationEvent", "AsmDeactivateConversationEvent", "AsmAgentStateChangedEvent", "AsmAgentLogoutEvent", "AsmPauseEvent", "AsmResumeEvent", "AsmConversationPulledEvent", "ScorecardsCreateQuestionEvent", "ScorecardsUpdateQuestionEvent", "ScorecardsDeleteQuestionEvent", "ScorecardsCreateScorecardEvent", "ScorecardsUpdateScorecardEvent", "ScorecardsDeleteScorecardEvent", "ScorecardsCloneScorecardEvent", "ScorecardsCreateEvaluationEvent", "ScorecardsDeleteEvaluationEvent", "ScorecardsCreateSectionEvent", "ScorecardsUpdateSectionEvent", "ScorecardsDeleteSectionEvent", "ScorecardsCreateCategoryEvent", "ScorecardsUpdateCategoryEvent", "ScorecardsDeleteCategoryEvent", "ScorecardsCreateEvaluationQuestionEvent", "ScorecardsUpdateEvaluationQuestionEvent", "ScorecardsDeleteEvaluationQuestionEvent", "ScorecardsCreateScorecardQuestionEvent", "ScorecardsUpdateScorecardQuestionEvent", "ScorecardsDeleteScorecardQuestionEvent", "ScorecardsCreateAutoEvaluationEvent", "ScorecardsUpdateEvaluationEvent", "ScorecardsCreateSmartEvaluationEvent", "TicketEvent", "TicketCustomFieldCreateEvent", "TicketCustomFieldEditEvent", "ComplianceRndQueryEvent", "ComplianceRndQueryCachedEvent", "AgentTrainingCreateLearningOpportunityEvent", "LmsPipelineFailureEvent", "LmsPipelineNoOutputEvent", "LmsPipelineSuccessfulEvent", "BillingCommitBillingPlanEvent", "BillingCreateBillingPlanEvent", "BillingCreateInvoiceEvent", "BillingCreateRateDefinitionEvent", "BillingDeleteBillingPlanEvent", "BillingDeleteInvoiceEvent", "BillingDeleteRateDefinitionEvent", "BillingExportInvoiceEvent", "BillingUpdateBillingPlanEvent", "BillingUpdateInvoiceEvent", "BillingUpdateRateDefinitionEvent", "BillingRatedItemsGeneratedEvent", "BillingAccumulateItemsEvent", "DeliveryFailureEvent", "DeliverySuccessEvent", "ContactManagerEntryAddEvent", "ContactManagerEntryGetEncEvent", "ContactManagerDeleteEvent", "ContactManagerKycEvent", "ContactManagerEntryEditEvent", "ContactManagerListUploadEvent", "ContactManagerKycVerificationEvent", "ContactManagerEntryDeleteEvent", "ContactManagerEntryExpungeEvent", "ContactManagerEntityAssociationEvent", "AccessTokensExpiringEvent", "Event", });
+        new java.lang.String[] { "OrgId", "RegionId", "ClusterId", "EventTime", "AuditId", "EventType", "DummyEvent", "VanaFlagEvent", "VanaFlagReviewEvent", "VanaBillingReportEvent", "VanaFlagSummaryEvent", "VanaPhraseCorrectionEvent", "VanaCreateTranscriptEvent", "VanaCreateSentimentEvent", "VanaCreateSummaryEvent", "OmnichannelCreateProjectEvent", "OmnichannelCreateCampaignEvent", "OmnichannelDailyProjectReportEvent", "OmnichannelDailyConversationReportEvent", "OmnichannelAgentAssignConversationEvent", "OmnichannelAgentUnassignConversationEvent", "OmnichannelAgentReassignConversationEvent", "OmnichannelT10Event", "OmnichannelCustomerTextMessageEvent", "OmnichannelAgentTextMessageEvent", "OmnichannelFinishWrapUpEvent", "OmnichannelBeginWrapUpEvent", "OmnichannelT11Event", "OmnichannelCreateConversationEvent", "OmnichannelAgentSuspendEvent", "OmnichannelCloseConversationEvent", "OmnichannelManagerTextMessageEvent", "OmnichannelUpdateCampaignEvent", "OmnichannelSetConversationCollectedDataEvent", "OmnichannelCompleteCampaignEvent", "OmnichannelArchiveCampaignEvent", "OmnichannelPauseCampaignEvent", "OmnichannelResumeCampaignEvent", "OmnichannelStartCampaignEvent", "OmnichannelScheduleModuleEvent", "OmnichannelStartModuleEvent", "OmnichannelPauseModuleEvent", "OmnichannelResumeModuleEvent", "OmnichannelErrorModuleEvent", "OmnichannelSuccessModuleEvent", "OmnichannelFailModuleEvent", "OmnichannelCompleteModuleEvent", "OmnichannelArchiveModuleEvent", "OmnichannelUpdateModuleEvent", "OmnichannelAddSmsMessageSentModuleEvent", "OmnichannelModuleInitialReplyEvent", "OmnichannelTaskMessageSentEvent", "OmnichannelConnectedInboxPollEvent", "OmnichannelConnectedInboxCreatedEvent", "OmnichannelAgentMessageUnitsEvent", "OmnichannelManagerMessageUnitsEvent", "OmnichannelCustomerMessageUnitsEvent", "OmnichannelSystemMessageUnitsEvent", "OmnichannelPaymentLinkSentEvent", "OmnichannelManualApproveTaskAcceptedEvent", "OmnichannelManualApproveTaskRejectedEvent", "OmnichannelManualApproveTaskTimeoutEvent", "OmnichannelManualApproveTaskRequeueEvent", "OmnichannelTranscriptSavedEvent", "OmnichannelMessageSentEvent", "OmnichannelProviderResponseEvent", "OmnichannelProviderMessageFailedEvent", "AsmAgentLoginEvent", "AsmOpenVoiceEvent", "AsmOpenOmniAgentEvent", "AsmActivateConversationEvent", "AsmDeactivateConversationEvent", "AsmAgentStateChangedEvent", "AsmAgentLogoutEvent", "AsmPauseEvent", "AsmResumeEvent", "AsmConversationPulledEvent", "ScorecardsCreateQuestionEvent", "ScorecardsUpdateQuestionEvent", "ScorecardsDeleteQuestionEvent", "ScorecardsCreateScorecardEvent", "ScorecardsUpdateScorecardEvent", "ScorecardsDeleteScorecardEvent", "ScorecardsCloneScorecardEvent", "ScorecardsCreateEvaluationEvent", "ScorecardsDeleteEvaluationEvent", "ScorecardsCreateSectionEvent", "ScorecardsUpdateSectionEvent", "ScorecardsDeleteSectionEvent", "ScorecardsCreateCategoryEvent", "ScorecardsUpdateCategoryEvent", "ScorecardsDeleteCategoryEvent", "ScorecardsCreateEvaluationQuestionEvent", "ScorecardsUpdateEvaluationQuestionEvent", "ScorecardsDeleteEvaluationQuestionEvent", "ScorecardsCreateScorecardQuestionEvent", "ScorecardsUpdateScorecardQuestionEvent", "ScorecardsDeleteScorecardQuestionEvent", "ScorecardsCreateAutoEvaluationEvent", "ScorecardsUpdateEvaluationEvent", "ScorecardsCreateSmartEvaluationEvent", "TicketEvent", "TicketCustomFieldCreateEvent", "TicketCustomFieldEditEvent", "ComplianceRndQueryEvent", "ComplianceRndQueryCachedEvent", "AgentTrainingCreateLearningOpportunityEvent", "LmsPipelineFailureEvent", "LmsPipelineNoOutputEvent", "LmsPipelineSuccessfulEvent", "BillingCommitBillingPlanEvent", "BillingCreateBillingPlanEvent", "BillingCreateInvoiceEvent", "BillingCreateRateDefinitionEvent", "BillingDeleteBillingPlanEvent", "BillingDeleteInvoiceEvent", "BillingDeleteRateDefinitionEvent", "BillingExportInvoiceEvent", "BillingUpdateBillingPlanEvent", "BillingUpdateInvoiceEvent", "BillingUpdateRateDefinitionEvent", "BillingRatedItemsGeneratedEvent", "BillingAccumulateItemsEvent", "DeliveryFailureEvent", "DeliverySuccessEvent", "ContactManagerEntryAddEvent", "ContactManagerEntryGetEncEvent", "ContactManagerDeleteEvent", "ContactManagerKycEvent", "ContactManagerEntryEditEvent", "ContactManagerListUploadEvent", "ContactManagerKycVerificationEvent", "ContactManagerEntryDeleteEvent", "ContactManagerEntryExpungeEvent", "ContactManagerEntityAssociationEvent", "AccessTokensExpiringEvent", "WfmPublishScheduleEvent", "Event", });
     com.tcn.cloud.api.api.commons.audit.AgentTrainingEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.AsmEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.BillingEventsProto.getDescriptor();
@@ -511,6 +516,7 @@ public final class AuditProto {
     com.tcn.cloud.api.api.commons.audit.ScorecardsEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.audit.VanaEventsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.audit.WfmEventsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
