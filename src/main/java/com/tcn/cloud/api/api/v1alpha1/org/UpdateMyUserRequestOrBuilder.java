@@ -164,6 +164,16 @@ public interface UpdateMyUserRequestOrBuilder extends
 
   /**
    * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 6 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  boolean getPlayNotificationSounds();
+
+  /**
+   * <pre>
    * Mask to filter fields on organization entities in response.
    * </pre>
    *

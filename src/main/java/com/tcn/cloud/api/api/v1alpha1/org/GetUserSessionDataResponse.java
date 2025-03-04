@@ -789,6 +789,16 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder();
+
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    boolean getPlayNotificationSounds();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.GetUserSessionDataResponse.User}
@@ -2844,6 +2854,21 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return accessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
     }
 
+    public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 37;
+    private boolean playNotificationSounds_ = false;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public boolean getPlayNotificationSounds() {
+      return playNotificationSounds_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2953,6 +2978,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (accessTokenExpiration_ != null) {
         output.writeMessage(36, getAccessTokenExpiration());
+      }
+      if (playNotificationSounds_ != false) {
+        output.writeBool(37, playNotificationSounds_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3096,6 +3124,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(36, getAccessTokenExpiration());
       }
+      if (playNotificationSounds_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(37, playNotificationSounds_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3196,6 +3228,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!getAccessTokenExpiration()
             .equals(other.getAccessTokenExpiration())) return false;
       }
+      if (getPlayNotificationSounds()
+          != other.getPlayNotificationSounds()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3299,6 +3333,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         hash = (37 * hash) + ACCESS_TOKEN_EXPIRATION_FIELD_NUMBER;
         hash = (53 * hash) + getAccessTokenExpiration().hashCode();
       }
+      hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPlayNotificationSounds());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3519,6 +3556,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           accessTokenExpirationBuilder_.dispose();
           accessTokenExpirationBuilder_ = null;
         }
+        playNotificationSounds_ = false;
         return this;
       }
 
@@ -3665,6 +3703,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           result.accessTokenExpiration_ = accessTokenExpirationBuilder_ == null
               ? accessTokenExpiration_
               : accessTokenExpirationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.playNotificationSounds_ = playNotificationSounds_;
         }
       }
 
@@ -3858,6 +3899,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (other.hasAccessTokenExpiration()) {
           mergeAccessTokenExpiration(other.getAccessTokenExpiration());
+        }
+        if (other.getPlayNotificationSounds() != false) {
+          setPlayNotificationSounds(other.getPlayNotificationSounds());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4064,6 +4108,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                 bitField0_ |= 0x40000000;
                 break;
               } // case 290
+              case 296: {
+                playNotificationSounds_ = input.readBool();
+                bitField0_ |= 0x80000000;
+                break;
+              } // case 296
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7478,6 +7527,50 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           accessTokenExpiration_ = null;
         }
         return accessTokenExpirationBuilder_;
+      }
+
+      private boolean playNotificationSounds_ ;
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>bool play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       * @return The playNotificationSounds.
+       */
+      @java.lang.Override
+      public boolean getPlayNotificationSounds() {
+        return playNotificationSounds_;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>bool play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       * @param value The playNotificationSounds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayNotificationSounds(boolean value) {
+
+        playNotificationSounds_ = value;
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the user wants notification sounds to play
+       * </pre>
+       *
+       * <code>bool play_notification_sounds = 37 [json_name = "playNotificationSounds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlayNotificationSounds() {
+        bitField0_ = (bitField0_ & ~0x80000000);
+        playNotificationSounds_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
