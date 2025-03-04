@@ -736,5 +736,32 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder getFinviEntrypointOrBuilder();
 
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   * @return Whether the contactManagementEnrichment field is set.
+   */
+  boolean hasContactManagementEnrichment();
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   * @return The contactManagementEnrichment.
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment getContactManagementEnrichment();
+  /**
+   * <pre>
+   * Will import a list of contact manager temp file from lms
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment contact_management_enrichment = 80 [json_name = "contactManagementEnrichment"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder getContactManagementEnrichmentOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }
