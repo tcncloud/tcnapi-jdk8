@@ -50872,33 +50872,6 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder getCampaignSidOrBuilder();
-
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     * @return Whether the agentResponse field is set.
-     */
-    boolean hasAgentResponse();
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     * @return The agentResponse.
-     */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse();
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder();
   }
   /**
    * <pre>
@@ -52345,44 +52318,6 @@ private static final long serialVersionUID = 0L;
       return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
     }
 
-    public static final int AGENT_RESPONSE_FIELD_NUMBER = 3;
-    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     * @return Whether the agentResponse field is set.
-     */
-    @java.lang.Override
-    public boolean hasAgentResponse() {
-      return agentResponse_ != null;
-    }
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     * @return The agentResponse.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
-      return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-    }
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
-      return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52403,9 +52338,6 @@ private static final long serialVersionUID = 0L;
       if (campaignSid_ != null) {
         output.writeMessage(2, getCampaignSid());
       }
-      if (agentResponse_ != null) {
-        output.writeMessage(3, getAgentResponse());
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -52422,10 +52354,6 @@ private static final long serialVersionUID = 0L;
       if (campaignSid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCampaignSid());
-      }
-      if (agentResponse_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getAgentResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -52452,11 +52380,6 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignSid()
             .equals(other.getCampaignSid())) return false;
       }
-      if (hasAgentResponse() != other.hasAgentResponse()) return false;
-      if (hasAgentResponse()) {
-        if (!getAgentResponse()
-            .equals(other.getAgentResponse())) return false;
-      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -52475,10 +52398,6 @@ private static final long serialVersionUID = 0L;
       if (hasCampaignSid()) {
         hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignSid().hashCode();
-      }
-      if (hasAgentResponse()) {
-        hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getAgentResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -52625,11 +52544,6 @@ private static final long serialVersionUID = 0L;
           campaignSidBuilder_.dispose();
           campaignSidBuilder_ = null;
         }
-        agentResponse_ = null;
-        if (agentResponseBuilder_ != null) {
-          agentResponseBuilder_.dispose();
-          agentResponseBuilder_ = null;
-        }
         return this;
       }
 
@@ -52672,11 +52586,6 @@ private static final long serialVersionUID = 0L;
           result.campaignSid_ = campaignSidBuilder_ == null
               ? campaignSid_
               : campaignSidBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.agentResponse_ = agentResponseBuilder_ == null
-              ? agentResponse_
-              : agentResponseBuilder_.build();
         }
       }
 
@@ -52730,9 +52639,6 @@ private static final long serialVersionUID = 0L;
         if (other.hasCampaignSid()) {
           mergeCampaignSid(other.getCampaignSid());
         }
-        if (other.hasAgentResponse()) {
-          mergeAgentResponse(other.getAgentResponse());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -52773,13 +52679,6 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 26: {
-                input.readMessage(
-                    getAgentResponseFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -53106,161 +53005,6 @@ private static final long serialVersionUID = 0L;
         }
         return campaignSidBuilder_;
       }
-
-      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> agentResponseBuilder_;
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       * @return Whether the agentResponse field is set.
-       */
-      public boolean hasAgentResponse() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       * @return The agentResponse.
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
-        if (agentResponseBuilder_ == null) {
-          return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-        } else {
-          return agentResponseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public Builder setAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
-        if (agentResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          agentResponse_ = value;
-        } else {
-          agentResponseBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public Builder setAgentResponse(
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
-        if (agentResponseBuilder_ == null) {
-          agentResponse_ = builderForValue.build();
-        } else {
-          agentResponseBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public Builder mergeAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
-        if (agentResponseBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            agentResponse_ != null &&
-            agentResponse_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance()) {
-            getAgentResponseBuilder().mergeFrom(value);
-          } else {
-            agentResponse_ = value;
-          }
-        } else {
-          agentResponseBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public Builder clearAgentResponse() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        agentResponse_ = null;
-        if (agentResponseBuilder_ != null) {
-          agentResponseBuilder_.dispose();
-          agentResponseBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getAgentResponseBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getAgentResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
-        if (agentResponseBuilder_ != null) {
-          return agentResponseBuilder_.getMessageOrBuilder();
-        } else {
-          return agentResponse_ == null ?
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-        }
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 3 [json_name = "agentResponse"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
-          getAgentResponseFieldBuilder() {
-        if (agentResponseBuilder_ == null) {
-          agentResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
-                  getAgentResponse(),
-                  getParentForChildren(),
-                  isClean());
-          agentResponse_ = null;
-        }
-        return agentResponseBuilder_;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -53436,33 +53180,6 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress email_address = 4 [json_name = "emailAddress"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddressOrBuilder getEmailAddressOrBuilder();
-
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     * @return Whether the agentResponse field is set.
-     */
-    boolean hasAgentResponse();
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     * @return The agentResponse.
-     */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse();
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     */
-    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder();
   }
   /**
    * <pre>
@@ -56415,44 +56132,6 @@ private static final long serialVersionUID = 0L;
       return emailAddress_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Chat.EmailAddress.getDefaultInstance() : emailAddress_;
     }
 
-    public static final int AGENT_RESPONSE_FIELD_NUMBER = 5;
-    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     * @return Whether the agentResponse field is set.
-     */
-    @java.lang.Override
-    public boolean hasAgentResponse() {
-      return agentResponse_ != null;
-    }
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     * @return The agentResponse.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
-      return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-    }
-    /**
-     * <pre>
-     * Query constraints on agent response.
-     * </pre>
-     *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
-      return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -56479,9 +56158,6 @@ private static final long serialVersionUID = 0L;
       if (emailAddress_ != null) {
         output.writeMessage(4, getEmailAddress());
       }
-      if (agentResponse_ != null) {
-        output.writeMessage(5, getAgentResponse());
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -56506,10 +56182,6 @@ private static final long serialVersionUID = 0L;
       if (emailAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getEmailAddress());
-      }
-      if (agentResponse_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getAgentResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -56546,11 +56218,6 @@ private static final long serialVersionUID = 0L;
         if (!getEmailAddress()
             .equals(other.getEmailAddress())) return false;
       }
-      if (hasAgentResponse() != other.hasAgentResponse()) return false;
-      if (hasAgentResponse()) {
-        if (!getAgentResponse()
-            .equals(other.getAgentResponse())) return false;
-      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -56577,10 +56244,6 @@ private static final long serialVersionUID = 0L;
       if (hasEmailAddress()) {
         hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getEmailAddress().hashCode();
-      }
-      if (hasAgentResponse()) {
-        hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getAgentResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -56737,11 +56400,6 @@ private static final long serialVersionUID = 0L;
           emailAddressBuilder_.dispose();
           emailAddressBuilder_ = null;
         }
-        agentResponse_ = null;
-        if (agentResponseBuilder_ != null) {
-          agentResponseBuilder_.dispose();
-          agentResponseBuilder_ = null;
-        }
         return this;
       }
 
@@ -56794,11 +56452,6 @@ private static final long serialVersionUID = 0L;
           result.emailAddress_ = emailAddressBuilder_ == null
               ? emailAddress_
               : emailAddressBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.agentResponse_ = agentResponseBuilder_ == null
-              ? agentResponse_
-              : agentResponseBuilder_.build();
         }
       }
 
@@ -56858,9 +56511,6 @@ private static final long serialVersionUID = 0L;
         if (other.hasEmailAddress()) {
           mergeEmailAddress(other.getEmailAddress());
         }
-        if (other.hasAgentResponse()) {
-          mergeAgentResponse(other.getAgentResponse());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -56915,13 +56565,6 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
-              case 42: {
-                input.readMessage(
-                    getAgentResponseFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -57557,161 +57200,6 @@ private static final long serialVersionUID = 0L;
           emailAddress_ = null;
         }
         return emailAddressBuilder_;
-      }
-
-      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> agentResponseBuilder_;
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       * @return Whether the agentResponse field is set.
-       */
-      public boolean hasAgentResponse() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       * @return The agentResponse.
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
-        if (agentResponseBuilder_ == null) {
-          return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-        } else {
-          return agentResponseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public Builder setAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
-        if (agentResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          agentResponse_ = value;
-        } else {
-          agentResponseBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public Builder setAgentResponse(
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
-        if (agentResponseBuilder_ == null) {
-          agentResponse_ = builderForValue.build();
-        } else {
-          agentResponseBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public Builder mergeAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
-        if (agentResponseBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            agentResponse_ != null &&
-            agentResponse_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance()) {
-            getAgentResponseBuilder().mergeFrom(value);
-          } else {
-            agentResponse_ = value;
-          }
-        } else {
-          agentResponseBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public Builder clearAgentResponse() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        agentResponse_ = null;
-        if (agentResponseBuilder_ != null) {
-          agentResponseBuilder_.dispose();
-          agentResponseBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getAgentResponseBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getAgentResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
-        if (agentResponseBuilder_ != null) {
-          return agentResponseBuilder_.getMessageOrBuilder();
-        } else {
-          return agentResponse_ == null ?
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
-        }
-      }
-      /**
-       * <pre>
-       * Query constraints on agent response.
-       * </pre>
-       *
-       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 5 [json_name = "agentResponse"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
-          getAgentResponseFieldBuilder() {
-        if (agentResponseBuilder_ == null) {
-          agentResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
-                  getAgentResponse(),
-                  getParentForChildren(),
-                  isClean());
-          agentResponse_ = null;
-        }
-        return agentResponseBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -80269,6 +79757,44 @@ private static final long serialVersionUID = 0L;
     return skills_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
   }
 
+  public static final int AGENT_RESPONSE_FIELD_NUMBER = 11;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return Whether the agentResponse field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentResponse() {
+    return agentResponse_ != null;
+  }
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return The agentResponse.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
+    return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+  }
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
+    return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -80312,6 +79838,9 @@ private static final long serialVersionUID = 0L;
     }
     if (skills_ != null) {
       output.writeMessage(10, getSkills());
+    }
+    if (agentResponse_ != null) {
+      output.writeMessage(11, getAgentResponse());
     }
     getUnknownFields().writeTo(output);
   }
@@ -80361,6 +79890,10 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getSkills());
+    }
+    if (agentResponse_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getAgentResponse());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -80427,6 +79960,11 @@ private static final long serialVersionUID = 0L;
       if (!getSkills()
           .equals(other.getSkills())) return false;
     }
+    if (hasAgentResponse() != other.hasAgentResponse()) return false;
+    if (hasAgentResponse()) {
+      if (!getAgentResponse()
+          .equals(other.getAgentResponse())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -80477,6 +80015,10 @@ private static final long serialVersionUID = 0L;
     if (hasSkills()) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkills().hashCode();
+    }
+    if (hasAgentResponse()) {
+      hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentResponse().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -80663,6 +80205,11 @@ private static final long serialVersionUID = 0L;
         skillsBuilder_.dispose();
         skillsBuilder_ = null;
       }
+      agentResponse_ = null;
+      if (agentResponseBuilder_ != null) {
+        agentResponseBuilder_.dispose();
+        agentResponseBuilder_ = null;
+      }
       return this;
     }
 
@@ -80746,6 +80293,11 @@ private static final long serialVersionUID = 0L;
             ? skills_
             : skillsBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.agentResponse_ = agentResponseBuilder_ == null
+            ? agentResponse_
+            : agentResponseBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -80821,6 +80373,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkills()) {
         mergeSkills(other.getSkills());
+      }
+      if (other.hasAgentResponse()) {
+        mergeAgentResponse(other.getAgentResponse());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -80918,6 +80473,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getAgentResponseFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -82487,6 +82049,161 @@ private static final long serialVersionUID = 0L;
         skills_ = null;
       }
       return skillsBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> agentResponseBuilder_;
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     * @return Whether the agentResponse field is set.
+     */
+    public boolean hasAgentResponse() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     * @return The agentResponse.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
+      if (agentResponseBuilder_ == null) {
+        return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+      } else {
+        return agentResponseBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder setAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+      if (agentResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        agentResponse_ = value;
+      } else {
+        agentResponseBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder setAgentResponse(
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+      if (agentResponseBuilder_ == null) {
+        agentResponse_ = builderForValue.build();
+      } else {
+        agentResponseBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder mergeAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+      if (agentResponseBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          agentResponse_ != null &&
+          agentResponse_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance()) {
+          getAgentResponseBuilder().mergeFrom(value);
+        } else {
+          agentResponse_ = value;
+        }
+      } else {
+        agentResponseBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder clearAgentResponse() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      agentResponse_ = null;
+      if (agentResponseBuilder_ != null) {
+        agentResponseBuilder_.dispose();
+        agentResponseBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getAgentResponseBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getAgentResponseFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
+      if (agentResponseBuilder_ != null) {
+        return agentResponseBuilder_.getMessageOrBuilder();
+      } else {
+        return agentResponse_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getAgentResponseFieldBuilder() {
+      if (agentResponseBuilder_ == null) {
+        agentResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
+                getAgentResponse(),
+                getParentForChildren(),
+                isClean());
+        agentResponse_ = null;
+      }
+      return agentResponseBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
