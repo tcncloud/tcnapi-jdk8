@@ -243,5 +243,59 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder();
 
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return Whether the omniMessageReceived field is set.
+   */
+  boolean hasOmniMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return The omniMessageReceived.
+   */
+  com.tcn.cloud.api.api.commons.OmniMessageReceieved getOmniMessageReceived();
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder getOmniMessageReceivedOrBuilder();
+
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return Whether the omniConversationAssigned field is set.
+   */
+  boolean hasOmniConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return The omniConversationAssigned.
+   */
+  com.tcn.cloud.api.api.commons.OmniConversationAssigned getOmniConversationAssigned();
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder getOmniConversationAssignedOrBuilder();
+
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }

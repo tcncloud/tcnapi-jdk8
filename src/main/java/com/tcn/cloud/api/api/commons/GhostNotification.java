@@ -58,6 +58,8 @@ private static final long serialVersionUID = 0L;
     DIRECTED_CALL_HANGUP(8),
     AGENT_QUEUED_CALLS_NOTIFICATION(9),
     AUTH_TOKEN_EXPIRATION_NOTIFICATION(11),
+    OMNI_MESSAGE_RECEIVED(12),
+    OMNI_CONVERSATION_ASSIGNED(13),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -83,6 +85,8 @@ private static final long serialVersionUID = 0L;
         case 8: return DIRECTED_CALL_HANGUP;
         case 9: return AGENT_QUEUED_CALLS_NOTIFICATION;
         case 11: return AUTH_TOKEN_EXPIRATION_NOTIFICATION;
+        case 12: return OMNI_MESSAGE_RECEIVED;
+        case 13: return OMNI_CONVERSATION_ASSIGNED;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -489,6 +493,92 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
   }
 
+  public static final int OMNI_MESSAGE_RECEIVED_FIELD_NUMBER = 12;
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return Whether the omniMessageReceived field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniMessageReceived() {
+    return payloadCase_ == 12;
+  }
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   * @return The omniMessageReceived.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessageReceieved getOmniMessageReceived() {
+    if (payloadCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * notification that a message has been received
+   * </pre>
+   *
+   * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder getOmniMessageReceivedOrBuilder() {
+    if (payloadCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+  }
+
+  public static final int OMNI_CONVERSATION_ASSIGNED_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return Whether the omniConversationAssigned field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniConversationAssigned() {
+    return payloadCase_ == 13;
+  }
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   * @return The omniConversationAssigned.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversationAssigned getOmniConversationAssigned() {
+    if (payloadCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * notification that a conversations has been assigned
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder getOmniConversationAssignedOrBuilder() {
+    if (payloadCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -529,6 +619,12 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 11) {
       output.writeMessage(11, (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_);
+    }
+    if (payloadCase_ == 12) {
+      output.writeMessage(12, (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_);
+    }
+    if (payloadCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -573,6 +669,14 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_);
+    }
+    if (payloadCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_);
+    }
+    if (payloadCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -625,6 +729,14 @@ private static final long serialVersionUID = 0L;
         if (!getAuthTokenExpirationNotification()
             .equals(other.getAuthTokenExpirationNotification())) return false;
         break;
+      case 12:
+        if (!getOmniMessageReceived()
+            .equals(other.getOmniMessageReceived())) return false;
+        break;
+      case 13:
+        if (!getOmniConversationAssigned()
+            .equals(other.getOmniConversationAssigned())) return false;
+        break;
       case 0:
       default:
     }
@@ -673,6 +785,14 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + AUTH_TOKEN_EXPIRATION_NOTIFICATION_FIELD_NUMBER;
         hash = (53 * hash) + getAuthTokenExpirationNotification().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + OMNI_MESSAGE_RECEIVED_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniMessageReceived().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + OMNI_CONVERSATION_ASSIGNED_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniConversationAssigned().hashCode();
         break;
       case 0:
       default:
@@ -838,6 +958,12 @@ private static final long serialVersionUID = 0L;
       if (authTokenExpirationNotificationBuilder_ != null) {
         authTokenExpirationNotificationBuilder_.clear();
       }
+      if (omniMessageReceivedBuilder_ != null) {
+        omniMessageReceivedBuilder_.clear();
+      }
+      if (omniConversationAssignedBuilder_ != null) {
+        omniConversationAssignedBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -913,6 +1039,14 @@ private static final long serialVersionUID = 0L;
       if (payloadCase_ == 11 &&
           authTokenExpirationNotificationBuilder_ != null) {
         result.payload_ = authTokenExpirationNotificationBuilder_.build();
+      }
+      if (payloadCase_ == 12 &&
+          omniMessageReceivedBuilder_ != null) {
+        result.payload_ = omniMessageReceivedBuilder_.build();
+      }
+      if (payloadCase_ == 13 &&
+          omniConversationAssignedBuilder_ != null) {
+        result.payload_ = omniConversationAssignedBuilder_.build();
       }
     }
 
@@ -996,6 +1130,14 @@ private static final long serialVersionUID = 0L;
         }
         case AUTH_TOKEN_EXPIRATION_NOTIFICATION: {
           mergeAuthTokenExpirationNotification(other.getAuthTokenExpirationNotification());
+          break;
+        }
+        case OMNI_MESSAGE_RECEIVED: {
+          mergeOmniMessageReceived(other.getOmniMessageReceived());
+          break;
+        }
+        case OMNI_CONVERSATION_ASSIGNED: {
+          mergeOmniConversationAssigned(other.getOmniConversationAssigned());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1089,6 +1231,20 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 11;
               break;
             } // case 90
+            case 98: {
+              input.readMessage(
+                  getOmniMessageReceivedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getOmniConversationAssignedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 13;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2635,6 +2791,362 @@ private static final long serialVersionUID = 0L;
       payloadCase_ = 11;
       onChanged();
       return authTokenExpirationNotificationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessageReceieved, com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder, com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder> omniMessageReceivedBuilder_;
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     * @return Whether the omniMessageReceived field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniMessageReceived() {
+      return payloadCase_ == 12;
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     * @return The omniMessageReceived.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniMessageReceieved getOmniMessageReceived() {
+      if (omniMessageReceivedBuilder_ == null) {
+        if (payloadCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 12) {
+          return omniMessageReceivedBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    public Builder setOmniMessageReceived(com.tcn.cloud.api.api.commons.OmniMessageReceieved value) {
+      if (omniMessageReceivedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        omniMessageReceivedBuilder_.setMessage(value);
+      }
+      payloadCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    public Builder setOmniMessageReceived(
+        com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder builderForValue) {
+      if (omniMessageReceivedBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniMessageReceivedBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    public Builder mergeOmniMessageReceived(com.tcn.cloud.api.api.commons.OmniMessageReceieved value) {
+      if (omniMessageReceivedBuilder_ == null) {
+        if (payloadCase_ == 12 &&
+            payload_ != com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniMessageReceieved.newBuilder((com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 12) {
+          omniMessageReceivedBuilder_.mergeFrom(value);
+        } else {
+          omniMessageReceivedBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    public Builder clearOmniMessageReceived() {
+      if (omniMessageReceivedBuilder_ == null) {
+        if (payloadCase_ == 12) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 12) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        omniMessageReceivedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder getOmniMessageReceivedBuilder() {
+      return getOmniMessageReceivedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder getOmniMessageReceivedOrBuilder() {
+      if ((payloadCase_ == 12) && (omniMessageReceivedBuilder_ != null)) {
+        return omniMessageReceivedBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a message has been received
+     * </pre>
+     *
+     * <code>.api.commons.OmniMessageReceieved omni_message_received = 12 [json_name = "omniMessageReceived"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniMessageReceieved, com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder, com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder> 
+        getOmniMessageReceivedFieldBuilder() {
+      if (omniMessageReceivedBuilder_ == null) {
+        if (!(payloadCase_ == 12)) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniMessageReceieved.getDefaultInstance();
+        }
+        omniMessageReceivedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniMessageReceieved, com.tcn.cloud.api.api.commons.OmniMessageReceieved.Builder, com.tcn.cloud.api.api.commons.OmniMessageReceievedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.OmniMessageReceieved) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 12;
+      onChanged();
+      return omniMessageReceivedBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversationAssigned, com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder, com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder> omniConversationAssignedBuilder_;
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     * @return Whether the omniConversationAssigned field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniConversationAssigned() {
+      return payloadCase_ == 13;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     * @return The omniConversationAssigned.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniConversationAssigned getOmniConversationAssigned() {
+      if (omniConversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 13) {
+          return omniConversationAssignedBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    public Builder setOmniConversationAssigned(com.tcn.cloud.api.api.commons.OmniConversationAssigned value) {
+      if (omniConversationAssignedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        omniConversationAssignedBuilder_.setMessage(value);
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    public Builder setOmniConversationAssigned(
+        com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder builderForValue) {
+      if (omniConversationAssignedBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniConversationAssignedBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    public Builder mergeOmniConversationAssigned(com.tcn.cloud.api.api.commons.OmniConversationAssigned value) {
+      if (omniConversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13 &&
+            payload_ != com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniConversationAssigned.newBuilder((com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 13) {
+          omniConversationAssignedBuilder_.mergeFrom(value);
+        } else {
+          omniConversationAssignedBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    public Builder clearOmniConversationAssigned() {
+      if (omniConversationAssignedBuilder_ == null) {
+        if (payloadCase_ == 13) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 13) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        omniConversationAssignedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder getOmniConversationAssignedBuilder() {
+      return getOmniConversationAssignedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder getOmniConversationAssignedOrBuilder() {
+      if ((payloadCase_ == 13) && (omniConversationAssignedBuilder_ != null)) {
+        return omniConversationAssignedBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * notification that a conversations has been assigned
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationAssigned omni_conversation_assigned = 13 [json_name = "omniConversationAssigned"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversationAssigned, com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder, com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder> 
+        getOmniConversationAssignedFieldBuilder() {
+      if (omniConversationAssignedBuilder_ == null) {
+        if (!(payloadCase_ == 13)) {
+          payload_ = com.tcn.cloud.api.api.commons.OmniConversationAssigned.getDefaultInstance();
+        }
+        omniConversationAssignedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniConversationAssigned, com.tcn.cloud.api.api.commons.OmniConversationAssigned.Builder, com.tcn.cloud.api.api.commons.OmniConversationAssignedOrBuilder>(
+                (com.tcn.cloud.api.api.commons.OmniConversationAssigned) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 13;
+      onChanged();
+      return omniConversationAssignedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
