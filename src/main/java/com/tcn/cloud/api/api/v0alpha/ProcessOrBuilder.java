@@ -763,5 +763,32 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichmentOrBuilder getContactManagementEnrichmentOrBuilder();
 
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   * @return Whether the ticketExchangeSink field is set.
+   */
+  boolean hasTicketExchangeSink();
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   * @return The ticketExchangeSink.
+   */
+  com.tcn.cloud.api.api.v0alpha.TicketExchangeSink getTicketExchangeSink();
+  /**
+   * <pre>
+   * TicketExchangeSink
+   * </pre>
+   *
+   * <code>.api.v0alpha.TicketExchangeSink ticket_exchange_sink = 81 [json_name = "ticketExchangeSink"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.TicketExchangeSinkOrBuilder getTicketExchangeSinkOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }

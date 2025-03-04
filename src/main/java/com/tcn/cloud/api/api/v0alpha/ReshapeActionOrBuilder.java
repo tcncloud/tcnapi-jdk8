@@ -34,7 +34,7 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2333
+   *     See api/v0alpha/lms.proto;l=2335
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Deprecated int getMatchingTypeValue();
@@ -45,7 +45,7 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2333
+   *     See api/v0alpha/lms.proto;l=2335
    * @return The matchingType.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getMatchingType();
@@ -53,14 +53,14 @@ public interface ReshapeActionOrBuilder extends
   /**
    * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-   *     See api/v0alpha/lms.proto;l=2334
+   *     See api/v0alpha/lms.proto;l=2336
    * @return Whether the predicate field is set.
    */
   @java.lang.Deprecated boolean hasPredicate();
   /**
    * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-   *     See api/v0alpha/lms.proto;l=2334
+   *     See api/v0alpha/lms.proto;l=2336
    * @return The predicate.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate();
