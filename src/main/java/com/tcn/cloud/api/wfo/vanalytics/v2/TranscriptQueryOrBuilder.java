@@ -41,7 +41,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=525
+   *     See wfo/vanalytics/v2/transcript.proto;l=541
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -52,7 +52,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=525
+   *     See wfo/vanalytics/v2/transcript.proto;l=541
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
@@ -280,4 +280,31 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getSkillsOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return Whether the agentResponse field is set.
+   */
+  boolean hasAgentResponse();
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return The agentResponse.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse();
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder();
 }

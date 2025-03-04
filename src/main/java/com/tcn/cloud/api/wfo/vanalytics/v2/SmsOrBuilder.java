@@ -117,4 +117,58 @@ public interface SmsOrBuilder extends
    * @return The campaignSid.
    */
   long getCampaignSid();
+
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Sms.AgentResponse&gt; agent_response = 6 [json_name = "agentResponse"];</code>
+   */
+  int getAgentResponseCount();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Sms.AgentResponse&gt; agent_response = 6 [json_name = "agentResponse"];</code>
+   */
+  boolean containsAgentResponse(
+      java.lang.String key);
+  /**
+   * Use {@link #getAgentResponseMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.AgentResponse>
+  getAgentResponse();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Sms.AgentResponse&gt; agent_response = 6 [json_name = "agentResponse"];</code>
+   */
+  java.util.Map<java.lang.String, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.AgentResponse>
+  getAgentResponseMap();
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Sms.AgentResponse&gt; agent_response = 6 [json_name = "agentResponse"];</code>
+   */
+  /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Sms.AgentResponse getAgentResponseOrDefault(
+      java.lang.String key,
+      /* nullable */
+com.tcn.cloud.api.wfo.vanalytics.v2.Sms.AgentResponse defaultValue);
+  /**
+   * <pre>
+   * The agent responses for this conversation.
+   * </pre>
+   *
+   * <code>map&lt;string, .wfo.vanalytics.v2.Sms.AgentResponse&gt; agent_response = 6 [json_name = "agentResponse"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.Sms.AgentResponse getAgentResponseOrThrow(
+      java.lang.String key);
 }

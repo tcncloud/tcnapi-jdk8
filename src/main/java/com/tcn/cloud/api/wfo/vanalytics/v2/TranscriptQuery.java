@@ -57265,6 +57265,6327 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface AgentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.AgentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> 
+        getAndList();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAnd(int index);
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    int getAndCount();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getAndOrBuilderList();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAndOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> 
+        getOrList();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getOr(int index);
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    int getOrCount();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getOrOrBuilderList();
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getOrOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Optional. Queries for what does not match the agent response query.
+     * </pre>
+     *
+     * <code>bool not = 3 [json_name = "not"];</code>
+     * @return The not.
+     */
+    boolean getNot();
+
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     * @return Whether the key field is set.
+     */
+    boolean hasKey();
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     * @return The key.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getKey();
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder getKeyOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     * @return Whether the values field is set.
+     */
+    boolean hasValues();
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     * @return The values.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getValues();
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder getValuesOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     * @return Whether the numbers field is set.
+     */
+    boolean hasNumbers();
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     * @return The numbers.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getNumbers();
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder getNumbersOrBuilder();
+  }
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse}
+   */
+  public static final class AgentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse)
+      AgentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AgentResponse.newBuilder() to construct.
+    private AgentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AgentResponse() {
+      and_ = java.util.Collections.emptyList();
+      or_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AgentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder.class);
+    }
+
+    public interface ValuesOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      java.util.List<java.lang.String>
+          getInList();
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      int getInCount();
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      java.lang.String getIn(int index);
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      com.google.protobuf.ByteString
+          getInBytes(int index);
+
+      /**
+       * <pre>
+       * Optional. Queries where value for key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The startsWith.
+       */
+      java.lang.String getStartsWith();
+      /**
+       * <pre>
+       * Optional. Queries where value for key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The bytes for startsWith.
+       */
+      com.google.protobuf.ByteString
+          getStartsWithBytes();
+
+      /**
+       * <pre>
+       * Optional. Queries where value for key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The contains.
+       */
+      java.lang.String getContains();
+      /**
+       * <pre>
+       * Optional. Queries where value for key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The bytes for contains.
+       */
+      com.google.protobuf.ByteString
+          getContainsBytes();
+    }
+    /**
+     * <pre>
+     * Values defines a query on values.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values}
+     */
+    public static final class Values extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)
+        ValuesOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Values.newBuilder() to construct.
+      private Values(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Values() {
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        startsWith_ = "";
+        contains_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Values();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Values_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Values_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder.class);
+      }
+
+      public static final int IN_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+
+      public static final int STARTS_WITH_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object startsWith_ = "";
+      /**
+       * <pre>
+       * Optional. Queries where value for key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The startsWith.
+       */
+      @java.lang.Override
+      public java.lang.String getStartsWith() {
+        java.lang.Object ref = startsWith_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startsWith_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value for key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The bytes for startsWith.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStartsWithBytes() {
+        java.lang.Object ref = startsWith_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startsWith_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONTAINS_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object contains_ = "";
+      /**
+       * <pre>
+       * Optional. Queries where value for key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The contains.
+       */
+      @java.lang.Override
+      public java.lang.String getContains() {
+        java.lang.Object ref = contains_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contains_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value for key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The bytes for contains.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContainsBytes() {
+        java.lang.Object ref = contains_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contains_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < in_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startsWith_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startsWith_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contains_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contains_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < in_.size(); i++) {
+            dataSize += computeStringSizeNoTag(in_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getInList().size();
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startsWith_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startsWith_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contains_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contains_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values) obj;
+
+        if (!getInList()
+            .equals(other.getInList())) return false;
+        if (!getStartsWith()
+            .equals(other.getStartsWith())) return false;
+        if (!getContains()
+            .equals(other.getContains())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getInCount() > 0) {
+          hash = (37 * hash) + IN_FIELD_NUMBER;
+          hash = (53 * hash) + getInList().hashCode();
+        }
+        hash = (37 * hash) + STARTS_WITH_FIELD_NUMBER;
+        hash = (53 * hash) + getStartsWith().hashCode();
+        hash = (37 * hash) + CONTAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getContains().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Values defines a query on values.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Values_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Values_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          in_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          startsWith_ = "";
+          contains_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Values_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            in_.makeImmutable();
+            result.in_ = in_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.startsWith_ = startsWith_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.contains_ = contains_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance()) return this;
+          if (!other.in_.isEmpty()) {
+            if (in_.isEmpty()) {
+              in_ = other.in_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureInIsMutable();
+              in_.addAll(other.in_);
+            }
+            onChanged();
+          }
+          if (!other.getStartsWith().isEmpty()) {
+            startsWith_ = other.startsWith_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getContains().isEmpty()) {
+            contains_ = other.contains_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureInIsMutable();
+                  in_.add(s);
+                  break;
+                } // case 10
+                case 18: {
+                  startsWith_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  contains_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureInIsMutable() {
+          if (!in_.isModifiable()) {
+            in_ = new com.google.protobuf.LazyStringArrayList(in_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return A list containing the in.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getInList() {
+          in_.makeImmutable();
+          return in_;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return The count of in.
+         */
+        public int getInCount() {
+          return in_.size();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index of the element to return.
+         * @return The in at the given index.
+         */
+        public java.lang.String getIn(int index) {
+          return in_.get(index);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the in at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getInBytes(int index) {
+          return in_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index to set the value at.
+         * @param value The in to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIn(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureInIsMutable();
+          in_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param value The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIn(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureInIsMutable();
+          in_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param values The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIn(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureInIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, in_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIn() {
+          in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param value The bytes of the in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addInBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureInIsMutable();
+          in_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object startsWith_ = "";
+        /**
+         * <pre>
+         * Optional. Queries where value for key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return The startsWith.
+         */
+        public java.lang.String getStartsWith() {
+          java.lang.Object ref = startsWith_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            startsWith_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return The bytes for startsWith.
+         */
+        public com.google.protobuf.ByteString
+            getStartsWithBytes() {
+          java.lang.Object ref = startsWith_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            startsWith_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @param value The startsWith to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStartsWith(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          startsWith_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStartsWith() {
+          startsWith_ = getDefaultInstance().getStartsWith();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @param value The bytes for startsWith to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStartsWithBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          startsWith_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object contains_ = "";
+        /**
+         * <pre>
+         * Optional. Queries where value for key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return The contains.
+         */
+        public java.lang.String getContains() {
+          java.lang.Object ref = contains_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            contains_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return The bytes for contains.
+         */
+        public com.google.protobuf.ByteString
+            getContainsBytes() {
+          java.lang.Object ref = contains_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            contains_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @param value The contains to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContains(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          contains_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContains() {
+          contains_ = getDefaultInstance().getContains();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value for key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @param value The bytes for contains to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContainsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          contains_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Values>
+          PARSER = new com.google.protobuf.AbstractParser<Values>() {
+        @java.lang.Override
+        public Values parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Values> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Values> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface NumbersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      java.util.List<java.lang.Double> getInList();
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      int getInCount();
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      double getIn(int index);
+
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      boolean hasGte();
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      com.google.protobuf.DoubleValue getGte();
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getGteOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      boolean hasLte();
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      com.google.protobuf.DoubleValue getLte();
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getLteOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      boolean hasGt();
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      com.google.protobuf.DoubleValue getGt();
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getGtOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      boolean hasLt();
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      com.google.protobuf.DoubleValue getLt();
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getLtOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       * @return Whether the eq field is set.
+       */
+      boolean hasEq();
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       * @return The eq.
+       */
+      com.google.protobuf.DoubleValue getEq();
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       */
+      com.google.protobuf.DoubleValueOrBuilder getEqOrBuilder();
+    }
+    /**
+     * <pre>
+     * Numbers defines a query on values as numbers.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers}
+     */
+    public static final class Numbers extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)
+        NumbersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Numbers.newBuilder() to construct.
+      private Numbers(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Numbers() {
+        in_ = emptyDoubleList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Numbers();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Numbers_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Numbers_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder.class);
+      }
+
+      public static final int IN_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.DoubleList in_;
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getInList() {
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where value in list provided.
+       * </pre>
+       *
+       * <code>repeated double in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public double getIn(int index) {
+        return in_.getDouble(index);
+      }
+      private int inMemoizedSerializedSize = -1;
+
+      public static final int GTE_FIELD_NUMBER = 2;
+      private com.google.protobuf.DoubleValue gte_;
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      @java.lang.Override
+      public boolean hasGte() {
+        return gte_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getGte() {
+        return gte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gte_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getGteOrBuilder() {
+        return gte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gte_;
+      }
+
+      public static final int LTE_FIELD_NUMBER = 3;
+      private com.google.protobuf.DoubleValue lte_;
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      @java.lang.Override
+      public boolean hasLte() {
+        return lte_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getLte() {
+        return lte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lte_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getLteOrBuilder() {
+        return lte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lte_;
+      }
+
+      public static final int GT_FIELD_NUMBER = 4;
+      private com.google.protobuf.DoubleValue gt_;
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      @java.lang.Override
+      public boolean hasGt() {
+        return gt_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getGt() {
+        return gt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gt_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getGtOrBuilder() {
+        return gt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gt_;
+      }
+
+      public static final int LT_FIELD_NUMBER = 5;
+      private com.google.protobuf.DoubleValue lt_;
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      @java.lang.Override
+      public boolean hasLt() {
+        return lt_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getLt() {
+        return lt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lt_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getLtOrBuilder() {
+        return lt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lt_;
+      }
+
+      public static final int EQ_FIELD_NUMBER = 6;
+      private com.google.protobuf.DoubleValue eq_;
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       * @return Whether the eq field is set.
+       */
+      @java.lang.Override
+      public boolean hasEq() {
+        return eq_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       * @return The eq.
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValue getEq() {
+        return eq_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : eq_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DoubleValueOrBuilder getEqOrBuilder() {
+        return eq_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : eq_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getInList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(inMemoizedSerializedSize);
+        }
+        for (int i = 0; i < in_.size(); i++) {
+          output.writeDoubleNoTag(in_.getDouble(i));
+        }
+        if (gte_ != null) {
+          output.writeMessage(2, getGte());
+        }
+        if (lte_ != null) {
+          output.writeMessage(3, getLte());
+        }
+        if (gt_ != null) {
+          output.writeMessage(4, getGt());
+        }
+        if (lt_ != null) {
+          output.writeMessage(5, getLt());
+        }
+        if (eq_ != null) {
+          output.writeMessage(6, getEq());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          dataSize = 8 * getInList().size();
+          size += dataSize;
+          if (!getInList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          inMemoizedSerializedSize = dataSize;
+        }
+        if (gte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getGte());
+        }
+        if (lte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getLte());
+        }
+        if (gt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getGt());
+        }
+        if (lt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getLt());
+        }
+        if (eq_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getEq());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers) obj;
+
+        if (!getInList()
+            .equals(other.getInList())) return false;
+        if (hasGte() != other.hasGte()) return false;
+        if (hasGte()) {
+          if (!getGte()
+              .equals(other.getGte())) return false;
+        }
+        if (hasLte() != other.hasLte()) return false;
+        if (hasLte()) {
+          if (!getLte()
+              .equals(other.getLte())) return false;
+        }
+        if (hasGt() != other.hasGt()) return false;
+        if (hasGt()) {
+          if (!getGt()
+              .equals(other.getGt())) return false;
+        }
+        if (hasLt() != other.hasLt()) return false;
+        if (hasLt()) {
+          if (!getLt()
+              .equals(other.getLt())) return false;
+        }
+        if (hasEq() != other.hasEq()) return false;
+        if (hasEq()) {
+          if (!getEq()
+              .equals(other.getEq())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getInCount() > 0) {
+          hash = (37 * hash) + IN_FIELD_NUMBER;
+          hash = (53 * hash) + getInList().hashCode();
+        }
+        if (hasGte()) {
+          hash = (37 * hash) + GTE_FIELD_NUMBER;
+          hash = (53 * hash) + getGte().hashCode();
+        }
+        if (hasLte()) {
+          hash = (37 * hash) + LTE_FIELD_NUMBER;
+          hash = (53 * hash) + getLte().hashCode();
+        }
+        if (hasGt()) {
+          hash = (37 * hash) + GT_FIELD_NUMBER;
+          hash = (53 * hash) + getGt().hashCode();
+        }
+        if (hasLt()) {
+          hash = (37 * hash) + LT_FIELD_NUMBER;
+          hash = (53 * hash) + getLt().hashCode();
+        }
+        if (hasEq()) {
+          hash = (37 * hash) + EQ_FIELD_NUMBER;
+          hash = (53 * hash) + getEq().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Numbers defines a query on values as numbers.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Numbers_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Numbers_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          in_ = emptyDoubleList();
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          eq_ = null;
+          if (eqBuilder_ != null) {
+            eqBuilder_.dispose();
+            eqBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Numbers_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            in_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.in_ = in_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.gte_ = gteBuilder_ == null
+                ? gte_
+                : gteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.lte_ = lteBuilder_ == null
+                ? lte_
+                : lteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.gt_ = gtBuilder_ == null
+                ? gt_
+                : gtBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.lt_ = ltBuilder_ == null
+                ? lt_
+                : ltBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.eq_ = eqBuilder_ == null
+                ? eq_
+                : eqBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance()) return this;
+          if (!other.in_.isEmpty()) {
+            if (in_.isEmpty()) {
+              in_ = other.in_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInIsMutable();
+              in_.addAll(other.in_);
+            }
+            onChanged();
+          }
+          if (other.hasGte()) {
+            mergeGte(other.getGte());
+          }
+          if (other.hasLte()) {
+            mergeLte(other.getLte());
+          }
+          if (other.hasGt()) {
+            mergeGt(other.getGt());
+          }
+          if (other.hasLt()) {
+            mergeLt(other.getLt());
+          }
+          if (other.hasEq()) {
+            mergeEq(other.getEq());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 9: {
+                  double v = input.readDouble();
+                  ensureInIsMutable();
+                  in_.addDouble(v);
+                  break;
+                } // case 9
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureInIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    in_.addDouble(input.readDouble());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getGteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  input.readMessage(
+                      getLteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  input.readMessage(
+                      getGtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 42: {
+                  input.readMessage(
+                      getLtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+                case 50: {
+                  input.readMessage(
+                      getEqFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 50
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Internal.DoubleList in_ = emptyDoubleList();
+        private void ensureInIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            in_ = mutableCopy(in_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @return A list containing the in.
+         */
+        public java.util.List<java.lang.Double>
+            getInList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(in_) : in_;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @return The count of in.
+         */
+        public int getInCount() {
+          return in_.size();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @param index The index of the element to return.
+         * @return The in at the given index.
+         */
+        public double getIn(int index) {
+          return in_.getDouble(index);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @param index The index to set the value at.
+         * @param value The in to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIn(
+            int index, double value) {
+
+          ensureInIsMutable();
+          in_.setDouble(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @param value The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIn(double value) {
+
+          ensureInIsMutable();
+          in_.addDouble(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @param values The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIn(
+            java.lang.Iterable<? extends java.lang.Double> values) {
+          ensureInIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, in_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where value in list provided.
+         * </pre>
+         *
+         * <code>repeated double in = 1 [json_name = "in"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIn() {
+          in_ = emptyDoubleList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.DoubleValue gte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> gteBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         * @return Whether the gte field is set.
+         */
+        public boolean hasGte() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         * @return The gte.
+         */
+        public com.google.protobuf.DoubleValue getGte() {
+          if (gteBuilder_ == null) {
+            return gte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gte_;
+          } else {
+            return gteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public Builder setGte(com.google.protobuf.DoubleValue value) {
+          if (gteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gte_ = value;
+          } else {
+            gteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public Builder setGte(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (gteBuilder_ == null) {
+            gte_ = builderForValue.build();
+          } else {
+            gteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public Builder mergeGte(com.google.protobuf.DoubleValue value) {
+          if (gteBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              gte_ != null &&
+              gte_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+              getGteBuilder().mergeFrom(value);
+            } else {
+              gte_ = value;
+            }
+          } else {
+            gteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public Builder clearGte() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getGteBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getGteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getGteOrBuilder() {
+          if (gteBuilder_ != null) {
+            return gteBuilder_.getMessageOrBuilder();
+          } else {
+            return gte_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : gte_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gte = 2 [json_name = "gte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getGteFieldBuilder() {
+          if (gteBuilder_ == null) {
+            gteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getGte(),
+                    getParentForChildren(),
+                    isClean());
+            gte_ = null;
+          }
+          return gteBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue lte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> lteBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         * @return Whether the lte field is set.
+         */
+        public boolean hasLte() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         * @return The lte.
+         */
+        public com.google.protobuf.DoubleValue getLte() {
+          if (lteBuilder_ == null) {
+            return lte_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lte_;
+          } else {
+            return lteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public Builder setLte(com.google.protobuf.DoubleValue value) {
+          if (lteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lte_ = value;
+          } else {
+            lteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public Builder setLte(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (lteBuilder_ == null) {
+            lte_ = builderForValue.build();
+          } else {
+            lteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public Builder mergeLte(com.google.protobuf.DoubleValue value) {
+          if (lteBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0) &&
+              lte_ != null &&
+              lte_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+              getLteBuilder().mergeFrom(value);
+            } else {
+              lte_ = value;
+            }
+          } else {
+            lteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public Builder clearLte() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getLteBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getLteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getLteOrBuilder() {
+          if (lteBuilder_ != null) {
+            return lteBuilder_.getMessageOrBuilder();
+          } else {
+            return lte_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : lte_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lte = 3 [json_name = "lte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getLteFieldBuilder() {
+          if (lteBuilder_ == null) {
+            lteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getLte(),
+                    getParentForChildren(),
+                    isClean());
+            lte_ = null;
+          }
+          return lteBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue gt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> gtBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         * @return Whether the gt field is set.
+         */
+        public boolean hasGt() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         * @return The gt.
+         */
+        public com.google.protobuf.DoubleValue getGt() {
+          if (gtBuilder_ == null) {
+            return gt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : gt_;
+          } else {
+            return gtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public Builder setGt(com.google.protobuf.DoubleValue value) {
+          if (gtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gt_ = value;
+          } else {
+            gtBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public Builder setGt(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (gtBuilder_ == null) {
+            gt_ = builderForValue.build();
+          } else {
+            gtBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public Builder mergeGt(com.google.protobuf.DoubleValue value) {
+          if (gtBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0) &&
+              gt_ != null &&
+              gt_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+              getGtBuilder().mergeFrom(value);
+            } else {
+              gt_ = value;
+            }
+          } else {
+            gtBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public Builder clearGt() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getGtBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getGtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getGtOrBuilder() {
+          if (gtBuilder_ != null) {
+            return gtBuilder_.getMessageOrBuilder();
+          } else {
+            return gt_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : gt_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue gt = 4 [json_name = "gt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getGtFieldBuilder() {
+          if (gtBuilder_ == null) {
+            gtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getGt(),
+                    getParentForChildren(),
+                    isClean());
+            gt_ = null;
+          }
+          return gtBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue lt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ltBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         * @return Whether the lt field is set.
+         */
+        public boolean hasLt() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         * @return The lt.
+         */
+        public com.google.protobuf.DoubleValue getLt() {
+          if (ltBuilder_ == null) {
+            return lt_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : lt_;
+          } else {
+            return ltBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public Builder setLt(com.google.protobuf.DoubleValue value) {
+          if (ltBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lt_ = value;
+          } else {
+            ltBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public Builder setLt(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (ltBuilder_ == null) {
+            lt_ = builderForValue.build();
+          } else {
+            ltBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public Builder mergeLt(com.google.protobuf.DoubleValue value) {
+          if (ltBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) != 0) &&
+              lt_ != null &&
+              lt_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+              getLtBuilder().mergeFrom(value);
+            } else {
+              lt_ = value;
+            }
+          } else {
+            ltBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public Builder clearLt() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getLtBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getLtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getLtOrBuilder() {
+          if (ltBuilder_ != null) {
+            return ltBuilder_.getMessageOrBuilder();
+          } else {
+            return lt_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : lt_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue lt = 5 [json_name = "lt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getLtFieldBuilder() {
+          if (ltBuilder_ == null) {
+            ltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getLt(),
+                    getParentForChildren(),
+                    isClean());
+            lt_ = null;
+          }
+          return ltBuilder_;
+        }
+
+        private com.google.protobuf.DoubleValue eq_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> eqBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         * @return Whether the eq field is set.
+         */
+        public boolean hasEq() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         * @return The eq.
+         */
+        public com.google.protobuf.DoubleValue getEq() {
+          if (eqBuilder_ == null) {
+            return eq_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : eq_;
+          } else {
+            return eqBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public Builder setEq(com.google.protobuf.DoubleValue value) {
+          if (eqBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            eq_ = value;
+          } else {
+            eqBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public Builder setEq(
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
+          if (eqBuilder_ == null) {
+            eq_ = builderForValue.build();
+          } else {
+            eqBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public Builder mergeEq(com.google.protobuf.DoubleValue value) {
+          if (eqBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) != 0) &&
+              eq_ != null &&
+              eq_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+              getEqBuilder().mergeFrom(value);
+            } else {
+              eq_ = value;
+            }
+          } else {
+            eqBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public Builder clearEq() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          eq_ = null;
+          if (eqBuilder_ != null) {
+            eqBuilder_.dispose();
+            eqBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public com.google.protobuf.DoubleValue.Builder getEqBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getEqFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        public com.google.protobuf.DoubleValueOrBuilder getEqOrBuilder() {
+          if (eqBuilder_ != null) {
+            return eqBuilder_.getMessageOrBuilder();
+          } else {
+            return eq_ == null ?
+                com.google.protobuf.DoubleValue.getDefaultInstance() : eq_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where equal to.
+         * </pre>
+         *
+         * <code>.google.protobuf.DoubleValue eq = 6 [json_name = "eq"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+            getEqFieldBuilder() {
+          if (eqBuilder_ == null) {
+            eqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                    getEq(),
+                    getParentForChildren(),
+                    isClean());
+            eq_ = null;
+          }
+          return eqBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Numbers>
+          PARSER = new com.google.protobuf.AbstractParser<Numbers>() {
+        @java.lang.Override
+        public Numbers parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Numbers> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Numbers> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface KeyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      java.util.List<java.lang.String>
+          getInList();
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      int getInCount();
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      java.lang.String getIn(int index);
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      com.google.protobuf.ByteString
+          getInBytes(int index);
+
+      /**
+       * <pre>
+       * Optional. Queries where key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The startsWith.
+       */
+      java.lang.String getStartsWith();
+      /**
+       * <pre>
+       * Optional. Queries where key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The bytes for startsWith.
+       */
+      com.google.protobuf.ByteString
+          getStartsWithBytes();
+
+      /**
+       * <pre>
+       * Optional. Queries where key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The contains.
+       */
+      java.lang.String getContains();
+      /**
+       * <pre>
+       * Optional. Queries where key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The bytes for contains.
+       */
+      com.google.protobuf.ByteString
+          getContainsBytes();
+    }
+    /**
+     * <pre>
+     * Key defines a query on the key.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key}
+     */
+    public static final class Key extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)
+        KeyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Key.newBuilder() to construct.
+      private Key(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Key() {
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        startsWith_ = "";
+        contains_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Key();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Key_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Key_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder.class);
+      }
+
+      public static final int IN_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where key in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+
+      public static final int STARTS_WITH_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object startsWith_ = "";
+      /**
+       * <pre>
+       * Optional. Queries where key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The startsWith.
+       */
+      @java.lang.Override
+      public java.lang.String getStartsWith() {
+        java.lang.Object ref = startsWith_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startsWith_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries where key starts with given string.
+       * </pre>
+       *
+       * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+       * @return The bytes for startsWith.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStartsWithBytes() {
+        java.lang.Object ref = startsWith_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startsWith_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONTAINS_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object contains_ = "";
+      /**
+       * <pre>
+       * Optional. Queries where key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The contains.
+       */
+      @java.lang.Override
+      public java.lang.String getContains() {
+        java.lang.Object ref = contains_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contains_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries where key contains given string.
+       * </pre>
+       *
+       * <code>string contains = 3 [json_name = "contains"];</code>
+       * @return The bytes for contains.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContainsBytes() {
+        java.lang.Object ref = contains_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contains_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < in_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startsWith_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startsWith_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contains_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contains_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < in_.size(); i++) {
+            dataSize += computeStringSizeNoTag(in_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getInList().size();
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startsWith_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startsWith_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contains_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contains_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key) obj;
+
+        if (!getInList()
+            .equals(other.getInList())) return false;
+        if (!getStartsWith()
+            .equals(other.getStartsWith())) return false;
+        if (!getContains()
+            .equals(other.getContains())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getInCount() > 0) {
+          hash = (37 * hash) + IN_FIELD_NUMBER;
+          hash = (53 * hash) + getInList().hashCode();
+        }
+        hash = (37 * hash) + STARTS_WITH_FIELD_NUMBER;
+        hash = (53 * hash) + getStartsWith().hashCode();
+        hash = (37 * hash) + CONTAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getContains().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Key defines a query on the key.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Key_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Key_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          in_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          startsWith_ = "";
+          contains_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_Key_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            in_.makeImmutable();
+            result.in_ = in_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.startsWith_ = startsWith_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.contains_ = contains_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance()) return this;
+          if (!other.in_.isEmpty()) {
+            if (in_.isEmpty()) {
+              in_ = other.in_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureInIsMutable();
+              in_.addAll(other.in_);
+            }
+            onChanged();
+          }
+          if (!other.getStartsWith().isEmpty()) {
+            startsWith_ = other.startsWith_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getContains().isEmpty()) {
+            contains_ = other.contains_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureInIsMutable();
+                  in_.add(s);
+                  break;
+                } // case 10
+                case 18: {
+                  startsWith_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  contains_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureInIsMutable() {
+          if (!in_.isModifiable()) {
+            in_ = new com.google.protobuf.LazyStringArrayList(in_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return A list containing the in.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getInList() {
+          in_.makeImmutable();
+          return in_;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return The count of in.
+         */
+        public int getInCount() {
+          return in_.size();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index of the element to return.
+         * @return The in at the given index.
+         */
+        public java.lang.String getIn(int index) {
+          return in_.get(index);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the in at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getInBytes(int index) {
+          return in_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param index The index to set the value at.
+         * @param value The in to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIn(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureInIsMutable();
+          in_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param value The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIn(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureInIsMutable();
+          in_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param values The in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIn(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureInIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, in_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIn() {
+          in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key in list provided.
+         * </pre>
+         *
+         * <code>repeated string in = 1 [json_name = "in"];</code>
+         * @param value The bytes of the in to add.
+         * @return This builder for chaining.
+         */
+        public Builder addInBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureInIsMutable();
+          in_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object startsWith_ = "";
+        /**
+         * <pre>
+         * Optional. Queries where key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return The startsWith.
+         */
+        public java.lang.String getStartsWith() {
+          java.lang.Object ref = startsWith_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            startsWith_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return The bytes for startsWith.
+         */
+        public com.google.protobuf.ByteString
+            getStartsWithBytes() {
+          java.lang.Object ref = startsWith_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            startsWith_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @param value The startsWith to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStartsWith(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          startsWith_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStartsWith() {
+          startsWith_ = getDefaultInstance().getStartsWith();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key starts with given string.
+         * </pre>
+         *
+         * <code>string starts_with = 2 [json_name = "startsWith"];</code>
+         * @param value The bytes for startsWith to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStartsWithBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          startsWith_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object contains_ = "";
+        /**
+         * <pre>
+         * Optional. Queries where key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return The contains.
+         */
+        public java.lang.String getContains() {
+          java.lang.Object ref = contains_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            contains_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return The bytes for contains.
+         */
+        public com.google.protobuf.ByteString
+            getContainsBytes() {
+          java.lang.Object ref = contains_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            contains_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @param value The contains to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContains(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          contains_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContains() {
+          contains_ = getDefaultInstance().getContains();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where key contains given string.
+         * </pre>
+         *
+         * <code>string contains = 3 [json_name = "contains"];</code>
+         * @param value The bytes for contains to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContainsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          contains_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Key>
+          PARSER = new com.google.protobuf.AbstractParser<Key>() {
+        @java.lang.Override
+        public Key parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Key> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Key> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int AND_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> and_;
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> getAndList() {
+      return and_;
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getAndOrBuilderList() {
+      return and_;
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    @java.lang.Override
+    public int getAndCount() {
+      return and_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAnd(int index) {
+      return and_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical and.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAndOrBuilder(
+        int index) {
+      return and_.get(index);
+    }
+
+    public static final int OR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> or_;
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> getOrList() {
+      return or_;
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getOrOrBuilderList() {
+      return or_;
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public int getOrCount() {
+      return or_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getOr(int index) {
+      return or_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Groups AgentResponse conditions with logical or.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getOrOrBuilder(
+        int index) {
+      return or_.get(index);
+    }
+
+    public static final int NOT_FIELD_NUMBER = 3;
+    private boolean not_ = false;
+    /**
+     * <pre>
+     * Optional. Queries for what does not match the agent response query.
+     * </pre>
+     *
+     * <code>bool not = 3 [json_name = "not"];</code>
+     * @return The not.
+     */
+    @java.lang.Override
+    public boolean getNot() {
+      return not_;
+    }
+
+    public static final int KEY_FIELD_NUMBER = 4;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key_;
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     * @return Whether the key field is set.
+     */
+    @java.lang.Override
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getKey() {
+      return key_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Optional. Key to query on.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder getKeyOrBuilder() {
+      return key_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance() : key_;
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 5;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values_;
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     * @return Whether the values field is set.
+     */
+    @java.lang.Override
+    public boolean hasValues() {
+      return values_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     * @return The values.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getValues() {
+      return values_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance() : values_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries values for the given keys. If no keys are provided then
+     * it will run the query on all values.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder getValuesOrBuilder() {
+      return values_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance() : values_;
+    }
+
+    public static final int NUMBERS_FIELD_NUMBER = 6;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers_;
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     * @return Whether the numbers field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumbers() {
+      return numbers_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     * @return The numbers.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getNumbers() {
+      return numbers_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance() : numbers_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries values as numbers for the given keys.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder getNumbersOrBuilder() {
+      return numbers_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance() : numbers_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < and_.size(); i++) {
+        output.writeMessage(1, and_.get(i));
+      }
+      for (int i = 0; i < or_.size(); i++) {
+        output.writeMessage(2, or_.get(i));
+      }
+      if (not_ != false) {
+        output.writeBool(3, not_);
+      }
+      if (key_ != null) {
+        output.writeMessage(4, getKey());
+      }
+      if (values_ != null) {
+        output.writeMessage(5, getValues());
+      }
+      if (numbers_ != null) {
+        output.writeMessage(6, getNumbers());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < and_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, and_.get(i));
+      }
+      for (int i = 0; i < or_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, or_.get(i));
+      }
+      if (not_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, not_);
+      }
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getKey());
+      }
+      if (values_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getValues());
+      }
+      if (numbers_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getNumbers());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse) obj;
+
+      if (!getAndList()
+          .equals(other.getAndList())) return false;
+      if (!getOrList()
+          .equals(other.getOrList())) return false;
+      if (getNot()
+          != other.getNot()) return false;
+      if (hasKey() != other.hasKey()) return false;
+      if (hasKey()) {
+        if (!getKey()
+            .equals(other.getKey())) return false;
+      }
+      if (hasValues() != other.hasValues()) return false;
+      if (hasValues()) {
+        if (!getValues()
+            .equals(other.getValues())) return false;
+      }
+      if (hasNumbers() != other.hasNumbers()) return false;
+      if (hasNumbers()) {
+        if (!getNumbers()
+            .equals(other.getNumbers())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAndCount() > 0) {
+        hash = (37 * hash) + AND_FIELD_NUMBER;
+        hash = (53 * hash) + getAndList().hashCode();
+      }
+      if (getOrCount() > 0) {
+        hash = (37 * hash) + OR_FIELD_NUMBER;
+        hash = (53 * hash) + getOrList().hashCode();
+      }
+      hash = (37 * hash) + NOT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getNot());
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
+      if (hasValues()) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValues().hashCode();
+      }
+      if (hasNumbers()) {
+        hash = (37 * hash) + NUMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumbers().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.AgentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.AgentResponse)
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (andBuilder_ == null) {
+          and_ = java.util.Collections.emptyList();
+        } else {
+          and_ = null;
+          andBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (orBuilder_ == null) {
+          or_ = java.util.Collections.emptyList();
+        } else {
+          or_ = null;
+          orBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        not_ = false;
+        key_ = null;
+        if (keyBuilder_ != null) {
+          keyBuilder_.dispose();
+          keyBuilder_ = null;
+        }
+        values_ = null;
+        if (valuesBuilder_ != null) {
+          valuesBuilder_.dispose();
+          valuesBuilder_ = null;
+        }
+        numbers_ = null;
+        if (numbersBuilder_ != null) {
+          numbersBuilder_.dispose();
+          numbersBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_AgentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse result) {
+        if (andBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            and_ = java.util.Collections.unmodifiableList(and_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.and_ = and_;
+        } else {
+          result.and_ = andBuilder_.build();
+        }
+        if (orBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            or_ = java.util.Collections.unmodifiableList(or_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.or_ = or_;
+        } else {
+          result.or_ = orBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.not_ = not_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.key_ = keyBuilder_ == null
+              ? key_
+              : keyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.values_ = valuesBuilder_ == null
+              ? values_
+              : valuesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.numbers_ = numbersBuilder_ == null
+              ? numbers_
+              : numbersBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance()) return this;
+        if (andBuilder_ == null) {
+          if (!other.and_.isEmpty()) {
+            if (and_.isEmpty()) {
+              and_ = other.and_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAndIsMutable();
+              and_.addAll(other.and_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.and_.isEmpty()) {
+            if (andBuilder_.isEmpty()) {
+              andBuilder_.dispose();
+              andBuilder_ = null;
+              and_ = other.and_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              andBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAndFieldBuilder() : null;
+            } else {
+              andBuilder_.addAllMessages(other.and_);
+            }
+          }
+        }
+        if (orBuilder_ == null) {
+          if (!other.or_.isEmpty()) {
+            if (or_.isEmpty()) {
+              or_ = other.or_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureOrIsMutable();
+              or_.addAll(other.or_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.or_.isEmpty()) {
+            if (orBuilder_.isEmpty()) {
+              orBuilder_.dispose();
+              orBuilder_ = null;
+              or_ = other.or_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              orBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrFieldBuilder() : null;
+            } else {
+              orBuilder_.addAllMessages(other.or_);
+            }
+          }
+        }
+        if (other.getNot() != false) {
+          setNot(other.getNot());
+        }
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
+        }
+        if (other.hasValues()) {
+          mergeValues(other.getValues());
+        }
+        if (other.hasNumbers()) {
+          mergeNumbers(other.getNumbers());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse m =
+                    input.readMessage(
+                        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.parser(),
+                        extensionRegistry);
+                if (andBuilder_ == null) {
+                  ensureAndIsMutable();
+                  and_.add(m);
+                } else {
+                  andBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse m =
+                    input.readMessage(
+                        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.parser(),
+                        extensionRegistry);
+                if (orBuilder_ == null) {
+                  ensureOrIsMutable();
+                  or_.add(m);
+                } else {
+                  orBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                not_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getValuesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getNumbersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> and_ =
+        java.util.Collections.emptyList();
+      private void ensureAndIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          and_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse>(and_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> andBuilder_;
+
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> getAndList() {
+        if (andBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(and_);
+        } else {
+          return andBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public int getAndCount() {
+        if (andBuilder_ == null) {
+          return and_.size();
+        } else {
+          return andBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAnd(int index) {
+        if (andBuilder_ == null) {
+          return and_.get(index);
+        } else {
+          return andBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder setAnd(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (andBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndIsMutable();
+          and_.set(index, value);
+          onChanged();
+        } else {
+          andBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder setAnd(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (andBuilder_ == null) {
+          ensureAndIsMutable();
+          and_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          andBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder addAnd(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (andBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndIsMutable();
+          and_.add(value);
+          onChanged();
+        } else {
+          andBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder addAnd(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (andBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndIsMutable();
+          and_.add(index, value);
+          onChanged();
+        } else {
+          andBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder addAnd(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (andBuilder_ == null) {
+          ensureAndIsMutable();
+          and_.add(builderForValue.build());
+          onChanged();
+        } else {
+          andBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder addAnd(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (andBuilder_ == null) {
+          ensureAndIsMutable();
+          and_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          andBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder addAllAnd(
+          java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> values) {
+        if (andBuilder_ == null) {
+          ensureAndIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, and_);
+          onChanged();
+        } else {
+          andBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder clearAnd() {
+        if (andBuilder_ == null) {
+          and_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          andBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public Builder removeAnd(int index) {
+        if (andBuilder_ == null) {
+          ensureAndIsMutable();
+          and_.remove(index);
+          onChanged();
+        } else {
+          andBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getAndBuilder(
+          int index) {
+        return getAndFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAndOrBuilder(
+          int index) {
+        if (andBuilder_ == null) {
+          return and_.get(index);  } else {
+          return andBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+           getAndOrBuilderList() {
+        if (andBuilder_ != null) {
+          return andBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(and_);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder addAndBuilder() {
+        return getAndFieldBuilder().addBuilder(
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder addAndBuilder(
+          int index) {
+        return getAndFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical and.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse and = 1 [json_name = "and"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder> 
+           getAndBuilderList() {
+        return getAndFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+          getAndFieldBuilder() {
+        if (andBuilder_ == null) {
+          andBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
+                  and_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          and_ = null;
+        }
+        return andBuilder_;
+      }
+
+      private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> or_ =
+        java.util.Collections.emptyList();
+      private void ensureOrIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          or_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse>(or_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> orBuilder_;
+
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> getOrList() {
+        if (orBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(or_);
+        } else {
+          return orBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public int getOrCount() {
+        if (orBuilder_ == null) {
+          return or_.size();
+        } else {
+          return orBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getOr(int index) {
+        if (orBuilder_ == null) {
+          return or_.get(index);
+        } else {
+          return orBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder setOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.set(index, value);
+          onChanged();
+        } else {
+          orBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder setOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder addOr(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.add(value);
+          onChanged();
+        } else {
+          orBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.add(index, value);
+          onChanged();
+        } else {
+          orBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder addAllOr(
+          java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse> values) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, or_);
+          onChanged();
+        } else {
+          orBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder clearOr() {
+        if (orBuilder_ == null) {
+          or_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          orBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public Builder removeOr(int index) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.remove(index);
+          onChanged();
+        } else {
+          orBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getOrBuilder(
+          int index) {
+        return getOrFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getOrOrBuilder(
+          int index) {
+        if (orBuilder_ == null) {
+          return or_.get(index);  } else {
+          return orBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+           getOrOrBuilderList() {
+        if (orBuilder_ != null) {
+          return orBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(or_);
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder addOrBuilder() {
+        return getOrFieldBuilder().addBuilder(
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder addOrBuilder(
+          int index) {
+        return getOrFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional. Groups AgentResponse conditions with logical or.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.AgentResponse or = 2 [json_name = "or"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder> 
+           getOrBuilderList() {
+        return getOrFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+          getOrFieldBuilder() {
+        if (orBuilder_ == null) {
+          orBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
+                  or_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          or_ = null;
+        }
+        return orBuilder_;
+      }
+
+      private boolean not_ ;
+      /**
+       * <pre>
+       * Optional. Queries for what does not match the agent response query.
+       * </pre>
+       *
+       * <code>bool not = 3 [json_name = "not"];</code>
+       * @return The not.
+       */
+      @java.lang.Override
+      public boolean getNot() {
+        return not_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries for what does not match the agent response query.
+       * </pre>
+       *
+       * <code>bool not = 3 [json_name = "not"];</code>
+       * @param value The not to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNot(boolean value) {
+
+        not_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries for what does not match the agent response query.
+       * </pre>
+       *
+       * <code>bool not = 3 [json_name = "not"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        not_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       * @return Whether the key field is set.
+       */
+      public boolean hasKey() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public Builder setKey(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public Builder setKey(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public Builder mergeKey(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key value) {
+        if (keyBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            key_ != null &&
+            key_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance()) {
+            getKeyBuilder().mergeFrom(value);
+          } else {
+            key_ = value;
+          }
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        key_ = null;
+        if (keyBuilder_ != null) {
+          keyBuilder_.dispose();
+          keyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder getKeyBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Key to query on.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key key = 4 [json_name = "key"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Key.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.KeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder> valuesBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       * @return Whether the values field is set.
+       */
+      public boolean hasValues() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       * @return The values.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values getValues() {
+        if (valuesBuilder_ == null) {
+          return values_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance() : values_;
+        } else {
+          return valuesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public Builder setValues(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          values_ = value;
+        } else {
+          valuesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public Builder setValues(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          values_ = builderForValue.build();
+        } else {
+          valuesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public Builder mergeValues(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values value) {
+        if (valuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            values_ != null &&
+            values_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance()) {
+            getValuesBuilder().mergeFrom(value);
+          } else {
+            values_ = value;
+          }
+        } else {
+          valuesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public Builder clearValues() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        values_ = null;
+        if (valuesBuilder_ != null) {
+          valuesBuilder_.dispose();
+          valuesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder getValuesBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getValuesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder getValuesOrBuilder() {
+        if (valuesBuilder_ != null) {
+          return valuesBuilder_.getMessageOrBuilder();
+        } else {
+          return values_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.getDefaultInstance() : values_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries values for the given keys. If no keys are provided then
+       * it will run the query on all values.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values values = 5 [json_name = "values"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder> 
+          getValuesFieldBuilder() {
+        if (valuesBuilder_ == null) {
+          valuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Values.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.ValuesOrBuilder>(
+                  getValues(),
+                  getParentForChildren(),
+                  isClean());
+          values_ = null;
+        }
+        return valuesBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder> numbersBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       * @return Whether the numbers field is set.
+       */
+      public boolean hasNumbers() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       * @return The numbers.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers getNumbers() {
+        if (numbersBuilder_ == null) {
+          return numbers_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance() : numbers_;
+        } else {
+          return numbersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public Builder setNumbers(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers value) {
+        if (numbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          numbers_ = value;
+        } else {
+          numbersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public Builder setNumbers(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder builderForValue) {
+        if (numbersBuilder_ == null) {
+          numbers_ = builderForValue.build();
+        } else {
+          numbersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public Builder mergeNumbers(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers value) {
+        if (numbersBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            numbers_ != null &&
+            numbers_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance()) {
+            getNumbersBuilder().mergeFrom(value);
+          } else {
+            numbers_ = value;
+          }
+        } else {
+          numbersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public Builder clearNumbers() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        numbers_ = null;
+        if (numbersBuilder_ != null) {
+          numbersBuilder_.dispose();
+          numbersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder getNumbersBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getNumbersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder getNumbersOrBuilder() {
+        if (numbersBuilder_ != null) {
+          return numbersBuilder_.getMessageOrBuilder();
+        } else {
+          return numbers_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.getDefaultInstance() : numbers_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries values as numbers for the given keys.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers numbers = 6 [json_name = "numbers"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder> 
+          getNumbersFieldBuilder() {
+        if (numbersBuilder_ == null) {
+          numbersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Numbers.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.NumbersOrBuilder>(
+                  getNumbers(),
+                  getParentForChildren(),
+                  isClean());
+          numbers_ = null;
+        }
+        return numbersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.AgentResponse)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AgentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AgentResponse>() {
+      @java.lang.Override
+      public AgentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AgentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AgentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ThreadsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Threads)
       com.google.protobuf.MessageOrBuilder {
@@ -73099,7 +79420,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=525
+   *     See wfo/vanalytics/v2/transcript.proto;l=541
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -73113,7 +79434,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=525
+   *     See wfo/vanalytics/v2/transcript.proto;l=541
    * @return The channel.
    */
   @java.lang.Override
@@ -73436,6 +79757,44 @@ private static final long serialVersionUID = 0L;
     return skills_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
   }
 
+  public static final int AGENT_RESPONSE_FIELD_NUMBER = 11;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return Whether the agentResponse field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentResponse() {
+    return agentResponse_ != null;
+  }
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   * @return The agentResponse.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
+    return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+  }
+  /**
+   * <pre>
+   * Query constraints on agent response.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
+    return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -73479,6 +79838,9 @@ private static final long serialVersionUID = 0L;
     }
     if (skills_ != null) {
       output.writeMessage(10, getSkills());
+    }
+    if (agentResponse_ != null) {
+      output.writeMessage(11, getAgentResponse());
     }
     getUnknownFields().writeTo(output);
   }
@@ -73528,6 +79890,10 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getSkills());
+    }
+    if (agentResponse_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getAgentResponse());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -73594,6 +79960,11 @@ private static final long serialVersionUID = 0L;
       if (!getSkills()
           .equals(other.getSkills())) return false;
     }
+    if (hasAgentResponse() != other.hasAgentResponse()) return false;
+    if (hasAgentResponse()) {
+      if (!getAgentResponse()
+          .equals(other.getAgentResponse())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -73644,6 +80015,10 @@ private static final long serialVersionUID = 0L;
     if (hasSkills()) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkills().hashCode();
+    }
+    if (hasAgentResponse()) {
+      hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentResponse().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -73830,6 +80205,11 @@ private static final long serialVersionUID = 0L;
         skillsBuilder_.dispose();
         skillsBuilder_ = null;
       }
+      agentResponse_ = null;
+      if (agentResponseBuilder_ != null) {
+        agentResponseBuilder_.dispose();
+        agentResponseBuilder_ = null;
+      }
       return this;
     }
 
@@ -73913,6 +80293,11 @@ private static final long serialVersionUID = 0L;
             ? skills_
             : skillsBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.agentResponse_ = agentResponseBuilder_ == null
+            ? agentResponse_
+            : agentResponseBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -73988,6 +80373,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkills()) {
         mergeSkills(other.getSkills());
+      }
+      if (other.hasAgentResponse()) {
+        mergeAgentResponse(other.getAgentResponse());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -74085,6 +80473,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getAgentResponseFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -74267,7 +80662,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=525
+     *     See wfo/vanalytics/v2/transcript.proto;l=541
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -74280,7 +80675,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=525
+     *     See wfo/vanalytics/v2/transcript.proto;l=541
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
@@ -75654,6 +82049,161 @@ private static final long serialVersionUID = 0L;
         skills_ = null;
       }
       return skillsBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agentResponse_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> agentResponseBuilder_;
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     * @return Whether the agentResponse field is set.
+     */
+    public boolean hasAgentResponse() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     * @return The agentResponse.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse getAgentResponse() {
+      if (agentResponseBuilder_ == null) {
+        return agentResponse_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+      } else {
+        return agentResponseBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder setAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+      if (agentResponseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        agentResponse_ = value;
+      } else {
+        agentResponseBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder setAgentResponse(
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder builderForValue) {
+      if (agentResponseBuilder_ == null) {
+        agentResponse_ = builderForValue.build();
+      } else {
+        agentResponseBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder mergeAgentResponse(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse value) {
+      if (agentResponseBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          agentResponse_ != null &&
+          agentResponse_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance()) {
+          getAgentResponseBuilder().mergeFrom(value);
+        } else {
+          agentResponse_ = value;
+        }
+      } else {
+        agentResponseBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public Builder clearAgentResponse() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      agentResponse_ = null;
+      if (agentResponseBuilder_ != null) {
+        agentResponseBuilder_.dispose();
+        agentResponseBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder getAgentResponseBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getAgentResponseFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder getAgentResponseOrBuilder() {
+      if (agentResponseBuilder_ != null) {
+        return agentResponseBuilder_.getMessageOrBuilder();
+      } else {
+        return agentResponse_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.getDefaultInstance() : agentResponse_;
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on agent response.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.AgentResponse agent_response = 11 [json_name = "agentResponse"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder> 
+        getAgentResponseFieldBuilder() {
+      if (agentResponseBuilder_ == null) {
+        agentResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponse.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.AgentResponseOrBuilder>(
+                getAgentResponse(),
+                getParentForChildren(),
+                isClean());
+        agentResponse_ = null;
+      }
+      return agentResponseBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
