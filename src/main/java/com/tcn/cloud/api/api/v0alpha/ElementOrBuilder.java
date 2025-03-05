@@ -165,4 +165,10 @@ public interface ElementOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <code>int64 pipeline_canvas_sid = 21 [json_name = "pipelineCanvasSid", jstype = JS_STRING];</code>
+   * @return The pipelineCanvasSid.
+   */
+  long getPipelineCanvasSid();
 }

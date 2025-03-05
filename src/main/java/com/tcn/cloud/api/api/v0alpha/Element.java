@@ -367,6 +367,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PIPELINE_CANVAS_SID_FIELD_NUMBER = 21;
+  private long pipelineCanvasSid_ = 0L;
+  /**
+   * <code>int64 pipeline_canvas_sid = 21 [json_name = "pipelineCanvasSid", jstype = JS_STRING];</code>
+   * @return The pipelineCanvasSid.
+   */
+  @java.lang.Override
+  public long getPipelineCanvasSid() {
+    return pipelineCanvasSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -415,6 +426,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < inputIsDiscard_.size(); i++) {
       output.writeBoolNoTag(inputIsDiscard_.getBoolean(i));
+    }
+    if (pipelineCanvasSid_ != 0L) {
+      output.writeInt64(21, pipelineCanvasSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -477,6 +491,10 @@ private static final long serialVersionUID = 0L;
       }
       inputIsDiscardMemoizedSerializedSize = dataSize;
     }
+    if (pipelineCanvasSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(21, pipelineCanvasSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -520,6 +538,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (getPipelineCanvasSid()
+        != other.getPipelineCanvasSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -563,6 +583,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    hash = (37 * hash) + PIPELINE_CANVAS_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPipelineCanvasSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -722,6 +745,7 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_ = null;
       }
       description_ = "";
+      pipelineCanvasSid_ = 0L;
       return this;
     }
 
@@ -798,6 +822,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.pipelineCanvasSid_ = pipelineCanvasSid_;
       }
     }
 
@@ -902,6 +929,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      if (other.getPipelineCanvasSid() != 0L) {
+        setPipelineCanvasSid(other.getPipelineCanvasSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -997,6 +1027,11 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 162
+            case 168: {
+              pipelineCanvasSid_ = input.readInt64();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 168
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1939,6 +1974,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       description_ = value;
       bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private long pipelineCanvasSid_ ;
+    /**
+     * <code>int64 pipeline_canvas_sid = 21 [json_name = "pipelineCanvasSid", jstype = JS_STRING];</code>
+     * @return The pipelineCanvasSid.
+     */
+    @java.lang.Override
+    public long getPipelineCanvasSid() {
+      return pipelineCanvasSid_;
+    }
+    /**
+     * <code>int64 pipeline_canvas_sid = 21 [json_name = "pipelineCanvasSid", jstype = JS_STRING];</code>
+     * @param value The pipelineCanvasSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPipelineCanvasSid(long value) {
+
+      pipelineCanvasSid_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 pipeline_canvas_sid = 21 [json_name = "pipelineCanvasSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPipelineCanvasSid() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      pipelineCanvasSid_ = 0L;
       onChanged();
       return this;
     }
