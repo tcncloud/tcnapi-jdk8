@@ -189,11 +189,11 @@ public final class ServiceProto {
       "r/file_templates/parse:\001*\022\240\001\n\nListEvents" +
       "\022*.api.v1alpha1.classifier.ListEventsReq" +
       "uest\032+.api.v1alpha1.classifier.ListEvent" +
-      "sResponse\"9\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002)\"$/api/v1alph" +
+      "sResponse\"9\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002)\"$/api/v1alph" +
       "a1/classifier/events/list:\001*\022\235\001\n\010PeekLis" +
       "t\022(.api.v1alpha1.classifier.PeekListRequ" +
       "est\032).api.v1alpha1.classifier.PeekListRe" +
-      "sponse\"<\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002,\"\'/api/v1alpha1/" +
+      "sponse\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v1alpha1/" +
       "classifier/events/preview:\001*\022\302\001\n\022UpdateF" +
       "ileTemplate\0222.api.v1alpha1.classifier.Up" +
       "dateFileTemplateRequest\0323.api.v1alpha1.c" +
@@ -207,12 +207,12 @@ public final class ServiceProto {
       "le_templates/delete:\001*\022\275\001\n\021ListFileTempl" +
       "ates\0221.api.v1alpha1.classifier.ListFileT" +
       "emplatesRequest\0322.api.v1alpha1.classifie" +
-      "r.ListFileTemplatesResponse\"A\272\270\221\002\005\n\003\010\350\007\202" +
+      "r.ListFileTemplatesResponse\"A\272\270\221\002\005\n\003\010\351\007\202" +
       "\323\344\223\0021\",/api/v1alpha1/classifier/file_tem" +
       "plates/list:\001*\022\266\001\n\017GetFileTemplate\022/.api" +
       ".v1alpha1.classifier.GetFileTemplateRequ" +
       "est\0320.api.v1alpha1.classifier.GetFileTem" +
-      "plateResponse\"@\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0020\"+/api/v1" +
+      "plateResponse\"@\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0020\"+/api/v1" +
       "alpha1/classifier/file_templates/get:\001*B" +
       "\267\001\n)com.tcn.cloud.api.api.v1alpha1.class" +
       "ifierB\014ServiceProtoP\001\242\002\003AVC\252\002\027Api.V1alph" +
