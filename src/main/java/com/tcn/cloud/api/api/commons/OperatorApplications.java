@@ -200,6 +200,14 @@ public enum OperatorApplications
    * <code>CONTACTMANAGER_APP = 34;</code>
    */
   CONTACTMANAGER_APP(34),
+  /**
+   * <pre>
+   * Knowledge Base
+   * </pre>
+   *
+   * <code>KNOWLEDGE_BASE_APP = 35;</code>
+   */
+  KNOWLEDGE_BASE_APP(35),
   UNRECOGNIZED(-1),
   ;
 
@@ -395,6 +403,14 @@ public enum OperatorApplications
    * <code>CONTACTMANAGER_APP = 34;</code>
    */
   public static final int CONTACTMANAGER_APP_VALUE = 34;
+  /**
+   * <pre>
+   * Knowledge Base
+   * </pre>
+   *
+   * <code>KNOWLEDGE_BASE_APP = 35;</code>
+   */
+  public static final int KNOWLEDGE_BASE_APP_VALUE = 35;
 
 
   public final int getNumber() {
@@ -445,6 +461,7 @@ public enum OperatorApplications
       case 32: return AGENT_BETA_APP;
       case 33: return NEWSROOM_APP;
       case 34: return CONTACTMANAGER_APP;
+      case 35: return KNOWLEDGE_BASE_APP;
       default: return null;
     }
   }

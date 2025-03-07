@@ -92,6 +92,10 @@ public enum Application
    * <code>APPLICATION_WFO_AGENT_MANAGER = 19;</code>
    */
   APPLICATION_WFO_AGENT_MANAGER(19),
+  /**
+   * <code>APPLICATION_KNOWLEDGE_BASE = 20;</code>
+   */
+  APPLICATION_KNOWLEDGE_BASE(20),
   UNRECOGNIZED(-1),
   ;
 
@@ -175,6 +179,10 @@ public enum Application
    * <code>APPLICATION_WFO_AGENT_MANAGER = 19;</code>
    */
   public static final int APPLICATION_WFO_AGENT_MANAGER_VALUE = 19;
+  /**
+   * <code>APPLICATION_KNOWLEDGE_BASE = 20;</code>
+   */
+  public static final int APPLICATION_KNOWLEDGE_BASE_VALUE = 20;
 
 
   public final int getNumber() {
@@ -221,6 +229,7 @@ public enum Application
       case 17: return APPLICATION_NEWSROOM;
       case 18: return APPLICATION_CONTACTMANAGER;
       case 19: return APPLICATION_WFO_AGENT_MANAGER;
+      case 20: return APPLICATION_KNOWLEDGE_BASE;
       default: return null;
     }
   }

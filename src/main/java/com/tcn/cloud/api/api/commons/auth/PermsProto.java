@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\251/" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\326/" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -176,11 +176,12 @@ public final class PermsProto {
       "\n\"PERMISSION_NEWSROOM_CLIENT_CONTROL\020\352 \032" +
       "\006\212\265\030\002\020\021\022,\n\037PERMISSION_CONTACTMANAGER_ADM" +
       "IN\020\354\'\032\006\212\265\030\002\020\022\022*\n\035PERMISSION_CONTACTMANAG" +
-      "ER_APP\020\355\'\032\006\212\265\030\002\020\022B\222\001\n\"com.tcn.cloud.api." +
-      "api.commons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020A" +
-      "pi.Commons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Api" +
-      "\\Commons\\Auth\\GPBMetadata\352\002\022Api::Commons" +
-      "::Authb\006proto3"
+      "ER_APP\020\355\'\032\006\212\265\030\002\020\022\022+\n\036PERMISSION_KNOWLEDG" +
+      "E_BASE_EDIT\020\320(\032\006\212\265\030\002\020\024B\222\001\n\"com.tcn.cloud" +
+      ".api.api.commons.authB\nPermsProtoP\001\242\002\003AC" +
+      "A\252\002\020Api.Commons.Auth\312\002\020Api\\Commons\\Auth\342" +
+      "\002\034Api\\Commons\\Auth\\GPBMetadata\352\002\022Api::Co" +
+      "mmons::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

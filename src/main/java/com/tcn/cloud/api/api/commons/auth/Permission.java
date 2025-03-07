@@ -890,6 +890,15 @@ public enum Permission
    * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_CONTACTMANAGER_APP(5101),
+  /**
+   * <pre>
+   *
+   * Knowledge Base
+   * </pre>
+   *
+   * <code>PERMISSION_KNOWLEDGE_BASE_EDIT = 5200 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_KNOWLEDGE_BASE_EDIT(5200),
   UNRECOGNIZED(-1),
   ;
 
@@ -1766,6 +1775,15 @@ public enum Permission
    * <code>PERMISSION_CONTACTMANAGER_APP = 5101 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_CONTACTMANAGER_APP_VALUE = 5101;
+  /**
+   * <pre>
+   *
+   * Knowledge Base
+   * </pre>
+   *
+   * <code>PERMISSION_KNOWLEDGE_BASE_EDIT = 5200 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_KNOWLEDGE_BASE_EDIT_VALUE = 5200;
 
 
   public final int getNumber() {
@@ -1901,6 +1919,7 @@ public enum Permission
       case 4202: return PERMISSION_NEWSROOM_CLIENT_CONTROL;
       case 5100: return PERMISSION_CONTACTMANAGER_ADMIN;
       case 5101: return PERMISSION_CONTACTMANAGER_APP;
+      case 5200: return PERMISSION_KNOWLEDGE_BASE_EDIT;
       default: return null;
     }
   }
