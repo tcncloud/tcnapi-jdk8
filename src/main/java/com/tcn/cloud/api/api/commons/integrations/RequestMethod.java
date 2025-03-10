@@ -1332,6 +1332,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_FORTIS_TOKEN_CC_PAYMENT = 6004;</code>
    */
   REQUEST_METHOD_FORTIS_TOKEN_CC_PAYMENT(6004),
+  /**
+   * <code>REQUEST_METHOD_BLINKPAYMENT_CHARGE = 6101;</code>
+   */
+  REQUEST_METHOD_BLINKPAYMENT_CHARGE(6101),
   UNRECOGNIZED(-1),
   ;
 
@@ -2645,6 +2649,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_FORTIS_TOKEN_CC_PAYMENT = 6004;</code>
    */
   public static final int REQUEST_METHOD_FORTIS_TOKEN_CC_PAYMENT_VALUE = 6004;
+  /**
+   * <code>REQUEST_METHOD_BLINKPAYMENT_CHARGE = 6101;</code>
+   */
+  public static final int REQUEST_METHOD_BLINKPAYMENT_CHARGE_VALUE = 6101;
 
 
   public final int getNumber() {
@@ -2996,6 +3004,7 @@ public enum RequestMethod
       case 6002: return REQUEST_METHOD_FORTIS_CREATE_CCTOKEN;
       case 6003: return REQUEST_METHOD_FORTIS_TOKEN_ACH_DEBIT_PAYMENT;
       case 6004: return REQUEST_METHOD_FORTIS_TOKEN_CC_PAYMENT;
+      case 6101: return REQUEST_METHOD_BLINKPAYMENT_CHARGE;
       default: return null;
     }
   }
