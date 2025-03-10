@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteBlinkPaymentChargeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteBlinkPaymentCharge)
+public interface ExecuteBlinkPaymentChargeAchOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteBlinkPaymentChargeAch)
     com.google.protobuf.MessageOrBuilder {
 }

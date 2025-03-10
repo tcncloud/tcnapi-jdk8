@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.commons.integrations;
 
 /**
- * Protobuf type {@code api.commons.integrations.ExecuteBlinkPaymentCharge}
+ * Protobuf type {@code api.commons.integrations.ExecuteBlinkPaymentChargeCc}
  */
-public final class ExecuteBlinkPaymentCharge extends
+public final class ExecuteBlinkPaymentChargeCc extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBlinkPaymentCharge)
-    ExecuteBlinkPaymentChargeOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteBlinkPaymentChargeCc)
+    ExecuteBlinkPaymentChargeCcOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ExecuteBlinkPaymentCharge.newBuilder() to construct.
-  private ExecuteBlinkPaymentCharge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ExecuteBlinkPaymentChargeCc.newBuilder() to construct.
+  private ExecuteBlinkPaymentChargeCc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ExecuteBlinkPaymentCharge() {
+  private ExecuteBlinkPaymentChargeCc() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ExecuteBlinkPaymentCharge();
+    return new ExecuteBlinkPaymentChargeCc();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentCharge_descriptor;
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentChargeCc_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentCharge_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentChargeCc_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.Builder.class);
+            com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge) obj;
+    com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc other = (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.integrations.ExecuteBlinkPaymentCharge}
+   * Protobuf type {@code api.commons.integrations.ExecuteBlinkPaymentChargeCc}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBlinkPaymentCharge)
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteBlinkPaymentChargeCc)
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentCharge_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentChargeCc_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentCharge_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentChargeCc_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.Builder.class);
+              com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.class, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentCharge_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteBlinkPaymentChargeCc_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge build() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge result = buildPartial();
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc build() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge buildPartial() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge(this);
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc buildPartial() {
+      com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc result = new com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge other) {
-      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc other) {
+      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBlinkPaymentCharge)
+    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteBlinkPaymentChargeCc)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBlinkPaymentCharge)
-  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteBlinkPaymentChargeCc)
+  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc();
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExecuteBlinkPaymentCharge>
-      PARSER = new com.google.protobuf.AbstractParser<ExecuteBlinkPaymentCharge>() {
+  private static final com.google.protobuf.Parser<ExecuteBlinkPaymentChargeCc>
+      PARSER = new com.google.protobuf.AbstractParser<ExecuteBlinkPaymentChargeCc>() {
     @java.lang.Override
-    public ExecuteBlinkPaymentCharge parsePartialFrom(
+    public ExecuteBlinkPaymentChargeCc parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ExecuteBlinkPaymentCharge> parser() {
+  public static com.google.protobuf.Parser<ExecuteBlinkPaymentChargeCc> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ExecuteBlinkPaymentCharge> getParserForType() {
+  public com.google.protobuf.Parser<ExecuteBlinkPaymentChargeCc> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentCharge getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
