@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     customFieldType_ = 0;
     editedValue_ = "";
     previousValue_ = "";
+    customFieldName_ = "";
+    ticketCustomFieldStatus_ = 0;
   }
 
   @java.lang.Override
@@ -180,6 +182,79 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CUSTOM_FIELD_NAME_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customFieldName_ = "";
+  /**
+   * <pre>
+   * custom filed name -
+   * </pre>
+   *
+   * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+   * @return The customFieldName.
+   */
+  @java.lang.Override
+  public java.lang.String getCustomFieldName() {
+    java.lang.Object ref = customFieldName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customFieldName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * custom filed name -
+   * </pre>
+   *
+   * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+   * @return The bytes for customFieldName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCustomFieldNameBytes() {
+    java.lang.Object ref = customFieldName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customFieldName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TICKET_CUSTOM_FIELD_STATUS_FIELD_NUMBER = 6;
+  private int ticketCustomFieldStatus_ = 0;
+  /**
+   * <pre>
+   * The status of field types
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+   * @return The enum numeric value on the wire for ticketCustomFieldStatus.
+   */
+  @java.lang.Override public int getTicketCustomFieldStatusValue() {
+    return ticketCustomFieldStatus_;
+  }
+  /**
+   * <pre>
+   * The status of field types
+   * </pre>
+   *
+   * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+   * @return The ticketCustomFieldStatus.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TicketCustomFieldStatus getTicketCustomFieldStatus() {
+    com.tcn.cloud.api.api.commons.TicketCustomFieldStatus result = com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.forNumber(ticketCustomFieldStatus_);
+    return result == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -206,6 +281,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousValue_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, previousValue_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customFieldName_);
+    }
+    if (ticketCustomFieldStatus_ != com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.Ticket_Custom_Field_Status_Added.getNumber()) {
+      output.writeEnum(6, ticketCustomFieldStatus_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -229,6 +310,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousValue_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, previousValue_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customFieldName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customFieldName_);
+    }
+    if (ticketCustomFieldStatus_ != com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.Ticket_Custom_Field_Status_Added.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, ticketCustomFieldStatus_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -251,6 +339,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEditedValue())) return false;
     if (!getPreviousValue()
         .equals(other.getPreviousValue())) return false;
+    if (!getCustomFieldName()
+        .equals(other.getCustomFieldName())) return false;
+    if (ticketCustomFieldStatus_ != other.ticketCustomFieldStatus_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -271,6 +362,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEditedValue().hashCode();
     hash = (37 * hash) + PREVIOUS_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getPreviousValue().hashCode();
+    hash = (37 * hash) + CUSTOM_FIELD_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomFieldName().hashCode();
+    hash = (37 * hash) + TICKET_CUSTOM_FIELD_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + ticketCustomFieldStatus_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -410,6 +505,8 @@ private static final long serialVersionUID = 0L;
       customFieldType_ = 0;
       editedValue_ = "";
       previousValue_ = "";
+      customFieldName_ = "";
+      ticketCustomFieldStatus_ = 0;
       return this;
     }
 
@@ -454,6 +551,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.previousValue_ = previousValue_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.customFieldName_ = customFieldName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ticketCustomFieldStatus_ = ticketCustomFieldStatus_;
       }
     }
 
@@ -517,6 +620,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getCustomFieldName().isEmpty()) {
+        customFieldName_ = other.customFieldName_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.ticketCustomFieldStatus_ != 0) {
+        setTicketCustomFieldStatusValue(other.getTicketCustomFieldStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -563,6 +674,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              customFieldName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              ticketCustomFieldStatus_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -877,6 +998,171 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       previousValue_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object customFieldName_ = "";
+    /**
+     * <pre>
+     * custom filed name -
+     * </pre>
+     *
+     * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+     * @return The customFieldName.
+     */
+    public java.lang.String getCustomFieldName() {
+      java.lang.Object ref = customFieldName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customFieldName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * custom filed name -
+     * </pre>
+     *
+     * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+     * @return The bytes for customFieldName.
+     */
+    public com.google.protobuf.ByteString
+        getCustomFieldNameBytes() {
+      java.lang.Object ref = customFieldName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customFieldName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * custom filed name -
+     * </pre>
+     *
+     * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+     * @param value The customFieldName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      customFieldName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom filed name -
+     * </pre>
+     *
+     * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomFieldName() {
+      customFieldName_ = getDefaultInstance().getCustomFieldName();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * custom filed name -
+     * </pre>
+     *
+     * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
+     * @param value The bytes for customFieldName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomFieldNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      customFieldName_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private int ticketCustomFieldStatus_ = 0;
+    /**
+     * <pre>
+     * The status of field types
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+     * @return The enum numeric value on the wire for ticketCustomFieldStatus.
+     */
+    @java.lang.Override public int getTicketCustomFieldStatusValue() {
+      return ticketCustomFieldStatus_;
+    }
+    /**
+     * <pre>
+     * The status of field types
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+     * @param value The enum numeric value on the wire for ticketCustomFieldStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCustomFieldStatusValue(int value) {
+      ticketCustomFieldStatus_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The status of field types
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+     * @return The ticketCustomFieldStatus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TicketCustomFieldStatus getTicketCustomFieldStatus() {
+      com.tcn.cloud.api.api.commons.TicketCustomFieldStatus result = com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.forNumber(ticketCustomFieldStatus_);
+      return result == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The status of field types
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+     * @param value The ticketCustomFieldStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCustomFieldStatus(com.tcn.cloud.api.api.commons.TicketCustomFieldStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      ticketCustomFieldStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The status of field types
+     * </pre>
+     *
+     * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCustomFieldStatus() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      ticketCustomFieldStatus_ = 0;
       onChanged();
       return this;
     }
