@@ -64,6 +64,10 @@ public enum AppName
    * <code>NEWSROOM = 13;</code>
    */
   NEWSROOM(13),
+  /**
+   * <code>KNOWLEDGE_BASE = 14;</code>
+   */
+  KNOWLEDGE_BASE(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -123,6 +127,10 @@ public enum AppName
    * <code>NEWSROOM = 13;</code>
    */
   public static final int NEWSROOM_VALUE = 13;
+  /**
+   * <code>KNOWLEDGE_BASE = 14;</code>
+   */
+  public static final int KNOWLEDGE_BASE_VALUE = 14;
 
 
   public final int getNumber() {
@@ -163,6 +171,7 @@ public enum AppName
       case 11: return LEARN;
       case 12: return BILLING;
       case 13: return NEWSROOM;
+      case 14: return KNOWLEDGE_BASE;
       default: return null;
     }
   }
