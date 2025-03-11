@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=473
+   *     See api/v0alpha/learn.proto;l=486
    * @return The content.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=473
+   *     See api/v0alpha/learn.proto;l=486
    * @return The bytes for content.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=475
+   *     See api/v0alpha/learn.proto;l=488
    * @return Whether the lastEditedTimestamp field is set.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=475
+   *     See api/v0alpha/learn.proto;l=488
    * @return The lastEditedTimestamp.
    */
   @java.lang.Override
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string content = 2 [json_name = "content", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-     *     See api/v0alpha/learn.proto;l=473
+     *     See api/v0alpha/learn.proto;l=486
      * @return The content.
      */
     @java.lang.Deprecated public java.lang.String getContent() {
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string content = 2 [json_name = "content", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-     *     See api/v0alpha/learn.proto;l=473
+     *     See api/v0alpha/learn.proto;l=486
      * @return The bytes for content.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string content = 2 [json_name = "content", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-     *     See api/v0alpha/learn.proto;l=473
+     *     See api/v0alpha/learn.proto;l=486
      * @param value The content to set.
      * @return This builder for chaining.
      */
@@ -810,7 +810,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string content = 2 [json_name = "content", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-     *     See api/v0alpha/learn.proto;l=473
+     *     See api/v0alpha/learn.proto;l=486
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContent() {
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string content = 2 [json_name = "content", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-     *     See api/v0alpha/learn.proto;l=473
+     *     See api/v0alpha/learn.proto;l=486
      * @param value The bytes for content to set.
      * @return This builder for chaining.
      */
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-     *     See api/v0alpha/learn.proto;l=475
+     *     See api/v0alpha/learn.proto;l=488
      * @return Whether the lastEditedTimestamp field is set.
      */
     @java.lang.Deprecated public boolean hasLastEditedTimestamp() {
@@ -863,7 +863,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-     *     See api/v0alpha/learn.proto;l=475
+     *     See api/v0alpha/learn.proto;l=488
      * @return The lastEditedTimestamp.
      */
     @java.lang.Deprecated public com.google.protobuf.Timestamp getLastEditedTimestamp() {
