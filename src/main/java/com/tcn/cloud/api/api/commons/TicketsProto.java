@@ -342,37 +342,30 @@ public final class TicketsProto {
       "icketCustomFieldAuditLog\022Y\n\027custom_field" +
       "_attributes\030\001 \003(\0132!.api.commons.CustomFi" +
       "eldAttributeR\025customFieldAttributes\022\037\n\013t" +
-      "icket_code\030\002 \001(\tR\nticketCode\"\353\002\n\024CustomF" +
+      "icket_code\030\002 \001(\tR\nticketCode\"\334\001\n\024CustomF" +
       "ieldAttribute\022*\n\017custom_field_id\030\001 \001(\003B\002" +
       "0\001R\rcustomFieldId\022N\n\021custom_field_type\030\002" +
       " \001(\0162\".api.commons.TicketCustomFieldType" +
       "R\017customFieldType\022!\n\014edited_value\030\003 \001(\tR" +
       "\013editedValue\022%\n\016previous_value\030\004 \001(\tR\rpr" +
-      "eviousValue\022*\n\021custom_field_name\030\005 \001(\tR\017" +
-      "customFieldName\022a\n\032ticket_custom_field_s" +
-      "tatus\030\006 \001(\0162$.api.commons.TicketCustomFi" +
-      "eldStatusR\027ticketCustomFieldStatus*\213\001\n\tT" +
-      "imeScale\022\025\n\021TIME_SCALE_MINUTE\020\000\022\023\n\017TIME_" +
-      "SCALE_HOUR\020\001\022\022\n\016TIME_SCALE_DAY\020\002\022\023\n\017TIME" +
-      "_SCALE_WEEK\020\003\022\024\n\020TIME_SCALE_MONTH\020\004\022\023\n\017T" +
-      "IME_SCALE_YEAR\020\005*V\n\014TicketStatus\022\025\n\021TICK" +
-      "ET_STATUS_NEW\020\000\022\026\n\022TICKET_STATUS_OPEN\020\001\022" +
-      "\027\n\023TICKET_STATUS_CLOSE\020\002*?\n\017PhoneNumberT" +
-      "ype\022\n\n\006MOBILE\020\000\022\t\n\005OTHER\020\001\022\021\n\rINVALID_ER" +
-      "ROR\020\002\032\002\030\001*\375\001\n\025TicketCustomFieldType\022#\n\037T" +
-      "ICKET_CUSTOMFIELD_TYPE_BOOLEAN\020\000\022\"\n\036TICK" +
-      "ET_CUSTOMFIELD_TYPE_STRING\020\001\022\"\n\036TICKET_C" +
-      "USTOMFIELD_TYPE_NUMBER\020\002\022$\n TICKET_CUSTO" +
-      "MFIELD_TYPE_DATETIME\020\003\022\'\n#TICKET_CUSTOMF" +
-      "IELD_TYPE_MULTISELECT\020\004\022(\n$TICKET_CUSTOM" +
-      "FIELD_TYPE_SINGLESELECT\020\005*\217\001\n\027TicketCust" +
-      "omFieldStatus\022$\n Ticket_Custom_Field_Sta" +
-      "tus_Added\020\000\022&\n\"Ticket_Custom_Field_Statu" +
-      "s_Updated\020\001\022&\n\"Ticket_Custom_Field_Statu" +
-      "s_Deleted\020\002Bz\n\035com.tcn.cloud.api.api.com" +
-      "monsB\014TicketsProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
-      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
-      "\352\002\014Api::Commonsb\006proto3"
+      "eviousValue*\213\001\n\tTimeScale\022\025\n\021TIME_SCALE_" +
+      "MINUTE\020\000\022\023\n\017TIME_SCALE_HOUR\020\001\022\022\n\016TIME_SC" +
+      "ALE_DAY\020\002\022\023\n\017TIME_SCALE_WEEK\020\003\022\024\n\020TIME_S" +
+      "CALE_MONTH\020\004\022\023\n\017TIME_SCALE_YEAR\020\005*V\n\014Tic" +
+      "ketStatus\022\025\n\021TICKET_STATUS_NEW\020\000\022\026\n\022TICK" +
+      "ET_STATUS_OPEN\020\001\022\027\n\023TICKET_STATUS_CLOSE\020" +
+      "\002*?\n\017PhoneNumberType\022\n\n\006MOBILE\020\000\022\t\n\005OTHE" +
+      "R\020\001\022\021\n\rINVALID_ERROR\020\002\032\002\030\001*\375\001\n\025TicketCus" +
+      "tomFieldType\022#\n\037TICKET_CUSTOMFIELD_TYPE_" +
+      "BOOLEAN\020\000\022\"\n\036TICKET_CUSTOMFIELD_TYPE_STR" +
+      "ING\020\001\022\"\n\036TICKET_CUSTOMFIELD_TYPE_NUMBER\020" +
+      "\002\022$\n TICKET_CUSTOMFIELD_TYPE_DATETIME\020\003\022" +
+      "\'\n#TICKET_CUSTOMFIELD_TYPE_MULTISELECT\020\004" +
+      "\022(\n$TICKET_CUSTOMFIELD_TYPE_SINGLESELECT" +
+      "\020\005Bz\n\035com.tcn.cloud.api.api.commonsB\014Tic" +
+      "ketsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Co" +
+      "mmons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::C" +
+      "ommonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -558,7 +551,7 @@ public final class TicketsProto {
     internal_static_api_commons_CustomFieldAttribute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_CustomFieldAttribute_descriptor,
-        new java.lang.String[] { "CustomFieldId", "CustomFieldType", "EditedValue", "PreviousValue", "CustomFieldName", "TicketCustomFieldStatus", });
+        new java.lang.String[] { "CustomFieldId", "CustomFieldType", "EditedValue", "PreviousValue", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

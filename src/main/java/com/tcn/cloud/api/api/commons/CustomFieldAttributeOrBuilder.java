@@ -75,43 +75,4 @@ public interface CustomFieldAttributeOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPreviousValueBytes();
-
-  /**
-   * <pre>
-   * custom filed name -
-   * </pre>
-   *
-   * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
-   * @return The customFieldName.
-   */
-  java.lang.String getCustomFieldName();
-  /**
-   * <pre>
-   * custom filed name -
-   * </pre>
-   *
-   * <code>string custom_field_name = 5 [json_name = "customFieldName"];</code>
-   * @return The bytes for customFieldName.
-   */
-  com.google.protobuf.ByteString
-      getCustomFieldNameBytes();
-
-  /**
-   * <pre>
-   * The status of field types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
-   * @return The enum numeric value on the wire for ticketCustomFieldStatus.
-   */
-  int getTicketCustomFieldStatusValue();
-  /**
-   * <pre>
-   * The status of field types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCustomFieldStatus ticket_custom_field_status = 6 [json_name = "ticketCustomFieldStatus"];</code>
-   * @return The ticketCustomFieldStatus.
-   */
-  com.tcn.cloud.api.api.commons.TicketCustomFieldStatus getTicketCustomFieldStatus();
 }

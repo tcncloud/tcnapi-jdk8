@@ -374,8 +374,6 @@ private static final long serialVersionUID = 0L;
     FORTIS_CREATE_CCTOKEN(6002),
     FORTIS_TOKEN_ACH_DEBIT_PAYMENT(6003),
     FORTIS_TOKEN_CC_PAYMENT(6004),
-    BLINKPAYMENT_CHARGE_CC(6101),
-    BLINKPAYMENT_CHARGE_ACH(6102),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -715,8 +713,6 @@ private static final long serialVersionUID = 0L;
         case 6002: return FORTIS_CREATE_CCTOKEN;
         case 6003: return FORTIS_TOKEN_ACH_DEBIT_PAYMENT;
         case 6004: return FORTIS_TOKEN_CC_PAYMENT;
-        case 6101: return BLINKPAYMENT_CHARGE_CC;
-        case 6102: return BLINKPAYMENT_CHARGE_ACH;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -9362,7 +9358,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1243
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9372,7 +9368,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1243
+   *     See api/commons/integrations/integrations.proto;l=1239
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9397,7 +9393,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1244
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9407,7 +9403,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1244
+   *     See api/commons/integrations/integrations.proto;l=1240
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9432,7 +9428,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1245
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9442,7 +9438,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1245
+   *     See api/commons/integrations/integrations.proto;l=1241
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9467,7 +9463,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1246
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9477,7 +9473,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1246
+   *     See api/commons/integrations/integrations.proto;l=1242
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9502,7 +9498,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1247
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9512,7 +9508,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1247
+   *     See api/commons/integrations/integrations.proto;l=1243
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9537,7 +9533,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1248
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9547,7 +9543,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1248
+   *     See api/commons/integrations/integrations.proto;l=1244
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9572,7 +9568,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1249
+   *     See api/commons/integrations/integrations.proto;l=1245
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9582,7 +9578,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1249
+   *     See api/commons/integrations/integrations.proto;l=1245
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10781,68 +10777,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment.getDefaultInstance();
   }
 
-  public static final int BLINKPAYMENT_CHARGE_CC_FIELD_NUMBER = 6101;
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-   * @return Whether the blinkpaymentChargeCc field is set.
-   */
-  @java.lang.Override
-  public boolean hasBlinkpaymentChargeCc() {
-    return valueCase_ == 6101;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-   * @return The blinkpaymentChargeCc.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc getBlinkpaymentChargeCc() {
-    if (valueCase_ == 6101) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder getBlinkpaymentChargeCcOrBuilder() {
-    if (valueCase_ == 6101) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-  }
-
-  public static final int BLINKPAYMENT_CHARGE_ACH_FIELD_NUMBER = 6102;
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-   * @return Whether the blinkpaymentChargeAch field is set.
-   */
-  @java.lang.Override
-  public boolean hasBlinkpaymentChargeAch() {
-    return valueCase_ == 6102;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-   * @return The blinkpaymentChargeAch.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch getBlinkpaymentChargeAch() {
-    if (valueCase_ == 6102) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAchOrBuilder getBlinkpaymentChargeAchOrBuilder() {
-    if (valueCase_ == 6102) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -11825,12 +11759,6 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 6004) {
       output.writeMessage(6004, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_);
-    }
-    if (valueCase_ == 6101) {
-      output.writeMessage(6101, (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_);
-    }
-    if (valueCase_ == 6102) {
-      output.writeMessage(6102, (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -13131,14 +13059,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 6004) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6004, (com.tcn.cloud.api.api.commons.integrations.ExecuteFortisTokenCcPayment) value_);
-    }
-    if (valueCase_ == 6101) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6101, (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_);
-    }
-    if (valueCase_ == 6102) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6102, (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -14447,14 +14367,6 @@ private static final long serialVersionUID = 0L;
         if (!getFortisTokenCcPayment()
             .equals(other.getFortisTokenCcPayment())) return false;
         break;
-      case 6101:
-        if (!getBlinkpaymentChargeCc()
-            .equals(other.getBlinkpaymentChargeCc())) return false;
-        break;
-      case 6102:
-        if (!getBlinkpaymentChargeAch()
-            .equals(other.getBlinkpaymentChargeAch())) return false;
-        break;
       case 0:
       default:
     }
@@ -15760,14 +15672,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getFortisTokenCcPayment().hashCode();
         break;
-      case 6101:
-        hash = (37 * hash) + BLINKPAYMENT_CHARGE_CC_FIELD_NUMBER;
-        hash = (53 * hash) + getBlinkpaymentChargeCc().hashCode();
-        break;
-      case 6102:
-        hash = (37 * hash) + BLINKPAYMENT_CHARGE_ACH_FIELD_NUMBER;
-        hash = (53 * hash) + getBlinkpaymentChargeAch().hashCode();
-        break;
       case 0:
       default:
     }
@@ -16885,12 +16789,6 @@ private static final long serialVersionUID = 0L;
       }
       if (fortisTokenCcPaymentBuilder_ != null) {
         fortisTokenCcPaymentBuilder_.clear();
-      }
-      if (blinkpaymentChargeCcBuilder_ != null) {
-        blinkpaymentChargeCcBuilder_.clear();
-      }
-      if (blinkpaymentChargeAchBuilder_ != null) {
-        blinkpaymentChargeAchBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -18274,14 +18172,6 @@ private static final long serialVersionUID = 0L;
           fortisTokenCcPaymentBuilder_ != null) {
         result.value_ = fortisTokenCcPaymentBuilder_.build();
       }
-      if (valueCase_ == 6101 &&
-          blinkpaymentChargeCcBuilder_ != null) {
-        result.value_ = blinkpaymentChargeCcBuilder_.build();
-      }
-      if (valueCase_ == 6102 &&
-          blinkpaymentChargeAchBuilder_ != null) {
-        result.value_ = blinkpaymentChargeAchBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -19620,14 +19510,6 @@ private static final long serialVersionUID = 0L;
         }
         case FORTIS_TOKEN_CC_PAYMENT: {
           mergeFortisTokenCcPayment(other.getFortisTokenCcPayment());
-          break;
-        }
-        case BLINKPAYMENT_CHARGE_CC: {
-          mergeBlinkpaymentChargeCc(other.getBlinkpaymentChargeCc());
-          break;
-        }
-        case BLINKPAYMENT_CHARGE_ACH: {
-          mergeBlinkpaymentChargeAch(other.getBlinkpaymentChargeAch());
           break;
         }
         case VALUE_NOT_SET: {
@@ -21919,20 +21801,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 6004;
               break;
             } // case 48034
-            case 48810: {
-              input.readMessage(
-                  getBlinkpaymentChargeCcFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 6101;
-              break;
-            } // case 48810
-            case 48818: {
-              input.readMessage(
-                  getBlinkpaymentChargeAchFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 6102;
-              break;
-            } // case 48818
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -61386,7 +61254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1243
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -61396,7 +61264,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1243
+     *     See api/commons/integrations/integrations.proto;l=1239
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -61532,7 +61400,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1244
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -61542,7 +61410,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1244
+     *     See api/commons/integrations/integrations.proto;l=1240
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -61678,7 +61546,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1245
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -61688,7 +61556,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1245
+     *     See api/commons/integrations/integrations.proto;l=1241
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -61824,7 +61692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1246
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -61834,7 +61702,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1246
+     *     See api/commons/integrations/integrations.proto;l=1242
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -61970,7 +61838,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1247
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -61980,7 +61848,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1247
+     *     See api/commons/integrations/integrations.proto;l=1243
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -62116,7 +61984,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1248
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -62126,7 +61994,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1248
+     *     See api/commons/integrations/integrations.proto;l=1244
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -62262,7 +62130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1249
+     *     See api/commons/integrations/integrations.proto;l=1245
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -62272,7 +62140,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1249
+     *     See api/commons/integrations/integrations.proto;l=1245
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -67797,290 +67665,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 6004;
       onChanged();
       return fortisTokenCcPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder> blinkpaymentChargeCcBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     * @return Whether the blinkpaymentChargeCc field is set.
-     */
-    @java.lang.Override
-    public boolean hasBlinkpaymentChargeCc() {
-      return valueCase_ == 6101;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     * @return The blinkpaymentChargeCc.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc getBlinkpaymentChargeCc() {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        if (valueCase_ == 6101) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-      } else {
-        if (valueCase_ == 6101) {
-          return blinkpaymentChargeCcBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    public Builder setBlinkpaymentChargeCc(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc value) {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        blinkpaymentChargeCcBuilder_.setMessage(value);
-      }
-      valueCase_ = 6101;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    public Builder setBlinkpaymentChargeCc(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder builderForValue) {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        blinkpaymentChargeCcBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 6101;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    public Builder mergeBlinkpaymentChargeCc(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc value) {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        if (valueCase_ == 6101 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 6101) {
-          blinkpaymentChargeCcBuilder_.mergeFrom(value);
-        } else {
-          blinkpaymentChargeCcBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 6101;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    public Builder clearBlinkpaymentChargeCc() {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        if (valueCase_ == 6101) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 6101) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        blinkpaymentChargeCcBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder getBlinkpaymentChargeCcBuilder() {
-      return getBlinkpaymentChargeCcFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder getBlinkpaymentChargeCcOrBuilder() {
-      if ((valueCase_ == 6101) && (blinkpaymentChargeCcBuilder_ != null)) {
-        return blinkpaymentChargeCcBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 6101) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeCc blinkpayment_charge_cc = 6101 [json_name = "blinkpaymentChargeCc"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder> 
-        getBlinkpaymentChargeCcFieldBuilder() {
-      if (blinkpaymentChargeCcBuilder_ == null) {
-        if (!(valueCase_ == 6101)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.getDefaultInstance();
-        }
-        blinkpaymentChargeCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCcOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeCc) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 6101;
-      onChanged();
-      return blinkpaymentChargeCcBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAchOrBuilder> blinkpaymentChargeAchBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     * @return Whether the blinkpaymentChargeAch field is set.
-     */
-    @java.lang.Override
-    public boolean hasBlinkpaymentChargeAch() {
-      return valueCase_ == 6102;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     * @return The blinkpaymentChargeAch.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch getBlinkpaymentChargeAch() {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        if (valueCase_ == 6102) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-      } else {
-        if (valueCase_ == 6102) {
-          return blinkpaymentChargeAchBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    public Builder setBlinkpaymentChargeAch(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch value) {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        blinkpaymentChargeAchBuilder_.setMessage(value);
-      }
-      valueCase_ = 6102;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    public Builder setBlinkpaymentChargeAch(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.Builder builderForValue) {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        blinkpaymentChargeAchBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 6102;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    public Builder mergeBlinkpaymentChargeAch(com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch value) {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        if (valueCase_ == 6102 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 6102) {
-          blinkpaymentChargeAchBuilder_.mergeFrom(value);
-        } else {
-          blinkpaymentChargeAchBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 6102;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    public Builder clearBlinkpaymentChargeAch() {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        if (valueCase_ == 6102) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 6102) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        blinkpaymentChargeAchBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.Builder getBlinkpaymentChargeAchBuilder() {
-      return getBlinkpaymentChargeAchFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAchOrBuilder getBlinkpaymentChargeAchOrBuilder() {
-      if ((valueCase_ == 6102) && (blinkpaymentChargeAchBuilder_ != null)) {
-        return blinkpaymentChargeAchBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 6102) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteBlinkPaymentChargeAch blinkpayment_charge_ach = 6102 [json_name = "blinkpaymentChargeAch"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAchOrBuilder> 
-        getBlinkpaymentChargeAchFieldBuilder() {
-      if (blinkpaymentChargeAchBuilder_ == null) {
-        if (!(valueCase_ == 6102)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.getDefaultInstance();
-        }
-        blinkpaymentChargeAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAchOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteBlinkPaymentChargeAch) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 6102;
-      onChanged();
-      return blinkpaymentChargeAchBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
