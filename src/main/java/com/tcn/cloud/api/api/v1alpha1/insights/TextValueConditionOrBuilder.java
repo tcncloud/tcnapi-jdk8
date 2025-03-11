@@ -9,7 +9,7 @@ public interface TextValueConditionOrBuilder extends
 
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
@@ -21,7 +21,7 @@ public interface TextValueConditionOrBuilder extends
   @java.lang.Deprecated boolean hasExpression();
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
@@ -33,7 +33,7 @@ public interface TextValueConditionOrBuilder extends
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
   /**
    * <pre>
-   * DEPRECATED use expression_node instead
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
@@ -144,28 +144,89 @@ public interface TextValueConditionOrBuilder extends
 
   /**
    * <pre>
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TextValueCondition.expression_node is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=289
    * @return Whether the expressionNode field is set.
    */
-  boolean hasExpressionNode();
+  @java.lang.Deprecated boolean hasExpressionNode();
   /**
    * <pre>
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TextValueCondition.expression_node is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=289
    * @return The expressionNode.
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode();
   /**
    * <pre>
+   * DEPRECATED use condition/result expression instead
    * The expression for the condition
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode"];</code>
+   * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getExpressionNodeOrBuilder();
+
+  /**
+   * <pre>
+   * The condition to determine whether to render this value
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode condition_expression = 7 [json_name = "conditionExpression"];</code>
+   * @return Whether the conditionExpression field is set.
+   */
+  boolean hasConditionExpression();
+  /**
+   * <pre>
+   * The condition to determine whether to render this value
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode condition_expression = 7 [json_name = "conditionExpression"];</code>
+   * @return The conditionExpression.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getConditionExpression();
+  /**
+   * <pre>
+   * The condition to determine whether to render this value
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode condition_expression = 7 [json_name = "conditionExpression"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getConditionExpressionOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode result_expression = 8 [json_name = "resultExpression"];</code>
+   * @return Whether the resultExpression field is set.
+   */
+  boolean hasResultExpression();
+  /**
+   * <pre>
+   * The result for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode result_expression = 8 [json_name = "resultExpression"];</code>
+   * @return The resultExpression.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getResultExpression();
+  /**
+   * <pre>
+   * The result for the condition
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExpressionNode result_expression = 8 [json_name = "resultExpression"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNodeOrBuilder getResultExpressionOrBuilder();
 }

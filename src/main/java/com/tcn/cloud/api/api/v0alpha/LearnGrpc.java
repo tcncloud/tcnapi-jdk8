@@ -793,6 +793,37 @@ public final class LearnGrpc {
     return getUploadStaticImageMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq,
+      com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> getGetUpdateUrlMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUpdateUrl",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq,
+      com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> getGetUpdateUrlMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq, com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> getGetUpdateUrlMethod;
+    if ((getGetUpdateUrlMethod = LearnGrpc.getGetUpdateUrlMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getGetUpdateUrlMethod = LearnGrpc.getGetUpdateUrlMethod) == null) {
+          LearnGrpc.getGetUpdateUrlMethod = getGetUpdateUrlMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq, com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUpdateUrl"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("GetUpdateUrl"))
+              .build();
+        }
+      }
+    }
+    return getGetUpdateUrlMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1097,6 +1128,16 @@ public final class LearnGrpc {
     default void uploadStaticImage(com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadStaticImageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload url for file updates
+     * </pre>
+     */
+    default void getUpdateUrl(com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUpdateUrlMethod(), responseObserver);
     }
   }
 
@@ -1412,6 +1453,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUploadStaticImageMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * upload url for file updates
+     * </pre>
+     */
+    public void getUpdateUrl(com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetUpdateUrlMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1691,6 +1743,16 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUploadStaticImageMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * upload url for file updates
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes getUpdateUrl(com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetUpdateUrlMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1945,6 +2007,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUploadStaticImageMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * upload url for file updates
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> getUpdateUrl(
+        com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetUpdateUrlMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1972,6 +2045,7 @@ public final class LearnGrpc {
   private static final int METHODID_REVIEW_VERSION_STREAM = 22;
   private static final int METHODID_DELETE_VERSION = 23;
   private static final int METHODID_UPLOAD_STATIC_IMAGE = 24;
+  private static final int METHODID_GET_UPDATE_URL = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2089,6 +2163,10 @@ public final class LearnGrpc {
         case METHODID_UPLOAD_STATIC_IMAGE:
           serviceImpl.uploadStaticImage((com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes>) responseObserver);
+          break;
+        case METHODID_GET_UPDATE_URL:
+          serviceImpl.getUpdateUrl((com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2283,6 +2361,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq,
               com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes>(
                 service, METHODID_UPLOAD_STATIC_IMAGE)))
+        .addMethod(
+          getGetUpdateUrlMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq,
+              com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes>(
+                service, METHODID_GET_UPDATE_URL)))
         .build();
   }
 
@@ -2356,6 +2441,7 @@ public final class LearnGrpc {
               .addMethod(getReviewVersionStreamMethod())
               .addMethod(getDeleteVersionMethod())
               .addMethod(getUploadStaticImageMethod())
+              .addMethod(getGetUpdateUrlMethod())
               .build();
         }
       }
