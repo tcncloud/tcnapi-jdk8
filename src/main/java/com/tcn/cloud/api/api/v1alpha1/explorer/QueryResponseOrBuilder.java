@@ -91,21 +91,41 @@ public interface QueryResponseOrBuilder extends
 
   /**
    * <pre>
-   * post processing query
+   * post processing table query
    * </pre>
    *
-   * <code>string post_processing_query = 4 [json_name = "postProcessingQuery"];</code>
-   * @return The postProcessingQuery.
+   * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+   * @return The postProcessingTableQuery.
    */
-  java.lang.String getPostProcessingQuery();
+  java.lang.String getPostProcessingTableQuery();
   /**
    * <pre>
-   * post processing query
+   * post processing table query
    * </pre>
    *
-   * <code>string post_processing_query = 4 [json_name = "postProcessingQuery"];</code>
-   * @return The bytes for postProcessingQuery.
+   * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+   * @return The bytes for postProcessingTableQuery.
    */
   com.google.protobuf.ByteString
-      getPostProcessingQueryBytes();
+      getPostProcessingTableQueryBytes();
+
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The postProcessingSummaryQuery.
+   */
+  java.lang.String getPostProcessingSummaryQuery();
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The bytes for postProcessingSummaryQuery.
+   */
+  com.google.protobuf.ByteString
+      getPostProcessingSummaryQueryBytes();
 }
