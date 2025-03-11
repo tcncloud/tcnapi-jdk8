@@ -148,4 +148,44 @@ public interface SupportQueryResponseOrBuilder extends
    */
   boolean getTimeFilteredDatasourcesOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_table_query = 7 [json_name = "postProcessingTableQuery"];</code>
+   * @return The postProcessingTableQuery.
+   */
+  java.lang.String getPostProcessingTableQuery();
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_table_query = 7 [json_name = "postProcessingTableQuery"];</code>
+   * @return The bytes for postProcessingTableQuery.
+   */
+  com.google.protobuf.ByteString
+      getPostProcessingTableQueryBytes();
+
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 8 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The postProcessingSummaryQuery.
+   */
+  java.lang.String getPostProcessingSummaryQuery();
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 8 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The bytes for postProcessingSummaryQuery.
+   */
+  com.google.protobuf.ByteString
+      getPostProcessingSummaryQueryBytes();
 }

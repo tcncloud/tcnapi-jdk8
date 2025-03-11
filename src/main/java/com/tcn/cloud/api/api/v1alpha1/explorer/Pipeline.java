@@ -104,6 +104,44 @@ private static final long serialVersionUID = 0L;
     return nodes_.get(index);
   }
 
+  public static final int FORMAT_QUERY_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery formatQuery_;
+  /**
+   * <pre>
+   * Format query returns a query to format the data in post processing
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+   * @return Whether the formatQuery field is set.
+   */
+  @java.lang.Override
+  public boolean hasFormatQuery() {
+    return formatQuery_ != null;
+  }
+  /**
+   * <pre>
+   * Format query returns a query to format the data in post processing
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+   * @return The formatQuery.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery getFormatQuery() {
+    return formatQuery_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.getDefaultInstance() : formatQuery_;
+  }
+  /**
+   * <pre>
+   * Format query returns a query to format the data in post processing
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.FormatQueryOrBuilder getFormatQueryOrBuilder() {
+    return formatQuery_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.getDefaultInstance() : formatQuery_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +159,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < nodes_.size(); i++) {
       output.writeMessage(1, nodes_.get(i));
     }
+    if (formatQuery_ != null) {
+      output.writeMessage(2, getFormatQuery());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +174,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < nodes_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, nodes_.get(i));
+    }
+    if (formatQuery_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getFormatQuery());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,6 +196,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getNodesList()
         .equals(other.getNodesList())) return false;
+    if (hasFormatQuery() != other.hasFormatQuery()) return false;
+    if (hasFormatQuery()) {
+      if (!getFormatQuery()
+          .equals(other.getFormatQuery())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -165,6 +215,10 @@ private static final long serialVersionUID = 0L;
     if (getNodesCount() > 0) {
       hash = (37 * hash) + NODES_FIELD_NUMBER;
       hash = (53 * hash) + getNodesList().hashCode();
+    }
+    if (hasFormatQuery()) {
+      hash = (37 * hash) + FORMAT_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getFormatQuery().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -308,6 +362,11 @@ private static final long serialVersionUID = 0L;
         nodesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      formatQuery_ = null;
+      if (formatQueryBuilder_ != null) {
+        formatQueryBuilder_.dispose();
+        formatQueryBuilder_ = null;
+      }
       return this;
     }
 
@@ -354,6 +413,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.formatQuery_ = formatQueryBuilder_ == null
+            ? formatQuery_
+            : formatQueryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -426,6 +490,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasFormatQuery()) {
+        mergeFormatQuery(other.getFormatQuery());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +532,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getFormatQueryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -792,6 +866,161 @@ private static final long serialVersionUID = 0L;
         nodes_ = null;
       }
       return nodesBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery formatQuery_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQueryOrBuilder> formatQueryBuilder_;
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     * @return Whether the formatQuery field is set.
+     */
+    public boolean hasFormatQuery() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     * @return The formatQuery.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery getFormatQuery() {
+      if (formatQueryBuilder_ == null) {
+        return formatQuery_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.getDefaultInstance() : formatQuery_;
+      } else {
+        return formatQueryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public Builder setFormatQuery(com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery value) {
+      if (formatQueryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        formatQuery_ = value;
+      } else {
+        formatQueryBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public Builder setFormatQuery(
+        com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.Builder builderForValue) {
+      if (formatQueryBuilder_ == null) {
+        formatQuery_ = builderForValue.build();
+      } else {
+        formatQueryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public Builder mergeFormatQuery(com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery value) {
+      if (formatQueryBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          formatQuery_ != null &&
+          formatQuery_ != com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.getDefaultInstance()) {
+          getFormatQueryBuilder().mergeFrom(value);
+        } else {
+          formatQuery_ = value;
+        }
+      } else {
+        formatQueryBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public Builder clearFormatQuery() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      formatQuery_ = null;
+      if (formatQueryBuilder_ != null) {
+        formatQueryBuilder_.dispose();
+        formatQueryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.Builder getFormatQueryBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getFormatQueryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.FormatQueryOrBuilder getFormatQueryOrBuilder() {
+      if (formatQueryBuilder_ != null) {
+        return formatQueryBuilder_.getMessageOrBuilder();
+      } else {
+        return formatQuery_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.getDefaultInstance() : formatQuery_;
+      }
+    }
+    /**
+     * <pre>
+     * Format query returns a query to format the data in post processing
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.FormatQuery format_query = 2 [json_name = "formatQuery"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQueryOrBuilder> 
+        getFormatQueryFieldBuilder() {
+      if (formatQueryBuilder_ == null) {
+        formatQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQuery.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.FormatQueryOrBuilder>(
+                getFormatQuery(),
+                getParentForChildren(),
+                isClean());
+        formatQuery_ = null;
+      }
+      return formatQueryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

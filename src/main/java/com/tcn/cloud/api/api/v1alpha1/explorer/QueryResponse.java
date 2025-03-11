@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private QueryResponse() {
     resultUrl_ = "";
+    postProcessingTableQuery_ = "";
+    postProcessingSummaryQuery_ = "";
   }
 
   @java.lang.Override
@@ -210,6 +212,100 @@ private static final long serialVersionUID = 0L;
     return map.get(key);
   }
 
+  public static final int POST_PROCESSING_TABLE_QUERY_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postProcessingTableQuery_ = "";
+  /**
+   * <pre>
+   * post processing table query
+   * </pre>
+   *
+   * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+   * @return The postProcessingTableQuery.
+   */
+  @java.lang.Override
+  public java.lang.String getPostProcessingTableQuery() {
+    java.lang.Object ref = postProcessingTableQuery_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      postProcessingTableQuery_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * post processing table query
+   * </pre>
+   *
+   * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+   * @return The bytes for postProcessingTableQuery.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPostProcessingTableQueryBytes() {
+    java.lang.Object ref = postProcessingTableQuery_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      postProcessingTableQuery_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int POST_PROCESSING_SUMMARY_QUERY_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postProcessingSummaryQuery_ = "";
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The postProcessingSummaryQuery.
+   */
+  @java.lang.Override
+  public java.lang.String getPostProcessingSummaryQuery() {
+    java.lang.Object ref = postProcessingSummaryQuery_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      postProcessingSummaryQuery_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * post processing summary query
+   * </pre>
+   *
+   * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+   * @return The bytes for postProcessingSummaryQuery.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPostProcessingSummaryQueryBytes() {
+    java.lang.Object ref = postProcessingSummaryQuery_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      postProcessingSummaryQuery_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -236,6 +332,12 @@ private static final long serialVersionUID = 0L;
         internalGetTimeFilteredDatasources(),
         TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry,
         3);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingTableQuery_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, postProcessingTableQuery_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, postProcessingSummaryQuery_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -262,6 +364,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, timeFilteredDatasources__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingTableQuery_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, postProcessingTableQuery_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, postProcessingSummaryQuery_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -283,6 +391,10 @@ private static final long serialVersionUID = 0L;
         != other.getResultSizeBytes()) return false;
     if (!internalGetTimeFilteredDatasources().equals(
         other.internalGetTimeFilteredDatasources())) return false;
+    if (!getPostProcessingTableQuery()
+        .equals(other.getPostProcessingTableQuery())) return false;
+    if (!getPostProcessingSummaryQuery()
+        .equals(other.getPostProcessingSummaryQuery())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -303,6 +415,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TIME_FILTERED_DATASOURCES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetTimeFilteredDatasources().hashCode();
     }
+    hash = (37 * hash) + POST_PROCESSING_TABLE_QUERY_FIELD_NUMBER;
+    hash = (53 * hash) + getPostProcessingTableQuery().hashCode();
+    hash = (37 * hash) + POST_PROCESSING_SUMMARY_QUERY_FIELD_NUMBER;
+    hash = (53 * hash) + getPostProcessingSummaryQuery().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -463,6 +579,8 @@ private static final long serialVersionUID = 0L;
       resultUrl_ = "";
       resultSizeBytes_ = 0L;
       internalGetMutableTimeFilteredDatasources().clear();
+      postProcessingTableQuery_ = "";
+      postProcessingSummaryQuery_ = "";
       return this;
     }
 
@@ -505,6 +623,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.timeFilteredDatasources_ = internalGetTimeFilteredDatasources();
         result.timeFilteredDatasources_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.postProcessingTableQuery_ = postProcessingTableQuery_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.postProcessingSummaryQuery_ = postProcessingSummaryQuery_;
       }
     }
 
@@ -563,6 +687,16 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().mergeFrom(
           other.internalGetTimeFilteredDatasources());
       bitField0_ |= 0x00000004;
+      if (!other.getPostProcessingTableQuery().isEmpty()) {
+        postProcessingTableQuery_ = other.postProcessingTableQuery_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getPostProcessingSummaryQuery().isEmpty()) {
+        postProcessingSummaryQuery_ = other.postProcessingSummaryQuery_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -608,6 +742,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              postProcessingTableQuery_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              postProcessingSummaryQuery_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -911,6 +1055,190 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000004;
+      return this;
+    }
+
+    private java.lang.Object postProcessingTableQuery_ = "";
+    /**
+     * <pre>
+     * post processing table query
+     * </pre>
+     *
+     * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+     * @return The postProcessingTableQuery.
+     */
+    public java.lang.String getPostProcessingTableQuery() {
+      java.lang.Object ref = postProcessingTableQuery_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postProcessingTableQuery_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing table query
+     * </pre>
+     *
+     * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+     * @return The bytes for postProcessingTableQuery.
+     */
+    public com.google.protobuf.ByteString
+        getPostProcessingTableQueryBytes() {
+      java.lang.Object ref = postProcessingTableQuery_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postProcessingTableQuery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing table query
+     * </pre>
+     *
+     * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+     * @param value The postProcessingTableQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingTableQuery(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      postProcessingTableQuery_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing table query
+     * </pre>
+     *
+     * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPostProcessingTableQuery() {
+      postProcessingTableQuery_ = getDefaultInstance().getPostProcessingTableQuery();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing table query
+     * </pre>
+     *
+     * <code>string post_processing_table_query = 4 [json_name = "postProcessingTableQuery"];</code>
+     * @param value The bytes for postProcessingTableQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingTableQueryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      postProcessingTableQuery_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object postProcessingSummaryQuery_ = "";
+    /**
+     * <pre>
+     * post processing summary query
+     * </pre>
+     *
+     * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+     * @return The postProcessingSummaryQuery.
+     */
+    public java.lang.String getPostProcessingSummaryQuery() {
+      java.lang.Object ref = postProcessingSummaryQuery_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postProcessingSummaryQuery_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing summary query
+     * </pre>
+     *
+     * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+     * @return The bytes for postProcessingSummaryQuery.
+     */
+    public com.google.protobuf.ByteString
+        getPostProcessingSummaryQueryBytes() {
+      java.lang.Object ref = postProcessingSummaryQuery_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postProcessingSummaryQuery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing summary query
+     * </pre>
+     *
+     * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+     * @param value The postProcessingSummaryQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingSummaryQuery(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      postProcessingSummaryQuery_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing summary query
+     * </pre>
+     *
+     * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPostProcessingSummaryQuery() {
+      postProcessingSummaryQuery_ = getDefaultInstance().getPostProcessingSummaryQuery();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing summary query
+     * </pre>
+     *
+     * <code>string post_processing_summary_query = 5 [json_name = "postProcessingSummaryQuery"];</code>
+     * @param value The bytes for postProcessingSummaryQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingSummaryQueryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      postProcessingSummaryQuery_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     @java.lang.Override
