@@ -1875,6 +1875,161 @@ public final class LMSGrpc {
     return getListPoolsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> getCreatePipelineCanvasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePipelineCanvas",
+      requestType = com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> getCreatePipelineCanvasMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> getCreatePipelineCanvasMethod;
+    if ((getCreatePipelineCanvasMethod = LMSGrpc.getCreatePipelineCanvasMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getCreatePipelineCanvasMethod = LMSGrpc.getCreatePipelineCanvasMethod) == null) {
+          LMSGrpc.getCreatePipelineCanvasMethod = getCreatePipelineCanvasMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePipelineCanvas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreatePipelineCanvas"))
+              .build();
+        }
+      }
+    }
+    return getCreatePipelineCanvasMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq,
+      com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> getListPipelineCanvasesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPipelineCanvases",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq,
+      com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> getListPipelineCanvasesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq, com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> getListPipelineCanvasesMethod;
+    if ((getListPipelineCanvasesMethod = LMSGrpc.getListPipelineCanvasesMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getListPipelineCanvasesMethod = LMSGrpc.getListPipelineCanvasesMethod) == null) {
+          LMSGrpc.getListPipelineCanvasesMethod = getListPipelineCanvasesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq, com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPipelineCanvases"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListPipelineCanvases"))
+              .build();
+        }
+      }
+    }
+    return getListPipelineCanvasesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> getUpdatePipelineCanvasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdatePipelineCanvas",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> getUpdatePipelineCanvasMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> getUpdatePipelineCanvasMethod;
+    if ((getUpdatePipelineCanvasMethod = LMSGrpc.getUpdatePipelineCanvasMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getUpdatePipelineCanvasMethod = LMSGrpc.getUpdatePipelineCanvasMethod) == null) {
+          LMSGrpc.getUpdatePipelineCanvasMethod = getUpdatePipelineCanvasMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePipelineCanvas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdatePipelineCanvas"))
+              .build();
+        }
+      }
+    }
+    return getUpdatePipelineCanvasMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> getDeletePipelineCanvasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeletePipelineCanvas",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> getDeletePipelineCanvasMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> getDeletePipelineCanvasMethod;
+    if ((getDeletePipelineCanvasMethod = LMSGrpc.getDeletePipelineCanvasMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getDeletePipelineCanvasMethod = LMSGrpc.getDeletePipelineCanvasMethod) == null) {
+          LMSGrpc.getDeletePipelineCanvasMethod = getDeletePipelineCanvasMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePipelineCanvas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeletePipelineCanvas"))
+              .build();
+        }
+      }
+    }
+    return getDeletePipelineCanvasMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> getGetPipelineCanvasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPipelineCanvas",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq,
+      com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> getGetPipelineCanvasMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> getGetPipelineCanvasMethod;
+    if ((getGetPipelineCanvasMethod = LMSGrpc.getGetPipelineCanvasMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getGetPipelineCanvasMethod = LMSGrpc.getGetPipelineCanvasMethod) == null) {
+          LMSGrpc.getGetPipelineCanvasMethod = getGetPipelineCanvasMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq, com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPipelineCanvas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetPipelineCanvas"))
+              .build();
+        }
+      }
+    }
+    return getGetPipelineCanvasMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2404,6 +2559,41 @@ public final class LMSGrpc {
     default void listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPoolsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void createPipelineCanvas(com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePipelineCanvasMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listPipelineCanvases(com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPipelineCanvasesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updatePipelineCanvas(com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePipelineCanvasMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deletePipelineCanvas(com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePipelineCanvasMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getPipelineCanvas(com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPipelineCanvasMethod(), responseObserver);
     }
   }
 
@@ -2976,6 +3166,46 @@ public final class LMSGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPoolsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createPipelineCanvas(com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePipelineCanvasMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listPipelineCanvases(com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPipelineCanvasesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updatePipelineCanvas(com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdatePipelineCanvasMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deletePipelineCanvas(com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeletePipelineCanvasMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getPipelineCanvas(com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPipelineCanvasMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3473,6 +3703,41 @@ public final class LMSGrpc {
     public com.tcn.cloud.api.api.v0alpha.ListPoolsResponse listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPoolsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes createPipelineCanvas(com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePipelineCanvasMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes listPipelineCanvases(com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPipelineCanvasesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes updatePipelineCanvas(com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdatePipelineCanvasMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes deletePipelineCanvas(com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeletePipelineCanvasMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes getPipelineCanvas(com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPipelineCanvasMethod(), getCallOptions(), request);
     }
   }
 
@@ -3976,6 +4241,46 @@ public final class LMSGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPoolsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes> createPipelineCanvas(
+        com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePipelineCanvasMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes> listPipelineCanvases(
+        com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPipelineCanvasesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes> updatePipelineCanvas(
+        com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdatePipelineCanvasMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes> deletePipelineCanvas(
+        com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeletePipelineCanvasMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes> getPipelineCanvas(
+        com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPipelineCanvasMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PUBLIC_KEY = 0;
@@ -4037,7 +4342,12 @@ public final class LMSGrpc {
   private static final int METHODID_GET_AVAILABLE_EHRFIELDS = 56;
   private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 57;
   private static final int METHODID_LIST_POOLS = 58;
-  private static final int METHODID_STREAM_LIST = 59;
+  private static final int METHODID_CREATE_PIPELINE_CANVAS = 59;
+  private static final int METHODID_LIST_PIPELINE_CANVASES = 60;
+  private static final int METHODID_UPDATE_PIPELINE_CANVAS = 61;
+  private static final int METHODID_DELETE_PIPELINE_CANVAS = 62;
+  private static final int METHODID_GET_PIPELINE_CANVAS = 63;
+  private static final int METHODID_STREAM_LIST = 64;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4291,6 +4601,26 @@ public final class LMSGrpc {
         case METHODID_LIST_POOLS:
           serviceImpl.listPools((com.tcn.cloud.api.api.v0alpha.ListPoolsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PIPELINE_CANVAS:
+          serviceImpl.createPipelineCanvas((com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes>) responseObserver);
+          break;
+        case METHODID_LIST_PIPELINE_CANVASES:
+          serviceImpl.listPipelineCanvases((com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_PIPELINE_CANVAS:
+          serviceImpl.updatePipelineCanvas((com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes>) responseObserver);
+          break;
+        case METHODID_DELETE_PIPELINE_CANVAS:
+          serviceImpl.deletePipelineCanvas((com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes>) responseObserver);
+          break;
+        case METHODID_GET_PIPELINE_CANVAS:
+          serviceImpl.getPipelineCanvas((com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4733,6 +5063,41 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.ListPoolsRequest,
               com.tcn.cloud.api.api.v0alpha.ListPoolsResponse>(
                 service, METHODID_LIST_POOLS)))
+        .addMethod(
+          getCreatePipelineCanvasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasReq,
+              com.tcn.cloud.api.api.v0alpha.CreatePipelineCanvasRes>(
+                service, METHODID_CREATE_PIPELINE_CANVAS)))
+        .addMethod(
+          getListPipelineCanvasesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesReq,
+              com.tcn.cloud.api.api.v0alpha.ListPipelineCanvasesRes>(
+                service, METHODID_LIST_PIPELINE_CANVASES)))
+        .addMethod(
+          getUpdatePipelineCanvasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasReq,
+              com.tcn.cloud.api.api.v0alpha.UpdatePipelineCanvasRes>(
+                service, METHODID_UPDATE_PIPELINE_CANVAS)))
+        .addMethod(
+          getDeletePipelineCanvasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasReq,
+              com.tcn.cloud.api.api.v0alpha.DeletePipelineCanvasRes>(
+                service, METHODID_DELETE_PIPELINE_CANVAS)))
+        .addMethod(
+          getGetPipelineCanvasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasReq,
+              com.tcn.cloud.api.api.v0alpha.GetPipelineCanvasRes>(
+                service, METHODID_GET_PIPELINE_CANVAS)))
         .build();
   }
 
@@ -4841,6 +5206,11 @@ public final class LMSGrpc {
               .addMethod(getGetAvailableEHRFieldsMethod())
               .addMethod(getGetQueuedEventsStatusByElementIdMethod())
               .addMethod(getListPoolsMethod())
+              .addMethod(getCreatePipelineCanvasMethod())
+              .addMethod(getListPipelineCanvasesMethod())
+              .addMethod(getUpdatePipelineCanvasMethod())
+              .addMethod(getDeletePipelineCanvasMethod())
+              .addMethod(getGetPipelineCanvasMethod())
               .build();
         }
       }
