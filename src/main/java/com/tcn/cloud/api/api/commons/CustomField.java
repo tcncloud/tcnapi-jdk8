@@ -285,44 +285,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.TicketCustomFieldType.UNRECOGNIZED : result;
   }
 
-  public static final int CUSTOM_FIELD_DATE_VALUE_FIELD_NUMBER = 9;
-  private com.google.protobuf.Timestamp customFieldDateValue_;
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   * @return Whether the customFieldDateValue field is set.
-   */
-  @java.lang.Override
-  public boolean hasCustomFieldDateValue() {
-    return customFieldDateValue_ != null;
-  }
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   * @return The customFieldDateValue.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getCustomFieldDateValue() {
-    return customFieldDateValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : customFieldDateValue_;
-  }
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getCustomFieldDateValueOrBuilder() {
-    return customFieldDateValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : customFieldDateValue_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -358,9 +320,6 @@ private static final long serialVersionUID = 0L;
     if (ticketCustomFieldType_ != com.tcn.cloud.api.api.commons.TicketCustomFieldType.TICKET_CUSTOMFIELD_TYPE_BOOLEAN.getNumber()) {
       output.writeEnum(8, ticketCustomFieldType_);
     }
-    if (customFieldDateValue_ != null) {
-      output.writeMessage(9, getCustomFieldDateValue());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -395,10 +354,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, ticketCustomFieldType_);
     }
-    if (customFieldDateValue_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, getCustomFieldDateValue());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -430,11 +385,6 @@ private static final long serialVersionUID = 0L;
     if (getIsDeleted()
         != other.getIsDeleted()) return false;
     if (ticketCustomFieldType_ != other.ticketCustomFieldType_) return false;
-    if (hasCustomFieldDateValue() != other.hasCustomFieldDateValue()) return false;
-    if (hasCustomFieldDateValue()) {
-      if (!getCustomFieldDateValue()
-          .equals(other.getCustomFieldDateValue())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -464,10 +414,6 @@ private static final long serialVersionUID = 0L;
         getIsDeleted());
     hash = (37 * hash) + TICKET_CUSTOM_FIELD_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + ticketCustomFieldType_;
-    if (hasCustomFieldDateValue()) {
-      hash = (37 * hash) + CUSTOM_FIELD_DATE_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomFieldDateValue().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -614,11 +560,6 @@ private static final long serialVersionUID = 0L;
       }
       isDeleted_ = false;
       ticketCustomFieldType_ = 0;
-      customFieldDateValue_ = null;
-      if (customFieldDateValueBuilder_ != null) {
-        customFieldDateValueBuilder_.dispose();
-        customFieldDateValueBuilder_ = null;
-      }
       return this;
     }
 
@@ -674,11 +615,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.ticketCustomFieldType_ = ticketCustomFieldType_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.customFieldDateValue_ = customFieldDateValueBuilder_ == null
-            ? customFieldDateValue_
-            : customFieldDateValueBuilder_.build();
       }
     }
 
@@ -753,9 +689,6 @@ private static final long serialVersionUID = 0L;
       if (other.ticketCustomFieldType_ != 0) {
         setTicketCustomFieldTypeValue(other.getTicketCustomFieldTypeValue());
       }
-      if (other.hasCustomFieldDateValue()) {
-        mergeCustomFieldDateValue(other.getCustomFieldDateValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -819,13 +752,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 64
-            case 74: {
-              input.readMessage(
-                  getCustomFieldDateValueFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1443,161 +1369,6 @@ private static final long serialVersionUID = 0L;
       ticketCustomFieldType_ = 0;
       onChanged();
       return this;
-    }
-
-    private com.google.protobuf.Timestamp customFieldDateValue_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> customFieldDateValueBuilder_;
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     * @return Whether the customFieldDateValue field is set.
-     */
-    public boolean hasCustomFieldDateValue() {
-      return ((bitField0_ & 0x00000080) != 0);
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     * @return The customFieldDateValue.
-     */
-    public com.google.protobuf.Timestamp getCustomFieldDateValue() {
-      if (customFieldDateValueBuilder_ == null) {
-        return customFieldDateValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : customFieldDateValue_;
-      } else {
-        return customFieldDateValueBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public Builder setCustomFieldDateValue(com.google.protobuf.Timestamp value) {
-      if (customFieldDateValueBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        customFieldDateValue_ = value;
-      } else {
-        customFieldDateValueBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public Builder setCustomFieldDateValue(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (customFieldDateValueBuilder_ == null) {
-        customFieldDateValue_ = builderForValue.build();
-      } else {
-        customFieldDateValueBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public Builder mergeCustomFieldDateValue(com.google.protobuf.Timestamp value) {
-      if (customFieldDateValueBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          customFieldDateValue_ != null &&
-          customFieldDateValue_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCustomFieldDateValueBuilder().mergeFrom(value);
-        } else {
-          customFieldDateValue_ = value;
-        }
-      } else {
-        customFieldDateValueBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public Builder clearCustomFieldDateValue() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      customFieldDateValue_ = null;
-      if (customFieldDateValueBuilder_ != null) {
-        customFieldDateValueBuilder_.dispose();
-        customFieldDateValueBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getCustomFieldDateValueBuilder() {
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return getCustomFieldDateValueFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getCustomFieldDateValueOrBuilder() {
-      if (customFieldDateValueBuilder_ != null) {
-        return customFieldDateValueBuilder_.getMessageOrBuilder();
-      } else {
-        return customFieldDateValue_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : customFieldDateValue_;
-      }
-    }
-    /**
-     * <pre>
-     * The new custom field date value
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getCustomFieldDateValueFieldBuilder() {
-      if (customFieldDateValueBuilder_ == null) {
-        customFieldDateValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getCustomFieldDateValue(),
-                getParentForChildren(),
-                isClean());
-        customFieldDateValue_ = null;
-      }
-      return customFieldDateValueBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -136,31 +136,4 @@ public interface CustomFieldOrBuilder extends
    * @return The ticketCustomFieldType.
    */
   com.tcn.cloud.api.api.commons.TicketCustomFieldType getTicketCustomFieldType();
-
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   * @return Whether the customFieldDateValue field is set.
-   */
-  boolean hasCustomFieldDateValue();
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   * @return The customFieldDateValue.
-   */
-  com.google.protobuf.Timestamp getCustomFieldDateValue();
-  /**
-   * <pre>
-   * The new custom field date value
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp custom_field_date_value = 9 [json_name = "customFieldDateValue"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getCustomFieldDateValueOrBuilder();
 }
