@@ -88,4 +88,24 @@ public interface QueryResponseOrBuilder extends
    */
   boolean getTimeFilteredDatasourcesOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_query = 4 [json_name = "postProcessingQuery"];</code>
+   * @return The postProcessingQuery.
+   */
+  java.lang.String getPostProcessingQuery();
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_query = 4 [json_name = "postProcessingQuery"];</code>
+   * @return The bytes for postProcessingQuery.
+   */
+  com.google.protobuf.ByteString
+      getPostProcessingQueryBytes();
 }

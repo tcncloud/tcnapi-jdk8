@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     prql_ = "";
     sql_ = "";
     explain_ = "";
+    postProcessingQuery_ = "";
   }
 
   @java.lang.Override
@@ -354,6 +355,53 @@ private static final long serialVersionUID = 0L;
     return map.get(key);
   }
 
+  public static final int POST_PROCESSING_QUERY_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postProcessingQuery_ = "";
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+   * @return The postProcessingQuery.
+   */
+  @java.lang.Override
+  public java.lang.String getPostProcessingQuery() {
+    java.lang.Object ref = postProcessingQuery_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      postProcessingQuery_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * post processing query
+   * </pre>
+   *
+   * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+   * @return The bytes for postProcessingQuery.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPostProcessingQueryBytes() {
+    java.lang.Object ref = postProcessingQuery_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      postProcessingQuery_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -389,6 +437,9 @@ private static final long serialVersionUID = 0L;
         internalGetTimeFilteredDatasources(),
         TimeFilteredDatasourcesDefaultEntryHolder.defaultEntry,
         6);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingQuery_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, postProcessingQuery_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -424,6 +475,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, timeFilteredDatasources__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingQuery_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, postProcessingQuery_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -451,6 +505,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getExplain())) return false;
     if (!internalGetTimeFilteredDatasources().equals(
         other.internalGetTimeFilteredDatasources())) return false;
+    if (!getPostProcessingQuery()
+        .equals(other.getPostProcessingQuery())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -477,6 +533,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TIME_FILTERED_DATASOURCES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetTimeFilteredDatasources().hashCode();
     }
+    hash = (37 * hash) + POST_PROCESSING_QUERY_FIELD_NUMBER;
+    hash = (53 * hash) + getPostProcessingQuery().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -640,6 +698,7 @@ private static final long serialVersionUID = 0L;
       sql_ = "";
       explain_ = "";
       internalGetMutableTimeFilteredDatasources().clear();
+      postProcessingQuery_ = "";
       return this;
     }
 
@@ -691,6 +750,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.timeFilteredDatasources_ = internalGetTimeFilteredDatasources();
         result.timeFilteredDatasources_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.postProcessingQuery_ = postProcessingQuery_;
       }
     }
 
@@ -764,6 +826,11 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().mergeFrom(
           other.internalGetTimeFilteredDatasources());
       bitField0_ |= 0x00000020;
+      if (!other.getPostProcessingQuery().isEmpty()) {
+        postProcessingQuery_ = other.postProcessingQuery_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -824,6 +891,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              postProcessingQuery_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1403,6 +1475,98 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000020;
+      return this;
+    }
+
+    private java.lang.Object postProcessingQuery_ = "";
+    /**
+     * <pre>
+     * post processing query
+     * </pre>
+     *
+     * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+     * @return The postProcessingQuery.
+     */
+    public java.lang.String getPostProcessingQuery() {
+      java.lang.Object ref = postProcessingQuery_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postProcessingQuery_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing query
+     * </pre>
+     *
+     * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+     * @return The bytes for postProcessingQuery.
+     */
+    public com.google.protobuf.ByteString
+        getPostProcessingQueryBytes() {
+      java.lang.Object ref = postProcessingQuery_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postProcessingQuery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * post processing query
+     * </pre>
+     *
+     * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+     * @param value The postProcessingQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingQuery(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      postProcessingQuery_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing query
+     * </pre>
+     *
+     * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPostProcessingQuery() {
+      postProcessingQuery_ = getDefaultInstance().getPostProcessingQuery();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * post processing query
+     * </pre>
+     *
+     * <code>string post_processing_query = 7 [json_name = "postProcessingQuery"];</code>
+     * @param value The bytes for postProcessingQuery to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPostProcessingQueryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      postProcessingQuery_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     @java.lang.Override
