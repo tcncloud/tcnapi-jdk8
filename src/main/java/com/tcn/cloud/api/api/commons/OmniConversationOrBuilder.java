@@ -537,4 +537,31 @@ public interface OmniConversationOrBuilder extends
    * <code>.google.protobuf.Timestamp last_state_changed_time = 23 [json_name = "lastStateChangedTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastStateChangedTimeOrBuilder();
+
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 24 [json_name = "taskSid"];</code>
+   * @return Whether the taskSid field is set.
+   */
+  boolean hasTaskSid();
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 24 [json_name = "taskSid"];</code>
+   * @return The taskSid.
+   */
+  com.google.protobuf.Int64Value getTaskSid();
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 24 [json_name = "taskSid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getTaskSidOrBuilder();
 }
