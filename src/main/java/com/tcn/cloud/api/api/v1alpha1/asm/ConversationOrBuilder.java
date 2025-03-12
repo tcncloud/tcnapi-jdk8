@@ -319,4 +319,31 @@ public interface ConversationOrBuilder extends
    * @return The lastMessageGroupType.
    */
   com.tcn.cloud.api.api.commons.OmniSenderType getLastMessageGroupType();
+
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   * @return Whether the taskSid field is set.
+   */
+  boolean hasTaskSid();
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   * @return The taskSid.
+   */
+  com.google.protobuf.Int64Value getTaskSid();
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getTaskSidOrBuilder();
 }

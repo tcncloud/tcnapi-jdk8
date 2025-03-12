@@ -484,6 +484,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OmniSenderType.UNRECOGNIZED : result;
   }
 
+  public static final int TASK_SID_FIELD_NUMBER = 20;
+  private com.google.protobuf.Int64Value taskSid_;
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   * @return Whether the taskSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasTaskSid() {
+    return taskSid_ != null;
+  }
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   * @return The taskSid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getTaskSid() {
+    return taskSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taskSid_;
+  }
+  /**
+   * <pre>
+   * the id of the task
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getTaskSidOrBuilder() {
+    return taskSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taskSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -539,6 +577,9 @@ private static final long serialVersionUID = 0L;
     }
     if (lastMessageGroupType_ != com.tcn.cloud.api.api.commons.OmniSenderType.OMNI_SENDER_TYPE_AGENT.getNumber()) {
       output.writeEnum(19, lastMessageGroupType_);
+    }
+    if (taskSid_ != null) {
+      output.writeMessage(20, getTaskSid());
     }
     getUnknownFields().writeTo(output);
   }
@@ -605,6 +646,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(19, lastMessageGroupType_);
     }
+    if (taskSid_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getTaskSid());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -667,6 +712,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getLastMessageGroupTime())) return false;
     }
     if (lastMessageGroupType_ != other.lastMessageGroupType_) return false;
+    if (hasTaskSid() != other.hasTaskSid()) return false;
+    if (hasTaskSid()) {
+      if (!getTaskSid()
+          .equals(other.getTaskSid())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -723,6 +773,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + LAST_MESSAGE_GROUP_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + lastMessageGroupType_;
+    if (hasTaskSid()) {
+      hash = (37 * hash) + TASK_SID_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskSid().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -900,6 +954,11 @@ private static final long serialVersionUID = 0L;
         lastMessageGroupTimeBuilder_ = null;
       }
       lastMessageGroupType_ = 0;
+      taskSid_ = null;
+      if (taskSidBuilder_ != null) {
+        taskSidBuilder_.dispose();
+        taskSidBuilder_ = null;
+      }
       return this;
     }
 
@@ -991,6 +1050,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.lastMessageGroupType_ = lastMessageGroupType_;
       }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.taskSid_ = taskSidBuilder_ == null
+            ? taskSid_
+            : taskSidBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1078,6 +1142,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.lastMessageGroupType_ != 0) {
         setLastMessageGroupTypeValue(other.getLastMessageGroupTypeValue());
+      }
+      if (other.hasTaskSid()) {
+        mergeTaskSid(other.getTaskSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1191,6 +1258,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 152
+            case 162: {
+              input.readMessage(
+                  getTaskSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2831,6 +2905,161 @@ private static final long serialVersionUID = 0L;
       lastMessageGroupType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Int64Value taskSid_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> taskSidBuilder_;
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     * @return Whether the taskSid field is set.
+     */
+    public boolean hasTaskSid() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     * @return The taskSid.
+     */
+    public com.google.protobuf.Int64Value getTaskSid() {
+      if (taskSidBuilder_ == null) {
+        return taskSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taskSid_;
+      } else {
+        return taskSidBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public Builder setTaskSid(com.google.protobuf.Int64Value value) {
+      if (taskSidBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        taskSid_ = value;
+      } else {
+        taskSidBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public Builder setTaskSid(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (taskSidBuilder_ == null) {
+        taskSid_ = builderForValue.build();
+      } else {
+        taskSidBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public Builder mergeTaskSid(com.google.protobuf.Int64Value value) {
+      if (taskSidBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          taskSid_ != null &&
+          taskSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getTaskSidBuilder().mergeFrom(value);
+        } else {
+          taskSid_ = value;
+        }
+      } else {
+        taskSidBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public Builder clearTaskSid() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      taskSid_ = null;
+      if (taskSidBuilder_ != null) {
+        taskSidBuilder_.dispose();
+        taskSidBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getTaskSidBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getTaskSidFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTaskSidOrBuilder() {
+      if (taskSidBuilder_ != null) {
+        return taskSidBuilder_.getMessageOrBuilder();
+      } else {
+        return taskSid_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : taskSid_;
+      }
+    }
+    /**
+     * <pre>
+     * the id of the task
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value task_sid = 20 [json_name = "taskSid"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getTaskSidFieldBuilder() {
+      if (taskSidBuilder_ == null) {
+        taskSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getTaskSid(),
+                getParentForChildren(),
+                isClean());
+        taskSid_ = null;
+      }
+      return taskSidBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
