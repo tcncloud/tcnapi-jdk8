@@ -55,4 +55,25 @@ public interface ListShiftSegmentsByShiftInstanceSidsReqOrBuilder extends
    * @return The includeActivity.
    */
   boolean getIncludeActivity();
+
+  /**
+   * <pre>
+   * The schedule type that the shift instance sids are associated with.
+   * All &#64;shift_instance_sids must belong to the same type of schedule.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType schedule_type = 4 [json_name = "scheduleType"];</code>
+   * @return The enum numeric value on the wire for scheduleType.
+   */
+  int getScheduleTypeValue();
+  /**
+   * <pre>
+   * The schedule type that the shift instance sids are associated with.
+   * All &#64;shift_instance_sids must belong to the same type of schedule.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType schedule_type = 4 [json_name = "scheduleType"];</code>
+   * @return The scheduleType.
+   */
+  com.tcn.cloud.api.api.commons.ScheduleType getScheduleType();
 }
