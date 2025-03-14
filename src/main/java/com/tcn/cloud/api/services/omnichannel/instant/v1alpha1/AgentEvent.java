@@ -21,8 +21,6 @@ private static final long serialVersionUID = 0L;
     agentFirstName_ = "";
     agentLastName_ = "";
     huntGroupName_ = "";
-    skillNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
     eventData_ = "";
   }
 
@@ -289,43 +287,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SKILL_NAMES_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList skillNames_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @return A list containing the skillNames.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getSkillNamesList() {
-    return skillNames_;
-  }
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @return The count of skillNames.
-   */
-  public int getSkillNamesCount() {
-    return skillNames_.size();
-  }
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @param index The index of the element to return.
-   * @return The skillNames at the given index.
-   */
-  public java.lang.String getSkillNames(int index) {
-    return skillNames_.get(index);
-  }
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the skillNames at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getSkillNamesBytes(int index) {
-    return skillNames_.getByteString(index);
-  }
-
   public static final int EVENT_DATA_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object eventData_ = "";
@@ -414,9 +375,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, huntGroupName_);
     }
-    for (int i = 0; i < skillNames_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, skillNames_.getRaw(i));
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -456,14 +414,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, huntGroupName_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < skillNames_.size(); i++) {
-        dataSize += computeStringSizeNoTag(skillNames_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getSkillNamesList().size();
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -498,8 +448,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentLastName())) return false;
     if (!getHuntGroupName()
         .equals(other.getHuntGroupName())) return false;
-    if (!getSkillNamesList()
-        .equals(other.getSkillNamesList())) return false;
     if (!getEventData()
         .equals(other.getEventData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -533,10 +481,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAgentLastName().hashCode();
     hash = (37 * hash) + HUNT_GROUP_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getHuntGroupName().hashCode();
-    if (getSkillNamesCount() > 0) {
-      hash = (37 * hash) + SKILL_NAMES_FIELD_NUMBER;
-      hash = (53 * hash) + getSkillNamesList().hashCode();
-    }
     hash = (37 * hash) + EVENT_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getEventData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -682,8 +626,6 @@ private static final long serialVersionUID = 0L;
       agentFirstName_ = "";
       agentLastName_ = "";
       huntGroupName_ = "";
-      skillNames_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       eventData_ = "";
       return this;
     }
@@ -745,10 +687,6 @@ private static final long serialVersionUID = 0L;
         result.huntGroupName_ = huntGroupName_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        skillNames_.makeImmutable();
-        result.skillNames_ = skillNames_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.eventData_ = eventData_;
       }
     }
@@ -831,19 +769,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
-      if (!other.skillNames_.isEmpty()) {
-        if (skillNames_.isEmpty()) {
-          skillNames_ = other.skillNames_;
-          bitField0_ |= 0x00000100;
-        } else {
-          ensureSkillNamesIsMutable();
-          skillNames_.addAll(other.skillNames_);
-        }
-        onChanged();
-      }
       if (!other.getEventData().isEmpty()) {
         eventData_ = other.eventData_;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -901,7 +829,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               eventData_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               break;
             } // case 50
             case 58: {
@@ -919,12 +847,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 74
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureSkillNamesIsMutable();
-              skillNames_.add(s);
-              break;
-            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1485,117 +1407,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList skillNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureSkillNamesIsMutable() {
-      if (!skillNames_.isModifiable()) {
-        skillNames_ = new com.google.protobuf.LazyStringArrayList(skillNames_);
-      }
-      bitField0_ |= 0x00000100;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @return A list containing the skillNames.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSkillNamesList() {
-      skillNames_.makeImmutable();
-      return skillNames_;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @return The count of skillNames.
-     */
-    public int getSkillNamesCount() {
-      return skillNames_.size();
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param index The index of the element to return.
-     * @return The skillNames at the given index.
-     */
-    public java.lang.String getSkillNames(int index) {
-      return skillNames_.get(index);
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the skillNames at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSkillNamesBytes(int index) {
-      return skillNames_.getByteString(index);
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param index The index to set the value at.
-     * @param value The skillNames to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSkillNames(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillNamesIsMutable();
-      skillNames_.set(index, value);
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param value The skillNames to add.
-     * @return This builder for chaining.
-     */
-    public Builder addSkillNames(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillNamesIsMutable();
-      skillNames_.add(value);
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param values The skillNames to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllSkillNames(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureSkillNamesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, skillNames_);
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSkillNames() {
-      skillNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000100);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-     * @param value The bytes of the skillNames to add.
-     * @return This builder for chaining.
-     */
-    public Builder addSkillNamesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureSkillNamesIsMutable();
-      skillNames_.add(value);
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object eventData_ = "";
     /**
      * <pre>
@@ -1651,7 +1462,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       eventData_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1665,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEventData() {
       eventData_ = getDefaultInstance().getEventData();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1683,7 +1494,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       eventData_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }

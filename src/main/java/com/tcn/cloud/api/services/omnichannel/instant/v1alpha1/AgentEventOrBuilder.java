@@ -95,31 +95,6 @@ public interface AgentEventOrBuilder extends
       getHuntGroupNameBytes();
 
   /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @return A list containing the skillNames.
-   */
-  java.util.List<java.lang.String>
-      getSkillNamesList();
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @return The count of skillNames.
-   */
-  int getSkillNamesCount();
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @param index The index of the element to return.
-   * @return The skillNames at the given index.
-   */
-  java.lang.String getSkillNames(int index);
-  /**
-   * <code>repeated string skill_names = 10 [json_name = "skillNames"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the skillNames at the given index.
-   */
-  com.google.protobuf.ByteString
-      getSkillNamesBytes(int index);
-
-  /**
    * <pre>
    * A JSON blob representing the Agent's state.
    * </pre>
