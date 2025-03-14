@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private CopyShiftInstancesToScheduleReq() {
     shiftInstanceSids_ = emptyLongList();
+    sourceScheduleType_ = 0;
   }
 
   @java.lang.Override
@@ -138,6 +139,32 @@ private static final long serialVersionUID = 0L;
     return overlapAsWarning_;
   }
 
+  public static final int SOURCE_SCHEDULE_TYPE_FIELD_NUMBER = 4;
+  private int sourceScheduleType_ = 0;
+  /**
+   * <pre>
+   * The type of schedule that the &#64;shift_instance_sids are associated with.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+   * @return The enum numeric value on the wire for sourceScheduleType.
+   */
+  @java.lang.Override public int getSourceScheduleTypeValue() {
+    return sourceScheduleType_;
+  }
+  /**
+   * <pre>
+   * The type of schedule that the &#64;shift_instance_sids are associated with.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+   * @return The sourceScheduleType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ScheduleType getSourceScheduleType() {
+    com.tcn.cloud.api.api.commons.ScheduleType result = com.tcn.cloud.api.api.commons.ScheduleType.forNumber(sourceScheduleType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ScheduleType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -165,6 +192,9 @@ private static final long serialVersionUID = 0L;
     }
     if (overlapAsWarning_ != false) {
       output.writeBool(3, overlapAsWarning_);
+    }
+    if (sourceScheduleType_ != com.tcn.cloud.api.api.commons.ScheduleType.DRAFT.getNumber()) {
+      output.writeEnum(4, sourceScheduleType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -197,6 +227,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, overlapAsWarning_);
     }
+    if (sourceScheduleType_ != com.tcn.cloud.api.api.commons.ScheduleType.DRAFT.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, sourceScheduleType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -221,6 +255,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getShiftInstanceSidsList())) return false;
     if (getOverlapAsWarning()
         != other.getOverlapAsWarning()) return false;
+    if (sourceScheduleType_ != other.sourceScheduleType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -243,6 +278,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + OVERLAP_AS_WARNING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getOverlapAsWarning());
+    hash = (37 * hash) + SOURCE_SCHEDULE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + sourceScheduleType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -385,6 +422,7 @@ private static final long serialVersionUID = 0L;
       }
       shiftInstanceSids_ = emptyLongList();
       overlapAsWarning_ = false;
+      sourceScheduleType_ = 0;
       return this;
     }
 
@@ -434,6 +472,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.overlapAsWarning_ = overlapAsWarning_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.sourceScheduleType_ = sourceScheduleType_;
       }
     }
 
@@ -497,6 +538,9 @@ private static final long serialVersionUID = 0L;
       if (other.getOverlapAsWarning() != false) {
         setOverlapAsWarning(other.getOverlapAsWarning());
       }
+      if (other.sourceScheduleType_ != 0) {
+        setSourceScheduleTypeValue(other.getSourceScheduleTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -551,6 +595,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              sourceScheduleType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -875,6 +924,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearOverlapAsWarning() {
       bitField0_ = (bitField0_ & ~0x00000004);
       overlapAsWarning_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int sourceScheduleType_ = 0;
+    /**
+     * <pre>
+     * The type of schedule that the &#64;shift_instance_sids are associated with.
+     * </pre>
+     *
+     * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+     * @return The enum numeric value on the wire for sourceScheduleType.
+     */
+    @java.lang.Override public int getSourceScheduleTypeValue() {
+      return sourceScheduleType_;
+    }
+    /**
+     * <pre>
+     * The type of schedule that the &#64;shift_instance_sids are associated with.
+     * </pre>
+     *
+     * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+     * @param value The enum numeric value on the wire for sourceScheduleType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceScheduleTypeValue(int value) {
+      sourceScheduleType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of schedule that the &#64;shift_instance_sids are associated with.
+     * </pre>
+     *
+     * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+     * @return The sourceScheduleType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ScheduleType getSourceScheduleType() {
+      com.tcn.cloud.api.api.commons.ScheduleType result = com.tcn.cloud.api.api.commons.ScheduleType.forNumber(sourceScheduleType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ScheduleType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of schedule that the &#64;shift_instance_sids are associated with.
+     * </pre>
+     *
+     * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+     * @param value The sourceScheduleType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceScheduleType(com.tcn.cloud.api.api.commons.ScheduleType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      sourceScheduleType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of schedule that the &#64;shift_instance_sids are associated with.
+     * </pre>
+     *
+     * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSourceScheduleType() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      sourceScheduleType_ = 0;
       onChanged();
       return this;
     }
