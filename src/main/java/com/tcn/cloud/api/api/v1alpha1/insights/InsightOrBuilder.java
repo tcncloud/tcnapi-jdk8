@@ -306,5 +306,32 @@ public interface InsightOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.PipelineOrBuilder getInsightBodyOrBuilder();
 
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * @return Whether the exportOptions field is set.
+   */
+  boolean hasExportOptions();
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * @return The exportOptions.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions();
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }
