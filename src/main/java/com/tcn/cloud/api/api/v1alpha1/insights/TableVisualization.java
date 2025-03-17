@@ -116,11 +116,13 @@ private static final long serialVersionUID = 0L;
    * Delimiter for csv exports
    * </pre>
    *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=255
    * @return The delimiter.
    */
   @java.lang.Override
-  public java.lang.String getDelimiter() {
+  @java.lang.Deprecated public java.lang.String getDelimiter() {
     java.lang.Object ref = delimiter_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -137,11 +139,13 @@ private static final long serialVersionUID = 0L;
    * Delimiter for csv exports
    * </pre>
    *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=255
    * @return The bytes for delimiter.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getDelimiterBytes() {
     java.lang.Object ref = delimiter_;
     if (ref instanceof java.lang.String) {
@@ -162,10 +166,12 @@ private static final long serialVersionUID = 0L;
    * Quote character for csv exports
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=257
    * @return The enum numeric value on the wire for quoteCharacter.
    */
-  @java.lang.Override public int getQuoteCharacterValue() {
+  @java.lang.Override @java.lang.Deprecated public int getQuoteCharacterValue() {
     return quoteCharacter_;
   }
   /**
@@ -173,10 +179,12 @@ private static final long serialVersionUID = 0L;
    * Quote character for csv exports
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=257
    * @return The quoteCharacter.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
     com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter result = com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.forNumber(quoteCharacter_);
     return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.UNRECOGNIZED : result;
   }
@@ -188,11 +196,13 @@ private static final long serialVersionUID = 0L;
    * Flag to include header in csv exports
    * </pre>
    *
-   * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+   * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=259
    * @return The noHeader.
    */
   @java.lang.Override
-  public boolean getNoHeader() {
+  @java.lang.Deprecated public boolean getNoHeader() {
     return noHeader_;
   }
 
@@ -1104,10 +1114,12 @@ private static final long serialVersionUID = 0L;
      * Delimiter for csv exports
      * </pre>
      *
-     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=255
      * @return The delimiter.
      */
-    public java.lang.String getDelimiter() {
+    @java.lang.Deprecated public java.lang.String getDelimiter() {
       java.lang.Object ref = delimiter_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1124,10 +1136,12 @@ private static final long serialVersionUID = 0L;
      * Delimiter for csv exports
      * </pre>
      *
-     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=255
      * @return The bytes for delimiter.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getDelimiterBytes() {
       java.lang.Object ref = delimiter_;
       if (ref instanceof String) {
@@ -1145,11 +1159,13 @@ private static final long serialVersionUID = 0L;
      * Delimiter for csv exports
      * </pre>
      *
-     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=255
      * @param value The delimiter to set.
      * @return This builder for chaining.
      */
-    public Builder setDelimiter(
+    @java.lang.Deprecated public Builder setDelimiter(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       delimiter_ = value;
@@ -1162,10 +1178,12 @@ private static final long serialVersionUID = 0L;
      * Delimiter for csv exports
      * </pre>
      *
-     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=255
      * @return This builder for chaining.
      */
-    public Builder clearDelimiter() {
+    @java.lang.Deprecated public Builder clearDelimiter() {
       delimiter_ = getDefaultInstance().getDelimiter();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -1176,11 +1194,13 @@ private static final long serialVersionUID = 0L;
      * Delimiter for csv exports
      * </pre>
      *
-     * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+     * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=255
      * @param value The bytes for delimiter to set.
      * @return This builder for chaining.
      */
-    public Builder setDelimiterBytes(
+    @java.lang.Deprecated public Builder setDelimiterBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1196,10 +1216,12 @@ private static final long serialVersionUID = 0L;
      * Quote character for csv exports
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=257
      * @return The enum numeric value on the wire for quoteCharacter.
      */
-    @java.lang.Override public int getQuoteCharacterValue() {
+    @java.lang.Override @java.lang.Deprecated public int getQuoteCharacterValue() {
       return quoteCharacter_;
     }
     /**
@@ -1207,11 +1229,13 @@ private static final long serialVersionUID = 0L;
      * Quote character for csv exports
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=257
      * @param value The enum numeric value on the wire for quoteCharacter to set.
      * @return This builder for chaining.
      */
-    public Builder setQuoteCharacterValue(int value) {
+    @java.lang.Deprecated public Builder setQuoteCharacterValue(int value) {
       quoteCharacter_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1222,11 +1246,13 @@ private static final long serialVersionUID = 0L;
      * Quote character for csv exports
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=257
      * @return The quoteCharacter.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter() {
       com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter result = com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.forNumber(quoteCharacter_);
       return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter.UNRECOGNIZED : result;
     }
@@ -1235,11 +1261,13 @@ private static final long serialVersionUID = 0L;
      * Quote character for csv exports
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=257
      * @param value The quoteCharacter to set.
      * @return This builder for chaining.
      */
-    public Builder setQuoteCharacter(com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter value) {
+    @java.lang.Deprecated public Builder setQuoteCharacter(com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1253,10 +1281,12 @@ private static final long serialVersionUID = 0L;
      * Quote character for csv exports
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+     * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=257
      * @return This builder for chaining.
      */
-    public Builder clearQuoteCharacter() {
+    @java.lang.Deprecated public Builder clearQuoteCharacter() {
       bitField0_ = (bitField0_ & ~0x00000004);
       quoteCharacter_ = 0;
       onChanged();
@@ -1269,11 +1299,13 @@ private static final long serialVersionUID = 0L;
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=259
      * @return The noHeader.
      */
     @java.lang.Override
-    public boolean getNoHeader() {
+    @java.lang.Deprecated public boolean getNoHeader() {
       return noHeader_;
     }
     /**
@@ -1281,11 +1313,13 @@ private static final long serialVersionUID = 0L;
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=259
      * @param value The noHeader to set.
      * @return This builder for chaining.
      */
-    public Builder setNoHeader(boolean value) {
+    @java.lang.Deprecated public Builder setNoHeader(boolean value) {
 
       noHeader_ = value;
       bitField0_ |= 0x00000008;
@@ -1297,10 +1331,12 @@ private static final long serialVersionUID = 0L;
      * Flag to include header in csv exports
      * </pre>
      *
-     * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+     * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=259
      * @return This builder for chaining.
      */
-    public Builder clearNoHeader() {
+    @java.lang.Deprecated public Builder clearNoHeader() {
       bitField0_ = (bitField0_ & ~0x00000008);
       noHeader_ = false;
       onChanged();

@@ -15,7 +15,7 @@ public interface TextValueConditionOrBuilder extends
    *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=272
+   *     See api/v1alpha1/insights/insight.proto;l=282
    * @return Whether the expression field is set.
    */
   @java.lang.Deprecated boolean hasExpression();
@@ -27,7 +27,7 @@ public interface TextValueConditionOrBuilder extends
    *
    * <code>.api.v1alpha1.insights.ExpressionNode expression = 1 [json_name = "expression", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TextValueCondition.expression is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=272
+   *     See api/v1alpha1/insights/insight.proto;l=282
    * @return The expression.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExpressionNode getExpression();
@@ -150,7 +150,7 @@ public interface TextValueConditionOrBuilder extends
    *
    * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TextValueCondition.expression_node is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=289
+   *     See api/v1alpha1/insights/insight.proto;l=299
    * @return Whether the expressionNode field is set.
    */
   @java.lang.Deprecated boolean hasExpressionNode();
@@ -162,7 +162,7 @@ public interface TextValueConditionOrBuilder extends
    *
    * <code>.api.v1alpha1.explorer.ExpressionNode expression_node = 6 [json_name = "expressionNode", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TextValueCondition.expression_node is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=289
+   *     See api/v1alpha1/insights/insight.proto;l=299
    * @return The expressionNode.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.explorer.ExpressionNode getExpressionNode();

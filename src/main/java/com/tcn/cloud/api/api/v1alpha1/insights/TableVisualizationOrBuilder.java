@@ -56,19 +56,23 @@ public interface TableVisualizationOrBuilder extends
    * Delimiter for csv exports
    * </pre>
    *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=255
    * @return The delimiter.
    */
-  java.lang.String getDelimiter();
+  @java.lang.Deprecated java.lang.String getDelimiter();
   /**
    * <pre>
    * Delimiter for csv exports
    * </pre>
    *
-   * <code>string delimiter = 2 [json_name = "delimiter"];</code>
+   * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=255
    * @return The bytes for delimiter.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getDelimiterBytes();
 
   /**
@@ -76,29 +80,35 @@ public interface TableVisualizationOrBuilder extends
    * Quote character for csv exports
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=257
    * @return The enum numeric value on the wire for quoteCharacter.
    */
-  int getQuoteCharacterValue();
+  @java.lang.Deprecated int getQuoteCharacterValue();
   /**
    * <pre>
    * Quote character for csv exports
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter"];</code>
+   * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=257
    * @return The quoteCharacter.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter();
 
   /**
    * <pre>
    * Flag to include header in csv exports
    * </pre>
    *
-   * <code>bool no_header = 4 [json_name = "noHeader"];</code>
+   * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=259
    * @return The noHeader.
    */
-  boolean getNoHeader();
+  @java.lang.Deprecated boolean getNoHeader();
 
   /**
    * <pre>
