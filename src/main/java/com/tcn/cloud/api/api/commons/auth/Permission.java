@@ -899,6 +899,15 @@ public enum Permission
    * <code>PERMISSION_KNOWLEDGE_BASE_EDIT = 5200 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_KNOWLEDGE_BASE_EDIT(5200),
+  /**
+   * <pre>
+   *
+   * Rule Engine
+   * </pre>
+   *
+   * <code>PERMISSION_RULE_ENGINE = 5300 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_RULE_ENGINE(5300),
   UNRECOGNIZED(-1),
   ;
 
@@ -1784,6 +1793,15 @@ public enum Permission
    * <code>PERMISSION_KNOWLEDGE_BASE_EDIT = 5200 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_KNOWLEDGE_BASE_EDIT_VALUE = 5200;
+  /**
+   * <pre>
+   *
+   * Rule Engine
+   * </pre>
+   *
+   * <code>PERMISSION_RULE_ENGINE = 5300 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_RULE_ENGINE_VALUE = 5300;
 
 
   public final int getNumber() {
@@ -1920,6 +1938,7 @@ public enum Permission
       case 5100: return PERMISSION_CONTACTMANAGER_ADMIN;
       case 5101: return PERMISSION_CONTACTMANAGER_APP;
       case 5200: return PERMISSION_KNOWLEDGE_BASE_EDIT;
+      case 5300: return PERMISSION_RULE_ENGINE;
       default: return null;
     }
   }
