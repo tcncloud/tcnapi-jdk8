@@ -261,6 +261,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_BLINKPAYMENT = 6100;</code>
    */
   INTEGRATION_TYPE_BLINKPAYMENT(6100),
+  /**
+   * <code>INTEGRATION_TYPE_WAYSTAR = 6200;</code>
+   */
+  INTEGRATION_TYPE_WAYSTAR(6200),
   UNRECOGNIZED(-1),
   ;
 
@@ -512,6 +516,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_BLINKPAYMENT = 6100;</code>
    */
   public static final int INTEGRATION_TYPE_BLINKPAYMENT_VALUE = 6100;
+  /**
+   * <code>INTEGRATION_TYPE_WAYSTAR = 6200;</code>
+   */
+  public static final int INTEGRATION_TYPE_WAYSTAR_VALUE = 6200;
 
 
   public final int getNumber() {
@@ -600,6 +608,7 @@ public enum IntegrationType
       case 5900: return INTEGRATION_TYPE_TRATTA;
       case 6000: return INTEGRATION_TYPE_FORTIS;
       case 6100: return INTEGRATION_TYPE_BLINKPAYMENT;
+      case 6200: return INTEGRATION_TYPE_WAYSTAR;
       default: return null;
     }
   }
