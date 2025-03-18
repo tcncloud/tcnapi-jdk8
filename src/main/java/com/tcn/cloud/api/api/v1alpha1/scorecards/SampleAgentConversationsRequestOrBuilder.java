@@ -137,8 +137,8 @@ public interface SampleAgentConversationsRequestOrBuilder extends
    * Optional - filter by saved transcript filter.
    * </pre>
    *
-   * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
-   * @return The transcriptFilterSid.
+   * <code>int64 filter_sid = 9 [json_name = "filterSid"];</code>
+   * @return The filterSid.
    */
-  long getTranscriptFilterSid();
+  long getFilterSid();
 }
