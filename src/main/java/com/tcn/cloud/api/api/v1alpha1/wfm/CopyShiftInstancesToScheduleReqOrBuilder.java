@@ -73,4 +73,23 @@ public interface CopyShiftInstancesToScheduleReqOrBuilder extends
    * @return The overlapAsWarning.
    */
   boolean getOverlapAsWarning();
+
+  /**
+   * <pre>
+   * The type of schedule that the &#64;shift_instance_sids are associated with.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+   * @return The enum numeric value on the wire for sourceScheduleType.
+   */
+  int getSourceScheduleTypeValue();
+  /**
+   * <pre>
+   * The type of schedule that the &#64;shift_instance_sids are associated with.
+   * </pre>
+   *
+   * <code>.api.commons.ScheduleType source_schedule_type = 4 [json_name = "sourceScheduleType"];</code>
+   * @return The sourceScheduleType.
+   */
+  com.tcn.cloud.api.api.commons.ScheduleType getSourceScheduleType();
 }
