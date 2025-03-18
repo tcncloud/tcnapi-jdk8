@@ -824,6 +824,37 @@ public final class LearnGrpc {
     return getGetUpdateUrlMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq,
+      com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> getAdvancedSearchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AdvancedSearch",
+      requestType = com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq,
+      com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> getAdvancedSearchMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq, com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> getAdvancedSearchMethod;
+    if ((getAdvancedSearchMethod = LearnGrpc.getAdvancedSearchMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getAdvancedSearchMethod = LearnGrpc.getAdvancedSearchMethod) == null) {
+          LearnGrpc.getAdvancedSearchMethod = getAdvancedSearchMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq, com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdvancedSearch"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("AdvancedSearch"))
+              .build();
+        }
+      }
+    }
+    return getAdvancedSearchMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1138,6 +1169,17 @@ public final class LearnGrpc {
     default void getUpdateUrl(com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUpdateUrlMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * integration with knowledge-retriever
+     * search the knowledge base
+     * </pre>
+     */
+    default void advancedSearch(com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAdvancedSearchMethod(), responseObserver);
     }
   }
 
@@ -1464,6 +1506,18 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUpdateUrlMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * integration with knowledge-retriever
+     * search the knowledge base
+     * </pre>
+     */
+    public void advancedSearch(com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAdvancedSearchMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1753,6 +1807,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUpdateUrlMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * integration with knowledge-retriever
+     * search the knowledge base
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes advancedSearch(com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAdvancedSearchMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -2018,6 +2083,18 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUpdateUrlMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * integration with knowledge-retriever
+     * search the knowledge base
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes> advancedSearch(
+        com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAdvancedSearchMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -2046,6 +2123,7 @@ public final class LearnGrpc {
   private static final int METHODID_DELETE_VERSION = 23;
   private static final int METHODID_UPLOAD_STATIC_IMAGE = 24;
   private static final int METHODID_GET_UPDATE_URL = 25;
+  private static final int METHODID_ADVANCED_SEARCH = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2167,6 +2245,10 @@ public final class LearnGrpc {
         case METHODID_GET_UPDATE_URL:
           serviceImpl.getUpdateUrl((com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes>) responseObserver);
+          break;
+        case METHODID_ADVANCED_SEARCH:
+          serviceImpl.advancedSearch((com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2368,6 +2450,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.GetUpdateUrlReq,
               com.tcn.cloud.api.api.v0alpha.GetUpdateUrlRes>(
                 service, METHODID_GET_UPDATE_URL)))
+        .addMethod(
+          getAdvancedSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AdvancedSearchReq,
+              com.tcn.cloud.api.api.v0alpha.AdvancedSearchRes>(
+                service, METHODID_ADVANCED_SEARCH)))
         .build();
   }
 
@@ -2442,6 +2531,7 @@ public final class LearnGrpc {
               .addMethod(getDeleteVersionMethod())
               .addMethod(getUploadStaticImageMethod())
               .addMethod(getGetUpdateUrlMethod())
+              .addMethod(getAdvancedSearchMethod())
               .build();
         }
       }
