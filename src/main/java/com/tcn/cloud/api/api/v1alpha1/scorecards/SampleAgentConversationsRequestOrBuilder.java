@@ -131,4 +131,14 @@ public interface SampleAgentConversationsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAgentUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional - filter by saved transcript filter.
+   * </pre>
+   *
+   * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
+   * @return The transcriptFilterSid.
+   */
+  long getTranscriptFilterSid();
 }

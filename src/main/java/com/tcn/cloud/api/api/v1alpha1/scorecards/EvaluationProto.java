@@ -219,7 +219,7 @@ public final class EvaluationProto {
       "valuation_id\030\002 \001(\003R\014evaluationId\022\027\n\007user" +
       "_id\030\003 \001(\tR\006userId\"T\n\031RestoreEvaluationRe" +
       "sponse\0227\n\nevaluation\030\001 \001(\0132\027.api.commons" +
-      ".EvaluationR\nevaluation\"\275\002\n\037SampleAgentC" +
+      ".EvaluationR\nevaluation\"\361\002\n\037SampleAgentC" +
       "onversationsRequest\022!\n\014scorecard_id\030\003 \001(" +
       "\003R\013scorecardId\0229\n\nstart_time\030\004 \001(\0132\032.goo" +
       "gle.protobuf.TimestampR\tstartTime\0225\n\010end" +
@@ -227,35 +227,37 @@ public final class EvaluationProto {
       "\007endTime\0222\n\025max_agent_evaluations\030\006 \001(\005R" +
       "\023maxAgentEvaluations\022+\n\021sample_percentag" +
       "e\030\007 \001(\005R\020samplePercentage\022$\n\016agent_user_" +
-      "ids\030\010 \003(\tR\014agentUserIds\"\177\n SampleAgentCo" +
-      "nversationsResponse\022[\n\023agent_conversatio" +
-      "ns\030\001 \003(\0132*.api.v1alpha1.scorecards.Agent" +
-      "ConversationR\022agentConversations\"\242\006\n\021Age" +
-      "ntConversation\022%\n\016transcript_sid\030\001 \001(\003R\r" +
-      "transcriptSid\0222\n\007channel\030\002 \001(\0162\030.api.com" +
-      "mons.ChannelTypeR\007channel\022\"\n\ragent_user_" +
-      "id\030\003 \001(\tR\013agentUserId\0229\n\nstart_time\030\004 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tstartTime" +
-      "\022^\n\rcall_metadata\030\n \001(\01327.api.v1alpha1.s" +
-      "corecards.AgentConversation.CallMetadata" +
-      "H\000R\014callMetadata\022[\n\014sms_metadata\030\013 \001(\01326" +
-      ".api.v1alpha1.scorecards.AgentConversati" +
-      "on.SmsMetadataH\000R\013smsMetadata\032\254\002\n\014CallMe" +
-      "tadata\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcal" +
-      "l_type\030\002 \001(\0162\032.api.commons.CallType.Enum" +
-      "R\010callType\022>\n\rcall_duration\030\003 \001(\0132\031.goog" +
-      "le.protobuf.DurationR\014callDuration\022B\n\017sp" +
-      "eech_duration\030\004 \001(\0132\031.google.protobuf.Du" +
-      "rationR\016speechDuration\022D\n\020silence_durati" +
-      "on\030\005 \001(\0132\031.google.protobuf.DurationR\017sil" +
-      "enceDuration\032[\n\013SmsMetadata\022)\n\020conversat" +
-      "ion_sid\030\001 \001(\003R\017conversationSid\022!\n\014campai" +
-      "gn_sid\030\002 \001(\003R\013campaignSidB\n\n\010metadataB\272\001" +
-      "\n)com.tcn.cloud.api.api.v1alpha1.scoreca" +
-      "rdsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
-      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
-      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
-      "\031Api::V1alpha1::Scorecardsb\006proto3"
+      "ids\030\010 \003(\tR\014agentUserIds\0222\n\025transcript_fi" +
+      "lter_sid\030\t \001(\003R\023transcriptFilterSid\"\177\n S" +
+      "ampleAgentConversationsResponse\022[\n\023agent" +
+      "_conversations\030\001 \003(\0132*.api.v1alpha1.scor" +
+      "ecards.AgentConversationR\022agentConversat" +
+      "ions\"\242\006\n\021AgentConversation\022%\n\016transcript" +
+      "_sid\030\001 \001(\003R\rtranscriptSid\0222\n\007channel\030\002 \001" +
+      "(\0162\030.api.commons.ChannelTypeR\007channel\022\"\n" +
+      "\ragent_user_id\030\003 \001(\tR\013agentUserId\0229\n\nsta" +
+      "rt_time\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\tstartTime\022^\n\rcall_metadata\030\n \001(\01327.ap" +
+      "i.v1alpha1.scorecards.AgentConversation." +
+      "CallMetadataH\000R\014callMetadata\022[\n\014sms_meta" +
+      "data\030\013 \001(\01326.api.v1alpha1.scorecards.Age" +
+      "ntConversation.SmsMetadataH\000R\013smsMetadat" +
+      "a\032\254\002\n\014CallMetadata\022\031\n\010call_sid\030\001 \001(\003R\007ca" +
+      "llSid\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.C" +
+      "allType.EnumR\010callType\022>\n\rcall_duration\030" +
+      "\003 \001(\0132\031.google.protobuf.DurationR\014callDu" +
+      "ration\022B\n\017speech_duration\030\004 \001(\0132\031.google" +
+      ".protobuf.DurationR\016speechDuration\022D\n\020si" +
+      "lence_duration\030\005 \001(\0132\031.google.protobuf.D" +
+      "urationR\017silenceDuration\032[\n\013SmsMetadata\022" +
+      ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
+      "id\022!\n\014campaign_sid\030\002 \001(\003R\013campaignSidB\n\n" +
+      "\010metadataB\272\001\n)com.tcn.cloud.api.api.v1al" +
+      "pha1.scorecardsB\017EvaluationProtoP\001\242\002\003AVS" +
+      "\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alpha" +
+      "1\\Scorecards\342\002#Api\\V1alpha1\\Scorecards\\G" +
+      "PBMetadata\352\002\031Api::V1alpha1::Scorecardsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -392,7 +394,7 @@ public final class EvaluationProto {
     internal_static_api_v1alpha1_scorecards_SampleAgentConversationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_SampleAgentConversationsRequest_descriptor,
-        new java.lang.String[] { "ScorecardId", "StartTime", "EndTime", "MaxAgentEvaluations", "SamplePercentage", "AgentUserIds", });
+        new java.lang.String[] { "ScorecardId", "StartTime", "EndTime", "MaxAgentEvaluations", "SamplePercentage", "AgentUserIds", "TranscriptFilterSid", });
     internal_static_api_v1alpha1_scorecards_SampleAgentConversationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_api_v1alpha1_scorecards_SampleAgentConversationsResponse_fieldAccessorTable = new

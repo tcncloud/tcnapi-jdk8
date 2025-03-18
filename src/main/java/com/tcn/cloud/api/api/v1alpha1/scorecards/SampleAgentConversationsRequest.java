@@ -218,6 +218,21 @@ private static final long serialVersionUID = 0L;
     return agentUserIds_.getByteString(index);
   }
 
+  public static final int TRANSCRIPT_FILTER_SID_FIELD_NUMBER = 9;
+  private long transcriptFilterSid_ = 0L;
+  /**
+   * <pre>
+   * Optional - filter by saved transcript filter.
+   * </pre>
+   *
+   * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
+   * @return The transcriptFilterSid.
+   */
+  @java.lang.Override
+  public long getTranscriptFilterSid() {
+    return transcriptFilterSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -249,6 +264,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < agentUserIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, agentUserIds_.getRaw(i));
+    }
+    if (transcriptFilterSid_ != 0L) {
+      output.writeInt64(9, transcriptFilterSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -287,6 +305,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getAgentUserIdsList().size();
     }
+    if (transcriptFilterSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, transcriptFilterSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -320,6 +342,8 @@ private static final long serialVersionUID = 0L;
         != other.getSamplePercentage()) return false;
     if (!getAgentUserIdsList()
         .equals(other.getAgentUserIdsList())) return false;
+    if (getTranscriptFilterSid()
+        != other.getTranscriptFilterSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -350,6 +374,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_USER_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getAgentUserIdsList().hashCode();
     }
+    hash = (37 * hash) + TRANSCRIPT_FILTER_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTranscriptFilterSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -500,6 +527,7 @@ private static final long serialVersionUID = 0L;
       samplePercentage_ = 0;
       agentUserIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      transcriptFilterSid_ = 0L;
       return this;
     }
 
@@ -555,6 +583,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         agentUserIds_.makeImmutable();
         result.agentUserIds_ = agentUserIds_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.transcriptFilterSid_ = transcriptFilterSid_;
       }
     }
 
@@ -627,6 +658,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getTranscriptFilterSid() != 0L) {
+        setTranscriptFilterSid(other.getTranscriptFilterSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -688,6 +722,11 @@ private static final long serialVersionUID = 0L;
               agentUserIds_.add(s);
               break;
             } // case 66
+            case 72: {
+              transcriptFilterSid_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1290,6 +1329,50 @@ private static final long serialVersionUID = 0L;
       ensureAgentUserIdsIsMutable();
       agentUserIds_.add(value);
       bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private long transcriptFilterSid_ ;
+    /**
+     * <pre>
+     * Optional - filter by saved transcript filter.
+     * </pre>
+     *
+     * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
+     * @return The transcriptFilterSid.
+     */
+    @java.lang.Override
+    public long getTranscriptFilterSid() {
+      return transcriptFilterSid_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by saved transcript filter.
+     * </pre>
+     *
+     * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
+     * @param value The transcriptFilterSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTranscriptFilterSid(long value) {
+
+      transcriptFilterSid_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by saved transcript filter.
+     * </pre>
+     *
+     * <code>int64 transcript_filter_sid = 9 [json_name = "transcriptFilterSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTranscriptFilterSid() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      transcriptFilterSid_ = 0L;
       onChanged();
       return this;
     }
