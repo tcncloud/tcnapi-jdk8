@@ -30,7 +30,7 @@ public interface HeaderGroupOrBuilder extends
   /**
    * <code>repeated string headers = 2 [json_name = "headers", deprecated = true];</code>
    * @deprecated api.v0alpha.HeaderGroup.headers is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1684
+   *     See api/v0alpha/omniapi.proto;l=1693
    * @return A list containing the headers.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -38,14 +38,14 @@ public interface HeaderGroupOrBuilder extends
   /**
    * <code>repeated string headers = 2 [json_name = "headers", deprecated = true];</code>
    * @deprecated api.v0alpha.HeaderGroup.headers is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1684
+   *     See api/v0alpha/omniapi.proto;l=1693
    * @return The count of headers.
    */
   @java.lang.Deprecated int getHeadersCount();
   /**
    * <code>repeated string headers = 2 [json_name = "headers", deprecated = true];</code>
    * @deprecated api.v0alpha.HeaderGroup.headers is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1684
+   *     See api/v0alpha/omniapi.proto;l=1693
    * @param index The index of the element to return.
    * @return The headers at the given index.
    */
@@ -53,7 +53,7 @@ public interface HeaderGroupOrBuilder extends
   /**
    * <code>repeated string headers = 2 [json_name = "headers", deprecated = true];</code>
    * @deprecated api.v0alpha.HeaderGroup.headers is deprecated.
-   *     See api/v0alpha/omniapi.proto;l=1684
+   *     See api/v0alpha/omniapi.proto;l=1693
    * @param index The index of the value to return.
    * @return The bytes of the headers at the given index.
    */
