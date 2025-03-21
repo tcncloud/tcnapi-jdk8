@@ -30,4 +30,28 @@ public interface ReceiptOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ReceiptFieldOrBuilder getFieldsOrBuilder(
       int index);
+
+  /**
+   * <code>string header = 2 [json_name = "header"];</code>
+   * @return The header.
+   */
+  java.lang.String getHeader();
+  /**
+   * <code>string header = 2 [json_name = "header"];</code>
+   * @return The bytes for header.
+   */
+  com.google.protobuf.ByteString
+      getHeaderBytes();
+
+  /**
+   * <code>string footer = 3 [json_name = "footer"];</code>
+   * @return The footer.
+   */
+  java.lang.String getFooter();
+  /**
+   * <code>string footer = 3 [json_name = "footer"];</code>
+   * @return The bytes for footer.
+   */
+  com.google.protobuf.ByteString
+      getFooterBytes();
 }
