@@ -9,6 +9,26 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
+   * Name of the column
+   * </pre>
+   *
+   * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
+   * @return The columnName.
+   */
+  java.lang.String getColumnName();
+  /**
+   * <pre>
+   * Name of the column
+   * </pre>
+   *
+   * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
+   * @return The bytes for columnName.
+   */
+  com.google.protobuf.ByteString
+      getColumnNameBytes();
+
+  /**
+   * <pre>
    * Operations to be performed on the column
    * </pre>
    *
