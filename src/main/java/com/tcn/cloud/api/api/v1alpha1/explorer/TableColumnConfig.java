@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TableColumnConfig() {
-    columnName_ = "";
     operations_ = java.util.Collections.emptyList();
     columnSummary_ = 0;
   }
@@ -43,53 +42,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.explorer.PipelineProto.internal_static_api_v1alpha1_explorer_TableColumnConfig_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig.class, com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig.Builder.class);
-  }
-
-  public static final int COLUMNNAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object columnName_ = "";
-  /**
-   * <pre>
-   * Name of the column
-   * </pre>
-   *
-   * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-   * @return The columnName.
-   */
-  @java.lang.Override
-  public java.lang.String getColumnName() {
-    java.lang.Object ref = columnName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      columnName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Name of the column
-   * </pre>
-   *
-   * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-   * @return The bytes for columnName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getColumnNameBytes() {
-    java.lang.Object ref = columnName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      columnName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int OPERATIONS_FIELD_NUMBER = 5;
@@ -193,9 +145,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, columnName_);
-    }
     for (int i = 0; i < operations_.size(); i++) {
       output.writeMessage(5, operations_.get(i));
     }
@@ -211,9 +160,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, columnName_);
-    }
     for (int i = 0; i < operations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, operations_.get(i));
@@ -237,8 +183,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig other = (com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig) obj;
 
-    if (!getColumnName()
-        .equals(other.getColumnName())) return false;
     if (!getOperationsList()
         .equals(other.getOperationsList())) return false;
     if (columnSummary_ != other.columnSummary_) return false;
@@ -253,8 +197,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + COLUMNNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getColumnName().hashCode();
     if (getOperationsCount() > 0) {
       hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOperationsList().hashCode();
@@ -396,14 +338,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      columnName_ = "";
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
       } else {
         operations_ = null;
         operationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       columnSummary_ = 0;
       return this;
     }
@@ -439,9 +380,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig result) {
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.operations_ = operations_;
       } else {
@@ -451,10 +392,7 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.columnName_ = columnName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.columnSummary_ = columnSummary_;
       }
     }
@@ -503,16 +441,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.explorer.TableColumnConfig.getDefaultInstance()) return this;
-      if (!other.getColumnName().isEmpty()) {
-        columnName_ = other.columnName_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (operationsBuilder_ == null) {
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -525,7 +458,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -563,11 +496,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              columnName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 42: {
               com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperation m =
                   input.readMessage(
@@ -583,7 +511,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 48: {
               columnSummary_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 48
             default: {
@@ -603,104 +531,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object columnName_ = "";
-    /**
-     * <pre>
-     * Name of the column
-     * </pre>
-     *
-     * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-     * @return The columnName.
-     */
-    public java.lang.String getColumnName() {
-      java.lang.Object ref = columnName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        columnName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Name of the column
-     * </pre>
-     *
-     * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-     * @return The bytes for columnName.
-     */
-    public com.google.protobuf.ByteString
-        getColumnNameBytes() {
-      java.lang.Object ref = columnName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        columnName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Name of the column
-     * </pre>
-     *
-     * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-     * @param value The columnName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setColumnName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      columnName_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Name of the column
-     * </pre>
-     *
-     * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearColumnName() {
-      columnName_ = getDefaultInstance().getColumnName();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Name of the column
-     * </pre>
-     *
-     * <code>string ColumnName = 1 [json_name = "ColumnName"];</code>
-     * @param value The bytes for columnName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setColumnNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      columnName_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         operations_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperation>(operations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -894,7 +730,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -999,7 +835,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperation, com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperation.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ColumnOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1030,7 +866,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setColumnSummaryValue(int value) {
       columnSummary_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1060,7 +896,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       columnSummary_ = value.getNumber();
       onChanged();
       return this;
@@ -1074,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearColumnSummary() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       columnSummary_ = 0;
       onChanged();
       return this;
