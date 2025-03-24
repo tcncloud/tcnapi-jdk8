@@ -351,41 +351,42 @@ public final class PipelineProto {
       "olumn\022\035\n\nvalue_type\030\004 \001(\tR\tvalueType\"i\n\013" +
       "FormatQuery\022Z\n\024table_column_configs\030\001 \003(" +
       "\0132(.api.v1alpha1.explorer.TableColumnCon" +
-      "figR\022tableColumnConfigs\"\254\001\n\021TableColumnC" +
-      "onfig\022F\n\noperations\030\005 \003(\0132&.api.v1alpha1" +
-      ".explorer.ColumnOperationR\noperations\022O\n" +
-      "\016column_summary\030\006 \001(\0162(.api.v1alpha1.exp" +
-      "lorer.ColumnSummaryTypeR\rcolumnSummary\"1" +
-      "\n\014FormatSeries\022!\n\014format_parts\030\001 \003(\tR\013fo" +
-      "rmatParts\"i\n\014PadOperation\022#\n\rpad_charact" +
-      "er\030\001 \001(\tR\014padCharacter\022\031\n\010pad_left\030\002 \001(\010" +
-      "R\007padLeft\022\031\n\010pad_size\030\003 \001(\005R\007padSize\"\254\002\n" +
-      "\017ColumnOperation\022K\n\016operation_type\030\001 \001(\016" +
-      "2$.api.v1alpha1.explorer.OperationTypeR\r" +
-      "operationType\022!\n\013float_value\030\002 \001(\001H\000R\nfl" +
-      "oatValue\022J\n\rformat_series\030\003 \001(\0132#.api.v1" +
-      "alpha1.explorer.FormatSeriesH\000R\014formatSe" +
-      "ries\022J\n\rpad_operation\030\004 \001(\0132#.api.v1alph" +
-      "a1.explorer.PadOperationH\000R\014padOperation" +
-      "B\021\n\017operation_value*\340\002\n\rOperationType\022\036\n" +
-      "\032OPERATION_TYPE_UNSPECIFIED\020\000\022\027\n\023OPERATI" +
-      "ON_TYPE_DATE\020\001\022\031\n\025OPERATION_TYPE_PREFIX\020" +
-      "\002\022\031\n\025OPERATION_TYPE_SUFFIX\020\003\022\033\n\027OPERATIO" +
-      "N_TYPE_DURATION\020\004\022\026\n\022OPERATION_TYPE_ADD\020" +
-      "\005\022\033\n\027OPERATION_TYPE_SUBTRACT\020\006\022\033\n\027OPERAT" +
-      "ION_TYPE_MULTIPLY\020\007\022\031\n\025OPERATION_TYPE_DI" +
-      "VIDE\020\010\022 \n\034OPERATION_TYPE_FORMAT_NUMBER\020\t" +
-      "\022\034\n\030OPERATION_TYPE_PRECISION\020\n\022\026\n\022OPERAT" +
-      "ION_TYPE_PAD\020\013*\254\001\n\021ColumnSummaryType\022#\n\037" +
-      "COLUMN_SUMMARY_TYPE_UNSPECIFIED\020\000\022\033\n\027COL" +
-      "UMN_SUMMARY_TYPE_AVG\020\001\022\033\n\027COLUMN_SUMMARY" +
-      "_TYPE_SUM\020\002\022\033\n\027COLUMN_SUMMARY_TYPE_MIN\020\003" +
-      "\022\033\n\027COLUMN_SUMMARY_TYPE_MAX\020\004B\256\001\n\'com.tc" +
-      "n.cloud.api.api.v1alpha1.explorerB\rPipel" +
-      "ineProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer" +
-      "\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1alpha1\\" +
-      "Explorer\\GPBMetadata\352\002\027Api::V1alpha1::Ex" +
-      "plorerb\006proto3"
+      "figR\022tableColumnConfigs\"\315\001\n\021TableColumnC" +
+      "onfig\022\037\n\013column_name\030\001 \001(\tR\ncolumnName\022F" +
+      "\n\noperations\030\005 \003(\0132&.api.v1alpha1.explor" +
+      "er.ColumnOperationR\noperations\022O\n\016column" +
+      "_summary\030\006 \001(\0162(.api.v1alpha1.explorer.C" +
+      "olumnSummaryTypeR\rcolumnSummary\"1\n\014Forma" +
+      "tSeries\022!\n\014format_parts\030\001 \003(\tR\013formatPar" +
+      "ts\"i\n\014PadOperation\022#\n\rpad_character\030\001 \001(" +
+      "\tR\014padCharacter\022\031\n\010pad_left\030\002 \001(\010R\007padLe" +
+      "ft\022\031\n\010pad_size\030\003 \001(\005R\007padSize\"\254\002\n\017Column" +
+      "Operation\022K\n\016operation_type\030\001 \001(\0162$.api." +
+      "v1alpha1.explorer.OperationTypeR\roperati" +
+      "onType\022!\n\013float_value\030\002 \001(\001H\000R\nfloatValu" +
+      "e\022J\n\rformat_series\030\003 \001(\0132#.api.v1alpha1." +
+      "explorer.FormatSeriesH\000R\014formatSeries\022J\n" +
+      "\rpad_operation\030\004 \001(\0132#.api.v1alpha1.expl" +
+      "orer.PadOperationH\000R\014padOperationB\021\n\017ope" +
+      "ration_value*\340\002\n\rOperationType\022\036\n\032OPERAT" +
+      "ION_TYPE_UNSPECIFIED\020\000\022\027\n\023OPERATION_TYPE" +
+      "_DATE\020\001\022\031\n\025OPERATION_TYPE_PREFIX\020\002\022\031\n\025OP" +
+      "ERATION_TYPE_SUFFIX\020\003\022\033\n\027OPERATION_TYPE_" +
+      "DURATION\020\004\022\026\n\022OPERATION_TYPE_ADD\020\005\022\033\n\027OP" +
+      "ERATION_TYPE_SUBTRACT\020\006\022\033\n\027OPERATION_TYP" +
+      "E_MULTIPLY\020\007\022\031\n\025OPERATION_TYPE_DIVIDE\020\010\022" +
+      " \n\034OPERATION_TYPE_FORMAT_NUMBER\020\t\022\034\n\030OPE" +
+      "RATION_TYPE_PRECISION\020\n\022\026\n\022OPERATION_TYP" +
+      "E_PAD\020\013*\254\001\n\021ColumnSummaryType\022#\n\037COLUMN_" +
+      "SUMMARY_TYPE_UNSPECIFIED\020\000\022\033\n\027COLUMN_SUM" +
+      "MARY_TYPE_AVG\020\001\022\033\n\027COLUMN_SUMMARY_TYPE_S" +
+      "UM\020\002\022\033\n\027COLUMN_SUMMARY_TYPE_MIN\020\003\022\033\n\027COL" +
+      "UMN_SUMMARY_TYPE_MAX\020\004B\256\001\n\'com.tcn.cloud" +
+      ".api.api.v1alpha1.explorerB\rPipelineProt" +
+      "oP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\" +
+      "V1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explore" +
+      "r\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -594,7 +595,7 @@ public final class PipelineProto {
     internal_static_api_v1alpha1_explorer_TableColumnConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_TableColumnConfig_descriptor,
-        new java.lang.String[] { "Operations", "ColumnSummary", });
+        new java.lang.String[] { "ColumnName", "Operations", "ColumnSummary", });
     internal_static_api_v1alpha1_explorer_FormatSeries_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_api_v1alpha1_explorer_FormatSeries_fieldAccessorTable = new
