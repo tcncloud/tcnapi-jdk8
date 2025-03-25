@@ -297,4 +297,34 @@ public interface OmniCampaignModuleOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   * @return Whether the hoursOfOperationTimezone field is set.
+   */
+  boolean hasHoursOfOperationTimezone();
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   * @return The hoursOfOperationTimezone.
+   */
+  com.tcn.cloud.api.api.commons.WeekdayTimeRange getHoursOfOperationTimezone();
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   */
+  com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder getHoursOfOperationTimezoneOrBuilder();
 }

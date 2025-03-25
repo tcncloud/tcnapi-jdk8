@@ -2658,6 +2658,47 @@ private static final long serialVersionUID = 0L;
     return attachments_.get(index);
   }
 
+  public static final int HOURS_OF_OPERATION_TIMEZONE_FIELD_NUMBER = 13;
+  private com.tcn.cloud.api.api.commons.WeekdayTimeRange hoursOfOperationTimezone_;
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   * @return Whether the hoursOfOperationTimezone field is set.
+   */
+  @java.lang.Override
+  public boolean hasHoursOfOperationTimezone() {
+    return hoursOfOperationTimezone_ != null;
+  }
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   * @return The hoursOfOperationTimezone.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.WeekdayTimeRange getHoursOfOperationTimezone() {
+    return hoursOfOperationTimezone_ == null ? com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance() : hoursOfOperationTimezone_;
+  }
+  /**
+   * <pre>
+   * campaign module operating time based on the tasks timezone-determined by the sms number,
+   * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+   * </pre>
+   *
+   * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder getHoursOfOperationTimezoneOrBuilder() {
+    return hoursOfOperationTimezone_ == null ? com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance() : hoursOfOperationTimezone_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2707,6 +2748,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < attachments_.size(); i++) {
       output.writeMessage(12, attachments_.get(i));
+    }
+    if (hoursOfOperationTimezone_ != null) {
+      output.writeMessage(13, getHoursOfOperationTimezone());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2764,6 +2808,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < attachments_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, attachments_.get(i));
+    }
+    if (hoursOfOperationTimezone_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getHoursOfOperationTimezone());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2823,6 +2871,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getAttachmentsList()
         .equals(other.getAttachmentsList())) return false;
+    if (hasHoursOfOperationTimezone() != other.hasHoursOfOperationTimezone()) return false;
+    if (hasHoursOfOperationTimezone()) {
+      if (!getHoursOfOperationTimezone()
+          .equals(other.getHoursOfOperationTimezone())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2875,6 +2928,10 @@ private static final long serialVersionUID = 0L;
     if (getAttachmentsCount() > 0) {
       hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getAttachmentsList().hashCode();
+    }
+    if (hasHoursOfOperationTimezone()) {
+      hash = (37 * hash) + HOURS_OF_OPERATION_TIMEZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getHoursOfOperationTimezone().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3057,6 +3114,11 @@ private static final long serialVersionUID = 0L;
         attachmentsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000800);
+      hoursOfOperationTimezone_ = null;
+      if (hoursOfOperationTimezoneBuilder_ != null) {
+        hoursOfOperationTimezoneBuilder_.dispose();
+        hoursOfOperationTimezoneBuilder_ = null;
+      }
       return this;
     }
 
@@ -3149,6 +3211,11 @@ private static final long serialVersionUID = 0L;
         result.details_ = detailsBuilder_ == null
             ? details_
             : detailsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.hoursOfOperationTimezone_ = hoursOfOperationTimezoneBuilder_ == null
+            ? hoursOfOperationTimezone_
+            : hoursOfOperationTimezoneBuilder_.build();
       }
     }
 
@@ -3254,6 +3321,9 @@ private static final long serialVersionUID = 0L;
             attachmentsBuilder_.addAllMessages(other.attachments_);
           }
         }
+      }
+      if (other.hasHoursOfOperationTimezone()) {
+        mergeHoursOfOperationTimezone(other.getHoursOfOperationTimezone());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3363,6 +3433,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getHoursOfOperationTimezoneFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5009,6 +5086,170 @@ private static final long serialVersionUID = 0L;
         attachments_ = null;
       }
       return attachmentsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.WeekdayTimeRange hoursOfOperationTimezone_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.WeekdayTimeRange, com.tcn.cloud.api.api.commons.WeekdayTimeRange.Builder, com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder> hoursOfOperationTimezoneBuilder_;
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     * @return Whether the hoursOfOperationTimezone field is set.
+     */
+    public boolean hasHoursOfOperationTimezone() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     * @return The hoursOfOperationTimezone.
+     */
+    public com.tcn.cloud.api.api.commons.WeekdayTimeRange getHoursOfOperationTimezone() {
+      if (hoursOfOperationTimezoneBuilder_ == null) {
+        return hoursOfOperationTimezone_ == null ? com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance() : hoursOfOperationTimezone_;
+      } else {
+        return hoursOfOperationTimezoneBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public Builder setHoursOfOperationTimezone(com.tcn.cloud.api.api.commons.WeekdayTimeRange value) {
+      if (hoursOfOperationTimezoneBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hoursOfOperationTimezone_ = value;
+      } else {
+        hoursOfOperationTimezoneBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public Builder setHoursOfOperationTimezone(
+        com.tcn.cloud.api.api.commons.WeekdayTimeRange.Builder builderForValue) {
+      if (hoursOfOperationTimezoneBuilder_ == null) {
+        hoursOfOperationTimezone_ = builderForValue.build();
+      } else {
+        hoursOfOperationTimezoneBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public Builder mergeHoursOfOperationTimezone(com.tcn.cloud.api.api.commons.WeekdayTimeRange value) {
+      if (hoursOfOperationTimezoneBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          hoursOfOperationTimezone_ != null &&
+          hoursOfOperationTimezone_ != com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance()) {
+          getHoursOfOperationTimezoneBuilder().mergeFrom(value);
+        } else {
+          hoursOfOperationTimezone_ = value;
+        }
+      } else {
+        hoursOfOperationTimezoneBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public Builder clearHoursOfOperationTimezone() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      hoursOfOperationTimezone_ = null;
+      if (hoursOfOperationTimezoneBuilder_ != null) {
+        hoursOfOperationTimezoneBuilder_.dispose();
+        hoursOfOperationTimezoneBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.WeekdayTimeRange.Builder getHoursOfOperationTimezoneBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getHoursOfOperationTimezoneFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder getHoursOfOperationTimezoneOrBuilder() {
+      if (hoursOfOperationTimezoneBuilder_ != null) {
+        return hoursOfOperationTimezoneBuilder_.getMessageOrBuilder();
+      } else {
+        return hoursOfOperationTimezone_ == null ?
+            com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance() : hoursOfOperationTimezone_;
+      }
+    }
+    /**
+     * <pre>
+     * campaign module operating time based on the tasks timezone-determined by the sms number,
+     * and zip code in the task's data fields, then reverts to campaign timezone if neither are present; nullable
+     * </pre>
+     *
+     * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.WeekdayTimeRange, com.tcn.cloud.api.api.commons.WeekdayTimeRange.Builder, com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder> 
+        getHoursOfOperationTimezoneFieldBuilder() {
+      if (hoursOfOperationTimezoneBuilder_ == null) {
+        hoursOfOperationTimezoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.WeekdayTimeRange, com.tcn.cloud.api.api.commons.WeekdayTimeRange.Builder, com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder>(
+                getHoursOfOperationTimezone(),
+                getParentForChildren(),
+                isClean());
+        hoursOfOperationTimezone_ = null;
+      }
+      return hoursOfOperationTimezoneBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
