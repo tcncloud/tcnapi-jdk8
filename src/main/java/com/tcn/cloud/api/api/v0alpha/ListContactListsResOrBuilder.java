@@ -50,4 +50,26 @@ public interface ListContactListsResOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ContactListOrBuilder getContactListsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Token to retrieve the next page of contacts, or empty if there are
+   * no more contact in the list.
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The nextPageToken.
+   */
+  java.lang.String getNextPageToken();
+  /**
+   * <pre>
+   * Token to retrieve the next page of contacts, or empty if there are
+   * no more contact in the list.
+   * </pre>
+   *
+   * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+   * @return The bytes for nextPageToken.
+   */
+  com.google.protobuf.ByteString
+      getNextPageTokenBytes();
 }
