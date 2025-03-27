@@ -2699,21 +2699,6 @@ private static final long serialVersionUID = 0L;
     return hoursOfOperationTimezone_ == null ? com.tcn.cloud.api.api.commons.WeekdayTimeRange.getDefaultInstance() : hoursOfOperationTimezone_;
   }
 
-  public static final int GLOBAL_TIMEZONE_ORDERING_FIELD_NUMBER = 14;
-  private boolean globalTimezoneOrdering_ = false;
-  /**
-   * <pre>
-   * indicates if the tasks associated with a campaign should be ordered based on the task.timezone_offset
-   * </pre>
-   *
-   * <code>bool global_timezone_ordering = 14 [json_name = "globalTimezoneOrdering"];</code>
-   * @return The globalTimezoneOrdering.
-   */
-  @java.lang.Override
-  public boolean getGlobalTimezoneOrdering() {
-    return globalTimezoneOrdering_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2766,9 +2751,6 @@ private static final long serialVersionUID = 0L;
     }
     if (hoursOfOperationTimezone_ != null) {
       output.writeMessage(13, getHoursOfOperationTimezone());
-    }
-    if (globalTimezoneOrdering_ != false) {
-      output.writeBool(14, globalTimezoneOrdering_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2830,10 +2812,6 @@ private static final long serialVersionUID = 0L;
     if (hoursOfOperationTimezone_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getHoursOfOperationTimezone());
-    }
-    if (globalTimezoneOrdering_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(14, globalTimezoneOrdering_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2898,8 +2876,6 @@ private static final long serialVersionUID = 0L;
       if (!getHoursOfOperationTimezone()
           .equals(other.getHoursOfOperationTimezone())) return false;
     }
-    if (getGlobalTimezoneOrdering()
-        != other.getGlobalTimezoneOrdering()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2957,9 +2933,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HOURS_OF_OPERATION_TIMEZONE_FIELD_NUMBER;
       hash = (53 * hash) + getHoursOfOperationTimezone().hashCode();
     }
-    hash = (37 * hash) + GLOBAL_TIMEZONE_ORDERING_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getGlobalTimezoneOrdering());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3146,7 +3119,6 @@ private static final long serialVersionUID = 0L;
         hoursOfOperationTimezoneBuilder_.dispose();
         hoursOfOperationTimezoneBuilder_ = null;
       }
-      globalTimezoneOrdering_ = false;
       return this;
     }
 
@@ -3244,9 +3216,6 @@ private static final long serialVersionUID = 0L;
         result.hoursOfOperationTimezone_ = hoursOfOperationTimezoneBuilder_ == null
             ? hoursOfOperationTimezone_
             : hoursOfOperationTimezoneBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.globalTimezoneOrdering_ = globalTimezoneOrdering_;
       }
     }
 
@@ -3355,9 +3324,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHoursOfOperationTimezone()) {
         mergeHoursOfOperationTimezone(other.getHoursOfOperationTimezone());
-      }
-      if (other.getGlobalTimezoneOrdering() != false) {
-        setGlobalTimezoneOrdering(other.getGlobalTimezoneOrdering());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3474,11 +3440,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 106
-            case 112: {
-              globalTimezoneOrdering_ = input.readBool();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5289,50 +5250,6 @@ private static final long serialVersionUID = 0L;
         hoursOfOperationTimezone_ = null;
       }
       return hoursOfOperationTimezoneBuilder_;
-    }
-
-    private boolean globalTimezoneOrdering_ ;
-    /**
-     * <pre>
-     * indicates if the tasks associated with a campaign should be ordered based on the task.timezone_offset
-     * </pre>
-     *
-     * <code>bool global_timezone_ordering = 14 [json_name = "globalTimezoneOrdering"];</code>
-     * @return The globalTimezoneOrdering.
-     */
-    @java.lang.Override
-    public boolean getGlobalTimezoneOrdering() {
-      return globalTimezoneOrdering_;
-    }
-    /**
-     * <pre>
-     * indicates if the tasks associated with a campaign should be ordered based on the task.timezone_offset
-     * </pre>
-     *
-     * <code>bool global_timezone_ordering = 14 [json_name = "globalTimezoneOrdering"];</code>
-     * @param value The globalTimezoneOrdering to set.
-     * @return This builder for chaining.
-     */
-    public Builder setGlobalTimezoneOrdering(boolean value) {
-
-      globalTimezoneOrdering_ = value;
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * indicates if the tasks associated with a campaign should be ordered based on the task.timezone_offset
-     * </pre>
-     *
-     * <code>bool global_timezone_ordering = 14 [json_name = "globalTimezoneOrdering"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearGlobalTimezoneOrdering() {
-      bitField0_ = (bitField0_ & ~0x00002000);
-      globalTimezoneOrdering_ = false;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
