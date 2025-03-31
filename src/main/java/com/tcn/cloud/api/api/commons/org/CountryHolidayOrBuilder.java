@@ -34,7 +34,7 @@ public interface CountryHolidayOrBuilder extends
    *
    * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
    * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-   *     See api/commons/org/preferences.proto;l=848
+   *     See api/commons/org/preferences.proto;l=847
    * @return The enum numeric value on the wire for country.
    */
   @java.lang.Deprecated int getCountryValue();
@@ -45,7 +45,7 @@ public interface CountryHolidayOrBuilder extends
    *
    * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
    * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-   *     See api/commons/org/preferences.proto;l=848
+   *     See api/commons/org/preferences.proto;l=847
    * @return The country.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.Country getCountry();
