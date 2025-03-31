@@ -3789,7 +3789,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Proximity is how close (number of words) a phrase may appear to digits
+     * Proximity is the number of words that can appear between the phrase
+     * and the digits. Functionally treated as OR.
      * </pre>
      *
      * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Proximity}
@@ -4018,7 +4019,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Proximity is how close (number of words) a phrase may appear to digits
+       * Proximity is the number of words that can appear between the phrase
+       * and the digits. Functionally treated as OR.
        * </pre>
        *
        * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Proximity}
