@@ -5,8 +5,8 @@ package com.tcn.cloud.api.api.commons.org;
 
 /**
  * <pre>
- * Preferences for voice analytics. Primarily consumed and interpreted by
- * localmixer when mixing and transcribing call recordings.
+ * Preferences for voice analytics. Consumed and interpreted by localmixer
+ * and redactor when mixing, transcribing, and redacting call recordings.
  * </pre>
  *
  * Protobuf type {@code api.commons.org.VoiceAnalyticsPreferences}
@@ -606,8 +606,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Preferences for voice analytics. Primarily consumed and interpreted by
-   * localmixer when mixing and transcribing call recordings.
+   * Preferences for voice analytics. Consumed and interpreted by localmixer
+   * and redactor when mixing, transcribing, and redacting call recordings.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.VoiceAnalyticsPreferences}

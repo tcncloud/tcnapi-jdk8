@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
    * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-   *     See api/commons/org/preferences.proto;l=807
+   *     See api/commons/org/preferences.proto;l=858
    * @return The enum numeric value on the wire for country.
    */
   @java.lang.Override @java.lang.Deprecated public int getCountryValue() {
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
    * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-   *     See api/commons/org/preferences.proto;l=807
+   *     See api/commons/org/preferences.proto;l=858
    * @return The country.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.Country getCountry() {
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
      * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-     *     See api/commons/org/preferences.proto;l=807
+     *     See api/commons/org/preferences.proto;l=858
      * @return The enum numeric value on the wire for country.
      */
     @java.lang.Override @java.lang.Deprecated public int getCountryValue() {
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
      * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-     *     See api/commons/org/preferences.proto;l=807
+     *     See api/commons/org/preferences.proto;l=858
      * @param value The enum numeric value on the wire for country to set.
      * @return This builder for chaining.
      */
@@ -863,7 +863,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
      * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-     *     See api/commons/org/preferences.proto;l=807
+     *     See api/commons/org/preferences.proto;l=858
      * @return The country.
      */
     @java.lang.Override
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
      * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-     *     See api/commons/org/preferences.proto;l=807
+     *     See api/commons/org/preferences.proto;l=858
      * @param value The country to set.
      * @return This builder for chaining.
      */
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
      * @deprecated api.commons.org.CountryHoliday.country is deprecated.
-     *     See api/commons/org/preferences.proto;l=807
+     *     See api/commons/org/preferences.proto;l=858
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCountry() {

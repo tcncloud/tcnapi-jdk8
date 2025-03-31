@@ -866,6 +866,33 @@ private static final long serialVersionUID = 0L;
      * @return The slop.
      */
     int getSlop();
+
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     * @return Whether the phraseProximity field is set.
+     */
+    boolean hasPhraseProximity();
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     * @return The phraseProximity.
+     */
+    com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getPhraseProximity();
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     */
+    com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder getPhraseProximityOrBuilder();
   }
   /**
    * Protobuf type {@code api.commons.org.VoiceAnalytics.Number}
@@ -1044,6 +1071,3472 @@ private static final long serialVersionUID = 0L;
       // @@protoc_insertion_point(enum_scope:api.commons.org.VoiceAnalytics.Number.Kind)
     }
 
+    public interface PhraseProximityOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api.commons.org.VoiceAnalytics.Number.PhraseProximity)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       * @return Whether the phrase field is set.
+       */
+      boolean hasPhrase();
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       * @return The phrase.
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getPhrase();
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder getPhraseOrBuilder();
+
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       * @return Whether the proximity field is set.
+       */
+      boolean hasProximity();
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       * @return The proximity.
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getProximity();
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder getProximityOrBuilder();
+    }
+    /**
+     * <pre>
+     * PhraseProximity is a phrase and how close it should appear to digits.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.PhraseProximity}
+     */
+    public static final class PhraseProximity extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api.commons.org.VoiceAnalytics.Number.PhraseProximity)
+        PhraseProximityOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PhraseProximity.newBuilder() to construct.
+      private PhraseProximity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PhraseProximity() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PhraseProximity();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder.class);
+      }
+
+      public static final int PHRASE_FIELD_NUMBER = 1;
+      private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase phrase_;
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       * @return Whether the phrase field is set.
+       */
+      @java.lang.Override
+      public boolean hasPhrase() {
+        return phrase_ != null;
+      }
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       * @return The phrase.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getPhrase() {
+        return phrase_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance() : phrase_;
+      }
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder getPhraseOrBuilder() {
+        return phrase_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance() : phrase_;
+      }
+
+      public static final int PROXIMITY_FIELD_NUMBER = 2;
+      private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity proximity_;
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       * @return Whether the proximity field is set.
+       */
+      @java.lang.Override
+      public boolean hasProximity() {
+        return proximity_ != null;
+      }
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       * @return The proximity.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getProximity() {
+        return proximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance() : proximity_;
+      }
+      /**
+       * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder getProximityOrBuilder() {
+        return proximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance() : proximity_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (phrase_ != null) {
+          output.writeMessage(1, getPhrase());
+        }
+        if (proximity_ != null) {
+          output.writeMessage(2, getProximity());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (phrase_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getPhrase());
+        }
+        if (proximity_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getProximity());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity other = (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity) obj;
+
+        if (hasPhrase() != other.hasPhrase()) return false;
+        if (hasPhrase()) {
+          if (!getPhrase()
+              .equals(other.getPhrase())) return false;
+        }
+        if (hasProximity() != other.hasProximity()) return false;
+        if (hasProximity()) {
+          if (!getProximity()
+              .equals(other.getProximity())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasPhrase()) {
+          hash = (37 * hash) + PHRASE_FIELD_NUMBER;
+          hash = (53 * hash) + getPhrase().hashCode();
+        }
+        if (hasProximity()) {
+          hash = (37 * hash) + PROXIMITY_FIELD_NUMBER;
+          hash = (53 * hash) + getProximity().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * PhraseProximity is a phrase and how close it should appear to digits.
+       * </pre>
+       *
+       * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.PhraseProximity}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api.commons.org.VoiceAnalytics.Number.PhraseProximity)
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          phrase_ = null;
+          if (phraseBuilder_ != null) {
+            phraseBuilder_.dispose();
+            phraseBuilder_ = null;
+          }
+          proximity_ = null;
+          if (proximityBuilder_ != null) {
+            proximityBuilder_.dispose();
+            proximityBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getDefaultInstanceForType() {
+          return com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity build() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity buildPartial() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity result = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.phrase_ = phraseBuilder_ == null
+                ? phrase_
+                : phraseBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.proximity_ = proximityBuilder_ == null
+                ? proximity_
+                : proximityBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity) {
+            return mergeFrom((com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity other) {
+          if (other == com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance()) return this;
+          if (other.hasPhrase()) {
+            mergePhrase(other.getPhrase());
+          }
+          if (other.hasProximity()) {
+            mergeProximity(other.getProximity());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getPhraseFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getProximityFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase phrase_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder> phraseBuilder_;
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         * @return Whether the phrase field is set.
+         */
+        public boolean hasPhrase() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         * @return The phrase.
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getPhrase() {
+          if (phraseBuilder_ == null) {
+            return phrase_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance() : phrase_;
+          } else {
+            return phraseBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public Builder setPhrase(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase value) {
+          if (phraseBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            phrase_ = value;
+          } else {
+            phraseBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public Builder setPhrase(
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder builderForValue) {
+          if (phraseBuilder_ == null) {
+            phrase_ = builderForValue.build();
+          } else {
+            phraseBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public Builder mergePhrase(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase value) {
+          if (phraseBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              phrase_ != null &&
+              phrase_ != com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance()) {
+              getPhraseBuilder().mergeFrom(value);
+            } else {
+              phrase_ = value;
+            }
+          } else {
+            phraseBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public Builder clearPhrase() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          phrase_ = null;
+          if (phraseBuilder_ != null) {
+            phraseBuilder_.dispose();
+            phraseBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder getPhraseBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getPhraseFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder getPhraseOrBuilder() {
+          if (phraseBuilder_ != null) {
+            return phraseBuilder_.getMessageOrBuilder();
+          } else {
+            return phrase_ == null ?
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance() : phrase_;
+          }
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Phrase phrase = 1 [json_name = "phrase"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder> 
+            getPhraseFieldBuilder() {
+          if (phraseBuilder_ == null) {
+            phraseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder>(
+                    getPhrase(),
+                    getParentForChildren(),
+                    isClean());
+            phrase_ = null;
+          }
+          return phraseBuilder_;
+        }
+
+        private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity proximity_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder> proximityBuilder_;
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         * @return Whether the proximity field is set.
+         */
+        public boolean hasProximity() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         * @return The proximity.
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getProximity() {
+          if (proximityBuilder_ == null) {
+            return proximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance() : proximity_;
+          } else {
+            return proximityBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public Builder setProximity(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity value) {
+          if (proximityBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            proximity_ = value;
+          } else {
+            proximityBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public Builder setProximity(
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder builderForValue) {
+          if (proximityBuilder_ == null) {
+            proximity_ = builderForValue.build();
+          } else {
+            proximityBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public Builder mergeProximity(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity value) {
+          if (proximityBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              proximity_ != null &&
+              proximity_ != com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance()) {
+              getProximityBuilder().mergeFrom(value);
+            } else {
+              proximity_ = value;
+            }
+          } else {
+            proximityBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public Builder clearProximity() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          proximity_ = null;
+          if (proximityBuilder_ != null) {
+            proximityBuilder_.dispose();
+            proximityBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder getProximityBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getProximityFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder getProximityOrBuilder() {
+          if (proximityBuilder_ != null) {
+            return proximityBuilder_.getMessageOrBuilder();
+          } else {
+            return proximity_ == null ?
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance() : proximity_;
+          }
+        }
+        /**
+         * <code>.api.commons.org.VoiceAnalytics.Number.Proximity proximity = 2 [json_name = "proximity"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder> 
+            getProximityFieldBuilder() {
+          if (proximityBuilder_ == null) {
+            proximityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder>(
+                    getProximity(),
+                    getParentForChildren(),
+                    isClean());
+            proximity_ = null;
+          }
+          return proximityBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api.commons.org.VoiceAnalytics.Number.PhraseProximity)
+      }
+
+      // @@protoc_insertion_point(class_scope:api.commons.org.VoiceAnalytics.Number.PhraseProximity)
+      private static final com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity();
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PhraseProximity>
+          PARSER = new com.google.protobuf.AbstractParser<PhraseProximity>() {
+        @java.lang.Override
+        public PhraseProximity parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PhraseProximity> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PhraseProximity> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface PhraseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api.commons.org.VoiceAnalytics.Number.Phrase)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> 
+          getWordsList();
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getWords(int index);
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      int getWordsCount();
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      java.util.List<? extends com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder> 
+          getWordsOrBuilderList();
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder getWordsOrBuilder(
+          int index);
+
+      /**
+       * <pre>
+       * slop is the number of extra terms that can be in the query that
+       * are not being searched for. For example: slop of 2 when searching for
+       * "This is my dog" would allow "This is my quick brown dog".
+       * </pre>
+       *
+       * <code>uint32 slop = 2 [json_name = "slop"];</code>
+       * @return The slop.
+       */
+      int getSlop();
+
+      /**
+       * <pre>
+       * when in_order is true then the terms must be found in the order given.
+       * </pre>
+       *
+       * <code>bool in_order = 3 [json_name = "inOrder"];</code>
+       * @return The inOrder.
+       */
+      boolean getInOrder();
+
+      /**
+       * <pre>
+       * TODO: unsure if needed for MVP
+       * When true the phrase must not be matched.
+       * </pre>
+       *
+       * <code>bool not = 5 [json_name = "not"];</code>
+       * @return The not.
+       */
+      boolean getNot();
+
+      /**
+       * <pre>
+       * TODO: unsure if needed for MVP
+       * When set, targets side of call (caller or agent).
+       * Use 1 for caller, 2 for agent.
+       * Use with agent to target (a) speaker(s).
+       *   - e.g. caller spoke phrase to this specific agent
+       * </pre>
+       *
+       * <code>uint32 channel = 7 [json_name = "channel"];</code>
+       * @return The channel.
+       */
+      int getChannel();
+    }
+    /**
+     * <pre>
+     * Phrase is one or more words close together.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Phrase}
+     */
+    public static final class Phrase extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api.commons.org.VoiceAnalytics.Number.Phrase)
+        PhraseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Phrase.newBuilder() to construct.
+      private Phrase(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Phrase() {
+        words_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Phrase();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder.class);
+      }
+
+      public interface WordOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:api.commons.org.VoiceAnalytics.Number.Phrase.Word)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * value is a word to search for
+         * </pre>
+         *
+         * <code>string value = 1 [json_name = "value"];</code>
+         * @return The value.
+         */
+        java.lang.String getValue();
+        /**
+         * <pre>
+         * value is a word to search for
+         * </pre>
+         *
+         * <code>string value = 1 [json_name = "value"];</code>
+         * @return The bytes for value.
+         */
+        com.google.protobuf.ByteString
+            getValueBytes();
+
+        /**
+         * <pre>
+         * fuzziness allows the term to be spelled slightly incorrect and still
+         * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+         * that the term matches exactly, 2 would allow 2 letter differences, and
+         * AUTO would automatically pick a number based on the word length.
+         * </pre>
+         *
+         * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+         * @return The fuzziness.
+         */
+        java.lang.String getFuzziness();
+        /**
+         * <pre>
+         * fuzziness allows the term to be spelled slightly incorrect and still
+         * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+         * that the term matches exactly, 2 would allow 2 letter differences, and
+         * AUTO would automatically pick a number based on the word length.
+         * </pre>
+         *
+         * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+         * @return The bytes for fuzziness.
+         */
+        com.google.protobuf.ByteString
+            getFuzzinessBytes();
+      }
+      /**
+       * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Phrase.Word}
+       */
+      public static final class Word extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:api.commons.org.VoiceAnalytics.Number.Phrase.Word)
+          WordOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Word.newBuilder() to construct.
+        private Word(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Word() {
+          value_ = "";
+          fuzziness_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Word();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder.class);
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 1;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object value_ = "";
+        /**
+         * <pre>
+         * value is a word to search for
+         * </pre>
+         *
+         * <code>string value = 1 [json_name = "value"];</code>
+         * @return The value.
+         */
+        @java.lang.Override
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            value_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * value is a word to search for
+         * </pre>
+         *
+         * <code>string value = 1 [json_name = "value"];</code>
+         * @return The bytes for value.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int FUZZINESS_FIELD_NUMBER = 2;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object fuzziness_ = "";
+        /**
+         * <pre>
+         * fuzziness allows the term to be spelled slightly incorrect and still
+         * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+         * that the term matches exactly, 2 would allow 2 letter differences, and
+         * AUTO would automatically pick a number based on the word length.
+         * </pre>
+         *
+         * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+         * @return The fuzziness.
+         */
+        @java.lang.Override
+        public java.lang.String getFuzziness() {
+          java.lang.Object ref = fuzziness_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            fuzziness_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * fuzziness allows the term to be spelled slightly incorrect and still
+         * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+         * that the term matches exactly, 2 would allow 2 letter differences, and
+         * AUTO would automatically pick a number based on the word length.
+         * </pre>
+         *
+         * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+         * @return The bytes for fuzziness.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getFuzzinessBytes() {
+          java.lang.Object ref = fuzziness_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            fuzziness_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fuzziness_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fuzziness_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fuzziness_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fuzziness_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word)) {
+            return super.equals(obj);
+          }
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word other = (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word) obj;
+
+          if (!getValue()
+              .equals(other.getValue())) return false;
+          if (!getFuzziness()
+              .equals(other.getFuzziness())) return false;
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+          hash = (37 * hash) + FUZZINESS_FIELD_NUMBER;
+          hash = (53 * hash) + getFuzziness().hashCode();
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Phrase.Word}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:api.commons.org.VoiceAnalytics.Number.Phrase.Word)
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder.class);
+          }
+
+          // Construct using com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            value_ = "";
+            fuzziness_ = "";
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor;
+          }
+
+          @java.lang.Override
+          public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getDefaultInstanceForType() {
+            return com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word build() {
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word buildPartial() {
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word result = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.value_ = value_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.fuzziness_ = fuzziness_;
+            }
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word) {
+              return mergeFrom((com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word other) {
+            if (other == com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.getDefaultInstance()) return this;
+            if (!other.getValue().isEmpty()) {
+              value_ = other.value_;
+              bitField0_ |= 0x00000001;
+              onChanged();
+            }
+            if (!other.getFuzziness().isEmpty()) {
+              fuzziness_ = other.fuzziness_;
+              bitField0_ |= 0x00000002;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    value_ = input.readStringRequireUtf8();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 10
+                  case 18: {
+                    fuzziness_ = input.readStringRequireUtf8();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 18
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object value_ = "";
+          /**
+           * <pre>
+           * value is a word to search for
+           * </pre>
+           *
+           * <code>string value = 1 [json_name = "value"];</code>
+           * @return The value.
+           */
+          public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              value_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * value is a word to search for
+           * </pre>
+           *
+           * <code>string value = 1 [json_name = "value"];</code>
+           * @return The bytes for value.
+           */
+          public com.google.protobuf.ByteString
+              getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              value_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * value is a word to search for
+           * </pre>
+           *
+           * <code>string value = 1 [json_name = "value"];</code>
+           * @param value The value to set.
+           * @return This builder for chaining.
+           */
+          public Builder setValue(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            value_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * value is a word to search for
+           * </pre>
+           *
+           * <code>string value = 1 [json_name = "value"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearValue() {
+            value_ = getDefaultInstance().getValue();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * value is a word to search for
+           * </pre>
+           *
+           * <code>string value = 1 [json_name = "value"];</code>
+           * @param value The bytes for value to set.
+           * @return This builder for chaining.
+           */
+          public Builder setValueBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            checkByteStringIsUtf8(value);
+            value_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object fuzziness_ = "";
+          /**
+           * <pre>
+           * fuzziness allows the term to be spelled slightly incorrect and still
+           * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+           * that the term matches exactly, 2 would allow 2 letter differences, and
+           * AUTO would automatically pick a number based on the word length.
+           * </pre>
+           *
+           * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+           * @return The fuzziness.
+           */
+          public java.lang.String getFuzziness() {
+            java.lang.Object ref = fuzziness_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              fuzziness_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * fuzziness allows the term to be spelled slightly incorrect and still
+           * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+           * that the term matches exactly, 2 would allow 2 letter differences, and
+           * AUTO would automatically pick a number based on the word length.
+           * </pre>
+           *
+           * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+           * @return The bytes for fuzziness.
+           */
+          public com.google.protobuf.ByteString
+              getFuzzinessBytes() {
+            java.lang.Object ref = fuzziness_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              fuzziness_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * fuzziness allows the term to be spelled slightly incorrect and still
+           * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+           * that the term matches exactly, 2 would allow 2 letter differences, and
+           * AUTO would automatically pick a number based on the word length.
+           * </pre>
+           *
+           * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+           * @param value The fuzziness to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFuzziness(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            fuzziness_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * fuzziness allows the term to be spelled slightly incorrect and still
+           * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+           * that the term matches exactly, 2 would allow 2 letter differences, and
+           * AUTO would automatically pick a number based on the word length.
+           * </pre>
+           *
+           * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFuzziness() {
+            fuzziness_ = getDefaultInstance().getFuzziness();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * fuzziness allows the term to be spelled slightly incorrect and still
+           * match. Fuzziness can have the values 0, 1, 2, or "AUTO"; 0 would require
+           * that the term matches exactly, 2 would allow 2 letter differences, and
+           * AUTO would automatically pick a number based on the word length.
+           * </pre>
+           *
+           * <code>string fuzziness = 2 [json_name = "fuzziness"];</code>
+           * @param value The bytes for fuzziness to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFuzzinessBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            checkByteStringIsUtf8(value);
+            fuzziness_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:api.commons.org.VoiceAnalytics.Number.Phrase.Word)
+        }
+
+        // @@protoc_insertion_point(class_scope:api.commons.org.VoiceAnalytics.Number.Phrase.Word)
+        private static final com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word();
+        }
+
+        public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Word>
+            PARSER = new com.google.protobuf.AbstractParser<Word>() {
+          @java.lang.Override
+          public Word parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<Word> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Word> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int WORDS_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> words_;
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> getWordsList() {
+        return words_;
+      }
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder> 
+          getWordsOrBuilderList() {
+        return words_;
+      }
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      @java.lang.Override
+      public int getWordsCount() {
+        return words_.size();
+      }
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getWords(int index) {
+        return words_.get(index);
+      }
+      /**
+       * <pre>
+       * words that will be searched for
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder getWordsOrBuilder(
+          int index) {
+        return words_.get(index);
+      }
+
+      public static final int SLOP_FIELD_NUMBER = 2;
+      private int slop_ = 0;
+      /**
+       * <pre>
+       * slop is the number of extra terms that can be in the query that
+       * are not being searched for. For example: slop of 2 when searching for
+       * "This is my dog" would allow "This is my quick brown dog".
+       * </pre>
+       *
+       * <code>uint32 slop = 2 [json_name = "slop"];</code>
+       * @return The slop.
+       */
+      @java.lang.Override
+      public int getSlop() {
+        return slop_;
+      }
+
+      public static final int IN_ORDER_FIELD_NUMBER = 3;
+      private boolean inOrder_ = false;
+      /**
+       * <pre>
+       * when in_order is true then the terms must be found in the order given.
+       * </pre>
+       *
+       * <code>bool in_order = 3 [json_name = "inOrder"];</code>
+       * @return The inOrder.
+       */
+      @java.lang.Override
+      public boolean getInOrder() {
+        return inOrder_;
+      }
+
+      public static final int NOT_FIELD_NUMBER = 5;
+      private boolean not_ = false;
+      /**
+       * <pre>
+       * TODO: unsure if needed for MVP
+       * When true the phrase must not be matched.
+       * </pre>
+       *
+       * <code>bool not = 5 [json_name = "not"];</code>
+       * @return The not.
+       */
+      @java.lang.Override
+      public boolean getNot() {
+        return not_;
+      }
+
+      public static final int CHANNEL_FIELD_NUMBER = 7;
+      private int channel_ = 0;
+      /**
+       * <pre>
+       * TODO: unsure if needed for MVP
+       * When set, targets side of call (caller or agent).
+       * Use 1 for caller, 2 for agent.
+       * Use with agent to target (a) speaker(s).
+       *   - e.g. caller spoke phrase to this specific agent
+       * </pre>
+       *
+       * <code>uint32 channel = 7 [json_name = "channel"];</code>
+       * @return The channel.
+       */
+      @java.lang.Override
+      public int getChannel() {
+        return channel_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < words_.size(); i++) {
+          output.writeMessage(1, words_.get(i));
+        }
+        if (slop_ != 0) {
+          output.writeUInt32(2, slop_);
+        }
+        if (inOrder_ != false) {
+          output.writeBool(3, inOrder_);
+        }
+        if (not_ != false) {
+          output.writeBool(5, not_);
+        }
+        if (channel_ != 0) {
+          output.writeUInt32(7, channel_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < words_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, words_.get(i));
+        }
+        if (slop_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, slop_);
+        }
+        if (inOrder_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, inOrder_);
+        }
+        if (not_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(5, not_);
+        }
+        if (channel_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(7, channel_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase other = (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase) obj;
+
+        if (!getWordsList()
+            .equals(other.getWordsList())) return false;
+        if (getSlop()
+            != other.getSlop()) return false;
+        if (getInOrder()
+            != other.getInOrder()) return false;
+        if (getNot()
+            != other.getNot()) return false;
+        if (getChannel()
+            != other.getChannel()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getWordsCount() > 0) {
+          hash = (37 * hash) + WORDS_FIELD_NUMBER;
+          hash = (53 * hash) + getWordsList().hashCode();
+        }
+        hash = (37 * hash) + SLOP_FIELD_NUMBER;
+        hash = (53 * hash) + getSlop();
+        hash = (37 * hash) + IN_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getInOrder());
+        hash = (37 * hash) + NOT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNot());
+        hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+        hash = (53 * hash) + getChannel();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Phrase is one or more words close together.
+       * </pre>
+       *
+       * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Phrase}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api.commons.org.VoiceAnalytics.Number.Phrase)
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (wordsBuilder_ == null) {
+            words_ = java.util.Collections.emptyList();
+          } else {
+            words_ = null;
+            wordsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          slop_ = 0;
+          inOrder_ = false;
+          not_ = false;
+          channel_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getDefaultInstanceForType() {
+          return com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase build() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase buildPartial() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase result = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase result) {
+          if (wordsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              words_ = java.util.Collections.unmodifiableList(words_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.words_ = words_;
+          } else {
+            result.words_ = wordsBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.slop_ = slop_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.inOrder_ = inOrder_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.not_ = not_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.channel_ = channel_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase) {
+            return mergeFrom((com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase other) {
+          if (other == com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.getDefaultInstance()) return this;
+          if (wordsBuilder_ == null) {
+            if (!other.words_.isEmpty()) {
+              if (words_.isEmpty()) {
+                words_ = other.words_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureWordsIsMutable();
+                words_.addAll(other.words_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.words_.isEmpty()) {
+              if (wordsBuilder_.isEmpty()) {
+                wordsBuilder_.dispose();
+                wordsBuilder_ = null;
+                words_ = other.words_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                wordsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getWordsFieldBuilder() : null;
+              } else {
+                wordsBuilder_.addAllMessages(other.words_);
+              }
+            }
+          }
+          if (other.getSlop() != 0) {
+            setSlop(other.getSlop());
+          }
+          if (other.getInOrder() != false) {
+            setInOrder(other.getInOrder());
+          }
+          if (other.getNot() != false) {
+            setNot(other.getNot());
+          }
+          if (other.getChannel() != 0) {
+            setChannel(other.getChannel());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word m =
+                      input.readMessage(
+                          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.parser(),
+                          extensionRegistry);
+                  if (wordsBuilder_ == null) {
+                    ensureWordsIsMutable();
+                    words_.add(m);
+                  } else {
+                    wordsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+                case 16: {
+                  slop_ = input.readUInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  inOrder_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 40: {
+                  not_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 40
+                case 56: {
+                  channel_ = input.readUInt32();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 56
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> words_ =
+          java.util.Collections.emptyList();
+        private void ensureWordsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            words_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word>(words_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder> wordsBuilder_;
+
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> getWordsList() {
+          if (wordsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(words_);
+          } else {
+            return wordsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public int getWordsCount() {
+          if (wordsBuilder_ == null) {
+            return words_.size();
+          } else {
+            return wordsBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word getWords(int index) {
+          if (wordsBuilder_ == null) {
+            return words_.get(index);
+          } else {
+            return wordsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder setWords(
+            int index, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word value) {
+          if (wordsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWordsIsMutable();
+            words_.set(index, value);
+            onChanged();
+          } else {
+            wordsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder setWords(
+            int index, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder builderForValue) {
+          if (wordsBuilder_ == null) {
+            ensureWordsIsMutable();
+            words_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            wordsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder addWords(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word value) {
+          if (wordsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWordsIsMutable();
+            words_.add(value);
+            onChanged();
+          } else {
+            wordsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder addWords(
+            int index, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word value) {
+          if (wordsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWordsIsMutable();
+            words_.add(index, value);
+            onChanged();
+          } else {
+            wordsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder addWords(
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder builderForValue) {
+          if (wordsBuilder_ == null) {
+            ensureWordsIsMutable();
+            words_.add(builderForValue.build());
+            onChanged();
+          } else {
+            wordsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder addWords(
+            int index, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder builderForValue) {
+          if (wordsBuilder_ == null) {
+            ensureWordsIsMutable();
+            words_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            wordsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder addAllWords(
+            java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word> values) {
+          if (wordsBuilder_ == null) {
+            ensureWordsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, words_);
+            onChanged();
+          } else {
+            wordsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder clearWords() {
+          if (wordsBuilder_ == null) {
+            words_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            wordsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public Builder removeWords(int index) {
+          if (wordsBuilder_ == null) {
+            ensureWordsIsMutable();
+            words_.remove(index);
+            onChanged();
+          } else {
+            wordsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder getWordsBuilder(
+            int index) {
+          return getWordsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder getWordsOrBuilder(
+            int index) {
+          if (wordsBuilder_ == null) {
+            return words_.get(index);  } else {
+            return wordsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public java.util.List<? extends com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder> 
+             getWordsOrBuilderList() {
+          if (wordsBuilder_ != null) {
+            return wordsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(words_);
+          }
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder addWordsBuilder() {
+          return getWordsFieldBuilder().addBuilder(
+              com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder addWordsBuilder(
+            int index) {
+          return getWordsFieldBuilder().addBuilder(
+              index, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * words that will be searched for
+         * </pre>
+         *
+         * <code>repeated .api.commons.org.VoiceAnalytics.Number.Phrase.Word words = 1 [json_name = "words"];</code>
+         */
+        public java.util.List<com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder> 
+             getWordsBuilderList() {
+          return getWordsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder> 
+            getWordsFieldBuilder() {
+          if (wordsBuilder_ == null) {
+            wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.Word.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase.WordOrBuilder>(
+                    words_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            words_ = null;
+          }
+          return wordsBuilder_;
+        }
+
+        private int slop_ ;
+        /**
+         * <pre>
+         * slop is the number of extra terms that can be in the query that
+         * are not being searched for. For example: slop of 2 when searching for
+         * "This is my dog" would allow "This is my quick brown dog".
+         * </pre>
+         *
+         * <code>uint32 slop = 2 [json_name = "slop"];</code>
+         * @return The slop.
+         */
+        @java.lang.Override
+        public int getSlop() {
+          return slop_;
+        }
+        /**
+         * <pre>
+         * slop is the number of extra terms that can be in the query that
+         * are not being searched for. For example: slop of 2 when searching for
+         * "This is my dog" would allow "This is my quick brown dog".
+         * </pre>
+         *
+         * <code>uint32 slop = 2 [json_name = "slop"];</code>
+         * @param value The slop to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSlop(int value) {
+
+          slop_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * slop is the number of extra terms that can be in the query that
+         * are not being searched for. For example: slop of 2 when searching for
+         * "This is my dog" would allow "This is my quick brown dog".
+         * </pre>
+         *
+         * <code>uint32 slop = 2 [json_name = "slop"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSlop() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          slop_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean inOrder_ ;
+        /**
+         * <pre>
+         * when in_order is true then the terms must be found in the order given.
+         * </pre>
+         *
+         * <code>bool in_order = 3 [json_name = "inOrder"];</code>
+         * @return The inOrder.
+         */
+        @java.lang.Override
+        public boolean getInOrder() {
+          return inOrder_;
+        }
+        /**
+         * <pre>
+         * when in_order is true then the terms must be found in the order given.
+         * </pre>
+         *
+         * <code>bool in_order = 3 [json_name = "inOrder"];</code>
+         * @param value The inOrder to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInOrder(boolean value) {
+
+          inOrder_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * when in_order is true then the terms must be found in the order given.
+         * </pre>
+         *
+         * <code>bool in_order = 3 [json_name = "inOrder"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInOrder() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          inOrder_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean not_ ;
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When true the phrase must not be matched.
+         * </pre>
+         *
+         * <code>bool not = 5 [json_name = "not"];</code>
+         * @return The not.
+         */
+        @java.lang.Override
+        public boolean getNot() {
+          return not_;
+        }
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When true the phrase must not be matched.
+         * </pre>
+         *
+         * <code>bool not = 5 [json_name = "not"];</code>
+         * @param value The not to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNot(boolean value) {
+
+          not_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When true the phrase must not be matched.
+         * </pre>
+         *
+         * <code>bool not = 5 [json_name = "not"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNot() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          not_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int channel_ ;
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When set, targets side of call (caller or agent).
+         * Use 1 for caller, 2 for agent.
+         * Use with agent to target (a) speaker(s).
+         *   - e.g. caller spoke phrase to this specific agent
+         * </pre>
+         *
+         * <code>uint32 channel = 7 [json_name = "channel"];</code>
+         * @return The channel.
+         */
+        @java.lang.Override
+        public int getChannel() {
+          return channel_;
+        }
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When set, targets side of call (caller or agent).
+         * Use 1 for caller, 2 for agent.
+         * Use with agent to target (a) speaker(s).
+         *   - e.g. caller spoke phrase to this specific agent
+         * </pre>
+         *
+         * <code>uint32 channel = 7 [json_name = "channel"];</code>
+         * @param value The channel to set.
+         * @return This builder for chaining.
+         */
+        public Builder setChannel(int value) {
+
+          channel_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * TODO: unsure if needed for MVP
+         * When set, targets side of call (caller or agent).
+         * Use 1 for caller, 2 for agent.
+         * Use with agent to target (a) speaker(s).
+         *   - e.g. caller spoke phrase to this specific agent
+         * </pre>
+         *
+         * <code>uint32 channel = 7 [json_name = "channel"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearChannel() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          channel_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api.commons.org.VoiceAnalytics.Number.Phrase)
+      }
+
+      // @@protoc_insertion_point(class_scope:api.commons.org.VoiceAnalytics.Number.Phrase)
+      private static final com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase();
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Phrase>
+          PARSER = new com.google.protobuf.AbstractParser<Phrase>() {
+        @java.lang.Override
+        public Phrase parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Phrase> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Phrase> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Phrase getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ProximityOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api.commons.org.VoiceAnalytics.Number.Proximity)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int32 before = 1 [json_name = "before"];</code>
+       * @return The before.
+       */
+      int getBefore();
+
+      /**
+       * <code>int32 after = 2 [json_name = "after"];</code>
+       * @return The after.
+       */
+      int getAfter();
+    }
+    /**
+     * <pre>
+     * Proximity is how close (number of words) a phrase may appear to digits
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Proximity}
+     */
+    public static final class Proximity extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api.commons.org.VoiceAnalytics.Number.Proximity)
+        ProximityOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Proximity.newBuilder() to construct.
+      private Proximity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Proximity() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Proximity();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder.class);
+      }
+
+      public static final int BEFORE_FIELD_NUMBER = 1;
+      private int before_ = 0;
+      /**
+       * <code>int32 before = 1 [json_name = "before"];</code>
+       * @return The before.
+       */
+      @java.lang.Override
+      public int getBefore() {
+        return before_;
+      }
+
+      public static final int AFTER_FIELD_NUMBER = 2;
+      private int after_ = 0;
+      /**
+       * <code>int32 after = 2 [json_name = "after"];</code>
+       * @return The after.
+       */
+      @java.lang.Override
+      public int getAfter() {
+        return after_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (before_ != 0) {
+          output.writeInt32(1, before_);
+        }
+        if (after_ != 0) {
+          output.writeInt32(2, after_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (before_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, before_);
+        }
+        if (after_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, after_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity other = (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity) obj;
+
+        if (getBefore()
+            != other.getBefore()) return false;
+        if (getAfter()
+            != other.getAfter()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + BEFORE_FIELD_NUMBER;
+        hash = (53 * hash) + getBefore();
+        hash = (37 * hash) + AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getAfter();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Proximity is how close (number of words) a phrase may appear to digits
+       * </pre>
+       *
+       * Protobuf type {@code api.commons.org.VoiceAnalytics.Number.Proximity}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api.commons.org.VoiceAnalytics.Number.Proximity)
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.ProximityOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.class, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          before_ = 0;
+          after_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getDefaultInstanceForType() {
+          return com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity build() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity buildPartial() {
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity result = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.before_ = before_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.after_ = after_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity) {
+            return mergeFrom((com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity other) {
+          if (other == com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity.getDefaultInstance()) return this;
+          if (other.getBefore() != 0) {
+            setBefore(other.getBefore());
+          }
+          if (other.getAfter() != 0) {
+            setAfter(other.getAfter());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  before_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  after_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int before_ ;
+        /**
+         * <code>int32 before = 1 [json_name = "before"];</code>
+         * @return The before.
+         */
+        @java.lang.Override
+        public int getBefore() {
+          return before_;
+        }
+        /**
+         * <code>int32 before = 1 [json_name = "before"];</code>
+         * @param value The before to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBefore(int value) {
+
+          before_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 before = 1 [json_name = "before"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBefore() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          before_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int after_ ;
+        /**
+         * <code>int32 after = 2 [json_name = "after"];</code>
+         * @return The after.
+         */
+        @java.lang.Override
+        public int getAfter() {
+          return after_;
+        }
+        /**
+         * <code>int32 after = 2 [json_name = "after"];</code>
+         * @param value The after to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAfter(int value) {
+
+          after_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 after = 2 [json_name = "after"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAfter() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          after_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api.commons.org.VoiceAnalytics.Number.Proximity)
+      }
+
+      // @@protoc_insertion_point(class_scope:api.commons.org.VoiceAnalytics.Number.Proximity)
+      private static final com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity();
+      }
+
+      public static com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Proximity>
+          PARSER = new com.google.protobuf.AbstractParser<Proximity>() {
+        @java.lang.Override
+        public Proximity parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Proximity> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Proximity> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.Proximity getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int KIND_FIELD_NUMBER = 1;
     private int kind_ = 0;
     /**
@@ -1123,6 +4616,44 @@ private static final long serialVersionUID = 0L;
       return slop_;
     }
 
+    public static final int PHRASE_PROXIMITY_FIELD_NUMBER = 5;
+    private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity phraseProximity_;
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     * @return Whether the phraseProximity field is set.
+     */
+    @java.lang.Override
+    public boolean hasPhraseProximity() {
+      return phraseProximity_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     * @return The phraseProximity.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getPhraseProximity() {
+      return phraseProximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance() : phraseProximity_;
+    }
+    /**
+     * <pre>
+     * Optional. If set, the digit sequence must appear near the phrase.
+     * </pre>
+     *
+     * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder getPhraseProximityOrBuilder() {
+      return phraseProximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance() : phraseProximity_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1149,6 +4680,9 @@ private static final long serialVersionUID = 0L;
       if (slop_ != 0) {
         output.writeUInt32(4, slop_);
       }
+      if (phraseProximity_ != null) {
+        output.writeMessage(5, getPhraseProximity());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1174,6 +4708,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, slop_);
       }
+      if (phraseProximity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPhraseProximity());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1196,6 +4734,11 @@ private static final long serialVersionUID = 0L;
           != other.getMaxConsecutive()) return false;
       if (getSlop()
           != other.getSlop()) return false;
+      if (hasPhraseProximity() != other.hasPhraseProximity()) return false;
+      if (hasPhraseProximity()) {
+        if (!getPhraseProximity()
+            .equals(other.getPhraseProximity())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1215,6 +4758,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getMaxConsecutive();
       hash = (37 * hash) + SLOP_FIELD_NUMBER;
       hash = (53 * hash) + getSlop();
+      if (hasPhraseProximity()) {
+        hash = (37 * hash) + PHRASE_PROXIMITY_FIELD_NUMBER;
+        hash = (53 * hash) + getPhraseProximity().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1350,6 +4897,11 @@ private static final long serialVersionUID = 0L;
         minConsecutive_ = 0;
         maxConsecutive_ = 0;
         slop_ = 0;
+        phraseProximity_ = null;
+        if (phraseProximityBuilder_ != null) {
+          phraseProximityBuilder_.dispose();
+          phraseProximityBuilder_ = null;
+        }
         return this;
       }
 
@@ -1394,6 +4946,11 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.slop_ = slop_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.phraseProximity_ = phraseProximityBuilder_ == null
+              ? phraseProximity_
+              : phraseProximityBuilder_.build();
         }
       }
 
@@ -1453,6 +5010,9 @@ private static final long serialVersionUID = 0L;
         if (other.getSlop() != 0) {
           setSlop(other.getSlop());
         }
+        if (other.hasPhraseProximity()) {
+          mergePhraseProximity(other.getPhraseProximity());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1499,6 +5059,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 42: {
+                input.readMessage(
+                    getPhraseProximityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1743,6 +5310,161 @@ private static final long serialVersionUID = 0L;
         slop_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity phraseProximity_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder> phraseProximityBuilder_;
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       * @return Whether the phraseProximity field is set.
+       */
+      public boolean hasPhraseProximity() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       * @return The phraseProximity.
+       */
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity getPhraseProximity() {
+        if (phraseProximityBuilder_ == null) {
+          return phraseProximity_ == null ? com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance() : phraseProximity_;
+        } else {
+          return phraseProximityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public Builder setPhraseProximity(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity value) {
+        if (phraseProximityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          phraseProximity_ = value;
+        } else {
+          phraseProximityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public Builder setPhraseProximity(
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder builderForValue) {
+        if (phraseProximityBuilder_ == null) {
+          phraseProximity_ = builderForValue.build();
+        } else {
+          phraseProximityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public Builder mergePhraseProximity(com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity value) {
+        if (phraseProximityBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            phraseProximity_ != null &&
+            phraseProximity_ != com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance()) {
+            getPhraseProximityBuilder().mergeFrom(value);
+          } else {
+            phraseProximity_ = value;
+          }
+        } else {
+          phraseProximityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public Builder clearPhraseProximity() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        phraseProximity_ = null;
+        if (phraseProximityBuilder_ != null) {
+          phraseProximityBuilder_.dispose();
+          phraseProximityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder getPhraseProximityBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPhraseProximityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder getPhraseProximityOrBuilder() {
+        if (phraseProximityBuilder_ != null) {
+          return phraseProximityBuilder_.getMessageOrBuilder();
+        } else {
+          return phraseProximity_ == null ?
+              com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.getDefaultInstance() : phraseProximity_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. If set, the digit sequence must appear near the phrase.
+       * </pre>
+       *
+       * <code>.api.commons.org.VoiceAnalytics.Number.PhraseProximity phrase_proximity = 5 [json_name = "phraseProximity"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder> 
+          getPhraseProximityFieldBuilder() {
+        if (phraseProximityBuilder_ == null) {
+          phraseProximityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximity.Builder, com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.PhraseProximityOrBuilder>(
+                  getPhraseProximity(),
+                  getParentForChildren(),
+                  isClean());
+          phraseProximity_ = null;
+        }
+        return phraseProximityBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

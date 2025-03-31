@@ -195,6 +195,26 @@ public final class PreferencesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_VoiceAnalytics_Number_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_VoiceAnalytics_Notify_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -557,146 +577,160 @@ public final class PreferencesProto {
       " \001(\tR\014numberFormat\022*\n\021redact_all_digits\030" +
       "\n \001(\010R\017redactAllDigits\022+\n\021silence_thresh" +
       "old\030d \001(\rR\020silenceThreshold\022/\n\023talk_over" +
-      "_threshold\030\310\001 \001(\rR\021talkOverThreshold\"\374\002\n" +
+      "_threshold\030\310\001 \001(\rR\021talkOverThreshold\"\261\007\n" +
       "\016VoiceAnalytics\032S\n\006Redact\022@\n\006number\030\001 \001(" +
       "\0132&.api.commons.org.VoiceAnalytics.Numbe" +
-      "rH\000R\006numberB\007\n\005where\032\366\001\n\006Number\022?\n\004kind\030" +
+      "rH\000R\006numberB\007\n\005where\032\253\006\n\006Number\022?\n\004kind\030" +
       "\001 \001(\0162+.api.commons.org.VoiceAnalytics.N" +
       "umber.KindR\004kind\022\'\n\017min_consecutive\030\002 \001(" +
       "\rR\016minConsecutive\022\'\n\017max_consecutive\030\003 \001" +
-      "(\rR\016maxConsecutive\022\022\n\004slop\030\004 \001(\rR\004slop\"E" +
-      "\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPECIFIED\020\000\022\020\n" +
-      "\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002\032\034\n\006Notify\022" +
-      "\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOfDayPreferen" +
-      "ces\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\neod_monday" +
-      "\030\n \001(\005R\teodMonday\022\037\n\013eod_tuesday\030\013 \001(\005R\n" +
-      "eodTuesday\022#\n\reod_wednesday\030\014 \001(\005R\014eodWe" +
-      "dnesday\022!\n\014eod_thursday\030\r \001(\005R\013eodThursd" +
-      "ay\022\035\n\neod_friday\030\016 \001(\005R\teodFriday\022!\n\014eod" +
-      "_saturday\030\017 \001(\005R\013eodSaturday\022\035\n\neod_sund" +
-      "ay\030\020 \001(\005R\teodSunday\"\352\002\n\021FilterPreference" +
-      "s\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032default_auto" +
-      "_report_filter\030\n \001(\0132\035.api.commons.org.R" +
-      "eportFilterR\027defaultAutoReportFilter\0225\n\027" +
-      "send_empty_auto_reports\030\013 \001(\010R\024sendEmpty" +
-      "AutoReports\022E\n\037display_broadcast_resend_" +
-      "filter\030\014 \001(\010R\034displayBroadcastResendFilt" +
-      "er\022d\n\037default_broadcast_resend_filter\030\r " +
-      "\001(\0132\035.api.commons.org.ReportFilterR\034defa" +
-      "ultBroadcastResendFilter\"s\n\014ReportFilter" +
-      "\022?\n\010standard\030\001 \001(\0162!.api.commons.Standar" +
-      "dReportFilterH\000R\010standard\022\030\n\006custom\030\002 \001(" +
-      "\003H\000R\006customB\010\n\006choice\"\254\003\n\024RecordingPrefe" +
-      "rences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022-\n\022convent" +
-      "ion_enabled\030\n \001(\010R\021conventionEnabled\022a\n\024" +
-      "file_name_convention\030\013 \001(\0132/.api.commons" +
-      ".org.RecordingsFileNamingConventionR\022fil" +
-      "eNameConvention\0224\n\026zip_convention_enable" +
-      "d\030\014 \001(\010R\024zipConventionEnabled\022k\n\030zip_fil" +
-      "e_name_convention\030\r \001(\01322.api.commons.or" +
-      "g.RecordingsZipFileNamingConventionR\025zip" +
-      "FileNameConvention\022H\n\020export_file_type\030\016" +
-      " \001(\0162\036.api.commons.RecordingFileTypeR\016ex" +
-      "portFileType\"\333\002\n\036RecordingsFileNamingCon" +
-      "vention\0225\n\027xml_client_property_sid\030\001 \001(\003" +
-      "R\024xmlClientPropertySid\022?\n\007inbound\030\002 \001(\0132" +
+      "(\rR\016maxConsecutive\022\022\n\004slop\030\004 \001(\rR\004slop\022a" +
+      "\n\020phrase_proximity\030\005 \001(\01326.api.commons.o" +
+      "rg.VoiceAnalytics.Number.PhraseProximity" +
+      "R\017phraseProximity\032\250\001\n\017PhraseProximity\022E\n" +
+      "\006phrase\030\001 \001(\0132-.api.commons.org.VoiceAna" +
+      "lytics.Number.PhraseR\006phrase\022N\n\tproximit" +
+      "y\030\002 \001(\01320.api.commons.org.VoiceAnalytics" +
+      ".Number.ProximityR\tproximity\032\351\001\n\006Phrase\022" +
+      "H\n\005words\030\001 \003(\01322.api.commons.org.VoiceAn" +
+      "alytics.Number.Phrase.WordR\005words\022\022\n\004slo" +
+      "p\030\002 \001(\rR\004slop\022\031\n\010in_order\030\003 \001(\010R\007inOrder" +
+      "\022\020\n\003not\030\005 \001(\010R\003not\022\030\n\007channel\030\007 \001(\rR\007cha" +
+      "nnel\032:\n\004Word\022\024\n\005value\030\001 \001(\tR\005value\022\034\n\tfu" +
+      "zziness\030\002 \001(\tR\tfuzziness\0329\n\tProximity\022\026\n" +
+      "\006before\030\001 \001(\005R\006before\022\024\n\005after\030\002 \001(\005R\005af" +
+      "ter\"E\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPECIFIED" +
+      "\020\000\022\020\n\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002\032\034\n\006No" +
+      "tify\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOfDayPre" +
+      "ferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\neod_m" +
+      "onday\030\n \001(\005R\teodMonday\022\037\n\013eod_tuesday\030\013 " +
+      "\001(\005R\neodTuesday\022#\n\reod_wednesday\030\014 \001(\005R\014" +
+      "eodWednesday\022!\n\014eod_thursday\030\r \001(\005R\013eodT" +
+      "hursday\022\035\n\neod_friday\030\016 \001(\005R\teodFriday\022!" +
+      "\n\014eod_saturday\030\017 \001(\005R\013eodSaturday\022\035\n\neod" +
+      "_sunday\030\020 \001(\005R\teodSunday\"\352\002\n\021FilterPrefe" +
+      "rences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032default" +
+      "_auto_report_filter\030\n \001(\0132\035.api.commons." +
+      "org.ReportFilterR\027defaultAutoReportFilte" +
+      "r\0225\n\027send_empty_auto_reports\030\013 \001(\010R\024send" +
+      "EmptyAutoReports\022E\n\037display_broadcast_re" +
+      "send_filter\030\014 \001(\010R\034displayBroadcastResen" +
+      "dFilter\022d\n\037default_broadcast_resend_filt" +
+      "er\030\r \001(\0132\035.api.commons.org.ReportFilterR" +
+      "\034defaultBroadcastResendFilter\"s\n\014ReportF" +
+      "ilter\022?\n\010standard\030\001 \001(\0162!.api.commons.St" +
+      "andardReportFilterH\000R\010standard\022\030\n\006custom" +
+      "\030\002 \001(\003H\000R\006customB\010\n\006choice\"\254\003\n\024Recording" +
+      "Preferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022-\n\022co" +
+      "nvention_enabled\030\n \001(\010R\021conventionEnable" +
+      "d\022a\n\024file_name_convention\030\013 \001(\0132/.api.co" +
+      "mmons.org.RecordingsFileNamingConvention" +
+      "R\022fileNameConvention\0224\n\026zip_convention_e" +
+      "nabled\030\014 \001(\010R\024zipConventionEnabled\022k\n\030zi" +
+      "p_file_name_convention\030\r \001(\01322.api.commo" +
+      "ns.org.RecordingsZipFileNamingConvention" +
+      "R\025zipFileNameConvention\022H\n\020export_file_t" +
+      "ype\030\016 \001(\0162\036.api.commons.RecordingFileTyp" +
+      "eR\016exportFileType\"\333\002\n\036RecordingsFileNami" +
+      "ngConvention\0225\n\027xml_client_property_sid\030" +
+      "\001 \001(\003R\024xmlClientPropertySid\022?\n\007inbound\030\002" +
+      " \001(\0132%.api.commons.org.FileNamingConvent" +
+      "ionR\007inbound\022=\n\006manual\030\003 \001(\0132%.api.commo" +
+      "ns.org.FileNamingConventionR\006manual\022A\n\010o" +
+      "utbound\030\004 \001(\0132%.api.commons.org.FileNami" +
+      "ngConventionR\010outbound\022?\n\007preview\030\005 \001(\0132" +
       "%.api.commons.org.FileNamingConventionR\007" +
-      "inbound\022=\n\006manual\030\003 \001(\0132%.api.commons.or" +
-      "g.FileNamingConventionR\006manual\022A\n\010outbou" +
-      "nd\030\004 \001(\0132%.api.commons.org.FileNamingCon" +
-      "ventionR\010outbound\022?\n\007preview\030\005 \001(\0132%.api" +
-      ".commons.org.FileNamingConventionR\007previ" +
-      "ew\"\340\002\n!RecordingsZipFileNamingConvention" +
-      "\0225\n\027xml_client_property_sid\030\001 \001(\003R\024xmlCl" +
-      "ientPropertySid\022?\n\007inbound\030\002 \001(\0132%.api.c" +
-      "ommons.org.FileNamingConventionR\007inbound" +
-      "\022=\n\006manual\030\003 \001(\0132%.api.commons.org.FileN" +
-      "amingConventionR\006manual\022A\n\010outbound\030\004 \001(" +
-      "\0132%.api.commons.org.FileNamingConvention" +
-      "R\010outbound\022A\n\010combined\030\005 \001(\0132%.api.commo" +
-      "ns.org.FileNamingConventionR\010combined\"T\n" +
-      "\024FileNamingConvention\022<\n\010segments\030\001 \003(\0132" +
-      " .api.commons.org.FileNameSegmentR\010segme" +
-      "nts\"}\n\017FileNameSegment\022!\n\014segment_type\030\001" +
-      " \001(\tR\013segmentType\022%\n\016format_pattern\030\002 \001(" +
-      "\tR\rformatPattern\022 \n\014time_zone_id\030\003 \001(\tR\n" +
-      "timeZoneId\"\342\003\n\026AdminClientPreferences\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_reserved_car" +
-      "rier\030\n \001(\010R\022useReservedCarrier\022+\n\021reserv" +
-      "ed_carriers\030\013 \003(\tR\020reservedCarriers\022\033\n\te" +
-      "mail_key\030\014 \001(\tR\010emailKey\022\031\n\010email_id\030\r \001" +
-      "(\tR\007emailId\022\035\n\nemail_name\030\016 \001(\tR\temailNa" +
-      "me\022#\n\rwhitelist_ips\030\017 \003(\tR\014whitelistIps\022" +
-      "+\n\021whitelist_domains\030\020 \003(\tR\020whitelistDom" +
-      "ains\0220\n\024callbacks_service_id\030\021 \001(\tR\022call" +
-      "backsServiceId\0224\n\026agent_screen_recording" +
-      "\030\022 \001(\010R\024agentScreenRecording\022A\n\021allowed_" +
-      "countries\030\023 \003(\0162\024.api.commons.CountryR\020a" +
-      "llowedCountries\"\375\002\n\rBusinessHours\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\022 \n\013description\030\004 \001(\tR\013d" +
-      "escription\022*\n\021business_hours_id\030\006 \001(\tR\017b" +
-      "usinessHoursId\022.\n\023business_hours_name\030\007 " +
-      "\001(\tR\021businessHoursName\0221\n\010timezone\030\010 \001(\016" +
-      "2\025.api.commons.TimeZoneR\010timezone\022A\n\rday" +
-      "_intervals\030\t \003(\0132\034.api.commons.org.DayIn" +
-      "tervalR\014dayIntervals\022=\n\014last_updated\030\n \001" +
-      "(\0132\032.google.protobuf.TimestampR\013lastUpda" +
-      "tedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002idR\004nameR\006ranges\"" +
-      "\207\001\n\005Range\022\035\n\nstart_hour\030\001 \001(\005R\tstartHour" +
-      "\022!\n\014start_minute\030\002 \001(\005R\013startMinute\022\031\n\010e" +
-      "nd_hour\030\003 \001(\005R\007endHour\022\035\n\nend_minute\030\004 \001" +
-      "(\005R\tendMinute:\002\030\001\"7\n\tTimeOfDay\022\022\n\004hour\030\001" +
-      " \001(\005R\004hour\022\026\n\006minute\030\002 \001(\005R\006minute\"\232\001\n\013D" +
-      "ayInterval\022+\n\003day\030\001 \001(\0162\031.api.commons.We" +
-      "ekday.EnumR\003day\0220\n\005start\030\002 \001(\0132\032.api.com" +
-      "mons.org.TimeOfDayR\005start\022,\n\003end\030\003 \001(\0132\032" +
-      ".api.commons.org.TimeOfDayR\003end\"w\n\014Month" +
-      "DayDate\022\033\n\tdate_name\030\001 \001(\tR\010dateName\022(\n\005" +
-      "month\030\002 \001(\0162\022.api.commons.MonthR\005month\022 " +
-      "\n\014day_of_month\030\003 \001(\005R\ndayOfMonth\"\270\001\n\016Cou" +
-      "ntryHoliday\022!\n\014holiday_name\030\001 \001(\tR\013holid" +
-      "ayName\0222\n\007country\030\002 \001(\0162\024.api.commons.Co" +
-      "untryB\002\030\001R\007country\022!\n\014country_name\030\003 \001(\t" +
-      "R\013countryName\022\024\n\005types\030\004 \003(\tR\005types\022\026\n\006s" +
-      "tates\030\005 \003(\tR\006states\"\212\001\n\rProgrammedDay\0221\n" +
-      "\003day\030\001 \001(\0132\035.api.commons.org.MonthDayDat" +
-      "eH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons." +
-      "org.CountryHolidayH\000R\007holidayB\t\n\007DayType" +
-      "\"\324\002\n\017ProgrammedDates\022\025\n\006org_id\030\001 \001(\tR\005or" +
-      "gId\022.\n\023programmed_dates_id\030\002 \001(\tR\021progra" +
-      "mmedDatesId\0222\n\025programmed_dates_name\030\003 \001" +
-      "(\tR\023programmedDatesName\022 \n\013description\030\004" +
-      " \001(\tR\013description\0221\n\010timezone\030\005 \001(\0162\025.ap" +
-      "i.commons.TimeZoneR\010timezone\0222\n\004days\030\006 \003" +
-      "(\0132\036.api.commons.org.ProgrammedDayR\004days" +
-      "\022=\n\014last_updated\030\007 \001(\0132\032.google.protobuf" +
-      ".TimestampR\013lastUpdated\"\333\002\n\020ObservedHoli" +
-      "days\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024observed_" +
-      "holidays_id\030\002 \001(\tR\022observedHolidaysId\0224\n" +
-      "\026observed_holidays_name\030\003 \001(\tR\024observedH" +
-      "olidaysName\022 \n\013description\030\004 \001(\tR\013descri" +
-      "ption\0221\n\010timezone\030\005 \001(\0162\025.api.commons.Ti" +
-      "meZoneR\010timezone\0224\n\004days\030\006 \003(\0132 .api.com" +
-      "mons.org.ObservedHolidayR\004days\022=\n\014last_u" +
-      "pdated\030\007 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\013lastUpdated\"\214\001\n\017ObservedHoliday\0221\n\003day" +
-      "\030\001 \001(\0132\035.api.commons.org.MonthDayDateH\000R" +
-      "\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons.org." +
-      "CountryHolidayH\000R\007holidayB\t\n\007DayType\"\377\002\n" +
-      "\017CertificateInfo\022.\n\023certificate_info_id\030" +
-      "\001 \001(\tR\021certificateInfoId\022\025\n\006org_id\030\002 \001(\t" +
-      "R\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descripti" +
-      "on\030\004 \001(\tR\013description\022\022\n\004hash\030\005 \001(\tR\004has" +
-      "h\022C\n\017expiration_date\030\006 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\016expirationDate\022?\n\rcreati" +
-      "on_date\030\007 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\014creationDate\022\035\n\nrequest_by\030\010 \001(\tR\treq" +
-      "uestBy\022\030\n\007deleted\030\t \001(\010R\007deleted\022\030\n\007revo" +
-      "ked\030\n \001(\010R\007revoked:\002\030\001B\223\001\n!com.tcn.cloud" +
-      ".api.api.commons.orgB\020PreferencesProtoP\001" +
-      "\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\O" +
-      "rg\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api::" +
-      "Commons::Orgb\006proto3"
+      "preview\"\340\002\n!RecordingsZipFileNamingConve" +
+      "ntion\0225\n\027xml_client_property_sid\030\001 \001(\003R\024" +
+      "xmlClientPropertySid\022?\n\007inbound\030\002 \001(\0132%." +
+      "api.commons.org.FileNamingConventionR\007in" +
+      "bound\022=\n\006manual\030\003 \001(\0132%.api.commons.org." +
+      "FileNamingConventionR\006manual\022A\n\010outbound" +
+      "\030\004 \001(\0132%.api.commons.org.FileNamingConve" +
+      "ntionR\010outbound\022A\n\010combined\030\005 \001(\0132%.api." +
+      "commons.org.FileNamingConventionR\010combin" +
+      "ed\"T\n\024FileNamingConvention\022<\n\010segments\030\001" +
+      " \003(\0132 .api.commons.org.FileNameSegmentR\010" +
+      "segments\"}\n\017FileNameSegment\022!\n\014segment_t" +
+      "ype\030\001 \001(\tR\013segmentType\022%\n\016format_pattern" +
+      "\030\002 \001(\tR\rformatPattern\022 \n\014time_zone_id\030\003 " +
+      "\001(\tR\ntimeZoneId\"\342\003\n\026AdminClientPreferenc" +
+      "es\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_reserve" +
+      "d_carrier\030\n \001(\010R\022useReservedCarrier\022+\n\021r" +
+      "eserved_carriers\030\013 \003(\tR\020reservedCarriers" +
+      "\022\033\n\temail_key\030\014 \001(\tR\010emailKey\022\031\n\010email_i" +
+      "d\030\r \001(\tR\007emailId\022\035\n\nemail_name\030\016 \001(\tR\tem" +
+      "ailName\022#\n\rwhitelist_ips\030\017 \003(\tR\014whitelis" +
+      "tIps\022+\n\021whitelist_domains\030\020 \003(\tR\020whiteli" +
+      "stDomains\0220\n\024callbacks_service_id\030\021 \001(\tR" +
+      "\022callbacksServiceId\0224\n\026agent_screen_reco" +
+      "rding\030\022 \001(\010R\024agentScreenRecording\022A\n\021all" +
+      "owed_countries\030\023 \003(\0162\024.api.commons.Count" +
+      "ryR\020allowedCountries\"\375\002\n\rBusinessHours\022\025" +
+      "\n\006org_id\030\001 \001(\tR\005orgId\022 \n\013description\030\004 \001" +
+      "(\tR\013description\022*\n\021business_hours_id\030\006 \001" +
+      "(\tR\017businessHoursId\022.\n\023business_hours_na" +
+      "me\030\007 \001(\tR\021businessHoursName\0221\n\010timezone\030" +
+      "\010 \001(\0162\025.api.commons.TimeZoneR\010timezone\022A" +
+      "\n\rday_intervals\030\t \003(\0132\034.api.commons.org." +
+      "DayIntervalR\014dayIntervals\022=\n\014last_update" +
+      "d\030\n \001(\0132\032.google.protobuf.TimestampR\013las" +
+      "tUpdatedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002idR\004nameR\006ra" +
+      "nges\"\207\001\n\005Range\022\035\n\nstart_hour\030\001 \001(\005R\tstar" +
+      "tHour\022!\n\014start_minute\030\002 \001(\005R\013startMinute" +
+      "\022\031\n\010end_hour\030\003 \001(\005R\007endHour\022\035\n\nend_minut" +
+      "e\030\004 \001(\005R\tendMinute:\002\030\001\"7\n\tTimeOfDay\022\022\n\004h" +
+      "our\030\001 \001(\005R\004hour\022\026\n\006minute\030\002 \001(\005R\006minute\"" +
+      "\232\001\n\013DayInterval\022+\n\003day\030\001 \001(\0162\031.api.commo" +
+      "ns.Weekday.EnumR\003day\0220\n\005start\030\002 \001(\0132\032.ap" +
+      "i.commons.org.TimeOfDayR\005start\022,\n\003end\030\003 " +
+      "\001(\0132\032.api.commons.org.TimeOfDayR\003end\"w\n\014" +
+      "MonthDayDate\022\033\n\tdate_name\030\001 \001(\tR\010dateNam" +
+      "e\022(\n\005month\030\002 \001(\0162\022.api.commons.MonthR\005mo" +
+      "nth\022 \n\014day_of_month\030\003 \001(\005R\ndayOfMonth\"\270\001" +
+      "\n\016CountryHoliday\022!\n\014holiday_name\030\001 \001(\tR\013" +
+      "holidayName\0222\n\007country\030\002 \001(\0162\024.api.commo" +
+      "ns.CountryB\002\030\001R\007country\022!\n\014country_name\030" +
+      "\003 \001(\tR\013countryName\022\024\n\005types\030\004 \003(\tR\005types" +
+      "\022\026\n\006states\030\005 \003(\tR\006states\"\212\001\n\rProgrammedD" +
+      "ay\0221\n\003day\030\001 \001(\0132\035.api.commons.org.MonthD" +
+      "ayDateH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.com" +
+      "mons.org.CountryHolidayH\000R\007holidayB\t\n\007Da" +
+      "yType\"\324\002\n\017ProgrammedDates\022\025\n\006org_id\030\001 \001(" +
+      "\tR\005orgId\022.\n\023programmed_dates_id\030\002 \001(\tR\021p" +
+      "rogrammedDatesId\0222\n\025programmed_dates_nam" +
+      "e\030\003 \001(\tR\023programmedDatesName\022 \n\013descript" +
+      "ion\030\004 \001(\tR\013description\0221\n\010timezone\030\005 \001(\016" +
+      "2\025.api.commons.TimeZoneR\010timezone\0222\n\004day" +
+      "s\030\006 \003(\0132\036.api.commons.org.ProgrammedDayR" +
+      "\004days\022=\n\014last_updated\030\007 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\013lastUpdated\"\333\002\n\020Observe" +
+      "dHolidays\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024obse" +
+      "rved_holidays_id\030\002 \001(\tR\022observedHolidays" +
+      "Id\0224\n\026observed_holidays_name\030\003 \001(\tR\024obse" +
+      "rvedHolidaysName\022 \n\013description\030\004 \001(\tR\013d" +
+      "escription\0221\n\010timezone\030\005 \001(\0162\025.api.commo" +
+      "ns.TimeZoneR\010timezone\0224\n\004days\030\006 \003(\0132 .ap" +
+      "i.commons.org.ObservedHolidayR\004days\022=\n\014l" +
+      "ast_updated\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stampR\013lastUpdated\"\214\001\n\017ObservedHoliday\0221" +
+      "\n\003day\030\001 \001(\0132\035.api.commons.org.MonthDayDa" +
+      "teH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons" +
+      ".org.CountryHolidayH\000R\007holidayB\t\n\007DayTyp" +
+      "e\"\377\002\n\017CertificateInfo\022.\n\023certificate_inf" +
+      "o_id\030\001 \001(\tR\021certificateInfoId\022\025\n\006org_id\030" +
+      "\002 \001(\tR\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013desc" +
+      "ription\030\004 \001(\tR\013description\022\022\n\004hash\030\005 \001(\t" +
+      "R\004hash\022C\n\017expiration_date\030\006 \001(\0132\032.google" +
+      ".protobuf.TimestampR\016expirationDate\022?\n\rc" +
+      "reation_date\030\007 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\014creationDate\022\035\n\nrequest_by\030\010 \001(\t" +
+      "R\trequestBy\022\030\n\007deleted\030\t \001(\010R\007deleted\022\030\n" +
+      "\007revoked\030\n \001(\010R\007revoked:\002\030\001B\223\001\n!com.tcn." +
+      "cloud.api.api.commons.orgB\020PreferencesPr",
+      "otoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Comm" +
+      "ons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021" +
+      "Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -924,7 +958,31 @@ public final class PreferencesProto {
     internal_static_api_commons_org_VoiceAnalytics_Number_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_VoiceAnalytics_Number_descriptor,
-        new java.lang.String[] { "Kind", "MinConsecutive", "MaxConsecutive", "Slop", });
+        new java.lang.String[] { "Kind", "MinConsecutive", "MaxConsecutive", "Slop", "PhraseProximity", });
+    internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor =
+      internal_static_api_commons_org_VoiceAnalytics_Number_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_VoiceAnalytics_Number_PhraseProximity_descriptor,
+        new java.lang.String[] { "Phrase", "Proximity", });
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor =
+      internal_static_api_commons_org_VoiceAnalytics_Number_descriptor.getNestedTypes().get(1);
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor,
+        new java.lang.String[] { "Words", "Slop", "InOrder", "Not", "Channel", });
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor =
+      internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_VoiceAnalytics_Number_Phrase_Word_descriptor,
+        new java.lang.String[] { "Value", "Fuzziness", });
+    internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor =
+      internal_static_api_commons_org_VoiceAnalytics_Number_descriptor.getNestedTypes().get(2);
+    internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_VoiceAnalytics_Number_Proximity_descriptor,
+        new java.lang.String[] { "Before", "After", });
     internal_static_api_commons_org_VoiceAnalytics_Notify_descriptor =
       internal_static_api_commons_org_VoiceAnalytics_descriptor.getNestedTypes().get(2);
     internal_static_api_commons_org_VoiceAnalytics_Notify_fieldAccessorTable = new
