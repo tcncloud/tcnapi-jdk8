@@ -1944,31 +1944,6 @@ private static final long serialVersionUID = 0L;
        * @return The inOrder.
        */
       boolean getInOrder();
-
-      /**
-       * <pre>
-       * TODO: unsure if needed for MVP
-       * When true the phrase must not be matched.
-       * </pre>
-       *
-       * <code>bool not = 5 [json_name = "not"];</code>
-       * @return The not.
-       */
-      boolean getNot();
-
-      /**
-       * <pre>
-       * TODO: unsure if needed for MVP
-       * When set, targets side of call (caller or agent).
-       * Use 1 for caller, 2 for agent.
-       * Use with agent to target (a) speaker(s).
-       *   - e.g. caller spoke phrase to this specific agent
-       * </pre>
-       *
-       * <code>uint32 channel = 7 [json_name = "channel"];</code>
-       * @return The channel.
-       */
-      int getChannel();
     }
     /**
      * <pre>
@@ -2902,41 +2877,6 @@ private static final long serialVersionUID = 0L;
         return inOrder_;
       }
 
-      public static final int NOT_FIELD_NUMBER = 5;
-      private boolean not_ = false;
-      /**
-       * <pre>
-       * TODO: unsure if needed for MVP
-       * When true the phrase must not be matched.
-       * </pre>
-       *
-       * <code>bool not = 5 [json_name = "not"];</code>
-       * @return The not.
-       */
-      @java.lang.Override
-      public boolean getNot() {
-        return not_;
-      }
-
-      public static final int CHANNEL_FIELD_NUMBER = 7;
-      private int channel_ = 0;
-      /**
-       * <pre>
-       * TODO: unsure if needed for MVP
-       * When set, targets side of call (caller or agent).
-       * Use 1 for caller, 2 for agent.
-       * Use with agent to target (a) speaker(s).
-       *   - e.g. caller spoke phrase to this specific agent
-       * </pre>
-       *
-       * <code>uint32 channel = 7 [json_name = "channel"];</code>
-       * @return The channel.
-       */
-      @java.lang.Override
-      public int getChannel() {
-        return channel_;
-      }
-
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -2960,12 +2900,6 @@ private static final long serialVersionUID = 0L;
         if (inOrder_ != false) {
           output.writeBool(3, inOrder_);
         }
-        if (not_ != false) {
-          output.writeBool(5, not_);
-        }
-        if (channel_ != 0) {
-          output.writeUInt32(7, channel_);
-        }
         getUnknownFields().writeTo(output);
       }
 
@@ -2986,14 +2920,6 @@ private static final long serialVersionUID = 0L;
         if (inOrder_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(3, inOrder_);
-        }
-        if (not_ != false) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(5, not_);
-        }
-        if (channel_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(7, channel_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -3016,10 +2942,6 @@ private static final long serialVersionUID = 0L;
             != other.getSlop()) return false;
         if (getInOrder()
             != other.getInOrder()) return false;
-        if (getNot()
-            != other.getNot()) return false;
-        if (getChannel()
-            != other.getChannel()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -3040,11 +2962,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + IN_ORDER_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getInOrder());
-        hash = (37 * hash) + NOT_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getNot());
-        hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
-        hash = (53 * hash) + getChannel();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -3189,8 +3106,6 @@ private static final long serialVersionUID = 0L;
           bitField0_ = (bitField0_ & ~0x00000001);
           slop_ = 0;
           inOrder_ = false;
-          not_ = false;
-          channel_ = 0;
           return this;
         }
 
@@ -3242,12 +3157,6 @@ private static final long serialVersionUID = 0L;
           }
           if (((from_bitField0_ & 0x00000004) != 0)) {
             result.inOrder_ = inOrder_;
-          }
-          if (((from_bitField0_ & 0x00000008) != 0)) {
-            result.not_ = not_;
-          }
-          if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.channel_ = channel_;
           }
         }
 
@@ -3327,12 +3236,6 @@ private static final long serialVersionUID = 0L;
           if (other.getInOrder() != false) {
             setInOrder(other.getInOrder());
           }
-          if (other.getNot() != false) {
-            setNot(other.getNot());
-          }
-          if (other.getChannel() != 0) {
-            setChannel(other.getChannel());
-          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -3382,16 +3285,6 @@ private static final long serialVersionUID = 0L;
                   bitField0_ |= 0x00000004;
                   break;
                 } // case 24
-                case 40: {
-                  not_ = input.readBool();
-                  bitField0_ |= 0x00000008;
-                  break;
-                } // case 40
-                case 56: {
-                  channel_ = input.readUInt32();
-                  bitField0_ |= 0x00000010;
-                  break;
-                } // case 56
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -3811,109 +3704,6 @@ private static final long serialVersionUID = 0L;
         public Builder clearInOrder() {
           bitField0_ = (bitField0_ & ~0x00000004);
           inOrder_ = false;
-          onChanged();
-          return this;
-        }
-
-        private boolean not_ ;
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When true the phrase must not be matched.
-         * </pre>
-         *
-         * <code>bool not = 5 [json_name = "not"];</code>
-         * @return The not.
-         */
-        @java.lang.Override
-        public boolean getNot() {
-          return not_;
-        }
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When true the phrase must not be matched.
-         * </pre>
-         *
-         * <code>bool not = 5 [json_name = "not"];</code>
-         * @param value The not to set.
-         * @return This builder for chaining.
-         */
-        public Builder setNot(boolean value) {
-
-          not_ = value;
-          bitField0_ |= 0x00000008;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When true the phrase must not be matched.
-         * </pre>
-         *
-         * <code>bool not = 5 [json_name = "not"];</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearNot() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          not_ = false;
-          onChanged();
-          return this;
-        }
-
-        private int channel_ ;
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When set, targets side of call (caller or agent).
-         * Use 1 for caller, 2 for agent.
-         * Use with agent to target (a) speaker(s).
-         *   - e.g. caller spoke phrase to this specific agent
-         * </pre>
-         *
-         * <code>uint32 channel = 7 [json_name = "channel"];</code>
-         * @return The channel.
-         */
-        @java.lang.Override
-        public int getChannel() {
-          return channel_;
-        }
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When set, targets side of call (caller or agent).
-         * Use 1 for caller, 2 for agent.
-         * Use with agent to target (a) speaker(s).
-         *   - e.g. caller spoke phrase to this specific agent
-         * </pre>
-         *
-         * <code>uint32 channel = 7 [json_name = "channel"];</code>
-         * @param value The channel to set.
-         * @return This builder for chaining.
-         */
-        public Builder setChannel(int value) {
-
-          channel_ = value;
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * TODO: unsure if needed for MVP
-         * When set, targets side of call (caller or agent).
-         * Use 1 for caller, 2 for agent.
-         * Use with agent to target (a) speaker(s).
-         *   - e.g. caller spoke phrase to this specific agent
-         * </pre>
-         *
-         * <code>uint32 channel = 7 [json_name = "channel"];</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearChannel() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          channel_ = 0;
           onChanged();
           return this;
         }
