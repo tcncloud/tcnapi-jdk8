@@ -97,27 +97,31 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+   *     See api/v0alpha/lms.proto;l=3098
    * @return Whether the deDuplicationInfo field is set.
    */
-  boolean hasDeDuplicationInfo();
+  @java.lang.Deprecated boolean hasDeDuplicationInfo();
   /**
    * <pre>
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+   *     See api/v0alpha/lms.proto;l=3098
    * @return The deDuplicationInfo.
    */
-  com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo();
   /**
    * <pre>
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder();
 
   /**
    * <pre>
@@ -128,4 +132,23 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * @return The insertIfMissing.
    */
   boolean getInsertIfMissing();
+
+  /**
+   * <pre>
+   * search criteria enum
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+   * @return The enum numeric value on the wire for searchFieldType.
+   */
+  int getSearchFieldTypeValue();
+  /**
+   * <pre>
+   * search criteria enum
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+   * @return The searchFieldType.
+   */
+  com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType getSearchFieldType();
 }

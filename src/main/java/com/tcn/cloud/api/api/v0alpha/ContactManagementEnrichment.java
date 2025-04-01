@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     contactListName_ = "";
     fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    searchFieldType_ = 0;
   }
 
   @java.lang.Override
@@ -44,6 +45,123 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ContactManagementEnrichment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.class, com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.Builder.class);
+  }
+
+  /**
+   * Protobuf enum {@code api.v0alpha.ContactManagementEnrichment.SearchFieldType}
+   */
+  public enum SearchFieldType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NONE = 0;</code>
+     */
+    NONE(0),
+    /**
+     * <code>PHONE_NUMBER = 1;</code>
+     */
+    PHONE_NUMBER(1),
+    /**
+     * <code>EMAIL_ADDRESS = 2;</code>
+     */
+    EMAIL_ADDRESS(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NONE = 0;</code>
+     */
+    public static final int NONE_VALUE = 0;
+    /**
+     * <code>PHONE_NUMBER = 1;</code>
+     */
+    public static final int PHONE_NUMBER_VALUE = 1;
+    /**
+     * <code>EMAIL_ADDRESS = 2;</code>
+     */
+    public static final int EMAIL_ADDRESS_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SearchFieldType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SearchFieldType forNumber(int value) {
+      switch (value) {
+        case 0: return NONE;
+        case 1: return PHONE_NUMBER;
+        case 2: return EMAIL_ADDRESS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SearchFieldType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SearchFieldType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SearchFieldType>() {
+            public SearchFieldType findValueByNumber(int number) {
+              return SearchFieldType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SearchFieldType[] VALUES = values();
+
+    public static SearchFieldType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SearchFieldType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:api.v0alpha.ContactManagementEnrichment.SearchFieldType)
   }
 
   public static final int PROJECT_ID_FIELD_NUMBER = 1;
@@ -204,11 +322,13 @@ private static final long serialVersionUID = 0L;
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+   *     See api/v0alpha/lms.proto;l=3098
    * @return Whether the deDuplicationInfo field is set.
    */
   @java.lang.Override
-  public boolean hasDeDuplicationInfo() {
+  @java.lang.Deprecated public boolean hasDeDuplicationInfo() {
     return deDuplicationInfo_ != null;
   }
   /**
@@ -216,11 +336,13 @@ private static final long serialVersionUID = 0L;
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+   * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+   *     See api/v0alpha/lms.proto;l=3098
    * @return The deDuplicationInfo.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo() {
     return deDuplicationInfo_ == null ? com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.getDefaultInstance() : deDuplicationInfo_;
   }
   /**
@@ -228,10 +350,10 @@ private static final long serialVersionUID = 0L;
    * same deduplication options from the contact manager sink
    * </pre>
    *
-   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+   * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder() {
     return deDuplicationInfo_ == null ? com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.getDefaultInstance() : deDuplicationInfo_;
   }
 
@@ -248,6 +370,32 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getInsertIfMissing() {
     return insertIfMissing_;
+  }
+
+  public static final int SEARCH_FIELD_TYPE_FIELD_NUMBER = 6;
+  private int searchFieldType_ = 0;
+  /**
+   * <pre>
+   * search criteria enum
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+   * @return The enum numeric value on the wire for searchFieldType.
+   */
+  @java.lang.Override public int getSearchFieldTypeValue() {
+    return searchFieldType_;
+  }
+  /**
+   * <pre>
+   * search criteria enum
+   * </pre>
+   *
+   * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+   * @return The searchFieldType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType getSearchFieldType() {
+    com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType result = com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.forNumber(searchFieldType_);
+    return result == null ? com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -278,6 +426,9 @@ private static final long serialVersionUID = 0L;
     }
     if (insertIfMissing_ != false) {
       output.writeBool(5, insertIfMissing_);
+    }
+    if (searchFieldType_ != com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.NONE.getNumber()) {
+      output.writeEnum(6, searchFieldType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -310,6 +461,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, insertIfMissing_);
     }
+    if (searchFieldType_ != com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.NONE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, searchFieldType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -338,6 +493,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getInsertIfMissing()
         != other.getInsertIfMissing()) return false;
+    if (searchFieldType_ != other.searchFieldType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -364,6 +520,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INSERT_IF_MISSING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getInsertIfMissing());
+    hash = (37 * hash) + SEARCH_FIELD_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + searchFieldType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -509,6 +667,7 @@ private static final long serialVersionUID = 0L;
         deDuplicationInfoBuilder_ = null;
       }
       insertIfMissing_ = false;
+      searchFieldType_ = 0;
       return this;
     }
 
@@ -559,6 +718,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.insertIfMissing_ = insertIfMissing_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.searchFieldType_ = searchFieldType_;
       }
     }
 
@@ -632,6 +794,9 @@ private static final long serialVersionUID = 0L;
       if (other.getInsertIfMissing() != false) {
         setInsertIfMissing(other.getInsertIfMissing());
       }
+      if (other.searchFieldType_ != 0) {
+        setSearchFieldTypeValue(other.getSearchFieldTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -686,6 +851,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              searchFieldType_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1051,10 +1221,12 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+     *     See api/v0alpha/lms.proto;l=3098
      * @return Whether the deDuplicationInfo field is set.
      */
-    public boolean hasDeDuplicationInfo() {
+    @java.lang.Deprecated public boolean hasDeDuplicationInfo() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
@@ -1062,10 +1234,12 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
+     * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
+     *     See api/v0alpha/lms.proto;l=3098
      * @return The deDuplicationInfo.
      */
-    public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo() {
       if (deDuplicationInfoBuilder_ == null) {
         return deDuplicationInfo_ == null ? com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.getDefaultInstance() : deDuplicationInfo_;
       } else {
@@ -1077,9 +1251,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public Builder setDeDuplicationInfo(com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication value) {
+    @java.lang.Deprecated public Builder setDeDuplicationInfo(com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication value) {
       if (deDuplicationInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1097,9 +1271,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public Builder setDeDuplicationInfo(
+    @java.lang.Deprecated public Builder setDeDuplicationInfo(
         com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.Builder builderForValue) {
       if (deDuplicationInfoBuilder_ == null) {
         deDuplicationInfo_ = builderForValue.build();
@@ -1115,9 +1289,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public Builder mergeDeDuplicationInfo(com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication value) {
+    @java.lang.Deprecated public Builder mergeDeDuplicationInfo(com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication value) {
       if (deDuplicationInfoBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           deDuplicationInfo_ != null &&
@@ -1138,9 +1312,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public Builder clearDeDuplicationInfo() {
+    @java.lang.Deprecated public Builder clearDeDuplicationInfo() {
       bitField0_ = (bitField0_ & ~0x00000008);
       deDuplicationInfo_ = null;
       if (deDuplicationInfoBuilder_ != null) {
@@ -1155,9 +1329,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.Builder getDeDuplicationInfoBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.Builder getDeDuplicationInfoBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getDeDuplicationInfoFieldBuilder().getBuilder();
@@ -1167,9 +1341,9 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder() {
       if (deDuplicationInfoBuilder_ != null) {
         return deDuplicationInfoBuilder_.getMessageOrBuilder();
       } else {
@@ -1182,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      * same deduplication options from the contact manager sink
      * </pre>
      *
-     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo"];</code>
+     * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication, com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication.Builder, com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder> 
@@ -1238,6 +1412,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearInsertIfMissing() {
       bitField0_ = (bitField0_ & ~0x00000010);
       insertIfMissing_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int searchFieldType_ = 0;
+    /**
+     * <pre>
+     * search criteria enum
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+     * @return The enum numeric value on the wire for searchFieldType.
+     */
+    @java.lang.Override public int getSearchFieldTypeValue() {
+      return searchFieldType_;
+    }
+    /**
+     * <pre>
+     * search criteria enum
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+     * @param value The enum numeric value on the wire for searchFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSearchFieldTypeValue(int value) {
+      searchFieldType_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * search criteria enum
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+     * @return The searchFieldType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType getSearchFieldType() {
+      com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType result = com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.forNumber(searchFieldType_);
+      return result == null ? com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * search criteria enum
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+     * @param value The searchFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSearchFieldType(com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      searchFieldType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * search criteria enum
+     * </pre>
+     *
+     * <code>.api.v0alpha.ContactManagementEnrichment.SearchFieldType search_field_type = 6 [json_name = "searchFieldType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSearchFieldType() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      searchFieldType_ = 0;
       onChanged();
       return this;
     }
