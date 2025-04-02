@@ -152,6 +152,15 @@ public enum Validation
    * <code>VALIDATION_TRANSACTION_ID = 601;</code>
    */
   VALIDATION_TRANSACTION_ID(601),
+  /**
+   * <pre>
+   * a select is for a predefined list of values,
+   * these values are given on the "formats" field of the field defintition proto.
+   * </pre>
+   *
+   * <code>VALIDATION_SELECT = 701;</code>
+   */
+  VALIDATION_SELECT(701),
   UNRECOGNIZED(-1),
   ;
 
@@ -293,6 +302,15 @@ public enum Validation
    * <code>VALIDATION_TRANSACTION_ID = 601;</code>
    */
   public static final int VALIDATION_TRANSACTION_ID_VALUE = 601;
+  /**
+   * <pre>
+   * a select is for a predefined list of values,
+   * these values are given on the "formats" field of the field defintition proto.
+   * </pre>
+   *
+   * <code>VALIDATION_SELECT = 701;</code>
+   */
+  public static final int VALIDATION_SELECT_VALUE = 701;
 
 
   public final int getNumber() {
@@ -337,6 +355,7 @@ public enum Validation
       case 501: return VALIDATION_ROUTING;
       case 502: return VALIDATION_ACCOUNT;
       case 601: return VALIDATION_TRANSACTION_ID;
+      case 701: return VALIDATION_SELECT;
       default: return null;
     }
   }
