@@ -713,24 +713,27 @@ public enum Permission
    * Enables access to the Adherence app as an Admin user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_WFM_ADHERENCE_ADMIN(1502),
   /**
    * <pre>
    * Enables access to the Adherence app as a Manager user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_WFM_ADHERENCE_MANAGER(1503),
   /**
    * <pre>
    * Enables access to the Adherence app as a Monitor user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_WFM_ADHERENCE_MONITOR(1504),
   /**
    * <pre>
@@ -1607,25 +1610,25 @@ public enum Permission
    * Enables access to the Adherence app as an Admin user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_ADMIN = 1502 [deprecated = true];</code>
    */
-  public static final int PERMISSION_WFM_ADHERENCE_ADMIN_VALUE = 1502;
+  @java.lang.Deprecated public static final int PERMISSION_WFM_ADHERENCE_ADMIN_VALUE = 1502;
   /**
    * <pre>
    * Enables access to the Adherence app as a Manager user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_MANAGER = 1503 [deprecated = true];</code>
    */
-  public static final int PERMISSION_WFM_ADHERENCE_MANAGER_VALUE = 1503;
+  @java.lang.Deprecated public static final int PERMISSION_WFM_ADHERENCE_MANAGER_VALUE = 1503;
   /**
    * <pre>
    * Enables access to the Adherence app as a Monitor user.
    * </pre>
    *
-   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WFM_ADHERENCE_MONITOR = 1504 [deprecated = true];</code>
    */
-  public static final int PERMISSION_WFM_ADHERENCE_MONITOR_VALUE = 1504;
+  @java.lang.Deprecated public static final int PERMISSION_WFM_ADHERENCE_MONITOR_VALUE = 1504;
   /**
    * <pre>
    * Enables access to Scorecards app.
