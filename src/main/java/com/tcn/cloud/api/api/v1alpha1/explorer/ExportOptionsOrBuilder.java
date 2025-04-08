@@ -61,17 +61,17 @@ public interface ExportOptionsOrBuilder extends
    * result format
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-   * @return The enum numeric value on the wire for resultFormat.
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+   * @return The enum numeric value on the wire for exportFormat.
    */
-  int getResultFormatValue();
+  int getExportFormatValue();
   /**
    * <pre>
    * result format
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-   * @return The resultFormat.
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+   * @return The exportFormat.
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat getResultFormat();
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat();
 }

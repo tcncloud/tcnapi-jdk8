@@ -22,7 +22,7 @@ private static final long serialVersionUID = 0L;
   private ExportOptions() {
     delimiter_ = "";
     quoteCharacter_ = 0;
-    resultFormat_ = 0;
+    exportFormat_ = 0;
   }
 
   @java.lang.Override
@@ -133,30 +133,30 @@ private static final long serialVersionUID = 0L;
     return noHeader_;
   }
 
-  public static final int RESULT_FORMAT_FIELD_NUMBER = 4;
-  private int resultFormat_ = 0;
+  public static final int EXPORT_FORMAT_FIELD_NUMBER = 4;
+  private int exportFormat_ = 0;
   /**
    * <pre>
    * result format
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-   * @return The enum numeric value on the wire for resultFormat.
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+   * @return The enum numeric value on the wire for exportFormat.
    */
-  @java.lang.Override public int getResultFormatValue() {
-    return resultFormat_;
+  @java.lang.Override public int getExportFormatValue() {
+    return exportFormat_;
   }
   /**
    * <pre>
    * result format
    * </pre>
    *
-   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-   * @return The resultFormat.
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+   * @return The exportFormat.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat getResultFormat() {
-    com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.forNumber(resultFormat_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat() {
+    com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(exportFormat_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -182,8 +182,8 @@ private static final long serialVersionUID = 0L;
     if (noHeader_ != false) {
       output.writeBool(3, noHeader_);
     }
-    if (resultFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.RESULT_FORMAT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, resultFormat_);
+    if (exportFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, exportFormat_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -205,9 +205,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, noHeader_);
     }
-    if (resultFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.RESULT_FORMAT_UNSPECIFIED.getNumber()) {
+    if (exportFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, resultFormat_);
+        .computeEnumSize(4, exportFormat_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
     if (quoteCharacter_ != other.quoteCharacter_) return false;
     if (getNoHeader()
         != other.getNoHeader()) return false;
-    if (resultFormat_ != other.resultFormat_) return false;
+    if (exportFormat_ != other.exportFormat_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -248,8 +248,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NO_HEADER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getNoHeader());
-    hash = (37 * hash) + RESULT_FORMAT_FIELD_NUMBER;
-    hash = (53 * hash) + resultFormat_;
+    hash = (37 * hash) + EXPORT_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + exportFormat_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -388,7 +388,7 @@ private static final long serialVersionUID = 0L;
       delimiter_ = "";
       quoteCharacter_ = 0;
       noHeader_ = false;
-      resultFormat_ = 0;
+      exportFormat_ = 0;
       return this;
     }
 
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
         result.noHeader_ = noHeader_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.resultFormat_ = resultFormat_;
+        result.exportFormat_ = exportFormat_;
       }
     }
 
@@ -491,8 +491,8 @@ private static final long serialVersionUID = 0L;
       if (other.getNoHeader() != false) {
         setNoHeader(other.getNoHeader());
       }
-      if (other.resultFormat_ != 0) {
-        setResultFormatValue(other.getResultFormatValue());
+      if (other.exportFormat_ != 0) {
+        setExportFormatValue(other.getExportFormatValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 24
             case 32: {
-              resultFormat_ = input.readEnum();
+              exportFormat_ = input.readEnum();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -766,29 +766,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int resultFormat_ = 0;
+    private int exportFormat_ = 0;
     /**
      * <pre>
      * result format
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-     * @return The enum numeric value on the wire for resultFormat.
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+     * @return The enum numeric value on the wire for exportFormat.
      */
-    @java.lang.Override public int getResultFormatValue() {
-      return resultFormat_;
+    @java.lang.Override public int getExportFormatValue() {
+      return exportFormat_;
     }
     /**
      * <pre>
      * result format
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-     * @param value The enum numeric value on the wire for resultFormat to set.
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+     * @param value The enum numeric value on the wire for exportFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setResultFormatValue(int value) {
-      resultFormat_ = value;
+    public Builder setExportFormatValue(int value) {
+      exportFormat_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
@@ -798,29 +798,29 @@ private static final long serialVersionUID = 0L;
      * result format
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-     * @return The resultFormat.
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+     * @return The exportFormat.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat getResultFormat() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.forNumber(resultFormat_);
-      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(exportFormat_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * result format
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
-     * @param value The resultFormat to set.
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
+     * @param value The exportFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setResultFormat(com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat value) {
+    public Builder setExportFormat(com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000008;
-      resultFormat_ = value.getNumber();
+      exportFormat_ = value.getNumber();
       onChanged();
       return this;
     }
@@ -829,12 +829,12 @@ private static final long serialVersionUID = 0L;
      * result format
      * </pre>
      *
-     * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 4 [json_name = "exportFormat"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearResultFormat() {
+    public Builder clearExportFormat() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      resultFormat_ = 0;
+      exportFormat_ = 0;
       onChanged();
       return this;
     }
