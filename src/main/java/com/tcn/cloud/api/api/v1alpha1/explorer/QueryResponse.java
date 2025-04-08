@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     resultUrl_ = "";
     postProcessingTableQuery_ = "";
     postProcessingSummaryQuery_ = "";
+    resultUrls_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -306,6 +307,72 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RESULT_URLS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> resultUrls_;
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> getResultUrlsList() {
+    return resultUrls_;
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+      getResultUrlsOrBuilderList() {
+    return resultUrls_;
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public int getResultUrlsCount() {
+    return resultUrls_.size();
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index) {
+    return resultUrls_.get(index);
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+      int index) {
+    return resultUrls_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -337,6 +404,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, postProcessingSummaryQuery_);
+    }
+    for (int i = 0; i < resultUrls_.size(); i++) {
+      output.writeMessage(6, resultUrls_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -370,6 +440,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, postProcessingSummaryQuery_);
     }
+    for (int i = 0; i < resultUrls_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, resultUrls_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -395,6 +469,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPostProcessingTableQuery())) return false;
     if (!getPostProcessingSummaryQuery()
         .equals(other.getPostProcessingSummaryQuery())) return false;
+    if (!getResultUrlsList()
+        .equals(other.getResultUrlsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -419,6 +495,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPostProcessingTableQuery().hashCode();
     hash = (37 * hash) + POST_PROCESSING_SUMMARY_QUERY_FIELD_NUMBER;
     hash = (53 * hash) + getPostProcessingSummaryQuery().hashCode();
+    if (getResultUrlsCount() > 0) {
+      hash = (37 * hash) + RESULT_URLS_FIELD_NUMBER;
+      hash = (53 * hash) + getResultUrlsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -581,6 +661,13 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().clear();
       postProcessingTableQuery_ = "";
       postProcessingSummaryQuery_ = "";
+      if (resultUrlsBuilder_ == null) {
+        resultUrls_ = java.util.Collections.emptyList();
+      } else {
+        resultUrls_ = null;
+        resultUrlsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -607,9 +694,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse result) {
+      if (resultUrlsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          resultUrls_ = java.util.Collections.unmodifiableList(resultUrls_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.resultUrls_ = resultUrls_;
+      } else {
+        result.resultUrls_ = resultUrlsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse result) {
@@ -697,6 +797,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (resultUrlsBuilder_ == null) {
+        if (!other.resultUrls_.isEmpty()) {
+          if (resultUrls_.isEmpty()) {
+            resultUrls_ = other.resultUrls_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureResultUrlsIsMutable();
+            resultUrls_.addAll(other.resultUrls_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.resultUrls_.isEmpty()) {
+          if (resultUrlsBuilder_.isEmpty()) {
+            resultUrlsBuilder_.dispose();
+            resultUrlsBuilder_ = null;
+            resultUrls_ = other.resultUrls_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            resultUrlsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getResultUrlsFieldBuilder() : null;
+          } else {
+            resultUrlsBuilder_.addAllMessages(other.resultUrls_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -752,6 +878,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.parser(),
+                      extensionRegistry);
+              if (resultUrlsBuilder_ == null) {
+                ensureResultUrlsIsMutable();
+                resultUrls_.add(m);
+              } else {
+                resultUrlsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1240,6 +1379,336 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> resultUrls_ =
+      java.util.Collections.emptyList();
+    private void ensureResultUrlsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        resultUrls_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry>(resultUrls_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> resultUrlsBuilder_;
+
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> getResultUrlsList() {
+      if (resultUrlsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(resultUrls_);
+      } else {
+        return resultUrlsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public int getResultUrlsCount() {
+      if (resultUrlsBuilder_ == null) {
+        return resultUrls_.size();
+      } else {
+        return resultUrlsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index) {
+      if (resultUrlsBuilder_ == null) {
+        return resultUrls_.get(index);
+      } else {
+        return resultUrlsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder setResultUrls(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+      if (resultUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultUrlsIsMutable();
+        resultUrls_.set(index, value);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder setResultUrls(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+      if (resultUrlsBuilder_ == null) {
+        ensureResultUrlsIsMutable();
+        resultUrls_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        resultUrlsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder addResultUrls(com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+      if (resultUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultUrlsIsMutable();
+        resultUrls_.add(value);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder addResultUrls(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+      if (resultUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultUrlsIsMutable();
+        resultUrls_.add(index, value);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder addResultUrls(
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+      if (resultUrlsBuilder_ == null) {
+        ensureResultUrlsIsMutable();
+        resultUrls_.add(builderForValue.build());
+        onChanged();
+      } else {
+        resultUrlsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder addResultUrls(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+      if (resultUrlsBuilder_ == null) {
+        ensureResultUrlsIsMutable();
+        resultUrls_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        resultUrlsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder addAllResultUrls(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> values) {
+      if (resultUrlsBuilder_ == null) {
+        ensureResultUrlsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, resultUrls_);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder clearResultUrls() {
+      if (resultUrlsBuilder_ == null) {
+        resultUrls_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public Builder removeResultUrls(int index) {
+      if (resultUrlsBuilder_ == null) {
+        ensureResultUrlsIsMutable();
+        resultUrls_.remove(index);
+        onChanged();
+      } else {
+        resultUrlsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder getResultUrlsBuilder(
+        int index) {
+      return getResultUrlsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+        int index) {
+      if (resultUrlsBuilder_ == null) {
+        return resultUrls_.get(index);  } else {
+        return resultUrlsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+         getResultUrlsOrBuilderList() {
+      if (resultUrlsBuilder_ != null) {
+        return resultUrlsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(resultUrls_);
+      }
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder addResultUrlsBuilder() {
+      return getResultUrlsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder addResultUrlsBuilder(
+        int index) {
+      return getResultUrlsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 6 [json_name = "resultUrls"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder> 
+         getResultUrlsBuilderList() {
+      return getResultUrlsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+        getResultUrlsFieldBuilder() {
+      if (resultUrlsBuilder_ == null) {
+        resultUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder>(
+                resultUrls_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        resultUrls_ = null;
+      }
+      return resultUrlsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     comment_ = "";
     format_ = 0;
     timePeriod_ = 0;
+    resultTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -741,6 +742,130 @@ private static final long serialVersionUID = 0L;
     return reportDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : reportDate_;
   }
 
+  public static final int EXPORT_OPTIONS_FIELD_NUMBER = 17;
+  private com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions exportOptions_;
+  /**
+   * <pre>
+   * export options for post processing operations
+   * if empty - results generated as .parquet
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   * @return Whether the exportOptions field is set.
+   */
+  @java.lang.Override
+  public boolean hasExportOptions() {
+    return exportOptions_ != null;
+  }
+  /**
+   * <pre>
+   * export options for post processing operations
+   * if empty - results generated as .parquet
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   * @return The exportOptions.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getExportOptions() {
+    return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : exportOptions_;
+  }
+  /**
+   * <pre>
+   * export options for post processing operations
+   * if empty - results generated as .parquet
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
+    return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : exportOptions_;
+  }
+
+  public static final int RESULT_TYPES_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> resultTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultType> resultTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultType>() {
+            public com.tcn.cloud.api.api.v1alpha1.explorer.ResultType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.v1alpha1.explorer.ResultType result = com.tcn.cloud.api.api.v1alpha1.explorer.ResultType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ResultType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return A list containing the resultTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultType> getResultTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultType>(resultTypes_, resultTypes_converter_);
+  }
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return The count of resultTypes.
+   */
+  @java.lang.Override
+  public int getResultTypesCount() {
+    return resultTypes_.size();
+  }
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The resultTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultType getResultTypes(int index) {
+    return resultTypes_converter_.convert(resultTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for resultTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getResultTypesValueList() {
+    return resultTypes_;
+  }
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of resultTypes at the given index.
+   */
+  @java.lang.Override
+  public int getResultTypesValue(int index) {
+    return resultTypes_.get(index);
+  }
+  private int resultTypesMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -755,6 +880,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasourceName_);
     }
@@ -799,6 +925,16 @@ private static final long serialVersionUID = 0L;
     }
     if (queryCase_ == 16) {
       output.writeMessage(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
+    }
+    if (exportOptions_ != null) {
+      output.writeMessage(17, getExportOptions());
+    }
+    if (getResultTypesList().size() > 0) {
+      output.writeUInt32NoTag(146);
+      output.writeUInt32NoTag(resultTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < resultTypes_.size(); i++) {
+      output.writeEnumNoTag(resultTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -867,6 +1003,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, (com.tcn.cloud.api.api.v1alpha1.explorer.Pipeline) query_);
     }
+    if (exportOptions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, getExportOptions());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < resultTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(resultTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getResultTypesList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }resultTypesMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -915,6 +1067,12 @@ private static final long serialVersionUID = 0L;
       if (!getReportDate()
           .equals(other.getReportDate())) return false;
     }
+    if (hasExportOptions() != other.hasExportOptions()) return false;
+    if (hasExportOptions()) {
+      if (!getExportOptions()
+          .equals(other.getExportOptions())) return false;
+    }
+    if (!resultTypes_.equals(other.resultTypes_)) return false;
     if (!getQueryCase().equals(other.getQueryCase())) return false;
     switch (queryCase_) {
       case 3:
@@ -976,6 +1134,14 @@ private static final long serialVersionUID = 0L;
     if (hasReportDate()) {
       hash = (37 * hash) + REPORT_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getReportDate().hashCode();
+    }
+    if (hasExportOptions()) {
+      hash = (37 * hash) + EXPORT_OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getExportOptions().hashCode();
+    }
+    if (getResultTypesCount() > 0) {
+      hash = (37 * hash) + RESULT_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + resultTypes_.hashCode();
     }
     switch (queryCase_) {
       case 3:
@@ -1160,6 +1326,13 @@ private static final long serialVersionUID = 0L;
         reportDateBuilder_.dispose();
         reportDateBuilder_ = null;
       }
+      exportOptions_ = null;
+      if (exportOptionsBuilder_ != null) {
+        exportOptionsBuilder_.dispose();
+        exportOptionsBuilder_ = null;
+      }
+      resultTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00010000);
       queryCase_ = 0;
       query_ = null;
       return this;
@@ -1188,10 +1361,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest result = new com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest result) {
+      if (((bitField0_ & 0x00010000) != 0)) {
+        resultTypes_ = java.util.Collections.unmodifiableList(resultTypes_);
+        bitField0_ = (bitField0_ & ~0x00010000);
+      }
+      result.resultTypes_ = resultTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest result) {
@@ -1240,6 +1422,11 @@ private static final long serialVersionUID = 0L;
         result.reportDate_ = reportDateBuilder_ == null
             ? reportDate_
             : reportDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.exportOptions_ = exportOptionsBuilder_ == null
+            ? exportOptions_
+            : exportOptionsBuilder_.build();
       }
     }
 
@@ -1346,6 +1533,19 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasReportDate()) {
         mergeReportDate(other.getReportDate());
+      }
+      if (other.hasExportOptions()) {
+        mergeExportOptions(other.getExportOptions());
+      }
+      if (!other.resultTypes_.isEmpty()) {
+        if (resultTypes_.isEmpty()) {
+          resultTypes_ = other.resultTypes_;
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          ensureResultTypesIsMutable();
+          resultTypes_.addAll(other.resultTypes_);
+        }
+        onChanged();
       }
       switch (other.getQueryCase()) {
         case PIPELINE: {
@@ -1482,6 +1682,30 @@ private static final long serialVersionUID = 0L;
               queryCase_ = 16;
               break;
             } // case 130
+            case 138: {
+              input.readMessage(
+                  getExportOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 138
+            case 144: {
+              int tmpRaw = input.readEnum();
+              ensureResultTypesIsMutable();
+              resultTypes_.add(tmpRaw);
+              break;
+            } // case 144
+            case 146: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureResultTypesIsMutable();
+                resultTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3288,6 +3512,370 @@ private static final long serialVersionUID = 0L;
         reportDate_ = null;
       }
       return reportDateBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions exportOptions_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder> exportOptionsBuilder_;
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     * @return Whether the exportOptions field is set.
+     */
+    public boolean hasExportOptions() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     * @return The exportOptions.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getExportOptions() {
+      if (exportOptionsBuilder_ == null) {
+        return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : exportOptions_;
+      } else {
+        return exportOptionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public Builder setExportOptions(com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions value) {
+      if (exportOptionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        exportOptions_ = value;
+      } else {
+        exportOptionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public Builder setExportOptions(
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder builderForValue) {
+      if (exportOptionsBuilder_ == null) {
+        exportOptions_ = builderForValue.build();
+      } else {
+        exportOptionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public Builder mergeExportOptions(com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions value) {
+      if (exportOptionsBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          exportOptions_ != null &&
+          exportOptions_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance()) {
+          getExportOptionsBuilder().mergeFrom(value);
+        } else {
+          exportOptions_ = value;
+        }
+      } else {
+        exportOptionsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public Builder clearExportOptions() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      exportOptions_ = null;
+      if (exportOptionsBuilder_ != null) {
+        exportOptionsBuilder_.dispose();
+        exportOptionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder getExportOptionsBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getExportOptionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
+      if (exportOptionsBuilder_ != null) {
+        return exportOptionsBuilder_.getMessageOrBuilder();
+      } else {
+        return exportOptions_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : exportOptions_;
+      }
+    }
+    /**
+     * <pre>
+     * export options for post processing operations
+     * if empty - results generated as .parquet
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder> 
+        getExportOptionsFieldBuilder() {
+      if (exportOptionsBuilder_ == null) {
+        exportOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder>(
+                getExportOptions(),
+                getParentForChildren(),
+                isClean());
+        exportOptions_ = null;
+      }
+      return exportOptionsBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> resultTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureResultTypesIsMutable() {
+      if (!((bitField0_ & 0x00010000) != 0)) {
+        resultTypes_ = new java.util.ArrayList<java.lang.Integer>(resultTypes_);
+        bitField0_ |= 0x00010000;
+      }
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @return A list containing the resultTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultType> getResultTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultType>(resultTypes_, resultTypes_converter_);
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @return The count of resultTypes.
+     */
+    public int getResultTypesCount() {
+      return resultTypes_.size();
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The resultTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultType getResultTypes(int index) {
+      return resultTypes_converter_.convert(resultTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The resultTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResultTypes(
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureResultTypesIsMutable();
+      resultTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param value The resultTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addResultTypes(com.tcn.cloud.api.api.v1alpha1.explorer.ResultType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureResultTypesIsMutable();
+      resultTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param values The resultTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllResultTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultType> values) {
+      ensureResultTypesIsMutable();
+      for (com.tcn.cloud.api.api.v1alpha1.explorer.ResultType value : values) {
+        resultTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResultTypes() {
+      resultTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for resultTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getResultTypesValueList() {
+      return java.util.Collections.unmodifiableList(resultTypes_);
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of resultTypes at the given index.
+     */
+    public int getResultTypesValue(int index) {
+      return resultTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for resultTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResultTypesValue(
+        int index, int value) {
+      ensureResultTypesIsMutable();
+      resultTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param value The enum numeric value on the wire for resultTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addResultTypesValue(int value) {
+      ensureResultTypesIsMutable();
+      resultTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * result types for the query
+     * raw result type always included
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+     * @param values The enum numeric values on the wire for resultTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllResultTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureResultTypesIsMutable();
+      for (int value : values) {
+        resultTypes_.add(value);
+      }
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -188,4 +188,53 @@ public interface QueryExplainResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPostProcessingSummaryQueryBytes();
+
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> 
+      getResultUrlsList();
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index);
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  int getResultUrlsCount();
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+      getResultUrlsOrBuilderList();
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+      int index);
 }
