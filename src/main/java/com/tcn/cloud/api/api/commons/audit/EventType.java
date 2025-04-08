@@ -1122,6 +1122,23 @@ public enum EventType
    * <code>EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT = 1400;</code>
    */
   EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT(1400),
+  /**
+   * <pre>
+   *P3AMQP Events
+   * Call result event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_P3_AMQP_CALL_RESULT_EVENT = 1500;</code>
+   */
+  EVENT_TYPE_P3_AMQP_CALL_RESULT_EVENT(1500),
+  /**
+   * <pre>
+   * Agent response event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_P3_AMQP_AGENT_RESPONSE_EVENT = 1501;</code>
+   */
+  EVENT_TYPE_P3_AMQP_AGENT_RESPONSE_EVENT(1501),
   UNRECOGNIZED(-1),
   ;
 
@@ -2201,6 +2218,23 @@ public enum EventType
    * <code>EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT = 1400;</code>
    */
   public static final int EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT_VALUE = 1400;
+  /**
+   * <pre>
+   *P3AMQP Events
+   * Call result event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_P3_AMQP_CALL_RESULT_EVENT = 1500;</code>
+   */
+  public static final int EVENT_TYPE_P3_AMQP_CALL_RESULT_EVENT_VALUE = 1500;
+  /**
+   * <pre>
+   * Agent response event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_P3_AMQP_AGENT_RESPONSE_EVENT = 1501;</code>
+   */
+  public static final int EVENT_TYPE_P3_AMQP_AGENT_RESPONSE_EVENT_VALUE = 1501;
 
 
   public final int getNumber() {
@@ -2377,6 +2411,8 @@ public enum EventType
       case 1209: return EVENT_TYPE_CONTACT_MANAGER_ENTITY_ASSOCIATED_EVENT;
       case 1300: return EVENT_TYPE_ORGANIZATION_ACCESS_TOKENS_EXPIRING_EVENT;
       case 1400: return EVENT_TYPE_WFM_PUBLISH_SCHEDULE_EVENT;
+      case 1500: return EVENT_TYPE_P3_AMQP_CALL_RESULT_EVENT;
+      case 1501: return EVENT_TYPE_P3_AMQP_AGENT_RESPONSE_EVENT;
       default: return null;
     }
   }
