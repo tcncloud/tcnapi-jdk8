@@ -453,17 +453,17 @@ private static final long serialVersionUID = 0L;
 
   public static final int RESULT_URLS_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> resultUrls_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> resultUrls_;
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> getResultUrlsList() {
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> getResultUrlsList() {
     return resultUrls_;
   }
   /**
@@ -472,10 +472,10 @@ private static final long serialVersionUID = 0L;
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
       getResultUrlsOrBuilderList() {
     return resultUrls_;
   }
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
   public int getResultUrlsCount() {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index) {
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index) {
     return resultUrls_.get(index);
   }
   /**
@@ -509,10 +509,10 @@ private static final long serialVersionUID = 0L;
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
       int index) {
     return resultUrls_.get(index);
   }
@@ -1095,9 +1095,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 66
             case 74: {
-              com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry m =
+              com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.parser(),
                       extensionRegistry);
               if (resultUrlsBuilder_ == null) {
                 ensureResultUrlsIsMutable();
@@ -1873,17 +1873,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> resultUrls_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> resultUrls_ =
       java.util.Collections.emptyList();
     private void ensureResultUrlsIsMutable() {
       if (!((bitField0_ & 0x00000100) != 0)) {
-        resultUrls_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry>(resultUrls_);
+        resultUrls_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry>(resultUrls_);
         bitField0_ |= 0x00000100;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> resultUrlsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> resultUrlsBuilder_;
 
     /**
      * <pre>
@@ -1891,9 +1891,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> getResultUrlsList() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> getResultUrlsList() {
       if (resultUrlsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(resultUrls_);
       } else {
@@ -1906,7 +1906,7 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public int getResultUrlsCount() {
       if (resultUrlsBuilder_ == null) {
@@ -1921,9 +1921,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index) {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index) {
       if (resultUrlsBuilder_ == null) {
         return resultUrls_.get(index);
       } else {
@@ -1936,10 +1936,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder setResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
       if (resultUrlsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1958,10 +1958,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder setResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
       if (resultUrlsBuilder_ == null) {
         ensureResultUrlsIsMutable();
         resultUrls_.set(index, builderForValue.build());
@@ -1977,9 +1977,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public Builder addResultUrls(com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+    public Builder addResultUrls(com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
       if (resultUrlsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1998,10 +1998,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder addResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
       if (resultUrlsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2020,10 +2020,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder addResultUrls(
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
       if (resultUrlsBuilder_ == null) {
         ensureResultUrlsIsMutable();
         resultUrls_.add(builderForValue.build());
@@ -2039,10 +2039,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder addResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
       if (resultUrlsBuilder_ == null) {
         ensureResultUrlsIsMutable();
         resultUrls_.add(index, builderForValue.build());
@@ -2058,10 +2058,10 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder addAllResultUrls(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> values) {
       if (resultUrlsBuilder_ == null) {
         ensureResultUrlsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2078,7 +2078,7 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder clearResultUrls() {
       if (resultUrlsBuilder_ == null) {
@@ -2096,7 +2096,7 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
     public Builder removeResultUrls(int index) {
       if (resultUrlsBuilder_ == null) {
@@ -2114,9 +2114,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder getResultUrlsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder getResultUrlsBuilder(
         int index) {
       return getResultUrlsFieldBuilder().getBuilder(index);
     }
@@ -2126,9 +2126,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
         int index) {
       if (resultUrlsBuilder_ == null) {
         return resultUrls_.get(index);  } else {
@@ -2141,9 +2141,9 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
          getResultUrlsOrBuilderList() {
       if (resultUrlsBuilder_ != null) {
         return resultUrlsBuilder_.getMessageOrBuilderList();
@@ -2157,11 +2157,11 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder addResultUrlsBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder addResultUrlsBuilder() {
       return getResultUrlsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.getDefaultInstance());
+          com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.getDefaultInstance());
     }
     /**
      * <pre>
@@ -2169,12 +2169,12 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder addResultUrlsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder addResultUrlsBuilder(
         int index) {
       return getResultUrlsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.getDefaultInstance());
     }
     /**
      * <pre>
@@ -2182,18 +2182,18 @@ private static final long serialVersionUID = 0L;
      * raw result type always included
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder> 
          getResultUrlsBuilderList() {
       return getResultUrlsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
         getResultUrlsFieldBuilder() {
       if (resultUrlsBuilder_ == null) {
         resultUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder>(
                 resultUrls_,
                 ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),

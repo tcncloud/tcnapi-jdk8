@@ -195,9 +195,9 @@ public interface SupportQueryResponseOrBuilder extends
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> 
       getResultUrlsList();
   /**
    * <pre>
@@ -205,16 +205,16 @@ public interface SupportQueryResponseOrBuilder extends
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntry getResultUrls(int index);
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index);
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
   int getResultUrlsCount();
   /**
@@ -223,9 +223,9 @@ public interface SupportQueryResponseOrBuilder extends
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
       getResultUrlsOrBuilderList();
   /**
    * <pre>
@@ -233,8 +233,8 @@ public interface SupportQueryResponseOrBuilder extends
    * raw result type always included
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlsEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlsEntryOrBuilder getResultUrlsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
       int index);
 }

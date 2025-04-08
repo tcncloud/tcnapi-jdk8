@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.explorer;
 
-public interface ResultUrlsEntryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.ResultUrlsEntry)
+public interface ResultUrlEntryOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.ResultUrlEntry)
     com.google.protobuf.MessageOrBuilder {
 
   /**
