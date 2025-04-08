@@ -308,14 +308,4 @@ public interface CannedMessageWithGroupOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * disable edit flag
-   * </pre>
-   *
-   * <code>bool disable_edit = 14 [json_name = "disableEdit"];</code>
-   * @return The disableEdit.
-   */
-  boolean getDisableEdit();
 }

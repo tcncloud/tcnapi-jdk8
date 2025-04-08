@@ -140,14 +140,4 @@ public interface CreateCannedMessageReqOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * disable edit flag
-   * </pre>
-   *
-   * <code>bool disable_edit = 7 [json_name = "disableEdit"];</code>
-   * @return The disableEdit.
-   */
-  boolean getDisableEdit();
 }
