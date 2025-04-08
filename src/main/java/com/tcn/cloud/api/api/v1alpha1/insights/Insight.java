@@ -30,6 +30,7 @@ private static final long serialVersionUID = 0L;
     resourceId_ = "";
     datasourceType_ = 0;
     datasourceName_ = "";
+    exportFormat_ = 0;
   }
 
   @java.lang.Override
@@ -622,7 +623,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions exportOptions_;
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -634,7 +635,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -646,7 +647,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -654,6 +655,32 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
     return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.getDefaultInstance() : exportOptions_;
+  }
+
+  public static final int EXPORT_FORMAT_FIELD_NUMBER = 19;
+  private int exportFormat_ = 0;
+  /**
+   * <pre>
+   * export format type
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+   * @return The enum numeric value on the wire for exportFormat.
+   */
+  @java.lang.Override public int getExportFormatValue() {
+    return exportFormat_;
+  }
+  /**
+   * <pre>
+   * export format type
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+   * @return The exportFormat.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat() {
+    com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(exportFormat_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -717,6 +744,9 @@ private static final long serialVersionUID = 0L;
     }
     if (exportOptions_ != null) {
       output.writeMessage(18, getExportOptions());
+    }
+    if (exportFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(19, exportFormat_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -786,6 +816,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getExportOptions());
     }
+    if (exportFormat_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.REPORT_FORMAT_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(19, exportFormat_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -835,6 +869,7 @@ private static final long serialVersionUID = 0L;
       if (!getExportOptions()
           .equals(other.getExportOptions())) return false;
     }
+    if (exportFormat_ != other.exportFormat_) return false;
     if (!getInsightContentCase().equals(other.getInsightContentCase())) return false;
     switch (insightContentCase_) {
       case 16:
@@ -895,6 +930,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXPORT_OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getExportOptions().hashCode();
     }
+    hash = (37 * hash) + EXPORT_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + exportFormat_;
     switch (insightContentCase_) {
       case 16:
         hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
@@ -1076,6 +1113,7 @@ private static final long serialVersionUID = 0L;
         exportOptionsBuilder_.dispose();
         exportOptionsBuilder_ = null;
       }
+      exportFormat_ = 0;
       insightContentCase_ = 0;
       insightContent_ = null;
       return this;
@@ -1159,6 +1197,9 @@ private static final long serialVersionUID = 0L;
         result.exportOptions_ = exportOptionsBuilder_ == null
             ? exportOptions_
             : exportOptionsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.exportFormat_ = exportFormat_;
       }
     }
 
@@ -1270,6 +1311,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExportOptions()) {
         mergeExportOptions(other.getExportOptions());
+      }
+      if (other.exportFormat_ != 0) {
+        setExportFormatValue(other.getExportFormatValue());
       }
       switch (other.getInsightContentCase()) {
         case PIPELINE: {
@@ -1400,6 +1444,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 146
+            case 152: {
+              exportFormat_ = input.readEnum();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 152
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2918,7 +2967,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder> exportOptionsBuilder_;
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -2929,7 +2978,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -2944,7 +2993,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -2964,7 +3013,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -2982,7 +3031,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -3005,7 +3054,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -3022,7 +3071,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -3034,7 +3083,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -3049,7 +3098,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * export options for the insight for delimiter, quoting etc
      * </pre>
      *
      * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -3066,6 +3115,79 @@ private static final long serialVersionUID = 0L;
         exportOptions_ = null;
       }
       return exportOptionsBuilder_;
+    }
+
+    private int exportFormat_ = 0;
+    /**
+     * <pre>
+     * export format type
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+     * @return The enum numeric value on the wire for exportFormat.
+     */
+    @java.lang.Override public int getExportFormatValue() {
+      return exportFormat_;
+    }
+    /**
+     * <pre>
+     * export format type
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+     * @param value The enum numeric value on the wire for exportFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExportFormatValue(int value) {
+      exportFormat_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export format type
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+     * @return The exportFormat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat result = com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.forNumber(exportFormat_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * export format type
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+     * @param value The exportFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExportFormat(com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00010000;
+      exportFormat_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export format type
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExportFormat() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      exportFormat_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

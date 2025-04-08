@@ -308,7 +308,7 @@ public interface InsightOrBuilder extends
 
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -317,7 +317,7 @@ public interface InsightOrBuilder extends
   boolean hasExportOptions();
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
@@ -326,12 +326,31 @@ public interface InsightOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions();
   /**
    * <pre>
-   * export options for the insight
+   * export options for the insight for delimiter, quoting etc
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder();
+
+  /**
+   * <pre>
+   * export format type
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+   * @return The enum numeric value on the wire for exportFormat.
+   */
+  int getExportFormatValue();
+  /**
+   * <pre>
+   * export format type
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportFormat export_format = 19 [json_name = "exportFormat"];</code>
+   * @return The exportFormat.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportFormat getExportFormat();
 
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }
