@@ -317,7 +317,7 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
-   * format is the format of the raw result.
+   * format is the format of the result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -326,7 +326,7 @@ public interface QueryRequestOrBuilder extends
   int getFormatValue();
   /**
    * <pre>
-   * format is the format of the raw result.
+   * format is the format of the result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>

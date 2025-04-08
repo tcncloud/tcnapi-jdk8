@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
   private int format_ = 0;
   /**
    * <pre>
-   * format is the format of the raw result.
+   * format is the format of the result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * format is the format of the raw result.
+   * format is the format of the result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3208,7 +3208,7 @@ private static final long serialVersionUID = 0L;
     private int format_ = 0;
     /**
      * <pre>
-     * format is the format of the raw result.
+     * format is the format of the result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3219,7 +3219,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the raw result.
+     * format is the format of the result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3234,7 +3234,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the raw result.
+     * format is the format of the result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3247,7 +3247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the raw result.
+     * format is the format of the result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3265,7 +3265,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the raw result.
+     * format is the format of the result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
