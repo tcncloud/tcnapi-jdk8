@@ -22,7 +22,6 @@ private static final long serialVersionUID = 0L;
   private ExportOptions() {
     delimiter_ = "";
     quoteCharacter_ = 0;
-    fileExtension_ = 0;
   }
 
   @java.lang.Override
@@ -133,32 +132,6 @@ private static final long serialVersionUID = 0L;
     return noHeader_;
   }
 
-  public static final int FILE_EXTENSION_FIELD_NUMBER = 4;
-  private int fileExtension_ = 0;
-  /**
-   * <pre>
-   * File extension for exporting
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-   * @return The enum numeric value on the wire for fileExtension.
-   */
-  @java.lang.Override public int getFileExtensionValue() {
-    return fileExtension_;
-  }
-  /**
-   * <pre>
-   * File extension for exporting
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-   * @return The fileExtension.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension getFileExtension() {
-    com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension result = com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.forNumber(fileExtension_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -182,9 +155,6 @@ private static final long serialVersionUID = 0L;
     if (noHeader_ != false) {
       output.writeBool(3, noHeader_);
     }
-    if (fileExtension_ != com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.FILE_EXTENSION_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, fileExtension_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -204,10 +174,6 @@ private static final long serialVersionUID = 0L;
     if (noHeader_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, noHeader_);
-    }
-    if (fileExtension_ != com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.FILE_EXTENSION_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, fileExtension_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -229,7 +195,6 @@ private static final long serialVersionUID = 0L;
     if (quoteCharacter_ != other.quoteCharacter_) return false;
     if (getNoHeader()
         != other.getNoHeader()) return false;
-    if (fileExtension_ != other.fileExtension_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -248,8 +213,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NO_HEADER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getNoHeader());
-    hash = (37 * hash) + FILE_EXTENSION_FIELD_NUMBER;
-    hash = (53 * hash) + fileExtension_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -388,7 +351,6 @@ private static final long serialVersionUID = 0L;
       delimiter_ = "";
       quoteCharacter_ = 0;
       noHeader_ = false;
-      fileExtension_ = 0;
       return this;
     }
 
@@ -430,9 +392,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.noHeader_ = noHeader_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.fileExtension_ = fileExtension_;
       }
     }
 
@@ -491,9 +450,6 @@ private static final long serialVersionUID = 0L;
       if (other.getNoHeader() != false) {
         setNoHeader(other.getNoHeader());
       }
-      if (other.fileExtension_ != 0) {
-        setFileExtensionValue(other.getFileExtensionValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -535,11 +491,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              fileExtension_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -762,79 +713,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearNoHeader() {
       bitField0_ = (bitField0_ & ~0x00000004);
       noHeader_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int fileExtension_ = 0;
-    /**
-     * <pre>
-     * File extension for exporting
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-     * @return The enum numeric value on the wire for fileExtension.
-     */
-    @java.lang.Override public int getFileExtensionValue() {
-      return fileExtension_;
-    }
-    /**
-     * <pre>
-     * File extension for exporting
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-     * @param value The enum numeric value on the wire for fileExtension to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileExtensionValue(int value) {
-      fileExtension_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * File extension for exporting
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-     * @return The fileExtension.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension getFileExtension() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension result = com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.forNumber(fileExtension_);
-      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * File extension for exporting
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-     * @param value The fileExtension to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFileExtension(com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000008;
-      fileExtension_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * File extension for exporting
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFileExtension() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      fileExtension_ = 0;
       onChanged();
       return this;
     }

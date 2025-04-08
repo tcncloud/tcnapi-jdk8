@@ -55,23 +55,4 @@ public interface ExportOptionsOrBuilder extends
    * @return The noHeader.
    */
   boolean getNoHeader();
-
-  /**
-   * <pre>
-   * File extension for exporting
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-   * @return The enum numeric value on the wire for fileExtension.
-   */
-  int getFileExtensionValue();
-  /**
-   * <pre>
-   * File extension for exporting
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.FileExtension file_extension = 4 [json_name = "fileExtension"];</code>
-   * @return The fileExtension.
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.FileExtension getFileExtension();
 }
