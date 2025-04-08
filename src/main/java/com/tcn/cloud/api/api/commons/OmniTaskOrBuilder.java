@@ -335,4 +335,16 @@ public interface OmniTaskOrBuilder extends
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder getTaskConfigOrBuilder();
+
+  /**
+   * <pre>
+   * tracks the timezone difference for tasks
+   * -13 represents absent offset
+   * can be used for prioritizing and ordering based on destination timezone
+   * </pre>
+   *
+   * <code>float timezone_offset = 16 [json_name = "timezoneOffset"];</code>
+   * @return The timezoneOffset.
+   */
+  float getTimezoneOffset();
 }
