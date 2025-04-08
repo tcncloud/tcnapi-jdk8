@@ -104,18 +104,17 @@ public final class EntitiesProto {
       "rceType\022\037\n\033DATASOURCE_TYPE_UNSPECIFIED\020\000" +
       "\022\027\n\023DATASOURCE_TYPE_VFS\020\001\022\036\n\032DATASOURCE_" +
       "TYPE_CLICKHOUSE\020\002\022 \n\034DATASOURCE_TYPE_INS" +
-      "TANT_DATA\020\003*\207\001\n\nResultType\022\033\n\027RESULT_TYP" +
-      "E_UNSPECIFIED\020\000\022\023\n\017RESULT_TYPE_RAW\020\001\022\026\n\022" +
-      "RESULT_TYPE_FORMAT\020\002\022\027\n\023RESULT_TYPE_SUMM" +
-      "ARY\020\003\022\026\n\022RESULT_TYPE_REPORT\020\004*u\n\016QuoteCh" +
-      "aracter\022\037\n\033QUOTE_CHARACTER_UNSPECIFIED\020\000" +
-      "\022 \n\034QUOTE_CHARACTER_DOUBLE_QUOTE\020\001\022 \n\034QU" +
-      "OTE_CHARACTER_SINGLE_QUOTE\020\002B\256\001\n\'com.tcn" +
-      ".cloud.api.api.v1alpha1.explorerB\rEntiti" +
-      "esProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312" +
-      "\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1alpha1\\E" +
-      "xplorer\\GPBMetadata\352\002\027Api::V1alpha1::Exp" +
-      "lorerb\006proto3"
+      "TANT_DATA\020\003*r\n\nResultType\022\033\n\027RESULT_TYPE" +
+      "_UNSPECIFIED\020\000\022\026\n\022RESULT_TYPE_FORMAT\020\001\022\027" +
+      "\n\023RESULT_TYPE_SUMMARY\020\002\022\026\n\022RESULT_TYPE_R" +
+      "EPORT\020\003*u\n\016QuoteCharacter\022\037\n\033QUOTE_CHARA" +
+      "CTER_UNSPECIFIED\020\000\022 \n\034QUOTE_CHARACTER_DO" +
+      "UBLE_QUOTE\020\001\022 \n\034QUOTE_CHARACTER_SINGLE_Q" +
+      "UOTE\020\002B\256\001\n\'com.tcn.cloud.api.api.v1alpha" +
+      "1.explorerB\rEntitiesProtoP\001\242\002\003AVE\252\002\025Api." +
+      "V1alpha1.Explorer\312\002\025Api\\V1alpha1\\Explore" +
+      "r\342\002!Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027" +
+      "Api::V1alpha1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

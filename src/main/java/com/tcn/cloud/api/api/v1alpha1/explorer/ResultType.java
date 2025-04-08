@@ -14,7 +14,7 @@ public enum ResultType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * Unspecified is represented as 0.
+   * Unspecified is raw
    * </pre>
    *
    * <code>RESULT_TYPE_UNSPECIFIED = 0;</code>
@@ -25,39 +25,31 @@ public enum ResultType
    * Raw is the raw result from the pipeline with no formatting applied.
    * </pre>
    *
-   * <code>RESULT_TYPE_RAW = 1;</code>
+   * <code>RESULT_TYPE_FORMAT = 1;</code>
    */
-  RESULT_TYPE_RAW(1),
-  /**
-   * <pre>
-   * Format is the formatted table result from the pipeline.
-   * </pre>
-   *
-   * <code>RESULT_TYPE_FORMAT = 2;</code>
-   */
-  RESULT_TYPE_FORMAT(2),
+  RESULT_TYPE_FORMAT(1),
   /**
    * <pre>
    * Summary is the formatted summary result from the pipeline.
    * </pre>
    *
-   * <code>RESULT_TYPE_SUMMARY = 3;</code>
+   * <code>RESULT_TYPE_SUMMARY = 2;</code>
    */
-  RESULT_TYPE_SUMMARY(3),
+  RESULT_TYPE_SUMMARY(2),
   /**
    * <pre>
    * Report is the combined report of Format and Summary.
    * </pre>
    *
-   * <code>RESULT_TYPE_REPORT = 4;</code>
+   * <code>RESULT_TYPE_REPORT = 3;</code>
    */
-  RESULT_TYPE_REPORT(4),
+  RESULT_TYPE_REPORT(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * Unspecified is represented as 0.
+   * Unspecified is raw
    * </pre>
    *
    * <code>RESULT_TYPE_UNSPECIFIED = 0;</code>
@@ -68,33 +60,25 @@ public enum ResultType
    * Raw is the raw result from the pipeline with no formatting applied.
    * </pre>
    *
-   * <code>RESULT_TYPE_RAW = 1;</code>
+   * <code>RESULT_TYPE_FORMAT = 1;</code>
    */
-  public static final int RESULT_TYPE_RAW_VALUE = 1;
-  /**
-   * <pre>
-   * Format is the formatted table result from the pipeline.
-   * </pre>
-   *
-   * <code>RESULT_TYPE_FORMAT = 2;</code>
-   */
-  public static final int RESULT_TYPE_FORMAT_VALUE = 2;
+  public static final int RESULT_TYPE_FORMAT_VALUE = 1;
   /**
    * <pre>
    * Summary is the formatted summary result from the pipeline.
    * </pre>
    *
-   * <code>RESULT_TYPE_SUMMARY = 3;</code>
+   * <code>RESULT_TYPE_SUMMARY = 2;</code>
    */
-  public static final int RESULT_TYPE_SUMMARY_VALUE = 3;
+  public static final int RESULT_TYPE_SUMMARY_VALUE = 2;
   /**
    * <pre>
    * Report is the combined report of Format and Summary.
    * </pre>
    *
-   * <code>RESULT_TYPE_REPORT = 4;</code>
+   * <code>RESULT_TYPE_REPORT = 3;</code>
    */
-  public static final int RESULT_TYPE_REPORT_VALUE = 4;
+  public static final int RESULT_TYPE_REPORT_VALUE = 3;
 
 
   public final int getNumber() {
@@ -122,10 +106,9 @@ public enum ResultType
   public static ResultType forNumber(int value) {
     switch (value) {
       case 0: return RESULT_TYPE_UNSPECIFIED;
-      case 1: return RESULT_TYPE_RAW;
-      case 2: return RESULT_TYPE_FORMAT;
-      case 3: return RESULT_TYPE_SUMMARY;
-      case 4: return RESULT_TYPE_REPORT;
+      case 1: return RESULT_TYPE_FORMAT;
+      case 2: return RESULT_TYPE_SUMMARY;
+      case 3: return RESULT_TYPE_REPORT;
       default: return null;
     }
   }
