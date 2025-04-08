@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
   private int format_ = 0;
   /**
    * <pre>
-   * format is the format of the result.
+   * format is the format of the raw result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * format is the format of the result.
+   * format is the format of the raw result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -747,7 +747,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -760,7 +759,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -773,7 +771,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3211,7 +3208,7 @@ private static final long serialVersionUID = 0L;
     private int format_ = 0;
     /**
      * <pre>
-     * format is the format of the result.
+     * format is the format of the raw result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3222,7 +3219,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the result.
+     * format is the format of the raw result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3237,7 +3234,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the result.
+     * format is the format of the raw result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3250,7 +3247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the result.
+     * format is the format of the raw result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3268,7 +3265,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * format is the format of the result.
+     * format is the format of the raw result.
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -3520,7 +3517,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3532,7 +3528,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3548,7 +3543,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3569,7 +3563,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3588,7 +3581,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3612,7 +3604,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3630,7 +3621,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3643,7 +3633,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -3659,7 +3648,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * export options for post processing operations
-     * if empty - results generated as .parquet
      * </pre>
      *
      * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>

@@ -317,7 +317,7 @@ public interface QueryRequestOrBuilder extends
 
   /**
    * <pre>
-   * format is the format of the result.
+   * format is the format of the raw result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -326,7 +326,7 @@ public interface QueryRequestOrBuilder extends
   int getFormatValue();
   /**
    * <pre>
-   * format is the format of the result.
+   * format is the format of the raw result.
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportFormat format = 12 [json_name = "format"];</code>
@@ -385,7 +385,6 @@ public interface QueryRequestOrBuilder extends
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -395,7 +394,6 @@ public interface QueryRequestOrBuilder extends
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
@@ -405,7 +403,6 @@ public interface QueryRequestOrBuilder extends
   /**
    * <pre>
    * export options for post processing operations
-   * if empty - results generated as .parquet
    * </pre>
    *
    * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
