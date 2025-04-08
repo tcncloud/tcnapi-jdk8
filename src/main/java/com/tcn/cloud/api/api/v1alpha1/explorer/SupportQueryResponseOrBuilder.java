@@ -193,48 +193,63 @@ public interface SupportQueryResponseOrBuilder extends
    * <pre>
    * result urls per result type
    * raw result type always included
+   * the key is the enum value of ResultType
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> 
-      getResultUrlsList();
-  /**
-   * <pre>
-   * result urls per result type
-   * raw result type always included
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index);
-  /**
-   * <pre>
-   * result urls per result type
-   * raw result type always included
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
    */
   int getResultUrlsCount();
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
+   * the key is the enum value of ResultType
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
-      getResultUrlsOrBuilderList();
+  boolean containsResultUrls(
+      int key);
+  /**
+   * Use {@link #getResultUrlsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+  getResultUrls();
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
+   * the key is the enum value of ResultType
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
-      int index);
+  java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+  getResultUrlsMap();
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * the key is the enum value of ResultType
+   * </pre>
+   *
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrDefault(
+      int key,
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile defaultValue);
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * the key is the enum value of ResultType
+   * </pre>
+   *
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrThrow(
+      int key);
 }

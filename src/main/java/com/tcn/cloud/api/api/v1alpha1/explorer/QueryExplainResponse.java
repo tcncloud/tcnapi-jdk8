@@ -26,7 +26,6 @@ private static final long serialVersionUID = 0L;
     explain_ = "";
     postProcessingTableQuery_ = "";
     postProcessingSummaryQuery_ = "";
-    resultUrls_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -48,6 +47,8 @@ private static final long serialVersionUID = 0L;
     switch (number) {
       case 6:
         return internalGetTimeFilteredDatasources();
+      case 9:
+        return internalGetResultUrls();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -452,69 +453,106 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULT_URLS_FIELD_NUMBER = 9;
+  private static final class ResultUrlsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>newDefaultInstance(
+                com.tcn.cloud.api.api.v1alpha1.explorer.ServiceProto.internal_static_api_v1alpha1_explorer_QueryExplainResponse_ResultUrlsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.INT32,
+                0,
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile.getDefaultInstance());
+  }
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> resultUrls_;
-  /**
-   * <pre>
-   * result urls per result type
-   * raw result type always included
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> getResultUrlsList() {
+  private com.google.protobuf.MapField<
+      java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> resultUrls_;
+  private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+  internalGetResultUrls() {
+    if (resultUrls_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          ResultUrlsDefaultEntryHolder.defaultEntry);
+    }
     return resultUrls_;
   }
-  /**
-   * <pre>
-   * result urls per result type
-   * raw result type always included
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
-      getResultUrlsOrBuilderList() {
-    return resultUrls_;
-  }
-  /**
-   * <pre>
-   * result urls per result type
-   * raw result type always included
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-   */
-  @java.lang.Override
   public int getResultUrlsCount() {
-    return resultUrls_.size();
+    return internalGetResultUrls().getMap().size();
   }
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
+   * the key is the enum value of ResultType
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index) {
-    return resultUrls_.get(index);
+  public boolean containsResultUrls(
+      int key) {
+
+    return internalGetResultUrls().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getResultUrlsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> getResultUrls() {
+    return getResultUrlsMap();
   }
   /**
    * <pre>
    * result urls per result type
    * raw result type always included
+   * the key is the enum value of ResultType
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
-      int index) {
-    return resultUrls_.get(index);
+  public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> getResultUrlsMap() {
+    return internalGetResultUrls().getMap();
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * the key is the enum value of ResultType
+   * </pre>
+   *
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrDefault(
+      int key,
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile defaultValue) {
+
+    java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> map =
+        internalGetResultUrls().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * result urls per result type
+   * raw result type always included
+   * the key is the enum value of ResultType
+   * </pre>
+   *
+   * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrThrow(
+      int key) {
+
+    java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> map =
+        internalGetResultUrls().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -558,9 +596,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, postProcessingSummaryQuery_);
     }
-    for (int i = 0; i < resultUrls_.size(); i++) {
-      output.writeMessage(9, resultUrls_.get(i));
-    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeIntegerMapTo(
+        output,
+        internalGetResultUrls(),
+        ResultUrlsDefaultEntryHolder.defaultEntry,
+        9);
     getUnknownFields().writeTo(output);
   }
 
@@ -602,9 +643,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postProcessingSummaryQuery_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, postProcessingSummaryQuery_);
     }
-    for (int i = 0; i < resultUrls_.size(); i++) {
+    for (java.util.Map.Entry<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> entry
+         : internalGetResultUrls().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+      resultUrls__ = ResultUrlsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, resultUrls_.get(i));
+          .computeMessageSize(9, resultUrls__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -637,8 +684,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPostProcessingTableQuery())) return false;
     if (!getPostProcessingSummaryQuery()
         .equals(other.getPostProcessingSummaryQuery())) return false;
-    if (!getResultUrlsList()
-        .equals(other.getResultUrlsList())) return false;
+    if (!internalGetResultUrls().equals(
+        other.internalGetResultUrls())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -669,9 +716,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPostProcessingTableQuery().hashCode();
     hash = (37 * hash) + POST_PROCESSING_SUMMARY_QUERY_FIELD_NUMBER;
     hash = (53 * hash) + getPostProcessingSummaryQuery().hashCode();
-    if (getResultUrlsCount() > 0) {
+    if (!internalGetResultUrls().getMap().isEmpty()) {
       hash = (37 * hash) + RESULT_URLS_FIELD_NUMBER;
-      hash = (53 * hash) + getResultUrlsList().hashCode();
+      hash = (53 * hash) + internalGetResultUrls().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -792,6 +839,8 @@ private static final long serialVersionUID = 0L;
       switch (number) {
         case 6:
           return internalGetTimeFilteredDatasources();
+        case 9:
+          return internalGetResultUrls();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -803,6 +852,8 @@ private static final long serialVersionUID = 0L;
       switch (number) {
         case 6:
           return internalGetMutableTimeFilteredDatasources();
+        case 9:
+          return internalGetMutableResultUrls();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -838,13 +889,7 @@ private static final long serialVersionUID = 0L;
       internalGetMutableTimeFilteredDatasources().clear();
       postProcessingTableQuery_ = "";
       postProcessingSummaryQuery_ = "";
-      if (resultUrlsBuilder_ == null) {
-        resultUrls_ = java.util.Collections.emptyList();
-      } else {
-        resultUrls_ = null;
-        resultUrlsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableResultUrls().clear();
       return this;
     }
 
@@ -871,22 +916,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result = new com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result) {
-      if (resultUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          resultUrls_ = java.util.Collections.unmodifiableList(resultUrls_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.resultUrls_ = resultUrls_;
-      } else {
-        result.resultUrls_ = resultUrlsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.QueryExplainResponse result) {
@@ -915,6 +947,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.postProcessingSummaryQuery_ = postProcessingSummaryQuery_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.resultUrls_ = internalGetResultUrls();
+        result.resultUrls_.makeImmutable();
       }
     }
 
@@ -998,32 +1034,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
-      if (resultUrlsBuilder_ == null) {
-        if (!other.resultUrls_.isEmpty()) {
-          if (resultUrls_.isEmpty()) {
-            resultUrls_ = other.resultUrls_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureResultUrlsIsMutable();
-            resultUrls_.addAll(other.resultUrls_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.resultUrls_.isEmpty()) {
-          if (resultUrlsBuilder_.isEmpty()) {
-            resultUrlsBuilder_.dispose();
-            resultUrlsBuilder_ = null;
-            resultUrls_ = other.resultUrls_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            resultUrlsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getResultUrlsFieldBuilder() : null;
-          } else {
-            resultUrlsBuilder_.addAllMessages(other.resultUrls_);
-          }
-        }
-      }
+      internalGetMutableResultUrls().mergeFrom(
+          other.internalGetResultUrls());
+      bitField0_ |= 0x00000100;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1095,16 +1108,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 66
             case 74: {
-              com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.parser(),
-                      extensionRegistry);
-              if (resultUrlsBuilder_ == null) {
-                ensureResultUrlsIsMutable();
-                resultUrls_.add(m);
-              } else {
-                resultUrlsBuilder_.addMessage(m);
-              }
+              com.google.protobuf.MapEntry<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+              resultUrls__ = input.readMessage(
+                  ResultUrlsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableResultUrls().getMutableMap().put(
+                  resultUrls__.getKey(), resultUrls__.getValue());
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             default: {
@@ -1873,334 +1882,173 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> resultUrls_ =
-      java.util.Collections.emptyList();
-    private void ensureResultUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        resultUrls_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry>(resultUrls_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> resultUrlsBuilder_;
-
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> getResultUrlsList() {
-      if (resultUrlsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(resultUrls_);
-      } else {
-        return resultUrlsBuilder_.getMessageList();
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> resultUrls_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+        internalGetResultUrls() {
+      if (resultUrls_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ResultUrlsDefaultEntryHolder.defaultEntry);
       }
+      return resultUrls_;
     }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
+    private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+        internalGetMutableResultUrls() {
+      if (resultUrls_ == null) {
+        resultUrls_ = com.google.protobuf.MapField.newMapField(
+            ResultUrlsDefaultEntryHolder.defaultEntry);
+      }
+      if (!resultUrls_.isMutable()) {
+        resultUrls_ = resultUrls_.copy();
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return resultUrls_;
+    }
     public int getResultUrlsCount() {
-      if (resultUrlsBuilder_ == null) {
-        return resultUrls_.size();
-      } else {
-        return resultUrlsBuilder_.getCount();
-      }
+      return internalGetResultUrls().getMap().size();
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry getResultUrls(int index) {
-      if (resultUrlsBuilder_ == null) {
-        return resultUrls_.get(index);
-      } else {
-        return resultUrlsBuilder_.getMessage(index);
-      }
+    @java.lang.Override
+    public boolean containsResultUrls(
+        int key) {
+
+      return internalGetResultUrls().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getResultUrlsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> getResultUrls() {
+      return getResultUrlsMap();
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public Builder setResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
-      if (resultUrlsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureResultUrlsIsMutable();
-        resultUrls_.set(index, value);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.setMessage(index, value);
-      }
-      return this;
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> getResultUrlsMap() {
+      return internalGetResultUrls().getMap();
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public Builder setResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
-      if (resultUrlsBuilder_ == null) {
-        ensureResultUrlsIsMutable();
-        resultUrls_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        resultUrlsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
+    @java.lang.Override
+    public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrDefault(
+        int key,
+        /* nullable */
+com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> map =
+          internalGetResultUrls().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public Builder addResultUrls(com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
-      if (resultUrlsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureResultUrlsIsMutable();
-        resultUrls_.add(value);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.addMessage(value);
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile getResultUrlsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> map =
+          internalGetResultUrls().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
-      return this;
+      return map.get(key);
     }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public Builder addResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry value) {
-      if (resultUrlsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureResultUrlsIsMutable();
-        resultUrls_.add(index, value);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public Builder addResultUrls(
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
-      if (resultUrlsBuilder_ == null) {
-        ensureResultUrlsIsMutable();
-        resultUrls_.add(builderForValue.build());
-        onChanged();
-      } else {
-        resultUrlsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public Builder addResultUrls(
-        int index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder builderForValue) {
-      if (resultUrlsBuilder_ == null) {
-        ensureResultUrlsIsMutable();
-        resultUrls_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        resultUrlsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public Builder addAllResultUrls(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry> values) {
-      if (resultUrlsBuilder_ == null) {
-        ensureResultUrlsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, resultUrls_);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
     public Builder clearResultUrls() {
-      if (resultUrlsBuilder_ == null) {
-        resultUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.clear();
-      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableResultUrls().getMutableMap()
+          .clear();
       return this;
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public Builder removeResultUrls(int index) {
-      if (resultUrlsBuilder_ == null) {
-        ensureResultUrlsIsMutable();
-        resultUrls_.remove(index);
-        onChanged();
-      } else {
-        resultUrlsBuilder_.remove(index);
-      }
+    public Builder removeResultUrls(
+        int key) {
+
+      internalGetMutableResultUrls().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile>
+        getMutableResultUrls() {
+      bitField0_ |= 0x00000100;
+      return internalGetMutableResultUrls().getMutableMap();
+    }
+    /**
+     * <pre>
+     * result urls per result type
+     * raw result type always included
+     * the key is the enum value of ResultType
+     * </pre>
+     *
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
+     */
+    public Builder putResultUrls(
+        int key,
+        com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile value) {
+
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableResultUrls().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000100;
       return this;
     }
     /**
      * <pre>
      * result urls per result type
      * raw result type always included
+     * the key is the enum value of ResultType
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
+     * <code>map&lt;int32, .api.v1alpha1.explorer.ResultFile&gt; result_urls = 9 [json_name = "resultUrls"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder getResultUrlsBuilder(
-        int index) {
-      return getResultUrlsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder getResultUrlsOrBuilder(
-        int index) {
-      if (resultUrlsBuilder_ == null) {
-        return resultUrls_.get(index);  } else {
-        return resultUrlsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
-         getResultUrlsOrBuilderList() {
-      if (resultUrlsBuilder_ != null) {
-        return resultUrlsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(resultUrls_);
-      }
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder addResultUrlsBuilder() {
-      return getResultUrlsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder addResultUrlsBuilder(
-        int index) {
-      return getResultUrlsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * result urls per result type
-     * raw result type always included
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.explorer.ResultUrlEntry result_urls = 9 [json_name = "resultUrls"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder> 
-         getResultUrlsBuilderList() {
-      return getResultUrlsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder> 
-        getResultUrlsFieldBuilder() {
-      if (resultUrlsBuilder_ == null) {
-        resultUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntry.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ResultUrlEntryOrBuilder>(
-                resultUrls_,
-                ((bitField0_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        resultUrls_ = null;
-      }
-      return resultUrlsBuilder_;
+    public Builder putAllResultUrls(
+        java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.explorer.ResultFile> values) {
+      internalGetMutableResultUrls().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000100;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
