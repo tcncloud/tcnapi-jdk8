@@ -55,4 +55,23 @@ public interface ExportOptionsOrBuilder extends
    * @return The noHeader.
    */
   boolean getNoHeader();
+
+  /**
+   * <pre>
+   * result format
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
+   * @return The enum numeric value on the wire for resultFormat.
+   */
+  int getResultFormatValue();
+  /**
+   * <pre>
+   * result format
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ResultFormat result_format = 4 [json_name = "resultFormat"];</code>
+   * @return The resultFormat.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultFormat getResultFormat();
 }
