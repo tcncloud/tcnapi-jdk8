@@ -14,7 +14,7 @@ public enum ResultType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * Unspecified is raw
+   * Unspecified is the raw result.
    * </pre>
    *
    * <code>RESULT_TYPE_UNSPECIFIED = 0;</code>
@@ -49,7 +49,7 @@ public enum ResultType
 
   /**
    * <pre>
-   * Unspecified is raw
+   * Unspecified is the raw result.
    * </pre>
    *
    * <code>RESULT_TYPE_UNSPECIFIED = 0;</code>
