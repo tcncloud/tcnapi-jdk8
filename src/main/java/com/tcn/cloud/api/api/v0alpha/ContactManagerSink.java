@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-   *     See api/v0alpha/lms.proto;l=2518
+   *     See api/v0alpha/lms.proto;l=2494
    * @return The ttl.
    */
   @java.lang.Override
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2522
+   *     See api/v0alpha/lms.proto;l=2498
    * @return The userId.
    */
   @java.lang.Override
@@ -1233,7 +1233,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2522
+   *     See api/v0alpha/lms.proto;l=2498
    * @return The bytes for userId.
    */
   @java.lang.Override
@@ -2251,7 +2251,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2518
+     *     See api/v0alpha/lms.proto;l=2494
      * @return The ttl.
      */
     @java.lang.Override
@@ -2261,7 +2261,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2518
+     *     See api/v0alpha/lms.proto;l=2494
      * @param value The ttl to set.
      * @return This builder for chaining.
      */
@@ -2275,7 +2275,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-     *     See api/v0alpha/lms.proto;l=2518
+     *     See api/v0alpha/lms.proto;l=2494
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTtl() {
@@ -2453,7 +2453,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=2522
+     *     See api/v0alpha/lms.proto;l=2498
      * @return The userId.
      */
     @java.lang.Deprecated public java.lang.String getUserId() {
@@ -2471,7 +2471,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=2522
+     *     See api/v0alpha/lms.proto;l=2498
      * @return The bytes for userId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2490,7 +2490,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=2522
+     *     See api/v0alpha/lms.proto;l=2498
      * @param value The userId to set.
      * @return This builder for chaining.
      */
@@ -2505,7 +2505,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=2522
+     *     See api/v0alpha/lms.proto;l=2498
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearUserId() {
@@ -2517,7 +2517,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
      * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=2522
+     *     See api/v0alpha/lms.proto;l=2498
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */

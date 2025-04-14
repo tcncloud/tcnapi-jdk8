@@ -117,7 +117,7 @@ public interface ContactManagerSinkOrBuilder extends
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-   *     See api/v0alpha/lms.proto;l=2518
+   *     See api/v0alpha/lms.proto;l=2494
    * @return The ttl.
    */
   @java.lang.Deprecated long getTtl();
@@ -155,14 +155,14 @@ public interface ContactManagerSinkOrBuilder extends
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2522
+   *     See api/v0alpha/lms.proto;l=2498
    * @return The userId.
    */
   @java.lang.Deprecated java.lang.String getUserId();
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2522
+   *     See api/v0alpha/lms.proto;l=2498
    * @return The bytes for userId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
