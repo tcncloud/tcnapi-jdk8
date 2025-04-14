@@ -29,7 +29,7 @@ private static final long serialVersionUID = 0L;
     channelTypes_ = java.util.Collections.emptyList();
     orderBy_ = "";
     pageToken_ = "";
-    status_ = java.util.Collections.emptyList();
+    statuses_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -547,11 +547,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STATUS_FIELD_NUMBER = 18;
+  public static final int STATUSES_FIELD_NUMBER = 18;
   @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> status_;
+  private java.util.List<java.lang.Integer> statuses_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState> status_converter_ =
+      java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState> statuses_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>() {
             public com.tcn.cloud.api.api.commons.EvaluationState convert(java.lang.Integer from) {
@@ -564,66 +564,66 @@ private static final long serialVersionUID = 0L;
    * Optional. Filter by status.
    * </pre>
    *
-   * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-   * @return A list containing the status.
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return A list containing the statuses.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusesList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(status_, status_converter_);
+        java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(statuses_, statuses_converter_);
   }
   /**
    * <pre>
    * Optional. Filter by status.
    * </pre>
    *
-   * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-   * @return The count of status.
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return The count of statuses.
    */
   @java.lang.Override
-  public int getStatusCount() {
-    return status_.size();
+  public int getStatusesCount() {
+    return statuses_.size();
   }
   /**
    * <pre>
    * Optional. Filter by status.
    * </pre>
    *
-   * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
    * @param index The index of the element to return.
-   * @return The status at the given index.
+   * @return The statuses at the given index.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.EvaluationState getStatus(int index) {
-    return status_converter_.convert(status_.get(index));
+  public com.tcn.cloud.api.api.commons.EvaluationState getStatuses(int index) {
+    return statuses_converter_.convert(statuses_.get(index));
   }
   /**
    * <pre>
    * Optional. Filter by status.
    * </pre>
    *
-   * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-   * @return A list containing the enum numeric values on the wire for status.
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return A list containing the enum numeric values on the wire for statuses.
    */
   @java.lang.Override
   public java.util.List<java.lang.Integer>
-  getStatusValueList() {
-    return status_;
+  getStatusesValueList() {
+    return statuses_;
   }
   /**
    * <pre>
    * Optional. Filter by status.
    * </pre>
    *
-   * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
    * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of status at the given index.
+   * @return The enum numeric value on the wire of statuses at the given index.
    */
   @java.lang.Override
-  public int getStatusValue(int index) {
-    return status_.get(index);
+  public int getStatusesValue(int index) {
+    return statuses_.get(index);
   }
-  private int statusMemoizedSerializedSize;
+  private int statusesMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -685,12 +685,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pageToken_);
     }
-    if (getStatusList().size() > 0) {
+    if (getStatusesList().size() > 0) {
       output.writeUInt32NoTag(146);
-      output.writeUInt32NoTag(statusMemoizedSerializedSize);
+      output.writeUInt32NoTag(statusesMemoizedSerializedSize);
     }
-    for (int i = 0; i < status_.size(); i++) {
-      output.writeEnumNoTag(status_.get(i));
+    for (int i = 0; i < statuses_.size(); i++) {
+      output.writeEnumNoTag(statuses_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -781,15 +781,15 @@ private static final long serialVersionUID = 0L;
     }
     {
       int dataSize = 0;
-      for (int i = 0; i < status_.size(); i++) {
+      for (int i = 0; i < statuses_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(status_.get(i));
+          .computeEnumSizeNoTag(statuses_.get(i));
       }
       size += dataSize;
-      if (!getStatusList().isEmpty()) {  size += 2;
+      if (!getStatusesList().isEmpty()) {  size += 2;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32SizeNoTag(dataSize);
-      }statusMemoizedSerializedSize = dataSize;
+      }statusesMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
         != other.getPageSize()) return false;
     if (!getPageToken()
         .equals(other.getPageToken())) return false;
-    if (!status_.equals(other.status_)) return false;
+    if (!statuses_.equals(other.statuses_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -882,9 +882,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
-    if (getStatusCount() > 0) {
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_.hashCode();
+    if (getStatusesCount() > 0) {
+      hash = (37 * hash) + STATUSES_FIELD_NUMBER;
+      hash = (53 * hash) + statuses_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
       orderBy_ = "";
       pageSize_ = 0;
       pageToken_ = "";
-      status_ = java.util.Collections.emptyList();
+      statuses_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
@@ -1094,10 +1094,10 @@ private static final long serialVersionUID = 0L;
       }
       result.channelTypes_ = channelTypes_;
       if (((bitField0_ & 0x00000800) != 0)) {
-        status_ = java.util.Collections.unmodifiableList(status_);
+        statuses_ = java.util.Collections.unmodifiableList(statuses_);
         bitField0_ = (bitField0_ & ~0x00000800);
       }
-      result.status_ = status_;
+      result.statuses_ = statuses_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest result) {
@@ -1250,13 +1250,13 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (!other.status_.isEmpty()) {
-        if (status_.isEmpty()) {
-          status_ = other.status_;
+      if (!other.statuses_.isEmpty()) {
+        if (statuses_.isEmpty()) {
+          statuses_ = other.statuses_;
           bitField0_ = (bitField0_ & ~0x00000800);
         } else {
-          ensureStatusIsMutable();
-          status_.addAll(other.status_);
+          ensureStatusesIsMutable();
+          statuses_.addAll(other.statuses_);
         }
         onChanged();
       }
@@ -1383,8 +1383,8 @@ private static final long serialVersionUID = 0L;
             } // case 138
             case 144: {
               int tmpRaw = input.readEnum();
-              ensureStatusIsMutable();
-              status_.add(tmpRaw);
+              ensureStatusesIsMutable();
+              statuses_.add(tmpRaw);
               break;
             } // case 144
             case 146: {
@@ -1392,8 +1392,8 @@ private static final long serialVersionUID = 0L;
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int tmpRaw = input.readEnum();
-                ensureStatusIsMutable();
-                status_.add(tmpRaw);
+                ensureStatusesIsMutable();
+                statuses_.add(tmpRaw);
               }
               input.popLimit(oldLimit);
               break;
@@ -2783,11 +2783,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<java.lang.Integer> status_ =
+    private java.util.List<java.lang.Integer> statuses_ =
       java.util.Collections.emptyList();
-    private void ensureStatusIsMutable() {
+    private void ensureStatusesIsMutable() {
       if (!((bitField0_ & 0x00000800) != 0)) {
-        status_ = new java.util.ArrayList<java.lang.Integer>(status_);
+        statuses_ = new java.util.ArrayList<java.lang.Integer>(statuses_);
         bitField0_ |= 0x00000800;
       }
     }
@@ -2796,53 +2796,53 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @return A list containing the status.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @return A list containing the statuses.
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusesList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(status_, status_converter_);
+          java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(statuses_, statuses_converter_);
     }
     /**
      * <pre>
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @return The count of status.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @return The count of statuses.
      */
-    public int getStatusCount() {
-      return status_.size();
+    public int getStatusesCount() {
+      return statuses_.size();
     }
     /**
      * <pre>
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
      * @param index The index of the element to return.
-     * @return The status at the given index.
+     * @return The statuses at the given index.
      */
-    public com.tcn.cloud.api.api.commons.EvaluationState getStatus(int index) {
-      return status_converter_.convert(status_.get(index));
+    public com.tcn.cloud.api.api.commons.EvaluationState getStatuses(int index) {
+      return statuses_converter_.convert(statuses_.get(index));
     }
     /**
      * <pre>
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
      * @param index The index to set the value at.
-     * @param value The status to set.
+     * @param value The statuses to set.
      * @return This builder for chaining.
      */
-    public Builder setStatus(
+    public Builder setStatuses(
         int index, com.tcn.cloud.api.api.commons.EvaluationState value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureStatusIsMutable();
-      status_.set(index, value.getNumber());
+      ensureStatusesIsMutable();
+      statuses_.set(index, value.getNumber());
       onChanged();
       return this;
     }
@@ -2851,16 +2851,16 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @param value The status to add.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @param value The statuses to add.
      * @return This builder for chaining.
      */
-    public Builder addStatus(com.tcn.cloud.api.api.commons.EvaluationState value) {
+    public Builder addStatuses(com.tcn.cloud.api.api.commons.EvaluationState value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureStatusIsMutable();
-      status_.add(value.getNumber());
+      ensureStatusesIsMutable();
+      statuses_.add(value.getNumber());
       onChanged();
       return this;
     }
@@ -2869,15 +2869,15 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @param values The status to add.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @param values The statuses to add.
      * @return This builder for chaining.
      */
-    public Builder addAllStatus(
+    public Builder addAllStatuses(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.EvaluationState> values) {
-      ensureStatusIsMutable();
+      ensureStatusesIsMutable();
       for (com.tcn.cloud.api.api.commons.EvaluationState value : values) {
-        status_.add(value.getNumber());
+        statuses_.add(value.getNumber());
       }
       onChanged();
       return this;
@@ -2887,11 +2887,11 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearStatus() {
-      status_ = java.util.Collections.emptyList();
+    public Builder clearStatuses() {
+      statuses_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
@@ -2901,39 +2901,39 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @return A list containing the enum numeric values on the wire for status.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @return A list containing the enum numeric values on the wire for statuses.
      */
     public java.util.List<java.lang.Integer>
-    getStatusValueList() {
-      return java.util.Collections.unmodifiableList(status_);
+    getStatusesValueList() {
+      return java.util.Collections.unmodifiableList(statuses_);
     }
     /**
      * <pre>
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
      * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of status at the given index.
+     * @return The enum numeric value on the wire of statuses at the given index.
      */
-    public int getStatusValue(int index) {
-      return status_.get(index);
+    public int getStatusesValue(int index) {
+      return statuses_.get(index);
     }
     /**
      * <pre>
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
      * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for status to set.
+     * @param value The enum numeric value on the wire for statuses to set.
      * @return This builder for chaining.
      */
-    public Builder setStatusValue(
+    public Builder setStatusesValue(
         int index, int value) {
-      ensureStatusIsMutable();
-      status_.set(index, value);
+      ensureStatusesIsMutable();
+      statuses_.set(index, value);
       onChanged();
       return this;
     }
@@ -2942,13 +2942,13 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @param value The enum numeric value on the wire for status to add.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @param value The enum numeric value on the wire for statuses to add.
      * @return This builder for chaining.
      */
-    public Builder addStatusValue(int value) {
-      ensureStatusIsMutable();
-      status_.add(value);
+    public Builder addStatusesValue(int value) {
+      ensureStatusesIsMutable();
+      statuses_.add(value);
       onChanged();
       return this;
     }
@@ -2957,15 +2957,15 @@ private static final long serialVersionUID = 0L;
      * Optional. Filter by status.
      * </pre>
      *
-     * <code>repeated .api.commons.EvaluationState status = 18 [json_name = "status"];</code>
-     * @param values The enum numeric values on the wire for status to add.
+     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+     * @param values The enum numeric values on the wire for statuses to add.
      * @return This builder for chaining.
      */
-    public Builder addAllStatusValue(
+    public Builder addAllStatusesValue(
         java.lang.Iterable<java.lang.Integer> values) {
-      ensureStatusIsMutable();
+      ensureStatusesIsMutable();
       for (int value : values) {
-        status_.add(value);
+        statuses_.add(value);
       }
       onChanged();
       return this;
