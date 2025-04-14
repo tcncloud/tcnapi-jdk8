@@ -204,6 +204,31 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_OrgIntegrationSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_OrgIntegrationSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsRes_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -388,54 +413,76 @@ public final class ServiceProto {
       "t_due\030\002 \001(\0132\022.google.type.MoneyR\016totalAm" +
       "ountDue\032U\n\023CalculatedFeesEntry\022\020\n\003key\030\001 " +
       "\001(\tR\003key\022(\n\005value\030\002 \001(\0132\022.google.type.Mo" +
-      "neyR\005value:\0028\0012\353\014\n\022IntegrationsPublic\022\250\001" +
-      "\n\013GetLinkData\022/.api.v1alpha1.integration" +
-      "spublic.GetLinkDataReq\032/.api.v1alpha1.in" +
-      "tegrationspublic.GetLinkDataRes\"7\202\323\344\223\0021\"" +
-      ",/api/v1alpha1/integrationspublic/getlin" +
-      "kdata:\001*\022\304\001\n\022SubmitVerification\0226.api.v1" +
-      "alpha1.integrationspublic.SubmitVerifica" +
-      "tionReq\0326.api.v1alpha1.integrationspubli" +
-      "c.SubmitVerificationRes\">\202\323\344\223\0028\"3/api/v1" +
-      "alpha1/integrationspublic/submitverifica" +
-      "tion:\001*\022\274\001\n\020SessionKeepAlive\0224.api.v1alp" +
-      "ha1.integrationspublic.SessionKeepAliveR" +
-      "eq\0324.api.v1alpha1.integrationspublic.Ses" +
-      "sionKeepAliveRes\"<\202\323\344\223\0026\"1/api/v1alpha1/" +
-      "integrationspublic/sessionkeepalive:\001*\022\244" +
-      "\001\n\nGetInvoice\022..api.v1alpha1.integration" +
-      "spublic.GetInvoiceReq\032..api.v1alpha1.int" +
-      "egrationspublic.GetInvoiceRes\"6\202\323\344\223\0020\"+/" +
-      "api/v1alpha1/integrationspublic/getinvoi" +
-      "ce:\001*\022\260\001\n\rSubmitPayment\0221.api.v1alpha1.i" +
-      "ntegrationspublic.SubmitPaymentReq\0321.api" +
-      ".v1alpha1.integrationspublic.SubmitPayme" +
-      "ntRes\"9\202\323\344\223\0023\"./api/v1alpha1/integration" +
-      "spublic/submitpayment:\001*\022\244\001\n\nGetReceipt\022" +
-      "..api.v1alpha1.integrationspublic.GetRec" +
-      "eiptReq\032..api.v1alpha1.integrationspubli" +
-      "c.GetReceiptRes\"6\202\323\344\223\0020\"+/api/v1alpha1/i" +
-      "ntegrationspublic/getreceipt:\001*\022\270\001\n\017Proc" +
-      "essWorkflow\0223.api.v1alpha1.integrationsp" +
-      "ublic.ProcessWorkflowReq\0323.api.v1alpha1." +
-      "integrationspublic.ProcessWorkflowRes\";\202" +
-      "\323\344\223\0025\"0/api/v1alpha1/integrationspublic/" +
-      "processworkflow:\001*\022\264\001\n\016GetLinkDetails\0222." +
-      "api.v1alpha1.integrationspublic.GetLinkD" +
-      "etailsReq\0322.api.v1alpha1.integrationspub" +
-      "lic.GetLinkDetailsRes\":\202\323\344\223\0024\"//api/v1al" +
-      "pha1/integrationspublic/getlinkdetails:\001" +
-      "*\022\260\001\n\rCalculateFees\0221.api.v1alpha1.integ" +
-      "rationspublic.CalculateFeesReq\0321.api.v1a" +
-      "lpha1.integrationspublic.CalculateFeesRe" +
-      "s\"9\202\323\344\223\0023\"./api/v1alpha1/integrationspub" +
-      "lic/calculatefees:\001*B\337\001\n1com.tcn.cloud.a" +
-      "pi.api.v1alpha1.integrationspublicB\014Serv" +
-      "iceProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integrat" +
-      "ionspublic\312\002\037Api\\V1alpha1\\Integrationspu" +
-      "blic\342\002+Api\\V1alpha1\\Integrationspublic\\G" +
-      "PBMetadata\352\002!Api::V1alpha1::Integrations" +
-      "publicb\006proto3"
+      "neyR\005value:\0028\001\"v\n\026OrgIntegrationSettings" +
+      "\022\\\n\024allowed_integrations\030\001 \003(\0162).api.com" +
+      "mons.integrations.IntegrationTypeR\023allow" +
+      "edIntegrations\"\036\n\034GetOrgIntegrationSetti" +
+      "ngsReq\"|\n\034GetOrgIntegrationSettingsRes\022\\" +
+      "\n\024allowed_integrations\030\001 \003(\0162).api.commo" +
+      "ns.integrations.IntegrationTypeR\023allowed" +
+      "Integrations\"r\n\037UpsertOrgIntegrationSett" +
+      "ingsReq\022O\n\006entity\030\001 \001(\01327.api.v1alpha1.i" +
+      "ntegrationspublic.OrgIntegrationSettings" +
+      "R\006entity\"!\n\037UpsertOrgIntegrationSettings" +
+      "Res2\275\020\n\022IntegrationsPublic\022\250\001\n\013GetLinkDa" +
+      "ta\022/.api.v1alpha1.integrationspublic.Get" +
+      "LinkDataReq\032/.api.v1alpha1.integrationsp" +
+      "ublic.GetLinkDataRes\"7\202\323\344\223\0021\",/api/v1alp" +
+      "ha1/integrationspublic/getlinkdata:\001*\022\304\001" +
+      "\n\022SubmitVerification\0226.api.v1alpha1.inte" +
+      "grationspublic.SubmitVerificationReq\0326.a" +
+      "pi.v1alpha1.integrationspublic.SubmitVer" +
+      "ificationRes\">\202\323\344\223\0028\"3/api/v1alpha1/inte" +
+      "grationspublic/submitverification:\001*\022\274\001\n" +
+      "\020SessionKeepAlive\0224.api.v1alpha1.integra" +
+      "tionspublic.SessionKeepAliveReq\0324.api.v1" +
+      "alpha1.integrationspublic.SessionKeepAli" +
+      "veRes\"<\202\323\344\223\0026\"1/api/v1alpha1/integration" +
+      "spublic/sessionkeepalive:\001*\022\244\001\n\nGetInvoi" +
+      "ce\022..api.v1alpha1.integrationspublic.Get" +
+      "InvoiceReq\032..api.v1alpha1.integrationspu" +
+      "blic.GetInvoiceRes\"6\202\323\344\223\0020\"+/api/v1alpha" +
+      "1/integrationspublic/getinvoice:\001*\022\260\001\n\rS" +
+      "ubmitPayment\0221.api.v1alpha1.integrations" +
+      "public.SubmitPaymentReq\0321.api.v1alpha1.i" +
+      "ntegrationspublic.SubmitPaymentRes\"9\202\323\344\223" +
+      "\0023\"./api/v1alpha1/integrationspublic/sub" +
+      "mitpayment:\001*\022\244\001\n\nGetReceipt\022..api.v1alp" +
+      "ha1.integrationspublic.GetReceiptReq\032..a" +
+      "pi.v1alpha1.integrationspublic.GetReceip" +
+      "tRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integrations" +
+      "public/getreceipt:\001*\022\270\001\n\017ProcessWorkflow" +
+      "\0223.api.v1alpha1.integrationspublic.Proce" +
+      "ssWorkflowReq\0323.api.v1alpha1.integration" +
+      "spublic.ProcessWorkflowRes\";\202\323\344\223\0025\"0/api" +
+      "/v1alpha1/integrationspublic/processwork" +
+      "flow:\001*\022\264\001\n\016GetLinkDetails\0222.api.v1alpha" +
+      "1.integrationspublic.GetLinkDetailsReq\0322" +
+      ".api.v1alpha1.integrationspublic.GetLink" +
+      "DetailsRes\":\202\323\344\223\0024\"//api/v1alpha1/integr" +
+      "ationspublic/getlinkdetails:\001*\022\260\001\n\rCalcu" +
+      "lateFees\0221.api.v1alpha1.integrationspubl" +
+      "ic.CalculateFeesReq\0321.api.v1alpha1.integ" +
+      "rationspublic.CalculateFeesRes\"9\202\323\344\223\0023\"." +
+      "/api/v1alpha1/integrationspublic/calcula" +
+      "tefees:\001*\022\340\001\n\031GetOrgIntegrationSettings\022" +
+      "=.api.v1alpha1.integrationspublic.GetOrg" +
+      "IntegrationSettingsReq\032=.api.v1alpha1.in" +
+      "tegrationspublic.GetOrgIntegrationSettin" +
+      "gsRes\"E\202\323\344\223\002?\":/api/v1alpha1/integration" +
+      "spublic/getorgintegrationsettings:\001*\022\354\001\n" +
+      "\034UpsertOrgIntegrationSettings\022@.api.v1al" +
+      "pha1.integrationspublic.UpsertOrgIntegra" +
+      "tionSettingsReq\032@.api.v1alpha1.integrati" +
+      "onspublic.UpsertOrgIntegrationSettingsRe" +
+      "s\"H\202\323\344\223\002B\"=/api/v1alpha1/integrationspub" +
+      "lic/upsertorgintegrationsettings:\001*B\337\001\n1" +
+      "com.tcn.cloud.api.api.v1alpha1.integrati" +
+      "onspublicB\014ServiceProtoP\001\242\002\003AVI\252\002\037Api.V1" +
+      "alpha1.Integrationspublic\312\002\037Api\\V1alpha1" +
+      "\\Integrationspublic\342\002+Api\\V1alpha1\\Integ" +
+      "rationspublic\\GPBMetadata\352\002!Api::V1alpha" +
+      "1::Integrationspublicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -676,6 +723,36 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_CalculatedFeesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_integrationspublic_OrgIntegrationSettings_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_v1alpha1_integrationspublic_OrgIntegrationSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_OrgIntegrationSettings_descriptor,
+        new java.lang.String[] { "AllowedIntegrations", });
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsRes_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsRes_descriptor,
+        new java.lang.String[] { "AllowedIntegrations", });
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsReq_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsReq_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsRes_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_UpsertOrgIntegrationSettingsRes_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
