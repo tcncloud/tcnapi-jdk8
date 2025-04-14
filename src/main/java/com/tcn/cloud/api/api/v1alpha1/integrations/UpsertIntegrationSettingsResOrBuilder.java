@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
-public interface UpsertOrgIntegrationSettingsResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.UpsertOrgIntegrationSettingsRes)
+public interface UpsertIntegrationSettingsResOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrations.UpsertIntegrationSettingsRes)
     com.google.protobuf.MessageOrBuilder {
 }

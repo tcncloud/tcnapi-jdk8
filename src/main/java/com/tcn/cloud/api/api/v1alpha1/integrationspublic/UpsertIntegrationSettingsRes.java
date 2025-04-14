@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.v1alpha1.integrationspublic;
 
 /**
- * Protobuf type {@code api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq}
+ * Protobuf type {@code api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes}
  */
-public final class GetOrgIntegrationSettingsReq extends
+public final class UpsertIntegrationSettingsRes extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)
-    GetOrgIntegrationSettingsReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)
+    UpsertIntegrationSettingsResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetOrgIntegrationSettingsReq.newBuilder() to construct.
-  private GetOrgIntegrationSettingsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpsertIntegrationSettingsRes.newBuilder() to construct.
+  private UpsertIntegrationSettingsRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetOrgIntegrationSettingsReq() {
+  private UpsertIntegrationSettingsRes() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetOrgIntegrationSettingsReq();
+    return new UpsertIntegrationSettingsRes();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_UpsertIntegrationSettingsRes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_UpsertIntegrationSettingsRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq other = (com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes other = (com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq}
+   * Protobuf type {@code api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_UpsertIntegrationSettingsRes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_UpsertIntegrationSettingsRes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_GetOrgIntegrationSettingsReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_UpsertIntegrationSettingsRes_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq build() {
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes build() {
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq result = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes result = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes)
+  private static final com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetOrgIntegrationSettingsReq>
-      PARSER = new com.google.protobuf.AbstractParser<GetOrgIntegrationSettingsReq>() {
+  private static final com.google.protobuf.Parser<UpsertIntegrationSettingsRes>
+      PARSER = new com.google.protobuf.AbstractParser<UpsertIntegrationSettingsRes>() {
     @java.lang.Override
-    public GetOrgIntegrationSettingsReq parsePartialFrom(
+    public UpsertIntegrationSettingsRes parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetOrgIntegrationSettingsReq> parser() {
+  public static com.google.protobuf.Parser<UpsertIntegrationSettingsRes> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetOrgIntegrationSettingsReq> getParserForType() {
+  public com.google.protobuf.Parser<UpsertIntegrationSettingsRes> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

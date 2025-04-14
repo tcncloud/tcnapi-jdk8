@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.integrationspublic;
 
-public interface GetOrgIntegrationSettingsReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrationspublic.GetOrgIntegrationSettingsReq)
+public interface GetIntegrationSettingsReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.integrationspublic.GetIntegrationSettingsReq)
     com.google.protobuf.MessageOrBuilder {
 }
