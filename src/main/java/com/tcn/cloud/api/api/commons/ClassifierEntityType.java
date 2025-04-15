@@ -92,6 +92,10 @@ public enum ClassifierEntityType
    * <code>CET_ACCOUNT_NUMBER = 19;</code>
    */
   CET_ACCOUNT_NUMBER(19),
+  /**
+   * <code>CET_CURRENCY = 20;</code>
+   */
+  CET_CURRENCY(20),
   UNRECOGNIZED(-1),
   ;
 
@@ -175,6 +179,10 @@ public enum ClassifierEntityType
    * <code>CET_ACCOUNT_NUMBER = 19;</code>
    */
   public static final int CET_ACCOUNT_NUMBER_VALUE = 19;
+  /**
+   * <code>CET_CURRENCY = 20;</code>
+   */
+  public static final int CET_CURRENCY_VALUE = 20;
 
 
   public final int getNumber() {
@@ -221,6 +229,7 @@ public enum ClassifierEntityType
       case 17: return CET_US_SSN;
       case 18: return CET_POSTAL_CODE;
       case 19: return CET_ACCOUNT_NUMBER;
+      case 20: return CET_CURRENCY;
       default: return null;
     }
   }

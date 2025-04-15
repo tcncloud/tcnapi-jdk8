@@ -1124,6 +1124,21 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DateTimeModifier datetime = 45 [json_name = "datetime"];</code>
      */
     com.tcn.cloud.api.api.v0alpha.DateTimeModifierOrBuilder getDatetimeOrBuilder();
+
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     * @return Whether the datetimeFieldModifier field is set.
+     */
+    boolean hasDatetimeFieldModifier();
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     * @return The datetimeFieldModifier.
+     */
+    com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier getDatetimeFieldModifier();
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     */
+    com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder getDatetimeFieldModifierOrBuilder();
   }
   /**
    * <pre>
@@ -1190,6 +1205,32 @@ private static final long serialVersionUID = 0L;
       return datetime_ == null ? com.tcn.cloud.api.api.v0alpha.DateTimeModifier.getDefaultInstance() : datetime_;
     }
 
+    public static final int DATETIME_FIELD_MODIFIER_FIELD_NUMBER = 46;
+    private com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier datetimeFieldModifier_;
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     * @return Whether the datetimeFieldModifier field is set.
+     */
+    @java.lang.Override
+    public boolean hasDatetimeFieldModifier() {
+      return datetimeFieldModifier_ != null;
+    }
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     * @return The datetimeFieldModifier.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier getDatetimeFieldModifier() {
+      return datetimeFieldModifier_ == null ? com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.getDefaultInstance() : datetimeFieldModifier_;
+    }
+    /**
+     * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder getDatetimeFieldModifierOrBuilder() {
+      return datetimeFieldModifier_ == null ? com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.getDefaultInstance() : datetimeFieldModifier_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1207,6 +1248,9 @@ private static final long serialVersionUID = 0L;
       if (datetime_ != null) {
         output.writeMessage(45, getDatetime());
       }
+      if (datetimeFieldModifier_ != null) {
+        output.writeMessage(46, getDatetimeFieldModifier());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1219,6 +1263,10 @@ private static final long serialVersionUID = 0L;
       if (datetime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(45, getDatetime());
+      }
+      if (datetimeFieldModifier_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(46, getDatetimeFieldModifier());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1240,6 +1288,11 @@ private static final long serialVersionUID = 0L;
         if (!getDatetime()
             .equals(other.getDatetime())) return false;
       }
+      if (hasDatetimeFieldModifier() != other.hasDatetimeFieldModifier()) return false;
+      if (hasDatetimeFieldModifier()) {
+        if (!getDatetimeFieldModifier()
+            .equals(other.getDatetimeFieldModifier())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1254,6 +1307,10 @@ private static final long serialVersionUID = 0L;
       if (hasDatetime()) {
         hash = (37 * hash) + DATETIME_FIELD_NUMBER;
         hash = (53 * hash) + getDatetime().hashCode();
+      }
+      if (hasDatetimeFieldModifier()) {
+        hash = (37 * hash) + DATETIME_FIELD_MODIFIER_FIELD_NUMBER;
+        hash = (53 * hash) + getDatetimeFieldModifier().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1395,6 +1452,11 @@ private static final long serialVersionUID = 0L;
           datetimeBuilder_.dispose();
           datetimeBuilder_ = null;
         }
+        datetimeFieldModifier_ = null;
+        if (datetimeFieldModifierBuilder_ != null) {
+          datetimeFieldModifierBuilder_.dispose();
+          datetimeFieldModifierBuilder_ = null;
+        }
         return this;
       }
 
@@ -1432,6 +1494,11 @@ private static final long serialVersionUID = 0L;
           result.datetime_ = datetimeBuilder_ == null
               ? datetime_
               : datetimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.datetimeFieldModifier_ = datetimeFieldModifierBuilder_ == null
+              ? datetimeFieldModifier_
+              : datetimeFieldModifierBuilder_.build();
         }
       }
 
@@ -1482,6 +1549,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasDatetime()) {
           mergeDatetime(other.getDatetime());
         }
+        if (other.hasDatetimeFieldModifier()) {
+          mergeDatetimeFieldModifier(other.getDatetimeFieldModifier());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1515,6 +1585,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 362
+              case 370: {
+                input.readMessage(
+                    getDatetimeFieldModifierFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 370
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1649,6 +1726,125 @@ private static final long serialVersionUID = 0L;
           datetime_ = null;
         }
         return datetimeBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier datetimeFieldModifier_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.Builder, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder> datetimeFieldModifierBuilder_;
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       * @return Whether the datetimeFieldModifier field is set.
+       */
+      public boolean hasDatetimeFieldModifier() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       * @return The datetimeFieldModifier.
+       */
+      public com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier getDatetimeFieldModifier() {
+        if (datetimeFieldModifierBuilder_ == null) {
+          return datetimeFieldModifier_ == null ? com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.getDefaultInstance() : datetimeFieldModifier_;
+        } else {
+          return datetimeFieldModifierBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public Builder setDatetimeFieldModifier(com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier value) {
+        if (datetimeFieldModifierBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          datetimeFieldModifier_ = value;
+        } else {
+          datetimeFieldModifierBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public Builder setDatetimeFieldModifier(
+          com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.Builder builderForValue) {
+        if (datetimeFieldModifierBuilder_ == null) {
+          datetimeFieldModifier_ = builderForValue.build();
+        } else {
+          datetimeFieldModifierBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public Builder mergeDatetimeFieldModifier(com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier value) {
+        if (datetimeFieldModifierBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            datetimeFieldModifier_ != null &&
+            datetimeFieldModifier_ != com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.getDefaultInstance()) {
+            getDatetimeFieldModifierBuilder().mergeFrom(value);
+          } else {
+            datetimeFieldModifier_ = value;
+          }
+        } else {
+          datetimeFieldModifierBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public Builder clearDatetimeFieldModifier() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        datetimeFieldModifier_ = null;
+        if (datetimeFieldModifierBuilder_ != null) {
+          datetimeFieldModifierBuilder_.dispose();
+          datetimeFieldModifierBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.Builder getDatetimeFieldModifierBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDatetimeFieldModifierFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder getDatetimeFieldModifierOrBuilder() {
+        if (datetimeFieldModifierBuilder_ != null) {
+          return datetimeFieldModifierBuilder_.getMessageOrBuilder();
+        } else {
+          return datetimeFieldModifier_ == null ?
+              com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.getDefaultInstance() : datetimeFieldModifier_;
+        }
+      }
+      /**
+       * <code>.api.v0alpha.DateTimeFieldModifier datetime_field_modifier = 46 [json_name = "datetimeFieldModifier"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.Builder, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder> 
+          getDatetimeFieldModifierFieldBuilder() {
+        if (datetimeFieldModifierBuilder_ == null) {
+          datetimeFieldModifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifier.Builder, com.tcn.cloud.api.api.v0alpha.DateTimeFieldModifierOrBuilder>(
+                  getDatetimeFieldModifier(),
+                  getParentForChildren(),
+                  isClean());
+          datetimeFieldModifier_ = null;
+        }
+        return datetimeFieldModifierBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3447,14 +3643,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-     *     See api/v0alpha/lms.proto;l=2324
+     *     See api/v0alpha/lms.proto;l=2341
      * @return The enum numeric value on the wire for newType.
      */
     @java.lang.Deprecated int getNewTypeValue();
     /**
      * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-     *     See api/v0alpha/lms.proto;l=2324
+     *     See api/v0alpha/lms.proto;l=2341
      * @return The newType.
      */
     @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getNewType();
@@ -3535,7 +3731,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-     *     See api/v0alpha/lms.proto;l=2324
+     *     See api/v0alpha/lms.proto;l=2341
      * @return The enum numeric value on the wire for newType.
      */
     @java.lang.Override @java.lang.Deprecated public int getNewTypeValue() {
@@ -3544,7 +3740,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-     *     See api/v0alpha/lms.proto;l=2324
+     *     See api/v0alpha/lms.proto;l=2341
      * @return The newType.
      */
     @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getNewType() {
@@ -4009,7 +4205,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
        * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-       *     See api/v0alpha/lms.proto;l=2324
+       *     See api/v0alpha/lms.proto;l=2341
        * @return The enum numeric value on the wire for newType.
        */
       @java.lang.Override @java.lang.Deprecated public int getNewTypeValue() {
@@ -4018,7 +4214,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
        * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-       *     See api/v0alpha/lms.proto;l=2324
+       *     See api/v0alpha/lms.proto;l=2341
        * @param value The enum numeric value on the wire for newType to set.
        * @return This builder for chaining.
        */
@@ -4031,7 +4227,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
        * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-       *     See api/v0alpha/lms.proto;l=2324
+       *     See api/v0alpha/lms.proto;l=2341
        * @return The newType.
        */
       @java.lang.Override
@@ -4042,7 +4238,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
        * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-       *     See api/v0alpha/lms.proto;l=2324
+       *     See api/v0alpha/lms.proto;l=2341
        * @param value The newType to set.
        * @return This builder for chaining.
        */
@@ -4058,7 +4254,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
        * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
-       *     See api/v0alpha/lms.proto;l=2324
+       *     See api/v0alpha/lms.proto;l=2341
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearNewType() {
@@ -17105,7 +17301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2456
+   *     See api/v0alpha/lms.proto;l=2473
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -17118,7 +17314,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2456
+   *     See api/v0alpha/lms.proto;l=2473
    * @return The matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getMatchingType() {
@@ -17131,7 +17327,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-   *     See api/v0alpha/lms.proto;l=2457
+   *     See api/v0alpha/lms.proto;l=2474
    * @return Whether the predicate field is set.
    */
   @java.lang.Override
@@ -17141,7 +17337,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-   *     See api/v0alpha/lms.proto;l=2457
+   *     See api/v0alpha/lms.proto;l=2474
    * @return The predicate.
    */
   @java.lang.Override
@@ -19019,7 +19215,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2456
+     *     See api/v0alpha/lms.proto;l=2473
      * @return The enum numeric value on the wire for matchingType.
      */
     @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -19032,7 +19228,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2456
+     *     See api/v0alpha/lms.proto;l=2473
      * @param value The enum numeric value on the wire for matchingType to set.
      * @return This builder for chaining.
      */
@@ -19049,7 +19245,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2456
+     *     See api/v0alpha/lms.proto;l=2473
      * @return The matchingType.
      */
     @java.lang.Override
@@ -19064,7 +19260,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2456
+     *     See api/v0alpha/lms.proto;l=2473
      * @param value The matchingType to set.
      * @return This builder for chaining.
      */
@@ -19084,7 +19280,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2456
+     *     See api/v0alpha/lms.proto;l=2473
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMatchingType() {
@@ -19100,7 +19296,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-     *     See api/v0alpha/lms.proto;l=2457
+     *     See api/v0alpha/lms.proto;l=2474
      * @return Whether the predicate field is set.
      */
     @java.lang.Deprecated public boolean hasPredicate() {
@@ -19109,7 +19305,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.predicate is deprecated.
-     *     See api/v0alpha/lms.proto;l=2457
+     *     See api/v0alpha/lms.proto;l=2474
      * @return The predicate.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.FilterCheck getPredicate() {
