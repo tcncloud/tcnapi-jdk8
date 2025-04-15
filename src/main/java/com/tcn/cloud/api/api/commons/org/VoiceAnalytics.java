@@ -75,31 +75,31 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return Whether the redactEntity field is set.
      */
     boolean hasRedactEntity();
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return The enum numeric value on the wire for redactEntity.
      */
     int getRedactEntityValue();
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return The redactEntity.
      */
-    com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity();
+    com.tcn.cloud.api.api.commons.ClassifierEntityType getRedactEntity();
 
     com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Redact.WhereCase getWhereCase();
   }
@@ -226,10 +226,10 @@ private static final long serialVersionUID = 0L;
     public static final int REDACT_ENTITY_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return Whether the redactEntity field is set.
      */
     public boolean hasRedactEntity() {
@@ -237,10 +237,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return The enum numeric value on the wire for redactEntity.
      */
     public int getRedactEntityValue() {
@@ -251,19 +251,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Redact detected entity.
+     * Optional. Detected entity to redact.
      * </pre>
      *
-     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
      * @return The redactEntity.
      */
-    public com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity() {
+    public com.tcn.cloud.api.api.commons.ClassifierEntityType getRedactEntity() {
       if (whereCase_ == 2) {
-        com.tcn.cloud.api.api.commons.RedactEntity result = com.tcn.cloud.api.api.commons.RedactEntity.forNumber(
+        com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(
             (java.lang.Integer) where_);
-        return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
+        return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
       }
-      return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
+      return com.tcn.cloud.api.api.commons.ClassifierEntityType.CET_UNKNOWN;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -843,10 +843,10 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @return Whether the redactEntity field is set.
        */
       @java.lang.Override
@@ -855,10 +855,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @return The enum numeric value on the wire for redactEntity.
        */
       @java.lang.Override
@@ -870,10 +870,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @param value The enum numeric value on the wire for redactEntity to set.
        * @return This builder for chaining.
        */
@@ -885,31 +885,31 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @return The redactEntity.
        */
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity() {
+      public com.tcn.cloud.api.api.commons.ClassifierEntityType getRedactEntity() {
         if (whereCase_ == 2) {
-          com.tcn.cloud.api.api.commons.RedactEntity result = com.tcn.cloud.api.api.commons.RedactEntity.forNumber(
+          com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(
               (java.lang.Integer) where_);
-          return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
+          return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
         }
-        return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
+        return com.tcn.cloud.api.api.commons.ClassifierEntityType.CET_UNKNOWN;
       }
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @param value The redactEntity to set.
        * @return This builder for chaining.
        */
-      public Builder setRedactEntity(com.tcn.cloud.api.api.commons.RedactEntity value) {
+      public Builder setRedactEntity(com.tcn.cloud.api.api.commons.ClassifierEntityType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -920,10 +920,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entity.
+       * Optional. Detected entity to redact.
        * </pre>
        *
-       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * <code>.api.commons.ClassifierEntityType redact_entity = 2 [json_name = "redactEntity"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRedactEntity() {

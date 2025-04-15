@@ -309,11 +309,11 @@ public final class PreferencesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n!api/commons/org/preferences.proto\022\017api" +
-      ".commons.org\032\025api/commons/ana.proto\032\031api" +
-      "/commons/country.proto\032\027api/commons/enum" +
-      "s.proto\032\025api/commons/lms.proto\032\025api/comm" +
-      "ons/org.proto\032!api/commons/org_preferenc" +
-      "es.proto\032\034api/commons/vanalytics.proto\032\037" +
+      ".commons.org\032\025api/commons/ana.proto\032\034api" +
+      "/commons/classifier.proto\032\031api/commons/c" +
+      "ountry.proto\032\027api/commons/enums.proto\032\025a" +
+      "pi/commons/lms.proto\032\025api/commons/org.pr" +
+      "oto\032!api/commons/org_preferences.proto\032\037" +
       "google/protobuf/timestamp.proto\"\273\002\n\027Orga" +
       "nizationPreferences\022\025\n\006org_id\030\001 \001(\tR\005org" +
       "Id\022=\n\017default_country\030\n \001(\0162\024.api.common" +
@@ -558,158 +558,159 @@ public final class PreferencesProto {
       "erFormat\022*\n\021redact_all_digits\030\n \001(\010R\017red" +
       "actAllDigits\022+\n\021silence_threshold\030d \001(\rR" +
       "\020silenceThreshold\022/\n\023talk_over_threshold" +
-      "\030\310\001 \001(\rR\021talkOverThreshold\"\277\003\n\016VoiceAnal" +
-      "ytics\032\225\001\n\006Redact\022@\n\006number\030\001 \001(\0132&.api.c" +
+      "\030\310\001 \001(\rR\021talkOverThreshold\"\307\003\n\016VoiceAnal" +
+      "ytics\032\235\001\n\006Redact\022@\n\006number\030\001 \001(\0132&.api.c" +
       "ommons.org.VoiceAnalytics.NumberH\000R\006numb" +
-      "er\022@\n\rredact_entity\030\002 \001(\0162\031.api.commons." +
-      "RedactEntityH\000R\014redactEntityB\007\n\005where\032\366\001" +
-      "\n\006Number\022?\n\004kind\030\001 \001(\0162+.api.commons.org" +
-      ".VoiceAnalytics.Number.KindR\004kind\022\'\n\017min" +
-      "_consecutive\030\002 \001(\rR\016minConsecutive\022\'\n\017ma" +
-      "x_consecutive\030\003 \001(\rR\016maxConsecutive\022\022\n\004s" +
-      "lop\030\004 \001(\rR\004slop\"E\n\004Kind\022\035\n\031KIND_CARDINAL" +
-      "_UNSPECIFIED\020\000\022\020\n\014KIND_ORDINAL\020\001\022\014\n\010KIND" +
-      "_ANY\020\002\032\034\n\006Notify\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n" +
-      "\023EndOfDayPreferences\022\025\n\006org_id\030\001 \001(\tR\005or" +
-      "gId\022\035\n\neod_monday\030\n \001(\005R\teodMonday\022\037\n\013eo" +
-      "d_tuesday\030\013 \001(\005R\neodTuesday\022#\n\reod_wedne" +
-      "sday\030\014 \001(\005R\014eodWednesday\022!\n\014eod_thursday" +
-      "\030\r \001(\005R\013eodThursday\022\035\n\neod_friday\030\016 \001(\005R" +
-      "\teodFriday\022!\n\014eod_saturday\030\017 \001(\005R\013eodSat" +
-      "urday\022\035\n\neod_sunday\030\020 \001(\005R\teodSunday\"\352\002\n" +
-      "\021FilterPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\022Z\n\032default_auto_report_filter\030\n \001(\0132\035." +
-      "api.commons.org.ReportFilterR\027defaultAut" +
-      "oReportFilter\0225\n\027send_empty_auto_reports" +
-      "\030\013 \001(\010R\024sendEmptyAutoReports\022E\n\037display_" +
-      "broadcast_resend_filter\030\014 \001(\010R\034displayBr" +
-      "oadcastResendFilter\022d\n\037default_broadcast" +
-      "_resend_filter\030\r \001(\0132\035.api.commons.org.R" +
-      "eportFilterR\034defaultBroadcastResendFilte" +
-      "r\"s\n\014ReportFilter\022?\n\010standard\030\001 \001(\0162!.ap" +
-      "i.commons.StandardReportFilterH\000R\010standa" +
-      "rd\022\030\n\006custom\030\002 \001(\003H\000R\006customB\010\n\006choice\"\254" +
-      "\003\n\024RecordingPreferences\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\022-\n\022convention_enabled\030\n \001(\010R\021conv" +
-      "entionEnabled\022a\n\024file_name_convention\030\013 " +
-      "\001(\0132/.api.commons.org.RecordingsFileNami" +
-      "ngConventionR\022fileNameConvention\0224\n\026zip_" +
-      "convention_enabled\030\014 \001(\010R\024zipConventionE" +
-      "nabled\022k\n\030zip_file_name_convention\030\r \001(\013" +
-      "22.api.commons.org.RecordingsZipFileNami" +
-      "ngConventionR\025zipFileNameConvention\022H\n\020e" +
-      "xport_file_type\030\016 \001(\0162\036.api.commons.Reco" +
-      "rdingFileTypeR\016exportFileType\"\333\002\n\036Record" +
-      "ingsFileNamingConvention\0225\n\027xml_client_p" +
-      "roperty_sid\030\001 \001(\003R\024xmlClientPropertySid\022" +
-      "?\n\007inbound\030\002 \001(\0132%.api.commons.org.FileN" +
-      "amingConventionR\007inbound\022=\n\006manual\030\003 \001(\013" +
-      "2%.api.commons.org.FileNamingConventionR" +
-      "\006manual\022A\n\010outbound\030\004 \001(\0132%.api.commons." +
-      "org.FileNamingConventionR\010outbound\022?\n\007pr" +
-      "eview\030\005 \001(\0132%.api.commons.org.FileNaming" +
-      "ConventionR\007preview\"\340\002\n!RecordingsZipFil" +
-      "eNamingConvention\0225\n\027xml_client_property" +
-      "_sid\030\001 \001(\003R\024xmlClientPropertySid\022?\n\007inbo" +
-      "und\030\002 \001(\0132%.api.commons.org.FileNamingCo" +
-      "nventionR\007inbound\022=\n\006manual\030\003 \001(\0132%.api." +
-      "commons.org.FileNamingConventionR\006manual" +
-      "\022A\n\010outbound\030\004 \001(\0132%.api.commons.org.Fil" +
-      "eNamingConventionR\010outbound\022A\n\010combined\030" +
-      "\005 \001(\0132%.api.commons.org.FileNamingConven" +
-      "tionR\010combined\"T\n\024FileNamingConvention\022<" +
-      "\n\010segments\030\001 \003(\0132 .api.commons.org.FileN" +
-      "ameSegmentR\010segments\"}\n\017FileNameSegment\022" +
-      "!\n\014segment_type\030\001 \001(\tR\013segmentType\022%\n\016fo" +
-      "rmat_pattern\030\002 \001(\tR\rformatPattern\022 \n\014tim" +
-      "e_zone_id\030\003 \001(\tR\ntimeZoneId\"\342\003\n\026AdminCli" +
-      "entPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n" +
-      "\024use_reserved_carrier\030\n \001(\010R\022useReserved" +
-      "Carrier\022+\n\021reserved_carriers\030\013 \003(\tR\020rese" +
-      "rvedCarriers\022\033\n\temail_key\030\014 \001(\tR\010emailKe" +
-      "y\022\031\n\010email_id\030\r \001(\tR\007emailId\022\035\n\nemail_na" +
-      "me\030\016 \001(\tR\temailName\022#\n\rwhitelist_ips\030\017 \003" +
-      "(\tR\014whitelistIps\022+\n\021whitelist_domains\030\020 " +
-      "\003(\tR\020whitelistDomains\0220\n\024callbacks_servi" +
-      "ce_id\030\021 \001(\tR\022callbacksServiceId\0224\n\026agent" +
-      "_screen_recording\030\022 \001(\010R\024agentScreenReco" +
-      "rding\022A\n\021allowed_countries\030\023 \003(\0162\024.api.c" +
-      "ommons.CountryR\020allowedCountries\"\375\002\n\rBus" +
-      "inessHours\022\025\n\006org_id\030\001 \001(\tR\005orgId\022 \n\013des" +
-      "cription\030\004 \001(\tR\013description\022*\n\021business_" +
-      "hours_id\030\006 \001(\tR\017businessHoursId\022.\n\023busin" +
-      "ess_hours_name\030\007 \001(\tR\021businessHoursName\022" +
-      "1\n\010timezone\030\010 \001(\0162\025.api.commons.TimeZone" +
-      "R\010timezone\022A\n\rday_intervals\030\t \003(\0132\034.api." +
-      "commons.org.DayIntervalR\014dayIntervals\022=\n" +
-      "\014last_updated\030\n \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\013lastUpdatedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002" +
-      "idR\004nameR\006ranges\"\207\001\n\005Range\022\035\n\nstart_hour" +
-      "\030\001 \001(\005R\tstartHour\022!\n\014start_minute\030\002 \001(\005R" +
-      "\013startMinute\022\031\n\010end_hour\030\003 \001(\005R\007endHour\022" +
-      "\035\n\nend_minute\030\004 \001(\005R\tendMinute:\002\030\001\"7\n\tTi" +
-      "meOfDay\022\022\n\004hour\030\001 \001(\005R\004hour\022\026\n\006minute\030\002 " +
-      "\001(\005R\006minute\"\232\001\n\013DayInterval\022+\n\003day\030\001 \001(\016" +
-      "2\031.api.commons.Weekday.EnumR\003day\0220\n\005star" +
-      "t\030\002 \001(\0132\032.api.commons.org.TimeOfDayR\005sta" +
-      "rt\022,\n\003end\030\003 \001(\0132\032.api.commons.org.TimeOf" +
-      "DayR\003end\"w\n\014MonthDayDate\022\033\n\tdate_name\030\001 " +
-      "\001(\tR\010dateName\022(\n\005month\030\002 \001(\0162\022.api.commo" +
-      "ns.MonthR\005month\022 \n\014day_of_month\030\003 \001(\005R\nd" +
-      "ayOfMonth\"\270\001\n\016CountryHoliday\022!\n\014holiday_" +
-      "name\030\001 \001(\tR\013holidayName\0222\n\007country\030\002 \001(\016" +
-      "2\024.api.commons.CountryB\002\030\001R\007country\022!\n\014c" +
-      "ountry_name\030\003 \001(\tR\013countryName\022\024\n\005types\030" +
-      "\004 \003(\tR\005types\022\026\n\006states\030\005 \003(\tR\006states\"\212\001\n" +
-      "\rProgrammedDay\0221\n\003day\030\001 \001(\0132\035.api.common" +
-      "s.org.MonthDayDateH\000R\003day\022;\n\007holiday\030\002 \001" +
-      "(\0132\037.api.commons.org.CountryHolidayH\000R\007h" +
-      "olidayB\t\n\007DayType\"\324\002\n\017ProgrammedDates\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\022.\n\023programmed_dates" +
-      "_id\030\002 \001(\tR\021programmedDatesId\0222\n\025programm" +
-      "ed_dates_name\030\003 \001(\tR\023programmedDatesName" +
-      "\022 \n\013description\030\004 \001(\tR\013description\0221\n\010ti" +
-      "mezone\030\005 \001(\0162\025.api.commons.TimeZoneR\010tim" +
-      "ezone\0222\n\004days\030\006 \003(\0132\036.api.commons.org.Pr" +
-      "ogrammedDayR\004days\022=\n\014last_updated\030\007 \001(\0132" +
-      "\032.google.protobuf.TimestampR\013lastUpdated" +
-      "\"\333\002\n\020ObservedHolidays\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\0220\n\024observed_holidays_id\030\002 \001(\tR\022obse" +
-      "rvedHolidaysId\0224\n\026observed_holidays_name" +
-      "\030\003 \001(\tR\024observedHolidaysName\022 \n\013descript" +
-      "ion\030\004 \001(\tR\013description\0221\n\010timezone\030\005 \001(\016" +
-      "2\025.api.commons.TimeZoneR\010timezone\0224\n\004day" +
-      "s\030\006 \003(\0132 .api.commons.org.ObservedHolida" +
-      "yR\004days\022=\n\014last_updated\030\007 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\013lastUpdated\"\214\001\n\017Obser" +
-      "vedHoliday\0221\n\003day\030\001 \001(\0132\035.api.commons.or" +
-      "g.MonthDayDateH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037" +
-      ".api.commons.org.CountryHolidayH\000R\007holid" +
-      "ayB\t\n\007DayType\"\377\002\n\017CertificateInfo\022.\n\023cer" +
-      "tificate_info_id\030\001 \001(\tR\021certificateInfoI" +
-      "d\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004name\030\003 \001(\tR\004" +
-      "name\022 \n\013description\030\004 \001(\tR\013description\022\022" +
-      "\n\004hash\030\005 \001(\tR\004hash\022C\n\017expiration_date\030\006 " +
-      "\001(\0132\032.google.protobuf.TimestampR\016expirat" +
-      "ionDate\022?\n\rcreation_date\030\007 \001(\0132\032.google." +
-      "protobuf.TimestampR\014creationDate\022\035\n\nrequ" +
-      "est_by\030\010 \001(\tR\trequestBy\022\030\n\007deleted\030\t \001(\010" +
-      "R\007deleted\022\030\n\007revoked\030\n \001(\010R\007revoked:\002\030\001B" +
-      "\223\001\n!com.tcn.cloud.api.api.commons.orgB\020P" +
-      "referencesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Or" +
-      "g\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GP" +
-      "BMetadata\352\002\021Api::Commons::Orgb\006proto3"
+      "er\022H\n\rredact_entity\030\002 \001(\0162!.api.commons." +
+      "ClassifierEntityTypeH\000R\014redactEntityB\007\n\005" +
+      "where\032\366\001\n\006Number\022?\n\004kind\030\001 \001(\0162+.api.com" +
+      "mons.org.VoiceAnalytics.Number.KindR\004kin" +
+      "d\022\'\n\017min_consecutive\030\002 \001(\rR\016minConsecuti" +
+      "ve\022\'\n\017max_consecutive\030\003 \001(\rR\016maxConsecut" +
+      "ive\022\022\n\004slop\030\004 \001(\rR\004slop\"E\n\004Kind\022\035\n\031KIND_" +
+      "CARDINAL_UNSPECIFIED\020\000\022\020\n\014KIND_ORDINAL\020\001" +
+      "\022\014\n\010KIND_ANY\020\002\032\034\n\006Notify\022\022\n\004cron\030\001 \001(\tR\004" +
+      "cron\"\225\002\n\023EndOfDayPreferences\022\025\n\006org_id\030\001" +
+      " \001(\tR\005orgId\022\035\n\neod_monday\030\n \001(\005R\teodMond" +
+      "ay\022\037\n\013eod_tuesday\030\013 \001(\005R\neodTuesday\022#\n\re" +
+      "od_wednesday\030\014 \001(\005R\014eodWednesday\022!\n\014eod_" +
+      "thursday\030\r \001(\005R\013eodThursday\022\035\n\neod_frida" +
+      "y\030\016 \001(\005R\teodFriday\022!\n\014eod_saturday\030\017 \001(\005" +
+      "R\013eodSaturday\022\035\n\neod_sunday\030\020 \001(\005R\teodSu" +
+      "nday\"\352\002\n\021FilterPreferences\022\025\n\006org_id\030\001 \001" +
+      "(\tR\005orgId\022Z\n\032default_auto_report_filter\030" +
+      "\n \001(\0132\035.api.commons.org.ReportFilterR\027de" +
+      "faultAutoReportFilter\0225\n\027send_empty_auto" +
+      "_reports\030\013 \001(\010R\024sendEmptyAutoReports\022E\n\037" +
+      "display_broadcast_resend_filter\030\014 \001(\010R\034d" +
+      "isplayBroadcastResendFilter\022d\n\037default_b" +
+      "roadcast_resend_filter\030\r \001(\0132\035.api.commo" +
+      "ns.org.ReportFilterR\034defaultBroadcastRes" +
+      "endFilter\"s\n\014ReportFilter\022?\n\010standard\030\001 " +
+      "\001(\0162!.api.commons.StandardReportFilterH\000" +
+      "R\010standard\022\030\n\006custom\030\002 \001(\003H\000R\006customB\010\n\006" +
+      "choice\"\254\003\n\024RecordingPreferences\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022-\n\022convention_enabled\030\n \001" +
+      "(\010R\021conventionEnabled\022a\n\024file_name_conve" +
+      "ntion\030\013 \001(\0132/.api.commons.org.Recordings" +
+      "FileNamingConventionR\022fileNameConvention" +
+      "\0224\n\026zip_convention_enabled\030\014 \001(\010R\024zipCon" +
+      "ventionEnabled\022k\n\030zip_file_name_conventi" +
+      "on\030\r \001(\01322.api.commons.org.RecordingsZip" +
+      "FileNamingConventionR\025zipFileNameConvent" +
+      "ion\022H\n\020export_file_type\030\016 \001(\0162\036.api.comm" +
+      "ons.RecordingFileTypeR\016exportFileType\"\333\002" +
+      "\n\036RecordingsFileNamingConvention\0225\n\027xml_" +
+      "client_property_sid\030\001 \001(\003R\024xmlClientProp" +
+      "ertySid\022?\n\007inbound\030\002 \001(\0132%.api.commons.o" +
+      "rg.FileNamingConventionR\007inbound\022=\n\006manu" +
+      "al\030\003 \001(\0132%.api.commons.org.FileNamingCon" +
+      "ventionR\006manual\022A\n\010outbound\030\004 \001(\0132%.api." +
+      "commons.org.FileNamingConventionR\010outbou" +
+      "nd\022?\n\007preview\030\005 \001(\0132%.api.commons.org.Fi" +
+      "leNamingConventionR\007preview\"\340\002\n!Recordin" +
+      "gsZipFileNamingConvention\0225\n\027xml_client_" +
+      "property_sid\030\001 \001(\003R\024xmlClientPropertySid" +
+      "\022?\n\007inbound\030\002 \001(\0132%.api.commons.org.File" +
+      "NamingConventionR\007inbound\022=\n\006manual\030\003 \001(" +
+      "\0132%.api.commons.org.FileNamingConvention" +
+      "R\006manual\022A\n\010outbound\030\004 \001(\0132%.api.commons" +
+      ".org.FileNamingConventionR\010outbound\022A\n\010c" +
+      "ombined\030\005 \001(\0132%.api.commons.org.FileNami" +
+      "ngConventionR\010combined\"T\n\024FileNamingConv" +
+      "ention\022<\n\010segments\030\001 \003(\0132 .api.commons.o" +
+      "rg.FileNameSegmentR\010segments\"}\n\017FileName" +
+      "Segment\022!\n\014segment_type\030\001 \001(\tR\013segmentTy" +
+      "pe\022%\n\016format_pattern\030\002 \001(\tR\rformatPatter" +
+      "n\022 \n\014time_zone_id\030\003 \001(\tR\ntimeZoneId\"\342\003\n\026" +
+      "AdminClientPreferences\022\025\n\006org_id\030\001 \001(\tR\005" +
+      "orgId\0220\n\024use_reserved_carrier\030\n \001(\010R\022use" +
+      "ReservedCarrier\022+\n\021reserved_carriers\030\013 \003" +
+      "(\tR\020reservedCarriers\022\033\n\temail_key\030\014 \001(\tR" +
+      "\010emailKey\022\031\n\010email_id\030\r \001(\tR\007emailId\022\035\n\n" +
+      "email_name\030\016 \001(\tR\temailName\022#\n\rwhitelist" +
+      "_ips\030\017 \003(\tR\014whitelistIps\022+\n\021whitelist_do" +
+      "mains\030\020 \003(\tR\020whitelistDomains\0220\n\024callbac" +
+      "ks_service_id\030\021 \001(\tR\022callbacksServiceId\022" +
+      "4\n\026agent_screen_recording\030\022 \001(\010R\024agentSc" +
+      "reenRecording\022A\n\021allowed_countries\030\023 \003(\016" +
+      "2\024.api.commons.CountryR\020allowedCountries" +
+      "\"\375\002\n\rBusinessHours\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022 \n\013description\030\004 \001(\tR\013description\022*\n\021b" +
+      "usiness_hours_id\030\006 \001(\tR\017businessHoursId\022" +
+      ".\n\023business_hours_name\030\007 \001(\tR\021businessHo" +
+      "ursName\0221\n\010timezone\030\010 \001(\0162\025.api.commons." +
+      "TimeZoneR\010timezone\022A\n\rday_intervals\030\t \003(" +
+      "\0132\034.api.commons.org.DayIntervalR\014dayInte" +
+      "rvals\022=\n\014last_updated\030\n \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\013lastUpdatedJ\004\010\002\020\003J\004\010\003\020\004" +
+      "J\004\010\005\020\006R\002idR\004nameR\006ranges\"\207\001\n\005Range\022\035\n\nst" +
+      "art_hour\030\001 \001(\005R\tstartHour\022!\n\014start_minut" +
+      "e\030\002 \001(\005R\013startMinute\022\031\n\010end_hour\030\003 \001(\005R\007" +
+      "endHour\022\035\n\nend_minute\030\004 \001(\005R\tendMinute:\002" +
+      "\030\001\"7\n\tTimeOfDay\022\022\n\004hour\030\001 \001(\005R\004hour\022\026\n\006m" +
+      "inute\030\002 \001(\005R\006minute\"\232\001\n\013DayInterval\022+\n\003d" +
+      "ay\030\001 \001(\0162\031.api.commons.Weekday.EnumR\003day" +
+      "\0220\n\005start\030\002 \001(\0132\032.api.commons.org.TimeOf" +
+      "DayR\005start\022,\n\003end\030\003 \001(\0132\032.api.commons.or" +
+      "g.TimeOfDayR\003end\"w\n\014MonthDayDate\022\033\n\tdate" +
+      "_name\030\001 \001(\tR\010dateName\022(\n\005month\030\002 \001(\0162\022.a" +
+      "pi.commons.MonthR\005month\022 \n\014day_of_month\030" +
+      "\003 \001(\005R\ndayOfMonth\"\270\001\n\016CountryHoliday\022!\n\014" +
+      "holiday_name\030\001 \001(\tR\013holidayName\0222\n\007count" +
+      "ry\030\002 \001(\0162\024.api.commons.CountryB\002\030\001R\007coun" +
+      "try\022!\n\014country_name\030\003 \001(\tR\013countryName\022\024" +
+      "\n\005types\030\004 \003(\tR\005types\022\026\n\006states\030\005 \003(\tR\006st" +
+      "ates\"\212\001\n\rProgrammedDay\0221\n\003day\030\001 \001(\0132\035.ap" +
+      "i.commons.org.MonthDayDateH\000R\003day\022;\n\007hol" +
+      "iday\030\002 \001(\0132\037.api.commons.org.CountryHoli" +
+      "dayH\000R\007holidayB\t\n\007DayType\"\324\002\n\017Programmed" +
+      "Dates\022\025\n\006org_id\030\001 \001(\tR\005orgId\022.\n\023programm" +
+      "ed_dates_id\030\002 \001(\tR\021programmedDatesId\0222\n\025" +
+      "programmed_dates_name\030\003 \001(\tR\023programmedD" +
+      "atesName\022 \n\013description\030\004 \001(\tR\013descripti" +
+      "on\0221\n\010timezone\030\005 \001(\0162\025.api.commons.TimeZ" +
+      "oneR\010timezone\0222\n\004days\030\006 \003(\0132\036.api.common" +
+      "s.org.ProgrammedDayR\004days\022=\n\014last_update" +
+      "d\030\007 \001(\0132\032.google.protobuf.TimestampR\013las" +
+      "tUpdated\"\333\002\n\020ObservedHolidays\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\0220\n\024observed_holidays_id\030\002 \001" +
+      "(\tR\022observedHolidaysId\0224\n\026observed_holid" +
+      "ays_name\030\003 \001(\tR\024observedHolidaysName\022 \n\013" +
+      "description\030\004 \001(\tR\013description\0221\n\010timezo" +
+      "ne\030\005 \001(\0162\025.api.commons.TimeZoneR\010timezon" +
+      "e\0224\n\004days\030\006 \003(\0132 .api.commons.org.Observ" +
+      "edHolidayR\004days\022=\n\014last_updated\030\007 \001(\0132\032." +
+      "google.protobuf.TimestampR\013lastUpdated\"\214" +
+      "\001\n\017ObservedHoliday\0221\n\003day\030\001 \001(\0132\035.api.co" +
+      "mmons.org.MonthDayDateH\000R\003day\022;\n\007holiday" +
+      "\030\002 \001(\0132\037.api.commons.org.CountryHolidayH" +
+      "\000R\007holidayB\t\n\007DayType\"\377\002\n\017CertificateInf" +
+      "o\022.\n\023certificate_info_id\030\001 \001(\tR\021certific" +
+      "ateInfoId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004name" +
+      "\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descr" +
+      "iption\022\022\n\004hash\030\005 \001(\tR\004hash\022C\n\017expiration" +
+      "_date\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\016expirationDate\022?\n\rcreation_date\030\007 \001(\0132\032" +
+      ".google.protobuf.TimestampR\014creationDate" +
+      "\022\035\n\nrequest_by\030\010 \001(\tR\trequestBy\022\030\n\007delet" +
+      "ed\030\t \001(\010R\007deleted\022\030\n\007revoked\030\n \001(\010R\007revo" +
+      "ked:\002\030\001B\223\001\n!com.tcn.cloud.api.api.common" +
+      "s.orgB\020PreferencesProtoP\001\242\002\003ACO\252\002\017Api.Co" +
+      "mmons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Common" +
+      "s\\Org\\GPBMetadata\352\002\021Api::Commons::Orgb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AnaProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.CountryProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.LmsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgPreferencesProto.getDescriptor(),
-          com.tcn.cloud.api.api.commons.VanalyticsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_commons_org_OrganizationPreferences_descriptor =
@@ -1055,12 +1056,12 @@ public final class PreferencesProto {
         internal_static_api_commons_org_CertificateInfo_descriptor,
         new java.lang.String[] { "CertificateInfoId", "OrgId", "Name", "Description", "Hash", "ExpirationDate", "CreationDate", "RequestBy", "Deleted", "Revoked", });
     com.tcn.cloud.api.api.commons.AnaProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.ClassifierProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.LmsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgPreferencesProto.getDescriptor();
-    com.tcn.cloud.api.api.commons.VanalyticsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
