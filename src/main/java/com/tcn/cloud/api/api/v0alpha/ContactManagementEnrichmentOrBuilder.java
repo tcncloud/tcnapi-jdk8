@@ -99,7 +99,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    *
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
-   *     See api/v0alpha/lms.proto;l=3115
+   *     See api/v0alpha/lms.proto;l=3139
    * @return Whether the deDuplicationInfo field is set.
    */
   @java.lang.Deprecated boolean hasDeDuplicationInfo();
@@ -110,7 +110,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    *
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
-   *     See api/v0alpha/lms.proto;l=3115
+   *     See api/v0alpha/lms.proto;l=3139
    * @return The deDuplicationInfo.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo();
