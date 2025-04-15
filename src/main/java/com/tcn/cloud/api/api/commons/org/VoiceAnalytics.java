@@ -263,7 +263,7 @@ private static final long serialVersionUID = 0L;
             (java.lang.Integer) where_);
         return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
       }
-      return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNKNOWN;
+      return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
               (java.lang.Integer) where_);
           return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
         }
-        return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNKNOWN;
+        return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
       }
       /**
        * <pre>

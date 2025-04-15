@@ -13,9 +13,9 @@ package com.tcn.cloud.api.api.commons;
 public enum RedactEntity
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>REDACT_ENTITY_UNKNOWN = 0;</code>
+   * <code>REDACT_ENTITY_UNSPECIFIED = 0;</code>
    */
-  REDACT_ENTITY_UNKNOWN(0),
+  REDACT_ENTITY_UNSPECIFIED(0),
   /**
    * <code>REDACT_ENTITY_CREDIT_CARD = 1;</code>
    */
@@ -24,9 +24,9 @@ public enum RedactEntity
   ;
 
   /**
-   * <code>REDACT_ENTITY_UNKNOWN = 0;</code>
+   * <code>REDACT_ENTITY_UNSPECIFIED = 0;</code>
    */
-  public static final int REDACT_ENTITY_UNKNOWN_VALUE = 0;
+  public static final int REDACT_ENTITY_UNSPECIFIED_VALUE = 0;
   /**
    * <code>REDACT_ENTITY_CREDIT_CARD = 1;</code>
    */
@@ -57,7 +57,7 @@ public enum RedactEntity
    */
   public static RedactEntity forNumber(int value) {
     switch (value) {
-      case 0: return REDACT_ENTITY_UNKNOWN;
+      case 0: return REDACT_ENTITY_UNSPECIFIED;
       case 1: return REDACT_ENTITY_CREDIT_CARD;
       default: return null;
     }
