@@ -1476,7 +1476,7 @@ public final class ServiceProto {
       "ountDue\032U\n\023CalculatedFeesEntry\022\020\n\003key\030\001 " +
       "\001(\tR\003key\022(\n\005value\030\002 \001(\0132\022.google.type.Mo" +
       "neyR\005value:\0028\001*0\n\020PrivateFieldType\022\013\n\007UN" +
-      "KNOWN\020\000\022\017\n\013PRIVATE_KEY\020\0012\3451\n\014Integration" +
+      "KNOWN\020\000\022\017\n\013PRIVATE_KEY\020\0012\2243\n\014Integration" +
       "s\022\225\001\n\007Process\022%.api.v1alpha1.integration" +
       "s.ProcessReq\032%.api.v1alpha1.integrations" +
       ".ProcessRes\"<\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api" +
@@ -1636,12 +1636,16 @@ public final class ServiceProto {
       "ulateFeesReq\032+.api.v1alpha1.integrations" +
       ".CalculateFeesRes\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/ap" +
       "i/v1alpha1/integrations/calculatefees:\001*" +
-      "B\301\001\n+com.tcn.cloud.api.api.v1alpha1.inte" +
-      "grationsB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1a" +
-      "lpha1.Integrations\312\002\031Api\\V1alpha1\\Integr" +
-      "ations\342\002%Api\\V1alpha1\\Integrations\\GPBMe" +
-      "tadata\352\002\033Api::V1alpha1::Integrationsb\006pr" +
-      "oto3"
+      "\022\254\001\n\016DeliverReceipt\022,.api.v1alpha1.integ" +
+      "rations.DeliverReceiptReq\032,.api.v1alpha1" +
+      ".integrations.DeliverReceiptRes\">\272\270\221\002\005\n\003" +
+      "\010\224\n\202\323\344\223\002.\")/api/v1alpha1/integrations/de" +
+      "liverreceipt:\001*B\301\001\n+com.tcn.cloud.api.ap" +
+      "i.v1alpha1.integrationsB\014ServiceProtoP\001\242" +
+      "\002\003AVI\252\002\031Api.V1alpha1.Integrations\312\002\031Api\\" +
+      "V1alpha1\\Integrations\342\002%Api\\V1alpha1\\Int" +
+      "egrations\\GPBMetadata\352\002\033Api::V1alpha1::I" +
+      "ntegrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

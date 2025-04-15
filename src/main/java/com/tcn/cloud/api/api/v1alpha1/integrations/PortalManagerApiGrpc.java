@@ -883,37 +883,6 @@ public final class PortalManagerApiGrpc {
     return getListPluginsByMethodMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> getDeliverReceiptMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeliverReceipt",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> getDeliverReceiptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> getDeliverReceiptMethod;
-    if ((getDeliverReceiptMethod = PortalManagerApiGrpc.getDeliverReceiptMethod) == null) {
-      synchronized (PortalManagerApiGrpc.class) {
-        if ((getDeliverReceiptMethod = PortalManagerApiGrpc.getDeliverReceiptMethod) == null) {
-          PortalManagerApiGrpc.getDeliverReceiptMethod = getDeliverReceiptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeliverReceipt"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes.getDefaultInstance()))
-              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeliverReceipt"))
-              .build();
-        }
-      }
-    }
-    return getDeliverReceiptMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1171,13 +1140,6 @@ public final class PortalManagerApiGrpc {
     default void listPluginsByMethod(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPluginsByMethodMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeliverReceiptMethod(), responseObserver);
     }
   }
 
@@ -1446,14 +1408,6 @@ public final class PortalManagerApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPluginsByMethodMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeliverReceiptMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1681,13 +1635,6 @@ public final class PortalManagerApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes listPluginsByMethod(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPluginsByMethodMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeliverReceiptMethod(), getCallOptions(), request);
     }
   }
 
@@ -1945,14 +1892,6 @@ public final class PortalManagerApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPluginsByMethodMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes> deliverReceipt(
-        com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeliverReceiptMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_UPSERT_PORTAL_CONFIG = 0;
@@ -1983,7 +1922,6 @@ public final class PortalManagerApiGrpc {
   private static final int METHODID_LIST_PORTAL_WORKFLOWS = 25;
   private static final int METHODID_LIST_ALL_ACTION_DEFINITIONS = 26;
   private static final int METHODID_LIST_PLUGINS_BY_METHOD = 27;
-  private static final int METHODID_DELIVER_RECEIPT = 28;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2113,10 +2051,6 @@ public final class PortalManagerApiGrpc {
         case METHODID_LIST_PLUGINS_BY_METHOD:
           serviceImpl.listPluginsByMethod((com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes>) responseObserver);
-          break;
-        case METHODID_DELIVER_RECEIPT:
-          serviceImpl.deliverReceipt((com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2332,13 +2266,6 @@ public final class PortalManagerApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes>(
                 service, METHODID_LIST_PLUGINS_BY_METHOD)))
-        .addMethod(
-          getDeliverReceiptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptReq,
-              com.tcn.cloud.api.api.v1alpha1.integrations.DeliverReceiptRes>(
-                service, METHODID_DELIVER_RECEIPT)))
         .build();
   }
 
@@ -2415,7 +2342,6 @@ public final class PortalManagerApiGrpc {
               .addMethod(getListPortalWorkflowsMethod())
               .addMethod(getListAllActionDefinitionsMethod())
               .addMethod(getListPluginsByMethodMethod())
-              .addMethod(getDeliverReceiptMethod())
               .build();
         }
       }
