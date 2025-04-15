@@ -1188,23 +1188,6 @@ private static final long serialVersionUID = 0L;
     return taskConfig_ == null ? com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance() : taskConfig_;
   }
 
-  public static final int TIMEZONE_OFFSET_FIELD_NUMBER = 16;
-  private float timezoneOffset_ = 0F;
-  /**
-   * <pre>
-   * tracks the timezone difference for tasks
-   * -13 represents absent offset
-   * can be used for prioritizing and ordering based on destination timezone
-   * </pre>
-   *
-   * <code>float timezone_offset = 16 [json_name = "timezoneOffset"];</code>
-   * @return The timezoneOffset.
-   */
-  @java.lang.Override
-  public float getTimezoneOffset() {
-    return timezoneOffset_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1260,9 +1243,6 @@ private static final long serialVersionUID = 0L;
     }
     if (taskConfig_ != null) {
       output.writeMessage(15, getTaskConfig());
-    }
-    if (java.lang.Float.floatToRawIntBits(timezoneOffset_) != 0) {
-      output.writeFloat(16, timezoneOffset_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1327,10 +1307,6 @@ private static final long serialVersionUID = 0L;
     if (taskConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getTaskConfig());
-    }
-    if (java.lang.Float.floatToRawIntBits(timezoneOffset_) != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(16, timezoneOffset_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1398,9 +1374,6 @@ private static final long serialVersionUID = 0L;
       if (!getTaskConfig()
           .equals(other.getTaskConfig())) return false;
     }
-    if (java.lang.Float.floatToIntBits(getTimezoneOffset())
-        != java.lang.Float.floatToIntBits(
-            other.getTimezoneOffset())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1461,9 +1434,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TASK_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getTaskConfig().hashCode();
     }
-    hash = (37 * hash) + TIMEZONE_OFFSET_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getTimezoneOffset());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1651,7 +1621,6 @@ private static final long serialVersionUID = 0L;
         taskConfigBuilder_.dispose();
         taskConfigBuilder_ = null;
       }
-      timezoneOffset_ = 0F;
       return this;
     }
 
@@ -1752,9 +1721,6 @@ private static final long serialVersionUID = 0L;
         result.taskConfig_ = taskConfigBuilder_ == null
             ? taskConfig_
             : taskConfigBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.timezoneOffset_ = timezoneOffset_;
       }
     }
 
@@ -1868,9 +1834,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTaskConfig()) {
         mergeTaskConfig(other.getTaskConfig());
-      }
-      if (other.getTimezoneOffset() != 0F) {
-        setTimezoneOffset(other.getTimezoneOffset());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1992,11 +1955,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 122
-            case 133: {
-              timezoneOffset_ = input.readFloat();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 133
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3861,56 +3819,6 @@ private static final long serialVersionUID = 0L;
         taskConfig_ = null;
       }
       return taskConfigBuilder_;
-    }
-
-    private float timezoneOffset_ ;
-    /**
-     * <pre>
-     * tracks the timezone difference for tasks
-     * -13 represents absent offset
-     * can be used for prioritizing and ordering based on destination timezone
-     * </pre>
-     *
-     * <code>float timezone_offset = 16 [json_name = "timezoneOffset"];</code>
-     * @return The timezoneOffset.
-     */
-    @java.lang.Override
-    public float getTimezoneOffset() {
-      return timezoneOffset_;
-    }
-    /**
-     * <pre>
-     * tracks the timezone difference for tasks
-     * -13 represents absent offset
-     * can be used for prioritizing and ordering based on destination timezone
-     * </pre>
-     *
-     * <code>float timezone_offset = 16 [json_name = "timezoneOffset"];</code>
-     * @param value The timezoneOffset to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTimezoneOffset(float value) {
-
-      timezoneOffset_ = value;
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * tracks the timezone difference for tasks
-     * -13 represents absent offset
-     * can be used for prioritizing and ordering based on destination timezone
-     * </pre>
-     *
-     * <code>float timezone_offset = 16 [json_name = "timezoneOffset"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTimezoneOffset() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      timezoneOffset_ = 0F;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
