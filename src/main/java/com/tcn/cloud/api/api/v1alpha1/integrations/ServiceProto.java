@@ -1491,7 +1491,7 @@ public final class ServiceProto {
       "api.v1alpha1.integrations.IntegrationSet" +
       "tingsR\006entity\"\036\n\034UpsertIntegrationSettin" +
       "gsRes*0\n\020PrivateFieldType\022\013\n\007UNKNOWN\020\000\022\017" +
-      "\n\013PRIVATE_KEY\020\0012\3451\n\014Integrations\022\225\001\n\007Pro" +
+      "\n\013PRIVATE_KEY\020\0012\2643\n\014Integrations\022\225\001\n\007Pro" +
       "cess\022%.api.v1alpha1.integrations.Process" +
       "Req\032%.api.v1alpha1.integrations.ProcessR" +
       "es\"<\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api/v1alpha1" +
@@ -1650,12 +1650,18 @@ public final class ServiceProto {
       ".api.v1alpha1.integrations.CalculateFees" +
       "Req\032+.api.v1alpha1.integrations.Calculat" +
       "eFeesRes\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha" +
-      "1/integrations/calculatefees:\001*B\301\001\n+com." +
-      "tcn.cloud.api.api.v1alpha1.integrationsB" +
-      "\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.Int" +
-      "egrations\312\002\031Api\\V1alpha1\\Integrations\342\002%" +
-      "Api\\V1alpha1\\Integrations\\GPBMetadata\352\002\033" +
-      "Api::V1alpha1::Integrationsb\006proto3"
+      "1/integrations/calculatefees:\001*\022\314\001\n\026GetI" +
+      "ntegrationSettings\0224.api.v1alpha1.integr" +
+      "ations.GetIntegrationSettingsReq\0324.api.v" +
+      "1alpha1.integrations.GetIntegrationSetti" +
+      "ngsRes\"F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1/api/v1alpha1/" +
+      "integrations/getintegrationsettings:\001*B\301" +
+      "\001\n+com.tcn.cloud.api.api.v1alpha1.integr" +
+      "ationsB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alp" +
+      "ha1.Integrations\312\002\031Api\\V1alpha1\\Integrat" +
+      "ions\342\002%Api\\V1alpha1\\Integrations\\GPBMeta" +
+      "data\352\002\033Api::V1alpha1::Integrationsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

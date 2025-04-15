@@ -294,68 +294,6 @@ public final class IntegrationsPublicGrpc {
     return getCalculateFeesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> getGetIntegrationSettingsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetIntegrationSettings",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> getGetIntegrationSettingsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> getGetIntegrationSettingsMethod;
-    if ((getGetIntegrationSettingsMethod = IntegrationsPublicGrpc.getGetIntegrationSettingsMethod) == null) {
-      synchronized (IntegrationsPublicGrpc.class) {
-        if ((getGetIntegrationSettingsMethod = IntegrationsPublicGrpc.getGetIntegrationSettingsMethod) == null) {
-          IntegrationsPublicGrpc.getGetIntegrationSettingsMethod = getGetIntegrationSettingsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntegrationSettings"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsPublicMethodDescriptorSupplier("GetIntegrationSettings"))
-              .build();
-        }
-      }
-    }
-    return getGetIntegrationSettingsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> getUpsertIntegrationSettingsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpsertIntegrationSettings",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> getUpsertIntegrationSettingsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> getUpsertIntegrationSettingsMethod;
-    if ((getUpsertIntegrationSettingsMethod = IntegrationsPublicGrpc.getUpsertIntegrationSettingsMethod) == null) {
-      synchronized (IntegrationsPublicGrpc.class) {
-        if ((getUpsertIntegrationSettingsMethod = IntegrationsPublicGrpc.getUpsertIntegrationSettingsMethod) == null) {
-          IntegrationsPublicGrpc.getUpsertIntegrationSettingsMethod = getUpsertIntegrationSettingsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertIntegrationSettings"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsPublicMethodDescriptorSupplier("UpsertIntegrationSettings"))
-              .build();
-        }
-      }
-    }
-    return getUpsertIntegrationSettingsMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -466,20 +404,6 @@ public final class IntegrationsPublicGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateFeesMethod(), responseObserver);
     }
-
-    /**
-     */
-    default void getIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationSettingsMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void upsertIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertIntegrationSettingsMethod(), responseObserver);
-    }
   }
 
   /**
@@ -580,22 +504,6 @@ public final class IntegrationsPublicGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void getIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetIntegrationSettingsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void upsertIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpsertIntegrationSettingsMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -675,20 +583,6 @@ public final class IntegrationsPublicGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes calculateFees(com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCalculateFeesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes getIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetIntegrationSettingsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes upsertIntegrationSettings(com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpsertIntegrationSettingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -779,22 +673,6 @@ public final class IntegrationsPublicGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes> getIntegrationSettings(
-        com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetIntegrationSettingsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes> upsertIntegrationSettings(
-        com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpsertIntegrationSettingsMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET_LINK_DATA = 0;
@@ -806,8 +684,6 @@ public final class IntegrationsPublicGrpc {
   private static final int METHODID_PROCESS_WORKFLOW = 6;
   private static final int METHODID_GET_LINK_DETAILS = 7;
   private static final int METHODID_CALCULATE_FEES = 8;
-  private static final int METHODID_GET_INTEGRATION_SETTINGS = 9;
-  private static final int METHODID_UPSERT_INTEGRATION_SETTINGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -861,14 +737,6 @@ public final class IntegrationsPublicGrpc {
         case METHODID_CALCULATE_FEES:
           serviceImpl.calculateFees((com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>) responseObserver);
-          break;
-        case METHODID_GET_INTEGRATION_SETTINGS:
-          serviceImpl.getIntegrationSettings((com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes>) responseObserver);
-          break;
-        case METHODID_UPSERT_INTEGRATION_SETTINGS:
-          serviceImpl.upsertIntegrationSettings((com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -951,20 +819,6 @@ public final class IntegrationsPublicGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq,
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>(
                 service, METHODID_CALCULATE_FEES)))
-        .addMethod(
-          getGetIntegrationSettingsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetIntegrationSettingsRes>(
-                service, METHODID_GET_INTEGRATION_SETTINGS)))
-        .addMethod(
-          getUpsertIntegrationSettingsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.UpsertIntegrationSettingsRes>(
-                service, METHODID_UPSERT_INTEGRATION_SETTINGS)))
         .build();
   }
 
@@ -1022,8 +876,6 @@ public final class IntegrationsPublicGrpc {
               .addMethod(getProcessWorkflowMethod())
               .addMethod(getGetLinkDetailsMethod())
               .addMethod(getCalculateFeesMethod())
-              .addMethod(getGetIntegrationSettingsMethod())
-              .addMethod(getUpsertIntegrationSettingsMethod())
               .build();
         }
       }
