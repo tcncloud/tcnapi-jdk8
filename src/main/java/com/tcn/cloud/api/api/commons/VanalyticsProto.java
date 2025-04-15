@@ -42,10 +42,12 @@ public final class VanalyticsProto {
       "L\020\002\022&\n\"TRANSCRIPT_SENTIMENT_TONE_POSITIV" +
       "E\020\003*b\n\rRecordingType\022\026\n\022RECORDING_TYPE_T" +
       "CN\020\000\022\033\n\027RECORDING_TYPE_EXTERNAL\020\001\022\034\n\030REC" +
-      "ORDING_TYPE_VOICEMAIL\020\002B}\n\035com.tcn.cloud" +
-      ".api.api.commonsB\017VanalyticsProtoP\001\242\002\003AC" +
-      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
-      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ORDING_TYPE_VOICEMAIL\020\002*L\n\014RedactEntity\022" +
+      "\035\n\031REDACT_ENTITY_UNSPECIFIED\020\000\022\035\n\031REDACT" +
+      "_ENTITY_CREDIT_CARD\020\001B}\n\035com.tcn.cloud.a" +
+      "pi.api.commonsB\017VanalyticsProtoP\001\242\002\003ACX\252" +
+      "\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Common" +
+      "s\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

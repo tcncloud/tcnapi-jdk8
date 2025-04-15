@@ -73,6 +73,34 @@ private static final long serialVersionUID = 0L;
      */
     com.tcn.cloud.api.api.commons.org.VoiceAnalytics.NumberOrBuilder getNumberOrBuilder();
 
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return Whether the redactEntity field is set.
+     */
+    boolean hasRedactEntity();
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return The enum numeric value on the wire for redactEntity.
+     */
+    int getRedactEntityValue();
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return The redactEntity.
+     */
+    com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity();
+
     com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Redact.WhereCase getWhereCase();
   }
   /**
@@ -117,6 +145,7 @@ private static final long serialVersionUID = 0L;
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NUMBER(1),
+      REDACT_ENTITY(2),
       WHERE_NOT_SET(0);
       private final int value;
       private WhereCase(int value) {
@@ -135,6 +164,7 @@ private static final long serialVersionUID = 0L;
       public static WhereCase forNumber(int value) {
         switch (value) {
           case 1: return NUMBER;
+          case 2: return REDACT_ENTITY;
           case 0: return WHERE_NOT_SET;
           default: return null;
         }
@@ -193,6 +223,49 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number.getDefaultInstance();
     }
 
+    public static final int REDACT_ENTITY_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return Whether the redactEntity field is set.
+     */
+    public boolean hasRedactEntity() {
+      return whereCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return The enum numeric value on the wire for redactEntity.
+     */
+    public int getRedactEntityValue() {
+      if (whereCase_ == 2) {
+        return (java.lang.Integer) where_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Optional. Redact detected entity.
+     * </pre>
+     *
+     * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+     * @return The redactEntity.
+     */
+    public com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity() {
+      if (whereCase_ == 2) {
+        com.tcn.cloud.api.api.commons.RedactEntity result = com.tcn.cloud.api.api.commons.RedactEntity.forNumber(
+            (java.lang.Integer) where_);
+        return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
+      }
+      return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -210,6 +283,9 @@ private static final long serialVersionUID = 0L;
       if (whereCase_ == 1) {
         output.writeMessage(1, (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number) where_);
       }
+      if (whereCase_ == 2) {
+        output.writeEnum(2, ((java.lang.Integer) where_));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -222,6 +298,10 @@ private static final long serialVersionUID = 0L;
       if (whereCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (com.tcn.cloud.api.api.commons.org.VoiceAnalytics.Number) where_);
+      }
+      if (whereCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, ((java.lang.Integer) where_));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -244,6 +324,10 @@ private static final long serialVersionUID = 0L;
           if (!getNumber()
               .equals(other.getNumber())) return false;
           break;
+        case 2:
+          if (getRedactEntityValue()
+              != other.getRedactEntityValue()) return false;
+          break;
         case 0:
         default:
       }
@@ -262,6 +346,10 @@ private static final long serialVersionUID = 0L;
         case 1:
           hash = (37 * hash) + NUMBER_FIELD_NUMBER;
           hash = (53 * hash) + getNumber().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + REDACT_ENTITY_FIELD_NUMBER;
+          hash = (53 * hash) + getRedactEntityValue();
           break;
         case 0:
         default:
@@ -496,6 +584,10 @@ private static final long serialVersionUID = 0L;
             mergeNumber(other.getNumber());
             break;
           }
+          case REDACT_ENTITY: {
+            setRedactEntityValue(other.getRedactEntityValue());
+            break;
+          }
           case WHERE_NOT_SET: {
             break;
           }
@@ -533,6 +625,12 @@ private static final long serialVersionUID = 0L;
                 whereCase_ = 1;
                 break;
               } // case 10
+              case 16: {
+                int rawValue = input.readEnum();
+                whereCase_ = 2;
+                where_ = rawValue;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -741,6 +839,100 @@ private static final long serialVersionUID = 0L;
         whereCase_ = 1;
         onChanged();
         return numberBuilder_;
+      }
+
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @return Whether the redactEntity field is set.
+       */
+      @java.lang.Override
+      public boolean hasRedactEntity() {
+        return whereCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @return The enum numeric value on the wire for redactEntity.
+       */
+      @java.lang.Override
+      public int getRedactEntityValue() {
+        if (whereCase_ == 2) {
+          return ((java.lang.Integer) where_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @param value The enum numeric value on the wire for redactEntity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedactEntityValue(int value) {
+        whereCase_ = 2;
+        where_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @return The redactEntity.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.RedactEntity getRedactEntity() {
+        if (whereCase_ == 2) {
+          com.tcn.cloud.api.api.commons.RedactEntity result = com.tcn.cloud.api.api.commons.RedactEntity.forNumber(
+              (java.lang.Integer) where_);
+          return result == null ? com.tcn.cloud.api.api.commons.RedactEntity.UNRECOGNIZED : result;
+        }
+        return com.tcn.cloud.api.api.commons.RedactEntity.REDACT_ENTITY_UNSPECIFIED;
+      }
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @param value The redactEntity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedactEntity(com.tcn.cloud.api.api.commons.RedactEntity value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        whereCase_ = 2;
+        where_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Redact detected entity.
+       * </pre>
+       *
+       * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedactEntity() {
+        if (whereCase_ == 2) {
+          whereCase_ = 0;
+          where_ = null;
+          onChanged();
+        }
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
