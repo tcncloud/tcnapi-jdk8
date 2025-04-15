@@ -327,4 +327,14 @@ public interface OmniCampaignModuleOrBuilder extends
    * <code>.api.commons.WeekdayTimeRange hours_of_operation_timezone = 13 [json_name = "hoursOfOperationTimezone"];</code>
    */
   com.tcn.cloud.api.api.commons.WeekdayTimeRangeOrBuilder getHoursOfOperationTimezoneOrBuilder();
+
+  /**
+   * <pre>
+   * indicates if the tasks associated with a campaign should be ordered based on the task.timezone_offset
+   * </pre>
+   *
+   * <code>bool global_timezone_ordering = 14 [json_name = "globalTimezoneOrdering"];</code>
+   * @return The globalTimezoneOrdering.
+   */
+  boolean getGlobalTimezoneOrdering();
 }
