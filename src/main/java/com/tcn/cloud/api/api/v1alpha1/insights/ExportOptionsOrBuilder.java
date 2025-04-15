@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.insights;
 
-@java.lang.Deprecated public interface ExportOptionsOrBuilder extends
+public interface ExportOptionsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.ExportOptions)
     com.google.protobuf.MessageOrBuilder {
 

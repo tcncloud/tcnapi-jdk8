@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
  *
  * Protobuf type {@code api.v1alpha1.insights.ExportOptions}
  */
-@java.lang.Deprecated public final class ExportOptions extends
+public final class ExportOptions extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.ExportOptions)
     ExportOptionsOrBuilder {

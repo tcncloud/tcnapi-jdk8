@@ -39,16 +39,6 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_explorer_Parameters_ParametersEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_explorer_ResultFile_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_explorer_ResultFile_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_explorer_ExportOptions_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_explorer_ExportOptions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -82,39 +72,25 @@ public final class EntitiesProto {
       "\tdata_type\030\003 \001(\tR\010dataType\032j\n\017Parameters" +
       "Entry\022\020\n\003key\030\001 \001(\tR\003key\022A\n\005value\030\002 \001(\0132+" +
       ".api.v1alpha1.explorer.Parameters.Parame" +
-      "terR\005value:\0028\001\"=\n\nResultFile\022\020\n\003url\030\001 \001(" +
-      "\tR\003url\022\035\n\nsize_bytes\030\002 \001(\003R\tsizeBytes\"\344\001" +
-      "\n\rExportOptions\022\034\n\tdelimiter\030\001 \001(\tR\tdeli" +
-      "miter\022N\n\017quote_character\030\002 \001(\0162%.api.v1a" +
-      "lpha1.explorer.QuoteCharacterR\016quoteChar" +
-      "acter\022\033\n\tno_header\030\003 \001(\010R\010noHeader\022H\n\rex" +
-      "port_format\030\004 \001(\0162#.api.v1alpha1.explore" +
-      "r.ExportFormatR\014exportFormat*\215\001\n\014ExportF" +
-      "ormat\022\035\n\031REPORT_FORMAT_UNSPECIFIED\020\000\022\025\n\021" +
-      "REPORT_FORMAT_CSV\020\001\022\031\n\025REPORT_FORMAT_PAR" +
-      "QUET\020\002\022\025\n\021REPORT_FORMAT_TSV\020\003\022\025\n\021REPORT_" +
-      "FORMAT_TXT\020\004*\245\002\n\nSchemaType\022\033\n\027SCHEMA_TY" +
-      "PE_UNSPECIFIED\020\000\022\023\n\017SCHEMA_TYPE_INT\020\002\022\025\n" +
-      "\021SCHEMA_TYPE_FLOAT\020\003\022\026\n\022SCHEMA_TYPE_STRI" +
-      "NG\020\005\022\024\n\020SCHEMA_TYPE_BOOL\020\006\022\031\n\025SCHEMA_TYP" +
-      "E_TIMESTAMP\020\007\022\031\n\025SCHEMA_TYPE_INT_ARRAY\020\010" +
-      "\022\033\n\027SCHEMA_TYPE_FLOAT_ARRAY\020\t\022\034\n\030SCHEMA_" +
-      "TYPE_STRING_ARRAY\020\n\022\032\n\026SCHEMA_TYPE_BOOL_" +
-      "ARRAY\020\013\022\023\n\017SCHEMA_TYPE_MAP\020\014*\214\001\n\016Datasou" +
-      "rceType\022\037\n\033DATASOURCE_TYPE_UNSPECIFIED\020\000" +
-      "\022\027\n\023DATASOURCE_TYPE_VFS\020\001\022\036\n\032DATASOURCE_" +
-      "TYPE_CLICKHOUSE\020\002\022 \n\034DATASOURCE_TYPE_INS" +
-      "TANT_DATA\020\003*r\n\nResultType\022\033\n\027RESULT_TYPE" +
-      "_UNSPECIFIED\020\000\022\026\n\022RESULT_TYPE_FORMAT\020\001\022\027" +
-      "\n\023RESULT_TYPE_SUMMARY\020\002\022\026\n\022RESULT_TYPE_R" +
-      "EPORT\020\003*u\n\016QuoteCharacter\022\037\n\033QUOTE_CHARA" +
-      "CTER_UNSPECIFIED\020\000\022 \n\034QUOTE_CHARACTER_DO" +
-      "UBLE_QUOTE\020\001\022 \n\034QUOTE_CHARACTER_SINGLE_Q" +
-      "UOTE\020\002B\256\001\n\'com.tcn.cloud.api.api.v1alpha" +
-      "1.explorerB\rEntitiesProtoP\001\242\002\003AVE\252\002\025Api." +
-      "V1alpha1.Explorer\312\002\025Api\\V1alpha1\\Explore" +
-      "r\342\002!Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027" +
-      "Api::V1alpha1::Explorerb\006proto3"
+      "terR\005value:\0028\001*_\n\014ExportFormat\022\035\n\031REPORT" +
+      "_FORMAT_UNSPECIFIED\020\000\022\025\n\021REPORT_FORMAT_C" +
+      "SV\020\001\022\031\n\025REPORT_FORMAT_PARQUET\020\002*\245\002\n\nSche" +
+      "maType\022\033\n\027SCHEMA_TYPE_UNSPECIFIED\020\000\022\023\n\017S" +
+      "CHEMA_TYPE_INT\020\002\022\025\n\021SCHEMA_TYPE_FLOAT\020\003\022" +
+      "\026\n\022SCHEMA_TYPE_STRING\020\005\022\024\n\020SCHEMA_TYPE_B" +
+      "OOL\020\006\022\031\n\025SCHEMA_TYPE_TIMESTAMP\020\007\022\031\n\025SCHE" +
+      "MA_TYPE_INT_ARRAY\020\010\022\033\n\027SCHEMA_TYPE_FLOAT" +
+      "_ARRAY\020\t\022\034\n\030SCHEMA_TYPE_STRING_ARRAY\020\n\022\032" +
+      "\n\026SCHEMA_TYPE_BOOL_ARRAY\020\013\022\023\n\017SCHEMA_TYP" +
+      "E_MAP\020\014*\214\001\n\016DatasourceType\022\037\n\033DATASOURCE" +
+      "_TYPE_UNSPECIFIED\020\000\022\027\n\023DATASOURCE_TYPE_V" +
+      "FS\020\001\022\036\n\032DATASOURCE_TYPE_CLICKHOUSE\020\002\022 \n\034" +
+      "DATASOURCE_TYPE_INSTANT_DATA\020\003B\256\001\n\'com.t" +
+      "cn.cloud.api.api.v1alpha1.explorerB\rEnti" +
+      "tiesProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explore" +
+      "r\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1alpha1" +
+      "\\Explorer\\GPBMetadata\352\002\027Api::V1alpha1::E" +
+      "xplorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -150,18 +126,6 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_Parameters_ParametersEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_api_v1alpha1_explorer_ResultFile_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_api_v1alpha1_explorer_ResultFile_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_explorer_ResultFile_descriptor,
-        new java.lang.String[] { "Url", "SizeBytes", });
-    internal_static_api_v1alpha1_explorer_ExportOptions_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_api_v1alpha1_explorer_ExportOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_explorer_ExportOptions_descriptor,
-        new java.lang.String[] { "Delimiter", "QuoteCharacter", "NoHeader", "ExportFormat", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

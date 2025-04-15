@@ -29,7 +29,6 @@ private static final long serialVersionUID = 0L;
     channelTypes_ = java.util.Collections.emptyList();
     orderBy_ = "";
     pageToken_ = "";
-    statuses_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -547,84 +546,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STATUSES_FIELD_NUMBER = 18;
-  @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> statuses_;
-  private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState> statuses_converter_ =
-          new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>() {
-            public com.tcn.cloud.api.api.commons.EvaluationState convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.EvaluationState result = com.tcn.cloud.api.api.commons.EvaluationState.forNumber(from);
-              return result == null ? com.tcn.cloud.api.api.commons.EvaluationState.UNRECOGNIZED : result;
-            }
-          };
-  /**
-   * <pre>
-   * Optional. Filter by status.
-   * </pre>
-   *
-   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-   * @return A list containing the statuses.
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusesList() {
-    return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(statuses_, statuses_converter_);
-  }
-  /**
-   * <pre>
-   * Optional. Filter by status.
-   * </pre>
-   *
-   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-   * @return The count of statuses.
-   */
-  @java.lang.Override
-  public int getStatusesCount() {
-    return statuses_.size();
-  }
-  /**
-   * <pre>
-   * Optional. Filter by status.
-   * </pre>
-   *
-   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-   * @param index The index of the element to return.
-   * @return The statuses at the given index.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.EvaluationState getStatuses(int index) {
-    return statuses_converter_.convert(statuses_.get(index));
-  }
-  /**
-   * <pre>
-   * Optional. Filter by status.
-   * </pre>
-   *
-   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-   * @return A list containing the enum numeric values on the wire for statuses.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Integer>
-  getStatusesValueList() {
-    return statuses_;
-  }
-  /**
-   * <pre>
-   * Optional. Filter by status.
-   * </pre>
-   *
-   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of statuses at the given index.
-   */
-  @java.lang.Override
-  public int getStatusesValue(int index) {
-    return statuses_.get(index);
-  }
-  private int statusesMemoizedSerializedSize;
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -684,13 +605,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pageToken_);
-    }
-    if (getStatusesList().size() > 0) {
-      output.writeUInt32NoTag(146);
-      output.writeUInt32NoTag(statusesMemoizedSerializedSize);
-    }
-    for (int i = 0; i < statuses_.size(); i++) {
-      output.writeEnumNoTag(statuses_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -779,18 +693,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, pageToken_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < statuses_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(statuses_.get(i));
-      }
-      size += dataSize;
-      if (!getStatusesList().isEmpty()) {  size += 2;
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32SizeNoTag(dataSize);
-      }statusesMemoizedSerializedSize = dataSize;
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -833,7 +735,6 @@ private static final long serialVersionUID = 0L;
         != other.getPageSize()) return false;
     if (!getPageToken()
         .equals(other.getPageToken())) return false;
-    if (!statuses_.equals(other.statuses_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -882,10 +783,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
-    if (getStatusesCount() > 0) {
-      hash = (37 * hash) + STATUSES_FIELD_NUMBER;
-      hash = (53 * hash) + statuses_.hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1043,8 +940,6 @@ private static final long serialVersionUID = 0L;
       orderBy_ = "";
       pageSize_ = 0;
       pageToken_ = "";
-      statuses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -1093,11 +988,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000080);
       }
       result.channelTypes_ = channelTypes_;
-      if (((bitField0_ & 0x00000800) != 0)) {
-        statuses_ = java.util.Collections.unmodifiableList(statuses_);
-        bitField0_ = (bitField0_ & ~0x00000800);
-      }
-      result.statuses_ = statuses_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest result) {
@@ -1250,16 +1140,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (!other.statuses_.isEmpty()) {
-        if (statuses_.isEmpty()) {
-          statuses_ = other.statuses_;
-          bitField0_ = (bitField0_ & ~0x00000800);
-        } else {
-          ensureStatusesIsMutable();
-          statuses_.addAll(other.statuses_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1381,23 +1261,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 138
-            case 144: {
-              int tmpRaw = input.readEnum();
-              ensureStatusesIsMutable();
-              statuses_.add(tmpRaw);
-              break;
-            } // case 144
-            case 146: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureStatusesIsMutable();
-                statuses_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2779,194 +2642,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pageToken_ = value;
       bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<java.lang.Integer> statuses_ =
-      java.util.Collections.emptyList();
-    private void ensureStatusesIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
-        statuses_ = new java.util.ArrayList<java.lang.Integer>(statuses_);
-        bitField0_ |= 0x00000800;
-      }
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @return A list containing the statuses.
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusesList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationState>(statuses_, statuses_converter_);
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @return The count of statuses.
-     */
-    public int getStatusesCount() {
-      return statuses_.size();
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param index The index of the element to return.
-     * @return The statuses at the given index.
-     */
-    public com.tcn.cloud.api.api.commons.EvaluationState getStatuses(int index) {
-      return statuses_converter_.convert(statuses_.get(index));
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param index The index to set the value at.
-     * @param value The statuses to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStatuses(
-        int index, com.tcn.cloud.api.api.commons.EvaluationState value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureStatusesIsMutable();
-      statuses_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param value The statuses to add.
-     * @return This builder for chaining.
-     */
-    public Builder addStatuses(com.tcn.cloud.api.api.commons.EvaluationState value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureStatusesIsMutable();
-      statuses_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param values The statuses to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllStatuses(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.EvaluationState> values) {
-      ensureStatusesIsMutable();
-      for (com.tcn.cloud.api.api.commons.EvaluationState value : values) {
-        statuses_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStatuses() {
-      statuses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000800);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @return A list containing the enum numeric values on the wire for statuses.
-     */
-    public java.util.List<java.lang.Integer>
-    getStatusesValueList() {
-      return java.util.Collections.unmodifiableList(statuses_);
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of statuses at the given index.
-     */
-    public int getStatusesValue(int index) {
-      return statuses_.get(index);
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for statuses to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStatusesValue(
-        int index, int value) {
-      ensureStatusesIsMutable();
-      statuses_.set(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param value The enum numeric value on the wire for statuses to add.
-     * @return This builder for chaining.
-     */
-    public Builder addStatusesValue(int value) {
-      ensureStatusesIsMutable();
-      statuses_.add(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. Filter by status.
-     * </pre>
-     *
-     * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
-     * @param values The enum numeric values on the wire for statuses to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllStatusesValue(
-        java.lang.Iterable<java.lang.Integer> values) {
-      ensureStatusesIsMutable();
-      for (int value : values) {
-        statuses_.add(value);
-      }
       onChanged();
       return this;
     }
