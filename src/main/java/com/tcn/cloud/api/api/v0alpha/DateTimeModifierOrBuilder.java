@@ -42,4 +42,26 @@ public interface DateTimeModifierOrBuilder extends
    * @return The seconds.
    */
   int getSeconds();
+
+  /**
+   * <pre>
+   * a string in the format: '10y9w8d7h6m5s'
+   * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
+   * </pre>
+   *
+   * <code>string duration = 8 [json_name = "duration"];</code>
+   * @return The duration.
+   */
+  java.lang.String getDuration();
+  /**
+   * <pre>
+   * a string in the format: '10y9w8d7h6m5s'
+   * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
+   * </pre>
+   *
+   * <code>string duration = 8 [json_name = "duration"];</code>
+   * @return The bytes for duration.
+   */
+  com.google.protobuf.ByteString
+      getDurationBytes();
 }
