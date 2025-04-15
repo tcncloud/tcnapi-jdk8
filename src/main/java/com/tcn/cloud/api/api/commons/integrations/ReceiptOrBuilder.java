@@ -30,24 +30,4 @@ public interface ReceiptOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ReceiptFieldOrBuilder getFieldsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * campaign identifier
-   * </pre>
-   *
-   * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
-   * @return The campaignSid.
-   */
-  long getCampaignSid();
-
-  /**
-   * <pre>
-   * campaign module identifier
-   * </pre>
-   *
-   * <code>int64 campaign_module_sid = 3 [json_name = "campaignModuleSid"];</code>
-   * @return The campaignModuleSid.
-   */
-  long getCampaignModuleSid();
 }

@@ -294,37 +294,6 @@ public final class IntegrationsPublicGrpc {
     return getCalculateFeesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> getDeliverReceiptMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeliverReceipt",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> getDeliverReceiptMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> getDeliverReceiptMethod;
-    if ((getDeliverReceiptMethod = IntegrationsPublicGrpc.getDeliverReceiptMethod) == null) {
-      synchronized (IntegrationsPublicGrpc.class) {
-        if ((getDeliverReceiptMethod = IntegrationsPublicGrpc.getDeliverReceiptMethod) == null) {
-          IntegrationsPublicGrpc.getDeliverReceiptMethod = getDeliverReceiptMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeliverReceipt"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsPublicMethodDescriptorSupplier("DeliverReceipt"))
-              .build();
-        }
-      }
-    }
-    return getDeliverReceiptMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -435,13 +404,6 @@ public final class IntegrationsPublicGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateFeesMethod(), responseObserver);
     }
-
-    /**
-     */
-    default void deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeliverReceiptMethod(), responseObserver);
-    }
   }
 
   /**
@@ -542,14 +504,6 @@ public final class IntegrationsPublicGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeliverReceiptMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -629,13 +583,6 @@ public final class IntegrationsPublicGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes calculateFees(com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCalculateFeesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes deliverReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeliverReceiptMethod(), getCallOptions(), request);
     }
   }
 
@@ -726,14 +673,6 @@ public final class IntegrationsPublicGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCalculateFeesMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes> deliverReceipt(
-        com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeliverReceiptMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET_LINK_DATA = 0;
@@ -745,7 +684,6 @@ public final class IntegrationsPublicGrpc {
   private static final int METHODID_PROCESS_WORKFLOW = 6;
   private static final int METHODID_GET_LINK_DETAILS = 7;
   private static final int METHODID_CALCULATE_FEES = 8;
-  private static final int METHODID_DELIVER_RECEIPT = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -799,10 +737,6 @@ public final class IntegrationsPublicGrpc {
         case METHODID_CALCULATE_FEES:
           serviceImpl.calculateFees((com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>) responseObserver);
-          break;
-        case METHODID_DELIVER_RECEIPT:
-          serviceImpl.deliverReceipt((com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -885,13 +819,6 @@ public final class IntegrationsPublicGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesReq,
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.CalculateFeesRes>(
                 service, METHODID_CALCULATE_FEES)))
-        .addMethod(
-          getDeliverReceiptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptRes>(
-                service, METHODID_DELIVER_RECEIPT)))
         .build();
   }
 
@@ -949,7 +876,6 @@ public final class IntegrationsPublicGrpc {
               .addMethod(getProcessWorkflowMethod())
               .addMethod(getGetLinkDetailsMethod())
               .addMethod(getCalculateFeesMethod())
-              .addMethod(getDeliverReceiptMethod())
               .build();
         }
       }
