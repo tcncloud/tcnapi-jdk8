@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1432
+   *     See api/v1alpha1/integrations/service.proto;l=1443
    * @return The headerText.
    */
   @java.lang.Override
@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1432
+   *     See api/v1alpha1/integrations/service.proto;l=1443
    * @return The bytes for headerText.
    */
   @java.lang.Override
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1433
+   *     See api/v1alpha1/integrations/service.proto;l=1444
    * @return The footerText.
    */
   @java.lang.Override
@@ -309,7 +309,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1433
+   *     See api/v1alpha1/integrations/service.proto;l=1444
    * @return The bytes for footerText.
    */
   @java.lang.Override
@@ -2109,7 +2109,7 @@ java.lang.String defaultValue) {
      *
      * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1432
+     *     See api/v1alpha1/integrations/service.proto;l=1443
      * @return The headerText.
      */
     @java.lang.Deprecated public java.lang.String getHeaderText() {
@@ -2131,7 +2131,7 @@ java.lang.String defaultValue) {
      *
      * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1432
+     *     See api/v1alpha1/integrations/service.proto;l=1443
      * @return The bytes for headerText.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2154,7 +2154,7 @@ java.lang.String defaultValue) {
      *
      * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1432
+     *     See api/v1alpha1/integrations/service.proto;l=1443
      * @param value The headerText to set.
      * @return This builder for chaining.
      */
@@ -2173,7 +2173,7 @@ java.lang.String defaultValue) {
      *
      * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1432
+     *     See api/v1alpha1/integrations/service.proto;l=1443
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearHeaderText() {
@@ -2189,7 +2189,7 @@ java.lang.String defaultValue) {
      *
      * <code>string header_text = 6 [json_name = "headerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.header_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1432
+     *     See api/v1alpha1/integrations/service.proto;l=1443
      * @param value The bytes for headerText to set.
      * @return This builder for chaining.
      */
@@ -2211,7 +2211,7 @@ java.lang.String defaultValue) {
      *
      * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1433
+     *     See api/v1alpha1/integrations/service.proto;l=1444
      * @return The footerText.
      */
     @java.lang.Deprecated public java.lang.String getFooterText() {
@@ -2233,7 +2233,7 @@ java.lang.String defaultValue) {
      *
      * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1433
+     *     See api/v1alpha1/integrations/service.proto;l=1444
      * @return The bytes for footerText.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2256,7 +2256,7 @@ java.lang.String defaultValue) {
      *
      * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1433
+     *     See api/v1alpha1/integrations/service.proto;l=1444
      * @param value The footerText to set.
      * @return This builder for chaining.
      */
@@ -2275,7 +2275,7 @@ java.lang.String defaultValue) {
      *
      * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1433
+     *     See api/v1alpha1/integrations/service.proto;l=1444
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFooterText() {
@@ -2291,7 +2291,7 @@ java.lang.String defaultValue) {
      *
      * <code>string footer_text = 7 [json_name = "footerText", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalWorkflow.footer_text is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1433
+     *     See api/v1alpha1/integrations/service.proto;l=1444
      * @param value The bytes for footerText to set.
      * @return This builder for chaining.
      */
