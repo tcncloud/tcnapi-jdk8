@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DateTimeModifier() {
-    duration_ = "";
   }
 
   @java.lang.Override
@@ -109,55 +108,6 @@ private static final long serialVersionUID = 0L;
     return seconds_;
   }
 
-  public static final int DURATION_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object duration_ = "";
-  /**
-   * <pre>
-   * a string in the format: '10y9w8d7h6m5s'
-   * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-   * </pre>
-   *
-   * <code>string duration = 8 [json_name = "duration"];</code>
-   * @return The duration.
-   */
-  @java.lang.Override
-  public java.lang.String getDuration() {
-    java.lang.Object ref = duration_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      duration_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * a string in the format: '10y9w8d7h6m5s'
-   * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-   * </pre>
-   *
-   * <code>string duration = 8 [json_name = "duration"];</code>
-   * @return The bytes for duration.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDurationBytes() {
-    java.lang.Object ref = duration_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      duration_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -189,9 +139,6 @@ private static final long serialVersionUID = 0L;
     }
     if (seconds_ != 0) {
       output.writeInt32(7, seconds_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, duration_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -226,9 +173,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(7, seconds_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(duration_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, duration_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -256,8 +200,6 @@ private static final long serialVersionUID = 0L;
         != other.getMinutes()) return false;
     if (getSeconds()
         != other.getSeconds()) return false;
-    if (!getDuration()
-        .equals(other.getDuration())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -281,8 +223,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMinutes();
     hash = (37 * hash) + SECONDS_FIELD_NUMBER;
     hash = (53 * hash) + getSeconds();
-    hash = (37 * hash) + DURATION_FIELD_NUMBER;
-    hash = (53 * hash) + getDuration().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -424,7 +364,6 @@ private static final long serialVersionUID = 0L;
       hours_ = 0;
       minutes_ = 0;
       seconds_ = 0;
-      duration_ = "";
       return this;
     }
 
@@ -475,9 +414,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.seconds_ = seconds_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.duration_ = duration_;
       }
     }
 
@@ -543,11 +479,6 @@ private static final long serialVersionUID = 0L;
       if (other.getSeconds() != 0) {
         setSeconds(other.getSeconds());
       }
-      if (!other.getDuration().isEmpty()) {
-        duration_ = other.duration_;
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -604,11 +535,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 56
-            case 66: {
-              duration_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -814,103 +740,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearSeconds() {
       bitField0_ = (bitField0_ & ~0x00000020);
       seconds_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object duration_ = "";
-    /**
-     * <pre>
-     * a string in the format: '10y9w8d7h6m5s'
-     * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-     * </pre>
-     *
-     * <code>string duration = 8 [json_name = "duration"];</code>
-     * @return The duration.
-     */
-    public java.lang.String getDuration() {
-      java.lang.Object ref = duration_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        duration_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * a string in the format: '10y9w8d7h6m5s'
-     * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-     * </pre>
-     *
-     * <code>string duration = 8 [json_name = "duration"];</code>
-     * @return The bytes for duration.
-     */
-    public com.google.protobuf.ByteString
-        getDurationBytes() {
-      java.lang.Object ref = duration_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        duration_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * a string in the format: '10y9w8d7h6m5s'
-     * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-     * </pre>
-     *
-     * <code>string duration = 8 [json_name = "duration"];</code>
-     * @param value The duration to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDuration(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      duration_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * a string in the format: '10y9w8d7h6m5s'
-     * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-     * </pre>
-     *
-     * <code>string duration = 8 [json_name = "duration"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDuration() {
-      duration_ = getDefaultInstance().getDuration();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * a string in the format: '10y9w8d7h6m5s'
-     * prefix any op with a '-' to subtract: '-10y9w8d-7h6m5s'
-     * </pre>
-     *
-     * <code>string duration = 8 [json_name = "duration"];</code>
-     * @param value The bytes for duration to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDurationBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      duration_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
