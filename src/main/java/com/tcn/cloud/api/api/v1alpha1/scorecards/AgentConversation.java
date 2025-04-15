@@ -2041,6 +2041,596 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ChatMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.scorecards.AgentConversation.ChatMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of the chat conversation.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    long getConversationSid();
+
+    /**
+     * <pre>
+     * Id of the campaign.
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    long getCampaignSid();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.scorecards.AgentConversation.ChatMetadata}
+   */
+  public static final class ChatMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.scorecards.AgentConversation.ChatMetadata)
+      ChatMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChatMetadata.newBuilder() to construct.
+    private ChatMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChatMetadata() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChatMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.class, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder.class);
+    }
+
+    public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
+    private long conversationSid_ = 0L;
+    /**
+     * <pre>
+     * Id of the chat conversation.
+     * </pre>
+     *
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
+    }
+
+    public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
+    private long campaignSid_ = 0L;
+    /**
+     * <pre>
+     * Id of the campaign.
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public long getCampaignSid() {
+      return campaignSid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (conversationSid_ != 0L) {
+        output.writeInt64(1, conversationSid_);
+      }
+      if (campaignSid_ != 0L) {
+        output.writeInt64(2, campaignSid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (conversationSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, conversationSid_);
+      }
+      if (campaignSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, campaignSid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata other = (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) obj;
+
+      if (getConversationSid()
+          != other.getConversationSid()) return false;
+      if (getCampaignSid()
+          != other.getCampaignSid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConversationSid());
+      hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCampaignSid());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.scorecards.AgentConversation.ChatMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.scorecards.AgentConversation.ChatMetadata)
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.class, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conversationSid_ = 0L;
+        campaignSid_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata build() {
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata result = new com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.conversationSid_ = conversationSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.campaignSid_ = campaignSid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance()) return this;
+        if (other.getConversationSid() != 0L) {
+          setConversationSid(other.getConversationSid());
+        }
+        if (other.getCampaignSid() != 0L) {
+          setCampaignSid(other.getCampaignSid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                conversationSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                campaignSid_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long conversationSid_ ;
+      /**
+       * <pre>
+       * Id of the chat conversation.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return The conversationSid.
+       */
+      @java.lang.Override
+      public long getConversationSid() {
+        return conversationSid_;
+      }
+      /**
+       * <pre>
+       * Id of the chat conversation.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @param value The conversationSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversationSid(long value) {
+
+        conversationSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the chat conversation.
+       * </pre>
+       *
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversationSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        conversationSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long campaignSid_ ;
+      /**
+       * <pre>
+       * Id of the campaign.
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return The campaignSid.
+       */
+      @java.lang.Override
+      public long getCampaignSid() {
+        return campaignSid_;
+      }
+      /**
+       * <pre>
+       * Id of the campaign.
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @param value The campaignSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCampaignSid(long value) {
+
+        campaignSid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of the campaign.
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCampaignSid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        campaignSid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.scorecards.AgentConversation.ChatMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.scorecards.AgentConversation.ChatMetadata)
+    private static final com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChatMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ChatMetadata>() {
+      @java.lang.Override
+      public ChatMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChatMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChatMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int metadataCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object metadata_;
@@ -2049,6 +2639,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CALL_METADATA(10),
     SMS_METADATA(11),
+    CHAT_METADATA(12),
     METADATA_NOT_SET(0);
     private final int value;
     private MetadataCase(int value) {
@@ -2068,6 +2659,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 10: return CALL_METADATA;
         case 11: return SMS_METADATA;
+        case 12: return CHAT_METADATA;
         case 0: return METADATA_NOT_SET;
         default: return null;
       }
@@ -2295,6 +2887,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.SmsMetadata.getDefaultInstance();
   }
 
+  public static final int CHAT_METADATA_FIELD_NUMBER = 12;
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   * @return Whether the chatMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasChatMetadata() {
+    return metadataCase_ == 12;
+  }
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   * @return The chatMetadata.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getChatMetadata() {
+    if (metadataCase_ == 12) {
+       return (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder getChatMetadataOrBuilder() {
+    if (metadataCase_ == 12) {
+       return (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2327,6 +2962,9 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 11) {
       output.writeMessage(11, (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.SmsMetadata) metadata_);
     }
+    if (metadataCase_ == 12) {
+      output.writeMessage(12, (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2358,6 +2996,10 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.SmsMetadata) metadata_);
+    }
+    if (metadataCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2394,6 +3036,10 @@ private static final long serialVersionUID = 0L;
         if (!getSmsMetadata()
             .equals(other.getSmsMetadata())) return false;
         break;
+      case 12:
+        if (!getChatMetadata()
+            .equals(other.getChatMetadata())) return false;
+        break;
       case 0:
       default:
     }
@@ -2427,6 +3073,10 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + SMS_METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getSmsMetadata().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + CHAT_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getChatMetadata().hashCode();
         break;
       case 0:
       default:
@@ -2581,6 +3231,9 @@ private static final long serialVersionUID = 0L;
       if (smsMetadataBuilder_ != null) {
         smsMetadataBuilder_.clear();
       }
+      if (chatMetadataBuilder_ != null) {
+        chatMetadataBuilder_.clear();
+      }
       metadataCase_ = 0;
       metadata_ = null;
       return this;
@@ -2643,6 +3296,10 @@ private static final long serialVersionUID = 0L;
       if (metadataCase_ == 11 &&
           smsMetadataBuilder_ != null) {
         result.metadata_ = smsMetadataBuilder_.build();
+      }
+      if (metadataCase_ == 12 &&
+          chatMetadataBuilder_ != null) {
+        result.metadata_ = chatMetadataBuilder_.build();
       }
     }
 
@@ -2713,6 +3370,10 @@ private static final long serialVersionUID = 0L;
           mergeSmsMetadata(other.getSmsMetadata());
           break;
         }
+        case CHAT_METADATA: {
+          mergeChatMetadata(other.getChatMetadata());
+          break;
+        }
         case METADATA_NOT_SET: {
           break;
         }
@@ -2779,6 +3440,13 @@ private static final long serialVersionUID = 0L;
               metadataCase_ = 11;
               break;
             } // case 90
+            case 98: {
+              input.readMessage(
+                  getChatMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 12;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3529,6 +4197,184 @@ private static final long serialVersionUID = 0L;
       metadataCase_ = 11;
       onChanged();
       return smsMetadataBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder> chatMetadataBuilder_;
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     * @return Whether the chatMetadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasChatMetadata() {
+      return metadataCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     * @return The chatMetadata.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getChatMetadata() {
+      if (chatMetadataBuilder_ == null) {
+        if (metadataCase_ == 12) {
+          return (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+      } else {
+        if (metadataCase_ == 12) {
+          return chatMetadataBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    public Builder setChatMetadata(com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata value) {
+      if (chatMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        metadata_ = value;
+        onChanged();
+      } else {
+        chatMetadataBuilder_.setMessage(value);
+      }
+      metadataCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    public Builder setChatMetadata(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder builderForValue) {
+      if (chatMetadataBuilder_ == null) {
+        metadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        chatMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      metadataCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    public Builder mergeChatMetadata(com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata value) {
+      if (chatMetadataBuilder_ == null) {
+        if (metadataCase_ == 12 &&
+            metadata_ != com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance()) {
+          metadata_ = com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.newBuilder((com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          metadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (metadataCase_ == 12) {
+          chatMetadataBuilder_.mergeFrom(value);
+        } else {
+          chatMetadataBuilder_.setMessage(value);
+        }
+      }
+      metadataCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    public Builder clearChatMetadata() {
+      if (chatMetadataBuilder_ == null) {
+        if (metadataCase_ == 12) {
+          metadataCase_ = 0;
+          metadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (metadataCase_ == 12) {
+          metadataCase_ = 0;
+          metadata_ = null;
+        }
+        chatMetadataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder getChatMetadataBuilder() {
+      return getChatMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder getChatMetadataOrBuilder() {
+      if ((metadataCase_ == 12) && (chatMetadataBuilder_ != null)) {
+        return chatMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        if (metadataCase_ == 12) {
+          return (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Metdata for a chat conversation.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder> 
+        getChatMetadataFieldBuilder() {
+      if (chatMetadataBuilder_ == null) {
+        if (!(metadataCase_ == 12)) {
+          metadata_ = com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.getDefaultInstance();
+        }
+        chatMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata) metadata_,
+                getParentForChildren(),
+                isClean());
+        metadata_ = null;
+      }
+      metadataCase_ = 12;
+      onChanged();
+      return chatMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

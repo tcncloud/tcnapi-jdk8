@@ -338,4 +338,53 @@ public interface ListEvaluationsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
+
+  /**
+   * <pre>
+   * Optional. Filter by status.
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return A list containing the statuses.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.EvaluationState> getStatusesList();
+  /**
+   * <pre>
+   * Optional. Filter by status.
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return The count of statuses.
+   */
+  int getStatusesCount();
+  /**
+   * <pre>
+   * Optional. Filter by status.
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @param index The index of the element to return.
+   * @return The statuses at the given index.
+   */
+  com.tcn.cloud.api.api.commons.EvaluationState getStatuses(int index);
+  /**
+   * <pre>
+   * Optional. Filter by status.
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @return A list containing the enum numeric values on the wire for statuses.
+   */
+  java.util.List<java.lang.Integer>
+  getStatusesValueList();
+  /**
+   * <pre>
+   * Optional. Filter by status.
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationState statuses = 18 [json_name = "statuses"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of statuses at the given index.
+   */
+  int getStatusesValue(int index);
 }

@@ -24,6 +24,14 @@ public enum ExportFormat
    * <code>REPORT_FORMAT_PARQUET = 2;</code>
    */
   REPORT_FORMAT_PARQUET(2),
+  /**
+   * <code>REPORT_FORMAT_TSV = 3;</code>
+   */
+  REPORT_FORMAT_TSV(3),
+  /**
+   * <code>REPORT_FORMAT_TXT = 4;</code>
+   */
+  REPORT_FORMAT_TXT(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -39,6 +47,14 @@ public enum ExportFormat
    * <code>REPORT_FORMAT_PARQUET = 2;</code>
    */
   public static final int REPORT_FORMAT_PARQUET_VALUE = 2;
+  /**
+   * <code>REPORT_FORMAT_TSV = 3;</code>
+   */
+  public static final int REPORT_FORMAT_TSV_VALUE = 3;
+  /**
+   * <code>REPORT_FORMAT_TXT = 4;</code>
+   */
+  public static final int REPORT_FORMAT_TXT_VALUE = 4;
 
 
   public final int getNumber() {
@@ -68,6 +84,8 @@ public enum ExportFormat
       case 0: return REPORT_FORMAT_UNSPECIFIED;
       case 1: return REPORT_FORMAT_CSV;
       case 2: return REPORT_FORMAT_PARQUET;
+      case 3: return REPORT_FORMAT_TSV;
+      case 4: return REPORT_FORMAT_TXT;
       default: return null;
     }
   }

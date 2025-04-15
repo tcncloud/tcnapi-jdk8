@@ -622,38 +622,80 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions exportOptions_;
   /**
    * <pre>
-   * export options for the insight
+   * use data_export_options instead
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=32
    * @return Whether the exportOptions field is set.
    */
   @java.lang.Override
-  public boolean hasExportOptions() {
+  @java.lang.Deprecated public boolean hasExportOptions() {
     return exportOptions_ != null;
   }
   /**
    * <pre>
-   * export options for the insight
+   * use data_export_options instead
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=32
    * @return The exportOptions.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions() {
     return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.getDefaultInstance() : exportOptions_;
+  }
+  /**
+   * <pre>
+   * use data_export_options instead
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
+    return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.getDefaultInstance() : exportOptions_;
+  }
+
+  public static final int DATA_EXPORT_OPTIONS_FIELD_NUMBER = 19;
+  private com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions dataExportOptions_;
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   * @return Whether the dataExportOptions field is set.
+   */
+  @java.lang.Override
+  public boolean hasDataExportOptions() {
+    return dataExportOptions_ != null;
   }
   /**
    * <pre>
    * export options for the insight
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   * @return The dataExportOptions.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
-    return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.getDefaultInstance() : exportOptions_;
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getDataExportOptions() {
+    return dataExportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : dataExportOptions_;
+  }
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getDataExportOptionsOrBuilder() {
+    return dataExportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : dataExportOptions_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -717,6 +759,9 @@ private static final long serialVersionUID = 0L;
     }
     if (exportOptions_ != null) {
       output.writeMessage(18, getExportOptions());
+    }
+    if (dataExportOptions_ != null) {
+      output.writeMessage(19, getDataExportOptions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -786,6 +831,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getExportOptions());
     }
+    if (dataExportOptions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, getDataExportOptions());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -834,6 +883,11 @@ private static final long serialVersionUID = 0L;
     if (hasExportOptions()) {
       if (!getExportOptions()
           .equals(other.getExportOptions())) return false;
+    }
+    if (hasDataExportOptions() != other.hasDataExportOptions()) return false;
+    if (hasDataExportOptions()) {
+      if (!getDataExportOptions()
+          .equals(other.getDataExportOptions())) return false;
     }
     if (!getInsightContentCase().equals(other.getInsightContentCase())) return false;
     switch (insightContentCase_) {
@@ -894,6 +948,10 @@ private static final long serialVersionUID = 0L;
     if (hasExportOptions()) {
       hash = (37 * hash) + EXPORT_OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getExportOptions().hashCode();
+    }
+    if (hasDataExportOptions()) {
+      hash = (37 * hash) + DATA_EXPORT_OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getDataExportOptions().hashCode();
     }
     switch (insightContentCase_) {
       case 16:
@@ -1076,6 +1134,11 @@ private static final long serialVersionUID = 0L;
         exportOptionsBuilder_.dispose();
         exportOptionsBuilder_ = null;
       }
+      dataExportOptions_ = null;
+      if (dataExportOptionsBuilder_ != null) {
+        dataExportOptionsBuilder_.dispose();
+        dataExportOptionsBuilder_ = null;
+      }
       insightContentCase_ = 0;
       insightContent_ = null;
       return this;
@@ -1159,6 +1222,11 @@ private static final long serialVersionUID = 0L;
         result.exportOptions_ = exportOptionsBuilder_ == null
             ? exportOptions_
             : exportOptionsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.dataExportOptions_ = dataExportOptionsBuilder_ == null
+            ? dataExportOptions_
+            : dataExportOptionsBuilder_.build();
       }
     }
 
@@ -1270,6 +1338,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExportOptions()) {
         mergeExportOptions(other.getExportOptions());
+      }
+      if (other.hasDataExportOptions()) {
+        mergeDataExportOptions(other.getDataExportOptions());
       }
       switch (other.getInsightContentCase()) {
         case PIPELINE: {
@@ -1400,6 +1471,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  getDataExportOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 154
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2918,24 +2996,28 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder> exportOptionsBuilder_;
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=32
      * @return Whether the exportOptions field is set.
      */
-    public boolean hasExportOptions() {
+    @java.lang.Deprecated public boolean hasExportOptions() {
       return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+     * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+     *     See api/v1alpha1/insights/insight.proto;l=32
      * @return The exportOptions.
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions() {
       if (exportOptionsBuilder_ == null) {
         return exportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.getDefaultInstance() : exportOptions_;
       } else {
@@ -2944,12 +3026,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public Builder setExportOptions(com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions value) {
+    @java.lang.Deprecated public Builder setExportOptions(com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions value) {
       if (exportOptionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2964,12 +3046,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public Builder setExportOptions(
+    @java.lang.Deprecated public Builder setExportOptions(
         com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder builderForValue) {
       if (exportOptionsBuilder_ == null) {
         exportOptions_ = builderForValue.build();
@@ -2982,12 +3064,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public Builder mergeExportOptions(com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions value) {
+    @java.lang.Deprecated public Builder mergeExportOptions(com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions value) {
       if (exportOptionsBuilder_ == null) {
         if (((bitField0_ & 0x00008000) != 0) &&
           exportOptions_ != null &&
@@ -3005,12 +3087,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public Builder clearExportOptions() {
+    @java.lang.Deprecated public Builder clearExportOptions() {
       bitField0_ = (bitField0_ & ~0x00008000);
       exportOptions_ = null;
       if (exportOptionsBuilder_ != null) {
@@ -3022,24 +3104,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder getExportOptionsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder getExportOptionsBuilder() {
       bitField0_ |= 0x00008000;
       onChanged();
       return getExportOptionsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder() {
       if (exportOptionsBuilder_ != null) {
         return exportOptionsBuilder_.getMessageOrBuilder();
       } else {
@@ -3049,10 +3131,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * export options for the insight
+     * use data_export_options instead
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+     * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder> 
@@ -3066,6 +3148,161 @@ private static final long serialVersionUID = 0L;
         exportOptions_ = null;
       }
       return exportOptionsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions dataExportOptions_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder> dataExportOptionsBuilder_;
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     * @return Whether the dataExportOptions field is set.
+     */
+    public boolean hasDataExportOptions() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     * @return The dataExportOptions.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getDataExportOptions() {
+      if (dataExportOptionsBuilder_ == null) {
+        return dataExportOptions_ == null ? com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : dataExportOptions_;
+      } else {
+        return dataExportOptionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public Builder setDataExportOptions(com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions value) {
+      if (dataExportOptionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dataExportOptions_ = value;
+      } else {
+        dataExportOptionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public Builder setDataExportOptions(
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder builderForValue) {
+      if (dataExportOptionsBuilder_ == null) {
+        dataExportOptions_ = builderForValue.build();
+      } else {
+        dataExportOptionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public Builder mergeDataExportOptions(com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions value) {
+      if (dataExportOptionsBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          dataExportOptions_ != null &&
+          dataExportOptions_ != com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance()) {
+          getDataExportOptionsBuilder().mergeFrom(value);
+        } else {
+          dataExportOptions_ = value;
+        }
+      } else {
+        dataExportOptionsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public Builder clearDataExportOptions() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      dataExportOptions_ = null;
+      if (dataExportOptionsBuilder_ != null) {
+        dataExportOptionsBuilder_.dispose();
+        dataExportOptionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder getDataExportOptionsBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getDataExportOptionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getDataExportOptionsOrBuilder() {
+      if (dataExportOptionsBuilder_ != null) {
+        return dataExportOptionsBuilder_.getMessageOrBuilder();
+      } else {
+        return dataExportOptions_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.getDefaultInstance() : dataExportOptions_;
+      }
+    }
+    /**
+     * <pre>
+     * export options for the insight
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder> 
+        getDataExportOptionsFieldBuilder() {
+      if (dataExportOptionsBuilder_ == null) {
+        dataExportOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions.Builder, com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder>(
+                getDataExportOptions(),
+                getParentForChildren(),
+                isClean());
+        dataExportOptions_ = null;
+      }
+      return dataExportOptionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

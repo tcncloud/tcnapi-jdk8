@@ -58,7 +58,7 @@ public interface TableVisualizationOrBuilder extends
    *
    * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=256
+   *     See api/v1alpha1/insights/insight.proto;l=258
    * @return The delimiter.
    */
   @java.lang.Deprecated java.lang.String getDelimiter();
@@ -69,7 +69,7 @@ public interface TableVisualizationOrBuilder extends
    *
    * <code>string delimiter = 2 [json_name = "delimiter", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TableVisualization.delimiter is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=256
+   *     See api/v1alpha1/insights/insight.proto;l=258
    * @return The bytes for delimiter.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -82,7 +82,7 @@ public interface TableVisualizationOrBuilder extends
    *
    * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=258
+   *     See api/v1alpha1/insights/insight.proto;l=260
    * @return The enum numeric value on the wire for quoteCharacter.
    */
   @java.lang.Deprecated int getQuoteCharacterValue();
@@ -93,7 +93,7 @@ public interface TableVisualizationOrBuilder extends
    *
    * <code>.api.v1alpha1.insights.QuoteCharacter quote_character = 3 [json_name = "quoteCharacter", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TableVisualization.quote_character is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=258
+   *     See api/v1alpha1/insights/insight.proto;l=260
    * @return The quoteCharacter.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.QuoteCharacter getQuoteCharacter();
@@ -105,7 +105,7 @@ public interface TableVisualizationOrBuilder extends
    *
    * <code>bool no_header = 4 [json_name = "noHeader", deprecated = true];</code>
    * @deprecated api.v1alpha1.insights.TableVisualization.no_header is deprecated.
-   *     See api/v1alpha1/insights/insight.proto;l=260
+   *     See api/v1alpha1/insights/insight.proto;l=262
    * @return The noHeader.
    */
   @java.lang.Deprecated boolean getNoHeader();

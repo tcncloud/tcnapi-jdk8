@@ -137,5 +137,32 @@ public interface AgentConversationOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.SmsMetadataOrBuilder getSmsMetadataOrBuilder();
 
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   * @return Whether the chatMetadata field is set.
+   */
+  boolean hasChatMetadata();
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   * @return The chatMetadata.
+   */
+  com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadata getChatMetadata();
+  /**
+   * <pre>
+   * Metdata for a chat conversation.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.AgentConversation.ChatMetadata chat_metadata = 12 [json_name = "chatMetadata"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.ChatMetadataOrBuilder getChatMetadataOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.scorecards.AgentConversation.MetadataCase getMetadataCase();
 }
