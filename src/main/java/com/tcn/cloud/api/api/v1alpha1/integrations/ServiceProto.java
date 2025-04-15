@@ -740,6 +740,21 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_integrations_InsertPrivateFieldRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_DeliverReceiptReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_DeliverReceiptReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_EmailReceipt_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_EmailReceipt_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_DeliverReceiptRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_DeliverReceiptRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_integrations_CalculateFeesReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1437,190 +1452,196 @@ public final class ServiceProto {
       "private_field_type\030\003 \001(\0162+.api.v1alpha1." +
       "integrations.PrivateFieldTypeR\020privateFi" +
       "eldType\"A\n\025InsertPrivateFieldRes\022(\n\020priv" +
-      "ate_field_id\030\001 \001(\005R\016privateFieldId\"\227\003\n\020C" +
-      "alculateFeesReq\0221\n\004fees\030\002 \003(\0132\035.api.comm" +
-      "ons.integrations.FeeR\004fees\022O\n\006params\030\003 \003" +
-      "(\01327.api.v1alpha1.integrations.Calculate" +
-      "FeesReq.ParamsEntryR\006params\022\031\n\010call_sid\030" +
-      "\004 \001(\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032.api." +
-      "commons.CallType.EnumR\010callType\022N\n\016reque" +
-      "st_origin\030\006 \001(\0162\'.api.commons.integratio" +
-      "ns.RequestOriginR\rrequestOrigin\032[\n\013Param" +
-      "sEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132" +
-      " .api.v1alpha1.integrations.ValueR\005value" +
-      ":\0028\001\"\221\002\n\020CalculateFeesRes\022h\n\017calculated_" +
-      "fees\030\001 \003(\0132?.api.v1alpha1.integrations.C" +
-      "alculateFeesRes.CalculatedFeesEntryR\016cal" +
-      "culatedFees\022<\n\020total_amount_due\030\002 \001(\0132\022." +
-      "google.type.MoneyR\016totalAmountDue\032U\n\023Cal" +
-      "culatedFeesEntry\022\020\n\003key\030\001 \001(\tR\003key\022(\n\005va" +
-      "lue\030\002 \001(\0132\022.google.type.MoneyR\005value:\0028\001" +
-      "*0\n\020PrivateFieldType\022\013\n\007UNKNOWN\020\000\022\017\n\013PRI" +
-      "VATE_KEY\020\0012\3451\n\014Integrations\022\225\001\n\007Process\022" +
-      "%.api.v1alpha1.integrations.ProcessReq\032%" +
-      ".api.v1alpha1.integrations.ProcessRes\"<\272" +
-      "\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api/v1alpha1/inte" +
-      "grations/process:\001*\022\322\001\n\031GetIntegrationTr" +
-      "ansaction\0227.api.v1alpha1.integrations.Ge" +
-      "tIntegrationTransactionReq\0321.api.v1alpha" +
-      "1.integrations.IntegrationTransaction\"I\272" +
-      "\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/integrati" +
-      "ons/getintegrationtransaction:\001*\022\365\001\n\037Get" +
-      "IntegrationTransactionReport\022=.api.v1alp" +
-      "ha1.integrations.GetIntegrationTransacti" +
-      "onReportReq\032=.api.v1alpha1.integrations." +
-      "GetIntegrationTransactionReportRes\"T\272\270\221\002" +
-      "\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002?\":/api/v1alpha1/integra" +
-      "tions/getintegrationtransactionreport:\001*" +
-      "\022\200\002\n#GetIntegrationTransactionReportData" +
-      "\022A.api.v1alpha1.integrations.GetIntegrat" +
-      "ionTransactionReportDataReq\032A.api.v1alph" +
-      "a1.integrations.GetIntegrationTransactio" +
-      "nReportDataRes\"S\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002C\">/api/v" +
-      "1alpha1/integrations/getintegrationtrans" +
-      "actionreportdata:\001*\022\332\001\n\026SearchPastTransa" +
-      "ctions\0228.api.v1alpha1.integrations.Searc" +
-      "hPastTransactionsRequest\0329.api.v1alpha1." +
-      "integrations.SearchPastTransactionsRespo" +
-      "nse\"K\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0026\"1/api/v1alpha" +
-      "1/integrations/searchpasttransactions:\001*" +
-      "\022\307\001\n\025GetAggregatedMetadata\0223.api.v1alpha" +
-      "1.integrations.GetAggregatedMetadataReq\032" +
-      "3.api.v1alpha1.integrations.GetAggregate" +
-      "dMetadataRes\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"//api/v1a" +
-      "lpha1/integrations/getaggregatemetadata:" +
-      "\001*\022\330\001\n\031GetPortalLinksByDateRange\0227.api.v" +
-      "1alpha1.integrations.GetPortalLinksByDat" +
-      "eRangeReq\0327.api.v1alpha1.integrations.Ge" +
-      "tPortalLinksByDateRangeRes\"I\272\270\221\002\005\n\003\010\224\n\202\323" +
-      "\344\223\0029\"4/api/v1alpha1/integrations/getport" +
-      "allinksbydaterange:\001*\022\262\001\n\027CreateIntegrat" +
-      "ionConfig\022,.api.v1alpha1.integrations.In" +
-      "tegrationConfig\032 .api.v1alpha1.integrati" +
-      "ons.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alph" +
-      "a1/integrations/createintegrationconfig:" +
-      "\001*\022\276\001\n\024GetIntegrationConfig\0222.api.v1alph" +
-      "a1.integrations.GetIntegrationConfigReq\032" +
-      ",.api.v1alpha1.integrations.IntegrationC" +
-      "onfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"//api/v1alpha1/i" +
-      "ntegrations/getintegrationconfig:\001*\022\273\001\n\027" +
-      "UpdateIntegrationConfig\0225.api.v1alpha1.i" +
-      "ntegrations.UpdateIntegrationConfigReq\032 " +
-      ".api.v1alpha1.integrations.Empty\"G\272\270\221\002\005\n" +
-      "\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integrations/u" +
-      "dpateintegrationconfig:\001*\022\273\001\n\027DeleteInte" +
-      "grationConfig\0225.api.v1alpha1.integration" +
-      "s.DeleteIntegrationConfigReq\032 .api.v1alp" +
-      "ha1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027" +
-      "\"2/api/v1alpha1/integrations/deleteinteg" +
-      "rationconfig:\001*\022\250\001\n\020ListIntegrations\022 .a" +
-      "pi.v1alpha1.integrations.Empty\032+.api.v1a" +
-      "lpha1.integrations.IntegrationInfos\"E\272\270\221" +
-      "\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0020\"+/api/v1alpha1/integr" +
-      "ations/listintegrations:\001*\022\310\001\n\026ListInteg" +
-      "rationsForOrg\0224.api.v1alpha1.integration" +
-      "s.ListIntegrationsForOrgReq\032+.api.v1alph" +
-      "a1.integrations.IntegrationInfos\"K\272\270\221\002\n\n" +
-      "\003\010\224\n\n\003\010\326\002\202\323\344\223\0026\"1/api/v1alpha1/integrati" +
-      "ons/listintegrationsfororg:\001*\022\334\001\n\032ListIn" +
-      "tegrationConfigNames\0228.api.v1alpha1.inte" +
-      "grations.ListIntegrationConfigNamesReq\0328" +
-      ".api.v1alpha1.integrations.ListIntegrati" +
-      "onConfigNamesRes\"J\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002:\"5/api" +
-      "/v1alpha1/integrations/listintegrationco" +
-      "nfignames:\001*\022\271\001\n\022ListJourneyConfigs\0220.ap" +
-      "i.v1alpha1.integrations.ListJourneyConfi" +
-      "gsReq\032-.api.v1alpha1.integrations.Integr" +
-      "ationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1a" +
-      "lpha1/integrations/listjourneyconfigs:\001*" +
-      "\022\302\001\n\025ListNonJourneyConfigs\0223.api.v1alpha" +
-      "1.integrations.ListNonJourneyConfigsReq\032" +
-      "-.api.v1alpha1.integrations.IntegrationC" +
-      "onfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0/api/v1alpha1/" +
-      "integrations/listnonjourneyconfigs:\001*\022\243\001" +
-      "\n\022CreatePortalConfig\022\'.api.v1alpha1.inte" +
+      "ate_field_id\030\001 \001(\005R\016privateFieldId\"\225\001\n\021D" +
+      "eliverReceiptReq\022N\n\remail_receipt\030\003 \001(\0132" +
+      "\'.api.v1alpha1.integrations.EmailReceipt" +
+      "H\000R\014emailReceipt\022\035\n\nreceipt_id\030\006 \001(\tR\tre" +
+      "ceiptIdB\021\n\017delivery_method\"\'\n\014EmailRecei" +
+      "pt\022\027\n\007to_addr\030\001 \001(\tR\006toAddr\"\023\n\021DeliverRe" +
+      "ceiptRes\"\227\003\n\020CalculateFeesReq\0221\n\004fees\030\002 " +
+      "\003(\0132\035.api.commons.integrations.FeeR\004fees" +
+      "\022O\n\006params\030\003 \003(\01327.api.v1alpha1.integrat" +
+      "ions.CalculateFeesReq.ParamsEntryR\006param" +
+      "s\022\031\n\010call_sid\030\004 \001(\003R\007callSid\0227\n\tcall_typ" +
+      "e\030\005 \001(\0162\032.api.commons.CallType.EnumR\010cal" +
+      "lType\022N\n\016request_origin\030\006 \001(\0162\'.api.comm" +
+      "ons.integrations.RequestOriginR\rrequestO" +
+      "rigin\032[\n\013ParamsEntry\022\020\n\003key\030\001 \001(\tR\003key\0226" +
+      "\n\005value\030\002 \001(\0132 .api.v1alpha1.integration" +
+      "s.ValueR\005value:\0028\001\"\221\002\n\020CalculateFeesRes\022" +
+      "h\n\017calculated_fees\030\001 \003(\0132?.api.v1alpha1." +
+      "integrations.CalculateFeesRes.Calculated" +
+      "FeesEntryR\016calculatedFees\022<\n\020total_amoun" +
+      "t_due\030\002 \001(\0132\022.google.type.MoneyR\016totalAm" +
+      "ountDue\032U\n\023CalculatedFeesEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022(\n\005value\030\002 \001(\0132\022.google.type.Mo" +
+      "neyR\005value:\0028\001*0\n\020PrivateFieldType\022\013\n\007UN" +
+      "KNOWN\020\000\022\017\n\013PRIVATE_KEY\020\0012\3451\n\014Integration" +
+      "s\022\225\001\n\007Process\022%.api.v1alpha1.integration" +
+      "s.ProcessReq\032%.api.v1alpha1.integrations" +
+      ".ProcessRes\"<\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api" +
+      "/v1alpha1/integrations/process:\001*\022\322\001\n\031Ge" +
+      "tIntegrationTransaction\0227.api.v1alpha1.i" +
+      "ntegrations.GetIntegrationTransactionReq" +
+      "\0321.api.v1alpha1.integrations.Integration" +
+      "Transaction\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1al" +
+      "pha1/integrations/getintegrationtransact" +
+      "ion:\001*\022\365\001\n\037GetIntegrationTransactionRepo" +
+      "rt\022=.api.v1alpha1.integrations.GetIntegr" +
+      "ationTransactionReportReq\032=.api.v1alpha1" +
+      ".integrations.GetIntegrationTransactionR" +
+      "eportRes\"T\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002?\":/api/v1" +
+      "alpha1/integrations/getintegrationtransa" +
+      "ctionreport:\001*\022\200\002\n#GetIntegrationTransac" +
+      "tionReportData\022A.api.v1alpha1.integratio" +
+      "ns.GetIntegrationTransactionReportDataRe" +
+      "q\032A.api.v1alpha1.integrations.GetIntegra" +
+      "tionTransactionReportDataRes\"S\272\270\221\002\005\n\003\010\224\n" +
+      "\202\323\344\223\002C\">/api/v1alpha1/integrations/getin" +
+      "tegrationtransactionreportdata:\001*\022\332\001\n\026Se" +
+      "archPastTransactions\0228.api.v1alpha1.inte" +
+      "grations.SearchPastTransactionsRequest\0329" +
+      ".api.v1alpha1.integrations.SearchPastTra" +
+      "nsactionsResponse\"K\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0026" +
+      "\"1/api/v1alpha1/integrations/searchpastt" +
+      "ransactions:\001*\022\307\001\n\025GetAggregatedMetadata" +
+      "\0223.api.v1alpha1.integrations.GetAggregat" +
+      "edMetadataReq\0323.api.v1alpha1.integration" +
+      "s.GetAggregatedMetadataRes\"D\272\270\221\002\005\n\003\010\224\n\202\323" +
+      "\344\223\0024\"//api/v1alpha1/integrations/getaggr" +
+      "egatemetadata:\001*\022\330\001\n\031GetPortalLinksByDat" +
+      "eRange\0227.api.v1alpha1.integrations.GetPo" +
+      "rtalLinksByDateRangeReq\0327.api.v1alpha1.i" +
+      "ntegrations.GetPortalLinksByDateRangeRes" +
+      "\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/integr" +
+      "ations/getportallinksbydaterange:\001*\022\262\001\n\027" +
+      "CreateIntegrationConfig\022,.api.v1alpha1.i" +
+      "ntegrations.IntegrationConfig\032 .api.v1al" +
+      "pha1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002" +
+      "7\"2/api/v1alpha1/integrations/createinte" +
+      "grationconfig:\001*\022\276\001\n\024GetIntegrationConfi" +
+      "g\0222.api.v1alpha1.integrations.GetIntegra" +
+      "tionConfigReq\032,.api.v1alpha1.integration" +
+      "s.IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"//" +
+      "api/v1alpha1/integrations/getintegration" +
+      "config:\001*\022\273\001\n\027UpdateIntegrationConfig\0225." +
+      "api.v1alpha1.integrations.UpdateIntegrat" +
+      "ionConfigReq\032 .api.v1alpha1.integrations" +
+      ".Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/" +
+      "integrations/udpateintegrationconfig:\001*\022" +
+      "\273\001\n\027DeleteIntegrationConfig\0225.api.v1alph" +
+      "a1.integrations.DeleteIntegrationConfigR" +
+      "eq\032 .api.v1alpha1.integrations.Empty\"G\272\270" +
+      "\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integratio" +
+      "ns/deleteintegrationconfig:\001*\022\250\001\n\020ListIn" +
+      "tegrations\022 .api.v1alpha1.integrations.E" +
+      "mpty\032+.api.v1alpha1.integrations.Integra" +
+      "tionInfos\"E\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0020\"+/api/v" +
+      "1alpha1/integrations/listintegrations:\001*" +
+      "\022\310\001\n\026ListIntegrationsForOrg\0224.api.v1alph" +
+      "a1.integrations.ListIntegrationsForOrgRe" +
+      "q\032+.api.v1alpha1.integrations.Integratio" +
+      "nInfos\"K\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0026\"1/api/v1al" +
+      "pha1/integrations/listintegrationsfororg" +
+      ":\001*\022\334\001\n\032ListIntegrationConfigNames\0228.api" +
+      ".v1alpha1.integrations.ListIntegrationCo" +
+      "nfigNamesReq\0328.api.v1alpha1.integrations" +
+      ".ListIntegrationConfigNamesRes\"J\272\270\221\002\005\n\003\010" +
+      "\224\n\202\323\344\223\002:\"5/api/v1alpha1/integrations/lis" +
+      "tintegrationconfignames:\001*\022\271\001\n\022ListJourn" +
+      "eyConfigs\0220.api.v1alpha1.integrations.Li" +
+      "stJourneyConfigsReq\032-.api.v1alpha1.integ" +
+      "rations.IntegrationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323" +
+      "\344\223\0022\"-/api/v1alpha1/integrations/listjou" +
+      "rneyconfigs:\001*\022\302\001\n\025ListNonJourneyConfigs" +
+      "\0223.api.v1alpha1.integrations.ListNonJour" +
+      "neyConfigsReq\032-.api.v1alpha1.integration" +
+      "s.IntegrationConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0" +
+      "/api/v1alpha1/integrations/listnonjourne" +
+      "yconfigs:\001*\022\243\001\n\022CreatePortalConfig\022\'.api" +
+      ".v1alpha1.integrations.PortalConfig\032 .ap" +
+      "i.v1alpha1.integrations.Empty\"B\272\270\221\002\005\n\003\010\224" +
+      "\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/crea" +
+      "teportalconfig:\001*\022\261\001\n\021ListPortalConfigs\022" +
+      "/.api.v1alpha1.integrations.ListPortalCo" +
+      "nfigsReq\032(.api.v1alpha1.integrations.Por" +
+      "talConfigs\"A\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alp" +
+      "ha1/integrations/listportalconfigs:\001*\022\243\001" +
+      "\n\022UpdatePortalConfig\022\'.api.v1alpha1.inte" +
       "grations.PortalConfig\032 .api.v1alpha1.int" +
       "egrations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/" +
-      "v1alpha1/integrations/createportalconfig" +
-      ":\001*\022\261\001\n\021ListPortalConfigs\022/.api.v1alpha1" +
-      ".integrations.ListPortalConfigsReq\032(.api" +
-      ".v1alpha1.integrations.PortalConfigs\"A\272\270" +
-      "\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alpha1/integratio" +
-      "ns/listportalconfigs:\001*\022\243\001\n\022UpdatePortal" +
-      "Config\022\'.api.v1alpha1.integrations.Porta" +
-      "lConfig\032 .api.v1alpha1.integrations.Empt" +
-      "y\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integ" +
-      "rations/updateportalconfig:\001*\022\252\001\n\017GetPor" +
-      "talConfig\022-.api.v1alpha1.integrations.Ge" +
-      "tPortalConfigReq\032\'.api.v1alpha1.integrat" +
-      "ions.PortalConfig\"?\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002/\"*/ap" +
-      "i/v1alpha1/integrations/getportalconfig:" +
-      "\001*\022\254\001\n\022DeletePortalConfig\0220.api.v1alpha1" +
-      ".integrations.DeletePortalConfigReq\032 .ap" +
-      "i.v1alpha1.integrations.Empty\"B\272\270\221\002\005\n\003\010\224" +
-      "\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/dele" +
-      "teportalconfig:\001*\022\246\001\n\020UpdatePortalLogo\022." +
-      ".api.v1alpha1.integrations.UpdatePortalL" +
-      "ogoReq\032 .api.v1alpha1.integrations.Empty" +
-      "\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1/integr" +
-      "ations/updateportallogo:\001*\022\234\001\n\rGetPortal" +
-      "Logo\022+.api.v1alpha1.integrations.GetPort" +
-      "alLogoReq\032\037.api.v1alpha1.integrations.Lo" +
-      "go\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha1/inte" +
-      "grations/getportallogo:\001*\022\324\001\n\030CreatePaym",
-      "entPortalLinks\0226.api.v1alpha1.integratio" +
-      "ns.CreatePaymentPortalLinksReq\0326.api.v1a" +
-      "lpha1.integrations.CreatePaymentPortalLi" +
-      "nksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3/api/v1alpha1/" +
-      "integrations/createpaymentportallinks:\001*" +
-      "\022\220\001\n\007Summary\022%.api.v1alpha1.integrations" +
-      ".SummaryReq\032%.api.v1alpha1.integrations." +
-      "SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api/v1alp" +
-      "ha1/integrations/summary:\001*\022\360\001\n ListInte" +
-      "grationTemplatesByConfig\022>.api.v1alpha1." +
-      "integrations.ListIntegrationTemplatesByC" +
-      "onfigReq\032>.api.v1alpha1.integrations.Lis" +
-      "tIntegrationTemplatesByConfigRes\"L\272\270\221\002\005\n" +
-      "\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/integrations/i" +
-      "ntegrationtemplatesbyconfig:\001*\022\255\001\n\017CallE" +
-      "picPatient\022-.api.v1alpha1.integrations.C" +
-      "allEpicPatientReq\032-.api.v1alpha1.integra" +
-      "tions.CallEpicPatientRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"" +
-      "*/api/v1alpha1/integrations/callepicpati" +
-      "ent:\001*\022\262\001\n\025HangUpEpicPatientCall\0223.api.v" +
-      "1alpha1.integrations.HangUpEpicPatientCa" +
-      "llReq\032 .api.v1alpha1.integrations.Empty\"" +
-      "B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v1alpha1/integratio" +
-      "ns/hangupepicpatientcall:\001*\022\302\001\n\024Generate" +
-      "EpicKeyPairs\0221.api.v1alpha1.integrations" +
-      ".GenerateEpicKeyPairReq\0321.api.v1alpha1.i" +
-      "ntegrations.GenerateEpicKeyPairRes\"D\272\270\221\002" +
-      "\005\n\003\010\236\n\202\323\344\223\0024\"//api/v1alpha1/integrations" +
-      "/generateepickeypairs:\001*\022\320\001\n\027PopulateInt" +
-      "egrationLink\0225.api.v1alpha1.integrations" +
-      ".PopulateIntegrationLinkReq\0325.api.v1alph" +
-      "a1.integrations.PopulateIntegrationLinkR" +
-      "es\"G\272\270\221\002\005\n\003\010\327\002\202\323\344\223\0027\"2/api/v1alpha1/inte" +
-      "grations/populateintegrationlink:\001*\022\272\001\n\017" +
-      "ProcessWorkflow\022-.api.v1alpha1.integrati" +
-      "ons.ProcessWorkflowReq\032-.api.v1alpha1.in" +
-      "tegrations.ProcessWorkflowRes\"I\272\270\221\002\017\n\003\010\224" +
-      "\n\n\003\010\327\002\n\003\010\331\002\202\323\344\223\002/\"*/api/v1alpha1/integra" +
-      "tions/processworkflow:\001*\022\274\001\n\022InsertPriva" +
-      "teField\0220.api.v1alpha1.integrations.Inse" +
-      "rtPrivateFieldReq\0320.api.v1alpha1.integra" +
-      "tions.InsertPrivateFieldRes\"B\272\270\221\002\005\n\003\010\224\n\202" +
-      "\323\344\223\0022\"-/api/v1alpha1/integrations/insert" +
-      "privatefield:\001*\022\250\001\n\rCalculateFees\022+.api." +
-      "v1alpha1.integrations.CalculateFeesReq\032+" +
-      ".api.v1alpha1.integrations.CalculateFees" +
-      "Res\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha1/int" +
-      "egrations/calculatefees:\001*B\301\001\n+com.tcn.c" +
-      "loud.api.api.v1alpha1.integrationsB\014Serv" +
-      "iceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.Integrat" +
-      "ions\312\002\031Api\\V1alpha1\\Integrations\342\002%Api\\V" +
-      "1alpha1\\Integrations\\GPBMetadata\352\002\033Api::" +
-      "V1alpha1::Integrationsb\006proto3"
+      "v1alpha1/integrations/updateportalconfig" +
+      ":\001*\022\252\001\n\017GetPortalConfig\022-.api.v1alpha1.i" +
+      "ntegrations.GetPortalConfigReq\032\'.api.v1a" +
+      "lpha1.integrations.PortalConfig\"?\272\270\221\002\005\n\003" +
+      "\010\224\n\202\323\344\223\002/\"*/api/v1alpha1/integrations/ge" +
+      "tportalconfig:\001*\022\254\001\n\022DeletePortalConfig\022" +
+      "0.api.v1alpha1.integrations.DeletePortal" +
+      "ConfigReq\032 .api.v1alpha1.integrations.Em" +
+      "pty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/int" +
+      "egrations/deleteportalconfig:\001*\022\246\001\n\020Upda" +
+      "tePortalLogo\022..api.v1alpha1.integrations" +
+      ".UpdatePortalLogoReq\032 .api.v1alpha1.inte" +
+      "grations.Empty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v",
+      "1alpha1/integrations/updateportallogo:\001*" +
+      "\022\234\001\n\rGetPortalLogo\022+.api.v1alpha1.integr" +
+      "ations.GetPortalLogoReq\032\037.api.v1alpha1.i" +
+      "ntegrations.Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api" +
+      "/v1alpha1/integrations/getportallogo:\001*\022" +
+      "\324\001\n\030CreatePaymentPortalLinks\0226.api.v1alp" +
+      "ha1.integrations.CreatePaymentPortalLink" +
+      "sReq\0326.api.v1alpha1.integrations.CreateP" +
+      "aymentPortalLinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3" +
+      "/api/v1alpha1/integrations/createpayment" +
+      "portallinks:\001*\022\220\001\n\007Summary\022%.api.v1alpha" +
+      "1.integrations.SummaryReq\032%.api.v1alpha1" +
+      ".integrations.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223" +
+      "\002\'\"\"/api/v1alpha1/integrations/summary:\001" +
+      "*\022\360\001\n ListIntegrationTemplatesByConfig\022>" +
+      ".api.v1alpha1.integrations.ListIntegrati" +
+      "onTemplatesByConfigReq\032>.api.v1alpha1.in" +
+      "tegrations.ListIntegrationTemplatesByCon" +
+      "figRes\"L\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/" +
+      "integrations/integrationtemplatesbyconfi" +
+      "g:\001*\022\255\001\n\017CallEpicPatient\022-.api.v1alpha1." +
+      "integrations.CallEpicPatientReq\032-.api.v1" +
+      "alpha1.integrations.CallEpicPatientRes\"<" +
+      "\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v1alpha1/integration" +
+      "s/callepicpatient:\001*\022\262\001\n\025HangUpEpicPatie" +
+      "ntCall\0223.api.v1alpha1.integrations.HangU" +
+      "pEpicPatientCallReq\032 .api.v1alpha1.integ" +
+      "rations.Empty\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v1alp" +
+      "ha1/integrations/hangupepicpatientcall:\001" +
+      "*\022\302\001\n\024GenerateEpicKeyPairs\0221.api.v1alpha" +
+      "1.integrations.GenerateEpicKeyPairReq\0321." +
+      "api.v1alpha1.integrations.GenerateEpicKe" +
+      "yPairRes\"D\272\270\221\002\005\n\003\010\236\n\202\323\344\223\0024\"//api/v1alpha" +
+      "1/integrations/generateepickeypairs:\001*\022\320" +
+      "\001\n\027PopulateIntegrationLink\0225.api.v1alpha" +
+      "1.integrations.PopulateIntegrationLinkRe" +
+      "q\0325.api.v1alpha1.integrations.PopulateIn" +
+      "tegrationLinkRes\"G\272\270\221\002\005\n\003\010\327\002\202\323\344\223\0027\"2/api" +
+      "/v1alpha1/integrations/populateintegrati" +
+      "onlink:\001*\022\272\001\n\017ProcessWorkflow\022-.api.v1al" +
+      "pha1.integrations.ProcessWorkflowReq\032-.a" +
+      "pi.v1alpha1.integrations.ProcessWorkflow" +
+      "Res\"I\272\270\221\002\017\n\003\010\224\n\n\003\010\327\002\n\003\010\331\002\202\323\344\223\002/\"*/api/v1" +
+      "alpha1/integrations/processworkflow:\001*\022\274" +
+      "\001\n\022InsertPrivateField\0220.api.v1alpha1.int" +
+      "egrations.InsertPrivateFieldReq\0320.api.v1" +
+      "alpha1.integrations.InsertPrivateFieldRe" +
+      "s\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integ" +
+      "rations/insertprivatefield:\001*\022\250\001\n\rCalcul" +
+      "ateFees\022+.api.v1alpha1.integrations.Calc" +
+      "ulateFeesReq\032+.api.v1alpha1.integrations" +
+      ".CalculateFeesRes\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/ap" +
+      "i/v1alpha1/integrations/calculatefees:\001*" +
+      "B\301\001\n+com.tcn.cloud.api.api.v1alpha1.inte" +
+      "grationsB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1a" +
+      "lpha1.Integrations\312\002\031Api\\V1alpha1\\Integr" +
+      "ations\342\002%Api\\V1alpha1\\Integrations\\GPBMe" +
+      "tadata\352\002\033Api::V1alpha1::Integrationsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2505,8 +2526,26 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_InsertPrivateFieldRes_descriptor,
         new java.lang.String[] { "PrivateFieldId", });
-    internal_static_api_v1alpha1_integrations_CalculateFeesReq_descriptor =
+    internal_static_api_v1alpha1_integrations_DeliverReceiptReq_descriptor =
       getDescriptor().getMessageTypes().get(115);
+    internal_static_api_v1alpha1_integrations_DeliverReceiptReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_DeliverReceiptReq_descriptor,
+        new java.lang.String[] { "EmailReceipt", "ReceiptId", "DeliveryMethod", });
+    internal_static_api_v1alpha1_integrations_EmailReceipt_descriptor =
+      getDescriptor().getMessageTypes().get(116);
+    internal_static_api_v1alpha1_integrations_EmailReceipt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_EmailReceipt_descriptor,
+        new java.lang.String[] { "ToAddr", });
+    internal_static_api_v1alpha1_integrations_DeliverReceiptRes_descriptor =
+      getDescriptor().getMessageTypes().get(117);
+    internal_static_api_v1alpha1_integrations_DeliverReceiptRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_DeliverReceiptRes_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_integrations_CalculateFeesReq_descriptor =
+      getDescriptor().getMessageTypes().get(118);
     internal_static_api_v1alpha1_integrations_CalculateFeesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CalculateFeesReq_descriptor,
@@ -2518,7 +2557,7 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_CalculateFeesReq_ParamsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_CalculateFeesRes_descriptor =
-      getDescriptor().getMessageTypes().get(116);
+      getDescriptor().getMessageTypes().get(119);
     internal_static_api_v1alpha1_integrations_CalculateFeesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CalculateFeesRes_descriptor,

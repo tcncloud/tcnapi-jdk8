@@ -530,7 +530,7 @@ public final class PortalsProto {
       "egrations.RequestMethodR\010methodId\"_\n\026Lis" +
       "tPluginsByMethodRes\022E\n\010entities\030\001 \003(\0132)." +
       "api.v1alpha1.integrations.PluginInstance" +
-      "R\010entities2\276*\n\020PortalManagerApi\022\275\001\n\022Upse" +
+      "R\010entities2\355+\n\020PortalManagerApi\022\275\001\n\022Upse" +
       "rtPortalConfig\0220.api.v1alpha1.integratio" +
       "ns.UpsertPortalConfigReq\0320.api.v1alpha1." +
       "integrations.UpsertPortalConfigRes\"C\272\270\221\002" +
@@ -666,12 +666,16 @@ public final class PortalsProto {
       "yMethodReq\0321.api.v1alpha1.integrations.L" +
       "istPluginsByMethodRes\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"" +
       "//api/v1alpha1/portalmanager/listplugins" +
-      "bymethod:\001*B\301\001\n+com.tcn.cloud.api.api.v1" +
-      "alpha1.integrationsB\014PortalsProtoP\001\242\002\003AV" +
-      "I\252\002\031Api.V1alpha1.Integrations\312\002\031Api\\V1al" +
-      "pha1\\Integrations\342\002%Api\\V1alpha1\\Integra" +
-      "tions\\GPBMetadata\352\002\033Api::V1alpha1::Integ" +
-      "rationsb\006proto3"
+      "bymethod:\001*\022\254\001\n\016DeliverReceipt\022,.api.v1a" +
+      "lpha1.integrations.DeliverReceiptReq\032,.a" +
+      "pi.v1alpha1.integrations.DeliverReceiptR" +
+      "es\">\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002.\")/api/v1alpha1/inte" +
+      "grations/deliverreceipt:\001*B\301\001\n+com.tcn.c" +
+      "loud.api.api.v1alpha1.integrationsB\014Port" +
+      "alsProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.Integrat" +
+      "ions\312\002\031Api\\V1alpha1\\Integrations\342\002%Api\\V" +
+      "1alpha1\\Integrations\\GPBMetadata\352\002\033Api::" +
+      "V1alpha1::Integrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

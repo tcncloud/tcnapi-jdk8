@@ -80,6 +80,36 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
 
+  public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
+  private long campaignSid_ = 0L;
+  /**
+   * <pre>
+   * campaign identifier
+   * </pre>
+   *
+   * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+   * @return The campaignSid.
+   */
+  @java.lang.Override
+  public long getCampaignSid() {
+    return campaignSid_;
+  }
+
+  public static final int CAMPAIGN_MODULE_SID_FIELD_NUMBER = 3;
+  private long campaignModuleSid_ = 0L;
+  /**
+   * <pre>
+   * campaign module identifier
+   * </pre>
+   *
+   * <code>int64 campaign_module_sid = 3 [json_name = "campaignModuleSid"];</code>
+   * @return The campaignModuleSid.
+   */
+  @java.lang.Override
+  public long getCampaignModuleSid() {
+    return campaignModuleSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +127,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fields_.size(); i++) {
       output.writeMessage(1, fields_.get(i));
     }
+    if (campaignSid_ != 0L) {
+      output.writeInt64(2, campaignSid_);
+    }
+    if (campaignModuleSid_ != 0L) {
+      output.writeInt64(3, campaignModuleSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +145,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, fields_.get(i));
+    }
+    if (campaignSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, campaignSid_);
+    }
+    if (campaignModuleSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, campaignModuleSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -127,6 +171,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
+    if (getCampaignSid()
+        != other.getCampaignSid()) return false;
+    if (getCampaignModuleSid()
+        != other.getCampaignModuleSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +190,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
     }
+    hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCampaignSid());
+    hash = (37 * hash) + CAMPAIGN_MODULE_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCampaignModuleSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -280,6 +334,8 @@ private static final long serialVersionUID = 0L;
         fieldsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      campaignSid_ = 0L;
+      campaignModuleSid_ = 0L;
       return this;
     }
 
@@ -326,6 +382,12 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.Receipt result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.campaignModuleSid_ = campaignModuleSid_;
+      }
     }
 
     @java.lang.Override
@@ -398,6 +460,12 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getCampaignSid() != 0L) {
+        setCampaignSid(other.getCampaignSid());
+      }
+      if (other.getCampaignModuleSid() != 0L) {
+        setCampaignModuleSid(other.getCampaignModuleSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -437,6 +505,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 16: {
+              campaignSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              campaignModuleSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -692,6 +770,94 @@ private static final long serialVersionUID = 0L;
         fields_ = null;
       }
       return fieldsBuilder_;
+    }
+
+    private long campaignSid_ ;
+    /**
+     * <pre>
+     * campaign identifier
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public long getCampaignSid() {
+      return campaignSid_;
+    }
+    /**
+     * <pre>
+     * campaign identifier
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @param value The campaignSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignSid(long value) {
+
+      campaignSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign identifier
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      campaignSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long campaignModuleSid_ ;
+    /**
+     * <pre>
+     * campaign module identifier
+     * </pre>
+     *
+     * <code>int64 campaign_module_sid = 3 [json_name = "campaignModuleSid"];</code>
+     * @return The campaignModuleSid.
+     */
+    @java.lang.Override
+    public long getCampaignModuleSid() {
+      return campaignModuleSid_;
+    }
+    /**
+     * <pre>
+     * campaign module identifier
+     * </pre>
+     *
+     * <code>int64 campaign_module_sid = 3 [json_name = "campaignModuleSid"];</code>
+     * @param value The campaignModuleSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignModuleSid(long value) {
+
+      campaignModuleSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * campaign module identifier
+     * </pre>
+     *
+     * <code>int64 campaign_module_sid = 3 [json_name = "campaignModuleSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignModuleSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      campaignModuleSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

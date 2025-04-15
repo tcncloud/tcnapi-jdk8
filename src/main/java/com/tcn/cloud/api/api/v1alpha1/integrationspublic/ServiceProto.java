@@ -185,6 +185,21 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_integrationspublic_GetLinkDetailsRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_EmailReceipt_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_EmailReceipt_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrationspublic_DeliverReceiptRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -369,73 +384,83 @@ public final class ServiceProto {
       "\034\n\tcompleted\030\004 \001(\010R\tcompleted\022X\n\021portal_" +
       "definition\030\005 \001(\0132+.api.v1alpha1.integrat" +
       "ions.PortalDefinitionR\020portalDefinition\"" +
-      "\352\003\n\020CalculateFeesReq\022E\n\006entity\030\001 \001(\0132-.a" +
-      "pi.v1alpha1.integrationspublic.PortalLin" +
-      "kIdR\006entity\0221\n\004fees\030\002 \003(\0132\035.api.commons." +
-      "integrations.FeeR\004fees\022U\n\006params\030\003 \003(\0132=" +
+      "\233\001\n\021DeliverReceiptReq\022T\n\remail_receipt\030\003" +
+      " \001(\0132-.api.v1alpha1.integrationspublic.E" +
+      "mailReceiptH\000R\014emailReceipt\022\035\n\nreceipt_i" +
+      "d\030\006 \001(\tR\treceiptIdB\021\n\017delivery_method\"\'\n" +
+      "\014EmailReceipt\022\027\n\007to_addr\030\001 \001(\tR\006toAddr\"\023" +
+      "\n\021DeliverReceiptRes\"\352\003\n\020CalculateFeesReq" +
+      "\022E\n\006entity\030\001 \001(\0132-.api.v1alpha1.integrat" +
+      "ionspublic.PortalLinkIdR\006entity\0221\n\004fees\030" +
+      "\002 \003(\0132\035.api.commons.integrations.FeeR\004fe" +
+      "es\022U\n\006params\030\003 \003(\0132=.api.v1alpha1.integr" +
+      "ationspublic.CalculateFeesReq.ParamsEntr" +
+      "yR\006params\022\031\n\010call_sid\030\004 \001(\003R\007callSid\0227\n\t" +
+      "call_type\030\005 \001(\0162\032.api.commons.CallType.E" +
+      "numR\010callType\022N\n\016request_origin\030\006 \001(\0162\'." +
+      "api.commons.integrations.RequestOriginR\r" +
+      "requestOrigin\032a\n\013ParamsEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022<\n\005value\030\002 \001(\0132&.api.v1alpha1.int" +
+      "egrationspublic.ValueR\005value:\0028\001\"\227\002\n\020Cal" +
+      "culateFeesRes\022n\n\017calculated_fees\030\001 \003(\0132E" +
       ".api.v1alpha1.integrationspublic.Calcula" +
-      "teFeesReq.ParamsEntryR\006params\022\031\n\010call_si" +
-      "d\030\004 \001(\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032.ap" +
-      "i.commons.CallType.EnumR\010callType\022N\n\016req" +
-      "uest_origin\030\006 \001(\0162\'.api.commons.integrat" +
-      "ions.RequestOriginR\rrequestOrigin\032a\n\013Par" +
-      "amsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005value\030\002 \001(" +
-      "\0132&.api.v1alpha1.integrationspublic.Valu" +
-      "eR\005value:\0028\001\"\227\002\n\020CalculateFeesRes\022n\n\017cal" +
-      "culated_fees\030\001 \003(\0132E.api.v1alpha1.integr" +
-      "ationspublic.CalculateFeesRes.Calculated" +
-      "FeesEntryR\016calculatedFees\022<\n\020total_amoun" +
-      "t_due\030\002 \001(\0132\022.google.type.MoneyR\016totalAm" +
-      "ountDue\032U\n\023CalculatedFeesEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022(\n\005value\030\002 \001(\0132\022.google.type.Mo" +
-      "neyR\005value:\0028\0012\353\014\n\022IntegrationsPublic\022\250\001" +
-      "\n\013GetLinkData\022/.api.v1alpha1.integration" +
-      "spublic.GetLinkDataReq\032/.api.v1alpha1.in" +
-      "tegrationspublic.GetLinkDataRes\"7\202\323\344\223\0021\"" +
-      ",/api/v1alpha1/integrationspublic/getlin" +
-      "kdata:\001*\022\304\001\n\022SubmitVerification\0226.api.v1" +
-      "alpha1.integrationspublic.SubmitVerifica" +
-      "tionReq\0326.api.v1alpha1.integrationspubli" +
-      "c.SubmitVerificationRes\">\202\323\344\223\0028\"3/api/v1" +
-      "alpha1/integrationspublic/submitverifica" +
-      "tion:\001*\022\274\001\n\020SessionKeepAlive\0224.api.v1alp" +
-      "ha1.integrationspublic.SessionKeepAliveR" +
-      "eq\0324.api.v1alpha1.integrationspublic.Ses" +
-      "sionKeepAliveRes\"<\202\323\344\223\0026\"1/api/v1alpha1/" +
-      "integrationspublic/sessionkeepalive:\001*\022\244" +
-      "\001\n\nGetInvoice\022..api.v1alpha1.integration" +
-      "spublic.GetInvoiceReq\032..api.v1alpha1.int" +
-      "egrationspublic.GetInvoiceRes\"6\202\323\344\223\0020\"+/" +
-      "api/v1alpha1/integrationspublic/getinvoi" +
-      "ce:\001*\022\260\001\n\rSubmitPayment\0221.api.v1alpha1.i" +
-      "ntegrationspublic.SubmitPaymentReq\0321.api" +
-      ".v1alpha1.integrationspublic.SubmitPayme" +
-      "ntRes\"9\202\323\344\223\0023\"./api/v1alpha1/integration" +
-      "spublic/submitpayment:\001*\022\244\001\n\nGetReceipt\022" +
-      "..api.v1alpha1.integrationspublic.GetRec" +
-      "eiptReq\032..api.v1alpha1.integrationspubli" +
-      "c.GetReceiptRes\"6\202\323\344\223\0020\"+/api/v1alpha1/i" +
-      "ntegrationspublic/getreceipt:\001*\022\270\001\n\017Proc" +
-      "essWorkflow\0223.api.v1alpha1.integrationsp" +
-      "ublic.ProcessWorkflowReq\0323.api.v1alpha1." +
-      "integrationspublic.ProcessWorkflowRes\";\202" +
-      "\323\344\223\0025\"0/api/v1alpha1/integrationspublic/" +
-      "processworkflow:\001*\022\264\001\n\016GetLinkDetails\0222." +
-      "api.v1alpha1.integrationspublic.GetLinkD" +
-      "etailsReq\0322.api.v1alpha1.integrationspub" +
-      "lic.GetLinkDetailsRes\":\202\323\344\223\0024\"//api/v1al" +
-      "pha1/integrationspublic/getlinkdetails:\001" +
-      "*\022\260\001\n\rCalculateFees\0221.api.v1alpha1.integ" +
-      "rationspublic.CalculateFeesReq\0321.api.v1a" +
-      "lpha1.integrationspublic.CalculateFeesRe" +
-      "s\"9\202\323\344\223\0023\"./api/v1alpha1/integrationspub" +
-      "lic/calculatefees:\001*B\337\001\n1com.tcn.cloud.a" +
-      "pi.api.v1alpha1.integrationspublicB\014Serv" +
-      "iceProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integrat" +
-      "ionspublic\312\002\037Api\\V1alpha1\\Integrationspu" +
-      "blic\342\002+Api\\V1alpha1\\Integrationspublic\\G" +
-      "PBMetadata\352\002!Api::V1alpha1::Integrations" +
-      "publicb\006proto3"
+      "teFeesRes.CalculatedFeesEntryR\016calculate" +
+      "dFees\022<\n\020total_amount_due\030\002 \001(\0132\022.google" +
+      ".type.MoneyR\016totalAmountDue\032U\n\023Calculate" +
+      "dFeesEntry\022\020\n\003key\030\001 \001(\tR\003key\022(\n\005value\030\002 " +
+      "\001(\0132\022.google.type.MoneyR\005value:\0028\0012\242\016\n\022I" +
+      "ntegrationsPublic\022\250\001\n\013GetLinkData\022/.api." +
+      "v1alpha1.integrationspublic.GetLinkDataR" +
+      "eq\032/.api.v1alpha1.integrationspublic.Get" +
+      "LinkDataRes\"7\202\323\344\223\0021\",/api/v1alpha1/integ" +
+      "rationspublic/getlinkdata:\001*\022\304\001\n\022SubmitV" +
+      "erification\0226.api.v1alpha1.integrationsp" +
+      "ublic.SubmitVerificationReq\0326.api.v1alph" +
+      "a1.integrationspublic.SubmitVerification" +
+      "Res\">\202\323\344\223\0028\"3/api/v1alpha1/integrationsp" +
+      "ublic/submitverification:\001*\022\274\001\n\020SessionK" +
+      "eepAlive\0224.api.v1alpha1.integrationspubl" +
+      "ic.SessionKeepAliveReq\0324.api.v1alpha1.in" +
+      "tegrationspublic.SessionKeepAliveRes\"<\202\323" +
+      "\344\223\0026\"1/api/v1alpha1/integrationspublic/s" +
+      "essionkeepalive:\001*\022\244\001\n\nGetInvoice\022..api." +
+      "v1alpha1.integrationspublic.GetInvoiceRe" +
+      "q\032..api.v1alpha1.integrationspublic.GetI" +
+      "nvoiceRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integra" +
+      "tionspublic/getinvoice:\001*\022\260\001\n\rSubmitPaym" +
+      "ent\0221.api.v1alpha1.integrationspublic.Su" +
+      "bmitPaymentReq\0321.api.v1alpha1.integratio" +
+      "nspublic.SubmitPaymentRes\"9\202\323\344\223\0023\"./api/" +
+      "v1alpha1/integrationspublic/submitpaymen" +
+      "t:\001*\022\244\001\n\nGetReceipt\022..api.v1alpha1.integ" +
+      "rationspublic.GetReceiptReq\032..api.v1alph" +
+      "a1.integrationspublic.GetReceiptRes\"6\202\323\344" +
+      "\223\0020\"+/api/v1alpha1/integrationspublic/ge" +
+      "treceipt:\001*\022\270\001\n\017ProcessWorkflow\0223.api.v1" +
+      "alpha1.integrationspublic.ProcessWorkflo" +
+      "wReq\0323.api.v1alpha1.integrationspublic.P" +
+      "rocessWorkflowRes\";\202\323\344\223\0025\"0/api/v1alpha1" +
+      "/integrationspublic/processworkflow:\001*\022\264" +
+      "\001\n\016GetLinkDetails\0222.api.v1alpha1.integra" +
+      "tionspublic.GetLinkDetailsReq\0322.api.v1al" +
+      "pha1.integrationspublic.GetLinkDetailsRe" +
+      "s\":\202\323\344\223\0024\"//api/v1alpha1/integrationspub" +
+      "lic/getlinkdetails:\001*\022\260\001\n\rCalculateFees\022" +
+      "1.api.v1alpha1.integrationspublic.Calcul" +
+      "ateFeesReq\0321.api.v1alpha1.integrationspu" +
+      "blic.CalculateFeesRes\"9\202\323\344\223\0023\"./api/v1al" +
+      "pha1/integrationspublic/calculatefees:\001*" +
+      "\022\264\001\n\016DeliverReceipt\0222.api.v1alpha1.integ" +
+      "rationspublic.DeliverReceiptReq\0322.api.v1" +
+      "alpha1.integrationspublic.DeliverReceipt" +
+      "Res\":\202\323\344\223\0024\"//api/v1alpha1/integrationsp" +
+      "ublic/deliverreceipt:\001*B\337\001\n1com.tcn.clou" +
+      "d.api.api.v1alpha1.integrationspublicB\014S" +
+      "erviceProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integ" +
+      "rationspublic\312\002\037Api\\V1alpha1\\Integration" +
+      "spublic\342\002+Api\\V1alpha1\\Integrationspubli" +
+      "c\\GPBMetadata\352\002!Api::V1alpha1::Integrati" +
+      "onspublicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -652,8 +677,26 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_GetLinkDetailsRes_descriptor,
         new java.lang.String[] { "Portal", "PortalConfig", "Expired", "Completed", "PortalDefinition", });
-    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor =
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_descriptor =
       getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_descriptor,
+        new java.lang.String[] { "EmailReceipt", "ReceiptId", "DeliveryMethod", });
+    internal_static_api_v1alpha1_integrationspublic_EmailReceipt_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_integrationspublic_EmailReceipt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_EmailReceipt_descriptor,
+        new java.lang.String[] { "ToAddr", });
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptRes_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_v1alpha1_integrationspublic_DeliverReceiptRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrationspublic_DeliverReceiptRes_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor =
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_descriptor,
@@ -665,7 +708,7 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrationspublic_CalculateFeesReq_ParamsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_CalculateFeesRes_descriptor,
