@@ -382,5 +382,86 @@ public interface QueryRequestOrBuilder extends
    */
   com.google.protobuf.TimestampOrBuilder getReportDateOrBuilder();
 
+  /**
+   * <pre>
+   * export options for post processing operations
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   * @return Whether the exportOptions field is set.
+   */
+  boolean hasExportOptions();
+  /**
+   * <pre>
+   * export options for post processing operations
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   * @return The exportOptions.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getExportOptions();
+  /**
+   * <pre>
+   * export options for post processing operations
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions export_options = 17 [json_name = "exportOptions"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getExportOptionsOrBuilder();
+
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return A list containing the resultTypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.ResultType> getResultTypesList();
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return The count of resultTypes.
+   */
+  int getResultTypesCount();
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The resultTypes at the given index.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ResultType getResultTypes(int index);
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for resultTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getResultTypesValueList();
+  /**
+   * <pre>
+   * result types for the query
+   * raw result type always included
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.explorer.ResultType result_types = 18 [json_name = "resultTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of resultTypes at the given index.
+   */
+  int getResultTypesValue(int index);
+
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.QueryCase getQueryCase();
 }

@@ -5,56 +5,64 @@ package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
  * <pre>
- * ExportFormat is an enum for the format of a report.
+ * QuoteCharacter specifies the quote character
  * </pre>
  *
- * Protobuf enum {@code api.v1alpha1.explorer.ExportFormat}
+ * Protobuf enum {@code api.v1alpha1.explorer.QuoteCharacter}
  */
-public enum ExportFormat
+public enum QuoteCharacter
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>REPORT_FORMAT_UNSPECIFIED = 0;</code>
+   * <pre>
+   * Unspecified
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_UNSPECIFIED = 0;</code>
    */
-  REPORT_FORMAT_UNSPECIFIED(0),
+  QUOTE_CHARACTER_UNSPECIFIED(0),
   /**
-   * <code>REPORT_FORMAT_CSV = 1;</code>
+   * <pre>
+   * Double Quote
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_DOUBLE_QUOTE = 1;</code>
    */
-  REPORT_FORMAT_CSV(1),
+  QUOTE_CHARACTER_DOUBLE_QUOTE(1),
   /**
-   * <code>REPORT_FORMAT_PARQUET = 2;</code>
+   * <pre>
+   * Single Quote
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_SINGLE_QUOTE = 2;</code>
    */
-  REPORT_FORMAT_PARQUET(2),
-  /**
-   * <code>REPORT_FORMAT_TSV = 3;</code>
-   */
-  REPORT_FORMAT_TSV(3),
-  /**
-   * <code>REPORT_FORMAT_TXT = 4;</code>
-   */
-  REPORT_FORMAT_TXT(4),
+  QUOTE_CHARACTER_SINGLE_QUOTE(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>REPORT_FORMAT_UNSPECIFIED = 0;</code>
+   * <pre>
+   * Unspecified
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_UNSPECIFIED = 0;</code>
    */
-  public static final int REPORT_FORMAT_UNSPECIFIED_VALUE = 0;
+  public static final int QUOTE_CHARACTER_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>REPORT_FORMAT_CSV = 1;</code>
+   * <pre>
+   * Double Quote
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_DOUBLE_QUOTE = 1;</code>
    */
-  public static final int REPORT_FORMAT_CSV_VALUE = 1;
+  public static final int QUOTE_CHARACTER_DOUBLE_QUOTE_VALUE = 1;
   /**
-   * <code>REPORT_FORMAT_PARQUET = 2;</code>
+   * <pre>
+   * Single Quote
+   * </pre>
+   *
+   * <code>QUOTE_CHARACTER_SINGLE_QUOTE = 2;</code>
    */
-  public static final int REPORT_FORMAT_PARQUET_VALUE = 2;
-  /**
-   * <code>REPORT_FORMAT_TSV = 3;</code>
-   */
-  public static final int REPORT_FORMAT_TSV_VALUE = 3;
-  /**
-   * <code>REPORT_FORMAT_TXT = 4;</code>
-   */
-  public static final int REPORT_FORMAT_TXT_VALUE = 4;
+  public static final int QUOTE_CHARACTER_SINGLE_QUOTE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -71,7 +79,7 @@ public enum ExportFormat
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ExportFormat valueOf(int value) {
+  public static QuoteCharacter valueOf(int value) {
     return forNumber(value);
   }
 
@@ -79,26 +87,24 @@ public enum ExportFormat
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ExportFormat forNumber(int value) {
+  public static QuoteCharacter forNumber(int value) {
     switch (value) {
-      case 0: return REPORT_FORMAT_UNSPECIFIED;
-      case 1: return REPORT_FORMAT_CSV;
-      case 2: return REPORT_FORMAT_PARQUET;
-      case 3: return REPORT_FORMAT_TSV;
-      case 4: return REPORT_FORMAT_TXT;
+      case 0: return QUOTE_CHARACTER_UNSPECIFIED;
+      case 1: return QUOTE_CHARACTER_DOUBLE_QUOTE;
+      case 2: return QUOTE_CHARACTER_SINGLE_QUOTE;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ExportFormat>
+  public static com.google.protobuf.Internal.EnumLiteMap<QuoteCharacter>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ExportFormat> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ExportFormat>() {
-          public ExportFormat findValueByNumber(int number) {
-            return ExportFormat.forNumber(number);
+      QuoteCharacter> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<QuoteCharacter>() {
+          public QuoteCharacter findValueByNumber(int number) {
+            return QuoteCharacter.forNumber(number);
           }
         };
 
@@ -116,12 +122,12 @@ public enum ExportFormat
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(0);
+    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(4);
   }
 
-  private static final ExportFormat[] VALUES = values();
+  private static final QuoteCharacter[] VALUES = values();
 
-  public static ExportFormat valueOf(
+  public static QuoteCharacter valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -135,10 +141,10 @@ public enum ExportFormat
 
   private final int value;
 
-  private ExportFormat(int value) {
+  private QuoteCharacter(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.v1alpha1.explorer.ExportFormat)
+  // @@protoc_insertion_point(enum_scope:api.v1alpha1.explorer.QuoteCharacter)
 }
 

@@ -308,30 +308,61 @@ public interface InsightOrBuilder extends
 
   /**
    * <pre>
-   * export options for the insight
+   * use data_export_options instead
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=32
    * @return Whether the exportOptions field is set.
    */
-  boolean hasExportOptions();
+  @java.lang.Deprecated boolean hasExportOptions();
   /**
    * <pre>
-   * export options for the insight
+   * use data_export_options instead
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   * @deprecated api.v1alpha1.insights.Insight.export_options is deprecated.
+   *     See api/v1alpha1/insights/insight.proto;l=32
    * @return The exportOptions.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExportOptions getExportOptions();
+  /**
+   * <pre>
+   * use data_export_options instead
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder();
+
   /**
    * <pre>
    * export options for the insight
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ExportOptions export_options = 18 [json_name = "exportOptions"];</code>
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   * @return Whether the dataExportOptions field is set.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ExportOptionsOrBuilder getExportOptionsOrBuilder();
+  boolean hasDataExportOptions();
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   * @return The dataExportOptions.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptions getDataExportOptions();
+  /**
+   * <pre>
+   * export options for the insight
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.ExportOptions data_export_options = 19 [json_name = "dataExportOptions"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.ExportOptionsOrBuilder getDataExportOptionsOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.Insight.InsightContentCase getInsightContentCase();
 }
