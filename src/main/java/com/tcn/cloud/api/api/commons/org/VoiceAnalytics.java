@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
     boolean hasRedactEntity();
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
     int getRedactEntityValue();
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
     public static final int REDACT_ENTITY_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Redact detected entities.
+     * Optional. Redact detected entity.
      * </pre>
      *
      * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -885,7 +885,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -902,7 +902,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Optional. Redact detected entities.
+       * Optional. Redact detected entity.
        * </pre>
        *
        * <code>.api.commons.RedactEntity redact_entity = 2 [json_name = "redactEntity"];</code>
