@@ -139,6 +139,11 @@ public final class EvaluationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_AgentConversation_SmsMetadata_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -231,7 +236,7 @@ public final class EvaluationProto {
       "\001(\003R\tfilterSid\"\177\n SampleAgentConversatio" +
       "nsResponse\022[\n\023agent_conversations\030\001 \003(\0132" +
       "*.api.v1alpha1.scorecards.AgentConversat" +
-      "ionR\022agentConversations\"\242\006\n\021AgentConvers" +
+      "ionR\022agentConversations\"\340\007\n\021AgentConvers" +
       "ation\022%\n\016transcript_sid\030\001 \001(\003R\rtranscrip" +
       "tSid\0222\n\007channel\030\002 \001(\0162\030.api.commons.Chan" +
       "nelTypeR\007channel\022\"\n\ragent_user_id\030\003 \001(\tR" +
@@ -241,22 +246,27 @@ public final class EvaluationProto {
       ".AgentConversation.CallMetadataH\000R\014callM" +
       "etadata\022[\n\014sms_metadata\030\013 \001(\01326.api.v1al" +
       "pha1.scorecards.AgentConversation.SmsMet" +
-      "adataH\000R\013smsMetadata\032\254\002\n\014CallMetadata\022\031\n" +
-      "\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 " +
-      "\001(\0162\032.api.commons.CallType.EnumR\010callTyp" +
-      "e\022>\n\rcall_duration\030\003 \001(\0132\031.google.protob" +
-      "uf.DurationR\014callDuration\022B\n\017speech_dura" +
-      "tion\030\004 \001(\0132\031.google.protobuf.DurationR\016s" +
-      "peechDuration\022D\n\020silence_duration\030\005 \001(\0132" +
-      "\031.google.protobuf.DurationR\017silenceDurat" +
-      "ion\032[\n\013SmsMetadata\022)\n\020conversation_sid\030\001" +
-      " \001(\003R\017conversationSid\022!\n\014campaign_sid\030\002 " +
-      "\001(\003R\013campaignSidB\n\n\010metadataB\272\001\n)com.tcn" +
-      ".cloud.api.api.v1alpha1.scorecardsB\017Eval" +
-      "uationProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Score" +
-      "cards\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1" +
-      "alpha1\\Scorecards\\GPBMetadata\352\002\031Api::V1a" +
-      "lpha1::Scorecardsb\006proto3"
+      "adataH\000R\013smsMetadata\022^\n\rchat_metadata\030\014 " +
+      "\001(\01327.api.v1alpha1.scorecards.AgentConve" +
+      "rsation.ChatMetadataH\000R\014chatMetadata\032\254\002\n" +
+      "\014CallMetadata\022\031\n\010call_sid\030\001 \001(\003R\007callSid" +
+      "\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallTy" +
+      "pe.EnumR\010callType\022>\n\rcall_duration\030\003 \001(\013" +
+      "2\031.google.protobuf.DurationR\014callDuratio" +
+      "n\022B\n\017speech_duration\030\004 \001(\0132\031.google.prot" +
+      "obuf.DurationR\016speechDuration\022D\n\020silence" +
+      "_duration\030\005 \001(\0132\031.google.protobuf.Durati" +
+      "onR\017silenceDuration\032[\n\013SmsMetadata\022)\n\020co" +
+      "nversation_sid\030\001 \001(\003R\017conversationSid\022!\n" +
+      "\014campaign_sid\030\002 \001(\003R\013campaignSid\032\\\n\014Chat" +
+      "Metadata\022)\n\020conversation_sid\030\001 \001(\003R\017conv" +
+      "ersationSid\022!\n\014campaign_sid\030\002 \001(\003R\013campa" +
+      "ignSidB\n\n\010metadataB\272\001\n)com.tcn.cloud.api" +
+      ".api.v1alpha1.scorecardsB\017EvaluationProt" +
+      "oP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Ap" +
+      "i\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Sco" +
+      "recards\\GPBMetadata\352\002\031Api::V1alpha1::Sco" +
+      "recardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -405,7 +415,7 @@ public final class EvaluationProto {
     internal_static_api_v1alpha1_scorecards_AgentConversation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_AgentConversation_descriptor,
-        new java.lang.String[] { "TranscriptSid", "Channel", "AgentUserId", "StartTime", "CallMetadata", "SmsMetadata", "Metadata", });
+        new java.lang.String[] { "TranscriptSid", "Channel", "AgentUserId", "StartTime", "CallMetadata", "SmsMetadata", "ChatMetadata", "Metadata", });
     internal_static_api_v1alpha1_scorecards_AgentConversation_CallMetadata_descriptor =
       internal_static_api_v1alpha1_scorecards_AgentConversation_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_scorecards_AgentConversation_CallMetadata_fieldAccessorTable = new
@@ -417,6 +427,12 @@ public final class EvaluationProto {
     internal_static_api_v1alpha1_scorecards_AgentConversation_SmsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_AgentConversation_SmsMetadata_descriptor,
+        new java.lang.String[] { "ConversationSid", "CampaignSid", });
+    internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor =
+      internal_static_api_v1alpha1_scorecards_AgentConversation_descriptor.getNestedTypes().get(2);
+    internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_AgentConversation_ChatMetadata_descriptor,
         new java.lang.String[] { "ConversationSid", "CampaignSid", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
