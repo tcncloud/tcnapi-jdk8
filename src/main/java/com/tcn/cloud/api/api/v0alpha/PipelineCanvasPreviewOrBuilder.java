@@ -77,28 +77,4 @@ public interface PipelineCanvasPreviewOrBuilder extends
    * @return The elementCount.
    */
   long getElementCount();
-
-  /**
-   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> 
-      getEntrypointMetadataList();
-  /**
-   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.EntrypointMetadata getEntrypointMetadata(int index);
-  /**
-   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
-   */
-  int getEntrypointMetadataCount();
-  /**
-   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder> 
-      getEntrypointMetadataOrBuilderList();
-  /**
-   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
-   */
-  com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder getEntrypointMetadataOrBuilder(
-      int index);
 }

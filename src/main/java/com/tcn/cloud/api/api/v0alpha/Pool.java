@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
    * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=798
+   *     See api/v0alpha/lms.proto;l=784
    * @return The desc.
    */
   @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
    * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=798
+   *     See api/v0alpha/lms.proto;l=784
    * @return The bytes for desc.
    */
   @java.lang.Override
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
      * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=798
+     *     See api/v0alpha/lms.proto;l=784
      * @return The desc.
      */
     @java.lang.Deprecated public java.lang.String getDesc() {
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
      * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=798
+     *     See api/v0alpha/lms.proto;l=784
      * @return The bytes for desc.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
      * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=798
+     *     See api/v0alpha/lms.proto;l=784
      * @param value The desc to set.
      * @return This builder for chaining.
      */
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
      * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=798
+     *     See api/v0alpha/lms.proto;l=784
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDesc() {
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
      * @deprecated api.v0alpha.Pool.desc is deprecated.
-     *     See api/v0alpha/lms.proto;l=798
+     *     See api/v0alpha/lms.proto;l=784
      * @param value The bytes for desc to set.
      * @return This builder for chaining.
      */

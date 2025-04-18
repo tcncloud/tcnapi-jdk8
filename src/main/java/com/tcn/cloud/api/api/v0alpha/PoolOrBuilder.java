@@ -34,14 +34,14 @@ public interface PoolOrBuilder extends
   /**
    * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
    * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=798
+   *     See api/v0alpha/lms.proto;l=784
    * @return The desc.
    */
   @java.lang.Deprecated java.lang.String getDesc();
   /**
    * <code>string desc = 3 [json_name = "desc", deprecated = true];</code>
    * @deprecated api.v0alpha.Pool.desc is deprecated.
-   *     See api/v0alpha/lms.proto;l=798
+   *     See api/v0alpha/lms.proto;l=784
    * @return The bytes for desc.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

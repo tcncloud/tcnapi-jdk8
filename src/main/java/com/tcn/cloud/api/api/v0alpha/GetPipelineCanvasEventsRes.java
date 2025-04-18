@@ -43,8 +43,6 @@ private static final long serialVersionUID = 0L;
         return internalGetQueuedEvents();
       case 2:
         return internalGetProcessingEvents();
-      case 3:
-        return internalGetEntrypointFailures();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -244,101 +242,6 @@ private static final long serialVersionUID = 0L;
     return map.get(key);
   }
 
-  public static final int ENTRYPOINT_FAILURES_FIELD_NUMBER = 3;
-  private static final class EntrypointFailuresDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> entrypointFailures_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetEntrypointFailures() {
-    if (entrypointFailures_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          EntrypointFailuresDefaultEntryHolder.defaultEntry);
-    }
-    return entrypointFailures_;
-  }
-  public int getEntrypointFailuresCount() {
-    return internalGetEntrypointFailures().getMap().size();
-  }
-  /**
-   * <pre>
-   * map of entrypoint to recent error messages preventing processing
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-   */
-  @java.lang.Override
-  public boolean containsEntrypointFailures(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetEntrypointFailures().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getEntrypointFailuresMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getEntrypointFailures() {
-    return getEntrypointFailuresMap();
-  }
-  /**
-   * <pre>
-   * map of entrypoint to recent error messages preventing processing
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getEntrypointFailuresMap() {
-    return internalGetEntrypointFailures().getMap();
-  }
-  /**
-   * <pre>
-   * map of entrypoint to recent error messages preventing processing
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getEntrypointFailuresOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetEntrypointFailures().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * map of entrypoint to recent error messages preventing processing
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getEntrypointFailuresOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetEntrypointFailures().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -365,12 +268,6 @@ java.lang.String defaultValue) {
         internalGetProcessingEvents(),
         ProcessingEventsDefaultEntryHolder.defaultEntry,
         2);
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetEntrypointFailures(),
-        EntrypointFailuresDefaultEntryHolder.defaultEntry,
-        3);
     getUnknownFields().writeTo(output);
   }
 
@@ -400,16 +297,6 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, processingEvents__);
     }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetEntrypointFailures().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      entrypointFailures__ = EntrypointFailuresDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, entrypointFailures__);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -429,8 +316,6 @@ java.lang.String defaultValue) {
         other.internalGetQueuedEvents())) return false;
     if (!internalGetProcessingEvents().equals(
         other.internalGetProcessingEvents())) return false;
-    if (!internalGetEntrypointFailures().equals(
-        other.internalGetEntrypointFailures())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -449,10 +334,6 @@ java.lang.String defaultValue) {
     if (!internalGetProcessingEvents().getMap().isEmpty()) {
       hash = (37 * hash) + PROCESSING_EVENTS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetProcessingEvents().hashCode();
-    }
-    if (!internalGetEntrypointFailures().getMap().isEmpty()) {
-      hash = (37 * hash) + ENTRYPOINT_FAILURES_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetEntrypointFailures().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -575,8 +456,6 @@ java.lang.String defaultValue) {
           return internalGetQueuedEvents();
         case 2:
           return internalGetProcessingEvents();
-        case 3:
-          return internalGetEntrypointFailures();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -590,8 +469,6 @@ java.lang.String defaultValue) {
           return internalGetMutableQueuedEvents();
         case 2:
           return internalGetMutableProcessingEvents();
-        case 3:
-          return internalGetMutableEntrypointFailures();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -621,7 +498,6 @@ java.lang.String defaultValue) {
       bitField0_ = 0;
       internalGetMutableQueuedEvents().clear();
       internalGetMutableProcessingEvents().clear();
-      internalGetMutableEntrypointFailures().clear();
       return this;
     }
 
@@ -662,10 +538,6 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.processingEvents_ = internalGetProcessingEvents();
         result.processingEvents_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.entrypointFailures_ = internalGetEntrypointFailures();
-        result.entrypointFailures_.makeImmutable();
       }
     }
 
@@ -719,9 +591,6 @@ java.lang.String defaultValue) {
       internalGetMutableProcessingEvents().mergeFrom(
           other.internalGetProcessingEvents());
       bitField0_ |= 0x00000002;
-      internalGetMutableEntrypointFailures().mergeFrom(
-          other.internalGetEntrypointFailures());
-      bitField0_ |= 0x00000004;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -766,15 +635,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              entrypointFailures__ = input.readMessage(
-                  EntrypointFailuresDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableEntrypointFailures().getMutableMap().put(
-                  entrypointFailures__.getKey(), entrypointFailures__.getValue());
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1095,161 +955,6 @@ java.lang.String defaultValue) {
       internalGetMutableProcessingEvents().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000002;
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> entrypointFailures_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetEntrypointFailures() {
-      if (entrypointFailures_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            EntrypointFailuresDefaultEntryHolder.defaultEntry);
-      }
-      return entrypointFailures_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableEntrypointFailures() {
-      if (entrypointFailures_ == null) {
-        entrypointFailures_ = com.google.protobuf.MapField.newMapField(
-            EntrypointFailuresDefaultEntryHolder.defaultEntry);
-      }
-      if (!entrypointFailures_.isMutable()) {
-        entrypointFailures_ = entrypointFailures_.copy();
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return entrypointFailures_;
-    }
-    public int getEntrypointFailuresCount() {
-      return internalGetEntrypointFailures().getMap().size();
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    @java.lang.Override
-    public boolean containsEntrypointFailures(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetEntrypointFailures().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getEntrypointFailuresMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getEntrypointFailures() {
-      return getEntrypointFailuresMap();
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getEntrypointFailuresMap() {
-      return internalGetEntrypointFailures().getMap();
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getEntrypointFailuresOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetEntrypointFailures().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getEntrypointFailuresOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetEntrypointFailures().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearEntrypointFailures() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      internalGetMutableEntrypointFailures().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    public Builder removeEntrypointFailures(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableEntrypointFailures().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableEntrypointFailures() {
-      bitField0_ |= 0x00000004;
-      return internalGetMutableEntrypointFailures().getMutableMap();
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    public Builder putEntrypointFailures(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableEntrypointFailures().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000004;
-      return this;
-    }
-    /**
-     * <pre>
-     * map of entrypoint to recent error messages preventing processing
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; entrypoint_failures = 3 [json_name = "entrypointFailures"];</code>
-     */
-    public Builder putAllEntrypointFailures(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableEntrypointFailures().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000004;
       return this;
     }
     @java.lang.Override
