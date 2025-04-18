@@ -337,4 +337,15 @@ public interface OmniCampaignModuleOrBuilder extends
    * @return The globalTimezoneOrdering.
    */
   boolean getGlobalTimezoneOrdering();
+
+  /**
+   * <pre>
+   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
+   * if true, tasks will pause instead of be cancelled
+   * </pre>
+   *
+   * <code>bool tasks_carry_over = 15 [json_name = "tasksCarryOver"];</code>
+   * @return The tasksCarryOver.
+   */
+  boolean getTasksCarryOver();
 }
