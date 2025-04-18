@@ -2714,22 +2714,6 @@ private static final long serialVersionUID = 0L;
     return globalTimezoneOrdering_;
   }
 
-  public static final int TASKS_CARRY_OVER_FIELD_NUMBER = 15;
-  private boolean tasksCarryOver_ = false;
-  /**
-   * <pre>
-   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-   * if true, tasks will pause instead of be cancelled
-   * </pre>
-   *
-   * <code>bool tasks_carry_over = 15 [json_name = "tasksCarryOver"];</code>
-   * @return The tasksCarryOver.
-   */
-  @java.lang.Override
-  public boolean getTasksCarryOver() {
-    return tasksCarryOver_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2785,9 +2769,6 @@ private static final long serialVersionUID = 0L;
     }
     if (globalTimezoneOrdering_ != false) {
       output.writeBool(14, globalTimezoneOrdering_);
-    }
-    if (tasksCarryOver_ != false) {
-      output.writeBool(15, tasksCarryOver_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2854,10 +2835,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, globalTimezoneOrdering_);
     }
-    if (tasksCarryOver_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(15, tasksCarryOver_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2923,8 +2900,6 @@ private static final long serialVersionUID = 0L;
     }
     if (getGlobalTimezoneOrdering()
         != other.getGlobalTimezoneOrdering()) return false;
-    if (getTasksCarryOver()
-        != other.getTasksCarryOver()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2985,9 +2960,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + GLOBAL_TIMEZONE_ORDERING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getGlobalTimezoneOrdering());
-    hash = (37 * hash) + TASKS_CARRY_OVER_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getTasksCarryOver());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3175,7 +3147,6 @@ private static final long serialVersionUID = 0L;
         hoursOfOperationTimezoneBuilder_ = null;
       }
       globalTimezoneOrdering_ = false;
-      tasksCarryOver_ = false;
       return this;
     }
 
@@ -3276,9 +3247,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.globalTimezoneOrdering_ = globalTimezoneOrdering_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.tasksCarryOver_ = tasksCarryOver_;
       }
     }
 
@@ -3390,9 +3358,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getGlobalTimezoneOrdering() != false) {
         setGlobalTimezoneOrdering(other.getGlobalTimezoneOrdering());
-      }
-      if (other.getTasksCarryOver() != false) {
-        setTasksCarryOver(other.getTasksCarryOver());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3514,11 +3479,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 112
-            case 120: {
-              tasksCarryOver_ = input.readBool();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 120
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5371,53 +5331,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearGlobalTimezoneOrdering() {
       bitField0_ = (bitField0_ & ~0x00002000);
       globalTimezoneOrdering_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean tasksCarryOver_ ;
-    /**
-     * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
-     * </pre>
-     *
-     * <code>bool tasks_carry_over = 15 [json_name = "tasksCarryOver"];</code>
-     * @return The tasksCarryOver.
-     */
-    @java.lang.Override
-    public boolean getTasksCarryOver() {
-      return tasksCarryOver_;
-    }
-    /**
-     * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
-     * </pre>
-     *
-     * <code>bool tasks_carry_over = 15 [json_name = "tasksCarryOver"];</code>
-     * @param value The tasksCarryOver to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTasksCarryOver(boolean value) {
-
-      tasksCarryOver_ = value;
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
-     * </pre>
-     *
-     * <code>bool tasks_carry_over = 15 [json_name = "tasksCarryOver"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTasksCarryOver() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      tasksCarryOver_ = false;
       onChanged();
       return this;
     }
