@@ -340,8 +340,7 @@ public interface OmniCampaignModuleOrBuilder extends
 
   /**
    * <pre>
-   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-   * if true, tasks will pause instead of be cancelled
+   * indicates what happens to pending tasks when a campaign leaves hours of operation
    * </pre>
    *
    * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -350,8 +349,7 @@ public interface OmniCampaignModuleOrBuilder extends
   int getTaskCarryOverBehaviorValue();
   /**
    * <pre>
-   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-   * if true, tasks will pause instead of be cancelled
+   * indicates what happens to pending tasks when a campaign leaves hours of operation
    * </pre>
    *
    * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>

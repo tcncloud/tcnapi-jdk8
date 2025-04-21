@@ -2719,8 +2719,7 @@ private static final long serialVersionUID = 0L;
   private int taskCarryOverBehavior_ = 0;
   /**
    * <pre>
-   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-   * if true, tasks will pause instead of be cancelled
+   * indicates what happens to pending tasks when a campaign leaves hours of operation
    * </pre>
    *
    * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -2731,8 +2730,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-   * if true, tasks will pause instead of be cancelled
+   * indicates what happens to pending tasks when a campaign leaves hours of operation
    * </pre>
    *
    * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -5389,8 +5387,7 @@ private static final long serialVersionUID = 0L;
     private int taskCarryOverBehavior_ = 0;
     /**
      * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
+     * indicates what happens to pending tasks when a campaign leaves hours of operation
      * </pre>
      *
      * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -5401,8 +5398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
+     * indicates what happens to pending tasks when a campaign leaves hours of operation
      * </pre>
      *
      * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -5417,8 +5413,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
+     * indicates what happens to pending tasks when a campaign leaves hours of operation
      * </pre>
      *
      * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -5431,8 +5426,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
+     * indicates what happens to pending tasks when a campaign leaves hours of operation
      * </pre>
      *
      * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
@@ -5450,8 +5444,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * indicates new tasks will carry over to the next time frame when campaign is within hours of operation
-     * if true, tasks will pause instead of be cancelled
+     * indicates what happens to pending tasks when a campaign leaves hours of operation
      * </pre>
      *
      * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
