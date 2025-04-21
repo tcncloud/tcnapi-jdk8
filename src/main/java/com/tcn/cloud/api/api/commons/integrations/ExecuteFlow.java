@@ -379,8 +379,6 @@ private static final long serialVersionUID = 0L;
     BLINKPAYMENT_CHARGE_ACH(6102),
     WAYSTAR_CC_PAYMENT(6201),
     WAYSTAR_ACH_PAYMENT(6202),
-    ACIWORLDWIDE_CC_PAYMENT(6301),
-    ACIWORLDWIDE_ACH_PAYMENT(6302),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -725,8 +723,6 @@ private static final long serialVersionUID = 0L;
         case 6102: return BLINKPAYMENT_CHARGE_ACH;
         case 6201: return WAYSTAR_CC_PAYMENT;
         case 6202: return WAYSTAR_ACH_PAYMENT;
-        case 6301: return ACIWORLDWIDE_CC_PAYMENT;
-        case 6302: return ACIWORLDWIDE_ACH_PAYMENT;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -9403,7 +9399,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1260
+   *     See api/commons/integrations/integrations.proto;l=1256
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -9413,7 +9409,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1260
+   *     See api/commons/integrations/integrations.proto;l=1256
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -9438,7 +9434,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1261
+   *     See api/commons/integrations/integrations.proto;l=1257
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -9448,7 +9444,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1261
+   *     See api/commons/integrations/integrations.proto;l=1257
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -9473,7 +9469,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1262
+   *     See api/commons/integrations/integrations.proto;l=1258
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -9483,7 +9479,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1262
+   *     See api/commons/integrations/integrations.proto;l=1258
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -9508,7 +9504,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1263
+   *     See api/commons/integrations/integrations.proto;l=1259
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -9518,7 +9514,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1263
+   *     See api/commons/integrations/integrations.proto;l=1259
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -9543,7 +9539,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1264
+   *     See api/commons/integrations/integrations.proto;l=1260
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -9553,7 +9549,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1264
+   *     See api/commons/integrations/integrations.proto;l=1260
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -9578,7 +9574,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1265
+   *     See api/commons/integrations/integrations.proto;l=1261
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -9588,7 +9584,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1265
+   *     See api/commons/integrations/integrations.proto;l=1261
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -9613,7 +9609,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1266
+   *     See api/commons/integrations/integrations.proto;l=1262
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -9623,7 +9619,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1266
+   *     See api/commons/integrations/integrations.proto;l=1262
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -10946,68 +10942,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteWayStarAchPayment.getDefaultInstance();
   }
 
-  public static final int ACIWORLDWIDE_CC_PAYMENT_FIELD_NUMBER = 6301;
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-   * @return Whether the aciworldwideCcPayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasAciworldwideCcPayment() {
-    return valueCase_ == 6301;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-   * @return The aciworldwideCcPayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment getAciworldwideCcPayment() {
-    if (valueCase_ == 6301) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPaymentOrBuilder getAciworldwideCcPaymentOrBuilder() {
-    if (valueCase_ == 6301) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-  }
-
-  public static final int ACIWORLDWIDE_ACH_PAYMENT_FIELD_NUMBER = 6302;
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-   * @return Whether the aciworldwideAchPayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasAciworldwideAchPayment() {
-    return valueCase_ == 6302;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-   * @return The aciworldwideAchPayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment getAciworldwideAchPayment() {
-    if (valueCase_ == 6302) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPaymentOrBuilder getAciworldwideAchPaymentOrBuilder() {
-    if (valueCase_ == 6302) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -12005,12 +11939,6 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 6202) {
       output.writeMessage(6202, (com.tcn.cloud.api.api.commons.integrations.ExecuteWayStarAchPayment) value_);
-    }
-    if (valueCase_ == 6301) {
-      output.writeMessage(6301, (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_);
-    }
-    if (valueCase_ == 6302) {
-      output.writeMessage(6302, (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -13331,14 +13259,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 6202) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6202, (com.tcn.cloud.api.api.commons.integrations.ExecuteWayStarAchPayment) value_);
-    }
-    if (valueCase_ == 6301) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6301, (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_);
-    }
-    if (valueCase_ == 6302) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6302, (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -14667,14 +14587,6 @@ private static final long serialVersionUID = 0L;
         if (!getWaystarAchPayment()
             .equals(other.getWaystarAchPayment())) return false;
         break;
-      case 6301:
-        if (!getAciworldwideCcPayment()
-            .equals(other.getAciworldwideCcPayment())) return false;
-        break;
-      case 6302:
-        if (!getAciworldwideAchPayment()
-            .equals(other.getAciworldwideAchPayment())) return false;
-        break;
       case 0:
       default:
     }
@@ -16000,14 +15912,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + WAYSTAR_ACH_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getWaystarAchPayment().hashCode();
         break;
-      case 6301:
-        hash = (37 * hash) + ACIWORLDWIDE_CC_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAciworldwideCcPayment().hashCode();
-        break;
-      case 6302:
-        hash = (37 * hash) + ACIWORLDWIDE_ACH_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAciworldwideAchPayment().hashCode();
-        break;
       case 0:
       default:
     }
@@ -17140,12 +17044,6 @@ private static final long serialVersionUID = 0L;
       }
       if (waystarAchPaymentBuilder_ != null) {
         waystarAchPaymentBuilder_.clear();
-      }
-      if (aciworldwideCcPaymentBuilder_ != null) {
-        aciworldwideCcPaymentBuilder_.clear();
-      }
-      if (aciworldwideAchPaymentBuilder_ != null) {
-        aciworldwideAchPaymentBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -18549,14 +18447,6 @@ private static final long serialVersionUID = 0L;
           waystarAchPaymentBuilder_ != null) {
         result.value_ = waystarAchPaymentBuilder_.build();
       }
-      if (valueCase_ == 6301 &&
-          aciworldwideCcPaymentBuilder_ != null) {
-        result.value_ = aciworldwideCcPaymentBuilder_.build();
-      }
-      if (valueCase_ == 6302 &&
-          aciworldwideAchPaymentBuilder_ != null) {
-        result.value_ = aciworldwideAchPaymentBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -19915,14 +19805,6 @@ private static final long serialVersionUID = 0L;
         }
         case WAYSTAR_ACH_PAYMENT: {
           mergeWaystarAchPayment(other.getWaystarAchPayment());
-          break;
-        }
-        case ACIWORLDWIDE_CC_PAYMENT: {
-          mergeAciworldwideCcPayment(other.getAciworldwideCcPayment());
-          break;
-        }
-        case ACIWORLDWIDE_ACH_PAYMENT: {
-          mergeAciworldwideAchPayment(other.getAciworldwideAchPayment());
           break;
         }
         case VALUE_NOT_SET: {
@@ -22249,20 +22131,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 6202;
               break;
             } // case 49618
-            case 50410: {
-              input.readMessage(
-                  getAciworldwideCcPaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 6301;
-              break;
-            } // case 50410
-            case 50418: {
-              input.readMessage(
-                  getAciworldwideAchPaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 6302;
-              break;
-            } // case 50418
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -61858,7 +61726,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1260
+     *     See api/commons/integrations/integrations.proto;l=1256
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -61868,7 +61736,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1260
+     *     See api/commons/integrations/integrations.proto;l=1256
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -62004,7 +61872,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1261
+     *     See api/commons/integrations/integrations.proto;l=1257
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -62014,7 +61882,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1261
+     *     See api/commons/integrations/integrations.proto;l=1257
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -62150,7 +62018,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1262
+     *     See api/commons/integrations/integrations.proto;l=1258
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -62160,7 +62028,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1262
+     *     See api/commons/integrations/integrations.proto;l=1258
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -62296,7 +62164,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1263
+     *     See api/commons/integrations/integrations.proto;l=1259
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -62306,7 +62174,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1263
+     *     See api/commons/integrations/integrations.proto;l=1259
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -62442,7 +62310,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1264
+     *     See api/commons/integrations/integrations.proto;l=1260
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -62452,7 +62320,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1264
+     *     See api/commons/integrations/integrations.proto;l=1260
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -62588,7 +62456,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1265
+     *     See api/commons/integrations/integrations.proto;l=1261
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -62598,7 +62466,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1265
+     *     See api/commons/integrations/integrations.proto;l=1261
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -62734,7 +62602,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1266
+     *     See api/commons/integrations/integrations.proto;l=1262
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -62744,7 +62612,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1266
+     *     See api/commons/integrations/integrations.proto;l=1262
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -68837,290 +68705,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 6202;
       onChanged();
       return waystarAchPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPaymentOrBuilder> aciworldwideCcPaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     * @return Whether the aciworldwideCcPayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasAciworldwideCcPayment() {
-      return valueCase_ == 6301;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     * @return The aciworldwideCcPayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment getAciworldwideCcPayment() {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        if (valueCase_ == 6301) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 6301) {
-          return aciworldwideCcPaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    public Builder setAciworldwideCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment value) {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        aciworldwideCcPaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 6301;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    public Builder setAciworldwideCcPayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.Builder builderForValue) {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        aciworldwideCcPaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 6301;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    public Builder mergeAciworldwideCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment value) {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        if (valueCase_ == 6301 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 6301) {
-          aciworldwideCcPaymentBuilder_.mergeFrom(value);
-        } else {
-          aciworldwideCcPaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 6301;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    public Builder clearAciworldwideCcPayment() {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        if (valueCase_ == 6301) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 6301) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        aciworldwideCcPaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.Builder getAciworldwideCcPaymentBuilder() {
-      return getAciworldwideCcPaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPaymentOrBuilder getAciworldwideCcPaymentOrBuilder() {
-      if ((valueCase_ == 6301) && (aciworldwideCcPaymentBuilder_ != null)) {
-        return aciworldwideCcPaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 6301) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideCcPayment aciworldwide_cc_payment = 6301 [json_name = "aciworldwideCcPayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPaymentOrBuilder> 
-        getAciworldwideCcPaymentFieldBuilder() {
-      if (aciworldwideCcPaymentBuilder_ == null) {
-        if (!(valueCase_ == 6301)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.getDefaultInstance();
-        }
-        aciworldwideCcPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideCcPayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 6301;
-      onChanged();
-      return aciworldwideCcPaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPaymentOrBuilder> aciworldwideAchPaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     * @return Whether the aciworldwideAchPayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasAciworldwideAchPayment() {
-      return valueCase_ == 6302;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     * @return The aciworldwideAchPayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment getAciworldwideAchPayment() {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        if (valueCase_ == 6302) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 6302) {
-          return aciworldwideAchPaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    public Builder setAciworldwideAchPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment value) {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        aciworldwideAchPaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 6302;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    public Builder setAciworldwideAchPayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.Builder builderForValue) {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        aciworldwideAchPaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 6302;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    public Builder mergeAciworldwideAchPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment value) {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        if (valueCase_ == 6302 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 6302) {
-          aciworldwideAchPaymentBuilder_.mergeFrom(value);
-        } else {
-          aciworldwideAchPaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 6302;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    public Builder clearAciworldwideAchPayment() {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        if (valueCase_ == 6302) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 6302) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        aciworldwideAchPaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.Builder getAciworldwideAchPaymentBuilder() {
-      return getAciworldwideAchPaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPaymentOrBuilder getAciworldwideAchPaymentOrBuilder() {
-      if ((valueCase_ == 6302) && (aciworldwideAchPaymentBuilder_ != null)) {
-        return aciworldwideAchPaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 6302) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteACIWorldwideAchPayment aciworldwide_ach_payment = 6302 [json_name = "aciworldwideAchPayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPaymentOrBuilder> 
-        getAciworldwideAchPaymentFieldBuilder() {
-      if (aciworldwideAchPaymentBuilder_ == null) {
-        if (!(valueCase_ == 6302)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.getDefaultInstance();
-        }
-        aciworldwideAchPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteACIWorldwideAchPayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 6302;
-      onChanged();
-      return aciworldwideAchPaymentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
