@@ -110,6 +110,16 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_pbx_v2_GetPBXUserResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_pbx_v2_GetSipCredentialsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_pbx_v2_GetSipCredentialsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_pbx_v2_GetSipCredentialsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_pbx_v2_GetSipCredentialsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_pbx_v2_ListRingGroupsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -253,105 +263,114 @@ public final class ServiceProto {
       "ipAccount\"3\n\021GetPBXUserRequest\022\036\n\013pbx_us" +
       "er_id\030\001 \001(\tR\tpbxUserId\"B\n\022GetPBXUserResp" +
       "onse\022,\n\004user\030\001 \001(\0132\030.services.pbx.v2.PBX" +
-      "UserR\004user\"\027\n\025ListRingGroupsRequest\"L\n\026L" +
-      "istRingGroupsResponse\0222\n\006groups\030\001 \003(\0132\032." +
-      "services.pbx.v2.RingGroupR\006groups\"D\n\034Lis" +
-      "tRingGroupsBySipIdRequest\022$\n\016sip_account" +
-      "_id\030\001 \001(\tR\014sipAccountId\"S\n\035ListRingGroup" +
-      "sBySipIdResponse\0222\n\006groups\030\001 \003(\0132\032.servi" +
-      "ces.pbx.v2.RingGroupR\006groups\"9\n\023GetRingG" +
-      "roupRequest\022\"\n\rring_group_id\030\001 \001(\tR\013ring" +
-      "GroupId\"H\n\024GetRingGroupResponse\0220\n\005group" +
-      "\030\001 \001(\0132\032.services.pbx.v2.RingGroupR\005grou" +
-      "p\"\224\001\n\027UpdateSIPAccountRequest\022<\n\013sip_acc" +
-      "ount\030\001 \001(\0132\033.services.pbx.v2.SIPAccountR" +
-      "\nsipAccount\022;\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskR\nupdateMask\"X\n\030Upda" +
-      "teSIPAccountResponse\022<\n\013sip_account\030\001 \001(" +
-      "\0132\033.services.pbx.v2.SIPAccountR\nsipAccou" +
-      "nt\"\207\001\n\026UpdateRingGroupRequest\0220\n\005group\030\001" +
-      " \001(\0132\032.services.pbx.v2.RingGroupR\005group\022" +
-      ";\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\nupdateMask\"K\n\027UpdateRingGroupR" +
+      "UserR\004user\"\032\n\030GetSipCredentialsRequest\"z" +
+      "\n\031GetSipCredentialsResponse\022\035\n\nsip_domai" +
+      "n\030\001 \001(\tR\tsipDomain\022\031\n\010user_uri\030\002 \001(\tR\007us" +
+      "erUri\022#\n\rsession_token\030\003 \001(\tR\014sessionTok" +
+      "en\"\027\n\025ListRingGroupsRequest\"L\n\026ListRingG" +
+      "roupsResponse\0222\n\006groups\030\001 \003(\0132\032.services" +
+      ".pbx.v2.RingGroupR\006groups\"D\n\034ListRingGro" +
+      "upsBySipIdRequest\022$\n\016sip_account_id\030\001 \001(" +
+      "\tR\014sipAccountId\"S\n\035ListRingGroupsBySipId" +
+      "Response\0222\n\006groups\030\001 \003(\0132\032.services.pbx." +
+      "v2.RingGroupR\006groups\"9\n\023GetRingGroupRequ" +
+      "est\022\"\n\rring_group_id\030\001 \001(\tR\013ringGroupId\"" +
+      "H\n\024GetRingGroupResponse\0220\n\005group\030\001 \001(\0132\032" +
+      ".services.pbx.v2.RingGroupR\005group\"\224\001\n\027Up" +
+      "dateSIPAccountRequest\022<\n\013sip_account\030\001 \001" +
+      "(\0132\033.services.pbx.v2.SIPAccountR\nsipAcco" +
+      "unt\022;\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\nupdateMask\"X\n\030UpdateSIPAcc" +
+      "ountResponse\022<\n\013sip_account\030\001 \001(\0132\033.serv" +
+      "ices.pbx.v2.SIPAccountR\nsipAccount\"\207\001\n\026U" +
+      "pdateRingGroupRequest\0220\n\005group\030\001 \001(\0132\032.s" +
+      "ervices.pbx.v2.RingGroupR\005group\022;\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "R\nupdateMask\"K\n\027UpdateRingGroupResponse\022" +
+      "0\n\005group\030\001 \001(\0132\032.services.pbx.v2.RingGro" +
+      "upR\005group\"\036\n\034AssignRandomExtensionReques" +
+      "t\"=\n\035AssignRandomExtensionResponse\022\034\n\tex" +
+      "tension\030\001 \001(\tR\textension\"J\n\026CreateRingGr" +
+      "oupRequest\0220\n\005group\030\001 \001(\0132\032.services.pbx" +
+      ".v2.RingGroupR\005group\"K\n\027CreateRingGroupR" +
       "esponse\0220\n\005group\030\001 \001(\0132\032.services.pbx.v2" +
-      ".RingGroupR\005group\"\036\n\034AssignRandomExtensi" +
-      "onRequest\"=\n\035AssignRandomExtensionRespon" +
-      "se\022\034\n\textension\030\001 \001(\tR\textension\"J\n\026Crea" +
-      "teRingGroupRequest\0220\n\005group\030\001 \001(\0132\032.serv" +
-      "ices.pbx.v2.RingGroupR\005group\"K\n\027CreateRi" +
-      "ngGroupResponse\0220\n\005group\030\001 \001(\0132\032.service" +
-      "s.pbx.v2.RingGroupR\005group\"3\n\026DeleteRingG" +
-      "roupRequest\022\031\n\010group_id\030\001 \001(\tR\007groupId\"\031" +
-      "\n\027DeleteRingGroupResponse*\235\001\n\014RingStrate" +
-      "gy\022\035\n\031RING_STRATEGY_UNSPECIFIED\020\000\022\032\n\026RIN" +
-      "G_STRATEGY_RING_ALL\020\001\022\035\n\031RING_STRATEGY_R" +
-      "OUND_ROBIN\020\002\022\030\n\024RING_STRATEGY_RANDOM\020\003\022\031" +
-      "\n\025RING_STRATEGY_ORDERED\020\0042\230\023\n\nPBXService" +
-      "\022\235\001\n\014ListPBXUsers\022$.services.pbx.v2.List" +
-      "PBXUsersRequest\032%.services.pbx.v2.ListPB" +
-      "XUsersResponse\"@\210\002\001\272\270\221\002\005\n\003\010\204 \202\323\344\223\002-\"(/se" +
-      "rvices/pbx/v2/pbxservice/listpbxusers:\001*" +
-      "\022\225\001\n\nGetPBXUser\022\".services.pbx.v2.GetPBX" +
-      "UserRequest\032#.services.pbx.v2.GetPBXUser" +
-      "Response\">\210\002\001\272\270\221\002\005\n\003\010\204 \202\323\344\223\002+\"&/services" +
-      "/pbx/v2/pbxservice/getpbxuser:\001*\022\242\001\n\016Lis" +
-      "tRingGroups\022&.services.pbx.v2.ListRingGr" +
-      "oupsRequest\032\'.services.pbx.v2.ListRingGr" +
-      "oupsResponse\"?\272\270\221\002\005\n\003\010\204 \202\323\344\223\002/\"*/service" +
-      "s/pbx/v2/pbxservice/listringgroups:\001*\022\276\001" +
-      "\n\025ListRingGroupsBySipId\022-.services.pbx.v" +
-      "2.ListRingGroupsBySipIdRequest\032..service" +
-      "s.pbx.v2.ListRingGroupsBySipIdResponse\"F" +
-      "\272\270\221\002\005\n\003\010\204 \202\323\344\223\0026\"1/services/pbx/v2/pbxse" +
-      "rvice/listringgroupsbysipid:\001*\022\232\001\n\014GetRi" +
-      "ngGroup\022$.services.pbx.v2.GetRingGroupRe" +
-      "quest\032%.services.pbx.v2.GetRingGroupResp" +
-      "onse\"=\272\270\221\002\005\n\003\010\204 \202\323\344\223\002-\"(/services/pbx/v2" +
-      "/pbxservice/getringgroup:\001*\022\236\001\n\rGetSIPAc" +
-      "count\022%.services.pbx.v2.GetSIPAccountReq" +
-      "uest\032&.services.pbx.v2.GetSIPAccountResp" +
-      "onse\">\272\270\221\002\005\n\003\010\204 \202\323\344\223\002.\")/services/pbx/v2" +
-      "/pbxservice/getsipaccount:\001*\022\276\001\n\025GetSIPA" +
-      "ccountByUserId\022-.services.pbx.v2.GetSIPA" +
-      "ccountByUserIdRequest\032..services.pbx.v2." +
-      "GetSIPAccountByUserIdResponse\"F\272\270\221\002\005\n\003\010\204" +
-      " \202\323\344\223\0026\"1/services/pbx/v2/pbxservice/get" +
-      "sipaccountbyuserid:\001*\022\246\001\n\017ListSIPAccount" +
-      "s\022\'.services.pbx.v2.ListSIPAccountsReque" +
-      "st\032(.services.pbx.v2.ListSIPAccountsResp" +
-      "onse\"@\272\270\221\002\005\n\003\010\204 \202\323\344\223\0020\"+/services/pbx/v2" +
-      "/pbxservice/listsipaccounts:\001*\022\332\001\n\034ListS" +
-      "IPAccountsByRingGroupId\0224.services.pbx.v" +
-      "2.ListSIPAccountsByRingGroupIdRequest\0325." +
-      "services.pbx.v2.ListSIPAccountsByRingGro" +
-      "upIdResponse\"M\272\270\221\002\005\n\003\010\204 \202\323\344\223\002=\"8/service" +
-      "s/pbx/v2/pbxservice/listsipaccountsbyrin" +
-      "ggroupid:\001*\022\252\001\n\020UpdateSIPAccount\022(.servi" +
-      "ces.pbx.v2.UpdateSIPAccountRequest\032).ser" +
-      "vices.pbx.v2.UpdateSIPAccountResponse\"A\272" +
-      "\270\221\002\005\n\003\010\205 \202\323\344\223\0021\",/services/pbx/v2/pbxser" +
-      "vice/updatesipaccount:\001*\022\246\001\n\017UpdateRingG" +
-      "roup\022\'.services.pbx.v2.UpdateRingGroupRe" +
-      "quest\032(.services.pbx.v2.UpdateRingGroupR" +
-      "esponse\"@\272\270\221\002\005\n\003\010\205 \202\323\344\223\0020\"+/services/pbx" +
-      "/v2/pbxservice/updateringgroup:\001*\022\246\001\n\017Cr" +
-      "eateRingGroup\022\'.services.pbx.v2.CreateRi" +
-      "ngGroupRequest\032(.services.pbx.v2.CreateR" +
+      ".RingGroupR\005group\"3\n\026DeleteRingGroupRequ" +
+      "est\022\031\n\010group_id\030\001 \001(\tR\007groupId\"\031\n\027Delete" +
+      "RingGroupResponse*\235\001\n\014RingStrategy\022\035\n\031RI" +
+      "NG_STRATEGY_UNSPECIFIED\020\000\022\032\n\026RING_STRATE" +
+      "GY_RING_ALL\020\001\022\035\n\031RING_STRATEGY_ROUND_ROB" +
+      "IN\020\002\022\030\n\024RING_STRATEGY_RANDOM\020\003\022\031\n\025RING_S" +
+      "TRATEGY_ORDERED\020\0042\311\024\n\nPBXService\022\235\001\n\014Lis" +
+      "tPBXUsers\022$.services.pbx.v2.ListPBXUsers" +
+      "Request\032%.services.pbx.v2.ListPBXUsersRe" +
+      "sponse\"@\210\002\001\272\270\221\002\005\n\003\010\204 \202\323\344\223\002-\"(/services/p" +
+      "bx/v2/pbxservice/listpbxusers:\001*\022\225\001\n\nGet" +
+      "PBXUser\022\".services.pbx.v2.GetPBXUserRequ" +
+      "est\032#.services.pbx.v2.GetPBXUserResponse" +
+      "\">\210\002\001\272\270\221\002\005\n\003\010\204 \202\323\344\223\002+\"&/services/pbx/v2/" +
+      "pbxservice/getpbxuser:\001*\022\242\001\n\016ListRingGro" +
+      "ups\022&.services.pbx.v2.ListRingGroupsRequ" +
+      "est\032\'.services.pbx.v2.ListRingGroupsResp" +
+      "onse\"?\272\270\221\002\005\n\003\010\204 \202\323\344\223\002/\"*/services/pbx/v2" +
+      "/pbxservice/listringgroups:\001*\022\276\001\n\025ListRi" +
+      "ngGroupsBySipId\022-.services.pbx.v2.ListRi" +
+      "ngGroupsBySipIdRequest\032..services.pbx.v2" +
+      ".ListRingGroupsBySipIdResponse\"F\272\270\221\002\005\n\003\010" +
+      "\204 \202\323\344\223\0026\"1/services/pbx/v2/pbxservice/li" +
+      "stringgroupsbysipid:\001*\022\232\001\n\014GetRingGroup\022" +
+      "$.services.pbx.v2.GetRingGroupRequest\032%." +
+      "services.pbx.v2.GetRingGroupResponse\"=\272\270" +
+      "\221\002\005\n\003\010\204 \202\323\344\223\002-\"(/services/pbx/v2/pbxserv" +
+      "ice/getringgroup:\001*\022\236\001\n\rGetSIPAccount\022%." +
+      "services.pbx.v2.GetSIPAccountRequest\032&.s" +
+      "ervices.pbx.v2.GetSIPAccountResponse\">\272\270" +
+      "\221\002\005\n\003\010\204 \202\323\344\223\002.\")/services/pbx/v2/pbxserv" +
+      "ice/getsipaccount:\001*\022\276\001\n\025GetSIPAccountBy" +
+      "UserId\022-.services.pbx.v2.GetSIPAccountBy" +
+      "UserIdRequest\032..services.pbx.v2.GetSIPAc" +
+      "countByUserIdResponse\"F\272\270\221\002\005\n\003\010\204 \202\323\344\223\0026\"" +
+      "1/services/pbx/v2/pbxservice/getsipaccou" +
+      "ntbyuserid:\001*\022\256\001\n\021GetSipCredentials\022).se" +
+      "rvices.pbx.v2.GetSipCredentialsRequest\032*" +
+      ".services.pbx.v2.GetSipCredentialsRespon" +
+      "se\"B\272\270\221\002\005\n\003\010\204 \202\323\344\223\0022\"-/services/pbx/v2/p" +
+      "bxservice/getsipcredentials:\001*\022\246\001\n\017ListS" +
+      "IPAccounts\022\'.services.pbx.v2.ListSIPAcco" +
+      "untsRequest\032(.services.pbx.v2.ListSIPAcc" +
+      "ountsResponse\"@\272\270\221\002\005\n\003\010\204 \202\323\344\223\0020\"+/servic" +
+      "es/pbx/v2/pbxservice/listsipaccounts:\001*\022" +
+      "\332\001\n\034ListSIPAccountsByRingGroupId\0224.servi" +
+      "ces.pbx.v2.ListSIPAccountsByRingGroupIdR" +
+      "equest\0325.services.pbx.v2.ListSIPAccounts" +
+      "ByRingGroupIdResponse\"M\272\270\221\002\005\n\003\010\204 \202\323\344\223\002=\"" +
+      "8/services/pbx/v2/pbxservice/listsipacco" +
+      "untsbyringgroupid:\001*\022\252\001\n\020UpdateSIPAccoun" +
+      "t\022(.services.pbx.v2.UpdateSIPAccountRequ" +
+      "est\032).services.pbx.v2.UpdateSIPAccountRe" +
+      "sponse\"A\272\270\221\002\005\n\003\010\205 \202\323\344\223\0021\",/services/pbx/" +
+      "v2/pbxservice/updatesipaccount:\001*\022\246\001\n\017Up" +
+      "dateRingGroup\022\'.services.pbx.v2.UpdateRi" +
+      "ngGroupRequest\032(.services.pbx.v2.UpdateR" +
       "ingGroupResponse\"@\272\270\221\002\005\n\003\010\205 \202\323\344\223\0020\"+/ser" +
-      "vices/pbx/v2/pbxservice/createringgroup:" +
-      "\001*\022\246\001\n\017DeleteRingGroup\022\'.services.pbx.v2" +
-      ".DeleteRingGroupRequest\032(.services.pbx.v" +
-      "2.DeleteRingGroupResponse\"@\272\270\221\002\005\n\003\010\205 \202\323\344" +
-      "\223\0020\"+/services/pbx/v2/pbxservice/deleter" +
-      "inggroup:\001*\022\276\001\n\025AssignRandomExtension\022-." +
-      "services.pbx.v2.AssignRandomExtensionReq" +
-      "uest\032..services.pbx.v2.AssignRandomExten" +
-      "sionResponse\"F\272\270\221\002\005\n\003\010\205 \202\323\344\223\0026\"1/service" +
-      "s/pbx/v2/pbxservice/assignrandomextensio" +
-      "n:\001*B\217\001\n!com.tcn.cloud.api.services.pbx." +
-      "v2B\014ServiceProtoP\001\242\002\003SPX\252\002\017Services.Pbx." +
-      "V2\312\002\017Services\\Pbx\\V2\342\002\033Services\\Pbx\\V2\\G" +
-      "PBMetadata\352\002\021Services::Pbx::V2b\006proto3"
+      "vices/pbx/v2/pbxservice/updateringgroup:" +
+      "\001*\022\246\001\n\017CreateRingGroup\022\'.services.pbx.v2" +
+      ".CreateRingGroupRequest\032(.services.pbx.v" +
+      "2.CreateRingGroupResponse\"@\272\270\221\002\005\n\003\010\205 \202\323\344" +
+      "\223\0020\"+/services/pbx/v2/pbxservice/creater" +
+      "inggroup:\001*\022\246\001\n\017DeleteRingGroup\022\'.servic" +
+      "es.pbx.v2.DeleteRingGroupRequest\032(.servi" +
+      "ces.pbx.v2.DeleteRingGroupResponse\"@\272\270\221\002" +
+      "\005\n\003\010\205 \202\323\344\223\0020\"+/services/pbx/v2/pbxservic" +
+      "e/deleteringgroup:\001*\022\276\001\n\025AssignRandomExt" +
+      "ension\022-.services.pbx.v2.AssignRandomExt" +
+      "ensionRequest\032..services.pbx.v2.AssignRa" +
+      "ndomExtensionResponse\"F\272\270\221\002\005\n\003\010\205 \202\323\344\223\0026\"" +
+      "1/services/pbx/v2/pbxservice/assignrando" +
+      "mextension:\001*B\217\001\n!com.tcn.cloud.api.serv" +
+      "ices.pbx.v2B\014ServiceProtoP\001\242\002\003SPX\252\002\017Serv" +
+      "ices.Pbx.V2\312\002\017Services\\Pbx\\V2\342\002\033Services" +
+      "\\Pbx\\V2\\GPBMetadata\352\002\021Services::Pbx::V2b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -474,98 +493,110 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_GetPBXUserResponse_descriptor,
         new java.lang.String[] { "User", });
-    internal_static_services_pbx_v2_ListRingGroupsRequest_descriptor =
+    internal_static_services_pbx_v2_GetSipCredentialsRequest_descriptor =
       getDescriptor().getMessageTypes().get(19);
+    internal_static_services_pbx_v2_GetSipCredentialsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_pbx_v2_GetSipCredentialsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_pbx_v2_GetSipCredentialsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_services_pbx_v2_GetSipCredentialsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_pbx_v2_GetSipCredentialsResponse_descriptor,
+        new java.lang.String[] { "SipDomain", "UserUri", "SessionToken", });
+    internal_static_services_pbx_v2_ListRingGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_services_pbx_v2_ListRingGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_ListRingGroupsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_services_pbx_v2_ListRingGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_services_pbx_v2_ListRingGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_ListRingGroupsResponse_descriptor,
         new java.lang.String[] { "Groups", });
     internal_static_services_pbx_v2_ListRingGroupsBySipIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_services_pbx_v2_ListRingGroupsBySipIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_ListRingGroupsBySipIdRequest_descriptor,
         new java.lang.String[] { "SipAccountId", });
     internal_static_services_pbx_v2_ListRingGroupsBySipIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_services_pbx_v2_ListRingGroupsBySipIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_ListRingGroupsBySipIdResponse_descriptor,
         new java.lang.String[] { "Groups", });
     internal_static_services_pbx_v2_GetRingGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_services_pbx_v2_GetRingGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_GetRingGroupRequest_descriptor,
         new java.lang.String[] { "RingGroupId", });
     internal_static_services_pbx_v2_GetRingGroupResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_services_pbx_v2_GetRingGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_GetRingGroupResponse_descriptor,
         new java.lang.String[] { "Group", });
     internal_static_services_pbx_v2_UpdateSIPAccountRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_services_pbx_v2_UpdateSIPAccountRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_UpdateSIPAccountRequest_descriptor,
         new java.lang.String[] { "SipAccount", "UpdateMask", });
     internal_static_services_pbx_v2_UpdateSIPAccountResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_services_pbx_v2_UpdateSIPAccountResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_UpdateSIPAccountResponse_descriptor,
         new java.lang.String[] { "SipAccount", });
     internal_static_services_pbx_v2_UpdateRingGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_services_pbx_v2_UpdateRingGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_UpdateRingGroupRequest_descriptor,
         new java.lang.String[] { "Group", "UpdateMask", });
     internal_static_services_pbx_v2_UpdateRingGroupResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_services_pbx_v2_UpdateRingGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_UpdateRingGroupResponse_descriptor,
         new java.lang.String[] { "Group", });
     internal_static_services_pbx_v2_AssignRandomExtensionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_services_pbx_v2_AssignRandomExtensionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_AssignRandomExtensionRequest_descriptor,
         new java.lang.String[] { });
     internal_static_services_pbx_v2_AssignRandomExtensionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_services_pbx_v2_AssignRandomExtensionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_AssignRandomExtensionResponse_descriptor,
         new java.lang.String[] { "Extension", });
     internal_static_services_pbx_v2_CreateRingGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_services_pbx_v2_CreateRingGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_CreateRingGroupRequest_descriptor,
         new java.lang.String[] { "Group", });
     internal_static_services_pbx_v2_CreateRingGroupResponse_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_services_pbx_v2_CreateRingGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_CreateRingGroupResponse_descriptor,
         new java.lang.String[] { "Group", });
     internal_static_services_pbx_v2_DeleteRingGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_services_pbx_v2_DeleteRingGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_DeleteRingGroupRequest_descriptor,
         new java.lang.String[] { "GroupId", });
     internal_static_services_pbx_v2_DeleteRingGroupResponse_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_services_pbx_v2_DeleteRingGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_pbx_v2_DeleteRingGroupResponse_descriptor,
