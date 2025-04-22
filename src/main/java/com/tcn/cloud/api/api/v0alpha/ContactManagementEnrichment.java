@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.UNRECOGNIZED : result;
   }
 
-  public static final int COUNTRY_CODE_FIELD_NUMBER = 8;
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object countryCode_ = "";
   /**
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
    * Country code for the Phone Number
    * </pre>
    *
-   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * <code>string country_code = 7 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -428,7 +428,7 @@ private static final long serialVersionUID = 0L;
    * Country code for the Phone Number
    * </pre>
    *
-   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * <code>string country_code = 7 [json_name = "countryCode"];</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
       output.writeEnum(6, searchFieldType_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, countryCode_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, countryCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
         .computeEnumSize(6, searchFieldType_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, countryCode_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, countryCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -923,11 +923,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
-            case 66: {
+            case 58: {
               countryCode_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 66
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1567,7 +1567,7 @@ private static final long serialVersionUID = 0L;
      * Country code for the Phone Number
      * </pre>
      *
-     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * <code>string country_code = 7 [json_name = "countryCode"];</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -1587,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * Country code for the Phone Number
      * </pre>
      *
-     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * <code>string country_code = 7 [json_name = "countryCode"];</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -1608,7 +1608,7 @@ private static final long serialVersionUID = 0L;
      * Country code for the Phone Number
      * </pre>
      *
-     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * <code>string country_code = 7 [json_name = "countryCode"];</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1625,7 +1625,7 @@ private static final long serialVersionUID = 0L;
      * Country code for the Phone Number
      * </pre>
      *
-     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * <code>string country_code = 7 [json_name = "countryCode"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -1639,7 +1639,7 @@ private static final long serialVersionUID = 0L;
      * Country code for the Phone Number
      * </pre>
      *
-     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * <code>string country_code = 7 [json_name = "countryCode"];</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */

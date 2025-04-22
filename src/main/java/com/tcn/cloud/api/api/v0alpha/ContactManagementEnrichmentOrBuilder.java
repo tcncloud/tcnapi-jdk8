@@ -157,7 +157,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * Country code for the Phone Number
    * </pre>
    *
-   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * <code>string country_code = 7 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -166,7 +166,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * Country code for the Phone Number
    * </pre>
    *
-   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * <code>string country_code = 7 [json_name = "countryCode"];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
