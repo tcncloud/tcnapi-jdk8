@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     searchFieldType_ = 0;
+    countryCode_ = "";
   }
 
   @java.lang.Override
@@ -398,6 +399,53 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.UNRECOGNIZED : result;
   }
 
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  @java.lang.Override
+  public java.lang.String getCountryCode() {
+    java.lang.Object ref = countryCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      countryCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The bytes for countryCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCountryCodeBytes() {
+    java.lang.Object ref = countryCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      countryCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -429,6 +477,9 @@ private static final long serialVersionUID = 0L;
     }
     if (searchFieldType_ != com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType.NONE.getNumber()) {
       output.writeEnum(6, searchFieldType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, countryCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -465,6 +516,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, searchFieldType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, countryCode_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -494,6 +548,8 @@ private static final long serialVersionUID = 0L;
     if (getInsertIfMissing()
         != other.getInsertIfMissing()) return false;
     if (searchFieldType_ != other.searchFieldType_) return false;
+    if (!getCountryCode()
+        .equals(other.getCountryCode())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -522,6 +578,8 @@ private static final long serialVersionUID = 0L;
         getInsertIfMissing());
     hash = (37 * hash) + SEARCH_FIELD_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + searchFieldType_;
+    hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCountryCode().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -668,6 +726,7 @@ private static final long serialVersionUID = 0L;
       }
       insertIfMissing_ = false;
       searchFieldType_ = 0;
+      countryCode_ = "";
       return this;
     }
 
@@ -721,6 +780,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.searchFieldType_ = searchFieldType_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.countryCode_ = countryCode_;
       }
     }
 
@@ -797,6 +859,11 @@ private static final long serialVersionUID = 0L;
       if (other.searchFieldType_ != 0) {
         setSearchFieldTypeValue(other.getSearchFieldTypeValue());
       }
+      if (!other.getCountryCode().isEmpty()) {
+        countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -856,6 +923,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 66: {
+              countryCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1485,6 +1557,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearSearchFieldType() {
       bitField0_ = (bitField0_ & ~0x00000020);
       searchFieldType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object countryCode_ = "";
+    /**
+     * <pre>
+     * Country code for the Phone Number
+     * </pre>
+     *
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return The countryCode.
+     */
+    public java.lang.String getCountryCode() {
+      java.lang.Object ref = countryCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countryCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Country code for the Phone Number
+     * </pre>
+     *
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return The bytes for countryCode.
+     */
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Country code for the Phone Number
+     * </pre>
+     *
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @param value The countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      countryCode_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Country code for the Phone Number
+     * </pre>
+     *
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCode() {
+      countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Country code for the Phone Number
+     * </pre>
+     *
+     * <code>string country_code = 8 [json_name = "countryCode"];</code>
+     * @param value The bytes for countryCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      countryCode_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

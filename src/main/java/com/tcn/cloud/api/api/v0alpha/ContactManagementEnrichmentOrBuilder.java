@@ -151,4 +151,24 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * @return The searchFieldType.
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType getSearchFieldType();
+
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  java.lang.String getCountryCode();
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 8 [json_name = "countryCode"];</code>
+   * @return The bytes for countryCode.
+   */
+  com.google.protobuf.ByteString
+      getCountryCodeBytes();
 }
