@@ -337,23 +337,4 @@ public interface OmniCampaignModuleOrBuilder extends
    * @return The globalTimezoneOrdering.
    */
   boolean getGlobalTimezoneOrdering();
-
-  /**
-   * <pre>
-   * indicates what happens to pending tasks when a campaign leaves hours of operation
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-   * @return The enum numeric value on the wire for taskCarryOverBehavior.
-   */
-  int getTaskCarryOverBehaviorValue();
-  /**
-   * <pre>
-   * indicates what happens to pending tasks when a campaign leaves hours of operation
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-   * @return The taskCarryOverBehavior.
-   */
-  com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior getTaskCarryOverBehavior();
 }

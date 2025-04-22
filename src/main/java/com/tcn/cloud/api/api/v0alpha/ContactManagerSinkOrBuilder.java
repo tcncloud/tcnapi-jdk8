@@ -182,24 +182,4 @@ public interface ContactManagerSinkOrBuilder extends
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 11 [json_name = "deDuplicationInfo"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder();
-
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 12 [json_name = "countryCode"];</code>
-   * @return The countryCode.
-   */
-  java.lang.String getCountryCode();
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 12 [json_name = "countryCode"];</code>
-   * @return The bytes for countryCode.
-   */
-  com.google.protobuf.ByteString
-      getCountryCodeBytes();
 }

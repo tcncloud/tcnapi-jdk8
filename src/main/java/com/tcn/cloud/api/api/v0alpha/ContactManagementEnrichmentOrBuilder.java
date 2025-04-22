@@ -99,7 +99,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    *
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
-   *     See api/v0alpha/lms.proto;l=3191
+   *     See api/v0alpha/lms.proto;l=3188
    * @return Whether the deDuplicationInfo field is set.
    */
   @java.lang.Deprecated boolean hasDeDuplicationInfo();
@@ -110,7 +110,7 @@ public interface ContactManagementEnrichmentOrBuilder extends
    *
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 4 [json_name = "deDuplicationInfo", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagementEnrichment.de_duplication_info is deprecated.
-   *     See api/v0alpha/lms.proto;l=3191
+   *     See api/v0alpha/lms.proto;l=3188
    * @return The deDuplicationInfo.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplication getDeDuplicationInfo();
@@ -151,24 +151,4 @@ public interface ContactManagementEnrichmentOrBuilder extends
    * @return The searchFieldType.
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagementEnrichment.SearchFieldType getSearchFieldType();
-
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 7 [json_name = "countryCode"];</code>
-   * @return The countryCode.
-   */
-  java.lang.String getCountryCode();
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 7 [json_name = "countryCode"];</code>
-   * @return The bytes for countryCode.
-   */
-  com.google.protobuf.ByteString
-      getCountryCodeBytes();
 }

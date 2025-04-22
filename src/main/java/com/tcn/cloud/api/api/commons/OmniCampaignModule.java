@@ -23,7 +23,6 @@ private static final long serialVersionUID = 0L;
     moduleType_ = 0;
     status_ = 0;
     attachments_ = java.util.Collections.emptyList();
-    taskCarryOverBehavior_ = 0;
   }
 
   @java.lang.Override
@@ -2715,32 +2714,6 @@ private static final long serialVersionUID = 0L;
     return globalTimezoneOrdering_;
   }
 
-  public static final int TASK_CARRY_OVER_BEHAVIOR_FIELD_NUMBER = 15;
-  private int taskCarryOverBehavior_ = 0;
-  /**
-   * <pre>
-   * indicates what happens to pending tasks when a campaign leaves hours of operation
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-   * @return The enum numeric value on the wire for taskCarryOverBehavior.
-   */
-  @java.lang.Override public int getTaskCarryOverBehaviorValue() {
-    return taskCarryOverBehavior_;
-  }
-  /**
-   * <pre>
-   * indicates what happens to pending tasks when a campaign leaves hours of operation
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-   * @return The taskCarryOverBehavior.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior getTaskCarryOverBehavior() {
-    com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior result = com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.forNumber(taskCarryOverBehavior_);
-    return result == null ? com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2796,9 +2769,6 @@ private static final long serialVersionUID = 0L;
     }
     if (globalTimezoneOrdering_ != false) {
       output.writeBool(14, globalTimezoneOrdering_);
-    }
-    if (taskCarryOverBehavior_ != com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.OMNI_TASK_CARRY_OVER_PAUSE.getNumber()) {
-      output.writeEnum(15, taskCarryOverBehavior_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2865,10 +2835,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, globalTimezoneOrdering_);
     }
-    if (taskCarryOverBehavior_ != com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.OMNI_TASK_CARRY_OVER_PAUSE.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(15, taskCarryOverBehavior_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2934,7 +2900,6 @@ private static final long serialVersionUID = 0L;
     }
     if (getGlobalTimezoneOrdering()
         != other.getGlobalTimezoneOrdering()) return false;
-    if (taskCarryOverBehavior_ != other.taskCarryOverBehavior_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2995,8 +2960,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + GLOBAL_TIMEZONE_ORDERING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getGlobalTimezoneOrdering());
-    hash = (37 * hash) + TASK_CARRY_OVER_BEHAVIOR_FIELD_NUMBER;
-    hash = (53 * hash) + taskCarryOverBehavior_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3184,7 +3147,6 @@ private static final long serialVersionUID = 0L;
         hoursOfOperationTimezoneBuilder_ = null;
       }
       globalTimezoneOrdering_ = false;
-      taskCarryOverBehavior_ = 0;
       return this;
     }
 
@@ -3285,9 +3247,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.globalTimezoneOrdering_ = globalTimezoneOrdering_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.taskCarryOverBehavior_ = taskCarryOverBehavior_;
       }
     }
 
@@ -3399,9 +3358,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getGlobalTimezoneOrdering() != false) {
         setGlobalTimezoneOrdering(other.getGlobalTimezoneOrdering());
-      }
-      if (other.taskCarryOverBehavior_ != 0) {
-        setTaskCarryOverBehaviorValue(other.getTaskCarryOverBehaviorValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3523,11 +3479,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 112
-            case 120: {
-              taskCarryOverBehavior_ = input.readEnum();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 120
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5380,79 +5331,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearGlobalTimezoneOrdering() {
       bitField0_ = (bitField0_ & ~0x00002000);
       globalTimezoneOrdering_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int taskCarryOverBehavior_ = 0;
-    /**
-     * <pre>
-     * indicates what happens to pending tasks when a campaign leaves hours of operation
-     * </pre>
-     *
-     * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-     * @return The enum numeric value on the wire for taskCarryOverBehavior.
-     */
-    @java.lang.Override public int getTaskCarryOverBehaviorValue() {
-      return taskCarryOverBehavior_;
-    }
-    /**
-     * <pre>
-     * indicates what happens to pending tasks when a campaign leaves hours of operation
-     * </pre>
-     *
-     * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-     * @param value The enum numeric value on the wire for taskCarryOverBehavior to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTaskCarryOverBehaviorValue(int value) {
-      taskCarryOverBehavior_ = value;
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * indicates what happens to pending tasks when a campaign leaves hours of operation
-     * </pre>
-     *
-     * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-     * @return The taskCarryOverBehavior.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior getTaskCarryOverBehavior() {
-      com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior result = com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.forNumber(taskCarryOverBehavior_);
-      return result == null ? com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * indicates what happens to pending tasks when a campaign leaves hours of operation
-     * </pre>
-     *
-     * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-     * @param value The taskCarryOverBehavior to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTaskCarryOverBehavior(com.tcn.cloud.api.api.commons.OmniTaskCarryOverBehavior value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00004000;
-      taskCarryOverBehavior_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * indicates what happens to pending tasks when a campaign leaves hours of operation
-     * </pre>
-     *
-     * <code>.api.commons.OmniTaskCarryOverBehavior task_carry_over_behavior = 15 [json_name = "taskCarryOverBehavior"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTaskCarryOverBehavior() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      taskCarryOverBehavior_ = 0;
       onChanged();
       return this;
     }

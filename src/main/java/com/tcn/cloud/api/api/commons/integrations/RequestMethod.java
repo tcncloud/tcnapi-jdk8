@@ -1352,14 +1352,6 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_WAYSTAR_ACH_PAYMENT = 6202;</code>
    */
   REQUEST_METHOD_WAYSTAR_ACH_PAYMENT(6202),
-  /**
-   * <code>REQUEST_METHOD_ACIWORLDWIDE_CHARGE_CC = 6301;</code>
-   */
-  REQUEST_METHOD_ACIWORLDWIDE_CHARGE_CC(6301),
-  /**
-   * <code>REQUEST_METHOD_ACIWORLDWIDE_CHARGE_ACH = 6302;</code>
-   */
-  REQUEST_METHOD_ACIWORLDWIDE_CHARGE_ACH(6302),
   UNRECOGNIZED(-1),
   ;
 
@@ -2693,14 +2685,6 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_WAYSTAR_ACH_PAYMENT = 6202;</code>
    */
   public static final int REQUEST_METHOD_WAYSTAR_ACH_PAYMENT_VALUE = 6202;
-  /**
-   * <code>REQUEST_METHOD_ACIWORLDWIDE_CHARGE_CC = 6301;</code>
-   */
-  public static final int REQUEST_METHOD_ACIWORLDWIDE_CHARGE_CC_VALUE = 6301;
-  /**
-   * <code>REQUEST_METHOD_ACIWORLDWIDE_CHARGE_ACH = 6302;</code>
-   */
-  public static final int REQUEST_METHOD_ACIWORLDWIDE_CHARGE_ACH_VALUE = 6302;
 
 
   public final int getNumber() {
@@ -3057,8 +3041,6 @@ public enum RequestMethod
       case 6102: return REQUEST_METHOD_BLINKPAYMENT_CHARGE_ACH;
       case 6201: return REQUEST_METHOD_WAYSTAR_CC_PAYMENT;
       case 6202: return REQUEST_METHOD_WAYSTAR_ACH_PAYMENT;
-      case 6301: return REQUEST_METHOD_ACIWORLDWIDE_CHARGE_CC;
-      case 6302: return REQUEST_METHOD_ACIWORLDWIDE_CHARGE_ACH;
       default: return null;
     }
   }
