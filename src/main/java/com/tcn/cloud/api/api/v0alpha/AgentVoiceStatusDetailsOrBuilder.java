@@ -90,4 +90,29 @@ public interface AgentVoiceStatusDetailsOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSkillsBytes(int index);
+
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @return A list containing the pbxExtensions.
+   */
+  java.util.List<java.lang.String>
+      getPbxExtensionsList();
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @return The count of pbxExtensions.
+   */
+  int getPbxExtensionsCount();
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @param index The index of the element to return.
+   * @return The pbxExtensions at the given index.
+   */
+  java.lang.String getPbxExtensions(int index);
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the pbxExtensions at the given index.
+   */
+  com.google.protobuf.ByteString
+      getPbxExtensionsBytes(int index);
 }

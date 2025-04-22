@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
     statusDesc_ = 0;
     skills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -220,6 +222,43 @@ private static final long serialVersionUID = 0L;
     return skills_.getByteString(index);
   }
 
+  public static final int PBX_EXTENSIONS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList pbxExtensions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @return A list containing the pbxExtensions.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getPbxExtensionsList() {
+    return pbxExtensions_;
+  }
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @return The count of pbxExtensions.
+   */
+  public int getPbxExtensionsCount() {
+    return pbxExtensions_.size();
+  }
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @param index The index of the element to return.
+   * @return The pbxExtensions at the given index.
+   */
+  public java.lang.String getPbxExtensions(int index) {
+    return pbxExtensions_.get(index);
+  }
+  /**
+   * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the pbxExtensions at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getPbxExtensionsBytes(int index) {
+    return pbxExtensions_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -257,6 +296,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < skills_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, skills_.getRaw(i));
+    }
+    for (int i = 0; i < pbxExtensions_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, pbxExtensions_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -301,6 +343,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSkillsList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < pbxExtensions_.size(); i++) {
+        dataSize += computeStringSizeNoTag(pbxExtensions_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getPbxExtensionsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -331,6 +381,8 @@ private static final long serialVersionUID = 0L;
     if (statusDesc_ != other.statusDesc_) return false;
     if (!getSkillsList()
         .equals(other.getSkillsList())) return false;
+    if (!getPbxExtensionsList()
+        .equals(other.getPbxExtensionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -363,6 +415,10 @@ private static final long serialVersionUID = 0L;
     if (getSkillsCount() > 0) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillsList().hashCode();
+    }
+    if (getPbxExtensionsCount() > 0) {
+      hash = (37 * hash) + PBX_EXTENSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getPbxExtensionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -504,6 +560,8 @@ private static final long serialVersionUID = 0L;
       statusDesc_ = 0;
       skills_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      pbxExtensions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -561,6 +619,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         skills_.makeImmutable();
         result.skills_ = skills_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        pbxExtensions_.makeImmutable();
+        result.pbxExtensions_ = pbxExtensions_;
       }
     }
 
@@ -643,6 +705,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.pbxExtensions_.isEmpty()) {
+        if (pbxExtensions_.isEmpty()) {
+          pbxExtensions_ = other.pbxExtensions_;
+          bitField0_ |= 0x00000100;
+        } else {
+          ensurePbxExtensionsIsMutable();
+          pbxExtensions_.addAll(other.pbxExtensions_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -710,6 +782,12 @@ private static final long serialVersionUID = 0L;
               skills_.add(s);
               break;
             } // case 66
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePbxExtensionsIsMutable();
+              pbxExtensions_.add(s);
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1159,6 +1237,117 @@ private static final long serialVersionUID = 0L;
       ensureSkillsIsMutable();
       skills_.add(value);
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensurePbxExtensionsIsMutable() {
+      if (!pbxExtensions_.isModifiable()) {
+        pbxExtensions_ = new com.google.protobuf.LazyStringArrayList(pbxExtensions_);
+      }
+      bitField0_ |= 0x00000100;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @return A list containing the pbxExtensions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPbxExtensionsList() {
+      pbxExtensions_.makeImmutable();
+      return pbxExtensions_;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @return The count of pbxExtensions.
+     */
+    public int getPbxExtensionsCount() {
+      return pbxExtensions_.size();
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param index The index of the element to return.
+     * @return The pbxExtensions at the given index.
+     */
+    public java.lang.String getPbxExtensions(int index) {
+      return pbxExtensions_.get(index);
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pbxExtensions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPbxExtensionsBytes(int index) {
+      return pbxExtensions_.getByteString(index);
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param index The index to set the value at.
+     * @param value The pbxExtensions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPbxExtensions(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePbxExtensionsIsMutable();
+      pbxExtensions_.set(index, value);
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param value The pbxExtensions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPbxExtensions(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePbxExtensionsIsMutable();
+      pbxExtensions_.add(value);
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param values The pbxExtensions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPbxExtensions(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePbxExtensionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, pbxExtensions_);
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPbxExtensions() {
+      pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string pbx_extensions = 9 [json_name = "pbxExtensions"];</code>
+     * @param value The bytes of the pbxExtensions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPbxExtensionsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensurePbxExtensionsIsMutable();
+      pbxExtensions_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
