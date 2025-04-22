@@ -117,7 +117,7 @@ public interface ContactManagerSinkOrBuilder extends
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-   *     See api/v0alpha/lms.proto;l=2570
+   *     See api/v0alpha/lms.proto;l=2584
    * @return The ttl.
    */
   @java.lang.Deprecated long getTtl();
@@ -155,14 +155,14 @@ public interface ContactManagerSinkOrBuilder extends
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2574
+   *     See api/v0alpha/lms.proto;l=2588
    * @return The userId.
    */
   @java.lang.Deprecated java.lang.String getUserId();
   /**
    * <code>string user_id = 10 [json_name = "userId", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.user_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=2574
+   *     See api/v0alpha/lms.proto;l=2588
    * @return The bytes for userId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -182,4 +182,24 @@ public interface ContactManagerSinkOrBuilder extends
    * <code>.api.v0alpha.ContactManagerSink.DeDuplication de_duplication_info = 11 [json_name = "deDuplicationInfo"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagerSink.DeDuplicationOrBuilder getDeDuplicationInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 12 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  java.lang.String getCountryCode();
+  /**
+   * <pre>
+   * Country code for the Phone Number
+   * </pre>
+   *
+   * <code>string country_code = 12 [json_name = "countryCode"];</code>
+   * @return The bytes for countryCode.
+   */
+  com.google.protobuf.ByteString
+      getCountryCodeBytes();
 }

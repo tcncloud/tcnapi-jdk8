@@ -265,6 +265,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_WAYSTAR = 6200;</code>
    */
   INTEGRATION_TYPE_WAYSTAR(6200),
+  /**
+   * <code>INTEGRATION_TYPE_ACIWORLDWIDE = 6300;</code>
+   */
+  INTEGRATION_TYPE_ACIWORLDWIDE(6300),
   UNRECOGNIZED(-1),
   ;
 
@@ -520,6 +524,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_WAYSTAR = 6200;</code>
    */
   public static final int INTEGRATION_TYPE_WAYSTAR_VALUE = 6200;
+  /**
+   * <code>INTEGRATION_TYPE_ACIWORLDWIDE = 6300;</code>
+   */
+  public static final int INTEGRATION_TYPE_ACIWORLDWIDE_VALUE = 6300;
 
 
   public final int getNumber() {
@@ -609,6 +617,7 @@ public enum IntegrationType
       case 6000: return INTEGRATION_TYPE_FORTIS;
       case 6100: return INTEGRATION_TYPE_BLINKPAYMENT;
       case 6200: return INTEGRATION_TYPE_WAYSTAR;
+      case 6300: return INTEGRATION_TYPE_ACIWORLDWIDE;
       default: return null;
     }
   }

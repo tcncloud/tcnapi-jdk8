@@ -25,6 +25,11 @@ public final class LmsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_PipelineCanvas_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_EntrypointMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_EntrypointMetadata_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_PipelineCanvasPreview_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -99,6 +104,11 @@ public final class LmsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_GetPipelineCanvasEventsRes_ProcessingEventsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_ListPoolsRequest_descriptor;
   static final 
@@ -1286,1374 +1296,1388 @@ public final class LmsProto {
       "lastEdited\"\203\001\n\016PipelineCanvas\022?\n\010metadat" +
       "a\030\001 \001(\0132#.api.v0alpha.PipelineCanvasMeta" +
       "dataR\010metadata\0220\n\010elements\030\002 \003(\0132\024.api.v" +
-      "0alpha.ElementR\010elements\"\275\001\n\025PipelineCan" +
-      "vasPreview\022?\n\010metadata\030\001 \001(\0132#.api.v0alp" +
-      "ha.PipelineCanvasMetadataR\010metadata\022 \n\013e" +
-      "ntrypoints\030\002 \003(\tR\013entrypoints\022\034\n\texchang" +
-      "es\030\003 \003(\tR\texchanges\022#\n\relement_count\030\004 \001" +
-      "(\003R\014elementCount\"O\n\027CreatePipelineCanvas" +
-      "Req\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013description\030\002" +
-      " \001(\tR\013description\"_\n\027CreatePipelineCanva" +
-      "sRes\022D\n\017pipeline_canvas\030\001 \001(\0132\033.api.v0al" +
-      "pha.PipelineCanvasR\016pipelineCanvas\"\031\n\027Li" +
-      "stPipelineCanvasesReq\"w\n\027ListPipelineCan" +
-      "vasesRes\022\\\n\030pipeline_canvas_previews\030\001 \003" +
-      "(\0132\".api.v0alpha.PipelineCanvasPreviewR\026" +
-      "pipelineCanvasPreviews\"\203\001\n\027UpdatePipelin" +
-      "eCanvasReq\0222\n\023pipeline_canvas_sid\030\001 \001(\003B" +
-      "\0020\001R\021pipelineCanvasSid\022\022\n\004name\030\002 \001(\tR\004na" +
-      "me\022 \n\013description\030\003 \001(\tR\013description\"_\n\027" +
-      "UpdatePipelineCanvasRes\022D\n\017pipeline_canv" +
-      "as\030\001 \001(\0132\033.api.v0alpha.PipelineCanvasR\016p" +
-      "ipelineCanvas\"M\n\027DeletePipelineCanvasReq" +
-      "\0222\n\023pipeline_canvas_sid\030\001 \001(\003B\0020\001R\021pipel" +
-      "ineCanvasSid\"\031\n\027DeletePipelineCanvasRes\"" +
-      "J\n\024GetPipelineCanvasReq\0222\n\023pipeline_canv" +
-      "as_sid\030\001 \001(\003B\0020\001R\021pipelineCanvasSid\"\\\n\024G" +
-      "etPipelineCanvasRes\022D\n\017pipeline_canvas\030\001" +
-      " \001(\0132\033.api.v0alpha.PipelineCanvasR\016pipel" +
-      "ineCanvas\"P\n\032GetPipelineCanvasEventsReq\022" +
-      "2\n\023pipeline_canvas_sid\030\001 \001(\003B\0020\001R\021pipeli" +
-      "neCanvasSid\"\356\002\n\032GetPipelineCanvasEventsR" +
-      "es\022^\n\rqueued_events\030\001 \003(\01329.api.v0alpha." +
-      "GetPipelineCanvasEventsRes.QueuedEventsE" +
-      "ntryR\014queuedEvents\022j\n\021processing_events\030" +
-      "\002 \003(\0132=.api.v0alpha.GetPipelineCanvasEve" +
-      "ntsRes.ProcessingEventsEntryR\020processing" +
-      "Events\032?\n\021QueuedEventsEntry\022\020\n\003key\030\001 \001(\t" +
-      "R\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\032C\n\025Proce" +
-      "ssingEventsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
-      "lue\030\002 \001(\003R\005value:\0028\001\"\022\n\020ListPoolsRequest" +
-      "\"<\n\021ListPoolsResponse\022\'\n\005pools\030\001 \003(\0132\021.a" +
-      "pi.v0alpha.PoolR\005pools\"B\n\004Pool\022\016\n\002id\030\001 \001" +
-      "(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022\026\n\004desc\030\003 \001(\t" +
-      "B\002\030\001R\004desc\"\021\n\017GetPublicKeyReq\"\035\n\tPublicK" +
-      "ey\022\020\n\003key\030\001 \001(\tR\003key\"3\n\022FindFieldUsagesR" +
-      "eq\022\035\n\nfield_name\030\003 \001(\tR\tfieldName\"/\n\tNam" +
-      "eAndId\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004na" +
-      "me\"\246\001\n\022FindFieldUsagesRes\022\035\n\nfield_name\030" +
-      "\001 \001(\tR\tfieldName\022=\n\016file_templates\030\002 \003(\013" +
-      "2\026.api.v0alpha.NameAndIdR\rfileTemplates\022" +
-      "2\n\010elements\030\003 \003(\0132\026.api.v0alpha.NameAndI" +
-      "dR\010elements\"\250\003\n\014ElementError\022\\\n\022invalid_" +
-      "expression\030\004 \001(\0132+.api.v0alpha.ElementEr" +
-      "ror.InvalidExpressionH\000R\021invalidExpressi" +
-      "on\022M\n\rmissing_field\030\005 \001(\0132&.api.v0alpha." +
-      "ElementError.MissingFieldH\000R\014missingFiel" +
-      "d\022N\n\016bad_field_type\030\006 \001(\0132&.api.v0alpha." +
-      "ElementError.BadFieldTypeH\000R\014badFieldTyp" +
-      "e\0323\n\021InvalidExpression\022\036\n\nexpression\030\001 \001" +
-      "(\tR\nexpression\032-\n\014MissingField\022\035\n\nfield_" +
-      "name\030\002 \001(\tR\tfieldName\032-\n\014BadFieldType\022\035\n" +
-      "\nfield_name\030\003 \001(\tR\tfieldNameB\010\n\006reason\"\203" +
-      "\001\n\016ElementSummary\022\035\n\nelement_id\030\001 \001(\tR\te" +
-      "lementId\022!\n\014element_name\030\002 \001(\tR\013elementN" +
-      "ame\022/\n\005error\030\003 \001(\0132\031.api.v0alpha.Element" +
-      "ErrorR\005error\"L\n\026FindInvalidElementsReq\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\t" +
-      "R\010regionId\"`\n\026FindInvalidElementsRes\022F\n\020" +
-      "invalid_elements\030\001 \003(\0132\033.api.v0alpha.Ele" +
-      "mentSummaryR\017invalidElements\"\034\n\032GetCompl" +
-      "ianceScrubListsReq\"=\n\032GetComplianceScrub" +
-      "ListsRes\022\037\n\013scrub_lists\030\001 \003(\tR\nscrubList" +
-      "s\"[\n\021ProcessElementReq\022\035\n\nelement_id\030\001 \001" +
-      "(\tR\telementId\022\'\n\017process_message\030\002 \001(\tR\016" +
-      "processMessage\"G\n\022ProcessListRequest\022\035\n\n" +
-      "element_id\030\003 \001(\tR\telementId\022\022\n\004list\030\004 \001(" +
-      "\014R\004list\"\025\n\023ProcessListResponse\"|\n\021Stream" +
-      "ListRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tre" +
-      "gion_id\030\002 \001(\tR\010regionId\022\035\n\nelement_id\030\003 " +
-      "\001(\tR\telementId\022\024\n\005chunk\030\004 \001(\014R\005chunk\"\024\n\022" +
-      "StreamListResponse\"B\n!ListAvailableField" +
-      "sByElementIdReq\022\035\n\nelement_id\030\001 \001(\tR\tele" +
-      "mentId\"8\n\027ListFieldsForElementReq\022\035\n\nele" +
-      "ment_id\030\001 \001(\tR\telementId\"E\n\027ListFieldsFo" +
-      "rElementRes\022*\n\006fields\030\001 \003(\0132\022.api.v0alph" +
-      "a.FieldR\006fields\"\033\n\031ListAutocompleteField" +
-      "sReq\"G\n\031ListAutocompleteFieldsRes\022*\n\006fie" +
-      "lds\030\001 \003(\0132\022.api.v0alpha.FieldR\006fields\"*\n" +
-      "\tElementPK\022\035\n\nelement_id\030\001 \001(\tR\telementI" +
-      "d\"\345\003\n\007Element\022\035\n\nelement_id\030\003 \001(\tR\teleme" +
-      "ntId\022\022\n\004name\030\n \001(\tR\004name\022\026\n\006inputs\030\013 \003(\t" +
-      "R\006inputs\022(\n\020input_is_discard\030\024 \003(\010R\016inpu" +
-      "tIsDiscard\0222\n\ttransform\030\r \001(\0132\024.api.v0al" +
-      "pha.ProcessR\ttransform\022G\n\013last_status\030\016 " +
-      "\001(\0162&.api.commons.PipelineElementStatusT" +
-      "ypeR\nlastStatus\022\026\n\006labels\030\020 \003(\tR\006labels\022" +
-      "=\n\014created_date\030\021 \001(\0132\032.google.protobuf." +
-      "TimestampR\013createdDate\022;\n\013last_edited\030\022 " +
-      "\001(\0132\032.google.protobuf.TimestampR\nlastEdi" +
-      "ted\022 \n\013description\030\023 \001(\tR\013description\0222\n" +
-      "\023pipeline_canvas_sid\030\025 \001(\003B\0020\001R\021pipeline" +
-      "CanvasSid\"\321\001\n\013PeekListReq\022\035\n\nelement_id\030" +
-      "\003 \001(\tR\telementId\022\030\n\007version\030\004 \001(\003R\007versi" +
-      "on\022\033\n\tpage_size\030\n \001(\005R\010pageSize\022\022\n\004page\030" +
-      "\014 \001(\005R\004page\022.\n\007process\030\r \001(\0132\024.api.v0alp" +
-      "ha.ProcessR\007process\022(\n\020peek_at_discards\030" +
-      "\016 \001(\010R\016peekAtDiscards\"u\n\013PeekListRes\0222\n\007" +
-      "records\030\001 \003(\0132\030.api.v0alpha.RecordProtoR" +
-      "\007records\0222\n\007metrics\030\002 \001(\0132\030.api.v0alpha." +
-      "ListMetricsR\007metrics\"e\n\rGetHistoryReq\022\035\n" +
-      "\nelement_id\030\003 \001(\tR\telementId\022\024\n\005count\030\n " +
-      "\001(\005R\005count\022\037\n\013starting_id\030\013 \001(\003R\nstartin" +
-      "gId\"f\n\rGetHistoryRes\022\035\n\nelement_id\030\003 \001(\t" +
-      "R\telementId\0226\n\007commits\030\013 \003(\0132\034.api.v0alp" +
-      "ha.HistoryAndCountR\007commits\"\333\004\n\007History\022" +
-      "\035\n\nelement_id\030\003 \001(\tR\telementId\022\035\n\nhistor" +
-      "y_id\030\004 \001(\003R\thistoryId\022.\n\007process\030\007 \001(\0132\024" +
-      ".api.v0alpha.ProcessR\007process\022\026\n\006failed\030" +
-      "\n \001(\010R\006failed\022%\n\016attempt_number\030\014 \001(\005R\ra" +
-      "ttemptNumber\0224\n\006reason\030\r \001(\0132\034.google.pr" +
-      "otobuf.StringValueR\006reason\0227\n\tupload_ts\030" +
-      "\016 \001(\0132\032.google.protobuf.TimestampR\010uploa" +
-      "dTs\0229\n\nstarted_ts\030\017 \001(\0132\032.google.protobu" +
-      "f.TimestampR\tstartedTs\022;\n\013finished_ts\030\020 " +
-      "\001(\0132\032.google.protobuf.TimestampR\nfinishe" +
-      "dTs\022\031\n\010event_id\030\022 \001(\003R\007eventId\022*\n\021parent" +
-      "_element_id\030\026 \001(\tR\017parentElementId\0222\n\007me" +
-      "trics\030\027 \001(\0132\030.api.v0alpha.ListMetricsR\007m" +
-      "etrics\022A\n\017discard_metrics\030\030 \001(\0132\030.api.v0" +
-      "alpha.ListMetricsR\016discardMetrics\"\245\005\n\017Hi" +
-      "storyAndCount\022\035\n\nelement_id\030\003 \001(\tR\teleme" +
-      "ntId\022\035\n\nhistory_id\030\004 \001(\003R\thistoryId\022*\n\021e" +
-      "nding_history_id\030\005 \001(\003R\017endingHistoryId\022" +
-      ".\n\007process\030\007 \001(\0132\024.api.v0alpha.ProcessR\007" +
-      "process\022\026\n\006failed\030\n \001(\010R\006failed\022%\n\016attem" +
-      "pt_number\030\014 \001(\005R\rattemptNumber\0224\n\006reason" +
-      "\030\r \001(\0132\034.google.protobuf.StringValueR\006re" +
-      "ason\0227\n\tupload_ts\030\016 \001(\0132\032.google.protobu" +
-      "f.TimestampR\010uploadTs\0229\n\nstarted_ts\030\017 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tstartedTs" +
-      "\022;\n\013finished_ts\030\020 \001(\0132\032.google.protobuf." +
-      "TimestampR\nfinishedTs\022\031\n\010event_id\030\022 \001(\003R" +
-      "\007eventId\022*\n\021parent_element_id\030\026 \001(\tR\017par" +
-      "entElementId\0222\n\007metrics\030\027 \001(\0132\030.api.v0al" +
-      "pha.ListMetricsR\007metrics\022A\n\017discard_metr" +
-      "ics\030\031 \001(\0132\030.api.v0alpha.ListMetricsR\016dis" +
-      "cardMetrics\022\024\n\005count\030\030 \001(\003R\005count\"D\n\013Rec" +
-      "ordProto\0225\n\006fields\030\001 \003(\0132\035.api.v0alpha.R" +
-      "ecordFieldProtoR\006fields\"i\n\017RecordProtoPa" +
-      "ir\022*\n\003old\030\001 \001(\0132\030.api.v0alpha.RecordProt" +
-      "oR\003old\022*\n\003new\030\002 \001(\0132\030.api.v0alpha.Record" +
-      "ProtoR\003new\"\322\002\n\rProcessFields\0228\n\006fields\030\010" +
-      " \003(\0132 .api.v0alpha.ProcessFields.FieldR\006" +
-      "fields\032Y\n\013NestedField\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\0226\n\nfield_type\030\002 \001(\0162\027.api.commons.Reco" +
-      "rdTypeR\tfieldType\032\253\001\n\005Field\022\022\n\004name\030\003 \001(" +
-      "\tR\004name\0226\n\nfield_type\030\004 \001(\0162\027.api.common" +
-      "s.RecordTypeR\tfieldType\022>\n\006nested\030\005 \003(\0132" +
-      "&.api.v0alpha.ProcessFields.NestedFieldR" +
-      "\006nested\022\026\n\006format\030\t \001(\tR\006format\"\035\n\007Field" +
-      "PK\022\022\n\004name\030\003 \001(\tR\004name\"\342\001\n\005Field\022\022\n\004name" +
-      "\030\003 \001(\tR\004name\022*\n\004type\030\004 \001(\0162\026.api.commons" +
-      ".FieldTypeR\004type\022?\n\rdate_modified\030\005 \001(\0132" +
-      "\032.google.protobuf.TimestampR\014dateModifie" +
-      "d\0226\n\010metadata\030\n \001(\0132\032.api.v0alpha.FieldM" +
-      "etadataR\010metadata\022 \n\013description\030\013 \001(\tR\013" +
-      "description\"\206\002\n\016UpdateFieldReq\022\022\n\004name\030\003" +
-      " \001(\tR\004name\022*\n\004type\030\004 \001(\0162\026.api.commons.F" +
-      "ieldTypeR\004type\022?\n\rdate_modified\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampR\014dateModified\022" +
-      "\031\n\010new_name\030\006 \001(\tR\007newName\0226\n\010metadata\030\n" +
-      " \001(\0132\032.api.v0alpha.FieldMetadataR\010metada" +
-      "ta\022 \n\013description\030\013 \001(\tR\013description\"\321\004\n" +
-      "\rFieldMetadata\022\037\n\013time_format\030\001 \001(\tR\ntim" +
-      "eFormat\022<\n\tprecision\030\002 \001(\0162\036.api.commons" +
-      ".DateTimePrecisionR\tprecision\022+\n\021remove_" +
-      "characters\030\003 \001(\tR\020removeCharacters\022#\n\rre" +
-      "place_empty\030\004 \001(\tR\014replaceEmpty\022#\n\rrepla" +
-      "ce_error\030\005 \001(\tR\014replaceError\022%\n\016remove_l" +
-      "etters\030\006 \001(\010R\rremoveLetters\022%\n\016remove_nu" +
-      "mbers\030\007 \001(\010R\rremoveNumbers\022%\n\016remove_sym" +
-      "bols\030\010 \001(\010R\rremoveSymbols\022)\n\020leave_chara" +
-      "cters\030\t \001(\tR\017leaveCharacters\022#\n\rremove_s" +
-      "tring\030\n \001(\tR\014removeString\022\"\n\rjson_dot_pa" +
-      "th\030\013 \001(\tR\013jsonDotPath\0221\n\025json_force_type" +
-      "_match\030\014 \001(\010R\022jsonForceTypeMatch\022+\n\021star" +
-      "ting_position\030\r \001(\005R\020startingPosition\022!\n" +
-      "\014field_length\030\016 \001(\005R\013fieldLength\"4\n\006Fiel" +
-      "ds\022*\n\006fields\030\001 \003(\0132\022.api.v0alpha.FieldR\006" +
-      "fields\"k\n\nFieldIndex\022\024\n\005index\030\001 \003(\tR\005ind" +
-      "ex\022;\n\010datetime\030\002 \001(\0132\035.api.v0alpha.DateT" +
-      "imeModifierH\000R\010datetimeB\n\n\010modifier\"\017\n\rL" +
-      "istFieldsReq\"\333\005\n\020RecordFieldProto\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\022#\n\014string_value\030\002 \001(\tH\000R\013s" +
-      "tringValue\022#\n\014number_value\030\003 \001(\001H\000R\013numb" +
-      "erValue\022\037\n\nbool_value\030\004 \001(\010H\000R\tboolValue" +
-      "\022*\n\005phone\030\005 \001(\0132\022.api.v0alpha.PhoneH\000R\005p" +
-      "hone\0223\n\010currency\030\006 \001(\0132\025.api.v0alpha.Cur" +
-      "rencyH\000R\010currency\022:\n\013postal_code\030\010 \001(\0132\027" +
-      ".api.v0alpha.PostalCodeH\000R\npostalCode\022*\n" +
-      "\005email\030\t \001(\0132\022.api.v0alpha.EmailH\000R\005emai" +
-      "l\0224\n\tdate_time\030\n \001(\0132\025.api.v0alpha.DateT" +
-      "imeH\000R\010dateTime\022I\n\020repeated_records\030\r \001(" +
-      "\0132\034.api.v0alpha.RepeatedRecordsH\000R\017repea" +
-      "tedRecords\022G\n\020record_field_map\030\016 \001(\0132\033.a" +
-      "pi.v0alpha.RecordFieldMapH\000R\016recordField" +
-      "Map\022&\n\003err\030\017 \001(\0132\022.api.v0alpha.ErrorH\000R\003" +
-      "err\022C\n\016enriched_phone\030\020 \001(\0132\032.api.v0alph" +
-      "a.EnrichedPhoneH\000R\renrichedPhone\022=\n\014enri" +
-      "ched_zip\030\021 \001(\0132\030.api.v0alpha.EnrichedZip" +
-      "H\000R\013enrichedZipB\t\n\007payload\"E\n\017RepeatedRe" +
-      "cords\0222\n\007records\030\001 \003(\0132\030.api.v0alpha.Rec" +
-      "ordProtoR\007records\")\n\017ListElementsReq\022\026\n\006" +
-      "labels\030\001 \003(\tR\006labels\"\025\n\023GetFileTemplates" +
-      "Req\"S\n\021FileTemplateField\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022*\n\004type\030\002 \001(\0162\026.api.commons.FieldTy" +
-      "peR\004type\"L\n\022FileTemplateFields\0226\n\006fields" +
-      "\030\001 \003(\0132\036.api.v0alpha.FileTemplateFieldR\006" +
-      "fields\"<\n\nFieldTypes\022.\n\006values\030\001 \003(\0162\026.a" +
-      "pi.commons.FieldTypeR\006values\"\302\002\n\014FileTem" +
-      "plate\022(\n\020file_template_id\030\003 \001(\tR\016fileTem" +
-      "plateId\022\022\n\004name\030\n \001(\tR\004name\022 \n\013descripti" +
-      "on\030\013 \001(\tR\013description\022\037\n\013field_names\030\014 \003" +
-      "(\tR\nfieldNames\022K\n\022file_format_params\030\016 \001" +
-      "(\0132\035.api.v0alpha.FileFormatParamsR\020fileF" +
-      "ormatParams\0228\n\013file_format\030\017 \001(\0162\027.api.c" +
-      "ommons.FileFormatR\nfileFormat\022*\n\006fields\030" +
-      "\020 \003(\0132\022.api.v0alpha.FieldR\006fields\"F\n\014LMS" +
-      "UploadReq\022\035\n\nelement_id\030\003 \001(\tR\telementId" +
-      "\022\027\n\007file_id\030\014 \001(\tR\006fileId\"\016\n\014LMSUploadRe" +
-      "s\"@\n\010ReRunReq\022\027\n\007list_id\030\003 \001(\tR\006listId\022\033" +
-      "\n\trerun_url\030\004 \001(\tR\010rerunUrl\"\n\n\010ReRunRes\"" +
-      "\224\026\n\007Process\022\036\n\nexpression\0307 \001(\tR\nexpress" +
-      "ion\0224\n\006append\030\036 \001(\0132\032.api.v0alpha.Append" +
-      "ProcessH\000R\006append\022/\n\004sort\030\037 \001(\0132\031.api.v0" +
-      "alpha.SortCriteriaH\000R\004sort\0224\n\006filter\030  \001" +
-      "(\0132\032.api.v0alpha.FilterProcessH\000R\006filter" +
-      "\022;\n\tgs_export\030* \001(\0132\034.api.v0alpha.GSExpo" +
-      "rtProcessH\000R\010gsExport\022;\n\tp3_export\030, \001(\013" +
-      "2\034.api.v0alpha.P3ExportProcessH\000R\010p3Expo" +
-      "rt\0225\n\005compl\030- \001(\0132\031.api.v0alpha.ComplPro" +
-      "cessB\002\030\001H\000R\005compl\0222\n\005dedup\030. \001(\0132\032.api.v" +
-      "0alpha.DeDupCriteriaH\000R\005dedup\022>\n\ncfs_exp" +
-      "ort\030/ \001(\0132\035.api.v0alpha.CFSExportProcess" +
-      "H\000R\tcfsExport\022A\n\013sftp_export\0300 \001(\0132\036.api" +
-      ".v0alpha.SftpExportProcessH\000R\nsftpExport" +
-      "\0227\n\007reshape\0301 \001(\0132\033.api.v0alpha.ReshapeP" +
-      "rocessH\000R\007reshape\0224\n\006lookup\0302 \001(\0132\032.api." +
-      "v0alpha.LookupProcessH\000R\006lookup\022D\n\nentry" +
-      "point\0303 \001(\0132\036.api.v0alpha.EntrypointProc" +
-      "essB\002\030\001H\000R\nentrypoint\022S\n\021compliance_expo" +
-      "rt\0304 \001(\0132$.api.v0alpha.ComplianceExportP" +
-      "rocessH\000R\020complianceExport\022C\n\016api_entryp" +
-      "oint\0305 \001(\0132\032.api.v0alpha.ApiEntrypointH\000" +
-      "R\rapiEntrypoint\022:\n\013sftp_import\0306 \001(\0132\027.a" +
-      "pi.v0alpha.SftpImportH\000R\nsftpImport\0221\n\005s" +
-      "crub\0308 \001(\0132\031.api.v0alpha.ScrubProcessH\000R" +
-      "\005scrub\022=\n\tfrequency\0309 \001(\0132\035.api.v0alpha." +
-      "FrequencyProcessH\000R\tfrequency\022>\n\ncjs_imp" +
-      "ort\030: \001(\0132\035.api.v0alpha.CjsImportProcess" +
-      "H\000R\tcjsImport\022>\n\ncjs_export\030; \001(\0132\035.api." +
-      "v0alpha.CjsExportProcessH\000R\tcjsExport\022B\n" +
-      "\ncjs_enrich\030< \001(\0132!.api.v0alpha.CjsEnric" +
-      "hmentProcessH\000R\tcjsEnrich\022J\n\016web_entrypo" +
-      "int\030= \001(\0132!.api.v0alpha.WebEntrypointPro" +
-      "cessH\000R\rwebEntrypoint\022Z\n\024delete_scrub_en" +
-      "tries\030> \001(\0132&.api.v0alpha.DeleteScrubEnt" +
-      "riesProcessH\000R\022deleteScrubEntries\022>\n\nwfm" +
-      "_export\030? \001(\0132\035.api.v0alpha.WfmExportPro" +
-      "cessH\000R\twfmExport\022I\n\013link_enrich\030@ \001(\0132\"" +
-      ".api.v0alpha.PaymentLinkEnrichmentB\002\030\001H\000" +
-      "R\nlinkEnrich\0225\n\003rnd\030A \001(\0132!.api.v0alpha." +
-      "RndEnrichmentProcessH\000R\003rnd\022N\n\016consent_e" +
-      "nrich\030B \001(\0132%.api.v0alpha.ConsentEnrichm" +
-      "entProcessH\000R\rconsentEnrich\022J\n\016consent_e" +
-      "xport\030C \001(\0132!.api.v0alpha.ConsentExportP" +
-      "rocessH\000R\rconsentExport\022U\n\024compliance_pr" +
-      "ocessor\030E \001(\0132 .api.v0alpha.CompliancePr" +
-      "ocessorH\000R\023complianceProcessor\022V\n\022consen" +
-      "t_entrypoint\030F \001(\0132%.api.v0alpha.Consent" +
-      "EntrypointProcessH\000R\021consentEntrypoint\022Q" +
-      "\n\022portal_link_enrich\030G \001(\0132!.api.v0alpha" +
-      ".PortalLinkEnrichmentH\000R\020portalLinkEnric" +
-      "h\022W\n\023bulk_web_entrypoint\030H \001(\0132%.api.v0a" +
-      "lpha.BulkWebEntrypointProcessH\000R\021bulkWeb" +
-      "Entrypoint\022V\n\025omni_exchange_process\030I \001(" +
-      "\0132 .api.v0alpha.OmniExchangeProcessH\000R\023o" +
-      "mniExchangeProcess\022S\n\024web_exchange_proce" +
-      "ss\030J \001(\0132\037.api.v0alpha.WebExchangeProces" +
-      "sH\000R\022webExchangeProcess\0222\n\005split\030K \001(\0132\032" +
-      ".api.v0alpha.SplitCriteriaH\000R\005split\022G\n\020e" +
-      "pic_entry_point\030L \001(\0132\033.api.v0alpha.Epic" +
-      "EntrypointH\000R\016epicEntryPoint\022S\n\024contact_" +
-      "manager_sink\030M \001(\0132\037.api.v0alpha.Contact" +
-      "ManagerSinkH\000R\022contactManagerSink\022+\n\003sum" +
-      "\030N \001(\0132\027.api.v0alpha.SumProcessH\000R\003sum\022I" +
-      "\n\020finvi_entrypoint\030O \001(\0132\034.api.v0alpha.F" +
-      "inviEntrypointH\000R\017finviEntrypoint\022n\n\035con" +
-      "tact_management_enrichment\030P \001(\0132(.api.v" +
-      "0alpha.ContactManagementEnrichmentH\000R\033co" +
-      "ntactManagementEnrichment\022S\n\024ticket_exch" +
-      "ange_sink\030Q \001(\0132\037.api.v0alpha.TicketExch" +
-      "angeSinkH\000R\022ticketExchangeSinkB\006\n\004proc\"\270" +
-      "\003\n\023ComplianceProcessor\022\036\n\013rule_set_id\030\001 " +
-      "\001(\tR\truleSetId\0222\n\tcomm_type\030\005 \001(\0132\025.api." +
-      "commons.CommTypeR\010commType\022\033\n\tcall_type\030" +
-      "\006 \001(\tR\010callType\022,\n\022phone_number_field\030\007 " +
-      "\001(\tR\020phoneNumberField\022\037\n\013email_field\030\010 \001" +
-      "(\tR\nemailField\022$\n\016zip_code_field\030\t \001(\tR\014" +
-      "zipCodeField\022W\n\rcall_metadata\030\n \003(\01322.ap" +
-      "i.v0alpha.ComplianceProcessor.CallMetada" +
-      "taEntryR\014callMetadata\022!\n\014country_code\030\013 " +
-      "\001(\tR\013countryCode\032?\n\021CallMetadataEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028" +
-      "\001\"H\n\030ConsentEntrypointProcess\022,\n\022consent" +
-      "_profile_id\030\001 \001(\tR\020consentProfileId\"\226\001\n\030" +
-      "ConsentEnrichmentProcess\022#\n\rcontent_fiel" +
-      "d\030\003 \001(\tR\014contentField\022\'\n\017consent_profile" +
-      "\030\004 \001(\tR\016consentProfile\022,\n\022consent_profil" +
-      "e_id\030\005 \001(\tR\020consentProfileId\"\210\t\n\024Consent" +
-      "ExportProcess\022#\n\rcontent_field\030\003 \001(\tR\014co" +
-      "ntentField\022\'\n\017consent_profile\030\004 \001(\tR\016con" +
-      "sentProfile\022,\n\022consent_profile_id\030\005 \001(\tR" +
-      "\020consentProfileId\022/\n\010run_type\030\006 \001(\0162\024.ap" +
-      "i.commons.RunTypeR\007runType\0226\n\006action\030\007 \001" +
-      "(\0162\036.api.commons.ConsentActionTypeR\006acti" +
-      "on\022#\n\rreferring_url\030\010 \001(\tR\014referringUrl\022" +
-      "\024\n\005topic\030\t \001(\tR\005topic\022%\n\016revoked_reason\030" +
-      "\n \001(\tR\rrevokedReason\022%\n\016granted_reason\030\013" +
-      " \001(\tR\rgrantedReason\022\024\n\005proof\030\014 \001(\tR\005proo" +
-      "f\022:\n\032condition_time_of_day_from\030\r \001(\tR\026c" +
-      "onditionTimeOfDayFrom\0226\n\030condition_time_" +
-      "of_day_to\030\016 \001(\tR\024conditionTimeOfDayTo\022\024\n" +
-      "\005notes\030\017 \001(\tR\005notes\022\032\n\006expire\030\020 \001(\tB\002\030\001R" +
-      "\006expire\022%\n\016condition_from\030\021 \001(\tR\rconditi" +
-      "onFrom\022!\n\014condition_to\030\022 \001(\tR\013conditionT" +
-      "o\022D\n\020content_type_val\030\033 \001(\0162\030.api.common" +
-      "s.ContentTypeH\000R\016contentTypeVal\0227\n\027conte" +
-      "nt_type_field_name\030\034 \001(\tH\000R\024contentTypeF" +
-      "ieldName\022@\n\020channel_type_val\030\035 \001(\0162\024.api" +
-      ".commons.ChannelH\001R\016channelTypeVal\0227\n\027ch" +
-      "annel_type_field_name\030\036 \001(\tH\001R\024channelTy" +
-      "peFieldName\022E\n\017expiration_date\030\037 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampH\002R\016expirationDa" +
-      "te\0224\n\025expiration_field_name\030  \001(\tH\002R\023exp" +
-      "irationFieldName\022W\n\031expiration_after_dur" +
-      "ation\030! \001(\0132\031.google.protobuf.DurationH\002" +
-      "R\027expirationAfterDurationB\016\n\014content_typ" +
-      "eB\016\n\014channel_typeB\014\n\nexpiration\"\314\002\n\025Paym" +
-      "entLinkEnrichment\022\032\n\006fields\030\001 \003(\tB\002\030\001R\006f" +
-      "ields\0227\n\026payment_link_config_id\030\002 \001(\tB\002\030" +
-      "\001R\023paymentLinkConfigId\022=\n\031discard_on_mis" +
-      "sing_fields\030\003 \001(\010B\002\030\001R\026discardOnMissingF" +
-      "ields\022G\n\007key_map\030\004 \003(\0132..api.v0alpha.Pay" +
-      "mentLinkEnrichment.KeyMapEntryR\006keyMap\022\033" +
-      "\n\tportal_id\030\005 \001(\tR\010portalId\0329\n\013KeyMapEnt" +
-      "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
-      "ue:\0028\001\"\203\002\n\024PortalLinkEnrichment\022F\n\007key_m" +
-      "ap\030\001 \003(\0132-.api.v0alpha.PortalLinkEnrichm" +
-      "ent.KeyMapEntryR\006keyMap\022\033\n\tportal_id\030\002 \001" +
-      "(\tR\010portalId\0227\n\nexpiration\030\006 \001(\0132\027.api.v" +
-      "0alpha.ExpirationR\nexpiration\022\022\n\004demo\030\007 " +
-      "\001(\010R\004demo\0329\n\013KeyMapEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"U\n\nExpirati" +
-      "on\022+\n\005units\030\001 \001(\0162\025.api.v0alpha.TimeUnit" +
-      "R\005units\022\032\n\010quantity\030\002 \001(\003R\010quantity\"\023\n\021E" +
-      "ntrypointProcess\"\220\001\n\rApiEntrypoint\022\025\n\006ft" +
-      "s_id\030d \001(\tR\005ftsId\022(\n\020file_template_id\030\020 " +
-      "\001(\tR\016fileTemplateId\022 \n\013incremental\030\021 \001(\010" +
-      "R\013incremental\022\034\n\tencrypted\030\022 \001(\010R\tencryp" +
-      "ted\"\202\003\n\007HttpReq\022\020\n\003url\030\001 \001(\tR\003url\022;\n\007hea" +
-      "ders\030\002 \003(\0132!.api.v0alpha.HttpReq.Headers" +
-      "EntryR\007headers\022\022\n\004body\030\003 \001(\tR\004body\022-\n\006me" +
-      "thod\030\004 \001(\0162\025.api.commons.HttpVerbR\006metho" +
-      "d\022a\n\025named_response_values\030\005 \003(\0132-.api.v" +
-      "0alpha.HttpReq.NamedResponseValuesEntryR" +
-      "\023namedResponseValues\032:\n\014HeadersEntry\022\020\n\003" +
+      "0alpha.ElementR\010elements\"\332\001\n\022EntrypointM" +
+      "etadata\022\035\n\nelement_id\030\001 \001(\tR\telementId\022\022" +
+      "\n\004name\030\002 \001(\tR\004name\022\037\n\013cron_string\030\003 \001(\tR" +
+      "\ncronString\022>\n\rlast_run_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\013lastRunTime\0220\n\024r" +
+      "ecent_error_message\030\005 \001(\tR\022recentErrorMe" +
+      "ssage\"\217\002\n\025PipelineCanvasPreview\022?\n\010metad" +
+      "ata\030\001 \001(\0132#.api.v0alpha.PipelineCanvasMe" +
+      "tadataR\010metadata\022 \n\013entrypoints\030\002 \003(\tR\013e" +
+      "ntrypoints\022\034\n\texchanges\030\003 \003(\tR\texchanges" +
+      "\022#\n\relement_count\030\004 \001(\003R\014elementCount\022P\n" +
+      "\023entrypoint_metadata\030\005 \003(\0132\037.api.v0alpha" +
+      ".EntrypointMetadataR\022entrypointMetadata\"" +
+      "O\n\027CreatePipelineCanvasReq\022\022\n\004name\030\001 \001(\t" +
+      "R\004name\022 \n\013description\030\002 \001(\tR\013description" +
+      "\"_\n\027CreatePipelineCanvasRes\022D\n\017pipeline_" +
+      "canvas\030\001 \001(\0132\033.api.v0alpha.PipelineCanva" +
+      "sR\016pipelineCanvas\"\031\n\027ListPipelineCanvase" +
+      "sReq\"w\n\027ListPipelineCanvasesRes\022\\\n\030pipel" +
+      "ine_canvas_previews\030\001 \003(\0132\".api.v0alpha." +
+      "PipelineCanvasPreviewR\026pipelineCanvasPre" +
+      "views\"\203\001\n\027UpdatePipelineCanvasReq\0222\n\023pip" +
+      "eline_canvas_sid\030\001 \001(\003B\0020\001R\021pipelineCanv" +
+      "asSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description" +
+      "\030\003 \001(\tR\013description\"_\n\027UpdatePipelineCan" +
+      "vasRes\022D\n\017pipeline_canvas\030\001 \001(\0132\033.api.v0" +
+      "alpha.PipelineCanvasR\016pipelineCanvas\"M\n\027" +
+      "DeletePipelineCanvasReq\0222\n\023pipeline_canv" +
+      "as_sid\030\001 \001(\003B\0020\001R\021pipelineCanvasSid\"\031\n\027D" +
+      "eletePipelineCanvasRes\"J\n\024GetPipelineCan" +
+      "vasReq\0222\n\023pipeline_canvas_sid\030\001 \001(\003B\0020\001R" +
+      "\021pipelineCanvasSid\"\\\n\024GetPipelineCanvasR" +
+      "es\022D\n\017pipeline_canvas\030\001 \001(\0132\033.api.v0alph" +
+      "a.PipelineCanvasR\016pipelineCanvas\"P\n\032GetP" +
+      "ipelineCanvasEventsReq\0222\n\023pipeline_canva" +
+      "s_sid\030\001 \001(\003B\0020\001R\021pipelineCanvasSid\"\247\004\n\032G" +
+      "etPipelineCanvasEventsRes\022^\n\rqueued_even" +
+      "ts\030\001 \003(\01329.api.v0alpha.GetPipelineCanvas" +
+      "EventsRes.QueuedEventsEntryR\014queuedEvent" +
+      "s\022j\n\021processing_events\030\002 \003(\0132=.api.v0alp" +
+      "ha.GetPipelineCanvasEventsRes.Processing" +
+      "EventsEntryR\020processingEvents\022p\n\023entrypo" +
+      "int_failures\030\003 \003(\0132?.api.v0alpha.GetPipe" +
+      "lineCanvasEventsRes.EntrypointFailuresEn" +
+      "tryR\022entrypointFailures\032?\n\021QueuedEventsE" +
+      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005v" +
+      "alue:\0028\001\032C\n\025ProcessingEventsEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\032E\n" +
+      "\027EntrypointFailuresEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\022\n\020ListPool" +
+      "sRequest\"<\n\021ListPoolsResponse\022\'\n\005pools\030\001" +
+      " \003(\0132\021.api.v0alpha.PoolR\005pools\"B\n\004Pool\022\016" +
+      "\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022\026\n\004de" +
+      "sc\030\003 \001(\tB\002\030\001R\004desc\"\021\n\017GetPublicKeyReq\"\035\n" +
+      "\tPublicKey\022\020\n\003key\030\001 \001(\tR\003key\"3\n\022FindFiel" +
+      "dUsagesReq\022\035\n\nfield_name\030\003 \001(\tR\tfieldNam" +
+      "e\"/\n\tNameAndId\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002" +
+      " \001(\tR\004name\"\246\001\n\022FindFieldUsagesRes\022\035\n\nfie" +
+      "ld_name\030\001 \001(\tR\tfieldName\022=\n\016file_templat" +
+      "es\030\002 \003(\0132\026.api.v0alpha.NameAndIdR\rfileTe" +
+      "mplates\0222\n\010elements\030\003 \003(\0132\026.api.v0alpha." +
+      "NameAndIdR\010elements\"\250\003\n\014ElementError\022\\\n\022" +
+      "invalid_expression\030\004 \001(\0132+.api.v0alpha.E" +
+      "lementError.InvalidExpressionH\000R\021invalid" +
+      "Expression\022M\n\rmissing_field\030\005 \001(\0132&.api." +
+      "v0alpha.ElementError.MissingFieldH\000R\014mis" +
+      "singField\022N\n\016bad_field_type\030\006 \001(\0132&.api." +
+      "v0alpha.ElementError.BadFieldTypeH\000R\014bad" +
+      "FieldType\0323\n\021InvalidExpression\022\036\n\nexpres" +
+      "sion\030\001 \001(\tR\nexpression\032-\n\014MissingField\022\035" +
+      "\n\nfield_name\030\002 \001(\tR\tfieldName\032-\n\014BadFiel" +
+      "dType\022\035\n\nfield_name\030\003 \001(\tR\tfieldNameB\010\n\006" +
+      "reason\"\203\001\n\016ElementSummary\022\035\n\nelement_id\030" +
+      "\001 \001(\tR\telementId\022!\n\014element_name\030\002 \001(\tR\013" +
+      "elementName\022/\n\005error\030\003 \001(\0132\031.api.v0alpha" +
+      ".ElementErrorR\005error\"L\n\026FindInvalidEleme" +
+      "ntsReq\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_" +
+      "id\030\002 \001(\tR\010regionId\"`\n\026FindInvalidElement" +
+      "sRes\022F\n\020invalid_elements\030\001 \003(\0132\033.api.v0a" +
+      "lpha.ElementSummaryR\017invalidElements\"\034\n\032" +
+      "GetComplianceScrubListsReq\"=\n\032GetComplia" +
+      "nceScrubListsRes\022\037\n\013scrub_lists\030\001 \003(\tR\ns" +
+      "crubLists\"[\n\021ProcessElementReq\022\035\n\nelemen" +
+      "t_id\030\001 \001(\tR\telementId\022\'\n\017process_message" +
+      "\030\002 \001(\tR\016processMessage\"G\n\022ProcessListReq" +
+      "uest\022\035\n\nelement_id\030\003 \001(\tR\telementId\022\022\n\004l" +
+      "ist\030\004 \001(\014R\004list\"\025\n\023ProcessListResponse\"|" +
+      "\n\021StreamListRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022\035\n\neleme" +
+      "nt_id\030\003 \001(\tR\telementId\022\024\n\005chunk\030\004 \001(\014R\005c" +
+      "hunk\"\024\n\022StreamListResponse\"B\n!ListAvaila" +
+      "bleFieldsByElementIdReq\022\035\n\nelement_id\030\001 " +
+      "\001(\tR\telementId\"8\n\027ListFieldsForElementRe" +
+      "q\022\035\n\nelement_id\030\001 \001(\tR\telementId\"E\n\027List" +
+      "FieldsForElementRes\022*\n\006fields\030\001 \003(\0132\022.ap" +
+      "i.v0alpha.FieldR\006fields\"\033\n\031ListAutocompl" +
+      "eteFieldsReq\"G\n\031ListAutocompleteFieldsRe" +
+      "s\022*\n\006fields\030\001 \003(\0132\022.api.v0alpha.FieldR\006f" +
+      "ields\"*\n\tElementPK\022\035\n\nelement_id\030\001 \001(\tR\t" +
+      "elementId\"\345\003\n\007Element\022\035\n\nelement_id\030\003 \001(" +
+      "\tR\telementId\022\022\n\004name\030\n \001(\tR\004name\022\026\n\006inpu" +
+      "ts\030\013 \003(\tR\006inputs\022(\n\020input_is_discard\030\024 \003" +
+      "(\010R\016inputIsDiscard\0222\n\ttransform\030\r \001(\0132\024." +
+      "api.v0alpha.ProcessR\ttransform\022G\n\013last_s" +
+      "tatus\030\016 \001(\0162&.api.commons.PipelineElemen" +
+      "tStatusTypeR\nlastStatus\022\026\n\006labels\030\020 \003(\tR" +
+      "\006labels\022=\n\014created_date\030\021 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\013createdDate\022;\n\013last_e" +
+      "dited\030\022 \001(\0132\032.google.protobuf.TimestampR" +
+      "\nlastEdited\022 \n\013description\030\023 \001(\tR\013descri" +
+      "ption\0222\n\023pipeline_canvas_sid\030\025 \001(\003B\0020\001R\021" +
+      "pipelineCanvasSid\"\321\001\n\013PeekListReq\022\035\n\nele" +
+      "ment_id\030\003 \001(\tR\telementId\022\030\n\007version\030\004 \001(" +
+      "\003R\007version\022\033\n\tpage_size\030\n \001(\005R\010pageSize\022" +
+      "\022\n\004page\030\014 \001(\005R\004page\022.\n\007process\030\r \001(\0132\024.a" +
+      "pi.v0alpha.ProcessR\007process\022(\n\020peek_at_d" +
+      "iscards\030\016 \001(\010R\016peekAtDiscards\"u\n\013PeekLis" +
+      "tRes\0222\n\007records\030\001 \003(\0132\030.api.v0alpha.Reco" +
+      "rdProtoR\007records\0222\n\007metrics\030\002 \001(\0132\030.api." +
+      "v0alpha.ListMetricsR\007metrics\"e\n\rGetHisto" +
+      "ryReq\022\035\n\nelement_id\030\003 \001(\tR\telementId\022\024\n\005" +
+      "count\030\n \001(\005R\005count\022\037\n\013starting_id\030\013 \001(\003R" +
+      "\nstartingId\"f\n\rGetHistoryRes\022\035\n\nelement_" +
+      "id\030\003 \001(\tR\telementId\0226\n\007commits\030\013 \003(\0132\034.a" +
+      "pi.v0alpha.HistoryAndCountR\007commits\"\333\004\n\007" +
+      "History\022\035\n\nelement_id\030\003 \001(\tR\telementId\022\035" +
+      "\n\nhistory_id\030\004 \001(\003R\thistoryId\022.\n\007process" +
+      "\030\007 \001(\0132\024.api.v0alpha.ProcessR\007process\022\026\n" +
+      "\006failed\030\n \001(\010R\006failed\022%\n\016attempt_number\030" +
+      "\014 \001(\005R\rattemptNumber\0224\n\006reason\030\r \001(\0132\034.g" +
+      "oogle.protobuf.StringValueR\006reason\0227\n\tup" +
+      "load_ts\030\016 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\010uploadTs\0229\n\nstarted_ts\030\017 \001(\0132\032.google" +
+      ".protobuf.TimestampR\tstartedTs\022;\n\013finish" +
+      "ed_ts\030\020 \001(\0132\032.google.protobuf.TimestampR" +
+      "\nfinishedTs\022\031\n\010event_id\030\022 \001(\003R\007eventId\022*" +
+      "\n\021parent_element_id\030\026 \001(\tR\017parentElement" +
+      "Id\0222\n\007metrics\030\027 \001(\0132\030.api.v0alpha.ListMe" +
+      "tricsR\007metrics\022A\n\017discard_metrics\030\030 \001(\0132" +
+      "\030.api.v0alpha.ListMetricsR\016discardMetric" +
+      "s\"\245\005\n\017HistoryAndCount\022\035\n\nelement_id\030\003 \001(" +
+      "\tR\telementId\022\035\n\nhistory_id\030\004 \001(\003R\thistor" +
+      "yId\022*\n\021ending_history_id\030\005 \001(\003R\017endingHi" +
+      "storyId\022.\n\007process\030\007 \001(\0132\024.api.v0alpha.P" +
+      "rocessR\007process\022\026\n\006failed\030\n \001(\010R\006failed\022" +
+      "%\n\016attempt_number\030\014 \001(\005R\rattemptNumber\0224" +
+      "\n\006reason\030\r \001(\0132\034.google.protobuf.StringV" +
+      "alueR\006reason\0227\n\tupload_ts\030\016 \001(\0132\032.google" +
+      ".protobuf.TimestampR\010uploadTs\0229\n\nstarted" +
+      "_ts\030\017 \001(\0132\032.google.protobuf.TimestampR\ts" +
+      "tartedTs\022;\n\013finished_ts\030\020 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\nfinishedTs\022\031\n\010event_i" +
+      "d\030\022 \001(\003R\007eventId\022*\n\021parent_element_id\030\026 " +
+      "\001(\tR\017parentElementId\0222\n\007metrics\030\027 \001(\0132\030." +
+      "api.v0alpha.ListMetricsR\007metrics\022A\n\017disc" +
+      "ard_metrics\030\031 \001(\0132\030.api.v0alpha.ListMetr" +
+      "icsR\016discardMetrics\022\024\n\005count\030\030 \001(\003R\005coun" +
+      "t\"D\n\013RecordProto\0225\n\006fields\030\001 \003(\0132\035.api.v" +
+      "0alpha.RecordFieldProtoR\006fields\"i\n\017Recor" +
+      "dProtoPair\022*\n\003old\030\001 \001(\0132\030.api.v0alpha.Re" +
+      "cordProtoR\003old\022*\n\003new\030\002 \001(\0132\030.api.v0alph" +
+      "a.RecordProtoR\003new\"\322\002\n\rProcessFields\0228\n\006" +
+      "fields\030\010 \003(\0132 .api.v0alpha.ProcessFields" +
+      ".FieldR\006fields\032Y\n\013NestedField\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\0226\n\nfield_type\030\002 \001(\0162\027.api.comm" +
+      "ons.RecordTypeR\tfieldType\032\253\001\n\005Field\022\022\n\004n" +
+      "ame\030\003 \001(\tR\004name\0226\n\nfield_type\030\004 \001(\0162\027.ap" +
+      "i.commons.RecordTypeR\tfieldType\022>\n\006neste" +
+      "d\030\005 \003(\0132&.api.v0alpha.ProcessFields.Nest" +
+      "edFieldR\006nested\022\026\n\006format\030\t \001(\tR\006format\"" +
+      "\035\n\007FieldPK\022\022\n\004name\030\003 \001(\tR\004name\"\342\001\n\005Field" +
+      "\022\022\n\004name\030\003 \001(\tR\004name\022*\n\004type\030\004 \001(\0162\026.api" +
+      ".commons.FieldTypeR\004type\022?\n\rdate_modifie" +
+      "d\030\005 \001(\0132\032.google.protobuf.TimestampR\014dat" +
+      "eModified\0226\n\010metadata\030\n \001(\0132\032.api.v0alph" +
+      "a.FieldMetadataR\010metadata\022 \n\013description" +
+      "\030\013 \001(\tR\013description\"\206\002\n\016UpdateFieldReq\022\022" +
+      "\n\004name\030\003 \001(\tR\004name\022*\n\004type\030\004 \001(\0162\026.api.c" +
+      "ommons.FieldTypeR\004type\022?\n\rdate_modified\030" +
+      "\005 \001(\0132\032.google.protobuf.TimestampR\014dateM" +
+      "odified\022\031\n\010new_name\030\006 \001(\tR\007newName\0226\n\010me" +
+      "tadata\030\n \001(\0132\032.api.v0alpha.FieldMetadata" +
+      "R\010metadata\022 \n\013description\030\013 \001(\tR\013descrip" +
+      "tion\"\321\004\n\rFieldMetadata\022\037\n\013time_format\030\001 " +
+      "\001(\tR\ntimeFormat\022<\n\tprecision\030\002 \001(\0162\036.api" +
+      ".commons.DateTimePrecisionR\tprecision\022+\n" +
+      "\021remove_characters\030\003 \001(\tR\020removeCharacte" +
+      "rs\022#\n\rreplace_empty\030\004 \001(\tR\014replaceEmpty\022" +
+      "#\n\rreplace_error\030\005 \001(\tR\014replaceError\022%\n\016" +
+      "remove_letters\030\006 \001(\010R\rremoveLetters\022%\n\016r" +
+      "emove_numbers\030\007 \001(\010R\rremoveNumbers\022%\n\016re" +
+      "move_symbols\030\010 \001(\010R\rremoveSymbols\022)\n\020lea" +
+      "ve_characters\030\t \001(\tR\017leaveCharacters\022#\n\r" +
+      "remove_string\030\n \001(\tR\014removeString\022\"\n\rjso" +
+      "n_dot_path\030\013 \001(\tR\013jsonDotPath\0221\n\025json_fo" +
+      "rce_type_match\030\014 \001(\010R\022jsonForceTypeMatch" +
+      "\022+\n\021starting_position\030\r \001(\005R\020startingPos" +
+      "ition\022!\n\014field_length\030\016 \001(\005R\013fieldLength" +
+      "\"4\n\006Fields\022*\n\006fields\030\001 \003(\0132\022.api.v0alpha" +
+      ".FieldR\006fields\"k\n\nFieldIndex\022\024\n\005index\030\001 " +
+      "\003(\tR\005index\022;\n\010datetime\030\002 \001(\0132\035.api.v0alp" +
+      "ha.DateTimeModifierH\000R\010datetimeB\n\n\010modif" +
+      "ier\"\017\n\rListFieldsReq\"\333\005\n\020RecordFieldProt" +
+      "o\022\022\n\004name\030\001 \001(\tR\004name\022#\n\014string_value\030\002 " +
+      "\001(\tH\000R\013stringValue\022#\n\014number_value\030\003 \001(\001" +
+      "H\000R\013numberValue\022\037\n\nbool_value\030\004 \001(\010H\000R\tb" +
+      "oolValue\022*\n\005phone\030\005 \001(\0132\022.api.v0alpha.Ph" +
+      "oneH\000R\005phone\0223\n\010currency\030\006 \001(\0132\025.api.v0a" +
+      "lpha.CurrencyH\000R\010currency\022:\n\013postal_code" +
+      "\030\010 \001(\0132\027.api.v0alpha.PostalCodeH\000R\nposta" +
+      "lCode\022*\n\005email\030\t \001(\0132\022.api.v0alpha.Email" +
+      "H\000R\005email\0224\n\tdate_time\030\n \001(\0132\025.api.v0alp" +
+      "ha.DateTimeH\000R\010dateTime\022I\n\020repeated_reco" +
+      "rds\030\r \001(\0132\034.api.v0alpha.RepeatedRecordsH" +
+      "\000R\017repeatedRecords\022G\n\020record_field_map\030\016" +
+      " \001(\0132\033.api.v0alpha.RecordFieldMapH\000R\016rec" +
+      "ordFieldMap\022&\n\003err\030\017 \001(\0132\022.api.v0alpha.E" +
+      "rrorH\000R\003err\022C\n\016enriched_phone\030\020 \001(\0132\032.ap" +
+      "i.v0alpha.EnrichedPhoneH\000R\renrichedPhone" +
+      "\022=\n\014enriched_zip\030\021 \001(\0132\030.api.v0alpha.Enr" +
+      "ichedZipH\000R\013enrichedZipB\t\n\007payload\"E\n\017Re" +
+      "peatedRecords\0222\n\007records\030\001 \003(\0132\030.api.v0a" +
+      "lpha.RecordProtoR\007records\")\n\017ListElement" +
+      "sReq\022\026\n\006labels\030\001 \003(\tR\006labels\"\025\n\023GetFileT" +
+      "emplatesReq\"S\n\021FileTemplateField\022\022\n\004name" +
+      "\030\001 \001(\tR\004name\022*\n\004type\030\002 \001(\0162\026.api.commons" +
+      ".FieldTypeR\004type\"L\n\022FileTemplateFields\0226" +
+      "\n\006fields\030\001 \003(\0132\036.api.v0alpha.FileTemplat" +
+      "eFieldR\006fields\"<\n\nFieldTypes\022.\n\006values\030\001" +
+      " \003(\0162\026.api.commons.FieldTypeR\006values\"\302\002\n" +
+      "\014FileTemplate\022(\n\020file_template_id\030\003 \001(\tR" +
+      "\016fileTemplateId\022\022\n\004name\030\n \001(\tR\004name\022 \n\013d" +
+      "escription\030\013 \001(\tR\013description\022\037\n\013field_n" +
+      "ames\030\014 \003(\tR\nfieldNames\022K\n\022file_format_pa" +
+      "rams\030\016 \001(\0132\035.api.v0alpha.FileFormatParam" +
+      "sR\020fileFormatParams\0228\n\013file_format\030\017 \001(\016" +
+      "2\027.api.commons.FileFormatR\nfileFormat\022*\n" +
+      "\006fields\030\020 \003(\0132\022.api.v0alpha.FieldR\006field" +
+      "s\"F\n\014LMSUploadReq\022\035\n\nelement_id\030\003 \001(\tR\te" +
+      "lementId\022\027\n\007file_id\030\014 \001(\tR\006fileId\"\016\n\014LMS" +
+      "UploadRes\"@\n\010ReRunReq\022\027\n\007list_id\030\003 \001(\tR\006" +
+      "listId\022\033\n\trerun_url\030\004 \001(\tR\010rerunUrl\"\n\n\010R" +
+      "eRunRes\"\224\026\n\007Process\022\036\n\nexpression\0307 \001(\tR" +
+      "\nexpression\0224\n\006append\030\036 \001(\0132\032.api.v0alph" +
+      "a.AppendProcessH\000R\006append\022/\n\004sort\030\037 \001(\0132" +
+      "\031.api.v0alpha.SortCriteriaH\000R\004sort\0224\n\006fi" +
+      "lter\030  \001(\0132\032.api.v0alpha.FilterProcessH\000" +
+      "R\006filter\022;\n\tgs_export\030* \001(\0132\034.api.v0alph" +
+      "a.GSExportProcessH\000R\010gsExport\022;\n\tp3_expo" +
+      "rt\030, \001(\0132\034.api.v0alpha.P3ExportProcessH\000" +
+      "R\010p3Export\0225\n\005compl\030- \001(\0132\031.api.v0alpha." +
+      "ComplProcessB\002\030\001H\000R\005compl\0222\n\005dedup\030. \001(\013" +
+      "2\032.api.v0alpha.DeDupCriteriaH\000R\005dedup\022>\n" +
+      "\ncfs_export\030/ \001(\0132\035.api.v0alpha.CFSExpor" +
+      "tProcessH\000R\tcfsExport\022A\n\013sftp_export\0300 \001" +
+      "(\0132\036.api.v0alpha.SftpExportProcessH\000R\nsf" +
+      "tpExport\0227\n\007reshape\0301 \001(\0132\033.api.v0alpha." +
+      "ReshapeProcessH\000R\007reshape\0224\n\006lookup\0302 \001(" +
+      "\0132\032.api.v0alpha.LookupProcessH\000R\006lookup\022" +
+      "D\n\nentrypoint\0303 \001(\0132\036.api.v0alpha.Entryp" +
+      "ointProcessB\002\030\001H\000R\nentrypoint\022S\n\021complia" +
+      "nce_export\0304 \001(\0132$.api.v0alpha.Complianc" +
+      "eExportProcessH\000R\020complianceExport\022C\n\016ap" +
+      "i_entrypoint\0305 \001(\0132\032.api.v0alpha.ApiEntr" +
+      "ypointH\000R\rapiEntrypoint\022:\n\013sftp_import\0306" +
+      " \001(\0132\027.api.v0alpha.SftpImportH\000R\nsftpImp" +
+      "ort\0221\n\005scrub\0308 \001(\0132\031.api.v0alpha.ScrubPr" +
+      "ocessH\000R\005scrub\022=\n\tfrequency\0309 \001(\0132\035.api." +
+      "v0alpha.FrequencyProcessH\000R\tfrequency\022>\n" +
+      "\ncjs_import\030: \001(\0132\035.api.v0alpha.CjsImpor" +
+      "tProcessH\000R\tcjsImport\022>\n\ncjs_export\030; \001(" +
+      "\0132\035.api.v0alpha.CjsExportProcessH\000R\tcjsE" +
+      "xport\022B\n\ncjs_enrich\030< \001(\0132!.api.v0alpha." +
+      "CjsEnrichmentProcessH\000R\tcjsEnrich\022J\n\016web" +
+      "_entrypoint\030= \001(\0132!.api.v0alpha.WebEntry" +
+      "pointProcessH\000R\rwebEntrypoint\022Z\n\024delete_" +
+      "scrub_entries\030> \001(\0132&.api.v0alpha.Delete" +
+      "ScrubEntriesProcessH\000R\022deleteScrubEntrie" +
+      "s\022>\n\nwfm_export\030? \001(\0132\035.api.v0alpha.WfmE" +
+      "xportProcessH\000R\twfmExport\022I\n\013link_enrich" +
+      "\030@ \001(\0132\".api.v0alpha.PaymentLinkEnrichme" +
+      "ntB\002\030\001H\000R\nlinkEnrich\0225\n\003rnd\030A \001(\0132!.api." +
+      "v0alpha.RndEnrichmentProcessH\000R\003rnd\022N\n\016c" +
+      "onsent_enrich\030B \001(\0132%.api.v0alpha.Consen" +
+      "tEnrichmentProcessH\000R\rconsentEnrich\022J\n\016c" +
+      "onsent_export\030C \001(\0132!.api.v0alpha.Consen" +
+      "tExportProcessH\000R\rconsentExport\022U\n\024compl" +
+      "iance_processor\030E \001(\0132 .api.v0alpha.Comp" +
+      "lianceProcessorH\000R\023complianceProcessor\022V" +
+      "\n\022consent_entrypoint\030F \001(\0132%.api.v0alpha" +
+      ".ConsentEntrypointProcessH\000R\021consentEntr" +
+      "ypoint\022Q\n\022portal_link_enrich\030G \001(\0132!.api" +
+      ".v0alpha.PortalLinkEnrichmentH\000R\020portalL" +
+      "inkEnrich\022W\n\023bulk_web_entrypoint\030H \001(\0132%" +
+      ".api.v0alpha.BulkWebEntrypointProcessH\000R" +
+      "\021bulkWebEntrypoint\022V\n\025omni_exchange_proc" +
+      "ess\030I \001(\0132 .api.v0alpha.OmniExchangeProc" +
+      "essH\000R\023omniExchangeProcess\022S\n\024web_exchan" +
+      "ge_process\030J \001(\0132\037.api.v0alpha.WebExchan" +
+      "geProcessH\000R\022webExchangeProcess\0222\n\005split" +
+      "\030K \001(\0132\032.api.v0alpha.SplitCriteriaH\000R\005sp" +
+      "lit\022G\n\020epic_entry_point\030L \001(\0132\033.api.v0al" +
+      "pha.EpicEntrypointH\000R\016epicEntryPoint\022S\n\024" +
+      "contact_manager_sink\030M \001(\0132\037.api.v0alpha" +
+      ".ContactManagerSinkH\000R\022contactManagerSin" +
+      "k\022+\n\003sum\030N \001(\0132\027.api.v0alpha.SumProcessH" +
+      "\000R\003sum\022I\n\020finvi_entrypoint\030O \001(\0132\034.api.v" +
+      "0alpha.FinviEntrypointH\000R\017finviEntrypoin" +
+      "t\022n\n\035contact_management_enrichment\030P \001(\013" +
+      "2(.api.v0alpha.ContactManagementEnrichme" +
+      "ntH\000R\033contactManagementEnrichment\022S\n\024tic" +
+      "ket_exchange_sink\030Q \001(\0132\037.api.v0alpha.Ti" +
+      "cketExchangeSinkH\000R\022ticketExchangeSinkB\006" +
+      "\n\004proc\"\270\003\n\023ComplianceProcessor\022\036\n\013rule_s" +
+      "et_id\030\001 \001(\tR\truleSetId\0222\n\tcomm_type\030\005 \001(" +
+      "\0132\025.api.commons.CommTypeR\010commType\022\033\n\tca" +
+      "ll_type\030\006 \001(\tR\010callType\022,\n\022phone_number_" +
+      "field\030\007 \001(\tR\020phoneNumberField\022\037\n\013email_f" +
+      "ield\030\010 \001(\tR\nemailField\022$\n\016zip_code_field" +
+      "\030\t \001(\tR\014zipCodeField\022W\n\rcall_metadata\030\n " +
+      "\003(\01322.api.v0alpha.ComplianceProcessor.Ca" +
+      "llMetadataEntryR\014callMetadata\022!\n\014country" +
+      "_code\030\013 \001(\tR\013countryCode\032?\n\021CallMetadata" +
+      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005" +
+      "value:\0028\001\"H\n\030ConsentEntrypointProcess\022,\n" +
+      "\022consent_profile_id\030\001 \001(\tR\020consentProfil" +
+      "eId\"\226\001\n\030ConsentEnrichmentProcess\022#\n\rcont" +
+      "ent_field\030\003 \001(\tR\014contentField\022\'\n\017consent" +
+      "_profile\030\004 \001(\tR\016consentProfile\022,\n\022consen" +
+      "t_profile_id\030\005 \001(\tR\020consentProfileId\"\210\t\n" +
+      "\024ConsentExportProcess\022#\n\rcontent_field\030\003" +
+      " \001(\tR\014contentField\022\'\n\017consent_profile\030\004 " +
+      "\001(\tR\016consentProfile\022,\n\022consent_profile_i" +
+      "d\030\005 \001(\tR\020consentProfileId\022/\n\010run_type\030\006 " +
+      "\001(\0162\024.api.commons.RunTypeR\007runType\0226\n\006ac" +
+      "tion\030\007 \001(\0162\036.api.commons.ConsentActionTy" +
+      "peR\006action\022#\n\rreferring_url\030\010 \001(\tR\014refer" +
+      "ringUrl\022\024\n\005topic\030\t \001(\tR\005topic\022%\n\016revoked" +
+      "_reason\030\n \001(\tR\rrevokedReason\022%\n\016granted_" +
+      "reason\030\013 \001(\tR\rgrantedReason\022\024\n\005proof\030\014 \001" +
+      "(\tR\005proof\022:\n\032condition_time_of_day_from\030" +
+      "\r \001(\tR\026conditionTimeOfDayFrom\0226\n\030conditi" +
+      "on_time_of_day_to\030\016 \001(\tR\024conditionTimeOf" +
+      "DayTo\022\024\n\005notes\030\017 \001(\tR\005notes\022\032\n\006expire\030\020 " +
+      "\001(\tB\002\030\001R\006expire\022%\n\016condition_from\030\021 \001(\tR" +
+      "\rconditionFrom\022!\n\014condition_to\030\022 \001(\tR\013co" +
+      "nditionTo\022D\n\020content_type_val\030\033 \001(\0162\030.ap" +
+      "i.commons.ContentTypeH\000R\016contentTypeVal\022" +
+      "7\n\027content_type_field_name\030\034 \001(\tH\000R\024cont" +
+      "entTypeFieldName\022@\n\020channel_type_val\030\035 \001" +
+      "(\0162\024.api.commons.ChannelH\001R\016channelTypeV" +
+      "al\0227\n\027channel_type_field_name\030\036 \001(\tH\001R\024c" +
+      "hannelTypeFieldName\022E\n\017expiration_date\030\037" +
+      " \001(\0132\032.google.protobuf.TimestampH\002R\016expi" +
+      "rationDate\0224\n\025expiration_field_name\030  \001(" +
+      "\tH\002R\023expirationFieldName\022W\n\031expiration_a" +
+      "fter_duration\030! \001(\0132\031.google.protobuf.Du" +
+      "rationH\002R\027expirationAfterDurationB\016\n\014con" +
+      "tent_typeB\016\n\014channel_typeB\014\n\nexpiration\"" +
+      "\314\002\n\025PaymentLinkEnrichment\022\032\n\006fields\030\001 \003(" +
+      "\tB\002\030\001R\006fields\0227\n\026payment_link_config_id\030" +
+      "\002 \001(\tB\002\030\001R\023paymentLinkConfigId\022=\n\031discar" +
+      "d_on_missing_fields\030\003 \001(\010B\002\030\001R\026discardOn" +
+      "MissingFields\022G\n\007key_map\030\004 \003(\0132..api.v0a" +
+      "lpha.PaymentLinkEnrichment.KeyMapEntryR\006" +
+      "keyMap\022\033\n\tportal_id\030\005 \001(\tR\010portalId\0329\n\013K" +
+      "eyMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 " +
+      "\001(\tR\005value:\0028\001\"\203\002\n\024PortalLinkEnrichment\022" +
+      "F\n\007key_map\030\001 \003(\0132-.api.v0alpha.PortalLin" +
+      "kEnrichment.KeyMapEntryR\006keyMap\022\033\n\tporta" +
+      "l_id\030\002 \001(\tR\010portalId\0227\n\nexpiration\030\006 \001(\013" +
+      "2\027.api.v0alpha.ExpirationR\nexpiration\022\022\n" +
+      "\004demo\030\007 \001(\010R\004demo\0329\n\013KeyMapEntry\022\020\n\003key\030" +
+      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"U\n\n" +
+      "Expiration\022+\n\005units\030\001 \001(\0162\025.api.v0alpha." +
+      "TimeUnitR\005units\022\032\n\010quantity\030\002 \001(\003R\010quant" +
+      "ity\"\023\n\021EntrypointProcess\"\220\001\n\rApiEntrypoi" +
+      "nt\022\025\n\006fts_id\030d \001(\tR\005ftsId\022(\n\020file_templa" +
+      "te_id\030\020 \001(\tR\016fileTemplateId\022 \n\013increment" +
+      "al\030\021 \001(\010R\013incremental\022\034\n\tencrypted\030\022 \001(\010" +
+      "R\tencrypted\"\202\003\n\007HttpReq\022\020\n\003url\030\001 \001(\tR\003ur" +
+      "l\022;\n\007headers\030\002 \003(\0132!.api.v0alpha.HttpReq",
+      ".HeadersEntryR\007headers\022\022\n\004body\030\003 \001(\tR\004bo" +
+      "dy\022-\n\006method\030\004 \001(\0162\025.api.commons.HttpVer" +
+      "bR\006method\022a\n\025named_response_values\030\005 \003(\013" +
+      "2-.api.v0alpha.HttpReq.NamedResponseValu" +
+      "esEntryR\023namedResponseValues\032:\n\014HeadersE" +
+      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005v" +
+      "alue:\0028\001\032F\n\030NamedResponseValuesEntry\022\020\n\003" +
       "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
-      "\032F\n\030NamedResponseValuesEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\231\002\n\024Web" +
-      "EntrypointProcess\0229\n\rhttp_requests\030\001 \003(\013" +
-      "2\024.api.v0alpha.HttpReqR\014httpRequests\022(\n\020" +
-      "file_template_id\030\005 \001(\tR\016fileTemplateId\022>" +
-      "\n\rfile_template\030\006 \001(\0132\031.api.v0alpha.File",
-      "TemplateR\014fileTemplate\022\022\n\004name\030\007 \001(\tR\004na" +
-      "me\022\022\n\004cron\030\023 \001(\tR\004cron\022\032\n\010timezone\030\024 \001(\t" +
-      "R\010timezone\022\030\n\007enabled\030\025 \001(\010R\007enabled\"\301\003\n" +
-      "\030BulkWebEntrypointProcess\022G\n\024preliminary" +
-      "_requests\030\002 \003(\0132\024.api.v0alpha.HttpReqR\023p" +
-      "reliminaryRequests\022N\n\021paginated_request\030" +
-      "\004 \001(\0132!.api.v0alpha.PaginatedHttpRequest" +
-      "R\020paginatedRequest\022(\n\020file_template_id\030\005" +
-      " \001(\tR\016fileTemplateId\022\022\n\004name\030\007 \001(\tR\004name" +
-      "\022\022\n\004cron\030\023 \001(\tR\004cron\022\032\n\010timezone\030\024 \001(\tR\010" +
-      "timezone\022\030\n\007enabled\030\025 \001(\010R\007enabled\022(\n\020fl" +
-      "ush_page_count\030\026 \001(\003R\016flushPageCount\022,\n\022" +
-      "flush_minute_count\030\027 \001(\003R\020flushMinuteCou" +
-      "nt\022,\n\022flush_during_check\030\030 \001(\010R\020flushDur" +
-      "ingCheck\"\300\001\n\023OmniExchangeProcess\022!\n\nproj" +
-      "ect_id\030\001 \001(\003B\0020\001R\tprojectId\022#\n\013campaign_" +
-      "id\030\002 \001(\003B\0020\001R\ncampaignId\022\033\n\ttime_zone\030\005 " +
-      "\001(\tR\010timeZone\022\022\n\004days\030\004 \001(\003R\004days\022\022\n\004hou" +
-      "r\030\006 \001(\003R\004hour\022\026\n\006minute\030\007 \001(\003R\006minuteJ\004\010" +
-      "\003\020\004\"x\n\022WebExchangeProcess\0229\n\rhttp_reques" +
+      "\"\231\002\n\024WebEntrypointProcess\0229\n\rhttp_reques" +
       "ts\030\001 \003(\0132\024.api.v0alpha.HttpReqR\014httpRequ" +
-      "ests\022\'\n\017error_threshold\030\002 \001(\003R\016errorThre" +
-      "shold\"\246\004\n\024PaginatedHttpRequest\022A\n\021iterat" +
-      "ion_request\030\001 \001(\0132\024.api.v0alpha.HttpReqR" +
-      "\020iterationRequest\022\037\n\013start_index\030\002 \001(\003R\n" +
-      "startIndex\022A\n\013end_for_any\030\003 \003(\0132!.api.co" +
-      "mmons.PaginationTerminatorR\tendForAny\022A\n" +
-      "\013end_for_all\030\004 \003(\0132!.api.commons.Paginat" +
-      "ionTerminatorR\tendForAll\022M\n\021request_not_" +
-      "ready\030\005 \001(\0132!.api.commons.PaginationTerm" +
-      "inatorR\017requestNotReady\0223\n\026not_ready_wai" +
-      "t_seconds\030\006 \001(\003R\023notReadyWaitSeconds\022;\n\032" +
-      "not_ready_redo_preliminary\030\007 \001(\010R\027notRea" +
-      "dyRedoPreliminary\0227\n\030not_ready_skip_iter" +
-      "ation\030\010 \001(\010R\025notReadySkipIteration\022*\n\021pr" +
-      "ocess_stop_page\030\t \001(\010R\017processStopPage\"\256" +
-      "\003\n\nSftpImport\022\022\n\004user\030\004 \001(\tR\004user\022\032\n\010pas" +
-      "sword\030\005 \001(\tR\010password\022\037\n\013private_key\030\006 \001" +
-      "(\tR\nprivateKey\022\030\n\007address\030\007 \001(\tR\007address" +
-      "\022\022\n\004port\030\010 \001(\tR\004port\022;\n\014file_pattern\030\r \001" +
-      "(\0132\030.api.commons.FilePatternR\013filePatter" +
-      "n\022\030\n\007enabled\030\017 \001(\010R\007enabled\022(\n\020file_temp" +
-      "late_id\030\020 \001(\tR\016fileTemplateId\022 \n\013increme" +
-      "ntal\030\021 \001(\010R\013incremental\022\034\n\tencrypted\030\022 \001" +
-      "(\010R\tencrypted\022\022\n\004cron\030\023 \001(\tR\004cron\022\032\n\010tim" +
-      "ezone\030\024 \001(\tR\010timezone\0220\n\024transfer_config" +
-      "_name\030\025 \001(\tR\022transferConfigName\"z\n\024RndEn" +
-      "richmentProcess\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\024" +
-      "\n\005field\030\002 \001(\tR\005field\0225\n\027date_last_contac" +
-      "t_field\030\003 \001(\tR\024dateLastContactField\"\306\001\n\020" +
-      "CjsImportProcess\022*\n\021cjs_collection_id\030\003 " +
-      "\001(\tR\017cjsCollectionId\022\030\n\007enabled\030\005 \001(\010R\007e" +
-      "nabled\022\022\n\004cron\030\006 \001(\tR\004cron\022\032\n\010timezone\030\007" +
-      " \001(\tR\010timezone\022\024\n\005dedup\030\010 \001(\010R\005dedup\022&\n\017" +
-      "use_zero_values\030\t \001(\010R\ruseZeroValues\"\355\002\n" +
-      "\020CjsExportProcess\022*\n\021cjs_collection_id\030\003" +
-      " \001(\tR\017cjsCollectionId\0221\n\006header\030\004 \001(\0132\031." +
-      "api.v0alpha.ExportHeaderR\006header\022/\n\010run_" +
-      "type\030\005 \001(\0162\024.api.commons.RunTypeR\007runTyp" +
-      "e\022.\n\023cjs_collection_name\030\006 \001(\tR\021cjsColle" +
-      "ctionName\022\034\n\toverwrite\030\010 \001(\010R\toverwrite\022" +
-      "\026\n\006update\030\t \001(\010R\006update\022(\n\020update_key_fi" +
-      "eld\030\n \001(\tR\016updateKeyField\0229\n\031replace_inv" +
-      "alid_with_null\030\013 \001(\010R\026replaceInvalidWith" +
-      "Null\"\247\003\n\024CjsEnrichmentProcess\022*\n\021cjs_col" +
-      "lection_id\030\003 \001(\tR\017cjsCollectionId\022\033\n\tkey" +
-      "_field\030\004 \001(\tR\010keyField\022<\n\013enrich_type\030\005 " +
-      "\001(\0162\033.api.commons.EnrichmentTypeR\nenrich" +
-      "Type\022A\n\016primary_source\030\006 \001(\0162\032.api.commo" +
-      "ns.PrimarySourceR\rprimarySource\022+\n\022cjs_k" +
-      "ey_field_name\030\007 \001(\tR\017cjsKeyFieldName\022)\n\020" +
-      "column_overwrite\030\010 \001(\010R\017columnOverwrite\022" +
-      "E\n\020dedup_key_policy\030\t \001(\0162\033.api.commons." +
-      "DedupKeyPolicyR\016dedupKeyPolicy\022&\n\017use_ze" +
-      "ro_values\030\n \001(\010R\ruseZeroValues\"&\n\rAppend" +
-      "Process\022\025\n\006fts_id\030\005 \001(\tR\005ftsId\"\375\003\n\rLooku" +
-      "pProcess\022\037\n\013field_names\030\006 \003(\tR\nfieldName" +
-      "s\022?\n\005compl\030\007 \001(\0132\'.api.v0alpha.LookupPro" +
-      "cess.ComplProcessH\000R\005compl\022;\n\004list\030\010 \001(\013" +
-      "2%.api.v0alpha.LookupProcess.ListLookupH" +
-      "\000R\004list\0228\n\003url\030\t \001(\0132$.api.v0alpha.Looku" +
-      "pProcess.UrlLookupH\000R\003url\0321\n\014ComplProces" +
-      "s\022!\n\014country_code\030\013 \001(\tR\013countryCode\032y\n\n" +
-      "ListLookup\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\treg" +
-      "ion_id\030\002 \001(\tR\010regionId\022\035\n\nelement_id\030\003 \001" +
-      "(\tR\telementId\022\030\n\007version\030\004 \001(\003R\007version\032" +
-      "]\n\tUrlLookup\022\020\n\003url\030\005 \001(\tR\003url\022>\n\rfile_t" +
-      "emplate\030\n \001(\0132\031.api.v0alpha.FileTemplate" +
-      "R\014fileTemplateB\006\n\004proc\"\016\n\014ComplProcess\"T" +
-      "\n\017CFSExportConfig\022+\n\004type\030\001 \001(\0162\027.api.co" +
-      "mmons.ExportTypeR\004type\022\024\n\005value\030\002 \001(\tR\005v" +
-      "alue\"\300\001\n\022CFSExportReqHeader\022>\n\rexport_he" +
-      "ader\030\001 \001(\0132\031.api.v0alpha.ExportHeaderR\014e" +
-      "xportHeader\0226\n\007configs\030\002 \003(\0132\034.api.v0alp" +
-      "ha.CFSExportConfigR\007configs\022\025\n\006org_id\030\003 " +
-      "\001(\tR\005orgId\022\033\n\tregion_id\030\004 \001(\tR\010regionId\"" +
-      "\212\001\n\020CFSExportProcess\022>\n\rexport_header\030\001 " +
-      "\001(\0132\031.api.v0alpha.ExportHeaderR\014exportHe" +
-      "ader\0226\n\007configs\030\002 \003(\0132\034.api.v0alpha.CFSE" +
-      "xportConfigR\007configs\"\205\001\n\rFilterProcess\022\036" +
-      "\n\nexpression\030\001 \001(\tR\nexpression\022<\n\noperat" +
-      "ions\030\002 \003(\0132\034.api.v0alpha.FilterOperation" +
-      "R\noperations\022\026\n\006negate\030\003 \001(\010R\006negate\"{\n\017" +
-      "FilterOperation\0220\n\006checks\030\001 \003(\0132\030.api.v0" +
-      "alpha.FilterCheckR\006checks\0226\n\010operator\030\002 " +
-      "\001(\0162\032.api.commons.ChainOperatorR\010operato" +
-      "r\"\200\t\n\013FilterCheck\022E\n\010val_comp\030\014 \001(\0132(.ap" +
-      "i.v0alpha.FilterCheck.ValueComparisonH\000R" +
-      "\007valComp\022F\n\ttype_comp\030\r \001(\0132\'.api.v0alph" +
-      "a.FilterCheck.TypeComparisonH\000R\010typeComp" +
-      "\022F\n\tlist_comp\030\016 \001(\0132\'.api.v0alpha.Filter" +
-      "Check.ListComparisonH\000R\010listComp\032\335\001\n\005Val" +
-      "ue\022\037\n\nstring_val\030\001 \001(\tH\000R\tstringVal\022\037\n\nn" +
-      "umber_val\030\002 \001(\001H\000R\tnumberVal\022\033\n\010bool_val" +
-      "\030\003 \001(\010H\000R\007boolVal\0228\n\nfield_name\030\005 \001(\0132\027." +
-      "api.v0alpha.FieldIndexH\000R\tfieldName\0224\n\td" +
-      "ate_time\030\016 \001(\0132\025.api.v0alpha.DateTimeH\000R" +
-      "\010dateTimeB\005\n\003val\032\335\001\n\017ValueComparison\0226\n\n" +
-      "field_name\030\006 \001(\0132\027.api.v0alpha.FieldInde" +
-      "xR\tfieldName\022,\n\002op\030\007 \001(\0162\034.api.commons.C" +
-      "ompareOperatorR\002op\0224\n\005value\030\010 \001(\0132\036.api." +
-      "v0alpha.FilterCheck.ValueR\005value\022\026\n\006nega" +
-      "te\030\t \001(\010R\006negate\022\026\n\006exists\030\n \001(\010R\006exists" +
-      "\032\247\001\n\016TypeComparison\0226\n\nfield_name\030\t \001(\0132" +
-      "\027.api.v0alpha.FieldIndexR\tfieldName\022E\n\022m" +
-      "atches_field_type\030\n \001(\0162\027.api.commons.Re" +
-      "cordTypeR\020matchesFieldType\022\026\n\006negate\030\013 \001" +
-      "(\010R\006negate\032\246\002\n\016ListComparison\0226\n\nfield_n" +
-      "ame\030\005 \001(\0132\027.api.v0alpha.FieldIndexR\tfiel" +
-      "dName\022F\n\004data\030\010 \003(\01322.api.v0alpha.Filter" +
-      "Check.ListComparison.FieldOrValR\004data\022\026\n" +
-      "\006negate\030\t \001(\010R\006negate\032|\n\nFieldOrVal\022/\n\005f" +
-      "ield\030\006 \001(\0132\027.api.v0alpha.FieldIndexH\000R\005f" +
-      "ield\0226\n\005value\030\007 \001(\0132\036.api.v0alpha.Filter" +
-      "Check.ValueH\000R\005valueB\005\n\003valB\007\n\005check\"=\n\017" +
-      "GSExportProcess\022\026\n\006bucket\030\002 \001(\tR\006bucket\022" +
-      "\022\n\004file\030\003 \001(\tR\004file\"\274\020\n\017P3ExportProcess\022" +
-      "1\n\006header\030\001 \001(\0132\031.api.v0alpha.ExportHead" +
-      "erR\006header\022.\n\023contact_list_prefix\030\002 \001(\tR" +
-      "\021contactListPrefix\022\036\n\010username\030\003 \001(\tB\002\030\001" +
-      "R\010username\022\036\n\010password\030\004 \001(\tB\002\030\001R\010passwo" +
-      "rd\022!\n\014access_token\0301 \001(\tR\013accessToken\022\030\n" +
-      "\007country\030\005 \001(\tR\007country\022A\n\013dupe_policy\030\006" +
-      " \001(\0162 .api.commons.DuplicatePolicyTypeR\n" +
-      "dupePolicy\022B\n\rabsent_policy\030\007 \001(\0162\035.api." +
-      "commons.AbsentPolicyTypeR\014absentPolicy\022\037" +
-      "\n\013template_id\030\010 \001(\005R\ntemplateId\022*\n\021defau" +
-      "lt_area_code\030\t \001(\005R\017defaultAreaCode\0228\n\030s" +
-      "chedule_template_number\030\n \001(\005R\026scheduleT" +
-      "emplateNumber\022 \n\013description\030\013 \001(\tR\013desc" +
-      "ription\022/\n\010run_type\030\014 \001(\0162\024.api.commons." +
-      "RunTypeR\007runType\022?\n\014file_pattern\030\r \001(\0132\030" +
-      ".api.commons.FilePatternB\002\030\001R\013filePatter" +
-      "n\022<\n\010filename\030+ \001(\0132 .api.commons.Constr" +
-      "uctedFilenameR\010filename\022\035\n\ncaller_ids\030\016 " +
-      "\003(\003R\tcallerIds\022\035\n\ncell_scrub\030\017 \001(\010R\tcell" +
-      "Scrub\0229\n\nstart_time\030\020 \001(\0132\032.google.proto" +
-      "buf.TimestampR\tstartTime\0225\n\010end_time\030\021 \001" +
-      "(\0132\032.google.protobuf.TimestampR\007endTime\022" +
-      "9\n\ndial_order\030\022 \001(\0162\032.api.commons.DialOr" +
-      "derTypeR\tdialOrder\022\037\n\013email_field\030\024 \001(\tR" +
-      "\nemailField\022\035\n\nemail_from\030\025 \001(\tR\temailFr" +
-      "om\022$\n\016follow_the_sun\030\026 \001(\010R\014followTheSun" +
-      "\022.\n\023messages_per_minute\030\027 \001(\005R\021messagesP" +
-      "erMinute\022-\n\022randomize_contacts\030\030 \001(\010R\021ra" +
-      "ndomizeContacts\022,\n\022schedule_as_paused\030\031 " +
-      "\001(\010R\020scheduleAsPaused\022#\n\rschedule_rule\030\032" +
-      " \001(\tR\014scheduleRule\022.\n\023sha_digest_overrid" +
-      "e\030\033 \001(\010R\021shaDigestOverride\022\033\n\tsms_field\030" +
-      "\034 \001(\tR\010smsField\022*\n\021sms_source_number\030\035 \001" +
-      "(\003R\017smsSourceNumber\022+\n\021timezone_override" +
-      "\030\036 \001(\010R\020timezoneOverride\022\033\n\tzip_scrub\030\037 " +
-      "\001(\010R\010zipScrub\0221\n\024completion_threshold\030  " +
-      "\001(\005R\023completionThreshold\022\032\n\010timezone\030! \001" +
-      "(\tR\010timezone\022\'\n\017compliance_rule\030\" \001(\tR\016c" +
-      "omplianceRule\022\'\n\017field_delimiter\030# \001(\tR\016" +
-      "fieldDelimiter\022)\n\020record_delimiter\030$ \001(\t" +
-      "R\017recordDelimiter\022!\n\014quote_fields\030% \001(\010R" +
-      "\013quoteFields\0223\n\026use_custom_date_format\030&" +
-      " \001(\010R\023useCustomDateFormat\0228\n\013file_format" +
-      "\030\' \001(\0162\027.api.commons.FileFormatR\nfileFor" +
-      "mat\022(\n\020days_into_future\030( \001(\003R\016daysIntoF" +
-      "uture\022\035\n\nstart_hour\030) \001(\tR\tstartHour\022\031\n\010" +
-      "end_hour\030* \001(\tR\007endHour\0220\n\024schedule_by_t" +
-      "imezone\030, \001(\010R\022scheduleByTimezone\022,\n\022shi" +
-      "ft_phone_fields\030- \001(\010R\020shiftPhoneFields\022" +
-      ".\n\023do_campaign_linking\030. \001(\010R\021doCampaign" +
-      "Linking\022(\n\020campaign_link_id\030/ \001(\tR\016campa" +
-      "ignLinkId\022!\n\014stop_trigger\0300 \001(\tR\013stopTri" +
-      "ggerJ\004\010\023\020\024\"\236\002\n\027ComplianceExportProcess\022\033" +
-      "\n\tlist_name\030\002 \001(\tR\010listName\022\024\n\005field\030\003 \001" +
-      "(\tR\005field\022)\n\020expiration_field\030\004 \001(\tR\017exp" +
-      "irationField\022!\n\014country_code\030\005 \001(\tR\013coun" +
-      "tryCode\022/\n\010run_type\030\006 \001(\0162\024.api.commons." +
-      "RunTypeR\007runType\022Q\n\024compliance_list_type" +
-      "\030\007 \001(\0162\037.api.commons.ComplianceListTypeR" +
-      "\022complianceListType\"=\n\014ScrubProcess\022\027\n\007l" +
-      "ist_id\030\003 \001(\tR\006listId\022\024\n\005field\030\004 \001(\tR\005fie" +
-      "ld\"J\n\031DeleteScrubEntriesProcess\022\027\n\007list_" +
-      "id\030\003 \001(\tR\006listId\022\024\n\005field\030\004 \001(\tR\005field\"\242" +
-      "\002\n\020FrequencyProcess\022\024\n\005field\030\004 \001(\tR\005fiel" +
-      "d\022\022\n\004days\030\005 \001(\003R\004days\022!\n\014country_code\030\006 " +
-      "\001(\tR\013countryCode\022\035\n\nmeta_field\030\007 \001(\tR\tme" +
-      "taField\022@\n\014dispositions\030\010 \003(\0132\034.api.v0al" +
-      "pha.DispositionPairR\014dispositions\022\030\n\007res" +
-      "ults\030\t \003(\tR\007results\022F\n\020disposition_sets\030" +
-      "\n \003(\0132\033.api.v0alpha.DispositionSetR\017disp" +
-      "ositionSets\"R\n\016DispositionSet\022@\n\014disposi" +
-      "tions\030\001 \003(\0132\034.api.v0alpha.DispositionPai" +
-      "rR\014dispositions\"9\n\017DispositionPair\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"\215\006\n\021S" +
-      "ftpExportProcess\022#\n\rdest_filepath\030\001 \001(\tR" +
-      "\014destFilepath\022\032\n\010password\030\002 \001(\tR\010passwor" +
-      "d\022\030\n\007address\030\003 \001(\tR\007address\022\032\n\010username\030" +
-      "\004 \001(\tR\010username\022\022\n\004port\030\005 \001(\005R\004port\0227\n\nf" +
-      "ileformat\030\007 \001(\0162\027.api.commons.FileFormat" +
-      "R\nfileformat\022\'\n\017prepend_headers\030\010 \001(\010R\016p" +
-      "rependHeaders\022\'\n\017field_delimiter\030\t \001(\tR\016" +
-      "fieldDelimiter\022)\n\020record_delimiter\030\n \001(\t" +
-      "R\017recordDelimiter\022?\n\014file_pattern\030\013 \001(\0132" +
-      "\030.api.commons.FilePatternB\002\030\001R\013filePatte" +
-      "rn\022/\n\010run_type\030\014 \001(\0162\024.api.commons.RunTy" +
-      "peR\007runType\0221\n\006header\030\r \001(\0132\031.api.v0alph" +
-      "a.ExportHeaderR\006header\022!\n\014quote_fields\030\016" +
-      " \001(\010R\013quoteFields\0223\n\026use_custom_date_for" +
-      "mat\030\017 \001(\010R\023useCustomDateFormat\022\034\n\tdirect" +
-      "ory\030\020 \001(\tR\tdirectory\022<\n\010filename\030\021 \001(\0132 " +
-      ".api.commons.ConstructedFilenameR\010filena" +
-      "me\022,\n\022shift_phone_fields\030\022 \001(\010R\020shiftPho" +
-      "neFields\0220\n\024transfer_config_name\030\023 \001(\tR\022" +
-      "transferConfigName\"\017\n\rWfmMultiSkill\"q\n\020W" +
-      "fmExportProcess\022\030\n\006single\030\001 \001(\003H\000R\006singl" +
-      "e\0222\n\005multi\030\002 \001(\0132\032.api.v0alpha.WfmMultiS" +
-      "killH\000R\005multiB\017\n\rskill_profile\"$\n\014Export" +
-      "Header\022\024\n\005names\030\001 \003(\tR\005names\"\201\001\n\007SortReq" +
-      "\0227\n\010criteria\030\001 \001(\0132\031.api.v0alpha.SortCri" +
-      "teriaH\000R\010criteria\0222\n\006record\030\002 \001(\0132\030.api." +
-      "v0alpha.RecordProtoH\000R\006recordB\t\n\007request" +
-      "\"\210\001\n\014CFSExportReq\0229\n\006header\030\001 \001(\0132\037.api." +
-      "v0alpha.CFSExportReqHeaderH\000R\006header\0222\n\006" +
-      "record\030\002 \001(\0132\030.api.v0alpha.RecordProtoH\000" +
-      "R\006recordB\t\n\007request\"\312\001\n\rDeDupCriteria\0221\n" +
-      "\006action\030\003 \001(\0162\031.api.commons.DeDupActions" +
-      "R\006action\022/\n\006fields\030\002 \003(\0132\027.api.v0alpha.F" +
-      "ieldIndexR\006fields\0220\n\006unless\030\004 \001(\0132\030.api." +
-      "v0alpha.FilterCheckR\006unless\022#\n\rdisjunct_" +
-      "keys\030\005 \001(\010R\014disjunctKeys\"|\n\014SortCriteria" +
-      "\0222\n\010ordering\030\001 \003(\0162\026.api.commons.SortOrd" +
-      "erR\010ordering\0228\n\013field_order\030\002 \003(\0132\027.api." +
-      "v0alpha.FieldIndexR\nfieldOrder\":\n\005Error\022" +
-      "\024\n\005error\030\001 \001(\tR\005error\022\033\n\traw_value\030\002 \001(\t" +
-      "R\010rawValue\"\253\001\n\016RecordFieldMap\022?\n\006fields\030" +
-      "\001 \003(\0132\'.api.v0alpha.RecordFieldMap.Field" +
-      "sEntryR\006fields\032X\n\013FieldsEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\0223\n\005value\030\002 \001(\0132\035.api.v0alpha.Rec" +
-      "ordFieldProtoR\005value:\0028\001\"\203\001\n\010Currency\022\026\n" +
-      "\006symbol\030\001 \001(\tR\006symbol\022\033\n\traw_value\030\002 \001(\t" +
-      "R\010rawValue\022\024\n\005value\030\003 \001(\001R\005value\022\022\n\004name" +
-      "\030\004 \001(\tR\004name\022\030\n\007invalid\030\005 \001(\010R\007invalid\"_" +
-      "\n\005Phone\022\033\n\traw_value\030\003 \001(\tR\010rawValue\022\037\n\013" +
-      "full_number\030\004 \001(\tR\nfullNumber\022\030\n\007invalid" +
-      "\030\005 \001(\010R\007invalid\"G\n\nPostalCode\022\037\n\013postal_" +
-      "code\030\001 \001(\tR\npostalCode\022\030\n\007invalid\030\002 \001(\010R" +
-      "\007invalid\"{\n\005Email\022\035\n\nlocal_part\030\001 \001(\tR\tl" +
-      "ocalPart\022\026\n\006domain\030\002 \001(\tR\006domain\022!\n\014full" +
-      "_address\030\003 \001(\tR\013fullAddress\022\030\n\007invalid\030\004" +
-      " \001(\010R\007invalid\"\270\001\n\020DateTimeModifier\022\024\n\005ye" +
-      "ars\030\001 \001(\005R\005years\022\024\n\005weeks\030\003 \001(\005R\005weeks\022\022" +
-      "\n\004days\030\004 \001(\005R\004days\022\024\n\005hours\030\005 \001(\005R\005hours" +
-      "\022\030\n\007minutes\030\006 \001(\005R\007minutes\022\030\n\007seconds\030\007 " +
-      "\001(\005R\007seconds\022\032\n\010duration\030\010 \001(\tR\010duration" +
-      "\"\242\002\n\025DateTimeFieldModifier\022\037\n\013years_fiel" +
-      "d\030\001 \001(\tR\nyearsField\022\037\n\013weeks_field\030\003 \001(\t" +
-      "R\nweeksField\022\035\n\ndays_field\030\004 \001(\tR\tdaysFi" +
-      "eld\022\037\n\013hours_field\030\005 \001(\tR\nhoursField\022#\n\r" +
-      "minutes_field\030\006 \001(\tR\014minutesField\022#\n\rsec" +
-      "onds_field\030\007 \001(\tR\014secondsField\022%\n\016durati" +
-      "on_field\030\010 \001(\tR\rdurationField\022\026\n\006negate\030" +
-      "\t \001(\010R\006negate\"\270\001\n\010DateTime\022\033\n\traw_value\030" +
-      "\001 \001(\tR\010rawValue\022\026\n\006format\030\002 \001(\tR\006format\022" +
-      "<\n\tprecision\030\003 \001(\0162\036.api.commons.DateTim" +
-      "ePrecisionR\tprecision\0229\n\010modifier\030\013 \001(\0132" +
-      "\035.api.v0alpha.DateTimeModifierR\010modifier" +
-      "\"\313\005\n\rEnrichedPhone\022\033\n\tarea_code\030\001 \001(\tR\010a" +
-      "reaCode\022\031\n\010block_id\030\002 \001(\tR\007blockId\022\030\n\007ca" +
-      "rrier\030\003 \001(\tR\007carrier\022\016\n\002cc\030\004 \001(\tR\002cc\022\024\n\005" +
-      "ccnsn\030\005 \001(\tR\005ccnsn\022\037\n\013cell_prefix\030\006 \001(\tR" +
-      "\ncellPrefix\022\022\n\004city\030\007 \001(\tR\004city\022\031\n\010coc_t" +
-      "ype\030\010 \001(\tR\007cocType\022\020\n\003dst\030\t \001(\010R\003dst\0221\n\024" +
-      "international_prefix\030\n \001(\tR\023internationa" +
-      "lPrefix\022\022\n\004iso2\030\013 \001(\tR\004iso2\022\032\n\010language\030" +
-      "\014 \001(\tR\010language\022\020\n\003max\030\016 \001(\tR\003max\022\020\n\003min" +
-      "\030\017 \001(\tR\003min\022\'\n\017national_prefix\030\020 \001(\tR\016na" +
-      "tionalPrefix\022\020\n\003ndc\030\021 \001(\tR\003ndc\022\026\n\006prefix" +
-      "\030\022 \001(\tR\006prefix\022\037\n\013region_code\030\023 \001(\tR\nreg" +
-      "ionCode\022\037\n\013region_name\030\024 \001(\tR\nregionName" +
-      "\022\022\n\004ssc1\030\025 \001(\tR\004ssc1\022\022\n\004ssc2\030\026 \001(\tR\004ssc2" +
-      "\022\022\n\004ssc3\030\027 \001(\tR\004ssc3\022\022\n\004ssc4\030\030 \001(\tR\004ssc4" +
-      "\022\026\n\006source\030\031 \001(\tR\006source\022\033\n\ttime_zone\030\032 " +
-      "\001(\tR\010timeZone\022\022\n\004type\030\033 \001(\tR\004type\022\031\n\010use" +
-      "s_ndc\030\034 \001(\010R\007usesNdc\022\020\n\003utc\030\035 \001(\002R\003utc\"\245" +
-      "\006\n\013EnrichedZip\022\032\n\010accuracy\030\001 \001(\005R\010accura" +
-      "cy\022\037\n\013admin_code1\030\002 \001(\tR\nadminCode1\022\037\n\013a" +
-      "dmin_code2\030\003 \001(\tR\nadminCode2\022\037\n\013admin_co" +
-      "de3\030\004 \001(\tR\nadminCode3\022\037\n\013admin_name1\030\005 \001" +
-      "(\tR\nadminName1\022\037\n\013admin_name2\030\006 \001(\tR\nadm" +
-      "inName2\022\037\n\013admin_name3\030\007 \001(\tR\nadminName3" +
-      "\022\033\n\tarea_code\030\010 \001(\tR\010areaCode\022\033\n\tcity_na" +
-      "me\030\t \001(\tR\010cityName\022\033\n\tcity_type\030\n \001(\tR\010c" +
-      "ityType\022!\n\014country_code\030\013 \001(\tR\013countryCo" +
-      "de\022\037\n\013county_fips\030\014 \001(\tR\ncountyFips\022\037\n\013c" +
-      "ounty_name\030\r \001(\tR\ncountyName\022\020\n\003dst\030\016 \001(" +
-      "\010R\003dst\022\022\n\004iso2\030\017 \001(\tR\004iso2\022\031\n\010msa_code\030\021" +
-      " \001(\tR\007msaCode\022\035\n\nplace_name\030\022 \001(\tR\tplace" +
-      "Name\022\037\n\013postal_code\030\023 \001(\tR\npostalCode\022&\n" +
-      "\017postal_code_key\030\024 \001(\tR\rpostalCodeKey\022\037\n" +
-      "\013postal_type\030\025 \001(\tR\npostalType\022#\n\rprovin" +
-      "ce_abbr\030\026 \001(\tR\014provinceAbbr\022#\n\rprovince_" +
-      "name\030\027 \001(\tR\014provinceName\022\026\n\006source\030\030 \001(\t" +
-      "R\006source\022\035\n\nstate_fips\030\031 \001(\tR\tstateFips\022" +
-      "\033\n\ttime_zone\030\032 \001(\tR\010timeZone\022\020\n\003utc\030\033 \001(" +
-      "\002R\003utc\"\005\n\003Now\"\357\001\n\tTimestamp\022\022\n\004year\030\003 \001(" +
-      "\005R\004year\022\024\n\005month\030\004 \001(\005R\005month\022\022\n\004week\030\005 " +
-      "\001(\005R\004week\022 \n\014day_of_month\030\006 \001(\005R\ndayOfMo" +
-      "nth\022\036\n\013day_of_week\030\007 \001(\005R\tdayOfWeek\022\036\n\013d" +
-      "ay_of_year\030\010 \001(\005R\tdayOfYear\022\022\n\004hour\030\t \001(" +
-      "\005R\004hour\022\026\n\006minute\030\n \001(\005R\006minute\022\026\n\006secon" +
-      "d\030\013 \001(\005R\006second\"\246\001\n\004Date\022\022\n\004year\030\003 \001(\005R\004" +
-      "year\022\024\n\005month\030\004 \001(\005R\005month\022\022\n\004week\030\005 \001(\005" +
-      "R\004week\022 \n\014day_of_month\030\006 \001(\005R\ndayOfMonth" +
-      "\022\036\n\013day_of_week\030\007 \001(\005R\tdayOfWeek\022\036\n\013day_" +
-      "of_year\030\010 \001(\005R\tdayOfYear\"\231\001\n\013MonthAndDay" +
-      "\022\024\n\005month\030\003 \001(\005R\005month\022\022\n\004week\030\004 \001(\005R\004we" +
-      "ek\022 \n\014day_of_month\030\005 \001(\005R\ndayOfMonth\022\036\n\013" +
-      "day_of_week\030\006 \001(\005R\tdayOfWeek\022\036\n\013day_of_y" +
-      "ear\030\007 \001(\005R\tdayOfYear\"+\n\tDayOfWeek\022\036\n\013day" +
-      "_of_week\030\003 \001(\005R\tdayOfWeek\"O\n\tTimeOfDay\022\022" +
-      "\n\004hour\030\003 \001(\005R\004hour\022\026\n\006minute\030\004 \001(\005R\006minu" +
-      "te\022\026\n\006second\030\005 \001(\005R\006second\"\226\002\n\020FileForma" +
-      "tParams\0221\n\023skip_first_no_lines\030\n \001(\005B\002\030\001" +
-      "R\020skipFirstNoLines\0227\n\026skip_lines_match_r" +
-      "egex\030\013 \001(\tB\002\030\001R\023skipLinesMatchRegex\022\037\n\013t" +
-      "rim_spaces\030\014 \001(\010R\ntrimSpaces\022)\n\020custom_d" +
-      "elimiter\030\r \001(\tR\017customDelimiter\022&\n\017skip_" +
-      "first_line\030\016 \001(\010R\rskipFirstLine\022\"\n\rjson_" +
-      "dot_path\030\017 \001(\tR\013jsonDotPath\"F\n\016ReshapePr" +
-      "ocess\0224\n\007actions\030\001 \003(\0132\032.api.v0alpha.Res" +
-      "hapeActionR\007actions\"\272\037\n\rReshapeAction\022\024\n" +
-      "\005field\030\023 \001(\tR\005field\022@\n\rmatching_type\030\024 \001" +
-      "(\0162\027.api.commons.RecordTypeB\002\030\001R\014matchin" +
-      "gType\022:\n\tpredicate\0302 \001(\0132\030.api.v0alpha.F" +
-      "ilterCheckB\002\030\001R\tpredicate\022<\n\noperations\030" +
-      "7 \001(\0132\034.api.v0alpha.FilterOperationR\nope" +
-      "rations\022;\n\006rename\030\026 \001(\0132!.api.v0alpha.Re" +
-      "shapeAction.RenameH\000R\006rename\022B\n\tadd_valu" +
-      "e\030\027 \001(\0132#.api.v0alpha.ReshapeAction.AddV" +
-      "alueH\000R\010addValue\022B\n\tadd_field\030\030 \001(\0132#.ap" +
-      "i.v0alpha.ReshapeAction.AddFieldH\000R\010addF" +
-      "ield\022?\n\010add_date\030/ \001(\0132\".api.v0alpha.Res" +
-      "hapeAction.AddDateH\000R\007addDate\022Q\n\016subtrac" +
-      "t_value\030\031 \001(\0132(.api.v0alpha.ReshapeActio" +
-      "n.SubtractValueH\000R\rsubtractValue\022Q\n\016subt" +
-      "ract_field\030\032 \001(\0132(.api.v0alpha.ReshapeAc" +
-      "tion.SubtractFieldH\000R\rsubtractField\022>\n\007c" +
-      "onvert\030\034 \001(\0132\".api.v0alpha.ReshapeAction" +
-      ".ConvertH\000R\007convert\022K\n\014remove_field\030\035 \001(" +
-      "\0132&.api.v0alpha.ReshapeAction.RemoveFiel" +
-      "dH\000R\013removeField\022L\n\radd_new_field\030\036 \001(\0132" +
-      "&.api.v0alpha.ReshapeAction.AddNewFieldH" +
-      "\000R\013addNewField\022a\n\024change_currency_type\030\037" +
-      " \001(\0132-.api.v0alpha.ReshapeAction.ChangeC" +
-      "urrencyTypeH\000R\022changeCurrencyType\022;\n\006div" +
-      "ide\030  \001(\0132!.api.v0alpha.ReshapeAction.Di" +
-      "videH\000R\006divide\022A\n\010multiply\030! \001(\0132#.api.v" +
-      "0alpha.ReshapeAction.MultiplyH\000R\010multipl" +
-      "y\022;\n\006modulo\030\" \001(\0132!.api.v0alpha.ReshapeA" +
-      "ction.ModuloH\000R\006modulo\0228\n\005merge\030( \001(\0132 ." +
-      "api.v0alpha.ReshapeAction.MergeH\000R\005merge" +
-      "\022R\n\017set_field_value\030) \001(\0132(.api.v0alpha." +
-      "ReshapeAction.SetFieldValueH\000R\rsetFieldV" +
-      "alue\022i\n\030add_new_field_from_field\030- \001(\0132/" +
-      ".api.v0alpha.ReshapeAction.AddNewFieldFr" +
-      "omFieldH\000R\024addNewFieldFromField\022_\n\024set_f" +
-      "ield_from_field\030. \001(\0132,.api.v0alpha.Resh" +
-      "apeAction.SetFieldFromFieldH\000R\021setFieldF" +
-      "romField\0222\n\003pad\0304 \001(\0132\036.api.v0alpha.Resh" +
-      "apeAction.PadH\000R\003pad\0225\n\004trim\0305 \001(\0132\037.api" +
-      ".v0alpha.ReshapeAction.TrimH\000R\004trim\022>\n\007e" +
-      "xtract\0306 \001(\0132\".api.v0alpha.ReshapeAction" +
-      ".ExtractH\000R\007extract\032#\n\006Rename\022\031\n\010new_nam" +
-      "e\030\n \001(\tR\007newName\032 \n\010AddValue\022\024\n\005value\030\013 " +
-      "\001(\001R\005value\032\240\001\n\007AddDate\0229\n\010datetime\030- \001(\013" +
-      "2\035.api.v0alpha.DateTimeModifierR\010datetim" +
-      "e\022Z\n\027datetime_field_modifier\030. \001(\0132\".api" +
-      ".v0alpha.DateTimeFieldModifierR\025datetime" +
-      "FieldModifier\032D\n\010AddField\0228\n\013other_field" +
-      "\030\014 \001(\0132\027.api.v0alpha.FieldIndexR\notherFi" +
-      "eld\032%\n\rSubtractValue\022\024\n\005value\030\013 \001(\001R\005val" +
-      "ue\032I\n\rSubtractField\0228\n\013other_field\030\014 \001(\013" +
-      "2\027.api.v0alpha.FieldIndexR\notherField\032\265\001",
-      "\n\007Convert\0225\n\007newType\030\021 \001(\0162\027.api.commons" +
-      ".RecordTypeB\002\030\001R\007newType\022/\n\tnew_field\030\022 " +
-      "\001(\0132\022.api.v0alpha.FieldR\010newField\022B\n\rdef" +
-      "ault_value\030\023 \001(\0132\035.api.v0alpha.RecordFie" +
-      "ldProtoR\014defaultValue\032S\n\006Divide\022\'\n\rdefau" +
-      "lt_value\030\001 \001(\001B\002\030\001R\014defaultValue\022\034\n\007divi" +
-      "sor\030\002 \001(\001B\002\030\001R\007divisor:\002\030\001\032#\n\013DivideValu" +
-      "e\022\024\n\005value\030\001 \001(\001R\005value\032G\n\013DivideField\0228" +
-      "\n\013other_field\030\014 \001(\0132\027.api.v0alpha.FieldI" +
-      "ndexR\notherField\032[\n\010Multiply\022\'\n\rdefault_" +
-      "value\030\001 \001(\001B\002\030\001R\014defaultValue\022\"\n\nmultipl" +
-      "ier\030\002 \001(\001B\002\030\001R\nmultiplier:\002\030\001\032%\n\rMultipl" +
-      "yValue\022\024\n\005value\030\001 \001(\001R\005value\032I\n\rMultiply" +
-      "Field\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha" +
-      ".FieldIndexR\notherField\032S\n\006Modulo\022\'\n\rdef" +
-      "ault_value\030\001 \001(\005B\002\030\001R\014defaultValue\022\034\n\007mo" +
-      "dulus\030\002 \001(\005B\002\030\001R\007modulus:\002\030\001\032#\n\013ModuloVa" +
-      "lue\022\024\n\005value\030\001 \001(\001R\005value\032G\n\013ModuloField" +
-      "\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha.Fiel" +
-      "dIndexR\notherField\032\r\n\013RemoveField\032S\n\013Add" +
-      "NewField\022D\n\016starting_value\030\022 \001(\0132\035.api.v" +
-      "0alpha.RecordFieldProtoR\rstartingValue\032d" +
-      "\n\024AddNewFieldFromField\022\022\n\004name\030\n \001(\tR\004na" +
-      "me\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha.Fi" +
-      "eldIndexR\notherField\032\024\n\022ChangeCurrencyTy" +
-      "pe\032D\n\rSetFieldValue\0223\n\005value\030\022 \001(\0132\035.api" +
-      ".v0alpha.RecordFieldProtoR\005value\032a\n\021SetF" +
-      "ieldFromField\022\022\n\004name\030\n \001(\tR\004name\0228\n\013oth" +
+      "ests\022(\n\020file_template_id\030\005 \001(\tR\016fileTemp" +
+      "lateId\022>\n\rfile_template\030\006 \001(\0132\031.api.v0al" +
+      "pha.FileTemplateR\014fileTemplate\022\022\n\004name\030\007" +
+      " \001(\tR\004name\022\022\n\004cron\030\023 \001(\tR\004cron\022\032\n\010timezo" +
+      "ne\030\024 \001(\tR\010timezone\022\030\n\007enabled\030\025 \001(\010R\007ena" +
+      "bled\"\301\003\n\030BulkWebEntrypointProcess\022G\n\024pre" +
+      "liminary_requests\030\002 \003(\0132\024.api.v0alpha.Ht" +
+      "tpReqR\023preliminaryRequests\022N\n\021paginated_" +
+      "request\030\004 \001(\0132!.api.v0alpha.PaginatedHtt" +
+      "pRequestR\020paginatedRequest\022(\n\020file_templ" +
+      "ate_id\030\005 \001(\tR\016fileTemplateId\022\022\n\004name\030\007 \001" +
+      "(\tR\004name\022\022\n\004cron\030\023 \001(\tR\004cron\022\032\n\010timezone" +
+      "\030\024 \001(\tR\010timezone\022\030\n\007enabled\030\025 \001(\010R\007enabl" +
+      "ed\022(\n\020flush_page_count\030\026 \001(\003R\016flushPageC" +
+      "ount\022,\n\022flush_minute_count\030\027 \001(\003R\020flushM" +
+      "inuteCount\022,\n\022flush_during_check\030\030 \001(\010R\020" +
+      "flushDuringCheck\"\300\001\n\023OmniExchangeProcess" +
+      "\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tprojectId\022#\n\013c" +
+      "ampaign_id\030\002 \001(\003B\0020\001R\ncampaignId\022\033\n\ttime" +
+      "_zone\030\005 \001(\tR\010timeZone\022\022\n\004days\030\004 \001(\003R\004day" +
+      "s\022\022\n\004hour\030\006 \001(\003R\004hour\022\026\n\006minute\030\007 \001(\003R\006m" +
+      "inuteJ\004\010\003\020\004\"x\n\022WebExchangeProcess\0229\n\rhtt" +
+      "p_requests\030\001 \003(\0132\024.api.v0alpha.HttpReqR\014" +
+      "httpRequests\022\'\n\017error_threshold\030\002 \001(\003R\016e" +
+      "rrorThreshold\"\246\004\n\024PaginatedHttpRequest\022A" +
+      "\n\021iteration_request\030\001 \001(\0132\024.api.v0alpha." +
+      "HttpReqR\020iterationRequest\022\037\n\013start_index" +
+      "\030\002 \001(\003R\nstartIndex\022A\n\013end_for_any\030\003 \003(\0132" +
+      "!.api.commons.PaginationTerminatorR\tendF" +
+      "orAny\022A\n\013end_for_all\030\004 \003(\0132!.api.commons" +
+      ".PaginationTerminatorR\tendForAll\022M\n\021requ" +
+      "est_not_ready\030\005 \001(\0132!.api.commons.Pagina" +
+      "tionTerminatorR\017requestNotReady\0223\n\026not_r" +
+      "eady_wait_seconds\030\006 \001(\003R\023notReadyWaitSec" +
+      "onds\022;\n\032not_ready_redo_preliminary\030\007 \001(\010" +
+      "R\027notReadyRedoPreliminary\0227\n\030not_ready_s" +
+      "kip_iteration\030\010 \001(\010R\025notReadySkipIterati" +
+      "on\022*\n\021process_stop_page\030\t \001(\010R\017processSt" +
+      "opPage\"\256\003\n\nSftpImport\022\022\n\004user\030\004 \001(\tR\004use" +
+      "r\022\032\n\010password\030\005 \001(\tR\010password\022\037\n\013private" +
+      "_key\030\006 \001(\tR\nprivateKey\022\030\n\007address\030\007 \001(\tR" +
+      "\007address\022\022\n\004port\030\010 \001(\tR\004port\022;\n\014file_pat" +
+      "tern\030\r \001(\0132\030.api.commons.FilePatternR\013fi" +
+      "lePattern\022\030\n\007enabled\030\017 \001(\010R\007enabled\022(\n\020f" +
+      "ile_template_id\030\020 \001(\tR\016fileTemplateId\022 \n" +
+      "\013incremental\030\021 \001(\010R\013incremental\022\034\n\tencry" +
+      "pted\030\022 \001(\010R\tencrypted\022\022\n\004cron\030\023 \001(\tR\004cro" +
+      "n\022\032\n\010timezone\030\024 \001(\tR\010timezone\0220\n\024transfe" +
+      "r_config_name\030\025 \001(\tR\022transferConfigName\"" +
+      "z\n\024RndEnrichmentProcess\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\022\024\n\005field\030\002 \001(\tR\005field\0225\n\027date_las" +
+      "t_contact_field\030\003 \001(\tR\024dateLastContactFi" +
+      "eld\"\306\001\n\020CjsImportProcess\022*\n\021cjs_collecti" +
+      "on_id\030\003 \001(\tR\017cjsCollectionId\022\030\n\007enabled\030" +
+      "\005 \001(\010R\007enabled\022\022\n\004cron\030\006 \001(\tR\004cron\022\032\n\010ti" +
+      "mezone\030\007 \001(\tR\010timezone\022\024\n\005dedup\030\010 \001(\010R\005d" +
+      "edup\022&\n\017use_zero_values\030\t \001(\010R\ruseZeroVa" +
+      "lues\"\355\002\n\020CjsExportProcess\022*\n\021cjs_collect" +
+      "ion_id\030\003 \001(\tR\017cjsCollectionId\0221\n\006header\030" +
+      "\004 \001(\0132\031.api.v0alpha.ExportHeaderR\006header" +
+      "\022/\n\010run_type\030\005 \001(\0162\024.api.commons.RunType" +
+      "R\007runType\022.\n\023cjs_collection_name\030\006 \001(\tR\021" +
+      "cjsCollectionName\022\034\n\toverwrite\030\010 \001(\010R\tov" +
+      "erwrite\022\026\n\006update\030\t \001(\010R\006update\022(\n\020updat" +
+      "e_key_field\030\n \001(\tR\016updateKeyField\0229\n\031rep" +
+      "lace_invalid_with_null\030\013 \001(\010R\026replaceInv" +
+      "alidWithNull\"\247\003\n\024CjsEnrichmentProcess\022*\n" +
+      "\021cjs_collection_id\030\003 \001(\tR\017cjsCollectionI" +
+      "d\022\033\n\tkey_field\030\004 \001(\tR\010keyField\022<\n\013enrich" +
+      "_type\030\005 \001(\0162\033.api.commons.EnrichmentType" +
+      "R\nenrichType\022A\n\016primary_source\030\006 \001(\0162\032.a" +
+      "pi.commons.PrimarySourceR\rprimarySource\022" +
+      "+\n\022cjs_key_field_name\030\007 \001(\tR\017cjsKeyField" +
+      "Name\022)\n\020column_overwrite\030\010 \001(\010R\017columnOv" +
+      "erwrite\022E\n\020dedup_key_policy\030\t \001(\0162\033.api." +
+      "commons.DedupKeyPolicyR\016dedupKeyPolicy\022&" +
+      "\n\017use_zero_values\030\n \001(\010R\ruseZeroValues\"&" +
+      "\n\rAppendProcess\022\025\n\006fts_id\030\005 \001(\tR\005ftsId\"\375" +
+      "\003\n\rLookupProcess\022\037\n\013field_names\030\006 \003(\tR\nf" +
+      "ieldNames\022?\n\005compl\030\007 \001(\0132\'.api.v0alpha.L" +
+      "ookupProcess.ComplProcessH\000R\005compl\022;\n\004li" +
+      "st\030\010 \001(\0132%.api.v0alpha.LookupProcess.Lis" +
+      "tLookupH\000R\004list\0228\n\003url\030\t \001(\0132$.api.v0alp" +
+      "ha.LookupProcess.UrlLookupH\000R\003url\0321\n\014Com" +
+      "plProcess\022!\n\014country_code\030\013 \001(\tR\013country" +
+      "Code\032y\n\nListLookup\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022\033\n\tregion_id\030\002 \001(\tR\010regionId\022\035\n\nelemen" +
+      "t_id\030\003 \001(\tR\telementId\022\030\n\007version\030\004 \001(\003R\007" +
+      "version\032]\n\tUrlLookup\022\020\n\003url\030\005 \001(\tR\003url\022>" +
+      "\n\rfile_template\030\n \001(\0132\031.api.v0alpha.File" +
+      "TemplateR\014fileTemplateB\006\n\004proc\"\016\n\014ComplP" +
+      "rocess\"T\n\017CFSExportConfig\022+\n\004type\030\001 \001(\0162" +
+      "\027.api.commons.ExportTypeR\004type\022\024\n\005value\030" +
+      "\002 \001(\tR\005value\"\300\001\n\022CFSExportReqHeader\022>\n\re" +
+      "xport_header\030\001 \001(\0132\031.api.v0alpha.ExportH" +
+      "eaderR\014exportHeader\0226\n\007configs\030\002 \003(\0132\034.a" +
+      "pi.v0alpha.CFSExportConfigR\007configs\022\025\n\006o" +
+      "rg_id\030\003 \001(\tR\005orgId\022\033\n\tregion_id\030\004 \001(\tR\010r" +
+      "egionId\"\212\001\n\020CFSExportProcess\022>\n\rexport_h" +
+      "eader\030\001 \001(\0132\031.api.v0alpha.ExportHeaderR\014" +
+      "exportHeader\0226\n\007configs\030\002 \003(\0132\034.api.v0al" +
+      "pha.CFSExportConfigR\007configs\"\205\001\n\rFilterP" +
+      "rocess\022\036\n\nexpression\030\001 \001(\tR\nexpression\022<" +
+      "\n\noperations\030\002 \003(\0132\034.api.v0alpha.FilterO" +
+      "perationR\noperations\022\026\n\006negate\030\003 \001(\010R\006ne" +
+      "gate\"{\n\017FilterOperation\0220\n\006checks\030\001 \003(\0132" +
+      "\030.api.v0alpha.FilterCheckR\006checks\0226\n\010ope" +
+      "rator\030\002 \001(\0162\032.api.commons.ChainOperatorR" +
+      "\010operator\"\200\t\n\013FilterCheck\022E\n\010val_comp\030\014 " +
+      "\001(\0132(.api.v0alpha.FilterCheck.ValueCompa" +
+      "risonH\000R\007valComp\022F\n\ttype_comp\030\r \001(\0132\'.ap" +
+      "i.v0alpha.FilterCheck.TypeComparisonH\000R\010" +
+      "typeComp\022F\n\tlist_comp\030\016 \001(\0132\'.api.v0alph" +
+      "a.FilterCheck.ListComparisonH\000R\010listComp" +
+      "\032\335\001\n\005Value\022\037\n\nstring_val\030\001 \001(\tH\000R\tstring" +
+      "Val\022\037\n\nnumber_val\030\002 \001(\001H\000R\tnumberVal\022\033\n\010" +
+      "bool_val\030\003 \001(\010H\000R\007boolVal\0228\n\nfield_name\030" +
+      "\005 \001(\0132\027.api.v0alpha.FieldIndexH\000R\tfieldN" +
+      "ame\0224\n\tdate_time\030\016 \001(\0132\025.api.v0alpha.Dat" +
+      "eTimeH\000R\010dateTimeB\005\n\003val\032\335\001\n\017ValueCompar" +
+      "ison\0226\n\nfield_name\030\006 \001(\0132\027.api.v0alpha.F" +
+      "ieldIndexR\tfieldName\022,\n\002op\030\007 \001(\0162\034.api.c" +
+      "ommons.CompareOperatorR\002op\0224\n\005value\030\010 \001(" +
+      "\0132\036.api.v0alpha.FilterCheck.ValueR\005value" +
+      "\022\026\n\006negate\030\t \001(\010R\006negate\022\026\n\006exists\030\n \001(\010" +
+      "R\006exists\032\247\001\n\016TypeComparison\0226\n\nfield_nam" +
+      "e\030\t \001(\0132\027.api.v0alpha.FieldIndexR\tfieldN" +
+      "ame\022E\n\022matches_field_type\030\n \001(\0162\027.api.co" +
+      "mmons.RecordTypeR\020matchesFieldType\022\026\n\006ne" +
+      "gate\030\013 \001(\010R\006negate\032\246\002\n\016ListComparison\0226\n" +
+      "\nfield_name\030\005 \001(\0132\027.api.v0alpha.FieldInd" +
+      "exR\tfieldName\022F\n\004data\030\010 \003(\01322.api.v0alph" +
+      "a.FilterCheck.ListComparison.FieldOrValR" +
+      "\004data\022\026\n\006negate\030\t \001(\010R\006negate\032|\n\nFieldOr" +
+      "Val\022/\n\005field\030\006 \001(\0132\027.api.v0alpha.FieldIn" +
+      "dexH\000R\005field\0226\n\005value\030\007 \001(\0132\036.api.v0alph" +
+      "a.FilterCheck.ValueH\000R\005valueB\005\n\003valB\007\n\005c" +
+      "heck\"=\n\017GSExportProcess\022\026\n\006bucket\030\002 \001(\tR" +
+      "\006bucket\022\022\n\004file\030\003 \001(\tR\004file\"\274\020\n\017P3Export" +
+      "Process\0221\n\006header\030\001 \001(\0132\031.api.v0alpha.Ex" +
+      "portHeaderR\006header\022.\n\023contact_list_prefi" +
+      "x\030\002 \001(\tR\021contactListPrefix\022\036\n\010username\030\003" +
+      " \001(\tB\002\030\001R\010username\022\036\n\010password\030\004 \001(\tB\002\030\001" +
+      "R\010password\022!\n\014access_token\0301 \001(\tR\013access" +
+      "Token\022\030\n\007country\030\005 \001(\tR\007country\022A\n\013dupe_" +
+      "policy\030\006 \001(\0162 .api.commons.DuplicatePoli" +
+      "cyTypeR\ndupePolicy\022B\n\rabsent_policy\030\007 \001(" +
+      "\0162\035.api.commons.AbsentPolicyTypeR\014absent" +
+      "Policy\022\037\n\013template_id\030\010 \001(\005R\ntemplateId\022" +
+      "*\n\021default_area_code\030\t \001(\005R\017defaultAreaC" +
+      "ode\0228\n\030schedule_template_number\030\n \001(\005R\026s" +
+      "cheduleTemplateNumber\022 \n\013description\030\013 \001" +
+      "(\tR\013description\022/\n\010run_type\030\014 \001(\0162\024.api." +
+      "commons.RunTypeR\007runType\022?\n\014file_pattern" +
+      "\030\r \001(\0132\030.api.commons.FilePatternB\002\030\001R\013fi" +
+      "lePattern\022<\n\010filename\030+ \001(\0132 .api.common" +
+      "s.ConstructedFilenameR\010filename\022\035\n\ncalle" +
+      "r_ids\030\016 \003(\003R\tcallerIds\022\035\n\ncell_scrub\030\017 \001" +
+      "(\010R\tcellScrub\0229\n\nstart_time\030\020 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\tstartTime\0225\n\010end_" +
+      "time\030\021 \001(\0132\032.google.protobuf.TimestampR\007" +
+      "endTime\0229\n\ndial_order\030\022 \001(\0162\032.api.common" +
+      "s.DialOrderTypeR\tdialOrder\022\037\n\013email_fiel" +
+      "d\030\024 \001(\tR\nemailField\022\035\n\nemail_from\030\025 \001(\tR" +
+      "\temailFrom\022$\n\016follow_the_sun\030\026 \001(\010R\014foll" +
+      "owTheSun\022.\n\023messages_per_minute\030\027 \001(\005R\021m" +
+      "essagesPerMinute\022-\n\022randomize_contacts\030\030" +
+      " \001(\010R\021randomizeContacts\022,\n\022schedule_as_p" +
+      "aused\030\031 \001(\010R\020scheduleAsPaused\022#\n\rschedul" +
+      "e_rule\030\032 \001(\tR\014scheduleRule\022.\n\023sha_digest" +
+      "_override\030\033 \001(\010R\021shaDigestOverride\022\033\n\tsm" +
+      "s_field\030\034 \001(\tR\010smsField\022*\n\021sms_source_nu" +
+      "mber\030\035 \001(\003R\017smsSourceNumber\022+\n\021timezone_" +
+      "override\030\036 \001(\010R\020timezoneOverride\022\033\n\tzip_" +
+      "scrub\030\037 \001(\010R\010zipScrub\0221\n\024completion_thre" +
+      "shold\030  \001(\005R\023completionThreshold\022\032\n\010time" +
+      "zone\030! \001(\tR\010timezone\022\'\n\017compliance_rule\030" +
+      "\" \001(\tR\016complianceRule\022\'\n\017field_delimiter" +
+      "\030# \001(\tR\016fieldDelimiter\022)\n\020record_delimit" +
+      "er\030$ \001(\tR\017recordDelimiter\022!\n\014quote_field" +
+      "s\030% \001(\010R\013quoteFields\0223\n\026use_custom_date_" +
+      "format\030& \001(\010R\023useCustomDateFormat\0228\n\013fil" +
+      "e_format\030\' \001(\0162\027.api.commons.FileFormatR" +
+      "\nfileFormat\022(\n\020days_into_future\030( \001(\003R\016d" +
+      "aysIntoFuture\022\035\n\nstart_hour\030) \001(\tR\tstart" +
+      "Hour\022\031\n\010end_hour\030* \001(\tR\007endHour\0220\n\024sched" +
+      "ule_by_timezone\030, \001(\010R\022scheduleByTimezon" +
+      "e\022,\n\022shift_phone_fields\030- \001(\010R\020shiftPhon" +
+      "eFields\022.\n\023do_campaign_linking\030. \001(\010R\021do" +
+      "CampaignLinking\022(\n\020campaign_link_id\030/ \001(" +
+      "\tR\016campaignLinkId\022!\n\014stop_trigger\0300 \001(\tR" +
+      "\013stopTriggerJ\004\010\023\020\024\"\236\002\n\027ComplianceExportP" +
+      "rocess\022\033\n\tlist_name\030\002 \001(\tR\010listName\022\024\n\005f" +
+      "ield\030\003 \001(\tR\005field\022)\n\020expiration_field\030\004 " +
+      "\001(\tR\017expirationField\022!\n\014country_code\030\005 \001" +
+      "(\tR\013countryCode\022/\n\010run_type\030\006 \001(\0162\024.api." +
+      "commons.RunTypeR\007runType\022Q\n\024compliance_l" +
+      "ist_type\030\007 \001(\0162\037.api.commons.ComplianceL" +
+      "istTypeR\022complianceListType\"=\n\014ScrubProc" +
+      "ess\022\027\n\007list_id\030\003 \001(\tR\006listId\022\024\n\005field\030\004 " +
+      "\001(\tR\005field\"J\n\031DeleteScrubEntriesProcess\022" +
+      "\027\n\007list_id\030\003 \001(\tR\006listId\022\024\n\005field\030\004 \001(\tR" +
+      "\005field\"\242\002\n\020FrequencyProcess\022\024\n\005field\030\004 \001" +
+      "(\tR\005field\022\022\n\004days\030\005 \001(\003R\004days\022!\n\014country" +
+      "_code\030\006 \001(\tR\013countryCode\022\035\n\nmeta_field\030\007" +
+      " \001(\tR\tmetaField\022@\n\014dispositions\030\010 \003(\0132\034." +
+      "api.v0alpha.DispositionPairR\014disposition" +
+      "s\022\030\n\007results\030\t \003(\tR\007results\022F\n\020dispositi" +
+      "on_sets\030\n \003(\0132\033.api.v0alpha.DispositionS" +
+      "etR\017dispositionSets\"R\n\016DispositionSet\022@\n" +
+      "\014dispositions\030\001 \003(\0132\034.api.v0alpha.Dispos" +
+      "itionPairR\014dispositions\"9\n\017DispositionPa" +
+      "ir\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\"\215\006\n\021SftpExportProcess\022#\n\rdest_filepat" +
+      "h\030\001 \001(\tR\014destFilepath\022\032\n\010password\030\002 \001(\tR" +
+      "\010password\022\030\n\007address\030\003 \001(\tR\007address\022\032\n\010u" +
+      "sername\030\004 \001(\tR\010username\022\022\n\004port\030\005 \001(\005R\004p" +
+      "ort\0227\n\nfileformat\030\007 \001(\0162\027.api.commons.Fi" +
+      "leFormatR\nfileformat\022\'\n\017prepend_headers\030" +
+      "\010 \001(\010R\016prependHeaders\022\'\n\017field_delimiter" +
+      "\030\t \001(\tR\016fieldDelimiter\022)\n\020record_delimit" +
+      "er\030\n \001(\tR\017recordDelimiter\022?\n\014file_patter" +
+      "n\030\013 \001(\0132\030.api.commons.FilePatternB\002\030\001R\013f" +
+      "ilePattern\022/\n\010run_type\030\014 \001(\0162\024.api.commo" +
+      "ns.RunTypeR\007runType\0221\n\006header\030\r \001(\0132\031.ap" +
+      "i.v0alpha.ExportHeaderR\006header\022!\n\014quote_" +
+      "fields\030\016 \001(\010R\013quoteFields\0223\n\026use_custom_" +
+      "date_format\030\017 \001(\010R\023useCustomDateFormat\022\034" +
+      "\n\tdirectory\030\020 \001(\tR\tdirectory\022<\n\010filename" +
+      "\030\021 \001(\0132 .api.commons.ConstructedFilename" +
+      "R\010filename\022,\n\022shift_phone_fields\030\022 \001(\010R\020" +
+      "shiftPhoneFields\0220\n\024transfer_config_name" +
+      "\030\023 \001(\tR\022transferConfigName\"\017\n\rWfmMultiSk" +
+      "ill\"q\n\020WfmExportProcess\022\030\n\006single\030\001 \001(\003H" +
+      "\000R\006single\0222\n\005multi\030\002 \001(\0132\032.api.v0alpha.W" +
+      "fmMultiSkillH\000R\005multiB\017\n\rskill_profile\"$" +
+      "\n\014ExportHeader\022\024\n\005names\030\001 \003(\tR\005names\"\201\001\n" +
+      "\007SortReq\0227\n\010criteria\030\001 \001(\0132\031.api.v0alpha" +
+      ".SortCriteriaH\000R\010criteria\0222\n\006record\030\002 \001(" +
+      "\0132\030.api.v0alpha.RecordProtoH\000R\006recordB\t\n" +
+      "\007request\"\210\001\n\014CFSExportReq\0229\n\006header\030\001 \001(" +
+      "\0132\037.api.v0alpha.CFSExportReqHeaderH\000R\006he" +
+      "ader\0222\n\006record\030\002 \001(\0132\030.api.v0alpha.Recor" +
+      "dProtoH\000R\006recordB\t\n\007request\"\312\001\n\rDeDupCri" +
+      "teria\0221\n\006action\030\003 \001(\0162\031.api.commons.DeDu" +
+      "pActionsR\006action\022/\n\006fields\030\002 \003(\0132\027.api.v" +
+      "0alpha.FieldIndexR\006fields\0220\n\006unless\030\004 \001(" +
+      "\0132\030.api.v0alpha.FilterCheckR\006unless\022#\n\rd" +
+      "isjunct_keys\030\005 \001(\010R\014disjunctKeys\"|\n\014Sort" +
+      "Criteria\0222\n\010ordering\030\001 \003(\0162\026.api.commons" +
+      ".SortOrderR\010ordering\0228\n\013field_order\030\002 \003(" +
+      "\0132\027.api.v0alpha.FieldIndexR\nfieldOrder\":" +
+      "\n\005Error\022\024\n\005error\030\001 \001(\tR\005error\022\033\n\traw_val" +
+      "ue\030\002 \001(\tR\010rawValue\"\253\001\n\016RecordFieldMap\022?\n" +
+      "\006fields\030\001 \003(\0132\'.api.v0alpha.RecordFieldM" +
+      "ap.FieldsEntryR\006fields\032X\n\013FieldsEntry\022\020\n" +
+      "\003key\030\001 \001(\tR\003key\0223\n\005value\030\002 \001(\0132\035.api.v0a" +
+      "lpha.RecordFieldProtoR\005value:\0028\001\"\203\001\n\010Cur" +
+      "rency\022\026\n\006symbol\030\001 \001(\tR\006symbol\022\033\n\traw_val" +
+      "ue\030\002 \001(\tR\010rawValue\022\024\n\005value\030\003 \001(\001R\005value" +
+      "\022\022\n\004name\030\004 \001(\tR\004name\022\030\n\007invalid\030\005 \001(\010R\007i" +
+      "nvalid\"_\n\005Phone\022\033\n\traw_value\030\003 \001(\tR\010rawV" +
+      "alue\022\037\n\013full_number\030\004 \001(\tR\nfullNumber\022\030\n" +
+      "\007invalid\030\005 \001(\010R\007invalid\"G\n\nPostalCode\022\037\n" +
+      "\013postal_code\030\001 \001(\tR\npostalCode\022\030\n\007invali" +
+      "d\030\002 \001(\010R\007invalid\"{\n\005Email\022\035\n\nlocal_part\030" +
+      "\001 \001(\tR\tlocalPart\022\026\n\006domain\030\002 \001(\tR\006domain" +
+      "\022!\n\014full_address\030\003 \001(\tR\013fullAddress\022\030\n\007i" +
+      "nvalid\030\004 \001(\010R\007invalid\"\270\001\n\020DateTimeModifi" +
+      "er\022\024\n\005years\030\001 \001(\005R\005years\022\024\n\005weeks\030\003 \001(\005R" +
+      "\005weeks\022\022\n\004days\030\004 \001(\005R\004days\022\024\n\005hours\030\005 \001(" +
+      "\005R\005hours\022\030\n\007minutes\030\006 \001(\005R\007minutes\022\030\n\007se" +
+      "conds\030\007 \001(\005R\007seconds\022\032\n\010duration\030\010 \001(\tR\010" +
+      "duration\"\242\002\n\025DateTimeFieldModifier\022\037\n\013ye" +
+      "ars_field\030\001 \001(\tR\nyearsField\022\037\n\013weeks_fie" +
+      "ld\030\003 \001(\tR\nweeksField\022\035\n\ndays_field\030\004 \001(\t" +
+      "R\tdaysField\022\037\n\013hours_field\030\005 \001(\tR\nhoursF" +
+      "ield\022#\n\rminutes_field\030\006 \001(\tR\014minutesFiel" +
+      "d\022#\n\rseconds_field\030\007 \001(\tR\014secondsField\022%" +
+      "\n\016duration_field\030\010 \001(\tR\rdurationField\022\026\n" +
+      "\006negate\030\t \001(\010R\006negate\"\270\001\n\010DateTime\022\033\n\tra" +
+      "w_value\030\001 \001(\tR\010rawValue\022\026\n\006format\030\002 \001(\tR" +
+      "\006format\022<\n\tprecision\030\003 \001(\0162\036.api.commons" +
+      ".DateTimePrecisionR\tprecision\0229\n\010modifie" +
+      "r\030\013 \001(\0132\035.api.v0alpha.DateTimeModifierR\010" +
+      "modifier\"\313\005\n\rEnrichedPhone\022\033\n\tarea_code\030" +
+      "\001 \001(\tR\010areaCode\022\031\n\010block_id\030\002 \001(\tR\007block" +
+      "Id\022\030\n\007carrier\030\003 \001(\tR\007carrier\022\016\n\002cc\030\004 \001(\t" +
+      "R\002cc\022\024\n\005ccnsn\030\005 \001(\tR\005ccnsn\022\037\n\013cell_prefi" +
+      "x\030\006 \001(\tR\ncellPrefix\022\022\n\004city\030\007 \001(\tR\004city\022" +
+      "\031\n\010coc_type\030\010 \001(\tR\007cocType\022\020\n\003dst\030\t \001(\010R" +
+      "\003dst\0221\n\024international_prefix\030\n \001(\tR\023inte" +
+      "rnationalPrefix\022\022\n\004iso2\030\013 \001(\tR\004iso2\022\032\n\010l" +
+      "anguage\030\014 \001(\tR\010language\022\020\n\003max\030\016 \001(\tR\003ma" +
+      "x\022\020\n\003min\030\017 \001(\tR\003min\022\'\n\017national_prefix\030\020" +
+      " \001(\tR\016nationalPrefix\022\020\n\003ndc\030\021 \001(\tR\003ndc\022\026" +
+      "\n\006prefix\030\022 \001(\tR\006prefix\022\037\n\013region_code\030\023 " +
+      "\001(\tR\nregionCode\022\037\n\013region_name\030\024 \001(\tR\nre" +
+      "gionName\022\022\n\004ssc1\030\025 \001(\tR\004ssc1\022\022\n\004ssc2\030\026 \001" +
+      "(\tR\004ssc2\022\022\n\004ssc3\030\027 \001(\tR\004ssc3\022\022\n\004ssc4\030\030 \001" +
+      "(\tR\004ssc4\022\026\n\006source\030\031 \001(\tR\006source\022\033\n\ttime" +
+      "_zone\030\032 \001(\tR\010timeZone\022\022\n\004type\030\033 \001(\tR\004typ" +
+      "e\022\031\n\010uses_ndc\030\034 \001(\010R\007usesNdc\022\020\n\003utc\030\035 \001(" +
+      "\002R\003utc\"\245\006\n\013EnrichedZip\022\032\n\010accuracy\030\001 \001(\005" +
+      "R\010accuracy\022\037\n\013admin_code1\030\002 \001(\tR\nadminCo" +
+      "de1\022\037\n\013admin_code2\030\003 \001(\tR\nadminCode2\022\037\n\013" +
+      "admin_code3\030\004 \001(\tR\nadminCode3\022\037\n\013admin_n" +
+      "ame1\030\005 \001(\tR\nadminName1\022\037\n\013admin_name2\030\006 " +
+      "\001(\tR\nadminName2\022\037\n\013admin_name3\030\007 \001(\tR\nad" +
+      "minName3\022\033\n\tarea_code\030\010 \001(\tR\010areaCode\022\033\n" +
+      "\tcity_name\030\t \001(\tR\010cityName\022\033\n\tcity_type\030" +
+      "\n \001(\tR\010cityType\022!\n\014country_code\030\013 \001(\tR\013c" +
+      "ountryCode\022\037\n\013county_fips\030\014 \001(\tR\ncountyF" +
+      "ips\022\037\n\013county_name\030\r \001(\tR\ncountyName\022\020\n\003" +
+      "dst\030\016 \001(\010R\003dst\022\022\n\004iso2\030\017 \001(\tR\004iso2\022\031\n\010ms" +
+      "a_code\030\021 \001(\tR\007msaCode\022\035\n\nplace_name\030\022 \001(" +
+      "\tR\tplaceName\022\037\n\013postal_code\030\023 \001(\tR\nposta" +
+      "lCode\022&\n\017postal_code_key\030\024 \001(\tR\rpostalCo" +
+      "deKey\022\037\n\013postal_type\030\025 \001(\tR\npostalType\022#" +
+      "\n\rprovince_abbr\030\026 \001(\tR\014provinceAbbr\022#\n\rp" +
+      "rovince_name\030\027 \001(\tR\014provinceName\022\026\n\006sour" +
+      "ce\030\030 \001(\tR\006source\022\035\n\nstate_fips\030\031 \001(\tR\tst" +
+      "ateFips\022\033\n\ttime_zone\030\032 \001(\tR\010timeZone\022\020\n\003" +
+      "utc\030\033 \001(\002R\003utc\"\005\n\003Now\"\357\001\n\tTimestamp\022\022\n\004y" +
+      "ear\030\003 \001(\005R\004year\022\024\n\005month\030\004 \001(\005R\005month\022\022\n" +
+      "\004week\030\005 \001(\005R\004week\022 \n\014day_of_month\030\006 \001(\005R" +
+      "\ndayOfMonth\022\036\n\013day_of_week\030\007 \001(\005R\tdayOfW" +
+      "eek\022\036\n\013day_of_year\030\010 \001(\005R\tdayOfYear\022\022\n\004h" +
+      "our\030\t \001(\005R\004hour\022\026\n\006minute\030\n \001(\005R\006minute\022" +
+      "\026\n\006second\030\013 \001(\005R\006second\"\246\001\n\004Date\022\022\n\004year" +
+      "\030\003 \001(\005R\004year\022\024\n\005month\030\004 \001(\005R\005month\022\022\n\004we" +
+      "ek\030\005 \001(\005R\004week\022 \n\014day_of_month\030\006 \001(\005R\nda" +
+      "yOfMonth\022\036\n\013day_of_week\030\007 \001(\005R\tdayOfWeek" +
+      "\022\036\n\013day_of_year\030\010 \001(\005R\tdayOfYear\"\231\001\n\013Mon" +
+      "thAndDay\022\024\n\005month\030\003 \001(\005R\005month\022\022\n\004week\030\004" +
+      " \001(\005R\004week\022 \n\014day_of_month\030\005 \001(\005R\ndayOfM" +
+      "onth\022\036\n\013day_of_week\030\006 \001(\005R\tdayOfWeek\022\036\n\013" +
+      "day_of_year\030\007 \001(\005R\tdayOfYear\"+\n\tDayOfWee" +
+      "k\022\036\n\013day_of_week\030\003 \001(\005R\tdayOfWeek\"O\n\tTim" +
+      "eOfDay\022\022\n\004hour\030\003 \001(\005R\004hour\022\026\n\006minute\030\004 \001" +
+      "(\005R\006minute\022\026\n\006second\030\005 \001(\005R\006second\"\226\002\n\020F" +
+      "ileFormatParams\0221\n\023skip_first_no_lines\030\n" +
+      " \001(\005B\002\030\001R\020skipFirstNoLines\0227\n\026skip_lines" +
+      "_match_regex\030\013 \001(\tB\002\030\001R\023skipLinesMatchRe" +
+      "gex\022\037\n\013trim_spaces\030\014 \001(\010R\ntrimSpaces\022)\n\020" +
+      "custom_delimiter\030\r \001(\tR\017customDelimiter\022" +
+      "&\n\017skip_first_line\030\016 \001(\010R\rskipFirstLine\022" +
+      "\"\n\rjson_dot_path\030\017 \001(\tR\013jsonDotPath\"F\n\016R" +
+      "eshapeProcess\0224\n\007actions\030\001 \003(\0132\032.api.v0a" +
+      "lpha.ReshapeActionR\007actions\"\272\037\n\rReshapeA" +
+      "ction\022\024\n\005field\030\023 \001(\tR\005field\022@\n\rmatching_" +
+      "type\030\024 \001(\0162\027.api.commons.RecordTypeB\002\030\001R" +
+      "\014matchingType\022:\n\tpredicate\0302 \001(\0132\030.api.v" +
+      "0alpha.FilterCheckB\002\030\001R\tpredicate\022<\n\nope" +
+      "rations\0307 \001(\0132\034.api.v0alpha.FilterOperat" +
+      "ionR\noperations\022;\n\006rename\030\026 \001(\0132!.api.v0" +
+      "alpha.ReshapeAction.RenameH\000R\006rename\022B\n\t" +
+      "add_value\030\027 \001(\0132#.api.v0alpha.ReshapeAct" +
+      "ion.AddValueH\000R\010addValue\022B\n\tadd_field\030\030 " +
+      "\001(\0132#.api.v0alpha.ReshapeAction.AddField" +
+      "H\000R\010addField\022?\n\010add_date\030/ \001(\0132\".api.v0a" +
+      "lpha.ReshapeAction.AddDateH\000R\007addDate\022Q\n" +
+      "\016subtract_value\030\031 \001(\0132(.api.v0alpha.Resh" +
+      "apeAction.SubtractValueH\000R\rsubtractValue" +
+      "\022Q\n\016subtract_field\030\032 \001(\0132(.api.v0alpha.R" +
+      "eshapeAction.SubtractFieldH\000R\rsubtractFi" +
+      "eld\022>\n\007convert\030\034 \001(\0132\".api.v0alpha.Resha" +
+      "peAction.ConvertH\000R\007convert\022K\n\014remove_fi" +
+      "eld\030\035 \001(\0132&.api.v0alpha.ReshapeAction.Re" +
+      "moveFieldH\000R\013removeField\022L\n\radd_new_fiel" +
+      "d\030\036 \001(\0132&.api.v0alpha.ReshapeAction.AddN" +
+      "ewFieldH\000R\013addNewField\022a\n\024change_currenc" +
+      "y_type\030\037 \001(\0132-.api.v0alpha.ReshapeAction" +
+      ".ChangeCurrencyTypeH\000R\022changeCurrencyTyp" +
+      "e\022;\n\006divide\030  \001(\0132!.api.v0alpha.ReshapeA" +
+      "ction.DivideH\000R\006divide\022A\n\010multiply\030! \001(\013" +
+      "2#.api.v0alpha.ReshapeAction.MultiplyH\000R" +
+      "\010multiply\022;\n\006modulo\030\" \001(\0132!.api.v0alpha." +
+      "ReshapeAction.ModuloH\000R\006modulo\0228\n\005merge\030" +
+      "( \001(\0132 .api.v0alpha.ReshapeAction.MergeH" +
+      "\000R\005merge\022R\n\017set_field_value\030) \001(\0132(.api." +
+      "v0alpha.ReshapeAction.SetFieldValueH\000R\rs" +
+      "etFieldValue\022i\n\030add_new_field_from_field" +
+      "\030- \001(\0132/.api.v0alpha.ReshapeAction.AddNe" +
+      "wFieldFromFieldH\000R\024addNewFieldFromField\022" +
+      "_\n\024set_field_from_field\030. \001(\0132,.api.v0al" +
+      "pha.ReshapeAction.SetFieldFromFieldH\000R\021s" +
+      "etFieldFromField\0222\n\003pad\0304 \001(\0132\036.api.v0al" +
+      "pha.ReshapeAction.PadH\000R\003pad\0225\n\004trim\0305 \001" +
+      "(\0132\037.api.v0alpha.ReshapeAction.TrimH\000R\004t",
+      "rim\022>\n\007extract\0306 \001(\0132\".api.v0alpha.Resha" +
+      "peAction.ExtractH\000R\007extract\032#\n\006Rename\022\031\n" +
+      "\010new_name\030\n \001(\tR\007newName\032 \n\010AddValue\022\024\n\005" +
+      "value\030\013 \001(\001R\005value\032\240\001\n\007AddDate\0229\n\010dateti" +
+      "me\030- \001(\0132\035.api.v0alpha.DateTimeModifierR" +
+      "\010datetime\022Z\n\027datetime_field_modifier\030. \001" +
+      "(\0132\".api.v0alpha.DateTimeFieldModifierR\025" +
+      "datetimeFieldModifier\032D\n\010AddField\0228\n\013oth" +
       "er_field\030\014 \001(\0132\027.api.v0alpha.FieldIndexR" +
-      "\notherField\032\246\001\n\005Merge\022?\n\004data\030, \003(\0132+.ap" +
-      "i.v0alpha.ReshapeAction.Merge.FieldOrVal" +
-      "R\004data\032\\\n\nFieldOrVal\022/\n\005field\030& \001(\0132\027.ap" +
-      "i.v0alpha.FieldIndexH\000R\005field\022\026\n\005value\030+" +
-      " \001(\tH\000R\005valueB\005\n\003val\032I\n\003Pad\022\022\n\004char\030\n \001(" +
-      "\tR\004char\022\026\n\006amount\030\014 \001(\005R\006amount\022\026\n\006prefi" +
-      "x\030\r \001(\010R\006prefix\032o\n\004Trim\022\030\n\006amount\030\001 \001(\005H" +
-      "\000R\006amount\022\024\n\004data\030\002 \001(\tH\000R\004data\022\030\n\006marke" +
-      "r\030\003 \001(\tH\000R\006marker\022\026\n\006suffix\030\n \001(\010R\006suffi" +
-      "xB\005\n\003opt\032\203\003\n\007Extract\022>\n\005parts\030\' \003(\0132(.ap" +
-      "i.v0alpha.ReshapeAction.Extract.SliceR\005p" +
-      "arts\032D\n\005Index\022\034\n\010position\030\014 \001(\005H\000R\010posit" +
-      "ion\022\026\n\005match\030+ \001(\tH\000R\005matchB\005\n\003val\032\361\001\n\005S" +
-      "lice\022,\n\022start_is_exclusive\030\r \001(\010R\020startI" +
-      "sExclusive\022(\n\020end_is_inclusive\030\016 \001(\010R\016en" +
-      "dIsInclusive\022I\n\013start_index\030# \003(\0132(.api." +
-      "v0alpha.ReshapeAction.Extract.IndexR\nsta" +
-      "rtIndex\022E\n\tend_index\030$ \003(\0132(.api.v0alpha" +
-      ".ReshapeAction.Extract.IndexR\010endIndexB\010" +
-      "\n\006action\"\326\005\n\022ContactManagerSink\022\035\n\nproje" +
-      "ct_id\030\002 \001(\tR\tprojectId\022*\n\021contact_list_n" +
-      "ame\030\003 \001(\tR\017contactListName\0228\n\030contact_li" +
-      "st_description\030\004 \001(\tR\026contactListDescrip" +
-      "tion\022\026\n\006fields\030\010 \003(\tR\006fields\022\024\n\003ttl\030\007 \001(" +
-      "\003B\002\030\001R\003ttl\0225\n\010lifetime\030\t \001(\0132\031.google.pr" +
-      "otobuf.DurationR\010lifetime\022\033\n\007user_id\030\n \001" +
-      "(\tB\002\030\001R\006userId\022]\n\023de_duplication_info\030\013 " +
-      "\001(\0132-.api.v0alpha.ContactManagerSink.DeD" +
-      "uplicationR\021deDuplicationInfo\032\311\001\n\rDeDupl" +
-      "ication\022U\n\nfield_type\030\001 \001(\01626.api.v0alph" +
-      "a.ContactManagerSink.DeDuplicationFieldT" +
-      "ypeR\tfieldType\022a\n\016merge_strategy\030\002 \001(\0162:" +
-      ".api.v0alpha.ContactManagerSink.DeDuplic" +
-      "ationMergeStrategyR\rmergeStrategy\"=\n\026DeD" +
-      "uplicationFieldType\022\020\n\014PHONE_NUMBER\020\000\022\021\n" +
-      "\rEMAIL_ADDRESS\020\001\"O\n\032DeDuplicationMergeSt" +
-      "rategy\022\026\n\022KEEP_EXISTING_LIST\020\000\022\031\n\025REPLAC" +
-      "E_EXISTING_LIST\020\001\"\244\001\n\nSumProcess\022\024\n\005fiel" +
-      "d\030\001 \001(\tR\005field\022\031\n\010new_name\030\002 \001(\tR\007newNam" +
-      "e\022/\n\010group_by\030\003 \001(\0132\024.api.v0alpha.GroupB" +
-      "yR\007groupBy\0224\n\006filter\030\004 \001(\0132\034.api.v0alpha" +
-      ".FilterOperationR\006filter\"!\n\007GroupBy\022\026\n\006f" +
-      "ields\030\001 \003(\tR\006fields\"\314\005\n\013ListMetrics\022,\n\022i" +
-      "nput_record_count\030\001 \001(\005R\020inputRecordCoun" +
-      "t\022.\n\023output_record_count\030\002 \001(\005R\021outputRe" +
-      "cordCount\022\037\n\013field_names\030\003 \003(\tR\nfieldNam" +
-      "es\022<\n\013field_types\030\004 \003(\0162\027.api.commons.Re" +
-      "cordTypeB\002\030\001R\nfieldTypes\022.\n\006ftypes\030\022 \003(\016" +
-      "2\026.api.commons.FieldTypeR\006ftypes\022!\n\014fiel" +
-      "d_counts\030\005 \003(\005R\013fieldCounts\022/\n\010run_type\030" +
-      "\006 \001(\0162\024.api.commons.RunTypeR\007runType\022\'\n\017" +
-      "success_message\030\007 \001(\tR\016successMessage\022(\n" +
-      "\020max_record_width\030\010 \001(\005R\016maxRecordWidth\022" +
-      "(\n\020min_record_width\030\t \001(\005R\016minRecordWidt" +
-      "h\022(\n\020max_record_index\030\n \001(\005R\016maxRecordIn" +
-      "dex\022(\n\020min_record_index\030\013 \001(\005R\016minRecord" +
-      "Index\022\024\n\005files\030\014 \003(\tR\005files\022\026\n\006groups\030\r " +
-      "\003(\tR\006groups\022%\n\016missing_fields\030\017 \003(\tR\rmis" +
-      "singFields\022(\n\020seconds_to_start\030\020 \001(\001R\016se" +
-      "condsToStart\022,\n\022seconds_to_process\030\021 \001(\001" +
-      "R\020secondsToProcess\"h\n\010ParseReq\022\035\n\nelemen" +
-      "t_id\030\003 \001(\tR\telementId\022\035\n\nsession_id\030\004 \001(" +
-      "\tR\tsessionId\022\036\n\nexpression\030\005 \001(\tR\nexpres" +
-      "sion\"\314\001\n\010ParseRes\022\035\n\nsession_id\030\001 \001(\tR\ts" +
-      "essionId\022\036\n\nexpression\030\002 \001(\tR\nexpression" +
-      "\022\037\n\013next_tokens\030\003 \003(\tR\nnextTokens\022\024\n\005err" +
-      "or\030\005 \001(\tR\005error\022\032\n\010complete\030\006 \001(\010R\010compl" +
-      "ete\022.\n\007process\030\007 \001(\0132\024.api.v0alpha.Proce" +
-      "ssR\007process\"\266\004\n\005Event\022\031\n\010event_id\030\003 \001(\003R" +
-      "\007eventId\0229\n\tparent_id\030\005 \001(\0132\034.google.pro" +
-      "tobuf.StringValueR\010parentId\0228\n\tinput_ids" +
-      "\030\006 \001(\0132\033.api.commons.StringArraySqlR\010inp" +
-      "utIds\022\035\n\nelement_id\030\007 \001(\tR\telementId\022.\n\007" +
-      "process\030\t \001(\0132\024.api.v0alpha.ProcessR\007pro" +
-      "cess\0227\n\tupload_ts\030\n \001(\0132\032.google.protobu" +
-      "f.TimestampR\010uploadTs\0229\n\nstarted_ts\030\013 \001(" +
-      "\0132\032.google.protobuf.TimestampR\tstartedTs" +
-      "\022;\n\013finished_ts\030\014 \001(\0132\032.google.protobuf." +
-      "TimestampR\nfinishedTs\022=\n\014backoff_till\030\r " +
-      "\001(\0132\032.google.protobuf.TimestampR\013backoff" +
-      "Till\022\032\n\010attempts\030\016 \001(\005R\010attempts\022B\n\016late" +
-      "st_history\030\017 \001(\0132\033.google.protobuf.Int64" +
-      "ValueR\rlatestHistory\"4\n\006Events\022*\n\006events" +
-      "\030\001 \003(\0132\022.api.v0alpha.EventR\006events\"\333\001\n\014V" +
-      "iewQueueReq\0229\n\nnewer_than\030\001 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tnewerThan\022>\n\rno_new" +
-      "er_than\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\013noNewerThan\022$\n\016after_event_id\030\003 \001(\003R\014" +
-      "afterEventId\022*\n\021number_of_records\030\004 \001(\003R" +
-      "\017numberOfRecords\"\236\002\n\023RetypeCollectionReq" +
-      "\022#\n\rcollection_id\030\003 \001(\tR\014collectionId\022\037\n" +
-      "\013primary_key\030\004 \003(\tR\nprimaryKey\022Q\n\013field_" +
-      "types\030\005 \003(\01320.api.v0alpha.RetypeCollecti" +
-      "onReq.FieldTypesEntryR\nfieldTypes\022\027\n\007as_" +
-      "copy\030\006 \001(\010R\006asCopy\032U\n\017FieldTypesEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022,\n\005value\030\002 \001(\0162\026.api.com" +
-      "mons.FieldTypeR\005value:\0028\001\"\200\002\n\023RetypeColl" +
-      "ectionRes\022#\n\rcollection_id\030\001 \001(\tR\014collec" +
-      "tionId\022%\n\016inserted_count\030\002 \001(\005R\rinserted" +
-      "Count\022#\n\rupdated_count\030\003 \001(\005R\014updatedCou" +
-      "nt\022%\n\016rejected_count\030\004 \001(\005R\rrejectedCoun" +
-      "t\022#\n\rignored_count\030\005 \001(\005R\014ignoredCount\022," +
-      "\n\022rejected_entry_ids\030\006 \003(\tR\020rejectedEntr" +
-      "yIds\"\331\004\n\022CollectionMetadata\022#\n\rcollectio" +
-      "n_id\030\003 \001(\tR\014collectionId\022\'\n\017collection_n" +
-      "ame\030\004 \001(\tR\016collectionName\022<\n\006fields\030\005 \003(" +
-      "\0132$.api.v0alpha.CollectionFieldMetadataR" +
-      "\006fields\022\030\n\007deleted\030\006 \001(\010R\007deleted\022\035\n\ncre" +
-      "ated_by\030\007 \001(\tR\tcreatedBy\0229\n\ncreated_on\030\010" +
-      " \001(\0132\032.google.protobuf.TimestampR\tcreate" +
-      "dOn\022=\n\014last_queried\030\t \001(\0132\032.google.proto" +
-      "buf.TimestampR\013lastQueried\022\037\n\013query_coun" +
-      "t\030\n \001(\003R\nqueryCount\022\037\n\013entry_count\030\013 \001(\003" +
-      "R\nentryCount\022=\n\014last_updated\030\014 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\013lastUpdated\022!\n\014s" +
-      "earch_count\030\r \001(\003R\013searchCount\022?\n\rlast_s" +
-      "earched\030\016 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\014lastSearched\022\037\n\013primary_key\030\017 \003(\tR\npr" +
-      "imaryKey\"\306\001\n\017CollectionEntry\022#\n\rcollecti" +
-      "on_id\030\003 \001(\tR\014collectionId\022\031\n\010entry_id\030\004 " +
-      "\001(\tR\007entryId\0224\n\006fields\030\005 \003(\0132\034.api.v0alp" +
-      "ha.CollectionFieldR\006fields\022=\n\014last_updat" +
-      "ed\030\006 \001(\0132\032.google.protobuf.TimestampR\013la" +
-      "stUpdated\"\204\001\n\010MatchReq\022#\n\rcollection_id\030" +
-      "\003 \001(\tR\014collectionId\0224\n\006fields\030\004 \003(\0132\034.ap" +
-      "i.v0alpha.CollectionFieldR\006fields\022\035\n\nbat" +
-      "ch_size\030\005 \001(\003R\tbatchSize\"B\n\010MatchRes\0226\n\007" +
-      "entries\030\001 \003(\0132\034.api.v0alpha.CollectionEn" +
-      "tryR\007entries\"\222\001\n\027CollectionFieldMetadata" +
-      "\022\035\n\nfield_name\030\001 \001(\tR\tfieldName\0225\n\nfield" +
-      "_type\030\002 \001(\0162\026.api.commons.FieldTypeR\tfie" +
-      "ldType\022!\n\014field_format\030\003 \001(\tR\013fieldForma" +
-      "t\"Q\n\017CollectionField\022\035\n\nfield_name\030\001 \001(\t" +
-      "R\tfieldName\022\037\n\013field_value\030\002 \001(\tR\nfieldV" +
-      "alue\"7\n\020GetCollectionReq\022#\n\rcollection_i" +
-      "d\030\003 \001(\tR\014collectionId\":\n\023StreamCollectio" +
-      "nReq\022#\n\rcollection_id\030\003 \001(\tR\014collectionI" +
-      "d\":\n\023DeleteCollectionReq\022#\n\rcollection_i" +
-      "d\030\003 \001(\tR\014collectionId\"9\n\022ResetCollection" +
+      "\notherField\032%\n\rSubtractValue\022\024\n\005value\030\013 " +
+      "\001(\001R\005value\032I\n\rSubtractField\0228\n\013other_fie" +
+      "ld\030\014 \001(\0132\027.api.v0alpha.FieldIndexR\nother" +
+      "Field\032\265\001\n\007Convert\0225\n\007newType\030\021 \001(\0162\027.api" +
+      ".commons.RecordTypeB\002\030\001R\007newType\022/\n\tnew_" +
+      "field\030\022 \001(\0132\022.api.v0alpha.FieldR\010newFiel" +
+      "d\022B\n\rdefault_value\030\023 \001(\0132\035.api.v0alpha.R" +
+      "ecordFieldProtoR\014defaultValue\032S\n\006Divide\022" +
+      "\'\n\rdefault_value\030\001 \001(\001B\002\030\001R\014defaultValue" +
+      "\022\034\n\007divisor\030\002 \001(\001B\002\030\001R\007divisor:\002\030\001\032#\n\013Di" +
+      "videValue\022\024\n\005value\030\001 \001(\001R\005value\032G\n\013Divid" +
+      "eField\0228\n\013other_field\030\014 \001(\0132\027.api.v0alph" +
+      "a.FieldIndexR\notherField\032[\n\010Multiply\022\'\n\r" +
+      "default_value\030\001 \001(\001B\002\030\001R\014defaultValue\022\"\n" +
+      "\nmultiplier\030\002 \001(\001B\002\030\001R\nmultiplier:\002\030\001\032%\n" +
+      "\rMultiplyValue\022\024\n\005value\030\001 \001(\001R\005value\032I\n\r" +
+      "MultiplyField\0228\n\013other_field\030\014 \001(\0132\027.api" +
+      ".v0alpha.FieldIndexR\notherField\032S\n\006Modul" +
+      "o\022\'\n\rdefault_value\030\001 \001(\005B\002\030\001R\014defaultVal" +
+      "ue\022\034\n\007modulus\030\002 \001(\005B\002\030\001R\007modulus:\002\030\001\032#\n\013" +
+      "ModuloValue\022\024\n\005value\030\001 \001(\001R\005value\032G\n\013Mod" +
+      "uloField\0228\n\013other_field\030\014 \001(\0132\027.api.v0al" +
+      "pha.FieldIndexR\notherField\032\r\n\013RemoveFiel" +
+      "d\032S\n\013AddNewField\022D\n\016starting_value\030\022 \001(\013" +
+      "2\035.api.v0alpha.RecordFieldProtoR\rstartin" +
+      "gValue\032d\n\024AddNewFieldFromField\022\022\n\004name\030\n" +
+      " \001(\tR\004name\0228\n\013other_field\030\014 \001(\0132\027.api.v0" +
+      "alpha.FieldIndexR\notherField\032\024\n\022ChangeCu" +
+      "rrencyType\032D\n\rSetFieldValue\0223\n\005value\030\022 \001" +
+      "(\0132\035.api.v0alpha.RecordFieldProtoR\005value" +
+      "\032a\n\021SetFieldFromField\022\022\n\004name\030\n \001(\tR\004nam" +
+      "e\0228\n\013other_field\030\014 \001(\0132\027.api.v0alpha.Fie" +
+      "ldIndexR\notherField\032\246\001\n\005Merge\022?\n\004data\030, " +
+      "\003(\0132+.api.v0alpha.ReshapeAction.Merge.Fi" +
+      "eldOrValR\004data\032\\\n\nFieldOrVal\022/\n\005field\030& " +
+      "\001(\0132\027.api.v0alpha.FieldIndexH\000R\005field\022\026\n" +
+      "\005value\030+ \001(\tH\000R\005valueB\005\n\003val\032I\n\003Pad\022\022\n\004c" +
+      "har\030\n \001(\tR\004char\022\026\n\006amount\030\014 \001(\005R\006amount\022" +
+      "\026\n\006prefix\030\r \001(\010R\006prefix\032o\n\004Trim\022\030\n\006amoun" +
+      "t\030\001 \001(\005H\000R\006amount\022\024\n\004data\030\002 \001(\tH\000R\004data\022" +
+      "\030\n\006marker\030\003 \001(\tH\000R\006marker\022\026\n\006suffix\030\n \001(" +
+      "\010R\006suffixB\005\n\003opt\032\203\003\n\007Extract\022>\n\005parts\030\' " +
+      "\003(\0132(.api.v0alpha.ReshapeAction.Extract." +
+      "SliceR\005parts\032D\n\005Index\022\034\n\010position\030\014 \001(\005H" +
+      "\000R\010position\022\026\n\005match\030+ \001(\tH\000R\005matchB\005\n\003v" +
+      "al\032\361\001\n\005Slice\022,\n\022start_is_exclusive\030\r \001(\010" +
+      "R\020startIsExclusive\022(\n\020end_is_inclusive\030\016" +
+      " \001(\010R\016endIsInclusive\022I\n\013start_index\030# \003(" +
+      "\0132(.api.v0alpha.ReshapeAction.Extract.In" +
+      "dexR\nstartIndex\022E\n\tend_index\030$ \003(\0132(.api" +
+      ".v0alpha.ReshapeAction.Extract.IndexR\010en" +
+      "dIndexB\010\n\006action\"\371\005\n\022ContactManagerSink\022" +
+      "\035\n\nproject_id\030\002 \001(\tR\tprojectId\022*\n\021contac" +
+      "t_list_name\030\003 \001(\tR\017contactListName\0228\n\030co" +
+      "ntact_list_description\030\004 \001(\tR\026contactLis" +
+      "tDescription\022\026\n\006fields\030\010 \003(\tR\006fields\022\024\n\003" +
+      "ttl\030\007 \001(\003B\002\030\001R\003ttl\0225\n\010lifetime\030\t \001(\0132\031.g" +
+      "oogle.protobuf.DurationR\010lifetime\022\033\n\007use" +
+      "r_id\030\n \001(\tB\002\030\001R\006userId\022]\n\023de_duplication" +
+      "_info\030\013 \001(\0132-.api.v0alpha.ContactManager" +
+      "Sink.DeDuplicationR\021deDuplicationInfo\022!\n" +
+      "\014country_code\030\014 \001(\tR\013countryCode\032\311\001\n\rDeD" +
+      "uplication\022U\n\nfield_type\030\001 \001(\01626.api.v0a" +
+      "lpha.ContactManagerSink.DeDuplicationFie" +
+      "ldTypeR\tfieldType\022a\n\016merge_strategy\030\002 \001(" +
+      "\0162:.api.v0alpha.ContactManagerSink.DeDup" +
+      "licationMergeStrategyR\rmergeStrategy\"=\n\026" +
+      "DeDuplicationFieldType\022\020\n\014PHONE_NUMBER\020\000" +
+      "\022\021\n\rEMAIL_ADDRESS\020\001\"O\n\032DeDuplicationMerg" +
+      "eStrategy\022\026\n\022KEEP_EXISTING_LIST\020\000\022\031\n\025REP" +
+      "LACE_EXISTING_LIST\020\001\"\244\001\n\nSumProcess\022\024\n\005f" +
+      "ield\030\001 \001(\tR\005field\022\031\n\010new_name\030\002 \001(\tR\007new" +
+      "Name\022/\n\010group_by\030\003 \001(\0132\024.api.v0alpha.Gro" +
+      "upByR\007groupBy\0224\n\006filter\030\004 \001(\0132\034.api.v0al" +
+      "pha.FilterOperationR\006filter\"!\n\007GroupBy\022\026" +
+      "\n\006fields\030\001 \003(\tR\006fields\"\314\005\n\013ListMetrics\022," +
+      "\n\022input_record_count\030\001 \001(\005R\020inputRecordC" +
+      "ount\022.\n\023output_record_count\030\002 \001(\005R\021outpu" +
+      "tRecordCount\022\037\n\013field_names\030\003 \003(\tR\nfield" +
+      "Names\022<\n\013field_types\030\004 \003(\0162\027.api.commons" +
+      ".RecordTypeB\002\030\001R\nfieldTypes\022.\n\006ftypes\030\022 " +
+      "\003(\0162\026.api.commons.FieldTypeR\006ftypes\022!\n\014f" +
+      "ield_counts\030\005 \003(\005R\013fieldCounts\022/\n\010run_ty" +
+      "pe\030\006 \001(\0162\024.api.commons.RunTypeR\007runType\022" +
+      "\'\n\017success_message\030\007 \001(\tR\016successMessage" +
+      "\022(\n\020max_record_width\030\010 \001(\005R\016maxRecordWid" +
+      "th\022(\n\020min_record_width\030\t \001(\005R\016minRecordW" +
+      "idth\022(\n\020max_record_index\030\n \001(\005R\016maxRecor" +
+      "dIndex\022(\n\020min_record_index\030\013 \001(\005R\016minRec" +
+      "ordIndex\022\024\n\005files\030\014 \003(\tR\005files\022\026\n\006groups" +
+      "\030\r \003(\tR\006groups\022%\n\016missing_fields\030\017 \003(\tR\r" +
+      "missingFields\022(\n\020seconds_to_start\030\020 \001(\001R" +
+      "\016secondsToStart\022,\n\022seconds_to_process\030\021 " +
+      "\001(\001R\020secondsToProcess\"h\n\010ParseReq\022\035\n\nele" +
+      "ment_id\030\003 \001(\tR\telementId\022\035\n\nsession_id\030\004" +
+      " \001(\tR\tsessionId\022\036\n\nexpression\030\005 \001(\tR\nexp" +
+      "ression\"\314\001\n\010ParseRes\022\035\n\nsession_id\030\001 \001(\t" +
+      "R\tsessionId\022\036\n\nexpression\030\002 \001(\tR\nexpress" +
+      "ion\022\037\n\013next_tokens\030\003 \003(\tR\nnextTokens\022\024\n\005" +
+      "error\030\005 \001(\tR\005error\022\032\n\010complete\030\006 \001(\010R\010co" +
+      "mplete\022.\n\007process\030\007 \001(\0132\024.api.v0alpha.Pr" +
+      "ocessR\007process\"\266\004\n\005Event\022\031\n\010event_id\030\003 \001" +
+      "(\003R\007eventId\0229\n\tparent_id\030\005 \001(\0132\034.google." +
+      "protobuf.StringValueR\010parentId\0228\n\tinput_" +
+      "ids\030\006 \001(\0132\033.api.commons.StringArraySqlR\010" +
+      "inputIds\022\035\n\nelement_id\030\007 \001(\tR\telementId\022" +
+      ".\n\007process\030\t \001(\0132\024.api.v0alpha.ProcessR\007" +
+      "process\0227\n\tupload_ts\030\n \001(\0132\032.google.prot" +
+      "obuf.TimestampR\010uploadTs\0229\n\nstarted_ts\030\013" +
+      " \001(\0132\032.google.protobuf.TimestampR\tstarte" +
+      "dTs\022;\n\013finished_ts\030\014 \001(\0132\032.google.protob" +
+      "uf.TimestampR\nfinishedTs\022=\n\014backoff_till" +
+      "\030\r \001(\0132\032.google.protobuf.TimestampR\013back" +
+      "offTill\022\032\n\010attempts\030\016 \001(\005R\010attempts\022B\n\016l" +
+      "atest_history\030\017 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\rlatestHistory\"4\n\006Events\022*\n\006eve" +
+      "nts\030\001 \003(\0132\022.api.v0alpha.EventR\006events\"\333\001" +
+      "\n\014ViewQueueReq\0229\n\nnewer_than\030\001 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tnewerThan\022>\n\rno_" +
+      "newer_than\030\002 \001(\0132\032.google.protobuf.Times" +
+      "tampR\013noNewerThan\022$\n\016after_event_id\030\003 \001(" +
+      "\003R\014afterEventId\022*\n\021number_of_records\030\004 \001" +
+      "(\003R\017numberOfRecords\"\236\002\n\023RetypeCollection" +
       "Req\022#\n\rcollection_id\030\003 \001(\tR\014collectionId" +
-      "\"\024\n\022ListCollectionsReq\"W\n\022ListCollection" +
-      "sRes\022A\n\013collections\030\001 \003(\0132\037.api.v0alpha." +
-      "CollectionMetadataR\013collections\"\275\001\n\035Sear" +
-      "chCollectionsPaginatedReq\022%\n\016collection_" +
-      "ids\030\003 \003(\tR\rcollectionIds\022+\n\006search\030\004 \001(\013" +
-      "2\023.api.v0alpha.SearchR\006search\022\022\n\004from\030\005 " +
-      "\001(\003R\004from\022\033\n\tpage_size\030\006 \001(\003R\010pageSize\022\027" +
-      "\n\007last_id\030\007 \001(\tR\006lastId\"\265\001\n\006Search\022\022\n\004te" +
-      "rm\030\001 \001(\tR\004term\022 \n\tfuzziness\030\002 \001(\003B\002\030\001R\tf" +
-      "uzziness\022\034\n\tsubstring\030\003 \001(\010R\tsubstring\022\026" +
-      "\n\006negate\030\004 \001(\010R\006negate\022)\n\016case_sensitive" +
-      "\030\005 \001(\010B\002\030\001R\rcaseSensitive\022\024\n\005value\030\006 \001(\t" +
-      "R\005value\"\236\001\n\022PaginatedSearchRes\0226\n\007entrie" +
-      "s\030\001 \003(\0132\034.api.v0alpha.CollectionEntryR\007e" +
-      "ntries\022\024\n\005total\030\002 \001(\003R\005total\022!\n\014more_res" +
-      "ults\030\003 \001(\010R\013moreResults\022\027\n\007last_id\030\004 \001(\t" +
-      "R\006lastId\"\227\001\n\027GetCollectionEntriesReq\022#\n\r" +
-      "collection_id\030\003 \001(\tR\014collectionId\022\022\n\004fro" +
-      "m\030\004 \001(\003R\004from\022\033\n\tpage_size\030\005 \001(\003R\010pageSi" +
-      "ze\022&\n\017search_after_id\030\006 \001(\tR\rsearchAfter" +
-      "Id\"\216\001\n\027GetCollectionEntriesRes\022;\n\010metada" +
-      "ta\030\001 \001(\0132\037.api.v0alpha.CollectionMetadat" +
-      "aR\010metadata\0226\n\007entries\030\002 \003(\0132\034.api.v0alp" +
-      "ha.CollectionEntryR\007entries\"Z\n\030DeleteCol" +
-      "lectionEntryReq\022#\n\rcollection_id\030\003 \001(\tR\014" +
-      "collectionId\022\031\n\010entry_id\030\004 \001(\tR\007entryId\"" +
-      "?\n\024ListCampaignLinksRes\022\'\n\005Links\030\001 \003(\0132\021" +
-      ".api.v0alpha.LinkR\005Links\"k\n\004Link\022-\n\023xml_" +
-      "client_prop_sid\030\001 \001(\003R\020xmlClientPropSid\022" +
-      "\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\t" +
-      "R\013description\"\357\001\n\016CjsSearchField\022-\n\023cjs_" +
-      "search_field_id\030\001 \001(\tR\020cjsSearchFieldId\022" +
-      "7\n\030cjs_search_definition_id\030\002 \001(\tR\025cjsSe" +
-      "archDefinitionId\022\035\n\nfield_name\030\003 \001(\tR\tfi" +
-      "eldName\0225\n\nfield_type\030\004 \001(\0162\026.api.common" +
-      "s.FieldTypeR\tfieldType\022\037\n\013field_value\030\005 " +
-      "\001(\tR\nfieldValue\"\201\003\n\033CjsSearchDefinitionM" +
-      "etadata\0227\n\030cjs_search_definition_id\030\001 \001(" +
-      "\tR\025cjsSearchDefinitionId\022\022\n\004name\030\004 \001(\tR\004" +
-      "name\022 \n\013description\030\005 \001(\tR\013description\022\030" +
-      "\n\007deleted\030\006 \001(\010R\007deleted\022\035\n\nexec_count\030\007" +
-      " \001(\003R\texecCount\022!\n\014exec_success\030\010 \001(\003R\013e" +
-      "xecSuccess\022\033\n\texec_fail\030\t \001(\003R\010execFail\022" +
-      "=\n\014created_date\030\n \001(\0132\032.google.protobuf." +
-      "TimestampR\013createdDate\022;\n\013last_edited\030\013 " +
-      "\001(\0132\032.google.protobuf.TimestampR\nlastEdi" +
-      "ted\"\233\003\n\023CjsSearchDefinition\022D\n\010metadata\030" +
-      "\001 \001(\0132(.api.v0alpha.CjsSearchDefinitionM" +
-      "etadataR\010metadata\022@\n\rsearch_fields\030\002 \003(\013" +
-      "2\033.api.v0alpha.CjsSearchFieldR\014searchFie" +
-      "lds\022W\n\031whitelisted_return_fields\030\003 \003(\0132\033" +
-      ".api.v0alpha.CjsSearchFieldR\027whitelisted" +
-      "ReturnFields\022W\n\031blacklisted_return_field" +
-      "s\030\004 \003(\0132\033.api.v0alpha.CjsSearchFieldR\027bl" +
-      "acklistedReturnFields\022J\n\022unique_identifi" +
-      "ers\030\005 \003(\0132\033.api.v0alpha.CjsSearchFieldR\021" +
-      "uniqueIdentifiers\"T\n\031GetCjsSearchDefinit" +
-      "ionReq\0227\n\030cjs_search_definition_id\030\001 \001(\t" +
-      "R\025cjsSearchDefinitionId\"W\n\034DeleteCjsSear" +
-      "chDefinitionReq\0227\n\030cjs_search_definition" +
-      "_id\030\001 \001(\tR\025cjsSearchDefinitionId\"\035\n\033List" +
-      "CjsSearchDefinitionsReq\"i\n\033ListCjsSearch" +
-      "DefinitionsRes\022J\n\013definitions\030\001 \003(\0132(.ap" +
-      "i.v0alpha.CjsSearchDefinitionMetadataR\013d" +
-      "efinitions\"\232\001\n\035ExecuteCjsSearchDefinitio" +
-      "nReq\0220\n\024search_definition_id\030\001 \001(\tR\022sear" +
-      "chDefinitionId\022G\n\rsearch_fields\030\004 \003(\0132\"." +
-      "api.v0alpha.CjsExecuteSearchFieldR\014searc" +
-      "hFields\"n\n\035ExecuteCjsSearchDefinitionRes" +
-      "\022M\n\022collection_entries\030\001 \003(\0132\036.api.v0alp" +
-      "ha.CollectionEntriesR\021collectionEntries\"" +
-      "\210\001\n\021CollectionEntries\022;\n\010metadata\030\001 \001(\0132" +
-      "\037.api.v0alpha.CollectionMetadataR\010metada" +
-      "ta\0226\n\007entries\030\002 \003(\0132\034.api.v0alpha.Collec" +
-      "tionEntryR\007entries\"\233\001\n\025CjsExecuteSearchF" +
-      "ield\022\037\n\nfield_name\030\001 \001(\tH\000R\tfieldName\0227\n" +
-      "\nfield_type\030\002 \001(\0162\026.api.commons.FieldTyp" +
-      "eH\000R\tfieldType\022\037\n\013field_value\030\003 \001(\tR\nfie" +
-      "ldValueB\007\n\005field\"\367\001\n\037CjsSecureSearchCrit" +
-      "eriaMetadata\022@\n\035cjs_secure_search_criter" +
-      "ia_id\030\001 \001(\tR\031cjsSecureSearchCriteriaId\022\030" +
-      "\n\007deleted\030\004 \001(\010R\007deleted\0229\n\ncreated_on\030\n" +
-      " \001(\0132\032.google.protobuf.TimestampR\tcreate" +
-      "dOn\022=\n\014last_updated\030\013 \001(\0132\032.google.proto" +
-      "buf.TimestampR\013lastUpdated\"\246\001\n\027CjsSecure" +
-      "SearchCriteria\022H\n\010metadata\030\001 \001(\0132,.api.v" +
-      "0alpha.CjsSecureSearchCriteriaMetadataR\010" +
-      "metadata\022A\n\006fields\030\002 \003(\0132).api.v0alpha.C" +
-      "jsSecureSearchCriteriaFieldR\006fields\"\037\n\035G" +
-      "etCjsSecureSearchCriteriaReq\"\344\001\n\034CjsSecu" +
-      "reSearchCriteriaField\022K\n#cjs_secure_sear" +
-      "ch_criteria_field_id\030\001 \001(\tR\036cjsSecureSea" +
-      "rchCriteriaFieldId\022@\n\035cjs_secure_search_" +
-      "criteria_id\030\002 \001(\tR\031cjsSecureSearchCriter" +
-      "iaId\0225\n\nfield_type\030\003 \001(\0162\026.api.commons.F" +
-      "ieldTypeR\tfieldType\"\314\001\n\rSplitCriteria\0224\n" +
-      "\006unique\030\001 \001(\0132\032.api.v0alpha.SplitByUniqu" +
-      "eH\000R\006unique\0228\n\010max_size\030\002 \001(\0132\033.api.v0al" +
-      "pha.SplitByMaxSizeH\000R\007maxSize\022A\n\013equal_p" +
-      "arts\030\003 \001(\0132\036.api.v0alpha.SplitByEqualPar" +
-      "tsH\000R\nequalPartsB\010\n\006action\"n\n\nUniquePair" +
-      "\022?\n\017split_on_fields\030\001 \001(\0132\027.api.v0alpha." +
-      "FieldIndexR\rsplitOnFields\022\037\n\013split_value" +
-      "\030\002 \001(\tR\nsplitValue\"P\n\022SplitByNamedUnique" +
-      "\022:\n\014named_fields\030\001 \003(\0132\027.api.v0alpha.Uni" +
-      "quePairR\013namedFields\"P\n\rSplitByUnique\022?\n" +
-      "\017split_on_fields\030\001 \003(\0132\027.api.v0alpha.Fie" +
-      "ldIndexR\rsplitOnFields\"+\n\016SplitByMaxSize" +
-      "\022\031\n\010max_size\030\001 \001(\005R\007maxSize\"0\n\021SplitByEq" +
-      "ualParts\022\033\n\tpart_size\030\001 \001(\005R\010partSize\"\324\004" +
-      "\n\016EpicEntrypoint\022\022\n\004cron\030\002 \001(\tR\004cron\022\"\n\r" +
-      "max_wait_time\030\003 \001(\001R\013maxWaitTime\022>\n\014enti" +
-      "ty_types\030\004 \003(\0162\033.api.v0alpha.EpicEntityT" +
-      "ypeR\013entityTypes\022$\n\016group_base_url\030\005 \001(\t" +
-      "R\014groupBaseUrl\022\"\n\rgroup_fhir_id\030\006 \001(\tR\013g" +
-      "roupFhirId\022A\n\016runtime_values\030\007 \001(\0132\032.api" +
-      ".v0alpha.RuntimeValuesR\rruntimeValues\022(\n" +
-      "\020flush_page_count\030\010 \001(\003R\016flushPageCount\022" +
-      ",\n\022flush_minute_count\030\t \001(\003R\020flushMinute" +
-      "Count\022,\n\022flush_during_check\030\n \001(\010R\020flush" +
-      "DuringCheck\022\032\n\010timezone\030\013 \001(\tR\010timezone\022" +
-      "\030\n\007enabled\030\014 \001(\010R\007enabled\022*\n\006fields\030\r \003(" +
-      "\0132\022.api.v0alpha.FieldR\006fields\022\031\n\010raw_jso" +
-      "n\030\016 \001(\010R\007rawJson\022\031\n\010non_prod\030\017 \001(\010R\007nonP" +
-      "rod\022\037\n\013auth_server\030\020 \001(\tR\nauthServer\"\355\005\n" +
-      "\rRuntimeValues\022-\n\005state\030\001 \001(\0162\027.api.comm" +
-      "ons.EventStateR\005state\022!\n\014access_token\030\002 " +
-      "\001(\tR\013accessToken\022\033\n\tcheck_url\030\003 \001(\tR\010che" +
-      "ckUrl\0223\n\tdata_urls\030\004 \003(\0132\026.api.v0alpha.E" +
-      "ntityURLR\010dataUrls\022+\n\021current_iteration\030" +
-      "\005 \001(\003R\020currentIteration\022.\n\023total_seconds" +
-      "_spent\030\006 \001(\003R\021totalSecondsSpent\022\026\n\006error" +
-      "s\030\007 \003(\tR\006errors\0221\n\025total_not_ready_count" +
-      "\030\010 \001(\003R\022totalNotReadyCount\022B\n\010file_ids\030\t" +
-      " \003(\0132\'.api.v0alpha.RuntimeValues.FileIds" +
-      "EntryR\007fileIds\022Z\n\020preliminary_vars\030\n \003(\013" +
-      "2/.api.v0alpha.RuntimeValues.Preliminary" +
-      "VarsEntryR\017preliminaryVars\022(\n\020parent_eve" +
-      "nt_ids\030\013 \003(\003R\016parentEventIds\022\"\n\rno_more_" +
-      "pages\030\014 \001(\010R\013noMorePages\022\"\n\rtotal_fts_id" +
-      "s\030\r \003(\tR\013totalFtsIds\032:\n\014FileIdsEntry\022\020\n\003" +
-      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001" +
-      "\032B\n\024PreliminaryVarsEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\tEntityUR" +
-      "L\022<\n\013entity_type\030\001 \001(\0162\033.api.v0alpha.Epi" +
-      "cEntityTypeR\nentityType\022\020\n\003url\030\002 \001(\tR\003ur" +
-      "l\" \n\rSampleRequestJ\004\010\002\020\003R\thttp_body\"M\n\rE" +
-      "HREntityType\022<\n\013epic_entity\030\001 \001(\0162\033.api." +
-      "v0alpha.EpicEntityTypeR\nepicEntity\"\262\001\n\017F" +
-      "inviEntrypoint\022\027\n\007pool_id\030\001 \001(\tR\006poolId\022" +
-      "#\n\rcron_interval\030\002 \001(\tR\014cronInterval\022\032\n\010" +
-      "disabled\030\003 \001(\010R\010disabled\022\032\n\010timezone\030\004 \001" +
-      "(\tR\010timezone\022)\n\020filename_pattern\030\005 \001(\tR\017" +
-      "filenamePattern\"\267\003\n\033ContactManagementEnr" +
-      "ichment\022\035\n\nproject_id\030\001 \001(\tR\tprojectId\022*" +
-      "\n\021contact_list_name\030\002 \001(\tR\017contactListNa" +
-      "me\022\026\n\006fields\030\003 \003(\tR\006fields\022a\n\023de_duplica" +
-      "tion_info\030\004 \001(\0132-.api.v0alpha.ContactMan" +
-      "agerSink.DeDuplicationB\002\030\001R\021deDuplicatio" +
-      "nInfo\022*\n\021insert_if_missing\030\005 \001(\010R\017insert" +
-      "IfMissing\022d\n\021search_field_type\030\006 \001(\01628.a" +
-      "pi.v0alpha.ContactManagementEnrichment.S" +
-      "earchFieldTypeR\017searchFieldType\"@\n\017Searc" +
-      "hFieldType\022\010\n\004NONE\020\000\022\020\n\014PHONE_NUMBER\020\001\022\021" +
-      "\n\rEMAIL_ADDRESS\020\002\"l\n\022TicketExchangeSink\022" +
-      "\035\n\nproject_id\030\001 \001(\tR\tprojectId\022\037\n\013templa" +
-      "te_id\030\002 \001(\tR\ntemplateId\022\026\n\006fields\030\003 \003(\tR" +
-      "\006fields*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME" +
-      "_WEEKS\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*" +
-      "\317\001\n\016EpicEntityType\022\025\n\021EPIC_UNKNOWN_TYPE\020" +
-      "\000\022\034\n\030EPIC_ENTITY_TYPE_PATIENT\020\001\022 \n\034EPIC_" +
-      "ENTITY_TYPE_APPOINTMENT\020\002\022\037\n\033EPIC_ENTITY" +
-      "_TYPE_MEDICATION\020\003\022\'\n#EPIC_ENTITY_TYPE_M" +
-      "EDICATION_REQUEST\020\004\022\034\n\030EPIC_ENTITY_TYPE_" +
-      "ACCOUNT\020\0052\344J\n\003LMS\022v\n\014GetPublicKey\022\034.api." +
-      "v0alpha.GetPublicKeyReq\032\026.api.v0alpha.Pu" +
-      "blicKey\"0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/" +
-      "lms/pgpkey/get:\001*\022\207\001\n\022CreateFileTemplate" +
-      "\022\031.api.v0alpha.FileTemplate\032\031.api.v0alph" +
-      "a.FileTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v" +
-      "0alpha/lms/file_templates/create:\001*\022\210\001\n\021" +
-      "ListFileTemplates\022 .api.v0alpha.GetFileT" +
-      "emplatesReq\032\031.api.v0alpha.FileTemplate\"4" +
-      "\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002$\"\037/api/v0alpha/lms/file_" +
-      "templates:\001*0\001\022\207\001\n\022UpdateFileTemplate\022\031." +
-      "api.v0alpha.FileTemplate\032\031.api.v0alpha.F" +
-      "ileTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0al" +
-      "pha/lms/file_templates/update:\001*\022\207\001\n\022Del" +
-      "eteFileTemplate\022\031.api.v0alpha.FileTempla" +
-      "te\032\031.api.v0alpha.FileTemplate\";\272\270\221\002\005\n\003\010\351" +
-      "\007\202\323\344\223\002+\"&/api/v0alpha/lms/file_templates" +
-      "/delete:\001*\022\201\001\n\017GetFileTemplate\022\031.api.v0a" +
-      "lpha.FileTemplate\032\031.api.v0alpha.FileTemp" +
-      "late\"8\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002(\"#/api/v0alpha/lms" +
-      "/file_templates/get:\001*\022j\n\013CreateField\022\022." +
-      "api.v0alpha.Field\032\022.api.v0alpha.Field\"3\272" +
-      "\270\221\002\005\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lms/fields" +
-      "/create:\001*\022k\n\nListFields\022\032.api.v0alpha.L" +
-      "istFieldsReq\032\023.api.v0alpha.Fields\",\272\270\221\002\005" +
-      "\n\003\010\350\007\202\323\344\223\002\034\"\027/api/v0alpha/lms/fields:\001*\022" +
-      "d\n\010GetField\022\022.api.v0alpha.Field\032\022.api.v0" +
-      "alpha.Field\"0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0al" +
-      "pha/lms/fields/get:\001*\022s\n\013UpdateField\022\033.a" +
-      "pi.v0alpha.UpdateFieldReq\032\022.api.v0alpha." +
-      "Field\"3\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lm" +
-      "s/fields/update:\001*\022j\n\013DeleteField\022\022.api." +
-      "v0alpha.Field\032\022.api.v0alpha.Field\"3\272\270\221\002\005" +
-      "\n\003\010\351\007\202\323\344\223\002#*\036/api/v0alpha/lms/fields/del" +
-      "ete:\001*\022\243\001\n\036ListAvailableFieldsByElementI" +
-      "d\022..api.v0alpha.ListAvailableFieldsByEle" +
-      "mentIdReq\032\032.api.v0alpha.ProcessFields\"5\272" +
-      "\270\221\002\005\n\003\010\350\007\202\323\344\223\002%\" /api/v0alpha/lms/fields" +
-      "byelement:\001*\022\232\001\n\024ListFieldsForElement\022$." +
-      "api.v0alpha.ListFieldsForElementReq\032$.ap" +
-      "i.v0alpha.ListFieldsForElementRes\"6\272\270\221\002\005" +
-      "\n\003\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/fieldsfore" +
-      "lement:\001*\022\242\001\n\026ListAutocompleteFields\022&.a" +
-      "pi.v0alpha.ListAutocompleteFieldsReq\032&.a" +
-      "pi.v0alpha.ListAutocompleteFieldsRes\"8\272\270" +
-      "\221\002\005\n\003\010\350\007\202\323\344\223\002(\"#/api/v0alpha/lms/autocom" +
-      "pletefields:\001*\022\206\001\n\021ListCampaignLinks\022\026.g" +
-      "oogle.protobuf.Empty\032!.api.v0alpha.ListC" +
-      "ampaignLinksRes\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v" +
-      "0alpha/lms/campaignlink/list:\001*\022s\n\010PeekL" +
-      "ist\022\030.api.v0alpha.PeekListReq\032\030.api.v0al" +
-      "pha.PeekListRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/" +
-      "v0alpha/lms/lists/preview:\001*\022y\n\nGetHisto" +
-      "ry\022\032.api.v0alpha.GetHistoryReq\032\032.api.v0a" +
-      "lpha.GetHistoryRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/a" +
-      "pi/v0alpha/lms/lists/history:\001*\022s\n\rCreat" +
-      "eElement\022\024.api.v0alpha.Element\032\024.api.v0a",
-      "lpha.Element\"6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0a" +
-      "lpha/lms/pipelines/create:\001*\022u\n\014ListElem" +
-      "ents\022\034.api.v0alpha.ListElementsReq\032\024.api" +
-      ".v0alpha.Element\"/\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\037\"\032/api" +
-      "/v0alpha/lms/pipelines:\001*0\001\022o\n\nGetElemen" +
-      "t\022\026.api.v0alpha.ElementPK\032\024.api.v0alpha." +
-      "Element\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/" +
-      "lms/pipelines/get:\001*\022s\n\rUpdateElement\022\024." +
+      "\022\037\n\013primary_key\030\004 \003(\tR\nprimaryKey\022Q\n\013fie" +
+      "ld_types\030\005 \003(\01320.api.v0alpha.RetypeColle" +
+      "ctionReq.FieldTypesEntryR\nfieldTypes\022\027\n\007" +
+      "as_copy\030\006 \001(\010R\006asCopy\032U\n\017FieldTypesEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005value\030\002 \001(\0162\026.api." +
+      "commons.FieldTypeR\005value:\0028\001\"\200\002\n\023RetypeC" +
+      "ollectionRes\022#\n\rcollection_id\030\001 \001(\tR\014col" +
+      "lectionId\022%\n\016inserted_count\030\002 \001(\005R\rinser" +
+      "tedCount\022#\n\rupdated_count\030\003 \001(\005R\014updated" +
+      "Count\022%\n\016rejected_count\030\004 \001(\005R\rrejectedC" +
+      "ount\022#\n\rignored_count\030\005 \001(\005R\014ignoredCoun" +
+      "t\022,\n\022rejected_entry_ids\030\006 \003(\tR\020rejectedE" +
+      "ntryIds\"\331\004\n\022CollectionMetadata\022#\n\rcollec" +
+      "tion_id\030\003 \001(\tR\014collectionId\022\'\n\017collectio" +
+      "n_name\030\004 \001(\tR\016collectionName\022<\n\006fields\030\005" +
+      " \003(\0132$.api.v0alpha.CollectionFieldMetada" +
+      "taR\006fields\022\030\n\007deleted\030\006 \001(\010R\007deleted\022\035\n\n" +
+      "created_by\030\007 \001(\tR\tcreatedBy\0229\n\ncreated_o" +
+      "n\030\010 \001(\0132\032.google.protobuf.TimestampR\tcre" +
+      "atedOn\022=\n\014last_queried\030\t \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\013lastQueried\022\037\n\013query_c" +
+      "ount\030\n \001(\003R\nqueryCount\022\037\n\013entry_count\030\013 " +
+      "\001(\003R\nentryCount\022=\n\014last_updated\030\014 \001(\0132\032." +
+      "google.protobuf.TimestampR\013lastUpdated\022!" +
+      "\n\014search_count\030\r \001(\003R\013searchCount\022?\n\rlas" +
+      "t_searched\030\016 \001(\0132\032.google.protobuf.Times" +
+      "tampR\014lastSearched\022\037\n\013primary_key\030\017 \003(\tR" +
+      "\nprimaryKey\"\306\001\n\017CollectionEntry\022#\n\rcolle" +
+      "ction_id\030\003 \001(\tR\014collectionId\022\031\n\010entry_id" +
+      "\030\004 \001(\tR\007entryId\0224\n\006fields\030\005 \003(\0132\034.api.v0" +
+      "alpha.CollectionFieldR\006fields\022=\n\014last_up" +
+      "dated\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\013lastUpdated\"\204\001\n\010MatchReq\022#\n\rcollection_" +
+      "id\030\003 \001(\tR\014collectionId\0224\n\006fields\030\004 \003(\0132\034" +
+      ".api.v0alpha.CollectionFieldR\006fields\022\035\n\n" +
+      "batch_size\030\005 \001(\003R\tbatchSize\"B\n\010MatchRes\022" +
+      "6\n\007entries\030\001 \003(\0132\034.api.v0alpha.Collectio" +
+      "nEntryR\007entries\"\222\001\n\027CollectionFieldMetad" +
+      "ata\022\035\n\nfield_name\030\001 \001(\tR\tfieldName\0225\n\nfi" +
+      "eld_type\030\002 \001(\0162\026.api.commons.FieldTypeR\t" +
+      "fieldType\022!\n\014field_format\030\003 \001(\tR\013fieldFo" +
+      "rmat\"Q\n\017CollectionField\022\035\n\nfield_name\030\001 " +
+      "\001(\tR\tfieldName\022\037\n\013field_value\030\002 \001(\tR\nfie" +
+      "ldValue\"7\n\020GetCollectionReq\022#\n\rcollectio" +
+      "n_id\030\003 \001(\tR\014collectionId\":\n\023StreamCollec" +
+      "tionReq\022#\n\rcollection_id\030\003 \001(\tR\014collecti" +
+      "onId\":\n\023DeleteCollectionReq\022#\n\rcollectio" +
+      "n_id\030\003 \001(\tR\014collectionId\"9\n\022ResetCollect" +
+      "ionReq\022#\n\rcollection_id\030\003 \001(\tR\014collectio" +
+      "nId\"\024\n\022ListCollectionsReq\"W\n\022ListCollect" +
+      "ionsRes\022A\n\013collections\030\001 \003(\0132\037.api.v0alp" +
+      "ha.CollectionMetadataR\013collections\"\275\001\n\035S" +
+      "earchCollectionsPaginatedReq\022%\n\016collecti" +
+      "on_ids\030\003 \003(\tR\rcollectionIds\022+\n\006search\030\004 " +
+      "\001(\0132\023.api.v0alpha.SearchR\006search\022\022\n\004from" +
+      "\030\005 \001(\003R\004from\022\033\n\tpage_size\030\006 \001(\003R\010pageSiz" +
+      "e\022\027\n\007last_id\030\007 \001(\tR\006lastId\"\265\001\n\006Search\022\022\n" +
+      "\004term\030\001 \001(\tR\004term\022 \n\tfuzziness\030\002 \001(\003B\002\030\001" +
+      "R\tfuzziness\022\034\n\tsubstring\030\003 \001(\010R\tsubstrin" +
+      "g\022\026\n\006negate\030\004 \001(\010R\006negate\022)\n\016case_sensit" +
+      "ive\030\005 \001(\010B\002\030\001R\rcaseSensitive\022\024\n\005value\030\006 " +
+      "\001(\tR\005value\"\236\001\n\022PaginatedSearchRes\0226\n\007ent" +
+      "ries\030\001 \003(\0132\034.api.v0alpha.CollectionEntry" +
+      "R\007entries\022\024\n\005total\030\002 \001(\003R\005total\022!\n\014more_" +
+      "results\030\003 \001(\010R\013moreResults\022\027\n\007last_id\030\004 " +
+      "\001(\tR\006lastId\"\227\001\n\027GetCollectionEntriesReq\022" +
+      "#\n\rcollection_id\030\003 \001(\tR\014collectionId\022\022\n\004" +
+      "from\030\004 \001(\003R\004from\022\033\n\tpage_size\030\005 \001(\003R\010pag" +
+      "eSize\022&\n\017search_after_id\030\006 \001(\tR\rsearchAf" +
+      "terId\"\216\001\n\027GetCollectionEntriesRes\022;\n\010met" +
+      "adata\030\001 \001(\0132\037.api.v0alpha.CollectionMeta" +
+      "dataR\010metadata\0226\n\007entries\030\002 \003(\0132\034.api.v0" +
+      "alpha.CollectionEntryR\007entries\"Z\n\030Delete" +
+      "CollectionEntryReq\022#\n\rcollection_id\030\003 \001(" +
+      "\tR\014collectionId\022\031\n\010entry_id\030\004 \001(\tR\007entry" +
+      "Id\"?\n\024ListCampaignLinksRes\022\'\n\005Links\030\001 \003(" +
+      "\0132\021.api.v0alpha.LinkR\005Links\"k\n\004Link\022-\n\023x" +
+      "ml_client_prop_sid\030\001 \001(\003R\020xmlClientPropS" +
+      "id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 " +
+      "\001(\tR\013description\"\357\001\n\016CjsSearchField\022-\n\023c" +
+      "js_search_field_id\030\001 \001(\tR\020cjsSearchField" +
+      "Id\0227\n\030cjs_search_definition_id\030\002 \001(\tR\025cj" +
+      "sSearchDefinitionId\022\035\n\nfield_name\030\003 \001(\tR" +
+      "\tfieldName\0225\n\nfield_type\030\004 \001(\0162\026.api.com" +
+      "mons.FieldTypeR\tfieldType\022\037\n\013field_value" +
+      "\030\005 \001(\tR\nfieldValue\"\201\003\n\033CjsSearchDefiniti" +
+      "onMetadata\0227\n\030cjs_search_definition_id\030\001" +
+      " \001(\tR\025cjsSearchDefinitionId\022\022\n\004name\030\004 \001(" +
+      "\tR\004name\022 \n\013description\030\005 \001(\tR\013descriptio" +
+      "n\022\030\n\007deleted\030\006 \001(\010R\007deleted\022\035\n\nexec_coun" +
+      "t\030\007 \001(\003R\texecCount\022!\n\014exec_success\030\010 \001(\003" +
+      "R\013execSuccess\022\033\n\texec_fail\030\t \001(\003R\010execFa" +
+      "il\022=\n\014created_date\030\n \001(\0132\032.google.protob" +
+      "uf.TimestampR\013createdDate\022;\n\013last_edited" +
+      "\030\013 \001(\0132\032.google.protobuf.TimestampR\nlast" +
+      "Edited\"\233\003\n\023CjsSearchDefinition\022D\n\010metada" +
+      "ta\030\001 \001(\0132(.api.v0alpha.CjsSearchDefiniti" +
+      "onMetadataR\010metadata\022@\n\rsearch_fields\030\002 " +
+      "\003(\0132\033.api.v0alpha.CjsSearchFieldR\014search" +
+      "Fields\022W\n\031whitelisted_return_fields\030\003 \003(" +
+      "\0132\033.api.v0alpha.CjsSearchFieldR\027whitelis" +
+      "tedReturnFields\022W\n\031blacklisted_return_fi" +
+      "elds\030\004 \003(\0132\033.api.v0alpha.CjsSearchFieldR" +
+      "\027blacklistedReturnFields\022J\n\022unique_ident" +
+      "ifiers\030\005 \003(\0132\033.api.v0alpha.CjsSearchFiel" +
+      "dR\021uniqueIdentifiers\"T\n\031GetCjsSearchDefi" +
+      "nitionReq\0227\n\030cjs_search_definition_id\030\001 " +
+      "\001(\tR\025cjsSearchDefinitionId\"W\n\034DeleteCjsS" +
+      "earchDefinitionReq\0227\n\030cjs_search_definit" +
+      "ion_id\030\001 \001(\tR\025cjsSearchDefinitionId\"\035\n\033L" +
+      "istCjsSearchDefinitionsReq\"i\n\033ListCjsSea" +
+      "rchDefinitionsRes\022J\n\013definitions\030\001 \003(\0132(" +
+      ".api.v0alpha.CjsSearchDefinitionMetadata" +
+      "R\013definitions\"\232\001\n\035ExecuteCjsSearchDefini" +
+      "tionReq\0220\n\024search_definition_id\030\001 \001(\tR\022s" +
+      "earchDefinitionId\022G\n\rsearch_fields\030\004 \003(\013" +
+      "2\".api.v0alpha.CjsExecuteSearchFieldR\014se" +
+      "archFields\"n\n\035ExecuteCjsSearchDefinition" +
+      "Res\022M\n\022collection_entries\030\001 \003(\0132\036.api.v0" +
+      "alpha.CollectionEntriesR\021collectionEntri" +
+      "es\"\210\001\n\021CollectionEntries\022;\n\010metadata\030\001 \001" +
+      "(\0132\037.api.v0alpha.CollectionMetadataR\010met" +
+      "adata\0226\n\007entries\030\002 \003(\0132\034.api.v0alpha.Col" +
+      "lectionEntryR\007entries\"\233\001\n\025CjsExecuteSear" +
+      "chField\022\037\n\nfield_name\030\001 \001(\tH\000R\tfieldName" +
+      "\0227\n\nfield_type\030\002 \001(\0162\026.api.commons.Field" +
+      "TypeH\000R\tfieldType\022\037\n\013field_value\030\003 \001(\tR\n" +
+      "fieldValueB\007\n\005field\"\367\001\n\037CjsSecureSearchC" +
+      "riteriaMetadata\022@\n\035cjs_secure_search_cri" +
+      "teria_id\030\001 \001(\tR\031cjsSecureSearchCriteriaI" +
+      "d\022\030\n\007deleted\030\004 \001(\010R\007deleted\0229\n\ncreated_o" +
+      "n\030\n \001(\0132\032.google.protobuf.TimestampR\tcre" +
+      "atedOn\022=\n\014last_updated\030\013 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\013lastUpdated\"\246\001\n\027CjsSec" +
+      "ureSearchCriteria\022H\n\010metadata\030\001 \001(\0132,.ap" +
+      "i.v0alpha.CjsSecureSearchCriteriaMetadat" +
+      "aR\010metadata\022A\n\006fields\030\002 \003(\0132).api.v0alph" +
+      "a.CjsSecureSearchCriteriaFieldR\006fields\"\037" +
+      "\n\035GetCjsSecureSearchCriteriaReq\"\344\001\n\034CjsS" +
+      "ecureSearchCriteriaField\022K\n#cjs_secure_s" +
+      "earch_criteria_field_id\030\001 \001(\tR\036cjsSecure" +
+      "SearchCriteriaFieldId\022@\n\035cjs_secure_sear" +
+      "ch_criteria_id\030\002 \001(\tR\031cjsSecureSearchCri" +
+      "teriaId\0225\n\nfield_type\030\003 \001(\0162\026.api.common" +
+      "s.FieldTypeR\tfieldType\"\314\001\n\rSplitCriteria" +
+      "\0224\n\006unique\030\001 \001(\0132\032.api.v0alpha.SplitByUn" +
+      "iqueH\000R\006unique\0228\n\010max_size\030\002 \001(\0132\033.api.v" +
+      "0alpha.SplitByMaxSizeH\000R\007maxSize\022A\n\013equa" +
+      "l_parts\030\003 \001(\0132\036.api.v0alpha.SplitByEqual" +
+      "PartsH\000R\nequalPartsB\010\n\006action\"n\n\nUniqueP" +
+      "air\022?\n\017split_on_fields\030\001 \001(\0132\027.api.v0alp" +
+      "ha.FieldIndexR\rsplitOnFields\022\037\n\013split_va" +
+      "lue\030\002 \001(\tR\nsplitValue\"P\n\022SplitByNamedUni" +
+      "que\022:\n\014named_fields\030\001 \003(\0132\027.api.v0alpha." +
+      "UniquePairR\013namedFields\"P\n\rSplitByUnique" +
+      "\022?\n\017split_on_fields\030\001 \003(\0132\027.api.v0alpha." +
+      "FieldIndexR\rsplitOnFields\"+\n\016SplitByMaxS" +
+      "ize\022\031\n\010max_size\030\001 \001(\005R\007maxSize\"0\n\021SplitB" +
+      "yEqualParts\022\033\n\tpart_size\030\001 \001(\005R\010partSize" +
+      "\"\324\004\n\016EpicEntrypoint\022\022\n\004cron\030\002 \001(\tR\004cron\022" +
+      "\"\n\rmax_wait_time\030\003 \001(\001R\013maxWaitTime\022>\n\014e" +
+      "ntity_types\030\004 \003(\0162\033.api.v0alpha.EpicEnti" +
+      "tyTypeR\013entityTypes\022$\n\016group_base_url\030\005 " +
+      "\001(\tR\014groupBaseUrl\022\"\n\rgroup_fhir_id\030\006 \001(\t" +
+      "R\013groupFhirId\022A\n\016runtime_values\030\007 \001(\0132\032." +
+      "api.v0alpha.RuntimeValuesR\rruntimeValues" +
+      "\022(\n\020flush_page_count\030\010 \001(\003R\016flushPageCou" +
+      "nt\022,\n\022flush_minute_count\030\t \001(\003R\020flushMin" +
+      "uteCount\022,\n\022flush_during_check\030\n \001(\010R\020fl" +
+      "ushDuringCheck\022\032\n\010timezone\030\013 \001(\tR\010timezo" +
+      "ne\022\030\n\007enabled\030\014 \001(\010R\007enabled\022*\n\006fields\030\r" +
+      " \003(\0132\022.api.v0alpha.FieldR\006fields\022\031\n\010raw_" +
+      "json\030\016 \001(\010R\007rawJson\022\031\n\010non_prod\030\017 \001(\010R\007n" +
+      "onProd\022\037\n\013auth_server\030\020 \001(\tR\nauthServer\"" +
+      "\355\005\n\rRuntimeValues\022-\n\005state\030\001 \001(\0162\027.api.c" +
+      "ommons.EventStateR\005state\022!\n\014access_token" +
+      "\030\002 \001(\tR\013accessToken\022\033\n\tcheck_url\030\003 \001(\tR\010" +
+      "checkUrl\0223\n\tdata_urls\030\004 \003(\0132\026.api.v0alph" +
+      "a.EntityURLR\010dataUrls\022+\n\021current_iterati" +
+      "on\030\005 \001(\003R\020currentIteration\022.\n\023total_seco" +
+      "nds_spent\030\006 \001(\003R\021totalSecondsSpent\022\026\n\006er" +
+      "rors\030\007 \003(\tR\006errors\0221\n\025total_not_ready_co" +
+      "unt\030\010 \001(\003R\022totalNotReadyCount\022B\n\010file_id" +
+      "s\030\t \003(\0132\'.api.v0alpha.RuntimeValues.File" +
+      "IdsEntryR\007fileIds\022Z\n\020preliminary_vars\030\n " +
+      "\003(\0132/.api.v0alpha.RuntimeValues.Prelimin" +
+      "aryVarsEntryR\017preliminaryVars\022(\n\020parent_" +
+      "event_ids\030\013 \003(\003R\016parentEventIds\022\"\n\rno_mo" +
+      "re_pages\030\014 \001(\010R\013noMorePages\022\"\n\rtotal_fts" +
+      "_ids\030\r \003(\tR\013totalFtsIds\032:\n\014FileIdsEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:" +
+      "\0028\001\032B\n\024PreliminaryVarsEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\tEntit" +
+      "yURL\022<\n\013entity_type\030\001 \001(\0162\033.api.v0alpha." +
+      "EpicEntityTypeR\nentityType\022\020\n\003url\030\002 \001(\tR" +
+      "\003url\" \n\rSampleRequestJ\004\010\002\020\003R\thttp_body\"M" +
+      "\n\rEHREntityType\022<\n\013epic_entity\030\001 \001(\0162\033.a" +
+      "pi.v0alpha.EpicEntityTypeR\nepicEntity\"\262\001" +
+      "\n\017FinviEntrypoint\022\027\n\007pool_id\030\001 \001(\tR\006pool" +
+      "Id\022#\n\rcron_interval\030\002 \001(\tR\014cronInterval\022" +
+      "\032\n\010disabled\030\003 \001(\010R\010disabled\022\032\n\010timezone\030" +
+      "\004 \001(\tR\010timezone\022)\n\020filename_pattern\030\005 \001(" +
+      "\tR\017filenamePattern\"\332\003\n\033ContactManagement" +
+      "Enrichment\022\035\n\nproject_id\030\001 \001(\tR\tprojectI" +
+      "d\022*\n\021contact_list_name\030\002 \001(\tR\017contactLis" +
+      "tName\022\026\n\006fields\030\003 \003(\tR\006fields\022a\n\023de_dupl" +
+      "ication_info\030\004 \001(\0132-.api.v0alpha.Contact" +
+      "ManagerSink.DeDuplicationB\002\030\001R\021deDuplica" +
+      "tionInfo\022*\n\021insert_if_missing\030\005 \001(\010R\017ins" +
+      "ertIfMissing\022d\n\021search_field_type\030\006 \001(\0162" +
+      "8.api.v0alpha.ContactManagementEnrichmen" +
+      "t.SearchFieldTypeR\017searchFieldType\022!\n\014co" +
+      "untry_code\030\007 \001(\tR\013countryCode\"@\n\017SearchF" +
+      "ieldType\022\010\n\004NONE\020\000\022\020\n\014PHONE_NUMBER\020\001\022\021\n\r" +
+      "EMAIL_ADDRESS\020\002\"l\n\022TicketExchangeSink\022\035\n" +
+      "\nproject_id\030\001 \001(\tR\tprojectId\022\037\n\013template" +
+      "_id\030\002 \001(\tR\ntemplateId\022\026\n\006fields\030\003 \003(\tR\006f" +
+      "ields*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_W" +
+      "EEKS\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*\317\001" +
+      "\n\016EpicEntityType\022\025\n\021EPIC_UNKNOWN_TYPE\020\000\022" +
+      "\034\n\030EPIC_ENTITY_TYPE_PATIENT\020\001\022 \n\034EPIC_EN" +
+      "TITY_TYPE_APPOINTMENT\020\002\022\037\n\033EPIC_ENTITY_T" +
+      "YPE_MEDICATION\020\003\022\'\n#EPIC_ENTITY_TYPE_MED" +
+      "ICATION_REQUEST\020\004\022\034\n\030EPIC_ENTITY_TYPE_AC" +
+      "COUNT\020\0052\344J\n\003LMS\022v\n\014GetPublicKey\022\034.api.v0" +
+      "alpha.GetPublicKeyReq\032\026.api.v0alpha.Publ" +
+      "icKey\"0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lm" +
+      "s/pgpkey/get:\001*\022\207\001\n\022CreateFileTemplate\022\031" +
+      ".api.v0alpha.FileTemplate\032\031.api.v0alpha." +
+      "FileTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0a" +
+      "lpha/lms/file_templates/create:\001*\022\210\001\n\021Li" +
+      "stFileTemplates\022 .api.v0alpha.GetFileTem" +
+      "platesReq\032\031.api.v0alpha.FileTemplate\"4\272\270" +
+      "\221\002\005\n\003\010\350\007\202\323\344\223\002$\"\037/api/v0alpha/lms/file_te" +
+      "mplates:\001*0\001\022\207\001\n\022UpdateFileTemplate\022\031.ap" +
+      "i.v0alpha.FileTemplate\032\031.api.v0alpha.Fil" +
+      "eTemplate\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alph" +
+      "a/lms/file_templates/update:\001*\022\207\001\n\022Delet" +
+      "eFileTemplate\022\031.api.v0alpha.FileTemplate" +
+      "\032\031.api.v0alpha.FileTemplate\";\272\270\221\002\005\n\003\010\351\007\202" +
+      "\323\344\223\002+\"&/api/v0alpha/lms/file_templates/d" +
+      "elete:\001*\022\201\001\n\017GetFileTemplate\022\031.api.v0alp" +
+      "ha.FileTemplate\032\031.api.v0alpha.FileTempla" +
+      "te\"8\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002(\"#/api/v0alpha/lms/f" +
+      "ile_templates/get:\001*\022j\n\013CreateField\022\022.ap" +
+      "i.v0alpha.Field\032\022.api.v0alpha.Field\"3\272\270\221" +
+      "\002\005\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lms/fields/c" +
+      "reate:\001*\022k\n\nListFields\022\032.api.v0alpha.Lis" +
+      "tFieldsReq\032\023.api.v0alpha.Fields\",\272\270\221\002\005\n\003" +
+      "\010\350\007\202\323\344\223\002\034\"\027/api/v0alpha/lms/fields:\001*\022d\n" +
+      "\010GetField\022\022.api.v0alpha.Field\032\022.api.v0al" +
+      "pha.Field\"0\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alph" +
+      "a/lms/fields/get:\001*\022s\n\013UpdateField\022\033.api" +
+      ".v0alpha.UpdateFieldReq\032\022.api.v0alpha.Fi" +
+      "eld\"3\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002#\"\036/api/v0alpha/lms/" +
+      "fields/update:\001*\022j\n\013DeleteField\022\022.api.v0" +
+      "alpha.Field\032\022.api.v0alpha.Field\"3\272\270\221\002\005\n\003" +
+      "\010\351\007\202\323\344\223\002#*\036/api/v0alpha/lms/fields/delet" +
+      "e:\001*\022\243\001\n\036ListAvailableFieldsByElementId\022" +
+      "..api.v0alpha.ListAvailableFieldsByEleme" +
+      "ntIdReq\032\032.api.v0alpha.ProcessFields\"5\272\270\221" +
+      "\002\005\n\003\010\350\007\202\323\344\223\002%\" /api/v0alpha/lms/fieldsby" +
+      "element:\001*\022\232\001\n\024ListFieldsForElement\022$.ap" +
+      "i.v0alpha.ListFieldsForElementReq\032$.api." +
+      "v0alpha.ListFieldsForElementRes\"6\272\270\221\002\005\n\003" +
+      "\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/fieldsforele" +
+      "ment:\001*\022\242\001\n\026ListAutocompleteFields\022&.api",
+      ".v0alpha.ListAutocompleteFieldsReq\032&.api" +
+      ".v0alpha.ListAutocompleteFieldsRes\"8\272\270\221\002" +
+      "\005\n\003\010\350\007\202\323\344\223\002(\"#/api/v0alpha/lms/autocompl" +
+      "etefields:\001*\022\206\001\n\021ListCampaignLinks\022\026.goo" +
+      "gle.protobuf.Empty\032!.api.v0alpha.ListCam" +
+      "paignLinksRes\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v0a" +
+      "lpha/lms/campaignlink/list:\001*\022s\n\010PeekLis" +
+      "t\022\030.api.v0alpha.PeekListReq\032\030.api.v0alph" +
+      "a.PeekListRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0" +
+      "alpha/lms/lists/preview:\001*\022y\n\nGetHistory" +
+      "\022\032.api.v0alpha.GetHistoryReq\032\032.api.v0alp" +
+      "ha.GetHistoryRes\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api" +
+      "/v0alpha/lms/lists/history:\001*\022s\n\rCreateE" +
+      "lement\022\024.api.v0alpha.Element\032\024.api.v0alp" +
+      "ha.Element\"6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0alp" +
+      "ha/lms/pipelines/create:\001*\022u\n\014ListElemen" +
+      "ts\022\034.api.v0alpha.ListElementsReq\032\024.api.v" +
+      "0alpha.Element\"/\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\037\"\032/api/v" +
+      "0alpha/lms/pipelines:\001*0\001\022o\n\nGetElement\022" +
+      "\026.api.v0alpha.ElementPK\032\024.api.v0alpha.El" +
+      "ement\"3\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002#\"\036/api/v0alpha/lm" +
+      "s/pipelines/get:\001*\022s\n\rUpdateElement\022\024.ap" +
+      "i.v0alpha.Element\032\024.api.v0alpha.Element\"" +
+      "6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0alpha/lms/pipe" +
+      "lines/update:\001*\022s\n\rDeleteElement\022\024.api.v" +
+      "0alpha.Element\032\024.api.v0alpha.Element\"6\272\270" +
+      "\221\002\005\n\003\010\351\007\202\323\344\223\002&*!/api/v0alpha/lms/pipelin" +
+      "es/delete:\001*\022\202\001\n\024CopyPipelineUpstream\022\024." +
       "api.v0alpha.Element\032\024.api.v0alpha.Elemen" +
-      "t\"6\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&\"!/api/v0alpha/lms/pi" +
-      "pelines/update:\001*\022s\n\rDeleteElement\022\024.api" +
-      ".v0alpha.Element\032\024.api.v0alpha.Element\"6" +
-      "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002&*!/api/v0alpha/lms/pipel" +
-      "ines/delete:\001*\022\202\001\n\024CopyPipelineUpstream\022" +
-      "\024.api.v0alpha.Element\032\024.api.v0alpha.Elem" +
-      "ent\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v0alpha/lms/" +
-      "pipelines/copyupstream:\001*0\001\022\206\001\n\026CopyPipe" +
-      "lineDownstream\022\024.api.v0alpha.Element\032\024.a" +
-      "pi.v0alpha.Element\">\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002.\")/a" +
-      "pi/v0alpha/lms/pipelines/copydownstream:" +
-      "\001*0\001\022\201\001\n\016ProcessElement\022\036.api.v0alpha.Pr" +
-      "ocessElementReq\032\026.google.protobuf.Empty\"" +
-      "7\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api/v0alpha/lms/pipe" +
-      "lines/process:\001*\022\232\001\n\013ProcessList\022\037.api.v" +
-      "0alpha.ProcessListRequest\032 .api.v0alpha." +
-      "ProcessListResponse\"H\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0028\"3/" +
-      "api/v0alpha/lms/pipelines/processlist/{e" +
-      "lement_id}:\001*\022\230\001\n\nStreamList\022\036.api.v0alp" +
-      "ha.StreamListRequest\032\037.api.v0alpha.Strea" +
-      "mListResponse\"G\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0027\"2/api/v0" +
-      "alpha/lms/pipelines/streamlist/{element_" +
-      "id}:\001*(\001\022\200\001\n\022GetAvailableFields\022\026.google" +
-      ".protobuf.Empty\032\032.api.v0alpha.ProcessFie" +
-      "lds\"6\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/" +
-      "available-fields:\001*\022r\n\rListNewEvents\022\026.g" +
-      "oogle.protobuf.Empty\032\023.api.v0alpha.Event" +
-      "s\"4\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002$\"\037/api/v0alpha/lms/ge" +
-      "t-new-events:\001*\022m\n\tViewQueue\022\031.api.v0alp" +
-      "ha.ViewQueueReq\032\023.api.v0alpha.Events\"0\272\270" +
-      "\221\002\005\n\003\010\350\007\202\323\344\223\002 \"\033/api/v0alpha/lms/view-qu" +
-      "eue:\001*\022p\n\014Autocomplete\022\025.api.v0alpha.Par" +
-      "seReq\032\025.api.v0alpha.ParseRes\"2\272\270\221\002\005\n\003\010\350\007" +
-      "\202\323\344\223\002\"\"\035/api/v0alpha/lms/autocomplete:\001*" +
-      "\022\247\001\n\027GetComplianceScrubLists\022\'.api.v0alp" +
-      "ha.GetComplianceScrubListsReq\032\'.api.v0al" +
-      "pha.GetComplianceScrubListsRes\":\272\270\221\002\005\n\003\010" +
-      "\351\007\202\323\344\223\002*\"%/api/v0alpha/lms/compliancescr" +
-      "ublists:\001*\022\214\001\n\017FindFieldUsages\022\037.api.v0a" +
-      "lpha.FindFieldUsagesReq\032\037.api.v0alpha.Fi" +
-      "ndFieldUsagesRes\"7\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api" +
-      "/v0alpha/lms/find-field-usages:\001*\022\234\001\n\023Fi" +
-      "ndInvalidElements\022#.api.v0alpha.FindInva" +
-      "lidElementsReq\032#.api.v0alpha.FindInvalid" +
-      "ElementsRes\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0al" +
-      "pha/lms/find-invalid-elements:\001*\022\213\001\n\020Cre" +
-      "ateCollection\022\037.api.v0alpha.CollectionMe" +
-      "tadata\032\037.api.v0alpha.CollectionMetadata\"" +
-      "5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collect" +
-      "ions/create:\001*\022\206\001\n\rGetCollection\022\035.api.v" +
-      "0alpha.GetCollectionReq\032\037.api.v0alpha.Co" +
-      "llectionMetadata\"5\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002%\" /api" +
-      "/v0alpha/lms/collections/get:\001*\022\202\001\n\020Upda" +
-      "teCollection\022\037.api.v0alpha.CollectionMet" +
-      "adata\032\026.google.protobuf.Empty\"5\272\270\221\002\002\030\001\202\323" +
-      "\344\223\002(\"#/api/v0alpha/lms/collections/updat" +
-      "e:\001*\022\227\001\n\020RetypeCollection\022 .api.v0alpha." +
-      "RetypeCollectionReq\032 .api.v0alpha.Retype" +
-      "CollectionRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alp" +
-      "ha/lms/collections/retypecollection:\001*\022\203" +
-      "\001\n\020DeleteCollection\022 .api.v0alpha.Delete" +
-      "CollectionReq\032\026.google.protobuf.Empty\"5\272" +
+      "t\"<\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002,\"\'/api/v0alpha/lms/pi" +
+      "pelines/copyupstream:\001*0\001\022\206\001\n\026CopyPipeli" +
+      "neDownstream\022\024.api.v0alpha.Element\032\024.api" +
+      ".v0alpha.Element\">\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002.\")/api" +
+      "/v0alpha/lms/pipelines/copydownstream:\001*" +
+      "0\001\022\201\001\n\016ProcessElement\022\036.api.v0alpha.Proc" +
+      "essElementReq\032\026.google.protobuf.Empty\"7\272" +
+      "\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api/v0alpha/lms/pipeli" +
+      "nes/process:\001*\022\232\001\n\013ProcessList\022\037.api.v0a" +
+      "lpha.ProcessListRequest\032 .api.v0alpha.Pr" +
+      "ocessListResponse\"H\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0028\"3/ap" +
+      "i/v0alpha/lms/pipelines/processlist/{ele" +
+      "ment_id}:\001*\022\230\001\n\nStreamList\022\036.api.v0alpha" +
+      ".StreamListRequest\032\037.api.v0alpha.StreamL" +
+      "istResponse\"G\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0027\"2/api/v0al" +
+      "pha/lms/pipelines/streamlist/{element_id" +
+      "}:\001*(\001\022\200\001\n\022GetAvailableFields\022\026.google.p" +
+      "rotobuf.Empty\032\032.api.v0alpha.ProcessField" +
+      "s\"6\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002&\"!/api/v0alpha/lms/av" +
+      "ailable-fields:\001*\022r\n\rListNewEvents\022\026.goo" +
+      "gle.protobuf.Empty\032\023.api.v0alpha.Events\"" +
+      "4\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002$\"\037/api/v0alpha/lms/get-" +
+      "new-events:\001*\022m\n\tViewQueue\022\031.api.v0alpha" +
+      ".ViewQueueReq\032\023.api.v0alpha.Events\"0\272\270\221\002" +
+      "\005\n\003\010\350\007\202\323\344\223\002 \"\033/api/v0alpha/lms/view-queu" +
+      "e:\001*\022p\n\014Autocomplete\022\025.api.v0alpha.Parse" +
+      "Req\032\025.api.v0alpha.ParseRes\"2\272\270\221\002\005\n\003\010\350\007\202\323" +
+      "\344\223\002\"\"\035/api/v0alpha/lms/autocomplete:\001*\022\247" +
+      "\001\n\027GetComplianceScrubLists\022\'.api.v0alpha" +
+      ".GetComplianceScrubListsReq\032\'.api.v0alph" +
+      "a.GetComplianceScrubListsRes\":\272\270\221\002\005\n\003\010\351\007" +
+      "\202\323\344\223\002*\"%/api/v0alpha/lms/compliancescrub" +
+      "lists:\001*\022\214\001\n\017FindFieldUsages\022\037.api.v0alp" +
+      "ha.FindFieldUsagesReq\032\037.api.v0alpha.Find" +
+      "FieldUsagesRes\"7\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\'\"\"/api/v" +
+      "0alpha/lms/find-field-usages:\001*\022\234\001\n\023Find" +
+      "InvalidElements\022#.api.v0alpha.FindInvali" +
+      "dElementsReq\032#.api.v0alpha.FindInvalidEl" +
+      "ementsRes\";\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002+\"&/api/v0alph" +
+      "a/lms/find-invalid-elements:\001*\022\213\001\n\020Creat" +
+      "eCollection\022\037.api.v0alpha.CollectionMeta" +
+      "data\032\037.api.v0alpha.CollectionMetadata\"5\272" +
       "\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collectio" +
-      "ns/delete:\001*\022\206\001\n\017ListCollections\022\037.api.v" +
-      "0alpha.ListCollectionsReq\032\037.api.v0alpha." +
-      "ListCollectionsRes\"1\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002!\"\034/a" +
-      "pi/v0alpha/lms/collections:\001*\022\200\001\n\017ResetC" +
-      "ollection\022\037.api.v0alpha.ResetCollectionR" +
-      "eq\032\026.google.protobuf.Empty\"4\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "\'\"\"/api/v0alpha/lms/collections/reset:\001*" +
-      "\022\212\001\n\022AddCollectionEntry\022\034.api.v0alpha.Co" +
-      "llectionEntry\032\034.api.v0alpha.CollectionEn" +
-      "try\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/lms/col" +
-      "lections/add-entry:\001*\022\223\001\n\025DeleteCollecti" +
-      "onEntry\022%.api.v0alpha.DeleteCollectionEn" +
-      "tryReq\032\026.google.protobuf.Empty\";\272\270\221\002\002\030\001\202" +
-      "\323\344\223\002.\")/api/v0alpha/lms/collections/dele" +
-      "te-entry:\001*\022\220\001\n\025UpdateCollectionEntry\022\034." +
-      "api.v0alpha.CollectionEntry\032\034.api.v0alph" +
-      "a.CollectionEntry\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v" +
-      "0alpha/lms/collections/update-entry:\001*\022\213" +
-      "\001\n\020StreamCollection\022 .api.v0alpha.Stream" +
-      "CollectionReq\032\034.api.v0alpha.CollectionEn" +
-      "try\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/col" +
-      "lections/stream:\001*0\001\022\253\001\n\032SearchCollectio" +
-      "nsPaginated\022*.api.v0alpha.SearchCollecti" +
-      "onsPaginatedReq\032\037.api.v0alpha.PaginatedS" +
-      "earchRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/lm" +
-      "s/collections/searchcollections:\001*\022\252\001\n\024G" +
-      "etCollectionEntries\022$.api.v0alpha.GetCol" +
-      "lectionEntriesReq\032$.api.v0alpha.GetColle" +
-      "ctionEntriesRes\"F\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0026\"1/api/" +
-      "v0alpha/lms/collections/getcollectionent" +
-      "ries:\001*\022\246\001\n\031CreateCjsSearchDefinition\022 ." +
-      "api.v0alpha.CjsSearchDefinition\032 .api.v0" +
-      "alpha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323\344\223\0028" +
-      "\"3/api/v0alpha/lms/collections/createsea" +
-      "rchdefinition:\001*\022\246\001\n\026GetCjsSearchDefinit" +
-      "ion\022&.api.v0alpha.GetCjsSearchDefinition" +
-      "Req\032 .api.v0alpha.CjsSearchDefinition\"B\272" +
-      "\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/lms/collectio" +
-      "ns/getsearchdefinition:\001*\022\234\001\n\031UpdateCjsS" +
-      "earchDefinition\022 .api.v0alpha.CjsSearchD" +
-      "efinition\032\026.google.protobuf.Empty\"E\272\270\221\002\002" +
-      "\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/collections/u" +
-      "pdatesearchdefinition:\001*\022\245\001\n\031DeleteCjsSe" +
-      "archDefinition\022).api.v0alpha.DeleteCjsSe" +
-      "archDefinitionReq\032\026.google.protobuf.Empt" +
-      "y\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/colle" +
-      "ctions/deletesearchdefinition:\001*\022\264\001\n\030Lis" +
-      "tCjsSearchDefinitions\022(.api.v0alpha.List" +
-      "CjsSearchDefinitionsReq\032(.api.v0alpha.Li" +
-      "stCjsSearchDefinitionsRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027" +
-      "\"2/api/v0alpha/lms/collections/listsearc" +
-      "hdefinitions:\001*\022\274\001\n\032ExecuteCjsSearchDefi" +
-      "nition\022*.api.v0alpha.ExecuteCjsSearchDef" +
-      "initionReq\032*.api.v0alpha.ExecuteCjsSearc" +
-      "hDefinitionRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0al" +
-      "pha/lms/collections/executesearchdefinit" +
-      "ion:\001*\022\272\001\n\032GetCjsSecureSearchCriteria\022*." +
-      "api.v0alpha.GetCjsSecureSearchCriteriaRe" +
-      "q\032$.api.v0alpha.CjsSecureSearchCriteria\"" +
-      "J\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/coll" +
-      "ections/getsecuresearchdcriteria:\001*\022\272\001\n\035" +
-      "CreateCjsSecureSearchCriteria\022$.api.v0al" +
-      "pha.CjsSecureSearchCriteria\032$.api.v0alph" +
-      "a.CjsSecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344" +
-      "\223\002=\"8/api/v0alpha/lms/collections/create" +
-      "securesearchdcriteria:\001*\022\254\001\n\035UpdateCjsSe" +
-      "cureSearchCriteria\022$.api.v0alpha.CjsSecu" +
-      "reSearchCriteria\032\026.google.protobuf.Empty" +
-      "\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/col" +
-      "lections/updatesecuresearchdcriteria:\001*\022" +
-      "r\n\016SampleEndpoint\022\032.api.v0alpha.SampleRe" +
-      "quest\032\026.google.protobuf.Empty\",\272\270\221\002\005\n\003\010\351" +
-      "\007\202\323\344\223\002\034\"\027/api/v0alpha/lms/sample:\001*\022\204\001\n\025" +
-      "GetAvailableEHRFields\022\032.api.v0alpha.EHRE" +
-      "ntityType\032\023.api.v0alpha.Fields\":\272\270\221\002\005\n\003\010" +
-      "\350\007\202\323\344\223\002*\"%/api/v0alpha/lms/available-ehr" +
-      "-fields:\001*\022\243\001\n GetQueuedEventsStatusByEl" +
-      "ementId\022\026.api.v0alpha.ElementPK\032\023.api.v0" +
-      "alpha.Events\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0a" +
-      "lpha/lms/collections/getqueuedeventsstat" +
-      "usbyelementid:\001*\022w\n\tListPools\022\035.api.v0al" +
-      "pha.ListPoolsRequest\032\036.api.v0alpha.ListP" +
-      "oolsResponse\"+\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\033\"\026/api/v0a" +
-      "lpha/lms/pools:\001*\022\262\001\n\024CreatePipelineCanv" +
-      "as\022$.api.v0alpha.CreatePipelineCanvasReq" +
-      "\032$.api.v0alpha.CreatePipelineCanvasRes\"N" +
+      "ns/create:\001*\022\206\001\n\rGetCollection\022\035.api.v0a" +
+      "lpha.GetCollectionReq\032\037.api.v0alpha.Coll" +
+      "ectionMetadata\"5\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002%\" /api/v" +
+      "0alpha/lms/collections/get:\001*\022\202\001\n\020Update" +
+      "Collection\022\037.api.v0alpha.CollectionMetad" +
+      "ata\032\026.google.protobuf.Empty\"5\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002(\"#/api/v0alpha/lms/collections/update:" +
+      "\001*\022\227\001\n\020RetypeCollection\022 .api.v0alpha.Re" +
+      "typeCollectionReq\032 .api.v0alpha.RetypeCo" +
+      "llectionRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha" +
+      "/lms/collections/retypecollection:\001*\022\203\001\n" +
+      "\020DeleteCollection\022 .api.v0alpha.DeleteCo" +
+      "llectionReq\032\026.google.protobuf.Empty\"5\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collections" +
+      "/delete:\001*\022\206\001\n\017ListCollections\022\037.api.v0a" +
+      "lpha.ListCollectionsReq\032\037.api.v0alpha.Li" +
+      "stCollectionsRes\"1\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002!\"\034/api" +
+      "/v0alpha/lms/collections:\001*\022\200\001\n\017ResetCol" +
+      "lection\022\037.api.v0alpha.ResetCollectionReq" +
+      "\032\026.google.protobuf.Empty\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"" +
+      "\"/api/v0alpha/lms/collections/reset:\001*\022\212" +
+      "\001\n\022AddCollectionEntry\022\034.api.v0alpha.Coll" +
+      "ectionEntry\032\034.api.v0alpha.CollectionEntr" +
+      "y\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/lms/colle" +
+      "ctions/add-entry:\001*\022\223\001\n\025DeleteCollection" +
+      "Entry\022%.api.v0alpha.DeleteCollectionEntr" +
+      "yReq\032\026.google.protobuf.Empty\";\272\270\221\002\002\030\001\202\323\344" +
+      "\223\002.\")/api/v0alpha/lms/collections/delete" +
+      "-entry:\001*\022\220\001\n\025UpdateCollectionEntry\022\034.ap" +
+      "i.v0alpha.CollectionEntry\032\034.api.v0alpha." +
+      "CollectionEntry\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0a" +
+      "lpha/lms/collections/update-entry:\001*\022\213\001\n" +
+      "\020StreamCollection\022 .api.v0alpha.StreamCo" +
+      "llectionReq\032\034.api.v0alpha.CollectionEntr" +
+      "y\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/colle" +
+      "ctions/stream:\001*0\001\022\253\001\n\032SearchCollections" +
+      "Paginated\022*.api.v0alpha.SearchCollection" +
+      "sPaginatedReq\032\037.api.v0alpha.PaginatedSea" +
+      "rchRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/lms/" +
+      "collections/searchcollections:\001*\022\252\001\n\024Get" +
+      "CollectionEntries\022$.api.v0alpha.GetColle" +
+      "ctionEntriesReq\032$.api.v0alpha.GetCollect" +
+      "ionEntriesRes\"F\272\270\221\002\005\n\003\010\350\007\202\323\344\223\0026\"1/api/v0" +
+      "alpha/lms/collections/getcollectionentri" +
+      "es:\001*\022\246\001\n\031CreateCjsSearchDefinition\022 .ap" +
+      "i.v0alpha.CjsSearchDefinition\032 .api.v0al" +
+      "pha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3" +
+      "/api/v0alpha/lms/collections/createsearc" +
+      "hdefinition:\001*\022\246\001\n\026GetCjsSearchDefinitio" +
+      "n\022&.api.v0alpha.GetCjsSearchDefinitionRe" +
+      "q\032 .api.v0alpha.CjsSearchDefinition\"B\272\270\221" +
+      "\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/lms/collections" +
+      "/getsearchdefinition:\001*\022\234\001\n\031UpdateCjsSea" +
+      "rchDefinition\022 .api.v0alpha.CjsSearchDef" +
+      "inition\032\026.google.protobuf.Empty\"E\272\270\221\002\002\030\001" +
+      "\202\323\344\223\0028\"3/api/v0alpha/lms/collections/upd" +
+      "atesearchdefinition:\001*\022\245\001\n\031DeleteCjsSear" +
+      "chDefinition\022).api.v0alpha.DeleteCjsSear" +
+      "chDefinitionReq\032\026.google.protobuf.Empty\"" +
+      "E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/collect" +
+      "ions/deletesearchdefinition:\001*\022\264\001\n\030ListC" +
+      "jsSearchDefinitions\022(.api.v0alpha.ListCj" +
+      "sSearchDefinitionsReq\032(.api.v0alpha.List" +
+      "CjsSearchDefinitionsRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2" +
+      "/api/v0alpha/lms/collections/listsearchd" +
+      "efinitions:\001*\022\274\001\n\032ExecuteCjsSearchDefini" +
+      "tion\022*.api.v0alpha.ExecuteCjsSearchDefin" +
+      "itionReq\032*.api.v0alpha.ExecuteCjsSearchD" +
+      "efinitionRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alph" +
+      "a/lms/collections/executesearchdefinitio" +
+      "n:\001*\022\272\001\n\032GetCjsSecureSearchCriteria\022*.ap" +
+      "i.v0alpha.GetCjsSecureSearchCriteriaReq\032" +
+      "$.api.v0alpha.CjsSecureSearchCriteria\"J\272" +
+      "\270\221\002\005\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/collec" +
+      "tions/getsecuresearchdcriteria:\001*\022\272\001\n\035Cr" +
+      "eateCjsSecureSearchCriteria\022$.api.v0alph" +
+      "a.CjsSecureSearchCriteria\032$.api.v0alpha." +
+      "CjsSecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002" +
+      "=\"8/api/v0alpha/lms/collections/createse" +
+      "curesearchdcriteria:\001*\022\254\001\n\035UpdateCjsSecu" +
+      "reSearchCriteria\022$.api.v0alpha.CjsSecure" +
+      "SearchCriteria\032\026.google.protobuf.Empty\"M" +
+      "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/colle" +
+      "ctions/updatesecuresearchdcriteria:\001*\022r\n" +
+      "\016SampleEndpoint\022\032.api.v0alpha.SampleRequ" +
+      "est\032\026.google.protobuf.Empty\",\272\270\221\002\005\n\003\010\351\007\202" +
+      "\323\344\223\002\034\"\027/api/v0alpha/lms/sample:\001*\022\204\001\n\025Ge" +
+      "tAvailableEHRFields\022\032.api.v0alpha.EHREnt" +
+      "ityType\032\023.api.v0alpha.Fields\":\272\270\221\002\005\n\003\010\350\007" +
+      "\202\323\344\223\002*\"%/api/v0alpha/lms/available-ehr-f" +
+      "ields:\001*\022\243\001\n GetQueuedEventsStatusByElem" +
+      "entId\022\026.api.v0alpha.ElementPK\032\023.api.v0al" +
+      "pha.Events\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0alp" +
+      "ha/lms/collections/getqueuedeventsstatus" +
+      "byelementid:\001*\022w\n\tListPools\022\035.api.v0alph" +
+      "a.ListPoolsRequest\032\036.api.v0alpha.ListPoo" +
+      "lsResponse\"+\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002\033\"\026/api/v0alp" +
+      "ha/lms/pools:\001*\022\262\001\n\024CreatePipelineCanvas" +
+      "\022$.api.v0alpha.CreatePipelineCanvasReq\032$" +
+      ".api.v0alpha.CreatePipelineCanvasRes\"N\272\270" +
+      "\221\002\005\n\003\010\351\007\202\323\344\223\002>\"9/api/v0alpha/lms/pipelin" +
+      "e-canvases/create-pipeline-canvas:\001*\022\262\001\n" +
+      "\024ListPipelineCanvases\022$.api.v0alpha.List" +
+      "PipelineCanvasesReq\032$.api.v0alpha.ListPi" +
+      "pelineCanvasesRes\"N\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002>\"9/ap" +
+      "i/v0alpha/lms/pipeline-canvases/list-pip" +
+      "eline-canvases:\001*\022\262\001\n\024UpdatePipelineCanv" +
+      "as\022$.api.v0alpha.UpdatePipelineCanvasReq" +
+      "\032$.api.v0alpha.UpdatePipelineCanvasRes\"N" +
       "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002>\"9/api/v0alpha/lms/pipel" +
-      "ine-canvases/create-pipeline-canvas:\001*\022\262" +
-      "\001\n\024ListPipelineCanvases\022$.api.v0alpha.Li" +
-      "stPipelineCanvasesReq\032$.api.v0alpha.List" +
-      "PipelineCanvasesRes\"N\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002>\"9/" +
-      "api/v0alpha/lms/pipeline-canvases/list-p" +
-      "ipeline-canvases:\001*\022\262\001\n\024UpdatePipelineCa" +
-      "nvas\022$.api.v0alpha.UpdatePipelineCanvasR" +
-      "eq\032$.api.v0alpha.UpdatePipelineCanvasRes" +
-      "\"N\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002>\"9/api/v0alpha/lms/pip" +
-      "eline-canvases/update-pipeline-canvas:\001*" +
-      "\022\262\001\n\024DeletePipelineCanvas\022$.api.v0alpha." +
-      "DeletePipelineCanvasReq\032$.api.v0alpha.De" +
-      "letePipelineCanvasRes\"N\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002>\"" +
-      "9/api/v0alpha/lms/pipeline-canvases/dele" +
-      "te-pipeline-canvas:\001*\022\246\001\n\021GetPipelineCan" +
-      "vas\022!.api.v0alpha.GetPipelineCanvasReq\032!" +
-      ".api.v0alpha.GetPipelineCanvasRes\"K\272\270\221\002\005" +
-      "\n\003\010\350\007\202\323\344\223\002;\"6/api/v0alpha/lms/pipeline-c" +
-      "anvases/get-pipeline-canvas:\001*\022\277\001\n\027GetPi" +
-      "pelineCanvasEvents\022\'.api.v0alpha.GetPipe" +
-      "lineCanvasEventsReq\032\'.api.v0alpha.GetPip" +
-      "elineCanvasEventsRes\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=" +
-      "/api/v0alpha/lms/pipeline-canvases/get-p" +
-      "ipeline-canvas-events:\001*Bv\n\035com.tcn.clou" +
-      "d.api.api.v0alphaB\010LmsProtoP\001\242\002\003AVX\252\002\013Ap" +
-      "i.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GP" +
-      "BMetadata\352\002\014Api::V0alphab\006proto3"
+      "ine-canvases/update-pipeline-canvas:\001*\022\262" +
+      "\001\n\024DeletePipelineCanvas\022$.api.v0alpha.De" +
+      "letePipelineCanvasReq\032$.api.v0alpha.Dele" +
+      "tePipelineCanvasRes\"N\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002>\"9/" +
+      "api/v0alpha/lms/pipeline-canvases/delete" +
+      "-pipeline-canvas:\001*\022\246\001\n\021GetPipelineCanva" +
+      "s\022!.api.v0alpha.GetPipelineCanvasReq\032!.a" +
+      "pi.v0alpha.GetPipelineCanvasRes\"K\272\270\221\002\005\n\003" +
+      "\010\350\007\202\323\344\223\002;\"6/api/v0alpha/lms/pipeline-can" +
+      "vases/get-pipeline-canvas:\001*\022\277\001\n\027GetPipe" +
+      "lineCanvasEvents\022\'.api.v0alpha.GetPipeli" +
+      "neCanvasEventsReq\032\'.api.v0alpha.GetPipel" +
+      "ineCanvasEventsRes\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/a" +
+      "pi/v0alpha/lms/pipeline-canvases/get-pip" +
+      "eline-canvas-events:\001*Bv\n\035com.tcn.cloud." +
+      "api.api.v0alphaB\010LmsProtoP\001\242\002\003AVX\252\002\013Api." +
+      "V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBM" +
+      "etadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2682,84 +2706,90 @@ public final class LmsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PipelineCanvas_descriptor,
         new java.lang.String[] { "Metadata", "Elements", });
-    internal_static_api_v0alpha_PipelineCanvasPreview_descriptor =
+    internal_static_api_v0alpha_EntrypointMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_api_v0alpha_EntrypointMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_EntrypointMetadata_descriptor,
+        new java.lang.String[] { "ElementId", "Name", "CronString", "LastRunTime", "RecentErrorMessage", });
+    internal_static_api_v0alpha_PipelineCanvasPreview_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_v0alpha_PipelineCanvasPreview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PipelineCanvasPreview_descriptor,
-        new java.lang.String[] { "Metadata", "Entrypoints", "Exchanges", "ElementCount", });
+        new java.lang.String[] { "Metadata", "Entrypoints", "Exchanges", "ElementCount", "EntrypointMetadata", });
     internal_static_api_v0alpha_CreatePipelineCanvasReq_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_v0alpha_CreatePipelineCanvasReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CreatePipelineCanvasReq_descriptor,
         new java.lang.String[] { "Name", "Description", });
     internal_static_api_v0alpha_CreatePipelineCanvasRes_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_v0alpha_CreatePipelineCanvasRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CreatePipelineCanvasRes_descriptor,
         new java.lang.String[] { "PipelineCanvas", });
     internal_static_api_v0alpha_ListPipelineCanvasesReq_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_v0alpha_ListPipelineCanvasesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListPipelineCanvasesReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListPipelineCanvasesRes_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_v0alpha_ListPipelineCanvasesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListPipelineCanvasesRes_descriptor,
         new java.lang.String[] { "PipelineCanvasPreviews", });
     internal_static_api_v0alpha_UpdatePipelineCanvasReq_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_v0alpha_UpdatePipelineCanvasReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdatePipelineCanvasReq_descriptor,
         new java.lang.String[] { "PipelineCanvasSid", "Name", "Description", });
     internal_static_api_v0alpha_UpdatePipelineCanvasRes_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v0alpha_UpdatePipelineCanvasRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdatePipelineCanvasRes_descriptor,
         new java.lang.String[] { "PipelineCanvas", });
     internal_static_api_v0alpha_DeletePipelineCanvasReq_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_v0alpha_DeletePipelineCanvasReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeletePipelineCanvasReq_descriptor,
         new java.lang.String[] { "PipelineCanvasSid", });
     internal_static_api_v0alpha_DeletePipelineCanvasRes_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v0alpha_DeletePipelineCanvasRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeletePipelineCanvasRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_GetPipelineCanvasReq_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v0alpha_GetPipelineCanvasReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPipelineCanvasReq_descriptor,
         new java.lang.String[] { "PipelineCanvasSid", });
     internal_static_api_v0alpha_GetPipelineCanvasRes_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v0alpha_GetPipelineCanvasRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPipelineCanvasRes_descriptor,
         new java.lang.String[] { "PipelineCanvas", });
     internal_static_api_v0alpha_GetPipelineCanvasEventsReq_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v0alpha_GetPipelineCanvasEventsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPipelineCanvasEventsReq_descriptor,
         new java.lang.String[] { "PipelineCanvasSid", });
     internal_static_api_v0alpha_GetPipelineCanvasEventsRes_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v0alpha_GetPipelineCanvasEventsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPipelineCanvasEventsRes_descriptor,
-        new java.lang.String[] { "QueuedEvents", "ProcessingEvents", });
+        new java.lang.String[] { "QueuedEvents", "ProcessingEvents", "EntrypointFailures", });
     internal_static_api_v0alpha_GetPipelineCanvasEventsRes_QueuedEventsEntry_descriptor =
       internal_static_api_v0alpha_GetPipelineCanvasEventsRes_descriptor.getNestedTypes().get(0);
     internal_static_api_v0alpha_GetPipelineCanvasEventsRes_QueuedEventsEntry_fieldAccessorTable = new
@@ -2772,56 +2802,62 @@ public final class LmsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPipelineCanvasEventsRes_ProcessingEventsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_descriptor =
+      internal_static_api_v0alpha_GetPipelineCanvasEventsRes_descriptor.getNestedTypes().get(2);
+    internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_GetPipelineCanvasEventsRes_EntrypointFailuresEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_ListPoolsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v0alpha_ListPoolsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListPoolsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListPoolsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v0alpha_ListPoolsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListPoolsResponse_descriptor,
         new java.lang.String[] { "Pools", });
     internal_static_api_v0alpha_Pool_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v0alpha_Pool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Pool_descriptor,
         new java.lang.String[] { "Id", "Name", "Desc", });
     internal_static_api_v0alpha_GetPublicKeyReq_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v0alpha_GetPublicKeyReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetPublicKeyReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_PublicKey_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v0alpha_PublicKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PublicKey_descriptor,
         new java.lang.String[] { "Key", });
     internal_static_api_v0alpha_FindFieldUsagesReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_v0alpha_FindFieldUsagesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FindFieldUsagesReq_descriptor,
         new java.lang.String[] { "FieldName", });
     internal_static_api_v0alpha_NameAndId_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v0alpha_NameAndId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_NameAndId_descriptor,
         new java.lang.String[] { "Id", "Name", });
     internal_static_api_v0alpha_FindFieldUsagesRes_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v0alpha_FindFieldUsagesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FindFieldUsagesRes_descriptor,
         new java.lang.String[] { "FieldName", "FileTemplates", "Elements", });
     internal_static_api_v0alpha_ElementError_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_v0alpha_ElementError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ElementError_descriptor,
@@ -2845,157 +2881,157 @@ public final class LmsProto {
         internal_static_api_v0alpha_ElementError_BadFieldType_descriptor,
         new java.lang.String[] { "FieldName", });
     internal_static_api_v0alpha_ElementSummary_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_v0alpha_ElementSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ElementSummary_descriptor,
         new java.lang.String[] { "ElementId", "ElementName", "Error", });
     internal_static_api_v0alpha_FindInvalidElementsReq_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v0alpha_FindInvalidElementsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FindInvalidElementsReq_descriptor,
         new java.lang.String[] { "OrgId", "RegionId", });
     internal_static_api_v0alpha_FindInvalidElementsRes_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v0alpha_FindInvalidElementsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FindInvalidElementsRes_descriptor,
         new java.lang.String[] { "InvalidElements", });
     internal_static_api_v0alpha_GetComplianceScrubListsReq_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v0alpha_GetComplianceScrubListsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetComplianceScrubListsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_GetComplianceScrubListsRes_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v0alpha_GetComplianceScrubListsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetComplianceScrubListsRes_descriptor,
         new java.lang.String[] { "ScrubLists", });
     internal_static_api_v0alpha_ProcessElementReq_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_v0alpha_ProcessElementReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessElementReq_descriptor,
         new java.lang.String[] { "ElementId", "ProcessMessage", });
     internal_static_api_v0alpha_ProcessListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_v0alpha_ProcessListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessListRequest_descriptor,
         new java.lang.String[] { "ElementId", "List", });
     internal_static_api_v0alpha_ProcessListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_api_v0alpha_ProcessListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessListResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_StreamListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_api_v0alpha_StreamListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_StreamListRequest_descriptor,
         new java.lang.String[] { "OrgId", "RegionId", "ElementId", "Chunk", });
     internal_static_api_v0alpha_StreamListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_api_v0alpha_StreamListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_StreamListResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListAvailableFieldsByElementIdReq_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_api_v0alpha_ListAvailableFieldsByElementIdReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListAvailableFieldsByElementIdReq_descriptor,
         new java.lang.String[] { "ElementId", });
     internal_static_api_v0alpha_ListFieldsForElementReq_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_api_v0alpha_ListFieldsForElementReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListFieldsForElementReq_descriptor,
         new java.lang.String[] { "ElementId", });
     internal_static_api_v0alpha_ListFieldsForElementRes_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_api_v0alpha_ListFieldsForElementRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListFieldsForElementRes_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_ListAutocompleteFieldsReq_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_api_v0alpha_ListAutocompleteFieldsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListAutocompleteFieldsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListAutocompleteFieldsRes_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_api_v0alpha_ListAutocompleteFieldsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListAutocompleteFieldsRes_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_ElementPK_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_v0alpha_ElementPK_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ElementPK_descriptor,
         new java.lang.String[] { "ElementId", });
     internal_static_api_v0alpha_Element_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_v0alpha_Element_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Element_descriptor,
         new java.lang.String[] { "ElementId", "Name", "Inputs", "InputIsDiscard", "Transform", "LastStatus", "Labels", "CreatedDate", "LastEdited", "Description", "PipelineCanvasSid", });
     internal_static_api_v0alpha_PeekListReq_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_v0alpha_PeekListReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PeekListReq_descriptor,
         new java.lang.String[] { "ElementId", "Version", "PageSize", "Page", "Process", "PeekAtDiscards", });
     internal_static_api_v0alpha_PeekListRes_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_v0alpha_PeekListRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PeekListRes_descriptor,
         new java.lang.String[] { "Records", "Metrics", });
     internal_static_api_v0alpha_GetHistoryReq_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_v0alpha_GetHistoryReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetHistoryReq_descriptor,
         new java.lang.String[] { "ElementId", "Count", "StartingId", });
     internal_static_api_v0alpha_GetHistoryRes_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_v0alpha_GetHistoryRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetHistoryRes_descriptor,
         new java.lang.String[] { "ElementId", "Commits", });
     internal_static_api_v0alpha_History_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_v0alpha_History_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_History_descriptor,
         new java.lang.String[] { "ElementId", "HistoryId", "Process", "Failed", "AttemptNumber", "Reason", "UploadTs", "StartedTs", "FinishedTs", "EventId", "ParentElementId", "Metrics", "DiscardMetrics", });
     internal_static_api_v0alpha_HistoryAndCount_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_v0alpha_HistoryAndCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_HistoryAndCount_descriptor,
         new java.lang.String[] { "ElementId", "HistoryId", "EndingHistoryId", "Process", "Failed", "AttemptNumber", "Reason", "UploadTs", "StartedTs", "FinishedTs", "EventId", "ParentElementId", "Metrics", "DiscardMetrics", "Count", });
     internal_static_api_v0alpha_RecordProto_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_v0alpha_RecordProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RecordProto_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_RecordProtoPair_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_v0alpha_RecordProtoPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RecordProtoPair_descriptor,
         new java.lang.String[] { "Old", "New", });
     internal_static_api_v0alpha_ProcessFields_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_v0alpha_ProcessFields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessFields_descriptor,
@@ -3013,127 +3049,127 @@ public final class LmsProto {
         internal_static_api_v0alpha_ProcessFields_Field_descriptor,
         new java.lang.String[] { "Name", "FieldType", "Nested", "Format", });
     internal_static_api_v0alpha_FieldPK_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_v0alpha_FieldPK_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FieldPK_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_api_v0alpha_Field_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v0alpha_Field_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Field_descriptor,
         new java.lang.String[] { "Name", "Type", "DateModified", "Metadata", "Description", });
     internal_static_api_v0alpha_UpdateFieldReq_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v0alpha_UpdateFieldReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateFieldReq_descriptor,
         new java.lang.String[] { "Name", "Type", "DateModified", "NewName", "Metadata", "Description", });
     internal_static_api_v0alpha_FieldMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v0alpha_FieldMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FieldMetadata_descriptor,
         new java.lang.String[] { "TimeFormat", "Precision", "RemoveCharacters", "ReplaceEmpty", "ReplaceError", "RemoveLetters", "RemoveNumbers", "RemoveSymbols", "LeaveCharacters", "RemoveString", "JsonDotPath", "JsonForceTypeMatch", "StartingPosition", "FieldLength", });
     internal_static_api_v0alpha_Fields_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v0alpha_Fields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Fields_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_FieldIndex_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v0alpha_FieldIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FieldIndex_descriptor,
         new java.lang.String[] { "Index", "Datetime", "Modifier", });
     internal_static_api_v0alpha_ListFieldsReq_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v0alpha_ListFieldsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListFieldsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_RecordFieldProto_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_api_v0alpha_RecordFieldProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RecordFieldProto_descriptor,
         new java.lang.String[] { "Name", "StringValue", "NumberValue", "BoolValue", "Phone", "Currency", "PostalCode", "Email", "DateTime", "RepeatedRecords", "RecordFieldMap", "Err", "EnrichedPhone", "EnrichedZip", "Payload", });
     internal_static_api_v0alpha_RepeatedRecords_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_api_v0alpha_RepeatedRecords_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RepeatedRecords_descriptor,
         new java.lang.String[] { "Records", });
     internal_static_api_v0alpha_ListElementsReq_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_api_v0alpha_ListElementsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListElementsReq_descriptor,
         new java.lang.String[] { "Labels", });
     internal_static_api_v0alpha_GetFileTemplatesReq_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_api_v0alpha_GetFileTemplatesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetFileTemplatesReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_FileTemplateField_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_api_v0alpha_FileTemplateField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FileTemplateField_descriptor,
         new java.lang.String[] { "Name", "Type", });
     internal_static_api_v0alpha_FileTemplateFields_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_api_v0alpha_FileTemplateFields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FileTemplateFields_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_FieldTypes_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_api_v0alpha_FieldTypes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FieldTypes_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v0alpha_FileTemplate_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_api_v0alpha_FileTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FileTemplate_descriptor,
         new java.lang.String[] { "FileTemplateId", "Name", "Description", "FieldNames", "FileFormatParams", "FileFormat", "Fields", });
     internal_static_api_v0alpha_LMSUploadReq_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_api_v0alpha_LMSUploadReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_LMSUploadReq_descriptor,
         new java.lang.String[] { "ElementId", "FileId", });
     internal_static_api_v0alpha_LMSUploadRes_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_api_v0alpha_LMSUploadRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_LMSUploadRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ReRunReq_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_api_v0alpha_ReRunReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ReRunReq_descriptor,
         new java.lang.String[] { "ListId", "RerunUrl", });
     internal_static_api_v0alpha_ReRunRes_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_api_v0alpha_ReRunRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ReRunRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_Process_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_api_v0alpha_Process_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Process_descriptor,
         new java.lang.String[] { "Expression", "Append", "Sort", "Filter", "GsExport", "P3Export", "Compl", "Dedup", "CfsExport", "SftpExport", "Reshape", "Lookup", "Entrypoint", "ComplianceExport", "ApiEntrypoint", "SftpImport", "Scrub", "Frequency", "CjsImport", "CjsExport", "CjsEnrich", "WebEntrypoint", "DeleteScrubEntries", "WfmExport", "LinkEnrich", "Rnd", "ConsentEnrich", "ConsentExport", "ComplianceProcessor", "ConsentEntrypoint", "PortalLinkEnrich", "BulkWebEntrypoint", "OmniExchangeProcess", "WebExchangeProcess", "Split", "EpicEntryPoint", "ContactManagerSink", "Sum", "FinviEntrypoint", "ContactManagementEnrichment", "TicketExchangeSink", "Proc", });
     internal_static_api_v0alpha_ComplianceProcessor_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_api_v0alpha_ComplianceProcessor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ComplianceProcessor_descriptor,
@@ -3145,25 +3181,25 @@ public final class LmsProto {
         internal_static_api_v0alpha_ComplianceProcessor_CallMetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_ConsentEntrypointProcess_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_api_v0alpha_ConsentEntrypointProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ConsentEntrypointProcess_descriptor,
         new java.lang.String[] { "ConsentProfileId", });
     internal_static_api_v0alpha_ConsentEnrichmentProcess_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_api_v0alpha_ConsentEnrichmentProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ConsentEnrichmentProcess_descriptor,
         new java.lang.String[] { "ContentField", "ConsentProfile", "ConsentProfileId", });
     internal_static_api_v0alpha_ConsentExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_api_v0alpha_ConsentExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ConsentExportProcess_descriptor,
         new java.lang.String[] { "ContentField", "ConsentProfile", "ConsentProfileId", "RunType", "Action", "ReferringUrl", "Topic", "RevokedReason", "GrantedReason", "Proof", "ConditionTimeOfDayFrom", "ConditionTimeOfDayTo", "Notes", "Expire", "ConditionFrom", "ConditionTo", "ContentTypeVal", "ContentTypeFieldName", "ChannelTypeVal", "ChannelTypeFieldName", "ExpirationDate", "ExpirationFieldName", "ExpirationAfterDuration", "ContentType", "ChannelType", "Expiration", });
     internal_static_api_v0alpha_PaymentLinkEnrichment_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_v0alpha_PaymentLinkEnrichment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PaymentLinkEnrichment_descriptor,
@@ -3175,7 +3211,7 @@ public final class LmsProto {
         internal_static_api_v0alpha_PaymentLinkEnrichment_KeyMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_PortalLinkEnrichment_descriptor =
-      getDescriptor().getMessageTypes().get(75);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_api_v0alpha_PortalLinkEnrichment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PortalLinkEnrichment_descriptor,
@@ -3187,25 +3223,25 @@ public final class LmsProto {
         internal_static_api_v0alpha_PortalLinkEnrichment_KeyMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_Expiration_descriptor =
-      getDescriptor().getMessageTypes().get(76);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_api_v0alpha_Expiration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Expiration_descriptor,
         new java.lang.String[] { "Units", "Quantity", });
     internal_static_api_v0alpha_EntrypointProcess_descriptor =
-      getDescriptor().getMessageTypes().get(77);
+      getDescriptor().getMessageTypes().get(78);
     internal_static_api_v0alpha_EntrypointProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EntrypointProcess_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ApiEntrypoint_descriptor =
-      getDescriptor().getMessageTypes().get(78);
+      getDescriptor().getMessageTypes().get(79);
     internal_static_api_v0alpha_ApiEntrypoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ApiEntrypoint_descriptor,
         new java.lang.String[] { "FtsId", "FileTemplateId", "Incremental", "Encrypted", });
     internal_static_api_v0alpha_HttpReq_descriptor =
-      getDescriptor().getMessageTypes().get(79);
+      getDescriptor().getMessageTypes().get(80);
     internal_static_api_v0alpha_HttpReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_HttpReq_descriptor,
@@ -3223,73 +3259,73 @@ public final class LmsProto {
         internal_static_api_v0alpha_HttpReq_NamedResponseValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_WebEntrypointProcess_descriptor =
-      getDescriptor().getMessageTypes().get(80);
+      getDescriptor().getMessageTypes().get(81);
     internal_static_api_v0alpha_WebEntrypointProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_WebEntrypointProcess_descriptor,
         new java.lang.String[] { "HttpRequests", "FileTemplateId", "FileTemplate", "Name", "Cron", "Timezone", "Enabled", });
     internal_static_api_v0alpha_BulkWebEntrypointProcess_descriptor =
-      getDescriptor().getMessageTypes().get(81);
+      getDescriptor().getMessageTypes().get(82);
     internal_static_api_v0alpha_BulkWebEntrypointProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_BulkWebEntrypointProcess_descriptor,
         new java.lang.String[] { "PreliminaryRequests", "PaginatedRequest", "FileTemplateId", "Name", "Cron", "Timezone", "Enabled", "FlushPageCount", "FlushMinuteCount", "FlushDuringCheck", });
     internal_static_api_v0alpha_OmniExchangeProcess_descriptor =
-      getDescriptor().getMessageTypes().get(82);
+      getDescriptor().getMessageTypes().get(83);
     internal_static_api_v0alpha_OmniExchangeProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_OmniExchangeProcess_descriptor,
         new java.lang.String[] { "ProjectId", "CampaignId", "TimeZone", "Days", "Hour", "Minute", });
     internal_static_api_v0alpha_WebExchangeProcess_descriptor =
-      getDescriptor().getMessageTypes().get(83);
+      getDescriptor().getMessageTypes().get(84);
     internal_static_api_v0alpha_WebExchangeProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_WebExchangeProcess_descriptor,
         new java.lang.String[] { "HttpRequests", "ErrorThreshold", });
     internal_static_api_v0alpha_PaginatedHttpRequest_descriptor =
-      getDescriptor().getMessageTypes().get(84);
+      getDescriptor().getMessageTypes().get(85);
     internal_static_api_v0alpha_PaginatedHttpRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PaginatedHttpRequest_descriptor,
         new java.lang.String[] { "IterationRequest", "StartIndex", "EndForAny", "EndForAll", "RequestNotReady", "NotReadyWaitSeconds", "NotReadyRedoPreliminary", "NotReadySkipIteration", "ProcessStopPage", });
     internal_static_api_v0alpha_SftpImport_descriptor =
-      getDescriptor().getMessageTypes().get(85);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_api_v0alpha_SftpImport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SftpImport_descriptor,
         new java.lang.String[] { "User", "Password", "PrivateKey", "Address", "Port", "FilePattern", "Enabled", "FileTemplateId", "Incremental", "Encrypted", "Cron", "Timezone", "TransferConfigName", });
     internal_static_api_v0alpha_RndEnrichmentProcess_descriptor =
-      getDescriptor().getMessageTypes().get(86);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_api_v0alpha_RndEnrichmentProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RndEnrichmentProcess_descriptor,
         new java.lang.String[] { "OrgId", "Field", "DateLastContactField", });
     internal_static_api_v0alpha_CjsImportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(87);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_api_v0alpha_CjsImportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsImportProcess_descriptor,
         new java.lang.String[] { "CjsCollectionId", "Enabled", "Cron", "Timezone", "Dedup", "UseZeroValues", });
     internal_static_api_v0alpha_CjsExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(88);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_api_v0alpha_CjsExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsExportProcess_descriptor,
         new java.lang.String[] { "CjsCollectionId", "Header", "RunType", "CjsCollectionName", "Overwrite", "Update", "UpdateKeyField", "ReplaceInvalidWithNull", });
     internal_static_api_v0alpha_CjsEnrichmentProcess_descriptor =
-      getDescriptor().getMessageTypes().get(89);
+      getDescriptor().getMessageTypes().get(90);
     internal_static_api_v0alpha_CjsEnrichmentProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsEnrichmentProcess_descriptor,
         new java.lang.String[] { "CjsCollectionId", "KeyField", "EnrichType", "PrimarySource", "CjsKeyFieldName", "ColumnOverwrite", "DedupKeyPolicy", "UseZeroValues", });
     internal_static_api_v0alpha_AppendProcess_descriptor =
-      getDescriptor().getMessageTypes().get(90);
+      getDescriptor().getMessageTypes().get(91);
     internal_static_api_v0alpha_AppendProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_AppendProcess_descriptor,
         new java.lang.String[] { "FtsId", });
     internal_static_api_v0alpha_LookupProcess_descriptor =
-      getDescriptor().getMessageTypes().get(91);
+      getDescriptor().getMessageTypes().get(92);
     internal_static_api_v0alpha_LookupProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_LookupProcess_descriptor,
@@ -3313,43 +3349,43 @@ public final class LmsProto {
         internal_static_api_v0alpha_LookupProcess_UrlLookup_descriptor,
         new java.lang.String[] { "Url", "FileTemplate", });
     internal_static_api_v0alpha_ComplProcess_descriptor =
-      getDescriptor().getMessageTypes().get(92);
+      getDescriptor().getMessageTypes().get(93);
     internal_static_api_v0alpha_ComplProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ComplProcess_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_CFSExportConfig_descriptor =
-      getDescriptor().getMessageTypes().get(93);
+      getDescriptor().getMessageTypes().get(94);
     internal_static_api_v0alpha_CFSExportConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CFSExportConfig_descriptor,
         new java.lang.String[] { "Type", "Value", });
     internal_static_api_v0alpha_CFSExportReqHeader_descriptor =
-      getDescriptor().getMessageTypes().get(94);
+      getDescriptor().getMessageTypes().get(95);
     internal_static_api_v0alpha_CFSExportReqHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CFSExportReqHeader_descriptor,
         new java.lang.String[] { "ExportHeader", "Configs", "OrgId", "RegionId", });
     internal_static_api_v0alpha_CFSExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(95);
+      getDescriptor().getMessageTypes().get(96);
     internal_static_api_v0alpha_CFSExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CFSExportProcess_descriptor,
         new java.lang.String[] { "ExportHeader", "Configs", });
     internal_static_api_v0alpha_FilterProcess_descriptor =
-      getDescriptor().getMessageTypes().get(96);
+      getDescriptor().getMessageTypes().get(97);
     internal_static_api_v0alpha_FilterProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FilterProcess_descriptor,
         new java.lang.String[] { "Expression", "Operations", "Negate", });
     internal_static_api_v0alpha_FilterOperation_descriptor =
-      getDescriptor().getMessageTypes().get(97);
+      getDescriptor().getMessageTypes().get(98);
     internal_static_api_v0alpha_FilterOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FilterOperation_descriptor,
         new java.lang.String[] { "Checks", "Operator", });
     internal_static_api_v0alpha_FilterCheck_descriptor =
-      getDescriptor().getMessageTypes().get(98);
+      getDescriptor().getMessageTypes().get(99);
     internal_static_api_v0alpha_FilterCheck_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FilterCheck_descriptor,
@@ -3385,109 +3421,109 @@ public final class LmsProto {
         internal_static_api_v0alpha_FilterCheck_ListComparison_FieldOrVal_descriptor,
         new java.lang.String[] { "Field", "Value", "Val", });
     internal_static_api_v0alpha_GSExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(99);
+      getDescriptor().getMessageTypes().get(100);
     internal_static_api_v0alpha_GSExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GSExportProcess_descriptor,
         new java.lang.String[] { "Bucket", "File", });
     internal_static_api_v0alpha_P3ExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(100);
+      getDescriptor().getMessageTypes().get(101);
     internal_static_api_v0alpha_P3ExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_P3ExportProcess_descriptor,
         new java.lang.String[] { "Header", "ContactListPrefix", "Username", "Password", "AccessToken", "Country", "DupePolicy", "AbsentPolicy", "TemplateId", "DefaultAreaCode", "ScheduleTemplateNumber", "Description", "RunType", "FilePattern", "Filename", "CallerIds", "CellScrub", "StartTime", "EndTime", "DialOrder", "EmailField", "EmailFrom", "FollowTheSun", "MessagesPerMinute", "RandomizeContacts", "ScheduleAsPaused", "ScheduleRule", "ShaDigestOverride", "SmsField", "SmsSourceNumber", "TimezoneOverride", "ZipScrub", "CompletionThreshold", "Timezone", "ComplianceRule", "FieldDelimiter", "RecordDelimiter", "QuoteFields", "UseCustomDateFormat", "FileFormat", "DaysIntoFuture", "StartHour", "EndHour", "ScheduleByTimezone", "ShiftPhoneFields", "DoCampaignLinking", "CampaignLinkId", "StopTrigger", });
     internal_static_api_v0alpha_ComplianceExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(101);
+      getDescriptor().getMessageTypes().get(102);
     internal_static_api_v0alpha_ComplianceExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ComplianceExportProcess_descriptor,
         new java.lang.String[] { "ListName", "Field", "ExpirationField", "CountryCode", "RunType", "ComplianceListType", });
     internal_static_api_v0alpha_ScrubProcess_descriptor =
-      getDescriptor().getMessageTypes().get(102);
+      getDescriptor().getMessageTypes().get(103);
     internal_static_api_v0alpha_ScrubProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ScrubProcess_descriptor,
         new java.lang.String[] { "ListId", "Field", });
     internal_static_api_v0alpha_DeleteScrubEntriesProcess_descriptor =
-      getDescriptor().getMessageTypes().get(103);
+      getDescriptor().getMessageTypes().get(104);
     internal_static_api_v0alpha_DeleteScrubEntriesProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeleteScrubEntriesProcess_descriptor,
         new java.lang.String[] { "ListId", "Field", });
     internal_static_api_v0alpha_FrequencyProcess_descriptor =
-      getDescriptor().getMessageTypes().get(104);
+      getDescriptor().getMessageTypes().get(105);
     internal_static_api_v0alpha_FrequencyProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FrequencyProcess_descriptor,
         new java.lang.String[] { "Field", "Days", "CountryCode", "MetaField", "Dispositions", "Results", "DispositionSets", });
     internal_static_api_v0alpha_DispositionSet_descriptor =
-      getDescriptor().getMessageTypes().get(105);
+      getDescriptor().getMessageTypes().get(106);
     internal_static_api_v0alpha_DispositionSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DispositionSet_descriptor,
         new java.lang.String[] { "Dispositions", });
     internal_static_api_v0alpha_DispositionPair_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(107);
     internal_static_api_v0alpha_DispositionPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DispositionPair_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_SftpExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(107);
+      getDescriptor().getMessageTypes().get(108);
     internal_static_api_v0alpha_SftpExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SftpExportProcess_descriptor,
         new java.lang.String[] { "DestFilepath", "Password", "Address", "Username", "Port", "Fileformat", "PrependHeaders", "FieldDelimiter", "RecordDelimiter", "FilePattern", "RunType", "Header", "QuoteFields", "UseCustomDateFormat", "Directory", "Filename", "ShiftPhoneFields", "TransferConfigName", });
     internal_static_api_v0alpha_WfmMultiSkill_descriptor =
-      getDescriptor().getMessageTypes().get(108);
+      getDescriptor().getMessageTypes().get(109);
     internal_static_api_v0alpha_WfmMultiSkill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_WfmMultiSkill_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_WfmExportProcess_descriptor =
-      getDescriptor().getMessageTypes().get(109);
+      getDescriptor().getMessageTypes().get(110);
     internal_static_api_v0alpha_WfmExportProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_WfmExportProcess_descriptor,
         new java.lang.String[] { "Single", "Multi", "SkillProfile", });
     internal_static_api_v0alpha_ExportHeader_descriptor =
-      getDescriptor().getMessageTypes().get(110);
+      getDescriptor().getMessageTypes().get(111);
     internal_static_api_v0alpha_ExportHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ExportHeader_descriptor,
         new java.lang.String[] { "Names", });
     internal_static_api_v0alpha_SortReq_descriptor =
-      getDescriptor().getMessageTypes().get(111);
+      getDescriptor().getMessageTypes().get(112);
     internal_static_api_v0alpha_SortReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SortReq_descriptor,
         new java.lang.String[] { "Criteria", "Record", "Request", });
     internal_static_api_v0alpha_CFSExportReq_descriptor =
-      getDescriptor().getMessageTypes().get(112);
+      getDescriptor().getMessageTypes().get(113);
     internal_static_api_v0alpha_CFSExportReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CFSExportReq_descriptor,
         new java.lang.String[] { "Header", "Record", "Request", });
     internal_static_api_v0alpha_DeDupCriteria_descriptor =
-      getDescriptor().getMessageTypes().get(113);
+      getDescriptor().getMessageTypes().get(114);
     internal_static_api_v0alpha_DeDupCriteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeDupCriteria_descriptor,
         new java.lang.String[] { "Action", "Fields", "Unless", "DisjunctKeys", });
     internal_static_api_v0alpha_SortCriteria_descriptor =
-      getDescriptor().getMessageTypes().get(114);
+      getDescriptor().getMessageTypes().get(115);
     internal_static_api_v0alpha_SortCriteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SortCriteria_descriptor,
         new java.lang.String[] { "Ordering", "FieldOrder", });
     internal_static_api_v0alpha_Error_descriptor =
-      getDescriptor().getMessageTypes().get(115);
+      getDescriptor().getMessageTypes().get(116);
     internal_static_api_v0alpha_Error_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Error_descriptor,
         new java.lang.String[] { "Error", "RawValue", });
     internal_static_api_v0alpha_RecordFieldMap_descriptor =
-      getDescriptor().getMessageTypes().get(116);
+      getDescriptor().getMessageTypes().get(117);
     internal_static_api_v0alpha_RecordFieldMap_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RecordFieldMap_descriptor,
@@ -3499,109 +3535,109 @@ public final class LmsProto {
         internal_static_api_v0alpha_RecordFieldMap_FieldsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_Currency_descriptor =
-      getDescriptor().getMessageTypes().get(117);
+      getDescriptor().getMessageTypes().get(118);
     internal_static_api_v0alpha_Currency_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Currency_descriptor,
         new java.lang.String[] { "Symbol", "RawValue", "Value", "Name", "Invalid", });
     internal_static_api_v0alpha_Phone_descriptor =
-      getDescriptor().getMessageTypes().get(118);
+      getDescriptor().getMessageTypes().get(119);
     internal_static_api_v0alpha_Phone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Phone_descriptor,
         new java.lang.String[] { "RawValue", "FullNumber", "Invalid", });
     internal_static_api_v0alpha_PostalCode_descriptor =
-      getDescriptor().getMessageTypes().get(119);
+      getDescriptor().getMessageTypes().get(120);
     internal_static_api_v0alpha_PostalCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PostalCode_descriptor,
         new java.lang.String[] { "PostalCode", "Invalid", });
     internal_static_api_v0alpha_Email_descriptor =
-      getDescriptor().getMessageTypes().get(120);
+      getDescriptor().getMessageTypes().get(121);
     internal_static_api_v0alpha_Email_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Email_descriptor,
         new java.lang.String[] { "LocalPart", "Domain", "FullAddress", "Invalid", });
     internal_static_api_v0alpha_DateTimeModifier_descriptor =
-      getDescriptor().getMessageTypes().get(121);
+      getDescriptor().getMessageTypes().get(122);
     internal_static_api_v0alpha_DateTimeModifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DateTimeModifier_descriptor,
         new java.lang.String[] { "Years", "Weeks", "Days", "Hours", "Minutes", "Seconds", "Duration", });
     internal_static_api_v0alpha_DateTimeFieldModifier_descriptor =
-      getDescriptor().getMessageTypes().get(122);
+      getDescriptor().getMessageTypes().get(123);
     internal_static_api_v0alpha_DateTimeFieldModifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DateTimeFieldModifier_descriptor,
         new java.lang.String[] { "YearsField", "WeeksField", "DaysField", "HoursField", "MinutesField", "SecondsField", "DurationField", "Negate", });
     internal_static_api_v0alpha_DateTime_descriptor =
-      getDescriptor().getMessageTypes().get(123);
+      getDescriptor().getMessageTypes().get(124);
     internal_static_api_v0alpha_DateTime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DateTime_descriptor,
         new java.lang.String[] { "RawValue", "Format", "Precision", "Modifier", });
     internal_static_api_v0alpha_EnrichedPhone_descriptor =
-      getDescriptor().getMessageTypes().get(124);
+      getDescriptor().getMessageTypes().get(125);
     internal_static_api_v0alpha_EnrichedPhone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EnrichedPhone_descriptor,
         new java.lang.String[] { "AreaCode", "BlockId", "Carrier", "Cc", "Ccnsn", "CellPrefix", "City", "CocType", "Dst", "InternationalPrefix", "Iso2", "Language", "Max", "Min", "NationalPrefix", "Ndc", "Prefix", "RegionCode", "RegionName", "Ssc1", "Ssc2", "Ssc3", "Ssc4", "Source", "TimeZone", "Type", "UsesNdc", "Utc", });
     internal_static_api_v0alpha_EnrichedZip_descriptor =
-      getDescriptor().getMessageTypes().get(125);
+      getDescriptor().getMessageTypes().get(126);
     internal_static_api_v0alpha_EnrichedZip_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EnrichedZip_descriptor,
         new java.lang.String[] { "Accuracy", "AdminCode1", "AdminCode2", "AdminCode3", "AdminName1", "AdminName2", "AdminName3", "AreaCode", "CityName", "CityType", "CountryCode", "CountyFips", "CountyName", "Dst", "Iso2", "MsaCode", "PlaceName", "PostalCode", "PostalCodeKey", "PostalType", "ProvinceAbbr", "ProvinceName", "Source", "StateFips", "TimeZone", "Utc", });
     internal_static_api_v0alpha_Now_descriptor =
-      getDescriptor().getMessageTypes().get(126);
+      getDescriptor().getMessageTypes().get(127);
     internal_static_api_v0alpha_Now_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Now_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_Timestamp_descriptor =
-      getDescriptor().getMessageTypes().get(127);
+      getDescriptor().getMessageTypes().get(128);
     internal_static_api_v0alpha_Timestamp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Timestamp_descriptor,
         new java.lang.String[] { "Year", "Month", "Week", "DayOfMonth", "DayOfWeek", "DayOfYear", "Hour", "Minute", "Second", });
     internal_static_api_v0alpha_Date_descriptor =
-      getDescriptor().getMessageTypes().get(128);
+      getDescriptor().getMessageTypes().get(129);
     internal_static_api_v0alpha_Date_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Date_descriptor,
         new java.lang.String[] { "Year", "Month", "Week", "DayOfMonth", "DayOfWeek", "DayOfYear", });
     internal_static_api_v0alpha_MonthAndDay_descriptor =
-      getDescriptor().getMessageTypes().get(129);
+      getDescriptor().getMessageTypes().get(130);
     internal_static_api_v0alpha_MonthAndDay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_MonthAndDay_descriptor,
         new java.lang.String[] { "Month", "Week", "DayOfMonth", "DayOfWeek", "DayOfYear", });
     internal_static_api_v0alpha_DayOfWeek_descriptor =
-      getDescriptor().getMessageTypes().get(130);
+      getDescriptor().getMessageTypes().get(131);
     internal_static_api_v0alpha_DayOfWeek_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DayOfWeek_descriptor,
         new java.lang.String[] { "DayOfWeek", });
     internal_static_api_v0alpha_TimeOfDay_descriptor =
-      getDescriptor().getMessageTypes().get(131);
+      getDescriptor().getMessageTypes().get(132);
     internal_static_api_v0alpha_TimeOfDay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_TimeOfDay_descriptor,
         new java.lang.String[] { "Hour", "Minute", "Second", });
     internal_static_api_v0alpha_FileFormatParams_descriptor =
-      getDescriptor().getMessageTypes().get(132);
+      getDescriptor().getMessageTypes().get(133);
     internal_static_api_v0alpha_FileFormatParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FileFormatParams_descriptor,
         new java.lang.String[] { "SkipFirstNoLines", "SkipLinesMatchRegex", "TrimSpaces", "CustomDelimiter", "SkipFirstLine", "JsonDotPath", });
     internal_static_api_v0alpha_ReshapeProcess_descriptor =
-      getDescriptor().getMessageTypes().get(133);
+      getDescriptor().getMessageTypes().get(134);
     internal_static_api_v0alpha_ReshapeProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ReshapeProcess_descriptor,
         new java.lang.String[] { "Actions", });
     internal_static_api_v0alpha_ReshapeAction_descriptor =
-      getDescriptor().getMessageTypes().get(134);
+      getDescriptor().getMessageTypes().get(135);
     internal_static_api_v0alpha_ReshapeAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ReshapeAction_descriptor,
@@ -3781,11 +3817,11 @@ public final class LmsProto {
         internal_static_api_v0alpha_ReshapeAction_Extract_Slice_descriptor,
         new java.lang.String[] { "StartIsExclusive", "EndIsInclusive", "StartIndex", "EndIndex", });
     internal_static_api_v0alpha_ContactManagerSink_descriptor =
-      getDescriptor().getMessageTypes().get(135);
+      getDescriptor().getMessageTypes().get(136);
     internal_static_api_v0alpha_ContactManagerSink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ContactManagerSink_descriptor,
-        new java.lang.String[] { "ProjectId", "ContactListName", "ContactListDescription", "Fields", "Ttl", "Lifetime", "UserId", "DeDuplicationInfo", });
+        new java.lang.String[] { "ProjectId", "ContactListName", "ContactListDescription", "Fields", "Ttl", "Lifetime", "UserId", "DeDuplicationInfo", "CountryCode", });
     internal_static_api_v0alpha_ContactManagerSink_DeDuplication_descriptor =
       internal_static_api_v0alpha_ContactManagerSink_descriptor.getNestedTypes().get(0);
     internal_static_api_v0alpha_ContactManagerSink_DeDuplication_fieldAccessorTable = new
@@ -3793,55 +3829,55 @@ public final class LmsProto {
         internal_static_api_v0alpha_ContactManagerSink_DeDuplication_descriptor,
         new java.lang.String[] { "FieldType", "MergeStrategy", });
     internal_static_api_v0alpha_SumProcess_descriptor =
-      getDescriptor().getMessageTypes().get(136);
+      getDescriptor().getMessageTypes().get(137);
     internal_static_api_v0alpha_SumProcess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SumProcess_descriptor,
         new java.lang.String[] { "Field", "NewName", "GroupBy", "Filter", });
     internal_static_api_v0alpha_GroupBy_descriptor =
-      getDescriptor().getMessageTypes().get(137);
+      getDescriptor().getMessageTypes().get(138);
     internal_static_api_v0alpha_GroupBy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GroupBy_descriptor,
         new java.lang.String[] { "Fields", });
     internal_static_api_v0alpha_ListMetrics_descriptor =
-      getDescriptor().getMessageTypes().get(138);
+      getDescriptor().getMessageTypes().get(139);
     internal_static_api_v0alpha_ListMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListMetrics_descriptor,
         new java.lang.String[] { "InputRecordCount", "OutputRecordCount", "FieldNames", "FieldTypes", "Ftypes", "FieldCounts", "RunType", "SuccessMessage", "MaxRecordWidth", "MinRecordWidth", "MaxRecordIndex", "MinRecordIndex", "Files", "Groups", "MissingFields", "SecondsToStart", "SecondsToProcess", });
     internal_static_api_v0alpha_ParseReq_descriptor =
-      getDescriptor().getMessageTypes().get(139);
+      getDescriptor().getMessageTypes().get(140);
     internal_static_api_v0alpha_ParseReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ParseReq_descriptor,
         new java.lang.String[] { "ElementId", "SessionId", "Expression", });
     internal_static_api_v0alpha_ParseRes_descriptor =
-      getDescriptor().getMessageTypes().get(140);
+      getDescriptor().getMessageTypes().get(141);
     internal_static_api_v0alpha_ParseRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ParseRes_descriptor,
         new java.lang.String[] { "SessionId", "Expression", "NextTokens", "Error", "Complete", "Process", });
     internal_static_api_v0alpha_Event_descriptor =
-      getDescriptor().getMessageTypes().get(141);
+      getDescriptor().getMessageTypes().get(142);
     internal_static_api_v0alpha_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Event_descriptor,
         new java.lang.String[] { "EventId", "ParentId", "InputIds", "ElementId", "Process", "UploadTs", "StartedTs", "FinishedTs", "BackoffTill", "Attempts", "LatestHistory", });
     internal_static_api_v0alpha_Events_descriptor =
-      getDescriptor().getMessageTypes().get(142);
+      getDescriptor().getMessageTypes().get(143);
     internal_static_api_v0alpha_Events_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Events_descriptor,
         new java.lang.String[] { "Events", });
     internal_static_api_v0alpha_ViewQueueReq_descriptor =
-      getDescriptor().getMessageTypes().get(143);
+      getDescriptor().getMessageTypes().get(144);
     internal_static_api_v0alpha_ViewQueueReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ViewQueueReq_descriptor,
         new java.lang.String[] { "NewerThan", "NoNewerThan", "AfterEventId", "NumberOfRecords", });
     internal_static_api_v0alpha_RetypeCollectionReq_descriptor =
-      getDescriptor().getMessageTypes().get(144);
+      getDescriptor().getMessageTypes().get(145);
     internal_static_api_v0alpha_RetypeCollectionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RetypeCollectionReq_descriptor,
@@ -3853,265 +3889,265 @@ public final class LmsProto {
         internal_static_api_v0alpha_RetypeCollectionReq_FieldTypesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_RetypeCollectionRes_descriptor =
-      getDescriptor().getMessageTypes().get(145);
+      getDescriptor().getMessageTypes().get(146);
     internal_static_api_v0alpha_RetypeCollectionRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RetypeCollectionRes_descriptor,
         new java.lang.String[] { "CollectionId", "InsertedCount", "UpdatedCount", "RejectedCount", "IgnoredCount", "RejectedEntryIds", });
     internal_static_api_v0alpha_CollectionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(146);
+      getDescriptor().getMessageTypes().get(147);
     internal_static_api_v0alpha_CollectionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CollectionMetadata_descriptor,
         new java.lang.String[] { "CollectionId", "CollectionName", "Fields", "Deleted", "CreatedBy", "CreatedOn", "LastQueried", "QueryCount", "EntryCount", "LastUpdated", "SearchCount", "LastSearched", "PrimaryKey", });
     internal_static_api_v0alpha_CollectionEntry_descriptor =
-      getDescriptor().getMessageTypes().get(147);
+      getDescriptor().getMessageTypes().get(148);
     internal_static_api_v0alpha_CollectionEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CollectionEntry_descriptor,
         new java.lang.String[] { "CollectionId", "EntryId", "Fields", "LastUpdated", });
     internal_static_api_v0alpha_MatchReq_descriptor =
-      getDescriptor().getMessageTypes().get(148);
+      getDescriptor().getMessageTypes().get(149);
     internal_static_api_v0alpha_MatchReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_MatchReq_descriptor,
         new java.lang.String[] { "CollectionId", "Fields", "BatchSize", });
     internal_static_api_v0alpha_MatchRes_descriptor =
-      getDescriptor().getMessageTypes().get(149);
+      getDescriptor().getMessageTypes().get(150);
     internal_static_api_v0alpha_MatchRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_MatchRes_descriptor,
         new java.lang.String[] { "Entries", });
     internal_static_api_v0alpha_CollectionFieldMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(150);
+      getDescriptor().getMessageTypes().get(151);
     internal_static_api_v0alpha_CollectionFieldMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CollectionFieldMetadata_descriptor,
         new java.lang.String[] { "FieldName", "FieldType", "FieldFormat", });
     internal_static_api_v0alpha_CollectionField_descriptor =
-      getDescriptor().getMessageTypes().get(151);
+      getDescriptor().getMessageTypes().get(152);
     internal_static_api_v0alpha_CollectionField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CollectionField_descriptor,
         new java.lang.String[] { "FieldName", "FieldValue", });
     internal_static_api_v0alpha_GetCollectionReq_descriptor =
-      getDescriptor().getMessageTypes().get(152);
+      getDescriptor().getMessageTypes().get(153);
     internal_static_api_v0alpha_GetCollectionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetCollectionReq_descriptor,
         new java.lang.String[] { "CollectionId", });
     internal_static_api_v0alpha_StreamCollectionReq_descriptor =
-      getDescriptor().getMessageTypes().get(153);
+      getDescriptor().getMessageTypes().get(154);
     internal_static_api_v0alpha_StreamCollectionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_StreamCollectionReq_descriptor,
         new java.lang.String[] { "CollectionId", });
     internal_static_api_v0alpha_DeleteCollectionReq_descriptor =
-      getDescriptor().getMessageTypes().get(154);
+      getDescriptor().getMessageTypes().get(155);
     internal_static_api_v0alpha_DeleteCollectionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeleteCollectionReq_descriptor,
         new java.lang.String[] { "CollectionId", });
     internal_static_api_v0alpha_ResetCollectionReq_descriptor =
-      getDescriptor().getMessageTypes().get(155);
+      getDescriptor().getMessageTypes().get(156);
     internal_static_api_v0alpha_ResetCollectionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ResetCollectionReq_descriptor,
         new java.lang.String[] { "CollectionId", });
     internal_static_api_v0alpha_ListCollectionsReq_descriptor =
-      getDescriptor().getMessageTypes().get(156);
+      getDescriptor().getMessageTypes().get(157);
     internal_static_api_v0alpha_ListCollectionsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCollectionsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListCollectionsRes_descriptor =
-      getDescriptor().getMessageTypes().get(157);
+      getDescriptor().getMessageTypes().get(158);
     internal_static_api_v0alpha_ListCollectionsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCollectionsRes_descriptor,
         new java.lang.String[] { "Collections", });
     internal_static_api_v0alpha_SearchCollectionsPaginatedReq_descriptor =
-      getDescriptor().getMessageTypes().get(158);
+      getDescriptor().getMessageTypes().get(159);
     internal_static_api_v0alpha_SearchCollectionsPaginatedReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SearchCollectionsPaginatedReq_descriptor,
         new java.lang.String[] { "CollectionIds", "Search", "From", "PageSize", "LastId", });
     internal_static_api_v0alpha_Search_descriptor =
-      getDescriptor().getMessageTypes().get(159);
+      getDescriptor().getMessageTypes().get(160);
     internal_static_api_v0alpha_Search_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Search_descriptor,
         new java.lang.String[] { "Term", "Fuzziness", "Substring", "Negate", "CaseSensitive", "Value", });
     internal_static_api_v0alpha_PaginatedSearchRes_descriptor =
-      getDescriptor().getMessageTypes().get(160);
+      getDescriptor().getMessageTypes().get(161);
     internal_static_api_v0alpha_PaginatedSearchRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_PaginatedSearchRes_descriptor,
         new java.lang.String[] { "Entries", "Total", "MoreResults", "LastId", });
     internal_static_api_v0alpha_GetCollectionEntriesReq_descriptor =
-      getDescriptor().getMessageTypes().get(161);
+      getDescriptor().getMessageTypes().get(162);
     internal_static_api_v0alpha_GetCollectionEntriesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetCollectionEntriesReq_descriptor,
         new java.lang.String[] { "CollectionId", "From", "PageSize", "SearchAfterId", });
     internal_static_api_v0alpha_GetCollectionEntriesRes_descriptor =
-      getDescriptor().getMessageTypes().get(162);
+      getDescriptor().getMessageTypes().get(163);
     internal_static_api_v0alpha_GetCollectionEntriesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetCollectionEntriesRes_descriptor,
         new java.lang.String[] { "Metadata", "Entries", });
     internal_static_api_v0alpha_DeleteCollectionEntryReq_descriptor =
-      getDescriptor().getMessageTypes().get(163);
+      getDescriptor().getMessageTypes().get(164);
     internal_static_api_v0alpha_DeleteCollectionEntryReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeleteCollectionEntryReq_descriptor,
         new java.lang.String[] { "CollectionId", "EntryId", });
     internal_static_api_v0alpha_ListCampaignLinksRes_descriptor =
-      getDescriptor().getMessageTypes().get(164);
+      getDescriptor().getMessageTypes().get(165);
     internal_static_api_v0alpha_ListCampaignLinksRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCampaignLinksRes_descriptor,
         new java.lang.String[] { "Links", });
     internal_static_api_v0alpha_Link_descriptor =
-      getDescriptor().getMessageTypes().get(165);
+      getDescriptor().getMessageTypes().get(166);
     internal_static_api_v0alpha_Link_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_Link_descriptor,
         new java.lang.String[] { "XmlClientPropSid", "Name", "Description", });
     internal_static_api_v0alpha_CjsSearchField_descriptor =
-      getDescriptor().getMessageTypes().get(166);
+      getDescriptor().getMessageTypes().get(167);
     internal_static_api_v0alpha_CjsSearchField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSearchField_descriptor,
         new java.lang.String[] { "CjsSearchFieldId", "CjsSearchDefinitionId", "FieldName", "FieldType", "FieldValue", });
     internal_static_api_v0alpha_CjsSearchDefinitionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(167);
+      getDescriptor().getMessageTypes().get(168);
     internal_static_api_v0alpha_CjsSearchDefinitionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSearchDefinitionMetadata_descriptor,
         new java.lang.String[] { "CjsSearchDefinitionId", "Name", "Description", "Deleted", "ExecCount", "ExecSuccess", "ExecFail", "CreatedDate", "LastEdited", });
     internal_static_api_v0alpha_CjsSearchDefinition_descriptor =
-      getDescriptor().getMessageTypes().get(168);
+      getDescriptor().getMessageTypes().get(169);
     internal_static_api_v0alpha_CjsSearchDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSearchDefinition_descriptor,
         new java.lang.String[] { "Metadata", "SearchFields", "WhitelistedReturnFields", "BlacklistedReturnFields", "UniqueIdentifiers", });
     internal_static_api_v0alpha_GetCjsSearchDefinitionReq_descriptor =
-      getDescriptor().getMessageTypes().get(169);
+      getDescriptor().getMessageTypes().get(170);
     internal_static_api_v0alpha_GetCjsSearchDefinitionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetCjsSearchDefinitionReq_descriptor,
         new java.lang.String[] { "CjsSearchDefinitionId", });
     internal_static_api_v0alpha_DeleteCjsSearchDefinitionReq_descriptor =
-      getDescriptor().getMessageTypes().get(170);
+      getDescriptor().getMessageTypes().get(171);
     internal_static_api_v0alpha_DeleteCjsSearchDefinitionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeleteCjsSearchDefinitionReq_descriptor,
         new java.lang.String[] { "CjsSearchDefinitionId", });
     internal_static_api_v0alpha_ListCjsSearchDefinitionsReq_descriptor =
-      getDescriptor().getMessageTypes().get(171);
+      getDescriptor().getMessageTypes().get(172);
     internal_static_api_v0alpha_ListCjsSearchDefinitionsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCjsSearchDefinitionsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListCjsSearchDefinitionsRes_descriptor =
-      getDescriptor().getMessageTypes().get(172);
+      getDescriptor().getMessageTypes().get(173);
     internal_static_api_v0alpha_ListCjsSearchDefinitionsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCjsSearchDefinitionsRes_descriptor,
         new java.lang.String[] { "Definitions", });
     internal_static_api_v0alpha_ExecuteCjsSearchDefinitionReq_descriptor =
-      getDescriptor().getMessageTypes().get(173);
+      getDescriptor().getMessageTypes().get(174);
     internal_static_api_v0alpha_ExecuteCjsSearchDefinitionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ExecuteCjsSearchDefinitionReq_descriptor,
         new java.lang.String[] { "SearchDefinitionId", "SearchFields", });
     internal_static_api_v0alpha_ExecuteCjsSearchDefinitionRes_descriptor =
-      getDescriptor().getMessageTypes().get(174);
+      getDescriptor().getMessageTypes().get(175);
     internal_static_api_v0alpha_ExecuteCjsSearchDefinitionRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ExecuteCjsSearchDefinitionRes_descriptor,
         new java.lang.String[] { "CollectionEntries", });
     internal_static_api_v0alpha_CollectionEntries_descriptor =
-      getDescriptor().getMessageTypes().get(175);
+      getDescriptor().getMessageTypes().get(176);
     internal_static_api_v0alpha_CollectionEntries_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CollectionEntries_descriptor,
         new java.lang.String[] { "Metadata", "Entries", });
     internal_static_api_v0alpha_CjsExecuteSearchField_descriptor =
-      getDescriptor().getMessageTypes().get(176);
+      getDescriptor().getMessageTypes().get(177);
     internal_static_api_v0alpha_CjsExecuteSearchField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsExecuteSearchField_descriptor,
         new java.lang.String[] { "FieldName", "FieldType", "FieldValue", "Field", });
     internal_static_api_v0alpha_CjsSecureSearchCriteriaMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(177);
+      getDescriptor().getMessageTypes().get(178);
     internal_static_api_v0alpha_CjsSecureSearchCriteriaMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSecureSearchCriteriaMetadata_descriptor,
         new java.lang.String[] { "CjsSecureSearchCriteriaId", "Deleted", "CreatedOn", "LastUpdated", });
     internal_static_api_v0alpha_CjsSecureSearchCriteria_descriptor =
-      getDescriptor().getMessageTypes().get(178);
+      getDescriptor().getMessageTypes().get(179);
     internal_static_api_v0alpha_CjsSecureSearchCriteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSecureSearchCriteria_descriptor,
         new java.lang.String[] { "Metadata", "Fields", });
     internal_static_api_v0alpha_GetCjsSecureSearchCriteriaReq_descriptor =
-      getDescriptor().getMessageTypes().get(179);
+      getDescriptor().getMessageTypes().get(180);
     internal_static_api_v0alpha_GetCjsSecureSearchCriteriaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetCjsSecureSearchCriteriaReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_CjsSecureSearchCriteriaField_descriptor =
-      getDescriptor().getMessageTypes().get(180);
+      getDescriptor().getMessageTypes().get(181);
     internal_static_api_v0alpha_CjsSecureSearchCriteriaField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_CjsSecureSearchCriteriaField_descriptor,
         new java.lang.String[] { "CjsSecureSearchCriteriaFieldId", "CjsSecureSearchCriteriaId", "FieldType", });
     internal_static_api_v0alpha_SplitCriteria_descriptor =
-      getDescriptor().getMessageTypes().get(181);
+      getDescriptor().getMessageTypes().get(182);
     internal_static_api_v0alpha_SplitCriteria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SplitCriteria_descriptor,
         new java.lang.String[] { "Unique", "MaxSize", "EqualParts", "Action", });
     internal_static_api_v0alpha_UniquePair_descriptor =
-      getDescriptor().getMessageTypes().get(182);
+      getDescriptor().getMessageTypes().get(183);
     internal_static_api_v0alpha_UniquePair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UniquePair_descriptor,
         new java.lang.String[] { "SplitOnFields", "SplitValue", });
     internal_static_api_v0alpha_SplitByNamedUnique_descriptor =
-      getDescriptor().getMessageTypes().get(183);
+      getDescriptor().getMessageTypes().get(184);
     internal_static_api_v0alpha_SplitByNamedUnique_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SplitByNamedUnique_descriptor,
         new java.lang.String[] { "NamedFields", });
     internal_static_api_v0alpha_SplitByUnique_descriptor =
-      getDescriptor().getMessageTypes().get(184);
+      getDescriptor().getMessageTypes().get(185);
     internal_static_api_v0alpha_SplitByUnique_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SplitByUnique_descriptor,
         new java.lang.String[] { "SplitOnFields", });
     internal_static_api_v0alpha_SplitByMaxSize_descriptor =
-      getDescriptor().getMessageTypes().get(185);
+      getDescriptor().getMessageTypes().get(186);
     internal_static_api_v0alpha_SplitByMaxSize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SplitByMaxSize_descriptor,
         new java.lang.String[] { "MaxSize", });
     internal_static_api_v0alpha_SplitByEqualParts_descriptor =
-      getDescriptor().getMessageTypes().get(186);
+      getDescriptor().getMessageTypes().get(187);
     internal_static_api_v0alpha_SplitByEqualParts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SplitByEqualParts_descriptor,
         new java.lang.String[] { "PartSize", });
     internal_static_api_v0alpha_EpicEntrypoint_descriptor =
-      getDescriptor().getMessageTypes().get(187);
+      getDescriptor().getMessageTypes().get(188);
     internal_static_api_v0alpha_EpicEntrypoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EpicEntrypoint_descriptor,
         new java.lang.String[] { "Cron", "MaxWaitTime", "EntityTypes", "GroupBaseUrl", "GroupFhirId", "RuntimeValues", "FlushPageCount", "FlushMinuteCount", "FlushDuringCheck", "Timezone", "Enabled", "Fields", "RawJson", "NonProd", "AuthServer", });
     internal_static_api_v0alpha_RuntimeValues_descriptor =
-      getDescriptor().getMessageTypes().get(188);
+      getDescriptor().getMessageTypes().get(189);
     internal_static_api_v0alpha_RuntimeValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_RuntimeValues_descriptor,
@@ -4129,37 +4165,37 @@ public final class LmsProto {
         internal_static_api_v0alpha_RuntimeValues_PreliminaryVarsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_EntityURL_descriptor =
-      getDescriptor().getMessageTypes().get(189);
+      getDescriptor().getMessageTypes().get(190);
     internal_static_api_v0alpha_EntityURL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EntityURL_descriptor,
         new java.lang.String[] { "EntityType", "Url", });
     internal_static_api_v0alpha_SampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(190);
+      getDescriptor().getMessageTypes().get(191);
     internal_static_api_v0alpha_SampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_SampleRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_EHREntityType_descriptor =
-      getDescriptor().getMessageTypes().get(191);
+      getDescriptor().getMessageTypes().get(192);
     internal_static_api_v0alpha_EHREntityType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_EHREntityType_descriptor,
         new java.lang.String[] { "EpicEntity", });
     internal_static_api_v0alpha_FinviEntrypoint_descriptor =
-      getDescriptor().getMessageTypes().get(192);
+      getDescriptor().getMessageTypes().get(193);
     internal_static_api_v0alpha_FinviEntrypoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FinviEntrypoint_descriptor,
         new java.lang.String[] { "PoolId", "CronInterval", "Disabled", "Timezone", "FilenamePattern", });
     internal_static_api_v0alpha_ContactManagementEnrichment_descriptor =
-      getDescriptor().getMessageTypes().get(193);
+      getDescriptor().getMessageTypes().get(194);
     internal_static_api_v0alpha_ContactManagementEnrichment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ContactManagementEnrichment_descriptor,
-        new java.lang.String[] { "ProjectId", "ContactListName", "Fields", "DeDuplicationInfo", "InsertIfMissing", "SearchFieldType", });
+        new java.lang.String[] { "ProjectId", "ContactListName", "Fields", "DeDuplicationInfo", "InsertIfMissing", "SearchFieldType", "CountryCode", });
     internal_static_api_v0alpha_TicketExchangeSink_descriptor =
-      getDescriptor().getMessageTypes().get(194);
+      getDescriptor().getMessageTypes().get(195);
     internal_static_api_v0alpha_TicketExchangeSink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_TicketExchangeSink_descriptor,
