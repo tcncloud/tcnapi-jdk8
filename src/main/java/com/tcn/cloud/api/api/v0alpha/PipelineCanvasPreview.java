@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     exchanges_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    entrypointMetadata_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -153,6 +154,47 @@ private static final long serialVersionUID = 0L;
     return elementCount_;
   }
 
+  public static final int ENTRYPOINT_METADATA_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> entrypointMetadata_;
+  /**
+   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> getEntrypointMetadataList() {
+    return entrypointMetadata_;
+  }
+  /**
+   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder> 
+      getEntrypointMetadataOrBuilderList() {
+    return entrypointMetadata_;
+  }
+  /**
+   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+   */
+  @java.lang.Override
+  public int getEntrypointMetadataCount() {
+    return entrypointMetadata_.size();
+  }
+  /**
+   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EntrypointMetadata getEntrypointMetadata(int index) {
+    return entrypointMetadata_.get(index);
+  }
+  /**
+   * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder getEntrypointMetadataOrBuilder(
+      int index) {
+    return entrypointMetadata_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -178,6 +220,9 @@ private static final long serialVersionUID = 0L;
     }
     if (elementCount_ != 0L) {
       output.writeInt64(4, elementCount_);
+    }
+    for (int i = 0; i < entrypointMetadata_.size(); i++) {
+      output.writeMessage(5, entrypointMetadata_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -212,6 +257,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, elementCount_);
     }
+    for (int i = 0; i < entrypointMetadata_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, entrypointMetadata_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -238,6 +287,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getExchangesList())) return false;
     if (getElementCount()
         != other.getElementCount()) return false;
+    if (!getEntrypointMetadataList()
+        .equals(other.getEntrypointMetadataList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -264,6 +315,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ELEMENT_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getElementCount());
+    if (getEntrypointMetadataCount() > 0) {
+      hash = (37 * hash) + ENTRYPOINT_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getEntrypointMetadataList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -405,6 +460,13 @@ private static final long serialVersionUID = 0L;
       exchanges_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       elementCount_ = 0L;
+      if (entrypointMetadataBuilder_ == null) {
+        entrypointMetadata_ = java.util.Collections.emptyList();
+      } else {
+        entrypointMetadata_ = null;
+        entrypointMetadataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -431,9 +493,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PipelineCanvasPreview buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PipelineCanvasPreview result = new com.tcn.cloud.api.api.v0alpha.PipelineCanvasPreview(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.PipelineCanvasPreview result) {
+      if (entrypointMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          entrypointMetadata_ = java.util.Collections.unmodifiableList(entrypointMetadata_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.entrypointMetadata_ = entrypointMetadata_;
+      } else {
+        result.entrypointMetadata_ = entrypointMetadataBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PipelineCanvasPreview result) {
@@ -526,6 +601,32 @@ private static final long serialVersionUID = 0L;
       if (other.getElementCount() != 0L) {
         setElementCount(other.getElementCount());
       }
+      if (entrypointMetadataBuilder_ == null) {
+        if (!other.entrypointMetadata_.isEmpty()) {
+          if (entrypointMetadata_.isEmpty()) {
+            entrypointMetadata_ = other.entrypointMetadata_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureEntrypointMetadataIsMutable();
+            entrypointMetadata_.addAll(other.entrypointMetadata_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.entrypointMetadata_.isEmpty()) {
+          if (entrypointMetadataBuilder_.isEmpty()) {
+            entrypointMetadataBuilder_.dispose();
+            entrypointMetadataBuilder_ = null;
+            entrypointMetadata_ = other.entrypointMetadata_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            entrypointMetadataBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEntrypointMetadataFieldBuilder() : null;
+          } else {
+            entrypointMetadataBuilder_.addAllMessages(other.entrypointMetadata_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -576,6 +677,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              com.tcn.cloud.api.api.v0alpha.EntrypointMetadata m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.parser(),
+                      extensionRegistry);
+              if (entrypointMetadataBuilder_ == null) {
+                ensureEntrypointMetadataIsMutable();
+                entrypointMetadata_.add(m);
+              } else {
+                entrypointMetadataBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -964,6 +1078,246 @@ private static final long serialVersionUID = 0L;
       elementCount_ = 0L;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> entrypointMetadata_ =
+      java.util.Collections.emptyList();
+    private void ensureEntrypointMetadataIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        entrypointMetadata_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata>(entrypointMetadata_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EntrypointMetadata, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder, com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder> entrypointMetadataBuilder_;
+
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> getEntrypointMetadataList() {
+      if (entrypointMetadataBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(entrypointMetadata_);
+      } else {
+        return entrypointMetadataBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public int getEntrypointMetadataCount() {
+      if (entrypointMetadataBuilder_ == null) {
+        return entrypointMetadata_.size();
+      } else {
+        return entrypointMetadataBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EntrypointMetadata getEntrypointMetadata(int index) {
+      if (entrypointMetadataBuilder_ == null) {
+        return entrypointMetadata_.get(index);
+      } else {
+        return entrypointMetadataBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder setEntrypointMetadata(
+        int index, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata value) {
+      if (entrypointMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.set(index, value);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder setEntrypointMetadata(
+        int index, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder builderForValue) {
+      if (entrypointMetadataBuilder_ == null) {
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder addEntrypointMetadata(com.tcn.cloud.api.api.v0alpha.EntrypointMetadata value) {
+      if (entrypointMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.add(value);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder addEntrypointMetadata(
+        int index, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata value) {
+      if (entrypointMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.add(index, value);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder addEntrypointMetadata(
+        com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder builderForValue) {
+      if (entrypointMetadataBuilder_ == null) {
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.add(builderForValue.build());
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder addEntrypointMetadata(
+        int index, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder builderForValue) {
+      if (entrypointMetadataBuilder_ == null) {
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder addAllEntrypointMetadata(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.EntrypointMetadata> values) {
+      if (entrypointMetadataBuilder_ == null) {
+        ensureEntrypointMetadataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, entrypointMetadata_);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder clearEntrypointMetadata() {
+      if (entrypointMetadataBuilder_ == null) {
+        entrypointMetadata_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public Builder removeEntrypointMetadata(int index) {
+      if (entrypointMetadataBuilder_ == null) {
+        ensureEntrypointMetadataIsMutable();
+        entrypointMetadata_.remove(index);
+        onChanged();
+      } else {
+        entrypointMetadataBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder getEntrypointMetadataBuilder(
+        int index) {
+      return getEntrypointMetadataFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder getEntrypointMetadataOrBuilder(
+        int index) {
+      if (entrypointMetadataBuilder_ == null) {
+        return entrypointMetadata_.get(index);  } else {
+        return entrypointMetadataBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder> 
+         getEntrypointMetadataOrBuilderList() {
+      if (entrypointMetadataBuilder_ != null) {
+        return entrypointMetadataBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(entrypointMetadata_);
+      }
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder addEntrypointMetadataBuilder() {
+      return getEntrypointMetadataFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder addEntrypointMetadataBuilder(
+        int index) {
+      return getEntrypointMetadataFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v0alpha.EntrypointMetadata entrypoint_metadata = 5 [json_name = "entrypointMetadata"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder> 
+         getEntrypointMetadataBuilderList() {
+      return getEntrypointMetadataFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EntrypointMetadata, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder, com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder> 
+        getEntrypointMetadataFieldBuilder() {
+      if (entrypointMetadataBuilder_ == null) {
+        entrypointMetadataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.EntrypointMetadata, com.tcn.cloud.api.api.v0alpha.EntrypointMetadata.Builder, com.tcn.cloud.api.api.v0alpha.EntrypointMetadataOrBuilder>(
+                entrypointMetadata_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        entrypointMetadata_ = null;
+      }
+      return entrypointMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
