@@ -1880,6 +1880,37 @@ public final class AcdGrpc {
     return getValidateFieldMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest,
+      com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> getListAgentsVoiceStatusesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentsVoiceStatuses",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest,
+      com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> getListAgentsVoiceStatusesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest, com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> getListAgentsVoiceStatusesMethod;
+    if ((getListAgentsVoiceStatusesMethod = AcdGrpc.getListAgentsVoiceStatusesMethod) == null) {
+      synchronized (AcdGrpc.class) {
+        if ((getListAgentsVoiceStatusesMethod = AcdGrpc.getListAgentsVoiceStatusesMethod) == null) {
+          AcdGrpc.getListAgentsVoiceStatusesMethod = getListAgentsVoiceStatusesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest, com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentsVoiceStatuses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply.getDefaultInstance()))
+              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("ListAgentsVoiceStatuses"))
+              .build();
+        }
+      }
+    }
+    return getListAgentsVoiceStatusesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2384,6 +2415,13 @@ public final class AcdGrpc {
     default void validateField(com.tcn.cloud.api.api.v0alpha.ValidateFieldReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ValidateFieldRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateFieldMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listAgentsVoiceStatuses(com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentsVoiceStatusesMethod(), responseObserver);
     }
   }
 
@@ -2936,6 +2974,14 @@ public final class AcdGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getValidateFieldMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listAgentsVoiceStatuses(com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentsVoiceStatusesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3412,6 +3458,13 @@ public final class AcdGrpc {
     public com.tcn.cloud.api.api.v0alpha.ValidateFieldRes validateField(com.tcn.cloud.api.api.v0alpha.ValidateFieldReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getValidateFieldMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply listAgentsVoiceStatuses(com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentsVoiceStatusesMethod(), getCallOptions(), request);
     }
   }
 
@@ -3932,6 +3985,14 @@ public final class AcdGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getValidateFieldMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply> listAgentsVoiceStatuses(
+        com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentsVoiceStatusesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_AGENT_GET_STATUS_STREAM = 0;
@@ -3994,6 +4055,7 @@ public final class AcdGrpc {
   private static final int METHODID_FINISH_SECURE_FORM_HANDLING = 57;
   private static final int METHODID_POPULATE_WORKFLOW_FIELDS = 58;
   private static final int METHODID_VALIDATE_FIELD = 59;
+  private static final int METHODID_LIST_AGENTS_VOICE_STATUSES = 60;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4251,6 +4313,10 @@ public final class AcdGrpc {
         case METHODID_VALIDATE_FIELD:
           serviceImpl.validateField((com.tcn.cloud.api.api.v0alpha.ValidateFieldReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ValidateFieldRes>) responseObserver);
+          break;
+        case METHODID_LIST_AGENTS_VOICE_STATUSES:
+          serviceImpl.listAgentsVoiceStatuses((com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4690,6 +4756,13 @@ public final class AcdGrpc {
               com.tcn.cloud.api.api.v0alpha.ValidateFieldReq,
               com.tcn.cloud.api.api.v0alpha.ValidateFieldRes>(
                 service, METHODID_VALIDATE_FIELD)))
+        .addMethod(
+          getListAgentsVoiceStatusesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesRequest,
+              com.tcn.cloud.api.api.v0alpha.ListAgentsVoiceStatusesReply>(
+                service, METHODID_LIST_AGENTS_VOICE_STATUSES)))
         .build();
   }
 
@@ -4798,6 +4871,7 @@ public final class AcdGrpc {
               .addMethod(getFinishSecureFormHandlingMethod())
               .addMethod(getPopulateWorkflowFieldsMethod())
               .addMethod(getValidateFieldMethod())
+              .addMethod(getListAgentsVoiceStatusesMethod())
               .build();
         }
       }

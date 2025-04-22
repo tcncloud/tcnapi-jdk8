@@ -659,6 +659,21 @@ public final class AcdProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_ValidateFieldRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_ListAgentsVoiceStatusesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_ListAgentsVoiceStatusesReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_AgentVoiceStatusDetails_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_AgentVoiceStatusDetails_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -940,7 +955,23 @@ public final class AcdProto {
       "\002 \001(\0162$.api.commons.integrations.Validat" +
       "ionR\016validationType\022\035\n\nfield_name\030\003 \001(\tR" +
       "\tfieldName\"@\n\020ValidateFieldRes\022\024\n\005valid\030" +
-      "\001 \001(\010R\005valid\022\026\n\006reason\030\002 \001(\tR\006reason2\263L\n" +
+      "\001 \001(\010R\005valid\022\026\n\006reason\030\002 \001(\tR\006reason\"\207\001\n" +
+      "\036ListAgentsVoiceStatusesRequest\022\026\n\006skill" +
+      "s\030\001 \003(\tR\006skills\022.\n\023all_skills_required\030\002" +
+      " \001(\010R\021allSkillsRequired\022\035\n\npage_token\030\003 " +
+      "\001(\tR\tpageToken\"\221\001\n\034ListAgentsVoiceStatus" +
+      "esReply\022I\n\ragent_details\030\001 \003(\0132$.api.v0a" +
+      "lpha.AgentVoiceStatusDetailsR\014agentDetai" +
+      "ls\022&\n\017next_page_token\030\002 \001(\tR\rnextPageTok" +
+      "en\"\337\002\n\027AgentVoiceStatusDetails\022\033\n\tagent_" +
+      "sid\030\001 \001(\003R\010agentSid\022$\n\016hunt_group_sid\030\002 " +
+      "\001(\003R\014huntGroupSid\022.\n\023current_session_sid" +
+      "\030\003 \001(\003R\021currentSessionSid\022\035\n\nfirst_name\030" +
+      "\004 \001(\tR\tfirstName\022\033\n\tlast_name\030\005 \001(\tR\010las" +
+      "tName\022\026\n\006status\030\006 \001(\003R\006status\022>\n\013status_" +
+      "desc\030\007 \001(\0162\035.api.commons.AgentStatus.Enu" +
+      "mR\nstatusDesc\022\026\n\006skills\030\010 \003(\tR\006skills\022%\n" +
+      "\016pbx_extensions\030\t \003(\tR\rpbxExtensions2\346M\n" +
       "\003Acd\022\227\001\n\024AgentGetStatusStream\022\".api.v0al" +
       "pha.AgentGetStatusRequest\032 .api.v0alpha." +
       "AgentGetStatusReply\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api" +
@@ -1051,7 +1082,7 @@ public final class AcdProto {
       "ransferWarmToOutboundStartRequest\032-.api." +
       "v0alpha.TransferWarmToOutboundStartReply" +
       "\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/acd/transf" +
-      "erwarmtooutboundstart:\001*\022\325\001\n CreateWarmO" +
+      "erwarmtooutboundstart:\001*\022\325\001\n CreateWarmO",
       "utboundTransferMember\0224.api.v0alpha.Crea" +
       "teWarmOutboundTransferMemberRequest\0322.ap" +
       "i.v0alpha.CreateWarmOutboundTransferMemb" +
@@ -1067,7 +1098,7 @@ public final class AcdProto {
       "rmToAgentStartReply\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api" +
       "/v0alpha/acd/transferwarmtoagentstart:\001*" +
       "\022\241\001\n\024AgentGetCallFromHold\022(.api.v0alpha." +
-      "AgentGetCallFromHoldRequest\032&.api.v0alph",
+      "AgentGetCallFromHoldRequest\032&.api.v0alph" +
       "a.AgentGetCallFromHoldReply\"7\272\270\221\002\002\030\001\202\323\344\223" +
       "\002*\"%/api/v0alpha/acd/agentgetcallfromhol" +
       "d:\001*\022\301\001\n\034AgentGetSpecificCallFromHold\0220." +
@@ -1185,10 +1216,15 @@ public final class AcdProto {
       "ds:\001*\022\202\001\n\rValidateField\022\035.api.v0alpha.Va" +
       "lidateFieldReq\032\035.api.v0alpha.ValidateFie" +
       "ldRes\"3\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002#\"\036/api/v0alpha/ac" +
-      "d/validatefield:\001*Bv\n\035com.tcn.cloud.api." +
-      "api.v0alphaB\010AcdProtoP\001\242\002\003AVX\252\002\013Api.V0al" +
-      "pha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetad" +
-      "ata\352\002\014Api::V0alphab\006proto3"
+      "d/validatefield:\001*\022\260\001\n\027ListAgentsVoiceSt" +
+      "atuses\022+.api.v0alpha.ListAgentsVoiceStat" +
+      "usesRequest\032).api.v0alpha.ListAgentsVoic" +
+      "eStatusesReply\"=\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002-\"(/api/v" +
+      "0alpha/acd/listagentsvoicestatuses:\001*Bv\n" +
+      "\035com.tcn.cloud.api.api.v0alphaB\010AcdProto" +
+      "P\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027A" +
+      "pi\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1973,6 +2009,24 @@ public final class AcdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ValidateFieldRes_descriptor,
         new java.lang.String[] { "Valid", "Reason", });
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(120);
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_ListAgentsVoiceStatusesRequest_descriptor,
+        new java.lang.String[] { "Skills", "AllSkillsRequired", "PageToken", });
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesReply_descriptor =
+      getDescriptor().getMessageTypes().get(121);
+    internal_static_api_v0alpha_ListAgentsVoiceStatusesReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_ListAgentsVoiceStatusesReply_descriptor,
+        new java.lang.String[] { "AgentDetails", "NextPageToken", });
+    internal_static_api_v0alpha_AgentVoiceStatusDetails_descriptor =
+      getDescriptor().getMessageTypes().get(122);
+    internal_static_api_v0alpha_AgentVoiceStatusDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_AgentVoiceStatusDetails_descriptor,
+        new java.lang.String[] { "AgentSid", "HuntGroupSid", "CurrentSessionSid", "FirstName", "LastName", "Status", "StatusDesc", "Skills", "PbxExtensions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
