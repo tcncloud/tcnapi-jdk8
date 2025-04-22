@@ -91,24 +91,4 @@ public interface AddContactEntryRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactFieldOrBuilder getFieldOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 5 [json_name = "countryCode"];</code>
-   * @return The countryCode.
-   */
-  java.lang.String getCountryCode();
-  /**
-   * <pre>
-   * Country code for the Phone Number
-   * </pre>
-   *
-   * <code>string country_code = 5 [json_name = "countryCode"];</code>
-   * @return The bytes for countryCode.
-   */
-  com.google.protobuf.ByteString
-      getCountryCodeBytes();
 }
