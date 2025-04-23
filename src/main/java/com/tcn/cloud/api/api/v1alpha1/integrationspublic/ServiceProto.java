@@ -403,64 +403,66 @@ public final class ServiceProto {
       "t_due\030\002 \001(\0132\022.google.type.MoneyR\016totalAm" +
       "ountDue\032U\n\023CalculatedFeesEntry\022\020\n\003key\030\001 " +
       "\001(\tR\003key\022(\n\005value\030\002 \001(\0132\022.google.type.Mo" +
-      "neyR\005value:\0028\001\"\233\001\n\021DeliverReceiptReq\022T\n\r" +
-      "email_receipt\030\003 \001(\0132-.api.v1alpha1.integ" +
-      "rationspublic.EmailReceiptH\000R\014emailRecei" +
-      "pt\022\035\n\nreceipt_id\030\006 \001(\tR\treceiptIdB\021\n\017del" +
-      "ivery_method\"\'\n\014EmailReceipt\022\027\n\007to_addr\030" +
-      "\001 \001(\tR\006toAddr\"\023\n\021DeliverReceiptRes2\242\016\n\022I" +
-      "ntegrationsPublic\022\250\001\n\013GetLinkData\022/.api." +
+      "neyR\005value:\0028\001\"\342\001\n\021DeliverReceiptReq\022E\n\006" +
+      "entity\030\001 \001(\0132-.api.v1alpha1.integrations" +
+      "public.PortalLinkIdR\006entity\022T\n\remail_rec" +
+      "eipt\030\003 \001(\0132-.api.v1alpha1.integrationspu" +
+      "blic.EmailReceiptH\000R\014emailReceipt\022\035\n\nrec" +
+      "eipt_id\030\006 \001(\tR\treceiptIdB\021\n\017delivery_met" +
+      "hod\"\'\n\014EmailReceipt\022\027\n\007to_addr\030\001 \001(\tR\006to" +
+      "Addr\"\023\n\021DeliverReceiptRes2\242\016\n\022Integratio" +
+      "nsPublic\022\250\001\n\013GetLinkData\022/.api.v1alpha1." +
+      "integrationspublic.GetLinkDataReq\032/.api." +
       "v1alpha1.integrationspublic.GetLinkDataR" +
-      "eq\032/.api.v1alpha1.integrationspublic.Get" +
-      "LinkDataRes\"7\202\323\344\223\0021\",/api/v1alpha1/integ" +
-      "rationspublic/getlinkdata:\001*\022\304\001\n\022SubmitV" +
-      "erification\0226.api.v1alpha1.integrationsp" +
-      "ublic.SubmitVerificationReq\0326.api.v1alph" +
-      "a1.integrationspublic.SubmitVerification" +
-      "Res\">\202\323\344\223\0028\"3/api/v1alpha1/integrationsp" +
-      "ublic/submitverification:\001*\022\274\001\n\020SessionK" +
-      "eepAlive\0224.api.v1alpha1.integrationspubl" +
-      "ic.SessionKeepAliveReq\0324.api.v1alpha1.in" +
-      "tegrationspublic.SessionKeepAliveRes\"<\202\323" +
-      "\344\223\0026\"1/api/v1alpha1/integrationspublic/s" +
-      "essionkeepalive:\001*\022\244\001\n\nGetInvoice\022..api." +
-      "v1alpha1.integrationspublic.GetInvoiceRe" +
-      "q\032..api.v1alpha1.integrationspublic.GetI" +
-      "nvoiceRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integra" +
-      "tionspublic/getinvoice:\001*\022\260\001\n\rSubmitPaym" +
-      "ent\0221.api.v1alpha1.integrationspublic.Su" +
-      "bmitPaymentReq\0321.api.v1alpha1.integratio" +
-      "nspublic.SubmitPaymentRes\"9\202\323\344\223\0023\"./api/" +
-      "v1alpha1/integrationspublic/submitpaymen" +
-      "t:\001*\022\244\001\n\nGetReceipt\022..api.v1alpha1.integ" +
-      "rationspublic.GetReceiptReq\032..api.v1alph" +
-      "a1.integrationspublic.GetReceiptRes\"6\202\323\344" +
-      "\223\0020\"+/api/v1alpha1/integrationspublic/ge" +
-      "treceipt:\001*\022\270\001\n\017ProcessWorkflow\0223.api.v1" +
-      "alpha1.integrationspublic.ProcessWorkflo" +
-      "wReq\0323.api.v1alpha1.integrationspublic.P" +
-      "rocessWorkflowRes\";\202\323\344\223\0025\"0/api/v1alpha1" +
-      "/integrationspublic/processworkflow:\001*\022\264" +
-      "\001\n\016GetLinkDetails\0222.api.v1alpha1.integra" +
-      "tionspublic.GetLinkDetailsReq\0322.api.v1al" +
-      "pha1.integrationspublic.GetLinkDetailsRe" +
-      "s\":\202\323\344\223\0024\"//api/v1alpha1/integrationspub" +
-      "lic/getlinkdetails:\001*\022\260\001\n\rCalculateFees\022" +
-      "1.api.v1alpha1.integrationspublic.Calcul" +
-      "ateFeesReq\0321.api.v1alpha1.integrationspu" +
-      "blic.CalculateFeesRes\"9\202\323\344\223\0023\"./api/v1al" +
-      "pha1/integrationspublic/calculatefees:\001*" +
-      "\022\264\001\n\016DeliverReceipt\0222.api.v1alpha1.integ" +
-      "rationspublic.DeliverReceiptReq\0322.api.v1" +
-      "alpha1.integrationspublic.DeliverReceipt" +
-      "Res\":\202\323\344\223\0024\"//api/v1alpha1/integrationsp" +
-      "ublic/deliverreceipt:\001*B\337\001\n1com.tcn.clou" +
-      "d.api.api.v1alpha1.integrationspublicB\014S" +
-      "erviceProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integ" +
-      "rationspublic\312\002\037Api\\V1alpha1\\Integration" +
-      "spublic\342\002+Api\\V1alpha1\\Integrationspubli" +
-      "c\\GPBMetadata\352\002!Api::V1alpha1::Integrati" +
-      "onspublicb\006proto3"
+      "es\"7\202\323\344\223\0021\",/api/v1alpha1/integrationspu" +
+      "blic/getlinkdata:\001*\022\304\001\n\022SubmitVerificati" +
+      "on\0226.api.v1alpha1.integrationspublic.Sub" +
+      "mitVerificationReq\0326.api.v1alpha1.integr" +
+      "ationspublic.SubmitVerificationRes\">\202\323\344\223" +
+      "\0028\"3/api/v1alpha1/integrationspublic/sub" +
+      "mitverification:\001*\022\274\001\n\020SessionKeepAlive\022" +
+      "4.api.v1alpha1.integrationspublic.Sessio" +
+      "nKeepAliveReq\0324.api.v1alpha1.integration" +
+      "spublic.SessionKeepAliveRes\"<\202\323\344\223\0026\"1/ap" +
+      "i/v1alpha1/integrationspublic/sessionkee" +
+      "palive:\001*\022\244\001\n\nGetInvoice\022..api.v1alpha1." +
+      "integrationspublic.GetInvoiceReq\032..api.v" +
+      "1alpha1.integrationspublic.GetInvoiceRes" +
+      "\"6\202\323\344\223\0020\"+/api/v1alpha1/integrationspubl" +
+      "ic/getinvoice:\001*\022\260\001\n\rSubmitPayment\0221.api" +
+      ".v1alpha1.integrationspublic.SubmitPayme" +
+      "ntReq\0321.api.v1alpha1.integrationspublic." +
+      "SubmitPaymentRes\"9\202\323\344\223\0023\"./api/v1alpha1/" +
+      "integrationspublic/submitpayment:\001*\022\244\001\n\n" +
+      "GetReceipt\022..api.v1alpha1.integrationspu" +
+      "blic.GetReceiptReq\032..api.v1alpha1.integr" +
+      "ationspublic.GetReceiptRes\"6\202\323\344\223\0020\"+/api" +
+      "/v1alpha1/integrationspublic/getreceipt:" +
+      "\001*\022\270\001\n\017ProcessWorkflow\0223.api.v1alpha1.in" +
+      "tegrationspublic.ProcessWorkflowReq\0323.ap" +
+      "i.v1alpha1.integrationspublic.ProcessWor" +
+      "kflowRes\";\202\323\344\223\0025\"0/api/v1alpha1/integrat" +
+      "ionspublic/processworkflow:\001*\022\264\001\n\016GetLin" +
+      "kDetails\0222.api.v1alpha1.integrationspubl" +
+      "ic.GetLinkDetailsReq\0322.api.v1alpha1.inte" +
+      "grationspublic.GetLinkDetailsRes\":\202\323\344\223\0024" +
+      "\"//api/v1alpha1/integrationspublic/getli" +
+      "nkdetails:\001*\022\260\001\n\rCalculateFees\0221.api.v1a" +
+      "lpha1.integrationspublic.CalculateFeesRe" +
+      "q\0321.api.v1alpha1.integrationspublic.Calc" +
+      "ulateFeesRes\"9\202\323\344\223\0023\"./api/v1alpha1/inte" +
+      "grationspublic/calculatefees:\001*\022\264\001\n\016Deli" +
+      "verReceipt\0222.api.v1alpha1.integrationspu" +
+      "blic.DeliverReceiptReq\0322.api.v1alpha1.in" +
+      "tegrationspublic.DeliverReceiptRes\":\202\323\344\223" +
+      "\0024\"//api/v1alpha1/integrationspublic/del" +
+      "iverreceipt:\001*B\337\001\n1com.tcn.cloud.api.api" +
+      ".v1alpha1.integrationspublicB\014ServicePro" +
+      "toP\001\242\002\003AVI\252\002\037Api.V1alpha1.Integrationspu" +
+      "blic\312\002\037Api\\V1alpha1\\Integrationspublic\342\002" +
+      "+Api\\V1alpha1\\Integrationspublic\\GPBMeta" +
+      "data\352\002!Api::V1alpha1::Integrationspublic" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -706,7 +708,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrationspublic_DeliverReceiptReq_descriptor,
-        new java.lang.String[] { "EmailReceipt", "ReceiptId", "DeliveryMethod", });
+        new java.lang.String[] { "Entity", "EmailReceipt", "ReceiptId", "DeliveryMethod", });
     internal_static_api_v1alpha1_integrationspublic_EmailReceipt_descriptor =
       getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_integrationspublic_EmailReceipt_fieldAccessorTable = new

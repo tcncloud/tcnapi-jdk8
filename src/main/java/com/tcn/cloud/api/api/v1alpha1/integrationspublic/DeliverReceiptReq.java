@@ -79,6 +79,32 @@ private static final long serialVersionUID = 0L;
         deliveryMethodCase_);
   }
 
+  public static final int ENTITY_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId entity_;
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   * @return Whether the entity field is set.
+   */
+  @java.lang.Override
+  public boolean hasEntity() {
+    return entity_ != null;
+  }
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   * @return The entity.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId getEntity() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance() : entity_;
+  }
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder getEntityOrBuilder() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance() : entity_;
+  }
+
   public static final int EMAIL_RECEIPT_FIELD_NUMBER = 3;
   /**
    * <pre>
@@ -183,6 +209,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (entity_ != null) {
+      output.writeMessage(1, getEntity());
+    }
     if (deliveryMethodCase_ == 3) {
       output.writeMessage(3, (com.tcn.cloud.api.api.v1alpha1.integrationspublic.EmailReceipt) deliveryMethod_);
     }
@@ -198,6 +227,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (entity_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getEntity());
+    }
     if (deliveryMethodCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.tcn.cloud.api.api.v1alpha1.integrationspublic.EmailReceipt) deliveryMethod_);
@@ -220,6 +253,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq other = (com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq) obj;
 
+    if (hasEntity() != other.hasEntity()) return false;
+    if (hasEntity()) {
+      if (!getEntity()
+          .equals(other.getEntity())) return false;
+    }
     if (!getReceiptId()
         .equals(other.getReceiptId())) return false;
     if (!getDeliveryMethodCase().equals(other.getDeliveryMethodCase())) return false;
@@ -242,6 +280,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasEntity()) {
+      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getEntity().hashCode();
+    }
     hash = (37 * hash) + RECEIPT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getReceiptId().hashCode();
     switch (deliveryMethodCase_) {
@@ -383,6 +425,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
       if (emailReceiptBuilder_ != null) {
         emailReceiptBuilder_.clear();
       }
@@ -423,7 +470,12 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.entity_ = entityBuilder_ == null
+            ? entity_
+            : entityBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.receiptId_ = receiptId_;
       }
     }
@@ -481,9 +533,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrationspublic.DeliverReceiptReq.getDefaultInstance()) return this;
+      if (other.hasEntity()) {
+        mergeEntity(other.getEntity());
+      }
       if (!other.getReceiptId().isEmpty()) {
         receiptId_ = other.receiptId_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       switch (other.getDeliveryMethodCase()) {
@@ -521,6 +576,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             case 26: {
               input.readMessage(
                   getEmailReceiptFieldBuilder().getBuilder(),
@@ -530,7 +592,7 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 50: {
               receiptId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             default: {
@@ -564,6 +626,125 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+
+    private com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId entity_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder> entityBuilder_;
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     * @return Whether the entity field is set.
+     */
+    public boolean hasEntity() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     * @return The entity.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId getEntity() {
+      if (entityBuilder_ == null) {
+        return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance() : entity_;
+      } else {
+        return entityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder setEntity(com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId value) {
+      if (entityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        entity_ = value;
+      } else {
+        entityBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder setEntity(
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder builderForValue) {
+      if (entityBuilder_ == null) {
+        entity_ = builderForValue.build();
+      } else {
+        entityBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId value) {
+      if (entityBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          entity_ != null &&
+          entity_ != com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance()) {
+          getEntityBuilder().mergeFrom(value);
+        } else {
+          entity_ = value;
+        }
+      } else {
+        entityBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder clearEntity() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder getEntityBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getEntityFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder getEntityOrBuilder() {
+      if (entityBuilder_ != null) {
+        return entityBuilder_.getMessageOrBuilder();
+      } else {
+        return entity_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance() : entity_;
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder> 
+        getEntityFieldBuilder() {
+      if (entityBuilder_ == null) {
+        entityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder, com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder>(
+                getEntity(),
+                getParentForChildren(),
+                isClean());
+        entity_ = null;
+      }
+      return entityBuilder_;
+    }
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.integrationspublic.EmailReceipt, com.tcn.cloud.api.api.v1alpha1.integrationspublic.EmailReceipt.Builder, com.tcn.cloud.api.api.v1alpha1.integrationspublic.EmailReceiptOrBuilder> emailReceiptBuilder_;
@@ -798,7 +979,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       receiptId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -812,7 +993,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearReceiptId() {
       receiptId_ = getDefaultInstance().getReceiptId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -830,7 +1011,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       receiptId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

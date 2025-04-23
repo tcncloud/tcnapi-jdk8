@@ -8,6 +8,21 @@ public interface DeliverReceiptReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   * @return Whether the entity field is set.
+   */
+  boolean hasEntity();
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   * @return The entity.
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId getEntity();
+  /**
+   * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder getEntityOrBuilder();
+
+  /**
    * <pre>
    * adding sms, and pdf download in the future if requested
    * </pre>
