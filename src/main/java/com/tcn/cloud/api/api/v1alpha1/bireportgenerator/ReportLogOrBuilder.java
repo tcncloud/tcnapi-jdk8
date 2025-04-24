@@ -94,7 +94,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=65
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
    * @return Whether the jobRequestedTime field is set.
    */
   @java.lang.Deprecated boolean hasJobRequestedTime();
@@ -105,7 +105,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=65
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
    * @return The jobRequestedTime.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getJobRequestedTime();
@@ -125,7 +125,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=67
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
    * @return Whether the jobCompletedTime field is set.
    */
   @java.lang.Deprecated boolean hasJobCompletedTime();
@@ -136,7 +136,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=67
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
    * @return The jobCompletedTime.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getJobCompletedTime();
@@ -166,7 +166,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=71
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
    * @return The failureReason.
    */
   @java.lang.Deprecated java.lang.String getFailureReason();
@@ -177,7 +177,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=71
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
    * @return The bytes for failureReason.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -200,7 +200,7 @@ public interface ReportLogOrBuilder extends
    *
    * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=75
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=86
    * @return The maxAttempts.
    */
   @java.lang.Deprecated long getMaxAttempts();

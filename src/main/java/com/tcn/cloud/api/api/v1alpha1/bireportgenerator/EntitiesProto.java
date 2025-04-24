@@ -15,6 +15,21 @@ public final class EntitiesProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_bireportgenerator_ReportParameters_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_Parameter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_bireportgenerator_ReportParameters_Parameter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_ParametersEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_bireportgenerator_ReportParameters_ParametersEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38,67 +53,77 @@ public final class EntitiesProto {
       "#api/commons/bireportgenerator.proto\032\027ap" +
       "i/commons/enums.proto\032\025api/commons/org.p" +
       "roto\032\027api/commons/types.proto\032\037google/pr" +
-      "otobuf/timestamp.proto\"\337\007\n\tReportJob\022\"\n\r" +
-      "report_job_id\030\001 \001(\tR\013reportJobId\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
-      "iption\022%\n\014dashboard_id\030\004 \001(\tB\002\030\001R\013dashbo" +
-      "ardId\022\037\n\ttime_zone\030\005 \001(\tB\002\030\001R\010timeZone\0228" +
-      "\n\013time_period\030\006 \001(\0162\027.api.commons.TimePe" +
-      "riodR\ntimePeriod\022E\n\016delivery_times\030\007 \001(\013" +
-      "2\032.api.commons.DeliveryTimesB\002\030\001R\rdelive" +
-      "ryTimes\0229\n\nday_filter\030\010 \001(\0132\026.api.common" +
-      "s.DayFilterB\002\030\001R\tdayFilter\022.\n\006months\030\t \003" +
-      "(\0162\022.api.commons.MonthB\002\030\001R\006months\022E\n\016fo" +
-      "rmat_options\030\n \001(\0132\032.api.commons.FormatO" +
-      "ptionsB\002\030\001R\rformatOptions\022K\n\020delivery_op" +
-      "tions\030\013 \001(\0132\034.api.commons.DeliveryOption" +
-      "sB\002\030\001R\017deliveryOptions\022\033\n\tis_active\030\014 \001(" +
-      "\010R\010isActive\022*\n\021send_empty_report\030\r \001(\010R\017" +
-      "sendEmptyReport\0222\n\025dashboard_resource_id" +
-      "\030\016 \001(\tR\023dashboardResourceId\022H\n\021time_zone" +
-      "_wrapper\030\017 \001(\0132\034.api.commons.TimeZoneWra" +
-      "pperR\017timeZoneWrapper\022&\n\017hide_csv_footer" +
-      "\030\020 \001(\010R\rhideCsvFooter\0222\n\023transfer_config" +
-      "_sid\030\021 \001(\003B\002\030\001R\021transferConfigSid\022D\n\017cro" +
-      "n_expression\030\022 \001(\0132\033.api.commons.CronExp" +
-      "ressionR\016cronExpression\022G\n\020transfer_opti" +
-      "ons\030\023 \001(\0132\034.api.commons.TransferOptionsR" +
-      "\017transferOptions\"\242\t\n\tReportLog\022\025\n\006org_id" +
-      "\030\001 \001(\tR\005orgId\022\"\n\rreport_log_id\030\002 \001(\003R\013re" +
-      "portLogId\022&\n\rreport_job_id\030\003 \001(\003B\0020\001R\013re" +
-      "portJobId\022!\n\014execution_id\030\004 \001(\tR\013executi" +
-      "onId\022\037\n\013report_name\030\005 \001(\tR\nreportName\022L\n" +
-      "\022job_requested_time\030\006 \001(\0132\032.google.proto" +
-      "buf.TimestampB\002\030\001R\020jobRequestedTime\022L\n\022j" +
-      "ob_completed_time\030\007 \001(\0132\032.google.protobu" +
-      "f.TimestampB\002\030\001R\020jobCompletedTime\022\030\n\007suc" +
-      "cess\030\010 \001(\010R\007success\022)\n\016failure_reason\030\t " +
-      "\001(\tB\002\030\001R\rfailureReason\022%\n\016attempt_number" +
-      "\030\n \001(\003R\rattemptNumber\022%\n\014max_attempts\030\013 " +
-      "\001(\003B\002\030\001R\013maxAttempts\022;\n\013create_time\030\014 \001(" +
-      "\0132\032.google.protobuf.TimestampR\ncreateTim" +
-      "e\022;\n\013update_time\030\r \001(\0132\032.google.protobuf" +
-      ".TimestampR\nupdateTime\022\'\n\017dashboard_titl" +
-      "e\030\016 \001(\tR\016dashboardTitle\022A\n\016scheduled_tim" +
-      "e\030\017 \001(\0132\032.google.protobuf.TimestampR\rsch" +
-      "eduledTime\022L\n\024execution_start_time\030\020 \001(\013" +
-      "2\032.google.protobuf.TimestampR\022executionS" +
-      "tartTime\022H\n\022execution_end_time\030\021 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\020executionEndTi" +
-      "me\022F\n\021report_start_date\030\022 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\017reportStartDate\022B\n\017re" +
-      "port_end_date\030\023 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\rreportEndDate\022\032\n\010comments\030\024 \003(\t" +
-      "R\010comments\022\032\n\010timezone\030\025 \001(\tR\010timezone\022\034" +
-      "\n\tfilenames\030\026 \003(\tR\tfilenames\022#\n\rinsight_" +
-      "count\030\027 \001(\003R\014insightCount\022:\n\031delivery_de" +
-      "finition_title\030\030 \001(\tR\027deliveryDefinition" +
-      "TitleB\333\001\n0com.tcn.cloud.api.api.v1alpha1" +
-      ".bireportgeneratorB\rEntitiesProtoP\001\242\002\003AV" +
-      "B\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036Api" +
-      "\\V1alpha1\\Bireportgenerator\342\002*Api\\V1alph" +
-      "a1\\Bireportgenerator\\GPBMetadata\352\002 Api::" +
-      "V1alpha1::Bireportgeneratorb\006proto3"
+      "otobuf/timestamp.proto\"\257\002\n\020ReportParamet" +
+      "ers\022`\n\nparameters\030\001 \003(\0132@.api.v1alpha1.b" +
+      "ireportgenerator.ReportParameters.Parame" +
+      "tersEntryR\nparameters\032>\n\tParameter\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value\022\033\n\tdata_type\030\003 \001(\tR\010dat" +
+      "aType\032y\n\017ParametersEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022P\n\005value\030\002 \001(\0132:.api.v1alpha1.birepor" +
+      "tgenerator.ReportParameters.ParameterR\005v" +
+      "alue:\0028\001\"\276\010\n\tReportJob\022\"\n\rreport_job_id\030" +
+      "\001 \001(\tR\013reportJobId\022\022\n\004name\030\002 \001(\tR\004name\022 " +
+      "\n\013description\030\003 \001(\tR\013description\022%\n\014dash" +
+      "board_id\030\004 \001(\tB\002\030\001R\013dashboardId\022\037\n\ttime_" +
+      "zone\030\005 \001(\tB\002\030\001R\010timeZone\0228\n\013time_period\030" +
+      "\006 \001(\0162\027.api.commons.TimePeriodR\ntimePeri" +
+      "od\022E\n\016delivery_times\030\007 \001(\0132\032.api.commons" +
+      ".DeliveryTimesB\002\030\001R\rdeliveryTimes\0229\n\nday" +
+      "_filter\030\010 \001(\0132\026.api.commons.DayFilterB\002\030" +
+      "\001R\tdayFilter\022.\n\006months\030\t \003(\0162\022.api.commo" +
+      "ns.MonthB\002\030\001R\006months\022E\n\016format_options\030\n" +
+      " \001(\0132\032.api.commons.FormatOptionsB\002\030\001R\rfo" +
+      "rmatOptions\022K\n\020delivery_options\030\013 \001(\0132\034." +
+      "api.commons.DeliveryOptionsB\002\030\001R\017deliver" +
+      "yOptions\022\033\n\tis_active\030\014 \001(\010R\010isActive\022*\n" +
+      "\021send_empty_report\030\r \001(\010R\017sendEmptyRepor" +
+      "t\0222\n\025dashboard_resource_id\030\016 \001(\tR\023dashbo" +
+      "ardResourceId\022H\n\021time_zone_wrapper\030\017 \001(\013" +
+      "2\034.api.commons.TimeZoneWrapperR\017timeZone" +
+      "Wrapper\022&\n\017hide_csv_footer\030\020 \001(\010R\rhideCs" +
+      "vFooter\0222\n\023transfer_config_sid\030\021 \001(\003B\002\030\001" +
+      "R\021transferConfigSid\022D\n\017cron_expression\030\022" +
+      " \001(\0132\033.api.commons.CronExpressionR\016cronE" +
+      "xpression\022G\n\020transfer_options\030\023 \001(\0132\034.ap" +
+      "i.commons.TransferOptionsR\017transferOptio" +
+      "ns\022]\n\021report_parameters\030\024 \001(\01320.api.v1al" +
+      "pha1.bireportgenerator.ReportParametersR" +
+      "\020reportParameters\"\242\t\n\tReportLog\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022\"\n\rreport_log_id\030\002 \001(\003R\013r" +
+      "eportLogId\022&\n\rreport_job_id\030\003 \001(\003B\0020\001R\013r" +
+      "eportJobId\022!\n\014execution_id\030\004 \001(\tR\013execut" +
+      "ionId\022\037\n\013report_name\030\005 \001(\tR\nreportName\022L" +
+      "\n\022job_requested_time\030\006 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\002\030\001R\020jobRequestedTime\022L\n\022" +
+      "job_completed_time\030\007 \001(\0132\032.google.protob" +
+      "uf.TimestampB\002\030\001R\020jobCompletedTime\022\030\n\007su" +
+      "ccess\030\010 \001(\010R\007success\022)\n\016failure_reason\030\t" +
+      " \001(\tB\002\030\001R\rfailureReason\022%\n\016attempt_numbe" +
+      "r\030\n \001(\003R\rattemptNumber\022%\n\014max_attempts\030\013" +
+      " \001(\003B\002\030\001R\013maxAttempts\022;\n\013create_time\030\014 \001" +
+      "(\0132\032.google.protobuf.TimestampR\ncreateTi" +
+      "me\022;\n\013update_time\030\r \001(\0132\032.google.protobu" +
+      "f.TimestampR\nupdateTime\022\'\n\017dashboard_tit" +
+      "le\030\016 \001(\tR\016dashboardTitle\022A\n\016scheduled_ti" +
+      "me\030\017 \001(\0132\032.google.protobuf.TimestampR\rsc" +
+      "heduledTime\022L\n\024execution_start_time\030\020 \001(" +
+      "\0132\032.google.protobuf.TimestampR\022execution" +
+      "StartTime\022H\n\022execution_end_time\030\021 \001(\0132\032." +
+      "google.protobuf.TimestampR\020executionEndT" +
+      "ime\022F\n\021report_start_date\030\022 \001(\0132\032.google." +
+      "protobuf.TimestampR\017reportStartDate\022B\n\017r" +
+      "eport_end_date\030\023 \001(\0132\032.google.protobuf.T" +
+      "imestampR\rreportEndDate\022\032\n\010comments\030\024 \003(" +
+      "\tR\010comments\022\032\n\010timezone\030\025 \001(\tR\010timezone\022" +
+      "\034\n\tfilenames\030\026 \003(\tR\tfilenames\022#\n\rinsight" +
+      "_count\030\027 \001(\003R\014insightCount\022:\n\031delivery_d" +
+      "efinition_title\030\030 \001(\tR\027deliveryDefinitio" +
+      "nTitleB\333\001\n0com.tcn.cloud.api.api.v1alpha" +
+      "1.bireportgeneratorB\rEntitiesProtoP\001\242\002\003A" +
+      "VB\252\002\036Api.V1alpha1.Bireportgenerator\312\002\036Ap" +
+      "i\\V1alpha1\\Bireportgenerator\342\002*Api\\V1alp" +
+      "ha1\\Bireportgenerator\\GPBMetadata\352\002 Api:" +
+      ":V1alpha1::Bireportgeneratorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -109,14 +134,32 @@ public final class EntitiesProto {
           com.tcn.cloud.api.api.commons.TypesProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor =
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_bireportgenerator_ReportParameters_descriptor,
+        new java.lang.String[] { "Parameters", });
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_Parameter_descriptor =
+      internal_static_api_v1alpha1_bireportgenerator_ReportParameters_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_Parameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_bireportgenerator_ReportParameters_Parameter_descriptor,
+        new java.lang.String[] { "Value", "DataType", });
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_ParametersEntry_descriptor =
+      internal_static_api_v1alpha1_bireportgenerator_ReportParameters_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_bireportgenerator_ReportParameters_ParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_bireportgenerator_ReportParameters_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_bireportgenerator_ReportJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportJob_descriptor,
-        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", "TransferConfigSid", "CronExpression", "TransferOptions", });
+        new java.lang.String[] { "ReportJobId", "Name", "Description", "DashboardId", "TimeZone", "TimePeriod", "DeliveryTimes", "DayFilter", "Months", "FormatOptions", "DeliveryOptions", "IsActive", "SendEmptyReport", "DashboardResourceId", "TimeZoneWrapper", "HideCsvFooter", "TransferConfigSid", "CronExpression", "TransferOptions", "ReportParameters", });
     internal_static_api_v1alpha1_bireportgenerator_ReportLog_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_bireportgenerator_ReportLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_bireportgenerator_ReportLog_descriptor,
