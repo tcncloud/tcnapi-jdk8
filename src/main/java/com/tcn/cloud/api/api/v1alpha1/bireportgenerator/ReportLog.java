@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=77
    * @return Whether the jobRequestedTime field is set.
    */
   @java.lang.Override
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=77
    * @return The jobRequestedTime.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=79
    * @return Whether the jobCompletedTime field is set.
    */
   @java.lang.Override
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=79
    * @return The jobCompletedTime.
    */
   @java.lang.Override
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
    * @return The failureReason.
    */
   @java.lang.Override
@@ -356,7 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
    * @return The bytes for failureReason.
    */
   @java.lang.Override
@@ -398,7 +398,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=86
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=87
    * @return The maxAttempts.
    */
   @java.lang.Override
@@ -2328,7 +2328,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=77
      * @return Whether the jobRequestedTime field is set.
      */
     @java.lang.Deprecated public boolean hasJobRequestedTime() {
@@ -2341,7 +2341,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp job_requested_time = 6 [json_name = "jobRequestedTime", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_requested_time is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=76
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=77
      * @return The jobRequestedTime.
      */
     @java.lang.Deprecated public com.google.protobuf.Timestamp getJobRequestedTime() {
@@ -2487,7 +2487,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=79
      * @return Whether the jobCompletedTime field is set.
      */
     @java.lang.Deprecated public boolean hasJobCompletedTime() {
@@ -2500,7 +2500,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Timestamp job_completed_time = 7 [json_name = "jobCompletedTime", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.job_completed_time is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=78
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=79
      * @return The jobCompletedTime.
      */
     @java.lang.Deprecated public com.google.protobuf.Timestamp getJobCompletedTime() {
@@ -2688,7 +2688,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
      * @return The failureReason.
      */
     @java.lang.Deprecated public java.lang.String getFailureReason() {
@@ -2710,7 +2710,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
      * @return The bytes for failureReason.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2733,7 +2733,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
      * @param value The failureReason to set.
      * @return This builder for chaining.
      */
@@ -2752,7 +2752,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFailureReason() {
@@ -2768,7 +2768,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string failure_reason = 9 [json_name = "failureReason", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.failure_reason is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=82
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=83
      * @param value The bytes for failureReason to set.
      * @return This builder for chaining.
      */
@@ -2834,7 +2834,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=86
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=87
      * @return The maxAttempts.
      */
     @java.lang.Override
@@ -2848,7 +2848,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=86
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=87
      * @param value The maxAttempts to set.
      * @return This builder for chaining.
      */
@@ -2866,7 +2866,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 max_attempts = 11 [json_name = "maxAttempts", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportLog.max_attempts is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=86
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=87
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMaxAttempts() {

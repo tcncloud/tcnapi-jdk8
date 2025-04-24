@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @return The dashboardId.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
    * @return The bytes for dashboardId.
    */
   @java.lang.Override
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return The timeZone.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
    * @return The bytes for timeZone.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=34
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=35
    * @return Whether the deliveryTimes field is set.
    */
   @java.lang.Override
@@ -342,7 +342,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=34
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=35
    * @return The deliveryTimes.
    */
   @java.lang.Override
@@ -370,7 +370,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=36
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=37
    * @return Whether the dayFilter field is set.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=36
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=37
    * @return The dayFilter.
    */
   @java.lang.Override
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
    * @return A list containing the months.
    */
   @java.lang.Override
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
    * @return The count of months.
    */
   @java.lang.Override
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
    * @param index The index of the element to return.
    * @return The months at the given index.
    */
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
    * @return A list containing the enum numeric values on the wire for months.
    */
   @java.lang.Override
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of months at the given index.
    */
@@ -500,7 +500,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=40
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=41
    * @return Whether the formatOptions field is set.
    */
   @java.lang.Override
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=40
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=41
    * @return The formatOptions.
    */
   @java.lang.Override
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=42
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=43
    * @return Whether the deliveryOptions field is set.
    */
   @java.lang.Override
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=42
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=43
    * @return The deliveryOptions.
    */
   @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
-   *     See api/v1alpha1/bireportgenerator/entities.proto;l=54
+   *     See api/v1alpha1/bireportgenerator/entities.proto;l=55
    * @return The transferConfigSid.
    */
   @java.lang.Override
@@ -2039,7 +2039,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
      * @return The dashboardId.
      */
     @java.lang.Deprecated public java.lang.String getDashboardId() {
@@ -2061,7 +2061,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
      * @return The bytes for dashboardId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2084,7 +2084,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
      * @param value The dashboardId to set.
      * @return This builder for chaining.
      */
@@ -2103,7 +2103,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDashboardId() {
@@ -2119,7 +2119,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string dashboard_id = 4 [json_name = "dashboardId", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.dashboard_id is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=28
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=29
      * @param value The bytes for dashboardId to set.
      * @return This builder for chaining.
      */
@@ -2141,7 +2141,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
      * @return The timeZone.
      */
     @java.lang.Deprecated public java.lang.String getTimeZone() {
@@ -2163,7 +2163,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
      * @return The bytes for timeZone.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2186,7 +2186,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
      * @param value The timeZone to set.
      * @return This builder for chaining.
      */
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTimeZone() {
@@ -2221,7 +2221,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string time_zone = 5 [json_name = "timeZone", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.time_zone is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=30
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=31
      * @param value The bytes for timeZone to set.
      * @return This builder for chaining.
      */
@@ -2318,7 +2318,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=34
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=35
      * @return Whether the deliveryTimes field is set.
      */
     @java.lang.Deprecated public boolean hasDeliveryTimes() {
@@ -2331,7 +2331,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DeliveryTimes delivery_times = 7 [json_name = "deliveryTimes", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_times is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=34
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=35
      * @return The deliveryTimes.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryTimes getDeliveryTimes() {
@@ -2477,7 +2477,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=36
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=37
      * @return Whether the dayFilter field is set.
      */
     @java.lang.Deprecated public boolean hasDayFilter() {
@@ -2490,7 +2490,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DayFilter day_filter = 8 [json_name = "dayFilter", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.day_filter is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=36
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=37
      * @return The dayFilter.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DayFilter getDayFilter() {
@@ -2641,7 +2641,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @return A list containing the months.
      */
     @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.Month> getMonthsList() {
@@ -2655,7 +2655,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @return The count of months.
      */
     @java.lang.Deprecated public int getMonthsCount() {
@@ -2668,7 +2668,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param index The index of the element to return.
      * @return The months at the given index.
      */
@@ -2682,7 +2682,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param index The index to set the value at.
      * @param value The months to set.
      * @return This builder for chaining.
@@ -2704,7 +2704,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param value The months to add.
      * @return This builder for chaining.
      */
@@ -2724,7 +2724,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param values The months to add.
      * @return This builder for chaining.
      */
@@ -2744,7 +2744,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMonths() {
@@ -2760,7 +2760,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @return A list containing the enum numeric values on the wire for months.
      */
     @java.lang.Deprecated public java.util.List<java.lang.Integer>
@@ -2774,7 +2774,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of months at the given index.
      */
@@ -2788,7 +2788,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for months to set.
      * @return This builder for chaining.
@@ -2807,7 +2807,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param value The enum numeric value on the wire for months to add.
      * @return This builder for chaining.
      */
@@ -2824,7 +2824,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.Month months = 9 [json_name = "months", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.months is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=38
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=39
      * @param values The enum numeric values on the wire for months to add.
      * @return This builder for chaining.
      */
@@ -2848,7 +2848,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=40
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=41
      * @return Whether the formatOptions field is set.
      */
     @java.lang.Deprecated public boolean hasFormatOptions() {
@@ -2861,7 +2861,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FormatOptions format_options = 10 [json_name = "formatOptions", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.format_options is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=40
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=41
      * @return The formatOptions.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FormatOptions getFormatOptions() {
@@ -3007,7 +3007,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=42
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=43
      * @return Whether the deliveryOptions field is set.
      */
     @java.lang.Deprecated public boolean hasDeliveryOptions() {
@@ -3020,7 +3020,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.DeliveryOptions delivery_options = 11 [json_name = "deliveryOptions", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.delivery_options is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=42
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=43
      * @return The deliveryOptions.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.DeliveryOptions getDeliveryOptions() {
@@ -3543,7 +3543,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=54
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=55
      * @return The transferConfigSid.
      */
     @java.lang.Override
@@ -3557,7 +3557,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=54
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=55
      * @param value The transferConfigSid to set.
      * @return This builder for chaining.
      */
@@ -3575,7 +3575,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 transfer_config_sid = 17 [json_name = "transferConfigSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.bireportgenerator.ReportJob.transfer_config_sid is deprecated.
-     *     See api/v1alpha1/bireportgenerator/entities.proto;l=54
+     *     See api/v1alpha1/bireportgenerator/entities.proto;l=55
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTransferConfigSid() {

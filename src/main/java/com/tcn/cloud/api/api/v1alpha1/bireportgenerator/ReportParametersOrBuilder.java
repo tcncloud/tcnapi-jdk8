@@ -8,10 +8,18 @@ public interface ReportParametersOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   int getParametersCount();
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   boolean containsParameters(
@@ -23,11 +31,19 @@ public interface ReportParametersOrBuilder extends
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter>
   getParameters();
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter>
   getParametersMap();
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   /* nullable */
@@ -36,6 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter getP
       /* nullable */
 com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defaultValue);
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter getParametersOrThrow(

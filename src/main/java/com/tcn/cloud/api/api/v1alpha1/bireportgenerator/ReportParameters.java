@@ -781,6 +781,10 @@ private static final long serialVersionUID = 0L;
     return internalGetParameters().getMap().size();
   }
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -798,6 +802,10 @@ private static final long serialVersionUID = 0L;
     return getParametersMap();
   }
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -805,6 +813,10 @@ private static final long serialVersionUID = 0L;
     return internalGetParameters().getMap();
   }
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -819,6 +831,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * parameter key to value/data_type
+   * </pre>
+   *
    * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -1227,6 +1243,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return internalGetParameters().getMap().size();
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1244,6 +1264,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return getParametersMap();
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1251,6 +1275,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return internalGetParameters().getMap();
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1265,6 +1293,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     @java.lang.Override
@@ -1285,6 +1317,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return this;
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder removeParameters(
@@ -1304,6 +1340,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return internalGetMutableParameters().getMutableMap();
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder putParameters(
@@ -1317,6 +1357,10 @@ com.tcn.cloud.api.api.v1alpha1.bireportgenerator.ReportParameters.Parameter defa
       return this;
     }
     /**
+     * <pre>
+     * parameter key to value/data_type
+     * </pre>
+     *
      * <code>map&lt;string, .api.v1alpha1.bireportgenerator.ReportParameters.Parameter&gt; parameters = 1 [json_name = "parameters"];</code>
      */
     public Builder putAllParameters(
