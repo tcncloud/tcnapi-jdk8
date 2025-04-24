@@ -400,4 +400,14 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * <code>.api.commons.LocalePreferences locale_preferences_override = 24 [json_name = "localePreferencesOverride"];</code>
    */
   com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
+
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 25 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  boolean getPlayNotificationSounds();
 }

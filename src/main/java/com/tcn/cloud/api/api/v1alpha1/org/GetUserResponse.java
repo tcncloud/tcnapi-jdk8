@@ -2785,6 +2785,21 @@ private static final long serialVersionUID = 0L;
     return passwordResetDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : passwordResetDate_;
   }
 
+  public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 33;
+  private boolean playNotificationSounds_ = false;
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 33 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  @java.lang.Override
+  public boolean getPlayNotificationSounds() {
+    return playNotificationSounds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2894,6 +2909,9 @@ private static final long serialVersionUID = 0L;
     }
     if (passwordResetDate_ != null) {
       output.writeMessage(32, getPasswordResetDate());
+    }
+    if (playNotificationSounds_ != false) {
+      output.writeBool(33, playNotificationSounds_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -3030,6 +3048,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(32, getPasswordResetDate());
     }
+    if (playNotificationSounds_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(33, playNotificationSounds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3132,6 +3154,8 @@ private static final long serialVersionUID = 0L;
       if (!getPasswordResetDate()
           .equals(other.getPasswordResetDate())) return false;
     }
+    if (getPlayNotificationSounds()
+        != other.getPlayNotificationSounds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3242,6 +3266,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PASSWORD_RESET_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getPasswordResetDate().hashCode();
     }
+    hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPlayNotificationSounds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3377,6 +3404,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       userId_ = "";
       orgId_ = "";
       delegated_ = false;
@@ -3467,6 +3495,7 @@ private static final long serialVersionUID = 0L;
         passwordResetDateBuilder_.dispose();
         passwordResetDateBuilder_ = null;
       }
+      playNotificationSounds_ = false;
       return this;
     }
 
@@ -3495,6 +3524,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.api.v1alpha1.org.GetUserResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetUserResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -3641,6 +3671,13 @@ private static final long serialVersionUID = 0L;
         result.passwordResetDate_ = passwordResetDateBuilder_ == null
             ? passwordResetDate_
             : passwordResetDateBuilder_.build();
+      }
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.v1alpha1.org.GetUserResponse result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.playNotificationSounds_ = playNotificationSounds_;
       }
     }
 
@@ -3910,6 +3947,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasPasswordResetDate()) {
         mergePasswordResetDate(other.getPasswordResetDate());
       }
+      if (other.getPlayNotificationSounds() != false) {
+        setPlayNotificationSounds(other.getPlayNotificationSounds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4146,6 +4186,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x80000000;
               break;
             } // case 258
+            case 264: {
+              playNotificationSounds_ = input.readBool();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 264
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4162,6 +4207,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object userId_ = "";
     /**
@@ -8244,6 +8290,50 @@ private static final long serialVersionUID = 0L;
         passwordResetDate_ = null;
       }
       return passwordResetDateBuilder_;
+    }
+
+    private boolean playNotificationSounds_ ;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 33 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public boolean getPlayNotificationSounds() {
+      return playNotificationSounds_;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 33 [json_name = "playNotificationSounds"];</code>
+     * @param value The playNotificationSounds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayNotificationSounds(boolean value) {
+
+      playNotificationSounds_ = value;
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 33 [json_name = "playNotificationSounds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayNotificationSounds() {
+      bitField1_ = (bitField1_ & ~0x00000001);
+      playNotificationSounds_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -2148,6 +2148,21 @@ private static final long serialVersionUID = 0L;
     return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
   }
 
+  public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 25;
+  private boolean playNotificationSounds_ = false;
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 25 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  @java.lang.Override
+  public boolean getPlayNotificationSounds() {
+    return playNotificationSounds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2206,6 +2221,9 @@ private static final long serialVersionUID = 0L;
     }
     if (localePreferencesOverride_ != null) {
       output.writeMessage(24, getLocalePreferencesOverride());
+    }
+    if (playNotificationSounds_ != false) {
+      output.writeBool(25, playNotificationSounds_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2272,6 +2290,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getLocalePreferencesOverride());
     }
+    if (playNotificationSounds_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(25, playNotificationSounds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2329,6 +2351,8 @@ private static final long serialVersionUID = 0L;
       if (!getLocalePreferencesOverride()
           .equals(other.getLocalePreferencesOverride())) return false;
     }
+    if (getPlayNotificationSounds()
+        != other.getPlayNotificationSounds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2389,6 +2413,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
     }
+    hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPlayNotificationSounds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2579,6 +2606,7 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverrideBuilder_.dispose();
         localePreferencesOverrideBuilder_ = null;
       }
+      playNotificationSounds_ = false;
       return this;
     }
 
@@ -2692,6 +2720,9 @@ private static final long serialVersionUID = 0L;
         result.localePreferencesOverride_ = localePreferencesOverrideBuilder_ == null
             ? localePreferencesOverride_
             : localePreferencesOverrideBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.playNotificationSounds_ = playNotificationSounds_;
       }
     }
 
@@ -2884,6 +2915,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasLocalePreferencesOverride()) {
         mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
       }
+      if (other.getPlayNotificationSounds() != false) {
+        setPlayNotificationSounds(other.getPlayNotificationSounds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3025,6 +3059,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 194
+            case 200: {
+              playNotificationSounds_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 200
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5408,6 +5447,50 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverride_ = null;
       }
       return localePreferencesOverrideBuilder_;
+    }
+
+    private boolean playNotificationSounds_ ;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 25 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public boolean getPlayNotificationSounds() {
+      return playNotificationSounds_;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 25 [json_name = "playNotificationSounds"];</code>
+     * @param value The playNotificationSounds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayNotificationSounds(boolean value) {
+
+      playNotificationSounds_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 25 [json_name = "playNotificationSounds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayNotificationSounds() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      playNotificationSounds_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

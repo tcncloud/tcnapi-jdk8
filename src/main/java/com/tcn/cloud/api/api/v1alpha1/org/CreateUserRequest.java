@@ -881,6 +881,21 @@ private static final long serialVersionUID = 0L;
     return passwordResetRequired_;
   }
 
+  public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 21;
+  private boolean playNotificationSounds_ = false;
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 21 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  @java.lang.Override
+  public boolean getPlayNotificationSounds() {
+    return playNotificationSounds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -951,6 +966,9 @@ private static final long serialVersionUID = 0L;
     }
     if (passwordResetRequired_ != false) {
       output.writeBool(20, passwordResetRequired_);
+    }
+    if (playNotificationSounds_ != false) {
+      output.writeBool(21, playNotificationSounds_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1043,6 +1061,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, passwordResetRequired_);
     }
+    if (playNotificationSounds_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(21, playNotificationSounds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1101,6 +1123,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getPasswordResetRequired()
         != other.getPasswordResetRequired()) return false;
+    if (getPlayNotificationSounds()
+        != other.getPlayNotificationSounds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1164,6 +1188,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PASSWORD_RESET_REQUIRED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPasswordResetRequired());
+    hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPlayNotificationSounds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1330,6 +1357,7 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverrideBuilder_ = null;
       }
       passwordResetRequired_ = false;
+      playNotificationSounds_ = false;
       return this;
     }
 
@@ -1427,6 +1455,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.passwordResetRequired_ = passwordResetRequired_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.playNotificationSounds_ = playNotificationSounds_;
       }
     }
 
@@ -1579,6 +1610,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPasswordResetRequired() != false) {
         setPasswordResetRequired(other.getPasswordResetRequired());
       }
+      if (other.getPlayNotificationSounds() != false) {
+        setPlayNotificationSounds(other.getPlayNotificationSounds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1708,6 +1742,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00040000;
               break;
             } // case 160
+            case 168: {
+              playNotificationSounds_ = input.readBool();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 168
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3715,6 +3754,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearPasswordResetRequired() {
       bitField0_ = (bitField0_ & ~0x00040000);
       passwordResetRequired_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean playNotificationSounds_ ;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 21 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public boolean getPlayNotificationSounds() {
+      return playNotificationSounds_;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 21 [json_name = "playNotificationSounds"];</code>
+     * @param value The playNotificationSounds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayNotificationSounds(boolean value) {
+
+      playNotificationSounds_ = value;
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 21 [json_name = "playNotificationSounds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayNotificationSounds() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      playNotificationSounds_ = false;
       onChanged();
       return this;
     }

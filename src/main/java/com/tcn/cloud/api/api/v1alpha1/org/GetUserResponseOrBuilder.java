@@ -769,4 +769,14 @@ public interface GetUserResponseOrBuilder extends
    * <code>.google.protobuf.Timestamp password_reset_date = 32 [json_name = "passwordResetDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getPasswordResetDateOrBuilder();
+
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 33 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  boolean getPlayNotificationSounds();
 }

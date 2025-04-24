@@ -711,6 +711,21 @@ private static final long serialVersionUID = 0L;
     return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
   }
 
+  public static final int PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER = 16;
+  private boolean playNotificationSounds_ = false;
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 16 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  @java.lang.Override
+  public boolean getPlayNotificationSounds() {
+    return playNotificationSounds_;
+  }
+
   public static final int FIELD_MASK_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList fieldMask_ =
@@ -823,6 +838,9 @@ private static final long serialVersionUID = 0L;
     if (localePreferencesOverride_ != null) {
       output.writeMessage(15, getLocalePreferencesOverride());
     }
+    if (playNotificationSounds_ != false) {
+      output.writeBool(16, playNotificationSounds_);
+    }
     for (int i = 0; i < fieldMask_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, fieldMask_.getRaw(i));
     }
@@ -899,6 +917,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getLocalePreferencesOverride());
     }
+    if (playNotificationSounds_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(16, playNotificationSounds_);
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < fieldMask_.size(); i++) {
@@ -957,6 +979,8 @@ private static final long serialVersionUID = 0L;
       if (!getLocalePreferencesOverride()
           .equals(other.getLocalePreferencesOverride())) return false;
     }
+    if (getPlayNotificationSounds()
+        != other.getPlayNotificationSounds()) return false;
     if (!getFieldMaskList()
         .equals(other.getFieldMaskList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1011,6 +1035,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
     }
+    hash = (37 * hash) + PLAY_NOTIFICATION_SOUNDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPlayNotificationSounds());
     if (getFieldMaskCount() > 0) {
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMaskList().hashCode();
@@ -1176,6 +1203,7 @@ private static final long serialVersionUID = 0L;
         localePreferencesOverrideBuilder_.dispose();
         localePreferencesOverrideBuilder_ = null;
       }
+      playNotificationSounds_ = false;
       fieldMask_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -1264,6 +1292,9 @@ private static final long serialVersionUID = 0L;
             : localePreferencesOverrideBuilder_.build();
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.playNotificationSounds_ = playNotificationSounds_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         fieldMask_.makeImmutable();
         result.fieldMask_ = fieldMask_;
       }
@@ -1395,10 +1426,13 @@ private static final long serialVersionUID = 0L;
       if (other.hasLocalePreferencesOverride()) {
         mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
       }
+      if (other.getPlayNotificationSounds() != false) {
+        setPlayNotificationSounds(other.getPlayNotificationSounds());
+      }
       if (!other.fieldMask_.isEmpty()) {
         if (fieldMask_.isEmpty()) {
           fieldMask_ = other.fieldMask_;
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00010000;
         } else {
           ensureFieldMaskIsMutable();
           fieldMask_.addAll(other.fieldMask_);
@@ -1513,6 +1547,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 122
+            case 128: {
+              playNotificationSounds_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
             case 162: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureFieldMaskIsMutable();
@@ -3140,13 +3179,57 @@ private static final long serialVersionUID = 0L;
       return localePreferencesOverrideBuilder_;
     }
 
+    private boolean playNotificationSounds_ ;
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 16 [json_name = "playNotificationSounds"];</code>
+     * @return The playNotificationSounds.
+     */
+    @java.lang.Override
+    public boolean getPlayNotificationSounds() {
+      return playNotificationSounds_;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 16 [json_name = "playNotificationSounds"];</code>
+     * @param value The playNotificationSounds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlayNotificationSounds(boolean value) {
+
+      playNotificationSounds_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the user wants notification sounds to play
+     * </pre>
+     *
+     * <code>bool play_notification_sounds = 16 [json_name = "playNotificationSounds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlayNotificationSounds() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      playNotificationSounds_ = false;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.LazyStringArrayList fieldMask_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFieldMaskIsMutable() {
       if (!fieldMask_.isModifiable()) {
         fieldMask_ = new com.google.protobuf.LazyStringArrayList(fieldMask_);
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
     }
     /**
      * <pre>
@@ -3212,7 +3295,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldMaskIsMutable();
       fieldMask_.set(index, value);
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3230,7 +3313,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldMaskIsMutable();
       fieldMask_.add(value);
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3248,7 +3331,7 @@ private static final long serialVersionUID = 0L;
       ensureFieldMaskIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fieldMask_);
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3263,7 +3346,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFieldMask() {
       fieldMask_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00008000);;
+      bitField0_ = (bitField0_ & ~0x00010000);;
       onChanged();
       return this;
     }
@@ -3282,7 +3365,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFieldMaskIsMutable();
       fieldMask_.add(value);
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }

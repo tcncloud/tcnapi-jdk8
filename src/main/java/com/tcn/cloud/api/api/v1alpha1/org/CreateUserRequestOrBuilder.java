@@ -469,4 +469,14 @@ public interface CreateUserRequestOrBuilder extends
    * @return The passwordResetRequired.
    */
   boolean getPasswordResetRequired();
+
+  /**
+   * <pre>
+   * If the user wants notification sounds to play
+   * </pre>
+   *
+   * <code>bool play_notification_sounds = 21 [json_name = "playNotificationSounds"];</code>
+   * @return The playNotificationSounds.
+   */
+  boolean getPlayNotificationSounds();
 }
