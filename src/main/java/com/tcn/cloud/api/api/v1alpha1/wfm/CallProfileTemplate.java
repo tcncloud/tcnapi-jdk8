@@ -225,36 +225,43 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4850
    * @return Whether the averageHandleTimeProfile field is set.
    */
   @java.lang.Override
-  public boolean hasAverageHandleTimeProfile() {
+  @java.lang.Deprecated public boolean hasAverageHandleTimeProfile() {
     return averageHandleTimeProfile_ != null;
   }
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4850
    * @return The averageHandleTimeProfile.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile() {
     return averageHandleTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageHandleTimeProfile_;
   }
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder() {
     return averageHandleTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageHandleTimeProfile_;
   }
 
@@ -354,13 +361,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Fixed average for handle time
+   * Deprecated as of Apr/25/2025: use fixed_average_talk_time instead.
    * </pre>
    *
-   * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime"];</code>
+   * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.fixed_average_handle_time is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4859
    * @return The fixedAverageHandleTime.
    */
   @java.lang.Override
-  public float getFixedAverageHandleTime() {
+  @java.lang.Deprecated public float getFixedAverageHandleTime() {
     return fixedAverageHandleTime_;
   }
 
@@ -456,6 +466,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AVERAGE_TALK_TIME_PROFILE_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.CallProfileGroupAvgs averageTalkTimeProfile_;
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   * @return Whether the averageTalkTimeProfile field is set.
+   */
+  @java.lang.Override
+  public boolean hasAverageTalkTimeProfile() {
+    return averageTalkTimeProfile_ != null;
+  }
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   * @return The averageTalkTimeProfile.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageTalkTimeProfile() {
+    return averageTalkTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageTalkTimeProfile_;
+  }
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageTalkTimeProfileOrBuilder() {
+    return averageTalkTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageTalkTimeProfile_;
+  }
+
+  public static final int FIXED_AVERAGE_TALK_TIME_FIELD_NUMBER = 16;
+  private float fixedAverageTalkTime_ = 0F;
+  /**
+   * <pre>
+   * Fixed average for talk time
+   * </pre>
+   *
+   * <code>float fixed_average_talk_time = 16 [json_name = "fixedAverageTalkTime"];</code>
+   * @return The fixedAverageTalkTime.
+   */
+  @java.lang.Override
+  public float getFixedAverageTalkTime() {
+    return fixedAverageTalkTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -511,6 +574,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, timeZone_);
+    }
+    if (averageTalkTimeProfile_ != null) {
+      output.writeMessage(15, getAverageTalkTimeProfile());
+    }
+    if (java.lang.Float.floatToRawIntBits(fixedAverageTalkTime_) != 0) {
+      output.writeFloat(16, fixedAverageTalkTime_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -574,6 +643,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, timeZone_);
+    }
+    if (averageTalkTimeProfile_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getAverageTalkTimeProfile());
+    }
+    if (java.lang.Float.floatToRawIntBits(fixedAverageTalkTime_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(16, fixedAverageTalkTime_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -640,6 +717,14 @@ private static final long serialVersionUID = 0L;
         != other.getDefaultToFixedAveragesForecast()) return false;
     if (!getTimeZone()
         .equals(other.getTimeZone())) return false;
+    if (hasAverageTalkTimeProfile() != other.hasAverageTalkTimeProfile()) return false;
+    if (hasAverageTalkTimeProfile()) {
+      if (!getAverageTalkTimeProfile()
+          .equals(other.getAverageTalkTimeProfile())) return false;
+    }
+    if (java.lang.Float.floatToIntBits(getFixedAverageTalkTime())
+        != java.lang.Float.floatToIntBits(
+            other.getFixedAverageTalkTime())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -697,6 +782,13 @@ private static final long serialVersionUID = 0L;
         getDefaultToFixedAveragesForecast());
     hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
     hash = (53 * hash) + getTimeZone().hashCode();
+    if (hasAverageTalkTimeProfile()) {
+      hash = (37 * hash) + AVERAGE_TALK_TIME_PROFILE_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageTalkTimeProfile().hashCode();
+    }
+    hash = (37 * hash) + FIXED_AVERAGE_TALK_TIME_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getFixedAverageTalkTime());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -870,6 +962,12 @@ private static final long serialVersionUID = 0L;
       fixedAverageTimeToAbort_ = 0F;
       defaultToFixedAveragesForecast_ = false;
       timeZone_ = "";
+      averageTalkTimeProfile_ = null;
+      if (averageTalkTimeProfileBuilder_ != null) {
+        averageTalkTimeProfileBuilder_.dispose();
+        averageTalkTimeProfileBuilder_ = null;
+      }
+      fixedAverageTalkTime_ = 0F;
       return this;
     }
 
@@ -956,6 +1054,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.timeZone_ = timeZone_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.averageTalkTimeProfile_ = averageTalkTimeProfileBuilder_ == null
+            ? averageTalkTimeProfile_
+            : averageTalkTimeProfileBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.fixedAverageTalkTime_ = fixedAverageTalkTime_;
       }
     }
 
@@ -1048,6 +1154,12 @@ private static final long serialVersionUID = 0L;
         timeZone_ = other.timeZone_;
         bitField0_ |= 0x00002000;
         onChanged();
+      }
+      if (other.hasAverageTalkTimeProfile()) {
+        mergeAverageTalkTimeProfile(other.getAverageTalkTimeProfile());
+      }
+      if (other.getFixedAverageTalkTime() != 0F) {
+        setFixedAverageTalkTime(other.getFixedAverageTalkTime());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1157,6 +1269,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 114
+            case 122: {
+              input.readMessage(
+                  getAverageTalkTimeProfileFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 133: {
+              fixedAverageTalkTime_ = input.readFloat();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 133
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1781,23 +1905,29 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4850
      * @return Whether the averageHandleTimeProfile field is set.
      */
-    public boolean hasAverageHandleTimeProfile() {
+    @java.lang.Deprecated public boolean hasAverageHandleTimeProfile() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4850
      * @return The averageHandleTimeProfile.
      */
-    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile() {
       if (averageHandleTimeProfileBuilder_ == null) {
         return averageHandleTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageHandleTimeProfile_;
       } else {
@@ -1807,11 +1937,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public Builder setAverageHandleTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
+    @java.lang.Deprecated public Builder setAverageHandleTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageHandleTimeProfileBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1827,11 +1958,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public Builder setAverageHandleTimeProfile(
+    @java.lang.Deprecated public Builder setAverageHandleTimeProfile(
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
       if (averageHandleTimeProfileBuilder_ == null) {
         averageHandleTimeProfile_ = builderForValue.build();
@@ -1845,11 +1977,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public Builder mergeAverageHandleTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
+    @java.lang.Deprecated public Builder mergeAverageHandleTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageHandleTimeProfileBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
           averageHandleTimeProfile_ != null &&
@@ -1868,11 +2001,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public Builder clearAverageHandleTimeProfile() {
+    @java.lang.Deprecated public Builder clearAverageHandleTimeProfile() {
       bitField0_ = (bitField0_ & ~0x00000020);
       averageHandleTimeProfile_ = null;
       if (averageHandleTimeProfileBuilder_ != null) {
@@ -1885,11 +2019,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageHandleTimeProfileBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageHandleTimeProfileBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
       return getAverageHandleTimeProfileFieldBuilder().getBuilder();
@@ -1897,11 +2032,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder() {
       if (averageHandleTimeProfileBuilder_ != null) {
         return averageHandleTimeProfileBuilder_.getMessageOrBuilder();
       } else {
@@ -1912,9 +2048,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * call profile for AHT
+     * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
      * </pre>
      *
-     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+     * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs, com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder, com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder> 
@@ -2288,25 +2425,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Fixed average for handle time
+     * Deprecated as of Apr/25/2025: use fixed_average_talk_time instead.
      * </pre>
      *
-     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime"];</code>
+     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.CallProfileTemplate.fixed_average_handle_time is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4859
      * @return The fixedAverageHandleTime.
      */
     @java.lang.Override
-    public float getFixedAverageHandleTime() {
+    @java.lang.Deprecated public float getFixedAverageHandleTime() {
       return fixedAverageHandleTime_;
     }
     /**
      * <pre>
      * Fixed average for handle time
+     * Deprecated as of Apr/25/2025: use fixed_average_talk_time instead.
      * </pre>
      *
-     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime"];</code>
+     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.CallProfileTemplate.fixed_average_handle_time is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4859
      * @param value The fixedAverageHandleTime to set.
      * @return This builder for chaining.
      */
-    public Builder setFixedAverageHandleTime(float value) {
+    @java.lang.Deprecated public Builder setFixedAverageHandleTime(float value) {
 
       fixedAverageHandleTime_ = value;
       bitField0_ |= 0x00000200;
@@ -2316,12 +2459,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Fixed average for handle time
+     * Deprecated as of Apr/25/2025: use fixed_average_talk_time instead.
      * </pre>
      *
-     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime"];</code>
+     * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.CallProfileTemplate.fixed_average_handle_time is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4859
      * @return This builder for chaining.
      */
-    public Builder clearFixedAverageHandleTime() {
+    @java.lang.Deprecated public Builder clearFixedAverageHandleTime() {
       bitField0_ = (bitField0_ & ~0x00000200);
       fixedAverageHandleTime_ = 0F;
       onChanged();
@@ -2548,6 +2694,205 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       timeZone_ = value;
       bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.CallProfileGroupAvgs averageTalkTimeProfile_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallProfileGroupAvgs, com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder, com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder> averageTalkTimeProfileBuilder_;
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     * @return Whether the averageTalkTimeProfile field is set.
+     */
+    public boolean hasAverageTalkTimeProfile() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     * @return The averageTalkTimeProfile.
+     */
+    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageTalkTimeProfile() {
+      if (averageTalkTimeProfileBuilder_ == null) {
+        return averageTalkTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageTalkTimeProfile_;
+      } else {
+        return averageTalkTimeProfileBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public Builder setAverageTalkTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
+      if (averageTalkTimeProfileBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageTalkTimeProfile_ = value;
+      } else {
+        averageTalkTimeProfileBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public Builder setAverageTalkTimeProfile(
+        com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
+      if (averageTalkTimeProfileBuilder_ == null) {
+        averageTalkTimeProfile_ = builderForValue.build();
+      } else {
+        averageTalkTimeProfileBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public Builder mergeAverageTalkTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
+      if (averageTalkTimeProfileBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          averageTalkTimeProfile_ != null &&
+          averageTalkTimeProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance()) {
+          getAverageTalkTimeProfileBuilder().mergeFrom(value);
+        } else {
+          averageTalkTimeProfile_ = value;
+        }
+      } else {
+        averageTalkTimeProfileBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public Builder clearAverageTalkTimeProfile() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      averageTalkTimeProfile_ = null;
+      if (averageTalkTimeProfileBuilder_ != null) {
+        averageTalkTimeProfileBuilder_.dispose();
+        averageTalkTimeProfileBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageTalkTimeProfileBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getAverageTalkTimeProfileFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageTalkTimeProfileOrBuilder() {
+      if (averageTalkTimeProfileBuilder_ != null) {
+        return averageTalkTimeProfileBuilder_.getMessageOrBuilder();
+      } else {
+        return averageTalkTimeProfile_ == null ?
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageTalkTimeProfile_;
+      }
+    }
+    /**
+     * <pre>
+     * call profile for ATT
+     * </pre>
+     *
+     * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallProfileGroupAvgs, com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder, com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder> 
+        getAverageTalkTimeProfileFieldBuilder() {
+      if (averageTalkTimeProfileBuilder_ == null) {
+        averageTalkTimeProfileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs, com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder, com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder>(
+                getAverageTalkTimeProfile(),
+                getParentForChildren(),
+                isClean());
+        averageTalkTimeProfile_ = null;
+      }
+      return averageTalkTimeProfileBuilder_;
+    }
+
+    private float fixedAverageTalkTime_ ;
+    /**
+     * <pre>
+     * Fixed average for talk time
+     * </pre>
+     *
+     * <code>float fixed_average_talk_time = 16 [json_name = "fixedAverageTalkTime"];</code>
+     * @return The fixedAverageTalkTime.
+     */
+    @java.lang.Override
+    public float getFixedAverageTalkTime() {
+      return fixedAverageTalkTime_;
+    }
+    /**
+     * <pre>
+     * Fixed average for talk time
+     * </pre>
+     *
+     * <code>float fixed_average_talk_time = 16 [json_name = "fixedAverageTalkTime"];</code>
+     * @param value The fixedAverageTalkTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFixedAverageTalkTime(float value) {
+
+      fixedAverageTalkTime_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Fixed average for talk time
+     * </pre>
+     *
+     * <code>float fixed_average_talk_time = 16 [json_name = "fixedAverageTalkTime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFixedAverageTalkTime() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      fixedAverageTalkTime_ = 0F;
       onChanged();
       return this;
     }

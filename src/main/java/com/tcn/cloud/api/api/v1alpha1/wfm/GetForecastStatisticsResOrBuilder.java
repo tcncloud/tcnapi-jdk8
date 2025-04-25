@@ -90,12 +90,15 @@ public interface GetForecastStatisticsResOrBuilder extends
   /**
    * <pre>
    * root-mean-squared error between actual and predicted aht
+   * Deprecated as of Apr/25/2025: use rms_error_ATT instead.
    * </pre>
    *
-   * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT"];</code>
+   * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetForecastStatisticsRes.rms_error_AHT is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5254
    * @return The rmsErrorAHT.
    */
-  float getRmsErrorAHT();
+  @java.lang.Deprecated float getRmsErrorAHT();
 
   /**
    * <pre>
@@ -126,4 +129,14 @@ public interface GetForecastStatisticsResOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInvalidReasonBytes();
+
+  /**
+   * <pre>
+   * root-mean-squared error between actual and predicted att
+   * </pre>
+   *
+   * <code>float rms_error_ATT = 12 [json_name = "rmsErrorATT"];</code>
+   * @return The rmsErrorATT.
+   */
+  float getRmsErrorATT();
 }

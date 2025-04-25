@@ -168,13 +168,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted aht
+   * Deprecated as of Apr/25/2025: use rms_error_ATT instead.
    * </pre>
    *
-   * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT"];</code>
+   * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.GetForecastStatisticsRes.rms_error_AHT is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5254
    * @return The rmsErrorAHT.
    */
   @java.lang.Override
-  public float getRmsErrorAHT() {
+  @java.lang.Deprecated public float getRmsErrorAHT() {
     return rmsErrorAHT_;
   }
 
@@ -240,6 +243,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RMS_ERROR_ATT_FIELD_NUMBER = 12;
+  private float rmsErrorATT_ = 0F;
+  /**
+   * <pre>
+   * root-mean-squared error between actual and predicted att
+   * </pre>
+   *
+   * <code>float rms_error_ATT = 12 [json_name = "rmsErrorATT"];</code>
+   * @return The rmsErrorATT.
+   */
+  @java.lang.Override
+  public float getRmsErrorATT() {
+    return rmsErrorATT_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -286,6 +304,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidReason_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, invalidReason_);
+    }
+    if (java.lang.Float.floatToRawIntBits(rmsErrorATT_) != 0) {
+      output.writeFloat(12, rmsErrorATT_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -339,6 +360,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidReason_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, invalidReason_);
     }
+    if (java.lang.Float.floatToRawIntBits(rmsErrorATT_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(12, rmsErrorATT_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -382,6 +407,9 @@ private static final long serialVersionUID = 0L;
         != other.getAreStatsInvalid()) return false;
     if (!getInvalidReason()
         .equals(other.getInvalidReason())) return false;
+    if (java.lang.Float.floatToIntBits(getRmsErrorATT())
+        != java.lang.Float.floatToIntBits(
+            other.getRmsErrorATT())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -422,6 +450,9 @@ private static final long serialVersionUID = 0L;
         getAreStatsInvalid());
     hash = (37 * hash) + INVALID_REASON_FIELD_NUMBER;
     hash = (53 * hash) + getInvalidReason().hashCode();
+    hash = (37 * hash) + RMS_ERROR_ATT_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getRmsErrorATT());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -568,6 +599,7 @@ private static final long serialVersionUID = 0L;
       rmsErrorAHT_ = 0F;
       areStatsInvalid_ = false;
       invalidReason_ = "";
+      rmsErrorATT_ = 0F;
       return this;
     }
 
@@ -633,6 +665,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.invalidReason_ = invalidReason_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.rmsErrorATT_ = rmsErrorATT_;
       }
     }
 
@@ -715,6 +750,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
+      if (other.getRmsErrorATT() != 0F) {
+        setRmsErrorATT(other.getRmsErrorATT());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -796,6 +834,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 90
+            case 101: {
+              rmsErrorATT_ = input.readFloat();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 101
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1169,25 +1212,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * root-mean-squared error between actual and predicted aht
+     * Deprecated as of Apr/25/2025: use rms_error_ATT instead.
      * </pre>
      *
-     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT"];</code>
+     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.GetForecastStatisticsRes.rms_error_AHT is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5254
      * @return The rmsErrorAHT.
      */
     @java.lang.Override
-    public float getRmsErrorAHT() {
+    @java.lang.Deprecated public float getRmsErrorAHT() {
       return rmsErrorAHT_;
     }
     /**
      * <pre>
      * root-mean-squared error between actual and predicted aht
+     * Deprecated as of Apr/25/2025: use rms_error_ATT instead.
      * </pre>
      *
-     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT"];</code>
+     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.GetForecastStatisticsRes.rms_error_AHT is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5254
      * @param value The rmsErrorAHT to set.
      * @return This builder for chaining.
      */
-    public Builder setRmsErrorAHT(float value) {
+    @java.lang.Deprecated public Builder setRmsErrorAHT(float value) {
 
       rmsErrorAHT_ = value;
       bitField0_ |= 0x00000100;
@@ -1197,12 +1246,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * root-mean-squared error between actual and predicted aht
+     * Deprecated as of Apr/25/2025: use rms_error_ATT instead.
      * </pre>
      *
-     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT"];</code>
+     * <code>float rms_error_AHT = 9 [json_name = "rmsErrorAHT", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.GetForecastStatisticsRes.rms_error_AHT is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5254
      * @return This builder for chaining.
      */
-    public Builder clearRmsErrorAHT() {
+    @java.lang.Deprecated public Builder clearRmsErrorAHT() {
       bitField0_ = (bitField0_ & ~0x00000100);
       rmsErrorAHT_ = 0F;
       onChanged();
@@ -1341,6 +1393,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       invalidReason_ = value;
       bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private float rmsErrorATT_ ;
+    /**
+     * <pre>
+     * root-mean-squared error between actual and predicted att
+     * </pre>
+     *
+     * <code>float rms_error_ATT = 12 [json_name = "rmsErrorATT"];</code>
+     * @return The rmsErrorATT.
+     */
+    @java.lang.Override
+    public float getRmsErrorATT() {
+      return rmsErrorATT_;
+    }
+    /**
+     * <pre>
+     * root-mean-squared error between actual and predicted att
+     * </pre>
+     *
+     * <code>float rms_error_ATT = 12 [json_name = "rmsErrorATT"];</code>
+     * @param value The rmsErrorATT to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRmsErrorATT(float value) {
+
+      rmsErrorATT_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * root-mean-squared error between actual and predicted att
+     * </pre>
+     *
+     * <code>float rms_error_ATT = 12 [json_name = "rmsErrorATT"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRmsErrorATT() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      rmsErrorATT_ = 0F;
       onChanged();
       return this;
     }

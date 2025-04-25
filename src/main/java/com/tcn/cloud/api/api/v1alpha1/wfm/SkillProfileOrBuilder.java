@@ -198,12 +198,15 @@ public interface SkillProfileOrBuilder extends
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 11 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 11 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.SkillProfile.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4556
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <pre>
@@ -310,4 +313,14 @@ public interface SkillProfileOrBuilder extends
    * <code>.api.v1alpha1.wfm.SkillProfile.SmsMetadata sms = 16 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.SmsMetadataOrBuilder getSmsOrBuilder();
+
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }

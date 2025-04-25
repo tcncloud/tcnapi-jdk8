@@ -42,7 +42,7 @@ public interface CallDataByIntervalOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.CallDataByInterval.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5030
+   *     See api/v1alpha1/wfm/wfm.proto;l=5051
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();
@@ -70,12 +70,15 @@ public interface CallDataByIntervalOrBuilder extends
   /**
    * <pre>
    * optional
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallDataByInterval.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5058
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <pre>
@@ -164,4 +167,14 @@ public interface CallDataByIntervalOrBuilder extends
    * <code>.api.commons.SkillProfileCategory skill_profile_category = 12 [json_name = "skillProfileCategory"];</code>
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
+
+  /**
+   * <pre>
+   * optional - average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 13 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }

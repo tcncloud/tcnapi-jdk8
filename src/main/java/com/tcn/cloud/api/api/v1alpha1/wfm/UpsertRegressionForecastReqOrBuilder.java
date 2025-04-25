@@ -47,13 +47,15 @@ public interface UpsertRegressionForecastReqOrBuilder extends
 
   /**
    * <pre>
-   * optional
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 3 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 3 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.UpsertRegressionForecastReq.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5317
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <pre>
@@ -103,4 +105,14 @@ public interface UpsertRegressionForecastReqOrBuilder extends
    * @return The skillProfileSidsToForecast at the given index.
    */
   long getSkillProfileSidsToForecast(int index);
+
+  /**
+   * <pre>
+   * optional - average talk duration.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 7 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }

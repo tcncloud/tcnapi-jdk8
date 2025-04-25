@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4726
+   *     See api/v1alpha1/wfm/wfm.proto;l=4735
    * @return The skillProfileSid.
    */
   @java.lang.Override
@@ -144,36 +144,43 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4742
    * @return Whether the averageHandleTimeInSeconds field is set.
    */
   @java.lang.Override
-  public boolean hasAverageHandleTimeInSeconds() {
+  @java.lang.Deprecated public boolean hasAverageHandleTimeInSeconds() {
     return averageHandleTimeInSeconds_ != null;
   }
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4742
    * @return The averageHandleTimeInSeconds.
    */
   @java.lang.Override
-  public com.google.protobuf.FloatValue getAverageHandleTimeInSeconds() {
+  @java.lang.Deprecated public com.google.protobuf.FloatValue getAverageHandleTimeInSeconds() {
     return averageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageHandleTimeInSeconds_;
   }
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder() {
     return averageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageHandleTimeInSeconds_;
   }
 
@@ -347,36 +354,43 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4760
    * @return Whether the originalAverageHandleTimeInSeconds field is set.
    */
   @java.lang.Override
-  public boolean hasOriginalAverageHandleTimeInSeconds() {
+  @java.lang.Deprecated public boolean hasOriginalAverageHandleTimeInSeconds() {
     return originalAverageHandleTimeInSeconds_ != null;
   }
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4760
    * @return The originalAverageHandleTimeInSeconds.
    */
   @java.lang.Override
-  public com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds() {
+  @java.lang.Deprecated public com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds() {
     return originalAverageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageHandleTimeInSeconds_;
   }
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder() {
     return originalAverageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageHandleTimeInSeconds_;
   }
 
@@ -524,6 +538,82 @@ private static final long serialVersionUID = 0L;
     return skillProfileCategory_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillProfileCategory_;
   }
 
+  public static final int AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER = 17;
+  private com.google.protobuf.FloatValue averageTalkTimeInSeconds_;
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return Whether the averageTalkTimeInSeconds field is set.
+   */
+  @java.lang.Override
+  public boolean hasAverageTalkTimeInSeconds() {
+    return averageTalkTimeInSeconds_ != null;
+  }
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValue getAverageTalkTimeInSeconds() {
+    return averageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageTalkTimeInSeconds_;
+  }
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValueOrBuilder getAverageTalkTimeInSecondsOrBuilder() {
+    return averageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageTalkTimeInSeconds_;
+  }
+
+  public static final int ORIGINAL_AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER = 18;
+  private com.google.protobuf.FloatValue originalAverageTalkTimeInSeconds_;
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   * @return Whether the originalAverageTalkTimeInSeconds field is set.
+   */
+  @java.lang.Override
+  public boolean hasOriginalAverageTalkTimeInSeconds() {
+    return originalAverageTalkTimeInSeconds_ != null;
+  }
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   * @return The originalAverageTalkTimeInSeconds.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValue getOriginalAverageTalkTimeInSeconds() {
+    return originalAverageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageTalkTimeInSeconds_;
+  }
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValueOrBuilder getOriginalAverageTalkTimeInSecondsOrBuilder() {
+    return originalAverageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageTalkTimeInSeconds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -585,6 +675,12 @@ private static final long serialVersionUID = 0L;
     }
     if (skillProfileCategory_ != null) {
       output.writeMessage(16, getSkillProfileCategory());
+    }
+    if (averageTalkTimeInSeconds_ != null) {
+      output.writeMessage(17, getAverageTalkTimeInSeconds());
+    }
+    if (originalAverageTalkTimeInSeconds_ != null) {
+      output.writeMessage(18, getOriginalAverageTalkTimeInSeconds());
     }
     getUnknownFields().writeTo(output);
   }
@@ -658,6 +754,14 @@ private static final long serialVersionUID = 0L;
     if (skillProfileCategory_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getSkillProfileCategory());
+    }
+    if (averageTalkTimeInSeconds_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, getAverageTalkTimeInSeconds());
+    }
+    if (originalAverageTalkTimeInSeconds_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getOriginalAverageTalkTimeInSeconds());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -736,6 +840,16 @@ private static final long serialVersionUID = 0L;
       if (!getSkillProfileCategory()
           .equals(other.getSkillProfileCategory())) return false;
     }
+    if (hasAverageTalkTimeInSeconds() != other.hasAverageTalkTimeInSeconds()) return false;
+    if (hasAverageTalkTimeInSeconds()) {
+      if (!getAverageTalkTimeInSeconds()
+          .equals(other.getAverageTalkTimeInSeconds())) return false;
+    }
+    if (hasOriginalAverageTalkTimeInSeconds() != other.hasOriginalAverageTalkTimeInSeconds()) return false;
+    if (hasOriginalAverageTalkTimeInSeconds()) {
+      if (!getOriginalAverageTalkTimeInSeconds()
+          .equals(other.getOriginalAverageTalkTimeInSeconds())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -800,6 +914,14 @@ private static final long serialVersionUID = 0L;
     if (hasSkillProfileCategory()) {
       hash = (37 * hash) + SKILL_PROFILE_CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfileCategory().hashCode();
+    }
+    if (hasAverageTalkTimeInSeconds()) {
+      hash = (37 * hash) + AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageTalkTimeInSeconds().hashCode();
+    }
+    if (hasOriginalAverageTalkTimeInSeconds()) {
+      hash = (37 * hash) + ORIGINAL_AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + getOriginalAverageTalkTimeInSeconds().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -992,6 +1114,16 @@ private static final long serialVersionUID = 0L;
         skillProfileCategoryBuilder_.dispose();
         skillProfileCategoryBuilder_ = null;
       }
+      averageTalkTimeInSeconds_ = null;
+      if (averageTalkTimeInSecondsBuilder_ != null) {
+        averageTalkTimeInSecondsBuilder_.dispose();
+        averageTalkTimeInSecondsBuilder_ = null;
+      }
+      originalAverageTalkTimeInSeconds_ = null;
+      if (originalAverageTalkTimeInSecondsBuilder_ != null) {
+        originalAverageTalkTimeInSecondsBuilder_.dispose();
+        originalAverageTalkTimeInSecondsBuilder_ = null;
+      }
       return this;
     }
 
@@ -1093,6 +1225,16 @@ private static final long serialVersionUID = 0L;
             ? skillProfileCategory_
             : skillProfileCategoryBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.averageTalkTimeInSeconds_ = averageTalkTimeInSecondsBuilder_ == null
+            ? averageTalkTimeInSeconds_
+            : averageTalkTimeInSecondsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.originalAverageTalkTimeInSeconds_ = originalAverageTalkTimeInSecondsBuilder_ == null
+            ? originalAverageTalkTimeInSeconds_
+            : originalAverageTalkTimeInSecondsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1186,6 +1328,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkillProfileCategory()) {
         mergeSkillProfileCategory(other.getSkillProfileCategory());
+      }
+      if (other.hasAverageTalkTimeInSeconds()) {
+        mergeAverageTalkTimeInSeconds(other.getAverageTalkTimeInSeconds());
+      }
+      if (other.hasOriginalAverageTalkTimeInSeconds()) {
+        mergeOriginalAverageTalkTimeInSeconds(other.getOriginalAverageTalkTimeInSeconds());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1313,6 +1461,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 130
+            case 138: {
+              input.readMessage(
+                  getAverageTalkTimeInSecondsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getOriginalAverageTalkTimeInSecondsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1494,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4726
+     *     See api/v1alpha1/wfm/wfm.proto;l=4735
      * @return The skillProfileSid.
      */
     @java.lang.Override
@@ -1509,7 +1671,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4726
+     *     See api/v1alpha1/wfm/wfm.proto;l=4735
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
@@ -1528,7 +1690,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4726
+     *     See api/v1alpha1/wfm/wfm.proto;l=4735
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkillProfileSid() {
@@ -1708,23 +1870,29 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4742
      * @return Whether the averageHandleTimeInSeconds field is set.
      */
-    public boolean hasAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public boolean hasAverageHandleTimeInSeconds() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4742
      * @return The averageHandleTimeInSeconds.
      */
-    public com.google.protobuf.FloatValue getAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValue getAverageHandleTimeInSeconds() {
       if (averageHandleTimeInSecondsBuilder_ == null) {
         return averageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageHandleTimeInSeconds_;
       } else {
@@ -1734,11 +1902,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder setAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
+    @java.lang.Deprecated public Builder setAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
       if (averageHandleTimeInSecondsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1754,11 +1923,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder setAverageHandleTimeInSeconds(
+    @java.lang.Deprecated public Builder setAverageHandleTimeInSeconds(
         com.google.protobuf.FloatValue.Builder builderForValue) {
       if (averageHandleTimeInSecondsBuilder_ == null) {
         averageHandleTimeInSeconds_ = builderForValue.build();
@@ -1772,11 +1942,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder mergeAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
+    @java.lang.Deprecated public Builder mergeAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
       if (averageHandleTimeInSecondsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           averageHandleTimeInSeconds_ != null &&
@@ -1795,11 +1966,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder clearAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public Builder clearAverageHandleTimeInSeconds() {
       bitField0_ = (bitField0_ & ~0x00000008);
       averageHandleTimeInSeconds_ = null;
       if (averageHandleTimeInSecondsBuilder_ != null) {
@@ -1812,11 +1984,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public com.google.protobuf.FloatValue.Builder getAverageHandleTimeInSecondsBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValue.Builder getAverageHandleTimeInSecondsBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getAverageHandleTimeInSecondsFieldBuilder().getBuilder();
@@ -1824,11 +1997,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder() {
       if (averageHandleTimeInSecondsBuilder_ != null) {
         return averageHandleTimeInSecondsBuilder_.getMessageOrBuilder();
       } else {
@@ -1839,9 +2013,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -2478,23 +2653,29 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4760
      * @return Whether the originalAverageHandleTimeInSeconds field is set.
      */
-    public boolean hasOriginalAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public boolean hasOriginalAverageHandleTimeInSeconds() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4760
      * @return The originalAverageHandleTimeInSeconds.
      */
-    public com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds() {
       if (originalAverageHandleTimeInSecondsBuilder_ == null) {
         return originalAverageHandleTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageHandleTimeInSeconds_;
       } else {
@@ -2504,11 +2685,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder setOriginalAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
+    @java.lang.Deprecated public Builder setOriginalAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
       if (originalAverageHandleTimeInSecondsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2524,11 +2706,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder setOriginalAverageHandleTimeInSeconds(
+    @java.lang.Deprecated public Builder setOriginalAverageHandleTimeInSeconds(
         com.google.protobuf.FloatValue.Builder builderForValue) {
       if (originalAverageHandleTimeInSecondsBuilder_ == null) {
         originalAverageHandleTimeInSeconds_ = builderForValue.build();
@@ -2542,11 +2725,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder mergeOriginalAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
+    @java.lang.Deprecated public Builder mergeOriginalAverageHandleTimeInSeconds(com.google.protobuf.FloatValue value) {
       if (originalAverageHandleTimeInSecondsBuilder_ == null) {
         if (((bitField0_ & 0x00000400) != 0) &&
           originalAverageHandleTimeInSeconds_ != null &&
@@ -2565,11 +2749,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public Builder clearOriginalAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public Builder clearOriginalAverageHandleTimeInSeconds() {
       bitField0_ = (bitField0_ & ~0x00000400);
       originalAverageHandleTimeInSeconds_ = null;
       if (originalAverageHandleTimeInSecondsBuilder_ != null) {
@@ -2582,11 +2767,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public com.google.protobuf.FloatValue.Builder getOriginalAverageHandleTimeInSecondsBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValue.Builder getOriginalAverageHandleTimeInSecondsBuilder() {
       bitField0_ |= 0x00000400;
       onChanged();
       return getOriginalAverageHandleTimeInSecondsFieldBuilder().getBuilder();
@@ -2594,11 +2780,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
-    public com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder() {
       if (originalAverageHandleTimeInSecondsBuilder_ != null) {
         return originalAverageHandleTimeInSecondsBuilder_.getMessageOrBuilder();
       } else {
@@ -2609,9 +2796,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * original average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+     * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
@@ -3178,6 +3366,316 @@ private static final long serialVersionUID = 0L;
         skillProfileCategory_ = null;
       }
       return skillProfileCategoryBuilder_;
+    }
+
+    private com.google.protobuf.FloatValue averageTalkTimeInSeconds_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> averageTalkTimeInSecondsBuilder_;
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     * @return Whether the averageTalkTimeInSeconds field is set.
+     */
+    public boolean hasAverageTalkTimeInSeconds() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     * @return The averageTalkTimeInSeconds.
+     */
+    public com.google.protobuf.FloatValue getAverageTalkTimeInSeconds() {
+      if (averageTalkTimeInSecondsBuilder_ == null) {
+        return averageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : averageTalkTimeInSeconds_;
+      } else {
+        return averageTalkTimeInSecondsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public Builder setAverageTalkTimeInSeconds(com.google.protobuf.FloatValue value) {
+      if (averageTalkTimeInSecondsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageTalkTimeInSeconds_ = value;
+      } else {
+        averageTalkTimeInSecondsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public Builder setAverageTalkTimeInSeconds(
+        com.google.protobuf.FloatValue.Builder builderForValue) {
+      if (averageTalkTimeInSecondsBuilder_ == null) {
+        averageTalkTimeInSeconds_ = builderForValue.build();
+      } else {
+        averageTalkTimeInSecondsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public Builder mergeAverageTalkTimeInSeconds(com.google.protobuf.FloatValue value) {
+      if (averageTalkTimeInSecondsBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          averageTalkTimeInSeconds_ != null &&
+          averageTalkTimeInSeconds_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+          getAverageTalkTimeInSecondsBuilder().mergeFrom(value);
+        } else {
+          averageTalkTimeInSeconds_ = value;
+        }
+      } else {
+        averageTalkTimeInSecondsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public Builder clearAverageTalkTimeInSeconds() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      averageTalkTimeInSeconds_ = null;
+      if (averageTalkTimeInSecondsBuilder_ != null) {
+        averageTalkTimeInSecondsBuilder_.dispose();
+        averageTalkTimeInSecondsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public com.google.protobuf.FloatValue.Builder getAverageTalkTimeInSecondsBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getAverageTalkTimeInSecondsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getAverageTalkTimeInSecondsOrBuilder() {
+      if (averageTalkTimeInSecondsBuilder_ != null) {
+        return averageTalkTimeInSecondsBuilder_.getMessageOrBuilder();
+      } else {
+        return averageTalkTimeInSeconds_ == null ?
+            com.google.protobuf.FloatValue.getDefaultInstance() : averageTalkTimeInSeconds_;
+      }
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+        getAverageTalkTimeInSecondsFieldBuilder() {
+      if (averageTalkTimeInSecondsBuilder_ == null) {
+        averageTalkTimeInSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                getAverageTalkTimeInSeconds(),
+                getParentForChildren(),
+                isClean());
+        averageTalkTimeInSeconds_ = null;
+      }
+      return averageTalkTimeInSecondsBuilder_;
+    }
+
+    private com.google.protobuf.FloatValue originalAverageTalkTimeInSeconds_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> originalAverageTalkTimeInSecondsBuilder_;
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     * @return Whether the originalAverageTalkTimeInSeconds field is set.
+     */
+    public boolean hasOriginalAverageTalkTimeInSeconds() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     * @return The originalAverageTalkTimeInSeconds.
+     */
+    public com.google.protobuf.FloatValue getOriginalAverageTalkTimeInSeconds() {
+      if (originalAverageTalkTimeInSecondsBuilder_ == null) {
+        return originalAverageTalkTimeInSeconds_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageTalkTimeInSeconds_;
+      } else {
+        return originalAverageTalkTimeInSecondsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public Builder setOriginalAverageTalkTimeInSeconds(com.google.protobuf.FloatValue value) {
+      if (originalAverageTalkTimeInSecondsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        originalAverageTalkTimeInSeconds_ = value;
+      } else {
+        originalAverageTalkTimeInSecondsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public Builder setOriginalAverageTalkTimeInSeconds(
+        com.google.protobuf.FloatValue.Builder builderForValue) {
+      if (originalAverageTalkTimeInSecondsBuilder_ == null) {
+        originalAverageTalkTimeInSeconds_ = builderForValue.build();
+      } else {
+        originalAverageTalkTimeInSecondsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public Builder mergeOriginalAverageTalkTimeInSeconds(com.google.protobuf.FloatValue value) {
+      if (originalAverageTalkTimeInSecondsBuilder_ == null) {
+        if (((bitField0_ & 0x00020000) != 0) &&
+          originalAverageTalkTimeInSeconds_ != null &&
+          originalAverageTalkTimeInSeconds_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+          getOriginalAverageTalkTimeInSecondsBuilder().mergeFrom(value);
+        } else {
+          originalAverageTalkTimeInSeconds_ = value;
+        }
+      } else {
+        originalAverageTalkTimeInSecondsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public Builder clearOriginalAverageTalkTimeInSeconds() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      originalAverageTalkTimeInSeconds_ = null;
+      if (originalAverageTalkTimeInSecondsBuilder_ != null) {
+        originalAverageTalkTimeInSecondsBuilder_.dispose();
+        originalAverageTalkTimeInSecondsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public com.google.protobuf.FloatValue.Builder getOriginalAverageTalkTimeInSecondsBuilder() {
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return getOriginalAverageTalkTimeInSecondsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getOriginalAverageTalkTimeInSecondsOrBuilder() {
+      if (originalAverageTalkTimeInSecondsBuilder_ != null) {
+        return originalAverageTalkTimeInSecondsBuilder_.getMessageOrBuilder();
+      } else {
+        return originalAverageTalkTimeInSeconds_ == null ?
+            com.google.protobuf.FloatValue.getDefaultInstance() : originalAverageTalkTimeInSeconds_;
+      }
+    }
+    /**
+     * <pre>
+     * original average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+        getOriginalAverageTalkTimeInSecondsFieldBuilder() {
+      if (originalAverageTalkTimeInSecondsBuilder_ == null) {
+        originalAverageTalkTimeInSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                getOriginalAverageTalkTimeInSeconds(),
+                getParentForChildren(),
+                isClean());
+        originalAverageTalkTimeInSeconds_ = null;
+      }
+      return originalAverageTalkTimeInSecondsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

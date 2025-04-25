@@ -97,12 +97,15 @@ public interface SkillProfileGroupOrBuilder extends
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 6 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 6 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.SkillProfileGroup.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4589
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <pre>
@@ -189,4 +192,14 @@ public interface SkillProfileGroupOrBuilder extends
    * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDatetimeSetToInactiveOrBuilder();
+
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 12 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }

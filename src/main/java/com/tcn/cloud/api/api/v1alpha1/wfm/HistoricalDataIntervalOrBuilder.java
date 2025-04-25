@@ -42,7 +42,7 @@ public interface HistoricalDataIntervalOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4726
+   *     See api/v1alpha1/wfm/wfm.proto;l=4735
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();
@@ -80,29 +80,36 @@ public interface HistoricalDataIntervalOrBuilder extends
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4742
    * @return Whether the averageHandleTimeInSeconds field is set.
    */
-  boolean hasAverageHandleTimeInSeconds();
+  @java.lang.Deprecated boolean hasAverageHandleTimeInSeconds();
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4742
    * @return The averageHandleTimeInSeconds.
    */
-  com.google.protobuf.FloatValue getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated com.google.protobuf.FloatValue getAverageHandleTimeInSeconds();
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue average_handle_time_in_seconds = 4 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
    */
-  com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.FloatValueOrBuilder getAverageHandleTimeInSecondsOrBuilder();
 
   /**
    * <pre>
@@ -224,29 +231,36 @@ public interface HistoricalDataIntervalOrBuilder extends
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4760
    * @return Whether the originalAverageHandleTimeInSeconds field is set.
    */
-  boolean hasOriginalAverageHandleTimeInSeconds();
+  @java.lang.Deprecated boolean hasOriginalAverageHandleTimeInSeconds();
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.original_average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4760
    * @return The originalAverageHandleTimeInSeconds.
    */
-  com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds();
+  @java.lang.Deprecated com.google.protobuf.FloatValue getOriginalAverageHandleTimeInSeconds();
   /**
    * <pre>
    * original average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use original_average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds"];</code>
+   * <code>.google.protobuf.FloatValue original_average_handle_time_in_seconds = 11 [json_name = "originalAverageHandleTimeInSeconds", deprecated = true];</code>
    */
-  com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.FloatValueOrBuilder getOriginalAverageHandleTimeInSecondsOrBuilder();
 
   /**
    * <pre>
@@ -348,4 +362,58 @@ public interface HistoricalDataIntervalOrBuilder extends
    * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
+
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return Whether the averageTalkTimeInSeconds field is set.
+   */
+  boolean hasAverageTalkTimeInSeconds();
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  com.google.protobuf.FloatValue getAverageTalkTimeInSeconds();
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue average_talk_time_in_seconds = 17 [json_name = "averageTalkTimeInSeconds"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getAverageTalkTimeInSecondsOrBuilder();
+
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   * @return Whether the originalAverageTalkTimeInSeconds field is set.
+   */
+  boolean hasOriginalAverageTalkTimeInSeconds();
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   * @return The originalAverageTalkTimeInSeconds.
+   */
+  com.google.protobuf.FloatValue getOriginalAverageTalkTimeInSeconds();
+  /**
+   * <pre>
+   * original average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue original_average_talk_time_in_seconds = 18 [json_name = "originalAverageTalkTimeInSeconds"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getOriginalAverageTalkTimeInSecondsOrBuilder();
 }

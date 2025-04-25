@@ -121,29 +121,36 @@ public interface CallProfileTemplateOrBuilder extends
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4850
    * @return Whether the averageHandleTimeProfile field is set.
    */
-  boolean hasAverageHandleTimeProfile();
+  @java.lang.Deprecated boolean hasAverageHandleTimeProfile();
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.average_handle_time_profile is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4850
    * @return The averageHandleTimeProfile.
    */
-  com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageHandleTimeProfile();
   /**
    * <pre>
    * call profile for AHT
+   * Deprecated as of Apr/25/2025: use average_talk_time_profile instead.
    * </pre>
    *
-   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
+   * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder();
 
   /**
    * <pre>
@@ -212,12 +219,15 @@ public interface CallProfileTemplateOrBuilder extends
   /**
    * <pre>
    * Fixed average for handle time
+   * Deprecated as of Apr/25/2025: use fixed_average_talk_time instead.
    * </pre>
    *
-   * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime"];</code>
+   * <code>float fixed_average_handle_time = 10 [json_name = "fixedAverageHandleTime", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallProfileTemplate.fixed_average_handle_time is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4859
    * @return The fixedAverageHandleTime.
    */
-  float getFixedAverageHandleTime();
+  @java.lang.Deprecated float getFixedAverageHandleTime();
 
   /**
    * <pre>
@@ -268,4 +278,41 @@ public interface CallProfileTemplateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTimeZoneBytes();
+
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   * @return Whether the averageTalkTimeProfile field is set.
+   */
+  boolean hasAverageTalkTimeProfile();
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   * @return The averageTalkTimeProfile.
+   */
+  com.tcn.cloud.api.api.commons.CallProfileGroupAvgs getAverageTalkTimeProfile();
+  /**
+   * <pre>
+   * call profile for ATT
+   * </pre>
+   *
+   * <code>.api.commons.CallProfileGroupAvgs average_talk_time_profile = 15 [json_name = "averageTalkTimeProfile"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageTalkTimeProfileOrBuilder();
+
+  /**
+   * <pre>
+   * Fixed average for talk time
+   * </pre>
+   *
+   * <code>float fixed_average_talk_time = 16 [json_name = "fixedAverageTalkTime"];</code>
+   * @return The fixedAverageTalkTime.
+   */
+  float getFixedAverageTalkTime();
 }

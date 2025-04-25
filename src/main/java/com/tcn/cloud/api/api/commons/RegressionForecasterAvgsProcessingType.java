@@ -10,7 +10,7 @@ public enum RegressionForecasterAvgsProcessingType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * a complete forecast is built for each skill profile for ACW/ASA/AHT/ATAB
+   * a complete forecast is built for each skill profile for ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>FORECAST = 0;</code>
@@ -18,7 +18,7 @@ public enum RegressionForecasterAvgsProcessingType
   FORECAST(0),
   /**
    * <pre>
-   * an average from the training data is built for each skill profile for ACW/ASA/AHT/ATAB
+   * an average from the training data is built for each skill profile for ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>AVERAGES = 1;</code>
@@ -26,7 +26,7 @@ public enum RegressionForecasterAvgsProcessingType
   AVERAGES(1),
   /**
    * <pre>
-   * Fixed values are used for  ACW/ASA/AHT/ATAB
+   * Fixed values are used for  ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>FIXED_AVERAGES = 2;</code>
@@ -37,7 +37,7 @@ public enum RegressionForecasterAvgsProcessingType
 
   /**
    * <pre>
-   * a complete forecast is built for each skill profile for ACW/ASA/AHT/ATAB
+   * a complete forecast is built for each skill profile for ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>FORECAST = 0;</code>
@@ -45,7 +45,7 @@ public enum RegressionForecasterAvgsProcessingType
   public static final int FORECAST_VALUE = 0;
   /**
    * <pre>
-   * an average from the training data is built for each skill profile for ACW/ASA/AHT/ATAB
+   * an average from the training data is built for each skill profile for ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>AVERAGES = 1;</code>
@@ -53,7 +53,7 @@ public enum RegressionForecasterAvgsProcessingType
   public static final int AVERAGES_VALUE = 1;
   /**
    * <pre>
-   * Fixed values are used for  ACW/ASA/AHT/ATAB
+   * Fixed values are used for  ACW/ASA/ATT/ATAB
    * </pre>
    *
    * <code>FIXED_AVERAGES = 2;</code>

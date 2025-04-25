@@ -70,12 +70,15 @@ public interface UpdateSkillProfileReqOrBuilder extends
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.UpdateSkillProfileReq.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4633
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <pre>
@@ -106,4 +109,14 @@ public interface UpdateSkillProfileReqOrBuilder extends
    * @return The areAveragesManual.
    */
   boolean getAreAveragesManual();
+
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 9 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }

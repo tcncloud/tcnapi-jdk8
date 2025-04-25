@@ -173,13 +173,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * average duration of answered calls.
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
    * </pre>
    *
-   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.UpdateSkillProfileReq.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4633
    * @return The averageHandleTimeInSeconds.
    */
   @java.lang.Override
-  public float getAverageHandleTimeInSeconds() {
+  @java.lang.Deprecated public float getAverageHandleTimeInSeconds() {
     return averageHandleTimeInSeconds_;
   }
 
@@ -228,6 +231,21 @@ private static final long serialVersionUID = 0L;
     return areAveragesManual_;
   }
 
+  public static final int AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER = 9;
+  private float averageTalkTimeInSeconds_ = 0F;
+  /**
+   * <pre>
+   * average talk duration of answered calls.
+   * </pre>
+   *
+   * <code>float average_talk_time_in_seconds = 9 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  @java.lang.Override
+  public float getAverageTalkTimeInSeconds() {
+    return averageTalkTimeInSeconds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -265,6 +283,9 @@ private static final long serialVersionUID = 0L;
     }
     if (areAveragesManual_ != false) {
       output.writeBool(8, areAveragesManual_);
+    }
+    if (java.lang.Float.floatToRawIntBits(averageTalkTimeInSeconds_) != 0) {
+      output.writeFloat(9, averageTalkTimeInSeconds_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -305,6 +326,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, areAveragesManual_);
     }
+    if (java.lang.Float.floatToRawIntBits(averageTalkTimeInSeconds_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(9, averageTalkTimeInSeconds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -340,6 +365,9 @@ private static final long serialVersionUID = 0L;
             other.getAverageTimeToAbortInSeconds())) return false;
     if (getAreAveragesManual()
         != other.getAreAveragesManual()) return false;
+    if (java.lang.Float.floatToIntBits(getAverageTalkTimeInSeconds())
+        != java.lang.Float.floatToIntBits(
+            other.getAverageTalkTimeInSeconds())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -373,6 +401,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ARE_AVERAGES_MANUAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAreAveragesManual());
+    hash = (37 * hash) + AVERAGE_TALK_TIME_IN_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getAverageTalkTimeInSeconds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -516,6 +547,7 @@ private static final long serialVersionUID = 0L;
       averageAfterCallWorkInSeconds_ = 0F;
       averageTimeToAbortInSeconds_ = 0F;
       areAveragesManual_ = false;
+      averageTalkTimeInSeconds_ = 0F;
       return this;
     }
 
@@ -572,6 +604,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.areAveragesManual_ = areAveragesManual_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.averageTalkTimeInSeconds_ = averageTalkTimeInSeconds_;
       }
     }
 
@@ -647,6 +682,9 @@ private static final long serialVersionUID = 0L;
       if (other.getAreAveragesManual() != false) {
         setAreAveragesManual(other.getAreAveragesManual());
       }
+      if (other.getAverageTalkTimeInSeconds() != 0F) {
+        setAverageTalkTimeInSeconds(other.getAverageTalkTimeInSeconds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -713,6 +751,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 77: {
+              averageTalkTimeInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 77
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1006,25 +1049,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateSkillProfileReq.average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4633
      * @return The averageHandleTimeInSeconds.
      */
     @java.lang.Override
-    public float getAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public float getAverageHandleTimeInSeconds() {
       return averageHandleTimeInSeconds_;
     }
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateSkillProfileReq.average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4633
      * @param value The averageHandleTimeInSeconds to set.
      * @return This builder for chaining.
      */
-    public Builder setAverageHandleTimeInSeconds(float value) {
+    @java.lang.Deprecated public Builder setAverageHandleTimeInSeconds(float value) {
 
       averageHandleTimeInSeconds_ = value;
       bitField0_ |= 0x00000010;
@@ -1034,12 +1083,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * average duration of answered calls.
+     * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
      * </pre>
      *
-     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds"];</code>
+     * <code>float average_handle_time_in_seconds = 5 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.UpdateSkillProfileReq.average_handle_time_in_seconds is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=4633
      * @return This builder for chaining.
      */
-    public Builder clearAverageHandleTimeInSeconds() {
+    @java.lang.Deprecated public Builder clearAverageHandleTimeInSeconds() {
       bitField0_ = (bitField0_ & ~0x00000010);
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
@@ -1174,6 +1226,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearAreAveragesManual() {
       bitField0_ = (bitField0_ & ~0x00000080);
       areAveragesManual_ = false;
+      onChanged();
+      return this;
+    }
+
+    private float averageTalkTimeInSeconds_ ;
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>float average_talk_time_in_seconds = 9 [json_name = "averageTalkTimeInSeconds"];</code>
+     * @return The averageTalkTimeInSeconds.
+     */
+    @java.lang.Override
+    public float getAverageTalkTimeInSeconds() {
+      return averageTalkTimeInSeconds_;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>float average_talk_time_in_seconds = 9 [json_name = "averageTalkTimeInSeconds"];</code>
+     * @param value The averageTalkTimeInSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageTalkTimeInSeconds(float value) {
+
+      averageTalkTimeInSeconds_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average talk duration of answered calls.
+     * </pre>
+     *
+     * <code>float average_talk_time_in_seconds = 9 [json_name = "averageTalkTimeInSeconds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageTalkTimeInSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      averageTalkTimeInSeconds_ = 0F;
       onChanged();
       return this;
     }

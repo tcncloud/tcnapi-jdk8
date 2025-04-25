@@ -18,10 +18,16 @@ public interface CalculateTrainingDataAveragesForSkillProfileResOrBuilder extend
   float getAverageSpeedOfAnswerInSeconds();
 
   /**
-   * <code>float average_handle_time_in_seconds = 2 [json_name = "averageHandleTimeInSeconds"];</code>
+   * <pre>
+   * Deprecated as of Apr/25/2025: use average_talk_time_in_seconds instead.
+   * </pre>
+   *
+   * <code>float average_handle_time_in_seconds = 2 [json_name = "averageHandleTimeInSeconds", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes.average_handle_time_in_seconds is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5420
    * @return The averageHandleTimeInSeconds.
    */
-  float getAverageHandleTimeInSeconds();
+  @java.lang.Deprecated float getAverageHandleTimeInSeconds();
 
   /**
    * <code>float average_after_call_work_in_seconds = 3 [json_name = "averageAfterCallWorkInSeconds"];</code>
@@ -34,4 +40,10 @@ public interface CalculateTrainingDataAveragesForSkillProfileResOrBuilder extend
    * @return The averageTimeToAbortInSeconds.
    */
   float getAverageTimeToAbortInSeconds();
+
+  /**
+   * <code>float average_talk_time_in_seconds = 5 [json_name = "averageTalkTimeInSeconds"];</code>
+   * @return The averageTalkTimeInSeconds.
+   */
+  float getAverageTalkTimeInSeconds();
 }
